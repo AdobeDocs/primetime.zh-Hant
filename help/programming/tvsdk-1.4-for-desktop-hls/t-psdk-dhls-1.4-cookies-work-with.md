@@ -1,0 +1,57 @@
+---
+description: 您可以使用TVSDK在Cookie標題中傳送任意資料，以進行作業管理、閘道存取等。
+seo-description: 您可以使用TVSDK在Cookie標題中傳送任意資料，以進行作業管理、閘道存取等。
+seo-title: 使用Cookie
+title: 使用Cookie
+uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# 使用Cookie{#work-with-cookies}
+
+您可以使用TVSDK在Cookie標題中傳送任意資料，以進行作業管理、閘道存取等。
+
+以下是向密鑰伺服器發出請求時具有某種類型驗證的示例：
+
+1. 您的客戶使用瀏覽器登入您的網站，而他們的登入顯示他們可以檢視內容。
+1. 您的應用程式會根據授權伺服器的需求產生驗證Token。 將該值傳遞至TVSDK。
+1. TVSDK會在Cookie標題中設定該值。
+1. 當TVSDK向金鑰伺服器要求取得解密內容的金鑰時，該要求會包含Cookie標題中的驗證值，因此金鑰伺服器會知道該要求有效。
+
+若要使用Cookie:
+
+1. 使用中 `cookieHeaders` 的屬 `NetworkConfiguration` 性來設定Cookie。 屬 `cookieHeaders` 性是中繼資料物件，您可將索引鍵值配對新增至此物件，以便包含在Cookie標題中。
+
+   例如：
+
+   ```
+   var metadata:Metadata = new Metadata(); 
+   metadata.setValue(“val1”, “12345”); 
+   metadata.setValue(“val2”, “abcd”); 
+   
+   networkConfiguration.cookieHeaders = metadata;
+   ```
+
+   依預設，Cookie標題只會與關鍵要求一起傳送。 若要傳送包含所有請求的Cookie標題，請將 `NetworkConfiguration` 屬性 `useCookieHeadersForAllRequests` 設為true。
+
+1. 若要確保其可 `NetworkConfiguration` 以運作，請將它設定為中繼資料：
+
+   ```
+   var networkConfiguration:NetworkConfiguration = new NetworkConfiguration(); 
+   networkConfiguration.forceNativeNetworking = true; 
+   var resourceMetadata:Metadata = new Metadata(); 
+   resourceMetadata.setMetadata(DefaultMetadataKeys.NETWORK_CONFIGURATION_KEY,  
+                                networkConfiguration);
+   ```
+
+1. 在您建立時，提供上一個步驟的中繼資料 `MediaResource`。
+
+   例如，如果您使用此方 `createFromURL` 法，請輸入下列資訊：
+
+   ```
+   var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
+   ```
+
