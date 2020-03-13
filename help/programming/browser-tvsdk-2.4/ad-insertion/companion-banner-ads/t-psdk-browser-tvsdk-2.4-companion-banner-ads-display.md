@@ -1,0 +1,78 @@
+---
+description: 若要顯示橫幅廣告，您必須建立橫幅例項，並允許瀏覽器TVSDK監聽廣告相關事件。
+seo-description: 若要顯示橫幅廣告，您必須建立橫幅例項，並允許瀏覽器TVSDK監聽廣告相關事件。
+seo-title: 顯示橫幅廣告
+title: 顯示橫幅廣告
+uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
+translation-type: tm+mt
+source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+
+---
+
+
+# 顯示橫幅廣告 {#display-banner-ads}
+
+若要顯示橫幅廣告，您必須建立橫幅例項，並允許瀏覽器TVSDK監聽廣告相關事件。
+
+瀏覽器TVSDK提供與事件中的線性廣告相關的配套橫幅廣告清 `AdobePSDK.PSDKEventType.AD_STARTED` 單。
+
+清單可透過下列方式指定配套橫幅廣告：
+
+* HTML程式碼片段
+* iFrame頁面的URL
+* 靜態影像或Adobe Flash SWF檔案的URL
+
+對於每個配套廣告，瀏覽器TVSDK會指出您的應用程式有哪些類型。
+
+為執行下列操作的事 `AdobePSDK.PSDKEventType.AD_STARTED` 件添加偵聽器：
+1. 清除橫幅例項中的現有廣告。
+1. 從中取得配套廣告清單 `Ad.getCompanionAssets`。
+1. 如果配套廣告清單不是空的，請在橫幅例項清單上重複。
+
+   每個橫幅實例( `AdBannerAsset`an)都包含寬度、高度、資源類型（html、iframe或靜態），以及顯示配套橫幅所需的資料。
+1. 如果視訊廣告沒有隨附的配套廣告，則配套資產清單中不會包含該視訊廣告的資料。
+1. 將橫幅資訊傳送至頁面上顯示適當位置橫幅的函式。
+
+   這通常是 `div`，您的函式會使 `div ID` 用來顯示橫幅。 例如：
+
+   添加事件偵聽器：
+
+   ```js
+   _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
+   ```
+
+   實作監聽器處理常式：
+
+   ```js
+   private function onAdStarted(event:AdPlaybackEvent):void 
+   { 
+       // check if there are any companion banner 
+       if (event.ad && event.ad.companionAssets  
+                    && event.ad.companionAssets.length > 0) { 
+            for each (var banner:AdBannerAsset in event.ad.companionAssets) { 
+               if (ExternalInterface.available) { 
+                   //-- call the java script that will handle the banner display. 
+                   ExternalInterface.call('addBanner', banner.resourceType,  
+                       banner.width, banner.height, banner.bannerData); 
+                } 
+            } 
+        }  
+        //...        
+   }
+   ```
+
+   處理顯示的JavaScript範例：
+
+   ```js
+   function displayCompanion (resourceType, width, height, data) { 
+       console.log(resourceType + "," +  width + "," +  height); 
+       var bannerDiv = document.getElementById('banner' + width + 'x' + height);  
+   
+       // Assuming that there is an HTML element on the page  
+       // with an id of "banner300x250", for example 
+       if (bannerDiv !== null) { 
+           bannerDiv.innerHTML = data; 
+       } 
+   }
+   ```
+
