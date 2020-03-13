@@ -1,0 +1,41 @@
+---
+description: 您可以使用TVSDK設定檔(AdobeTVSDKonfig.json)來更新VAST/VMAP回應廣告創意選擇的優先順序。 您也可以使用此設定檔案來定義廣告創作人員的來源URL轉換規則。
+keywords: creative selection rules;AdobeTVSDKConfig;ad creative priorities;transformation rules
+seo-description: 您可以使用TVSDK設定檔(AdobeTVSDKonfig.json)來更新VAST/VMAP回應廣告創意選擇的優先順序。 您也可以使用此設定檔案來定義廣告創作人員的來源URL轉換規則。
+seo-title: 更新廣告創意選擇規則
+title: 更新廣告創意選擇規則
+uuid: 77d8e186-01b5-4d62-8686-28f431d18876
+translation-type: tm+mt
+source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+
+---
+
+
+# 概觀 {#update-ad-creative-selection-rules-overview}
+
+您可以使用TVSDK設定檔(AdobeTVSDKonfig.json)來更新VAST/VMAP回應廣告創意選擇的優先順序。 您也可以使用此設定檔案來定義廣告創作人員的來源URL轉換規則。
+
+當您的視訊播放器向廣告伺服器提出要求時，VAST/VMAP回應通常會包含多個廣告創意素材( `MediaFile` 元素)，其中每個元素都會提供不同容器轉碼器版本的URL。 在某些情況下，VAST/VMAP回應中的廣告創意素材會為廣告提供不同的位元速率。 如果您想要為這些廣告創意人員指定自己的優先順序和轉換規則，可以在設定檔案中 [!DNL AdobeTVSDKConfig.json] 這麼做。
+
+>[!IMPORTANT]
+>
+>* 請勿變更TVSDK設定檔的名稱。 名稱必須保留 [!DNL AdobeTVSDKConfig.json]。
+>* 此檔案必須放在專案 [!DNL assets/] 的檔案夾中。
+>* 在播放廣告時變更音軌並不會變更音軌。 播放器不應允許使用者在播放廣告時變更音軌。
+>
+
+
+
+您可以在中指定兩種類型的規則 [!DNL AdobeTVSDKConfig.json]:優 *先順序**,* 標準化規則。
+
+**[!UICONTROL Ad Rules change]**
+
+<!--<a id="section_EDCE7C94156D4A47AA2FBAE9BE0390CE"></a>-->
+
+廣告規則是使用JSON檔案指定。 TVSDK的兩個版本中，JSON檔案的格式都維持不變。 不過，在TVSDK v3.0中，廣告規則JSON檔案必須裝載在可透過HTTP URL存取的位置。 應用程式可使用AuditudeSettings的例項：
+
+```
+//TVSDK v3.0 AuditudeSettings result = new AuditudeSettings(); 
+result.setCRSRulesJsonURL(<http url of 
+AdobeTVSDKConfig.json>);  
+```
