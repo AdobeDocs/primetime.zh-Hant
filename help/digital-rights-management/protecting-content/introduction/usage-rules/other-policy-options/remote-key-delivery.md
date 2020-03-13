@@ -1,0 +1,24 @@
+---
+seo-title: 遠端和本機iOS金鑰傳送
+title: 遠端和本機iOS金鑰傳送
+uuid: 90f672e7-9301-4e14-adca-db2a8f951a83
+translation-type: tm+mt
+source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+
+---
+
+
+# 遠端和本機iOS金鑰傳送 {#remote-and-local-ios-key-delivery}
+
+Adobe Primetime支援下列選項，以將關鍵內容傳送至iOS用戶端：
+
+* **Remote** —— 如HTTP即時串流(HLS)規格中所指定般執行；m3U8資訊清單指定HTTPS路徑，其中包含AES金鑰，該金鑰應用來解密串流中的下列加密區段。 當您在Primetime DRM `Remote` 原則中指定時，用戶端裝置必須連線至遠端HTTPS伺服器，才能取得AES金鑰。
+
+* **本機** -當您在 `Local` Primetime DRM中指定AES金鑰，而非連線至網際網路／網路時，本機HTTPS伺服器會內嵌在iOS應用程式中，然後管理所有AES金鑰要求。 內嵌的HTTPS伺服器會自動在P應用程式中設定和設定。 應用程式開發人員不需要干預。
+
+遠端金鑰傳送是透過用於封裝內容的Primetime DRM政策來啟用。 如果您想要變更此設定，則必須重新封裝內容。 如果您啟用遠端金鑰傳送，您必須部署Primetime DRM金鑰伺服器，以管理來自iOS用戶端的金鑰要求。 不過，其他平台上的用戶端工作流程並無變更。
+
+>[!NOTE] {class=&quot;- topic/note &quot;}
+>
+>「金鑰傳送」選項只會影響iOS用戶端。 所有使用HLS內容的其他裝置(例如Android和Primetime on Desktop(Flash Player))，即使已指定， `Local` 也一律 `Remote` 使用金鑰傳送。
+
