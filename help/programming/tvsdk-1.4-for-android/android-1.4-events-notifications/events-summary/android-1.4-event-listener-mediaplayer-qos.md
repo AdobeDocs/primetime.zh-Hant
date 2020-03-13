@@ -1,0 +1,26 @@
+---
+description: TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算（例如緩衝或搜尋）的事件。
+seo-description: TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算（例如緩衝或搜尋）的事件。
+seo-title: QoS事件
+title: QoS事件
+uuid: 27f60cd3-d3fc-4ea3-81df-96d0fe9f7068
+translation-type: tm+mt
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+
+---
+
+
+# QoS事件{#qos-events}
+
+TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算（例如緩衝或搜尋）的事件。
+
+要獲得所有QoS相關事件的通知，請註冊包含以 `MediaPlayer.QOSEventListener` 下回呼的實現：
+
+| 事件 | 意義 |
+|---|---|
+| [onBufferComplete](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.QOSEventListener.html#onBufferComplete()) | 緩衝已完成。 |
+| [onBufferStart](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.QOSEventListener.html#onBufferStart()) | 緩衝已開始。 |
+| [onLoadInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.QOSEventListener.html#onLoadInfo(com.adobe.mediacore.qos.LoadInfo))(loadInfo) | 已成功下載片段。 |
+| [onOperationFailed](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.QOSEventListener.html)(MediaPlayerNotification)。 [警告](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.Warning.html) ) | 發生可恢復錯誤。 |
+| [onSeekComplete](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.QOSEventListener.html#onSeekComplete(long))(long adjustedTime) | 搜尋已完成。 |
+| [onSeekStart](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.QOSEventListener.html#onSeekStart()) | 搜尋正在開始。 |
