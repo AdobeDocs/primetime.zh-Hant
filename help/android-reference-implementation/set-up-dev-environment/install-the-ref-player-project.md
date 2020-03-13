@@ -1,0 +1,44 @@
+---
+description: 「TVSDK Primetime參考」是以TVSDK和AVE架構為基礎的Android應用程式。
+seo-description: 「TVSDK Primetime參考」是以TVSDK和AVE架構為基礎的Android應用程式。
+seo-title: 建立Primetime參考實作
+title: 建立Primetime參考實作
+uuid: ab12660a-1563-49a4-82d9-1ab13f8a92be
+translation-type: tm+mt
+source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+
+---
+
+
+# 建立Primetime參考實作 {#build-the-primetime-reference-implementation}
+
+「TVSDK Primetime參考」是以TVSDK和AVE架構為基礎的Android應用程式。
+
+若要在Eclipse中設定和建立Primetime參考專案：
+
+1. 下載TVSDK Android zip檔案，並將它解壓縮至您會記得的目錄。
+1. 啟動Eclipse。
+1. 選擇 **[!UICONTROL File]** > **[!UICONTROL Import]**。
+1. 選擇 **[!UICONTROL Android]** > **[!UICONTROL Existing Android Code Into Workspace]**。
+1. 按一下 **[!UICONTROL Next]**.
+1. 使用按 **[!UICONTROL Browse]** 鈕，在欄 **[!UICONTROL Root Directory]** 位中填入您解壓縮TVSDK Android [!DNL samples/PrimetimeReference/src] zip檔案的目錄。
+1. 選擇要導入的以下項目： **[!UICONTROL appcompat]**, **[!UICONTROL PrimetimeReference]**。
+1. 按一下 **[!UICONTROL Finish]**.
+1. 選擇 **[!UICONTROL Project]** > **[!UICONTROL Build Project]** 以建立專案。
+
+   如果將項目設定為自動生成，則不需要此步驟。
+1. 如果您想要在工作區中包含測試專案，請將測試專案與PrimetimeReference專案建立關聯：
+   1. 重複步驟3。 到6號。
+   1. 選擇要導入的以下項目： `PrimetimeReference\tests`。
+   1. 按一下 **[!UICONTROL Finish]**.
+
+      測試項目依賴於CatalogActivity項目，因此您需要將測試項目與CatalogActivity項目關聯。
+   1. 按一下滑鼠右 **[!UICONTROL tests]** 鍵並選擇 **[!UICONTROL Properties]**。
+   1. 選擇「 **[!UICONTROL Projects]** Java生成路徑」下的頁籤。
+   1. 按一下 **[!UICONTROL Add...]**
+   1. 選擇目錄活動。
+   1. 按一 **[!UICONTROL OK]** 下以新增專案。
+   1. 按一下 **[!UICONTROL OK]** 退出「屬性」頁。
+   1. 選擇 **[!UICONTROL Project]** > **[!UICONTROL Build Project]** 以建立專案。
+
+      如果將項目設定為自動生成，則不需要此步驟。
