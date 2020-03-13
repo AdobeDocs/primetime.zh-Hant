@@ -1,0 +1,21 @@
+---
+description: 參考實作說明如何設定廣告的播放器，包括設定廣告插入的視訊中繼資料，以及將前、中、後段廣告解析為VOD或即時／線性視訊串流。 它也說明如何處理可點選廣告。
+seo-description: 參考實作說明如何設定廣告的播放器，包括設定廣告插入的視訊中繼資料，以及將前、中、後段廣告解析為VOD或即時／線性視訊串流。 它也說明如何處理可點選廣告。
+seo-title: 廣告插入
+title: 廣告插入
+uuid: 75c1d77a-a7ff-4cb6-ad7f-7c83a950b7cb
+translation-type: tm+mt
+source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+
+---
+
+
+# 廣告插入 {#ad-insertion}
+
+參考實作說明如何設定廣告的播放器，包括設定廣告插入的視訊中繼資料，以及將前、中、後段廣告解析為VOD或即時／線性視訊串流。 它也說明如何處理可點選廣告。
+
+設定廣告插入播放器的程式包括：
+
+* **輸入摘要：** 以廣告中繼資料填入輸入饋送。 請參閱 [目錄格式](../set-up-dev-environment/exploring-code/catalog-format.md)。
+* **參考實作摘要適配器：** 剖析輸入饋送以填入廣告中繼資料物件。
+* **AdsManager:** 使用AdsManager擷取廣告中繼資料並建立對應的AdProvider。
