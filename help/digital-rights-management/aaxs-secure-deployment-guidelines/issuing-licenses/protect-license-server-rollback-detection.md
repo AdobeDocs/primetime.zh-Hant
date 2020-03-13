@@ -1,0 +1,15 @@
+---
+seo-title: 回滾檢測
+title: 回滾檢測
+uuid: fc80c98f-7ee5-414b-87fe-0dbb8d4f6019
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# 回滾檢測{#rollback-detection}
+
+如果您的Adobe Access實作使用需要用戶端維持狀態（例如播放視窗間隔）的業務規則，Adobe強烈建議伺服器追蹤回滾計數器，並使用AIR或SWF白名單。
+
+回滾計數器在客戶端發出的大多數請求中都發送到伺服器。 如果您的Adobe Access實作不需要回滾計數器，則可以忽略它。 否則，Adobe建議伺服器儲存隨機機器ID(使用 `MachineToken.getMachineId().getUniqueId()`取得)和資料庫中的目前計數器值。 如需增加和追蹤回滾計數器的詳細資訊，請參閱「使用Adobe Access SDK for Protecting Content」中的「 *Adobe Access API Reference* and *Rollback detection」(Adobe Access SDK for Protecting Content)***。
