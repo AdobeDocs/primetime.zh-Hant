@@ -1,0 +1,15 @@
+---
+seo-title: 升級Adobe Primetime DRM Server以進行受保護的串流
+title: 升級Adobe Primetime DRM Server以進行受保護的串流
+uuid: 5c507ae3-d1d9-40ad-ba97-501ec92b45dc
+translation-type: tm+mt
+source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+
+---
+
+
+# 升級Adobe Primetime DRM Server以進行受保護的串流{#upgrading-the-adobe-primetime-drm-server-for-protected-streaming}
+
+如果您想要升級執行Primetime DRM Server for Protected Streaming的伺服器，您必須將已部署在應用程式伺服器上的檔案，取代為最新Primetime DRM所包含的檔案。 `flashaccessserver.war`
+
+如果要使用新的配置選項，則需要更新伺服器的 `flashaccess-tenant.xml`。 您也需要更新 [!DNL jsafe.dll] 或 [!DNL libjsafe.so] 更新最新Primetime DRM隨附的版本。
