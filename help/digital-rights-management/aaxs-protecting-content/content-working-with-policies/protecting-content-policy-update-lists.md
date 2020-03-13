@@ -1,0 +1,15 @@
+---
+seo-title: 策略更新清單
+title: 策略更新清單
+uuid: 83cf0d14-bc55-4714-aa87-0fc6f1235a93
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# 策略更新清單{#policy-update-lists}
+
+如果您在封裝內容後更新原則中的使用規則，則授權伺服器必須擁有最新版本，才能使用更新的原則來核發授權。 要做到這一點，一個方法是通過策略更新清單。 策略更新清單是包含更新策略或已撤銷策略清單的檔案。 更新策略時，生成新的策略更新清單，並定期將清單推送到所有許可證伺服器。
+
+有關建立和更新策略的詳細資訊，請參 [閱*使用策略](../../aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)*。
