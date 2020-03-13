@@ -1,0 +1,17 @@
+---
+seo-title: 發行網域限制授權
+title: 發行網域限制授權
+uuid: 706650b7-6044-4c01-9f5a-90779127c9e1
+translation-type: tm+mt
+source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+
+---
+
+
+# 發行網域限制授權{#issuing-domain-bound-licenses}
+
+要使用需要域註冊的DRM策略發佈許可證，客戶機的請求必須包括由策略中指定的域伺服器發出的有效域令牌。 當用戶端要求授權時，會自動為任何網域伺服器加入網域Token，此網域Token是在內容中繼資料中指定的，但前提是用戶端已向這些網域伺服器註冊。 如果選取的DRM政策需要網域註冊，則SDK會自動從請求中選取網域Token，以將授權系結至，或傳回錯誤（如果找不到適當的網域Token）。
+
+若網域Token未過期，且是由授權網域CA核發，則網域Token即視為有效。 授權伺服器必須指定網域授權機構，以便透過設定接受網域Token `HandlerConfiguration.setDomainCAs()`。 如果未配置域CA，則許可證伺服器將無法發放域綁定的許可證。
+
+如果元資料包括多個DRM策略，則許可伺服器業務邏輯可以選擇基於客戶是否呈現域令牌的DRM策略。 您可以使 `LicenseRequestMessage.getDomainTokens()` 用來判斷用戶端已註冊的網域。
