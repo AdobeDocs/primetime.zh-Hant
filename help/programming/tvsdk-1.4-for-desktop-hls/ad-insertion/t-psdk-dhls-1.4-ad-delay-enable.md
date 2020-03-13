@@ -1,0 +1,48 @@
+---
+description: 您可以指定是否允許在所有廣告載入並置於時間軸之前播放。 以這種方式開始播放，讓檢視者可更快速存取主要內容。 此功能僅適用於即時DVR，而且無法使用，例如VOD資產。
+seo-description: 您可以指定是否允許在所有廣告載入並置於時間軸之前播放。 以這種方式開始播放，讓檢視者可更快速存取主要內容。 此功能僅適用於即時DVR，而且無法使用，例如VOD資產。
+seo-title: 啟用延遲廣告載入
+title: 啟用延遲廣告載入
+uuid: ac7c8801-7fa2-4f17-b79c-c603b3236948
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# 啟用延遲廣告載入{#enable-lazy-ad-loading}
+
+您可以指定是否允許在所有廣告載入並置於時間軸之前播放。 以這種方式開始播放，讓檢視者可更快速存取主要內容。 此功能僅適用於即時DVR，而且無法使用，例如VOD資產。
+
+1. 在中使用Boolean `delayAdLoading` 屬 `AdvertisingMetadata`性。
+
+   * 若為false,TVSDK會等到所有廣告都解決並放置後，再轉換至PREPARED狀態。 預設為false。
+   * 若為true,TVSDK只會解析初始廣告和轉場至「已準備」狀態。 其餘廣告會在播放期間解析並放置。
+
+1. 若要啟用Adobe Primetime廣告決策的延遲廣告載入，請在您建立廣告時 `true` 將此設定為 `AuditudeSettings`。
+
+   類會 `AuditudeSettings` 從中繼承此屬性， `AdvertisingMetadata`但不會繼承當前值。
+
+   ```
+   var auditudeSettings:AuditudeSettings = new AuditudeSettings(); 
+   auditudeSettings.mediaId = ... 
+   auditudeSettings.zoneId = ... 
+   auditudeSettings.delayAdLoading = true;
+   ```
+
+1. 若要將廣告準確反映為拖曳桿上的提示，請聆聽 `TimelineEvent`。 `TIMELINE_UPDATED` 活動，並在您每次收到此活動時重新繪製拖曳列。
+
+   當VoD串流使用延遲廣告載入時，並非播放器進入「已準備」狀態時，所有廣告都會放在時間軸上，因此您必須明確重繪拖曳列。
+
+   TVSDK會最佳化此事件的派單，將您必須重繪拖曳列的次數減至最少；因此，時間軸事件的數目與要放置在時間軸上的廣告分段數目無關。 例如，如果您有五個廣告插播，可能就不會收到五個事件。
+
+   ```
+   mediaPlayer.addEventListener(TimelineEvent.TIMELINE_UPDATED, onTimelineUpdated); 
+   // ... 
+   function onTimelineUpdated(event:TimelineEvent):void { 
+       // get markers 
+       var markers:Vector.<TimelineMarker> = event.timeline.timelineMarkers; 
+       drawMarkers(markers); 
+   } 
+   ```
+
