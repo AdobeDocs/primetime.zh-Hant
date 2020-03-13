@@ -1,0 +1,32 @@
+---
+description: TVSDK會根據廣告相關作業（例如廣告開始播放時）來調度廣告播放事件。
+seo-description: TVSDK會根據廣告相關作業（例如廣告開始播放時）來調度廣告播放事件。
+seo-title: 廣告播放事件
+title: 廣告播放事件
+uuid: 63138237-2315-45ff-914d-369da18fdff7
+translation-type: tm+mt
+source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+
+---
+
+
+# 廣告播放事件 {#ad-playback-events}
+
+TVSDK會根據廣告相關作業（例如廣告開始播放時）來調度廣告播放事件。
+
+若要收到所有廣告播放相關事件的通知，請向下列事件的物 `MediaPlayer` 件註冊聆聽器。
+
+>[!TIP]
+>
+>當廣告插入媒體或從媒體移除時，TVSDK會調度播放事件TimelineEvent。[時間軸_已更新](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/TimelineEvent.html#TIMELINE_UPDATED)。
+
+| 事件 | 意義 |
+|---|---|
+| AdBreakPlaybackEvent。[AD_BREAK_COMPLETED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdBreakPlaybackEvent.html#AD_BREAK_COMPLETED) | 廣告插播已完全播放。 |
+| AdBreakPlaybackEvent。[AD_BREAK_BRIKPED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdBreakPlaybackEvent.html#AD_BREAK_SKIPPED) | 在播放期間會略過廣告插播。 |
+| AdBreakPlaybackEvent。[AD_BREAK_STARTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdBreakPlaybackEvent.html#AD_BREAK_STARTED) | 廣告插播已開始。 |
+| AdClickEvent。[廣告_點按](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdClickEvent.html#AD_CLICK) | 使用者已點按廣告。 針對您的應用程式呼叫，提供使用者所點按廣告的相關資訊給您的應用 `notifyClick` 程式 `MediaPlayerView`。 |
+| AdPlaybackEvent。[廣告完成(_COMPLETED)](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html#AD_COMPLETED) | 廣告已完全播放。 |
+| AdPlaybackEvent。[廣告進度](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html#AD_PROGRESS) | 廣告播放已進行。 在廣告播放時多次傳送。 |
+| AdPlaybackEvent。[廣告_搜尋](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html#AD_STARTED) | 跨廣告界限或廣告內發生搜尋。 |
+| AdPlaybackEvent。[AD _STARTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/AdPlaybackEvent.html#AD_STARTED) | 廣告已開始。 |
