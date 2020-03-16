@@ -1,29 +1,33 @@
 ---
-title: iOS版TVSDK 3.10發行說明
-description: iOS版本注意事項的TVSDK 3.10說明TVSDK iOS 3.10中有哪些新增或變更、已解決和已知問題以及裝置問題。
+title: iOS版TVSDK 3.11發行說明
+description: iOS版本注意事項的TVSDK 3.11說明TVSDK iOS 3.11中有哪些新增或變更、已解決和已知問題以及裝置問題。
 translation-type: tm+mt
-source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
+source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 ---
 
 
-# iOS版TVSDK 3.10發行說明 {#tvsdk-for-ios-release-notes}
+# iOS版TVSDK 3.11發行說明 {#tvsdk-for-ios-release-notes}
 
-iOS版本注意事項的TVSDK 3.10說明TVSDK iOS 3.10中有哪些新增或變更、已解決和已知問題以及裝置問題。
+iOS版本注意事項的TVSDK 3.11說明TVSDK iOS 3.11中有哪些新增或變更、已解決和已知問題以及裝置問題。
 
 ## 系統與軟體需求 {#system-software-requirements}
 
-在下載iOS 3.10之前，請確定您的硬體、作業系統和應用程式版本符合下列需求：
+在下載iOS 3.11之前，請確定您的硬體、作業系統和應用程式版本符合下列需求：
 
 作業系統：iOS 8.0或更新版本。
 
-## iOS TVSDK 3.10
+## iOS TVSDK 3.11
 
-修正當網路無法使用時，TVSDK播放器無法觸發PTMediaPlayerStatusError通知的問題。
+針對造成應用程式當機的客 `isFallbackOnInvalidCreativeEnabled` 戶問題 `customParams` 提供修正。
 
 如需目前版本的修正，請參 [閱修正的客戶問題](#resolved-issues) ，而如需限制，請參閱 [已知問題和限制一節](#known-issues-and-limitations) 。
 
 ### 舊版的新功能和修正 {#whats-new-previous}
+
+**iOS TVSDK 3.10**
+
+* 修正當網路無法使用時，TVSDK播放 `PTMediaPlayerStatusError` 器無法觸發通知的問題。
 
 **iOS TVSDK 3.9**
 
@@ -290,11 +294,17 @@ Comment Type: draft
 </note>
  -->
 
+**iOS TVSDK 3.11**
+
+* (ZD#40998)-造 `isFallbackOnInvalidCreativeEnabled` 成應用程式當機。
+
+* (ZD#41289)- `NSInvalidArgumentException` 使用導致應用程式當機 `customParams` 的方法進行觀察。
+
+### 已解決舊版中的問題 {#resolved-issues-previous}
+
 **iOS TVSDK 3.10**
 
 (ZD#40943)-當網路不可用時，TVSDK播放器不會觸發PTMediaPlayerStatusError通知。
-
-### 已解決舊版中的問題 {#resolved-issues-previous}
 
 **iOS TVSDK 3.9**
 
@@ -310,94 +320,81 @@ Comment Type: draft
 
 **iOS TVSDK 3.7**
 
-* (ZD#38961)-當多個內容設定為在PiP中播放時，當一個內容完成播放後，內容無法在「畫中畫」(PiP)視窗中播放。
+(ZD#38961)-當多個內容設定為在PiP中播放時，當一個內容完成播放後，內容無法在「畫中畫」(PiP)視窗中播放。
 
 **iOS TVSDK 3.6**
 
-* 此發行中沒有新問題。
+此發行中沒有新問題。
 
 **iOS TVSDK 3.5**
 
-* 此發行中沒有新問題。
+此發行中沒有新問題。
 
 **第3.3版**
 
-* (ZD#37820)-新增自訂標題HS-Id、HS-SSAI-TAG的白名單。
+(ZD#37820)-新增自訂標題HS-Id、HS-SSAI-TAG的白名單。
 
 **第3.2版**
 
-**Ticket#36588** —— 呼叫MediaPlayer STOP方法時，會觀察到播放器損毀。
-
+* **Ticket#36588** —— 呼叫MediaPlayer STOP方法時，會觀察到播放器損毀。
 已修正呼叫STOP方法以取得少數具有字幕的串流時，所觀察到的間歇性損毀。
 
-**Ticket#37080** —— 顯示清單呼叫的重複請求。
-
+* **Ticket#37080** —— 顯示清單呼叫的重複請求。
 已修正播放期間對資訊清單URL重複提出的要求。 TVSDK現在會針對每份資訊清單發出一個呼叫。
 
-**Ticket#37** - CRS標準化規則失敗，且eq符合類型
-
-已修正當播放器遇到具有&quot;eq&quot;符合類型之主機名稱的上次標準化規則集時，會當機的案例。
+* **Ticket#37** - CRS標準化規則失敗，並包含eq符合類型修正播放器在遇到具有&quot;eq&quot;符合類型之主機名稱的上次標準化規則集時，會當機的案例。
 
 **第3.1版**
 
-**票證#36313** —— 線性廣告插播期間不可預期的結果
-
-修正即時串流中線性廣告中斷時的間歇性播放。
+**票證#36313** —— 線性廣告中斷期間的間歇性不可預測結果修正即時串流中線性廣告中斷期間的間歇性播放。
 
 **3.0.1版**
 
-**Ticket36948** - CRS - iOS 12上不一致的資產選擇順序
-
-為CRS選取的資產不一定是VAST或VMAP回應中傳回的最高品質變數。
+**Ticket36948** - CRS - iOS 12上不一致的資產選擇順序為CRS選擇的資產並不總是在VAST或VMAP響應中返回的最高質量變數。
 
 **3.0版**
 
-**Ticket35311** —— 在電話呼叫中斷期間，播放器狀態不會變為「暫停」
+* **Ticket35311** —— 在電話呼叫中斷期間，播放器狀態不會變成PAUSED新增中斷處理常式，以阻止播放器中斷。 當中斷時，播放器狀態會變為「暫停」，然後按一下播放按鈕繼續播放。
 
-已新增中斷處理常式，以阻止播放器中斷。 當中斷時，播放器狀態會變為「暫停」，然後按一下播放按鈕繼續播放。
+* **Ticket36685** —— 即時資產——與播放器時間進度和SCTE標籤時間不符的時間針對即時點前方的SCTE標籤計算正確時間。
 
-**Ticket36685** —— 即時資產——時間與播放器時間進度和SCTE標籤時間不符
-
-計算SCTE標籤在即時點之前的正確時間。
-
-**Ticket36492** - `currentTime``localTime` 當在暫停狀態期間尋找新位置時，未更新
-
-現在，當播放器處於暫停狀態時，可將播放器的目前時間設為零；稍早的目前時間，會設為僅在播放狀態中為零。
+* **Ticket36492** —— 當在暫停狀態 `currentTime``localTime` 中尋找新位置時未更新Player的目前時間現在可設為零，以備播放器處於暫停狀態時使用；稍早的目前時間，會設為僅在播放狀態中為零。
 
 **1.4.45版**
 
-**Ticket36294** - iOS TVSDK無法與Xcode 10搭配運作
+* **Ticket36294** - iOS TVSDK無法與Xcode 10搭配運作已修正XCode 10上TVSDK的編譯問題。 由於XCode 10的需求，iOS 1.4.45版以上的TVSDK為基礎建立的應用程式需要最低部署目標，如iOS 7.0
 
-修正XCode 10上TVSDK的編譯問題。 由於XCode 10的需求，iOS 1.4.45版以上的TVSDK為基礎建立的應用程式需要最低部署目標，如iOS 7.0
+* **Ticket36321** —— 在「播放」狀態中，在 `PTMediaPlayer` 與 `AVPlayer` 例項之間可見範圍中觀察到的差異。
 
-**Ticket36321** —— 在「播放」狀態中，在 `PTMediaPlayer` 與 `AVPlayer` 例項之間可見範圍中觀察到的差異。
-**Ticket36493** - `libstdc++` iOS 12的支援
-
-修正iOS 12上TVSDK的編譯問題。 以iOS 1.4.45版之前的TVSDK為基礎建立的應用程式，在iOS 7.0版之前，需要最低部署目標
+* **Ticket36493** - `libstdc++` iOS 12支援已修正iOS 12上TVSDK的編譯問題。 以iOS 1.4.45版之前的TVSDK為基礎建立的應用程式，在iOS 7.0版之前，需要最低部署目標
 
 **1.4.44版**
 
-**Ticket34683** —— 廣告播放進度時間為負
+* **Ticket34683** —— 廣告播放進度時間為負
 
 當廣告伺服器所報告的持續時間與實際廣告內容不符時，會進行其他檢查以處理此情況。
 
-**Ticket34801** - currentTime和localTime在暫停狀態期間尋找新位置時未更新
+* **Ticket34801** - currentTime和localTime在暫停狀態期間尋找新位置時未更新現在，播放器處於暫停狀態時，可將播放器的目前時間設定為零；稍早的目前時間，會設為僅在播放狀態中為零。
 
-現在，當播放器處於暫停狀態時，可將播放器的目前時間設為零；稍早的目前時間，會設為僅在播放狀態中為零。
-
-**Ticket35037** —— 從訊號式廣告插入返回時，播放會停止有錯誤的URL。
-
+* **Ticket35037** —— 從訊號式廣告插入返回時，播放會停止有錯誤的URL。
 已改善1.4.42版本中已關閉問題#34385的修正。 已新增isCancelled檢查和異常處理代碼，讓作業佇列更為健全。
 
 **1.4.43版**
 
 * (ZD#32990)- iOS:在某些提示點上播放內容，而非播放廣告。 `selectedMediaOptionInMediaSelectionGroup` 屬於AVPlayerItem介面的API現在已移至iOS 11的AVMediaSelection下。 此新API已解決此問題。
+
 * (ZD#33683)從中繼資料字串移除的TVSDK ==字尾。 問題已修正在剖析邏輯中。
+
 * (ZD#33905)- iOS TVSDK使用兩個使用者代理呼叫資訊清單檔案。 已修正第一次m3u8呼叫（新安裝案例）的使用者代理問題。 M3u8現在所有呼叫都有相同的使用者代理。
+
 * (ZD#34293)-插入線性串流的預卷無法在iOS11上正確播放。 前置廣告的問題已修正。
+
 * (ZD#34684)-套用廣告略過原則時，前段廣告影格會顯示數秒。 已引入新的API enableVodPreroll，可停用vod播放中的前置播放。 此API的預設值為「是」。 API可確保在主要內容中跳過廣告內容拼接。
+
 * (ZD#34765)-呼叫stop()後，仍有少數傳輸串流區段會下載。 已增強Stop()API，以避免下載額外的區段。
+
 * (ZD#34865)-即時串流的前段廣告會在iOS上截斷。 與iOS11相關，並新增額外的檢查來確認串流是預先播放還是主要內容，以解決此問題。
+
 * (ZD#35093)-修正若串流的主要變數在啟動時失敗（傳回404），則播放不會切換至備份串流的容錯情形。
 
 **1.4.42 (1.4.42.118)**
@@ -405,10 +402,13 @@ Comment Type: draft
 * (ZD#34385)-從訊號式廣告插入返回時，播放會停止有錯誤的URL。
 
    增加的最大併發計 `CustomAVAssetLoaderOperations`數，以便可繼續執行資訊清單讀取。
-* (ZD#34373)-當不允許串流錄制時，終端用戶無法串流至HDMI連接的裝置。
+
+* (ZD#34373)-當不允許串流錄制時，一般使用者無法串流至HDMI連接的裝置。
+
 * (ZD#32678)- TVSDK不會在iOS上收集正確的廣告ID。
 
    在VHL ping中，如果發生VAST/VMAP重新導向，現在會擷取最終廣告創意素材的廣告ID。
+
 * (ZD#33904)- TVSDK未註冊AVF基礎通知 `AVAudioSessionMediaServicesWereLostNotification` 和 `AVAudioSessionMediaServicesWereResetNotification`。
 
    `PTMediaServicesWereLostNotification` 現在 `PTMediaServicesWereResetNotification` 可在播放器應用程式中註冊，以在媒體服務重設或遺失時取得通知。
@@ -883,7 +883,7 @@ CPU/資源使用量過高已修正為兩個層級。 首先，讓時間更新函
 
 在PTMediaPlayerItem.prepareToPlay中初始載入manifest檔案時，如果載入資訊清單失敗，TVSDK不會向應用程式報告失敗回應的正文。
 
-此問題已解決，方法是讓TVSDK將失敗回應報告為應用程式的錯誤。
+此問題已解決，因為TVSDK會將失敗回應報告為應用程式的錯誤。
 
 * (ZD #19615)-備援邏輯無法運作
 
