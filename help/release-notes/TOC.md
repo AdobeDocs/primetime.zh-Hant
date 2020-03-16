@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Release Notes
 translation-type: tm+mt
-source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
+source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
 + Primetime動態廣告插入 {#ptai}
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
 + iOS版TVSDK {#tvsdk-ios}
-   + [iOS版TVSDK 3.10發行說明](tvsdk-3x-ios.md)
+   + [iOS版TVSDK 3.11發行說明](tvsdk-3x-ios.md)
    + [iOS版TVSDK 1.4發行說明](tvsdk-1-4-ios.md)
 + Android專用的TVSDK {#tvsdk-android}
    + [TVSDK 3.10 for Android版本注意事項](tvsdk-3x-android.md)
