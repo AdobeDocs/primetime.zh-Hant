@@ -2,7 +2,7 @@
 title: PTAI 19.11.1發行說明
 description: PTAI 19.11.1發行說明說明2019年黃金時段動態廣告插入的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 8c1aa935c3ca75c41de82d52908054c109d1160b
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -67,7 +67,7 @@ source-git-commit: 8c1aa935c3ca75c41de82d52908054c109d1160b
 
 **時間：** 7月10日星期三
 
-* SSAI:對於即時串流中支援EXT-X-CUE-OUT廣告中斷訊號的ptcueformat值，在EXT-X-ASSET標籤範例中新增一般巨集以傳遞屬性資料：#EXT-X-CUE-OUT標籤隨附的標籤：#EXT-X-ASSET:CAID=75BCD15,GENRE=News,Program=NewsAt10巨集：#可用來將新聞（從GENER屬性）傳遞至廣告呼叫URL #，以便將NewsAt10（從程式屬性）傳遞至廣告呼叫URL例外：為了向後相容性，#和#有相同的功能。 在上例中，兩個宏都可用於傳遞CAID屬性的值，將該值從十六進位轉換為長值後。十六進位值75BCD15的長值是123456789。 這兩個巨集都會用來將123456789傳遞至廣告呼叫URL。巨集一律以#開頭。 巨集區分大小寫，但EXT-X-ASSET標籤中的屬性不區分大小寫。 即EXT-X-ASSET標籤中允許PROGRAM和Program
+* SSAI:對於即時串流中支援EXT-X-CUE-OUT廣告中斷訊號的ptcueformat值，在EXT-X-ASSET標籤範例中新增一般巨集，以傳遞屬性的資料：#EXT-X-CUE-OUT標籤隨附的標籤：#EXT-X-ASSET:CAID=75BCD15,GENRE=News,Program=NewsAt10巨集：#可用來將新聞（從GENER屬性）傳遞至廣告呼叫URL #，以便將NewsAt10（從程式屬性）傳遞至廣告呼叫URL例外：為了向後相容性，#和#有相同的功能。 在上例中，兩個宏都可用於傳遞CAID屬性的值，將該值從十六進位轉換為長值後。十六進位值75BCD15的長值是123456789。 這兩個巨集都會用來將123456789傳遞至廣告呼叫URL。巨集一律以#開頭。 巨集區分大小寫，但EXT-X-ASSET標籤中的屬性不區分大小寫。 即EXT-X-ASSET標籤中允許PROGRAM和Program
 * SSAI:特定客戶的下列配置更改：
    * 滑動視窗（即時播放清單）長度為4分鐘
    * 如果當資訊清單伺服器擷取來源內容時引發通訊端逾時例外，資訊清單伺服器會傳回HTTP回應碼(404)，而非500
@@ -127,11 +127,11 @@ source-git-commit: 8c1aa935c3ca75c41de82d52908054c109d1160b
 * SSAI:對於CRS資產，新增功能，每當CRS資產插入時，將其查閱記錄到期時間延長30天
    * 先前的行為：CRS資產查閱記錄儲存在每個pod的memcache中。 CRS資產查閱記錄在新增至記憶體快取後30天會自動移除。 若要在創意素材從記憶體快取中移除後，在pod中重新填入其CRS資產查閱記錄，該創意素材需要在該pod中遇到3次
    * 新行為：當pod存取CRS資產查閱記錄以插入CRS資產時，該pod中的CRS資產查閱記錄的有效期將延長30天。 因此，經常使用的CRS資產，直到最近使用30天後，才會從Pod的記憶體快取中移除
-   * 新行為是全系統的，如果偵測到效能下降，則可以關閉
+   * 新行為是全系統的，如果偵測到效能下降，則可關閉
 * SSAI:僅針對即時串流更新WebVTT資訊清單操縱行為
    * 先前的行為：僅在WebVTT資訊清單中，移除將在每個插入廣告之前和插入廣告插入廣告插入廣告插入的最後一段之後插入的EXT-X-DINSTRUCTION標籤
    * 新行為：已將新參數vttdisc（可接受的值為true和false）新增至SSAI引導URL
-      * vttdisc=true:EXT-X-DINSTRUCTION標籤將插入WebVTT資訊清單中，在每個插入廣告之前和插入廣告插入廣告插入的最後一段之後，與音訊／視訊和純音訊資訊清單的行為相符
+      * vttdisc=true:EXT-X-DINSTRUCTION標籤將插入WebVTT資訊清單中，在每個插入廣告之前和插入廣告插入廣告插入的最後一段之後，與音訊／視訊和純音訊清單的行為相符
       * vttdisc=false（與先前的行為相同）:僅在WebVTT資訊清單中，移除將在每個插入廣告之前和插入廣告插入廣告插入廣告插入的最後一段之後插入的EXT-X-DINSTRUCTION標籤
       * 如果vttdisc參數被省略或其值為true/false，則vttdisc將預設為true
 * SSAI:安全性更新和軟體版本更新
@@ -200,4 +200,3 @@ ZD#37503 —— 快取CRS規則的Json回應，以避免重複要求。
 **PTAI 19.7.1**
 
 沒有新的限制。
-
