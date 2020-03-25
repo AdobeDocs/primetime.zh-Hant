@@ -4,7 +4,7 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -25,9 +25,9 @@ source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 如需 [Android目前發行版本的詳細資訊，請參](../release-notes/tvsdk-3x-android.md)閱。
 
-## PTAI 19.11.1的增強功能和修正
+## PTAI 20.3.3的增強功能和修正
 
-重點關注維護更新。
+專注於客戶問題修正。
 
 如需最新版動態廣告插入的詳細資訊，請參閱 [PTAI發行說明](ptai-19x-release-notes.md)。
 
