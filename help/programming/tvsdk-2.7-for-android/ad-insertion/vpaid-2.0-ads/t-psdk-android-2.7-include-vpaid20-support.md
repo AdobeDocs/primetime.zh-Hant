@@ -43,26 +43,20 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
    >此外，您只應在播放器處於「已準備」狀態時建立自訂廣告檢視，
    >
    >
-   >只有在呼叫重設時，才能處理自訂廣告檢視。 例如：   >
+   >只有在呼叫重設時，才能處理自訂廣告檢視。 例如：
    >
-   >
-   ```>
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
    >
+   >```
    >
-   ```   >
+   >最後，在您處理自訂廣告檢視之前，您必須先將它從中移除 `FrameLayout`。 例如：
    >
-
-
-
-   >最後，在您處理自訂廣告檢視之前，您必須先將它從中移除 `FrameLayout`。 例如：   >
-   >
-   >
-   ```>
-   if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
-   ```
+   >```
+   >if (_playerFrame != null) 
+   >   _playerFrame.removeAllViews(); 
+   >```
