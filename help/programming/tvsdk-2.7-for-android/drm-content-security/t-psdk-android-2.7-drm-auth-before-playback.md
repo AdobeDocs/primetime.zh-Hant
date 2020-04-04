@@ -5,7 +5,7 @@ seo-title: 播放前的DRM驗證
 title: 播放前的DRM驗證
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 
 ---
 
@@ -48,26 +48,25 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 1. 在中實施回呼 `DRMLoadMetadataListener`。
 
-       「loadDRMMetadata」會呼叫這些事件處理常式。
-       
- &quot;     java
-     public interface DRMLoadMetadataListener {
-     
-    public void onLoadMetadataUrlStart();
-      
-    /**
- * @param authNeeded     
-    *是否需要DRM驗證。
-       * @paramMetadata
-    *已獲得解析的DRMMetadata。    */
-    public void onLoadMetadataUrlComplete(boolean authNeeded, DRMetadata drmMetadata);
-      public void onLoadMetadataUrlError();
-      }
-    
- &quot;以下是有關處理     
-    
-    程式的其他詳細資訊：
+   呼叫 `loadDRMMetadata` 這些事件處理常式。
+
+   ```java
+   public interface DRMLoadMetadataListener { 
    
+       public void onLoadMetadataUrlStart(); 
+   
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
+   ```
+
+   以下是有關處理常式的其他詳細資訊：
+
    * `onLoadMetadataUrlStart` 偵測中繼資料URL載入何時開始。
    * `onLoadMetadataUrlComplete` 偵測中繼資料URL何時完成載入。
    * `onLoadMetadataUrlError` 表示無法載入中繼資料。
