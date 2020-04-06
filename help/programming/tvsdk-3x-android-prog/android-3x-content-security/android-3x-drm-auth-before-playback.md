@@ -48,26 +48,26 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 1. 在中實施回呼 `DRMLoadMetadataListener`。
 
-       「loadDRMMetadata」會呼叫這些事件處理常式。
-       
- &quot;     java
-     public interface DRMLoadMetadataListener {
-     
-    public void onLoadMetadataUrlStart();
-      
-    /**
- * @param authNeeded     
-    *是否需要DRM驗證。
-       * @paramMetadata
-    *已獲得解析的DRMMetadata。    */
-    public void onLoadMetadataUrlComplete(boolean authNeeded, DRMetadata drmMetadata);
-      public void onLoadMetadataUrlError();
-      }
+   `loadDRMMetadata`會呼叫這些事件處理常式。
+
+   ```java
+   public interface DRMLoadMetadataListener { 
     
- &quot;以下是有關處理     
+       public void onLoadMetadataUrlStart(); 
     
-    程式的其他詳細資訊：
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
    
+   ```   
+
+   程式的其他詳細資訊：
+
    * `onLoadMetadataUrlStart` 偵測中繼資料URL載入何時開始。
    * `onLoadMetadataUrlComplete` 偵測中繼資料URL何時完成載入。
    * `onLoadMetadataUrlError` 表示無法載入中繼資料。
