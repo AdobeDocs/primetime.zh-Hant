@@ -5,7 +5,7 @@ seo-title: 播放前的DRM驗證
 title: 播放前的DRM驗證
 uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
 
 ---
 
@@ -48,13 +48,13 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 1. 在中實施回呼 `DRMLoadMetadataListener`。
 
-   `loadDRMMetadata`會呼叫這些事件處理常式。
+   呼叫 `loadDRMMetadata` 這些事件處理常式。
 
    ```java
    public interface DRMLoadMetadataListener { 
-    
+   
        public void onLoadMetadataUrlStart(); 
-    
+   
        /** 
        * @param authNeeded 
        * whether DRM authentication is needed. 
@@ -63,10 +63,9 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
        public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
        public void onLoadMetadataUrlError(); 
    } 
-   
-   ```   
+   ```
 
-   程式的其他詳細資訊：
+   以下是有關處理常式的其他詳細資訊：
 
    * `onLoadMetadataUrlStart` 偵測中繼資料URL載入何時開始。
    * `onLoadMetadataUrlComplete` 偵測中繼資料URL何時完成載入。
