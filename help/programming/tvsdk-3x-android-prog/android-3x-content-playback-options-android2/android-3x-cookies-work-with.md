@@ -5,7 +5,7 @@ seo-title: 使用Cookie
 title: 使用Cookie
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -64,8 +64,9 @@ source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   將此&#39;setReadSetCookieHeader&#39;設定為false後，請使用JAVA Cookie管理員來設定關鍵要求的Cookie。
    >
+   >將此&#39;setReadSetCookieHeader&#39;設定為false後，請使用JAVA Cookie管理員來設定關鍵要求的Cookie。
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 每當C++ Cookie（來自http回應的Cookie）中有更新時，就會觸發此回呼API。 應用程式需要監聽此回呼，並可依此更新其JAVA CookieStore，如此其JAVA網路呼叫就可利用Cookie，如下所示：
 
