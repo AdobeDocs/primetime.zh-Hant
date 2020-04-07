@@ -2,7 +2,7 @@
 title: iOS版TVSDK 3.11發行說明
 description: iOS版本注意事項的TVSDK 3.11說明TVSDK iOS 3.11中有哪些新增或變更、已解決和已知問題以及裝置問題。
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
 
 ---
 
@@ -183,7 +183,6 @@ TVSDK API現在提供協力廠商VAST回應的其他資訊。 廣告ID、廣告�
 此類 `PTSDKConfig` 別提供對Adobe Primetime廣告決策、DRM和視訊分析伺服器提出要求時強制執行SSL的方法。 如需詳細資訊，請參 `forceHTTPS` 閱此類 `isForcingHTTPS` 別的和方法。 如果透過HTTPS載入資訊清單，TVSDK會保留HTTPS的內容使用，並在從資訊清單載入任何相關URL時會尊重此使用方式。
 
 >[!NOTE] 對第三方網域（例如廣告追蹤像素、內容和廣告URL）的請求以及類似的請求不會修改，內容提供者和廣告伺服器有責任提供透過HTTPS支援的URL。
-> 
 
 **1.4.18版**
 
@@ -218,7 +217,6 @@ Primetime iOS TVSDK現在支援VPAID 2.0 Javascript創意素材，以提供豐�
 **1.4.13版**
 
 >[!NOTE] Nielsen模組已從TVSDK組建版本移除，TVSDK將於近期內更新，並新增Nielsen整合模組。
-
 
 **廣告備援，廣告選擇邏輯中的菊花鏈(Zendesk #3103)**
 
@@ -403,7 +401,7 @@ Comment Type: draft
 
    增加的最大併發計 `CustomAVAssetLoaderOperations`數，以便可繼續執行資訊清單讀取。
 
-* (ZD#34373)-當不允許串流錄制時，一般使用者無法串流至HDMI連接的裝置。
+* (ZD#34373)-當不允許串流錄制時，終端用戶無法串流至HDMI連接的裝置。
 
 * (ZD#32678)- TVSDK不會在iOS上收集正確的廣告ID。
 
@@ -883,7 +881,7 @@ CPU/資源使用量過高已修正為兩個層級。 首先，讓時間更新函
 
 在PTMediaPlayerItem.prepareToPlay中初始載入manifest檔案時，如果載入資訊清單失敗，TVSDK不會向應用程式報告失敗回應的正文。
 
-此問題已解決，因為TVSDK會將失敗回應報告為應用程式的錯誤。
+此問題已解決，方法是讓TVSDK將失敗回應報告為應用程式的錯誤。
 
 * (ZD #19615)-備援邏輯無法運作
 
@@ -979,7 +977,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 當檢查描述檔和層級是否受支援時，當呼叫MediaCodecList和MediaCodecInfo API時，會發生此損毀。 Adobe正尋求Google的支援，以取得更多見解。 此問題已解決，方法是提前載入所有轉碼器資訊，以避免只在需要轉碼器資訊時呼叫這些API。
 
-* (Zendesk #18074)-在Nexus與Android 6.0上無法使用阿拉伯文字幕
+* (Zendesk #18074)-在Nexus與Android 6.0搭配使用時無法使用阿拉伯文字幕
 
 此問題已透過支援Android CTS字型圖而解決。
 
@@ -1108,9 +1106,11 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 ## 裝置認證與支援 {#device-certification-and-support}
 
 >[!NOTE]
-TVSDK不支 **援** 下列功能：
-* 在任何平台或版本上都能執行慢動作。
-* 即時戲法遊戲。
+>
+>TVSDK不支 **援** 下列功能：
+>
+>* 在任何平台或版本上都能執行慢動作。
+>* 即時戲法遊戲。
 
 
 **1.4.43版**
