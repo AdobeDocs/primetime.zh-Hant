@@ -5,7 +5,7 @@ seo-title: 實作VPAID 2.0整合
 title: 實作VPAID 2.0整合
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
 
 ---
 
@@ -45,18 +45,19 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
    >
    >只有在呼叫重設時，才能處理自訂廣告檢視。 例如：
    >
-   >```
+   >
+   ```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
-   >
    >```
    >
    >最後，在您處理自訂廣告檢視之前，您必須先將它從中移除 `FrameLayout`。 例如：
    >
-   >```
+   >
+   ```
    >if (_playerFrame != null) 
-   >   _playerFrame.removeAllViews(); 
+   >       _playerFrame.removeAllViews(); 
    >```
