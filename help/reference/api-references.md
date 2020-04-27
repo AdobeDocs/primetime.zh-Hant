@@ -5,12 +5,15 @@ description: API可協助您快速輕鬆地建立功能應用程式或整合。
 seo-description: API可協助您快速輕鬆地建立功能應用程式或整合。
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 7994dee271231af8e20f3aadadb1cfd6660ceb4e
+source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 ---
 
 
 # Adobe Primetime API參考 {#api-references}
+
++ TVSDK 3.11 {#tvsdk-311}
+   + [Android專用TVSDK 3.11](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_311/index.html)
 
 + TVSDK 3.5 {#tvsdk-35}
    + [iOS專用的TVSDK 3.5](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v35/index.html)
