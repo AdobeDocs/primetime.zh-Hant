@@ -4,7 +4,7 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: b986cdcb772c692cf71361d7c04b92130b3e0eea
 
 ---
 
@@ -13,11 +13,9 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
-## TVSDK 3.11 Android中的修正
-
-此版本增強了對Widevine DRM的支援，並解決了主要客戶問題。
-
-如需 [Android目前發行版本的詳細資訊，請參](../release-notes/tvsdk-3x-android.md)閱。
+<!-- ## Fixes in TVSDK 3.11 Android
+The release enhanced support for Widevine DRM and resolved top customer issues.
+Check out for more information about the current released version for [Android](../release-notes/tvsdk-3x-android.md). -->
 
 ## TVSDK 3.11 iOS版本注意事項中的增強功能和修正
 
