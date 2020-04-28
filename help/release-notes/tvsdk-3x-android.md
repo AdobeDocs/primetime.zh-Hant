@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
+source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
 
 ---
 
@@ -393,7 +393,7 @@ Android 2.5.1中發行的重要新功能。
 
 本節提供TVSDK 3.11 Android版本中已解決問題的摘要。
 
-* 在Android TVSDK參考應用程式中，韓文字元會顯示為含WebVTT的HLS資料清單遺失字元符號。
+* ZD#41252 —— 在Android TVSDK參考應用程式中，韓文字元會顯示為HLS資料清單及WebVTT的遺失字元符號。
 
 ### 已解決舊版中的問題
 
