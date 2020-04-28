@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
+source-git-commit: b71ac860652f53b171926b570c004db2351d3d3a
 
 ---
 
@@ -136,8 +136,9 @@ TVSDK現在允許擷取與目前載入的媒體資源相關的保護系統特定
 
    如需詳細資訊，請參閱API和事件變更的TVSDK 3.0 for Android程式設計人員指南。
 
-* **更新 `targetSdkVersion` 至最新版本\
-   **更新 `targetSdkVersion` 從19更新至27，讓工作更順暢。
+* **更新`targetSdkVersion`至最新版本**
+
+   更新 `targetSdkVersion` 至19至27，讓工作更順暢。
 
 * **Placement.Type getPlacementType()現在是介面TimelineMarker上的方法**
 
