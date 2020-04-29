@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
+source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
 
 ---
 
@@ -333,7 +333,7 @@ Android 2.5.1中發行的重要新功能。
 |---|---|---|
 | 一般播放（播放、暫停、搜尋） | VOD + Live | Y |
 | FER —— 一般播放（播放、暫停、搜尋） | FER VOD | Y |
-| 在廣告播放時尋找 | 即時 | 不支援 |
+| 在廣告播放時尋找 | VOD + Live | 不支援 |
 | AC3 | VOD + Live | 不支援 |
 | MP3 | VOD | 不支援 |
 | MP4內容播放 | VOD | Y |
@@ -399,7 +399,7 @@ Android 2.5.1中發行的重要新功能。
 | DRM | VOD + Live | 僅限Primetime DRM(未來：Widevine) |
 | 外部播放(RBOP) | VOD + Live | 僅限Primetime DRM |
 | 授權輪換 | VOD + Live | 僅限Primetime DRM |
-| 鍵旋轉 | VOD + Live | Primetime DRM和Widevine DRM |
+| 鍵旋轉 | VOD + Live | 僅限Primetime DRM |
 
 | 功能 | 內容類型 | HLS |
 |---|---|---|
@@ -414,7 +414,7 @@ Android 2.5.1中發行的重要新功能。
 
 本節提供TVSDK 3.11 Android版本中已解決問題的摘要。
 
-* ZD#41252 —— 在Android TVSDK參考應用程式中，韓文字元會顯示為HLS資料清單及WebVTT的遺失字元符號。
+* ZD#41252 - WebVTT中的韓文字元在Android 7.1之後中斷。
 
 ### 已解決舊版中的問題
 
