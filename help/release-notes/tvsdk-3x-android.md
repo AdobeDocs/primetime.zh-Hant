@@ -1,14 +1,14 @@
 ---
 title: TVSDK 3.11 for Android版本注意事項
 seo-title: TVSDK 3.11 for Android版本注意事項
-description: TVSDK 3.11 for Android發行說明說明TVSDK Android 3.10中的新增或變更、已解決和已知問題以及裝置問題
+description: TVSDK 3.11 for Android發行說明說明TVSDK Android 3.11中的新增或變更、已解決和已知問題以及裝置問題
 seo-description: TVSDK 3.11 for Android發行說明說明TVSDK Android 3.11中的新增或變更、已解決和已知問題以及裝置問題
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 26b0622f807405eaec9cfe162799111ed340e02c
+source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
 
 ---
 
@@ -97,46 +97,58 @@ TVSDK現在允許擷取與目前載入的媒體資源相關的保護系統特定
 * **平行廣告解析度與資訊清單下載支援**
 
    * TVSDK 3.2支援同步解析度，而非依序解析度，以處理除VMAP以外的所有廣告要求和廣告中斷。
+
    * 廣告分段中的所有廣告資訊清單都會同時下載。
+
 * **已啟用廣告解析度和資訊清單下載逾時支援。**
 
    * 使用者現在可以設定整體廣告解析度和資訊清單下載的逾時值。  在VMAP中，逾時值會套用至個別廣告插播，因為所有廣告插播都會依序解決。
+
 * **在AdvertisingMetadata類別中引入新的API:**
 
-   * void setAdResolutionTimeout(int adResolutionTimeout)
-   * int getAdResolutionTimeout()
-   * void setAdManifestTimeout(int adManifestTimeout)
-   * int getAdManifestTimeout()
+   * `void setAdResolutionTimeout(int adResolutionTimeout)`
+
+   * `int getAdResolutionTimeout()`
+
+   * `void setAdManifestTimeout(int adManifestTimeout)`
+
+   * `int getAdManifestTimeout()`
+
 * **從AdvertisingMetadata類別的API下方移除：**
 
-   * void setAdRequestTimeout(int adRequestTimeout)
-   * int getAdRequestTimeout()
+   * `void setAdRequestTimeout(int adRequestTimeout)`
+
+   * `int getAdRequestTimeout()`
+
 * **使用AC3/EAC3音訊轉碼器可播放串流**
 
-   * void alwaysUseAC3OnSupportedDevices(boolean val)in MediaPlayer類別
+   * `void alwaysUseAC3OnSupportedDevices(boolean val)` 在類 `MediaPlayer` 中
+
 * **TVSDK支援CMAF和純串流播放，以播放加密的Widevine CTR。**
+
 * **現在支援播放4K HEVC串流。**
+
 * **並行廣告呼叫請求** - TVSDK現在可並行預取20個廣告呼叫請求。
 
 **3.0版**
 
 * **TVSDK 3.0支援高效率視訊編碼(HEVC)串流。**
 
-* **即時——解析更接近廣告標籤的廣告**
+* **即時——解析更靠近廣告標籤的廣告現在可**&#x200B;以獨立解決每個廣告分隔。 以前，廣告解決方案是分兩階段進行的：在播放開始之前已解決預卷問題，在播放開始之後，所有中／後滾動插槽都已合併。 透過這項增強功能，現在每個廣告插播都會在廣告提示點之前的特定時間解決。
 
-   「懶惰廣告解析」現在可獨立解決每個廣告分隔。 以前，廣告解決方案是分兩階段進行的：在播放開始之前已解決預卷問題，在播放開始之後，所有中／後滾動插槽都已合併。 透過這項增強功能，現在每個廣告插播都會在廣告提示點之前的特定時間解決。
+> [!NOTE]
+>
+> 「懶惰廣告解決」現在已變更為預設關閉，而且必須明確啟用。
 
-   **請注意：「懶惰廣告解決」現在已變更為預設關閉，而且必須明確啟用。**
+新增API以取得與此廣 `AdvertisingMetadata::setDelayAdLoadingTolerance` 告中繼資料相關的延遲廣告載入容限。\
+現在，搜尋在準備後立即允許，搜尋廣告中斷將在搜尋完成前立即解決。\
+支援信 `SERVER_MAP` 令 `MANIFEST_CUES` 模式和。
 
-   新的API會新增至 *AdvertisingMetadata::setDelayAdLoadingTolerance* ，以取得與此廣告中繼資料相關的延遲廣告載入容限。\
-   現在在準備後將立即允許搜索，搜索廣告中斷將在搜索完成之前立即獲得解決。\
-   信令模式支援SERVER_MAP和MANIFEST_CEAS。
+如需詳細資訊，請參 [閱API和事件變更的TVSDK 3.0 for Android Programmer&#39;s Guide](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md) 。
 
-   如需詳細資訊，請參閱API和事件變更的TVSDK 3.0 for Android程式設計人員指南。
+* **更新`targetSdkVersion`至最新版**
 
-* **更新`targetSdkVersion`至最新版本**
-
-   更新 `targetSdkVersion` 至19至27，讓工作更順暢。
+更新 `targetSdkVersion` 自19至27，讓工作更順暢。
 
 * **Placement.Type getPlacementType()現在是介面TimelineMarker上的方法**
 
@@ -167,6 +179,7 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
    範例：使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
 
    * 第二個廣告會在剩餘期間（20秒）播放，接著是第三個廣告。
+
    * 不會引發已播放之部分廣告（第二個廣告）的廣告追蹤器。 只有第三個廣告的追蹤器會被觸發。
 
 * **透過HTTPS安全載入廣告**
@@ -175,7 +188,7 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
 
 * **新增至CRS請求的AdSystem和Creative Id**
 
-   * 現在在1401和1403個請求中加入「AdSystem」和「CreativeId」作為新參數。
+   現在，在1401 `AdSystem` 和 `CreativeId` 1403項要求中加入並作為新參數。
 
 * **NetworkConfiguration類別中的API setEncodeUrlForTracking** ，因為URL中不安全的字元應加以編碼。
 
@@ -183,17 +196,17 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
 
 Android TVSDK v2.5.4提供下列更新和API變更：
 
-* WebViewDebbuging的預設值變更
+* 預設值的變更 `WebViewDebbuging`
 
-   WebViewDebuging值預設為False。 若要啟用它，請在應用程式中呼叫setWebContentsDebuggingEnabled(true)。
+   `WebViewDebbuging` 值預設 `Fals`為e。 若要啟用，請在應用 `setWebContentsDebuggingEnabled(true)` 程式中呼叫。
 
-* OpenSSL和Curl版本升級
+* **OpenSSL和Curl版本升級**
 
    將libcurl更新為v7.57.0，將OpenSSL更新為v1.0.2k。
 
 * VAST回應物件的應用程式層級存取
 
-   引入新的API NetworkAdInfo::getVastXml()，可讓您存取應用程式的VAST回應物件。
+   引入新的API `NetworkAdInfo::getVastXml()` ，可讓您存取應用程式的WAST回應物件。
 
 **2.5.3版**
 
@@ -205,23 +218,24 @@ Android TVSDK v2.5.3提供下列更新和API變更。
 
 * TVSDK的使用者代理可自訂：我們新增了一些新API來自訂使用者代理。
 
-   * setCustomUserAgent（String值）
-   * getCustomUserAgent()
+   * `setCustomUserAgent(String value)`
+   * `getCustomUserAgent()`
 
 * 在Android應用程式與TVSDK之間共用Cookie:Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。 現在，您可以在原生C++圖層中設定和／或修改Cookie，因為Cookie會暴露在Java Cookie商店中。
+
 * API變更：
 
-   * 新增事件CookieUpdatedEvent。 當Cookie更新時，媒體播放器會傳送它。
+   * 會新增一 `CookiesUpdatedEvent` 個事件。 當Cookie更新時，媒體播放器會傳送它。
 
-   * 新的API會新增至NetworkConfiguration::set/getCustomUserAgent()，以使用自訂使用者代理。
+   * 新增API以使用自 `NetworkConfiguration::set/ getCustomUserAgent()` 訂使用者代理。
 
-   * 新的API已新增至NetworkConfiguration::set/getEncodedUrlForTracking，以強制對不安全字元進行編碼。
+   * 新增API以強制「不安 `NetworkConfiguration::set/ getEncodedUrlForTracking` 全」字元編碼。
 
-   * NetworkConfiguration::getNetworkDownVerificationUrl()中新增了一個API，以在發生故障切換時設定網路驗證URL。
+   * 新增API以設 `NetworkConfiguration::getNetworkDownVerificationUrl()` 定網路驗證URL，以備發生容錯移轉時使用。
 
-   * TextFormat::treatSpaceAsAlphaNum會新增一個屬性，可定義在顯示標題時是否將空格視為英數字元。
+   * 新增屬性，定義在顯 `TextFormat::treatSpaceAsAlphaNum` 示標題時是否將空格視為英數字元。
 
-* SizeAvailableEvent中的變更：以前，2.5.2中SizeAvailableEvent的getHeight()和getWidth()方法會用來傳回由媒體格式傳回的影格高度和影格寬度。 現在它分別返回解碼器返回的輸出高度和輸出寬度。
+* 變更 `SizeAvailableEvent`。 以前 `getHeight()` 的2. `getWidth()` 5.2中 `SizeAvailableEvent` 用於傳回媒體格式傳回的影格高度和影格寬度的方法。 現在它分別返回解碼器返回的輸出高度和輸出寬度。
 
 * 緩衝行為的變更：緩衝行為已變更。 在緩衝區為空時，應用程式開發人員需自行決定要做什麼。 2.5.3在緩衝區空的情況下使用播放緩衝區大小。
 
@@ -233,37 +247,38 @@ Android TVSDK v2.5.2提供重要的錯誤修正和一些API變更。
 
 Android 2.5.1中發行的重要新功能。
 
-* **效能**&#x200B;改進全新的TVSDK 2.5.1架構提供多項效能改進。 根據來自第三方基準研究的統計資料，新體系結構可將啟動時間縮短5倍，並減少掉幀數，與行業平均水準相比減少3.8倍：
+* **效能改進** -全新的TVSDK 2.5.1架構提供多項效能改進。 根據來自第三方基準研究的統計資料，新體系結構可將啟動時間縮短5倍，並減少掉幀數，與行業平均水準相比減少3.8倍：
 
-   * **VOD和即時的即時啟動(Instant on for VOD and live** )-當您啟用即時啟動時，TVSDK會在播放開始前初始化媒體並緩衝媒體。 由於您可以在背景同時啟動多個MediaPlayerItemLoader例項，因此可以緩衝多個串流。 當使用者變更頻道，而串流已正確緩衝時，新頻道上的播放會立即開始。 TVSDK 2.5.1也支援即時串流的 **Instant** On。 即時視窗移動時，即時串流會重新緩衝。
+* **VOD和即時的即時啟動(Instant on for VOD and live** )-當您啟用即時啟動時，TVSDK會在播放開始前初始化媒體並緩衝媒體。 由於您可以在背景同時啟動多個MediaPlayerItemLoader例項，因此可以緩衝多個串流。 當使用者變更頻道，而串流已正確緩衝時，新頻道上的播放會立即開始。 TVSDK 2.5.1也支援即時串流的 **Instant** On。 即時視窗移動時，即時串流會重新緩衝。
 
-   * **改進的ABR邏輯** -新的ABR邏輯基於緩衝區長度、緩衝區長度變化率和測量頻寬。 這確保了ABR在頻寬波動時選擇正確的比特率，並且還通過監視緩衝器長度變化的速率來優化比特率切換的實際發生的次數。
+* **改進的ABR邏輯** -新的ABR邏輯基於緩衝區長度、緩衝區長度變化率和測量頻寬。 這確保了ABR在頻寬波動時選擇正確的比特率，並且還通過監視緩衝器長度變化的速率來優化比特率切換的實際發生的次數。
 
-   * **部分區段下載／子區段-** TVSDK進一步縮減每個片段的大小，以便盡快開始播放。 ts片段必須每隔兩秒有一個關鍵影格。
+* **部分區段下載／子區段-** TVSDK進一步縮減每個片段的大小，以便盡快開始播放。 ts片段必須每隔兩秒有一個關鍵影格。
 
-   * **懶惰廣告解析度** - TVSDK不會等到非預先播放廣告的解析度後，再開始播放，因此會縮短啟動時間。 在所有廣告都解決之前，仍不允許搜尋和特技播放等API。 這適用於CSAI使用的VOD串流。 在廣告解析完成前，不允許搜尋和快進等操作。 對於即時串流，無法在即時事件期間啟用此功能以取得廣告解析度。
+* **懶惰廣告解析度** - TVSDK不會等到非預先播放廣告的解析度後，再開始播放，因此會縮短啟動時間。 在所有廣告都解決之前，仍不允許搜尋和特技播放等API。 這適用於CSAI使用的VOD串流。 在廣告解析完成前，不允許搜尋和快進等操作。 對於即時串流，無法在即時事件期間啟用此功能以取得廣告解析度。
 
-   * **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
+* **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器 *保持連線* 。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
 
-   * **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降至最低。
+* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降至最低。
 
-   * **平行廣告下載** - TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
+* **平行廣告下載** - TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
 
 * **播放**
 
-   * **MP4內容播放-** MP4短片不需重新轉碼，就可在TVSDK中播放。
-      > [!NOTE]
-      >
-      > MP4播放不支援ABR切換、特技播放、廣告插入、延遲音訊系結和子分段。
+* **MP4內容播放-** MP4短片不需重新轉碼，就可在TVSDK中播放。
 
-   * **使用可調式位元速率(ABR)進行特技播放** -此功能可讓TVSDK在特技播放模式下在iFrame串流之間切換。 您可以使用非iFrame描述檔，以較低的速度進行特技播放。
+   > [!NOTE]
+   >
+   > MP4播放不支援ABR切換、特技播放、廣告插入、延遲音訊系結和子分段。
 
-   * **更順暢的特技播放** -這些增強功能可增強使用者體驗：
+* **使用可調式位元速率(ABR)進行特技播放** -此功能可讓TVSDK在特技播放模式下在iFrame串流之間切換。 您可以使用非iFrame描述檔，以較低的速度進行特技播放。
 
-      * 在特技播放期間，根據頻寬和緩衝區描述檔選擇自適應比特率和幀速率
+* **更順暢的特技播放** -這些增強功能可增強使用者體驗：
 
-      * 使用主串流（而非IDR串流），以快速播放高達30 fps。
+   * 在特技播放期間，根據頻寬和緩衝區描述檔選擇自適應比特率和幀速率
+
+   * 使用主串流（而非IDR串流），以快速播放高達30 fps。
 
 * **內容保護**
 
@@ -291,15 +306,22 @@ Android 2.5.1中發行的重要新功能。
 
    * `getHeight()` 以及 `getWidth()` 將分 `SizeAvailableEvent` 別以高度和寬度返回輸出的方法。 顯示外觀比例的計算方式如下：
 
-      SizeAvailableEvent e;DAR = e.getWidth()/ e.getHeight();
+      ```java
+      SizeAvailableEvent e;
+      DAR = e.getWidth()/ e.getHeight();
+      ```
 
       在Sar寬度和Sar高度方面，儲存高寬比也可用於計算幀寬和幀高：
 
-      SAR = e.getSarWidth()/e.getSarHeight();frameHeight = e.getHeight();frameWidth = e.getWidth()/SAR;
+      ```java
+      SAR = e.getSarWidth()/e.getSarHeight();
+      frameHeight = e.getHeight();
+      frameWidth = e.getWidth()/SAR;
+      ```
 
 * **Cookie**
 
-   * Android TVSDK現在支援存取儲存在Android應用程式CookieStore中的JAVA Cookie。 每當新Cookie成為「Set-Cookie」回應標題的一部分時，都會提供回呼API(onCookieUpdated)來記錄。 這些Cookie是以HttpCookie清單的形式提供，用於不同URI/網域，方法是使用CookieStore在該特定URI/網域上設定這些Cookie值。 同樣地，TVSDK中的Cookie值也會使用CookieStore新增API來更新。
+   * Android TVSDK現在支援存取儲存在Android應用程式CookieStore中的JAVA Cookie。 每當新Cookie成為Set-Cookie回應標題的一部分時，都會提供回呼API(onCookieUpdated) **** 來記錄。 這些Cookie是以HttpCookie清單的形式提供，用於不同URI/網域，方法是使用CookieStore在該特定URI/網域上設定這些Cookie值。 同樣地，TVSDK中的Cookie值也會使用CookieStore新增API來更新。
 
 ## 功能矩陣 {#feature-matrix}
 
