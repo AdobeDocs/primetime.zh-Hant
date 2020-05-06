@@ -1,10 +1,10 @@
 ---
-title: PTAI 20.3.3發行說明
+title: PTAI 20.5.1發行說明
 description: PTAI 20.5.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 **時間：** 2020年3月26日星期四東部時間凌晨3點至4點
 
-* SSAI 4XX和5XX回應現在可正確提供CORS相關標題，讓跨網域javascript/webview用戶端可成功讀取錯誤回應。
+* SSAI 4XX和5XX回應現在可正確提供CORS相關標題，讓跨網域javascript/網頁檢視用戶端可成功讀取錯誤回應。
 
 * 修正X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
@@ -48,21 +48,23 @@ ht-degree: 0%
 
 **時間：** 2020年1月28日，星期二，東部時間凌晨2:00至3:00
 
-* **VMAP支援「nbc」 CueFormat** Convert seams from FER串流提示為FW時間軸覆寫參數，當使用ptcueformat=nbc且該串流是具有資訊清單內提示和內嵌廣告的VOD串流時。
+* **VMAP搭配FER支援nbc CueFormat**
 
-* 在轉送至第三方廣告供應商/CDN之前，先淨化HTTP標題中的使用者代理欄位。
+   將FER串流的提示轉換為FW時間軸覆寫參數(當使 `ptcueformat=nbc` 用時)，且該串流是VOD串流，包含資訊清單內提示和內建廣告。
 
-* 在傳送至Auditude和其他廣告供應商CDN之前，從「使用者代理」HTTP標題中篩除控制／不可列印的字元（ascii碼&lt; 32）。 用於失敗此類無效標題的Auditude廣告呼叫。
+* 在轉送至協力廠商廣告提供者/CDN之前，先淨化HTTP標題中的使用者代理欄位。
+
+* 在傳送至Auditude和其他廣告供應商CDN之前，先從使用者代理HTTP標題中篩除控制／不可列印的字元（ASCII程式碼&lt; 32）。 用於失敗此類無效標題的Auditude廣告呼叫。
 
 * 從NetStorage Groups清除舊的V1對象，使對象計數保持在Akamai的安全限制內。
 
 ## 已解決問題
 
-如果解決方法與報告的問題相關聯，則顯示Zendesk參考。 例如ZD#xxxxx。
+如果解決方法與報告的問題相關聯，則顯示Zendesk參考。 例如，ZD#xxxxx。
 
 **PTAI 20.3.3**
 
-* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，無法正確進行URL編碼。
+* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
 * CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE數字在某些情況下會不正確地增加
 
