@@ -1,17 +1,40 @@
 ---
 title: PTAI 20.3.3發行說明
-description: PTAI 20.3.3發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
+description: PTAI 20.5.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# Primetime動態廣告插入20.3.3發行說明
+# Primetime動態廣告插入20.5.1發行說明
 
-動態廣告插入20.3.3發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
+動態廣告插入20.5.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
 
-## PTAI 20.3.3的新增功能
+## PTAI 20.5.1的新增功能
+
+**時間：** 2020年5月5日星期二東部時間凌晨4時至5時
+
+* 修正在傳送If-Modified-Since標題時，確保提供正確的CORS標題的問題。
+
+* CRS儀表板上的錯誤修正。
+
+* 維護更新。
+
+## 舊版中的變更
+
+### 20.3.4版
+
+**時間：** 2020年4月1日星期三東部時間凌晨3點至4點
+
+* 修正在VOD/WebVTT中插入廣告後，字幕不同步的問題。
+
+* 安全性更新。
+
+### 20.3.3版
 
 **時間：** 2020年3月26日星期四東部時間凌晨3點至4點
 
@@ -19,17 +42,19 @@ source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 * 修正X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
-* 修正CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE編號會錯誤增加
+* 修正CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE編號會錯誤增加。
 
-## 舊版中的變更
+### 20.1.3版
 
-### 版本
+**時間：** 2020年1月28日，星期二，東部時間凌晨2:00至3:00
 
-**時間：**
+* **VMAP支援「nbc」 CueFormat** Convert seams from FER串流提示為FW時間軸覆寫參數，當使用ptcueformat=nbc且該串流是具有資訊清單內提示和內嵌廣告的VOD串流時。
 
-### 版本
+* 在轉送至第三方廣告供應商/CDN之前，先淨化HTTP標題中的使用者代理欄位。
 
-**時間：**
+* 在傳送至Auditude和其他廣告供應商CDN之前，從「使用者代理」HTTP標題中篩除控制／不可列印的字元（ascii碼&lt; 32）。 用於失敗此類無效標題的Auditude廣告呼叫。
+
+* 從NetStorage Groups清除舊的V1對象，使對象計數保持在Akamai的安全限制內。
 
 ## 已解決問題
 
@@ -37,7 +62,7 @@ source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 **PTAI 20.3.3**
 
-* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
+* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，無法正確進行URL編碼。
 
 * CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE數字在某些情況下會不正確地增加
 
