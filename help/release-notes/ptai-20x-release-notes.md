@@ -2,7 +2,7 @@
 title: PTAI 20.5.1發行說明
 description: PTAI 20.5.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 7c6acf4b310a7df4ea79a5974f66f7f4b615b21c
+source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -117,7 +117,7 @@ ht-degree: 0%
 
 **PTAI 20.3.3**
 
-* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
+* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，無法正確進行URL編碼。
 
 * CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE數字在某些情況下會不正確地增加
 
