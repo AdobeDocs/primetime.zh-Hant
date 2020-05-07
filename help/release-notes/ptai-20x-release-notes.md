@@ -2,9 +2,9 @@
 title: PTAI 20.5.1發行說明
 description: PTAI 20.5.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
+source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 **時間：** 2020年3月26日星期四東部時間凌晨3時至4時
 
-* SSAI 4XX和5XX回應現在可正確提供CORS相關標題，讓跨網域javascript/網頁檢視用戶端可成功讀取錯誤回應。
+* SSAI 4XX和5XX回應現在可正確提供與CORS相關的標題，讓跨網域javascript網頁檢視用戶端可成功讀取錯誤回應。
 
 * 修正X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 * 從NetStorage Groups清除舊的V1對象，使對象計數保持在Akamai的安全限制內。
 
-### 20.1.2版修補程 [式]
+### 20.1.2版（修補程式）
 
 **時間：** 2020年1月20日星期一東部時間凌晨2時至3時
 
@@ -103,7 +103,7 @@ ht-degree: 0%
 
 ## 已解決問題
 
-如果解決方法與報告的問題相關聯，則顯示Zendesk參考。 例如，ZD#xxxxx。
+如果解決方法與報告的問題相關聯，則顯示Zendesk參考。 例如， `ZD#xxxxx`
 
 **PTAI 20.5.1**
 
