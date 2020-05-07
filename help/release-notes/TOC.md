@@ -4,7 +4,10 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime發行說明
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: 7dd4dced32253a3d94e753a49a4b52a60bbba4b1
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +16,7 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 + [發行說明概觀](home.md)
 + Primetime動態廣告插入 {#ptai}
-   + [PTAI 20.3.3發行說明](ptai-20x-release-notes.md)
+   + [PTAI 20.5.1發行說明](ptai-20x-release-notes.md)
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
 + iOS版TVSDK {#tvsdk-ios}
    + [iOS版TVSDK 3.11發行說明](tvsdk-3x-ios.md)
