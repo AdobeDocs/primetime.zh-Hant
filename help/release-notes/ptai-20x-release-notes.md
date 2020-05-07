@@ -2,9 +2,9 @@
 title: PTAI 20.5.1發行說明
 description: PTAI 20.5.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 90f75f263e96ea37dd93a91f4392077ea2c70f32
+source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,26 @@ ht-degree: 0%
 * 修正X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
 * 修正CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE編號會錯誤增加。
+
+### 20.3.2版
+
+**時間：** 2020年3月11日星期三東部時間05時30分至07時
+
+* SCTE35信號處理的改進。
+
+* 維護更新。
+
+### 20.3.1版
+
+**時間：** 2020年3月05日星期四東部時間凌晨2點30分至4點30分
+
+* 效能改進：
+
+   * 新增主／媒體m3u8資料清單的快取支援。 這些清單現在會回應快取控制： 公開和最大年齡標題，這通常可改善視訊開始效能。
+
+   * 新增支援強制透過http擷取https創作元素，這也可改善視訊開始效能。
+
+* 安全性和維護修正。
 
 ### 20.2.1版
 
@@ -87,7 +107,7 @@ ht-degree: 0%
 
 **PTAI 20.3.3**
 
-* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，無法正確進行URL編碼。
+* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
 * CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE數字在某些情況下會不正確地增加
 
