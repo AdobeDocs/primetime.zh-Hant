@@ -2,7 +2,7 @@
 title: PTAI 20.5.1發行說明
 description: PTAI 20.5.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
+source-git-commit: 7c6acf4b310a7df4ea79a5974f66f7f4b615b21c
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
