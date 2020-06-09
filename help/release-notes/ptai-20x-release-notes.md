@@ -1,20 +1,40 @@
 ---
-title: PTAI 20.5.1發行說明
-description: PTAI 20.5.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
+title: PTAI 20.6.1發行說明
+description: PTAI 20.6.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
+source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 
-# Primetime動態廣告插入20.5.1發行說明
+# Primetime動態廣告插入20.6.1發行說明
 
-動態廣告插入20.5.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
+動態廣告插入20.6.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
 
-## PTAI 20.5.1的新增功能
+## PTAI 20.6.1的新增功能
+
+**時間：** 2020年6月2日星期二東部時間凌晨3時至5時
+
+**新功能**
+
+聯絡Adobe支援，透過伺服器端組態啟用下列新功能：
+
+* 資訊清單操縱： HLS區段和資源URL現在可在HTTP和HTTPS之間轉換，以減少後端要求的TLS交握，進而提高效能。 它也可用來將廣告／內容片段統一到相同的CDN上。
+
+* 長格式VOD: 改良的API，可使用長格式VOD資產維持工作階段的持續運作。
+
+**錯誤修正**
+
+* 修正無論所請求的原始通訊協定為何，一律在http通訊協定下要求WebVTT片段的問題。
+
+* 修正從廣告切換回內容時，從播放清單頂端移除EXT-X-DINSTRUCTION標籤的問題。 請聯絡Adobe支援以啟用此修正。
+
+## 舊版中的變更
+
+### 20.5.1版
 
 **時間：** 2020年5月5日星期二東部時間04:00至05:00
 
@@ -23,8 +43,6 @@ ht-degree: 0%
 * CRS儀表板上的錯誤修正。
 
 * 維護更新。
-
-## 舊版中的變更
 
 ### 20.3.4版
 
