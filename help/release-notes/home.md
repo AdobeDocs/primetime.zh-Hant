@@ -4,9 +4,9 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
+source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Primetime發行說明
 
-歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題
+歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
+
+## PTAI 20.6.1的增強功能和修正
+
+本版次著重於資訊清單操縱和改善API等功能，以維持長格式VOD資產的作業持續運作。 此版本還整合了對主要客戶問題的修正。
+
+如需最新版動態廣告插入的詳細資訊，請參閱 [PTAI發行說明](ptai-20x-release-notes.md)。
 
 ## TVSDK 3.12 iOS版本注意事項中的增強功能和修正
 
 本版次著重於解決主要客戶問題。
 
 如需 [iOS目前發行版本的詳細資訊，請](../release-notes/tvsdk-3x-ios.md)參閱。
-
-## PTAI 20.5.1的增強功能和修正
-
-專注於解決客戶的主要問題。
-
-如需最新版動態廣告插入的詳細資訊，請參閱 [PTAI發行說明](ptai-20x-release-notes.md)。
 
 ## TVSDK 3.11 Android中的修正
 
