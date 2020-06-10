@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+workflow-type: tm+mt
+source-wordcount: '5490'
+ht-degree: 0%
 
 ---
 
@@ -134,7 +137,7 @@ TVSDK現在允許擷取與目前載入的媒體資源相關的保護系統特定
 
 * **TVSDK 3.0支援高效率視訊編碼(HEVC)串流。**
 
-* **即時——解析更靠近廣告標籤的廣告現在可**&#x200B;以獨立解決每個廣告分隔。 以前，廣告解決方案是分兩階段進行的：在播放開始之前已解決預卷問題，在播放開始之後，所有中／後滾動插槽都已合併。 透過這項增強功能，現在每個廣告插播都會在廣告提示點之前的特定時間解決。
+* **即時——解析更靠近廣告標籤的廣告現在可**&#x200B;以獨立解決每個廣告分隔。 以前，廣告解決方案是分兩階段進行的： 在播放開始之前已解決預卷問題，在播放開始之後，所有中／後滾動插槽都已合併。 透過這項增強功能，現在每個廣告插播都會在廣告提示點之前的特定時間解決。
 
 > [!NOTE]
 >
@@ -176,7 +179,7 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
 * **部分插入廣告分段**
 
    在加入廣告中間而不觸發部分受觀看廣告的追蹤的電視類體驗。\
-   範例：使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
+   範例： 使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
 
    * 第二個廣告會在剩餘期間（20秒）播放，接著是第三個廣告。
 
@@ -212,16 +215,16 @@ Android TVSDK v2.5.4提供下列更新和API變更：
 
 Android TVSDK v2.5.3提供下列更新和API變更。
 
-* 建議所有使用CRS的TVSDK客戶使用TVSDK 2.5.3.85或最新版Android應用程式升級。 這將取代現有應用程式實作的下拉式。 在TVSDK升級後，在Proxy工具中檢查CRS創意URL要求(例如：Charles)，並確認路徑中的主機名稱和版本反映如下範例URL結構中。
+* 建議所有使用CRS的TVSDK客戶使用TVSDK 2.5.3.85或最新版Android應用程式升級。 這將取代現有應用程式實作的下拉式。 在TVSDK升級後，在Proxy工具中檢查CRS創意URL要求(例如： Charles)，並確認路徑中的主機名稱和版本反映如下範例URL結構中。
 
    `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
-* TVSDK的使用者代理可自訂：我們新增了一些新API來自訂使用者代理。
+* TVSDK的使用者代理可自訂： 我們新增了一些新API來自訂使用者代理。
 
    * `setCustomUserAgent(String value)`
    * `getCustomUserAgent()`
 
-* 在Android應用程式與TVSDK之間共用Cookie:Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。 現在，您可以在原生C++圖層中設定和／或修改Cookie，因為Cookie會暴露在Java Cookie商店中。
+* 在Android應用程式與TVSDK之間共用Cookie: Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。 現在，您可以在原生C++圖層中設定和／或修改Cookie，因為Cookie會暴露在Java Cookie商店中。
 
 * API變更：
 
@@ -237,7 +240,7 @@ Android TVSDK v2.5.3提供下列更新和API變更。
 
 * 變更 `SizeAvailableEvent`。 以前 `getHeight()` 的2. `getWidth()` 5.2中 `SizeAvailableEvent` 用於傳回媒體格式傳回的影格高度和影格寬度的方法。 現在它分別返回解碼器返回的輸出高度和輸出寬度。
 
-* 緩衝行為的變更：緩衝行為已變更。 在緩衝區為空時，應用程式開發人員需自行決定要做什麼。 2.5.3在緩衝區空的情況下使用播放緩衝區大小。
+* 緩衝行為的變更： 緩衝行為已變更。 在緩衝區為空時，應用程式開發人員需自行決定要做什麼。 2.5.3在緩衝區空的情況下使用播放緩衝區大小。
 
 **2.5.2版**
 
@@ -260,7 +263,7 @@ Android 2.5.1中發行的重要新功能。
 * **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器 *保持連線* 。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
 
-* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降至最低。
+* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降到最低。
 
 * **平行廣告下載** - TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
 
@@ -334,7 +337,8 @@ Android 2.5.1中發行的重要新功能。
 | 一般播放（播放、暫停、搜尋） | VOD + Live | Y |
 | FER —— 一般播放（播放、暫停、搜尋） | FER VOD | Y |
 | 在廣告播放時尋找 | VOD + Live | 不支援 |
-| AC3 | VOD + Live | 不支援 |
+| HEVC Playback | VOD + Live | 僅限fMP4容器 |
+| AC3和EAC3 | VOD + Live | 不支援 |
 | MP3 | VOD | 不支援 |
 | MP4內容播放 | VOD | Y |
 | 自適應位速率切換邏輯 | VOD + Live | Y |
@@ -353,8 +357,7 @@ Android 2.5.1中發行的重要新功能。
 | 自訂資訊清單標籤 | VOD + Live | Y |
 | 延遲音訊系結 | VOD + Live | Y |
 | 302重新導向 | VOD + Live | Y |
-| 具有偏移的播放 | VOD + Live | Y |
-| 僅限音訊播放 | VOD + Live | Y |
+| 使用偏移播放 | VOD + Live | Y |
 | Trick Play | VOD + Live | Y |
 | 特技遊戲中的慢動作 | VOD + Live | 不支援 |
 | 流暢的特技播放（使用ABR） | VOD + Live | Y |
@@ -384,19 +387,43 @@ Android 2.5.1中發行的重要新功能。
 | 延遲廣告解決 | VOD | Y |
 | 不連續標籤支援- SSAI | VOD + Live | Y |
 | 配套廣告、橫幅廣告和可點選廣告 | VOD + Live | Y |
+| 302重新導向黏性 | VOD + Live | Y |
+
+| 功能 | 內容類型 | HLS |
+|---|---|---|
+| 一般播放，啟用廣告 | VOD + Live | Y |
+| 啟用廣告的FER內容 | VOD | Y |
+| 預設廣告行為 | VOD + Live | Y |
+| VAST 2.0/3.0 | VOD + Live | Y |
+| VMAP 1.0 | VOD + Live | Y |
+| MP4廣告 | VOD + Live | Y（來自CRS） |
+| 啟用廣告的特技播放 | VOD + Live | Y |
+| 僅限廣告 | VOD | Y |
+| 定位參數 | VOD + Live | Y |
+| 自訂參數 | VOD + Live | Y |
+| 自訂廣告行為 | VOD + Live | Y |
+| 自訂廣告標籤 | 即時 | Y |
+| 自訂廣告解析器 | VOD + Live | Y |
+| Freewheel自訂廣告解析程式 | VOD | Y |
+| C3 | VOD + Live | 不支援 |
+| 延遲廣告解決 | VOD | Y |
+| 不連續標籤支援- SSAI | VOD + Live | Y |
+| 配套廣告、橫幅廣告和可點選廣告 | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y(JS) |
 | 提早退出廣告 | 即時 | Y |
 | 以規則為基礎的創意優先順序 | VOD + Live | Y |
 | CRS規則 | VOD + Live | Y |
 | JSON廣告解析程式 | VOD + Live | 不支援 |
 | Moat整合 | VOD + Live | Y |
+| 部分插入廣告分段 | 即時 | Y |
 
 | 功能 | 內容類型 | HLS |
 |---|---|---|
 | AES加密 | VOD + Live | Y |
 | 範例AES加密 | VOD + Live | Y |
 | Token化串流 | VOD + Live | Y |
-| DRM | VOD + Live | 僅限Primetime DRM(未來：Widevine) |
+| Widevine DRM | VOD + Live | 僅限fMP4容器 |
+| Primetime DRM | VOD + Live | Y |
 | 外部播放(RBOP) | VOD + Live | 僅限Primetime DRM |
 | 授權輪換 | VOD + Live | 僅限Primetime DRM |
 | 鍵旋轉 | VOD + Live | 僅限Primetime DRM |
@@ -512,7 +539,7 @@ Android 2.5.1中發行的重要新功能。
 
    * 在XML剖析中處理「空格」在「等號」（例如&lt;VAST version =&quot;2.0&quot;>）之前時，問題可重複的案例，以增強先前的修正
 
-* ZD #29296 - Android:將AdSystem和Creative ID新增至CRS請求。
+* ZD #29296 - Android: 將AdSystem和Creative ID新增至CRS請求。
 
    * 現在在1401和1403個請求中加入「AdSystem」和「CreativeId」作為新參數。
 
@@ -589,7 +616,7 @@ WebViewDebbuging預設為False。 若要啟用除錯，請使用setWebContentsDe
 * Zendesk#32369 —— 隱藏字幕顯示不同的顏色垃圾訊息或偽影。
 
    CC故障問題已修正至最新版本
-* Zendesk#25590 —— 增強：TVSDK Cookie儲存（C++至JAVA）
+* Zendesk#25590 —— 增強： TVSDK Cookie儲存（C++至JAVA）
 
    Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。
 * Zendesk#32252 - TVSDK_Android_2.5.2.12似乎沒有PTPLAY-20269的修正
@@ -638,7 +665,7 @@ WebViewDebbuging預設為False。 若要啟用除錯，請使用setWebContentsDe
 
 **Android TVSDK 2.5.1**
 
-* 特定裝置(Samsung Galaxy Tab 4)當機；VOD DRM LBA含Auditude，然後按一下廣告。
+* 特定裝置(Samsung Galaxy Tab 4)當機； VOD DRM LBA含Auditude，然後按一下廣告。
 * VHL —— 從偏移開始內容時會傳送錯誤的心率呼叫。
 * 播放VPAID廣告時，VHL心率eartbeat會呼叫event:type:play廣告，但會遺失。
 * 進入「完成」狀態後，播放器會回到SKIP adBreakPolicy的播放狀態，以處理後段廣告。
