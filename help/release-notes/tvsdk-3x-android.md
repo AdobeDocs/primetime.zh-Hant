@@ -1,24 +1,24 @@
 ---
-title: TVSDK 3.11 for Android版本注意事項
-seo-title: TVSDK 3.11 for Android版本注意事項
-description: TVSDK 3.11 for Android發行說明說明TVSDK Android 3.11中的新增或變更、已解決和已知問題以及裝置問題
-seo-description: TVSDK 3.11 for Android發行說明說明TVSDK Android 3.11中的新增或變更、已解決和已知問題以及裝置問題
+title: TVSDK 3.12 for Android版本注意事項
+seo-title: TVSDK 3.12 for Android版本注意事項
+description: TVSDK 3.12 for Android發行說明說明TVSDK Android 3.12中的新增或變更內容、已解決和已知問題以及裝置問題
+seo-description: TVSDK 3.12 for Android發行說明說明TVSDK Android 3.12中的新增或變更內容、已解決和已知問題以及裝置問題
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
 workflow-type: tm+mt
-source-wordcount: '5490'
+source-wordcount: '5531'
 ht-degree: 0%
 
 ---
 
 
-# TVSDK 3.11 for Android版本注意事項 {#tvsdk-for-android-release-notes}
+# TVSDK 3.12 for Android版本注意事項 {#tvsdk-for-android-release-notes}
 
-TVSDK 3.11 for Android發行說明說明TVSDK Android 3.11中的新增或變更、已解決和已知問題以及裝置問題。
+TVSDK 3.12 for Android發行說明說明TVSDK Android 3.12中的新增或變更內容、已解決和已知問題以及裝置問題。
 
 Android參考播放器隨附於Android TVSDK，位於您散發的範例／目錄中。 隨附的README.md檔案說明如何建立參考播放器。
 
@@ -36,26 +36,31 @@ Android參考播放器隨附於Android TVSDK，位於您散發的範例／目錄
 
 發行說明的「功能表」區段中提供完整的支援與 [不支援功能](#feature-matrix) 。
 
-## Android TVSDK 3.11
+## Android TVSDK 3.12
 
-**允許保護系統特定報頭(PSSH)框讀取**
+Primetime Reference應用程式的圖檔版本現已更新為5.6.4版。
 
-TVSDK現在允許擷取與目前載入的媒體資源相關的保護系統特定標題方塊。 新API `getPSSH()` 已新增至 `com.adobe.mediacore.drm.DRMManager`。
-如需詳細資訊，請參 [閱Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)。
+若要使用Android Studio來設定及執行參考應用程式，請依照TVSDK zip中ReadMe檔案的指示 `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`。
 
 目前版本中修正的主要客戶問題會在「已解決的問 [題」一節中](#resolved-issues) 。
 
 ### 舊版的新功能和增強功能
 
+**Android TVSDK 3.11**
+
+* **允許獲取保護系統特定報頭(PSSH)框** - TVSDK允許獲取與當前載入的媒體資源相關聯的保護系統特定報頭框。 新增 `getPSSH()` 至 `com.adobe.mediacore.drm.DRMManager`。
+
+如需詳細資訊，請參 [閱Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)。
+
 **Android TVSDK 3.10**
 
-本版次著重於解決疑難排解的客戶問題，如已解決 [的問題](#resolved-issues) 一節所述。
+本版次著重於修正解決的問題區段中提及的 [主要客戶](#resolved-issues) 問題。
 
 **Android TVSDK 3.9**
 
-* **透過HTTPS進行安全傳送** - Android TVSDK 3.9提供透過HTTPS的安全傳送功能，以無與倫比的規模與效能，安全地傳送內容。
+* **透過HTTPS進行安全傳送** - Android TVSDK 3.9推出透過HTTPS的安全傳送功能，以無人能及的規模和效能安全地傳送內容。
 
-   為了透過HTTPS進行安全傳送，類別中引入了新的API `NetworkConfiguration` 。
+   為了透過HTTPS進行安全傳送，類別中引入了新的 `NetworkConfiguration` API。
 
    `public void setForceHTTPS (boolean value)`
 
@@ -65,7 +70,7 @@ TVSDK現在允許擷取與目前載入的媒體資源相關的保護系統特定
 
 * **具有部分廣告插播功能的前段廣告支援** -透過此增強功能，TVSDK 3.8支援具有部分廣告插播功能(PABI)的前段廣告。
 
-   播放前段廣告（如果有的話），然後內容從即時點播放，以模擬即時電視的體驗。
+播放前段廣告（如果有的話），然後內容從即時點播放，以模擬即時電視的體驗。
 
 **Android TVSDK 3.7**
 
@@ -82,6 +87,7 @@ TVSDK現在允許擷取與目前載入的媒體資源相關的保護系統特定
 **第3.5版**
 
 * **Just In Time Ad Resolution** - TVSDK 3.5從時間軸移除對播放廣告的支援。
+
 * **已啟用離線播放支援** -使用離線播放，使用者現在可以下載視訊內容至其裝置，並在未連線時觀看。 如需詳細資訊，請參閱「[Offline Playback with Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf)」。
 
 **第3.4版**
@@ -263,7 +269,7 @@ Android 2.5.1中發行的重要新功能。
 * **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器 *保持連線* 。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
 
-* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降到最低。
+* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降至最低。
 
 * **平行廣告下載** - TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
 
@@ -435,15 +441,19 @@ Android 2.5.1中發行的重要新功能。
 
 ## 已解決問題 {#resolved-issues}
 
-如果解析度與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
+如果解決方法與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
+
+**Android TVSDK 3.12**
+
+本節提供TVSDK 3.12 Android版本中已解決問題的摘要。
+
+* ZD#40584 - Primetime參考應用程式不會建立最新的圖層版本。
+
+### 已解決舊版中的問題
 
 **Android TVSDK 3.11**
 
-本節提供TVSDK 3.11 Android版本中已解決問題的摘要。
-
 * ZD#41252 - WebVTT中的韓文字元在Android 7.1之後中斷。
-
-### 已解決舊版中的問題
 
 **Android TVSDK 3.10**
 
