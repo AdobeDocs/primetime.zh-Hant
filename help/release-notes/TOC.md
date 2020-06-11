@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime發行說明
 translation-type: tm+mt
-source-git-commit: 73c69ac4747db60cd17a1b385ab519f15b9003ac
+source-git-commit: 106a523b0df22157c2ddc9246e959389869fbba5
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
    + [iOS版TVSDK 3.12發行說明](tvsdk-3x-ios.md)
    + [iOS版TVSDK 1.4發行說明](tvsdk-1-4-ios.md)
 + Android專用的TVSDK {#tvsdk-android}
-   + [TVSDK 3.11 for Android版本注意事項](tvsdk-3x-android.md)
+   + [TVSDK 3.12 for Android版本注意事項](tvsdk-3x-android.md)
    + [TVSDK 2.7 for Android版本注意事項](tvsdk-27-android.md)
    + [Android專用TVSDK 2.4.1版本注意事項](tvsdk-24-android.md)
    + [TVSDK 1.4 for Android版本注意事項](tvsdk-1-4-android.md)
