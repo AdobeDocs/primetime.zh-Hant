@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
+source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5415'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,7 @@ Android 2.5.1中發行的重要新功能。
 * **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器 *保持連線* 。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
 
-* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降至最低。
+* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降到最低。
 
 * **平行廣告下載** - TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
 
@@ -393,28 +393,6 @@ Android 2.5.1中發行的重要新功能。
 | 延遲廣告解決 | VOD | Y |
 | 不連續標籤支援- SSAI | VOD + Live | Y |
 | 配套廣告、橫幅廣告和可點選廣告 | VOD + Live | Y |
-| 302重新導向黏性 | VOD + Live | Y |
-
-| 功能 | 內容類型 | HLS |
-|---|---|---|
-| 一般播放，啟用廣告 | VOD + Live | Y |
-| 啟用廣告的FER內容 | VOD | Y |
-| 預設廣告行為 | VOD + Live | Y |
-| VAST 2.0/3.0 | VOD + Live | Y |
-| VMAP 1.0 | VOD + Live | Y |
-| MP4廣告 | VOD + Live | Y（來自CRS） |
-| 啟用廣告的特技播放 | VOD + Live | Y |
-| 僅限廣告 | VOD | Y |
-| 定位參數 | VOD + Live | Y |
-| 自訂參數 | VOD + Live | Y |
-| 自訂廣告行為 | VOD + Live | Y |
-| 自訂廣告標籤 | 即時 | Y |
-| 自訂廣告解析器 | VOD + Live | Y |
-| Freewheel自訂廣告解析程式 | VOD | Y |
-| C3 | VOD + Live | 不支援 |
-| 延遲廣告解決 | VOD | Y |
-| 不連續標籤支援- SSAI | VOD + Live | Y |
-| 配套廣告、橫幅廣告和可點選廣告 | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y(JS) |
 | 提早退出廣告 | 即時 | Y |
 | 以規則為基礎的創意優先順序 | VOD + Live | Y |
@@ -441,7 +419,7 @@ Android 2.5.1中發行的重要新功能。
 
 ## 已解決問題 {#resolved-issues}
 
-如果解決方法與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
+如果解析度與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
 
 **Android TVSDK 3.12**
 
