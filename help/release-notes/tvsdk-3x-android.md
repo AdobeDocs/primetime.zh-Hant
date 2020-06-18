@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
-source-wordcount: '5415'
+source-wordcount: '5417'
 ht-degree: 0%
 
 ---
@@ -269,7 +269,7 @@ Android 2.5.1中發行的重要新功能。
 * **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器 *保持連線* 。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
 
-* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降到最低。
+* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降至最低。
 
 * **平行廣告下載** - TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
 
@@ -357,7 +357,7 @@ Android 2.5.1中發行的重要新功能。
 | 高級故障切換 | VOD + Live | Y |
 | QoS和播放器通知 | VOD + Live | Y |
 | 支援Cookie標題 | VOD + Live | Y |
-| 支援自訂HTTP標題 | VOD + Live | Y（需要白名單） |
+| 支援自訂HTTP標題 | VOD + Live | Y（允許列出） |
 | 設定緩衝器控制參數 | VOD + Live | Y |
 | 設定自適應位元速率控制 | VOD + Live | Y |
 | 自訂資訊清單標籤 | VOD + Live | Y |
@@ -468,7 +468,7 @@ Android 2.5.1中發行的重要新功能。
    * 修正廣告追蹤事件的特定案例。
 * ZD#37491 - HTTP狀態碼中沒有錯誤meta。
    * 已處理在堆棧中傳播網路錯誤的問題。
-* ZD#37808 —— 白名單新自訂標題。
+* ZD#37808 —— 允許清單新的自訂標題。
    * 已新增SSAI_TAG支援，做為此修正的一部分。
 * ZD#37622 —— 來自特定廣告Pod的URISyntax錯誤。
    * 修正當客戶Android應用程式提供包含未編碼%的廣告時，串流播放當機的問題
