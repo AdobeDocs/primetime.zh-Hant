@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 36a1619b43d22ccc7286d4a4b74f2c6297d0fd47
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4123'
+ht-degree: 0%
 
 ---
 
@@ -63,7 +66,7 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
 * **部分插入廣告分段**
 
    在加入廣告中間而不觸發部分受觀看廣告的追蹤的電視類體驗。\
-   範例**:**使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
+   範例**: **使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
    * 第二個廣告會在剩餘期間（20秒）播放，接著是第三個廣告。
    * 不會引發已播放之部分廣告（第二個廣告）的廣告追蹤器。 只有第三個廣告的追蹤器會被觸發。
 
@@ -89,16 +92,16 @@ Android TVSDK v2.5.4提供下列更新和API變更：
 
 Android TVSDK v2.5.3提供下列更新和API變更。
 
-* 建議所有使用CRS的TVSDK客戶使用TVSDK 2.5.3.85或最新版Android應用程式升級。 這將取代現有應用程式實作的下拉式。 在TVSDK升級後，在Proxy工具中檢查CRS創意URL要求(例如：Charles)，並確認路徑中的主機名稱和版本反映如下範例URL結構中。
+* 建議所有使用CRS的TVSDK客戶使用TVSDK 2.5.3.85或最新版Android應用程式升級。 這將取代現有應用程式實作的下拉式。 在TVSDK升級後，在Proxy工具中檢查CRS創意URL要求(例如： Charles)，並確認路徑中的主機名稱和版本反映如下範例URL結構中。
 
    `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
-* TVSDK的使用者代理可自訂：我們新增了一些新API來自訂使用者代理。
+* TVSDK的使用者代理可自訂： 我們新增了一些新API來自訂使用者代理。
 
    * setCustomUserAgent（String值）
    * getCustomUserAgent()
 
-* 在Android應用程式與TVSDK之間共用Cookie:Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。 現在，您可以在原生C++圖層中設定和／或修改Cookie，因為Cookie會暴露在Java Cookie商店中。
+* 在Android應用程式與TVSDK之間共用Cookie: Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。 現在，您可以在原生C++圖層中設定和／或修改Cookie，因為Cookie會暴露在Java Cookie商店中。
 * API變更：
 
    * 新增事件CookieUpdatedEvent。 當Cookie更新時，媒體播放器會傳送它。
@@ -107,8 +110,8 @@ Android TVSDK v2.5.3提供下列更新和API變更。
    * NetworkConfiguration::getNetworkDownVerificationUrl()中新增了一個API，以在發生故障切換時設定網路驗證URL。
    * TextFormat::treatSpaceAsAlphaNum會新增一個屬性，可定義在顯示標題時是否將空格視為英數字元。
 
-* SizeAvailableEvent中的變更：以前，2.5.2中SizeAvailableEvent的getHeight()和getWidth()方法會用來傳回由媒體格式傳回的影格高度和影格寬度。 現在它分別返回解碼器返回的輸出高度和輸出寬度。
-* 緩衝行為的變更：緩衝行為已變更。 在緩衝區為空時，應用程式開發人員需自行決定要做什麼。 2.5.3在緩衝區空的情況下使用播放緩衝區大小。
+* SizeAvailableEvent中的變更： 以前，2.5.2中SizeAvailableEvent的getHeight()和getWidth()方法會用來傳回由媒體格式傳回的影格高度和影格寬度。 現在它分別返回解碼器返回的輸出高度和輸出寬度。
+* 緩衝行為的變更： 緩衝行為已變更。 在緩衝區為空時，應用程式開發人員需自行決定要做什麼。 2.5.3在緩衝區空的情況下使用播放緩衝區大小。
 
 **2.5.2版**
 
@@ -133,7 +136,7 @@ Android 2.5.1中發行的重要新功能。
 * **播放**
 
    * **MP4內容播放-** MP4短片不需重新轉碼，就可在TVSDK中播放。
-注意：MP4播放不支援ABR切換、特技播放、廣告插入、延遲音訊系結和子分段。
+注意： MP4播放不支援ABR切換、特技播放、廣告插入、延遲音訊系結和子分段。
    * **使用可調式位元速率(ABR)進行特技播放** -此功能可讓TVSDK在特技播放模式下在iFrame串流之間切換。 您可以使用非iFrame描述檔，以較低的速度進行特技播放。
    * **更順暢的特技播放** -這些增強功能可增強使用者體驗：
 
@@ -204,7 +207,7 @@ TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需
 | 高級故障切換 | VOD + Live | Y |
 | QoS和播放器通知 | VOD + Live | Y |
 | 支援Cookie標題 | VOD + Live | Y |
-| 支援自訂HTTP標題 | VOD + Live | Y（需要白名單） |
+| 支援自訂HTTP標題 | VOD + Live | Y（允許列出） |
 | 設定緩衝器控制參數 | VOD + Live | Y |
 | 設定自適應位元速率控制 | VOD + Live | Y |
 | 自訂資訊清單標籤 | VOD + Live | Y |
@@ -253,7 +256,7 @@ TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需
 | AES加密 | VOD + Live | Y |
 | 範例AES加密 | VOD + Live | Y |
 | Token化串流 | VOD + Live | Y |
-| DRM | VOD + Live | 僅限Primetime DRM(未來：Widevine) |
+| DRM | VOD + Live | 僅限Primetime DRM(未來： Widevine) |
 | 外部播放(RBOP) | VOD + Live | 僅限Primetime DRM |
 | 授權輪換 | VOD + Live | 僅限Primetime DRM |
 | 鍵旋轉 | VOD + Live | 僅限Primetime DRM |
@@ -291,7 +294,7 @@ TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需
    * 由於可變m_nOutputHeight（在AndroidMCVideoDecoder內）會以影格高度而非實際輸出高度更新。 在getVideoFrame函式中進行相關變更，以正確計算m_nOutputHeight。
 * ZD #26614 —— 緊急——第三方廣告服務／程式化——未能提供印象。
    * 在XML剖析中處理「空格」在「等號」（例如&lt;VAST version =&quot;2.0&quot;>）之前時，問題可重複的案例，以增強先前的修正
-* ZD #29296 - Android:將AdSystem和Creative ID新增至CRS請求。
+* ZD #29296 - Android: 將AdSystem和Creative ID新增至CRS請求。
    * 現在在1401和1403個請求中加入「AdSystem」和「CreativeId」作為新參數。
 * ZD #33062 - TVSDK在CDATA節點下的VAST響應中發生管道字元時崩潰
    * NetworkConfiguration類別中的API setEncodeUrlForTracking會在要編碼的URL中移除不安全字元。
@@ -335,7 +338,7 @@ TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需
    * 現在運作正常，且setNetworkDownVerificationUrl如預期般運作。
 * Zendesk#32369 —— 隱藏字幕顯示不同的顏色垃圾訊息或偽影。
    * CC故障問題已修正至最新版本
-* Zendesk#25590 —— 增強：TVSDK Cookie儲存（C++至JAVA）
+* Zendesk#25590 —— 增強： TVSDK Cookie儲存（C++至JAVA）
    * Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。
 * Zendesk#32252 - TVSDK_Android_2.5.2.12似乎沒有PTPLAY-20269的修正此問題已修正並整合至2.5.2分支。
 * Zendesk#31806 - Auditude在PREPARINGPlayer中的棒條停留在「正在準備」狀態，因為回應xml有空標籤。 現在問題已修正。
@@ -371,7 +374,7 @@ Adobe Primetime版本字串會新增至系統使用者代理。
 
 **Android TVSDK 2.5.1**
 
-* 特定裝置(Samsung Galaxy Tab 4)當機；VOD DRM LBA含Auditude，然後按一下廣告。
+* 特定裝置(Samsung Galaxy Tab 4)當機； VOD DRM LBA含Auditude，然後按一下廣告。
 * VHL —— 從偏移開始內容時會傳送錯誤的心率呼叫。
 * 播放VPAID廣告時，VHL心率eartbeat會呼叫event:type:play廣告，但會遺失。
 * 進入「完成」狀態後，播放器會回到SKIP adBreakPolicy的播放狀態，以處理後段廣告。
