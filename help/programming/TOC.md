@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Programming Help
+user-guide-title: Primetime程式設計說明
 translation-type: tm+mt
-source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4307'
+ht-degree: 0%
 
 ---
 
@@ -266,7 +269,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
    + 內容保護 {#content-protection}
       + [Primetime DRM介面總覽](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-drm-interface.md)
       + [TVSDK應用程式中的Apple FairPlay](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
-      + [將您的iOS應用程式加入白名單](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md)
+      + [允許列出您的iOS應用程式](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
    + [播放器狀態、活動、錯誤和記錄的通知](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
    + [自訂記錄](tvsdk-3x-ios-prog/ios-3x-customized-logging/c-ios-customized-logging/c-ios-customized-logging.md)
    + [故障切換](tvsdk-3x-ios-prog/ios-3x-understanding-failover.md)
@@ -302,7 +305,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [重複使用或移除MediaPlayer例項](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
          + [檢查播放時間軸](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [暫停和還原MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
-      + 監聽Primetime Player活動 {#listen-primetime-player-events}
+      + 監聽Primetime Player活動   {#listen-primetime-player-events}
          + [概觀](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
          + [實作事件偵聽器和回呼](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-event-listeners-implement.md)
       + [設定錯誤處理](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md)
@@ -637,8 +640,8 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [警告通知代碼](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-warnings.md)
          + [資訊通知代碼](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/android-1.4-notification-info.md)
          + [NATIVE_ERROR通知的詳細資訊](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md)
-         + [NATIVE_ERROR:視訊播放值](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-video-playback.md)
-         + [NATIVE_ERROR:加密值](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-crypto-errors.md)
+         + [NATIVE_ERROR: 視訊播放值](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-video-playback.md)
+         + [NATIVE_ERROR: 加密值](tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-notifications-crypto-errors.md)
 + iOS專用的TVSDK 1.4 {#tvsdk-1-4-for-ios}
    + 簡介 {#introduction}
       + [概觀](tvsdk-1.4-for-ios/c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview.md)
@@ -720,7 +723,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
    + 內容保護 {#content-protection}
       + [Primetime DRM介面總覽](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [TVSDK應用程式中的Apple FairPlay](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
-      + [將您的iOS應用程式加入白名單](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-whitelist-your-ios-application.md)
+      + [允許列出您的iOS應用程式](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
    + [播放器狀態、活動、錯誤和記錄的通知 ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [自訂記錄](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [故障切換](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
@@ -938,8 +941,8 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [資訊通知代碼](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notification-info.md)
    + NATIVE_ERROR通知 {#native-error-notification}
       + [NATIVE_ERROR通知的詳細資訊](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md)
-      + [NATIVE_ERROR:視訊播放值](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-video-playback-errors.md)
-      + [NATIVE_ERROR:加密值](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-crypto-errors.md)
+      + [NATIVE_ERROR: 視訊播放值](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-video-playback-errors.md)
+      + [NATIVE_ERROR: 加密值](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-crypto-errors.md)
 + Browser-TVSDK-2.4 {#browser-tvsdk-2-4}
    + 簡介 {#introduction}
       + [產品概觀與受眾](browser-tvsdk-2.4/c-psdk-browser-2.4-introduction/c-psdk-browser-tvsdk-2.4-overview-prod-audience-guide.md)
@@ -1025,7 +1028,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
             + [概觀](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/c-psdk-browser-tvsdk-2.4-closed-caption-styling-control.md)
             + [設定隱藏字幕樣式](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/t-psdk-browser-tvsdk-2.4-closed-caption-styles-set.md)
             + [隱藏字幕樣式選項](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-styling-options.md)
-            + [範例：標題格式](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-formatting-samples.md)
+            + [範例： 標題格式](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/r-psdk-browser-tvsdk-2.4-closed-caption-formatting-samples.md)
       + [媒體播放](browser-tvsdk-2.4/drm-content-security/android-dhls-failover-for-playback/c-psdk-browser-tvsdk-2.4-failover-media-playback.md)
       + [ID3標籤](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-id3-metadata-retrieve.md)
       + [在iOS上自動播放](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-autoplay-ios.md)
