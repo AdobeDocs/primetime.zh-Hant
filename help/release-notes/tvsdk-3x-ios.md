@@ -2,7 +2,7 @@
 title: iOS版TVSDK 3.12發行說明
 description: iOS版本注意事項的TVSDK 3.12說明TVSDK iOS 3.12中有哪些新增或變更、已解決和已知問題以及裝置問題。
 translation-type: tm+mt
-source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -278,7 +278,7 @@ TVSDK現在支援傳送mTVR和MDPR ID3信標至Nielsen SDK，毋需任何自訂�
 
 ## 已解決問題 {#resolved-issues}
 
-如果解決方法與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
+如果解析度與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
 
 <!-- 
 
@@ -340,11 +340,12 @@ Comment Type: draft
 
 **第3.3版**
 
-(ZD#37820)-新增自訂標題HS-Id、HS-SSAI-TAG的白名單。
+(ZD#37820)-新增自訂標題HS-Id、HS-SSAI-TAG的允許清單。
 
 **第3.2版**
 
 * **Ticket#36588** —— 呼叫MediaPlayer STOP方法時，會觀察到播放器損毀。
+
 已修正呼叫STOP方法以取得少數具有字幕的串流時，所觀察到的間歇性損毀。
 
 * **Ticket#37080** —— 顯示清單呼叫的重複請求。
@@ -438,24 +439,29 @@ Comment Type: draft
    已修正嘗試在Apple TV上播放內容時發生的錯誤，此錯誤會完全導致無法播放
 * (ZD #32146)-在封鎖iOS 11開發測試版 `PTMediaPlayerStatusError` 時，未收到有關HLS Live內容的訊息
 
-   使用 `PTMediaPlayerStatusError` Charles（Drop connection和403）封鎖HLS Live和VOD內容時未收到
-* (ZD #29242)- Airplay視訊播放失敗並啟用廣告
+   使用 `PTMediaPlayerStatusError` Charles（Drop connection和403）封鎖時，未收到HLS Live和VOD內容。
 
-   當廣告啟用且AirPlay啟用開始播放視訊時，視訊播放不會開始，且不會顯示錯誤
-* (ZD#33341)-在 `DRMInterface.h` Xcode 9中觸發建置警告
+* (ZD #29242)- Airplay Video Playback Fails With Ads Enabled.
 
-   已修正兩個區塊原 `DRMInterface.h` 型，其參數清單中遺漏了「void」一詞
-* (ZD#31979)-當iPhone 7/iPhone 7+的iOS 10或更新版本為iOS 10時，不編譯／執行
+   當廣告啟用且AirPlay啟用開始播放視訊時，視訊播放不會開始，且不會顯示錯誤。
 
-   已修正iOS 7之前編譯IB檔案的功能不再受支援
-* (ZD#32920)-在廣告插播中出現白色空白畫面，而無廣告插播完成
+* (ZD#33341)-在 `DRMInterface.h` Xcode 9中觸發建置警告。
 
-   當廣告插播呈現廣告例項，且廣告例項完成後，會顯示白色空白畫面
-* (ZD#32509)-停用iOS 11螢幕錄制在iOS 11上停用螢幕錄制
+   已修正兩個區塊原 `DRMInterface.h` 型，其參數清單中遺漏了「void」一詞。
 
-* (ZD#33179)- iOS11上的間歇性事件失敗
+* (ZD#31979)-當iPhone 7/iPhone7+的iOS 10或更新版本為iOS 10時，不編譯／執行。
 
-   修正iOS 11上的事件失敗
+   已修正不再支援編譯iOS 7之前的IB檔案。
+
+* (ZD#32920)-廣告插播內的空白畫面，無廣告插播完成。
+
+   當廣告插播呈現廣告例項，且廣告例項完成後，會顯示空白畫面。
+
+* (ZD#32509)-停用iOS 11螢幕錄制在iOS 11上停用螢幕錄制。
+
+* (ZD#33179)- iOS11上的間歇性事件失敗。
+
+   已修正iOS 11上的事件失敗。
 
 **版本1.4.40** (1.4.40.72)
 
@@ -466,7 +472,7 @@ Comment Type: draft
 * (ZD #31951)-授權輪替期間發生TVSDK錯誤。
 
    已修正授權輪換問題。
-* (ZD #31951)-在廣告插播中出現白色空白畫面，而無廣告插播完成。
+* (ZD #31951)-廣告插播內的空白畫面，無廣告插播完成。
 
    處理Facebook VPAID廣告通常在單個 `<AdParameters>` VAST節點中返回多個CDATA塊的問題。
 * (ZD #33336)- iOS TVSDK —— 廣告pods未填入，儘管Freewheel傳回的廣告數量足夠。
@@ -625,9 +631,9 @@ TVSDK現在會公開兩種類型，可用來篩選必要的標題類型。
 
 TVSDK在此版本中已解決下列問題：
 
-* (ZD# 24180)新增自訂標題至白名單
+* (ZD# 24180)新增自訂標題以允許清單。
 
-新的自訂標題已新增至TVSDK白名單。
+新的自訂標題已新增至TVSDK允許清單。
 
 * (ZD# 25016)設定ABR控制參數時，會隨機選取容錯流
 
