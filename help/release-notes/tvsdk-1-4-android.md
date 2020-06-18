@@ -9,7 +9,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '7913'
+ht-degree: 0%
 
 ---
 
@@ -34,8 +37,9 @@ Adobe Primetime提供選項，可要求對primetime廣告伺服器和CRS進行HT
 
 **1.4.42版**
 
-**部分插入廣告分段：**在加入廣告中間而不觸發部分受觀看廣告的追蹤的電視類體驗。
-範例：使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
+**部分插入廣告分段：**
+在加入廣告中間而不觸發部分受觀看廣告的追蹤的電視類體驗。
+範例： 使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
 * 第二個廣告會在剩餘期間（20秒）播放，接著是第三個廣告。
 * 不會引發已播放之部分廣告（第二個廣告）的廣告追蹤器。 只有第三個廣告的追蹤器會被觸發。
 
@@ -125,14 +129,14 @@ AC-3 5.1僅在Amazon FireTV上受支援。
 * **視訊心率程式庫(VHL)更新至1.4.0.1版**
 
    * 新增使用Adobe Analytics Video Essentials搭售其他SDK或播放器之不同分析使用案例的能力。
-   * 已移除trackAdBreakStart和trackAdBreakComplete方法，以最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
+   * 已移除trackAdBreakStart和trackAdBreakComplete方法來最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
    * 追蹤廣告時不再需要播放頭屬性。
 
 * **Nielsen SDK整**&#x200B;合TVSDK現在支援將使用者追蹤資訊傳送至Nielsen SDK，毋需自訂整合。
 
 **1.4.0版**
 
-* **使用替代內容取代封鎖訊號** 1.4 TVSDK更新中，TVSDK現在也支援針對線性內容進行區域封鎖並返回。 TVSDK現在可以並行處理兩個資訊清單檔案，主要和替代檔案，以便在顯示替代原始程式設計的替代程式設計時，監控封鎖訊號。
+* **使用替代內容取代封鎖訊號** 1.4 TVSDK更新的一部份，TVSDK現在也支援針對線性內容進行區域封鎖並從區域封鎖中返回。 TVSDK現在可以並行處理兩個資訊清單檔案，主要和替代檔案，以便在顯示替代原始程式設計的替代程式設計時，監控封鎖訊號。
 
 * **移除／取代C3廣告** ：現在，您不需要額外的準備工作，就能將新廣告動態插入從C3視訊視訊(VOD)資產。 TVSDK現在提供API來移除自訂內容範圍並動態插入新廣告。 此強大的新功能在廣播期間播放即時／線性內容時也很有用，而且會立即下拉以做為隨選內容，而無需適當的時間來「清理」資產。
 
@@ -153,7 +157,8 @@ AC-3 5.1僅在Amazon FireTV上受支援。
 
    opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
 
-   return opportunityDetectors;}
+   return opportunityDetectors;
+}
 
    }
 
@@ -210,7 +215,7 @@ TVSDK 1.4.43已通過Android裝置的認證，其Android裝置具有Android 6.0.
 
 >[!NOTE]
 >
->強烈建議所有使用CRS的TVSDK客戶升級至iOS和Android上的TVSDK 1.4.39或最新版本。 此升級是現有應用程式實作的下載取代。 升級後，請在Proxy工具（例如Charles）中檢查CRS創意URL要求，以確認路徑中的版本是否反映3.1版。例如：
+>強烈建議所有使用CRS的TVSDK客戶升級至iOS和Android上的TVSDK 1.4.39或最新版本。 此升級是現有應用程式實作的下載取代。 升級後，請在Proxy工具（例如Charles）中檢查CRS創意URL要求，以確認路徑中的版本是否反映3.1版。 例如：
 >
 >`https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8`
 
@@ -232,25 +237,25 @@ TVSDK 1.4.43已通過Android裝置的認證，其Android裝置具有Android 6.0.
 
 **1.4.42版(1791)**
 
-* Zendesk #33719:FireTV 4k可調式位元速率會緩慢縮放。 已新增對FireTV 4K裝置的ABR支援。
-* Zendesk #3338: resetDRM會清除應用程式的所有資料。  已處理非TVSDK執行緒中的例外導致TVSDK作業佇列填滿的額外案例。
+* Zendesk #33719: FireTV 4k可調式位元速率會緩慢縮放。 已新增對FireTV 4K裝置的ABR支援。
+* Zendesk #3338:  resetDRM會清除應用程式的所有資料。  已處理非TVSDK執行緒中的例外導致TVSDK作業佇列填滿的額外案例。
 
 **1.4.41版(1776)**
 
 * Zendesk #33002 - Fire TV上TVSDK的附屬資產資料。 實作新類別AdBannerAsset，其會將使用者資料傳回為清單&lt;AdBannerAsset>，而AdAsset::id現在是字串，而非長字串。
 * Zendesk #32821 - Android Primetime播放器遇到WWE的簡報時間戳記(PTS)時會凍結。 這個問題已修正。
 * Zendesk #33572 - VideoAnalyticsProvider廣告開始當機。 使用VHL+Nielsen聯合SDK版VideoHeartbeat.jar的正確組合來修正此問題。
-* Zendesk #3355 - Fire TV:拖曳15秒。 TVSDK方面沒有任何修正，客戶在其「終端」和「第三方」驗證此項修正。
+* Zendesk #3355 - Fire TV: 拖曳15秒。 TVSDK方面沒有任何修正，客戶在其「終端」和「第三方」驗證此項修正。
 
 **1.4.40版(1764)**
 
 * Zendesk #33068 —— 新裝置上的Amazon Lip同步問題。 此版本已修正同步對嘴問題。
 * Zendesk #32215 - Android TVSDK 1.4.38安全性問題 `[Hotlist]`。 已更新至最新的OpenSSL-1.1.0和curl-7.55.1。
-* Zendesk #32920 —— 廣告插播中出現白色空白畫面，無廣告插播完成。 修正VPAID容器可能陷入擱置狀態並處理Facebook VPAID廣告通常在單一\&amp;lt;AdParameters\&amp;gt中傳回多個CDATA區塊的問題；巨型節點。
+* Zendesk #32920 —— 廣告插播內的空白畫面，無廣告插播完成。 修正VPAID容器可能陷入擱置狀態並處理Facebook VPAID廣告通常在單一\&amp;lt;AdParameters\&amp;gt中傳回多個CDATA區塊的問題； 巨型節點。
 
 **1.4.39版(1744)**
 
-* Zendesk #28976 —— 授權要求需要超過一秒的時間。 當使用POST的DRM授權要求呼叫正在執行時，Curl會新增額外「預期：100-continue」標題。 已移除TVSDK中的「預期：」標題。
+* Zendesk #28976 —— 授權要求需要超過一秒的時間。 當使用POST的DRM授權要求呼叫正在執行時，Curl會新增額外「預期： 100-continue」標題。 已移除TVSDK中的「預期：」標題。
 * Zendesk #27707 - CSAI環境不支援CUE IN標籤，以便提前返回或返回內容。 為多個機會生成器提供支援。
 
 **1.4.38版(1722)**
@@ -286,7 +291,7 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 * Zendesk #21701 —— 傳送1401 CRS要求的原始創意URL，而非標準化的URL。
 傳送原始的創意URL可解決此問題。
 
-* Zendesk #25023 —— 長視訊播放：視訊凍結、螢幕閃爍此問題已透過設定CenturyLink機上盒裝置的最大視訊格式尺寸來解決。
+* Zendesk #25023 —— 長視訊播放： 視訊凍結、螢幕閃爍此問題已透過設定CenturyLink機上盒裝置的最大視訊格式尺寸來解決。
 
 * Zendesk #27460 —— 新的Akamai帳戶無法處理POST cdn請求。
 已更新程式碼，讓廣 `cdn.auditude.com` 告要求為GET而非POST。
@@ -302,7 +307,7 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 **1.4.31版(1675)**
 
 * Zendesk #21974 —— 由空對象引起的例外
-   * AdIndex在null時很少增加。 這可能是因為前段adBreak收到錯誤的API呼叫所致。 修正資料類型，以避免此類例外
+   * AdIndex在null時很少增加。 這可能是由於收到前段adBreak的不正確API呼叫所致。 修正資料類型，以避免此類例外
 
 * Zendesk #24714 —— 關閉無關的日誌記錄
    * 更新TVSDK以關閉無關的記錄
@@ -334,7 +339,7 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 
 * Zendesk #25067 - VideoEngineTimeline中發生當機這是因為物件未正確清理，而且事件是在物件毀損後呼叫。 通過添加檢查來防止空例外，問題已得到解決。
 
-* Zendesk #25352 —— 設定自訂HTTP標題此問題已解決，方法是在TVSDK的白名單中新增自訂標題。
+* Zendesk #25352 —— 設定自訂HTTP標題此問題已解決，方法是在TVSDK的允許清單中新增自訂標題。
 
 * Zendesk #25617 —— 即時串流PTS變換導致播放器中斷和記憶體當機此問題已解決：當變換發生在區段中央時，在FracteredHTTPStreamer中新增PTS變換處理。
 
@@ -362,7 +367,7 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 
 **1.4.24版(1612)**
 
-* Zendesk #20784 - Analytics:觸發即時視訊轉場的內容完成問題已解決：新增API(trackVideoComplete)，以手動觸發即時／線性視訊追蹤工作階段中的內容完成。
+* Zendesk #20784 - Analytics: 觸發即時視訊轉場的內容完成問題已解決：新增API(trackVideoComplete)，以手動觸發即時／線性視訊追蹤工作階段中的內容完成。
 
 * Zendesk #21977 VideoEngineplaceAdBreak/acceptAd操作期間時間軸當機
    * 在此問題中，已更新下列程式庫：
@@ -390,7 +395,7 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 
 **1.4.22版(1581)**
 
-* Zendesk #17236 —— 帶DRMT的HLS視頻的不可靠播放頭時間已修正LBA流的時間跳轉，其中音頻段開始時間與視頻段開始時間不匹配。
+* Zendesk #17236 —— 帶DRMT的HLS視頻的不可靠播放頭時間LBA流的時間跳轉（音頻段開始時間與視頻段開始時間不匹配）已經修正。
 
 * Zendesk #17680 - Selevision Andredo方塊上的視訊播放已凍結此裝置上的視訊解碼器在將視訊影格從輸出緩衝區出隊時，有時會傳回顯著的輸出時間跳變，而此輸出時間戳記仍然很高。 此問題已解決：傳回不支 *援的視訊設定檔* ，此錯誤不會強制播放器重試相同的設定檔或選擇不同的設定檔。
 
@@ -415,7 +420,7 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 
 * Zendesk #17781 - ADB螢幕擷取不再運作此問題已借由新增DefaultMediaPlayer.create(Context, boolean secureSurface)API來解決，此API可讓螢幕擷取。
 若要允許螢幕擷取，請為secureSurface傳遞false。
-重要：強烈建議您不要在生產設定中啟用此螢幕擷取功能。
+重要： 強烈建議您不要在生產設定中啟用此螢幕擷取功能。
 
 * Zendesk #19074 - FFWD和REW特技播放期間的視訊凍結已解決trickPlay在播放中可能凍結時發生的下列問題：
 
@@ -434,7 +439,7 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 
 **1.4.20版(1546)**
 
-* Zendesk #17384 —— 功能要求：AAC播放的ID3中繼資料支援AAC媒體中的ID3標籤支援已在1.4.20版中開始的Android適用TVSDK中提供。
+* Zendesk #17384 —— 功能要求： AAC播放的ID3中繼資料支援AAC媒體中的ID3標籤支援已在1.4.20版中開始的Android適用TVSDK中提供。
 
 * Zendesk #18358 —— 播放器會因不同步中斷而凍結位元速率開關這個問題已透過適當處理ABR拼接邊緣案例而解決。
 
@@ -481,7 +486,7 @@ RENDITION_TIMEOUT_THRESHOLD已設為100ms，但發現它不足以用於某些流
 * Zendesk #3324 - Primetime廣告報告不會在VMAP中沒有廣告媒體時追蹤廣告插播。
 當廣告插播是空的時，廣告插播開始和完成追蹤事件都未被Ping通。 此問題已解決，方法是在空廣告插播（例如VMAP AdBreak）上傳送廣告插播開始ping，並提供有效的AdSource點頭。
 
-* Zendesk #18229 - MediaPlayer.reset()呼叫後會忽略SetCCVisibility(VISIBLE)此問題已透過新增setCCVisibility(Visibility.INVISIBLE)；解決至MediaPlayer類別中的reset()函式。
+* Zendesk #18229 - MediaPlayer.reset()呼叫後會忽略SetCCVisibility(VISIBLE)此問題已透過新增setCCVisibility(Visibility.INVISIBLE)；解決 至MediaPlayer類別中的reset()函式。
 
 * Zendesk #18328 - Amazon Fire TV第2代裝置上60FPST內容的掉格問題已解決此問題：將編碼的FPS套用在睡眠時間決策時，並使用更佳的編碼FPS預測邏輯。
 
@@ -559,7 +564,7 @@ RENDITION_TIMEOUT_THRESHOLD已設為100ms，但發現它不足以用於某些流
 
 **1.4.12版(1388)**
 
-* Zendesk #2751 - CSAI和CRS|增強：處理特定媒體檔案URL中的動態元素。
+* Zendesk #2751 - CSAI和CRS |增強： 處理特定媒體檔案URL中的動態元素。
 更新Creative重新封裝服務，以使用動態創意URL正確處理廣告。
 
 * Zendesk #3965 —— 從滴答作業切換回正常播放，在開始播放前會先跳一點。
@@ -573,7 +578,7 @@ RENDITION_TIMEOUT_THRESHOLD已設為100ms，但發現它不足以用於某些流
    * 修正在特技播放期間達到目標長度後，緩衝區持續增長的問題。
 
 * Zendesk #3992 —— 額外的特技播放速度。
-TrickPlay已更新，接受高於16倍的速率；+/- 32、+/-64和+/-128現在也允許使用。
+TrickPlay已更新，接受高於16倍的速率； +/- 32、+/-64和+/-128現在也允許使用。
 
 * Zendesk #4007 —— 將GEOB物件解譯為時間軸中繼資料（Android與Web）的一部分。
 已新增setByteArray和getByteArray API。
@@ -583,9 +588,9 @@ TrickPlay已更新，接受高於16倍的速率；+/- 32、+/-64和+/-128現在�
 
 **1.4.11版(1363)**
 
-* Zendesk #2076 —— 在Motorola Xoom上使用Android 4.0.3播放視訊時經常發生斷斷斷續續新增裝置至白名單，以防止他們嘗試播放高知名度的內容。
+* Zendesk #2076 —— 在Motorola Xoom上使用Android 4.0.3播放視訊時經常發生斷斷斷續續新增裝置，讓清單允許，以防止他們嘗試播放高知名度的內容。
 
-* Zendesk #2197 —— 使用警告 `[Ads]` 通知跟蹤廣告錯誤調度OperationFailedEvent。 
+* Zendesk #2197 —— 使用警告 `[Ads]` 通知跟蹤廣告錯誤調度OperationFailedEvent。
 
 * Zendesk #3304 —— 未填充VAST 3.0 `[ERRORCODE]` 宏
    * 如果內嵌廣告的創意不佳，則會公開錯誤代碼400。
@@ -595,13 +600,13 @@ TrickPlay已更新，接受高於16倍的速率；+/- 32、+/-64和+/-128現在�
 
 * Zendesk #2941 —— 即時資產在可見範圍內沒有&quot;0&quot;以前，在尋找即時串流開頭時有3個區段緩衝區，現在可以尋找即時串流的開始（即第一個區段的開始）。
 
-* Zendesk #3169 —— 使用Adobe Analytics整合更新參考播放器參考播放器已以Adobe Analytics程式庫更新為範例，以進行植入。 
+* Zendesk #3169 —— 使用Adobe Analytics整合更新參考播放器參考播放器已以Adobe Analytics程式庫更新為範例，以進行植入。
 * Zendesk #3299 —— 無法解釋的特技遊戲行為
    * 已修正在停止特技播放後，可能需要數秒（有時需要25秒以上）才能返回播放狀態的錯誤。
    * 已修正在相同媒體上再次叫用特技播放，可能導致串流在目前時間凍結的錯誤。
 * Zendesk #3433 - Android和Flash —— 字幕問題
 
-GetLine for WebVTT不會尊重&lt;CR>&lt;LF>調整的封包長度；最後一個標題可能包含先前標題中的字元。
+GetLine for WebVTT不會尊重&lt;CR>&lt;LF>調整的封包長度； 最後一個標題可能包含先前標題中的字元。
 
 * PTPLAY-6243 —— 增強參考播放器，以擷取除錯資訊
 
@@ -613,13 +618,13 @@ Android範例參考播放器已增強，提供開啟除錯記錄檔並以電子�
 
 在搜尋後，視訊引擎在視訊簡報人員準備好播放之前，將狀態設定為「播放」的可能案例。 發生於尋道前緩衝區狀態高時。 透過通知視訊引擎緩衝區狀態不足來修正。 由於視訊引擎緩衝區狀態低，呼叫「播放」會導致狀態變更為BUFFERING，而非PLAYING。 當狀態變更為「播放」時，播放會繼續。
 
-* Zendesk #2846 —— 增強請求：提供為Auditude程式庫所呼叫設定不同使用者代理字串的功能
+* Zendesk #2846 —— 增強請求： 提供為Auditude程式庫所呼叫設定不同使用者代理字串的功能
 
 已新增新API，以設定廣告相關呼叫的使用者代理，auditudeSettings.setUserAgent(&quot;user/agent&quot;)。 如果未設定使用者代理，則會使用預設值。 這只會影響廣告相關呼叫的使用者代理，媒體呼叫的使用者代理不會變更，即&quot;Adobe Primetime&quot;+&lt;預設使用者代理>。
 
 **1.4.8版(1324)**
 
-* Zendesk #1218 - 106000.33本機錯誤……如果在FracteredHTTPStreamer::ThreadParseManifest()中載入manifest時失敗，請檢查URL網域是否為localhost，如果是，請將網域變更為127.0.0.1，然後重新叫用ThreadParseManifest。
+* Zendesk #1218 - 106000.33本機錯誤…… 如果在FracteredHTTPStreamer::ThreadParseManifest()中載入manifest時失敗，請檢查URL網域是否為localhost，如果是，請將網域變更為127.0.0.1，然後重新叫用ThreadParseManifest。
 * Zendesk #3072 —— 自動切換至較低的位元速率。 將緩衝區長度計算更改為跳過零PTS有效負載。
 * Zendesk #3168 - WebVTT字幕僅顯示前10秒。
 * Zendesk #3193 —— 在TVSDK中請求設定檔變更API，已新增PlaybackEventListener.onProfileChanged()。
@@ -641,7 +646,7 @@ Android範例參考播放器已增強，提供開啟除錯記錄檔並以電子�
 **1.4.6版(1282)**
 
 * Zendesk #2192 —— 位元速率在較差的網路狀況下並不總是較低，而是透過移除快速的交換機實施來修正。
-* Zendesk #2631 - Android上的阿拉伯文字幕：多行文字會被切斷，並透過調整阿拉伯文字型的字型大小來修正。
+* Zendesk #2631 - Android上的阿拉伯文字幕： 多行文字會被切斷，並透過調整阿拉伯文字型的字型大小來修正。
 * Zendesk #2844 - Buffering on Note 4 and Fragment download time is not accurate.
 
 此問題已經修正，將視訊區段下載之間的延遲加入頻寬計算，並讓下載時間計算邏輯使用完整的請求週期時間。
@@ -662,7 +667,7 @@ Android範例參考播放器已增強，提供開啟除錯記錄檔並以電子�
 * Zendesk #2451 —— 隱藏字幕「底部內嵌」，在字幕代碼中新增「bottomInset」參數
 * Zendesk #2480 —— 停用HTTP 302重新導向最佳化，新增對設定useRedirectedUrl屬性的支援
 * Zendesk #2486 —— 第三方信標
-* Zendesk #2547 —— 阿拉伯文字幕：文本應對齊右對齊
+* Zendesk #2547 —— 阿拉伯文字幕： 文本應對齊右對齊
 
 **1.4.4版(1195)**
 
@@ -693,7 +698,7 @@ Android範例參考播放器已增強，提供開啟除錯記錄檔並以電子�
 
 * Zendesk #1951 - 4.0.x裝置上VideoEngine.nativeReset()鎖定
 * Zendesk #2064 —— 特定Intel架構Android裝置上的原生當機SIGSEGV
-* Zendesk #2075 - VideoEngine.nativeReleaseGPUResource在4.0.x裝置上鎖定注意：此版本是支援Android 5.0(Lollipop)的***必要***
+* Zendesk #2075 - VideoEngine.nativeReleaseGPUResource在4.0.x裝置上鎖定注意： 此版本是支援Android 5.0(Lollipop)的***必要***
 * Zendesk #1513 - Android Lollipop支援
 * Zendesk #1709 —— 不正確的媒體大小和延伸視訊
 * Zendesk #1871 —— 使用WebVTT標題檢視即時串流時，WebVTT標題偶爾會消失，然後重新出現
@@ -739,7 +744,7 @@ Android範例參考播放器已增強，提供開啟除錯記錄檔並以電子�
 **1.4.23版**
 
 * 隱藏字幕無法處理純音訊內容，因為字幕系統需要視訊才能運作。 沒有視訊，就沒有視訊區尺寸，沒有視訊區尺寸，就無法顯示標題的任何圖形。
-* 從1.4.23版開始，TVSDK將不支援Gingerbread OS 2.3。這是因為TVSDK使用下列私人Android程式庫來收集Gingerbread OS裝置的硬體資訊：
+* 從1.4.23版開始，TVSDK將不支援Gingerbread OS 2.3。 這是因為TVSDK使用下列私人Android程式庫來收集Gingerbread OS裝置的硬體資訊：
 
    * `libstagefright.so`
    * `libcutils.so`
@@ -772,7 +777,7 @@ Media Player會在Trick Play倒轉作業期間，將MediaPlayer PlayerState錯�
 * PTPLAY-2541 —— 在封鎖期中往／返備用流的數個交換機之後，有時會看到COMPONENT_CREATION_FAILURE
 * 錯誤#3726865 —— 如果多位元速率LBA串流從僅音訊串流開始，則切換至音訊／視訊串流時，將不會顯示視訊。 從音訊／視訊串流開始將不會顯示此問題，而且可以在音訊和音訊／視訊串流之間成功切換
 * 錯誤#3760144 —— 某些裝置（例如Kindle Fire 7和Samsung Galaxy Nexus）暫停串流時，解析度可能會偏移或看似脈衝。 僅可觀察
-* 錯誤#3761170 - seekToLocal in Live with Ads無法重新搜尋廣告內容；最好使用目前即時串流的currentTime API
+* 錯誤#3761170 - seekToLocal in Live with Ads無法重新搜尋廣告內容； 最好使用目前即時串流的currentTime API
 * 錯誤#3763370 —— 含廣告的即時串流偶爾會在應該只有一個廣告時，顯示兩個相近的廣告標籤。 這些廣告標籤代表相同的廣告，只會有一個
 * 錯誤#3763373 —— 在VOD串流中透過廣告時，廣告標籤可能會短暫消失。 廣告標籤會還原，而且時間軸上沒有其他負面效果
 * 有些裝置有已知的播放問題。 如需詳細資訊，請參 [閱1.4中的已知裝置問題](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14)。
@@ -792,11 +797,11 @@ Media Player會在Trick Play倒轉作業期間，將MediaPlayer PlayerState錯�
 | Nexus 7（第2代） | S4Pro APQ8064(Qualcomm) | 當影片暫停超過30分鐘時，裝置會掛起。 | 已回報給Google的裝置問題。 | 應用程式應逾時，以免出現長暫停狀態。 |
 | Nexus S(GB) | 嗡嗡鳥 | 無法使用HW解碼器播放任何視訊。 | Nexus S中沒有採用Stagefright的硬體解碼器，因此，我們針對Android 2.3使用軟體解碼器。 | 升級至ICS。 |
 | Nexus S(ICS) | 嗡嗡鳥 | 視訊偶爾會閃爍。 | 不良資料會導致解碼器進入不良狀態。 | 重新啟動設備。 |
-| Nook tabletAndroid OS:2.3 | TI OMAP 4 | 視訊無法播放，而應用程式也暫停。 | Stagefright在執行應用程式幾次後進入不穩定狀態。 呼叫mediaplayer::QueryCodecs暫停。 | 重新啟動設備以重置狀態。 |
+| Nook tabletAndroid OS: 2.3 | TI OMAP 4 | 視訊無法播放，而應用程式也暫停。 | Stagefright在執行應用程式幾次後進入不穩定狀態。 呼叫mediaplayer::QueryCodecs暫停。 | 重新啟動設備以重置狀態。 |
 | Samsung Galaxy ACE | Qualcomm MSM7227 | 無法安裝SampleMediaPlayer應用程式。 | 使用ARM v6而非更常見的ARM v7晶片集。 FP/AIR不支援此裝置。 |  |
-| Samsung Galaxy ACE2Android作業系統：2.3.6 | NovaThor U8500 | 無法播放視訊。 | 此晶片集是AVE中Android pre-ICS的未知解碼器。 |  |
+| Samsung Galaxy ACE2Android作業系統： 2.3.6 | NovaThor U8500 | 無法播放視訊。 | 此晶片集是AVE中Android pre-ICS的未知解碼器。 |  |
 | Samsung Galaxy S2(GT-I9100) | Exynos | 視訊效能不及此裝置的等級。 | HW解碼器返回具有錯誤PTS的解碼幀。 看來解碼器使用的是解碼時間而非呈現時間。 |  |
-| Samsung Galaxy S2 GAndroid OS:2.3.6 | TI OMAP4 | 啟動視訊時當機。 |  | 升級至Android 2.3.7或4.x。 |
+| Samsung Galaxy S2 GAndroid OS: 2.3.6 | TI OMAP4 | 啟動視訊時當機。 |  | 升級至Android 2.3.7或4.x。 |
 | Samsung Galaxy S3(I747) | Qualcomm MSM8960 | 視訊偶爾會凍結，只播放音訊，然後停止回應。 |  |  |
 | Samsung Galaxy S3 I747M | SAMSUNG_M2ATT | 視訊凍結。 | 調查。 |  |
 | Samsung Galaxy Tab 1 v10.1 | 特格拉2 | MBR轉換最多需要3秒。 | 當MBR當機時，我們會重新啟動每個串流交換機的解碼器，最多需要三秒。 |  |
