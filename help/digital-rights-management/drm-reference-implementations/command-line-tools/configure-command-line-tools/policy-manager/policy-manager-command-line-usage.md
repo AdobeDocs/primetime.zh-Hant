@@ -5,7 +5,10 @@ seo-title: 策略管理器命令行使用
 title: 策略管理器命令行使用
 uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1228'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ java -jar AdobePolicyManager.jar
 </i class="+ topic>
 ```
 
-**表1:命令**
+**表1: 命令**
 
 | 命令 | 說明 |
 |---|---|
@@ -27,7 +30,7 @@ java -jar AdobePolicyManager.jar
 | `detail` | 描述現有的DRM策略 |
 | `update` | 更新現有的DRM政策 |
 
-**表2:選項**
+**表2: 選項**
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_q5h_cpy_n4">  
  <thead class="- topic/thead "> 
@@ -39,7 +42,7 @@ java -jar AdobePolicyManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c配置檔案 </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指定配置檔案的名稱和位置。 </p> <p class="- topic/p ">如果未指定名稱或位置，DRM策略管理器將在當前工作目錄中 <span class="filepath"> 搜索flashaccessools. </span> properties。 </p> <p>注意： 在命令行上指定的選項優先於在配置檔案中指定的選項。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指定配置檔案的名稱和位置。 </p> <p class="- topic/p ">如果未指定名稱或位置，DRM策略管理器將在當前工作目錄中 <span class="filepath"> 搜索flashaccessools. </span> properties。 </p> <p>注意：  在命令行上指定的選項優先於在配置檔案中指定的選項。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
@@ -51,7 +54,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -root </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">表示DRM策略具有根許可證。 </p> <p class="- topic/p ">此選項不適用於更新。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">表示DRM策略具有根許可。 </p> <p class="- topic/p ">此選項不適用於更新。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e日期 </span> </td> 
@@ -85,7 +88,7 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">播放視窗，這是從第一次播放中可檢視內容的分鐘數。 </p> <p>如果未指定，或 <span class="codeph"> 者使 </span> 用-w而未指定分鐘數，則沒有播放窗口限制。 值必須是非負值。 </p> <p>可選的 <span class="codeph"> enableHS </span> 或disable <span class="codeph"> HS標誌 </span> 信號表示要啟用或禁用硬停止。 該標誌指示解密上下文在播放窗口的結尾處是否被破壞（啟用）或未被破壞（禁用）。 </p> <p>例如，若要指定內容只能檢視60分鐘，而且需要硬停止： 
      <codeblock>
        -w&amp;nbsp;60,enableHS 
-     </codeblock> </p> <p>注意： Flash Player <i></i> 、Android和iOS目前不支援硬式停止功能。 </p> </td> 
+     </codeblock> </p> <p>注意：  <i>Flash Player</i> 、Android和iOS目前不支援硬式停止功能。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l分鐘 </span> </td> 
@@ -108,28 +111,28 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許匿名存取。 </p> <p class="- topic/p ">您不能將此選項與 <span class="codeph"> -authNS一起應用 </span>。 </p> <p class="- topic/p ">更新不允許使用此選項。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[:應 <span class="+ topic/ph pr-d/codeph codeph"> 用程 </span>式ID [:[ <span class="+ topic/ph pr-d/codeph codeph"> 最小值 </span>]:[最大值 <span class="+ topic/ph pr-d/codeph codeph"></span>]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">可播放受保護內容的AIR應用程式白名單。 </p> <p class="- topic/p ">您可以套用此選項，以限制哪些發佈者、應用程式和版本可以存取使用此DRM原則保護的內容。 </p> <p class="- topic/p ">如果您未指定 <i class="+ topic/ph hi-d/i ">appId</i>，則允許發佈者 <i class="+ topic/ph hi-d/i ">pubId的所有應用程</i> 式。 </p> <p>注意： 最 <i class="+ topic/ph hi-d/i ">小和最</i><i class="+ topic/ph hi-d/i "></i> 大版本號是可選的。 </p> <p class="- topic/p ">您可以指定多個 <span class="codeph"> -air選項 </span> 來允許多個應用程式。 如果您未指定AIR或SWF應用程式，所有應用程式都可存取此內容。 在更新期間，要從清單中刪除或刪除所有條目，請應用 <span class="codeph"> -air而不 </span> 使用其餘參數。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> 最小 </span>]:[最大 <span class="+ topic/ph pr-d/codeph codeph"></span>]] </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">可播放受保護內容的AIR應用程式允許清單。 </p> <p class="- topic/p ">您可以套用此選項，以限制哪些發佈者、應用程式和版本可以存取使用此DRM原則保護的內容。 </p> <p class="- topic/p ">如果您未指定 <i class="+ topic/ph hi-d/i ">appId</i>，則允許發佈者 <i class="+ topic/ph hi-d/i ">pubId的所有應用程</i> 式。 </p> <p>注意：  <i class="+ topic/ph hi-d/i ">最小</i> 和最 <i class="+ topic/ph hi-d/i ">大版本號</i> 為可選。 </p> <p class="- topic/p ">您可以指定多個 <span class="codeph"> -air選項 </span> 來允許多個應用程式。 如果您未指定AIR或SWF應用程式，所有應用程式都可存取此內容。 在更新期間，要從清單中刪除或刪除所有條目，請應用 <span class="codeph"> -air而不 </span> 使用其餘參數。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> / <i class="+ topic/ph hi-d/i ">value</i><span class="+ topic/ph pr-d/codeph codeph"></span><i class="+ topic/ph hi-d/i "></i><span class="+ topic/ph pr-d/codeph codeph"> pairs </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">受到限制的DRM客戶端無法訪問受保護的內容。 </p> <p class="- topic/p ">值支援以下格式的逗號分隔名稱：值對： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> 或| release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1 </span>。 在更新期間，要從清單中刪除所有條目，請應用 <span class="codeph"> -drmBlacklist，而不 </span> 使用其餘引數。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">受到限制的DRM客戶端無法訪問受保護的內容。 </p> <p class="- topic/p ">值支援以下格式的逗號分隔名稱：值對： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1 </span>。 在更新期間，要從清單中刪除所有條目，請應用 <span class="codeph"> -drmBlacklist，而不 </span> 使用其餘引數。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">指出DRM用戶端必須有指定的最低安全等級才能存取受保護的內容。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION| USE_IF_AVAILABLE|必要| NO_PLAYBACK|必要_ACP|必要_CGMSA| USE_IF_AVAILABLE_ACP| USE_IF_AVAILABLE_CGMSA </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION | USE_IF_AVAILABLE |必要 | NO_PLAYBACK |必要_ACP |必要_CGMSA | USE_IF_AVAILABLE_ACP | USE_IF_AVAILABLE_CGMSA </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">模擬輸出保護限制 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION| USE_IF_AVAILABLE|必要| NO_PLAYBACK </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION | USE_IF_AVAILABLE |必要 | NO_PLAYBACK </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">數位輸出保護限制 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtime黑名單名 </span> 稱/ <i class="+ topic/ph hi-d/i ">值</i> 值對 <span class="+ topic/ph pr-d/codeph codeph"> 的 </span><i class="+ topic/ph hi-d/i "></i><span class="+ topic/ph pr-d/codeph codeph"> Laklist </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">限制存取受保護內容的應用程式執行時期。 </p> <p class="- topic/p ">值支援以下格式的逗號分隔名稱：值對： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> 或|應用程式| release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>。 在更新期間，要從清單中刪除所有條目，請應用 <span class="codeph"> -runtimeBlacklist，而不 </span> 使用其餘引數。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">限制存取受保護內容的應用程式執行時期。 </p> <p class="- topic/p ">值支援以下格式的逗號分隔名稱：值對： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os |應用程式 | release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>。 在更新期間，要從清單中刪除所有條目，請應用 <span class="codeph"> -runtimeBlacklist，而不 </span> 使用其餘引數。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeLevel int </span> </td> 
@@ -137,7 +140,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf檔案= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式白名單。 </p> <p class="- topic/p ">您可以指定多個 <span class="codeph"> -swf選 </span> 項，以允許多個應用程式。 如果您未指定任何AIR或SWF應用程式，所有應用程式都可存取此內容。 </p> <p>在更新期間，若要從清單中移除所有項目，請套用 <span class="codeph"> -swf </span> 而不需其餘引數。 如果您想要依據SWF的雜湊值來識別SWF，則需要指定要計算雜湊的SWF檔案，以及允許完成SWF驗證的最長時間（以秒為單位）。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式清單。 </p> <p class="- topic/p ">您可以指定多個 <span class="codeph"> -swf選 </span> 項，以允許多個應用程式。 如果您未指定任何AIR或SWF應用程式，所有應用程式都可存取此內容。 </p> <p>在更新期間，若要從清單中移除所有項目，請套用 <span class="codeph"> -swf </span> 而不需其餘引數。 如果您想要依據SWF的雜湊值來識別SWF，則需要指定要計算雜湊的SWF檔案，以及允許完成SWF驗證的最長時間（以秒為單位）。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k名稱=值 </span> </td> 
@@ -148,8 +151,8 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">新增自訂屬性，該屬性會顯示在為每個用戶端產生的授權中。 </p> <p class="- topic/p ">您可以指定多個 <span class="codeph"> -p選 </span> 項來新增多個屬性。 在更新期間，如果要刪除所有 <span class="codeph"> 屬性， </span> 則需要應用-p而不應用其餘參數。 此資料的解釋或處理由用戶端應用程式的實作管理。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA白名單=&lt;連接類型&gt; </span></span> </td> 
-   <td colname="2" class="- topic/entry "> 空中(OTA)輸出保護限制。 白名 <span class="codeph"> 單字 </span> 段指定白名單的連接類型和&lt;connection types&gt;的格式為 <span class="codeph"> [type(,type)*] </span>，其中type可以是下列任一類型：奇跡，空中，維迪，德爾納 </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA白名單=&lt;連接類型&gt; </span> </span> </td> 
+   <td colname="2" class="- topic/entry "> 空中(OTA)輸出保護限制。 白 <span class="codeph"> 名單字 </span> 段指定允許清單的連接類型和&lt;連接類型&gt;的格式為 <span class="codeph"> [type(,type)*] </span>，其中類型可以是以下任何類型： 奇跡，空中，維迪，德爾納 </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -opResolution &lt;檔案名&gt; </span> </td> 
