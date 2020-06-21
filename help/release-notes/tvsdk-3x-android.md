@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '5417'
+source-wordcount: '5418'
 ht-degree: 0%
 
 ---
@@ -435,7 +435,7 @@ Android 2.5.1中發行的重要新功能。
 
 **Android TVSDK 3.10**
 
-* ZD#40340 —— 在將所有TS(TypeScript)檔案列入黑名單後，嘗試播放時，應用程式會當機，出現「App Not Responding」錯誤。
+* ZD#40340 —— 在列出所有TS(TypeScript)檔案的區塊後，嘗試播放時，應用程式會當機，出現「App Not Responding」錯誤。
 
 **Android TVSDK 3.8**
 
