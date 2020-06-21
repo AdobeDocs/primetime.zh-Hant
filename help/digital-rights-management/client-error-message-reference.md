@@ -4,7 +4,7 @@ seo-description: 'DRM用戶端錯誤是TVSDK用戶端錯誤的子集。 '
 seo-title: DRM客戶端錯誤消息參考
 title: DRM客戶端錯誤消息參考
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
 source-wordcount: '5202'
 ht-degree: 1%
@@ -30,7 +30,7 @@ DRM客戶端錯誤是TVSDK客戶端錯誤的子集，與DRM相關的錯誤代碼
 | 3307 | 內部故障 | 這通常代表Primetime DRM程式碼中的錯誤，且未預期，除非有已知錯誤，如以下。subErrorId包含用戶端特定的錯誤或行錯誤。<ul><li>如果瀏覽器是Windows版Chrome，而Flash版本是11.6（SWF版本19或更新版本），授權代理商的軟體應假設使用者按下資訊列上的「拒絕」，並將它視為3368。</li><li>如果3307發生在瀏覽器非Chrome或Flash版本非11.6時，授權代理商應呈報給Adobe。</li></ul>**注意：** 3307:1107296344(FailedToGetBrokerHandle)可能發生在Chrome瀏覽器版本24-28。 |
 | 3308 | WrongLicenseKey | 當使用的授權包含解密內容的錯誤金鑰時，就會擲回此錯誤。 subErrorId包含用戶端特定的錯誤或行錯誤。<br>產生此錯誤的方式似乎只有兩種：<ul><li>客戶已修改產生授權的標準Adobe工具（例如授權者伺服器Java架構）。 在這種情況下，授權包含的金鑰可能不對應於任何內容。</li><li>客戶已使用相同的授權ID核發多份授權。 在此情況下，用戶端上有多份可用的授權，這些授權會符合內容中繼資料，而Primetime DRM程式碼已選取錯誤的授權供使用。</li><li>配銷商軟體應嘗試從伺服器重新取得授權。</li><li>如果沒有可用的授權或授權已過期，請為使用者提供工作流程以取得新的授權，或通知使用者內容無法觀看，並記錄問題。</li><li> 如果這是網域系結內容（適用於AIR），請為使用者提供加入網域的方式。</li><li>配銷商應：</li><li> 確認他們尚未自訂Primetime DRM授權伺服器的授權簽發部分。</li><li>確認他們正在為所有授權簽發唯一的授權ID。</li><li>向Adobe呈報問題。</li></ul> |
 | 3309 | 損壞的AdditionalHeader | 如果標題大於65536位元組，就會發生此情況。<ul><li>配銷商的軟體應記錄導致錯誤的內容。</li><li>配銷商應確認該錯誤是否可重複於特定內容。 重新封裝損壞的內容。</li></ul> |
-| 3310 | AppIDMismatch | 應用程式未列在白名單中。 Android、iOS或Flash SWF。<br>subErrorId: 郵遞區號1000942; 播放受保護的串流時出錯。 FAXS錯誤。<br>此外，用戶端也可能報告pubID（應用程式發行者ID）的空字串。<br>**Android:**Android應用程式與使用中的應用程式不符。 請記住，Android中除錯密鑰庫的目錄通常與發行密鑰庫的目錄不同。<br>**iOS:** 請參閱TVSDK iOS指南中的「Whitelist your iOS application documentation」（iOS應用程式白名單）。 |
+| 3310 | AppIDMismatch | 不允許列出應用程式。 Android、iOS或Flash SWF。<br>subErrorId: 郵遞區號1000942; 播放受保護的串流時出錯。 FAXS錯誤。<br>此外，用戶端也可能報告pubID（應用程式發行者ID）的空字串。<br>**Android:**Android應用程式與使用中的應用程式不符。 請記住，Android中除錯密鑰庫的目錄通常與發行密鑰庫的目錄不同。<br>**iOS:** 請參閱TVSDK iOS指南中的「允許清單您的iOS應用程式檔案」。 |
 | 3312 | LicenseIntegrity | 再次從伺服器下載授權。 |
 | 3313 | WriteMicrosafeFailed | 當系統無法寫入檔案系統時，會發生此問題。 subErrorId包含用戶端特定的錯誤或行錯誤。<br>在Microsoft Windows上，當加密內容的licenseID或policyID過長時，Active X或NPAPI外掛flash播放器可能會擲出錯誤3313。 這是因為Windows中的最大路徑長度。 （Pepper plugin沒有此問題。）<ul><li>配銷商的軟體應提示使用者確認其使用者目錄未鎖定，或是已滿或已鎖定的磁碟區。</li><li>如果配銷商使用AIR而非Flash，則問題可能是路徑長度限制所致。 配銷商應將其AIR應用程式的名稱縮短至合理的名稱。</li></ul> |
 | 3314 | 已損壞的DRMMetadata | 此錯誤通常表示內容已與測試PKI憑證封裝，而播放器是使用生產PKI建立，反之亦然。<br>subErrorId包含用戶端特定的錯誤或行錯誤。<ul><li>配銷商的軟體應記錄導致錯誤的內容。</li><li>配銷商應確認錯誤可透過特定內容重制。</li></ul>您可能必須重新封裝損壞的內容。 |
