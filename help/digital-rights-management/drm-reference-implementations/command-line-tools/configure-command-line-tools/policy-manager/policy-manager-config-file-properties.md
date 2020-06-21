@@ -6,12 +6,15 @@ seo-title: 配置屬性
 title: 配置屬性
 uuid: 216921d1-a9c1-4650-9dce-c025836986e5
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 0%
 
 ---
 
 
-# 配置屬性{#configuration-properties}
+# 配置屬性 {#configuration-properties}
 
 <!--<a id="section_20A96CDCC5C340DEAF455C6E300E5712"></a>-->
 
@@ -53,7 +56,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.chaining.ansymmetric.certfile</span> </td> 
-   <td colname="2" class="- topic/entry ">許可證伺服器證書，其公共密鑰用於加密「增強的許可證連結」的根加 <a href="https://help.adobe.com/en_US/primetime/drm/5.3/protecting_content/index.html#DRM-concept-Enhanced_License_Chaining" class="- topic/xref " format="http" scope="external"> 密密鑰</a>。 此屬性指定僅包含證書的檔案。 <p>注意： 支援PEM或DER格式。 </p> </td> 
+   <td colname="2" class="- topic/entry ">許可證伺服器證書，其公共密鑰用於加密「增強的許可證連結」的根加 <a href="https://help.adobe.com/en_US/primetime/drm/5.3/protecting_content/index.html#DRM-concept-Enhanced_License_Chaining" class="- topic/xref " format="http" scope="external"> 密密鑰</a>。 此屬性指定僅包含證書的檔案。 <p>注意：  支援PEM或DER格式。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.chaining.rootKey</span> <p class="- topic/p "><span class="codeph"> -rootKey</span> <i class="+ topic/ph hi-d/i ">root-key</i> </p> </td> 
@@ -65,11 +68,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.anonymous</span> <p class="- topic/p "><span class="codeph"> -domainAnon</span> </p> </td> 
-   <td colname="2" class="- topic/entry ">指定是否允許匿名域註冊。 將屬性設為true或包含此命令列選項以允許匿名訪問。 <p>注意：此選項不能與 <span class="codeph"> -domainAuthNS一起使用</span>。 </p> </td> 
+   <td colname="2" class="- topic/entry ">指定是否允許匿名域註冊。 將屬性設為true或包含此命令列選項以允許匿名訪問。 <p>注意： 此選項不能與 <span class="codeph"> -domainAuthNS一起使用</span>。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS命名空</span><i class="+ topic/ph hi-d/i ">間</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>網域註冊的驗證命名空間。 如果指定，客戶端需要使用指定授權機構發出的用戶名和密碼進行驗證。 </p> <p>對於更新，命令行選項不可用，而屬性將被忽略。 </p> <p>注意：此選項不能與 <span class="codeph"> -domainAnon一起使用</span>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>網域註冊的驗證命名空間。 如果指定，客戶端需要使用指定授權機構發出的用戶名和密碼進行驗證。 </p> <p>對於更新，命令行選項不可用，而屬性將被忽略。 </p> <p>注意： 此選項不能與 <span class="codeph"> -domainAnon一起使用</span>。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.analog</span> <p class="- topic/p "><span class="codeph"> -opAnalog</span> <i class="+ topic/ph hi-d/i ">AnalogOption</i> </p> </td> 
@@ -87,11 +90,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>DRM用戶端無法存取受保護的內容。 此選項指定不能使用的DRM模組版本清單（黑名單）。 </p> <p>值由逗號分隔的 <span class="codeph"> name=value</span> 對組成，格式如下： </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如， <span class="codeph"> os=Win,release=2.0,arch=32</span>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>DRM用戶端無法存取受保護的內容。 此選項指定可能未使用的DRM模組版本清單（塊清單）。 </p> <p>值由逗號分隔的 <span class="codeph"> name=value</span> 對組成，格式如下： </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如， <span class="codeph"> os=Win,release=2.0,arch=32</span>。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklsit</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>應用程式執行時期無法存取受保護的內容。 此選項指定不能使用的運行時模組版本清單（黑名單）。 </p> <p>值由逗號分隔的 <span class="codeph"> name=value</span> 對組成，格式如下： </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如， <span class="codeph"> os=Win,application=AIR</span>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>應用程式執行時期無法存取受保護的內容。 此選項指定不能使用的運行時模組版本清單（塊清單）。 </p> <p>值由逗號分隔的 <span class="codeph"> name=value</span> 對組成，格式如下： </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如， <span class="codeph"> os=Win,application=AIR</span>。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
@@ -119,19 +122,19 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.endDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">內容變為無效的日期。 </p> <p>注意：您不能 <span class="codeph"> 同時指定policy.expiration.endDate</span><span class="codeph"> 和policy.expiration.duration</span> 。 </p> <p>例如，2009-01-31-14:30:00表示內容將於1月31日下午2:30到期。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">內容變為無效的日期。 </p> <p>注意： 您不能 <span class="codeph"> 同時指定policy.expiration.endDate</span><span class="codeph"> 和policy.expiration.duration</span> 。 </p> <p>例如，2009-01-31-14:30:00表示內容將於1月31日下午2:30到期。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.duration</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">內容變為無效的時間（以分鐘為單位）。 封裝內容時的開始時間。 </p> <p>注意：您不能 <span class="codeph"> 同時指定policy.expiration.endDate</span><span class="codeph"> 和policy.expiration.duration</span> 。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">內容變為無效的時間（以分鐘為單位）。 封裝內容時的開始時間。 </p> <p>注意： 您不能 <span class="codeph"> 同時指定policy.expiration.endDate</span><span class="codeph"> 和policy.expiration.duration</span> 。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.duration</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在用戶端上快取授權的時間（以分鐘為單位）。 您可以將此屬性設為0以防止授權快取。 值必須為0或更高。 </p> <p>注意：您無法 <span class="codeph"> 同時指定policy.licenseCaching.duration</span><span class="codeph"> 和policy.licenseCaching.endDate</span> 。 </p> <p class="- topic/p ">此DRM策略設定僅應用於磁碟上的許可證快取，而不控制記憶體快取的許可證持續時間。 即使您未指定持續時間為零的DRM政策，授權仍可快取在記憶體中。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在用戶端上快取授權的時間（以分鐘為單位）。 您可以將此屬性設為0以防止授權快取。 值必須為0或更高。 </p> <p>注意： 您無法 <span class="codeph"> 同時指定policy.licenseCaching.duration</span><span class="codeph"> 和policy.licenseCaching.endDate</span> 。 </p> <p class="- topic/p ">此DRM策略設定僅應用於磁碟上的許可證快取，而不控制記憶體快取的許可證持續時間。 即使您未指定持續時間為零的DRM政策，授權仍可快取在記憶體中。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.endDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">您無法再快取授權的日期。 </p> <p>注意：您無法 <span class="codeph"> 同時指定policy.licenseCaching.duration</span><span class="codeph"> 和policy.licenseCaching.endDate</span> 。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">您無法再快取授權的日期。 </p> <p>注意： 您無法 <span class="codeph"> 同時指定policy.licenseCaching.duration</span><span class="codeph"> 和policy.licenseCaching.endDate</span> 。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.anonymous</span> </td> 
@@ -161,7 +164,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.ota</span> </td> 
-   <td colname="2" class="- topic/entry ">指定應列入白名單的Over the Air(OTA)連線類型。 有效的連接類型包括： 
+   <td colname="2" class="- topic/entry ">指定應允許的Over the Air(OTA)連接類型。 有效的連接類型包括： 
     <ul id="ul_iz5_4fp_fs"> 
      <li id="li_FB07519EFEFE4B95B3B1F5BFD4DE6591"><span class="codeph"> MIRACAST</span> </li> 
      <li id="li_51E7DE83679F4630B01264407DAD0E84"><span class="codeph"> AIRPLAY</span> </li> 
@@ -183,11 +186,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">非Flash應用程式（Adobe AIR、iOS、Android等）的白名單可播放受保護內容。 屬性必須使用下列格式： <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph"></span>max]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">非Flash應用程式（Adobe AIR、iOS、Android等）的允許清單 可播放受保護內容。 屬性必須使用下列格式： <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式白名單。 屬性必須使用下列格式： </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式清單。 屬性必須使用下列格式： </p> <p class="- topic/p "> 
      <ul id="ul_EC20F52AD95C4BE3B7F703048A43CDF0"> 
       <li id="li_3E4A47D925C24834A2C25BC5943279D4"><span class="+ topic/ph pr-d/codeph codeph">URL</span> </li> 
       <li id="li_9A7CAF081C5F488FB5CDA6D38C5552F6"><span class="+ topic/ph pr-d/codeph codeph">file=swf_file</span> </li> 
