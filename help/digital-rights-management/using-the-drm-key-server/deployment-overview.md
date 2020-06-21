@@ -3,7 +3,10 @@ seo-title: 部署Primetime DRM Key Server概觀
 title: 部署Primetime DRM Key Server概觀
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1077'
+ht-degree: 0%
 
 ---
 
@@ -153,7 +156,7 @@ iOS租 **用戶** 設定檔包含：
 
 * XSTS憑證——指定用於解密XSTS Token的應用程式開發人員憑證
 * XSTS簽署憑證——指定用來驗證XSTS Token上簽名的憑證。
-* Packager白名單——密鑰伺服器信任的Packager證書。 如果清單中沒有包裝器證書，則所有包裝器證書都將受信任。
+* Packager Allow list —密鑰伺服器信任的Packager證書。 如果清單中沒有包裝器證書，則所有包裝器證書都將受信任。
 
 ## 日誌檔案 {#log-files}
 
