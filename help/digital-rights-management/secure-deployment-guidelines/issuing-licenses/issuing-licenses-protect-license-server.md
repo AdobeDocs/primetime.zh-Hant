@@ -5,7 +5,10 @@ seo-title: 保護許可證伺服器
 title: 保護許可證伺服器
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1199'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Primetime DRM SDK會檢查並強制執行Adobe CRL。 不過，您可以建立CR
 
 ## 回滾檢測 {#rollback-detection}
 
-如果您實作的Adobe Primetime DRM使用需要用戶端維持狀態（例如播放視窗間隔）的業務規則，Adobe建議伺服器追蹤回滾計數器，並使用AIR或SWF白名單。
+如果您實作的Adobe Primetime DRM使用需要用戶端維持狀態（例如播放視窗間隔）的業務規則，Adobe建議伺服器追蹤回滾計數器，並使用AIR或SWF允許清單。
 
 回滾計數器在客戶端發出的大多數請求中都發送到伺服器。 如果您的Primetime DRM實作不需要回滾計數器，則可以忽略它。 否則，Adobe建議伺服器儲存隨機機器ID(使用 [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()))，以及資料庫中的目前計數器值。
 
@@ -72,11 +75,11 @@ DoS攻擊是攻擊者試圖阻止服務的合法用戶使用該服務。 例如�
 
 如需有關重放保護的詳細資訊，請 [ 參閱AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId())。
 
-## 維護受信任內容封裝器的白名單{#maintain-a-whitelist-of-trusted-content-packagers}
+## 維護受信任內容封裝器的允許清單{#maintain-a-allowlist-of-trusted-content-packagers}
 
-白名單是受信任實體的清單。
+允許清單是受信任實體的清單。
 
-對於內容封裝者，實體是受內容擁有者信任的組織，可封裝（或加密）視訊檔案並建立受DRM保護的內容。 部署Adobe Primetime DRM時，您應維護受信任內容封裝器的白名單。 您還必須在簽發許可之前，先驗證DRM保護檔案的DRM元資料中的內容包裝器的身份。
+對於內容封裝者，實體是受內容擁有者信任的組織，可封裝（或加密）視訊檔案並建立受DRM保護的內容。 部署Adobe Primetime DRM時，您應維護受信任內容封裝器的允許清單。 您還必須在簽發許可之前，先驗證DRM保護檔案的DRM元資料中的內容包裝器的身份。
 
 如要瞭解如何取得封裝內容之實體的相關資訊，請參 [閱V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo())。
 
