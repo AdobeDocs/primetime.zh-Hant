@@ -3,7 +3,10 @@ seo-title: 命令列使用
 title: 命令列使用
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1024'
+ht-degree: 0%
 
 ---
 
@@ -88,28 +91,28 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許匿名存取。 此選項不能與 <span class="codeph"> -authNS一起使用 </span>。 不允許更新。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[:應 <span class="+ topic/ph pr-d/codeph codeph"> 用程 </span>式ID [:[ <span class="+ topic/ph pr-d/codeph codeph"> 最小值 </span>]:[最大值 <span class="+ topic/ph pr-d/codeph codeph"></span>]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的AIR應用程式白名單。 使用此功能來限制哪些發佈者、應用程式和版本可存取使用此原則保護的內容。 </p> <p class="- topic/p ">如果 <i class="+ topic/ph hi-d/i ">未指定appId</i> ，則允許發佈者 <i class="+ topic/ph hi-d/i ">pubId的所有應用程式</i> 。 </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">最小</i> 和最 <i class="+ topic/ph hi-d/i ">大版本號</i> 為可選。 </p> <p class="- topic/p ">可以 <span class="codeph"> 指定多 </span> 個-air選項以允許多個應用程式。 如果未指定AIR或SWF應用程式，所有應用程式都可存取此內容。 在更新期間，請使用-air（不含其餘引數）來移除清單中的所有項目。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> 最小 </span>]:[最大 <span class="+ topic/ph pr-d/codeph codeph"></span>]] </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的AIR應用程式允許清單。 使用此功能來限制哪些發佈者、應用程式和版本可存取使用此原則保護的內容。 </p> <p class="- topic/p ">如果 <i class="+ topic/ph hi-d/i ">未指定appId</i> ，則允許發佈者 <i class="+ topic/ph hi-d/i ">pubId的所有應用程式</i> 。 </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">最小</i> 和最 <i class="+ topic/ph hi-d/i ">大版本號</i> 為可選。 </p> <p class="- topic/p ">可以 <span class="codeph"> 指定多 </span> 個-air選項以允許多個應用程式。 如果未指定AIR或SWF應用程式，所有應用程式都可存取此內容。 在更新期間，請使用-air（不含其餘引數）來移除清單中的所有項目。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> / <i class="+ topic/ph hi-d/i ">value</i><span class="+ topic/ph pr-d/codeph codeph"></span><i class="+ topic/ph hi-d/i "></i><span class="+ topic/ph pr-d/codeph codeph"> pairs </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM客戶端被限制訪問受保護的內容。 值由逗號分隔的名稱：值對組成，格式如下： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> 或| release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1 </span>。 在更新期間，使用 <span class="codeph"> -drmBlacklist(不含 </span> 其餘引數)從清單中刪除所有條目。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">DRM客戶端被限制訪問受保護的內容。 值由逗號分隔的名稱：值對組成，格式如下： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1 </span>。 在更新期間，使用 <span class="codeph"> -drmBlacklist(不含 </span> 其餘引數)從清單中刪除所有條目。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">指出DRM用戶端必須具備指定的最低安全等級才能存取受保護的內容。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION| USE_IF_AVAILABLE|必要| NO_PLAYBACK| ACP_REQUIRED| CGMS-A_REQUIRED| USE_ACP_IF_AVAILABLE| USE_CGMS-A_IF_AVAILABLE </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION | USE_IF_AVAILABLE |必要 | NO_PLAYBACK | ACP_REQUIRED | CGMS-A_REQUIRED | USE_ACP_IF_AVAILABLE | USE_CGMS-A_IF_AVAILABLE </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">模擬輸出保護限制。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION| USE_IF_AVAILABLE|必要| NO_PLAYBACK </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION | USE_IF_AVAILABLE |必要 | NO_PLAYBACK </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">數位輸出保護限制。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtime黑名單名 </span> 稱/ <i class="+ topic/ph hi-d/i ">值</i> 值對 <span class="+ topic/ph pr-d/codeph codeph"> 的 </span><i class="+ topic/ph hi-d/i "></i><span class="+ topic/ph pr-d/codeph codeph"> Laklist </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">應用程式執行時期無法存取受保護的內容。 值由逗號分隔的名稱：值對組成，格式如下： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> 或|應用程式| release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>。 在更新期間，使用 <span class="codeph"> -runtimeBlacklist(不含 </span> 其餘引數)來從清單中刪除所有條目。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">應用程式執行時期無法存取受保護的內容。 值由逗號分隔的名稱：值對組成，格式如下： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os |應用程式 | release= stringValue </span> </p> <p class="- topic/p ">例如， <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>。 在更新期間，使用 <span class="codeph"> -runtimeBlacklist(不含 </span> 其餘引數)來從清單中刪除所有條目。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeLevel int </span> </td> 
@@ -117,7 +120,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf檔案= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式白名單。 可以指定多個-swf選項以允許多個應用程式。 如果未指定AIR或SWF應用程式，所有應用程式都可存取此內容。 在更新期間，請使用-swf（不含其餘引數）來移除清單中的所有項目。 若要依其雜湊值來識別SWF，請指定要計算雜湊的SWF檔案，以及允許完成SWF驗證的最長時間（以秒為單位）。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式允許清單。 可以指定多個-swf選項以允許多個應用程式。 如果未指定AIR或SWF應用程式，所有應用程式都可存取此內容。 在更新期間，請使用-swf（不含其餘引數）來移除清單中的所有項目。 若要依其雜湊值來識別SWF，請指定要計算雜湊的SWF檔案，以及允許完成SWF驗證的最長時間（以秒為單位）。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k名稱=值 </span> </td> 
