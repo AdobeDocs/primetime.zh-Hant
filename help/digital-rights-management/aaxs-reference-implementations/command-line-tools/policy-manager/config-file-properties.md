@@ -3,7 +3,10 @@ seo-title: 配置檔案屬性
 title: 配置檔案屬性
 uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
 translation-type: tm+mt
-source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -72,11 +75,11 @@ source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">DRM用戶端無法存取受保護的內容。 此選項指定不能使用的DRM模組版本清單（黑名單）。 該值由逗號分隔的名稱=值對組成，其格式如下： <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如： <span class="codeph"> os=Win,release=2.0,arch=32</span>。 </p> </td> 
+   <td colname="2" class="- topic/entry ">DRM用戶端無法存取受保護的內容。 此選項指定可能未使用的DRM模組版本清單（塊清單）。 該值由逗號分隔的名稱=值對組成，其格式如下： <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如： <span class="codeph"> os=Win,release=2.0,arch=32</span>。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklsit</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">應用程式執行時期無法存取受保護的內容。 此選項指定不能使用的運行時模組版本清單（黑名單）。 該值由逗號分隔的名稱=值對組成，其格式如下： <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如， <span class="codeph"> os=Win,application=AIR</span>。 </p> </td> 
+   <td colname="2" class="- topic/entry ">應用程式執行時期無法存取受保護的內容。 此選項指定不能使用的運行時模組版本清單（塊清單）。 該值由逗號分隔的名稱=值對組成，其格式如下： <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen|value</span> </p> <p class="- topic/p ">其他名稱／值配對必須以逗號分隔。 例如， <span class="codeph"> os=Win,application=AIR</span>。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">name/value-pairs</i> </p> </td> 
@@ -88,7 +91,7 @@ source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
      <ul id="ul_a5j_q4t_44"> 
       <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> start</span> （必需）-啟動間隔指定自上次同步以來多分鐘的客戶端應開始與伺服器同步。 </li> 
       <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> force</span> （可選）-強制同步概率是客戶端在播放期間應強制同步消息的概率(0-100)。 </li> 
-      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> （可選）-硬停止間隔是在幾分鐘內的時間，在此時間之後，如果無法同步，客戶端將無法播放。 如果設定，則必須大於啟動間隔。 </li> 
+      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> （可選）-硬停止間隔是在幾分鐘內的時間，之後如果無法同步，客戶端將無法播放。 如果設定，則必須大於啟動間隔。 </li> 
      </ul>在更新期間， <span class="codeph"> 使用</span> -sync（不含其餘參數）來刪除同步要求。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -109,7 +112,7 @@ source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.duration</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在用戶端上快取授權的時間長度（以分鐘為單位）。 將此屬性設為0可禁止授權快取。 值必須為0或更高。 policy. <span class="codeph"> licenseCaching.duration</span><span class="codeph"> 和policy.licenseCaching.endDate</span> 不能同時使用。 </p> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">注意</b>:此策略設定僅應用於磁碟上的許可證快取。 它無法控制記憶體快取的授權持續時間。 即使策略指定的持續時間為零，也可以在記憶體上快取許可證。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在用戶端上快取授權的時間長度（以分鐘為單位）。 將此屬性設為0可禁止授權快取。 值必須為0或更高。 policy. <span class="codeph"> licenseCaching.duration</span><span class="codeph"> 和policy.licenseCaching.endDate</span> 不能同時使用。 </p> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">注意</b>: 此策略設定僅應用於磁碟上的許可證快取。 它無法控制記憶體快取的授權持續時間。 即使策略指定的持續時間為零，也可以在記憶體上快取許可證。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.endDate</span> </td> 
@@ -145,11 +148,11 @@ source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的Adobe AIR或iOS應用程式白名單。 屬性必須使用下列格式： <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph"></span>max]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的Adobe AIR或iOS應用程式清單。 屬性必須使用下列格式： <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式白名單。 使用下列格式： </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> =<span class="+ topic/ph pr-d/codeph codeph">swf</span>,time=max_time_to_verify<i class="+ topic/ph hi-d/i ">swf_file</i><i class="+ topic/ph hi-d/i "></i><i class="+ topic/ph hi-d/i "></i> ，是SWF檔案，它計算散列和max_time_to驗證SWF的最大時間是允許下載和驗證SWF以（以秒為單位）完成的最大時間。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">允許播放受保護內容的SWF應用程式清單。 使用下列格式： </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> =<span class="+ topic/ph pr-d/codeph codeph">swf</span>,time=max_time_to_verify<i class="+ topic/ph hi-d/i ">swf_file</i><i class="+ topic/ph hi-d/i "></i><i class="+ topic/ph hi-d/i "></i> ，是SWF檔案，它計算散列和max_time_to驗證SWF的最大時間是允許下載和驗證SWF以（以秒為單位）完成的最大時間。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
