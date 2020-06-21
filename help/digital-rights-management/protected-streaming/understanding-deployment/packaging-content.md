@@ -5,7 +5,10 @@ seo-title: 封裝內容
 title: 封裝內容
 uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -28,4 +31,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 如果每個租用戶使用不同的授權伺服器和傳輸憑證，請務必在封裝程式中指定正確的租用戶憑證。
 
-如果您想確定伺服器僅針對已知封裝商的內容發行授權，您必須將封裝商的憑證加入租用戶設定檔案的封裝商白名單中。
+如果您想確定伺服器僅針對已知封裝商的內容發行授權，您必須將封裝商的憑證加入封裝商允許的租用戶設定檔案清單中。
