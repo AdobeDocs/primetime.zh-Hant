@@ -5,7 +5,10 @@ seo-title: 更新配置檔案
 title: 更新配置檔案
 uuid: 34b3247c-3458-49de-b1b0-dc0ebbf61c88
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 ## 更新租用戶配置檔案 {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-您可以隨時修改檔案中指 [!DNL flashaccess-tenant.xml] 定的所有值。 這些更改將在伺服器下次重新載入配置檔案時生效。 此外，伺服器會檢查租用戶設定檔中參考的所有憑證( [!DNL .pfx])檔案和封裝程式白名單憑證檔案是否有任何修改。
+您可以隨時修改檔案中指 [!DNL flashaccess-tenant.xml] 定的所有值。 這些更改將在伺服器下次重新載入配置檔案時生效。 此外，伺服器會檢查所有憑證( [!DNL .pfx])檔案中是否有任何修改，並允許在租用戶設定檔案中參考的清單憑證檔案。
