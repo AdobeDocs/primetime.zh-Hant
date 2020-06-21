@@ -1,19 +1,22 @@
 ---
-description: 白名單是受信任實體的清單。
-seo-description: 白名單是受信任實體的清單。
-seo-title: 維護受信任內容封裝器的白名單
-title: 維護受信任內容封裝器的白名單
+description: 允許清單是受信任實體的清單。
+seo-description: 允許清單是受信任實體的清單。
+seo-title: 維護受信任內容封裝器的允許清單
+title: 維護受信任內容封裝器的允許清單
 uuid: 9a132ef9-eb56-408a-939e-1acd32d83a33
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '150'
+ht-degree: 0%
 
 ---
 
 
-# 維護受信任內容封裝器的白名單{#maintain-a-whitelist-of-trusted-content-packagers}
+# 維護受信任內容封裝器的允許清單{#maintain-a-allowlist-of-trusted-content-packagers}
 
-白名單是受信任實體的清單。
+允許清單是受信任實體的清單。
 
-對於內容封裝者，實體是受內容擁有者信任的組織，可封裝（或加密）視訊檔案並建立受DRM保護的內容。 部署Adobe Primetime DRM時，您應維護受信任內容封裝器的白名單。 您還必須在簽發許可之前，先驗證DRM保護檔案的DRM元資料中的內容包裝器的身份。
+對於內容封裝者，實體是受內容擁有者信任的組織，可封裝（或加密）視訊檔案並建立受DRM保護的內容。 部署Adobe Primetime DRM時，您應維護受信任內容封裝器的允許清單。 您還必須在簽發許可之前，先驗證DRM保護檔案的DRM元資料中的內容包裝器的身份。
 
 如要瞭解如何取得封裝內容之實體的相關資訊，請參 [閱V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo())。
