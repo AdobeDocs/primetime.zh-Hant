@@ -5,7 +5,10 @@ seo-title: 概觀
 title: 概觀
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '482'
+ht-degree: 0%
 
 ---
 
@@ -31,13 +34,13 @@ SDK提供Java API來完成這些工作，並包含授權伺服器的參考實作
 
 ## Adobe Access 5.2的新增功能 {#section_06220EDE36B54DCB9CA7963B76DA8167}
 
-* **外部CEK**:將內容密鑰管理系統(CKMS)整合至DRM授權服務和內容封裝工作流程的能力，而不是加密CEK並將它捆綁在內容的中繼資料中。 請參 [閱Adobe Access DRM External CEK概觀](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)。
+* **外部CEK**: 將內容密鑰管理系統(CKMS)整合至DRM授權服務和內容封裝工作流程的能力，而不是加密CEK並將它捆綁在內容的中繼資料中。 請參 [閱Adobe Access DRM External CEK概觀](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)。
 
-* **授權（憑單）退貨**:用戶端可傳回（或刪除）發給用戶端的授權。
-* **Xbox Key Server**:能夠保護傳送至Xbox和Xbox 360的內容。 （需要Adobe Primetime用戶端。）
+* **授權（憑單）退貨**: 用戶端可傳回（或刪除）發給用戶端的授權。
+* **Xbox Key Server**: 能夠保護傳送至Xbox和Xbox 360的內容。 （需要Adobe Primetime用戶端。）
 
 ## 自訂使用規則 {#custom-usage-rules}
 
 指定自訂使用規則。 自訂資料可包含在授權伺服器核發的授權中。 此資料的解譯／處理完全由用戶端應用程式和授權伺服器的實作決定。
 
-範例使用案例：允許將其他商業規則安全地傳達為原則及／或內容授權的一部分，以擴充使用規則。 出於安全原因，由於這些使用規則是在自訂用戶端應用程式碼中強制執行的，因此應搭配AIR應用程式或Flash Player SWF白名單選項使用此選項。 如需詳細資訊，請參閱「[執行時期和應用程式限制](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)」。
+範例使用案例： 允許將其他商業規則安全地傳達為原則及／或內容授權的一部分，以擴充使用規則。 出於安全原因，由於這些使用規則是在自訂用戶端應用程式碼中強制執行的，因此應搭配AIR應用程式或Flash Player SWF允許清單選項使用此選項。 如需詳細資訊，請參閱「[執行時期和應用程式限制](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)」。
