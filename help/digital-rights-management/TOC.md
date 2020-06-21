@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Digital Rights Management Help
+user-guide-title: Primetime數位版權管理說明
 translation-type: tm+mt
-source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '2197'
+ht-degree: 0%
 
 ---
 
@@ -110,7 +113,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [授權](multi-drm-workflows/quick-start/handle-the-licensing.md)
       + [播放您的受保護內容](multi-drm-workflows/quick-start/playback-protected-content.md)
       + [疑難排解快速入門](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
-   + 工作流程：封裝、授權和播放 {#package-license-play}
+   + 工作流程： 封裝、授權和播放 {#package-license-play}
       + [FairPlay的多DRM工作流程](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
       + [適用於Widevine和PlayReady的多DRM工作流程](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
       + [使用Bento4封裝您的內容](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
@@ -125,9 +128,9 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Primetime Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/plp-1.md)
       + [ExpressPlay Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/package-and-play.md)
    + 功能主題 {#feature-topics}
-      + [參考伺服器：範例ExpressPlay Entitlement Server(SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
-      + [參考服務：時間型權益](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-      + [參考服務：裝置系結權益](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+      + [參考伺服器： 範例ExpressPlay Entitlement Server(SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
+      + [參考服務： 時間型權益](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+      + [參考服務： 裝置系結權益](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
       + [查看公用API](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
    + ExpressPlay授權Token請求／回應參考 {#license-token-req-resp-ref}
       + [概觀](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
@@ -186,10 +189,10 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [時間型規則](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [同步要求](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + 執行時期和應用程式限制 {#runtime-application-restrictions}
-      + [允許播放受保護內容的Primetime DRM應用程式的白名單……](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-air.md)
-      + [Adobe® Flash® Player SWF的白名單](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-flash.md)
-      + [限制訪問受保護內容的DRM客戶端黑名單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-drm-clients.md)
-      + [應用程式運行時的黑名單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-app-runtimes.md)
+      + [允許播放受保護內容的Primetime DRM應用程式的允許清單……](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [Adobe® Flash® Player SWF的允許清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [DRM客戶端阻止訪問受保護內容的塊清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
+      + [應用程式執行時期的區塊清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [DRM和執行時期的最低安全等級](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
       + [播放受保護內容所需的裝置功能](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
       + [Jailbreak強制執行（需要Adobe Primetime DRM）](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
@@ -278,8 +281,8 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [DRM策略管理器](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
       + [策略管理器命令行使用](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
       + [配置屬性](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-config-file-properties.md)
-      + [非SWF應用程式白名單](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-whitelisting.md)
-      + [SWF應用程式白名單](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-whitelisting.md)
+      + [非SWF應用程式允許清單](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
+      + [SWF應用程式允許清單](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
    + [DRM Media Packager](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
    + [DRM策略更新清單管理器](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
    + [DRM撤銷清單管理員](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
@@ -398,7 +401,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [回滾檢測](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [核發授權時的機器計數](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [重放保護](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
-      + [維護受信任內容封裝器的白名單](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-whitelist.md)
+      + [維護受信任內容封裝器的允許清單](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
       + [驗證Token的逾時](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
       + [覆蓋策略選項](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
       + [預先產生的授權](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
@@ -421,10 +424,10 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [使用者驗證](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
    + [時間型規則](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + 執行時期和應用程式限制 {#runtime-and-application-restrictions}
-      + [允許播放受保護內容的Adobe® Primetime應用程式白名單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)
-      + [允許播放受保護內容的Adobe® Flash® Player SWF白名單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-flash.md)
-      + [DRM用戶端的黑名單，限制存取受保護的內容](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-drm-clients.md)
-      + [應用程式運行時限制訪問受保護內容的黑名單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-app-runtimes.md)
+      + [允許Adobe® Primetime應用程式播放受保護內容的清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [允許播放受保護內容的Adobe® Flash® Player SWF清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [DRM客戶端阻止訪問受保護內容的塊清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
+      + [限制存取受保護內容之應用程式執行時期的區塊清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [DRM和執行時期的最低安全等級](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [播放受保護內容所需的裝置功能](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
       + [Jailbreak Enforcement（需要Adobe Primetime）](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
