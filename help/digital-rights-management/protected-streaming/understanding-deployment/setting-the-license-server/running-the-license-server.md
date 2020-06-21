@@ -3,7 +3,10 @@ seo-title: 運行用於受保護流的DRM伺服器
 title: 運行用於受保護流的DRM伺服器
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
@@ -81,4 +84,4 @@ Adobe Primetime DRM Server for Protected Streaming應用程式產生的記錄檔
 
 ### 更新租用戶配置檔案 {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-您可以隨時修改檔案中指 [!DNL flashaccess-tenant.xml] 定的所有值。 這些更改將在伺服器下次重新載入配置檔案時生效。 此外，伺服器會檢查租用戶設定檔中參考的所有憑證( [!DNL .pfx])檔案和封裝程式白名單憑證檔案是否有任何修改。
+您可以隨時修改檔案中指 [!DNL flashaccess-tenant.xml] 定的所有值。 這些更改將在伺服器下次重新載入配置檔案時生效。 此外，伺服器會檢查所有憑證( [!DNL .pfx])檔案中是否有任何修改，並允許在租用戶設定檔案中參考的清單憑證檔案。
