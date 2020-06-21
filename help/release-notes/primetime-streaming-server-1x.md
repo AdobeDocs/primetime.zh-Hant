@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 0%
 
 ---
 
@@ -29,9 +32,9 @@ Primetime Streaming Server 1.3和1.4版本的新增功能。
 
 **原始伺服器**
 
-* HLS AES加密適用於即時和VOD工作流程。 Primetime原始碼可以及時將HLS AES加密套用至傳入的HLS串流或MP4檔案。
-* 它還可以在用於將傳入的HDS流轉換到HLS流時應用JIT HLS AES加密。
-* Primetime Origin現在支援PHLS串流的SWF白名單。 之前僅支援PHDS串流
+* HLS AES加密適用於即時和VOD工作流程。 Primetime原始碼可以及時將HLS AES加密應用到傳入的HLS流或MP4檔案。
+* 當它用於將傳入的HDS流轉換到HLS流時，它還可以應用JIT HLS AES加密。
+* Primetime原點現在支援SWF允許PHLS串流的清單。 之前僅支援PHDS串流
 
 **Primetime Live Packager**
 
@@ -39,7 +42,7 @@ Primetime Streaming Server 1.3和1.4版本的新增功能。
 
 已重新整理PHDS/PHLS憑證。 相同之新到期日為2016年10月1日。
 
-### **1.4版包含的錯誤修正**{#bug-fixes-included-in-release}
+### **1.4版包含的錯誤修正** {#bug-fixes-included-in-release}
 
 * PTPUB-282-由OfflinePackager 1.3.1建立的HLS設定層級資訊清單沒有編碼解碼器和解析度資訊。
 * PTPUB-353 - PlayListCreator不支援在設定層級資訊清單中新增WebVTT資訊
@@ -133,17 +136,17 @@ Primetime Origin的JIT封裝功能已整合數種效能增強功能，以處理�
 **硬體需求**
 
 * 3.2GHz Intel® Pentium® 4處理器（建議使用雙Intel Xeon®或速度更快的處理器）
-* 64位元作業系統：4GB的記憶體（建議使用8GB）
+* 64位元作業系統： 4GB的記憶體（建議使用8GB）
 * 建議使用1Gb乙太網卡（也支援多張網路卡和10Gb）
 * 磁碟：
 
-   * （磁碟-SAS）:7.5K RPM，最低10GB
-   * （磁碟——固態硬碟）:400MBps讀／寫
-   * (NAS):1 GB專用鏈路
+   * （磁碟-SAS）: 7.5K RPM，最低10GB
+   * （磁碟——固態硬碟）: 400MBps讀／寫
+   * (NAS): 1 GB專用鏈路
 
 **軟體需求**
 
-* Oracle Java JRE 1.7(建議：Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
+* Oracle Java JRE 1.7(建議： Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
 
 ### 安裝和設定Primetime串流伺服器 {#install-and-configure-primetime-streaming-server}
 
@@ -210,17 +213,17 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 **硬體需求**
 
 * 3.2GHz Intel® Pentium® 4處理器（建議使用雙Intel Xeon®或速度更快的處理器）
-* 64位元作業系統：4GB的記憶體（建議使用8GB）
+* 64位元作業系統： 4GB的記憶體（建議使用8GB）
 * 建議使用1Gb乙太網卡（也支援多張網路卡和10Gb）
 * 磁碟：
 
-   * （磁碟-SAS）:7.5K RPM，最低10GB
-   * （磁碟——固態硬碟）:400MBps讀／寫
-   * (NAS):1 GB專用鏈路
+   * （磁碟-SAS）: 7.5K RPM，最低10GB
+   * （磁碟——固態硬碟）: 400MBps讀／寫
+   * (NAS): 1 GB專用鏈路
 
 **軟體需求**
 
-* Oracle Java JRE 1.7(建議：Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
+* Oracle Java JRE 1.7(建議： Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
 
 上述最低系統需求適用於Origin Server和Live Packager。
 
@@ -258,7 +261,7 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 
 要重新啟動打包器，請停止並啟動打包器。
 
-**注意**:當軟體包啟動時，它嘗試從臨時目錄中的片段目標初始化引導資訊。 如果在片段目標處找到引導資訊，則表示已重新啟動包裝程式。 在重新啟動時，封裝程式會等到下一個片段邊界，然後開始封裝。 封裝程式會在引導程式中插入間隙項目，以指出有遺失片段。
+**注意**: 當軟體包啟動時，它嘗試從臨時目錄中的片段目標初始化引導資訊。 如果在片段目標處找到引導資訊，則表示已重新啟動包裝程式。 在重新啟動時，封裝程式會等到下一個片段邊界，然後開始封裝。 封裝程式會在引導程式中插入間隙項目，以指出有遺失片段。
 
 **重新啟動HTTP原始伺服器**
 
@@ -301,13 +304,13 @@ For more details about the configuration refer [the Primetime Live Packager docu
 **硬體需求**
 
 * 3.2GHz Intel® Pentium® 4處理器（建議使用雙Intel Xeon®或速度更快的處理器）
-* 64位元作業系統：4GB的記憶體（建議使用8GB）
+* 64位元作業系統： 4GB的記憶體（建議使用8GB）
 * 建議使用1Gb乙太網卡（也支援多張網路卡和10Gb）
 * 磁碟：
 
-   * （磁碟-SAS）:7.5K RPM，最低10GB
-   * （磁碟——固態硬碟）:400MBps讀／寫
-   * (NAS):1 GB專用鏈路
+   * （磁碟-SAS）: 7.5K RPM，最低10GB
+   * （磁碟——固態硬碟）: 400MBps讀／寫
+   * (NAS): 1 GB專用鏈路
 
 **軟體需求**
 
