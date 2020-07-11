@@ -3,9 +3,9 @@ seo-title: 建立自訂DRM原則（選用）
 title: 建立自訂DRM原則（選用）
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 建立自訂DRM原則（選用）{#create-custom-drm-policies-optional}
 
-Primetime Cloud DRM Protection Kit隨附一些預先設定的原則，可在封裝期間使用。 如果需要其他策略配置，例如特定的SWF-Allowsliting權限，則可使用隨附的Primetime DRM策略管理器生成自定義策略。
+Primetime Cloud DRM Protection Kit隨附一些預先設定的原則，可在封裝期間使用。 如果需要其他原則設定，例如特定的SWF允許清單權限，則可使用隨附的Primetime DRM原則管理員來產生自訂原則。
 
 >[!NOTE]
 >
