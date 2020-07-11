@@ -3,15 +3,15 @@ seo-title: 回滾檢測
 title: 回滾檢測
 uuid: fc80c98f-7ee5-414b-87fe-0dbb8d4f6019
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '125'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
 
-# 回滾檢測{#rollback-detection}
+# 回滾檢測 {#rollback-detection}
 
 如果您的Adobe Access實作使用要求用戶端維持狀態（例如播放視窗間隔）的業務規則，Adobe強烈建議伺服器追蹤回滾計數器，並使用AIR或SWF允許清單。
 
