@@ -3,7 +3,7 @@ seo-title: 限制存取受保護內容之應用程式執行時期的區塊清單
 title: 限制存取受保護內容之應用程式執行時期的區塊清單
 uuid: 462a2c09-b335-4768-bd0e-1359db169d69
 translation-type: tm+mt
-source-git-commit: fbc175f383c850a7286b1e6e89daa027e00b29ef
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -22,4 +22,3 @@ ht-degree: 0%
 | **屬性** | **支援的值** | **符合條件** | **說明** |
 |---|---|---|---|
 | 應用程式 | &quot;FlashPlayer&quot;、&quot;AIR&quot;、&quot;DRM_Library&quot;、&quot;AVE&quot; | 完全符合 | 識別應用程式執行時期的名稱。 |
-
