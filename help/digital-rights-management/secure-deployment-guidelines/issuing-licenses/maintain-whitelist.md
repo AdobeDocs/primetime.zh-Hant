@@ -5,15 +5,15 @@ seo-title: 維護受信任內容封裝器的允許清單
 title: 維護受信任內容封裝器的允許清單
 uuid: 9a132ef9-eb56-408a-939e-1acd32d83a33
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
 
-# 維護受信任內容封裝器的允許清單{#maintain-a-allowlist-of-trusted-content-packagers}
+# 維護受信任內容封裝器的允許清單 {#maintain-a-allowlist-of-trusted-content-packagers}
 
 允許清單是受信任實體的清單。
 
