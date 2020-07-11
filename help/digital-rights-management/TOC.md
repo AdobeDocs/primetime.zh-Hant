@@ -4,9 +4,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime數位版權管理說明
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2202'
 ht-degree: 0%
 
 ---
@@ -189,7 +189,7 @@ ht-degree: 0%
       + [時間型規則](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [同步要求](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + 執行時期和應用程式限制 {#runtime-application-restrictions}
-      + [允許播放受保護內容的Primetime DRM應用程式的允許清單……](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [允許播放受保護內容的Primetime DRM應用程式的清單……](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
       + [Adobe® Flash® Player SWF的允許清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
       + [DRM客戶端阻止訪問受保護內容的塊清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
       + [應用程式執行時期的區塊清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
