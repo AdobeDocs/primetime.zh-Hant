@@ -5,7 +5,7 @@ seo-title: 應用程式執行時期的區塊清單
 title: 應用程式執行時期的區塊清單
 uuid: fc3c9bd6-b1e6-4534-b29c-cd9a35b80928
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 應用程式執行時期的區塊清單{#blocklist-of-application-runtimes}
+# 應用程式執行時期的區塊清單 {#blocklist-of-application-runtimes}
 
 應用程式執行階段的區塊清單會指定無法存取內容的Primetime用戶端或Flash執行階段版本。 指定受限制的執行時期（Flash Player、AIR或iOS）、平台和版本。
 
