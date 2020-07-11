@@ -3,7 +3,7 @@ seo-title: SWF應用程式允許清單
 title: SWF應用程式允許清單
 uuid: e3021ae9-54f4-4bcf-a274-515ae765f74b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# SWF應用程式允許清單{#swf-application-allowlisting}
+# SWF應用程式允許清單 {#swf-application-allowlisting}
 
 若要允許列出SWF應用程式，您可以遵循下列兩種策略之一：
 
