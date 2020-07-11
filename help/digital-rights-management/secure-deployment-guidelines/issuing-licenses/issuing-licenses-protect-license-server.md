@@ -5,9 +5,9 @@ seo-title: 保護許可證伺服器
 title: 保護許可證伺服器
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ DoS攻擊是攻擊者試圖阻止服務的合法用戶使用該服務。 例如�
 
 如需有關重放保護的詳細資訊，請 [ 參閱AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId())。
 
-## 維護受信任內容封裝器的允許清單{#maintain-a-allowlist-of-trusted-content-packagers}
+## 維護受信任內容封裝器的允許清單 {#maintain-a-allowlist-of-trusted-content-packagers}
 
 允許清單是受信任實體的清單。
 
