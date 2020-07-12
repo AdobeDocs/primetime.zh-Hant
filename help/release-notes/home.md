@@ -4,9 +4,9 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 0%
 
 如需 [Android目前發行版本的詳細資訊，請參](../release-notes/tvsdk-3x-android.md)閱。
 
-## PTAI 20.6.1的增強功能和修正
+## PTAI 20.7.1的增強功能和修正
 
-本版次著重於資訊清單操縱和改善API等功能，以維持長格式VOD資產的作業持續運作。 此版本還整合了對主要客戶問題的修正。
+本版次主要針對SCTE35增強功能，在X-ADBE-AI-X1 HTTP回應標題中新增更多資訊、改善的量度匯總，以及「工作階段統計資料」面板。
 
 如需最新版動態廣告插入的詳細資訊，請參閱 [PTAI發行說明](ptai-20x-release-notes.md)。
 
