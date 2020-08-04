@@ -4,9 +4,9 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
+## PTAI 20.8.1的增強功能和修正
+
+此版本的重點是維護更新。
+
+如需最新版動態廣告插入的詳細資訊，請參閱 [PTAI發行說明](ptai-20x-release-notes.md)。
+
 ## TVSDK 3.12 Android中的修正
 
 本版次著重於將Primetime Reference應用程式的圖檔版本更新至5.6.4版。
 
 如需 [Android目前發行版本的詳細資訊，請參](../release-notes/tvsdk-3x-android.md)閱。
-
-## PTAI 20.7.1的增強功能和修正
-
-本版次主要針對SCTE35增強功能，在X-ADBE-AI-X1 HTTP回應標題中新增更多資訊、改善的量度匯總，以及「工作階段統計資料」面板。
-
-如需最新版動態廣告插入的詳細資訊，請參閱 [PTAI發行說明](ptai-20x-release-notes.md)。
 
 ## TVSDK 3.12 iOS版本注意事項中的增強功能和修正
 
