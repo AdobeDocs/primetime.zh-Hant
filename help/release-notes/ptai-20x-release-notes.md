@@ -1,20 +1,30 @@
 ---
-title: PTAI 20.7.1發行說明
-description: PTAI 20.7.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
+title: PTAI 20.8.1發行說明
+description: PTAI 20.8.1發行說明說明Primetime動態廣告插入在2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 
-# Primetime動態廣告插入20.7.1發行說明
+# Primetime動態廣告插入20.8.1發行說明
 
-動態廣告插入20.7.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
+動態廣告插入20.8.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
 
-## PTAI 20.7.1的新增功能
+## PTAI 20.8.1的新增功能
+
+**時間：** 2020年8月4日星期二東部時間凌晨3時至6時
+
+**增強功能和修正**
+
+維護更新。
+
+### 舊版的增強功能和修正
+
+#### 20.7.1版
 
 **時間：** 2020年7月9日星期四東部時間03:00至05:00
 
@@ -26,9 +36,7 @@ ht-degree: 0%
 
 * 增強的度量匯總。
 
-* 「作業統計資料」面板的增強SSAI主控台控制面板。
-
-### 舊版的增強功能和修正
+* 「作業統計資料」面板的增強SSAI主控台控制面板
 
 #### 20.6.2版
 
