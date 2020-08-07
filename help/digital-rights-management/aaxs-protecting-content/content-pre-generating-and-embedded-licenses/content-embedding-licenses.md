@@ -3,7 +3,10 @@ seo-title: 內嵌授權
 title: 內嵌授權
 uuid: b8d8ee9b-7430-4899-9caf-47d6b64021b8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 如需示範內嵌授權的范常式式碼，請 `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` 參閱參考實作命令列工具「範例」目錄。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Adobe Access 2.0用戶端會忽略內容中內嵌的任何授權，並會嘗試從中繼資料中指定的授權伺服器取得授權。 不過，如果中繼資料指出沒有可用的授權伺服器，Adobe Access 2.0用戶端將需要升級才能檢視內容。
 
