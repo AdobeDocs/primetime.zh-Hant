@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Android參考播放器隨附於Android TVSDK，位於您散發的範例／目錄
 >
 >1. 從https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases下載VideoHeartbeat.jar [](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) （Android v2.0.0的VideoHeartbeat程式庫）
 >1. 將VideoHeartbeat.jar解壓縮至libs/資料夾。
->
-
 
 
 適用於Android的TVSDK提供許多舊版的效能改進。 除了Multi-CDN支援外，它提供高品質的檢視體驗並具備1.4版的所有功能。
@@ -143,11 +141,11 @@ Primetime Reference應用程式的圖檔版本現已更新為5.6.4版。
 
 * **TVSDK 3.0支援高效率視訊編碼(HEVC)串流。**
 
-* **即時——解析更靠近廣告標籤的廣告現在可**&#x200B;以獨立解決每個廣告分隔。 以前，廣告解決方案是分兩階段進行的： 在播放開始之前已解決預卷問題，在播放開始之後，所有中／後滾動插槽都已合併。 透過這項增強功能，現在每個廣告插播都會在廣告提示點之前的特定時間解決。
+* **即時——解析更靠近廣告標籤的廣告現在可**&#x200B;以獨立解決每個廣告分隔。 以前，廣告解決方案是分兩階段進行的：在播放開始之前已解決預卷問題，在播放開始之後，所有中／後滾動插槽都已合併。 透過這項增強功能，現在每個廣告插播都會在廣告提示點之前的特定時間解決。
 
-> [!NOTE]
+>[!NOTE]
 >
-> 「懶惰廣告解決」現在已變更為預設關閉，而且必須明確啟用。
+>「懶惰廣告解決」現在已變更為預設關閉，而且必須明確啟用。
 
 新增API以取得與此廣 `AdvertisingMetadata::setDelayAdLoadingTolerance` 告中繼資料相關的延遲廣告載入容限。\
 現在，搜尋在準備後立即允許，搜尋廣告中斷將在搜尋完成前立即解決。\
@@ -185,7 +183,7 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
 * **部分插入廣告分段**
 
    在加入廣告中間而不觸發部分受觀看廣告的追蹤的電視類體驗。\
-   範例： 使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
+   範例：使用者在90秒廣告插播（包含3個30秒廣告）的中間（40秒）加入。 這是分段內第二個廣告的10秒。
 
    * 第二個廣告會在剩餘期間（20秒）播放，接著是第三個廣告。
 
@@ -221,16 +219,16 @@ Android TVSDK v2.5.4提供下列更新和API變更：
 
 Android TVSDK v2.5.3提供下列更新和API變更。
 
-* 建議所有使用CRS的TVSDK客戶使用TVSDK 2.5.3.85或最新版Android應用程式升級。 這將取代現有應用程式實作的下拉式。 在TVSDK升級後，在Proxy工具中檢查CRS創意URL要求(例如： Charles)，並確認路徑中的主機名稱和版本反映如下範例URL結構中。
+* 建議所有使用CRS的TVSDK客戶使用TVSDK 2.5.3.85或最新版Android應用程式升級。 這將取代現有應用程式實作的下拉式。 在TVSDK升級後，在Proxy工具中檢查CRS創意URL要求(例如：Charles)，並確認路徑中的主機名稱和版本反映如下範例URL結構中。
 
    `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
-* TVSDK的使用者代理可自訂： 我們新增了一些新API來自訂使用者代理。
+* TVSDK的使用者代理可自訂：我們新增了一些新API來自訂使用者代理。
 
    * `setCustomUserAgent(String value)`
    * `getCustomUserAgent()`
 
-* 在Android應用程式與TVSDK之間共用Cookie: Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。 現在，您可以在原生C++圖層中設定和／或修改Cookie，因為Cookie會暴露在Java Cookie商店中。
+* 在Android應用程式與TVSDK之間共用Cookie:Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。 現在，您可以在原生C++圖層中設定和／或修改Cookie，因為Cookie會暴露在Java Cookie商店中。
 
 * API變更：
 
@@ -246,7 +244,7 @@ Android TVSDK v2.5.3提供下列更新和API變更。
 
 * 變更 `SizeAvailableEvent`。 以前 `getHeight()` 的2. `getWidth()` 5.2中 `SizeAvailableEvent` 用於傳回媒體格式傳回的影格高度和影格寬度的方法。 現在它分別返回解碼器返回的輸出高度和輸出寬度。
 
-* 緩衝行為的變更： 緩衝行為已變更。 在緩衝區為空時，應用程式開發人員需自行決定要做什麼。 2.5.3在緩衝區空的情況下使用播放緩衝區大小。
+* 緩衝行為的變更：緩衝行為已變更。 在緩衝區為空時，應用程式開發人員需自行決定要做什麼。 2.5.3在緩衝區空的情況下使用播放緩衝區大小。
 
 **2.5.2版**
 
@@ -277,9 +275,9 @@ Android 2.5.1中發行的重要新功能。
 
 * **MP4內容播放-** MP4短片不需重新轉碼，就可在TVSDK中播放。
 
-   > [!NOTE]
+   >[!NOTE]
    >
-   > MP4播放不支援ABR切換、特技播放、廣告插入、延遲音訊系結和子分段。
+   >MP4播放不支援ABR切換、特技播放、廣告插入、延遲音訊系結和子分段。
 
 * **使用可調式位元速率(ABR)進行特技播放** -此功能可讓TVSDK在特技播放模式下在iFrame串流之間切換。 您可以使用非iFrame描述檔，以較低的速度進行特技播放。
 
@@ -296,6 +294,7 @@ Android 2.5.1中發行的重要新功能。
 * **工作流程支援**
 
    * **直接帳單整合** -這會將帳單量度傳送至Adobe Analytics後端，Adobe Primetime會針對客戶使用的串流進行認證。
+
    TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需的定期使用報告。 在每個串流開始事件上，TVSDK都會使用Adobe Analytics資料插入API，將計費量度(例如內容類型、啟用廣告插入的標幟，以及啟用drm的標幟（根據計費串流的持續時間）傳送至Adobe Analytics Primetime擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 此帳單使用報表會按要求定期傳送給客戶。 這是計費功能的第一階段，僅支援使用計費。 您可使用說明檔案中所述的API，根據銷售合約來設定此API。 此功能預設為啟用。 若要關閉此功能，請參閱參考播放器範例。
 
    * **改進的容錯移轉支援** -建置其他策略，以在主機伺服器、播放清單檔案和區段發生故障時，仍能繼續不間斷播放。
@@ -419,7 +418,7 @@ Android 2.5.1中發行的重要新功能。
 
 ## 已解決問題 {#resolved-issues}
 
-如果解析度與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
+如果解決方法與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
 
 **Android TVSDK 3.12**
 
@@ -527,7 +526,7 @@ Android 2.5.1中發行的重要新功能。
 
    * 在XML剖析中處理「空格」在「等號」（例如&lt;VAST version =&quot;2.0&quot;>）之前時，問題可重複的案例，以增強先前的修正
 
-* ZD #29296 - Android: 將AdSystem和Creative ID新增至CRS請求。
+* ZD #29296 - Android:將AdSystem和Creative ID新增至CRS請求。
 
    * 現在在1401和1403個請求中加入「AdSystem」和「CreativeId」作為新參數。
 
@@ -604,7 +603,7 @@ WebViewDebbuging預設為False。 若要啟用除錯，請使用setWebContentsDe
 * Zendesk#32369 —— 隱藏字幕顯示不同的顏色垃圾訊息或偽影。
 
    CC故障問題已修正至最新版本
-* Zendesk#25590 —— 增強： TVSDK Cookie儲存（C++至JAVA）
+* Zendesk#25590 —— 增強：TVSDK Cookie儲存（C++至JAVA）
 
    Android TVSDK現在支援在JAVA層（儲存於Android應用程式的CookieStore）和C++ TVSDK層之間存取Cookie。
 * Zendesk#32252 - TVSDK_Android_2.5.2.12似乎沒有PTPLAY-20269的修正
@@ -653,7 +652,7 @@ WebViewDebbuging預設為False。 若要啟用除錯，請使用setWebContentsDe
 
 **Android TVSDK 2.5.1**
 
-* 特定裝置(Samsung Galaxy Tab 4)當機； VOD DRM LBA含Auditude，然後按一下廣告。
+* 特定裝置(Samsung Galaxy Tab 4)當機；VOD DRM LBA含Auditude，然後按一下廣告。
 * VHL —— 從偏移開始內容時會傳送錯誤的心率呼叫。
 * 播放VPAID廣告時，VHL心率eartbeat會呼叫event:type:play廣告，但會遺失。
 * 進入「完成」狀態後，播放器會回到SKIP adBreakPolicy的播放狀態，以處理後段廣告。
