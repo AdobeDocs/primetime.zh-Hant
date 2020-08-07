@@ -5,7 +5,10 @@ seo-title: 預先產生的授權
 title: 預先產生的授權
 uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 當您產生根授權時，您必須如上所述指定內容中繼資料。 或者，您也可以套用DRM原則( `setSelectedPolicy()`)和授權伺服器URL()，而非中繼資料，來產 `setLicenseServerURL()`生根授權。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >即使沒有Adobe Primetime DRM License Server，用戶端也必須取得授權伺服器URL。 在這種情況下，「授權伺服器URL」應指定識別授權發行者的URL。
 
