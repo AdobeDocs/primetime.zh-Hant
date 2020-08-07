@@ -3,7 +3,10 @@ seo-title: 安全地封裝內容
 title: 安全地封裝內容
 uuid: a5e7cc17-353b-47d1-b89c-a2ba3c9faca1
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Adobe Access Media Packager命令行工具的配置檔案需要在打包過程�
 
 Packager也使用「授權伺服器」和「授權伺服器傳輸」憑證。 必須保護此資訊的完整性和機密性。 僅允許授權實體使用封裝程式。 如果您的任何私密金鑰遭到危害，請立即通知Adobe Systems Incorporated，以便撤銷憑證。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >API可讓您對多個內容使用相同的金鑰。 為確保最高等級的安全性，我們建議此功能僅用於多位元速率的FMS內容。 不建議對表示不同內容的多個檔案使用相同的索引鍵。
 
