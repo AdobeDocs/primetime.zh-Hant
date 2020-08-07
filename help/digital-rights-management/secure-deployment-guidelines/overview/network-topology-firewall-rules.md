@@ -5,7 +5,10 @@ seo-title: 防火牆規則
 title: 防火牆規則
 uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
@@ -103,7 +106,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >內部防火牆僅允許透過反向代理連線至Primetime DRM授權伺服器，且僅允許連線至表格中的URL。 為改善可擴充性，請使用HTTP來連接反向proxy和Primetime DRM。
 
