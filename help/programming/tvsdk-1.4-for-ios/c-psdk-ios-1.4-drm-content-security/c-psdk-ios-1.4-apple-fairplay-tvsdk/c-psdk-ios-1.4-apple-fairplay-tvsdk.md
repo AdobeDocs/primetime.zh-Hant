@@ -5,12 +5,15 @@ seo-title: TVSDK應用程式中的Apple FairPlay
 title: TVSDK應用程式中的Apple FairPlay
 uuid: 4384d379-37cd-46c5-8c25-0cda16bdebb8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
 
-# TVSDK應用程式中的Apple FairPlay {#apple-fairplay-in-tvsdk-applications}
+# TVSDK應用程式中的Apple FairPlay  {#apple-fairplay-in-tvsdk-applications}
 
 若要在TVSDK應用程式中實作FairPlay串流，您必須編寫資源載入器，該載入器會傳送取得授權的要求至您的FairPlay串流伺服器。
 
@@ -162,7 +165,7 @@ https://fp-gen.service.expressplay.com
 
    該方 `resourceLoader:shouldWaitForLoadingOfRequestedResource` 法等效於中的內容 `AVAssetResourceLoaderDelegate`。
 
-   >[!IMPORTANT] {imporication=&quot;high&quot;}
+   >[!IMPORTANT]
    >
    >在ExpressPlay授權伺服器案例中，若要播放內容，請將ExpressPlay FairPlay伺服器授權要求URL中的URL配置從 `skd://` 變 `https://` 更為( `https://`或)。
 
