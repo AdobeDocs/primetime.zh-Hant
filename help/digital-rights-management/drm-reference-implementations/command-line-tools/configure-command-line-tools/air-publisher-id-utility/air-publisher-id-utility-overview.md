@@ -3,9 +3,9 @@ seo-title: 概觀
 title: 概觀
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 發佈者ID是您用來建立AIR檔案的憑證唯一的。 如果您針對多個AIR應用程式重複使用相同的憑證，所有AIR應用程式都有相同的發佈者ID。 成功發行1.5.2的AIR版本不會將產生的發佈者ID新增至檔案。 因此，如果您打算使用AIR應用程式允許清單，請使用此工具來判斷發佈者ID。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >用於AIR允許清單實作的發佈者ID與應用程式發佈者在應用程式檔案中指定的發佈者ID不相 [!DNL application.xml] 同。
 
