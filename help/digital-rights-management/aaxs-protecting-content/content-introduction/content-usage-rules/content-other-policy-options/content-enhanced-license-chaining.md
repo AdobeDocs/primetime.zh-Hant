@@ -3,7 +3,10 @@ seo-title: 增強的授權鏈結
 title: 增強的授權鏈結
 uuid: d11b0631-5dfb-42b8-b7ba-cfeb1da488be
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Adobe Access 2.0支援的授權鏈結，其中葉片授權和根授權都系結�
 
 要啟用增強的許可證連結，會為策略分配根加密密鑰。 根加密密鑰用於以密碼方式將葉許可證綁定到根許可證。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Adobe Access用戶端3.0版及更新版本支援增強的授權鏈結。 如果舊版用戶端要求支援增強授權鏈結的內容授權，授權伺服器仍可使用Adobe Access 2.0支援的授權鏈結，向此用戶端發放授權。
 
