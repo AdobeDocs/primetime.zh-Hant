@@ -3,7 +3,10 @@ seo-title: 建立授權伺服器
 title: 建立授權伺服器
 uuid: d7ca8a8f-c778-41a2-b823-93fac9ab07c5
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 參考實施許可證伺服器包括用於部署許可證伺服器的WAR檔案。 它還包含所有許可證伺服器原始碼和Ant構建指令碼(參考Implementation\Server\refimpl\build-refimpl.xml)，因此您可以輕鬆更改代碼。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >只有在您要修改原始碼時，才需要此步驟。 為了進行評估，您可以跳過此步驟，並將WAR檔案按發運方式使用。
 
