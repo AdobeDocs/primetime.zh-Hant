@@ -3,7 +3,10 @@ seo-title: 部分加密級別
 title: 部分加密級別
 uuid: 462ca2d0-0d37-43a8-b8a0-8a25ecf73ce1
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 指定是否應加密所有幀，或僅加密幀的子集。 加密分為三個級別：低、中、高。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >僅限F4V/H.264檔案中的視訊追蹤。
 
