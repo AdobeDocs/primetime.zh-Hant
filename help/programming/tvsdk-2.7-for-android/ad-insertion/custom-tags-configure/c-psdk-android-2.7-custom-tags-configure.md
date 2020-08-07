@@ -5,7 +5,10 @@ seo-title: 自訂標籤
 title: 自訂標籤
 uuid: a86753ac-23d0-4c5e-9b5c-a6cdb7fcc5f7
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ TVSDK針對特定廣告標籤提供現成可用的 `#EXT` 支援。 您的應用
 >
 >您可以訂閱VOD和即時／線性串流的自訂標籤。
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
 >當在Safari中使用視訊標籤播放HLS，而非使用Flash備援時，Safari將無法使用此功能。
 
