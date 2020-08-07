@@ -3,7 +3,10 @@ seo-title: 設定資料庫和配置JNDI資料源
 title: 設定資料庫和配置JNDI資料源
 uuid: 1326523f-c053-4169-a934-1b2d3907b1f4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '521'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 匿名授權獲取不需要執行資料庫。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >本節中的說明適用於Microsoft Windows平台。 如需其他作業系統，請參閱作業系統的檔案或MySQL檔案。
 
@@ -31,13 +34,13 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 1. 記下根密碼。
 1. 如果需要重新安裝MySQL，請遵循下列步驟，以避免後續啟動伺服器時出現問題：
 
-   * 刪除資料夾系 *統驅動器：*[!DNL \Documents and Settings\All Users\Application Data\MySQL]。
+   * 刪除資料夾系 *統驅動器：*[!DNL \Documents and Settings\All Users\Application Data\MySQL].
 
-   * 刪除舊的MySQL安裝資料夾：例如，系 *統驅動器：*[!DNL \Program Files\MySQL\MySQL Server 5.1]。
+   * 刪除舊的MySQL安裝資料夾：例如，系 *統驅動器：*[!DNL \Program Files\MySQL\MySQL Server 5.1].
 
-接下來，您需要安裝MySQL JDBC驅動程式5.1.7。要執行此操作，請 [!DNL mysql-connector-java-5.1.7-bin.jar] 將(在DVD上的 [!DNL Third Party\MySQL\Installer\5.1] 資料夾中)複製到Tomcat Server lib目錄： [!DNL ...\Tomcat6.0\lib]。
+接下來，您需要安裝MySQL JDBC驅動程式5.1.7。要執行此操作，請 [!DNL mysql-connector-java-5.1.7-bin.jar] 將(在DVD上的 [!DNL Third Party\MySQL\Installer\5.1] 資料夾中)複製到Tomcat Server lib目錄： [!DNL ...\Tomcat6.0\lib].
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >MySQL JDBC驅動程式5.1.7可與Tomcat 6.0一起使用。不支援舊版Tomcat。
 
@@ -50,10 +53,10 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
        mysql> source “Reference Implementation\Server\dbscript\createsampledb.sql”
    ```
 
-1. 編輯填入表格中範例資料的指令碼，以納入您測試的資料： [!DNL Reference Implementation\Server\dbscript\PopulateSampleDB.sql]。
+1. 編輯填入表格中範例資料的指令碼，以納入您測試的資料： [!DNL Reference Implementation\Server\dbscript\PopulateSampleDB.sql].
 1. 執行此指令碼以像在步驟2中那樣填充資料。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >第一次執行指令碼時， [!DNL CreateSampleDB.sql] 您會收到下列錯誤：
 
