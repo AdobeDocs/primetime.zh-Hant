@@ -3,7 +3,10 @@ seo-title: 儲存憑證
 title: 儲存憑證
 uuid: a9e9db72-c921-4c28-ad1d-3fd3c2283f14
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
@@ -12,15 +15,15 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Primetime DRM SDK支援儲存憑證的不同方式，包括使用硬體安全模組(HSM)或以PKCS12檔案。 當需要私密金鑰時，SDK會使用憑證（公開金鑰憑證和相關的私密金鑰）。 例如，封包者使用憑證來簽署中繼資料；授權伺服器會使用憑證來解密使用授權伺服器或傳輸公開金鑰加密的資料。
 
-您必須密切保護私密金鑰，以確保內容和授權伺服器的安全性。 PKCS12是一種標準的存檔檔案格式，用於儲存使用口令加密的憑據。 （您也可以加密PKCS12檔案並加以簽署。）副檔名 [!DNL .pfx] 常用於支援此格式的檔案。
+您必須密切保護私密金鑰，以確保內容和授權伺服器的安全性。 PKCS12是一種標準的存檔檔案格式，用於儲存使用口令加密的憑據。 （您也可以加密PKCS12檔案並加以簽署。） 副檔名 [!DNL .pfx] 常用於支援此格式的檔案。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Adobe建議您使用HSM以提高安全性。
 >
 >請參閱 *Adobe Primetime DRM安全部署指南* 。
 
->[!NOTE] {imporication=&quot;high&quot;}
+>[!NOTE]
 >
 >從Java 1.7開始，64位元Sun Java for Windows不再支援Primetime DRM與HSM裝置通訊所需的PKCS11介面。 如果您打算使用HSM，則需要使用32位版本的Java，或使用支援完整PKCS11介面的JDK。
 
