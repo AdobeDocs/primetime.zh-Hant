@@ -3,7 +3,10 @@ seo-title: 增強的授權鏈結
 title: 增強的授權鏈結
 uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Primetime DRM 2.0支援授權鏈結，其中葉片授權和根授權皆系結至
 
 如果您想要啟用增強的授權鏈結，則必須將根加密金鑰指派給Primetime DRM政策。 根加密密鑰用於以密碼方式將葉許可證綁定到根許可證。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Primetime DRM用戶端3.0版或更新版本支援增強的授權鏈結。 如果舊版用戶端要求支援增強授權鏈結的內容授權，授權伺服器仍可使用Primetime DRM 2.0支援的授權鏈結，向此用戶端發放授權。
 
