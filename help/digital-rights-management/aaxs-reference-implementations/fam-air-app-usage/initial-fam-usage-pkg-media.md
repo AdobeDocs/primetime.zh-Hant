@@ -3,7 +3,10 @@ seo-title: 封裝媒體
 title: 封裝媒體
 uuid: f6e877be-d916-4766-bc44-99891a3df3a8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 如果要將資料夾中的所有檔案打包，請選擇該 **[!UICONTROL Select Single Folder]** 選項。 指定包含源檔案的資料夾。 只有符合條件的「輸入資料夾」 **[!UICONTROL Input Media File Selection]** 中的檔案才會封裝（子檔案夾中的檔案不會封裝）。 選擇加密文 [!DNL .flv] 件、 [!DNL .f4v] 檔案或輸入自定義規則運算式（例如「」）。*」加密資料夾中的所有檔案)。 加密的檔案將使用與原始檔案相同的檔案名保存在指定的輸出資料夾中。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >檔案路徑必須引用包裝伺服器可用的檔案。 如果您在與封裝伺服器不同的機器上執行Flash Access Manager，您必須指定伺服器可存取的路徑（位於網路磁碟機或伺服器本身）。
 
