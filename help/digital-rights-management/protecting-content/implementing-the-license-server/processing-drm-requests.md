@@ -3,7 +3,10 @@ seo-title: 處理Adobe Primetime DRM要求
 title: 處理Adobe Primetime DRM要求
 uuid: ee10504d-84f0-472a-b58a-2a87fdeedfc1
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1251'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 
 如果請求成功，請設定響應資料；否則，在失 `RequestMessageBase.setErrorData()` 敗時調用。 一律以叫用方法來結 `close()` 束實作(建議在 `close()` 陳述式的 `finally` 區塊中呼叫 `try` )。 如需如 `MessageHandlerBase` 何叫用處理常式的範例，請參閱API參考檔案。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >HTTP狀態碼200(OK)應會針對處理常式處理的所有要求而傳送。 如果由於伺服器錯誤而無法建立處理常式，伺服器可能會以其他狀態碼(例如500（內部伺服器錯誤）)回應。
 
@@ -26,7 +29,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 
 ## 使用機器識別碼 {#use-machine-identifiers}
 
-所有Adobe Primetime DRM請求（支援FMRMS相容性的請求除外）都包含在個人化期間發送給用戶端之機器Token的相關資訊。 機器Token包含機器ID，此為在個人化期間指派的識別碼。 您可以使用此識別碼來計算使用者要求授權或加入網域的電腦數目。
+所有Adobe Primetime DRM請求（支援FMRMS相容性的請求除外）都包含在個人化期間發送給用戶端之機器Token的相關資訊。 機器Token包含機器ID，此為個人化期間指派的識別碼。 您可以使用此識別碼來計算使用者要求授權或加入網域的電腦數目。
 
 您可以使用以下識別碼：
 
