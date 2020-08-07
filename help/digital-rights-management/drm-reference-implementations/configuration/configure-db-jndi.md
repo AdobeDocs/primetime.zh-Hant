@@ -5,7 +5,10 @@ seo-title: 配置許可證伺服器資料庫
 title: 配置許可證伺服器資料庫
 uuid: 6d34e849-1616-46bd-ad18-4f98e6c45af7
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    此指令碼位於資料夾 `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` 中。
 1. 執行指 [!DNL PopulateSampleDB] 令碼以填入資料，如同您在步驟2中所做的一樣。
 
-   >[!NOTE] {class=&quot;- topic/note &quot;}
+   >[!NOTE]
    >
    >第一次運行指令碼時，會發 [!DNL CreateSampleDB.sql] 生以下錯誤：
 
