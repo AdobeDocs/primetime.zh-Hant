@@ -3,7 +3,10 @@ seo-title: 實作使用模型概觀
 title: 實作使用模型概觀
 uuid: 1041bb84-9996-4284-b2a0-d6fc6d4b73d9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '589'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
     java -jar AdobeMediaPackager.jar source.flv dest.flv -k RI_UsageModelDemo=true
 ```
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >如果您未在封裝時啟用選用的示範模式，則授權伺服器會使用封裝時指定的原則來核發授權。 如果指定了多個策略，則許可證伺服器使用第一個有效策略。
 
