@@ -3,7 +3,10 @@ seo-title: 同步要求
 title: 同步要求
 uuid: 976a0ae1-bece-437e-b95b-6cd222525d13
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 * 硬停止間隔— （可選）。 如果未在指定的時間長度內成功同步，則不允許播放。
 * 強制同步概率— （可選）。 客戶端在下一個啟動間隔之前發送同步消息的概率。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >此使用規則受Adobe Access用戶端3.0版及更新版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱「 [最低客戶端版本](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)」。
 
