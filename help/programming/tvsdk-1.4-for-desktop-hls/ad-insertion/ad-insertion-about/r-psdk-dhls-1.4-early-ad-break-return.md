@@ -5,7 +5,10 @@ seo-title: 實作早期廣告插播傳回
 title: 實作早期廣告插播傳回
 uuid: 984b6ed0-c929-49a3-9553-e30d1a7758ed
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 若是即時串流廣告插入，您可能需要先退出廣告插播，才能播放該插播中的所有廣告。
 
->[!NOTE] {othertype=&quot;Presequate&quot;}
+>[!NOTE]
 >
 >您必須訂閱剪接／插入廣告標籤( `#EXT-X-CUE-OUT`、 `#EXT-X-CUE-IN`和 `#EXT-X-CUE`)。
 
