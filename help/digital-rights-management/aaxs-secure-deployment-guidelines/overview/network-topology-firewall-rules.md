@@ -3,7 +3,10 @@ seo-title: 防火牆規則
 title: 防火牆規則
 uuid: a5667030-c4d0-42e3-b56e-20a12c903954
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -75,11 +78,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端用來將FMRMS 1.x DRM中繼資料轉換為Adobe Access DRM中繼資料的URL。 </p> <p class="- topic/p ">注意：此 <i class="+ topic/ph hi-d/i ">URL必須使用SSL(HTTPS)</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端用來將FMRMS 1.x DRM中繼資料轉換為Adobe Access DRM中繼資料的URL。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES web service URL。 如果內容是使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器，並提示您升級至Adobe Access。 </p> <p class="- topic/p ">注意：此 <i class="+ topic/ph hi-d/i ">URL必須使用SSL(HTTPS)</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES web service URL。 如果內容是使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器，並提示您升級至Adobe Access。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -88,7 +91,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >內部防火牆只能允許透過反向代理與Adobe Access授權伺服器進行連線，且只能與上述URL連線。 為改善可擴充性，反向proxy和Adobe Access之間的連線將會透過HTTP進行。
 
