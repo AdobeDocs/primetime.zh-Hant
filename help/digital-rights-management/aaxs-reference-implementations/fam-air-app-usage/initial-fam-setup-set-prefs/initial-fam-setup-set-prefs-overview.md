@@ -3,7 +3,10 @@ seo-title: 設定偏好設定概觀
 title: 設定偏好設定概觀
 uuid: d1c067b1-6c2b-460e-8d00-5a5bfee0789c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 除了Packager Server URL，以下指定的所有偏好設定都會儲存在伺服器 [!DNL flashaccess-refimpl-packager.properties] 的檔案中。 您可以直接在屬性檔案或透過AIR應用程式修改所有設定。 密碼儲存在伺服器的屬性檔案中時會進行加密。 在UI中輸入未加密的密碼，並在密碼儲存在檔案中之前加密。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >所有目錄和路徑都指封裝伺服器上的目錄，而非執行AIR應用程式的用戶端上的目錄。
 
