@@ -5,7 +5,10 @@ seo-title: 密碼剪輯器
 title: 密碼剪輯器
 uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
@@ -43,6 +46,6 @@ Encrypted password:
 
 您在和檔案中指定的所有密 [!DNL flashaccess-global.xml] 碼都 [!DNL flashaccess-tenant.xml] 必須加密。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >用於受保護流的Primetime DRM伺服器中的密碼擾碼器實用程式不能與隨參考實施許可證伺服器提供的擾碼器互換。
