@@ -5,7 +5,10 @@ seo-title: 包裝和保護內容
 title: 包裝和保護內容
 uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '822'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Adobe Primetime DRM Media Packager命令列工具的設定檔需要封裝期間�
 
 封裝程式也會使用「授權伺服器」和「授權伺服器傳輸」憑證，而且必須保護這些資訊的完整性和機密性。 僅允許授權實體使用封裝程式。 如果您的私密金鑰受到危害，請立即通知Adobe Systems Incorporated，以便撤銷憑證。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >API可讓您對多個內容使用相同的金鑰。 為確保最高等級的安全性，您只應將此功能用於多位元速率的FMS內容。 請勿對代表不同內容的多個檔案使用相同的索引鍵。
 
