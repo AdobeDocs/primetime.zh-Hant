@@ -3,7 +3,10 @@ seo-title: 儲存憑證
 title: 儲存憑證
 uuid: dbce523c-32d9-423f-bc95-39786f85fc29
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '363'
+ht-degree: 0%
 
 ---
 
@@ -12,11 +15,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 SDK支援多種儲存憑證的方式（公開金鑰憑證及其相關的私密金鑰），包括在HSM或PKCS12檔案中。 憑證會在需要私密金鑰時使用（例如，封包員簽署中繼資料，或授權伺服器解密使用授權伺服器或傳輸公用金鑰加密的資料）。 私密金鑰必須嚴加保護，以確保內容和授權伺服器的安全性。 PKCS12是包含使用口令加密的憑據的檔案的標準格式。 副檔名。pfx常用於此格式的檔案。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Adobe建議使用HSM以提高安全性。 如需詳細資訊，請參閱Adobe Access安全部署准則。
 
->[!NOTE] {imporication=&quot;high&quot;}
+>[!NOTE]
 >
 >從Java1.7開始，64位元Sun Java for Windows不支援Adobe Access DRM與HSM裝置通訊所需的PKCS11介面。 如果您打算使用HSM，請使用32位版本的Java，或使用支援完整PKCS11介面的JDK。
 
