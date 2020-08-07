@@ -1,18 +1,21 @@
 ---
-description: 要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
-seo-description: 要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
+description: 要測試您的DRM解決方案，您需要一個視頻應用程式，該應用程式可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
+seo-description: 要測試您的DRM解決方案，您需要一個視頻應用程式，該應用程式可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
 seo-title: 播放您的受保護內容
 title: 播放您的受保護內容
 uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 0%
 
 ---
 
 
 # 播放您的受保護內容 {#playback-your-protected-content}
 
-要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
+要測試您的DRM解決方案，您需要一個視頻應用程式，該應用程式可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
 
 1. 從ExpressPlay伺服器傳回的代號回應使用授權伺服器URL，以測試您是否可以播放受保護的內容。
 
@@ -53,7 +56,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
    以下是使用FairPlay測試播放的完整範例，包括授權步驟：
 
-1. 使用FairPlay授權Token請求以取得您的授權Token URL。 (請使用您自己的「生產客戶驗證器」，並務必使用與用來封裝 `iv` FairPlay內容相同的CEK。)執行下列命令以取得範例內容的授權Token URL:
+1. 使用FairPlay授權Token請求以取得您的授權Token URL。 (請使用您自己的「生產客戶驗證器」，並務必使用與用來封裝 `iv` FairPlay內容相同的CEK。) 執行下列命令以取得範例內容的授權Token URL:
 
    ```
    curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
@@ -82,7 +85,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1"
    ```
 
-   >[!NOTE] {imporication=&quot;high&quot;}
+   >[!NOTE]
    >
    >上述資訊僅適用於FairPlay設定的測試。 視您設定FairPlay處理常式的方式而定，它可能不適用於您的生產設定。 如需詳 [細資訊，請參閱「在iOS應用程式中啟用Apple FairPlay](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) 」。
 
