@@ -3,7 +3,10 @@ seo-title: 預先產生的授權
 title: 預先產生的授權
 uuid: 31430753-11f1-4ce5-b402-cf4279119a05
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 當產生根授權時，內容中繼資料可如上所述指定。 或者，您可使用原則( `setSelectedPolicy()`)和授權伺服器URL()來產生根授權，而 `setLicenseServerURL()`非中繼資料。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >即使沒有Adobe Access License Server可供用戶端要求授權，仍需要授權伺服器URL。 在這種情況下，「授權伺服器URL」應指定識別授權發行者的URL。
 
