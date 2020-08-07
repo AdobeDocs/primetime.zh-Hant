@@ -5,7 +5,10 @@ seo-title: 在TVSDK應用程式中啟用Apple FairPlay
 title: 在TVSDK應用程式中啟用Apple FairPlay
 uuid: fafffdb9-09f9-45fb-9957-3c6e95ed55f9
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
    該方 `resourceLoader:shouldWaitForLoadingOfRequestedResource` 法等效於中的內容 `AVAssetResourceLoaderDelegate`。
 
-   >[!IMPORTANT] {imporication=&quot;high&quot;}
+   >[!IMPORTANT]
    >
    >在ExpressPlay授權伺服器案例中，若要播放內容，請將ExpressPlay FairPlay伺服器授權要求URL中的URL配置從 `skd://` 變 `https://` 更為( `https://`或)。
 
