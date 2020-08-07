@@ -5,7 +5,10 @@ seo-title: 控制隱藏字幕樣式
 title: 控制隱藏字幕樣式
 uuid: 331b0833-3e8a-482e-a3df-5e92b69d0a94
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
@@ -144,8 +147,9 @@ public TextFormatBuilder(
  String bottomInset)
 ```
 
-[!TIP]
-在定義預設值（例如DEFAULT）的選項中，該值是指最初指定標題時的設定。
+>[!TIP]
+>
+>在定義預設值（例如DEFAULT）的選項中，該值是指最初指定標題時的設定。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -157,7 +161,7 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> 字型 </td> 
-   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由 <span class="codeph"> TextFormat.Font枚舉定義的值，並表示(例如，有序列或無序列 </span> )的單間距。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 單空間與serifs通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
+   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由 <span class="codeph"> TextFormat.Font枚舉定義的值，並表示(例如，有序列或無序列 </span> )的單間距。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 帶有序列的單空間通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 大小 </td> 
