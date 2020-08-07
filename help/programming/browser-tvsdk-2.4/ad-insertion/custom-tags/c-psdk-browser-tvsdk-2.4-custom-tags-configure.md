@@ -5,7 +5,10 @@ seo-title: 自訂標籤
 title: 自訂標籤
 uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 >
 >您可以訂閱VOD和即時／線性串流的自訂標籤。
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
 >當在Safari中使用視訊標籤播放HLS，而非使用Flash備援時，Safari將無法使用此功能。
 
@@ -65,7 +68,7 @@ seg5.ts
 * 當標籤或 `#EXT-X-ASSET` 您已訂閱的任何其他自訂標籤名稱集存在於檔案中時，會發出通知。
 * 當在串流中找 `#EXT-X-AD` 到標籤或任何其他自訂標籤名稱時插入廣告。
 
-您可以訂閱下列任一標籤作為自訂標籤： `EXT-PROGRAM-DATE-TIME`, `EXT-X-START``EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`。 在剖析資訊清單檔 `TimedMetadata` 案時，會通知您事件。
+您可以訂閱下列任一標籤作為自訂標籤： `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`在剖析資訊清單檔 `TimedMetadata` 案時，會通知您事件。
 
 有些廣告標籤，例 `EXT-X-CUE`如您已訂閱。 這些廣告標籤也由預設機會生成器使用。 通過設定屬性，您可以指定預設業務機會生成器使用哪些廣告 `adTags` 標籤。
 
