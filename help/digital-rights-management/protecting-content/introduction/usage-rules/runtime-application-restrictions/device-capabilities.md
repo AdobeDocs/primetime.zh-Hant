@@ -5,7 +5,10 @@ seo-title: 播放受保護內容所需的裝置功能
 title: 播放受保護內容所需的裝置功能
 uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Adobe Primetime DRM用戶端2.0.2版及更新版本支援此使用規則。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。
 >
