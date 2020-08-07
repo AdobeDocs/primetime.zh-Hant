@@ -5,7 +5,10 @@ seo-title: 警告通知代碼
 title: 警告通知代碼
 uuid: 136b5a65-b842-40fd-8ddd-efe01d73c388
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 3%
 
 ---
 
@@ -166,4 +169,6 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
  </tbody> 
 </table>
 
->[!NOTE] adID和來源(URL)可透過PTAdAsset在通知中繼資料中使用金鑰來 `AD_ASSET` 擷取。
+>[!NOTE]
+>
+>adID和來源(URL)可透過PTAdAsset在通知中繼資料中使用金鑰來 `AD_ASSET` 擷取。
