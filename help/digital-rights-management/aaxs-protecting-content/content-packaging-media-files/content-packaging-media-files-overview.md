@@ -3,7 +3,10 @@ seo-title: 概觀
 title: 概觀
 uuid: 11cf1f1f-a4b2-4ac2-aae7-e925d96729d2
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '867'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 特定內容可能有多個策略。 例如，如果您想要在不同商業模式下授權內容，而不需要多次封裝內容，這可能很有用。 例如，您可以允許短時間的匿名存取，之後允許客戶購買內容並擁有無限存取權。 如果內容使用多個原則封裝，授權伺服器必須實作邏輯，以選擇要用來發佈授權的原則。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >該體系結構允許在內容打包時指定使用策略並綁定到內容。 用戶端必須先取得該電腦的授權，才能播放內容。 授權會指定所執行的使用規則，並提供用來解密內容的金鑰。 原則是產生授權的範本，但授權伺服器在發行授權時可選擇覆寫使用規則。 請注意，授權可能會因到期時間或播放視窗等限制而失效。
 
