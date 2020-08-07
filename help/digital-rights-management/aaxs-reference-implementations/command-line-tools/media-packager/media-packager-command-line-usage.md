@@ -3,7 +3,10 @@ seo-title: 命令列使用
 title: 命令列使用
 uuid: 5f24f18d-09ef-400a-9404-50a9fcf4316d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
@@ -67,7 +70,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` 是包含 [!DNL .metadata] DRM元資料的檔案。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >在封裝期間，Media Packager預設不會再產生。header檔案。 若要產生此檔案，請在封裝期 `-h` 間使用選項。
 
