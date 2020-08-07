@@ -5,7 +5,10 @@ seo-title: 錯誤通知代碼
 title: 錯誤通知代碼
 uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 5%
 
 ---
 
@@ -257,4 +260,6 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
  </tbody> 
 </table>
 
->[!NOTE] adID和來源(URL)可透過具有索引鍵的通 `PTAdAsset` 知中繼資料中的擷取 `AD_ASSET` 來源。
+>[!NOTE]
+>
+>adID和來源(URL)可透過具有索引鍵的通 `PTAdAsset` 知中繼資料中的擷取 `AD_ASSET` 來源。
