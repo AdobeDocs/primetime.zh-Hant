@@ -3,7 +3,10 @@ seo-title: 效能調整
 title: 效能調整
 uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '404'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 * 使用網路HSM比使用直接連接的HSM要慢得多。
 * 為提升效能，您可選擇部署位於SDK資料夾中的平台特定程式庫，以啟用加密 [!DNL thirdparty/cryptoj] 作業的原生支援。 若要啟用原生支援，請將平台的程式庫（Windows專用的jsafe.dll,Linux專用的libjsafe.so）新增至路徑。
 
-   >[!NOTE] {class=&quot;- topic/note &quot;}
+   >[!NOTE]
    >
    >如果在同一Tomcat實例中運行多個Web應用 `jsafe.dll` 程式並且路徑上有，則只有載入的第一個Web應用程式能夠載入庫 `jsafe.dll` 。 因此，只有第一個Web應用程式才能享有原生支援的優點。 在這種情況下，為了改善所有Web應用程式的效能，請 `cryptoj.jar`置於WAR檔案之外。 例如，在目錄 `<tomcat_installation_folder>/lib` 中。
 
