@@ -5,7 +5,10 @@ seo-title: FairPlay授權Token要求／回應
 title: FairPlay授權Token要求／回應
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 4%
 
 ---
 
@@ -45,7 +48,7 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
 
 **請求查詢參數**
 
-**表4:Token查詢參數**
+**表3:Token查詢參數**
 
 | 查詢參數 | 說明 | 需要？ |
 |--- |--- |--- |
