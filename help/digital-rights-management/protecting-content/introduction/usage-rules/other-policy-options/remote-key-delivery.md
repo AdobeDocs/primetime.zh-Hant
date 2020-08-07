@@ -3,7 +3,10 @@ seo-title: 遠端和本機iOS金鑰傳送
 title: 遠端和本機iOS金鑰傳送
 uuid: 90f672e7-9301-4e14-adca-db2a8f951a83
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Adobe Primetime支援下列選項，以將關鍵內容傳送至iOS用戶端：
 
 遠端金鑰傳送是透過用於封裝內容的Primetime DRM政策來啟用。 如果您想要變更此設定，則必須重新封裝內容。 如果您啟用遠端金鑰傳送，您必須部署Primetime DRM金鑰伺服器，以管理來自iOS用戶端的金鑰要求。 不過，其他平台上的用戶端工作流程並無變更。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >「金鑰傳送」選項只會影響iOS用戶端。 所有使用HLS內容的其他裝置(例如Android和Primetime on Desktop(Flash Player))，即使已指定， `Local` 也一律 `Remote` 使用金鑰傳送。
 
