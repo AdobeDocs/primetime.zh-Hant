@@ -5,7 +5,10 @@ seo-title: 授權伺服器
 title: 授權伺服器
 uuid: 39cb0d0f-f3dc-48e9-b6fd-6960a9ade291
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
 
 ## 建立授權伺服器 {#build-the-license-server}
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >只有當您要修改原始碼時，才需要建立授權伺服器。 為了進行評估，您只需將WAR檔案按發運方式使用即可。
 
