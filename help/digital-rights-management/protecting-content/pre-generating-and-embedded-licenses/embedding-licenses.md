@@ -3,7 +3,10 @@ seo-title: 內嵌授權
 title: 內嵌授權
 uuid: e3d55376-07de-479c-9a53-04bc8071ced4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 請參 `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` 閱參考實作命令列工具目錄， [!DNL Samples] 以取得示範內嵌授權的范常式式碼。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Adobe Primetime DRM 2.0用戶端會忽略內嵌在內容中的任何授權，然後嘗試從中繼資料中指定的授權伺服器取得授權。 不過，如果中繼資料指出沒有可用的授權伺服器，則Primetime DRM 2.0用戶端必須先升級，您才能檢視內容。
 
