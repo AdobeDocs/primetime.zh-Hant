@@ -3,7 +3,10 @@ seo-title: 概觀
 title: 概觀
 uuid: 870c32f5-1119-4fec-abed-25e51dd1ebe3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 如果請求成功，請設定響應資料；否則，在失 `RequestMessageBase.setErrorData()` 敗時調用。 一律以叫用方法來結 `close()` 束實作(建議在 `close()` 陳述式的 `finally` 區塊中呼叫 `try` )。 如需如 `MessageHandlerBase` 何叫用處理常式的範例，請參閱API參考檔案。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >HTTP狀態碼200(OK)應會針對處理常式處理的所有要求而傳送。 如果由於伺服器錯誤而無法建立處理常式，伺服器可能會以其他狀態碼(例如500（內部伺服器錯誤）)回應。
 
