@@ -3,7 +3,10 @@ seo-title: 伺服器屬性檔案
 title: 伺服器屬性檔案
 uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
    </i class="+ topic>
    ```
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >上例使用分號(;)作為分隔字元。 對於Microsoft Windows以外的平台，請使用冒號(:)作為分隔字元。
 
