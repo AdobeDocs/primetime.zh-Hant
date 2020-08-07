@@ -3,7 +3,10 @@ seo-title: 命令列使用
 title: 命令列使用
 uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ java -jar AdobePublisherIDUtility.jar
 
 * `signingcert` 指定用於簽署AIR應用程式的憑證
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >若要決定iOS應用程式的發佈者ID，請使用 `-s` 選項並指定用來簽署iOS應用程式的憑證。 ***Adobe Primetime是建立可播放受存取保護內容的iOS應用程式的必要工具***。
 
