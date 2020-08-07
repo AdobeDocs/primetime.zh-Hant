@@ -3,7 +3,10 @@ seo-title: 加密指令碼資料
 title: 加密指令碼資料
 uuid: c91e5568-194e-4f20-858b-65310049901b
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '67'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 
 此封裝選項指定是否加密內嵌在內容中的指令碼資料。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >此規則僅適用於FLV檔案格式。 對於其他格式的檔案，指令碼資料始終處於清除狀態。
 
