@@ -5,7 +5,10 @@ seo-title: 概觀
 title: 概觀
 uuid: f4474837-9460-479d-89c2-dd697e0fb997
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1317'
+ht-degree: 0%
 
 ---
 
@@ -77,11 +80,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` 是包含 [!DNL .metadata] DRM元資料的檔案。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >在封裝期間，Media Packager依預設無法再產 [!DNL .header] 生檔案。 若要產生 [!DNL .header] 檔案，請在封裝期 `-h` 間使用選項。
 
-**表4:選項**
+**表3:選項**
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_wgz_spy_n4">  
  <thead class="- topic/thead "> 
@@ -168,7 +171,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指示視頻加密級別。 </p> <p class="- topic/p ">高值 <span class="codeph"> 用於加密所有視頻內容</span><span class="codeph"></span><span class="codeph"></span> ，而中值和低值用於加密包含H.264內容的mp4檔案的視頻內容的部分。 </p> <p class="- topic/p ">值=高 <span class="codeph"> |中級|低</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指示視頻加密級別。 </p> <p class="- topic/p ">高值 <span class="codeph"> 用於加密所有視頻內容</span><span class="codeph"></span><span class="codeph"></span> ，而中值和低值用於加密包含H.264內容的mp4檔案的視頻內容的部分。 </p> <p class="- topic/p ">值=高 <span class="codeph"> |中級 |低</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.secondsUnencrypted</span> </td> 
