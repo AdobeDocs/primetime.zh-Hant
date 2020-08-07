@@ -3,7 +3,10 @@ seo-title: 同步要求
 title: 同步要求
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '161'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +21,6 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 * **硬停止間隔** -（可選）。 如果未在指定的時間長度內成功同步，則不允許播放。
 * **強制同步概率** -（可選）。 客戶端在下一個啟動間隔之前發送同步消息的概率。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Primetime DRM用戶端3.0版或更新版本支援此使用規則。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。
