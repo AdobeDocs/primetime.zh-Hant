@@ -5,7 +5,10 @@ seo-title: FairPlay的多DRM工作流程
 title: FairPlay的多DRM工作流程
 uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Apple的FairPlay DRM解決方案在您搭配ExpressPlay DRM服務使用時，需
 
 1. 從Apple取得認證。
 
-   這些認證是唯一提供給每個服務提供者的。 您必須填妥下清單格，以索取： [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/)。
+   這些認證是唯一提供給每個服務提供者的。 您必須填妥下清單格，以索取： [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
 
    >[!NOTE]
    >
@@ -65,7 +68,7 @@ Apple的FairPlay DRM解決方案在您搭配ExpressPlay DRM服務使用時，需
    1. ASK中的金鑰以完成憑證產生，然後按一下 **[!UICONTROL Continue]**。
    1. 確認已保存ASK後，按一下繼 **[!UICONTROL Generate]** 續。
 
-      >[!NOTE] {imporication=&quot;high&quot;}
+      >[!NOTE]
       >
       >請務必儲存ASK的副本並安全地儲存。 *如果您的ASK受到危害，您將無法再使用FairPlay串流保護您的內容。* 您的團隊只有一(1)個ASK。 將不再提供該值，您以後也無法檢索它。
 
@@ -87,7 +90,7 @@ Apple的FairPlay DRM解決方案在您搭配ExpressPlay DRM服務使用時，需
    1. 按一 **[!UICONTROL DRM SERVICES]** 下左上角的，然後選取標 **[!UICONTROL FairPlay]** 簽。
    1. 將您的FairPlay認證上傳至您的ExpressPlay帳戶。
 
-      1. 建立包含ASK值的文字檔案(例如：)，並 `1234567890abcdef1234567890abcdef`選取此檔案以進行上傳。
+      1. 建立包含ASK值的文字檔案(例如： `1234567890abcdef1234567890abcdef`)，並選取此檔案進行上傳。
       1. 從步驟4.f中選擇PKCS12檔案。上傳。
       1. 在步驟4.f中輸入PKCS12檔案口令。
       1. 按一下「上傳」按鈕。
@@ -141,6 +144,7 @@ Apple的FairPlay DRM解決方案在您搭配ExpressPlay DRM服務使用時，需
    * `iv_file_path` -這是包裝機上IV檔案的位置。
    * `key_url` -檔案標籤的 `EXT-X-KEY` URI參 [!DNL .m3u8] 數。
    * `content_id` -預設值。
+
    如 [Packager檔案所述](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7),「最佳實務是，建立組態檔，其中包含您要用來產生輸出的常用選項。 然後，通過提供特定選項作為命令行參數來建立輸出。」
 
    ```
@@ -171,7 +175,7 @@ Adobe提供範例ExpressPlay Entitlement Server(SEES)，可顯示如何執行 *�
 
 授權和播放FairPlay保護的內容需要在視訊資訊清單檔案(skd:)中使用的配置與ExpressPlay Token請求(https:)中使用的配置之間，交換URL配置。
 
-從iOS TVSDK用戶端實作授權和播放的指示如下：在 [TVSDK應用程式中啟用Apple FairPlay](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)。 您也可以選擇實作FairPlay的離線播放和授權輪換。
+從iOS TVSDK用戶端實作授權和播放的指示如下： [在TVSDK應用程式中啟用Apple FairPlay](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)。 您也可以選擇實作FairPlay的離線播放和授權輪換。
 
 ## HLS Offline with FairPlay {#section_047A05D1E3B64883858BC601CFC8F759}
 
