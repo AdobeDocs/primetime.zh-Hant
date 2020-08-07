@@ -3,7 +3,10 @@ seo-title: 輸出保護控制
 title: 輸出保護控制
 uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '635'
+ht-degree: 0%
 
 ---
 
@@ -68,7 +71,7 @@ source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >雖然這些規則在所有平台上都一致地執行，但目前只有在Windows平台上安全地開啟輸出保護功能。 在其他平台（例如Macintosh和Linux）上，協力廠商應用程式沒有支援的作業系統功能。
 
