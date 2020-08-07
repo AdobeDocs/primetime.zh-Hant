@@ -3,7 +3,10 @@ seo-title: '用於封裝內容和建立撤銷清單的命令列工具 '
 title: '用於封裝內容和建立撤銷清單的命令列工具 '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 * 所有命令列工具都需要Java 1.5或更新版本。
 * Adobe核發的Packager和License Server憑證（憑證和密碼）。 您需要認證來加密和簽署視訊檔案、簽署原則更新和撤銷清單，以及預先產生授權。
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >由於Java錯誤，命令行中使用的參數（如檔案名、策略名稱或說明）只能使用作業系統預設字元集中的字元。
 
@@ -44,7 +47,7 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 
 在運行工具之前，設定配置檔案中屬性的值。 對於某些命令行工具，可以通過命令行或配置檔案設定某些選項的值。 在這些情況下，通過命令行設定的值優先於配置檔案中的任何值。
 
-## 安裝命令行工具 {#installing-the-command-line-tools}
+## 安裝命令行工具  {#installing-the-command-line-tools}
 
 您可以從DVD上的目錄(包 [!DNL \Reference Implementation\Command Line Tools] 含預設配置檔案)複製所需的檔案， [!DNL flashaccesstools.properties] 並從目錄 [!DNL libs] （包含工具的JAR檔案）複製所需的檔案。
 
