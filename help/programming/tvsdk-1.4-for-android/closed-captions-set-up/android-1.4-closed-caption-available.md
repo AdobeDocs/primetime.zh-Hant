@@ -5,7 +5,10 @@ seo-title: 從可用字軌中選擇目前的字幕軌
 title: 從可用字軌中選擇目前的字幕軌
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 1%
 
 ---
 
@@ -41,11 +44,12 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    for (int i = 0; i < ccTracks.size(); i++) { 
        ClosedCaptionsTrack track = ccTracks.get(i); 
        if (track.getName().equals(INITIAL_CC_TRACK)) { 
-   
-<b>mediaPlayer.getCurrentItem()。selectClosedCaptionsTrack(track);</b>selectedClosedCaptionsIndex = i;}}
+           mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track); 
+           selectedClosedCaptionsIndex = i; 
+       } 
+   }
+   ```
 
-```
-1. Implement a listener for the event that indicates that more tracks are available. When TVSDK dispatches the event, retrieve the current list of available tracks.
+1. 實作事件的監聽器，指出有更多可用的追蹤。 當TVSDK派單事件時，擷取目前可用軌道的清單。
 
-Retrieve the list each time that the event occurs to ensure that you always have the most current list.
-
+   每次發生事件時擷取清單，以確保您始終擁有最新的清單。
