@@ -5,7 +5,10 @@ seo-title: 建立媒體資源
 title: 建立媒體資源
 uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ MediaResource類代表MediaPlayer實例要載入的內容。
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> 中繼資料 </span> </td> 
-      <td colname="col2"> 中繼資料類別的例項( <span class="codeph"></span> 類似字典的結構)，其中可能包含有關即將載入之內容的其他資訊，例如要置於主要內容內的替代或廣告內容。 如果使用廣告，請在使用此建構函式 <span class="codeph"> 之前設定 </span> AuditudeSettings(請參閱href=Ad insertion metadata](../../android-3.5-ad-ad-insertion/ad-insertion-metadata/android-3.5-ad-insertion-metadata.md)。 </td> 
+      <td colname="col2"> 中繼資料類別的例項( <span class="codeph"></span> 類似字典的結構)，其中可能包含有關即將載入之內容的其他資訊，例如要置於主要內容內的替代或廣告內容。 如果使用廣告，請在使用此建構函 <span class="codeph"> 式廣告 </span> 插入中繼資料前 <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> 先設定AuditudeSettings </a>。 </td> 
    </tr> 
    </tbody> 
    </table>
@@ -70,6 +73,7 @@ MediaResource類代表MediaPlayer實例要載入的內容。
 
    * MediaPlayer例項。
    * `MediaPlayerItemLoader` 如需詳細資訊，請參 [閱使用MediaPlayerItemLoader載入媒體資源](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)。
+
    >[!IMPORTANT]
    >
    >不要在後台線程上載入媒體資源。 大部分的TVSDK作業都需要在主執行緒上執行，而在背景執行緒上執行這些作業可能會導致作業擲回錯誤並退出。
