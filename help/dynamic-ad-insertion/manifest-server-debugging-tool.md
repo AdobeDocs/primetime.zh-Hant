@@ -13,7 +13,10 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '2430'
+ht-degree: 0%
 
 ---
 
@@ -85,7 +88,7 @@ X-ADBE-AI-DBG-17 TRACE_MISC   Done
 
 日誌記錄的結構如下：
 
-`datetime request_id session_id zone_id record_type` 其 *他欄位。*
+`datetime request_id session_id zone_id record_type` *其他欄位。*
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -259,7 +262,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
-| ad_id | 字串 | 完全限定的 `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]`廣告ID] Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]`]協定：AUDITUDE, VAST) |
+| ad_id | 字串 | 完全限定的廣 `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` 告ID Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` 協定：AUDITUDE, VAST`)` |
 
 ### TRACE_TROCKING_REQUESTED記錄 {#trace-transcoding-requested-records}
 
@@ -306,7 +309,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_WEBVTT_RESPONSE記錄 {#trace-webvtt-response-records}
 
-Records of this type log responses the manifest server sends to clients in answer to requests for WEBVTT captions. Fields beyond TRACE_WEBVTT_RESPONSE appear in the order shown in the table, separated by tabs.
+記錄 ``of ``日誌服 ``type ``務器中 ``responses ``該標 ``manifest ``題的 ``sends ``記 ``clients ``錄 `` `answer` ````requests ```for```WEBVTT ``到該標題。 TRACE_WEBVTT_RESPONSE &#39;&#39;以外的欄位按表中顯示的順序顯示，分隔的選 `by`項卡。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -331,26 +334,26 @@ Records of this type log responses the manifest server sends to clients in answe
 * AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*seconds*, ignore=ignore *, redirectAd=****redirectAdURL, priority=priority*
 * 廣告位置傳回null。
 * 成功銜接廣告。
-* 廣告呼叫失敗：錯 *誤訊息*。
-* 新增User-Agent以擷取原始資訊清單：使 *用者代理*。
-* 新增Cookie以擷取原始資訊清單： [Cookie]
+* 廣告呼叫失敗： *錯誤消息*。
+* 新增User-Agent以擷取原始資訊清單： *user-agent*。
+* 新增Cookie以擷取原始資訊清單： [cookie]
 * 請求的URL *錯誤訊息*。 （無法解析變型URL）
 * 呼叫的url:URL獲 *得傳回：回應程式碼*。 （即時URL）
 * 呼叫的url:URL傳 *回代碼：回應程式碼*。 (VOD URL)
 * 解決廣告時發現衝突：其中一個——中間輥開始端或中間輥結束端落在中間輥(VOD)中包含的前輥或前輥內。
-* URI的處理程式檢測到未處理的異常：請 *求URL*。
+* URI的處理程式檢測到未處理的異常： *請求URL*。
 * 已完成變型資訊清單的產生。 （變體）
 * 已完成變型資訊清單的產生。
-* 處理VAST重新導向*重新導向URL *錯誤：錯 *誤訊息*。
+* 處理VAST重新導向*重新導向URL *錯誤： *錯誤消息*。
 * 無法擷取廣告資訊清單URL *的播放清單*。
 * 無法產生目標資訊清單。 (HLSManifestResolver)
-* 無法解析第一個廣告呼叫回應：錯 *誤訊息*。
-* 無法處理*GET|POST *路徑請求：請 *求URL*。 （即時/VOD）
-* 無法處理即時資訊清單請求：請 *求URL*。 （即時）
-* 無法傳回變型資訊清單：錯 *誤訊息*。
-* 無法驗證組ID:群 *組ID*。
-* 正在擷取原始資訊清單：內 *容URL*。 （即時）
-* 遵循廣泛的重新導向：重 *新導向URL*。
+* 無法解析第一個廣告呼叫回應： *錯誤消息*。
+* 無法處理*GET|POST *路徑請求： *請求URL*。 （即時/VOD）
+* 無法處理即時資訊清單請求： *請求URL*。 （即時）
+* 無法傳回變型資訊清單： *錯誤消息*。
+* 無法驗證組ID: *群組ID*。
+* 正在擷取原始資訊清單： *內容URL*。 （即時）
+* 遵循廣泛的重新導向： *重新導向URL*。
 * 找到空的可用。 (VOD)
 * 找到*數字*廣告。 (VOD)
 * 收到HTTP請求。 （第一條訊息）
@@ -366,11 +369,11 @@ Records of this type log responses the manifest server sends to clients in answe
 * 請求無效。 標題不是有效的追蹤請求。 (VOD)
 * 請求無效。 標題請求必須在會話建立後進行。 (VOD)
 * 請求無效。 必須在建立工作階段後提出追蹤要求。 (VOD)
-* 過載組ID的伺服器實例無效：群 *組ID*。 （即時）
+* 過載組ID的伺服器實例無效： *群組ID*。 （即時）
 * 已達到VAST重導的限 *制*。
-* 進行廣告呼叫：廣 *告呼叫URL*。
-* 找不到以下項目的清單：內 *容URL*。 （即時）
-* 找不到可用ID的匹配可用值：可 *用ID*。 (HLSManifestResolver)
+* 進行廣告呼叫： *廣告呼叫URL*。
+* 找不到以下項目的清單： *內容URL*。 （即時）
+* 找不到可用ID的匹配可用值： *可用ID*。 (HLSManifestResolver)
 * 找不到播放會話。 (HLSManifestResolver)
 * 處理資訊清單內容URL *的VOD請求*。
 * 正在處理變型。
@@ -380,17 +383,17 @@ Records of this type log responses the manifest server sends to clients in answe
 * 請求： *URL*。
 * 傳回GET請求的錯誤回應，因為找不到播放作業。 (VOD)
 * 由於內部伺服器錯誤，傳回GET要求的錯誤回應。
-* 針對指定無效資產的GET請求傳回錯誤回應：廣 *告請求ID*。 (VOD)
-* 針對指定無效或空的群組ID的GET請求傳回錯誤回應：群 *組ID*。 (VOD)
+* 針對指定無效資產的GET請求傳回錯誤回應： *廣告請求ID*。 (VOD)
+* 針對指定無效或空的群組ID的GET請求傳回錯誤回應： *群組ID*。 (VOD)
 * 傳回指定無效追蹤位置值之GET要求的錯誤回應。 (VOD)
 * 以無效語法傳回GET要求的錯誤回應- *要求URL*。 （即時/VOD）
-* 使用不支援的HTTP方法傳回請求的錯誤回應： *取得|貼文*。 （即時/VOD）
+* 使用不支援的HTTP方法傳回請求的錯誤回應： *GET|POST*。 （即時/VOD）
 * 從快取傳回資訊清單。 (VOD)
 * 伺服器過載。 不需要廣告插圖請求即可繼續。 （變體）
 * 開始產生目標資訊清單。 (HLSManifestResolver)
-* 開始從以下位置生成變型清單：內 *容URL*。 （變體）
+* 開始從以下位置生成變型清單： *內容URL*。 （變體）
 * 開始將廣告聯繫到資訊清單中。 (VODHLSResolver)
-* 試圖在 *HH:MM:SS處縫製廣告*:AdPlacement [adManifestURL=*廣告資訊清單URL*,*adSeconds=* seconds *, ignore=* ignore *, redirectAd=*** redirect adPriority, priority=priorityJorityHiriorityUrl。 (HLSManifestResolver)
+* 試圖在 *HH:MM:SS處縫製廣告*:AdPlacement adManifestURL=*ad Manifest URL*,*adManifest URL*=*seconds, ignore*=*ignore*, redirectAd=** redirect adRedirect adPriority=priorityDuration。 (HLSManifestResolver)
 * 由於無效的時間軸而無法取得廣告——傳回不含廣告的內容。 (VOD)
 * 無法取得廣告——傳回不含廣告的內容。 (VOD)
 * 無法取得廣告查詢，且未提供內容URL。 (VOD)
