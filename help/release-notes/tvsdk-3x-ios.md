@@ -2,7 +2,7 @@
 title: iOS版TVSDK 3.12發行說明
 description: iOS版本注意事項的TVSDK 3.12說明TVSDK iOS 3.12中有哪些新增或變更、已解決和已知問題以及裝置問題。
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -541,7 +541,7 @@ EXT-X-PROGRAM-DATE-TIME標籤與即時DRM串流不會引發計時中繼資料事
 
 根據CRS標準化規則在CRS請求中使用Creative Id和AdSystem。
 
-* [ZD #29462)- A&amp;E VOD中的StuochHub廣告導致iOS應用程式當機
+* (ZD #29462)- A&amp;E VOD中的StuochHub廣告造成iOS應用程式當機
 
 **1.4.36版(1.4.36.835)**
 
@@ -824,7 +824,7 @@ TVSDK在Adobe Access DRM串流上開始播放時傳回101000錯誤的問題已�
 
 * (ZD #21889)-線上廣告和離線內容播放失敗
 
-已修正AES加密離線內容上的廣告失敗的問題。
+AES加密離線內容上的廣告已修正後播放失敗的問題。
 
 * (ZD #22074)-每分鐘在iOS上發生一次AUDVAST當機
 
@@ -901,7 +901,7 @@ CPU/資源使用量過高已修正為兩個層級。 首先，讓時間更新函
 
 在PTMediaPlayerItem.prepareToPlay中初始載入manifest檔案時，如果載入資訊清單失敗，TVSDK不會向應用程式報告失敗回應的正文。
 
-此問題已解決，方法是讓TVSDK將失敗回應報告為應用程式的錯誤。
+此問題已解決，因為TVSDK會將失敗回應報告為應用程式的錯誤。
 
 * (ZD #19615)-備援邏輯無法運作
 
@@ -997,7 +997,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 當檢查描述檔和層級是否受支援時，當呼叫MediaCodecList和MediaCodecInfo API時，會發生此損毀。 Adobe正尋求Google的支援，以取得更多見解。 此問題已解決，方法是提前載入所有轉碼器資訊，以避免只在需要轉碼器資訊時呼叫這些API。
 
-* (Zendesk #18074)-在Nexus與Android 6.0上無法使用阿拉伯文字幕
+* (Zendesk #18074)-在Nexus與Android 6.0搭配使用時無法使用阿拉伯文字幕
 
 此問題已透過支援Android CTS字型圖而解決。
 
@@ -1098,7 +1098,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 * (ZD #2141)TreeHouse應用程式的Analytics實作，新增程式庫 `AdobeAnalyticsPlugin.a` 以建立套件。
 * 視訊心率程式庫更新至1.4.1.2
-* [PTPALY-4226] [與ZD #2423有關)執行DRM重置可導致刪除應用程式文檔資料。
+* (PTPALY-4226)（與ZD #2423有關）執行DRM重置可導致刪除應用程式文檔資料。
 
 **1.4.4版** (1.4.4.242)
 
