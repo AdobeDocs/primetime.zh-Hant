@@ -5,7 +5,10 @@ seo-title: 使用預設播放行為
 title: 使用預設播放行為
 uuid: 36f76c42-4c6c-4620-9b47-ec97519a642a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -40,19 +43,20 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 1. 實作介 `AdPolicySelector` 面及其所有方法。
 1. 指派TVSDK透過廣告廠使用的原則例項。
 
->[!NOTE]
->classCustomContentFactory擴充ContentFactory {
->...
->@Override
->publicAdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem){
->傳回新的CustomAdPolicySelector(mediaPlayerItem);
->}
->...
->}
->//向媒體播放器註冊自訂內容工廠
->MediaPlayerItemConfig = new MediaPlayerItemConfig();
->config.setAdvertisingFactory(new CustomContentFactory());
->// this config will belled passed while loading >resource
->mediaPlayer.replaceCurrentResource(resource, config);
+   >[!NOTE]
+   >
+   >classCustomContentFactory擴展了ContentFactory &amp;lbrace;
+   >...
+   >@Override
+   >publicAdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem)&amp;lbrace;
+   >傳回新的CustomAdPolicySelector(mediaPlayerItem);
+   >&amp;rbraces;
+   >...
+   >&amp;rbraces;
+   >//向媒體播放器註冊自訂內容工廠
+   >MediaPlayerItemConfig = new MediaPlayerItemConfig();
+   >config.setAdvertisingFactory(new CustomContentFactory());
+   >// this config will belled passed while loading >resource
+   >mediaPlayer.replaceCurrentResource(resource, config);
 
 1. 實作您的自訂。
