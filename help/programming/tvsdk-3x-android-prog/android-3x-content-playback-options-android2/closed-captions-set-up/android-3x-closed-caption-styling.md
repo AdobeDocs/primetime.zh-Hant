@@ -5,7 +5,10 @@ seo-title: 控制隱藏字幕樣式
 title: 控制隱藏字幕樣式
 uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -123,20 +126,22 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
       public void setTreatSpaceAsAlphaNum(bool)
       ```
 
-      [!IMPORTANT]
+      >[!IMPORTANT]
+      >
+      >**顏色設定：** 在Android TVSDK 2.X中，對隱藏字幕的色彩樣式進行了增強。 該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：
+      >
+      >* FFFFFF =黑色
+      >* 000000 =白色
+      >* FF0000 =紅色
+      >* 00FF00 =綠色
+      >* 0000FF =藍色
+         >等等。
 
-      **顏色設定：** 在Android TVSDK 2.X中，對隱藏字幕的色彩樣式進行了增強。 該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：
+      >
+      >在應用程式中，每當您將顏色樣式資訊傳遞至時 `TextFormatBuilder`，您仍會像以前一樣使用列舉，但現在您必須 `Color``getValue()` 新增顏色才能將值當做字串取得。 例如：
+      >
+      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
-          * FFFFF = Black
-          * 00000 = White
-          * FF0000 = Red
-          * 00FF00 = Green
-          * 0000FF = Blue
-      等等。
-
-      在應用程式中，每當您將顏色樣式資訊傳遞至時 `TextFormatBuilder`，您仍會像以前一樣使用列舉，但現在您必須 `Color``getValue()` 新增顏色才能將值當做字串取得。 例如：
-
-      `tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 
 設定隱藏字幕樣式是非同步操作，因此變更可能需要數秒鐘才會顯示在畫面上。
@@ -175,7 +180,7 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> 字型 </td> 
-   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由 <span class="codeph"> TextFormat.Font枚舉定義的值，並表示(例如，有序列或無序列 </span> )的單間距。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 單空間與serifs通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
+   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由 <span class="codeph"> TextFormat.Font枚舉定義的值，並表示(例如，有序列或無序列 </span> )的單間距。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 帶有序列的單空間通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 大小 </td> 
