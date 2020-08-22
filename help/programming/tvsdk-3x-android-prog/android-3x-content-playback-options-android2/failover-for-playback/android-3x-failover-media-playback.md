@@ -5,7 +5,10 @@ seo-title: 媒體播放和故障切換
 title: 媒體播放和故障切換
 uuid: e0072eeb-8ad1-436f-bf4a-fee6885a25bd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 0%
 
 ---
 
@@ -45,9 +48,12 @@ break;
 
 如果視訊引擎持續無法取得區段，會將連續區段跳至5，然後停止播放，而TVSDK會發出程式碼5 `NATIVE_ERROR` 的問題。
 
->[!R限制]
+>[!NOTE]
+>
+>**限制**
 >
 >以下是您應注意的一些限制：
+>
 >* 當故障切換發生時，不考慮自適應位速率(ABR)控制參數。
 >
 >  
