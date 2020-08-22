@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Dynamic Ad Insertion Help
+user-guide-title: Primetime動態廣告插入說明
+user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
 translation-type: tm+mt
-source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 0%
 
 ---
 
@@ -14,6 +18,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
 + [動態廣告插入概述](home.md)
 + [動態廣告插入發行說明](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [資訊清單伺服器除錯工具](manifest-server-debugging-tool.md)
+
 <!-- + [Server Side Ad Insertion debugging dashboard](ssai-debugging-dashboard.md)-->
 + 廣告插入資訊清單伺服器API {#manifest-server}
    + [資訊清單伺服器互動概觀](msapi-topics/ms-overview.md)
