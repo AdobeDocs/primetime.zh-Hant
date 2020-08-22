@@ -5,7 +5,10 @@ seo-title: 插入廣告
 title: 插入廣告
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -93,11 +96,11 @@ TVSDK會自動追蹤VOD和即時／線性串流的廣告。
 
 1. 如果應用程式共用相同的提示來指示提示／剪接和提示／剪接，請擴充並實 `PTDefaultAdOpportunityResolver` 施該方 `preparePlacementOpportunity` 法。
 
-   [!TIP]
+   >[!TIP]
+   >
+   >下列程式碼假設應用程式具有方法的實 `isCueInOpportunity` 作。
 
-   下列程式碼假設應用程式具有方法的實 `isCueInOpportunity` 作。
-
-```
+   ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
    { 
          if ([self isCueInOpportunity:timedMetadata]) 
@@ -109,7 +112,7 @@ TVSDK會自動追蹤VOD和即時／線性串流的廣告。
                return [super preparePlacementOpportunity:timedMetadata]; 
          } 
    }
-```
+   ```
 
 1. 在實例上註冊擴展的機會解 `PTDefaultMediaPlayerClientFactory` 決程式。
 
