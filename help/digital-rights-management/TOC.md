@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime數位版權管理說明
+user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '2202'
 ht-degree: 0%
@@ -113,7 +114,7 @@ ht-degree: 0%
       + [授權](multi-drm-workflows/quick-start/handle-the-licensing.md)
       + [播放您的受保護內容](multi-drm-workflows/quick-start/playback-protected-content.md)
       + [疑難排解快速入門](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
-   + 工作流程： 封裝、授權和播放 {#package-license-play}
+   + 工作流程：封裝、授權和播放 {#package-license-play}
       + [FairPlay的多DRM工作流程](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
       + [適用於Widevine和PlayReady的多DRM工作流程](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
       + [使用Bento4封裝您的內容](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
@@ -128,9 +129,9 @@ ht-degree: 0%
       + [Primetime Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/plp-1.md)
       + [ExpressPlay Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/package-and-play.md)
    + 功能主題 {#feature-topics}
-      + [參考伺服器： 範例ExpressPlay Entitlement Server(SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
-      + [參考服務： 時間型權益](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-      + [參考服務： 裝置系結權益](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+      + [參考伺服器：範例ExpressPlay Entitlement Server(SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
+      + [參考服務：時間型權益](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+      + [參考服務：裝置系結權益](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
       + [查看公用API](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
    + ExpressPlay授權Token請求／回應參考 {#license-token-req-resp-ref}
       + [概觀](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
@@ -349,7 +350,7 @@ ht-degree: 0%
    + [關於Adobe Access Server for Protected Streaming](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [使用規則](aaxs-protected-streaming/usage-rules.md)
    + [需求](aaxs-protected-streaming/requirements.md)
-   + 部署Adobe Access Server進行受保護的串流 {#deploying-aaxs-protect-stream}
+   + 部署Adobe Access Server以進行受保護的串流 {#deploying-aaxs-protect-stream}
       + [部署Adobe Access Server for Protected Streaming概觀](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
       + [Java系統屬性](aaxs-protected-streaming/deplying-aaxs-protect-stream/java-system-properties.md)
       + [Adobe Access認證](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
