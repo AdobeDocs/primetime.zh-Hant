@@ -5,7 +5,10 @@ seo-title: 設定自訂播放
 title: 設定自訂播放
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 1. 指派TVSDK透過廣告廠使用的原則例項。
 
->[!ATTENTION]
+>[!IMPORTANT]
 >
 >當MediaPlayer例項>deallocated時，會清除在>playback開頭註冊的自訂廣告原則。您的應用程式必須在每次建立新的播放作業時，註冊一個原則>選擇器例項。
 
