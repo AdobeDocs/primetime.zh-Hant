@@ -5,7 +5,10 @@ seo-title: 考量事項和最佳實務
 title: 考量事項和最佳實務
 uuid: a65c9739-ed83-4519-8ae5-7ba4c8f1ca49
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
    * 時間軸調整無法在初始設定後修訂。
 
-      例如，廣告播放後，無法從時間軸移除。 如果使用者在簡報中尋找回來，即使原則是移除廣告，也會重播相同的廣告。
+      例如，廣告播放後，無法從時間軸移除。 如果使用者在簡報中尋找回來，即使原則是移除廣告，也會重新播放相同的廣告。
 
    * 根據編碼器精度，實際編碼媒體持續時間可能與串流資源清單中記錄的持續時間不同。
 
@@ -54,6 +57,6 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 如需詳細資訊，請參閱此類別中的forceHTTPS和isForcingHTTPS方法。
 
-[!IMPORTANT]
-
-不會修改對第三方網域（例如廣告追蹤像素、內容和廣告URL）的請求，以及類似的請求。 內容提供者和廣告伺服器有責任提供透過HTTPS支援的URL。
+>[!IMPORTANT]
+>
+>不會修改對第三方網域（例如廣告追蹤像素、內容和廣告URL）的請求，以及類似的請求。 內容提供者和廣告伺服器有責任提供透過HTTPS支援的URL。
