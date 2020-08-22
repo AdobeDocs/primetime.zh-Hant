@@ -5,7 +5,10 @@ seo-title: 廣告
 title: 廣告
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -56,14 +59,18 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       * `MediaFiles`
 
       * `MediaFile`
-         [!TIP]
-在此元素中，支 `id`持、 `bitrate`、、 `delivery`、 `width`、、 `height`和屬 `scalable``maintainAspectRatio``apiFramework``type` 性。
+
+         >[!TIP]
+         >
+         >在此元素中，支 `id`持、 `bitrate`、、 `delivery`、 `width`、、 `height`和屬 `scalable``maintainAspectRatio``apiFramework``type` 性。
 
 * **非線性廣告** ：支援下列元素：
 
    * `Non-linear`
-      [!TIP]
-在此元素中，支 `id`持、 `width`、、 `height`、 `apiFramework`、、 `expandedWidth`和屬 `expandedHeight``scalable``maintainAspectRatio``minSuggestedDuration` 性。
+
+      >[!TIP]
+      >
+      >在此元素中，支 `id`持、 `width`、、 `height`、 `apiFramework`、、 `expandedWidth`和屬 `expandedHeight``scalable``maintainAspectRatio``minSuggestedDuration` 性。
 
       * `StaticResource`
       * `IFrameResource`
@@ -74,8 +81,10 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 * **配套廣告** ：支援下列元素：
 
    * `Companion`
-      [!TIP]
-在此元素中，支 `id`持、 `width`、 `height`、 `apiFramework``expandedWidth`和 `expandedHeight` 屬性。
+
+      >[!TIP]
+      >
+      >在此元素中，支 `id`持、 `width`、 `height`、 `apiFramework``expandedWidth`和 `expandedHeight` 屬性。
 
       * `StaticResource`
       * `IFrameResource`
@@ -84,7 +93,8 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 ## 擴充功能 {#section_17401C75F419453BAE83637EEB6E1E60}
 
-[!TIP]
-僅支援Auditude專用的擴充功能。
+>[!TIP]
+>
+>僅支援Auditude專用的擴充功能。
 
 * `Extension`
