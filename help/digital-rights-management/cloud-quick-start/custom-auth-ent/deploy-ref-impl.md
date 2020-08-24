@@ -3,7 +3,10 @@ seo-title: 部署BEES參考實作
 title: 部署BEES參考實作
 uuid: 5ee7b066-8ae8-48ba-a3f0-8cc14b19d5c5
 translation-type: tm+mt
-source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+workflow-type: tm+mt
+source-wordcount: '53'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
 
 1. 設定Tomcat應用程式伺服器。 （請參閱Tomcat檔案。）
 1. 將文 `[!DNL bees.war]` 件複製到Tomcat的文 [!DNL webapps/] 件夾。
-1. 向！DNL https://localhost:8080/bees發送請求。
+1. 傳送要求至 `https://localhost:8080/bees`。
 
    如果您看到「蜂類正在運行」消息，則部署已成功完成。
 1. 在您的伺服器上啟用SSL。
