@@ -3,14 +3,17 @@ seo-title: 匿名網域
 title: 匿名網域
 uuid: ee29ae4d-65b2-48de-b441-18c8cf55de32
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 0%
 
 ---
 
 
 # 匿名網域 {#anonymous-domains}
 
-在此使用案例中，大量裝置屬於單一網域，因此可能不需要驗證。 要將此類型的域與參考實施一起使用，請建立指定需要域註冊的策略。 指定網域伺服器URL為 [*!DNL https:// host:port/flashaccess/domainserver/domainname/*] 並指定匿名驗證。
+在此使用案例中，大量裝置屬於單一網域，因此可能不需要驗證。 要將此類型的域與參考實施一起使用，請建立指定需要域註冊的策略。 指定網域伺服器URL為 `https:// host:port/flashaccess/domainserver/domainname/` 並指定匿名驗證。
 
 參考實現實現了以下域註冊邏輯：
 
