@@ -5,7 +5,10 @@ seo-title: Primetime廣告伺服器中繼資料
 title: Primetime廣告伺服器中繼資料
 uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 9d60bff4035963572e49fa49effa576ca854f799
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 TVSDK支援解析和插入VOD和即時／線性串流的廣告。
 
-[!PREREQUISITE] {othertype=&quot;Presefilit&quot;}
+## 先決條件
 
 在視訊內容中加入廣告之前，請提供下列中繼資料資訊：
 
