@@ -5,7 +5,10 @@ seo-title: 在MediaPlayer中載入媒體資源
 title: 在MediaPlayer中載入媒體資源
 uuid: ac31ccfe-161d-41a2-9a6e-38fae11ceab5
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 7d61a6cd8cb2c381f85a19d9ccac3d235ffceaf1
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
@@ -40,34 +43,30 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 以下簡化的范常式式碼說明載入媒體資源的程式：
 
->```js>
->player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
->                                               onStatusChange); 
-> 
->
+```js
+player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
+                        onStatusChange); 
+ 
 onStatusChange = function (event) { 
->       var msg = ""; 
->       switch (event.status) { 
->               case AdobePSDK.MediaPlayerStatus.INITIALIZED: 
->                       msg = "Player Status: INITIALIZED"; 
->                       console.log(msg); 
->                       player.prepareToPlay(AdobePSDK.MediaPlayer.LIVE_POINT); 
->                       break; 
-> 
->        
-       case AdobePSDK.MediaPlayerStatus.PREPARED: 
->               // The resource is successfully loaded and available 
->               // and the MediaPlayer is ready to start the playback. 
->               // Once the resource is loaded, the MediaPlayer can 
->               // provide a reference to the current "playable item" 
->                     MediaPlayerItem playerItem = player.currentItem; 
->                     if (playerItem != null) {  
->                           // here we can look at the properties of the  
->                           // loadedstream 
->                     } 
->                     break; 
->       } 
->}
->```>
-
-
+    var msg = ""; 
+    switch (event.status) { 
+        case AdobePSDK.MediaPlayerStatus.INITIALIZED: 
+            msg = "Player Status: INITIALIZED"; 
+            console.log(msg); 
+            player.prepareToPlay(AdobePSDK.MediaPlayer.LIVE_POINT); 
+            break; 
+ 
+        case AdobePSDK.MediaPlayerStatus.PREPARED: 
+        // The resource is successfully loaded and available 
+        // and the MediaPlayer is ready to start the playback. 
+        // Once the resource is loaded, the MediaPlayer can 
+        // provide a reference to the current "playable item" 
+           MediaPlayerItem playerItem = player.currentItem; 
+           if (playerItem != null) {  
+              // here we can look at the properties of the  
+              // loadedstream 
+           } 
+           break; 
+    } 
+}
+```
