@@ -5,7 +5,10 @@ seo-title: 初始化和設定視訊分析
 title: 初始化和設定視訊分析
 uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -49,37 +52,38 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 1. 確認資源檔案中的載入時 `ADBMobileConfig.json` 間選項正確。
 
-       &quot;
- {     &quot;
-    version&quot; :&quot;1.1&quot;,
- &quot;     analytics&quot; :{
- &quot;     rsids&quot;:&quot;adobedevelopment&quot;,
- &quot;     server&quot;:&quot;10.131.129.149:3000&quot;,
-    &quot;charset&quot; :&quot;UTF-8&quot;,
- &quot;     ssl&quot; :false,
-    「offlineEnabled」:false,
- 「     lifecycleTimeout」:5,
- 「     batchLimit」:50,
- 「隱     私預設」:&quot;optedin&quot;,
- &quot;     poi&quot;:[]
-    },
-    「marketingCloud」:{
- &quot;     org&quot;:&quot;ADOBE PROVIDED VALUE&quot;
- }     ,
- &quot;     target&quot;:{
-    &quot;clientCode&quot; :&quot;&quot;,
- &quot;逾     時&quot;:5
-    
- },     「audienceManager」:{
- &quot;     server&quot; :&quot;&quot;
- &quot;     
- }此JSON格     
-    
-    
-    式化組態檔已與TVSDK搭售為資源。 您的播放器只會在載入時讀取這些值，而且當您的應用程式執行時，這些值會維持不變。
-   要     
- 配     置載入時間選項：
-   
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
+
+   此JSON格式的設定檔會與TVSDK搭售為資源。 您的播放器只會在載入時讀取這些值，而且當您的應用程式執行時，這些值會維持不變。
+
+   要配置載入時間選項：
+
+
    1. 確認檔 `ADBMobileConfig.json` 案包含適當的值（由Adobe提供）。
    1. 確認此檔案位於資料夾 `assets/` 中。
 
