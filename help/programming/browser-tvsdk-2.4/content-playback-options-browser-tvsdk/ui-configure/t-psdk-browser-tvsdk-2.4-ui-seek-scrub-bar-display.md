@@ -5,7 +5,10 @@ seo-title: 使用查找條時處理查找
 title: 使用查找條時處理查找
 uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -38,15 +41,15 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 1. 等待瀏覽器TVSDK觸發事 `AdobePSDK.PSDKEventType.SEEK_END` 件，事件會傳回事件屬性中調整的 `actualPosition` 位置：
 
-       &quot;js
-    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete);
-      onSeekComplete = function(event){
- ///.actualSeek     
-    
-    
-    
-    Position}This is imporition Seek Could This in are in could the actual start position after the requested position. 下列部分規則可能適用：
-   
+   ```js
+   player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
+   onSeekComplete = function (event) {
+       // event.actualPosition
+   }
+   ```
+
+   這很重要，因為搜尋後的實際開始位置可能與要求的位置不同。 下列部分規則可能適用：
+
    * 如果搜尋或其他重新定位結束於廣告插播的中間或跳過廣告插播，則播放行為會受到影響。
    * 您只能在資產可見的期間內搜尋。 對於VOD，即從0到資產的持續時間。
 
