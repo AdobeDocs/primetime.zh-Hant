@@ -2,9 +2,9 @@
 title: PTAI 20.9.1發行說明
 description: PTAI 20.9.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: c23b052f14c6673d4ba2aae6a317a55a2e611e8a
+source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 **時間：** 2020年9月1日星期二東部時間凌晨3時30分至7時30分
 
-**修正**
+**變更**
 
 * 修正使用HLS/CMAF的客戶問題，其中EXT-X-MAP有時會遺失CDN Token或EXT-X-MAP標籤有時會從DVR視窗中錯誤地卷出。
 
@@ -165,9 +165,13 @@ ht-degree: 0%
 
 * 維護升級。
 
-## 已解決問題
+## 已解決問題 {#Resolved-issues}
 
-如果解決方法與報告的問題相關聯，則顯示Zendesk參考。 例如， `ZD#xxxxx`
+如果解決方法與報告的問題相關聯，則顯示Zendesk參考。 For example, `ZD#xxxxx`.
+
+**PTAI 20.9.1**
+
+* 修正使用HLS/CMAF的客戶問題，其中EXT-X-MAP有時會遺失CDN Token或EXT-X-MAP標籤有時會從DVR視窗中錯誤地卷出。
 
 **PTAI 20.6.1**
 
@@ -187,7 +191,7 @@ ht-degree: 0%
 
 **PTAI 20.3.3**
 
-* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，無法正確進行URL編碼。
+* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
 * CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE數字在某些情況下會不正確地增加
 
