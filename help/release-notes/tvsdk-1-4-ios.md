@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -158,7 +158,7 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 * **視訊心率程式庫(VHL)更新至1.4.1.1版**
 
    * 新增使用Adobe Analytics Video Essentials搭售其他SDK或播放器之不同分析使用案例的能力。
-   * 已移除trackAdBreakStart和trackAdBreakComplete方法，以最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
+   * 已移除trackAdBreakStart和trackAdBreakComplete方法來最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
    * 追蹤廣告時不再需要播放頭屬性。
    * 新增對Marketing Cloud訪客ID的支援。
 
@@ -221,10 +221,10 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note">` 
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
@@ -232,9 +232,9 @@ Comment Type: draft
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
 
  -->
 
@@ -267,7 +267,7 @@ Comment Type: draft
 
 * (ZD#32990)- iOS:在某些提示點上播放內容，而非播放廣告。 屬於AVPlayerItem介面的&#39;selectedMediaOptionInMediaSelectionGroup&#39; API現在已移至iOS 11的AVMediaSelection下方。 此新API已解決此問題。
 * (ZD#33683)從中繼資料字串移除的TVSDK ==字尾。 問題已修正在剖析邏輯中。
-* (ZD#33905)- iOS TVSDK使用兩個使用者代理呼叫資訊清單檔案。 已修正第一次m3u8呼叫（新安裝案例）的使用者代理問題。 M3u8現在所有呼叫都有相同的使用者代理。
+* (ZD#33905)- iOS TVSDK使用兩個使用者代理呼叫資訊清單檔案。 已修正第一次m3u8呼叫（新安裝案例）的使用者代理問題。 現在，M3u8的所有呼叫都有相同的使用者代理。
 * (ZD#34293)-插入線性串流的預卷無法在iOS11上正確播放。 前置廣告的問題已修正。
 * (ZD#34684)-套用廣告略過原則時，前段廣告影格會顯示數秒。 已引入新的API enableVodPreroll，可停用vod播放中的前置播放。 此API的預設值為「是」。 API可確保在主要內容中跳過廣告內容拼接。
 * (ZD#34765)-呼叫stop()後，仍有少數傳輸串流區段會下載。 已增強Stop()API，以避免下載額外的區段。
@@ -307,7 +307,7 @@ Comment Type: draft
    使用Charles（Drop connection和403）封鎖HLS Live和VOD內容時，未收到PTMediaPlayerStatusError
 * (ZD #29242)- Airplay視訊播放失敗並啟用廣告
 
-   當廣告啟用且AirPlay啟用開始播放視訊時，視訊播放不會開始，且不會顯示錯誤
+   當廣告啟用且AirPlay啟用時，開始播放視訊時，視訊播放不會開始，且不會顯示錯誤
 * (ZD#33341)- DRMIinterface.h會在Xcode 9中觸發建置警告
 
    修正DRMIinterface.h中參數清單中遺漏「void」字詞的兩個區塊原型
@@ -595,7 +595,7 @@ TVSDK在此版本中已解決下列問題：
 
 * (ZD #19629)-進入Airplay至ATV 4時即時視訊暫停
 
-此問題已解決，方法是在移除舊項目後，但在新增項目至AVQueuePlayer之前新增等候期。 沒有等候期，通知會傳送至不正確的項目。
+此問題已解決，方法是在移除舊項目後，但在新增項目至AVQueuePlayer之前新增等候期。 沒有等候期，通知會傳送至錯誤的項目。
 
 * (ZD #19856)-預設啟用時不顯示字幕
 
@@ -682,7 +682,7 @@ TVSDK在Adobe Access DRM串流上開始播放時傳回101000錯誤的問題已�
 
 * (ZD #21889)-線上廣告和離線內容播放失敗
 
-AES加密離線內容上的廣告已修正後播放失敗的問題。
+已修正AES加密離線內容上的廣告失敗的問題。
 
 * (ZD #22074)-每分鐘在iOS上發生一次AUDVAST當機
 
@@ -759,7 +759,7 @@ CPU/資源使用量過高已修正為兩個層級。 首先，讓時間更新函
 
 在PTMediaPlayerItem.prepareToPlay中初始載入manifest檔案時，如果載入資訊清單失敗，TVSDK不會向應用程式報告失敗回應的正文。
 
-此問題已解決，方法是讓TVSDK將失敗回應報告為應用程式的錯誤。
+此問題已解決，因為TVSDK會將失敗回應報告為應用程式的錯誤。
 
 * (ZD #19615)-備援邏輯無法運作
 
@@ -775,7 +775,7 @@ CPU/資源使用量過高已修正為兩個層級。 首先，讓時間更新函
 
 * (ZD #19868)-當無效創意素材被販賣時，TVSDK會當機
 
-已修正TVSDK中錯誤地取消配置大型剖析器例項的當機問題。
+已修正TVSDK中錯誤地解除配置大型剖析器例項的當機問題。
 
 * (ZD #20180)-偶爾會略過VPAID廣告
 
