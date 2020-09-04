@@ -3,9 +3,9 @@ seo-title: 部署Primetime DRM Key Server概觀
 title: 部署Primetime DRM Key Server概觀
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ### HSM配置 {#section_13A19E3E32934C5FA00AEF621F369877}
 
-如果您選擇使用HSM來儲存伺服器憑據，則必須將私鑰和證書載入到HSM並建立 *pkcs11.cfg* 配置檔案。 此檔案必須位於 *KeyServer.ConfigRoot目錄中* 。 請參閱 [!DNL <Primetime DRM Key Server>/configs目錄] ，用於示例PKCS 11配置檔案。 有關格式的資訊 [!DNL pkcs11.cfg]，請參見Sun PKCS11提供程式文檔。
+如果您選擇使用HSM來儲存伺服器憑據，則必須將私鑰和證書載入到HSM並建立 *pkcs11.cfg* 配置檔案。 此檔案必須位於 *KeyServer.ConfigRoot目錄中* 。 有關PKCS `<Primetime DRM Key Server>/configs` 11配置檔案示例，請參見目錄。 有關格式的資訊 [!DNL pkcs11.cfg]，請參見Sun PKCS11提供程式文檔。
 
 要驗證HSM和Sun PKCS11配置檔案是否已正確配置，可以從檔案所在的目錄（隨Java JRE和JDK一起安裝）中使用 [!DNL pkcs11.cfg][!DNL keytool] 以下命令：
 
@@ -112,7 +112,7 @@ Primetime DRM Key Server需要兩種類型的配置檔案：
 
 如果對配置檔案進行了更改，則必須重新啟動伺服器才能使更改生效。
 
-為避免在配置檔案中以明文形式提供密碼，必須加密全局配置檔案和租用戶配置檔案中指定的所有密碼。 如需加密密碼的詳細資訊，請參 [*閱使用Primetime DRM *Server*&#x200B;進行受保護串流的密碼剪貼器&#x200B;*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)。
+為避免在配置檔案中以明文形式提供密碼，必須加密全局配置檔案和租用戶配置檔案中指定的所有密碼。 如需加密密碼的詳細資訊，請參 [*閱使用Primetime DRM* Server *進行受保護串流的密碼剪貼器*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)。
 
 ## 配置目錄結構 {#configuration-directory-structure}
 
@@ -136,7 +136,7 @@ KeyServer.ConfigRoot/
 * 記錄——指定記錄級別以及記錄檔案的滾動頻率。
 * HSM密碼——僅當使用HSM儲存伺服器憑據時才需要。
 
-請參閱位於 [!DNL <Primetime DRM Key Server>/configs] ，以瞭解詳細資訊。
+如需詳細資訊，請參閱位於的範例全域設定檔案 `<Primetime DRM Key Server>/configs` 中的注釋。
 
 ## 租用戶設定檔案 {#tenant-configuration-files}
 
