@@ -5,9 +5,9 @@ seo-title: 租用戶配置檔案
 title: 租用戶配置檔案
 uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Flashaccess-tenant.xml組態檔包含套用至授權伺服器特定租用戶的設定。
 
-每個租用戶都支援位於 [!DNL &lt;LicenseServer.ConfigRoot>/flashaccessserver/ramens/中的此設定檔案執行個體<tenantname>]. 請參閱目 [!DNL configs/flashaccessserver/tenants/sampletenant] 錄以取得租用戶設定檔案的範例。
+每個租用戶都支援其中的此配置檔案實例 `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`。 請參閱目 `configs/flashaccessserver/tenants/sampletenant` 錄以取得租用戶設定檔案的範例。
 
-您可以將租用戶配置檔案中的所有檔案路徑指定為絕對路徑或相對於租用戶配置目錄的路徑( [!DNL &lt;LicenseServer.ConfigRoot>/flashaccessserver/ramones/<tenantname>]).
+您可以指定租用戶設定檔案中的所有檔案路徑為絕對路徑或相對於租用戶設定目錄(`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`)的路徑。
 
 租用戶配置檔案包括：
 
@@ -48,7 +48,7 @@ Flashaccess-tenant.xml組態檔包含套用至授權伺服器特定租用戶的�
    * *正確播放* — 必須至少指定一項權利。 如果您指定多個權限，則客戶會使用第一個符合所有要求的權限。
 
       * *輸出保護* — 控制輸出至外部轉換裝置是否應受到保護。
-      * *AIR和SWF應用程式限制* — 可選的允許清單列出可播放內容的SWF和AIR應用程式（例如，僅允許指定的應用程式）。 SWF應用程式可透過URL或SWF摘要識別，並允許下載和驗證摘要的最長時間。
+      * *AIR和SWF應用程式限制* — 可選的允許清單列出可播放內容的SWF和AIR應用程式（例如，僅允許指定的應用程式）。 SWF應用程式可透過URL或SWF摘要識別，以及允許下載和驗證摘要的最長時間。
 
          如需如 *何計算SWF摘要的詳細資訊* ，請參閱SWF雜湊計算器。
 
@@ -61,6 +61,7 @@ Flashaccess-tenant.xml組態檔包含套用至授權伺服器特定租用戶的�
          * `oemVendor`
          * `model`
          * `screenType`
+
          下列屬性現在為選用：
 
          * `osVersion`
