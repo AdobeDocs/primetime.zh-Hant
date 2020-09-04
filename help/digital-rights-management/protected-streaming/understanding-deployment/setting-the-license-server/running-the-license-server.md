@@ -3,9 +3,9 @@ seo-title: 運行用於受保護流的DRM伺服器
 title: 運行用於受保護流的DRM伺服器
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 如果要啟動Tomcat和許可證伺服器，則需要從Tomcat的 [!DNL catalina.bat start] 目錄 [!DNL catalina.sh start] 運行或 [!DNL bin] 運行。
 
-啟動伺服器後，您需要通過開啟 [!DNL https://<lic<span></span>ense-server-host:port>/flashaccessserver/來驗證是否已正確配置伺服器<tenant-name>/flashaccess/license/v1] 。 如果租用戶設定已成功載入，則會顯示確認訊息。
+啟動伺服器後，您需要通過在瀏覽器窗口中開啟來驗證是否已正確 `https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1` 配置伺服器。 如果租用戶設定已成功載入，則會顯示確認訊息。
 
 ## 日誌檔案 {#log-files}
 
@@ -54,11 +54,11 @@ Adobe Primetime DRM Server for Protected Streaming應用程式產生的記錄檔
 
 ### 分區日誌檔案 {#section_5660137CD6AA40519E72A4315534846B}
 
-分區日誌文 [!DNL flashaccess-partition.log]件位於目 [!DNL <LicenseServer.LogRoot>/flashaccesserver] 錄中。 它包含在處理授權要求期間產生的記錄訊息。
+分區日誌文 [!DNL flashaccess-partition.log]件位於目 `<LicenseServer.LogRoot>/flashaccesserver` 錄中。 它包含在處理授權要求期間產生的記錄訊息。
 
 ### 租用戶記錄檔 {#section_F0257CC0831647F18A746B4F02E3E910}
 
-每個租用戶的租用戶日 [!DNL flashaccess-tenant.log]志檔位於 [!DNL &lt;LicenseServer.LogRoot>/flashaccessserver/romens/<tenantname>]. 租用戶記錄包含稽核資訊，說明為此租用戶產生的每個授權。
+每個租用戶的租用戶日 [!DNL flashaccess-tenant.log]志檔案位於 `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`。 租用戶記錄包含稽核資訊，說明為此租用戶產生的每個授權。
 
 ## 更新配置檔案 {#updating-configuration-files}
 
