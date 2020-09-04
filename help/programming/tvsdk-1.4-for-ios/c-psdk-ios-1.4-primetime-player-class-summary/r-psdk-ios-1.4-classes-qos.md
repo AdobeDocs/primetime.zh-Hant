@@ -5,7 +5,10 @@ seo-title: QoS類
 title: QoS類
 uuid: fc175269-ec4a-415e-91f3-7fa036290fa6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
@@ -41,12 +44,12 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       為播放和裝置提供基本的QoS度量。
-    </ph>
-    <ph>
+    </pre>
+    <pre>
       QOS資訊提供器類別。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
  </tbody> 
 </table>
