@@ -5,7 +5,7 @@ seo-title: 標題
 title: 標題
 uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 3%
@@ -26,7 +26,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.CAPTIONS_UPDATED,
 ... 
 function onCaptionsUpdateEvent (event) { 
   // code to show the captions icon and any settings button. 
-<ph>
+<pre>
    For example: 
   var btnCC = document.getElementById("btn_captions"); 
    btnCC.classList.remove("invisible"); 
@@ -34,7 +34,7 @@ function onCaptionsUpdateEvent (event) {
   var btnSettings = document.getElementById("btn_settings"); 
    btnSettings.classList.remove("invisible"); 
  } 
-</ph>
+</pre>
 ```
 
 UI架構提供預設標題行為實作，可加以修改。 隱藏字幕行為也可以透過延伸預設隱藏字幕行為來修改。 例如：
