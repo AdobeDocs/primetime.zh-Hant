@@ -5,7 +5,10 @@ seo-title: 並行下載
 title: 並行下載
 uuid: fa3edb50-7c24-433c-bc50-72d6cf73d834
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
@@ -32,9 +35,9 @@ Removed as part of "no DASH use cases" for 2.5.1, May 31st, 2017 release.
 <!-- 
 
 See comment above (DASH use case removed).
-<note type="restriction">
+`<note type="restriction">`
   This feature applies only to content where the audio and video are encoded into different files (unmuxed content) and does not apply to MP4 content, which is always muxed. Most DASH content is unmuxed, and HLS content is often unmuxed, especially with alternate audio. 
-</note>
+`</note>`
 
  -->
 
