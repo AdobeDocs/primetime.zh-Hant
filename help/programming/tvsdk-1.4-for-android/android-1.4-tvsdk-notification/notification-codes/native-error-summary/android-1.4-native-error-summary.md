@@ -3,7 +3,10 @@ seo-title: NATIVE_ERROR通知的詳細資訊
 title: NATIVE_ERROR通知的詳細資訊
 uuid: 18c4da57-59de-41a8-a2ea-fef800565207
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +26,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   <tr> 
    <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
    <td colname="col2"> 
-    <ph>
+    <pre>
       AVE中的原生錯誤代碼。 
-    </ph> 這些代碼代表下列： 
+    </pre> 這些代碼代表下列： 
     <ul id="ul_330C626DE27B45A09E8851CC24768A07"> 
      <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">DRM錯誤（代碼3300到3367）。 這些錯誤碼與相當的Flash Player錯誤碼相同。 </li> 
      <li id="li_98A571480C154CF0AE1DC101FF0834C4">視訊播放錯誤（-1到89）。 </li> 
