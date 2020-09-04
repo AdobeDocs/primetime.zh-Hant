@@ -5,7 +5,10 @@ seo-title: 通知代碼
 title: 通知代碼
 uuid: a7b77a5c-9873-45cf-8499-aa00270a7ad6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -36,9 +39,9 @@ TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷
      <li id="li_11AE91D1325E4F718228E662C9C55F9A">警告通知事件，從200000到2999999 </li> 
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">資訊通知事件，從300000到3999999 </li> 
     </ul> <p>每個頂層範圍（例如錯誤）會分成子範圍，例如101000到101999代表播放錯誤。 </p>
-    <ph>
+    <pre>
      枚舉 <span class="codeph"></span> mediacore.PSDKErrorCode列出可能的值。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 名稱 </td> 
