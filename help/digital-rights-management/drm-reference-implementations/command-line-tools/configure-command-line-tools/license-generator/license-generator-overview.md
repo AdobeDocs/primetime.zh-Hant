@@ -3,7 +3,10 @@ seo-title: 概觀
 title: 概觀
 uuid: 857390be-dd14-46c0-b8f7-2bc661c515d4
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -120,7 +123,7 @@ java -jar AdobeLicenseGenerator.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry ">用於保護您使用licensegen.sign.certfile選項所指 <span class="+ topic/ph pr-d/codeph codeph"> 定檔案的密碼</span> 。 </td> 
+   <td colname="2" class="- topic/entry ">用於保護您使用licensegen.sign.certfile選項所指 <span class="+ topic/ph pr-d/codeph codeph"> 定的檔案的密碼</span> 。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.domainca.n</span> </td> 
@@ -128,16 +131,14 @@ java -jar AdobeLicenseGenerator.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.ansymet. licenseServerCredential.n</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">可選的PKCS12檔案，其中包括用於解密元資料和DRM策略中的CEK的附加許可證伺服器憑據。 如果內容先前已封裝為授權伺服器憑證，而非使用licensegen.sign.certfile指定的憑證，則可設定其他憑證 <span class="codeph"></span>。 此屬性必須參考包含 <span class="filepath"> 憑證和私密金鑰的。pfx</span> 檔案。 <span class="codeph">n</span> 必須單調增加，從1開始。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.ansymet. licenseServerCredential.n.password</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p>此密碼會用來保護您使用licensegen<span class="+ topic/ph pr-d/codeph codeph"> .keys.ansymetic.licenseServerCredential.n屬性所指定的檔案</span> 。 </p> </td> 
   </tr> 
  </tbody> 
