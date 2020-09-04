@@ -5,7 +5,10 @@ seo-title: 通知代碼
 title: 通知代碼
 uuid: 8a332057-8fda-4497-9264-a2caac92e900
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span></td> 
    <td colname="2">通知類型。 根據平台，此屬性會參照可能值為 
-    <ph>
+    <pre>
       資訊、警告或錯誤。 這是通知的頂層群組。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 代碼</span></td> 
