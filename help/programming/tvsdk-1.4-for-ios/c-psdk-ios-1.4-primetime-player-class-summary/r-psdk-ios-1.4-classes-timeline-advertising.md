@@ -5,7 +5,10 @@ seo-title: 時間軸廣告課程
 title: 時間軸廣告課程
 uuid: b36d128f-7f13-4c61-b925-dfa5cd94e255
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -25,40 +28,40 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAd.html" format="html" scope="external"> PTAd</a> </td> 
    <td colname="2">定義廣告抽象並包含所有廣告資訊的類別。 它由唯一ID、持續時間和MediaResources定義。 MediaResource包含實際廣告內容所在的URL。 
-    <ph>
+    <pre>
       代表插入內容的主要線性資產。 它可以選擇性地包含必須與線性資產一起顯示的配套資產陣列。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdAsset.html" format="html" scope="external"> PTAdAsset</a> </td> 
    <td colname="2">表示要顯示的資產的分類。 
-    <ph>
+    <pre>
       表示要顯示的資產。
-    </ph> 
-    <ph>
+    </pre> 
+    <pre>
       代表廣告資產的分類。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBannerView.html" format="html" scope="external"> PTAdBannerView</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       顯示橫幅資產。 您的應用程式必須建立此實用程式類的新實例、設定橫幅資產並將其添加到視圖中。 橫幅的曝光和點按追蹤由此類別內部管理。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBreak.html" format="html" scope="external"> PTAdBreak</a> </td> 
    <td colname="2">提供數個廣告統一檢視的類別，在播放期間的某個時間點播放。 
-    <ph>
+    <pre>
       代表連續的廣告序列，這些廣告會拼接至內容中。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdClick.html" format="html" scope="external"> PTAdClick</a> </td> 
    <td colname="2">表示與資產關聯之點按例項的分類。 此例項包含有關點進URL和標題的資訊，這些資訊可用來提供使用者其他資訊。 
-    <ph>
+    <pre>
       代表與資產相關聯的點按例項。 此例項包含有關點進URL和標題的資訊，這些資訊可用來提供使用者其他資訊。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdPolicyInfo.html" format="html" scope="external"> PTAdPolicyInfo</a> </td> 
@@ -74,9 +77,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 
-    <ph>
+    <pre>
      <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> 類， <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"></a> PTContentResolver協定
-    </ph> </td> 
+    </pre> </td> 
    <td colname="2"> 在Adobe Primetime廣告決策程式中處理廣告解析部分的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
