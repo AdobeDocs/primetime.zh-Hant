@@ -5,7 +5,7 @@ seo-title: 並行下載
 title: 並行下載
 uuid: 11d37a39-391d-4127-9aa7-c94eb8a6a6a8
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%
@@ -35,11 +35,9 @@ Removed as part of "no DASH use cases" for 2.5.1, May 31st, 2017 release.
 <!-- 
 
 See comment above (DASH use case removed).
-`<note type="restriction">`
-  This feature applies only to content where the audio and video are encoded into different files (unmuxed content) and does not apply to MP4 content, which is always muxed. Most DASH content is unmuxed, and HLS content is often unmuxed, especially with alternate audio. 
-`</note>`
 
- -->
+  This feature applies only to content where the audio and video are encoded into different files (unmuxed content) and does not apply to MP4 content, which is always muxed. Most DASH content is unmuxed, and HLS content is often unmuxed, especially with alternate audio. 
+-->
 
 HTTP連線可能會在下列階段發生延遲：
 
