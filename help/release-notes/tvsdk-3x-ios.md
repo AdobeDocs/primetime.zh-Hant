@@ -2,7 +2,7 @@
 title: iOS版TVSDK 3.12發行說明
 description: iOS版本注意事項的TVSDK 3.12說明TVSDK iOS 3.12中有哪些新增或變更、已解決和已知問題以及裝置問題。
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -179,7 +179,7 @@ TVSDK API現在提供協力廠商VAST回應的其他資訊。 廣告ID、廣告�
 
 * **帳單量度** ：為迎合只想支付使用費用而非固定費率的客戶，Adobe會收集使用量度，並使用這些量度來判斷向客戶收取的費用。
 
-   每當TVSDK產生串流開始事件時，播放器就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段稱為計費時段。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
+   每當TVSDK產生串流開始事件時，播放器就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段（稱為計費持續時間）可能不同。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
 
 * **CRS Ads TVSDK的多CDN支援** ，現在支援CRS廣告的多CDN。 透過提供CRS廣告的FTP詳細資訊，您可以指定CDN位置，而非預設的Adobe擁有的CDN位置，例如Akamai。
 
@@ -288,20 +288,17 @@ TVSDK現在支援傳送mTVR和MDPR ID3信標至Nielsen SDK，毋需任何自訂�
 
 Comment Type: draft
 
-`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-`</note>`
 
- -->
+-->
 
 <!--
 Comment Type: draft
 
-`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-`</note>`
- -->
+-->
+
 **iOS TVSDK 3.12**
 
 * 使用iOS 3.10版的TVSDK時，在播放15分鐘後即時串流會失敗。
@@ -810,7 +807,7 @@ Apple不建議使用的符號已移除。
 
 **iOS 6.0+版本1.4.23** (1.4.23.641)
 
-* (ZD #18016)- Primetime SDK無網路狀況不佳之回應
+* (ZD #18016)- Primetime SDK無網路狀況不佳的回應
 
 此問題已解決，方法是改善AVFoundation發生嚴重錯誤時的錯誤通知，並允許應用程式在錯誤後處理重新啟動。
 
