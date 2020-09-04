@@ -2,7 +2,7 @@
 title: iOS版TVSDK 3.12發行說明
 description: iOS版本注意事項的TVSDK 3.12說明TVSDK iOS 3.12中有哪些新增或變更、已解決和已知問題以及裝置問題。
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -84,7 +84,7 @@ wastXML屬性未正確設定，傳回nil值。
 
 **收入最佳化**
 
-啟用TVSDK來識別與廣告插入工作流程相關的問題區域，以向分析的選擇端報告。
+啟用TVSDK來識別與廣告插入工作流程相關的問題區域，以向分析的選擇終點報告。
 
 **第3.3版**
 
@@ -116,7 +116,7 @@ TVSDK 3.3現在符合iOS 11 SDK的規範。 所有已過時的API都已取代為
 
 * TVSDK 3.0支援HEVC串流。
 
-* 及時解決——將廣告解析得更接近廣告標籤。
+* 及時解決——解析更接近廣告標籤的廣告。
 
 已新增 `enableDelayAdLoading` 應用程式層級介面上的布林類型屬性，以啟用JIT。 如 `enableDelayAdLoading` 果為NO，則 `setadMetadata.delayAdLoading`為True（屬性PTAdMetadata介面）。
 
@@ -268,7 +268,7 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 
 * **Nielsen SDK整合**
 
-TVSDK現在支援傳送mTVR和MDPR ID3信標至Nielsen SDK，毋需任何自訂整合。 若要開始使用，請下載3.1.2.19 Nielsen iOS App SDK，然後依照iOS Programmers Guide中的說明進行。
+TVSDK現在支援傳送mTVR和MDPR ID3信標至Nielsen SDK，毋需任何自訂整合。 若要開始使用，請下載3.1.2.19 Nielsen iOS App SDK，並依照iOS Programmers Guide中的說明進行。
 
 **1.4.0版**
 
@@ -288,19 +288,19 @@ TVSDK現在支援傳送mTVR和MDPR ID3信標至Nielsen SDK，毋需任何自訂�
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -398,7 +398,7 @@ Comment Type: draft
 
 * (ZD#33683)從中繼資料字串移除的TVSDK ==字尾。 問題已修正在剖析邏輯中。
 
-* (ZD#33905)- iOS TVSDK使用兩個使用者代理呼叫資訊清單檔案。 已修正第一次m3u8呼叫（新安裝案例）的使用者代理問題。 M3u8現在所有呼叫都有相同的使用者代理。
+* (ZD#33905)- iOS TVSDK使用兩個使用者代理呼叫資訊清單檔案。 已修正第一次m3u8呼叫（新安裝案例）的使用者代理問題。 現在，M3u8的所有呼叫都有相同的使用者代理。
 
 * (ZD#34293)-插入線性串流的預卷無法在iOS11上正確播放。 前置廣告的問題已修正。
 
@@ -737,7 +737,7 @@ TVSDK在此版本中已解決下列問題：
 
 * (ZD #19629)-進入Airplay至ATV 4時即時視訊暫停
 
-此問題已解決，方法是在移除舊項目後，但在新增項目至AVQueuePlayer之前新增等候期。 沒有等候期，通知會傳送至不正確的項目。
+此問題已解決，方法是在移除舊項目後，但在新增項目至AVQueuePlayer之前新增等候期。 沒有等候期，通知會傳送至錯誤的項目。
 
 * (ZD #19856)-預設啟用時不顯示字幕
 
@@ -824,7 +824,7 @@ TVSDK在Adobe Access DRM串流上開始播放時傳回101000錯誤的問題已�
 
 * (ZD #21889)-線上廣告和離線內容播放失敗
 
-AES加密離線內容上的廣告已修正後播放失敗的問題。
+已修正AES加密離線內容上的廣告失敗的問題。
 
 * (ZD #22074)-每分鐘在iOS上發生一次AUDVAST當機
 
@@ -917,7 +917,7 @@ CPU/資源使用量過高已修正為兩個層級。 首先，讓時間更新函
 
 * (ZD #19868)-當無效創意素材被販賣時，TVSDK會當機
 
-已修正TVSDK中錯誤地取消配置大型剖析器例項的當機問題。
+已修正TVSDK中錯誤地解除配置大型剖析器例項的當機問題。
 
 * (ZD #20180)-偶爾會略過VPAID廣告
 
@@ -997,7 +997,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 當檢查描述檔和層級是否受支援時，當呼叫MediaCodecList和MediaCodecInfo API時，會發生此損毀。 Adobe正尋求Google的支援，以取得更多見解。 此問題已解決，方法是提前載入所有轉碼器資訊，以避免只在需要轉碼器資訊時呼叫這些API。
 
-* (Zendesk #18074)-在Nexus與Android 6.0搭配使用時無法使用阿拉伯文字幕
+* (Zendesk #18074)-在Nexus與Android 6.0上無法使用阿拉伯文字幕
 
 此問題已透過支援Android CTS字型圖而解決。
 
