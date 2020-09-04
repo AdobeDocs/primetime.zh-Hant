@@ -5,7 +5,10 @@ seo-title: QoS類
 title: QoS類
 uuid: c1192474-d183-4995-87ef-839699844b48
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '449'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">平台作業系統版本 </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">TVSDK程式庫的版本號碼 </li> 
      <li id="li_30D38320C2A3440E92C0A477FFFBF9A0">設備的型號名稱 </li> 
-     <li id="li_2D15164B987E405685B96A900EBF041D">裝置製造商的名稱 </li> 
+     <li id="li_2D15164B987E405685B96A900EBF041D">裝置製造商名稱 </li> 
      <li id="li_B78485CB9580444DB9694404706BA191">設備UUID </li> 
      <li id="li_841EA77499B44F0692192F9DE1A798E4">裝置螢幕的寬度／高度 </li> 
     </ul> </td> 
@@ -67,12 +70,12 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/QOSProvider.html" format="html" scope="external"> QOSProvider</a></span> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       為播放和裝置提供基本的QoS度量。
-    </ph>
-    <ph>
+    </pre>
+    <pre>
       QOS資訊提供器類別。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
  </tbody> 
 </table>
