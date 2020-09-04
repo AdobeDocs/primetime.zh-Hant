@@ -5,7 +5,10 @@ seo-title: 廣告播放的API元素
 title: 廣告播放的API元素
 uuid: 61ebbfd7-696c-4a5b-8dbb-682770cd5840
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ TVSDK提供您可用來自訂包含廣告之內容的播放行為的類別和方
   <tr> 
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">控制廣告插播是否應標示為已被檢視者觀看，如果是，應於何時標籤。 使用 
-    <ph>
+    <pre>
      adBreakAsWatched <span class="codeph"> 屬性</span> 。
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreakPolicy</span> </td> 
