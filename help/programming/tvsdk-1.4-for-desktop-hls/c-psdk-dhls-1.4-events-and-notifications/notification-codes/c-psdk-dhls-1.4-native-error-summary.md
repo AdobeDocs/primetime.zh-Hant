@@ -3,7 +3,10 @@ seo-title: NATIVE_ERROR通知的詳細資訊
 title: NATIVE_ERROR通知的詳細資訊
 uuid: 59f6077f-8162-4755-afd8-ce95fd5d57b2
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +26,9 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
   <tr> 
    <td colname="col1"> <span class="codeph"> RUNTIME_CODE </span> </td> 
    <td colname="col2"> 
-    <ph>
+    <pre>
       來自Flash Player的原生錯誤碼。 
-    </ph> 這些代碼代表下列： 
+    </pre> 這些代碼代表下列： 
     <ul id="ul_330C626DE27B45A09E8851CC24768A07"> 
      <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">DRM錯誤（代碼3300到3367）。 這些錯誤碼與相當的Flash Player錯誤碼相同。 </li> 
      <li id="li_98A571480C154CF0AE1DC101FF0834C4">視訊播放錯誤（-1到89）。 </li> 
