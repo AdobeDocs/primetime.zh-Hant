@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
+source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -264,10 +264,10 @@ Android 2.5.1中發行的重要新功能。
 
 * **懶惰廣告解析度** - TVSDK不會等到非預先播放廣告的解析度後，再開始播放，因此會縮短啟動時間。 在所有廣告都解決之前，仍不允許搜尋和特技播放等API。 這適用於CSAI使用的VOD串流。 在廣告解析完成前，不允許搜尋和快進等操作。 對於即時串流，無法在即時事件期間啟用此功能以取得廣告解析度。
 
-* **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
+* **持續網路連線** -此功能可讓TVSDK建立並儲存持續網路連線的內部清單。 這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在之後將其毀損。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器 *保持連線* 。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
 
-* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降至最低。
+* **並行下載** -並行下載視訊和音訊，而非串列下載，可減少啟動延遲。 此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降到最低。
 
 * **平行廣告下載** - TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
 
@@ -370,7 +370,7 @@ Android 2.5.1中發行的重要新功能。
 | 廣告封鎖 | VOD + Live | 不支援 |
 | 立即啟動 | VOD + Live | 不支援 |
 | 不連續標籤支援 | VOD + Live | Y |
-| 302重新導向黏性 | VOD + Live | Y |
+| 302重新導向黏性 | VOD + Live | 3. |
 
 | 功能 | 內容類型 | HLS |
 |---|---|---|
@@ -378,23 +378,23 @@ Android 2.5.1中發行的重要新功能。
 | 啟用廣告的FER內容 | VOD | Y |
 | 預設廣告行為 | VOD + Live | Y |
 | VAST 2.0/3.0 | VOD + Live | Y |
-| VMAP 1.0 | VOD + Live | Y |
+| VMAP 1.0 | VOD + Live | 3. |
 | MP4廣告 | VOD + Live | Y（來自CRS） |
-| 啟用廣告的特技播放 | VOD + Live | Y |
+| 啟用廣告的特技播放 | VOD + Live | 3. |
 | 僅限廣告 | VOD | Y |
 | 定位參數 | VOD + Live | Y |
 | 自訂參數 | VOD + Live | Y |
 | 自訂廣告行為 | VOD + Live | Y |
-| 自訂廣告標籤 | 即時 | Y |
-| 自訂廣告解析器 | VOD + Live | Y |
-| Freewheel自訂廣告解析程式 | VOD | Y |
+| 自訂廣告標籤 | 即時 | 3. |
+| 自訂廣告解析器 | VOD + Live | 3. |
+| Freewheel自訂廣告解析程式 | VOD | 3. |
 | C3 | VOD + Live | 不支援 |
 | 延遲廣告解決 | VOD | Y |
 | 不連續標籤支援- SSAI | VOD + Live | Y |
-| 配套廣告、橫幅廣告和可點選廣告 | VOD + Live | Y |
+| 配套廣告、橫幅廣告和可點選廣告 | VOD + Live | 3. |
 | VPAID 2.0 | VOD + Live | Y(JS) |
 | 提早退出廣告 | 即時 | Y |
-| 以規則為基礎的創意優先順序 | VOD + Live | Y |
+| 以規則為基礎的創意優先順序 | VOD + Live | 3. |
 | CRS規則 | VOD + Live | Y |
 | JSON廣告解析程式 | VOD + Live | 不支援 |
 | Moat整合 | VOD + Live | Y |
@@ -402,7 +402,7 @@ Android 2.5.1中發行的重要新功能。
 
 | 功能 | 內容類型 | HLS |
 |---|---|---|
-| AES加密 | VOD + Live | Y |
+| AES加密 | VOD + Live | 3. |
 | 範例AES加密 | VOD + Live | Y |
 | Token化串流 | VOD + Live | Y |
 | Widevine DRM | VOD + Live | 僅限fMP4容器 |
@@ -413,18 +413,18 @@ Android 2.5.1中發行的重要新功能。
 
 | 功能 | 內容類型 | HLS |
 |---|---|---|
-| Adobe Analytics VHL整合 | VOD + Live | Y |
-| 帳單 | VOD + Live | Y |
+| Adobe Analytics VHL整合 | VOD + Live | 3. |
+| 帳單 | VOD + Live | 3. |
 
 ## 已解決問題 {#resolved-issues}
 
-如果解決方法與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
+如果解析度與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
 
 **Android TVSDK 3.12**
 
 本節提供TVSDK 3.12 Android版本中已解決問題的摘要。
 
-* ZD#40584 - Primetime參考應用程式不會建立最新的圖層版本。
+* ZD#40584 - Primetime參考應用程式不會建立最新的Gradle版本。
 
 ### 已解決舊版中的問題
 
@@ -482,7 +482,7 @@ Android 2.5.1中發行的重要新功能。
 
 **3.0版**
 
-* ZD#33740 - TVSDK在建立MediaPlayer物件並呼叫replaceCurrentResource()後，就會拋出不需要的警告
+* ZD#33740 - TVSDK在建立MediaPlayer物件並呼叫replaceCurrentResource()後，就會擲出不需要的警告
 
    * 已改善先前的修正，只在播放器處於暫停狀態時呼叫restore
 
@@ -631,7 +631,7 @@ WebViewDebbuging預設為False。 若要啟用除錯，請使用setWebContentsDe
 
    setTreatSpaceAsAlphaNum屬性會公開在TextFormat中。 依預設，屬性為False。 在用戶端中將屬性設為True，以解決隱藏空間問題。
 
-* Zendesk#25097 CC顯示器具有帶有CC設定的視覺偽像。
+* Zendesk#25097 CC顯示器具有具有CC設定的視覺偽像。
 
    setTreatSpaceAsAlphaNum屬性會公開在TextFormat中。 依預設，屬性為False。 在用戶端中將屬性設為True，以解決隱藏空間問題。
 
