@@ -5,7 +5,10 @@ seo-title: 控制視訊檢視的位置和大小
 title: 控制視訊檢視的位置和大小
 uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
 
-TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、設定檔開關或內容切換等而變更）維持視訊檢視的外觀比例。
+TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描述檔開關或內容切換等而變更）維持視訊檢視的外觀比例。
 
 通過指定不同的比例策略，可以覆蓋預設的外 *觀比例行為*。 使用物件的屬性指 `MediaPlayerView` 定縮放原 `scalePolicy` 則。 預設 `MediaPlayerView`比例原則會與類別的例項一起設 `MaintainAspectRatioScalePolicy` 定。 若要重設比例原則，請以您自己的原則 `MaintainAspectRatioScalePolicy` 取代 `MediaPlayerView.scalePolicy` 預設的on例項。 (不能將屬 `scalePolicy` 性設定為空值。)
 
@@ -32,10 +35,10 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、設
    >TVSDK使用物 `StageVideo` 件來顯示視訊，而由於物件不在 `StageVideo` 顯示清單中，因此參數 `viewPort` 會包含視訊的絕對座標。
    >
    >
-   >例如：   >
+   >例如：
    >
    >
-   ```>
+   ```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -56,10 +59,7 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、設
    >               [...] 
    >       } 
    >}
-   >```   >
-   >
-
-
+   >```
 
 1. 將您的實作指派給 `MediaPlayerView` 屬性。
 
