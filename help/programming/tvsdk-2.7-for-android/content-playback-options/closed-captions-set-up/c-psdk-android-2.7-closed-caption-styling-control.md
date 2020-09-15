@@ -5,7 +5,10 @@ seo-title: 控制隱藏字幕樣式
 title: 控制隱藏字幕樣式
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -128,21 +131,23 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
       >[!IMPORTANT]
       >
-      >**顏色設定：** 在Android TVSDK 2.X中，對隱藏字幕的色彩樣式進行了增強。 該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：      >
+      >**顏色設定：** 在Android TVSDK 2.X中，對隱藏字幕的色彩樣式進行了增強。 該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：
       >
       >    * FFFFFF =黑色
       >    * 000000 =白色
       >    * FF0000 =紅色
       >    * 00FF00 =綠色
       >    * 0000FF =藍色
+
       >
       >等等。
       >
       >在應用程式中，每當您將顏色樣式資訊傳遞至時 `TextFormatBuilder`，您仍會像以前一樣使用列舉，但現在您必須 `Color``getValue()` 新增顏色才能將值當做字串取得。 例如：
-      >
+
       ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
+      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      ```
+
 
 
 
@@ -169,8 +174,7 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
->
->在定義預設值(例如 `DEFAULT`)的選項中，該值是指最初指定標題時的設定。
+在定義預設值(例如 `DEFAULT`)的選項中，該值是指最初指定標題時的設定。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
