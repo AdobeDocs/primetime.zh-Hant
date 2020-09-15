@@ -5,7 +5,10 @@ seo-title: 控制隱藏字幕的可見度
 title: 控制隱藏字幕的可見度
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 >[!NOTE]
 >
->隱藏字幕的可見度值在中定義 `ClosedCaptionsVisibility`。>
+>隱藏字幕的可見度值在中定義 `ClosedCaptionsVisibility`。
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
-
-
+>```
 
 1. 等待至 `MediaPlayer` 少具有PREPARED狀態(請 [參閱等待有效狀態](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
 1. 若要取得隱藏字幕的目前可見度設定，請使用中的getter方 `MediaPlayer`法，其會傳回可見度值。
