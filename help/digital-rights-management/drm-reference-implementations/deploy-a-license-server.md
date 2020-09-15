@@ -5,7 +5,10 @@ seo-title: 部署授權伺服器
 title: 部署授權伺服器
 uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >如果先前已部署許可證伺服器WAR檔案，則可能需要刪除Tomcat伺服器目錄中 [!DNL webapps] 未打包的WAR目錄：       >
+   >如果先前已部署許可證伺服器WAR檔案，則可能需要刪除Tomcat伺服器目錄中 [!DNL webapps] 未打包的WAR目錄：
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -39,6 +42,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
    * [!DNL flashaccesstools.properties] -許可證伺服器屬性檔案。
    * [!DNL log4j.xml] -許可證伺服器日誌配置
    * [!DNL *.pol] - DRM策略檔案示例。
+
    此外，您也可以選擇將Adobe認證檔案複製到此位置。
 
 1. 在中修改許可證伺服器設 [!DNL flashaccesstools.properties] 置，以反映伺服器設定。
