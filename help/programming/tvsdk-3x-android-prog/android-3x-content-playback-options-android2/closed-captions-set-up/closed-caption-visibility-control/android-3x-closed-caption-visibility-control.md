@@ -5,7 +5,10 @@ seo-title: 控制隱藏字幕的可見度
 title: 控制隱藏字幕的可見度
 uuid: f142e60d-5581-4d1c-9d4d-a4a58ac1b67b
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,15 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
 >
 >如果在播放器進入搜尋模式時顯示隱藏字幕文字，則在搜尋完成後不會再顯示文字。 相反地，在數秒後，TVSDK會在結束搜尋位置後，在視訊中顯示下一個隱藏字幕文字。
 >
->隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。>
+>隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。
 >
-```java>
+>
+```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. 等待至 `MediaPlayer` 少處於PREPARED狀態。 如需詳細資訊，請 [參閱等待有效狀態](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)。
 
