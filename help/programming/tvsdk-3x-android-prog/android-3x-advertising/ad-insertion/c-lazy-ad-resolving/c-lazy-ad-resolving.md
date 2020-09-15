@@ -6,7 +6,10 @@ seo-title: 即時廣告解決
 title: 即時廣告解決
 uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +23,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
    1. TVSDK會下載資訊清單（播放清單） *並解析* 所有廣告。
    1. TVSDK *會載入* 所有廣告，並將其置於時間軸上。
    1. TVSDK會將播放器移至「已準備」狀態，而內容播放便會開始。
+
    播放器使用資訊清單中的URL來取得廣告內容（創作元素），確保廣告內容是TVSDK可播放的格式，而TVSDK會將廣告放在時間軸上。 這個解析和載入廣告的基本程式會造成使用者等待播放其內容時，尤其是資訊清單包含數個廣告URL時，無法接受的長時間延遲。
 
 * *延遲廣告載入*:
@@ -27,6 +31,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
    1. TVSDK會下載播放清單 *並解析* 所有廣告。
    1. TVSDK *載入* pre-roll廣告、將播放器移入PREPARED狀態，然後內容播放開始。
    1. TVSDK會 *載入* 剩餘的廣告，並在播放時將其放在時間軸上。
+
    這項功能可在載入所有廣告之前，將播放器置於PREPARED狀態，以改善基本程式。
 
 * *懶惰廣告解決*:
@@ -43,7 +48,8 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 >[!IMPORTANT]
 >
->**使用懶惰廣告解決時要考慮的因素：** >
+>**使用懶惰廣告解決時要考慮的因素：**
+>
 >* 只有SERVER_MAP和MANIFEST_CEAS模式的VOD串流才支援延遲廣告解析。
 >* 預設不會啟用「懶惰廣告解析」。 如果停用，則會在播放開始前先解析VOD串流上的所有廣告。
 >* 「懶惰廣告解析」與「立即啟動」功能不相容。 有關「立即開啟」的詳細資訊，請參閱「立即開啟」。
@@ -52,6 +58,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 >* 建議不要將*setDelayAdLoadingTolerance()*的值降低到預設值（5秒）以下。 這麼做會造成播放器不必要地「緩衝」。
 >* 延遲廣告解析不會影響前段廣告。
 >* Auditude-Plugin目前支援懶惰廣告解決。 如果您使用自訂解析 **&#x200B;程式，建議不要將setDelayAdLoading設為true。
+
 >
 
 
