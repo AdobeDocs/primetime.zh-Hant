@@ -5,9 +5,9 @@ seo-title: Primetime DRM介面總覽
 title: Primetime DRM介面總覽
 uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -47,14 +47,14 @@ TVSDK會在DRM中 `PTMediaPlayerItemDRMMetadataChanged` 繼資料變更時發出
 
 >[!TIP]
 >
->在iOS應用程式中參考受DRM保護的資產URL時，查詢字串參 `?faxs=1` 數必須附加至(MBR)設定層級的M3U8 URL。 例如：>
+>在iOS應用程式中參考受DRM保護的資產URL時，查詢字串參 `?faxs=1` 數必須附加至(MBR)設定層級的M3U8 URL。 例如：
 >
-```>
+>
+```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
->```>
->The `faxs=1` query string parameter signals that the content is DRM protected, and triggers the DRM decryption workflow accordingly in the iOS TVSDK. You can also append the `faxs=1` tag on DRM-protected HLS asset URLs that are destined for other platforms; it is observed as required on iOS or treated as a non-op in players on other platforms.
-
-
+>```
+>
+>查 `faxs=1` 詢字串參數指示內容受DRM保護，並相應地在iOS TVSDK中觸發DRM解密工作流。 您也可以在DRM保 `faxs=1` 護的HLS資產URL上附加標籤，這些URL會用於其他平台；在iOS上會視為必要項目，或在其他平台上的播放器中視為非作業項目。
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
