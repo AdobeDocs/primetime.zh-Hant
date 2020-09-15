@@ -5,7 +5,10 @@ seo-title: 計時中繼資料類別
 title: 計時中繼資料類別
 uuid: 827a3bcf-a584-4032-aa19-4fc7730778cc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -56,7 +59,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    <td colname="col2">計時中繼資料的類型。 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG —— 指出計時中繼資料是從播放清單／資訊清單中的標籤建立。 </li> 
-     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 —— 指出計時中繼資料是從媒體串流中的ID3標籤建立。 </li> 
+     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 —— 表示計時中繼資料是從媒體串流的ID3標籤建立。 </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -70,16 +73,13 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
    >[!TIP]
    >
-   >資訊清單中自訂標籤中的複雜資料（例如含特殊字元的字串）必須使用引號。 例如：  >
+   >資訊清單中自訂標籤中的複雜資料（例如含特殊字元的字串）必須使用引號。 例如：
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * 如果擷取因自訂標籤格式而失敗，中繼資料屬性將為空白，而您的應用程式必須擷取實際資訊。 此情況下不會擲回錯誤。
 
