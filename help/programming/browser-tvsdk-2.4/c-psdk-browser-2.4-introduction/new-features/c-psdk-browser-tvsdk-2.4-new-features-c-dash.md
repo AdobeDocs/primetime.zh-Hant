@@ -5,7 +5,10 @@ seo-title: 支援的DASH功能
 title: 支援的DASH功能
 uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 >[!TIP]
 >
->在下面的功能矩陣表中， ![](assets/supported15.png)>
+>在以下的功能表格中，  ![](assets/supported15.png)
 >表示目前版本支援此功能。
 
 支援下列功能：
