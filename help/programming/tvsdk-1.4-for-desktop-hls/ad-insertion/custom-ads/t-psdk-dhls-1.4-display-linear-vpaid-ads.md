@@ -5,7 +5,10 @@ seo-title: 在廣告插播中顯示線性VPAID廣告
 title: 在廣告插播中顯示線性VPAID廣告
 uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -46,16 +49,13 @@ VPAID廣告的限制：
 
    >[!NOTE]
    >
-   >當您取得全螢幕變更事件並在廣告容器上設定新大小時，請依照下列方式傳遞舞台顯示狀態，以確保播放器可正確調整大小：   >
+   >當您取得全螢幕變更事件並在廣告容器上設定新大小時，請依照下列方式傳遞舞台顯示狀態，以確保播放器可正確調整大小：
    >
    >
-   ```>
+   ```
    >private function onFullScreenChange(event:FullScreenEvent):void { 
    >if (_adContainer) 
    >{ _adContainer.setSize(stage.stageWidth, stage.stageHeight, stage.displayState); } 
    >}
-   >```   >
-   >
-
-
+   >```
 
