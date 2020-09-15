@@ -5,7 +5,10 @@ seo-title: 控制隱藏字幕的可見度
 title: 控制隱藏字幕的可見度
 uuid: b9d48d70-2554-4948-8654-fa45093c3782
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,15 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 >
 >如果在播放器進入搜尋模式時顯示隱藏字幕文字，則在搜尋完成後不會再顯示文字。 相反地，在數秒後，TVSDK會在結束搜尋位置後，在視訊中顯示下一個隱藏字幕文字。
 >
->隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。>
+>隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。
 >
-```java>
+>
+```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. 等待至 `MediaPlayer` 少處於PREPARED狀態。
 
