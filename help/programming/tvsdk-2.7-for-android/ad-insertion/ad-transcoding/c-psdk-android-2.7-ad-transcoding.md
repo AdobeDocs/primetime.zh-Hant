@@ -5,7 +5,10 @@ seo-title: 使用Adobe Creative Repackaging Service(CRS)重新封裝不相容的
 title: 使用Adobe Creative Repackaging Service(CRS)重新封裝不相容的廣告
 uuid: c3961628-39aa-444c-9c93-9f1e267d9cd4
 translation-type: tm+mt
-source-git-commit: 1859eb201a41797544fee1ad97d5cb21c7a0a7c1
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,11 +25,13 @@ source-git-commit: 1859eb201a41797544fee1ad97d5cb21c7a0a7c1
 
 >[!NOTE]
 >
->對於CRS 3.0版（及舊版）客戶，從CRS 3.1版開始，下列變更已改善安全性和效能：>
+>對於CRS 3.0版（及舊版）客戶，從CRS 3.1版開始，下列變更已改善安全性和效能：
+>
 >* CRS 3.1會繼續處理 `https:` 重新封裝的內容是否使用 `https:`。 這降低了某些播放器呈現不安全內容的可能性。
    >
    >
 * CRS 3.1可大幅降低網路呼叫，縮短視訊啟動時間。
+
 >
 
 
