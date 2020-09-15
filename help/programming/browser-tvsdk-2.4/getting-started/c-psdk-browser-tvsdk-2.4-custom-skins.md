@@ -5,7 +5,10 @@ seo-title: 自訂外觀
 title: 自訂外觀
 uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -41,14 +44,11 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
       >[!TIP]
       >
-      >若要使用任何緩衝旋轉器，您必須在緩衝覆蓋元素中新增類別。 例如，若要使用 `overlay-text`，請在檔案中新增下列 `BufferOverlay.js` 行：      >
+      >若要使用任何緩衝旋轉器，您必須在緩衝覆蓋元素中新增類別。 例如，若要使用 `overlay-text`，請在檔案中新增下列 `BufferOverlay.js` 行：
       >
       >
-      ```js      >
+      ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
-      >```      >
-      >
-
-
+      >```
 
