@@ -5,7 +5,10 @@ seo-title: 播放器狀態、活動、錯誤和記錄的通知和事件
 title: 播放器狀態、活動、錯誤和記錄的通知和事件
 uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -72,11 +75,10 @@ Primetime Player通知系統的核心是類別， `Notification` 它代表獨立
 
    >[!NOTE]
    >
-   >若要避免此溢位，請執行下列其中一項作業：   >
-   >    
-   >    
-   >    1. 減少驅動線程輪詢新事件的時間間隔。
-   >    1. 增加通知清單的大小。
+   >若要避免此溢位，請執行下列其中一項作業：
+   >
+   >1. 減少驅動線程輪詢新事件的時間間隔。
+   >1. 增加通知清單的大小。
 
 
 1. 序列化JSON格式的最新通知事件項目，並將這些項目傳送至遠端伺服器以進行後處理。
