@@ -5,7 +5,10 @@ seo-title: 控制隱藏字幕的可見度
 title: 控制隱藏字幕的可見度
 uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,16 +23,15 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 >[!NOTE]
 >
->隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。>
+>隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。
 >
-```java>
+>
+```java
 >enum Visibility { 
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. 等待MediaPlayer至少擁有PREPARED狀態(請 [參閱等待有效狀態](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md))。
 1. 若要取得隱藏字幕的目前可見性設定，請使用MediaPlayer中的getter方法，此方法會傳回可見性值。
