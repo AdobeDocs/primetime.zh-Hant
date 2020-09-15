@@ -5,7 +5,10 @@ seo-title: 視訊品質的可調式位元速率(ABR)
 title: 視訊品質的可調式位元速率(ABR)
 uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -80,20 +83,17 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
 
    >[!NOTE]
    >
-   >例如，以下示例將所有參數初始化為預設值，然後僅將策略設定為保守，並將最大比特率限制為1000000:   >
+   >例如，以下示例將所有參數初始化為預設值，然後僅將策略設定為保守，並將最大比特率限制為1000000:
    >
    >
-   ```>
+   ```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
    >abrBuilder.maxBitRate = 1000000; 
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
-   >```   >
-   >
-
-
+   >```
 
 1. 在運行時修改單個ABR參數。
 
