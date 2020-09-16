@@ -1,28 +1,43 @@
 ---
-title: PTAI 20.9.1發行說明
-description: PTAI 20.9.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決及已知問題。
+title: PTAI 20.9.2發行說明
+description: PTAI 20.9.2發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
 
 
-# Primetime動態廣告插入20.9.1發行說明
+# 黃金時段動態廣告插入20.9.2發行說明
 
-動態廣告插入20.9.1發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
+動態廣告插入20.9.2發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
 
-## PTAI 20.9.1的新增功能
+## PTAI 20.9.2的新增功能
+
+**時間：** 2020年9月15日星期二東部時間凌晨3時30分至6時30分
+
+**增強功能**
+
+* 提供支援使用標籤包含非線性廣告 `EXT-X-MARKER` 類型。
+如需詳細資訊或啟用此功能，請連絡您的技術支援代表。
+
+* 提供支援，以限制提供者需要太長時間才能回應的整體廣告解決時間。 若要啟用限制，請將引導API參 `ptadtimeout` 數設為以毫秒為單位的值。
+
+   >[!NOTE]
+   >
+   >此逾時僅適用於廣告請求，不適用於廣告創意請求。
+
+### 舊版的增強功能和修正
+
+#### 20.9.1版
 
 **時間：** 2020年9月1日星期二東部時間凌晨3時30分至7時30分
 
 **變更**
 
 * 修正使用HLS/CMAF的客戶問題，其中EXT-X-MAP有時會遺失CDN Token或EXT-X-MAP標籤有時會從DVR視窗中錯誤地卷出。
-
-### 舊版的增強功能和修正
 
 #### 20.8.4版
 
@@ -191,7 +206,7 @@ ht-degree: 0%
 
 **PTAI 20.3.3**
 
-* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，無法正確進行URL編碼。
+* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
 * CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE數字在某些情況下會不正確地增加
 
