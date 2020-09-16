@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Primetime發行說明
 user-guide-description: Provides release-specific information, system requirements, limitations, fixed issues, and known issues.
 translation-type: tm+mt
-source-git-commit: f94569b6e2f12d8aa75993099be3f8a85fbb3572
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 + [發行說明概觀](home.md)
 + Primetime動態廣告插入 {#ptai}
-   + [PTAI 20.9.1發行說明](ptai-20x-release-notes.md)
+   + [PTAI 20.9.2發行說明](ptai-20x-release-notes.md)
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
 + iOS版TVSDK {#tvsdk-ios}
    + [iOS版TVSDK 3.12發行說明](tvsdk-3x-ios.md)
