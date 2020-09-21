@@ -5,7 +5,7 @@ seo-title: 控制隱藏字幕樣式
 title: 控制隱藏字幕樣式
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ ht-degree: 0%
       >
       >**顏色設定：** 在Android TVSDK 2.X中，對隱藏字幕的色彩樣式進行了增強。 該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：
       >
-      >    * FFFFFF =黑色
-      >    * 000000 =白色
-      >    * FF0000 =紅色
-      >    * 00FF00 =綠色
-      >    * 0000FF =藍色
+      >* FFFFFF =黑色
+      >* 000000 =白色
+      >* FF0000 =紅色
+      >* 00FF00 =綠色
+      >* 0000FF =藍色
 
       >
       >等等。
