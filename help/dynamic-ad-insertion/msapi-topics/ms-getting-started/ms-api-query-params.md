@@ -5,9 +5,9 @@ seo-title: 資訊清單伺服器查詢參數
 title: 資訊清單伺服器查詢參數
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 查詢參數會告訴資訊清單伺服器，用戶端傳送請求的類型，以及該用戶端希望資訊清單伺服器執行的動作。 有些是必要的，有些則具有特定的可接受格式或值。
 
-完整的URL包含基本URL，後面接著問號，然後是引數， `parameterName=value` 以&amp;符號分隔： `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+完整的URL包含基本URL，後面接著問號，然後是引數， `parameterName=value` 以&amp;符號分隔： `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## 可識別的參數 {#section_072845B7FA94468C8068E9092983C9E6}
+## 可識別的參數 {#recognized-parameters}
 
 資訊清單伺服器可識別下列參數。 它會處理它們，或將它們連同所有無法識別的參數傳遞至廣告伺服器。
 
@@ -50,3 +50,5 @@ ht-degree: 0%
 | scteTracking | 在JSON V2附屬內容中擷取SCTE追蹤資訊之前，請先擷取M3U8。  <br/>此參數向資訊清單伺服器指出擷取M3U8的播放器需要擷取SCTE標籤資訊。 | 否(預設值： false) | 真或假附註： SCTE-35資料會在JSONsidecar中傳回，並包含下列查詢參數值組合： <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | vetargetmultipher | 來自活動點的段數預滾偏移是使用下列方式配置的：  `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**注意**: 僅限即時／線性 | 否(預設值： 3.0) | 浮點 |
 | vebufferLength | 從即時點開始的秒數附註： 僅限即時／線性 | 否(預設值： 3.0) | 浮點 |
+| ptadtimeout | 若要限制整體廣告解決時間，供應商需要太長時間才能回應。 | 是，若要啟用 | 以毫秒為單位的值 |
+| ptarallew | 讓擁有要求CMAF的播放器的客戶可同時去除混音音或視訊串流，以確保音訊和視訊軌中的廣告一致。 | 是，啟用功能或省略禁用。 | true |
