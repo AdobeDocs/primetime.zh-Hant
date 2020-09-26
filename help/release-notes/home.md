@@ -4,9 +4,9 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,9 @@ ht-degree: 0%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
-## PTAI 20.9.2的增強功能和修正
+## PTAI 20.9.3的增強功能和修正
 
-本版次著重於支援使用標籤加入非線性廣告類型，以及 `EXT-X-MARKER` 在提供者需要太長時間才能回應時，限制整體廣告解析度時間。
-
-如需最新版動態廣告插入的詳細資訊，請參閱 [PTAI發行說明](ptai-20x-release-notes.md)。
+本版次主要提供引導API參數 `ptparallelstream`，讓客戶可使用要求CMAF去除混音音訊或視訊串流的播放器，以確保音訊和視訊軌中的廣告一致。
 
 ## TVSDK 3.12 Android中的修正
 
