@@ -5,7 +5,10 @@ seo-title: 顯示QoS播放和裝置統計資料
 title: 顯示QoS播放和裝置統計資料
 uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,11 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
    * 要建立QosManager:
       * 此應用程式需要使用廣告工作流程功能
+
    QoSManager qosManager =新的QosManagerOn();
 
    * 要使用ManagerFactory啟用QoS統計資訊的顯示，請：
+
    qosManager = ManagerFactory.getQosManager(
    <b>true</b>、config、mediaPlayer);
 
