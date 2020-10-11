@@ -1,24 +1,24 @@
 ---
-title: Primetime發行說明
+title: Primetime 發行說明
 seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 0%
+source-wordcount: '274'
+ht-degree: 33%
 
 ---
 
 
-# Primetime發行說明
+# Primetime 發行說明
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
-## PTAI 20.9.3的增強功能和修正
+## PTAI 20.10.1中的增強功能和修正
 
-本版次主要提供引導API參數 `ptparallelstream`，讓客戶可使用要求CMAF去除混音音訊或視訊串流的播放器，以確保音訊和視訊軌中的廣告一致。
+此版本的重點是維護更新。
 
 ## TVSDK 3.12 Android中的修正
 
@@ -36,12 +36,12 @@ ht-degree: 0%
 
 | 使用指南 | 說明 |
 |--- |--- |
-| [Primetime程式設計說明](/help/programming/home.md) | 可讓您學習在Android裝置上使用Java，在iOS裝置上使用Objective-C來開發應用程式和視訊播放器。 |
-| [Primetime移轉與轉換說明](/help/migration-guides/home.md) | 說明從您現有的Primetime TVSDK套裝轉換和移轉至新一代套裝的程式。 |
-| [參考實作](/help/android-reference-implementation/home.md) | 協助瞭解TVSDK並修改功能管理員以自訂您的個人播放器。 |
-| [Primetime API參考](/help/reference/api-references.md) | 提供有關TVSDK函式、資料結構和其他程式設計架構的詳細資訊。 |
+| [Primetime 程式設計說明](/help/programming/home.md) | 可讓您在 Android 裝置上使用 Java 和使用 iOS 裝置上使用 Objective-C 來學習開發應用程式和影片播放程式。 |
+| [Primetime移轉與轉換說明](/help/migration-guides/home.md) | 說明從您現有的 Primetime TVSDK 套裝轉換和移轉至新一代套裝的程序。 |
+| [參考實作](/help/android-reference-implementation/home.md) | 協助瞭解 TVSDK 並修改功能管理員，以自訂您的個人播放器。 |
+| [Primetime API參考](/help/reference/api-references.md) | 提供有關 TVSDK 函數、資料結構和其他程式設計建構的詳細資訊。 |
 | [數位版權管理](/help/digital-rights-management/home.md) | 協助您進一步瞭解Digital Rights Management(DRM)中的各種使用者案例 |
-| [動態廣告插入說明](/help/dynamic-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容獲利，並透過個人化廣告吸引觀眾。 |
+| [動態廣告插入說明](/help/dynamic-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
 | [封存](https://helpx.adobe.com/primetime/archives.html) | 下載已封存檔案的PDF。 |
 
 ## 有用的資源
