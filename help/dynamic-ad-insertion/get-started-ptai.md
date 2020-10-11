@@ -2,9 +2,9 @@
 title: 開始使用Adobe Primetime廣告插入
 description: Adobe Primetime廣告插入快速入門
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 2a9bb089cda2b315f91b30d5cab0db9b3e372799
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Primetime廣告插入透過重新編寫視訊清單與視訊傳送用戶端應�
 
 1. Primetime廣告插入從內容CDN擷取所要求的串流、剖析／讀取任何提示資訊、對廣告伺服器進行呼叫並視需要取代廣告插播。
 
-1. Primetime廣告插入可重寫資源URL並偵測廣告創意是否需要轉碼，借此標準化資訊清單，請參閱 [即時廣告轉碼](just-in-time-transcoding.md)[和封裝](just-in-time-repackaging.md)。
+1. Primetime廣告插入可重寫資源URL並偵測廣告創意是否需要轉碼，以標準化資訊清單。 <!-- see [Just-in-time ad transcoding](just-in-time-transcoding.md) and [packaging](just-in-time-repackaging.md).-->
 
 1. Primetime廣告插入會擷取所需廣告創作元素，並將適當片段插入資訊清單。
 
