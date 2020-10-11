@@ -1,28 +1,36 @@
 ---
-title: PTAI 20.9.3發行說明
-description: PTAI 20.9.3發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決及已知問題。
+title: PTAI 20.10.1發行說明
+description: PTAI 20.10.1發行說明說明2020年黃金時段廣告插入的新增或變更、已解決和已知問題。
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
 
 
-# 黃金時段動態廣告插入20.9.3發行說明
+# Primetime廣告插入20.10.1發行說明
 
-動態廣告插入20.9.3發行說明說明Primetime動態廣告插入2020年的新增或變更、已解決的問題和已知問題。
+Primetime廣告插入20.10.1發行說明說明2020年Primetime廣告插入中有哪些新增或變更、已解決的問題和已知問題。
 
-## PTAI 20.9.3的新增功能
+## PTAI 20.10.1的新增功能
+
+**時間：** 2020年10月13日星期二東部時間03:00至07:00
+
+**變更**
+
+* 維護更新。
+
+### 舊版的增強功能和修正
+
+#### 20.9.3版
 
 **時間：** 2020年9月30日星期三東部時間凌晨3時30分至6時30分
 
 **變更**
 
 * 新增引導API參數 `ptparallelstream`。 這可讓擁有要求CMAF解除混音音訊或視訊串流的播放器的客戶，同時確保音訊和視訊軌中的廣告一致。 將參數值設定為true可啟用此功能，或省略禁用。
-
-### 舊版的增強功能和修正
 
 #### 20.9.2版
 
@@ -214,12 +222,12 @@ ht-degree: 0%
 
 **PTAI 20.3.3**
 
-* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，無法正確進行URL編碼。
+* X-Forwarded-For標題的問題，當IPv6位址傳遞至廣告伺服器時，URL編碼不正確。
 
 * CMAF/去muxed音訊串流的問題，在某些情況下，EXT-X-MEDIA-SEQUENCE數字在某些情況下會不正確地增加
 
 ## 已知問題和限制
 
-**PTAI 20.3.3**
+**PTAI 20.10.1**
 
 沒有新的限制。
