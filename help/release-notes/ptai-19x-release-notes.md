@@ -1,18 +1,18 @@
 ---
 title: PTAI 19.11.1發行說明
-description: PTAI 19.11.1發行說明說明2019年黃金時段動態廣告插入的新增或變更、已解決及已知問題。
+description: PTAI 19.11.1發行說明說明2019年黃金時段廣告插入的新增或變更、已解決及已知問題。
 translation-type: tm+mt
-source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# 黃金時段動態廣告插入19.11.1發行說明
+# 黃金時段廣告插入19.11.1發行說明
 
-動態廣告插入19.11.1發行說明說明Primetime 2019年動態廣告插入的新增或變更、已解決問題和已知問題。
+Primetime廣告插入19.11.1發行說明說明2019年Primetime廣告插入中有哪些新增或變更、已解決的問題和已知問題。
 
 ## PTAI 19.11.1的新增功能
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 ### 19.10.1版
 
-**時間：**  10月22日星期二東部時間上午1點到2點
+**時間：** 10月22日星期二東部時間上午1點到2點
 
 維護更新。
 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 **時間：** 2019年8月21日星期三東部時間凌晨2時至3時
 
-* SSAI儀表板： 「作業統計資料」區段。 您可以透過「下載CSV」選項匯出工作階段事件。
+* SSAI儀表板：「作業統計資料」區段。 您可以透過「下載CSV」選項匯出工作階段事件。
 
 * 維護更新
 
@@ -58,21 +58,21 @@ ht-degree: 0%
 
 **時間：** 2019年8月6日星期二東部時間凌晨2時30分至2019年8月6日星期二東部時間凌晨4時30分
 
-* SSAI儀表板： 新增區段「作業統計資料」至SSAI儀表板
+* SSAI儀表板：新增區段「作業統計資料」至SSAI儀表板
    * 如果SSAI會話的會話ID已啟用調試模式(ptdebug=true)，則可以查找該會話中發生的以下活動：
       * 廣告請求／回應
       * 插入的廣告
       * 引發的信標（僅限伺服器端追蹤）
    * 在SSAI作業進行後30天內，您可以尋找特定作業ID的活動
    * 您可以匯出事件
-* 資料庫： 安全性更新
+* 資料庫：安全性更新
 
 ### 19.7.1版
 
 **時間：** 7月10日星期三
 
-* SSAI: 對於即時串流中支援EXT-X-CUE-OUT廣告中斷訊號的ptcueformat值，在EXT-X-ASSET標籤範例中新增一般巨集以傳遞屬性資料： #EXT-X-CUE-OUT標籤隨附的標籤： #EXT-X-ASSET:CAID=75BCD15,GENRE=News,Program=NewsAt10巨集： #可用來將新聞（從GENER屬性）傳遞至廣告呼叫URL #，以便將NewsAt10（從程式屬性）傳遞至廣告呼叫URL例外： 為了向後相容性，#和#有相同的功能。 在上例中，兩個宏都可用於傳遞CAID屬性的值，將該值從十六進位轉換為長值後。十六進位值75BCD15的長值是123456789。 這兩個巨集都會用來將123456789傳遞至廣告呼叫URL。巨集一律以#開頭。 巨集區分大小寫，但EXT-X-ASSET標籤中的屬性不區分大小寫。 即EXT-X-ASSET標籤中允許PROGRAM和Program
-* SSAI: 特定客戶的下列配置更改：
+* SSAI:對於即時串流中支援EXT-X-CUE-OUT廣告中斷訊號的ptcueformat值，在EXT-X-ASSET標籤範例中新增一般巨集以傳遞屬性資料：#EXT-X-CUE-OUT標籤隨附的標籤：#EXT-X-ASSET:CAID=75BCD15,GENRE=News,Program=NewsAt10巨集：#可用來將新聞（從GENRE屬性）傳遞至廣告呼叫URL #，可用來將NewsAt10（從程式屬性）傳遞至廣告呼叫URL例外：為了向後相容性，#和#有相同的功能。 在上例中，兩個宏都可用於傳遞CAID屬性的值，將該值從十六進位轉換為長值後。十六進位值75BCD15的長值是123456789。 這兩個巨集都會用來將123456789傳遞至廣告呼叫URL。巨集一律以#開頭。 巨集區分大小寫，但EXT-X-ASSET標籤中的屬性不區分大小寫。 即EXT-X-ASSET標籤中允許PROGRAM和Program
+* SSAI:特定客戶的下列配置更改：
    * 滑動視窗（即時播放清單）長度為4分鐘
    * 如果當資訊清單伺服器擷取來源內容時引發通訊端逾時例外，資訊清單伺服器會傳回HTTP回應碼(404)，而非500
 * 安全性更新
@@ -81,13 +81,14 @@ ht-degree: 0%
 
 **時間：** 2019年6月12日星期三11:30 PM PST至2019年6月13日星期四12:30 AM PST
 
-* CRS: RevJet創意素材的標準化規則
+* CRS:RevJet創意素材的標準化規則
    * 新增RevJet的創意URL標準化規則，供CRS和SSAI使用
-   * TVSDK: 如果您提供或計畫從RevJet提供廣告，則必須將標準化規則新增至CRS規則JSON，才能搭配其創意素材使用CRS。 請洽詢您的技術客戶經理以取得協助
-* CRS: Innovid創意人員的標準化規則
+   * TVSDK:如果您提供或計畫從RevJet提供廣告，則必須將標準化規則新增至CRS規則JSON，才能搭配其創意素材使用CRS。 請洽詢您的技術客戶經理以取得協助
+* CRS:Innovid創意人員的標準化規則
    * 新增Innovid的創意URL標準化規則，由SSAI使用
    * CRS使用的標準化規則已新增至先前的版本
-   * TVSDK: 新增至CRS規則JSON的標準化規則是在先前版本之後提供，但為安全起見，請與您的技術帳戶管理員聯絡，以檢閱您現有的所有標準化規則。
+   * TVSDK:新增至CRS規則JSON的標準化規則是在先前版本之後提供，但為安全起見，請與您的技術帳戶管理員聯絡，以檢閱您現有的所有標準化規則。
+
       >[!NOTE]
       >
       >大部分的Innovid創意URL都會在沒有標準化規則的情況下，成功轉碼和銜接。 不過，偶爾會遇到具有動態參數的Innovid創意URL。 需要標準化規則來處理這些例項。
@@ -97,65 +98,65 @@ ht-degree: 0%
 **時間：** 5月22日星期三東部時間凌晨2點30分至5月22日星期三東部時間凌晨4點30分
 
 * 新增對CMAF（HLS/fMP4內容）的支援
-   * SSAI: 處理CMAF清單
-   * SSAI: 根據內容格式（HLS/ts和HLS/fMP4）啟動轉碼請求並擷取CRS資產
-   * CRS: 新增將廣告重新封裝為CMAF格式(HLS/fMP4)的工作流程
-* SSAI: 修正當內容和廣告都沒有純音訊串流(EXT-X-STREAM-INF)時，無法將未混音廣告插入未混音內容的問題
-* SSAI: 新增對內容區段的Limelight(LLNW)CDN驗證Token支援
+   * SSAI:處理CMAF清單
+   * SSAI:根據內容格式（HLS/ts和HLS/fMP4）啟動轉碼請求並擷取CRS資產
+   * CRS:新增將廣告重新封裝為CMAF格式(HLS/fMP4)的工作流程
+* SSAI:修正當內容和廣告都沒有純音訊串流(EXT-X-STREAM-INF)時，無法將未混音廣告插入未混音內容的問題
+* SSAI:新增對內容區段的Limelight(LLNW)CDN驗證Token支援
    * 當新 `pttoken=limelight` 增 `pttoken=llnw` 或新增至引導URL時，我們會在擷取來源主播放清單時新增機密標題，然後將LLNW的X-Adobe-Sig標題中的查詢參數附加至內容區段
-* SSAI: 新增CenturyLink CDN驗證Token支`pttoken=centurylink`援的另一個Pttoken值()，此支援已於2018年7月30日發行
+* SSAI:新增CenturyLink CDN驗證Token支`pttoken=centurylink`援的另一個Pttoken值()，此支援已於2018年7月30日發行
    * `pttoken=centurylink` 具有與相同的行 `pttoken=level3`為，且兩個值都有效
 
 ### 19.5.1版
 
 **時間：** 5月9日星期四東部時間凌晨2點30分至5月9日星期四東部時間凌晨4點30分
 
-* SSAI: 安全性更新
-* CRS儀表板： 由於資料儲存限制（8位元），將「FqAdId範例」字串截斷為255個字元
+* SSAI:安全性更新
+* CRS儀表板：由於資料儲存限制（8位元），將「FqAdId範例」字串截斷為255個字元
    * 「FqAdId範例」字串包含廣告包裝函式鏈中每個XML回應的廣告系統和廣告ID，以插入所有具有SSAI的CRS廣告（CRS儀表板的「創作統計資料」區段）
-* SSAI和CRS儀表板： 軟體版本更新
+* SSAI和CRS儀表板：軟體版本更新
 
 ### 19.4.1版
 
 **時間：** 4月10日星期三東部時間凌晨2點30分至4月10日星期三東部時間凌晨4點30分
 
-* CRS: CRS重新封裝API將不再支援HTTP POST命令。 CRS重新封裝API會自動將(301)HTTP POST指令重新導向至HTTPS
+* CRS:CRS重新封裝API將不再支援HTTP POST命令。 CRS重新封裝API會自動將(301)HTTP POST指令重新導向至HTTPS
    * 從5月20日開始，將關閉HTTP->HTTPS POST命令的HTTP重新導向
    * 如果您使用CRS重新封裝API來預先重新封裝廣告，請在5月20日之前將POST命令切換為HTTPS
-* CRS: 重新設計將CRS資產上傳至客戶CDN來源的架構和工作流程
+* CRS:重新設計將CRS資產上傳至客戶CDN來源的架構和工作流程
    * 每個CDN來源的作業程式會分開，因此，一個CDN來源的上傳瓶頸不會影響上傳至其他CDN來源
-   * 其他好處： CRS工作處理時間和上傳率已改善至客戶的CDN來源
-* SSAI: 已將視訊廣告的ClickThrough和ClickTracking URL新增至sidecar JSON v2格式
+   * 其他好處：CRS工作處理時間和上傳率已改善至客戶的CDN來源
+* SSAI:已將視訊廣告的ClickThrough和ClickTracking URL新增至sidecar JSON v2格式
    * 新的JSON陣列屬性&quot;videoClicks&quot;會跟隨在&quot;trackingURLs&quot;屬性後面
    * 「事件」值名稱將是「clickThrough」和「clickTracking」，且它們不具有startTime值
-* SSAI: 對於CRS資產，新增功能，每當CRS資產插入時，將其查閱記錄到期時間延長30天
-   * 先前的行為： CRS資產查閱記錄儲存在每個pod的memcache中。 CRS資產查閱記錄在新增至記憶體快取後30天會自動移除。 若要在創意素材從記憶體快取中移除後，在pod中重新填入其CRS資產查閱記錄，該創意素材需要在該pod中遇到3次
-   * 新行為： 當pod存取CRS資產查閱記錄以插入CRS資產時，該pod中的CRS資產查閱記錄的有效期將延長30天。 因此，經常使用的CRS資產，直到最近使用30天後，才會從Pod的記憶體快取中移除
-   * 新行為是全系統的，如果偵測到效能下降，則可以關閉
-* SSAI: 僅針對即時串流更新WebVTT資訊清單操縱行為
-   * 先前的行為： 僅在WebVTT資訊清單中，移除將在每個插入廣告之前和插入廣告插入廣告插入廣告插入的最後一段之後插入的EXT-X-DINSTRUCTION標籤
-   * 新行為： 已將新參數vttdisc（可接受的值為true和false）新增至SSAI引導URL
-      * vttdisc=true: EXT-X-DINSTRUCTION標籤將插入WebVTT資訊清單中，在每個插入廣告之前和插入廣告插入廣告插入的最後一段之後，與音訊／視訊和純音訊清單的行為相符
-      * vttdisc=false（與先前的行為相同）: 僅在WebVTT資訊清單中，移除將在每個插入廣告之前和插入廣告插入廣告插入廣告插入的最後一段之後插入的EXT-X-DINSTRUCTION標籤
+* SSAI:對於CRS資產，新增功能，每當CRS資產插入時，將其查閱記錄到期時間延長30天
+   * 先前的行為：CRS資產查閱記錄儲存在每個pod的memcache中。 CRS資產查閱記錄在新增至記憶體快取後30天會自動移除。 若要在創意素材從記憶體快取中移除後，在pod中重新填入其CRS資產查閱記錄，該創意素材需要在該pod中遇到3次
+   * 新行為：當pod存取CRS資產查閱記錄以插入CRS資產時，該pod中的CRS資產查閱記錄的有效期將延長30天。 因此，經常使用的CRS資產，直到最近使用30天後，才會從Pod的記憶體快取中移除
+   * 新行為是全系統的，如果偵測到效能下降，則可關閉
+* SSAI:僅針對即時串流更新WebVTT資訊清單操縱行為
+   * 先前的行為：僅在WebVTT資訊清單中，移除將在每個插入廣告之前和插入廣告插入廣告插入廣告插入的最後一段之後插入的EXT-X-DINSTRUCTION標籤
+   * 新行為：已將新參數vttdisc（可接受的值為true和false）新增至SSAI引導URL
+      * vttdisc=true:EXT-X-DINSTRUCTION標籤將插入WebVTT資訊清單中，在每個插入廣告之前和插入廣告插入廣告插入的最後一段之後，與音訊／視訊和純音訊清單的行為相符
+      * vttdisc=false（與先前的行為相同）:僅在WebVTT資訊清單中，移除將在每個插入廣告之前和插入廣告插入廣告插入廣告插入的最後一段之後插入的EXT-X-DINSTRUCTION標籤
       * 如果vttdisc參數被省略或其值為true/false，則vttdisc將預設為true
-* SSAI: 安全性更新和軟體版本更新
-   * Java: 更新Java版本，以支援透過TLS 1.2(HTTPS)引發之廣告呼叫的其他密碼套件
+* SSAI:安全性更新和軟體版本更新
+   * Java:更新Java版本，以支援透過TLS 1.2(HTTPS)引發之廣告呼叫的其他密碼套件
 
 ### 19.2.1版
 
 **時間：** 2019年2月20日星期三東部時間凌晨1時30分至2019年2月20日星期三東部時間凌晨3時30分
 
-* SSAI: 已將視訊廣告的ClickThrough和ClickTracking URL新增至sidecar JSON v2格式
+* SSAI:已將視訊廣告的ClickThrough和ClickTracking URL新增至sidecar JSON v2格式
    * 在「trackingURLs」屬性下，其「事件」值名稱將是「點進」和「clickTracking」
    * 其startTime值將是廣告的開頭
-* SSAI: 對於CRS資產，新增功能，每當CRS資產插入時，將其查閱記錄到期時間延長30天
-   * 先前的行為： CRS資產查閱記錄儲存在每個pod的memcache中。 CRS資產查閱記錄在新增至記憶體快取後30天會自動移除。 若要在創意素材從記憶體快取中移除後，在pod中重新填入其CRS資產查閱記錄，該創意素材需要在該pod中遇到3次
-   * 新行為： 當pod存取CRS資產查閱記錄以插入CRS資產時，該pod中的CRS資產查閱記錄的有效期將延長30天。 因此，經常使用的CRS資產，直到最近使用30天後，才會從Pod的記憶體快取中移除
+* SSAI:對於CRS資產，新增功能，每當CRS資產插入時，將其查閱記錄到期時間延長30天
+   * 先前的行為：CRS資產查閱記錄儲存在每個pod的memcache中。 CRS資產查閱記錄在新增至記憶體快取後30天會自動移除。 若要在創意素材從記憶體快取中移除後，在pod中重新填入其CRS資產查閱記錄，該創意素材需要在該pod中遇到3次
+   * 新行為：當pod存取CRS資產查閱記錄以插入CRS資產時，該pod中的CRS資產查閱記錄的有效期將延長30天。 因此，經常使用的CRS資產，直到最近使用30天後，才會從Pod的記憶體快取中移除
    * 新行為是全系統的，如果偵測到效能下降，則可關閉
 
-* SSAI: NGINX和Kafka的軟體版本更新
+* SSAI:NGINX和Kafka的軟體版本更新
    * NGINX和Kafka用於在伺服器端引發和追蹤URL，並將資料推送至SSAI和CRS儀表板
-* CRS: CRS儀表板的效能改進
+* CRS:CRS儀表板的效能改進
 
 ### 網頁UI版本
 
@@ -169,12 +170,12 @@ ht-degree: 0%
 
 **時間：** 2019年1月30日星期三東部時間凌晨1時30分至1月30日星期三東部時間凌晨3時30分
 
-* SSAI: 更新SSAI用來儲存和擷取CRS資產的查閱索引鍵結構，以處理廣告提供者擁有相同廣告之動態廣告ID或創意ID的藍本
-   * 新的查閱索引鍵結構： 區域、Creative URL和格式參數（目標持續時間、輸出格式、目標CDN）
-   * 舊的查閱索引鍵結構： 區域、廣告系統、廣告ID、Creative ID、Creative URL和格式參數（目標持續時間、輸出格式、目標CDN）
+* SSAI:更新SSAI用來儲存和擷取CRS資產的查閱索引鍵結構，以處理廣告提供者擁有相同廣告之動態廣告ID或創意ID的藍本
+   * 新的查閱索引鍵結構：區域、Creative URL和格式參數（目標持續時間、輸出格式、目標CDN）
+   * 舊的查閱索引鍵結構：區域、廣告系統、廣告ID、Creative ID、Creative URL和格式參數（目標持續時間、輸出格式、目標CDN）
    * 現有CRS資產的查閱索引鍵將會更新，以符合生產發行之前的新結構，但請注意，在查閱索引鍵更新與生產發行之間轉換的新資產可能會遺失。 如果是，他們會在發行後下次遇到新的CRS請求時啟動
 
-* CRS: 新增封鎖特定廣告系統、廣告ID、創意ID、創意URL及／或創意格式之清單／允許清單CRS要求的功能
+* CRS:新增封鎖特定廣告系統、廣告ID、創意ID、創意URL及／或創意格式之清單／允許清單CRS要求的功能
 
    >注意
    >
