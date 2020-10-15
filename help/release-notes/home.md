@@ -4,7 +4,7 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 33%
@@ -41,7 +41,7 @@ ht-degree: 33%
 | [參考實作](/help/android-reference-implementation/home.md) | 協助瞭解 TVSDK 並修改功能管理員，以自訂您的個人播放器。 |
 | [Primetime API參考](/help/reference/api-references.md) | 提供有關 TVSDK 函數、資料結構和其他程式設計建構的詳細資訊。 |
 | [數位版權管理](/help/digital-rights-management/home.md) | 協助您進一步瞭解Digital Rights Management(DRM)中的各種使用者案例 |
-| [動態廣告插入說明](/help/dynamic-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
+| [Primetime廣告插入說明](/help/dynamic-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
 | [封存](https://helpx.adobe.com/primetime/archives.html) | 下載已封存檔案的PDF。 |
 
 ## 有用的資源
