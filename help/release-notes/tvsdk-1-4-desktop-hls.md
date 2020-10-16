@@ -9,7 +9,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
 workflow-type: tm+mt
 source-wordcount: '5222'
 ht-degree: 0%
@@ -86,7 +86,7 @@ ht-degree: 0%
 * **視訊心率程式庫(VHL)更新至1.4.0.1版**
 
    * 新增使用Adobe Analytics Video Essentials搭售其他SDK或播放器之不同分析使用案例的能力。
-   * 已移除trackAdBreakStart和trackAdBreakComplete方法，以最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
+   * 已移除trackAdBreakStart和trackAdBreakComplete方法來最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
    * 追蹤廣告時不再需要播放頭屬性。
 
 **1.4.0**
@@ -405,7 +405,7 @@ DRM適配器在下載一小部分段後重置無法正確恢復的問題已經�
 
 **注意**:此問題需要Flash Player 20.0.0.306或更新版本。
 
-在Google Chrome中搜尋時偶爾發生的掛起問題，可透過關閉查詢、查詢需要太長時間才能收到回應，或通訊端已關閉來解決。
+在Google Chrome中搜尋時偶爾發生的掛起問題已透過關閉查詢來解決，如果查詢需要太長時間才能收到回應，或通訊端已關閉。
 
 * Zendesk #19305 —— 播放A/V不連續的串流時，遇到不順暢的播放。
 
@@ -545,7 +545,7 @@ Cookie操作程式碼中可能會截斷Cookie值的錯誤已修正。
 
 修正是在跳過廣告時新增AD_BREAK_BRIKPED。
 
-* Zendesk #4496 —— 流完整性：錯誤102100，其重新導向至Token化串流。
+* Zendesk #4496 —— 流完整性：錯誤102100，其重新導向至標籤化串流。
 
 修正方法是透過TVSDK新增AVNetworkConfiguration屬性useCookieHeaderForAllRequests的設定支援。
 
@@ -588,7 +588,7 @@ Cookie操作程式碼中可能會截斷Cookie值的錯誤已修正。
 
 * Zendesk #4260 - Flash Player 18在IE11中當機（需要Flash Player 18.0.0.232或更新版本）
 
-已修正使用IE11以全螢幕模式播放視訊時的當機問題
+已修正使用IE11在全螢幕模式中播放視訊時的當機問題
 
 * Zendesk #4262 - Adobe Primetime播放器在Windows 10上當機（需要Flash Player 18.0.0.232或更新版本）
 
@@ -734,9 +734,6 @@ HLS格式的MIME類型區分大小寫，這是不正確的，而且已經更改�
 * Zendesk #1024 —— 透過資訊清單從串流移除廣告的功能
 * Zendesk #1423 - HLS播放失敗正在鎖定Flash Player（未報告錯誤）
 * Zendesk #1674 - ClosedCaption未顯示，當0x03 ETX代碼遺失時，708標題顯示正確。
-
-</p>
-</details>
 
 ## 已知問題 {#known-issues}
 
