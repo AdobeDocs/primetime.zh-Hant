@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime程式設計說明
-user-guide-description: Allows you to learn to develop applications and video players using Java on Android devices and Objective-C on iOS devices.
+user-guide-title: Primetime 程式設計說明
+user-guide-description: 可讓您在 Android 裝置上使用 Java 和使用 iOS 裝置上使用 Objective-C 來學習開發應用程式和影片播放程式。
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '4307'
+source-wordcount: '4327'
 ht-degree: 0%
 
 ---
 
 
-# Primetime程式設計說明 {#programming}
+# Primetime 程式設計說明 {#programming}
 
 + [程式設計概觀](home.md)
 + 適用於Android的TVSDK 3x {#tvsdk-3x-android-prog}
