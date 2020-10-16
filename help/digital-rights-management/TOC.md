@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime數位版權管理說明
-user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
+user-guide-title: Primetime 數位版權管理說明
+user-guide-description: 協助您進一步瞭解 Digital Rights Management (DRM) 中的各種使用者案例。
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
 
 
-# 數位版權管理說明 {#drm}
+# Digital Rights Management Help {#drm}
 
 + [DRM概觀](home.md)
 + 認證註冊指南 {#certificate-enrollment-guide}
