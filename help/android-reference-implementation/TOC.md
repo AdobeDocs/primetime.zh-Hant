@@ -2,13 +2,13 @@
 cloud: experience-cloud
 product: primetime
 audience: end-user
-user-guide-title: Primetime參考實作說明
-user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
+user-guide-title: Primetime 參考實作說明
+user-guide-description: 協助瞭解 TVSDK 並修改功能管理員，以自訂您的個人播放器。
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 7%
 
 ---
 
