@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Primetime 程式設計說明
 user-guide-description: 可讓您在 Android 裝置上使用 Java 和使用 iOS 裝置上使用 Objective-C 來學習開發應用程式和影片播放程式。
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 02ac57d14cf5c4c2819d17413a9d3e9a31237715
 workflow-type: tm+mt
 source-wordcount: '4327'
 ht-degree: 0%
