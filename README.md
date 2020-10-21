@@ -1,9 +1,16 @@
 ---
-source-git-commit: c771311a6b49573eb376ab03c3de8e57f40f576b
+source-git-commit: cb347453d4a08b869842aaaaca61538095978c91
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '460'
+ht-degree: 6%
 
 ---
 # Contribute文章
+
+| EXL-PR | EXL | 預覽 | 啟動 | 已發佈 | 說明 |
+|--- |--- |--- |--- |--- |--- |
+| [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/lastBuild/) | [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/lastBuild) | [預覽URL](https://experienceleague.corp.adobe.com/docs/primetime/programming/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [即時URL](https://experienceleague.adobe.com/docs/primetime/programming/home.html?lang=en) | [Authoring 指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 我們歡迎來自社群的貢獻，以及來自檔案團隊以外的Adobe員工。
 
