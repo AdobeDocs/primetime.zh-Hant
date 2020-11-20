@@ -5,7 +5,10 @@ seo-title: 將TimeRange廣告標籤置於時間軸
 title: 將TimeRange廣告標籤置於時間軸
 uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,8 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 * 假設載入的媒體播放器項目指向VOD資產。 當您的應用程式嘗試載入其中繼資料包含只能用於自訂廣告標籤功能內容 `TimeRange` 之規格的媒體資源時，TVSDK會檢查此項。 如果基礎資產不是VOD類型，TVSDK程式庫會擲回例外。
 
 * 在處理自訂廣告標籤時，TVSDK會停用其他廣告解析機制(透過Adobe Primetime廣告決策（先前稱為Auditude）或其他廣告布建系統)。 您可以使用TVSDK提供的各種廣告解析器模組或自訂廣告標籤機制。 使用自訂廣告標籤API時，廣告內容會被視為已解析並置於時間軸上。
->
-><!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
+<!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
 下列程式碼片段提供一個簡單範例，其中將一組三 `TimeRange` 個規格放在時間軸上做為自訂廣告標籤。
 
