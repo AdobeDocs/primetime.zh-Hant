@@ -37,8 +37,7 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描
    >
    >例如：
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
