@@ -7,7 +7,7 @@ uuid: 827a3bcf-a584-4032-aa19-4fc7730778cc
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ ht-degree: 0%
   <tr> 
    <td colname="col1"><span class="codeph"> 名稱</span> </td> 
    <td colname="col02"> 字串 </td> 
-   <td colname="col2">計時中繼資料的名稱。 如果類型為 <span class="codeph"> TAG</span>，則值代表提示／標籤名稱。 如果類型為 <span class="codeph"> ID3</span>，則為null。 </td> 
+   <td colname="col2">計時中繼資料的名稱。 如果類型為<span class="codeph"> TAG</span>，則值代表提示／標籤名稱。 如果類型為<span class="codeph"> ID3</span>，則為null。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> 時間</span> </td> 
