@@ -6,11 +6,14 @@ title: 設定Adobe Analytics報表
 uuid: bdf8bb7f-a0c8-48a2-a632-0b872687f3fe
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
-# 設定Adobe Analytics報表 {#configure-adobe-analytics-reporting}
+# 設定Adobe Analytics報表{#configure-adobe-analytics-reporting}
 
 您可以設定「參考實作」以使用Adobe Analytics報表。
 
@@ -44,7 +47,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 1. 設定應用程式以搭配Adobe Marketing Cloud使用。
 
-   若要啟用將Primetime驗證資料傳送至Adobe Analytics, [!DNL `ADBMobileConfig.json`] 必須在編譯時將設定檔案新增至「參考實作」。 請注意，這與Primetime SDK用來傳送視訊分析資料至Marketing Cloud的設定檔完全相同。 請參閱 [Adobe Marketing Cloud檔案](https://microsite.omniture.com/t2/help/en_US/reference/) ，以取得有關使用Adobe Analytics帳戶設定應用程式的詳細資訊。
+   若要啟用將Primetime驗證資料傳送至Adobe Analytics，編譯時必須將[!DNL `ADBMobileConfig.json`]組態檔新增至「參考實作」。 請注意，這與Primetime SDK用來傳送視訊分析資料至Marketing Cloud的設定檔完全相同。 如需使用您的Adobe Analytics帳戶設定應用程式的詳細資訊，請參閱[Adobe Marketing Cloud檔案](https://microsite.omniture.com/t2/help/en_US/reference/)。
 1. 建立處理規則。
 
-   「參考實作」所傳送的Primetime驗證事件資料不會自動出現在您的分析報表中。 您必須先建立處理規則，以利用資料。 請參閱 [Adobe Analytics檔案以建立處理規則](https://microsite.omniture.com/t2/help/en_US/reference/processing_rules.html)。
+   「參考實作」所傳送的Primetime驗證事件資料不會自動出現在您的分析報表中。 您必須先建立處理規則，以利用資料。 請參閱[Adobe Analytics檔案，瞭解如何建立處理規則](https://microsite.omniture.com/t2/help/en_US/reference/processing_rules.html)。
