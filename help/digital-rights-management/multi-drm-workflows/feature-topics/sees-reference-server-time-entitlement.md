@@ -6,15 +6,18 @@ title: 參考服務時間型權益
 uuid: dd937299-a271-49a9-9b26-eec16f1484df
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
 
-# 參考服務：時間型權益 {#reference-service-time-based-entitlement}
+# 參考服務：時間型權益{#reference-service-time-based-entitlement}
 
 使用SEES瞭解如何使用ExpressPlay啟用以時間為基礎的權益服務。
 
-SEES會從用戶端接收「權益要求」（請參閱「公用API」區段）。 SEES伺服器會根據來尋找CEK和IV `contentID`、新增 `expirationTime`請求，並將請求轉送至ExpressPlay伺服器。 最終的ExpressPlay Token有時限。 請參閱下方的「以時間為基礎的權益」順序圖。 ![](assets/fees-time-based.png)
+SEES會從用戶端接收「權益要求」（請參閱「公用API」區段）。 SEES伺服器根據`contentID`查找CEK和IV，添加`expirationTime`，並將請求轉發到ExpressPlay伺服器。 最終的ExpressPlay Token有時限。 請參閱下方的「以時間為基礎的權益」順序圖。![](assets/fees-time-based.png)
 
 **表1:用戶端傳送的授權參數**
 
@@ -37,7 +40,7 @@ SEES會從用戶端接收「權益要求」（請參閱「公用API」區段）�
  <tbody> 
   <tr> 
    <td><span class="codeph"> expirationTime</span> </td> 
-   <td>此代號的過期時間。 此值必須是 <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" type="external"> RFC 3339</a> 、日期／時間格式中「Z」區域指示符（「祖魯時間」）的字串，或前面帶有「+」符號的整數。 RFC 3339的日期／時間示例為 <span class="codeph"> 2006-04-14T12:01:10Z</span>。 <p>如果該值是RFC 3339日期／時間格式中的字串，則表示令牌的絕對到期日／時間。 如果值是前面有'+'符號的整數，則會將其解讀為從發出該標籤有效的秒數。 例如， <span class="codeph"> +60</span> 指定一分鐘。 Token存留期上限（且預設值，若未指定）為30天。 指定'+'符號時，請使用編碼格式"%2B"。 </p> </td> 
+   <td>此代號的過期時間。 此值必須是<a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" type="external"> RFC 3339</a>日期／時間格式的字串(「Z」區域指示符（「祖魯時間」），或前面帶有「+」符號的整數。 RFC 3339日期／時間的示例為<span class="codeph"> 2006-04-14T12:01:10Z</span>。 <p>如果該值是RFC 3339日期／時間格式中的字串，則表示令牌的絕對到期日／時間。 如果值是前面有'+'符號的整數，則會將其解讀為從發出該標籤有效的秒數。 例如，<span class="codeph"> +60</span>指定一分鐘。 Token存留期上限（且預設值，若未指定）為30天。 指定'+'符號時，請使用編碼格式"%2B"。 </p> </td> 
    <td> 否 </td> 
   </tr> 
  </tbody> 
