@@ -6,6 +6,9 @@ title: 訂閱自訂標籤
 uuid: fe8ba34d-66fc-43bb-b98e-659c1702d1e0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
@@ -17,11 +20,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 播放開始前，您必須訂閱標籤。
 要獲得有關HLS清單中自定義標籤的通知：
 
-將包含自訂標籤的陣列傳遞至中，以全域設定自訂廣告標 `setSubscribedTags` 記名 `MediaPlayerItemConfig`稱。
+將包含自訂標籤的陣列傳遞至`MediaPlayerItemConfig`中的`setSubscribedTags`，以全域設定自訂廣告標籤名稱。
 
 >[!IMPORTANT]
 >
->使用HLS流時必 `#` 須包含前置詞。
+>使用HLS流時必須包含`#`前置詞。
 
 例如：
 
