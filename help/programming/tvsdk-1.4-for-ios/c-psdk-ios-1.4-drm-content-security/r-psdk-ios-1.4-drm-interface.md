@@ -7,13 +7,13 @@ uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
 
-# Primetime DRM介面總覽 {#primetime-drm-interface-overview}
+# Primetime DRM介面概述{#primetime-drm-interface-overview}
 
 您可以使用Primetime數位版權管理(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商DRM解決方案，做為Adobe整合Primetime DRM解決方案的替代方案。
 
@@ -39,7 +39,7 @@ TVSDK支援將Primetime DRM整合為自訂DRM工作流程。 這表示您的應�
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-TVSDK會在DRM中 `PTMediaPlayerItemDRMMetadataChanged` 繼資料變更時發出通知。 此中繼資料幾乎用作類別所有功能的輸 `DRMManager` 入。
+TVSDK會在DRM中繼資料變更時發出`PTMediaPlayerItemDRMMetadataChanged`通知。 此元資料幾乎用作`DRMManager`類的所有函式的輸入。
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
@@ -47,20 +47,20 @@ TVSDK會在DRM中 `PTMediaPlayerItemDRMMetadataChanged` 繼資料變更時發出
 
 >[!TIP]
 >
->在iOS應用程式中參考受DRM保護的資產URL時，查詢字串參 `?faxs=1` 數必須附加至(MBR)設定層級的M3U8 URL。 例如：
+>在iOS應用程式中參考受DRM保護的資產URL時，查詢字串參數`?faxs=1`必須附加至(MBR)設定層級的M3U8 URL。 例如：
 >
 >
 ```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 >```
 >
->查 `faxs=1` 詢字串參數指示內容受DRM保護，並相應地在iOS TVSDK中觸發DRM解密工作流。 您也可以在DRM保 `faxs=1` 護的HLS資產URL上附加標籤，這些URL會用於其他平台；在iOS上會視為必要項目，或在其他平台上的播放器中視為非作業項目。
+>該`faxs=1`查詢字串參數指示該內容受DRM保護，並相應地在iOS TVSDK中觸發DRM解密工作流。 您也可以在受DRM保護的HLS資產URL上附加`faxs=1`標籤，這些URL會用於其他平台；在iOS上會視為必要項目，或在其他平台上的播放器中視為非作業項目。
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-如需DRM的詳細資訊，請參閱 [Adobe Primetime DRM檔案](https://help.adobe.com/en_US/primetime/drm)。
+如需DRM的詳細資訊，請參閱[Adobe Primetime DRM檔案](https://help.adobe.com/en_US/primetime/drm)。
 
-## 在TSVDK應用程式中實作Primetime DRM {#implement-primetime-drm-in-a-tsvdk-application}
+## 在TSVDK應用程式{#implement-primetime-drm-in-a-tsvdk-application}中實施Primetime DRM
 
 Primetime DRM已整合至TVSDK，可簡化在TVSDK應用程式中實作內容保護。
 
