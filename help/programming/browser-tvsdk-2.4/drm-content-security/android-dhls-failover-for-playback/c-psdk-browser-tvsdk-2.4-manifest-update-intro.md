@@ -6,6 +6,9 @@ title: 即時主資訊清單更新
 uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
