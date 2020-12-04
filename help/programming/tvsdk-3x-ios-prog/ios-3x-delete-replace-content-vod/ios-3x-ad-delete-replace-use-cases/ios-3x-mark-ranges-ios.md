@@ -6,19 +6,22 @@ title: 標籤範圍
 uuid: ca544f64-ef83-4c08-8ec5-1bc07fdba3c4
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
 
-# 使用案例來刪除和取代廣告 {#use-cases-delete-replace-ads}
+# 使用案例來刪除和取代廣告{#use-cases-delete-replace-ads}
 
 以下是刪除和取代廣告的使用案例：
 
-## 標籤範圍 {#mark-ranges}
+## 標籤範圍{#mark-ranges}
 
-若要實作內 `PTTimeRangeCollection` 容範圍並標示為廣告：
-1. 準備 `PTTimeRangeCollection`。
-1. 將類型設定為 `PTTimeRangeCollection``PTTimeRangeCollectionTypeMarkRanges`。
+若要實作`PTTimeRangeCollection`並將內容範圍標示為廣告：
+1. 準備`PTTimeRangeCollection`。
+1. 將`PTTimeRangeCollection`的類型設定為`PTTimeRangeCollectionTypeMarkRanges`。
 
    此步驟會通知TVSDK自訂範圍必須視為廣告。
 
@@ -39,7 +42,7 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
        type:PTTimeRangeCollectionTypeMarkRanges];
    ```
 
-1. 建立 `PTAdMetadata` 並設定 `PTTimeRangeCollection`。
+1. 建立`PTAdMetadata`並設定`PTTimeRangeCollection`。
 
    ```
    // Create the PTPlayerItem metadata 
@@ -71,11 +74,11 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
    [player play];
    ```
 
-## 取代範圍 {#replace-ranges}
+## 取代範圍{#replace-ranges}
 
-要將內容范 `PTTimeRangeCollection` 圍實作並刪除為廣告：
-1. 準備 `PTTimeRangeCollection`。
-1. 將類型設定為 `PTTimeRangeCollection``PTTimeRangeCollectionTypeReplaceRanges`。
+若要實作`PTTimeRangeCollection`並將內容範圍刪除為廣告：
+1. 準備`PTTimeRangeCollection`。
+1. 將`PTTimeRangeCollection`的類型設定為`PTTimeRangeCollectionTypeReplaceRanges`。
 
    此步驟會通知TVSDK必須以替代內容（廣告）來取代提供的範圍。
 
@@ -98,9 +101,9 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
 
    >[!TIP]
    >
-   >此引數 `replacementDuration` 為可選。 如果未定義，則 `AdServer` 會決定廣告分段的持續時間。
+   >引數`replacementDuration`是可選的。 如果未定義，`AdServer`會決定廣告插播的持續時間。
 
-1. 建立 `PTAdMetadata` 並設定 `PTTimeRangeCollection`。
+1. 建立`PTAdMetadata`並設定`PTTimeRangeCollection`。
 
    ```
    //Create the PTPlayerItem metadata 
@@ -124,7 +127,7 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
 
    >[!TIP]
    >
-   >雖然設 `signalingMode` 置為 `PTAdSignalingModeCustomRanges`，但在設定類型時會自動設定此廣 `PTTimeRangeCollection` 告信令模式 `PTTimeRangeCollectionTypeReplace`。
+   >儘管`signalingMode`設定為`PTAdSignalingModeCustomRanges`，但在設定`PTTimeRangeCollectionTypeReplace`類型的`PTTimeRangeCollection`時會自動設定此廣告信令模式。
 
 1. 建立播放器並開始播放。
 
@@ -139,11 +142,11 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
    [player play];
    ```
 
-## 刪除範圍 {#delete-ranges}
+## 刪除範圍{#delete-ranges}
 
-要將內容范 `PTTimeRangeCollection` 圍實作並刪除為廣告：
-1. 準備 `PTTimeRangeCollection`。
-1. 將類型設為 `PTTimeRangeCollection` , `PTTimeRangeCollectionTypeDeleteRanges`會通知TVSDK必須刪除提供的範圍。
+若要實作`PTTimeRangeCollection`並將內容範圍刪除為廣告：
+1. 準備`PTTimeRangeCollection`。
+1. 將`PTTimeRangeCollection`的類型設為`PTTimeRangeCollectionTypeDeleteRanges`，通知TVSDK必須刪除提供的範圍。
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -160,7 +163,7 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
                                               type:PTTimeRangeCollectionTypeDeleteRanges];
    ```
 
-1. 建立 `PTAdMetadata` 並設定 `PTTimeRangeCollection`。
+1. 建立`PTAdMetadata`並設定`PTTimeRangeCollection`。
 
    ```
    //Create the PTPlayerItem metadata 
@@ -184,7 +187,7 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
 
    >[!TIP]
    >
-   >廣告插入會在根據和目前刪除自訂範圍 `PTAdMetadata` 後發生 `PTAdSignalingMode`。
+   >廣告插入是在根據`PTAdMetadata`和目前`PTAdSignalingMode`刪除自訂範圍後進行。
 
 1. 建立播放器並開始播放。
 
