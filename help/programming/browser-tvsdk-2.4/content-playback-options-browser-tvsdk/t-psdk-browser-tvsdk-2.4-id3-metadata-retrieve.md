@@ -6,6 +6,9 @@ title: ID3標籤
 uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 ID3標籤提供音訊或視訊檔案的相關資訊，例如檔案的標題或藝術家的姓名。 瀏覽器TVSDK會在HLS串流的傳輸串流(TS)區段層級偵測ID3標籤，並派單事件。 應用程式可從標籤擷取資料。
 
-當在基礎HLS串流中找到新的ID3中繼資料時，瀏覽器TVSDK會觸發事 `AdobePSDK.TimedMetadataEvent` 件。
+當在基礎HLS串流中找到新的ID3中繼資料時，瀏覽器TVSDK會觸發`AdobePSDK.TimedMetadataEvent`事件。
 
-ID3 `TimedMetadata` 的物件具有下列屬性：
+ID3的`TimedMetadata`物件具有下列屬性：
 
 <table id="table_6C61886187FB44B4B9821E4B00200018"> 
  <thead> 
@@ -27,35 +30,35 @@ ID3 `TimedMetadata` 的物件具有下列屬性：
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
-   <td colname="col2"> <p>TimedMetadata物 <span class="codeph"> 件的類 </span> 型。 </p> <p>對於ID3中繼資料，其值 <span class="codeph"> 為AdobePSDK.TimedMetadataType.ID3 </span>。 </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> type  </span> </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> TimedMetadata </span>物件類型。 </p> <p>對於ID3中繼資料，其值為<span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> 時間 </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> 時間  </span> </p> </td> 
    <td colname="col2"> <p> 偵測到此計時中繼資料的播放器時間。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
-   <td colname="col2"> <p>TimedMetadata物件 <span class="codeph"> 的 </span> ID。 </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> TimedMetadata </span>物件的ID。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> 名稱 </span> </p> </td> 
-   <td colname="col2"> <p>TimedMetadata物 <span class="codeph"> 件的 </span> 名稱。 對於ID3中繼資料，值為「ID3」。 </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> 名稱  </span> </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> TimedMetadata </span>物件的名稱。 對於ID3中繼資料，值為「ID3」。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> 內容 </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> 內容  </span> </p> </td> 
    <td colname="col2"> <p>計時中繼資料內容。 對於ID3標籤，此值代表序號位元組陣列。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> 中繼資料 </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> TimedMetadata </span> 處理的資訊，此資訊是 <span class="codeph"> AdobePSDK.Metadata的例項， </span> 儲存ID3影格。 </p> <p> <p>注意： 對於Safari <span class="codeph"> 視訊 </span> 標籤，ID3標籤的特定影格資料會透過 <span class="codeph"> AdobePSDK.Metadata物件以物件形式公開，而對於其他瀏覽器，ID3標籤的影格資料則會透過 </span> AdobePSDK.Metadata物件以位元組陣列形式公開 <span class="codeph"></span> 。 </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> 中繼資料  </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> TimedMetadata </span> 處理的資訊，此資訊是 <span class="codeph"> AdobePSDK的例項。儲 </span> 存ID3影格的中繼資料。 </p> <p> <p>注意： 對於Safari <span class="codeph">視訊</span>標籤，ID3標籤的特定影格資料會透過<span class="codeph"> AdobePSDK.Metadata </span>物件以物件形式公開，而對於其他瀏覽器，ID3標籤的影格資料則會透過<span class="codeph"> AdobePSDK.Metada5&gt;物件。</span> </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 &#x200B;
 
-應用程式可透過下列兩種方 `TimedMetadata` 式擷取儲存在中的各種ID3標籤：
+應用程式可透過下列兩種方式擷取儲存在`TimedMetadata`中的各種ID3標籤：
 
 * 在AdobePSDK.PSDKeventType.TIMED_METADATA_AVAILABLE事件偵聽器中。
 
@@ -114,7 +117,7 @@ ID3 `TimedMetadata` 的物件具有下列屬性：
    }); 
    ```
 
-* 使用 `MediaPlayerItem`屬 `timedMetadata` 性。
+* 使用`MediaPlayerItem`的`timedMetadata`屬性。
 
    ```
    var isSafari = function () { 
