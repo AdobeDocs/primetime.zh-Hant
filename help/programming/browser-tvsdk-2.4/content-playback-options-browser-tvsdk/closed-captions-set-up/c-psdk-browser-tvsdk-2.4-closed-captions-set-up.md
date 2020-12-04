@@ -6,6 +6,9 @@ title: 使用隱藏字幕
 uuid: bc069e04-3ea3-4cdf-a8a6-d8aef91ece91
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +27,6 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 您可以：
 
 * 選取可用標題軌道作為目前軌道，並監聽表示其他可用軌道的事件。
-* 使用介面開啟或關閉隱藏字幕（可見或不可見） `MediaPlayer` 。
-* 選取樣式選項，以決定底層視訊引擎呈現隱藏字幕的方式。 使用介 `MediaPlayerItem` 面來選取字型或字型顏色等格式。
+* 使用`MediaPlayer`介面開啟或關閉（可見或不可見）關閉的字幕。
+* 選取樣式選項，以決定底層視訊引擎呈現隱藏字幕的方式。 使用`MediaPlayerItem`介面來選擇字型或字型顏色等格式。
 
