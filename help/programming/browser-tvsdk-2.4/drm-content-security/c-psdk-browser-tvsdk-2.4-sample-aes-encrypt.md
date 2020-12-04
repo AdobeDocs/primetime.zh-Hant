@@ -6,11 +6,14 @@ title: AES加密的HLS串流範例
 uuid: 32c1f87b-eb81-4e1c-92ea-ec37260a7ecb
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
 
-# AES加密的HLS串流範例{#sample-aes-encrypted-hls-streams}
+# 範例AES加密的HLS串流{#sample-aes-encrypted-hls-streams}
 
 AES-128加密方法對包括標頭的整個傳輸流(TS)容器進行加密，而SAMPLE-AES加密僅對音頻和部分視頻資料進行加密。
 
