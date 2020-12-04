@@ -6,11 +6,14 @@ title: 服務質量統計
 uuid: 8e990461-065b-4efa-b77c-b2b832f86f7d
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
 
-# 服務質量統計 {#quality-of-service-statistics}
+# 服務質量統計資料{#quality-of-service-statistics}
 
 服務質量(QoS)提供視訊引擎執行的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
 
@@ -20,27 +23,27 @@ TVSDK也提供下列下載資源的相關資訊：
 * 檔案片段
 * 檔案的追蹤資訊
 
-## 使用載入資訊在片段層級追蹤 {#section_4439D91E8EDC45588EF1D7BE25697350}
+## 使用載入資訊{#section_4439D91E8EDC45588EF1D7BE25697350}在片段層級追蹤
 
-您可以從類別中讀取有關下載資源（例如片段和追蹤）的服務品質(QoS) `LoadInformation` 資訊。
+您可以從`LoadInformation`類別讀取有關下載資源（如片段和軌道）的服務質量(QoS)資訊。
 
-1. 實作和註冊事 `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` 件偵聽器。
-1. 呼 `event.getLoadInformation()` 叫以從傳遞至回呼的參 `event` 數讀取相關資料。
+1. 實作並註冊`MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`事件偵聽器。
+1. 呼叫`event.getLoadInformation()`以讀取傳遞至回呼的`event`參數的相關資料。
 
    >[!NOTE]
    >
-   >如需詳細 `LoadInformation`資訊， [請參閱Android(Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) API檔案的2.7。
+   >如需`LoadInformation`的詳細資訊，請參閱[2.7 for Android(Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) API檔案。
 
-## 讀取QOS播放、緩衝和設備統計資訊 {#section_D21722600F324E67A9F06234D338B243}
+## 讀取QOS回放、緩衝和設備統計資訊{#section_D21722600F324E67A9F06234D338B243}
 
-您可以從類別中讀取播放、緩衝和裝置統計 `QOSProvider` 資料。
+您可以從`QOSProvider`類別讀取播放、緩衝和裝置統計資料。
 
-該類 `QOSProvider` 別提供各種統計資料，包括緩衝、位元速率、影格速率、時間資料等資訊。 此外，它也提供有關裝置的資訊，例如製造商、型號、作業系統、SDK版本、製造商的裝置ID和螢幕大小／密度。
+`QOSProvider`類別提供各種統計資料，包括緩衝、位元速率、影格速率、時間資料等資訊。 此外，它也提供有關裝置的資訊，例如製造商、型號、作業系統、SDK版本、製造商的裝置ID和螢幕大小／密度。
 
 1. 實例化媒體播放器。
-1. 建立物 `QOSProvider` 件並附加至媒體播放器。
+1. 建立`QOSProvider`物件，並將它附加至媒體播放器。
 
-   建構 `QOSProvider` 函式會擷取播放器內容，以便擷取裝置特定的資訊。
+   `QOSProvider`建構函式會擷取播放器內容，以便擷取裝置特定資訊。
 
    ```java
    // Create Media Player. 
@@ -50,7 +53,7 @@ TVSDK也提供下列下載資源的相關資訊：
 
 1. （可選）閱讀播放統計資料。
 
-   讀取播放統計資訊的一個解決方案是具有計時器，該計時器定期從中讀取新的QoS值 `QOSProvider`。
+   讀取播放統計資訊的一個解決方案是具有計時器，該計時器定期從`QOSProvider`中讀取新的QoS值。
 
    例如：
 
