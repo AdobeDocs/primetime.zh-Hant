@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 部分加密級別 {#partial-encryption-level}
+# 部分加密級別{#partial-encryption-level}
 
 此封裝選項指定是否應加密所有幀或僅加密幀的子集。 加密分為三個級別：低、中、高。
 
