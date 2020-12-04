@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
@@ -24,24 +24,24 @@ ht-degree: 33%
 
 本版次著重於將Primetime Reference應用程式的圖檔版本更新至5.6.4版。
 
-如需 [Android目前發行版本的詳細資訊，請參](../release-notes/tvsdk-3x-android.md)閱。
+如需[Android](../release-notes/tvsdk-3x-android.md)目前發行版本的詳細資訊，請參閱。
 
 ## TVSDK 3.12 iOS版本注意事項中的增強功能和修正
 
 本版次著重於解決主要客戶問題。
 
-如需 [iOS目前發行版本的詳細資訊，請](../release-notes/tvsdk-3x-ios.md)參閱。
+如需[iOS](../release-notes/tvsdk-3x-ios.md)目前發行版本的詳細資訊，請參閱。
 
 ## 另請參閱
 
 | 使用指南 | 說明 |
 |--- |--- |
 | [Primetime 程式設計說明](/help/programming/home.md) | 可讓您在 Android 裝置上使用 Java 和使用 iOS 裝置上使用 Objective-C 來學習開發應用程式和影片播放程式。 |
-| [Primetime移轉與轉換說明](/help/migration-guides/home.md) | 說明從您現有的 Primetime TVSDK 套裝轉換和移轉至新一代套裝的程序。 |
-| [參考實作](/help/android-reference-implementation/home.md) | 協助瞭解 TVSDK 並修改功能管理員，以自訂您的個人播放器。 |
+| [Primetime移轉與轉換說明](/help/migration-guides/home.md) | 說明從您現有的 Primetime TVSDK 套裝轉換及移轉至新一代套裝的程序。 |
+| [參考實作](/help/android-reference-implementation/home.md) | 協助了解 TVSDK 並修改功能管理員，以自訂您的個人播放器。 |
 | [Primetime API參考](/help/reference/api-references.md) | 提供有關 TVSDK 函數、資料結構和其他程式設計建構的詳細資訊。 |
 | [數位版權管理](/help/digital-rights-management/home.md) | 協助您進一步瞭解Digital Rights Management(DRM)中的各種使用者案例 |
-| [Primetime廣告插入說明](/help/dynamic-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
+| [Primetime Ad Insertion 說明](/help/dynamic-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
 | [封存](https://helpx.adobe.com/primetime/archives.html) | 下載已封存檔案的PDF。 |
 
 ## 有用的資源
