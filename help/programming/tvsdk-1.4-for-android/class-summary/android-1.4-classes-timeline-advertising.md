@@ -6,21 +6,24 @@ title: 時間軸廣告課程
 uuid: 4e6ca9fb-9e68-4625-a24b-386a50333862
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 0%
 
 ---
 
 
-# 時間軸廣告課程{#timeline-advertising-classes}
+# 時間軸廣告類{#timeline-advertising-classes}
 
 這些類別提供有關時間軸中發生廣告的資訊。
 
-套件： [com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/package-summary.html)
+套件：[com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/package-summary.html)
 
-套件： [com.adobe.mediacore.timeline.advertising.auditude](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/package-summary.html)
+套件：[com.adobe.mediacore.timeline.advertising.auditude](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/package-summary.html)
 
 | 名稱 | 說明 |
 |--- |--- |
-| [廣告](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | 定義廣告抽象並包含所有廣告資訊的類別。 它由唯一ID、持續時間和定義 `MediaResource`。 包含 `MediaResource` 實際廣告內容所在的URL。 |
+| [廣告](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | 定義廣告抽象並包含所有廣告資訊的類別。 它由唯一ID、持續時間和`MediaResource`定義。 `MediaResource`包含實際廣告內容所在的URL。 |
 | [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | 表示要顯示的資產的分類。 代表廣告資產的分類。 |
 | [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | 提供數個廣告統一檢視的類別，在播放期間的某個時間點播放。 |
 | [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | 廣告插播位置操作類。 |
@@ -32,5 +35,5 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 | [AuditudeResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeResolver.html) | 在片語處理中處理黃金時段廣告解析的類別。 |
 | [AuditudeTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeTracker.html) | 實作ContentTracker介面並定義Primetime廣告追蹤事件的類別。 |
 | [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentResolver.html) | 在片語處理中處理廣告解析部分的類。 |
-| [ContentTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | 定義您必須實作之通訊協定的介面（如果您想要建立廣告追蹤模組，以便與程式庫或自訂廣告追蹤器整合）。 此介面要求您定義向遠端廣告追蹤系統報告廣告進度事件的方式。 |
+| [ContentTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | 定義您必須實作之通訊協定的介面，以建立廣告追蹤模組，以便與程式庫或自訂廣告追蹤器整合。 此介面要求您定義向遠端廣告追蹤系統報告廣告進度事件的方式。 |
 | [位置資訊](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | 抽象位置資訊要求的類別。 每個已解決的廣告都必須附上一個位置資訊。 位置資訊說明廣告要放置在時間軸上的位置。 它包含以下資訊： <ul><li>位置（毫秒） </li><li>位置類型（前滾、中滾或後滾） </li><li>將要替換的主要內容塊的持續時間</li></ul> |
