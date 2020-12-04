@@ -6,21 +6,24 @@ title: 替代音訊
 uuid: 86aa5393-6a9e-49db-807b-7299e6b4ab2b
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#alternate-audio-overview}
+# 概述{#alternate-audio-overview}
 
 替代音效可讓您在視訊音軌的可用音軌間切換。 當視訊播放時，使用者可以選擇偏好的語言軌道。
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-當TVSDK建立目 `MediaPlayerItem` 前視訊的例項時，會為每個可用 `AudioTrack` 的音軌建立項目。 項目包含屬 `name` 性，屬性是字串，通常包含該追蹤語言的使用者可辨識描述。 項目也包含是否依預設使用該追蹤的資訊。 在播放視訊時，您可以要求提供可用音軌清單、選擇性允許使用者選擇音軌，並設定視訊與選取的音軌一起播放。
+當TVSDK建立目前視訊的`MediaPlayerItem`例項時，會為每個可用的音軌建立`AudioTrack`項目。 項目包含`name`屬性，此屬性是字串，通常包含該追蹤語言的使用者可識別描述。 項目也包含是否依預設使用該追蹤的資訊。 在播放視訊時，您可以要求提供可用音軌清單、選擇性允許使用者選擇音軌，並設定視訊與選取的音軌一起播放。
 
 >[!TIP]
 >
->雖然很少，但若TVSDK建立後有其他音軌可供使用， `MediaPlayerItem`TVSDK會觸發事 `MediaPlayerItem.AUDIO_TRACK_UPDATED` 件。
+>雖然很少，但若TVSDK在建立`MediaPlayerItem`後有其他音軌可供使用，TVSDK會觸發`MediaPlayerItem.AUDIO_TRACK_UPDATED`事件。
 
 ## 新增API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -28,13 +31,13 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 `hasAlternateAudio`
 
-如果指定的媒體有替代音軌（除預設音軌外），此布林值函式會傳回 `true`。 如果沒有替代音軌，函式會傳回 `false`。
+如果指定的媒體具有預設音軌以外的替代音軌，則此布爾函式返回`true`。 如果沒有替代音軌，函式將返回`false`。
 
 ```java
 boolean hasAlternateAudio();
 ```
 
-** `getAudioTracks`**
+** `getAudioTracks`*
 
 此函式會傳回指定媒體中所有目前可用音軌的清單。
 
