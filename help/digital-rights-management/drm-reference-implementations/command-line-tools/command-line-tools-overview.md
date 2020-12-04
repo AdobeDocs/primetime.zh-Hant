@@ -4,11 +4,14 @@ title: 概觀
 uuid: effb6c5e-afce-4a96-8c95-041b2f183690
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#overview}
+# 概述{#overview}
 
 Adobe Primetime DRM參考實作命令列工具可讓您直接從命令列執行各種DRM相關工作。
 
