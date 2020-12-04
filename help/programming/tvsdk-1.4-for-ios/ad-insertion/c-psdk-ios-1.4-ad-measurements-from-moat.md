@@ -6,11 +6,14 @@ title: 來自Moat的廣告度量
 uuid: 76fa9ca0-58bd-44fe-82ce-72fdf6fcc28c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
 
-# 來自Moat的廣告度量{#ad-measurements-from-moat}
+# 來自Moat{#ad-measurements-from-moat}的廣告測量
 
 TVSDK會從FreeWheel和其他提供VAST回應的伺服器取得資訊。 FreeWheel在VAST響應中提供來自Moat服務的資訊。 Moat服務以更準確的方式計算廣告曝光數，更能顯示創意人員捕捉或忽略觀眾的興趣。
 
@@ -47,4 +50,4 @@ Freewheel也可以在Ad元素中設定id屬性，如下例所示。
 <Ad id="118566" sequence="1">
 ```
 
-請參閱中類別的API文 `PTNetworkAdInfo` 檔 `PTAdAsset`。
+請參閱`PTAdAsset`中`PTNetworkAdInfo`類別的API文檔。
