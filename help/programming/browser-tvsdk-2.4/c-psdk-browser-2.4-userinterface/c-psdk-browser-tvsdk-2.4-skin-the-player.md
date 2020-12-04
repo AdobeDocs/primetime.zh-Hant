@@ -6,11 +6,14 @@ title: 設定播放器的外觀
 uuid: 516ff846-d76d-4062-b64b-3032f7a70470
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '1449'
+ht-degree: 0%
 
 ---
 
 
-# 設定播放器的外觀 {#skinning-the-player}
+# 設定播放器{#skinning-the-player}的外觀
 
 您可使用下列資訊來協助您設定播放器外觀。 對於每個視覺結構，預設行為中都會提到相應的行為。
 
@@ -18,13 +21,13 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 >
 >本檔案中的外觀設定詳細資料是針對由UI架構建立的預設UI元素。 如果您的播放器修改了這些元素，您也必須變更外觀元素。
 
-## 容器div {#section_99B0D598219D4150B57E97D5381B118F}
+## 容器divs {#section_99B0D598219D4150B57E97D5381B118F}
 
 以下是容器div的樣式：
 
 >[!TIP]
 >
->這些div列在檔案 `common-styles.css` 中。
+>這些div列在`common-styles.css`檔案中。
 
 主div的樣式如下：
 
@@ -49,7 +52,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
    <td colname="col2"> <p>當PIP模式處於活動狀態時使用。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1">預設行為為 <span class="codeph"> videoBehavior</span>。 </td> 
+   <td colname="col1">預設行為為<span class="codeph"> videoBehavior</span>。 </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -83,13 +86,13 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-## 各種控制項 {#section_E9E4A8E3AEBF4BDC89840B84B3B0E737}
+## 各種控制項{#section_E9E4A8E3AEBF4BDC89840B84B3B0E737}
 
 以下是一般播放器控制項的樣式：
 
 >[!TIP]
 >
->這些樣式列在檔案 `default-controls.css` 中。
+>這些樣式列在`default-controls.css`檔案中。
 
 <table id="table_0ACB6BAB5DAD42DBBD18CA7C0385A261"> 
  <thead> 
@@ -142,7 +145,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-## 控制列 {#section_B683B51EC746484B9AA90CB481D637BD}
+## 控制欄{#section_B683B51EC746484B9AA90CB481D637BD}
 
 控制列的樣式如下：
 
@@ -161,7 +164,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-## 功能按鈕 {#section_57FFD242FF674EA2867BCF6CA7F6B855}
+## 功能按鈕{#section_57FFD242FF674EA2867BCF6CA7F6B855}
 
 >[!NOTE]
 >
@@ -216,7 +219,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 * `playProgressBarBehavior`
 * `seekToBarBehavior`
 
-## 播放／暫停按鈕 {#section_F1F40A948D0049C5A4D8EA5F2A475CAA}
+## 播放／暫停按鈕{#section_F1F40A948D0049C5A4D8EA5F2A475CAA}
 
 以下是播放／暫停按鈕的樣式：
 
@@ -234,18 +237,18 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td>
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> in the pause state </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpause in the pause state </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td> 
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> in the play state </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausein the play state </p> </td>
   </tr>
  </tbody>
 </table>
 
-預設行為為 `playPauseButtonBehavior`。
+預設行為為`playPauseButtonBehavior`。
 
-## 卷 {#section_23E17BD2343948F8A2CEE1C8BEE2F874}
+## 卷{#section_23E17BD2343948F8A2CEE1C8BEE2F874}
 
 以下是配置卷按鈕的樣式：
 
@@ -284,7 +287,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-預設行為是 `volumeBehavior` 和 `muteButtonBehavior`。
+預設行為為`volumeBehavior`和`muteButtonBehavior`。
 
 以下是音量滑桿的樣式：
 
@@ -307,9 +310,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-預設行為為 `volumeSliderBehavior`。
+預設行為為`volumeSliderBehavior`。
 
-## 倒風 {#section_06EE608FC54A4CF5B5DF9DC743CFC740}
+## 倒帶{#section_06EE608FC54A4CF5B5DF9DC743CFC740}
 
 以下是倒轉按鈕的樣式：
 
@@ -328,9 +331,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-預設行為為 `rewindButtonBehavior`。
+預設行為為`rewindButtonBehavior`。
 
-## 時間 {#section_0E6549B3DF6D4C10947D445A5F8EEA7F}
+## 時間{#section_0E6549B3DF6D4C10947D445A5F8EEA7F}
 
 以下是在控制列上顯示剩餘時間的樣式：
 
@@ -349,9 +352,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 </tbody>
 </table>
 
-預設行為為 `timeRemainingBehavior`。
+預設行為為`timeRemainingBehavior`。
 
-## 快速倒風 {#section_F6E6C65BD3BD493A89915DF9B92933BA}
+## 快速倒帶{#section_F6E6C65BD3BD493A89915DF9B92933BA}
 
 以下是快速倒轉按鈕的樣式：
 
@@ -370,9 +373,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-預設行為為 `fastRewindButtonBehavior`。
+預設行為為`fastRewindButtonBehavior`。
 
-## 慢倒風 {#section_38A22BB8681B430F8C6808C3BD21FB4E}
+## 慢倒轉{#section_38A22BB8681B430F8C6808C3BD21FB4E}
 
 以下是慢速倒轉按鈕的樣式：
 
@@ -391,9 +394,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-預設行為為 `slowRewindButtonBehavior`。
+預設行為為`slowRewindButtonBehavior`。
 
-## 慢進 {#section_92ACF092EECC4A5EAF6AA090C05E552E}
+## 慢進{#section_92ACF092EECC4A5EAF6AA090C05E552E}
 
 以下是慢速前進按鈕的樣式：
 
@@ -412,9 +415,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-預設行為為 `slowForwardButtonBehavior`。
+預設行為為`slowForwardButtonBehavior`。
 
-## 快速前進 {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
+## 快進{#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
 
 以下是快速前進按鈕的樣式：
 
@@ -433,9 +436,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-預設行為為 `fastForwardButtonBehavior`。
+預設行為為`fastForwardButtonBehavior`。
 
-## 音軌 {#section_1CDF4FA5A1C14DB6B9C96579FFA1057C}
+## 音軌{#section_1CDF4FA5A1C14DB6B9C96579FFA1057C}
 
 以下是設定音軌的樣式：
 
@@ -456,7 +459,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
    <td colname="col2"> <p>控制列上的音軌按鈕。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1">預設行為為audioTrackButtonBehavior <span class="codeph"></span>。 </td>
+   <td colname="col1">預設行為為<span class="codeph"> audioTrackButtonBehavior</span>。 </td>
    <td colname="col2"> </td>
 </tr>
   <tr>
@@ -468,7 +471,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
    <td colname="col2"> <p>用於選擇音軌的面板。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1">預設行為為audioTrackSelectionPanelBehavior <span class="codeph"></span>。 </td>
+   <td colname="col1">預設行為為<span class="codeph"> audioTrackSelectionPanelBehavior</span>。 </td>
    <td colname="col2"> </td>
 </tr>
   <tr>
@@ -477,7 +480,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>ptp-audio-track-selection- <span class="codeph"> 面板的標題</span>。 </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-audio-track-selection-panel</span>的標題。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"> <p><b>音軌選擇功能表(N)</b> </p> </td>
@@ -485,12 +488,12 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-menu</span> </td>
-   <td colname="col2"> <p>ptp-audio-track-selection- <span class="codeph"> panel中的功能表項目</span>。 </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-audio-track-selection-panel</span>中的功能表項目。 </p> </td>
   </tr>
  </tbody>
 </table>
 
-## 共用 {#section_B2ADC76E76304A68AD648A00A12B676E}
+## 共用{#section_B2ADC76E76304A68AD648A00A12B676E}
 
 以下是設定共用的樣式：
 
@@ -508,10 +511,10 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>控制列上的社交媒體分享按鈕，此按鈕會開啟 <span class="codeph"> ptp-share-video-panel</span>。 </p> </td>
+   <td colname="col2"> <p>控制列上的社交媒體分享按鈕，此按鈕會開啟<span class="codeph"> ptp-share-video-panel</span>。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1">預設行為為 <span class="codeph"> shareVideoButtonBehavior</span>。 </td>
+   <td colname="col1">預設行為為<span class="codeph"> shareVideoButtonBehavior</span>。 </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
@@ -522,7 +525,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
    <td colname="col2"> <p>顯示社交分享選項的面板。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1">預設行為為 <span class="codeph"> shareVideoPanelBehavior</span>。 </td>
+   <td colname="col1">預設行為為<span class="codeph"> shareVideoPanelBehavior</span>。 </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
@@ -531,15 +534,15 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>ptp-audio-track-selection- <span class="codeph"> 面板的標題</span>。 </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-audio-track-selection-panel</span>的標題。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .share-video-panel-menu</span> </td>
-   <td colname="col2"> <p>ptp-share- <span class="codeph"> video-panel中的功能表</span> ，其中顯示社交媒體上分享內容的所有選項。 </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-share-video-panel</span>中的功能表，顯示在社交媒體上分享內容的所有選項。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-share-video-panel-menu-item</span> </td>
-   <td colname="col2"> <p>共用——視訊- <span class="codeph"> 面板——選單中的選單項目</span>。 </p> </td>
+   <td colname="col2"> <p><span class="codeph"> share-video-panel-menu</span>中的功能表項目。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-facebook</span> </td>
@@ -560,7 +563,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody>
 </table>
 
-## 隱藏字幕 {#section_A01BA68218564DA0B7D6BF51F045D7AB}
+## 隱藏字幕{#section_A01BA68218564DA0B7D6BF51F045D7AB}
 
 以下是設定隱藏字幕的樣式：
 
@@ -578,10 +581,10 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-closed-caption</span> </td>
-   <td colname="col2"> <p>控制 <span class="uicontrol"> 列上的</span> 「隱藏字幕」按鈕。 </p> </td>
+   <td colname="col2"> <p>控制列上的<span class="uicontrol">隱藏字幕</span>按鈕。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1">預設行為為 <span class="codeph"> closedCaptionButtonBehavior</span>。 </td>
+   <td colname="col1">預設行為為<span class="codeph"> closedCaptionButtonBehavior</span>。 </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
@@ -597,7 +600,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
    <td colname="col2"> <p>隱藏字幕面板。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1">預設行為為 <span class="codeph"> closedCaptionLanguagePanelBehavior</span>。 </td>
+   <td colname="col1">預設行為為<span class="codeph"> closedCaptionLanguagePanelBehavior</span>。 </td>
    <td colname="col2"> </td>
 </tr>
   <tr>
@@ -606,10 +609,10 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-panel:</span> </td>
-   <td colname="col2"> <p>ptp-audio-track-selection- <span class="codeph"> 面板的標題</span>。 </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-audio-track-selection-panel</span>的標題。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu: </span> </td>
+   <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu:  </span> </td>
    <td colname="col2"> <p>隱藏字幕面板中的功能表。 </p> </td>
   </tr>
   <tr>
@@ -618,7 +621,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-btn</span> </td>
-   <td colname="col2"> <p>隱藏 <span class="uicontrol"> 字幕選項</span> (Closed Captions)面板中的「選項」(Options)按鈕。 </p> </td>
+   <td colname="col2"> <p>隱藏字幕選項面板中的<span class="uicontrol">選項</span>按鈕。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-panel</span> </td>
@@ -634,7 +637,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-done-btn</span> </td> 
-   <td colname="col2"> <p>隱藏 <span class="uicontrol"> 字幕選項</span> (Closed Captions)面板標題中的「完成(Done)」按鈕。 </p> </td> 
+   <td colname="col2"> <p>隱藏字幕選項面板標題中的<span class="uicontrol"> Done</span>按鈕。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-menu</span> </td> 
@@ -658,7 +661,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-menu-item</span> </td> 
-   <td colname="col2"> <p>隱藏字幕選 <span class="uicontrol"> 項</span> (Options)菜單項。 </p> </td> 
+   <td colname="col2"> <p>隱藏字幕<span class="uicontrol">選項</span>功能表項目。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-preview-panel</span> </td> 
@@ -670,20 +673,20 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-reset-button</span> </td> 
-   <td colname="col2"> <p>隱藏 <span class="uicontrol"> 字幕選項</span> (Closed Captions)面板頁尾中的「重設(Reset)」按鈕。 </p> </td> 
+   <td colname="col2"> <p>隱藏字幕選項面板頁尾中的<span class="uicontrol"> Reset</span>按鈕。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-apply-button</span> </td> 
-   <td colname="col2"> <p>隱藏 <span class="uicontrol"> 字幕選項面板</span> (Closed Caption Options)頁尾中的「套用」按鈕。 </p> </td> 
+   <td colname="col2"> <p>隱藏字幕選項面板頁尾中的<span class="uicontrol"> Apply</span>按鈕。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1">預設行為為 <span class="codeph"> closedCaptionOptionsPanelBehavior</span>。 </td> 
+   <td colname="col1">預設行為為<span class="codeph"> closedCaptionOptionsPanelBehavior</span>。 </td> 
    <td colname="col2"> </td>
   </tr> 
  </tbody> 
 </table>
 
-## 更多選項(V) {#section_18E25CF8A8964FFD9026A8A833089CE3}
+## 更多選項(V){#section_18E25CF8A8964FFD9026A8A833089CE3}
 
 以下是配置其他選項的樣式：
 <table id="table_EC6EF88E2EDE4B8EBB1C14F87A6161FA"> 
@@ -696,11 +699,11 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options</span> </td> 
-   <td colname="col2"> <p>「更多 <span class="uicontrol"> 選項</span> 」按鈕。 </p> </td> 
+   <td colname="col2"> <p><span class="uicontrol">更多選項</span>按鈕。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options.ptp-control-bar-btn</span> </td> 
-   <td colname="col2"> <p>控 <span class="codeph"> 制欄中使用的ptp-btn-more</span> 選項。 </p> </td> 
+   <td colname="col2"> <p>用於控制欄的<span class="codeph"> ptp-btn-more-options</span>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
@@ -717,11 +720,11 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-預設行為為 `moreOptionsButtonBehavior`。
+預設行為為`moreOptionsButtonBehavior`。
 
-## PIP按鈕(W) {#section_1EE039DEA99541D391B30BD1DF72A83E}
+## PIP按鈕(W){#section_1EE039DEA99541D391B30BD1DF72A83E}
 
-以下是按鈕的樣 [!UICONTROL PIP<] 式：
+以下是[!UICONTROL PIP<]按鈕的樣式：
 
 <table id="table_EE2E882C87E24D39B8D5347686F29E55"> 
  <thead> 
@@ -736,13 +739,13 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
    <td colname="col2"> <p>控制欄上的PIP按鈕。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1">預設行為為 <span class="codeph"> pipButtonBehavior</span>。 </td> 
+   <td colname="col1">預設行為為<span class="codeph"> pipButtonBehavior</span>。 </td> 
    <td colname="col2"> </td>
   </tr> 
  </tbody> 
 </table>
 
-## 全螢幕(X) {#section_158A19DFB30E4432A67E4A74A7CBA563}
+## 全螢幕(X){#section_158A19DFB30E4432A67E4A74A7CBA563}
 
 以下是設定全螢幕的樣式：
 
@@ -756,14 +759,14 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-fullscreen</span> </td> 
-   <td colname="col2"> <p>控制 <span class="uicontrol"> 列上的</span> 「Full Screen（全螢幕）」按鈕。 </p> </td> 
+   <td colname="col2"> <p>控制欄上的<span class="uicontrol">全螢幕</span>按鈕。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-預設行為為 `fullScreenButtonBehavior`。
+預設行為為`fullScreenButtonBehavior`。
 
-## 特技播放(Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
+## 特技播放(Y){#section_AE6F83BB7EE2497FB13CD94A8316192D}
 
 以下是設定特技播放的樣式：
 
@@ -782,9 +785,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-預設行為為 `trickPlayRateDisplayBehavior`。
+預設行為為`trickPlayRateDisplayBehavior`。
 
-## 多視圖(Z) {#section_58EFAE7263BA45D3A4E2AB7309A9CAA7}
+## 多視圖(Z){#section_58EFAE7263BA45D3A4E2AB7309A9CAA7}
 
 以下是配置多視圖的樣式：
 
@@ -798,16 +801,16 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-multiview</span> </td> 
-   <td colname="col2"> <p>控制 <span class="uicontrol"> 列上的</span> 「MultiView」（多視圖）按鈕，以及「Multiview」（多視圖）按鈕的 <span class="uicontrol"> 初始狀態</span> 。 </p> </td> 
+   <td colname="col2"> <p>控制欄上的<span class="uicontrol"> MultiView</span>按鈕，以及<span class="uicontrol"> Multiview</span>按鈕的初始狀態。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1">預設行為為 <span class="codeph"> multiViewButtonBehavior</span>。 </td> 
+   <td colname="col1">預設行為為<span class="codeph"> multiViewButtonBehavior</span>。 </td> 
    <td colname="col2"> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## 縮圖 {#section_0AFD932975634BB08387EEE7D3BFC438}
+## 縮圖{#section_0AFD932975634BB08387EEE7D3BFC438}
 
 以下是設定縮圖的樣式：
 
@@ -826,9 +829,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-預設預設行為為 `thumbnailPreviewBehavior`。
+預設預設行為為`thumbnailPreviewBehavior`。
 
-## 錯誤訊息 {#section_AC9858EE1B5A4FF4947E383C663B6AB5}
+## 錯誤消息{#section_AC9858EE1B5A4FF4947E383C663B6AB5}
 
 以下是配置錯誤消息的樣式：
 
@@ -855,9 +858,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-預設行為為 `errorMessagePanelBehavior`。
+預設行為為`errorMessagePanelBehavior`。
 
-## 緩衝覆蓋 {#section_2FE8FDE2599E42BAA7411D0D38FA0A88}
+## 緩衝覆蓋{#section_2FE8FDE2599E42BAA7411D0D38FA0A88}
 
 以下是設定縮圖的樣式：
 
@@ -876,9 +879,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
  </tbody> 
 </table>
 
-預設覆蓋為 `bufferingOverlayBehavior`。
+預設覆蓋為`bufferingOverlayBehavior`。
 
-## 特定選擇器 {#section_51F735AEF82E41E890FF59E031A0DB89}
+## 特定選擇器{#section_51F735AEF82E41E890FF59E031A0DB89}
 
 以下是快速前進按鈕的樣式：
 
@@ -900,11 +903,11 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
       <li id="li_FDF2CEDB0A854098907FF9CBCF1A61C1"><span class="codeph"> .ptp-btn-slowforward</span> </li> 
       <li id="li_CD2E14DB3DD64C10A253DA23FBE04A04"><span class="codeph"> .ptp-btn-slowforward</span> </li> 
       <li id="li_A230359E8F7F4571A9EBFF0E4C2462D7"><span class="codeph"> .ptp-btn-slowwind</span> </li> 
-      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options </span> </li> 
+      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options  </span> </li> 
       <li id="li_71C8E76077A84ED590160AB5ABFCC0D7"><span class="codeph"> .ptp-btn-share-video</span> </li> 
-      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption </span> </li> 
+      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-closed-caption  </span> </li> 
       <li id="li_901A0186D65A48A1B774DC555CEC5367"><span class="codeph"> .ptp-btn-audio-track</span> </li> 
-      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip </span> </li> 
+      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip  </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
       <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-scrub-bar</span> </li> 
       <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-seek-to-bar</span> </li> 
@@ -924,7 +927,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
    <td colname="col1"><span class="codeph"> .fullscreen-state</span> </td> 
    <td colname="col2"> <p>播放器為全螢幕模式。 </p> <p>適用於下列項目： 
      <ul id="ul_B235C1D339F64B2FAC6BC72F03807616"> 
-      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar </span> </li> 
+      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar  </span> </li> 
       <li id="li_67D54B1A41764B2DA544479CDA1C901C"><span class="codeph"> .ptp-btn-fullscreen</span> </li> 
      </ul> </p> </td> 
   </tr> 
