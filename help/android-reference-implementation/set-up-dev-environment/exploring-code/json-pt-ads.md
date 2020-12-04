@@ -6,11 +6,14 @@ description: 當類型值為Primetime廣告時，下方的程式碼區塊會定�
 seo-description: 當類型值為Primetime廣告時，下方的程式碼區塊會定義詳細資訊JSON物件。
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
 
-# Primetime廣告的JSON物件 {#json-object-for-primetime-ads}
+# 黃金時段廣告的JSON物件{#json-object-for-primetime-ads}
 
 當類型值為Primetime廣告時，下方的程式碼區塊會定義詳細資訊JSON物件。
 
@@ -40,4 +43,4 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 | zoneid | Primetime廣告zoneid。 如需詳細資訊，請參閱Primetime廣告檔案。 |
 | 定位 | 用於定位內容特定廣告的索引鍵／值對陣列。 |
 
-如需 [這些屬性之值的詳細資訊，請參閱com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html) 。
+如需這些屬性值的詳細資訊，請參閱[com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html)。
