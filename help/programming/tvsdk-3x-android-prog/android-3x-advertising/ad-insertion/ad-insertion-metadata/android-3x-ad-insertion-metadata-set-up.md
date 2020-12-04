@@ -6,27 +6,30 @@ title: 設定廣告插入中繼資料
 uuid: 7400813c-6af0-4c96-a6c7-d9ea1ba6a7b9
 translation-type: tm+mt
 source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+workflow-type: tm+mt
+source-wordcount: '288'
+ht-degree: 0%
 
 ---
 
 
-# 設定廣告插入中繼資料 {#set-up-ad-insertion-metadata}
+# 設定廣告插入中繼資料{#set-up-ad-insertion-metadata}
 
-使用擴充類 `AuditudeSettings`別的輔助類 `MetadataNode` 別，來設定Adobe Primetime廣告決策中繼資料。
+使用延伸`MetadataNode`類別的輔助類別`AuditudeSettings`來設定Adobe Primetime廣告決策中繼資料。
 
 >[!TIP]
 >
 >Adobe Primetime廣告決策先前稱為Auditude。
 
-廣告中繼資料位於屬 `MediaResource.Metadata` 性中。 當開始播放新視訊時，您的應用程式負責設定正確的廣告中繼資料。
+廣告中繼資料位於`MediaResource.Metadata`屬性中。 當開始播放新視訊時，您的應用程式負責設定正確的廣告中繼資料。
 
-1. 建立實 `AuditudeSettings` 例。
+1. 建立`AuditudeSettings`例項。
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. 設定Adobe Primetime廣告決策 `mediaID`、 `zoneID``<ph conkeyref="phrases/primetime-sdk-name"/>`選用定位參數。
+1. 設定Adobe Primetime廣告決策`mediaID`、`zoneID`、`<ph conkeyref="phrases/primetime-sdk-name"/>`和選用的定位參數。
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
@@ -44,28 +47,28 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
 
    >[!TIP]
    >
-   >媒體ID由TVSDK使用為字串，並轉換為md5值，用於Primetime廣告決 `u` 策URL請求中的值。 例如：
+   >媒體ID由TVSDK使用為字串，並轉換為md5值，用於Primetime廣告決策URL請求中的`u`值。 例如：
    >
    >`https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
-1. 使用媒 `MediaResource` 體串流URL和先前建立的廣告中繼資料來建立例項。
+1. 使用媒體串流URL和先前建立的廣告中繼資料，建立`MediaResource`例項。
 
    ```java
    MediaResource mediaResource = new MediaResource( 
    "https://example.com/media/test_media.m3u8", MediaResource.Type.HLS, Metadata);
    ```
 
-1. 通過方 `MediaResource` 法載入對 `MediaPlayer.replaceCurrentResource` 像。
+1. 通過`MediaPlayer.replaceCurrentResource`方法載入`MediaResource`對象。
 
-   開始 `MediaPlayer` 載入和處理媒體串流資訊清單。
+   `MediaPlayer`開始載入並處理媒體串流資訊清單。
 
-1. 當轉換 `MediaPlayer` 為「已初始化」狀態時，通過方法以實例形式獲得媒 `MediaPlayerItem` 體流特 `MediaPlayer.CurrentItem` 性。
-1. （選擇性）查詢 `MediaPlayerItem` 例項以查看串流是否為即時，不論串流是否具有替代音軌或串流受到保護。
+1. 當`MediaPlayer`轉換為「已初始化」狀態時，通過`MediaPlayer.CurrentItem`方法以`MediaPlayerItem`實例的形式獲得媒體流特性。
+1. （選擇性）查詢`MediaPlayerItem`例項，以查看串流是否為即時，不論串流是否有替代的音軌或串流受到保護。
 
    這些資訊可協助您準備播放的UI。 例如，如果您知道有兩個音軌，則可加入UI控制項，以在這些音軌之間切換。
 
-1. 致電 `MediaPlayer.prepareToPlay` 啟動廣告工作流程。
+1. 呼叫`MediaPlayer.prepareToPlay`以啟動廣告工作流程。
 
-   在廣告已解析並置於時間軸上後，會轉 `MediaPlayer` 換為狀 `PREPARED` 態。
-1. 呼叫 `MediaPlayer.play` 以開始播放。
+   廣告解析並置於時間軸上後，`MediaPlayer`會轉換為`PREPARED`狀態。
+1. 呼叫`MediaPlayer.play`以開始播放。
 TVSDK現在會在您的媒體播放時加入廣告。
