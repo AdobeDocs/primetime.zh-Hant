@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 使用Java準備密碼{#prepare-passwords-using-java}
+# 使用Java{#prepare-passwords-using-java}準備密碼
 
-使用Java `ScrambleUtil.class` 運行：
+使用Java運行`ScrambleUtil.class` :
 
-1. 導覽至 `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
+1. 導覽至`[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
 1. 在命令行中鍵入：
 
    ```
