@@ -6,11 +6,14 @@ title: 實作章節支援
 uuid: 5b39e494-85ad-43bb-ab56-a55797aa4ef7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# 實作章節支援 {#implement-chapter-support}
+# 實作章節支援{#implement-chapter-support}
 
 您可透過下列方式，在以TVSDK為基礎的應用程式中定義及追蹤視訊追蹤章節：
 
