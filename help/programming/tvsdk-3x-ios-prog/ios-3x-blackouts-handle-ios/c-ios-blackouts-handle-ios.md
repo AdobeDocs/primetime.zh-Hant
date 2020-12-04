@@ -6,11 +6,14 @@ title: 處理封鎖期
 uuid: 00b6f204-6ba4-4245-9028-6f7c392e9275
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
 
-# 處理封鎖期 {#handle-blackouts}
+# 處理封鎖{#handle-blackouts}
 
 TVSDK可處理即時視訊串流中的封鎖，並在封鎖期間提供替代內容。
 
@@ -21,19 +24,19 @@ TVSDK可處理即時視訊串流中的封鎖，並在封鎖期間提供替代內
 1. 設定您的應用程式以訂閱即時串流資訊清單中的封鎖標籤。
 
    TVSDK並未直接察覺封鎖標籤，但可讓您的應用程式在資訊清單檔案剖析期間遇到特定標籤時訂閱通知。
-1. 為添加通知偵聽程式 `PTTimedMetadataChangedNotification`。
+1. 為`PTTimedMetadataChangedNotification`添加通知偵聽程式。
 
-   每次在資訊清單中剖析訂閱的標籤並準備新標籤時，就會傳送 `PTTimedMetadata` 此通知。
+   每次在清單中解析預訂的標籤並準備新的`PTTimedMetadata`時，都會發送此通知。
 
-1. 為前景中的對象實現監 `onMediaPlayerSubscribedTagIdentified`聽器 `PTTimedMetadata` 方法（如）。
+1. 對前景中的`PTTimedMetadata`對象實施偵聽器方法，如`onMediaPlayerSubscribedTagIdentified`。
 
-1. 每次播放期間出現更新時，請使用偵 `PTMediaPlayerTimeChangeNotification` 聽器來處理物 `PTTimedMetadata` 件。
+1. 每次播放期間有更新時，請使用`PTMediaPlayerTimeChangeNotification`偵聽器來處理`PTTimedMetadata`物件。
 
-1. 添加處理 `PTTimedMetadata` 程式。
+1. 添加`PTTimedMetadata`處理程式。
 
-   此處理常式可讓您切換至替代內容，並返回由物件及其播放時間所指 `PTTimedMetadata` 示的主要內容。
+   此處理常式可讓您切換至替代內容，並返回主要內容，如`PTTimedMetadata`物件及其播放時間所示。
 
-1. 用 `onSubscribedTagInBackground` 於在後台實現對象 `PTTimedMetadata` 的偵聽器方法。
+1. 使用`onSubscribedTagInBackground`實現背景中`PTTimedMetadata`對象的監聽器方法。
 
    此方法會監控背景串流的時間，協助您判斷何時可以從替代內容切換回主要內容。
 
