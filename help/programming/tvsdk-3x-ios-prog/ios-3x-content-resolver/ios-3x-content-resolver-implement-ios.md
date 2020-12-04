@@ -6,11 +6,14 @@ title: 實作自訂商機／內容解析程式
 uuid: 0023f516-12f3-4548-93de-b0934789053b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
 
-# 實作自訂商機／內容解析程式 {#implement-a-custom-opportunity-content-resolver}
+# 實作自訂的機會／內容解析器{#implement-a-custom-opportunity-content-resolver}
 
 您可以根據預設解析器實作解析器。
 
@@ -18,13 +21,13 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. 透過擴充抽象類別，開發自訂的廣 `PTContentResolver` 告解析程式。
+1. 擴充`PTContentResolver`抽象類別，以開發自訂廣告解析程式。
 
-   `PTContentResolver` 是必須由內容解析器類實現的介面。 同名的抽象類也可用，並自動處理配置（獲取委派）。
+   `PTContentResolver` 是必須由內容解析器類實現的介面。同名的抽象類也可用，並自動處理配置（獲取委派）。
 
    >[!TIP]
    >
-   >`PTContentResolver` 在班級里 `PTDefaultMediaPlayerClientFactory` 曝光。 客戶端可以通過擴展抽象類註冊新的內 `PTContentResolver` 容解析器。 預設情況下，除非特別刪除，否 `PTDefaultAdContentResolver` 則在中註冊 `PTDefaultMediaPlayerClientFactory`。
+   >`PTContentResolver` 在班級里 `PTDefaultMediaPlayerClientFactory` 曝光。客戶端可以通過擴展`PTContentResolver`抽象類來註冊新的內容解析器。 預設情況下，除非特別刪除，`PTDefaultAdContentResolver`將在`PTDefaultMediaPlayerClientFactory`中註冊。
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +55,28 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
    @end
    ```
 
-1. 如果 `shouldResolveOpportunity` 應處理 `YES` 所收到的內容，請實作並傳回 `PTPlacementOpportunity`。
-1. 實 `resolvePlacementOpportunity`作，開始載入替代內容或廣告。
-1. 載入廣告後，請準備一 `PTTimeline` 份包含要插入之內容的相關資訊。
+1. 實施`shouldResolveOpportunity`並傳回`YES`（如果它應處理收到的`PTPlacementOpportunity`）。
+1. 實作`resolvePlacementOpportunity`，開始載入替代內容或廣告。
+1. 載入廣告後，請準備`PTTimeline`，其中包含要插入之內容的相關資訊。
 
        以下是有關時間軸的一些有用資訊：
    
-   * 前滾、 `PTAdBreak`中滾和後滾類型可能有多種。
+   * 前滾、中滾和後滾類型可以有多種`PTAdBreak`。
 
-      * A `PTAdBreak` 具有下列：
+      * `PTAdBreak`包含下列項目：
 
-         * 具有 `CMTimeRange` 中斷的開始時間和持續時間的A。
+         * `CMTimeRange`，包含中斷的開始時間和持續時間。
 
-            此為的range屬性 `PTAdBreak`。
+            此值設定為`PTAdBreak`的範圍屬性。
 
-         * `NSArray` of `PTAd`s.
+         * `NSArray` of  `PTAd`s.
 
-            這會設為的ads屬性 `PTAdBreak`。
-   * A代 `PTAd` 表廣告，每個廣告 `PTAd` 都有下列項目：
+            這會設為`PTAdBreak`的ads屬性。
+   * `PTAd`代表廣告，而每個`PTAd`都有下列項目：
 
-      * 設定 `PTAdHLSAsset` 為廣告的主要資產屬性。
-      * 可能有多個 `PTAdAsset` 例項可點選廣告或橫幅廣告。
+      * `PTAdHLSAsset`設為廣告的主要資產屬性。
+      * 可能有多個`PTAdAsset`例項可點選廣告或橫幅廣告。
+
    例如：
 
    ```
@@ -102,8 +106,8 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. 請 `didFinishResolvingPlacementOpportunity`撥打，提供 `PTTimeline`。
-1. 透過呼叫，將您的自訂內容／廣告解析程式註冊至預設媒體播放器工廠 `registerContentResolver`。
+1. 呼叫`didFinishResolvingPlacementOpportunity`，其中提供`PTTimeline`。
+1. 呼叫`registerContentResolver`，將您的自訂內容／廣告解析程式註冊至預設媒體播放器工廠。
 
    ```
    //Remove default content/ad resolver 
