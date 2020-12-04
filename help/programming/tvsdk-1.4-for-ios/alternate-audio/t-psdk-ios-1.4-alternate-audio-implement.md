@@ -6,6 +6,9 @@ title: 存取替代音軌
 uuid: 77e39633-bf17-4a06-a2a1-93fdaadedd17
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 延遲系結音訊使用PTMediaPlayer來播放M3U8 HLS播放清單中指定且可包含數個替代音訊串流的視訊。
 
-1. 等待MediaPlayer至少處於狀 `PTMediaPlayerStatusReady` 態。
+1. 等待MediaPlayer至少處於`PTMediaPlayerStatusReady`狀態。
 1. 聽取此事件：
 
-   通知 `PTMediaPlayerItemMediaSelectionOptionsAvailable`:音軌的初始清單可供使用。
+   通知`PTMediaPlayerItemMediaSelectionOptionsAvailable`:音軌的初始清單可供使用。
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -26,7 +29,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
         object:self.player];
    ```
 
-1. 從例項取得可用的音軌 `PTMediaPlayerItem` 。
+1. 從`PTMediaPlayerItem`實例獲取可用的音軌。
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +39,4 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    ```
 
 1. （選擇性）向使用者呈現可用的追蹤。
-1. 在例項上設定選取的音軌 `PTMediaPlayerItem` 。
+1. 在`PTMediaPlayerItem`實例上設定選定的音軌。
