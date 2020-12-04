@@ -6,6 +6,9 @@ title: 即時／線性廣告解析與插入
 uuid: 69f287aa-b707-442b-8e07-16f81b242c4b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '324'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ TVSDK會以下列方式插入廣告：
 * **Pre-roll**，此為內容的開頭。
 * **Mid-roll**，位於內容中間。
 
-即使持續時間長於或短於提示點取代持續時間，TVSDK仍接受廣告插播。 依預設，TVSDK支援在解析 `#EXT-X-CUE` 和放置廣告時，提示為有效的廣告標籤。 此標籤需要以秒為單位 `DURATION` 的中繼資料欄位和提示的唯一ID。 例如：
+即使持續時間長於或短於提示點取代持續時間，TVSDK仍接受廣告插播。 依預設，TVSDK支援`#EXT-X-CUE`提示作為解析和放置廣告時的有效廣告標籤。 此標籤需要以秒為單位的中繼資料欄位`DURATION`和提示的唯一ID。 例如：
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -29,6 +32,6 @@ TVSDK會以下列方式插入廣告：
 
 >[!IMPORTANT]
 >
->在執行慣 `AdPolicySelector`例時，可以針對中的前滾、中滾和後滾給 `AdBreakTimelineItem``AdPolicyInfo`不同的策略，該策略基於s的類 `AdBreakTimelineItem`型。例如，您可以在播放中段內容後保留該內容，但在播放後移除前段內容。
+>在實施慣例`AdPolicySelector`時，可以在`AdPolicyInfo`中為前滾、中滾和後滾`AdBreakTimelineItem`s提供不同的策略，該策略基於`AdBreakTimelineItem`s的類型。例如，您可以在播放中段內容後保留該內容，但在播放後移除前段內容。
 
-播放開始後，視訊引擎會定期重新整理資訊清單檔案。 TVSDK可解析任何新廣告，並在資訊清單中定義的即時或線性串流中遇到提示點時插入廣告。 在解析並插入廣告後，TVSDK會再次計算虛擬時間軸，並調度事 `TimelineEvent.TIMELINE_UPDATED` 件。
+播放開始後，視訊引擎會定期重新整理資訊清單檔案。 TVSDK可解析任何新廣告，並在資訊清單中定義的即時或線性串流中遇到提示點時插入廣告。 廣告解析並插入後，TVSDK會再次計算虛擬時間軸並調度`TimelineEvent.TIMELINE_UPDATED`事件。
