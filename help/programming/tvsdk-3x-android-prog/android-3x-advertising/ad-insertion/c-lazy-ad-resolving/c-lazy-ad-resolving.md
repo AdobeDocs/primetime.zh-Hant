@@ -8,29 +8,29 @@ uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
 
 
-# 概觀 {#just-in-time-ad-resolving-overview}
+# 概述{#just-in-time-ad-resolving-overview}
 
 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入」和「延遲廣告解析」功能可以降低此啟動延遲。 3.0版中的「懶惰廣告解決」已大幅變更。 在3.0之前的懶惰廣告載入中，廣告解析分為兩個步驟，即僅解析PREPARED狀態之前的預卷廣告，以及PREPARED狀態之後的中間卷和後卷廣告。 這已變更，廣告分段現在會在廣告分段位置之前的指定間隔內解決。
 
 * 基本廣告解析與載入程式：
 
-   1. TVSDK會下載資訊清單（播放清單） *並解析* 所有廣告。
-   1. TVSDK *會載入* 所有廣告，並將其置於時間軸上。
+   1. TVSDK會下載資訊清單（播放清單）和&#x200B;*resolves*&#x200B;所有廣告。
+   1. TVSDK *載入*&#x200B;所有廣告，並將其置於時間軸上。
    1. TVSDK會將播放器移至「已準備」狀態，而內容播放便會開始。
 
    播放器使用資訊清單中的URL來取得廣告內容（創作元素），確保廣告內容是TVSDK可播放的格式，而TVSDK會將廣告放在時間軸上。 這個解析和載入廣告的基本程式會造成使用者等待播放其內容時，尤其是資訊清單包含數個廣告URL時，無法接受的長時間延遲。
 
 * *延遲廣告載入*:
 
-   1. TVSDK會下載播放清單 *並解析* 所有廣告。
-   1. TVSDK *載入* pre-roll廣告、將播放器移入PREPARED狀態，然後內容播放開始。
-   1. TVSDK會 *載入* 剩餘的廣告，並在播放時將其放在時間軸上。
+   1. TVSDK會下載播放清單和&#x200B;*resolves*&#x200B;所有廣告。
+   1. TVSDK *載入*&#x200B;前置廣告，將播放器移入PREPARED狀態，然後內容播放開始。
+   1. TVSDK *載入*&#x200B;剩餘的廣告，並在播放時將其放在時間軸上。
 
    這項功能可在載入所有廣告之前，將播放器置於PREPARED狀態，以改善基本程式。
 
@@ -57,7 +57,7 @@ ht-degree: 0%
 >* 透過「延遲廣告解決」，如果同時存在多個廣告插播(VMAP)，則會同時解決這些廣告插播。
 >* 建議不要將*setDelayAdLoadingTolerance()*的值降低到預設值（5秒）以下。 這麼做會造成播放器不必要地「緩衝」。
 >* 延遲廣告解析不會影響前段廣告。
->* Auditude-Plugin目前支援懶惰廣告解決。 如果您使用自訂解析 **&#x200B;程式，建議不要將setDelayAdLoading設為true。
+>* Auditude-Plugin目前支援懶惰廣告解決。 如果您使用自訂解析程式，建議不要將&#x200B;*setDelayAdLoading*&#x200B;設為true。
 
 >
 
