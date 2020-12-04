@@ -6,11 +6,14 @@ title: 資訊清單伺服器互動概觀
 uuid: 3e314a45-a4dd-492f-8915-19224a8fbbc7
 translation-type: tm+mt
 source-git-commit: 9dc8498593a1d70918b66016e429eb013cdc61f7
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
 
-# 資訊清單伺服器互動概觀 {#overview-of-manifest-server-interactions}
+# 資訊清單伺服器互動概述{#overview-of-manifest-server-interactions}
 
 資訊清單伺服器可協調提供內容、提供廣告、播放視訊和追蹤廣告的系統。 它接收客戶視訊播放器從內容提供者接收的M3U8編碼播放清單（清單），將廣告提供者的廣告插入清單，並將銜接清單傳遞給視訊播放器。 它支援用戶端和伺服器端廣告追蹤。 它使用以HTTP為基礎的web service介面進行互動。
 
@@ -24,9 +27,9 @@ source-git-commit: 9dc8498593a1d70918b66016e429eb013cdc61f7
 * 廣告伺服器
 * 廣告追蹤報表的接收者
 
-工作流程會根據許多因素而有所不同，例如CDN是Akamai，或是用戶端正在執行廣告追蹤。 如需用戶端廣告追蹤工作流程的圖表，請參 [閱用戶端追蹤工作流程](../msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow)。
+工作流程會根據許多因素而有所不同，例如CDN是Akamai，或是用戶端正在執行廣告追蹤。 如需用戶端廣告追蹤工作流程的圖表，請參閱[用戶端追蹤工作流程](../msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow)。
 
-資訊清單伺服器會接收並回應HTTP GET要求，以與視訊傳送用戶端互動。 這些回應是M3U8編碼的資訊清單，描述廣告銜接內容，可選擇包含JSON或VMAP結構(sidecar)，其中包含詳細的廣告追蹤指示(請參閱 [檔案格式](../msapi-topics/ms-list-file-formats/ms-api-file-formats.md))。
+資訊清單伺服器會接收並回應HTTP GET要求，以與視訊傳送用戶端互動。 這些回應是M3U8編碼的資訊清單，描述廣告銜接內容，可選擇包含包含詳細廣告追蹤指示的JSON或VMAP結構(sidecar)（請參閱[檔案格式](../msapi-topics/ms-list-file-formats/ms-api-file-formats.md)）。
 
 典型的工作流程如下所示：
 
@@ -38,7 +41,7 @@ source-git-commit: 9dc8498593a1d70918b66016e429eb013cdc61f7
 
    >[!NOTE]
    >
-   >如果引導URL查詢參數包含 `pttrackingmode=simple``ptplayer=ios-mobileweb` 或設定，則資訊清單伺服器會傳回JSON物件中的主／變型資訊清單URL，而用戶端會傳送GET要求至該變型資訊清單URL。
+   >如果引導URL查詢參數包含`pttrackingmode=simple`或`ptplayer=ios-mobileweb`設定，資訊清單伺服器會傳回JSON物件中的主資料清單／變型資訊清單URL，而用戶端會傳送GET要求至該變型資訊清單URL。
 
 1. 客戶端選擇所生成的變型清單中的流來播放，向清單伺服器發送廣告資訊。
 1. 資訊清單伺服器將用戶端提供的資訊傳送至廣告伺服器，並從廣告伺服器接收廣告和廣告追蹤URL。 如果提供的廣告不是HLS格式，資訊清單伺服器會將其傳送至CRS，以轉換至HLS。
@@ -53,7 +56,7 @@ Primetime廣告插入支援許多視訊傳送平台的客戶。 並非所有用�
 
 ## CORS {#section_BEA7F298660944BE92801E4C82FCD038}
 
-資訊清單伺服器使用跨原始資源共用標準(CORS)。 它會在收到的 `Origin` 請求中尋找標題。 如果標題存在，則會以
+資訊清單伺服器使用跨原始資源共用標準(CORS)。 它會在收到的請求中尋找`Origin`標題。 如果標題存在，則會以
 
 * `Access-Control-Allow-Origin: *`來源標題的字串`*`
 * `Access-Control-Allow-Credentials: true`
