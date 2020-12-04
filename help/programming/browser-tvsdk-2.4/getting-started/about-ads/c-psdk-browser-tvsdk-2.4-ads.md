@@ -6,15 +6,18 @@ title: 廣告
 uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#ads-overview}
+# 概述{#ads-overview}
 
 當內容播放時，瀏覽器TVSDK可在建立MediaResource物件時顯示廣告並傳遞廣告相關資訊。
 
-您可以選擇在收到函 `prepareToPlay` 數後呼叫函式 `AdobePSDK.MediaPlayerStatus.INITIALIZED`。
+在收到`AdobePSDK.MediaPlayerStatus.INITIALIZED`後，您可以選擇呼叫`prepareToPlay`函式。
 
 ```js
 function onStatusChange (event) { 
@@ -46,7 +49,7 @@ var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, audit
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-若要在UI Framework中檢視這項功能，請在設定中指定廣告設定，如下所示：
+若要在UI Framework中檢視此功能，請在設定中指定廣告設定，如下所示：
 
 ```js
 // Using UI Framework 
@@ -68,4 +71,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-如需所需資訊的詳細資訊，請參 `AuditudeSettings`閱廣告 [插入中繼資料](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)。
+如需所需`AuditudeSettings`的詳細資訊，請參閱[廣告插入中繼資料](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)。
