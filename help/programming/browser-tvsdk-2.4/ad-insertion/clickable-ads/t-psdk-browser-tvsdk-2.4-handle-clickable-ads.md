@@ -6,11 +6,14 @@ title: 處理可點選廣告
 uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# 處理可點選廣告 {#handle-clickable-ads}
+# 處理可點選廣告{#handle-clickable-ads}
 
 MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣告相關事件。 這些事件提供廣告和廣告分段資訊，供您的應用程式用來提供點進功能。
 
@@ -20,7 +23,7 @@ MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣�
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-包 `AdClickedEvent` 含處理點進功能所需的資訊。
+`AdClickedEvent`包含處理點進函式所需的資訊。
 
 1. 在您的播放器中提供控制項，讓使用者按一下可點選的廣告。
 
@@ -36,7 +39,7 @@ MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣�
 
 1. 新增使用者點按事件的處理常式。
 
-   此處理常式需要提示MediaPlayer以觸發事 `AdClicked` 件。
+   此處理常式需要提示MediaPlayer以觸發`AdClicked`事件。
 
    ```
    onAdClick = function (event) { 
