@@ -6,11 +6,14 @@ title: 控制隱藏字幕的可見度
 uuid: b161a729-73f3-4019-a95e-013b42779842
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
-# 控制隱藏字幕的可見度{#control-closed-caption-visibility}
+# 控制隱藏字幕可見度{#control-closed-caption-visibility}
 
 您可以控制隱藏字幕的可見度。 當可見性開啟時，會顯示目前選取的軌道。
 
@@ -22,7 +25,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 >[!TIP]
 >
->隱藏字幕的可見度值由和 `MediaPlayer.VISIBLE` 控制 `MediaPlayer.INVISIBLE`。
+>隱藏字幕的可見度值由`MediaPlayer.VISIBLE`和`MediaPlayer.INVISIBLE`控制。
 
-1. 使用屬 `MediaPlayer.ccVisibility` 性存取隱藏字幕的目前可見性設定。
+1. 使用`MediaPlayer.ccVisibility`屬性來存取隱藏字幕的目前可見性設定。
 
