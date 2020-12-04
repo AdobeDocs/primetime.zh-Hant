@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# 部署BEES參考實作 {#deploy-the-bees-reference-implementation}
+# 部署BEES參考實施{#deploy-the-bees-reference-implementation}
 
 1. 設定Tomcat應用程式伺服器。 （請參閱Tomcat檔案。）
-1. 將文 `[!DNL bees.war]` 件複製到Tomcat的文 [!DNL webapps/] 件夾。
-1. 傳送要求至 `https://localhost:8080/bees`。
+1. 將`[!DNL bees.war]`檔案複製到Tomcat的[!DNL webapps/]資料夾中。
+1. 傳送要求至`https://localhost:8080/bees`。
 
    如果您看到「蜂類正在運行」消息，則部署已成功完成。
 1. 在您的伺服器上啟用SSL。
