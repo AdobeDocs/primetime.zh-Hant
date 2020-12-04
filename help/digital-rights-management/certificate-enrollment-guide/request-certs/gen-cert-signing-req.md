@@ -4,11 +4,14 @@ title: 生成證書籤名請求（請求者）
 uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
 
-# 生成證書籤名請求（請求者） {#generate-a-certificate-signing-request-requester}
+# 生成證書籤名請求（請求者）{#generate-a-certificate-signing-request-requester}
 
 1. 生成密鑰對。 要使用OpenSSL等實用程式，請開啟「命令窗口」並輸入以下內容：
 
