@@ -10,15 +10,18 @@ products: SG_PRIMETIME
 discoiquuid: d71886cb-f34b-47b2-9df7-168686478106
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '6834'
+ht-degree: 0%
 
 ---
 
 
-# 瀏覽器TVSDK 2.4發行說明 {#browser-tvsdk-release-notes}
+# 瀏覽器TVSDK 2.4發行說明{#browser-tvsdk-release-notes}
 
 瀏覽器TVSDK 2.4發行說明說明瀏覽器TVSDK 2.4中的新功能、支援和不支援的功能及已知問題。
 
-## 簡介 {#introduction}
+## 簡介{#introduction}
 
 瀏覽器TVSDK是一套工具套件，可讓您在瀏覽器型視訊播放器應用程式中新增進階視訊播放功能、內容保護和廣告。
 
@@ -30,13 +33,13 @@ source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
 
 此發行包含下列資訊：
 
-·瀏 [覽器TVSDK API檔案](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)。
+· [瀏覽器TVSDK API檔案](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)。
 
-·瀏 [覽器TVSDK程式設計手冊](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf)。
+· [瀏覽器TVSDK程式設計手冊](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf)。
 
-· [TVSDK 1.4 DHLS至瀏覽器TVSDK 2.4移轉指南](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)。
+· [1.4 DHLS的TVSDK到瀏覽器TVSDK 2.4移轉指南](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)。
 
-· [從瀏覽器TVSDK 2.4.6轉換至2.4.7版](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html)。
+·從瀏覽器TVSDK 2.4.6轉換為2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html)版本的[。
 
 ·參考實作，包含在組建中。
 
@@ -44,7 +47,7 @@ source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
 >
 >*如需此版本的安全性考量事項完整清單，請參閱安全性考量事項。
 
-## 新增功能和支援的功能 {#what-s-new-and-supported-features}
+## 新增功能和支援的功能{#what-s-new-and-supported-features}
 
 本版瀏覽器TVSDK提供新功能，讓您用來增強視訊應用程式。
 
@@ -54,7 +57,7 @@ source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
 
 * AdobePSDK.MediaPlayer的大量API實作已變更，允許在靜音播放時在iOS上自動播放。
 
-·新增API, `auditudeSettings.ignoreVPAIDAds`以允許忽略從Auditude伺服器收到的VPAID廣告。 API不適用於Flash備援。
+·新增`auditudeSettings.ignoreVPAIDAds`新API，允許忽略從Auditude伺服器收到的VPAID廣告。 API不適用於Flash備援。
 
 **2.4.11版**
 
@@ -62,15 +65,15 @@ source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
 
 · HLS Live細分故障切換支援MSE和Flash備用模式。
 
-· API的支 `AuditudeSettings.creativeRepackagingDomain` 援現在也適用於MSE。 之前只支援Flash備援模式。
+·`AuditudeSettings.creativeRepackagingDomain` API現在也支援MSE。 之前只支援Flash備援模式。
 
-·本版本包含重要客戶問題的修正。 請參 *閱修正清單* 的問題。
+·本版本包含重要客戶問題的修正。 請參閱&#x200B;*問題已修正*&#x200B;清單。
 
 **2.4.10版**
 
 以下增強功能和新增功能是瀏覽器TVSDK 2.4.10版本的一部分：
 
-· TVSDK提供enableLogging()以啟用或停用記錄。 請參閱 [API文](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)件以取得使用。
+· TVSDK提供enableLogging()以啟用或停用記錄。 有關用法，請參閱[API文檔](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)。
 
 ·使用Adobe Analytics時，TVSDK不再支援「預設章節」。 使用您的應用程式定義和管理章節。
 
@@ -96,17 +99,17 @@ AdobePSDK.ForceHttpsAdConfiguration類別。
 
 **2.4.8更新的新功能(Build 6002)**
 
-此更新包含重要客戶問題的修正。 如需 *清單*，請參閱修正問題。
+此更新包含重要客戶問題的修正。 請參閱&#x200B;*修正問題*&#x200B;以取得清單。
 
-**2.4.8版**
+**2.4.9版**
 
 以下增強功能和新增功能是瀏覽器TVSDK 2.4.8版的一部份：
 
-· SDK現在符合Chrome EME規範，而且從Chrome v58開始提供的最佳實務變更。 如需詳細資訊，請 [參閱https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
+· SDK現在符合Chrome EME規範，而且從Chrome v58開始提供的最佳實務變更。 如需詳細資訊，請參閱[https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
 
 · UI Framework現在支援Flash、Ad和Targeting Info工作流程上的HLS Access DRM。
 
-· setDRMAuthenticateData API已新增至UI架構。 若要播放使用Adobe Access DRM保護的串流，請叫用此API。 或者，也可以在播放器中指定drmAuthenticateData屬性。 如需詳 [細資訊，請參閱AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)。
+· setDRMAuthenticateData API已新增至UI架構。 若要播放使用Adobe Access DRM保護的串流，請叫用此API。 或者，也可以在播放器中指定drmAuthenticateData屬性。 如需詳細資訊，請參閱[AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)。
 
 **2.4.7版**
 
@@ -126,7 +129,7 @@ AdobePSDK.ForceHttpsAdConfiguration類別。
 
 ·將MediaPlayerItemConfig API新增至UI架構
 
-各種功能，包括advertisingMetadata、advertisingFactory、adSigningMode、networkConfiguration、customRangeMetadata、useHardwareDecoder、subscriberTags、thumbnailScrubber、billingMetricsConfig，都可透過MediaPlayerItemConfig進行設定。 如需詳細資訊，請參閱瀏覽器TVSDK API [* *檔案中的AdobePSDK.MediaPlayerItemConfig](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)檔案 [](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)。
+各種功能，包括advertisingMetadata、advertisingFactory、adSigningMode、networkConfiguration、customRangeMetadata、useHardwareDecoder、subscriberTags、thumbnailScrubber、billingMetricsConfig，都可透過MediaPlayerItemConfig進行設定。 如需詳細資訊，請參閱[瀏覽器TVSDK API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [檔案](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)中的AdobePSDK.MediaPlayerItemConfig檔案。
 
 在UI架構中，已修改透過播放器組態傳遞網路組態的方式。
 
@@ -162,11 +165,11 @@ AdobePSDK.ForceHttpsAdConfiguration類別。
 
 DRM設定和Analytics追蹤可透過UI Framework啟用。
 
-* 新增 `AdobePSDK.embedSWFinFullScreenDiv` API
+* 新增`AdobePSDK.embedSWFinFullScreenDiv` API
 
 此新API可讓播放器應用程式靈活選擇div，以內嵌FlashFallback.swf檔案。
 
-* 將類 `getVersion`別中的 `AdobePSDK.MediaPlayer` API取代 `AdobePSDK.Version` 為類別，以取得TVSDK版本相關資訊。 如需詳細資訊，請 `AdobePSDK.Version` 參閱 [此處](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html)。
+* 已將`AdobePSDK.MediaPlayer`類別的`getVersion`API取代為`AdobePSDK.Version`類別，以取得TVSDK版本相關資訊。 如需詳細資訊，請參閱`AdobePSDK.Version` API [這裡](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html)。
 
 **2.4.6版**
 
@@ -182,7 +185,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 >[!NOTE]
 >
->Enum PSDKErrorCode中已過時的enum MediaPlayer.Events和已過時的常數已在2.4.6版中移除。如需詳細資訊，請 [參閱從瀏覽器TVSDK 2.4.5轉換為2.4.6版](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html)。
+>Enum PSDKErrorCode中已過時的enum MediaPlayer.Events和已過時的常數已在2.4.6版中移除。如需詳細資訊，請參閱[從瀏覽器TVSDK 2.4.5轉換至2.4.6](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html)版。
 
 **2.4.5版**
 
@@ -190,7 +193,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 * **完整活動重播和廣告**
 
-   HLS Full Event Replay(FER)串流現在支援廣告解析度和廣告行為。 若要啟用此支援，請在建立物件時將廣告 `MANIFEST_CUES` 信令模式設 `MediaPlayerItemConfig` 定為。
+   HLS Full Event Replay(FER)串流現在支援廣告解析度和廣告行為。 要啟用此支援，請在建立`MediaPlayerItemConfig`對象時將廣告信令模式設定為`MANIFEST_CUES`。
 
 * **MediaplayerView ScalePolicy支援**
 
@@ -202,11 +205,11 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 * **選擇性應用`withCredentials`**
 
-當 `withCredentials` 設為true時，標題 `Access-Control-Allow-Origin` 無法設為萬用字元。 根據伺服器的回應，瀏覽器TVSDK會選擇性地設定屬 `withCredentials` 性。 如需此支援的詳細資訊，請參 [閱瀏覽器TVSDK API檔案](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)。
+當`withCredentials`設為true時，`Access-Control-Allow-Origin`標題無法設為萬用字元。 根據伺服器的回應，瀏覽器TVSDK會選擇性地設定`withCredentials`屬性。 如需此支援的詳細資訊，請參閱[瀏覽器TVSDK API檔案](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)。
 
 **2.4.4版**
 
-下列功能是2.4.4版中的新功能：
+2.4.4版中有下列新功能：
 
 * **Chromecast範例應用程式**
 
@@ -234,7 +237,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 * **API奇偶校驗**
 
-如需API奇偶校驗的完整清單，請參閱「 [TVSDK 1.4 DHLS至瀏覽器TVSDK 2.4移轉指南」](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)。
+如需API奇偶校驗的完整清單，請參閱[TVSDK for 1.4 DHLS至瀏覽器TVSDK 2.4移轉指南](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)。
 
 * **Sample-AES支援**
 
@@ -293,11 +296,11 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    * 具有廣告行為和追蹤的前滾和後滾HLS廣告
    * 具有廣告行為和追蹤的前段和後段虛線廣告
 
-## 支援的平台 {#supported-platforms}
+## 支援的平台{#supported-platforms}
 
 瀏覽器TVSDK對其需要執行的平台和軟體層級有特定要求。 支援下列平台和軟體層級：
 
-### 案頭配置 {#desktop-configurations}
+### 案頭配置{#desktop-configurations}
 
 * Microsoft Windows 7:
 
@@ -321,7 +324,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    * Chrome 33+
    * Firefox 38+
 
-### 行動網路組態 {#mobile-web-configurations}
+### 行動Web組態{#mobile-web-configurations}
 
 * Android 4.4
 
@@ -410,7 +413,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
  </tbody> 
 </table>
 
-## 功能矩陣 {#feature-matrix}
+## 功能矩陣{#feature-matrix}
 
 以下是此版本支援和不支援的功能清單：
 
@@ -422,7 +425,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 >
 >*在下方的功能矩陣表格中，「Y」表示目前版本支援此功能。*
 
-### MP3音訊功能 {#mp-audio-features}
+### MP3音頻功能{#mp-audio-features}
 
 **表1:核心播放{#table-core-playback}**
 
@@ -434,7 +437,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 2 Firefox預設為41版或更舊版本的Flash Player。
 
-### MP4音訊功能 {#mp-audio-features-1}
+### MP4音頻功能{#mp-audio-features-1}
 
 **表2:核心播放**
 
@@ -442,7 +445,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 |--- |--- |--- |--- |--- |--- |
 | 播放 | MP4 VOD | 一般播放（播放、暫停、搜尋） | 不支援 | Y | Y |
 
-**表4:核心廣告插入**
+**表3:核心廣告插入**
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -451,7 +454,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 有關HLS或DASH功能支援的詳細資訊，請參閱下文。
 
-## HLS功能矩陣 {#hls-feature-matrix}
+## HLS功能矩陣{#hls-feature-matrix}
 
 以下是瀏覽器TVSDK中HLS功能的功能表。
 
@@ -466,7 +469,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 >
 >*在下方的功能矩陣表格中，「Y」表示目前版本支援此功能。*
 
-### HLS功能 {#hls-features}
+### HLS功能{#hls-features}
 
 支援下列功能：
 
@@ -888,19 +891,19 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
  </tbody> 
 </table>
 
-## DASH功能矩陣 {#dash-feature-matrix}
+## DASH功能矩陣{#dash-feature-matrix}
 
 以下是瀏覽器TVSDK中DASH功能的功能表。
 
 · *DASH核心播放功能*
 
-· *DASH進階播放功能*
+· *DASH Advanced playback features*
 
 · *DASH內容保護功能*
 
-· *DASH核心廣告插入功能*
+· *虛線核心廣告插入功能*
 
-· DASH進 *階廣告插入功能*
+· *DASH進階廣告插入功能*
 
 · *DASH整合*
 
@@ -908,7 +911,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 >
 >在下方的功能矩陣表格中，Y表示目前版本支援此功能。
 
-### 虛線功能 {#dash-features}
+### 虛線功能{#dash-features}
 
 支援下列功能：
 
@@ -1230,23 +1233,23 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
  </tbody> 
 </table>
 
-## 問題已修正 {#issues-fixed}
+## 修正的問題{#issues-fixed}
 
 **2.4.12更新(Build 204)中修正的問題**
 
 下列問題已在瀏覽器TVSDK 2.4.12版更新(Build 204)中修正：
 
-· **21647**—— 當音訊靜音時，TVSDK應允許在iOS裝置上自動播放視訊。
+· **21647**-當音訊靜音時，TVSDK應允許在iOS裝置上自動播放視訊。
 
-· **21465**—— 播放DASH即時串流後，播放受DRM保護的DASH串流時收到錯誤金鑰系統存取拒絕。
+·在播放DASH Live串流後播放受DRM保護的DASH串流時，收到&#x200B;**21465**-錯誤鍵系統存取拒絕。
 
-· **21442**—— 使用使用者手勢播放前置廣告後，在iOS網路上啟用內容自動播放。
+· **21442**-使用使用者手勢播放前置廣告後，在iOS網路上啟用內容自動播放。
 
-· **21240**—— 提供的API，可篩選從Auditude/VMAP剖析的VPAID廣告。
+· **21240**-提供的API，可篩選從Auditude/VMAP剖析的VPAID廣告。
 
 **2.4.11版中修正的問題**
 
-下列問題已在瀏覽器TVSDK 2.4.10版中修正：
+下列問題已在瀏覽器TVSDK 2.4.11版中修正：
 
 **核心播放功能：**
 
@@ -1254,7 +1257,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **21009**:隱藏字幕會持續存在於螢幕上，以避免在出現新字幕前尋找不連續字幕。
 
-· **21141**:由於區段附加期間有競爭條件，因此反向尋道遭拒。
+· **21141**:由於區段附加期間有競爭條件，因此反向尋道會遭拒。
 
 · **21142**:使可查看的播放範圍在播放器處於「已初始化」狀態時可用。 由於這些變更，現在支援在位置開始作業。
 
@@ -1286,7 +1289,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **20031**:在IE11(Windows 8.1)上以縱向模式時，視訊畫面變小。 內容保護功能：
 
-· **19316年**:略過在HLS AES-128串流中解密失敗的段。
+· **19316**:略過在HLS AES-128串流中解密失敗的段。
 
 **2.4.9版中修正的問題**
 
@@ -1300,7 +1303,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **17985**:在Firefox瀏覽器上播放特定ISO-BMFF串流時，播放會卡住（Firefox問題#1342913）。 自Firefox v53起，這個問題已修正。
 
-· **19141年**:未捕獲（在承諾中）ReferenceError:width is not define.
+· **19141**:未捕獲（在承諾中）ReferenceError:width is not define.
 
 · **18997、19299**:區段邊界的視訊閃爍問題。 這是因為SDK無法正確計算上一個範例的「合成」時間偏移。
 
@@ -1312,7 +1315,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **20179**:Flash備援無法與Flash Player v25.0.0.171搭配使用。
 
-· **20293年**:Firefox會停止某些HLS串流的緩衝資料，導致其停止。
+· **20293**:Firefox會停止某些HLS串流的緩衝資料，導致其停止。
 
 · **20626**:Player會在Chrome上擲出媒體解碼錯誤，因為無持續時間的視訊範例處理不正確。
 
@@ -1328,31 +1331,31 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **20043**:遺失包含多個廣告和第三方重新導向的廣告印象和廣告追蹤呼叫。
 
-· **2004年**:使用創意重新封裝時，廣告插播中的所有廣告都必須成功重新封裝，否則廣告插播會被完全捨棄。
+· **20044**:使用創意重新封裝時，廣告插播中的所有廣告都必須成功重新封裝，否則廣告插播會被完全捨棄。
 
-· **20097**:會略過廣告播放，而主要內容會立即繼續，而不需等候逾時20秒（如果廣告資訊清單不可用）。
+· **20097**:會略過廣告播放，而主要內容會立即繼續，而不是等到逾時20秒（如果廣告資訊清單不可用）。
 
 **2.4.8版更新(Build 6002)中修正的問題**
 
 下列問題已在瀏覽器TVSDK 2.4.8版更新(Build 6002)中修正：
 
-· **14126:** 由於MSE來源緩衝區中的內部間隙，Firefox上的播放可能會停止（問題#1316024）。 嘗試搜尋以繼續播放
+· **14126:**&#x200B;由於MSE來源緩衝區的內部間隙，Firefox上的播放可能會停止（問題#1316024）。 嘗試搜尋以繼續播放
 
-· **19608年：** 修正以符合來自Auditude VMAP回應的時間偏移值。
+· **19608:**&#x200B;修正以符合來自Auditude VMAP回應的時間偏移值。
 
-· **19635年：** 修正Windows 10上Internet Explorer 11的視訊停頓。
+· **19635:**&#x200B;修正Windows 10上Internet Explorer 11的視訊停止問題。
 
-· **19761年：** HLS的ABR問題修正
+· **19761:** HLS的ABR問題修正。
 
-· **19780年：** 修正Mozilla Firefox v53中中斷的HLS內容廣告播放。
+· **19780:**&#x200B;修正在Mozilla Firefox v53中中斷的HLS內容廣告播放。
 
-· **1987年和1974年：** 這些問題修正了在搜尋作業後選取位元速率時的不一致性。 現在，搜尋時的位元速率選擇是目前位元速率和位元速率在啟動時的較低值。
+· **19877和19744:**&#x200B;這些問題修正了在搜尋操作後選擇位元速率時的不一致性。 現在，搜尋時的位元速率選擇是目前位元速率和位元速率在啟動時的較低值。
 
-· **1981年：** 在執行搜尋3-4次後，播放卡住和緩衝覆蓋會出現無限時間。
+· **19881:**&#x200B;執行搜尋3-4次後，播放卡住和緩衝覆蓋會無限時間顯示。
 
-· **1984年：** 確認是否符合Chrome 59測試版驗證媒體路徑(VMP)要求。 bTVSDK可以使用Chrome 59 Beta播放Widevine DRM內容。
+· **1984:**&#x200B;確認符合Chrome 59測試版驗證媒體路徑(VMP)要求。 bTVSDK可以使用Chrome 59 Beta播放Widevine DRM內容。
 
-· **19916年：** UI-Framework上的DRM播放中斷。 現在，它會叫用acquireLicense，即使中繼資料中沒有原則。
+· **19916:**&#x200B;在UI-Framework上的DRM播放中斷。 現在，它會叫用acquireLicense，即使中繼資料中沒有原則。
 
 **2.4.8版中修正的問題**
 
@@ -1364,25 +1367,25 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **17306**:對於SSAI串流，支援播放。 不支援縫合廣告的追蹤。
 
-· **19142年**:有時倒轉會使視訊播放器永遠處於緩衝狀態。
+· **19142**:有時倒轉會使視訊播放器永遠處於緩衝狀態。
 
-· **19218年**:廣告標籤無法透過UI架構使用。
+· **19218**:廣告標籤無法透過UI架構使用。
 
-· **19219年**:廣告播放無法透過UI架構運作。
+· **19219**:廣告播放無法透過UI架構運作。
 
-· **1922年**:AES-128密鑰被請求一次以用於播放清單，且後續請求從快取中提供。 之前會針對每個區段提出要求。
+· **19222**:AES-128密鑰被請求一次以用於播放清單，且後續請求從快取中提供。 之前會針對每個區段提出要求。
 
-· **19597年**:&quot;未捕獲的TypeError:無法讀取未定義的屬性&#39;log&#39;」。
+· **19597**:&quot;未捕獲的TypeError:無法讀取未定義的屬性&#39;log&#39;」。
 
 · **19605**:adRequestDomain在Flash備援模式下無法使用。
 
 · **19608**:HLS Live串流未插入VMAP廣告。 SDK現在會考慮提示標籤，而不依賴VMAP回應中的時間偏移值。
 
-· **19637年**:廣告播放只會導致廣告結尾的指令碼錯誤。
+· **19637**:廣告播放只會導致廣告結尾的指令碼錯誤。
 
-· **19732年**:CRS播放清單請求失敗，出現404錯誤。 瀏覽器TVSDK的1401和1403要求現在已更新，以處理這個問題。
+· **19732**:CRS播放清單請求失敗，出現404錯誤。 瀏覽器TVSDK的1401和1403要求現在已更新，以處理這個問題。
 
-· **19762年**:acquireLicense在setAuthenticationToken之前曾呼叫，因為傳回的有效授權與Token有效性無關。 現在已修正此問題，而acquireLicense僅在setAuthenticationToken回應後才呼叫。
+· **19762**:acquireLicense在setAuthenticationToken之前曾呼叫，因為傳回的有效授權與Token有效性無關。 現在已修正此問題，而acquireLicense僅在setAuthenticationToken回應後才呼叫。
 
 **2.4.7版中修正的問題**
 
@@ -1394,7 +1397,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **14807**:在Chrome瀏覽器上，如果在play()後立即觸發搜尋或暫停，則播放可能會因錯誤DOMException而停止：play()要求已被呼叫中斷……（Chromium問題# 593273）。
 
-· **19085年**:MediaPlayer參數（例如volume、abrControlParameters和ccStyle）未設為「重設播放器時的預設值」。
+· **19085**:MediaPlayer參數（例如volume、abrControlParameters和ccStyle）未設為「重設播放器時的預設值」。
 
 **2.4.6版中修正的問題**
 
@@ -1408,7 +1411,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **8711**:使用MSE時，608/708字幕會依預設保持對齊。
 
-· **13934年**:播放HLS Live串流時，廣告的ABR設定不適用。
+· **13934**:播放HLS Live串流時，廣告的ABR設定不適用。
 
 · **14079**:具有低DVR窗口的HLS Live流的使用壽命可能會失敗，因為網路延遲問題可能導致回放時間延遲。 按一下即時點以繼續播放。
 
@@ -1422,7 +1425,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **16709**:使用PDT和不連續標籤恢復HLS Live串流可能會導致玩家在緩衝中卡住。
 
-## 已知問題和限制 {#known-issues-and-limitations}
+## 已知問題和限制{#known-issues-and-limitations}
 
 以下提及瀏覽器TVSDK的限制和已知問題。
 
@@ -1441,10 +1444,10 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td>VOD + Live</td> 
    <td>一般播放（播放、暫停、搜尋）</td> 
-   <td><p>·不支援HLS以外的媒體格式。</p> <p>8799:Flash備援不會處理混合內容，因此需要確保內容、廣告和其他URL不會導致混合內容（同時保全和不安全的內容）。</p> <p>· 19271年：Flash備援模式不支援透過UI架構進行多檢視播放。</p> <p>· Flash後援在Windows 7的Microsoft Internet Explorer 8和9上無法運作，因為SDK不支援這些版本。</p> <p>· 20262:Flash備援會新增自訂參數至定位資訊清單。 此外，自訂參數的優先順序在Flash和MSE的情況下也不同。</p> <p>· 20653：瀏覽器TVSDK Flash備援在Win10中無法搭配Creators更新運作。</p> <p>· Flash備援可與Flash Player 23版及更新版本搭配使用。</p> <p>· 20087 - Chrome 59 Beta版，含</p> <p>Flash 25.0.0.171</p> <p>Beta（預設值）,HLS播放無法在Flash備援模式中運作。 在加那利也沒問題。</p> </td> 
+   <td><p>·不支援HLS以外的媒體格式。</p> <p>8799:Flash備援不會處理混合內容，因此必須確保內容、廣告和其他URL不會導致混合內容（同時保全和不安全的內容）。</p> <p>· 19271年：Flash備援模式不支援透過UI架構進行多檢視播放。</p> <p>· Flash後援在Windows 7的Microsoft Internet Explorer 8和9上無法運作，因為SDK不支援這些版本。</p> <p>· 20262:Flash備援會新增自訂參數至定位資訊清單。 此外，自訂參數的優先順序在Flash和MSE的情況下也不同。</p> <p>· 20653：瀏覽器TVSDK Flash備援在Win10中無法搭配Creators更新運作。</p> <p>· Flash備援可與Flash Player 23版及更新版本搭配使用。</p> <p>· 20087 - Chrome 59 Beta版，含</p> <p>Flash 25.0.0.171</p> <p>測試版（預設）,HLS播放無法在Flash備援模式上運作。 在加那利也沒問題。</p> </td> 
    <td><p>· 12563:具有音訊codec mp4a.40.02的虛線串流無法在Firefox上播放，因為MPD中不支援音訊codec字串。 支援音訊轉碼器mp4a.40.2。</p> <p>一五〇二九年：在UI-Framework中在multiView中切換視訊時，播放／暫停按鈕不會相應更新。</p> <p>· 16034：在Windows 8.1 IE中，呼叫reset()會導致未知的MIME類型錯誤。 請重新載入媒體以繼續播放。</p> <p>· 18235:有廣告的DASH vod串流會出現某些搜尋問題。</p> <p>· 18727:MSE不支援錯誤API</p> <p>一八七五零年：在某些情況下，SDK和UI架構的狀態變更事件可能會失序，而在UI架構中，資源載入後新增的事件監聽程式可能會遺失IDLE和初始化狀態變更事件。</p> <p>· 18889:如果MediaPlayer處於ERROR狀態，則不會傳回檢視物件。</p> <p>· 19039年：如果是AdobePSDK。 MediaPlayer。 seekToLocal()的值大於EOF，在出現MSE時，從頭開始播放。</p> <p>· 19049年：播放期間視訊遭封鎖時，Chrome、IE和Firefox上的Flash Player未報告錯誤狀態。</p> <p>· 17205:視訊播放會在播放未混音串流時停止數小時，而音訊仍繼續播放（Chromium期刊# 664033）。</p> <p>· 12308:指定composition_time_offset的DASH串流可能會在Chrome瀏覽器上套用timeStampOffset，導致負解碼時間，因此MEDIA_ERR_SRC_NOT_SUPPORTED錯誤（Chromium期刊#398141）。</p> <p>· 14126:由於MSE來源緩衝區中的內部間隙，Firefox（問題# 1316024）上的播放可能會停止。 嘗試搜尋以繼續播放。</p> <p>· 1915年：MS Edge和IE 11（Win 8.1和10）未在CORS重新導向時將原始碼設為null，但因為標題不是null而導致播放錯誤而失敗。</p> <p>· 19861：已播放媒體在來源緩衝區上附加行為的問題。 Chrome拒絕附加的片段，包括moov，造成後續的解碼錯誤。 （Chromium期號735335）</p> <p>19921年：某些HLS內容即使緩衝成功，仍會停止播放（Chromium問題#713540）</p> <p>· 20444：在IE和Edge上尋找緩衝範圍結束可能會導致播放停止。</p> <p>· 20511年：有時有廣告或沒有廣告時，HLS流會出現尋道拒絕。</p> <p>· 20743年：在Windows 10 Chrome上，HLS Live串流在MP4前滾播放前會播放數秒。</p> <p>· 21043:由於缺乏中繼資料，影片維度在初始載入時可能不正確。</p> <p>· 2115:如果播放清單中的視訊有前置廣告，則需要Android使用者手勢才能開始播放。</p> <p>· HLS Live不支援時間戳記變換。</p> <p>·不支援AAC-SSR音訊。</p> <p>不支援音訊轉碼器AC3和增強型AC3。</p> <p>·對於具有時間戳不連續但沒有不連續標籤的流</p> <p>·播放可能由於跳轉而出現錯誤和搜尋錯誤。</p> <p>·內容持續時間和播放持續時間可能不匹配。</p> <p>·表示法與轉譯之間的不連續性，應與其他方式相符，可能導致同步和停頓問題。</p> <p>·標題和WebVTT可能不會顯示在接近串流結尾的位置。</p> <p>·不支援跨時間戳記跳轉的音訊轉碼器變更。</p> <p>·不支援廣告插入。</p> <p>·快速轉發特技模式可能導致Win 8.1 IE 11上的播放回圈（MS問題#12446268）。</p> <p>破折號：</p> <p>·對於即時串流——支援動態類型的即時描述檔。</p> <p>·對於VoD串流——支援靜態類型的即時描述檔。</p> <p>針對VoD串流——不會針對廣告工作流程認證隨選設定檔。</p> </td> 
    <td><p>·不支援DASH Live和DASH Video on Demand串流。</p> <p>·全螢幕模式的iOS不支援PIP（畫中畫）視訊播放。</p> <p>在Safari（視訊標籤）擴充功能中，沒有正確內容類型標題的資訊清單較少無法運作。</p> </td> 
-   <td><p>·傳送者應用程式中的應用程式ID必須與將「接收者」的URL註冊為「自訂接收者」應用程式時產生的ID相同。</p> <p>·參考播放器已通過DASH工作流程認證。 UI架構未通過認證。</p> <p>有關支援的媒體轉碼器清單，請參 <a href="https://developers.google.com/cast/docs/media"><em>閱此處</em></a>。</p> </td> 
+   <td><p>·傳送者應用程式中的應用程式ID必須與將「接收者」的URL註冊為「自訂接收者」應用程式時產生的ID相同。</p> <p>·參考播放器已通過DASH工作流程認證。 UI架構未通過認證。</p> <p>有關支援的媒體轉碼器清單，請參閱<a href="https://developers.google.com/cast/docs/media"><em>此處</em></a>。</p> </td> 
   </tr> 
   <tr> 
    <td>FER VOD</td> 
@@ -1498,7 +1501,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td>VOD + Live</td> 
    <td>QoS和播放器通知</td> 
    <td>二一一二九年：若是Flash備援，則無法使用影格速率。</td> 
-   <td><p>• 11170:</p> <p>Timed_Event不適用於MSE的瀏覽器TVSDK，而Flash備援的瀏覽器TVSDK則不同。</p> <p>二一一二九年：不會針對即時串流計算影格速率。</p> </td> 
+   <td><p>· 11170:</p> <p>Timed_Event不適用於MSE的瀏覽器TVSDK，而Flash備援的瀏覽器TVSDK則不同。</p> <p>二一一二九年：不會針對即時串流計算影格速率。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1530,7 +1533,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td>VOD + Live</td> 
    <td>302重新導向</td> 
    <td> </td> 
-   <td><p>15787: 302</p> <p>Windows Edge和IE瀏覽器不支援重新導向最佳化，因為這些瀏覽器不支援XMLHttpRequest物件中的responseURL屬性。</p> </td> 
+   <td><p>一五七八七年：302</p> <p>Windows Edge和IE瀏覽器不支援重新導向最佳化，因為這些瀏覽器不支援XMLHttpRequest物件中的responseURL屬性。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1727,6 +1730,6 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 |---|---|---|---|---|---|
 | VOD + Live | Adobe Analytics VHL整合 |  | 19004年：視訊分析追蹤無法透過UI設定器工具使用。 |  |  |
 
-## 有用的資源 {#helpful-resources}
+## 實用資源{#helpful-resources}
 
-* 請參閱 [Adobe Primetime學習與支援頁面的完整說明檔案](https://helpx.adobe.com/support/primetime.html) 。
+* 請參閱[Adobe Primetime學習與支援](https://helpx.adobe.com/support/primetime.html)頁面的完整說明檔案。
