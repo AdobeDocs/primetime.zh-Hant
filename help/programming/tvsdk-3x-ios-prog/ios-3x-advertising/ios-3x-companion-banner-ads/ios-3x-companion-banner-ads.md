@@ -6,11 +6,14 @@ title: 配套橫幅廣告
 uuid: 522578ff-1f09-48f1-91f7-f074cfd34064
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
 
-# 配套橫幅廣告 {#companion-banner-ads}
+# 配套橫幅廣告{#companion-banner-ads}
 
 TVSDK支援輔助橫幅廣告，這些廣告是線性廣告隨附的廣告，通常會線上性廣告結束後保留在頁面上。 您的應用程式負責顯示隨附線性廣告的配套橫幅。
 
@@ -29,14 +32,14 @@ TVSDK支援輔助橫幅廣告，這些廣告是線性廣告隨附的廣告，通
 
    標準是顯示每個配套橫幅，直到您取代此橫幅為止。
 
-## 配套橫幅資料 {#companion-banner-data}
+## 配套橫幅資料{#companion-banner-data}
 
 PTAdAsset的內容描述了一個配套的橫幅。
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-通 `PTMediaPlayerAdStartedNotification` 知會傳回包 `PTAd` 含屬性( `companionAssets` 陣列)的例 `PtAdAsset`項。
-每個 `PtAdAsset` 都提供有關顯示資產的資訊。
+`PTMediaPlayerAdStartedNotification`通知會傳回包含`companionAssets`屬性的`PTAd`例項（`PtAdAsset`的陣列）。
+每個`PtAdAsset`都提供有關顯示資產的資訊。
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -65,16 +68,16 @@ PTAdAsset的內容描述了一個配套的橫幅。
   </tr> 
   <tr> 
    <td colname="col1"> 資料 </td> 
-   <td colname="col2"> 此配套橫幅的resourceType所指 <span class="codeph">定類型</span> 的資料。 </td> 
+   <td colname="col2"> <span class="codeph">resourceType</span>為此配套橫幅所指定類型的資料。 </td> 
   </tr> 
  </tbody> 
 </table>
 
-## 顯示橫幅廣告 {#display-banner-ads}
+## 顯示橫幅廣告{#display-banner-ads}
 
 若要顯示橫幅廣告，您必須建立橫幅例項，並允許TVSDK監聽廣告相關事件。
 
-TVSDK會透過通知事件，提供與線性廣告相關的配套橫幅廣 `PTMediaPlayerAdPlayStartedNotification` 告清單。
+TVSDK會透過`PTMediaPlayerAdPlayStartedNotification`通知事件，提供與線性廣告相關的配套橫幅廣告清單。
 
 清單可透過下列方式指定配套橫幅廣告：
 
@@ -84,25 +87,25 @@ TVSDK會透過通知事件，提供與線性廣告相關的配套橫幅廣 `PTMe
 
 對於每個配套廣告，TVSDK會指出您的應用程式有哪些類型。
 
-1. 為您頁 `PTAdBannerView` 面上的每個配套廣告位置建立例項。
+1. 為頁面上的每個配套廣告插槽建立`PTAdBannerView`例項。
 
        請確定已提供下列資訊：
    
    * 為防止擷取不同大小的配套廣告，請使用指定寬度和高度的橫幅例項。
    * 標準橫幅大小。
 
-1. 為執行下列作業 `PTMediaPlayerAdStartedNotification` 的人新增觀察者：
+1. 為`PTMediaPlayerAdStartedNotification`添加執行下列操作的觀察器：
    1. 清除橫幅例項中的現有廣告。
-   1. 從中取得配套廣告的清 `Ad.getCompanionAssets``PTAd.companionAssets`單
+   1. 從`Ad.getCompanionAssets` `PTAd.companionAssets`取得配套廣告清單。
    1. 如果配套廣告清單不是空的，請在橫幅例項清單上重複。
 
-      每個橫幅實例(a `PTAdAsset`)都包含寬度、高度、資源類型（html、iframe或靜態），以及顯示配套橫幅所需的資料。
+      每個橫幅實例(`PTAdAsset`)都包含寬度、高度、資源類型（html、iframe或靜態），以及顯示配套橫幅所需的資料。
    1. 如果視訊廣告沒有隨附的配套廣告，則配套資產清單中不會包含該視訊廣告的資料。
 
       若要顯示獨立顯示廣告，請將邏輯新增至指令碼，以在適當的橫幅實例中執行一般的DFP（發佈者的DoubleClick）顯示廣告標籤。
    1. 將橫幅資訊傳送至頁面上顯示適當位置橫幅的函式。
 
-      這通常是 `div`，您的函式會使 `div ID` 用來顯示橫幅。 例如：
+      這通常是`div`，而您的函式使用`div ID`來顯示橫幅。 例如：
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 
