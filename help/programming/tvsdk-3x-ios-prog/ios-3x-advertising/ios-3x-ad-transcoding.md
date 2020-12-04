@@ -6,11 +6,14 @@ title: 使用Adobe Creative Repackaging Service重新封裝不相容的廣告
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '507'
+ht-degree: 0%
 
 ---
 
 
-# 使用Adobe Creative Repackaging Service重新封裝不相容的廣告 {#repackage-incompatible-ads-using-adobe-creative-repackaging-service}
+# 使用Adobe Creative Repackaging Service {#repackage-incompatible-ads-using-adobe-creative-repackaging-service}重新封裝不相容的廣告
 
 某些協力廠商廣告（或創意素材）無法銜接至HTTP即時串流(HLS)內容串流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇將不相容的廣告重新封裝至相容的M3U8視訊。
 
@@ -20,9 +23,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 若要啟用此選用功能，請連絡您的Adobe代表。
 
-如需CRS的詳細資訊，請參 [閱Creative Packaging Service(CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md)。
+如需CRS的詳細資訊，請參閱[創意封裝服務(CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md)。
 
-## CRS廣告傳送的多個CDN支援 {#section_900FDDA5454143718F1EB4C9732C8E1C}
+## CRS廣告傳送{#section_900FDDA5454143718F1EB4C9732C8E1C}的多個CDN支援
 
 雖然預設的Creative重新封裝服務(CRS)藍本是使用一個內容資料網路(CDN)，但您可以在多個CDN上部署CRS資產。
 
@@ -35,17 +38,17 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 以下是TVSDK中新增的API:
 
-* `PTURLTransformer` 說明轉換TVSDK要求的CRS和URL所需方法的通訊協定。 應用程式可實作此通訊協定，並提供所需方法的實作。
+* `PTURLTransformer` 說明轉換TVSDK要求的CRS和URL所需方法的通訊協定。應用程式可實作此通訊協定，並提供所需方法的實作。
 
-* `PTDefaultURLTransformer` 在TVSDK中建立並實作通訊協定的預設URL轉換器 `PTURLTransformer` 例項。 應用程式可覆寫此類別或新增貼文URL轉換處理常式。 當應用程式要在套用預設轉換後變更URL請求時，這個處理常式很有用。
+* `PTDefaultURLTransformer` 在TVSDK中建立並實作通訊協定的預設URL轉換器 `PTURLTransformer` 例項。應用程式可覆寫此類別或新增貼文URL轉換處理常式。 當應用程式要在套用預設轉換後變更URL請求時，這個處理常式很有用。
 
 * `PTNetworkConfiguration setURLTransformer:defaultTransformer` 在元資料實例上提供的setter方 `PTNetworkConfiguration` 法，用於設定實 `PTURLTransformer` 現。
 
 >[!IMPORTANT]
 >
->您的應用程式實作必須檢查 `PTURLTransformerInputType` 列舉，且只能轉換CRS類 `PTURLTransformerInputTypeCRSCreative` 型的URL。
+>您的應用程式實作必須檢查`PTURLTransformerInputType`列舉，並且只針對CRS檢查類型`PTURLTransformerInputTypeCRSCreative`的轉換URL。
 
-下列程式碼範例說明應用程式如何將預設主機元件變更為不同的字串(例如 `cdn.mycrsdomain.com`):
+下列程式碼範例說明應用程式如何將預設主機元件變更為不同的字串（例如`cdn.mycrsdomain.com`）:
 
 ```
 // The sample code below uses Non-ARC code 
