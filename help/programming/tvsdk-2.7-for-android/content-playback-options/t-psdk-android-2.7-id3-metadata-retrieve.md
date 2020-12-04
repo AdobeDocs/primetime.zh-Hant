@@ -6,11 +6,14 @@ title: ID3標籤
 uuid: 3fa199cd-668d-4d26-928f-074b6114b84c
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
 
-# ID3標籤 {#id-tags}
+# ID3標籤{#id-tags}
 
 ID3標籤提供音訊或視訊檔案的相關資訊，例如檔案的標題或藝術家的姓名。 TVSDK會在HLS串流的傳輸串流(TS)區段層級偵測ID3標籤，並派單事件。 應用程式可從標籤擷取資料。
 
@@ -23,13 +26,13 @@ ID3標籤提供音訊或視訊檔案的相關資訊，例如檔案的標題或�
 * 類型= ID3
 * 名稱= ID3
 
-1. 實作事件偵聽器， `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` 並將其註冊到對 `MediaPlayer` 像。
+1. 實作`MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)`的事件偵聽器，並將其註冊到`MediaPlayer`對象。
 
-   TVSDK會在偵測到中繼資料時呼叫此監 `ID3` 聽器。
+   TVSDK在偵測到`ID3`中繼資料時呼叫此接聽程式。
 
    >[!TIP]
    >
-   >自訂廣告提示會使用相 `onTimedMetadata` 同事件來指出偵測到新標籤。 這不應造成任何混淆，因為會在資訊清單層級偵測到自訂廣告提示，而ID3標籤內嵌在串流中。 如需詳細資訊，請參 [閱自訂標籤](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)。
+   >自訂廣告提示使用相同的`onTimedMetadata`事件來指示偵測到新標籤。 這不應造成任何混淆，因為會在資訊清單層級偵測到自訂廣告提示，而ID3標籤內嵌在串流中。 如需詳細資訊，請參閱[自訂標籤](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)。
 
 
 1. 擷取中繼資料。
