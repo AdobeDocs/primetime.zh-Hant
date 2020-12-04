@@ -4,6 +4,9 @@ title: 使用Adobe Media Server
 uuid: 272b9919-6ae4-4adb-aab5-28b1f92aa9fe
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 3%
 
 ---
 
