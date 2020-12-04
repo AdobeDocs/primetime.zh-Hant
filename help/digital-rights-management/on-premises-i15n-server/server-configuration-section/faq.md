@@ -4,11 +4,14 @@ title: 常見問答集
 uuid: 7e7409b5-9b3f-4dc3-96b6-42a06d9b1265
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# 常見問答集 {#faq}
+# 常見問答{#faq}
 
 * ECI變更的頻率為何？
    * 每當新的Adobe DRM用戶端一發佈，就會新增ECI裝置記錄。
