@@ -7,7 +7,7 @@ uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在以下的功能表格中，  ![](assets/supported15.png)
+>在下面的功能矩陣表中， ![](assets/supported15.png)
 >表示目前版本支援此功能。
 
 支援下列功能：
@@ -82,7 +82,7 @@ ht-degree: 0%
 
  -->
 
-## DASH整合 {#dash-integrations}
+## DASH整合{#dash-integrations}
 
 | 類別 | 內容類型 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
@@ -90,7 +90,7 @@ ht-degree: 0%
 | 整合 | VOD + Live | 帳單 | ![](assets/supported15.png) |
 | 整合 | VOD + Live | 瀏覽 | ![](assets/supported15.png) |
 
-## DASH進階廣告插入功能(CSAI) {#dash-advanced-insertion-features}
+## DASH進階廣告插入功能(CSAI){#dash-advanced-insertion-features}
 
 | 類別 | 內容類型 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
@@ -102,7 +102,7 @@ ht-degree: 0%
 | 廣告插入 | VOD | 配套廣告、橫幅廣告和可點選廣告 | 不支援 |
 | 廣告插入 | VOD | VPAID 2.0 | 不支援 |
 
-## DASH核心廣告插入功能(CSAI) {#dash-core-ad-insertion}
+## DASH核心廣告插入功能(CSAI){#dash-core-ad-insertion}
 
 | 類別 | 內容類型 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
@@ -115,7 +115,7 @@ ht-degree: 0%
 | 廣告插入 | VOD + Live | VMAP 1.0 | 僅限VOD |
 | 廣告插入 | VOD + Live | CRS v3.1 | 僅限VOD |
 
-## DASH內容保護功能 {#dash-content-protection}
+## DASH內容保護功能{#dash-content-protection}
 
 <table id="table_hrb_p2g_xx">  
  <thead> 
@@ -158,7 +158,7 @@ ht-degree: 0%
  </tbody> 
 </table>
 
-## DASH進階播放功能 {#dash-advanced-playback}
+## DASH進階播放功能{#dash-advanced-playback}
 
 | 類別 | 內容類型 | 功能 | HTML5、FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
@@ -172,7 +172,7 @@ ht-degree: 0%
 | 播放 | VOD + Live | 帳單 | ![](assets/supported15.png) |
 | 播放 | VOD + Live | 瀏覽 | ![](assets/supported15.png) |
 
-## DASH核心播放功能 {#dash-core-playback}
+## DASH核心播放功能{#dash-core-playback}
 
 | 類別 | 內容類型 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
