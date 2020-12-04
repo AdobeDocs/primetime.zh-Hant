@@ -4,11 +4,14 @@ title: 多個DRM策略
 uuid: d1159b53-fa96-430b-aaf0-50800fb22bcb
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 
 
-# 多個DRM策略 {#multiple-drm-policies}
+# 多個DRM策略{#multiple-drm-policies}
 
 您可以指定多個Primetime DRM策略，以便與單一內容區段建立關聯。 授權伺服器會決定使用哪個原則。
 
