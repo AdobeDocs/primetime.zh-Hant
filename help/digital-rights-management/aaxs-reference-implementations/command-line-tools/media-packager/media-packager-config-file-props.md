@@ -4,13 +4,16 @@ title: 配置檔案屬性
 uuid: f0d36240-e5fa-4bf9-9a82-7e963d03cdd0
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '630'
+ht-degree: 0%
 
 ---
 
 
-# 配置檔案屬性 {#configuration-file-properties}
+# 配置檔案屬性{#configuration-file-properties}
 
-在執行Media Packager之前，請指定Media Packager屬性的值。 配置檔案指定以下屬性。 對於包含* n*的屬性名稱， *n* 表示從1開始的整數，並且會為屬性的每個實例增加。
+在執行Media Packager之前，請指定Media Packager屬性的值。 配置檔案指定以下屬性。 對於包含* n*的屬性名稱，*n*&#x200B;表示從1開始的整數，並且對於屬性的每個實例都遞增。
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_dx4_mpy_n4"> 
  <thead class="- topic/thead "> 
@@ -30,11 +33,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.script</span> </td> 
-   <td colname="2" class="- topic/entry ">指出是否加密FLV中的指令碼資料。 <i class="+ topic/ph hi-d/i ">onMetaData</i> 和 <i class="+ topic/ph hi-d/i ">onXMP</i> 指令碼資料標籤不會加密，即使啟用此選項亦然。 </td> 
+   <td colname="2" class="- topic/entry ">指出是否加密FLV中的指令碼資料。 <i class="+ topic/ph hi-d/i ">即</i> 使已啟用 <i class="+ topic/ph hi-d/i "></i> 此選項，onMetaData和onXMPscript資料標籤也不會加密。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指示視頻加密級別。 高值用於加密所有視頻內容，而中值和低值用於加密包含H.264內容的F4V檔案的視頻內容部分。 </p> <p class="- topic/p ">值=高 <span class="codeph"> |中級|低</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指示視頻加密級別。 高值用於加密所有視頻內容，而中值和低值用於加密包含H.264內容的F4V檔案的視頻內容部分。 </p> <p class="- topic/p ">值= <span class="codeph">高 |中級 | low</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.secondsUnencrypted</span> </td> 
@@ -42,11 +45,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.ansymmet.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用於加密密鑰的許可證伺服器證書檔案。 encrypt.keys. <span class="codeph"> ansymetric.certfile</span> 屬性指定僅包含證書的檔案（可接受PEM或DER格式）。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用於加密密鑰的許可證伺服器證書檔案。 <span class="codeph"> encrypt.keys.ansymetic.certfile</span>屬性指定僅包含證書的檔案（可接受PEM或DER格式）。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">此屬性會重複用來建立要套用至內容的原則清單。 <span class="codeph"> n</span> 是值為1或更大的整數。 根據預設，用戶端會使用第一個例項。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">此屬性會重複用來建立要套用至內容的原則清單。 <span class="codeph"> </span> nis一個值為1或更高的整數。根據預設，用戶端會使用第一個例項。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 
@@ -54,15 +57,15 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.servercert</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">許可證伺服器的傳輸證書。 此屬性指定僅包 <span class="filepath"> 含證書的。cer</span> 檔案（可接受PEM或DER格式）。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">許可證伺服器的傳輸證書。 此屬性指定一個<span class="filepath"> .cer</span>檔案，該檔案僅包含證書（可接受PEM或DER格式）。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">包含用於簽署內容的封裝憑證的PKCS12檔案。 encrypt. <span class="codeph"> sign.certfile</span> 應該引用包含證書和私鑰 <span class="filepath"> 的。pfx</span> 檔案。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">包含用於簽署內容的Packager憑據的PKCS12檔案。 <span class="codeph"> encrypt.sign.certfile</span>應指包含憑證和私密金鑰的<span class="filepath"> .pfx</span>檔案。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用於保護由 <span class="codeph"> encrypt.sign.certfile指定檔案的口令</span>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用於保護<span class="codeph"> encrypt.sign.certfile</span>所指定檔案的口令。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
@@ -70,7 +73,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">如果策略 <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> 需要向使用不同於 <span class="+ topic/ph pr-d/codeph codeph"></span>encrypt.license.servercert中指定的傳輸證書的伺服器註冊域，則需要提供域傳輸證書。 </p> <p class="- topic/p ">此屬性指定僅包含證書的檔案（PEM或DER格式是可接受的）。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">如果策略<span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span>需要向使用與<span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>中指定不同傳輸憑證的伺服器進行域註冊，則需要提供域傳輸證書。 </p> <p class="- topic/p ">此屬性指定僅包含證書的檔案（PEM或DER格式是可接受的）。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
@@ -82,7 +85,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">啟用密鑰旋轉時用來加密內容的旋轉密鑰序列。 如果未指定任何金鑰，則會隨機產生金鑰。 密鑰長度必須為16個位元組，並指定為十六進位值。 </p> <p class="- topic/p ">十六進位值之間的空格是可選的。 <i class="+ topic/ph hi-d/i ">n必</i> 須單調增加，從1開始。 指定多個鍵時，按指示順序循環使用鍵。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">啟用密鑰旋轉時用來加密內容的旋轉密鑰序列。 如果未指定任何金鑰，則會隨機產生金鑰。 密鑰長度必須為16個位元組，並指定為十六進位值。 </p> <p class="- topic/p ">十六進位值之間的空格是可選的。 <i class="+ topic/ph hi-d/i ">一</i> 定是單調增加，從1開始。指定多個鍵時，按指示順序循環使用鍵。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.interval</span> </td> 
