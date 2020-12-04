@@ -26,7 +26,7 @@ ht-degree: 0%
 
 若要使用Cookie:
 
-1. 建立 `cookieManager` URI的Cookie並新增至您的 `cookieStore`。
+1. 建立`cookieManager`，並將URI的Cookie新增至`cookieStore`。
 
    例如：
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
    TVSDK會在執行時期查詢此cookieManager，檢查是否有任何與URL相關的cookie，並自動使用這些cookie。
 
-   另一個選項是用 `cookieHeaders` 於 `NetworkConfiguration` 設定要用於請求的任意Cookie標題字串。 依預設，此Cookie標題只會與關鍵要求一起傳送。 若要傳送包含所有請求的Cookie標題，請使用 `NetworkConfiguration` 方法 `setUseCookieHeadersForAllRequests`:
+   另一個選項是使用`NetworkConfiguration`中的`cookieHeaders`來設定要用於請求的任意Cookie標題字串。 依預設，此Cookie標題只會與關鍵要求一起傳送。 若要傳送包含所有請求的Cookie標題，請使用`NetworkConfiguration`方法`setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
