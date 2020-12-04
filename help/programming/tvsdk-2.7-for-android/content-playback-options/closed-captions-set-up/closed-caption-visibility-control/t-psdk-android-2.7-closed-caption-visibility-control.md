@@ -7,13 +7,13 @@ uuid: b9d48d70-2554-4948-8654-fa45093c3782
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
 
-# 概觀 {#control-closed-caption-visibility-overview}
+# 概述{#control-closed-caption-visibility-overview}
 
 您可以控制隱藏字幕的可見度。 啟用可見性後，會顯示目前選取的追蹤。 如果您變更了目前的軌道，可見度設定會維持不變。
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >如果在播放器進入搜尋模式時顯示隱藏字幕文字，則在搜尋完成後不會再顯示文字。 相反地，在數秒後，TVSDK會在結束搜尋位置後，在視訊中顯示下一個隱藏字幕文字。
 >
->隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。
+>隱藏字幕的可見度值定義在`MediaPlayer.Visibility`中。
 >
 >
 ```java
@@ -31,16 +31,16 @@ ht-degree: 0%
 >}
 >```
 
-1. 等待至 `MediaPlayer` 少處於PREPARED狀態。
+1. 等待`MediaPlayer`至少處於「已準備」狀態。
 
    如需詳細資訊，請參閱ui-state-prepared-wait-for。
-1. 若要取得隱藏字幕的目前可見度設定，請使用中的getter方 `MediaPlayer`法，其會傳回可見度值。
+1. 若要取得隱藏字幕的目前可見性設定，請使用`MediaPlayer`中的getter方法，此方法會傳回可見性值。
 
    ```java
    MediaPlayer.Visibility getCCVisibility() throws MediaPlayerException;
    ```
 
-1. 若要變更隱藏字幕的可見度，請使用setter方法，從中傳遞可見度值 `MediaPlayer.Visibility`。
+1. 若要變更隱藏字幕的可見度，請使用setter方法，從`MediaPlayer.Visibility`傳遞可見度值。
 
    例如：
 
