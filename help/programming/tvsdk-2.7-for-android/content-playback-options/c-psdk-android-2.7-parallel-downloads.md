@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 並行下載 {#parallel-downloads}
+# 並行下載{#parallel-downloads}
 
 並行下載視訊和音訊，而非串連下載，可減少啟動延遲。
 
