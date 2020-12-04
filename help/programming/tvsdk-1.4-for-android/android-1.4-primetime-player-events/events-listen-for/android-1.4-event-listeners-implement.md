@@ -6,17 +6,20 @@ title: 實作事件偵聽器和回呼
 uuid: 6b7859a4-55f9-48b1-b1f1-7b79bc92610a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
 
-# 實作事件偵聽器和回呼{#implement-event-listeners-and-callbacks}
+# 實施事件偵聽器和回呼{#implement-event-listeners-and-callbacks}
 
 事件處理常式可讓TVSDK回應事件。
 
 發生事件時，TVSDK的事件機制會呼叫您已註冊的事件處理常式，並將事件資訊傳遞給處理常式。
 
-TVSDK將監聽器定義為介面中的公用內部 `MediaPlayer` 介面。
+TVSDK將監聽器定義為`MediaPlayer`介面中的公用內部介面。
 
 您的應用程式必須針對影響您應用程式的TVSDK事件實作事件接聽程式。
 
@@ -28,7 +31,7 @@ TVSDK將監聽器定義為介面中的公用內部 `MediaPlayer` 介面。
 
       >[!IMPORTANT]
       >
-      >播放事件 `onStateChanged` 提供播放器狀態，包括錯誤。 任何狀態都可能會影響您播放器的下一步
+      >播放事件`onStateChanged`提供播放器狀態，包括錯誤。 任何狀態都可能會影響您播放器的下一步
 
    * **其他事件**:可選，視您的應用程式而定。
 
@@ -38,7 +41,7 @@ TVSDK將監聽器定義為介面中的公用內部 `MediaPlayer` 介面。
 
    TVSDK會將參數值傳回至您的事件接聽程式回呼。 這些值會提供有關事件的相關資訊，您可在監聽程式中用來執行適當動作。
 
-   `MediaPlayer.EventListener` 列出所有回呼介面。 每個介面會顯示每個事件傳回的回呼名稱和參數。
+   `MediaPlayer.EventListener` 列出所有回呼介面。每個介面會顯示每個事件傳回的回呼名稱和參數。
 
    例如：
 
@@ -47,7 +50,7 @@ TVSDK將監聽器定義為介面中的公用內部 `MediaPlayer` 介面。
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. 使用將回呼偵聽程式註冊 `MediaPlayer` 到對象中 `MediaPlayer.addEventListener`。
+1. 使用`MediaPlayer.addEventListener`將回呼偵聽器註冊到`MediaPlayer`對象。
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -59,28 +62,28 @@ TVSDK將監聽器定義為介面中的公用內部 `MediaPlayer` 介面。
    }
    ```
 
-## 播放事件的順序 {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## 播放事件的順序{#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
 TVSDK會依照一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件實施動作。
 
 下列範例顯示包含播放事件的某些事件的順序。
 
-* 成功載入媒體資源時， `MediaPlayer.replaceCurrentResource`事件順序為：
+* 通過`MediaPlayer.replaceCurrentResource`成功載入媒體資源時，事件順序為：
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
->在主線程上載入媒體資源。 如果您在背景執行緒上載入媒體資源，此作業或後續的TVSDK作業（或兩者）可能會擲回錯誤(例如 `IllegalStateException`)並退出。
+>在主線程上載入媒體資源。 如果您在背景執行緒上載入媒體資源，此作業或後續的TVSDK作業（或兩者）可能會擲回錯誤（例如`IllegalStateException`）並退出。
 
-* 在準備播放時， `MediaPlayer.prepareToPlay`事件的順序為：
+* 當透過`MediaPlayer.prepareToPlay`準備播放時，事件的順序為：
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 廣告。
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayerStatus.PREPARED`
 
 * 對於即時／線性串流，當播放視窗前進並解決其他機會時，事件順序為：
 
@@ -110,7 +113,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 });
 ```
 
-## 廣告活動順序 {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## 廣告活動順序{#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
 當您的播放包含廣告時，TVSDK會依一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件實施動作。
 
@@ -177,7 +180,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-## QoS事件 {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
+## QoS事件{#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
 
 TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算，例如緩衝和搜尋事件。
 
@@ -205,11 +208,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 });
 ```
 
-## DRM事件 {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## DRM事件{#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
 TVSDK響應於DRM相關操作（例如當有新的DRM元資料可用時）來調度數字版權管理(DRM)事件。 您的播放器可以實作回應這些事件的動作。
 
-要獲得所有與DRM相關的事件的通知，請監聽 `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`。 TVSDK會透過類別發佈其他DRM `DRMManager` 事件。
+要獲得所有與DRM相關的事件的通知，請監聽`onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`。 TVSDK會透過`DRMManager`類別分派其他DRM事件。
 
 以下示例顯示典型的進度：
 
@@ -221,7 +224,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.DRM,
 }); 
 ```
 
-## 載入器事件 {#section_5638F8EDACCE422A9425187484D39DCC}
+## 載入器事件{#section_5638F8EDACCE422A9425187484D39DCC}
 
 您的播放器可以根據下列事件實作動作：
 
