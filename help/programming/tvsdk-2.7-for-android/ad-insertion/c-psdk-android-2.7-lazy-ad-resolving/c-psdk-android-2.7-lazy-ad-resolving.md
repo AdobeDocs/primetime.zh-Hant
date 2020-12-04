@@ -8,29 +8,29 @@ uuid: cf9ba788-b83f-43aa-94c4-db391d92a77b
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
 
 
-# 概觀 {#lazy-ad-resolving}
+# 概述{#lazy-ad-resolving}
 
 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入」和「延遲廣告解析」功能可以降低此啟動延遲。
 
 * 基本廣告解析與載入程式：
 
-   1. TVSDK會下載資訊清單（播放清單） *並解析* 所有廣告。
-   1. TVSDK *會載入* 所有廣告，並將其置於時間軸上。
+   1. TVSDK會下載資訊清單（播放清單）和&#x200B;*resolves*&#x200B;所有廣告。
+   1. TVSDK *載入*&#x200B;所有廣告，並將其置於時間軸上。
    1. TVSDK會將播放器移至「已準備」狀態，而內容播放便會開始。
 
    播放器使用資訊清單中的URL來取得廣告內容（創作元素），確保廣告內容是TVSDK可播放的格式，而TVSDK會將廣告放在時間軸上。 這個解析和載入廣告的基本程式會造成使用者等待播放其內容時，尤其是資訊清單包含數個廣告URL時，無法接受的長時間延遲。
 
 * *延遲廣告載入*:
 
-   1. TVSDK會下載播放清單 *並解析* 所有廣告。
-   1. TVSDK *載入* pre-roll廣告、將播放器移入PREPARED狀態，然後內容播放開始。
-   1. TVSDK會 *載入* 剩餘的廣告，並在播放時將其放在時間軸上。
+   1. TVSDK會下載播放清單和&#x200B;*resolves*&#x200B;所有廣告。
+   1. TVSDK *載入*&#x200B;前置廣告，將播放器移入PREPARED狀態，然後內容播放開始。
+   1. TVSDK *載入*&#x200B;剩餘的廣告，並在播放時將其放在時間軸上。
 
    這項功能可在載入所有廣告之前，將播放器置於PREPARED狀態，以改善基本程式。
 
@@ -51,12 +51,12 @@ ht-degree: 0%
 
    >
    >    
-   * 玩家必須等待該活動， `kEventAdResolutionComplete` 才能允許搜尋或特技播放。
-   >    * 如果使用者嘗試在廣告仍在解決時執行搜尋或特技播放作業，TVSDK會擲回錯 `kECLazyAdResolutionInProgress` 誤。
-   >    * 如有必要，播放器應在收到事件後 *更新*`kEventAdResolutionComplete` 拖曳列。
+   * 播放器必須等待`kEventAdResolutionComplete`事件，才能允許搜尋或特技播放。
+   >    * 如果使用者嘗試在廣告仍在解決時執行搜尋或特技播放作業，TVSDK會擲回`kECLazyAdResolutionInProgress`錯誤。
+   >    * 如有必要，播放器應在&#x200B;*接收`kEventAdResolutionComplete`事件後更新scrubbar*。
 >
 >* 延遲廣告解析僅適用於VOD。 它無法與即時串流搭配使用。
->* 「懶惰廣告解析」與「立即啟動」 *功能不相容* 。
+>* 懶惰廣告解析與&#x200B;*即時開啟*&#x200B;功能不相容。
 
 >
 >  
