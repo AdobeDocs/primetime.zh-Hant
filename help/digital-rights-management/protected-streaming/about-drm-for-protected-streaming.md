@@ -6,6 +6,9 @@ title: 關於Adobe Primetime DRM Server for Protected Streaming
 uuid: 775bef19-6071-428f-80f5-57cae472753c
 translation-type: tm+mt
 source-git-commit: 68f1318db89cf9422f5969f669c11f3784560db6
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
