@@ -4,11 +4,14 @@ title: 疑難排解
 uuid: db76d6a4-c285-4d86-95a1-4f1a85ed3743
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
 
-# 疑難排解 {#troubleshooting}
+# 疑難排解{#troubleshooting}
 
 以下列出常見的部署問題和解決方案：
 
@@ -19,7 +22,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   請確定密碼是使用提供的類加密 `ScrambleUtil` 的。
+   請確定密碼是使用提供的`ScrambleUtil`類加密的。
 
 * 如果您看到下列錯誤：
 
