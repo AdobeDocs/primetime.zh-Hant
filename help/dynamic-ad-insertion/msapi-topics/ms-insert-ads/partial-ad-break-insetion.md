@@ -6,11 +6,14 @@ title: 部分插入廣告分段
 uuid: a0c1ae34-0f8d-4401-97fe-45a2ea40d08d
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# 部分插入廣告分段 {#partial-ad-break-insertion}
+# 部分廣告插入{#partial-ad-break-insertion}
 
 部分廣告插播(PABI)功能模仿電視的體驗，其中，如果使用者加入中間廣告插播內的即時串流，則會顯示中間廣告，而非前段廣告或板片廣告。
 
@@ -24,13 +27,13 @@ PABI功能指示資訊清單伺服器忽略前段廣告插播，並將EXT-X-STAR
 
 >[!NOTE]
 >
->若要啟用PABI，您必須在引導 [URL中指定query_params](../../msapi-topics/ms-getting-started/ms-api-query-params.md) 。
+>若要啟用PABI，您需要在引導URL中指定[query_params](../../msapi-topics/ms-getting-started/ms-api-query-params.md)。
 
 >[!NOTE]
 >
->[EXT-X-START](https://tools.ietf.org/html/rfc8216#section-4.3.5.2) 是標準HLS標籤，可指出播放清單中的偏好起點。
+>[EXT-X-START](https://tools.ietf.org/html/rfc8216#section-4.3.5.2)是標準HLS標籤，指示播放清單中的首選起點。
 
-## 建議 {#section_4CF0733B14504F2A99690310B9F3B130}
+## 建議{#section_4CF0733B14504F2A99690310B9F3B130}
 
 * 使用用戶端追蹤，因為用戶端對追蹤信標的觸發有更多的控制權。
 * 如果播放器支援EXT-X-START，則部分廣告插播應僅用於伺服器端追蹤模式。
