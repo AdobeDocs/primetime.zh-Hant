@@ -6,6 +6,9 @@ title: 訂閱自訂廣告標籤
 uuid: 208f61f4-dc33-4363-aa71-878458740a8d
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 瀏覽器TVSDK會在每次在媒體簡報描述(MPD)檔案中遇到這些物件時，為訂閱的標籤準備TimedMetadata物件。
 
 您必須先訂閱標籤，才能開始播放。
-若要訂閱標籤，請將包含自訂標籤名稱的向量設定為屬 `subscribedTags` 性。 如果您還需要變更預設業務機會產生器所使用的廣告標籤，請將包含自訂廣告標籤名稱的向量設定為屬 `adTags` 性。
+若要訂閱標籤，請將包含自訂標籤名稱的向量設定為`subscribedTags`屬性。 如果您還需要更改預設業務機會生成器使用的廣告標籤，請將包含自定義廣告標籤名稱的向量設定為`adTags`屬性。
 
 若要訂閱自訂標籤：
 
@@ -35,14 +38,14 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
    >[!IMPORTANT]
    >
-   >如果您正在處理HLS流，請記得包含前 `#` 綴。
+   >如果您正在處理HLS流，請記得包含`#`前置詞。
 
    ```js
    subscribeTags.push("urn:mpeg:dash:event:2012"); 
    subscribeTags.push("urn:com:adobe:dpi:simple:2015"); 
    ```
 
-1. 將更新的向量指派給 `mediaPlayerItemConfig.subscribeTags` 屬性。
+1. 將更新的向量指派至`mediaPlayerItemConfig.subscribeTags`屬性。
 
    ```js
    mediaPlayerItemConfig.subscribeTags = subscribeTags;
@@ -60,7 +63,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    adTags.push("urn:com:adobe:dpi:simple:2015");
    ```
 
-1. 將更新的向量指派給 `mediaPlayerItemConfig.adTags` 屬性。
+1. 將更新的向量指派至`mediaPlayerItemConfig.adTags`屬性。
 
    ```js
    mediaPlayerItemConfig.adTags = adTags;
