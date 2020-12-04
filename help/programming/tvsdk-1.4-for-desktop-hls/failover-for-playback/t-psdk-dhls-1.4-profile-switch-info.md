@@ -6,22 +6,26 @@ title: 取得設定檔切換的相關資訊
 uuid: e26ad9fb-6c54-450e-ab62-784d9033d214
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 0%
 
 ---
 
 
-# 取得設定檔切換的相關資訊{#get-information-about-profile-switch}
+# 獲取有關配置式交換機的資訊{#get-information-about-profile-switch}
 
 當媒體播放器將其當前配置式切換到新配置式時，您可以檢索有關交換機的資訊，包括交換機何時切換、寬度和高度資訊，或使用不同位速率的原因。
 
-1. 聽聽活 `ProfileEvent.PROFILE_CHANGED` 動。
+1. 監聽`ProfileEvent.PROFILE_CHANGED`事件。
 
    當TVSDK媒體播放器的可調式位元速率切換演算法因網路或機器狀況而切換至其他描述檔時，就會調度此事件。 （當位元速率或句點變更時）。
 1. 發生事件時，請查看以下屬性以獲得有關交換機的資訊：
 
    * `profile`:使用之新描述檔的識別碼。
    * `time`:發生切換的流時間。
-   * `description`:位元速率變更原因的文字說明，以分號分隔的鍵／值配對字串。 最多包含1 `Reason` 和1 `Bitrate`。 如果資訊不可用或位元速率未變更，則此字串為空。
+   * `description`:位元速率變更原因的文字說明，以分號分隔的鍵／值配對字串。最多包含一個`Reason`和一個`Bitrate`。 如果資訊不可用或位元速率未變更，則此字串為空。
+
    <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
     <thead> 
       <tr> 
@@ -31,7 +35,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
     </thead>
     <tbody> 
       <tr> 
-      <td colname="col1"> <span class="codeph"> 原因 </span> </td> 
+      <td colname="col1"> <span class="codeph"> 原因  </span> </td> 
       <td colname="col2"> 
        <ul id="ul_37DDE3F297634ED6B47DF5D73F969369"> 
        <li id="li_E374B029E1AF40689D70A9D30E057C5B">網路適應 </li> 
@@ -41,7 +45,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
        </ul> </td> 
       </tr> 
       <tr> 
-      <td colname="col1"> <span class="codeph"> 位元速率 </span> </td> 
+      <td colname="col1"> <span class="codeph"> 位元速率  </span> </td> 
       <td colname="col2"> 
        <ul id="ul_1B49BD90A91147359712E1AFD8877E23"> 
        <li id="li_1C8E593C65D34742B14A8D0EAD43E0A9"> <span class="codeph"> 向上 </span>:位元速率增加 </li> 
@@ -64,7 +68,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
     
     >[!NOTE]
     >
-    >寬度和高度資料只有包含在M3U8資訊清單的「RESOLUTION」標籤中時才可用。 如果M3U8中未包含這些資訊，則寬度和高度屬性會設為0，因為這些屬性不屬於描述檔資訊。
+    >寬度和高度資料只有包含在M3U8資訊清單的「RESOLUTION」標籤中時才可用。如果M3U8中未包含該資訊，則寬度和高度屬性將設定為0，因為它們不是配置檔案資訊的一部分。
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 
