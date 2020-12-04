@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 播放受保護內容所需的裝置功能 {#device-capabilities-required-to-play-protected-content}
+# 播放受保護內容{#device-capabilities-required-to-play-protected-content}所需的裝置功能
 
 指定存取內容所需的硬體功能。 使用移植套件的裝置可取得硬體功能的相關資訊。
 
@@ -42,5 +42,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此使用規則受Adobe Access用戶端2.0.2版及更新版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱「 [最低客戶端版本](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)」。
+>此使用規則受Adobe Access用戶端2.0.2版及更新版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱[最低客戶端版本](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)。
 
