@@ -4,11 +4,14 @@ title: Adobe Access SDK概觀
 uuid: a77b0427-a7ec-4d55-a887-d7210b5a15a5
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Access SDK概觀 {#an-overview-of-adobe-access-sdk}
+# Adobe Access SDK {#an-overview-of-adobe-access-sdk}概觀
 
 Adobe® Access™ SDK是數位版權管理平台，可保護並安全地提供視訊和音訊內容，以便在個人電腦等消費性裝置上播放。 Adobe Access是一個有彈性的平台，可讓內容擁有者保護其內容，並維持對散發的控制。 內容擁有者可針對每個數位媒體檔案建立授權，以保護並管理其權利，確保消費者可使用各種最高品質的內容。
 
