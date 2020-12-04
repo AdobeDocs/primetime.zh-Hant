@@ -6,11 +6,14 @@ title: VOD廣告解析與插入
 uuid: 33280792-ad08-41c1-b180-cc2159e8137c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
 
-# VOD廣告解析與插入{#vod-ad-resolving-and-insertion}
+# VOD廣告解析和插入{#vod-ad-resolving-and-insertion}
 
 對於隨選視訊(VOD)內容，TVSDK會在主要內容中剪接廣告，以增加時間軸持續時間。
 
