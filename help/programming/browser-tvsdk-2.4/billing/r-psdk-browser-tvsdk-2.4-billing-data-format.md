@@ -6,6 +6,9 @@ title: 傳輸帳單量度
 uuid: ed2638d2-7894-4840-b31a-51e48e0a3f49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
@@ -40,4 +43,4 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 </request>
 ```
 
-布爾屬 `drmProtected`性、 `adsEnabled`和 `midrollEnabled` 僅當其為true時才顯示。
+布爾屬性`drmProtected`、`adsEnabled`和`midrollEnabled`只有在屬性為true時才會顯示。
