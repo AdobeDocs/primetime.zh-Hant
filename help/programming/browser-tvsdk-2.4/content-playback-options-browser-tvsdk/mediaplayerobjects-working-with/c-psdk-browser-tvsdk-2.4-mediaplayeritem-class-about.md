@@ -6,6 +6,9 @@ title: 關於MediaPlayerItem類
 uuid: 5226d3ad-2438-44fe-a8ef-bcc0da8331b8
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '161'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 成功載入MediaResource後，瀏覽器TVSDK會建立MediaPlayerItem類別的例項，以提供該資源的存取權。
 
-該 `MediaResource` 表示應用層向實例發出的載入內容的 `MediaPlayer` 請求。
+`MediaResource`代表應用層向`MediaPlayer`實例發出的用於載入內容的請求。
 
-解 `MediaPlayer` 析媒體資源、載入相關資訊清單檔案，並解析資訊清單。 這是資源載入過程的非同步部分。 實 `MediaPlayerItem` 例是在資源解析後生成的，此實例是的已解析版本 `MediaResource`。 瀏覽器TVSDK可讓您透過存取新建 `MediaPlayerItem` 的例項 `MediaPlayer.CurrentItem`。
+`MediaPlayer`會解析媒體資源、載入相關資訊清單檔案，並解析資訊清單。 這是資源載入過程的非同步部分。 `MediaPlayerItem`實例是在資源解析後生成的，此實例是`MediaResource`的已解析版本。 瀏覽器TVSDK可讓您透過`MediaPlayer.CurrentItem`存取新建立的`MediaPlayerItem`例項。
 
 >[!TIP]
 >
