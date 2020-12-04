@@ -20,7 +20,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果在同一Tomcat實例中運行多個Web應用 `jsafe.dll` 程式並且路徑上有，則只有載入的第一個Web應用程式能夠載入庫 `jsafe.dll` 。 因此，只有第一個Web應用程式才能享有原生支援的優點。 在這種情況下，為了改善所有Web應用程式的效能，請 `cryptoj.jar`置於WAR檔案之外。 例如，在目錄 `<tomcat_installation_folder>/lib` 中。
+   >如果在同一個Tomcat實例中運行多個Web應用程式並且路徑上具有`jsafe.dll` ，則只有載入的第一個Web應用程式能夠載入`jsafe.dll`庫。 因此，只有第一個Web應用程式才能享有原生支援的優點。 在這種情況下，要提高所有Web應用程式的效能，請將`cryptoj.jar`置於WAR檔案之外。 例如，在`<tomcat_installation_folder>/lib`目錄中。
 
 * 64位元作業系統（例如64位元版本的Red Hat®或Windows）可提供比32位元作業系統更佳的效能。
 
