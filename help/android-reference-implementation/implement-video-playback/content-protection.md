@@ -6,11 +6,14 @@ title: DRM內容保護
 uuid: 95c446f6-8304-4d70-9bef-7368b9364025
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
-# DRM內容保護 {#drm-content-protection}
+# DRM內容保護{#drm-content-protection}
 
 Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表示您的應用程式必須在播放串流之前，先實作DRM驗證工作流程。
 
@@ -22,7 +25,7 @@ Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表
 
 所有受DRM保護的內容都會由TVSDK內建的DRM程式庫自動處理。 不過，您可以使用TVSDK API回呼來公開錯誤處理、裝置個人化最佳化和授權取得。
 
-## 為播放器新增內容保護 {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
+## 將內容保護新增至播放器{#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
 
 您可以建立播放管理員或使用管理員工廠，為播放器新增內容保護。
 
@@ -30,7 +33,7 @@ Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表
 
 * 初始化DRM系統。
 
-   下面的代碼示例顯示在應 `loadDRMServices` 用程式功 `onCreate()` 能中的調用，以確保在播放開始之前啟動DRM系統所需的任何初始化。
+   下面的代碼示例顯示在應用程式`onCreate()`函式中調用`loadDRMServices`，以確保在播放開始之前啟動DRM系統所需的任何初始化。
 
    ```java
    @Override 
@@ -42,7 +45,7 @@ Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表
 
 * 預先載入DRM授權。
 
-   下列程式碼範例顯示內容清 `VideoItems` 單載入完成時的載入。 這會導致從授權伺服器取得DRM授權並在本機快取，如此當播放開始時，內容會以最小延遲載入。
+   下列程式碼範例顯示內容清單載入完成時載入`VideoItems`。 這會導致從授權伺服器取得DRM授權並在本機快取，如此當播放開始時，內容會以最小延遲載入。
 
    ```java
    DrmManager.preLoadDrmLicenses(item.getUrl(),  
@@ -66,7 +69,7 @@ Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表
    >
    >![](assets/precache-drm-licenses.jpg)
 
-* 若要用 `ManagerFactory` 於實作DRM錯誤處理，請確定檔案中有下列程式碼 [!DNL PlayerFragment.java] 行：
+* 要使用`ManagerFactory`實施DRM錯誤處理，請確保在[!DNL PlayerFragment.java]檔案中包含以下代碼行：
 
    ```java
    drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
