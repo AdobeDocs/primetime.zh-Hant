@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 防火牆規則 {#firewall-rules}
+# 防火牆規則{#firewall-rules}
 
 在確定防火牆規則時，請考慮下列類型的URL:
 
