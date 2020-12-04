@@ -6,11 +6,14 @@ title: 時間軸課程
 uuid: effb7308-f581-4bc2-808d-7f7ccb121a3a
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '100'
+ht-degree: 0%
 
 ---
 
 
-# 時間軸課程 {#timeline-classes}
+# 時間軸類{#timeline-classes}
 
 這些類別提供特定媒體時間軸的相關資訊，包括廣告的放置。
 
