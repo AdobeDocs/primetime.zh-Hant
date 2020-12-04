@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 加密指令碼資料 {#encrypting-script-data}
+# 加密指令碼資料{#encrypting-script-data}
 
 此封裝選項指定是否加密內嵌在內容中的指令碼資料。
 
