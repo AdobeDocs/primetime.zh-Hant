@@ -6,13 +6,16 @@ title: 遠端金鑰傳送屬性(iOS)
 uuid: 17e1b756-d106-47a7-99ae-641190693870
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 0%
 
 ---
 
 
 # 遠端金鑰傳送屬性(iOS){#remote-key-delivery-properties-ios}
 
-若要支援在Adobe Primetime DRM中為iOS用戶端產生遠端金鑰傳送的授權，您必須在檔案中指定金鑰伺服器 `flashaccess-refimpl.properties` 憑證。
+若要支援在Adobe Primetime DRM中為iOS用戶端產生遠端金鑰傳送的授權，您必須在`flashaccess-refimpl.properties`檔案中指定金鑰伺服器憑證。
 
 Primetime DRM中已新增下列屬性：
 
@@ -30,7 +33,7 @@ Primetime DRM中已新增下列屬性：
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration。\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>儲存在HSM上的Key Server Adobe核發之License Server憑證的別名。 </p> <p>啟用HSM時，可以應用此屬性，而不應 <span class="codeph"> 用HandlerConfiguration.KeyServerCertificate屬性</span> 。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>儲存在HSM上的Key Server Adobe核發之License Server憑證的別名。 </p> <p>啟用HSM時，可以應用此屬性，而不應用<span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>屬性。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
