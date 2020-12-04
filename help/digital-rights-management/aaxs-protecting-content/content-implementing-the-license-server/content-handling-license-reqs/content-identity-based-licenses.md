@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 身分型授權 {#identity-based-licenses}
+# 身分型授權{#identity-based-licenses}
 
-如果使用以身分為基礎的授權，伺服器會先檢查有效的驗證Token，再核發授權。 如需處 [理驗證Token的詳細資訊](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) ，請參閱使用者驗證。
+如果使用以身分為基礎的授權，伺服器會先檢查有效的驗證Token，再核發授權。 如需處理驗證Token的詳細資訊，請參閱[使用者驗證](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)。
 
 >[!NOTE]
 >
