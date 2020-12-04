@@ -6,6 +6,9 @@ title: 封鎖API元素
 uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -18,15 +21,15 @@ TVSDK提供在實作封鎖期（包括方法、中繼資料和通知）時有用
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` 將當前載入的資源另存為背景資源。 如果 `replaceCurrentResource` 在此方法後呼叫，TVSDK會持續下載背景項目的資訊清單，直到您呼叫 `unregisterCurrentBackgroundItem`。
+   * `registerCurrentItemAsBackgroundItem` 將當前載入的資源另存為背景資源。如果在此方法後呼叫`replaceCurrentResource`,TVSDK會繼續下載背景項目的資訊清單，直到您呼叫`unregisterCurrentBackgroundItem`為止。
 
    * `unregisterCurrentBackgroundItem`  清除目前設定的背景資源，並停止擷取和剖析背景資訊清單。
 
-* **BlackoutMetadata** —特定於封鎖的元資料類型。
+* **** BlackoutMetadataA特定於封鎖的元資料類型。
 
-   這可讓您在TVSDK上設定不可見的範圍( `TimeRange` 稱為其 `nonseekableRange`他屬性)。 TVSDK會在使用者每次搜尋時檢查這些範圍(所需的搜尋位 `nonseekableRange`置是否在a內)。 如果已設定，且使用者搜尋至不可檢視的範圍，TVSDK會強制檢視器至終止時間 `seekableRange`。
+   這可讓您在TVSDK上設定不可見的範圍（稱為`nonseekableRange`的其他`TimeRange`屬性）。 TVSDK會在使用者每次搜尋時檢查這些範圍（所需的搜尋位置是否落在`nonseekableRange`內）。 如果已設定，且使用者搜尋至不可見的範圍，TVSDK會強制檢視器至`seekableRange`的結束時間。
 
-* **START HERE NEXT** **DefaultMetadataKeys** 透過設定為true或false，在即時串流上啟用或停 `ENABLE_LIVE_PREROLL` 用前置鏡頭。 若為false,TVSDK在內容播放前不會明確呼叫前段廣告的廣告伺服器，因此不會播放前段廣告。 這對中間輥沒有影響。 預設值為true。
+* **START HERE** **** NEXTDefaultMetadataKeys透過設定為true或false，在即時串流上啟用或停 `ENABLE_LIVE_PREROLL` 用前置鏡頭。若為false,TVSDK在內容播放前不會明確呼叫前段廣告的廣告伺服器，因此不會播放前段廣告。 這對中間輥沒有影響。 預設值為true。
 
 * **TimedMetadataEvent**
 
