@@ -6,17 +6,20 @@ title: 特殊使用案例
 uuid: 066bc256-4fdf-4083-b23e-0a916b3b532f
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
 # 特殊使用案例{#special-use-cases}
 
-TVSDK偏好自訂範圍設定，而非標準廣告設定。 例如，如果已定義MARK範圍，則會忽略廣告的插入設定。 如果已定義REPLACE範圍，TVSDK會自動使用信 `CustomRanges` 令模式。
+TVSDK偏好自訂範圍設定，而非標準廣告設定。 例如，如果已定義MARK範圍，則會忽略廣告的插入設定。 如果已定義REPLACE範圍，TVSDK會自動使用`CustomRanges`信令模式。
 
 1. `ReplaceRange` 無需更換持續時間
 
-   如果缺少更換持續時間，則實際更換持續時間由伺服器確定。 此處放置的廣告數 `AdBreak` 量也由伺服器決定。
+   如果缺少更換持續時間，則實際更換持續時間由伺服器確定。 此`AdBreak`中的廣告數量也由伺服器決定。
 
    ```
    {
