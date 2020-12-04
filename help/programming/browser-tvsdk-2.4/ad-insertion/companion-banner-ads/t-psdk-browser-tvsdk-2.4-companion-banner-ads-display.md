@@ -6,15 +6,18 @@ title: 顯示橫幅廣告
 uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
 
-# 顯示橫幅廣告 {#display-banner-ads}
+# 顯示橫幅廣告{#display-banner-ads}
 
 若要顯示橫幅廣告，您必須建立橫幅例項，並允許瀏覽器TVSDK監聽廣告相關事件。
 
-瀏覽器TVSDK提供與事件中的線性廣告相關的配套橫幅廣告清 `AdobePSDK.PSDKEventType.AD_STARTED` 單。
+瀏覽器TVSDK會提供與透過`AdobePSDK.PSDKEventType.AD_STARTED`事件的線性廣告相關的配套橫幅廣告清單。
 
 清單可透過下列方式指定配套橫幅廣告：
 
@@ -24,16 +27,16 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 對於每個配套廣告，瀏覽器TVSDK會指出您的應用程式有哪些類型。
 
-為執行下列操作的事 `AdobePSDK.PSDKEventType.AD_STARTED` 件添加偵聽器：
+為`AdobePSDK.PSDKEventType.AD_STARTED`事件添加偵聽程式，該事件執行以下操作：
 1. 清除橫幅例項中的現有廣告。
-1. 從中取得配套廣告清單 `Ad.getCompanionAssets`。
+1. 從`Ad.getCompanionAssets`取得配套廣告清單。
 1. 如果配套廣告清單不是空的，請在橫幅例項清單上重複。
 
-   每個橫幅實例( `AdBannerAsset`an)都包含寬度、高度、資源類型（html、iframe或靜態），以及顯示配套橫幅所需的資料。
+   每個橫幅實例(`AdBannerAsset`)都包含寬度、高度、資源類型（html、iframe或靜態），以及顯示配套橫幅所需的資料。
 1. 如果視訊廣告沒有隨附的配套廣告，則配套資產清單中不會包含該視訊廣告的資料。
 1. 將橫幅資訊傳送至頁面上顯示適當位置橫幅的函式。
 
-   這通常是 `div`，您的函式會使 `div ID` 用來顯示橫幅。 例如：
+   這通常是`div`，而您的函式使用`div ID`來顯示橫幅。 例如：
 
    添加事件偵聽器：
 
