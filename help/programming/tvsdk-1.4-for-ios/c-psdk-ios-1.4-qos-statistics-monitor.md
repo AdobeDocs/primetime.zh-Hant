@@ -6,19 +6,22 @@ title: 服務質量統計
 uuid: b74cbc94-1d69-4b4b-b969-d0e985b4762b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# 服務質量統計{#quality-of-service-statistics}
+# 服務質量統計資料{#quality-of-service-statistics}
 
 服務品質(QoS)提供視訊引擎執行情形的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
 
-## 讀取QOS播放、緩衝和設備統計資訊 {#section_9996406E2D814FA382B77E3041CB02BC}
+## 讀取QOS回放、緩衝和設備統計資訊{#section_9996406E2D814FA382B77E3041CB02BC}
 
-您可以從類別中讀取播放、緩衝和裝置統計 `PTQOSProvider` 資料。
+您可以從`PTQOSProvider`類別讀取播放、緩衝和裝置統計資料。
 
-該類 `PTQOSProvider` 別提供各種統計資料，包括緩衝、位元速率、影格速率、時間資料等資訊。
+`PTQOSProvider`類別提供各種統計資料，包括緩衝、位元速率、影格速率、時間資料等資訊。
 
 它也提供有關裝置的資訊，例如機型、作業系統和製造商的裝置ID。
 
@@ -27,9 +30,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 >您無法變更播放緩衝區大小，但可以監視緩衝區大小的狀態，以便進行調試或分析。 `PTPlaybackInformation` 包含和等 `playbackBufferFull` 屬性 `playbackLikelyToKeepUp`。
 
 1. 實例化媒體播放器。
-1. 建立物 `PTQOSProvider` 件並附加至媒體播放器。
+1. 建立`PTQOSProvider`物件，並將它附加至媒體播放器。
 
-   建構 `PTQOSProvider` 函式會擷取播放器內容，以便擷取裝置特定的資訊。
+   `PTQOSProvider`建構函式會擷取播放器內容，以便擷取裝置特定資訊。
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
@@ -37,7 +40,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 1. （可選）閱讀播放統計資料。
 
-   讀取播放統計資訊的一個解決方案是具有定時器， `NSTimer`例如定期從中讀取新QoS值的計時器 `PTQOSProvider`。 例如：
+   讀取播放統計資訊的一個解決方案是具有一個計時器，如從`PTQOSProvider`週期性地讀取新QoS值的`NSTimer`。 例如：
 
    ```
    - (void)printPlaybackInfoLog { 
