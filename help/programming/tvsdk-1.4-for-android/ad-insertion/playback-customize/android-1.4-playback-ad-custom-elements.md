@@ -6,11 +6,14 @@ title: 廣告播放的API元素
 uuid: 6d0ab181-9c50-431f-97bf-32e6684a7df1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
 
-# 廣告播放的API元素 {#api-elements-for-ad-playback}
+# 廣告播放{#api-elements-for-ad-playback}的API元素
 
 TVSDK提供您可用來自訂包含廣告之內容的播放行為的類別和方法。
 
@@ -26,7 +29,7 @@ TVSDK提供您可用來自訂包含廣告之內容的播放行為的類別和方
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
-   <td colname="col2">控制廣告插播是否應標示為已被檢視者觀看，如果是，應於何時標籤。 使用setAdBreakAsWatched和getAdBreakAsWatched來設 <span class="codeph"> 定並取得</span> 監看原則 <span class="codeph"></span>。 </td> 
+   <td colname="col2">控制廣告插播是否應標示為已被檢視者觀看，如果是，應於何時標籤。 使用<span class="codeph"> setAdBreakAsWatched</span>和<span class="codeph"> getAdBreakAsWatched</span>來設定並取得監看原則。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreakPolicy</span> </td> 
@@ -51,11 +54,11 @@ TVSDK提供您可用來自訂包含廣告之內容的播放行為的類別和方
      <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span>。 <p>這是播放的本機時間，排除已置入的廣告插播。 </p> </li> 
      <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> seekToLocal</span>。 <p>在此，搜索相對於流中的本地時間發生。 </p> </li> 
      <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>。 <p>時間軸上的虛擬位置會轉換為本機位置。 </p> </li> 
-    </ul> <p>重要： <span class="codeph"> getLocal</span> Time <span class="codeph"></span> 在MediaPlayer中傳回與原始內容相關的目前時間，而不會動態拼接廣告。 <span class="codeph"> AdBreak中的getLocal</span> Time <span class="codeph"></span> 會傳回與原始內容相對的中斷開始時間。 </p> </td> 
+    </ul> <p>重要： <span class="codeph">在<span class="codeph"> MediaPlayer</span>中的getLocalTime</span>會傳回目前相對於原始內容的時間，而不會動態拼接廣告。 <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreak傳回中斷相對於原始內容的開始時間。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreak</span> </td> 
-   <td colname="col2"><span class="codeph"> isWatched屬性</span> 。 指出檢視者是否已觀看廣告。 </td> 
+   <td colname="col2"><span class="codeph"> </span> isWatchedproperty。指出檢視者是否已觀看廣告。 </td> 
   </tr> 
  </tbody> 
 </table>
