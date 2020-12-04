@@ -6,6 +6,9 @@ title: 檢查播放時間軸
 uuid: 2f903493-2d88-4af2-ac71-36300b49735b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. 使用方 `Timeline` 法訪問 `MediaPlayer` 中的對 `get` 像。
+1. 使用`get`方法訪問`MediaPlayer`中的`Timeline`對象。
 
-   類 `Timeline` 封裝了與時間軸內容相關的資訊，該時間軸內容與實例當前載入的媒體項相關 `MediaPlayer` 聯。 該 `Timeline` 類可訪問基礎時間軸的只讀視圖。 類提 `Timeline` 供了獲取所有已放置對象的getter `TimelineMarker` 方法。
+   `Timeline`類封裝了與`MediaPlayer`實例當前載入的媒體項相關聯的時間軸內容相關的資訊。 `Timeline`類提供對基礎時間軸的只讀視圖的訪問。 `Timeline`類提供了獲取所有已放置`TimelineMarker`對象的getter方法。
 
-1. 逐步瀏覽清單， `TimelineMarkers` 並使用傳回的資訊來實作時間軸。
+1. 重複`TimelineMarkers`清單，並使用傳回的資訊來實作時間軸。
 
        「TimelineMarker」物件包含兩項資訊：
    
