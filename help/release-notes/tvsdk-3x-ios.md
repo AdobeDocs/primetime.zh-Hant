@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# iOS版TVSDK 3.12發行說明 {#tvsdk-for-ios-release-notes}
+# iOS版本注意事項TVSDK 3.12 {#tvsdk-for-ios-release-notes}
 
 iOS版本注意事項的TVSDK 3.12說明TVSDK iOS 3.12中有哪些新增或變更、已解決和已知問題以及裝置問題。
 
-## 系統與軟體需求 {#system-software-requirements}
+## 系統和軟體要求{#system-software-requirements}
 
 在下載iOS 3.12之前，請確定您的硬體、作業系統和應用程式版本符合下列需求：
 
@@ -24,17 +24,17 @@ iOS版本注意事項的TVSDK 3.12說明TVSDK iOS 3.12中有哪些新增或變�
 
 已修正即時串流在播放15分鐘後失敗的問題。
 
-如需目前版本的修正，請參 [閱修正的客戶問題](#resolved-issues) ，而如需限制，請參閱 [已知問題和限制一節](#known-issues-and-limitations) 。
+如需目前版本的修正，請參閱[customer issues fixed](#resolved-issues)，而有關限制，請參閱[已知問題和限制](#known-issues-and-limitations)一節。
 
-### 舊版的新功能和修正 {#whats-new-previous}
+### 舊版{#whats-new-previous}中的新功能和修正
 
 **iOS TVSDK 3.11**
 
-針對造成應用程式當機的客 `isFallbackOnInvalidCreativeEnabled` 戶問題 `customParams` 提供修正。
+針對`isFallbackOnInvalidCreativeEnabled`和方法`customParams`導致應用程式當機的客戶問題提供修正。
 
 **iOS TVSDK 3.10**
 
-* 修正當網路無法使用時，TVSDK播放 `PTMediaPlayerStatusError` 器無法觸發通知的問題。
+* 修正當網路無法使用時，TVSDK播放器無法觸發`PTMediaPlayerStatusError`通知的問題。
 
 **iOS TVSDK 3.9**
 
@@ -66,7 +66,7 @@ wastXML屬性未正確設定，傳回nil值。
 
 *設定您的應用程式，以便在進入背景時繼續播放音訊。*
 
-若要啟用此功能，我們必須設定PTMediaPlayer `audioPlaybackInBackground` 類別中新增的新API。 啟用此API後，您的應用程式就可以播放背景音訊。
+若要啟用此功能，我們必須設定PTMediaPlayer類別中新增的新API `audioPlaybackInBackground`。 啟用此API後，您的應用程式就可以播放背景音訊。
 
 **iOS TVSDK 3.4.0.19（修補程式）**
 
@@ -76,11 +76,11 @@ wastXML屬性未正確設定，傳回nil值。
 
 **廣告解析度逾時**
 
-* 使用TVSDK 3.4，使用者現在可以設定整體廣告解析度和資訊清單下載的逾時值。 如果在指定的逾時內，有些廣告無法解決，TVSDK將會播放剩餘的廣告。
+* 使用TVSDK 3.4，使用者現在可以設定整體廣告解析度和資訊清單下載的逾時值。 如果在指定的逾時內，有些廣告不會    已解決，TVSDK將播放剩餘的廣告。
 
 * PTAdMetadata:adRequestTimeout API已過時，將會移除。 預設值已設為35秒。
 
-* 在PTAdMetadataClass中引入了兩個新的替代API:adResolutionTimeout —— 整體廣告解析度呼叫adManifestTimeout的逾時——廣告資訊清單下載的逾時。
+* 在PTAdMetadataClass中引入了兩個新的替代API:adResolutionTimeout —— 整體廣告解析度呼叫的逾時                adManifestTimeout —— 廣告資訊清單下載的逾時。
 
 **收入最佳化**
 
@@ -104,9 +104,11 @@ TVSDK 3.3現在符合iOS 11 SDK的規範。 所有已過時的API都已取代為
 
 **第3.1版**
 
-* **其他記錄支援**&#x200B;新增在廣告播放失敗時對說明性通知的支援。
+* **其他記錄**
+支援新增在廣告播放失敗時對說明性通知的支援。
 
-* **新增Fairplay Encrypted CMAF串流支援** Fairplay Encrypted CMAF串流及AVC codec播放現已受支援。
+* **新增Fairplay加密的CMAF串流支**
+援Fairplay Encrypted的CMAF串流與AVC codec播放現在受支援。
 
 **3.0.1版**
 
@@ -118,13 +120,13 @@ TVSDK 3.3現在符合iOS 11 SDK的規範。 所有已過時的API都已取代為
 
 * 及時解決——解析更接近廣告標籤的廣告。
 
-已新增 `enableDelayAdLoading` 應用程式層級介面上的布林類型屬性，以啟用JIT。 如 `enableDelayAdLoading` 果為NO，則 `setadMetadata.delayAdLoading`為True（屬性PTAdMetadata介面）。
+新增「應用程式層級」介面上布林類型的`enableDelayAdLoading`屬性，以啟用JIT。 如果`enableDelayAdLoading`為NO，則`setadMetadata.delayAdLoading`將&lt;a1/>轉換為True（PTAdMetadata介面的屬性）。
 
-啟用此屬性後，TVSDK會根據定義的容差值，先解決每個廣告插播。 預設為 `delayAdTolerance` 5秒。
+啟用此屬性後，TVSDK會根據定義的容差值，先解決每個廣告插播。 根據預設，`delayAdTolerance`設定為5秒。
 
 **1.4.45版**
 
-為符合Xcode10,TVSDK已從「`libstdc++`」改`libc++`為「」，因此支援的最低版本為iOS 7。 之前是iOS 6。
+為符合Xcode10,TVSDK已從「`libstdc++`」移至「`libc++`」，因此支援的最低版本為iOS 7。 之前是iOS 6。
 
 **1.4.44版**
 
@@ -143,15 +145,15 @@ TVSDK 3.3現在符合iOS 11 SDK的規範。 所有已過時的API都已取代為
 
 **1.4.42版**
 
-此版本未新增任何新功能。 如需已修正問題的清單，請參閱「已 [解決問題」](#resolved-issues)。
+此版本未新增任何新功能。 有關已修復的問題清單，請參見[已解決的問題](#resolved-issues)。
 
 **1.4.41版**
 
 API變更：
 
-* **isSecure**:推出新的isSecure API，以保護播放器不會錄制和擲出錯誤。 預設值為true。
+* **isSecure**:推出新的isSecure API，以保護播放器不會錄制和擲出錯誤。預設值為true。
 
-* **allowExternalRecording**:引入新的API，允許對安全內容進行空中鏡像。 Airplay鏡像視為記錄，因 `allowExternalRecording` 此必須將值設定為 `True`，以允許airplay鏡像或設定為 `False` 停止airplay鏡像以保護內容。 依預設 `value` 為true。
+* **allowExternalRecording**:引入新的API，允許對安全內容進行空中鏡像。Airplay鏡像視為記錄，因此`allowExternalRecording`值必須設定為`True` ，以允許airplay鏡像或設定為`False` ，以停止airplay鏡像以保護內容。 依預設，`value`為true。
 
 **1.4.40版**
 
@@ -161,33 +163,33 @@ API變更：
 
 * iOS TVSDK已取得VHL 2.0.1認證，而VHL 2.0.1已取得Nielsen認證。
 
-* iOS TVSDK已更新，以從新的Akamai主機發出CRS請求 `primetime-a.akamaihd.net`。
+* iOS TVSDK已更新，以從新的Akamai主機`primetime-a.akamaihd.net`發出CRS請求。
 
 * 新的主機名稱設定提供CRS資產傳送，可透過HTTP和HTTPS(SSL)進行更大規模的傳送。
 
 **1.4.36版**
 
-在iOS TVSDK中整合及認證VHL 2.0:降低API的復 `VideoHeartbeatsLibrary` 雜性，以降低實作障礙。
+在iOS TVSDK中整合及認證VHL 2.0:透過降低API的複雜性，降低`VideoHeartbeatsLibrary`實作中的障礙。
 
 **1.4.34版**
 
 **網路廣告資訊**
 
-TVSDK API現在提供協力廠商VAST回應的其他資訊。 廣告ID、廣告系統和廣告延伸模組都提供在類別中， `PTNetworkAdInfo` 可透過廣告資 `networkAdInfo` 產的屬性存取。 此資訊可用於與其他廣告分析平台(例如 **Moat Analytics)整合**。
+TVSDK API現在提供協力廠商VAST回應的其他資訊。 廣告ID、廣告系統和廣告延伸模組提供於`PTNetworkAdInfo`類別中，可透過廣告資產的`networkAdInfo`屬性存取。 此資訊可用於與其他廣告分析平台整合，例如&#x200B;**Moat Analytics**。
 
 **1.4.31版**
 
-* **帳單量度** ：為迎合只想支付使用費用而非固定費率的客戶，Adobe會收集使用量度，並使用這些量度來判斷向客戶收取的費用。
+* **帳單** 量度為了容納只想支付所使用費用（而非固定費率，不論實際使用情形）的客戶，Adobe會收集使用量度，並使用這些量度來判斷向客戶收取的費用。
 
    每當TVSDK產生串流開始事件時，播放器就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段（稱為計費持續時間）可能不同。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
 
-* **CRS Ads TVSDK的多CDN支援** ，現在支援CRS廣告的多CDN。 透過提供CRS廣告的FTP詳細資訊，您可以指定CDN位置，而非預設的Adobe擁有的CDN位置，例如Akamai。
+* **CRS** AdsTVSDK的多CDN支援現在支援CRS廣告的多CDN。透過提供CRS廣告的FTP詳細資訊，您可以指定CDN位置，而非預設的Adobe擁有的CDN位置，例如Akamai。
 
 **1.4.29版**
 
-在類 `PTSDKConfig` 別中，已新增forceHTTPS API。
+在`PTSDKConfig`類別中，已新增forceHTTPS API。
 
-此類 `PTSDKConfig` 別提供對Adobe Primetime廣告決策、DRM和視訊分析伺服器提出要求時強制執行SSL的方法。 如需詳細資訊，請參 `forceHTTPS` 閱此類 `isForcingHTTPS` 別的和方法。 如果透過HTTPS載入資訊清單，TVSDK會保留HTTPS的內容使用，並在從資訊清單載入任何相關URL時會尊重此使用方式。
+`PTSDKConfig`類別提供對Adobe Primetime廣告決策、DRM和視訊分析伺服器提出的要求執行SSL的方法。 如需詳細資訊，請參閱此類別的`forceHTTPS`和`isForcingHTTPS`方法。 如果透過HTTPS載入資訊清單，TVSDK會保留HTTPS的內容使用，並在從資訊清單載入任何相關URL時會尊重此使用方式。
 
 >[!NOTE]
 >
@@ -262,8 +264,8 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 * **視訊心率程式庫(VHL)更新至1.4.1.1版**
 
    * 新增使用Adobe Analytics Video Essentials搭售其他SDK或播放器之不同分析使用案例的能力。
-   * 廣告追蹤已透過移除和方法 `trackAdBreakStart` 進行 `trackAdBreakComplete` 最佳化。 廣告分段是從和方法呼 `trackAdStart` 叫推 `trackAdComplete` 斷而得。
-   * 追蹤 `playhead` 廣告時，不再需要屬性。
+   * 已移除`trackAdBreakStart`和`trackAdBreakComplete`方法，以最佳化廣告追蹤。 廣告插播是從`trackAdStart`和`trackAdComplete`方法呼叫推斷而得。
+   * 追蹤廣告時，不再需要`playhead`屬性。
    * 新增對Marketing Cloud訪客ID的支援。
 
 * **Nielsen SDK整合**
@@ -280,7 +282,7 @@ TVSDK現在支援傳送mTVR和MDPR ID3信標至Nielsen SDK，毋需任何自訂�
 
 現在，您不需要額外的準備工作，就能將新廣告動態插入從C3視窗傳出的隨選視訊(VOD)資產。 TVSDK現在提供API來移除自訂內容範圍並動態插入新廣告。 此強大的新功能在廣播期間播放即時／線性內容時也很有用，而且會立即下拉以做為隨選內容，而無需適當的時間來「清理」資產。
 
-## 已解決問題 {#resolved-issues}
+## 已解決問題{#resolved-issues}
 
 如果解析度與報告的問題相關聯，則會顯示Zendesk參考，例如ZD#xxxxx。
 
@@ -303,13 +305,13 @@ Comment Type: draft
 
 * 使用iOS 3.10版的TVSDK時，在播放15分鐘後即時串流會失敗。
 
-### 已解決舊版中的問題 {#resolved-issues-previous}
+### 已解決舊版{#resolved-issues-previous}中的問題
 
 **iOS TVSDK 3.11**
 
-* (ZD#40998)-造 `isFallbackOnInvalidCreativeEnabled` 成應用程式當機。
+* (ZD#40998)- `isFallbackOnInvalidCreativeEnabled`會導致應用程式當機。
 
-* (ZD#41289)- `NSInvalidArgumentException` 使用導致應用程式當機 `customParams` 的方法進行觀察。
+* (ZD#41289)-使用`customParams`方法觀察到`NSInvalidArgumentException`導致應用程式當機。
 
 **iOS TVSDK 3.10**
 
@@ -323,9 +325,9 @@ Comment Type: draft
 
 * (ZD#40087)- iOS當機，且播放器錯誤導致過期的VOD內容。
 
-* (ZD#40083)- Pre-Roll廣告不會針對即時串流播放，而播放 `OpportunityGenerator` 器會發生錯誤。
+* (ZD#40083)- Pre-Roll廣告不會針對具有`OpportunityGenerator`的即時串流播放，而播放器會出現錯誤。
 
-* (ZD#39828)- `CurrentItem` 屬性遺失空值註解，當通知中包含的播放器狀態為時，造成播放器當機 `PTMediaPlayerStatusStopped`。
+* (ZD#39828)- `CurrentItem`屬性遺失nullability註解，當通知中包含的播放器狀態為`PTMediaPlayerStatusStopped`時，會造成播放器當機。
 
 **iOS TVSDK 3.7**
 
@@ -345,18 +347,17 @@ Comment Type: draft
 
 **第3.2版**
 
-* **Ticket#36588** —— 呼叫MediaPlayer STOP方法時，會觀察到播放器損毀。
+* **Ticket#36588** -呼叫MediaPlayer STOP方法時，會觀察到播放器損毀。
 
 已修正呼叫STOP方法以取得少數具有字幕的串流時，所觀察到的間歇性損毀。
 
-* **Ticket#37080** —— 顯示清單呼叫的重複請求。
-已修正播放期間對資訊清單URL重複提出的要求。 TVSDK現在會針對每份資訊清單發出一個呼叫。
+* **Ticket#37080** - Manifest呼叫的重複請求。已修正播放期間對資訊清單URL重複提出的要求。 TVSDK現在會針對每份資訊清單發出一個呼叫。
 
-* **Ticket#37** - CRS標準化規則失敗，並包含eq符合類型修正播放器在遇到具有&quot;eq&quot;符合類型之主機名稱的上次標準化規則集時，會當機的案例。
+* **Ticket#37** - CRS標準化規則失敗，並包含eq符合類型修正播放器在與具有&quot;eq&quot;符合類型之主機名稱的上次標準化規則集碰撞時，會當機的案例。
 
 **第3.1版**
 
-**票證#36313** —— 線性廣告中斷期間的間歇性不可預測結果修正即時串流中線性廣告中斷期間的間歇性播放。
+**票證#36313** -線性廣告中斷期間的間歇性不可預測結果在即時串流中的線性廣告中斷期間，固定間歇性播放。
 
 **3.0.1版**
 
@@ -364,34 +365,33 @@ Comment Type: draft
 
 **3.0版**
 
-* **Ticket35311** —— 在電話呼叫中斷期間，播放器狀態不會變成PAUSED新增中斷處理常式，以阻止播放器中斷。 當中斷時，播放器狀態會變為「暫停」，然後按一下播放按鈕繼續播放。
+* **Ticket35311** -在電話呼叫中斷期間，播放器狀態不會變為「暫停」新增中斷處理常式，以阻止播放器中斷。當中斷時，播放器狀態會變為「暫停」，然後按一下播放按鈕繼續播放。
 
-* **Ticket36685** —— 即時資產——與播放器時間進度和SCTE標籤時間不符的時間針對即時點前方的SCTE標籤計算正確時間。
+* **Ticket36685** -即時資產——與播放器時間進度和SCTE標籤時間不符的時間會針對即時點前方的SCTE標籤計算正確時間。
 
-* **Ticket36492** —— 當在暫停狀態 `currentTime``localTime` 中尋找新位置時未更新Player的目前時間現在可設為零，以備播放器處於暫停狀態時使用；稍早的目前時間，會設為僅在播放狀態中為零。
+* **Ticket36492** - `currentTime`  `localTime` 且在暫停狀態期間尋找新位置時未更新，現在，當播放器處於暫停狀態時，播放器的目前時間可設為零；稍早的目前時間，會設為僅在播放狀態中為零。
 
 **1.4.45版**
 
-* **Ticket36294** - iOS TVSDK無法與Xcode 10搭配運作已修正XCode 10上TVSDK的編譯問題。 由於XCode 10的需求，iOS 1.4.45版以上的TVSDK為基礎建立的應用程式需要最低部署目標，如iOS 7.0
+* **Ticket36294** - iOS TVSDK無法與Xcode 10搭配運作已修正XCode 10上TVSDK的編譯問題。由於XCode 10的需求，iOS 1.4.45版以上的TVSDK為基礎建立的應用程式需要最低部署目標，如iOS 7.0
 
-* **Ticket36321** —— 在「播放」狀態中，在 `PTMediaPlayer` 與 `AVPlayer` 例項之間可見範圍中觀察到的差異。
+* **Ticket36321** -在「播放」狀態中，在 `PTMediaPlayer` 與 `AVPlayer` 例項之間可查看的範圍中觀察到的差異。
 
-* **Ticket36493** - `libstdc++` iOS 12支援已修正iOS 12上TVSDK的編譯問題。 以iOS 1.4.45版之前的TVSDK為基礎建立的應用程式，在iOS 7.0版之前，需要最低部署目標
+* **Ticket36493** -  `libstdc++` iOS 12的支援已修正iOS 12上TVSDK的編譯問題。以iOS 1.4.45版之前的TVSDK為基礎建立的應用程式，在iOS 7.0版之前，需要最低部署目標
 
 **1.4.44版**
 
-* **Ticket34683** —— 廣告播放進度時間為負
+* **Ticket34683** -廣告播放進度時間為負
 
 當廣告伺服器所報告的持續時間與實際廣告內容不符時，會進行其他檢查以處理此情況。
 
-* **Ticket34801** - currentTime和localTime在暫停狀態期間尋找新位置時未更新現在，播放器處於暫停狀態時，可將播放器的目前時間設定為零；稍早的目前時間，會設為僅在播放狀態中為零。
+* **Ticket34801** - currentTime和localTime在暫停狀態期間搜尋新位置時未更新，現在播放器處於暫停狀態時，可將播放器的目前時間設定為零；稍早的目前時間，會設為僅在播放狀態中為零。
 
-* **Ticket35037** —— 從訊號式廣告插入返回時，播放會停止有錯誤的URL。
-已改善1.4.42版本中已關閉問題#34385的修正。 已新增isCancelled檢查和異常處理代碼，讓作業佇列更為健全。
+* **Ticket35037**  —— 從訊號式廣告插入返回時，播放會停止有錯誤的URL。已改善1.4.42版本中已關閉問題#34385的修正。 已新增isCancelled檢查和異常處理代碼，讓作業佇列更為健全。
 
 **1.4.43版**
 
-* (ZD#32990)- iOS:在某些提示點上播放內容，而非播放廣告。 `selectedMediaOptionInMediaSelectionGroup` 屬於AVPlayerItem介面的API現在已移至iOS 11的AVMediaSelection下。 此新API已解決此問題。
+* (ZD#32990)- iOS:在某些提示點上播放內容，而非播放廣告。 `selectedMediaOptionInMediaSelectionGroup` 屬於AVPlayerItem介面的API現在已移至iOS 11的AVMediaSelection下。此新API已解決此問題。
 
 * (ZD#33683)從中繼資料字串移除的TVSDK ==字尾。 問題已修正在剖析邏輯中。
 
@@ -407,11 +407,11 @@ Comment Type: draft
 
 * (ZD#35093)-修正若串流的主要變數在啟動時失敗（傳回404），則播放不會切換至備份串流的容錯情形。
 
-**1.4.42 (1.4.42.118)**
+**1.4.42(1.4.42.118)**
 
 * (ZD#34385)-從訊號式廣告插入返回時，播放會停止有錯誤的URL。
 
-   增加的最大併發計 `CustomAVAssetLoaderOperations`數，以便可繼續執行資訊清單讀取。
+   增加`CustomAVAssetLoaderOperations`的最大併發計數，以便資訊清單讀取繼續執行。
 
 * (ZD#34373)-當不允許串流錄制時，終端用戶無法串流至HDMI連接的裝置。
 
@@ -419,13 +419,13 @@ Comment Type: draft
 
    在VHL ping中，如果發生VAST/VMAP重新導向，現在會擷取最終廣告創意素材的廣告ID。
 
-* (ZD#33904)- TVSDK未註冊AVF基礎通知 `AVAudioSessionMediaServicesWereLostNotification` 和 `AVAudioSessionMediaServicesWereResetNotification`。
+* (ZD#33904)- TVSDK未註冊AVFoundation通知`AVAudioSessionMediaServicesWereLostNotification`和`AVAudioSessionMediaServicesWereResetNotification`。
 
    `PTMediaServicesWereLostNotification` 現在 `PTMediaServicesWereResetNotification` 可在播放器應用程式中註冊，以在媒體服務重設或遺失時取得通知。
 
 * (ZD#33815)-客戶無須更新應用程式，就無法更新其優先順序和標準化CRS規則。
 
-   新增 `getCRSRulesJsonURL` 和 `setCRSRulesJsonURL` API至iOS TVSDK。
+   將`getCRSRulesJsonURL`和`setCRSRulesJsonURL` API新增至iOS TVSDK。
 
 **1.4.41版(1.4.41.76)**
 
@@ -438,17 +438,17 @@ Comment Type: draft
 * (ZD #30371)-當我們線上性串流中插入超過2個廣告時，AdBreak開始時間會變更
 
    已修正嘗試在Apple TV上播放內容時發生的錯誤，此錯誤會完全導致無法播放
-* (ZD #32146)-在封鎖iOS 11開發測試版 `PTMediaPlayerStatusError` 時，未收到有關HLS Live內容的訊息
+* (ZD #32146)-封鎖iOS 11開發測試版時，收到HLS Live內容的`PTMediaPlayerStatusError`
 
-   使用 `PTMediaPlayerStatusError` Charles（Drop connection和403）封鎖時，未收到HLS Live和VOD內容。
+   使用Charles（Drop connection和403）封鎖時，未收到HLS Live和VOD內容的`PTMediaPlayerStatusError`。
 
 * (ZD #29242)- Airplay Video Playback Fails With Ads Enabled.
 
    當廣告啟用且AirPlay啟用開始播放視訊時，視訊播放不會開始，且不會顯示錯誤。
 
-* (ZD#33341)-在 `DRMInterface.h` Xcode 9中觸發建置警告。
+* (ZD#33341)- `DRMInterface.h`會在Xcode 9中觸發建置警告。
 
-   已修正兩個區塊原 `DRMInterface.h` 型，其參數清單中遺漏了「void」一詞。
+   已修正`DRMInterface.h`中遺失參數清單中「void」字詞的兩個區塊原型。
 
 * (ZD#31979)-當iPhone 7/iPhone7+的iOS 10或更新版本為iOS 10時，不編譯／執行。
 
@@ -468,19 +468,19 @@ Comment Type: draft
 
 * (ZD #32465)-播放器無法處理合併的播放器清單。
 
-   呼叫 `finishLoadingWithError`(使用：錯誤)，以便AV基礎嘗試替代串流／觸發器故障切換。
+   呼叫`finishLoadingWithError`(使用：錯誤)，以便AV基礎嘗試替代串流／觸發器故障切換。
 
 * (ZD #31951)-授權輪替期間發生TVSDK錯誤。
 
    已修正授權輪換問題。
 * (ZD #31951)-廣告插播內的空白畫面，無廣告插播完成。
 
-   處理Facebook VPAID廣告通常在單個 `<AdParameters>` VAST節點中返回多個CDATA塊的問題。
+   已處理Facebook VPAID廣告通常在單個`<AdParameters>` VAST節點中返回多個CDATA塊的問題。
 * (ZD #33336)- iOS TVSDK —— 廣告pods未填入，儘管Freewheel傳回的廣告數量足夠。
 
    已建立序列廣告與備援廣告之間的父子關係，並根據父序列與索引排序。
 
-**1.4.39版** (1.4.39.43)
+**版本1.4.39** (1.4.39.43)
 
 * (ZD #32178)- iOS TVSDK版本不正確。
 
@@ -516,7 +516,7 @@ Comment Type: draft
 
 基於CRS標準化規則的CRS請求中創意ID和AdSystem的使用
 
-* (ZD #29176)-當機 `PTAdPolicyDeligate` `satAdBreakAsWatched:position`
+* (ZD #29176)- `PTAdPolicyDeligate` `satAdBreakAsWatched:position`當機
 
 現在已處理由於空AdBreak而造成的當機。
 
@@ -548,13 +548,13 @@ EXT-X-PROGRAM-DATE-TIME標籤與即時DRM串流不會引發計時中繼資料事
 
 * (ZD #29462)-造成iOS TVSDK當機的VOD中的廣告。
 
-問題已修正。 iOS TVSDK會提出並 `exception(AUDNetworkAdInfo::initWithAdId)` 未處理它。 例外是由於空的廣告ID。
+問題已修正。 iOS TVSDK會提高`exception(AUDNetworkAdInfo::initWithAdId)`，但不會處理它。 例外是由於空的廣告ID。
 
 * (ZD #29281)-將AdSystem和Creative ID新增至CRS要求。
 
 在1401和1403個請求中加入AdSystem和CreativeId作為新參數（所有其他參數保持不變）。
 
-**版本1.4.35** (1.4.35.830)
+**1.4.35** (1.4.35.830)版
 
 * (ZD #27830)-需要以程式設計方式決定iOS中隱藏字幕和字幕之間的差異。
 
@@ -572,13 +572,13 @@ TVSDK現在會公開兩種類型，可用來篩選必要的標題類型。
 
 修正與同步相關的多次當機。
 
-**版本1.4.34** （iOS 6.0+版本1.4.34.815）
+**版本1.4.34** （iOS 6.0+專用1.4.34.815）
 
 * (ZD #28481)- FER中斷，因為這些FER串流的廣告插播結束時附加了不正確的鍵
 
-對於FER串流，廣告分段前的索引鍵會插入廣告分段結束後的索引鍵。 此問題已透過在廣告分 *段結尾附加上* 「上次看到的索引鍵」而解決。
+對於FER串流，廣告分段前的索引鍵會插入廣告分段結束後的索引鍵。 此問題已解決，方法是在廣告分段結尾附加&#x200B;*最後一個看見的索引鍵*。
 
-**版本1.4.33** （iOS 6.0+版本1.4.33.803）
+**版本1.4.33** （iOS 6.0+專用1.4.33.803）
 
 * (ZD# 21701)啟用子帳戶的CRS
 
@@ -588,9 +588,9 @@ TVSDK現在會公開兩種類型，可用來篩選必要的標題類型。
 
 此問題已解決，方法是更新資源載入，以便從所有可用的捆綁包中查找。
 
-* (ZD# 27460)Midroll第一次廣告拜訪- POST返回 `cdn.auditude.com` 403次。
+* (ZD# 27460)Midroll第一次廣告呼叫- POST至`cdn.auditude.com`返回403。
 
-新的CDN帳戶無法處理POST CDN請求。 此問題已透過更新程式碼，將廣告要 `cdn.auditude.com` 求設為GET而非POST而解決。
+新的CDN帳戶無法處理POST CDN請求。 此問題已解決，方法是更新程式碼，將`cdn.auditude.com`廣告要求設為GET，而非POST。
 
 **1.4.32版** （iOS 6.0+專用1.4.32.792）
 
@@ -602,11 +602,11 @@ TVSDK現在會公開兩種類型，可用來篩選必要的標題類型。
 
 將標籤放置在播放清單的開頭，即可解決此問題。
 
-**版本1.4.31** （iOS 6.0+版本1.4.31.785）
+**1.4.31版** （iOS 6.0+專用1.4.31.785）
 
 * (ZD# 24528)實施TVSDK帳單使用量度
 
-如需詳細資訊，請參閱 [帳單量度]。
+如需詳細資訊，請參閱[帳單量度]。
 
 * (ZD# 24642)TVSDK的畫中畫支援
 
@@ -628,7 +628,7 @@ TVSDK現在會公開兩種類型，可用來篩選必要的標題類型。
 
 此問題已解決，方法是針對沒有M3U8擴充功能的串流提供因應措施。
 
-**版本1.4.30** （iOS 6.0+版本1.4.30.754）
+**1.4.30版** （iOS 6.0+專用1.4.30.754）
 
 TVSDK在此版本中已解決下列問題：
 
@@ -670,7 +670,7 @@ TVSDK在此版本中已解決下列問題：
 
 此問題與ZD #25908相同。
 
-**1.4.29版** (1.4.29.743)
+**版本1.4.29** (1.4.29.743)
 
 * (ZD# 23901)第三方廣告未播放
 
@@ -688,7 +688,7 @@ TVSDK在此版本中已解決下列問題：
 
 已新增透過PTNetworkConfiguration類別對其區段請求的自訂標題的支援。
 
-**1.4.28版** (1.4.28.722)
+**版本1.4.28** (1.4.28.722)
 
 * (ZD #24549)多個廣告追蹤呼叫
 
@@ -724,7 +724,7 @@ TVSDK在此版本中已解決下列問題：
 
 記錄啟用時導致32位元裝置當機的記錄格式問題已經修正。
 
-**iOS 6.0+版本1.4.26** (1.4.26.702)
+**iOS 6.0+版本1.4** .26(1.4.26.702)
 
 * (ZD# 20213)- XCode7需要動態／模組化TVSDK FW
 
@@ -944,7 +944,7 @@ JavaScript mime類型並非一律包含或視為有效的mime類型。 此問題
 
 此問題已透過移除播放器名稱的預設值來解決。
 
-**iOS 6.0+版本1.4.17** (1.4.17.545)
+**iOS 6.0+版本1.4** .17(1.4.17.545)
 
 * (Zendesk #2228)-增強TVSDK，傳回資訊清單擷取的JSON回應
 
@@ -954,7 +954,7 @@ DRM Framework不會在內容不是M3U8時傳送錯誤，而會傳回nil DRMetada
 
 與Zendesk #2228的解析度相同
 
-* (Zendesk #3304)-未填充VAST 3.0 `[ERRORCODE]` 宏
+* (Zendesk #3304)-未填充VAST 3.0 `[ERRORCODE]`宏
 
 追蹤URL開頭有空格時，Auditude SDK無法傳送ping的問題已經解決。
 
@@ -972,7 +972,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 **注意**:已新增TVSDK的tvOS相容程式庫。
 
-**1.4.16版** (1.4.16.1454)
+**版本1.4.16** (1.4.16.1454)
 
 * Zendesk #3875 - Tab S在播放期間當機
 
@@ -988,7 +988,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 * (Zendesk #18053)-使用TVSDK的應用程式在Marshmallow上當機
 
-當TVSDK程式庫使用進行YUV `->` RGB色彩轉換的neon程式碼時，TVSDK會在Android M OS上當機。 此問題已解決，方法是更新導致此問題的函式，方法是使用的非霓虹版 `code`。
+當TVSDK程式庫使用進行YUV `->` RGB色彩轉換的neon程式碼時，TVSDK會在Android M OS上當機。 此問題已解決，方法是使用`code`的非Neon版本更新導致此問題的函式。
 
 * (Zendesk #18072)- Android M —— 應用程式當機
 
@@ -998,7 +998,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 此問題已透過支援Android CTS字型圖而解決。
 
-**iOS 6.0+版本1.4.15** (1.4.15.512)
+**iOS 6.0+版本1.4** .15(1.4.15.512)
 
 **注意**:Nielsen模組已從TVSDK組建版本移除，但TVSDK將在不久的將來更新，並新增Nielsen整合模組。
 
@@ -1014,7 +1014,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 允許線上性串流播放作業階段期間重新初始化視訊心率追蹤器。
 
-**iOS 6.0+版本1.4.14** (1.4.14.498)
+**iOS 6.0+版本1.4** .14(1.4.14.498)
 
 * (ZD #17260)- Crash on playlistManagerForURL
 
@@ -1022,9 +1022,9 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 **1.4.13版** (iOS 6.0+)
 
-* (ZD #3304)-未填充VAST 3.0 `[ERRORCODE]` 宏
+* (ZD #3304)-未填充VAST 3.0 `[ERRORCODE]`宏
 
-   * 如果內嵌廣告的創意不佳，則會顯示錯誤代碼400。
+   * 如果內嵌   廣告的創意不佳。
    * `[ERRORCODE]` 宏將進行URL編碼。
 
 * (ZD #3865)心率與IMA廣告整合
@@ -1091,13 +1091,13 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 * (ZD #2197)追蹤廣告錯誤。 新增資產通知無法載入資訊清單
 
-**1.4.5版** (1.4.5.283)
+**版本1.4.5** (1.4.5.283)
 
-* (ZD #2141)TreeHouse應用程式的Analytics實作，新增程式庫 `AdobeAnalyticsPlugin.a` 以建立套件。
+* (ZD #2141)TreeHouse應用程式的Analytics實作，新增`AdobeAnalyticsPlugin.a`程式庫以建立套件。
 * 視訊心率程式庫更新至1.4.1.2
 * (PTPALY-4226)（與ZD #2423有關）執行DRM重置可導致刪除應用程式文檔資料。
 
-**1.4.4版** (1.4.4.242)
+**版本1.4.4** (1.4.4.242)
 
 * 視訊心率程式庫(VHL)更新為1.4.1。
 
@@ -1105,7 +1105,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 **1.4.2版** (1.4.2.210:iOS 6.0+)
 
-* (ZD #1129) `_player.currentItem.audioOptions` 返回空白
+* (ZD #1129)`_player.currentItem.audioOptions`返回空白
 * (ZD #2109)Primetime PSDK 1.4.1.125不適用於Xcode 5.1.1
 * (ZD #2137)無法載入DRM中繼資料時，iOS上的PSDK當機
 
@@ -1120,11 +1120,11 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 * Zendesk #1024 —— 透過資訊清單從串流移除廣告的功能
 
-## 裝置認證與支援 {#device-certification-and-support}
+## 裝置認證與支援{#device-certification-and-support}
 
 >[!NOTE]
 >
->TVSDK不支 **援** 下列功能：
+>TVSDK支援下列功能：**not**:
 >
 >* 在任何平台或版本上都能執行慢動作。
 >* 即時戲法遊戲。
@@ -1141,7 +1141,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 **1.4.28版**
 
 * TVSDK 1.4.28已通過iOS 10 Beta 7認證。
-* DRM支援，透過新增和API來強 `forceHTTPS` 制 `isForcingHTTPS` HTTPS。
+* DRM支援透過新增`forceHTTPS`和`isForcingHTTPS` API來強制HTTPS。
 * 將VHL程式庫更新為1.5.8、將Adobe Mobile程式庫更新為4.8.4，以及將記錄器公用程式程式庫更新為7.0版部署目標。
 
 **1.4.19版**
@@ -1159,7 +1159,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
    * TVSDK tvOs支援僅限非Adobe DRM加密串流。 您必須移除tvOS建置設定中drmNativeInterface.framework的參考。 仍支援AES加密串流。
    * Apple要求所有Apple TV應用程式都必須啟用位元程式碼，因此您必須在專案設定中開啟此旗標。
 
-## 已知問題和限制 {#known-issues-and-limitations}
+## 已知問題和限制{#known-issues-and-limitations}
 
 * 由於iOS TVSDK 3.6以後版本不再使用iOS UIWebView類別：
    * VPAID廣告在iPad 13中不會如預期般播放。
@@ -1190,8 +1190,8 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 * 啟用JIT並將容限設為10秒後，在出現VMAP->VAST重新導向廣告時，第一個midroll廣告插播時不會看到VAST呼叫。
 * 為了讓廣告解析度逾時正常運作，每當即時串流播放期間更新播放清單時，播放器就會預期20秒內會有銜接播放清單。 如果在所述間隔內未接收到銜接播放清單，則拋出內部錯誤並且播放器停止。
 
-## 有用的資源 {#helpful-resources}
+## 實用資源{#helpful-resources}
 
 * [iOS版TVSDK 3.4程式設計人員指南](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-for-ios/introduction/ios-3x-overview.html)
 * [TVSDK iOS 3.4 API參考](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
-* 請參閱 [Adobe Primetime學習與支援頁面的完整說明檔案](https://helpx.adobe.com/support/primetime.html) 。
+* 請參閱[Adobe Primetime學習與支援](https://helpx.adobe.com/support/primetime.html)頁面的完整說明檔案。
