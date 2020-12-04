@@ -6,11 +6,14 @@ title: 新增自訂廣告標籤
 uuid: 5d8c8aaa-a4e7-499d-b70e-5c72007ec269
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#add-custom-ad-markers-overview}
+# 概述{#add-custom-ad-markers-overview}
 
 透過使用自訂廣告標籤，您可以將主要內容的特定區段標示為廣告相關內容句點。
 
@@ -27,4 +30,4 @@ TVSDK不會在內部處理廣告追蹤，例如Adobe Primetime廣告決策（先
 
 在每個廣告的起始和結束點，會針對廣告插播和廣告分別觸發播放事件。
 
-TVSDK會將廣告追蹤事件派單到您的應用程式，因此您可以實作自己的追蹤邏輯。 如果您設定自訂廣告標籤，您會收 `onAdBreakStart`到、 `onAdStart`、 `onAdProgress`、 `onAdComplete`和 `onAdBreakComplete` 事件。
+TVSDK會將廣告追蹤事件派單到您的應用程式，因此您可以實作自己的追蹤邏輯。 如果您設定自訂廣告標籤，則會收到`onAdBreakStart`、`onAdStart`、`onAdProgress`、`onAdComplete`和`onAdBreakComplete`事件。
