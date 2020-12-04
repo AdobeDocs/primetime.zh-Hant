@@ -6,17 +6,20 @@ title: 配套橫幅資料
 uuid: 4a5d78e1-5abe-45a8-b50f-14f73fdcc879
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# 配套橫幅資料 {#companion-banner-data}
+# 配套橫幅資料{#companion-banner-data}
 
 AdAsset的內容會說明配套橫幅。
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-每個 `AdAsset` 都提供有關顯示資產的資訊。
+每個`AdAsset`都提供有關顯示資產的資訊。
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -44,7 +47,7 @@ AdAsset的內容會說明配套橫幅。
   </tr> 
   <tr> 
    <td colname="col1"> 靜態URL </td> 
-   <td colname="col2"> <p>有時候，配套橫幅也會有 <span class="codeph"> 靜態URL</span> ，即影像或。swf <span class="codeph"></span> （flash橫幅）的直接URL。 </p> <p>如果您不想使用html或iframe，則可使用影像或swf的直接URL，在Flash階段中顯示橫幅。 在這種情況下，您可以使用 <span class="codeph"> staticURL</span> 來顯示橫幅。 </p> <p>重要： 您必須檢查靜態URL是否為有效字串，因為此屬性可能不一定都可用。 </p> </td> 
+   <td colname="col2"> <p>有時候，配套橫幅也會有<span class="codeph"> staticURL</span>，此為影像或<span class="codeph"> .swf</span>（flash橫幅）的直接URL。 </p> <p>如果您不想使用html或iframe，則可使用影像或swf的直接URL，在Flash階段中顯示橫幅。 在這種情況下，您可以使用<span class="codeph"> staticURL</span>來顯示橫幅。 </p> <p>重要： 您必須檢查靜態URL是否為有效字串，因為此屬性可能不一定都可用。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
