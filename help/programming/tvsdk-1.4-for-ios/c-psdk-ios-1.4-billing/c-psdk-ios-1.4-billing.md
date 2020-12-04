@@ -6,15 +6,18 @@ title: 帳單量度
 uuid: 658ffbcd-dedc-464c-8ec7-aa3bdfcb1512
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
 
-# 帳單量度 {#billing-metrics}
+# 帳單量度{#billing-metrics}
 
 為了迎合只想支付所用費用（而非固定費率，不論實際用途）的客戶，Adobe會收集使用量度，並使用這些度量來決定向客戶收取的費用。
 
-每當播放器產生串流開始事件時，TVSDK就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段稱為計費時段。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
+每當播放器產生串流開始事件時，TVSDK就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段（稱為計費持續時間）可能不同。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
 
 這些消息包含以下資訊：
 
@@ -29,7 +32,7 @@ Adobe會預先設定此安排，但如果您想要變更安排，請與您的Ado
 
 若要監控TVSDK傳送給Adobe的統計資料，請從您的Adobe啟用代表取得URL，並使用網路擷取工具（例如Charles）來查看資料。
 
-## 設定帳單量度 {#configure-billing-metrics}
+## 設定帳單量度{#configure-billing-metrics}
 
 如果您使用預設設定，您就不需要執行其他動作來啟用或設定帳單。 如果您從Adobe啟用代表取得不同的設定參數，請使用PTBillingMetricsConfiguration類別，在初始化媒體播放器之前先設定這些參數。
 
@@ -54,7 +57,7 @@ Adobe會預先設定此安排，但如果您想要變更安排，請與您的Ado
    [metadata setMetadata:billingConfig forKey:PTBillingMetricsConfigurationMetadataKey];
    ```
 
-## 傳輸帳單量度 {#transmit-billing-metrics}
+## 傳送帳單量度{#transmit-billing-metrics}
 
 TVSDK以XML格式將帳單量度傳送至Adobe。
 
@@ -86,4 +89,4 @@ TVSDK以XML格式將帳單量度傳送至Adobe。
 </request>
 ```
 
-布爾屬 `drmProtected`性、 `adsEnabled`和 `midrollEnabled` 僅當其為true時才顯示。
+布爾屬性`drmProtected`、`adsEnabled`和`midrollEnabled`只有在屬性為true時才會顯示。
