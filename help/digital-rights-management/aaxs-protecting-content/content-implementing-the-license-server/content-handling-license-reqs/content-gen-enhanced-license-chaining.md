@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 增強的授權鏈結 {#enhanced-license-chaining}
+# 增強的授權鏈{#enhanced-license-chaining}
 
-在Adobe Access 3.0中增強的授權鏈結，建議使用者在第一次要求特定機器的授權時，同時核發Leaf和Root。 如果使用者已擁有根授權，伺服器可能只會發出葉( `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` 呼叫以判斷用戶端是否已擁有3.0增強根)。 對於後續的授權要求，用戶端會指出其已有Leaf和Root，因此伺服器應該會核發新的Root授權。 當使用增強的授權連結時， `setRootKeyRetrievalInfo()` 必須呼叫，以提供解密策略中的根加密密鑰所需的憑據。
+在Adobe Access 3.0中增強的授權鏈結，建議使用者在第一次要求特定機器的授權時，同時核發Leaf和Root。 如果用戶已經擁有Root許可證，則伺服器僅能發出Leaf（調用`LicenseRequestMessage.clientHasEnhancedRootForPolicy()`以確定客戶機是否已擁有3.0 Enhanced Root）。 對於後續的授權要求，用戶端會指出其已有Leaf和Root，因此伺服器應該會核發新的Root授權。 當使用增強的授權連結時，必須調用`setRootKeyRetrievalInfo()`才能提供解密策略中的根加密密鑰所需的憑據。
 
 >[!NOTE]
 >
