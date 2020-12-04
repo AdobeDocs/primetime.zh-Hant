@@ -4,6 +4,9 @@ title: 封裝內容
 uuid: 366c8470-b7ef-4a39-83c2-151ba9be9a32
 translation-type: tm+mt
 source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
 https://key-server-host:port/faxsks/tenant-name/key
 ```
 
-例如，若是位於連接埠443 [!DNL mykeyserver.com] 監聽的Key Server主機名稱，以及名為租用戶 `tenant1`，則M3U8中要指定的Key Server URL是：
+例如，若是位於連接埠443的Key Server主機名稱[!DNL mykeyserver.com]監聽，以及名為`tenant1`的租用戶，M3U8中要指定的Key Server URL為：
 
 ```
 https://mykeyserver.com:443/faxsks/tenant1/key
