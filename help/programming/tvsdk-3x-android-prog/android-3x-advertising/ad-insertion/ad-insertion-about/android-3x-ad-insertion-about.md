@@ -6,15 +6,18 @@ title: 插入廣告
 uuid: f6636bfa-c96d-4d9d-987a-60292397525a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#insert-ads-overview}
+# 概述{#insert-ads-overview}
 
 廣告插入可解析隨選視訊(VOD)、即時串流以及具有廣告追蹤和廣告播放的線性串流廣告。 TVSDK會向廣告伺服器提出所需要求，接收指定內容的廣告資訊，並將廣告分階段置於內容中。
 
-包含 *`ad break`* 依序播放的一或多個廣告。 TVSDK會將廣告插入主要內容中，作為一個或多個廣告插播的成員。
+*`ad break`*&#x200B;包含一或多個依序播放的廣告。 TVSDK會將廣告插入主要內容中，作為一個或多個廣告插播的成員。
 
 >[!NOTE]
 >
