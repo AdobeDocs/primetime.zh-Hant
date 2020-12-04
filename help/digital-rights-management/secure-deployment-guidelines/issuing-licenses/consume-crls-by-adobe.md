@@ -6,11 +6,14 @@ title: 使用Adobe發佈的CRL
 uuid: 7a9088bd-dde6-4445-958c-3e7272215b3c
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
 
-# 使用Adobe發佈的CRL{#consuming-crls-published-by-adobe}
+# 使用Adobe{#consuming-crls-published-by-adobe}發佈的CRL
 
 SDK會定期下載由Adobe發佈的CRL。 您必須確保不會封鎖對這些檔案的存取，或不會妨礙這些CRL的執行。
 
