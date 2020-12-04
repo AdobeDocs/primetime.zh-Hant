@@ -6,11 +6,14 @@ title: 有效的MIME類型
 uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
-# 有效的MIME類型{#valid-mime-types}
+# 有效的mime類型{#valid-mime-types}
 
 一個廣告可能有多個創意素材，其中一個是選取要播放的。
 
@@ -24,6 +27,6 @@ var mimeTypes = [“video/mp4”, “application/x-mpegURL”];
 auditudeSettings.validMimeTypes = mimeTypes; 
 ```
 
-其中 `mimeTypes` 是字串的陣列，而每個字串代表MIME類型。
+其中`mimeTypes`是字串的陣列，而每個字串代表MIME類型。
 
-如果廣告傳回多個媒體檔案，選擇會視媒體檔案在陣列中的顯示順序而 `validMimeTypes` 定。 具有較低索引的MIME類型比具有較高索引的MIME類型更優先。
+如果廣告傳回多個媒體檔案，選擇會視媒體檔案在`validMimeTypes`陣列中的顯示順序而定。 具有較低索引的MIME類型比具有較高索引的MIME類型更優先。
