@@ -7,26 +7,29 @@ title: 跨來源資源共用
 uuid: e788b542-d4ac-48aa-91e2-1e88068cbba1
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
 
-# 跨來源資源共用 {#cross-origin-resource-sharing}
+# 跨原始資源共用{#cross-origin-resource-sharing}
 
 支援XMLHttpRequests中的withCredentials屬性，可讓跨原始資源共用(CORS)請求包含多種請求類型的目標網域Cookie。
 
-當用戶端要求資訊清單、區段或金鑰時，伺服器可設定用戶端必須傳遞的Cookie，才能進行後續的要求。 若要允許讀取和寫入Cookie，用戶端必須將屬性 `withCredentials` 設定為跨 `true` 原始碼請求。
+當用戶端要求資訊清單、區段或金鑰時，伺服器可設定用戶端必須傳遞的Cookie，才能進行後續的要求。 若要允許讀取和寫入Cookie，用戶端必須針對跨來源要求將`withCredentials`屬性設為`true`。
 
-若要在播 `withCredentials` 放指定的媒體資源時啟用對大多數類型請求的支援：
+要在播放給定媒體資源時啟用`withCredentials`對大多數類型請求的支援：
 
-1. 建立對 `CORSConfig` 像。
+1. 建立`CORSConfig`對象。
 
    ```js
    var corsConfig = new AdobePSDK.CORSConfig();  
    corsConfig.enableEncryptionRequest = true; 
    ```
 
-1. 將對 `corsConfig` 像附加 `NetworkConfiguration` 並設定 `useCookieHeaderForAllRequests` 為 `true`。
+1. 將`corsConfig`附加到`NetworkConfiguration`對象，並將`useCookieHeaderForAllRequests`設定為`true`。
 
    ```js
    var networkConfig = new AdobePSDK.NetworkConfiguration();  
@@ -34,14 +37,14 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
    networkConfiguration.useCookieHeaderForAllRequests= true;
    ```
 
-1. 在對 `networkConfig` 像中設 `MediaPlayerItemConfig` 置。
+1. 在`MediaPlayerItemConfig`對象中設定`networkConfig`。
 
    ```js
    var mediaPlayerItemConfig = new AdobePSDK.MediaPlayerItemConfig();  
    mediaPlayerItemConfig.networkConfiguration = networkConfig; 
    ```
 
-1. 傳 `MediaPlayerItemConfig` 遞至方 `MediaPlayer.replaceCurrentResource` 法。
+1. 將`MediaPlayerItemConfig`傳遞至`MediaPlayer.replaceCurrentResource`方法。
 
    ```js
    var player = new AdobePSDK.MediaPlayer(); 
@@ -52,7 +55,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 >[!IMPORTANT]
 >
->此標 `useCookieHeaderForAllRequests` 幟不會影響授權要求。 要將屬 `withCredentials` 性設定為許 `true` 可請求，必須在保護資料中設定屬性，或在保護資料中指定 `withCredentials``httpRequestHeaders` 授權密鑰。 例如：
+>`useCookieHeaderForAllRequests`標幟不會影響授權要求。 要為許可證請求將`withCredentials`屬性設定為`true`，您必須在保護資料中設定`withCredentials`屬性，或在保護資料的`httpRequestHeaders`中指定授權密鑰。 例如：
 
 ```
 # Example 1 
@@ -75,9 +78,9 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 }
 ```
 
-此標幟不會影響授權要求，因為有些伺服器會在回應 `Access-Control-Allow-Origin` 時將欄位設為萬用字元(&#39;*&#39;)。 但是，當憑證標幟設定為 `true`時，萬用字元無法用於 `Access-Control-Allow-Origin`。 如果您針對所 `useCookieHeaderForAllRequests` 有類 `true` 型的請求設定，則授權請求可能會出現下列錯誤：
+此標幟不會影響授權要求，因為有些伺服器會在回應中將`Access-Control-Allow-Origin`欄位設為萬用字元(&#39;*&#39;)。 但是，當憑證標幟設定為`true`時，萬用字元無法用於`Access-Control-Allow-Origin`。 如果您針對所有類型的請求將`useCookieHeaderForAllRequests`設為`true`，則授權請求可能會出現下列錯誤：
 
 請記住下列資訊：
 
-* 當呼叫失敗時， `withCredentials=true` 瀏覽器TVSDK會重試呼叫，而不 `withCredentials`會。
-* 使用呼叫時，會 `networkConfiguration.useCookieHeaderForAllRequests=false`發出XHR請求，而不含 `withCredentials` 屬性。
+* 當具有`withCredentials=true`的呼叫失敗時，瀏覽器TVSDK會重試沒有`withCredentials`的呼叫。
+* 使用`networkConfiguration.useCookieHeaderForAllRequests=false`進行呼叫時，會發出XHR請求，而不使用`withCredentials`屬性。
