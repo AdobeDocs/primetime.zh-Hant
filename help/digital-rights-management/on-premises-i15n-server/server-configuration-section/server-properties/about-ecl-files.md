@@ -4,6 +4,9 @@ title: 關於ECI檔案
 uuid: 124d8ab1-933b-4a1b-992a-919f3d799460
 translation-type: tm+mt
 source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
 http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
 ```
 
-文 [!DNL Latest.txt] 件將包含最新CRL分發檔案的URL。
+[!DNL Latest.txt]檔案將包含最新CRL散發檔案的URL。
 
 Adobe會依照下列方式建立ECI zip檔案：
 
@@ -58,8 +61,8 @@ Rename ECI.zip to <DATE_SHA-256>.zip
 
 1. 請注意SHA-256摘要，然後使用OpenSSL或相當的工具重新計算它。
 1. 將它與檔案名稱中指定的比較。
-1. 將檔案更名為 [!DNL ECI.zip]。
-1. 解壓縮目 [!DNL ECI] 錄。
+1. 將檔案更名為[!DNL ECI.zip]。
+1. 解壓縮[!DNL ECI]目錄。
 1. 將舊的ECI目錄更換為新目錄。
 1. 重新啟動個性化伺服器。
 
