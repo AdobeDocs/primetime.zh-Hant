@@ -6,11 +6,14 @@ title: 使用Adobe Offline Packager封裝您的內容
 uuid: d0676147-c20f-49ea-93a6-9c8dbbbba992
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
 
-# 使用Adobe Offline Packager封裝您的內容{#package-your-content-with-adobe-offline-packager}
+# 使用Adobe Offline Packager{#package-your-content-with-adobe-offline-packager}封裝您的內容
 
 Adobe Offline Packager會將輸入未加密的mp4內容。
 
@@ -28,14 +31,14 @@ Adobe Offline Packager會將輸入未加密的mp4內容。
     
     URLhttp://pr.test.expressplay.com/playready/RightsManager.asmx95f214dc7ecf31a8ebf8dbf1dddbf5-id5-playready_c595f214d84dc7ecf31a8ebf1b7dda5
 
-在此特定情況下，離線封裝程式會將Widevine內容保護和PlayReady內容保護初始化資料新增至輸出的DASH內容。 值是用 `-key_file_path` 於基64編碼密鑰。 其值用於 `-playready_LA_URL` PlayReady授權購買。
+在此特定情況下，離線封裝程式會將Widevine內容保護和PlayReady內容保護初始化資料新增至輸出的DASH內容。 `-key_file_path`的值用於基本64編碼的密鑰。 `-playready_LA_URL`的值用於PlayReady授權購買。
 
 conf_path參數指向將包含以下內容的配置檔案：
 
     &lt;config>
     &lt;frag_dur>4&lt;/frag_dur>
     &lt;target_dur>6&lt;/target_dur>
-    &lt;encrypt_audio>false&lt;/encrypt_audio>
-    &lt;/config
+    &lt;encrypt_audio>假&lt;/encrypt_audio>
+    &lt;/config>
 
 因為某些Android裝置— 主要是Amazon Fire TV — 不支援音訊解密，音訊加密是選用的。
