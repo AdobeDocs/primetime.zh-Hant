@@ -4,32 +4,35 @@ title: 時間型規則
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
 
-# 時間型規則 {#time-based-rules}
+# 時間型規則{#time-based-rules}
 
-Primetime DRM使用「軟執行」時間型授權限制。 如果時間右鍵在視訊播放期間過期，則Primetime DRM的預設行為是在下次重新建立視訊串流時（透過呼叫和），才限制 `Netstream.stop()` 播放 `Netstream.play()`。
+Primetime DRM使用「軟執行」時間型授權限制。 如果在播放視訊時，時間右鍵過期，則Primetime DRM的預設行為是在下次重新建立視訊串流時（透過呼叫`Netstream.stop()`和`Netstream.play()`），才限制播放。
 
-雖然軟強制是預設行為，但您也可以執行下列任務之一，以啟用硬強制：
+雖然軟強制是預設行為，但您也可以通過執行以下任務之一來啟用硬強制：
 
-* 請您的視訊播放器定期輪詢授權，以確保沒有任何時間限制過期。 這可透過呼叫「錯誤 `DRMManager.loadVoucher(LOCAL_ONLY).` 碼」指出本機儲存的授權不再有效來完成。
-* 每當使用者按一 **[!UICONTROL Pause]**&#x200B;下，您就可以錄制目前的視訊時間戳記，然後呼叫 `Netstream.stop()`。 當使用者按一下「播放」按鈕時，您可以尋找錄制的位置，然後呼叫 `Netstream.play()`。
+* 請您的視訊播放器定期輪詢授權，以確保沒有任何時間限制過期。 這可以通過調用`DRMManager.loadVoucher(LOCAL_ONLY).`來實現。錯誤代碼指示本地儲存的許可證不再有效。
+* 每當使用者按一下&#x200B;**[!UICONTROL Pause]**&#x200B;時，您就可以記錄目前的視訊時間戳記，然後呼叫`Netstream.stop()`。 當使用者按一下「播放」按鈕時，您可以尋找錄制的位置，然後呼叫`Netstream.play()`。
 
-## 開始日期 {#start-date}
+## 開始日期{#start-date}
 
 開始日期指定授權有效的日期。
 
 範例使用案例：使用絕對日期在資產可用日期之前核發內容授權，或執行「禁運」期間。
 
-## 結束日期 {#end-date}
+## 結束日期{#end-date}
 
 結束日期會指定授權到期的日期。
 
 範例使用案例：使用絕對到期日來反映散發權利的終止。
 
-## 相對結束日期 {#relative-end-date}
+## 相對結束日期{#relative-end-date}
 
 相對結束日期會指定授權到期日，此日期會以封裝日期表示，而非以授權簽發日期表示。
 
@@ -43,7 +46,7 @@ Primetime DRM使用「軟執行」時間型授權限制。 如果時間右鍵在
 
 範例使用案例：使用授權快取持續時間來指定特定授權的固定有效時間，例如租用使用案例。 您可以指定30天租金（含授權快取），以指出要使用內容的授權總持續時間。
 
-## 播放視窗 {#playback-window}
+## 播放窗口{#playback-window}
 
 播放視窗會指定授權在第一次用來播放受保護內容後的有效期間。
 
