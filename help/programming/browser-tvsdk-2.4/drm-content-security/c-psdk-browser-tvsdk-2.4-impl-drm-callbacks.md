@@ -6,6 +6,9 @@ title: 實現DRM回呼
 uuid: a54c5ec2-299f-47b0-b65b-eed5656ab6aa
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-您可以定義回呼函式(例如 `parseContentIdCallback`)來剖析內容ID，並使用 `drmManager` API `setParseContentIdCallback` 將其設定。
+您可以定義回呼函式（例如`parseContentIdCallback`）來剖析內容ID，並使用`setParseContentIdCallback` API將其設為`drmManager`。
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +42,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-您可以定義回呼函式(例如 `onCertificateResponseCallback`)，以處理文字憑證回應，並使用 `drmManager` API將函式設 `setCertificateResponseCallback` 定為。 您可以設 `setCertificateResponseCallback` 定為覆寫預設行為。 例如，如果您有 `certificateResponseType` 非回呼 `ArrayBuffer`，則可使用此回呼將憑證回應轉換為類 `ArrayBuffer` 型。
+您可以定義回呼函式（例如`onCertificateResponseCallback`），以處理文字憑證回應，並使用`setCertificateResponseCallback` API將函式設為`drmManager`。 您可以設定`setCertificateResponseCallback`來覆寫預設行為。 例如，如果您有`certificateResponseType`，而它不是`ArrayBuffer`，則可使用此回呼將憑證回應轉換為`ArrayBuffer`類型。
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -66,7 +69,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-您可以定義回呼函式來剖析授權訊息和授權回應，並在呼叫中傳遞回 `drmManager.acquireLicense`呼。 `onLicenseResponseCallback` 是 `acquireLicense` API中的新參數。
+您可以定義回呼函式來剖析授權訊息和授權回應，並在呼叫`drmManager.acquireLicense`時傳遞這些訊息。 `onLicenseResponseCallback` 是 `acquireLicense` API中的新參數。
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -121,7 +124,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-在「保護」資料中，新 **[!UICONTROL certificateResponseType]** 欄位用於設定證書響應類型。 以下是保護資料的示例：
+在保護資料中，新&#x200B;**[!UICONTROL certificateResponseType]**&#x200B;欄位用於設定證書響應類型。 以下是保護資料的示例：
 
 ```js
 { 
@@ -137,4 +140,4 @@ drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMe
 }
 ```
 
-使用欄位 `certificateResponseType` 是選用的。 如果未使用，則假設值為 `ArrayBuffer`。
+使用`certificateResponseType`欄位是選擇性的。 如果未使用，則假定值為`ArrayBuffer`。
