@@ -4,11 +4,14 @@ title: 物理安全性和訪問
 uuid: 804e8854-be3b-4ec7-bf96-f0fe5fd8a92b
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
 
-# 物理安全性和訪問 {#physical-security-and-access}
+# 物理安全和訪問{#physical-security-and-access}
 
 Adobe Access環境的物理安全性範圍從將伺服器置於安全室，並置於鎖定和鑰匙之下，以及其他設備，到安全的警告籠中，與其他電腦隔離，並使用由閉路電視(CCTV)持續監控的兩部份驗證（例如徽章和指紋）。 您實施的安全性程度取決於您組織的政策、所涉風險（如果損失，可能的損失和嚴重性），以及其他法律遵循要求。
 
