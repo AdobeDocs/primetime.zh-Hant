@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 密碼剪輯器 {#password-scrambler}
+# 密碼簽名器{#password-scrambler}
 
 Password Scrambler公用程式會加密Adobe Primetime DRM Server的受保護串流設定檔密碼。
 
@@ -44,7 +44,7 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-您在和檔案中指定的所有密 [!DNL flashaccess-global.xml] 碼都 [!DNL flashaccess-tenant.xml] 必須加密。
+您在[!DNL flashaccess-global.xml]和[!DNL flashaccess-tenant.xml]檔案中指定的所有密碼都必須加密。
 
 >[!NOTE]
 >
