@@ -6,6 +6,9 @@ title: 訂閱自訂標籤
 uuid: 43480265-4951-466a-a347-6debfb6935ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -15,15 +18,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 每次在內容資訊清單中遇到這些物件時，TVSDK會為訂閱的標籤準備TimedMetadata物件。
 
 播放開始前，您必須訂閱標籤。
-若要訂閱標籤，請指派包含自訂標籤名稱的向量至屬 `subscribedTags` 性。 如果您還需要變更預設業務機會產生器所使用的廣告標籤，請指派包含自訂廣告標籤名稱的向量至屬 `adTags` 性。
+若要訂閱標籤，請指派包含自訂標籤名稱的向量至`subscribedTags`屬性。 如果您還需要變更預設業務機會產生器所使用的廣告標籤，請指派包含自訂廣告標籤名稱的向量至`adTags`屬性。
 
 要獲得有關HLS清單中自定義標籤的通知：
 
-1. 將包含自訂標籤的向量指派給，以全域設定自訂廣告標 `subscribeTags` 記名 `MediaPlayerItemConfig`稱。
+1. 將包含自訂標籤的向量指派至`MediaPlayerItemConfig`中的`subscribeTags`，以全域設定自訂廣告標籤名稱。
 
    >[!IMPORTANT]
    >
-   >使用HLS流時必 `#` 須包含前置詞。
+   >使用HLS流時必須包含`#`前置詞。
 
    例如：
 
@@ -34,7 +37,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    PSDKConfig.subscribedTags = subscribedTags;
    ```
 
-1. 要全局更改預設業務機會生成器使用的廣告標籤，請為中的屬性分配包含自定義廣告標籤名稱 `adTags` 的向量 `PSDKConfig`。
+1. 要全局更改預設業務機會生成器使用的廣告標籤，請為`PSDKConfig`中的`adTags`屬性分配包含自定義廣告標籤名稱的向量。
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -55,7 +58,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       >
       >最簡單的方式是建立預設的媒體播放器項目設定。
 
-   1. 指定包含自訂標籤的向量 `subscribeTags` 於 `MediaPlayerItemConfig`。
+   1. 將包含自訂標籤的向量指派至`MediaPlayerItemConfig`中的`subscribeTags`。
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -67,7 +70,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    mediaPlayerItemConfig.subscribeTags = subscribedTags;
    ```
 
-1. 若要變更指定串流中預設業務機會產生器所使用的廣告標籤，請指派包含自訂廣告標籤名稱的向量至 `adTags``mediaPlayerItemConfig`
+1. 要更改指定流中預設業務機會生成器使用的廣告標籤，請為`mediaPlayerItemConfig`中的`adTags`屬性指定包含自定義廣告標籤名稱的向量
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
