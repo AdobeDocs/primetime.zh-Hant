@@ -6,15 +6,18 @@ title: 時間軸課程
 uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
 
-# 時間軸課程{#timeline-classes}
+# 時間軸類{#timeline-classes}
 
 這些類別提供特定媒體時間軸的相關資訊，包括廣告的放置。
 
-套件： [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/package-summary.html)
+套件：[com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_6752E908BA6546549619994A3F7D5F87"> 
  <thead> 
@@ -33,11 +36,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="2"> 介面，提供處理時間軸標籤的迭代器。 代表內容的時間軸，包括廣告插播。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a> </span> </td> 
    <td colname="2"> 類別。 時間軸項的通用不可變表示法。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a> </span> </td> 
    <td colname="2"> 表示時間軸上標籤的介面。 這會標示實際時間軸上感興趣的區域。 目前，感興趣的區域是廣告，例如，您可能想要在拖曳列UI上以不同的顏色標籤廣告。 每個標籤都由位置和持續時間定義（每個以毫秒錶示）。 </td> 
   </tr> 
   <tr rowsep="0"> 
