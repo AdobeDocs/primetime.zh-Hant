@@ -6,11 +6,14 @@ title: 初始化和設定視訊分析
 uuid: d1dc9425-e67c-4e13-aee7-302149352506
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
 
-# 初始化和設定視訊分析 {#initialize-and-configure-video-analytics}
+# 初始化並設定視訊分析{#initialize-and-configure-video-analytics}
 
 您可以設定您的播放器來追蹤和分析視訊使用。
 
@@ -22,8 +25,8 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>重要： 此JSON設定檔案名稱必須保 <span class="codeph"> 留為ADBMobileConfig.json </span>。 無法更改此配置檔案的名稱和路徑。 此檔案的路徑必須 <span class="codeph"> 是&lt;source root&gt;/AdobeMobile </span>。 </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>重要： 此JSON設定檔案名稱必須保留<span class="codeph"> ADBMobileConfig.json </span>。 無法更改此配置檔案的名稱和路徑。 此檔案的路徑必須是<span class="codeph"> &lt;source root&gt;/AdobeMobile </span>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> AppMeasurement追蹤 </span> 伺服器端點 </td> 
@@ -31,7 +34,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
   </tr> 
   <tr> 
    <td colname="col1"> 視訊分析追蹤伺服器端點 </td> 
-   <td colname="col2"> 視訊分析後端收集端點的URL。 這是傳送所有視訊心率追蹤呼叫的地方。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的詳細資訊，請參閱實 <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> 作ID服務 </a>。 </p> </td> 
+   <td colname="col2"> 視訊分析後端收集端點的URL。 這是傳送所有視訊心率追蹤呼叫的地方。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的詳細資訊，請參閱<a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external">實作ID服務</a>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 帳戶名稱 </td> 
@@ -50,7 +53,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 若要在您的播放器中設定視訊追蹤：
 
-1. 確認資源檔案中的載入時 `ADBMobileConfig.json` 間選項正確。
+1. 確認`ADBMobileConfig.json`資源檔案中的載入時間選項正確。
 
    ```
    { 
@@ -83,14 +86,14 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
    要配置載入時間選項：
 
-   1. 確認檔 `ADBMobileConfig.json` 案包含Adobe提供的適當值。
-   1. 確認此檔案位於資料夾 `AdobeMobile` 中。
+   1. 確認`ADBMobileConfig.json`檔案包含Adobe提供的適當值。
+   1. 確認此檔案位於`AdobeMobile`資料夾中。
 
       此資料夾必須位於應用程式源樹的根目錄中。
    1. 編譯並建立您的應用程式。
    1. 部署並執行整合的應用程式。
 
-      如需這些AppMeasurement設定的詳細資訊，請參 [閱「在Adobe Analytics中測量視訊」](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)。
+      如需這些AppMeasurement設定的詳細資訊，請參閱「在Adobe Analytics中測量視訊」[。](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)
 1. 初始化並設定視訊心率追蹤中繼資料。
 
    >[!IMPORTANT]
