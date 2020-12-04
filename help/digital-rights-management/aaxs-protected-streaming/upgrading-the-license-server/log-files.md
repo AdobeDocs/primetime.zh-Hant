@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 日誌檔案{#log-files}
 
-Adobe Access Server for Protected Streaming應用程式產生的記錄檔將位於 *LicenseServer.LogRoot所指定的目錄中*。
+Adobe Access Server for Protected Streaming應用程式產生的記錄檔將位於&#x200B;*LicenseServer.LogRoot*&#x200B;所指定的目錄中。
 
 >[!NOTE]
 >
