@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe Primetime API參考 {#api-references}
+# Adobe Primetime API參考{#api-references}
 
 + TVSDK 3.12 {#tvsdk-312}
    + [Android專用TVSDK 3.12](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
@@ -52,7 +52,7 @@ ht-degree: 0%
    + [iOS版DRM用戶端API](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/index.html)
    + [DRM SDK Server API](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
 
-+ 其他 {#miscellaneous}
++ 其他{#miscellaneous}
    + [視訊心率程式庫](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
    + [2.4瀏覽器TVSDK的UI架構](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
