@@ -6,11 +6,14 @@ title: 初始化和設定視訊分析
 uuid: 4a582b35-ae92-4557-806d-e174fc878cc5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
 
-# 初始化和設定視訊分析 {#initialize-and-configure-video-analytics}
+# 初始化並設定視訊分析{#initialize-and-configure-video-analytics}
 
 您可以設定您的播放器來追蹤和分析視訊使用。
 
@@ -26,7 +29,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
   </tr>
   <tr>
    <td colname="col1"> 視訊分析追蹤伺服器端點 </td>
-   <td colname="col2"> 視訊分析後端收集端點的URL。 這是傳送所有視訊心率追蹤呼叫的地方。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的詳細資訊，請參閱實 <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> 作ID服務 </a>。 </p> </td>
+   <td colname="col2"> 視訊分析後端收集端點的URL。 這是傳送所有視訊心率追蹤呼叫的地方。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的詳細資訊，請參閱<a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external">實作ID服務</a>。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"> 帳戶名稱 </td>
@@ -59,7 +62,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    * VisitorAPI程式庫的唯一設定選項是後端端點的URL，可為目前使用者提供唯一識別碼。
    * 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。
 
-      如需實作訪客ID服務的詳細資訊，請參閱訪 [客ID服務實作](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html)。
+      如需實作訪客ID服務的詳細資訊，請參閱[訪客ID服務實作](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html)。
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -68,7 +71,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 2. 執行個體化及設定AppMeasurement元件。
 
-   AppMeasurement例項有許多設定選項。 如需詳細資訊，請至 [Adobe Analytics開發人員檔案](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) 。 下列范常式式碼( `account`、 `visitorNamespace`和 `trackingServer`)中的選項為必要項，而值則由Adobe提供。
+   AppMeasurement例項有許多設定選項。 如需詳細資訊，請至[Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer)檔案。 下列范常式式碼（`account`、`visitorNamespace`和`trackingServer`）中的選項為必要項，而值則由Adobe提供。
 
    >[!IMPORTANT]
    >
@@ -86,7 +89,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
    >[!IMPORTANT]
    >
-   >在您的應用程式中，請確 `appMeasurementObject.visitor` 定已先填入，然後再開始視訊分析流程，否則您可能無法取得任何追蹤結果。 這些結果由日誌中的消息指示。 您可以新增空的追蹤呼叫( `appMeasurementObject.track`)、輪詢屬 `visitor` 性直到填入，以及啟動視訊分析。
+   >在您的應用程式中，請確定在開始視訊分析流程之前已填入`appMeasurementObject.visitor`，否則可能無法取得任何追蹤結果。 這些結果由日誌中的消息指示。 您可以新增空的追蹤呼叫(`appMeasurementObject.track`)、輪詢`visitor`屬性，直到填入為止，並啟動視訊分析。
 
 3. 初始化並設定視訊心率追蹤中繼資料。
 
