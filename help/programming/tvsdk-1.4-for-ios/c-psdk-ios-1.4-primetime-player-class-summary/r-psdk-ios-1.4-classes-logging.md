@@ -6,6 +6,9 @@ title: 記錄類
 uuid: feb4ee77-37de-4260-85fa-4931e059e034
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '92'
+ht-degree: 0%
 
 ---
 
