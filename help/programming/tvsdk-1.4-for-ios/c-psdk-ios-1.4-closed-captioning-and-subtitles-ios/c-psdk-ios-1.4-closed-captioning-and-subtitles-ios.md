@@ -6,11 +6,14 @@ title: 字幕和隱藏字幕
 uuid: 91daf0be-087a-4be5-86c2-f8b83da43a8f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
 
-# 字幕和隱藏字幕的需求 {#requirements-for-subtitles-and-closed-captions}
+# 字幕和隱藏字幕的要求{#requirements-for-subtitles-and-closed-captions}
 
 隱藏式字幕和字幕有一些獨特的差異，您可以以不同的方式加以啟用。
 
@@ -29,10 +32,10 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    * 字幕通常使用不同的語言，不包含背景音效。
    * 字幕位於與主要內容平行執行的串流中。
 
-      播 `PTMediaPlayer` 放主要內容和廣告，其中主要內容可以是即時／線性或VOD，廣告可以是前段、中段或後段。
+      `PTMediaPlayer`會播放主要內容和廣告，其中主要內容可以是即時／線性或VOD，而廣告可以是前段、中段或後段。
    以下是iOS中字幕的其他需求：
 
-   * 對於時間戳記， `X-TIMESTAMP-MAP` 在檔案標題區段中指定的值必須 `WebVTT` 符合視訊時間戳記。
+   * 對於時間戳記，`X-TIMESTAMP-MAP`值（在`WebVTT`檔案的標題區段中指定）必須符合視訊時間戳記。
 
    * 對於系統，您必須使用iOS 6.1或更新版本。
 
