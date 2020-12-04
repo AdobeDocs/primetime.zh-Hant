@@ -6,11 +6,14 @@ title: 特技播放的限制和行為
 uuid: 5b947075-eba0-45de-82d0-50b193f1ac83
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# 特技播放的限制和行為 {#limitations-and-behavior-for-trick-play}
+# 特技播放的限制和行為{#limitations-and-behavior-for-trick-play}
 
 <!--<a id="section_2BC43539C5C142E085D06A7E35C76726"></a>-->
 
@@ -22,7 +25,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 * 音軌和隱藏字幕已停用。
 * 播放和暫停已啟用。
 * 您可以將特技播放模式退出至任何允許的播放速率（播放或暫停）。
-* 當廣告整合在串流中時：
+* 當廣告併入串流時：
 
    * 您只能在播放主要內容時去玩耍。 如果您嘗試在廣告中斷期間切換來設計播放，則會傳送錯誤。
    * 開始特技播放模式後，會忽略廣告插播，且不會引發廣告事件。
@@ -30,7 +33,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
    * 當前時間值會隨著跳過廣告插播的持續時間向前（在快進時）或向後（在快倒）跳過。
 
       目前的這種跳轉行為允許在特技播放期間保留未修改的串流持續時間。 您的播放器只能追蹤與主要內容相關的時間。 跳過廣告時，不會對本機時間傳回的值執行時間跳變。
-   * 事 `MediaPlayerEvent.AD_BREAK_SKIPPED` 件會在即將跳過廣告插播之前立即傳送。
+   * `MediaPlayerEvent.AD_BREAK_SKIPPED`事件會在即將略過廣告分段之前立即傳送。
 
       您的播放器可以使用此事件來實施與跳過廣告插播相關的自訂邏輯。
 
