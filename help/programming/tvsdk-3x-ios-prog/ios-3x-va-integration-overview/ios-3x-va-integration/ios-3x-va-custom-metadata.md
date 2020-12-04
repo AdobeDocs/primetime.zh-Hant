@@ -6,11 +6,14 @@ title: 實作自訂中繼資料支援
 uuid: 229681f5-ff77-4321-8022-b8ccf2928fb3
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
 
-# 實作自訂中繼資料支援 {#implement-custom-metadata-support}
+# 實作自訂中繼資料支援{#implement-custom-metadata-support}
 
 您可以使用回呼函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
 
