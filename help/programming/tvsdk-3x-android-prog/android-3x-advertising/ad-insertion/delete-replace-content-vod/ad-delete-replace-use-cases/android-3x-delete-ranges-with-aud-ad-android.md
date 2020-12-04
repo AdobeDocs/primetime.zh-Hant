@@ -6,17 +6,20 @@ title: 刪除範圍
 uuid: 2aaea7a0-5d52-49a1-901c-f71e4b081d91
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 
 
-# 刪除範圍 {#delete-ranges}
+# 刪除範圍{#delete-ranges}
 
-您可以從時 `TimeRanges` 間軸 `begin` 中移 `end` 除和移 `localTime` 除之間。
+您可以從時間軸中移除`begin`和`localTime`中`end`之間的`TimeRanges`。
 
 >[!TIP]
 >
->若要僅從內容移除特定範圍，請建立例 `CustomRangeMetadata` 項並指定類型為使用已定義 `DELETE` 自訂範圍的作業。
+>若要僅從內容移除特定範圍，請建立`CustomRangeMetadata`例項，並指定類型為使用已定義自訂範圍的`DELETE`作業。
 
 廣告地圖必須依廣告伺服器的定義使用。
 
