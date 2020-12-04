@@ -6,11 +6,14 @@ title: 支援WebVTT標題
 uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# 支援WebVTT標題 {#support-for-webvtt-captions}
+# 支援WebVTT標題{#support-for-webvtt-captions}
 
 資訊清單伺服器支援所有HLS視訊格式的發佈者啟用WebVTT標題。 當收到將廣告插入WebVTT註解內容的請求時，它會正確執行。
 
