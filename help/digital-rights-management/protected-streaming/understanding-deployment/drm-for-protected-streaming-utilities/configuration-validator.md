@@ -6,6 +6,9 @@ title: 配置驗證器
 uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
@@ -50,13 +53,13 @@ Validator還可以執行基於部署的驗證。 除了檢查與方案的符合�
 
 可在下列層級執行部署型驗證：
 
-* `Tenant` — 驗證特定租用戶的設定檔案和認證。 如果要驗證配置，請 `<tenant1>`鍵入：
+* `Tenant` — 驗證特定租用戶的設定檔案和認證。如果要驗證`<tenant1>`的配置，請鍵入：
 
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -d flashaccessserver/tenant1 -t
    ```
 
-* `Global` — 驗證所有租戶的全域設定檔案和租用戶驗證。 如果要執行基於全局部署的驗證，請鍵入：
+* `Global` — 驗證所有租戶的全域設定檔案和租用戶驗證。如果要執行基於全局部署的驗證，請鍵入：
 
    ```
        Validator --<root-path-to-LicenseServer.ConfigRoot> -g
