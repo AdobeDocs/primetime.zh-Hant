@@ -6,11 +6,14 @@ title: 傳輸帳單量度
 uuid: f4a7f50e-f457-434e-bf26-1e06cb15a038
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
 
 
-# 傳輸帳單量度 {#transmit-billing-metrics}
+# 傳送帳單量度{#transmit-billing-metrics}
 
 TVSDK以XML格式將帳單量度傳送至Adobe。
 
@@ -40,4 +43,4 @@ TVSDK以XML格式將帳單量度傳送至Adobe。
 </request>
 ```
 
-布爾屬 `drmProtected`性、 `adsEnabled`和 `midrollEnabled` 僅當其為true時才顯示。
+布爾屬性`drmProtected`、`adsEnabled`和`midrollEnabled`只有在屬性為true時才會顯示。
