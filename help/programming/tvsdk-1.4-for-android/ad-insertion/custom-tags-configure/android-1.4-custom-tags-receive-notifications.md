@@ -6,11 +6,14 @@ title: 新增計時中繼資料通知的監聽器
 uuid: cd7a5936-d63a-4711-ac16-2d79bac099a3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# 新增計時中繼資料通知的監聽器 {#add-listeners-for-timed-metadata-notifications}
+# 為計時中繼資料通知新增監聽器{#add-listeners-for-timed-metadata-notifications}
 
 若要接收資訊清單中標籤的通知，請實作適當的事件接聽程式。
 
@@ -44,4 +47,4 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    }; 
    ```
 
-ID3中繼資料使用相同的onTimedMetadata監聽器來指出ID3標籤的存在。 不過，這不應造成任何混淆，因為您可以使 `TimedMetadata` 用物件的 `type` 屬性來區分TAG和ID3。 如需ID3標籤的詳細資訊，請參 [閱ID3標籤](../../../tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)。
+ID3中繼資料使用相同的onTimedMetadata監聽器來指出ID3標籤的存在。 但是，這不會造成任何混淆，因為您可以使用`TimedMetadata`物件的`type`屬性來區分TAG和ID3。 如需ID3標籤的詳細資訊，請參閱[ID3標籤](../../../tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)。
