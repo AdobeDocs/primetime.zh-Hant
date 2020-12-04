@@ -6,6 +6,9 @@ title: 播放事件的順序
 uuid: 4a9ea66b-a383-46ff-9ab8-983b1dd7f935
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -18,19 +21,19 @@ TVSDK會依照一般預期的序列來傳送事件／通知。 您的播放器�
 
 下列範例顯示包含播放事件的某些事件的順序。
 
-* 成功載入媒體資源時， `MediaPlayer.replaceCurrentResource`事件順序為：
+* 通過`MediaPlayer.replaceCurrentResource`成功載入媒體資源時，事件順序為：
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.INITIALIZED`
 
-* 在準備播放時， `MediaPlayer.prepareToPlay`事件的順序為：
+* 當透過`MediaPlayer.prepareToPlay`準備播放時，事件的順序為：
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` 是否插入廣告
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.PREPARED`
 
 * 對於即時／線性串流，當播放視窗前進並解決其他機會時，事件順序為：
 
