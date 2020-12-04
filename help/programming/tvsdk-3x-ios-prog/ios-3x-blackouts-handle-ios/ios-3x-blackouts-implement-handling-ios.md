@@ -6,11 +6,14 @@ title: 實施封鎖處理
 uuid: a447ff24-8386-4cae-878e-0859fb191de2
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
 
-# 實施封鎖處理 {#implement-blackout-handling}
+# 實施封鎖處理{#implement-blackout-handling}
 
 TVSDK提供API和范常式式碼，以處理封鎖期。
 
@@ -27,7 +30,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 為添加通知偵聽程式 `PTTimedMetadataChangedNotification`。
+1. 為`PTTimedMetadataChangedNotification`添加通知偵聽程式。
 
    ```
    - (void)addobservers 
@@ -37,7 +40,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 在前景中實現對象 `PTTimedMetadata` 的監聽器方法。
+1. 在前景中實現`PTTimedMetadata`對象的監聽器方法。
 
    例如：
 
@@ -61,7 +64,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 在播放 `TimedMetadata` 期間使用持續更新來處理物件。
+1. 在播放期間使用持續更新來處理`TimedMetadata`物件。
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 新增處 `PTTimedMetadata` 理常式，以切換至替代內容，並返回主要內容，如物件及其播 `PTTimedMetadata` 放時間所示。
+1. 新增`PTTimedMetadata`處理常式，以切換至替代內容，並返回主要內容，如`PTTimedMetadata`物件及其播放時間所示。
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 在後台實現對 `PTTimedMetadata` 像的監聽器方法。
+1. 在後台為`PTTimedMetadata`對象實施偵聽器方法。
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
