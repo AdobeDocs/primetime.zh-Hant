@@ -6,6 +6,9 @@ title: NATIVE_ERROR視訊播放值
 uuid: 4916f96c-857a-4e15-8d91-9c2f949ce783
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '1362'
+ht-degree: 6%
 
 ---
 
@@ -44,7 +47,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
    <td colname="col3"> 由於檔案結束(EOF)條件，無法操作。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"><span class="codeph"> 解碼器失敗</span> </td> 
    <td colname="col3"> 解碼器在執行時期失敗。 </td> 
   </tr> 
@@ -55,72 +58,72 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr> 
   <tr> 
    <td colname="col1"> 5 </td> 
-   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND  </span> </td> 
    <td colname="col3"> 找不到資源。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 6 </td> 
-   <td colname="col2"><span class="codeph"> GENERIC_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> GENERIC_ERROR  </span> </td> 
    <td colname="col3"> 一般錯誤。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 7 </td> 
-   <td colname="col2"><span class="codeph"> 不可恢復錯誤 </span> </td> 
+   <td colname="col2"><span class="codeph"> 不可恢復錯誤  </span> </td> 
    <td colname="col3"> 視訊引擎無法從中復原的錯誤狀況。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
-   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RESCOVERABLE </span> </td> 
+   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RESCOVERABLE  </span> </td> 
    <td colname="col3"> 網路錯誤，正在嘗試恢復。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 9 </td> 
-   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE </span> </td> 
+   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE  </span> </td> 
    <td colname="col3"> 無法確定資源的大小。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 10 </td> 
-   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED </span> </td> 
-   <td colname="col3"> 未實作功能。 </td> 
+   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED  </span> </td> 
+   <td colname="col3"> 功能未實作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
-   <td colname="col2"><span class="codeph"> 記憶體不足 </span> </td> 
+   <td colname="col2"><span class="codeph"> 記憶體不足  </span> </td> 
    <td colname="col3"> 記憶體不足。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 12 </td> 
-   <td colname="col2"><span class="codeph"> PARSE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> PARSE_ERROR  </span> </td> 
    <td colname="col3"> 解析媒體檔案時出錯。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 13 </td> 
-   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN  </span> </td> 
    <td colname="col3"> 資源有大小，但未知。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
-   <td colname="col2"><span class="codeph"> UNDER_FLOW </span> </td> 
+   <td colname="col2"><span class="codeph"> UNDER_FLOW  </span> </td> 
    <td colname="col3"> 底流。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 15 </td> 
-   <td colname="col2"><span class="codeph"> 不支援的組態 </span> </td> 
+   <td colname="col2"><span class="codeph"> 不支援的組態  </span> </td> 
    <td colname="col3"> 不支援設定。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION  </span> </td> 
    <td colname="col3"> 不支援操作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
-   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT </span> </td> 
+   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT  </span> </td> 
    <td colname="col3"> 尚未初始化。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 18 </td> 
-   <td colname="col2"><span class="codeph"> INVALID_PARAMETER </span> </td> 
+   <td colname="col2"><span class="codeph"> INVALID_PARAMETER  </span> </td> 
    <td colname="col3"> 參數無效。 </td> 
   </tr> 
   <tr> 
@@ -145,7 +148,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr> 
   <tr> 
    <td colname="col1"> 23 </td> 
-   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED </span> </td> 
+   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED  </span> </td> 
    <td colname="col3"> 未指定資源。 </td> 
   </tr> 
   <tr> 
@@ -175,7 +178,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> 不支援容器類型。 </td> 
   </tr> 
   <tr> 
@@ -250,8 +253,8 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
-   <td colname="col2"><span class="codeph"> 網路關閉 </span> </td> 
-   <td colname="col3"> 用戶的網路連接已關閉。 播放可能隨時停止，並會在連接可用時繼續。 </td> 
+   <td colname="col2"><span class="codeph"> 網路關閉  </span> </td> 
+   <td colname="col3"> 用戶的網路連接已關閉。 播放可能隨時停止，並會在連線可用時繼續。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 45 </td> 
@@ -296,21 +299,21 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr> 
    <td colname="col1"> 53 </td> 
    <td colname="col2"><span class="codeph"> PERIOD_HOLD</span> </td> 
-   <td colname="col3"> 媒體讀取器無法進一步讀取，因為它已達到 <span class="codeph"> setHoldAt</span> API設定的時間。 </td> 
+   <td colname="col3"> 媒體讀取器無法進一步讀取，因為它已達到由<span class="codeph"> setHoldAt</span> API設定的時間。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
-   <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
+   <td colname="col2"><span class="codeph"> LIVE_HOLD  </span> </td> 
    <td colname="col3"> 媒體閱讀器無法載入區段，因為它已到達即時視窗的尾端。 當伺服器將新媒體廣告至即時視窗時，區段載入將會繼續。 在下列情況下，通常會到達此狀態： 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
-     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">bufferTime <span class="codeph"> 太高</span> （等於或高於即時視窗持續時間）。 </li> 
+     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48"><span class="codeph"> bufferTime</span>太高（等於或高於即時窗口持續時間）。 </li> 
      <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">一個或多個插入／擦除API的組合取代了添加的多個介質。 </li> 
-     <li id="li_1B14716B2157492AB1859306D1250523">下一期間是有待更換媒體的即時期間(由於 <span class="codeph"> InsertBy</span> API呼叫) </li> 
+     <li id="li_1B14716B2157492AB1859306D1250523">下一時段是有待更換媒體的即時時段（由於<span class="codeph"> InsertBy</span> API呼叫） </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
-   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLANG </span> </td> 
+   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLANG  </span> </td> 
    <td colname="col3"> 媒體中的音訊和視訊交錯無法正確執行。 這是封裝錯誤。 當差異超過兩秒時，就會發出警告。 </td> 
   </tr> 
   <tr> 
@@ -321,7 +324,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHORIZED</span> </td> 
-   <td colname="col3"> Flash Player中尚未啟用HLS播放。 請參 <span class="codeph"> 閱AuthorizedFeatures.enableHLSPlayback</span>。 </td> 
+   <td colname="col3"> Flash Player中尚未啟用HLS播放。 請參閱<span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
@@ -339,7 +342,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
    <td colname="col3"> 即時媒體上不允許插入滾動後內容。 但是，當伺服器將介質標籤為完整後，才允許使用。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> 內部錯誤</span> </td> 
    <td colname="col3"> 這是一個非常罕見的問題，永遠不會發生。 </td> 
   </tr> 
@@ -375,7 +378,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr> 
   <tr> 
    <td colname="col1"> 68 </td> 
-   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> 不支援URL中使用的Web通訊協定。 </td> 
   </tr> 
   <tr> 
@@ -424,7 +427,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
    <td colname="col3"> 內部資料結構中沒有音頻接收器。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> 無法開啟檔案。 </td> 
   </tr> 
@@ -439,13 +442,13 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
    <td colname="col3"> 無法從檔案讀取。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> 剖析ID3資料時發生錯誤。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 82 </td> 
-   <td colname="col2"><span class="codeph"> SECURITY_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> SECURITY_ERROR  </span> </td> 
    <td colname="col3"> 由於安全性限制，載入內容失敗。 </td> 
   </tr> 
   <tr> 
@@ -465,7 +468,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr> 
   <tr> 
    <td colname="col1"> 87 </td> 
-   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND  </span> </td> 
    <td colname="col3"> 找不到密鑰。 </td> 
   </tr> 
   <tr> 
