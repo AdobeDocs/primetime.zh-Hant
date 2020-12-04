@@ -6,13 +6,16 @@ title: 實作章節支援
 uuid: f62a8244-6393-4a38-9ae2-8ac31f6a8a06
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
 
-# 實作章節支援 {#implement-chapter-support}
+# 實作章節支援{#implement-chapter-support}
 
-您可以在TVSDK應用程 *式中* ，定義並追蹤視訊追蹤的自訂章節。
+您可以在TVSDK應用程式中定義並追蹤&#x200B;*custom*&#x200B;章節，以進行視訊追蹤。
 
 自訂章節由應用程式管理，並以CMS資料或應用程式用來定義章節的其他方式為基礎。
 
