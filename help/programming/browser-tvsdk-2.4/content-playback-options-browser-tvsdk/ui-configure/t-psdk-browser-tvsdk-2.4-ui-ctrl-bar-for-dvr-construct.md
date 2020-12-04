@@ -6,11 +6,14 @@ title: 構建用於DVR的增強控制條
 uuid: 83c56def-a454-4f26-bdfc-2ef2497ef9bd
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# 構建用於DVR的增強控制條{#construct-a-control-bar-enhanced-for-dvr}
+# 構建增強的DVR控制條{#construct-a-control-bar-enhanced-for-dvr}
 
 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
 
