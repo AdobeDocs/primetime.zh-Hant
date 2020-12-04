@@ -4,11 +4,14 @@ title: 網路層安全性
 uuid: bd53bccf-1130-4189-97ec-4259bd25762f
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
 
-# 網路層安全性{#network-layer-security}
+# 網路層安全{#network-layer-security}
 
 網路安全漏洞是對任何面向網際網路或面向內聯網的應用程式伺服器的首批威脅之一。 本節介紹加強網路上主機抵御這些漏洞的過程。 它解決了網路分段、傳輸控制協定/Internet協定(TCP/IP)棧強化以及使用防火牆保護主機的問題。
 
