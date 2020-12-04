@@ -6,6 +6,9 @@ title: 存取替代音軌
 uuid: c7060022-29ec-43c1-811b-41cca5f5356c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +22,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
    `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`:音軌的初始清單可供使用。
 
-1. 從例項取得可用的音軌 `MediaPlayerItem` 。
+1. 從`MediaPlayerItem`實例獲取可用的音軌。
 
    `mediaPlayerItem.getAudioTracks()` 1. （選擇性）向使用者呈現可用的追蹤。
-1. 在例項上設定選取的音軌 `MediaPlayerItem` 。
+1. 在`MediaPlayerItem`實例上設定選定的音軌。
 
    `mediaPlayerItem.selectAudioTrack(audioTrack)`
