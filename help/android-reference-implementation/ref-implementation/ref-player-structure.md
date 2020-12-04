@@ -6,15 +6,18 @@ title: 參考實作結構
 uuid: ae347a97-1500-476a-9fc8-c99e6b2ab8de
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 0%
 
 ---
 
 
-# 參考實作結構 {#reference-implementation-structure}
+# 參考實施結構{#reference-implementation-structure}
 
 功能管理員是TVSDK程式庫的包裝函式。
 
-在Java中，類是以層次結構化的。 例如，下方的所有UI相關程式碼和所 `com.adobe.primetime.reference.ui` 有功能管理員下方的程式碼 `com.adobe.primetime.reference.manager`。
+在Java中，類是以層次結構化的。 例如，`com.adobe.primetime.reference.ui`下的所有UI相關程式碼和所有功能管理員都位於`com.adobe.primetime.reference.manager`下。
 
 Primetime參考實作包含下列套件：
 
@@ -32,4 +35,4 @@ Primetime參考實作包含下列套件：
 | [com.adobe.primetime.reference.ui.player](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/package-summary.html) | 包含播放器的UI程式碼。 |
 | [com.adobe.primetime.reference.ui.settings](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/settings/package-summary.html) | 包含設定的UI程式碼。 |
 | [com.adobe.primetime.reference.utils](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/package-summary.html) | 包含一般實用程式類。 |
-| [com.adobe.primetime.reference.utils.http](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/http/package-summary.html) | 包含實 `HTTP-specific` 用程式類。 |
+| [com.adobe.primetime.reference.utils.http](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/http/package-summary.html) | 包含`HTTP-specific`實用程式類。 |
