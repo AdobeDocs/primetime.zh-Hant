@@ -6,11 +6,14 @@ title: 自訂機會偵測器和內容解析器
 uuid: 7bd04c8f-6f04-4321-88e8-9bb93251d940
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#customize-opportunity-detectors-and-content-resolvers-overiew}
+# 概述{#customize-opportunity-detectors-and-content-resolvers-overiew}
 
 機會檢測器是TVADK元件，它檢測流中的自定義標籤並識別放置機會。 這些機會會傳送至內容解析器，內容解析器會根據放置機會屬性和中繼資料自訂內容／廣告插入工作流程。
 
