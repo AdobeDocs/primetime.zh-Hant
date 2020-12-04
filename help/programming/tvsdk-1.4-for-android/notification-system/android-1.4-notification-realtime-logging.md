@@ -6,6 +6,9 @@ title: 新增即時記錄與除錯
 uuid: 037daf57-a1b3-4b42-ac51-81179fb36915
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    然後，遠程伺服器可以即時圖形化地顯示所提供的資料。
 1. 若要偵測通知事件的遺失，請尋找事件索引值順序中的空隙。
 
-   每個通知事件都有一個索引值，該索引值會自動由類 `session.NotificationHistory` 增加。
+   每個通知事件都有一個索引值，該索引值會自動由`session.NotificationHistory`類別增加。
