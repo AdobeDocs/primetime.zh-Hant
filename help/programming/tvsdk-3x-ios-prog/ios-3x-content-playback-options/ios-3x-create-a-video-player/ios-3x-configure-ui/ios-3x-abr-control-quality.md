@@ -6,11 +6,14 @@ title: 視訊品質的可調式位元速率(ABR)
 uuid: a9b9a6a8-4098-4952-90e7-684e64800b3f
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
 
-# 視訊品質的可調式位元速率(ABR) {#adaptive-bit-rates-abr-for-video-quality}
+# 視訊品質的可調式位元速率(ABR){#adaptive-bit-rates-abr-for-video-quality}
 
 HLS和DASH串流針對相同的視訊短脈衝串提供不同的位元速率編碼（描述檔）。 TVSDK可根據可用頻寬來選取每個突發串的品質等級。
 
@@ -22,7 +25,7 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
  <tbody> 
   <tr> 
    <td colname="col01"> 初始位元速率 </td> 
-   <td colname="col2"> <p>第一段的所需播放位速率（以位／秒為單位）。 當播放開始時，第一個區段會使用最接近的描述檔，該描述檔等於或大於初始位元速率。 </p> <p> 如果定義了最小位元速率，且初始位元速率低於最小速率，則TVSDK會選擇位元速率高於最小位元速率的描述檔。 如果初始速率高於最大速率，TVSDK會選擇低於最大速率的最高速率。 </p> <p>如果初始比特率為零或未定義，則初始比特率由ABR策略確定。 </p> </td> 
+   <td colname="col2"> <p>第一段的所需播放位速率（以位／秒為單位）。 當播放開始時，第一個區段會使用最接近的描述檔，該描述檔等於或大於初始位元速率。 </p> <p> 如果定義了最小位元速率，且初始位元速率低於最小速率，則TVSDK會選擇位元速率低於最小速率的描述檔。 如果初始速率高於最大速率，TVSDK會選擇低於最大速率的最高速率。 </p> <p>如果初始比特率為零或未定義，則初始比特率由ABR策略確定。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> 最低位元速率 </td> 
@@ -42,19 +45,19 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
 
 例如，如果串流具有下列描述檔：
 
-* 1: 300000
-* 2: 700000
-* 3: 1500000
-* 4: 2400000
-* 5: 4000000
+* 1:300000
+* 2:700000
+* 3:150000
+* 4:240000
+* 5:400000
 
 如果您指定300000到2000000的範圍，TVSDK只會考慮設定檔1、2和3。 這可讓應用程式因應各種網路狀況進行調整，例如從WiFi切換至3G或切換至手機、平板電腦或桌上型電腦等各種裝置。
 
-## 配置自適應位速率 {#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
+## 配置自適應位速率{#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
 
 若要設定TVSDK可調式位元速率參數：
 
-1. 設定例項 `PTABRControlParameters` 以設定初始、最小和最大位元速率設定。
+1. 配置`PTABRControlParameters`實例以設定初始、最小和最大位速率設定。
 
    預設值會顯示在下列程式碼片段中，但您的應用程式可針對每個參數設定任何整數值。
 
@@ -72,7 +75,7 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. 使用已設 `PTMediaPlayer` 定的例項更新您的 `PTABRControlParameters` 例項。
+1. 使用已配置的`PTABRControlParameters`實例更新您的`PTMediaPlayer`實例。
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +84,9 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
 
 請記住：
 
-* 應用程式必須先將 `abrControlParameters` 屬性設定在 `PTMediaPlayer` 上，才 `PTMediaPlayerItem` 能設定初始和最小位元速率設定的執行個體。
+* 應用程式必須先在`PTMediaPlayer`上設定`abrControlParameters`屬性，才能設定`PTMediaPlayerItem`例項，讓初始和最小位元速率設定生效。
 
    內容播放開始後，設定新例項只會影響最大位元速率設定。
 
-* 若要在播放期間更新最大位元速率設定，請建立新 `PTABRControlParameters` 的例項並在播放器例項上設定。
-* 您只能在iOS 8.0和更新版本上，在播放期間更新最大位元速率設定。 對於舊版，會 `maxBitrate` 使用內容播放開始前設定的值。
+* 若要在播放期間更新最大位元速率設定，請建立新的`PTABRControlParameters`例項，並在播放器例項上加以設定。
+* 您只能在iOS 8.0和更新版本上，在播放期間更新最大位元速率設定。 對於舊版，會使用在內容播放開始前設定的`maxBitrate`值。
