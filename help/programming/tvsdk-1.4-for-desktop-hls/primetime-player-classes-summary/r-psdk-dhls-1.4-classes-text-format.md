@@ -6,6 +6,9 @@ title: 文本格式類
 uuid: ef0a5098-d6a0-42f4-91f6-eb944eae5c2a
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 這些類指定文本的格式。
 
-套件： [com.adobe.mediacore.textformat](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/package-detail.html)
+套件：[com.adobe.mediacore.textformat](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/package-detail.html)
 
 | 名稱 | 說明 |
 |---|---|
