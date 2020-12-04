@@ -1,22 +1,25 @@
 ---
-description: 您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實作多個片段。
-seo-description: 您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實作多個片段。
+description: 您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實施多個片段。
+seo-description: 您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實施多個片段。
 seo-title: 區隔可點按的廣告流程
 title: 區隔可點按的廣告流程
 uuid: a5254ac5-3005-483e-935e-acbbef03df0e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# 區隔可點按的廣告流程 {#separate-the-clickable-ad-process}
+# 分離可點按的廣告程式{#separate-the-clickable-ad-process}
 
-您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實作多個片段。
+您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實施多個片段。
 
-1. 實作一個片段以包含 `MediaPlayer`。
+1. 實作一個片段以包含`MediaPlayer`。
 
-   此片段應呼叫 `notifyClick()` 並負責視訊播放。
+   此片段應呼叫`notifyClick()`，並負責視訊播放。
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,9 +31,9 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
    } 
    ```
 
-1. 實作不同的片段，以顯示指出廣告可點按的UI元素、監控該UI元素，以及將使用者點按次數傳達給包含該片段的片段 `MediaPlayer`。
+1. 實作不同的片段，以顯示指出廣告可點按的UI元素、監視該UI元素，以及將使用者點按次數傳達給包含`MediaPlayer`的片段。
 
-   此片段應聲明用於片段通信的介面。 該片段在其生命週期方法期間捕獲 `onAttach()` 介面實現，並可調用介面方法與活動通信。
+   此片段應聲明用於片段通信的介面。 該片段在其`onAttach()`生命週期方法期間捕獲介面實現，並可調用介面方法與活動通信。
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
