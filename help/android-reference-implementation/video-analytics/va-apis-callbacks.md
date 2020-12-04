@@ -6,11 +6,14 @@ title: 相關API檔案
 uuid: 2dbb01c7-f8e0-47c7-baaa-84b8d54c03a6
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
 
-# 相關API檔案 {#related-api-documentation}
+# 相關API檔案{#related-api-documentation}
 
 視訊分析管理員會公開這些類別，以便在您的播放器中實作視訊追蹤。
 
