@@ -6,11 +6,14 @@ seo-description: 此工作流程與大多數現有的DRM系統不同，因為它
 uuid: b313594b-0feb-4f27-bf02-f04b955e2140
 translation-type: tm+mt
 source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 
-# AAXS DRM外部CEK工作流程{#aaxs-drm-external-cek-workflow}
+# AAXS DRM External CEK Workflow{#aaxs-drm-external-cek-workflow}
 
 此工作流程與大多數現有的DRM系統不同，因為它不需要使用任何中央儲存庫或內容密鑰管理系統(CKMS)。 但是，對於希望AAXS與其現有CKMS合作的客戶，AAXS提供一種稱為「外部CEK」的功能，其中CEK在包裝和許可證發放時由外部提供。
 
