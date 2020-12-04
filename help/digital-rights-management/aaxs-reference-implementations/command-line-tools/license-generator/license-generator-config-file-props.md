@@ -4,13 +4,16 @@ title: 配置檔案屬性
 uuid: 13e158a6-c447-4e5e-884d-03fb4835c120
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
 
-# 配置檔案屬性 {#configuration-file-properties}
+# 配置檔案屬性{#configuration-file-properties}
 
-在您執行授權產生器之前，請先為授權產生器屬性指定值。 配置檔案指定以下屬性。 對於包含 *n的屬性名*, ** n表示從1開始的整數，並且對於屬性的每個實例都遞增。
+在您執行授權產生器之前，請先為授權產生器屬性指定值。 配置檔案指定以下屬性。 對於包含&#x200B;*n*&#x200B;的屬性名稱，*n*&#x200B;表示從1開始的整數，並且會增加屬性的每個實例。
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_qk1_rry_n4"> 
  <thead class="- topic/thead "> 
@@ -34,7 +37,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry ">用於保護由licensegen.sign.certfile指定 <span class="+ topic/ph pr-d/codeph codeph"> 之檔案的密碼。</span> </td> 
+   <td colname="2" class="- topic/entry ">用於保護<span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile.</span>所指定檔案的密碼 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.domainca.n</span> </td> 
@@ -42,7 +45,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.ansymetic.licenseServerCredential.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">可選的PKCS12檔案，包含用於解密元資料和策略中的CEK的附加許可證伺服器憑據。 如果內容先前已封裝為授權伺服器憑證，而非由 <span class="codeph"> licensegen.sign.certfile所指定的憑證，則可設定其他憑證</span>。 此屬性應引用包含 <span class="filepath"> 證書和私鑰的。pfx</span> 檔案。 n必須單調增加，從1開始。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">可選的PKCS12檔案，包含用於解密元資料和策略中的CEK的附加許可證伺服器憑據。 如果內容先前已封裝為「授權伺服器」憑證，但<span class="codeph"> licensegen.sign.certfile</span>所指定的憑證除外，則可設定其他憑證。 此屬性應引用包含證書和私鑰的<span class="filepath"> .pfx</span>檔案。 n必須單調增加，從1開始。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.ansymetric.licenseServerCredential.n.password</span> </td> 
