@@ -13,16 +13,17 @@ ht-degree: 1%
 ---
 
 
-# 設定自訂播放 {#cset-up-customized-playback}
+# 設定自訂播放{#cset-up-customized-playback}
 
 您可以透過向TVSDK註冊廣告原則例項，自訂或覆寫廣告行為。
 
 若要自訂廣告行為，請執行下列其中一項作業：
 
-* 實作介 `AdPolicySelector` 面及其所有方法。
+* 實施`AdPolicySelector`介面及其所有方法。
 如果您需要覆寫所有預設廣告行為，建議使用此選項。
 
-* 擴充類 `DefaultAdPolicySelector` 別，並僅針對需要自訂的行為提供實作。
+* 擴充`DefaultAdPolicySelector`類別，並僅提供需要的行為實作
+自訂。
 如果您只需要覆寫部分預設行為，建議使用此選項。
 
 對於這兩個選項，請完成下列任務：
