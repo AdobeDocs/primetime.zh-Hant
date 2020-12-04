@@ -6,11 +6,14 @@ title: VOD的變更
 uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
 
-# VOD的變更 {#changes-to-vod}
+# 對VOD {#changes-to-vod}的更改
 
 適合VOD內容之一播放的廣告時間軸可能不適合後續播放。 您可以取代VOD時間軸，而不需變更內容。
 
@@ -21,4 +24,4 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 * 以持續時間更長的較新廣告動態取代舊的C3廣告。
 * 插入的廣告較少或完全沒有。
 
-您可以以原始的M3U8檔案和查詢參數的不同值提交新的廣告插入請求來取代廣告時 `pttimeline` 間軸。
+您可以以原始M3U8檔案和`pttimeline`查詢參數的不同值提交新的廣告插入請求來取代廣告時間軸。
