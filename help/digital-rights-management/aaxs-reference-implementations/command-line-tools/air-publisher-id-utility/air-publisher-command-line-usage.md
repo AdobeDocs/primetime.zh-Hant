@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 命令列使用 {#command-line-usage}
+# 命令行用法{#command-line-usage}
 
 若要執行工具，請使用下列語法：
 
@@ -35,5 +35,5 @@ java -jar AdobePublisherIDUtility.jar
 
 >[!NOTE]
 >
->若要決定iOS應用程式的發佈者ID，請使用 `-s` 選項並指定用來簽署iOS應用程式的憑證。 ***Adobe Primetime是建立可播放受存取保護內容的iOS應用程式的必要工具***。
+>若要決定iOS應用程式的發佈者ID，請使用`-s`選項並指定用來簽署iOS應用程式的憑證。 ***Adobe Primetime是建立可播放受存取保護內容的iOS應用程式的必要工具***。
 
