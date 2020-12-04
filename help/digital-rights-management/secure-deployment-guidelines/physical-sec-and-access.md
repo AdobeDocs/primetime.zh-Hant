@@ -6,11 +6,14 @@ title: 物理安全性和訪問
 uuid: a5b00012-f2e5-4afa-8c59-46910fa325da
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '324'
+ht-degree: 0%
 
 ---
 
 
-# 物理安全性和訪問{#physical-security-and-access}
+# 物理安全和訪問{#physical-security-and-access}
 
 實際保護您的Adobe Primetime DRM環境對於防止未經授權的存取至關重要。
 
@@ -20,4 +23,4 @@ Primetime DRM環境的物理安全範圍從將伺服器置於安全室的鎖和�
 
 要實現極高的安全級別，保護必須延伸到電源、不間斷電源(UPS)、網路設備和其他相關設備。 這些項目的中斷會影響伺服器，尤其是當伺服器必須始終處於啟動和運行狀態時。 必須有兩部分的存取權，例如徽章和PIN碼或徽章和指紋。 此外，門上必須安裝防尾制裝置，以防止被授權者允許未經授權者進入。
 
-有關物理安全標準的一般資訊和建議，請參 [見https://www.iso.org/frequently-asked-questions-faqs.html](https://www.iso.org/frequently-asked-questions-faqs.html)。
+有關物理安全標準的一般資訊和建議，請參見[https://www.iso.org/frequently-asked-questions-faqs.html](https://www.iso.org/frequently-asked-questions-faqs.html)。
