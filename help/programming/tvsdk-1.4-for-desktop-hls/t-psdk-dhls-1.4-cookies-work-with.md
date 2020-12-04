@@ -6,6 +6,9 @@ title: 使用Cookie
 uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 若要使用Cookie:
 
-1. 使用中 `cookieHeaders` 的屬 `NetworkConfiguration` 性來設定Cookie。 屬 `cookieHeaders` 性是中繼資料物件，您可將索引鍵值配對新增至此物件，以便包含在Cookie標題中。
+1. 使用`NetworkConfiguration`中的`cookieHeaders`屬性來設定Cookie。 `cookieHeaders`屬性是中繼資料物件，您可以新增索引鍵值配對至此物件，以加入Cookie標題中。
 
    例如：
 
@@ -35,9 +38,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   依預設，Cookie標題只會與關鍵要求一起傳送。 若要傳送包含所有請求的Cookie標題，請將 `NetworkConfiguration` 屬性 `useCookieHeadersForAllRequests` 設為true。
+   依預設，Cookie標題只會與關鍵要求一起傳送。 若要傳送包含所有請求的Cookie標頭，請將`NetworkConfiguration`屬性`useCookieHeadersForAllRequests`設為true。
 
-1. 若要確保其可 `NetworkConfiguration` 以運作，請將它設定為中繼資料：
+1. 若要確保`NetworkConfiguration`正常運作，請將它設為中繼資料：
 
    ```
    var networkConfiguration:NetworkConfiguration = new NetworkConfiguration(); 
@@ -47,9 +50,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
                                 networkConfiguration);
    ```
 
-1. 在您建立時，提供上一個步驟的中繼資料 `MediaResource`。
+1. 建立`MediaResource`時，請提供上一步的中繼資料。
 
-   例如，如果您使用此方 `createFromURL` 法，請輸入下列資訊：
+   例如，如果您使用`createFromURL`方法，請輸入以下資訊：
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
