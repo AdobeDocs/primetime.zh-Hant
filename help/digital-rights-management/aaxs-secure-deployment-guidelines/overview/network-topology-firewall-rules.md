@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 防火牆規則 {#firewall-rules}
+# 防火牆規則{#firewall-rules}
 
 ## 傳入的URL {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
@@ -78,11 +78,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端用來將FMRMS 1.x DRM中繼資料轉換為Adobe Access DRM中繼資料的URL。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端用來將FMRMS 1.x DRM中繼資料轉換為Adobe Access DRM中繼資料的URL。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES web service URL。 如果內容是使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器，並提示您升級至Adobe Access。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES web service URL。 如果內容是使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器，並提示您升級至Adobe Access。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -99,7 +99,7 @@ ht-degree: 0%
 
 授權伺服器需要透過防火牆存取，才能從Adobe下載下列CRL:
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
