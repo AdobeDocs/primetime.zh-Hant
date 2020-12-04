@@ -6,38 +6,41 @@ title: 在MediaPlayer中載入媒體資源
 uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
 translation-type: tm+mt
 source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
 
-# 在MediaPlayer中載入媒體資源 {#load-a-media-resource-in-the-mediaplayer}
+# 在MediaPlayer中載入媒體資源{#load-a-media-resource-in-the-mediaplayer}
 
 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
 
 1. 使用要播放的新資源設定MediaPlayer的可播放項目。
 
-   呼叫並傳遞現有例項，以取代您現有MediaPlayer `MediaPlayer.replaceCurrentItem` 的目前可播放 `MediaResource` 項目。
+   呼叫`MediaPlayer.replaceCurrentItem`並傳遞現有的`MediaResource`例項，以取代您現有的MediaPlayer目前可播放的項目。
 
-1. 向實例註冊接 `MediaPlayer.PlaybackEventListener` 口的實 `MediaPlayer` 施。
+1. 向`MediaPlayer`實例註冊`MediaPlayer.PlaybackEventListener`介面的實現。
 
    * `onPrepared`
    * `onStateChanged`，並檢查是否已初始化和錯誤。
 
-1. 當媒體播放器的狀態變更為「已初始化」時，您可以呼叫 `MediaPlayer.prepareToPlay`
+1. 當媒體播放器的狀態更改為「已初始化」時，您可以調用`MediaPlayer.prepareToPlay`
 
-   「已初始化」狀態表示介質已成功載入。 呼叫 `prepareToPlay` 會啟動廣告解析度和位置處理程式（如果有的話）。
+   「已初始化」狀態表示介質已成功載入。 呼叫`prepareToPlay`會啟動廣告解析度和位置處理程式（如果有的話）。
 
-1. 當TVSDK呼叫回 `onPrepared` 呼時，媒體串流已成功載入並準備播放。
+1. 當TVSDK呼叫`onPrepared`回呼時，媒體串流已成功載入並已準備好播放。
 
-   載入媒體串流時，會建 `MediaPlayerItem` 立。
+   載入媒體串流時，會建立`MediaPlayerItem`。
 
->如果發生故障，則切 `MediaPlayer` 換到「ERROR（錯誤）」狀態。 它也會呼叫您的回呼來通知您的應 `PlaybackEventListener.onStateChanged`用程式。
+>如果發生故障， `MediaPlayer`將切換到ERROR狀態。 它也會呼叫您的`PlaybackEventListener.onStateChanged`回呼來通知您的應用程式。
 >
 >這會傳遞數個參數：
->* 類 `state` 型的參 `MediaPlayer.PlayerState` 數，其值為 `MediaPlayer.PlayerState.ERROR`。
+>* 類型`MediaPlayer.PlayerState`的`state`參數，其值為`MediaPlayer.PlayerState.ERROR`。
    >
    >
-* 包含 `notification` 錯誤事件 `MediaPlayerNotification` 診斷資訊的類型參數。
+* 類型`MediaPlayerNotification`的`notification`參數，包含有關錯誤事件的診斷資訊。
 
 
 以下簡化的范常式式碼說明載入媒體資源的程式：
