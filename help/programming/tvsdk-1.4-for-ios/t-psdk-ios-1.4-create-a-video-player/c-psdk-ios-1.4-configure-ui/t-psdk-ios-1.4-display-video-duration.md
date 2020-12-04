@@ -6,11 +6,14 @@ title: 顯示視訊的持續時間
 uuid: 02042070-9c55-4cbb-9dc1-49987451eb8f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# 顯示視訊的持續時間 {#display-the-duration-of-the-video}
+# 顯示視頻的持續時間{#display-the-duration-of-the-video}
 
 您可以顯示目前作用中內容的持續時間。
 
