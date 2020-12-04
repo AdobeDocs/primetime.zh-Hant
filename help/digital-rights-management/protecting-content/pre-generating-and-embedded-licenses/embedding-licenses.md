@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# 內嵌授權 {#embedding-licenses}
+# 內嵌授權{#embedding-licenses}
 
 一旦內容已經加密且已預先產生授權，該授權可嵌入加密內容。
 
-如果您想要內嵌授權，則需要取得實例 `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`。 如果您知道加密內容的類型，請使用或的建構 `FLVKeyMetaDataUpdater` 函式 `F4VKeyMetaDataUpdater`;否則，請 `MediaProcessorFactory.getMediaProcessor()` 使用根據檢測到的檔案類型返回實例。 然後，您需要建構並 `KeyMetaDataCallback` 叫用 `modifyKeyMetaData()`。 然後，當DRM中繼資料位於加密內容時，就會叫用您的回呼實作。 您可以根據找到的中繼資料，選擇要內嵌的授權，並使用 `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`
+如果您想要內嵌授權，則需要取得`com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`的例項。 如果您知道加密內容的類型，請使用`FLVKeyMetaDataUpdater`或`F4VKeyMetaDataUpdater`的建構函式；否則，請使用`MediaProcessorFactory.getMediaProcessor()`根據檢測到的檔案類型返回實例。 然後，您需要建構`KeyMetaDataCallback`並叫用`modifyKeyMetaData()`。 然後，當DRM中繼資料位於加密內容時，就會叫用您的回呼實作。 您可以根據找到的中繼資料，選擇要內嵌的授權並使用`EmbedLicenseKeyMetaData.setEmbeddedLicenses()`來設定授權。
 
-請參 `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` 閱參考實作命令列工具目錄， [!DNL Samples] 以取得示範內嵌授權的范常式式碼。
+請參閱參考實作命令列工具[!DNL Samples]目錄中的`com.adobe.flashaccess.samples.licenseembedder.EmbedLicense`，以取得示範內嵌授權的范常式式碼。
 
 >[!NOTE]
 >
