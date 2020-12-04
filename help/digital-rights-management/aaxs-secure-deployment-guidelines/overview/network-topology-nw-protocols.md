@@ -4,11 +4,14 @@ title: Adobe Access使用的網路通訊協定
 uuid: 4f2ee3f5-6758-4fbe-b5cd-cead1e5ccde8
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Access使用的網路通訊協定 {#network-protocols-used-by-adobe-access}
+# Adobe Access {#network-protocols-used-by-adobe-access}使用的網路通訊協定
 
 當您設定安全網路架構時，Adobe Access與企業網路中其他系統之間的互動需要下表中的網路通訊協定。
 
@@ -26,7 +29,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTPS（可選） </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player、Adobe AIR和Adobe Primetime用戶端可使用HTTPS與Adobe Access通訊，但是，除非您需要支援FMRMS 1.x用戶端，否則不需要HTTPS(SSL)。 請參閱表「傳入的URL <a href="network-topology-firewall-rules.md" format="dita" scope="local"> 和設定SSL</a><a href="network-topology-nw-protocols.md"> 」中的附註</a>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Flash Player、Adobe AIR和Adobe Primetime用戶端可使用HTTPS與Adobe Access通訊，但是，除非您需要支援FMRMS 1.x用戶端，否則不需要HTTPS(SSL)。 請參閱表<a href="network-topology-firewall-rules.md" format="dita" scope="local">傳入URL</a>和<a href="network-topology-nw-protocols.md">設定SSL</a>中的附註。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
