@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# 警告通知代碼 {#warning-notification-codes}
+# 警告通知代碼{#warning-notification-codes}
 
 此表證明了有關WARN類型通知的詳細資訊。
 
@@ -61,14 +61,14 @@ ht-degree: 3%
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000 </span> </td> 
+   <td colname="1"><span class="codeph"> 204000  </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_警告</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span><span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME說</span><span class="codeph"> 明</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
    <td colname="5"> <p> 背景資訊清單下載時發生錯誤。 更新背景資訊清單時，會以TVSDK警告的形式傳送任何問題，且不會造成播放停止。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_警告</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> 說明</span> </td> 
@@ -82,17 +82,17 @@ ht-degree: 3%
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000 </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210000  </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> 無 </td> 
    <td colname="5"> 廣告信令模式被定義為自訂範圍，但沒有定義任何範圍。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001 </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號210001  </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 說明 </span> </td> 
+   <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> <p> 一個或多個時間範圍無效，將被忽略或修改。 </p> <p> DESCRIPTION是包含無效範圍說明的字串。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -103,52 +103,52 @@ ht-degree: 3%
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
+   <td colname="1"><span class="codeph"> 270000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_NOT_READY  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 說明 </span> </td> 
+   <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270001 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號270001  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>AD未插入流。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270002 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號270002  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>廣告不包含僅音訊串流 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270003 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號270003  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>找不到內容目前位元速率的相符廣告串流。 </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270005 </span> </td> 
-   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號270005  </span> </td> 
+   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE  </span> </td> 
+   <td colname="3"><span class="codeph"> PLAYBACK_ERROR  </span> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>建立AVAsset時出錯。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_WARNING </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號270006  </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_WARNING  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 說明 </span> </td> 
+   <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> <p>警告：請參閱sitecatalyst警告說明。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270007 </span> </td> 
-   <td colname="2"><span class="codeph"> 網路錯誤 </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號270007  </span> </td> 
+   <td colname="2"><span class="codeph"> 網路錯誤  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> URL </span> </td> 
+   <td colname="4"><span class="codeph"> URL  </span> </td> 
    <td colname="5"> <p>從網路獲取資料時出錯。 </p> </td> 
   </tr> 
  </tbody> 
@@ -156,6 +156,6 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->adID和來源(URL)可透過PTAdAsset在通知中繼資料中使用金鑰來 `AD_ASSET` 擷取。
+>adID和來源(URL)可透過PTAdAsset在通知中繼資料中以`AD_ASSET`鍵擷取。
 >
->屬性 [] 指定通知的可選鍵。
+>[]屬性指定通知的可選鍵。
