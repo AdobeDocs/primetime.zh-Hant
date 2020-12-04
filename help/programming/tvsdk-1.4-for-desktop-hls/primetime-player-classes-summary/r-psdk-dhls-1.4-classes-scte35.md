@@ -6,15 +6,21 @@ title: SCTE 35班
 uuid: 7f3754fd-90f1-4457-9e31-d40740435489
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 
-# SCTE 35班 {#scte-classes}
+# SCTE 35類{#scte-classes}
 
 這些類別可讓TVSDK包含SCTE 35接頭。
 
-套件： [com.adobe.mediacore.utils.scte35](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/package-detail.html)套件： [com.adobe.mediacore.utils.scte35.commands](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/commands/package-detail.html)套件： [com.adobe.mediacore.utils.scte35.data](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/data/package-detail.html)套件： [com.adobe.mediacore.utils.scte35.descriptors](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/descriptors/package-detail.html)
+套件：[com.adobe.mediacore.utils.scte35](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/package-detail.html)
+套件：[com.adobe.mediacore.utils.scte35.commands](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/commands/package-detail.html)
+套件：[com.adobe.mediacore.utils.scte35.data](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/data/package-detail.html)
+套件：[com.adobe.mediacore.utils.scte35.descriptors](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/scte35/descriptors/package-detail.html)
 
 | 封裝 | 說明 |
 |---|---|
