@@ -19,7 +19,7 @@ ht-degree: 0%
 
 要使用預設行為：
 
-* 如果您實作自己的 `ContentFactory` 類別，請傳回實作中 `DefaultAdPolicySelector` 的新例項 `doRetrieveAdPolicySelector`。
+* 如果您實作自己的`ContentFactory`類別，請在`doRetrieveAdPolicySelector`的實作中傳回新的`DefaultAdPolicySelector`例項。
 
    ```
    public class CustomContentFactory extends ContentFactory { 
@@ -38,4 +38,4 @@ ht-degree: 0%
    }
    ```
 
-* 如果您沒有類別的自訂實作， `ContentFactory` TVSDK會使用 `DefaultAdPolicySelector`。
+* 如果您沒有`ContentFactory`類別的自訂實作，TVSDK會使用`DefaultAdPolicySelector`。
