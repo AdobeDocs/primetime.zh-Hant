@@ -14,6 +14,6 @@ ht-degree: 78%
 ---
 
 
-# Primetime參考 {#reference}
+# 黃金時段參考{#reference}
 
 + [API參考](api-references.md)
