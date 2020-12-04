@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 封裝Widevine和PlayReady的內容 {#package-for-widevine}
+# 封裝Widevine和PlayReady {#package-for-widevine}的內容
 
 我們使用Bento4封裝程式和Adobe離線封裝程式來製作加密的DASH內容。 Bento4將作為輸入的未加密mp4內容。
 
-## 使用Bento4封裝您的內容{#package-your-content-with-bento}
+## 使用Bento4{#package-your-content-with-bento}封裝您的內容
 
 Bento4封裝程式預期輸入mp4會預先分割。 Bento4封裝器散發包含此工具。
 
@@ -66,13 +66,13 @@ Bento4封裝程式預期輸入mp4會預先分割。 Bento4封裝器散發包含�
 
 where
 
-標幟的 `--encryption-key` 值為形式 `<base16 encoded key id>:<base16 encoded encryption key>`。
+`--encryption-key`標誌的值格式為`<base16 encoded key id>:<base16 encoded encryption key>`。
 
-此標 `--widevine-header=provider:intertrust#content_id:2a` 幟會告訴封裝程式將pssh方塊包含在資訊清單中，TVSDK目前需要此方塊才能播放。
+`--widevine-header=provider:intertrust#content_id:2a`標幟會告訴封裝程式將pssh方塊包含在資訊清單中，TVSDK目前需要此方塊才能播放。
 
-PlayReady授權購 `-playready-header` 買的值。
+`-playready-header`的值是用於PlayReady授權購買。
 
-## 使用Adobe Offline Packager封裝您的內容 {#package-your-content-with-adobe-offline-packager}
+## 使用Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}封裝您的內容
 
 Adobe Offline Packager會將輸入未加密的mp4內容。
 
@@ -92,7 +92,7 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-在此特定情況下，離線封裝程式會將Widevine內容保護和PlayReady內容保護初始化資料新增至輸出的DASH內容。 值是用 `-key_file_path` 於基64編碼密鑰。 其值用於 `-playready_LA_URL` PlayReady授權購買。
+在此特定情況下，離線封裝程式會將Widevine內容保護和PlayReady內容保護初始化資料新增至輸出的DASH內容。 `-key_file_path`的值用於基本64編碼的密鑰。 `-playready_LA_URL`的值用於PlayReady授權購買。
 
 conf_path參數指向將包含以下內容的配置檔案：
 
