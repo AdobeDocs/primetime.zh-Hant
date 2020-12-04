@@ -6,15 +6,18 @@ title: 針對VOD的廣告插入和容錯
 uuid: 33f7aad5-fc4f-459d-8c29-01ba1353dfcc
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 0%
 
 ---
 
 
-# 針對VOD的廣告插入和容錯{#advertising-insertion-and-failover-for-vod}
+# VOD{#advertising-insertion-and-failover-for-vod}的廣告插入和故障切換
 
 隨選視訊(VOD)廣告插入程式由廣告解析、廣告插入和廣告播放階段組成。 對於廣告追蹤，瀏覽器TVSDK必須通知遠端追蹤伺服器有關每個廣告的播放進度。 當出現意外情況時，會採取適當的動作。
 
-## 廣告解析階段 {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
+## 廣告解析階段{#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
 
 瀏覽器TVSDK會連絡廣告傳送服務，例如Adobe Primetime廣告決策，並嘗試取得與廣告的視訊串流對應的主要播放清單檔案。 在廣告解析階段，瀏覽器TVSDK會對遠端廣告傳送伺服器進行HTTP呼叫，並分析伺服器的回應。
 
@@ -35,7 +38,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       這可能是因為，例如，對入站資料的解析失敗。
    瀏覽器TVSDK會發出有關錯誤的警告通知，並繼續處理。
 
-## 廣告插入階段 {#section_88A0E4FA12394717A9D85689BD11D59F}
+## 廣告插入階段{#section_88A0E4FA12394717A9D85689BD11D59F}
 
 瀏覽器TVSDK會將替代內容（廣告）插入與主要內容對應的時間軸。
 
@@ -45,7 +48,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 瀏覽器TVSDK會發出有關錯誤的警告通知，並繼續處理。
 
-## 廣告播放階段 {#section_7B0073BE9A744C74929263182C1243FC}
+## 廣告播放階段{#section_7B0073BE9A744C74929263182C1243FC}
 
 瀏覽器TVSDK會下載廣告區段，並在裝置螢幕上呈現廣告區段。
 
