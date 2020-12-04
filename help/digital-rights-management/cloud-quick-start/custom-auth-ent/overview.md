@@ -4,6 +4,9 @@ title: 蜜蜂概觀
 uuid: c6ee7528-fdfa-4a56-bea2-a5e2dab6d428
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +27,6 @@ Primetime Cloud DRM預設會使用匿名授權傳送。 這表示所有傳送至
 * `isAllowed`
 * `drmPolicyToUse`
 
-這些決定是否允許裝置播放內容，以及用來產生DRM授權的DRM政策(如果 `isAllowed` 為真)。
+這些決定是否允許裝置播放內容，以及用於生成DRM許可證的DRM策略（如果`isAllowed`為true）。
 
 本檔案涵蓋您完成上述選項2所需要執行的工作：實作您自己的內部外部權益服務，並將它提供給Primetime Cloud DRM，以取得您已封裝的內容。
