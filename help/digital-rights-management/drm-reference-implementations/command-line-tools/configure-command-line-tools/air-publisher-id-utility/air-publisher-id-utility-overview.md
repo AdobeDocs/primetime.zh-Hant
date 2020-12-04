@@ -11,17 +11,17 @@ ht-degree: 0%
 ---
 
 
-# AIR Publisher ID公用程式 {#air-publisher-id-utility}
+# AIR Publisher ID公用程式{#air-publisher-id-utility}
 
-當您建立AIR檔案時，AIR開發人員工具(ADT)會自動產生發佈者ID。 AIR Publisher ID公用程式( [!DNL AdobePublisherIDUtility.jar])會計算AIR應用程式的Publisher ID。
+當您建立AIR檔案時，AIR開發人員工具(ADT)會自動產生發佈者ID。 AIR Publisher ID公用程式([!DNL AdobePublisherIDUtility.jar])會計算AIR應用程式的Publisher ID。
 
 發佈者ID是您用來建立AIR檔案的憑證唯一的。 如果您針對多個AIR應用程式重複使用相同的憑證，所有AIR應用程式都有相同的發佈者ID。 成功發行1.5.2的AIR版本不會將產生的發佈者ID新增至檔案。 因此，如果您打算使用AIR應用程式允許清單，請使用此工具來判斷發佈者ID。
 
 >[!NOTE]
 >
->用於AIR允許清單實作的發佈者ID與應用程式發佈者在應用程式檔案中指定的發佈者ID不相 [!DNL application.xml] 同。
+>用於AIR允許清單實作的發佈者ID與應用程式發佈者在應用程式的[!DNL application.xml]檔案中指定的發佈者ID不同。
 
-## AIR Publisher ID公用程式命令列用法 {#air-publisher-id-utility-command-line-usage}
+## AIR Publisher ID公用程式命令列用法{#air-publisher-id-utility-command-line-usage}
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -37,10 +37,10 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`*指定AIR應用程式檔案的路徑，位 [!DNL signatures.xml] 於應用程式目錄中 [!DNL META-INF]
+   * `signaturefile`*指定AIR應用程式檔案的路徑，位 [!DNL signatures.xml] 於應用程式目錄中 [!DNL META-INF] 。
 
 * `signingcert` 指定用來簽署AIR應用程式的憑證
 
 >[!NOTE]
 >
->若要決定Android應用程式的發佈者ID，您必須使用選 `-s` 項來指定用來簽署Android應用程式套件(APK)的憑證。 Primetime DRM是建立Android應用程式的必要條件，以播放受DRM保護的內容。
+>若要決定Android應用程式的發佈者ID，您必須使用`-s`選項來指定用來簽署Android應用程式套件(APK)的憑證。 Primetime DRM是建立Android應用程式的必要條件，以播放受DRM保護的內容。
