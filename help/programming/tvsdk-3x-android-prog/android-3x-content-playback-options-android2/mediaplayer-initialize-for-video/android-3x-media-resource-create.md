@@ -13,15 +13,15 @@ ht-degree: 0%
 ---
 
 
-# 建立媒體資源 {#create-a-media-resource}
+# 建立媒體資源{#create-a-media-resource}
 
 對於每個新視訊內容，初始化包含視訊內容相關資訊的MediaResource例項並載入媒體資源。
 
 MediaResource類代表MediaPlayer實例要載入的內容。
 
-1. 將媒體 `MediaResource` 的相關資訊傳遞至建構函式，以建立 `MediaResource` 媒體。
+1. 將媒體相關資訊傳遞至`MediaResource`建構函式，以建立`MediaResource`。
 
-   建構 `MediaResource` 函式需要下列參數：
+   `MediaResource`建構函式需要下列參數：
 
    <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
    <thead> 
@@ -32,21 +32,21 @@ MediaResource類代表MediaPlayer實例要載入的內容。
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> url </span> </td> 
+      <td colname="col1"> <span class="codeph"> url  </span> </td> 
       <td colname="col2"> 代表媒體的資訊清單／播放清單URL的字串。 </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> type </span> </td> 
-      <td colname="col2"> MediaResource.Type列舉的下列成員之一(與指 <span class="codeph"> 定的檔 </span> 案類型相對應): 
+      <td colname="col1"> <span class="codeph"> type  </span> </td> 
+      <td colname="col2"> <span class="codeph"> MediaResource.Type </span>列舉的下列成員之一，與指定的檔案類型相對應： 
       <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO基本媒體檔案格式(MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - MPEG-DASH媒體簡報說明(MPD) </li> 
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS  </span> - M3U8 </li> 
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF  </span> - ISO基本媒體檔案格式(MP4) </li> 
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH  </span> - MPEG-DASH媒體簡報說明(MPD) </li> 
       </ul> </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> 中繼資料 </span> </td> 
-      <td colname="col2"> 中繼資料類別的例項( <span class="codeph"></span> 類似字典的結構)，其中可能包含有關即將載入之內容的其他資訊，例如要置於主要內容內的替代或廣告內容。 如果使用廣告，請在使用此建構函 <span class="codeph"> 式廣告 </span> 插入中繼資料前 <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> 先設定AuditudeSettings </a>。 </td> 
+      <td colname="col1"> <span class="codeph"> 中繼資料  </span> </td> 
+      <td colname="col2"> <span class="codeph">中繼資料</span>類別的例項（類似字典的結構），可能包含有關即將載入內容的其他資訊，例如要置於主內容中的替代或廣告內容。 如果使用廣告，請在使用此建構函式<a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md">廣告插入中繼資料</a>之前，先設定<span class="codeph"> AuditudeSettings </span>。 </td> 
    </tr> 
    </tbody> 
    </table>
@@ -57,7 +57,7 @@ MediaResource類代表MediaPlayer實例要載入的內容。
    >
    >對於MP4隨選視訊(VOD)內容，TVSDK不支援特技播放、可調式位元速率(ABR)串流、廣告插入、隱藏字幕或DRM。
 
-   下列程式碼會建立例 `MediaResource` 項：       >
+   以下代碼建立`MediaResource`實例：        >
 
    ```java
    // To do: Create metadata here 
@@ -67,7 +67,7 @@ MediaResource類代表MediaPlayer實例要載入的內容。
      metadata); 
    ```
 
-   在此步驟之後的任何時間，您都可 `MediaResource` 以使用存取器(getter)來檢查資源的類型、URL和中繼資料。
+   在此步驟之後的任何時間，您都可以使用`MediaResource`存取器(getters)來檢查資源的類型、URL和中繼資料。
 
 1. 使用下列選項之一載入媒體資源：
 
