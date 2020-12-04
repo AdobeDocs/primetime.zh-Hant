@@ -6,6 +6,9 @@ title: 檢查播放時間軸
 uuid: b2049e53-7c78-40f9-a43f-7ff7ee5581d0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
