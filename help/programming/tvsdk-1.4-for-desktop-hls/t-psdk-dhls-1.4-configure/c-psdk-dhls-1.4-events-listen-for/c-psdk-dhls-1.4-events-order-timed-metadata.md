@@ -6,6 +6,9 @@ title: 計時中繼資料事件
 uuid: 69c43701-6ffa-45fe-a104-fe81391222e7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
