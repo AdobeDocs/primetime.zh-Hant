@@ -6,15 +6,18 @@ title: 刪除和取代廣告的範例
 uuid: 6bf9d71a-73fe-4033-b97a-6b0cff8687f2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 0%
 
 ---
 
 
-# 刪除和取代廣告的範例 {#examples-to-delete-and-replace-ads}
+# 刪除和替換廣告的示例{#examples-to-delete-and-replace-ads}
 
 以下是刪除和取代廣告的程式範例。
 
-以下是使用的範例 `DELETE_RANGE`:
+以下是使用`DELETE_RANGE`的範例：
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +46,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-以下是使用的範例 `REPLACE_RANGE`:
+以下是使用`REPLACE_RANGE`的範例：
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
