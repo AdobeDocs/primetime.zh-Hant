@@ -6,11 +6,14 @@ title: 關於參考實作
 uuid: f08fdb4b-aaa8-4871-bb62-1a21d5abdd8d
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '565'
+ht-degree: 0%
 
 ---
 
 
-# 關於參考實作{#about-the-reference-implementations}
+# 關於引用實現{#about-the-reference-implementations}
 
 本指南說明Adobe Primetime DRM參考實作的安裝、設定和運作。
 
@@ -20,12 +23,12 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Primetime DRM參考實作包括下列元件：
 
-* **命令列工具** -這些工具是以Primetime DRM授權伺服器中使用的相同Primetime DRM SDK程式碼為基礎。 您可以從命令列執行封裝、授權和其他DRM工作，並順暢地在使用命令列工具和授權伺服器之間切換。
+* **命令列工具** -這些工具是以Primetime DRM授權伺服器中使用的相同Primetime DRM SDK程式碼為基礎。您可以從命令列執行封裝、授權和其他DRM工作，並順暢地在使用命令列工具和授權伺服器之間切換。
 * **授權伺服器** -功能完整、可自訂的授權伺服器（以下稱為您的授權伺服器選項之一）。
 
 **授權伺服器選項：**
 
-* **Primetime DRM參考實作** -本指南的主旨，此參考實作具備強穩的DRM授權伺服器，可展示Primetime DRM SDK提供的所有功能。 此實作包含原始碼和建立程式碼的指示。 此實作不會以現狀使用(雖然已包含 [!DNL .war] 可快速部署的檔案)。 它主要是做為參考，供您用來建立自訂的授權伺服器。
+* **Primetime DRM參考實作** -本指南的主旨，此參考實作具備強穩的DRM授權伺服器，可展示Primetime DRM SDK提供的所有功能。此實作包含原始碼和建立程式碼的指示。 此實作不會以現狀使用（雖然已包含可快速部署的[!DNL .war]檔案）。 它主要是做為您建立自訂授權伺服器時可使用的參考。
 
    授權伺服器功能：
 
@@ -57,7 +60,7 @@ Primetime DRM參考實作包括下列元件：
    * 同步請求
    * 授權退貨
 
-* **Primetime DRM Server for Protected Streaming** —— 這是一種現成可用的二進位格式，您只需花很少的力氣就能快速實作。 對於想要快速展示概念證明的客戶來說，這是個好選項，或者，如果您的自訂DRM需求 *最低* ，則可能是製作選項。 如需詳細資訊，請參閱下方的相關資訊。
+* **Primetime DRM Server for Protected Streaming**  —— 這是一種現成可用的二進位格式，您只需花很少的力氣就能快速實作。對於想要快速展示概念證明的客戶來說，這是個好選項，或者，如果您的自訂DRM需求極低，*可能*&#x200B;是生產選項。 如需詳細資訊，請參閱下方的相關資訊。
 
-* **Primetime Cloud DRM服務** -這是Adobe代管的授權伺服器，您可用來提供授權。 （您必須是Primetime授權人才能使用本服務。）此Adobe雲端服務可讓您免除建立自己服務所需的費用、維護和工程。 如需詳細資訊，請參閱下方的相關資訊。
+* **Primetime Cloud DRM服務** -這是Adobe代管的授權伺服器，您可用來提供授權。（您必須是Primetime授權人才能使用本服務。） 此Adobe雲端服務可讓您免除建立自己服務所需的費用、維護和工程。 如需詳細資訊，請參閱下方的相關資訊。
 
