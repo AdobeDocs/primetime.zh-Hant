@@ -6,11 +6,14 @@ title: 構建用於DVR的增強控制條
 uuid: c9c86383-379f-452c-b35d-447ac8691fa0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '355'
+ht-degree: 0%
 
 ---
 
 
-# 構建用於DVR的增強控制條{#construct-a-control-bar-enhanced-for-dvr}
+# 構建增強的DVR控制條{#construct-a-control-bar-enhanced-for-dvr}
 
 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
 
@@ -34,7 +37,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
       對於控制列：
    1. 新增覆蓋至代表播放範圍的控制列。
-   1. 當用戶開始尋道時，使用檢查所需的尋道位置是否在可尋道範圍內 `MediaPlayer.getSeekableRange`。
+   1. 當用戶開始尋道時，使用`MediaPlayer.getSeekableRange`檢查所需的尋道位置是否在可尋找範圍內。
 
       例如：
 
@@ -45,7 +48,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
       }
       ```
 
-      您也可以選擇使用常數尋找用戶端即時 `MediaPlayer.LIVE_POINT` 點。
+      您也可以選擇使用`MediaPlayer.LIVE_POINT`常數尋找用戶端即時點。
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
