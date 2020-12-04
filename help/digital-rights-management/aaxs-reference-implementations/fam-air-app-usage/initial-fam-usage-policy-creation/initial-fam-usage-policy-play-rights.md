@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 播放權限 {#play-rights}
+# 播放權限{#play-rights}
 
 下表說明「播放權限」偏好設定：
 
