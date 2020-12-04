@@ -6,6 +6,9 @@ title: 實作VPAID 2.0整合
 uuid: 7d11ffd8-240c-4a95-94e6-ff4417c8942e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 0%
 
 ---
 
