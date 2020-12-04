@@ -6,6 +6,9 @@ title: 支援的DRM系統
 uuid: db1f3d2f-b493-486c-ac53-49ccee9ec06b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
