@@ -6,11 +6,14 @@ title: 軟體需求
 uuid: 9faa229b-1abf-4b55-b293-247777bcb1db
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
-# 軟體需求 {#software-requirements}
+# 軟體要求{#software-requirements}
 
 * Tomcat 6
 * JDK 1.8
@@ -45,8 +48,8 @@ Adobe Primetime DRM On Promiess Indificialization Server套件包含下列內容
 要使用內部個人化伺服器，您必須首先獲得兩個數字證書（證書）:
 
 * *個人化傳輸憑證* -由Adobe核發
-* *個人化CA憑證* -由Symantec(VeriSign)核發
+* *個性化CA憑證* -由Symantec(VeriSign)頒發
 
-若要取得這些憑證，請透過Zendesk票證提交要求至： [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
+若要取得這些憑證，請透過Zendesk票證提交要求至：[https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 
 請注意，這些認證是除了Primetime DRM授權伺服器作業所需的認證之外。
