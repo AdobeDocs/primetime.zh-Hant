@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 初始化和設定視訊分析 {#initialize-and-configure-video-analytics}
+# 初始化並設定視訊分析{#initialize-and-configure-video-analytics}
 
 您可以設定您的播放器來追蹤和分析視訊使用。
 在啟動視訊追蹤（視訊心率）之前，請確定您有下列項目：
@@ -26,8 +26,8 @@ ht-degree: 0%
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>重要： 此JSON設定檔案名稱必須保 <span class="filepath"> 留為ADBMobileConfig.json </span>。 無法更改此配置檔案的名稱和路徑。 此檔案的路徑必須 <span class="filepath"> 是&lt;source root&gt;/assets </span>。 </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>重要： 此JSON設定檔案名稱必須保留<span class="filepath"> ADBMobileConfig.json </span>。 無法更改此配置檔案的名稱和路徑。 此檔案的路徑必須是<span class="filepath"> &lt;source root&gt;/assets </span>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AppMeasurement追蹤伺服器端點 </td> 
@@ -35,7 +35,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> 視訊分析追蹤伺服器端點 </td> 
-   <td colname="col2"> 視訊分析後端收集端點的URL。 這是傳送所有視訊心率追蹤呼叫的地方。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的詳細資訊，請參閱實 <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> 作ID服務 </a>。 </p> </td> 
+   <td colname="col2"> 視訊分析後端收集端點的URL。 這是傳送所有視訊心率追蹤呼叫的地方。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的詳細資訊，請參閱<a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external">實作ID服務</a>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 帳戶名稱 </td> 
@@ -50,7 +50,7 @@ ht-degree: 0%
 
 若要在您的播放器中設定視訊追蹤：
 
-1. 確認資源檔案中的載入時 `ADBMobileConfig.json` 間選項正確。
+1. 確認`ADBMobileConfig.json`資源檔案中的載入時間選項正確。
 
    ```
    { 
@@ -84,21 +84,21 @@ ht-degree: 0%
    要配置載入時間選項：
 
 
-   1. 確認檔 `ADBMobileConfig.json` 案包含適當的值（由Adobe提供）。
-   1. 確認此檔案位於資料夾 `assets/` 中。
+   1. 確認`ADBMobileConfig.json`檔案包含適當的值（由Adobe提供）。
+   1. 確認此檔案位於`assets/`資料夾中。
 
       此資料夾必須位於應用程式源樹的根目錄中。
 
    1. 編譯並建立您的應用程式。
    1. 部署並執行整合的應用程式。
 
-      如需這些AppMeasurement設定的詳細資訊，請參 [閱「在Adobe Analytics中測量視訊」](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)。
+      如需這些AppMeasurement設定的詳細資訊，請參閱「在Adobe Analytics中測量視訊」[。](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)
 
 1. 初始化並設定視訊心率追蹤中繼資料。
 
    >[!IMPORTANT]
    >
-   >您可以停止視訊分析模組中間串流，並視需要重新初始化它。 在重新初始化模組之前，請確定視訊分析中繼資料也已更新為正確的內容中繼資料。 若要重新建立中繼資料，請重複下列前兩個步驟(子 **步驟** a **和b**)。
+   >您可以停止視訊分析模組中間串流，並視需要重新初始化它。 在重新初始化模組之前，請確定視訊分析中繼資料也已更新為正確的內容中繼資料。 要重新建立元資料，請重複下面的前兩個步驟（子步驟&#x200B;**a**&#x200B;和&#x200B;**b**）。
 
    1. 建立視訊分析中繼資料的例項。
 
@@ -135,13 +135,13 @@ ht-degree: 0%
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. 在例項上設定視訊分析中繼 `videoAnalyticsProvider` 資料。
+   1. 在`videoAnalyticsProvider`例項上設定視訊分析中繼資料。
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. 將媒體播放器例項附加至例 `videoAnalyticsProvider` 項：
+   1. 將媒體播放器實例連接到`videoAnalyticsProvider`實例：
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
