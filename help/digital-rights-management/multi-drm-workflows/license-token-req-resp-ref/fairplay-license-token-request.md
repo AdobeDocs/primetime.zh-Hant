@@ -13,11 +13,11 @@ ht-degree: 4%
 ---
 
 
-# FairPlay授權Token請求與回應 {#fairplay-license-token-request-response}
+# FairPlay授權Token請求與回應{#fairplay-license-token-request-response}
 
 FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌換為FairPlay授權的Token。
 
-**方法：GET, POST** （包含ww-url編碼內文，其中包含兩種方法的參數）
+**方法：GET, POST** （含www-url編碼的內文，包含兩種方法的參數）
 
 **URL:**
 
@@ -53,20 +53,20 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
 | 查詢參數 | 說明 | 需要？ |
 |--- |--- |--- |
 | customerAuthenticator客戶驗證器作為查詢參數customerAuthenticator FairPlay | 這是您的客戶API金鑰，每個金鑰都適用於您的生產與測試環境。 您可在「ExpressPlay管理控制面板」標籤中找到這個選項。 | 是 |
-| errorFormat | html或json。 如果html（預設值），回應的實體主體中會提供任何錯誤的HTML表示法。 如果指定json，則會傳回JSON格式的結構化回應。 如需詳 [細資訊，請參閱](https://www.expressplay.com/developer/restapi/#json-errors) 「JSON錯誤」。 回應的MIME類型為成功時的text/uri-list、HTML錯誤格式的text/html或JSON錯誤格式的application/json。 | 否 |
+| errorFormat | html或json。 如果html（預設值），回應的實體主體中會提供任何錯誤的HTML表示法。 如果指定json，則會傳回JSON格式的結構化回應。 如需詳細資訊，請參閱[JSON錯誤](https://www.expressplay.com/developer/restapi/#json-errors)。 回應的MIME類型為成功時的text/uri-list、HTML錯誤格式的text/html或JSON錯誤格式的application/json。 | 否 |
 
 **表4:授權查詢參數**
 
 | **查詢參數** | **說明** | **需要？** |
 |---|---|---|
 | `generalFlags` | 代表許可證標誌的4位元組十六進位字串。 &#39;0000&#39;是唯一允許的值。 | 否 |
-| `kek` | 密鑰加密密鑰(KEK)。 密鑰使用密鑰封裝算法（AES密鑰封裝，RFC3394）與KEK進行加密。 如果 `kek` 已提供，則需要提供其中 `kid` 一 `ek` 個或參數，但不 *同時提供*。 | 否 |
-| `kid` | 內容加密密鑰或字串的16位元組十六進位字串表示 `'^somestring'`。 字串後接字元的長 `'^'` 度不能超過64個字元。 | 否 |
+| `kek` | 密鑰加密密鑰(KEK)。 密鑰使用密鑰封裝算法（AES密鑰封裝，RFC3394）與KEK進行加密。 如果提供`kek`，則需要提供`kid`或`ek`參數之一，*但不同時提供*&#x200B;參數。 | 否 |
+| `kid` | 內容加密密鑰或字串`'^somestring'`的16位元組十六進位字串表示。 字串後跟`'^'`的長度不能大於64個字元。 | 否 |
 | `ek` | 加密內容密鑰的十六進位字串表示。 | 否 |
-| `contentKey` | 內容加密密鑰的16位元組十六進位字串表示 | 是的，除非 `kek` 和 `ek` 或 `kid` 已提供。 |
+| `contentKey` | 內容加密密鑰的16位元組十六進位字串表示 | 是，除非提供`kek`和`ek`或`kid`。 |
 | `iv` | 內容加密的16位元組十六進位字串表示法IV | 是 |
 | `rentalDuration` | 租金的持續時間（以秒為單位）（預設值- 0） | 否 |
-| `fpExtension` | 以逗號分隔字 `extensionType` 串形 `extensionPayload`式包住和的簡短表單。 For example: […] `&fpExtension=wudo,AAAAAA==&`[…] | 否，可以使用任何數字 |
+| `fpExtension` | 以逗號分隔字串包住`extensionType`和`extensionPayload`的簡短表格。 例如：[...] `&fpExtension=wudo,AAAAAA==&`[...] | 否，可以使用任何數字 |
 
 **表5:Token限制查詢參數**
 
@@ -80,8 +80,8 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> expirationTime </span> </td> 
-   <td> 此代號的過期時間。 此值必須是 <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"></a> RFC 3339中「Z」區域指示符（「祖魯時間」）的日期／時間格式字串，或前面帶有「+」符號的整數。 RFC 3339日期／時間的示例是 <span class="codeph"> 2006-04-14T12:01:10Z </span>。 <p>如果該值是 <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339日期／時 </a> 間格式的字串，則表示令牌的絕對到期日／時間。 如果值是前面有'+'符號的整數，則會將其解讀為從發行開始的相對秒數，表示代號有效。 </p> 例如， <span class="codeph"> +60指 </span> 定一分鐘。 最大和預設（如果未指定）Token期限為30天。 </td> 
+   <td> <span class="codeph"> expirationTime  </span> </td> 
+   <td> 此代號的過期時間。 此值必須是<a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a>日期／時間格式中「Z」區域指示符（「祖魯時間」）的字串，或前面帶有「+」符號的整數。 RFC 3339日期／時間的示例為<span class="codeph"> 2006-04-14T12:01:10Z </span>。 <p>如果值是<a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a>日期／時間格式的字串，則它表示令牌的絕對到期日／時間。 如果值是前面有'+'符號的整數，則會將其解讀為從發行開始的相對秒數，表示代號有效。 </p> 例如，<span class="codeph"> +60 </span>指定一分鐘。 最大和預設（如果未指定）Token期限為30天。 </td> 
    <td> 否 </td> 
   </tr> 
  </tbody> 
@@ -100,10 +100,10 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
 | **HTTP狀態代碼** | **說明** | **內容類型** | **實體內文包含** |
 |---|---|---|---|
 | `200 OK` | 無錯誤。 | `text/uri-list` | 授權贏取URL + Token |
-| `400 Bad Request` | 無效的標籤 | `text/html` 或 `application/json` | 錯誤說明 |
-| `401 Unauthorized` | 驗證失敗 | `text/html` 或 `application/json` | 錯誤說明 |
-| `404 Not found` | 錯誤的URL | `text/html` 或 `application/json` | 錯誤說明 |
-| `50x Server Error` | 伺服器錯誤 | `text/html` 或 `application/json` | 錯誤說明 |
+| `400 Bad Request` | 無效的標籤 | `text/html` 或  `application/json` | 錯誤說明 |
+| `401 Unauthorized` | 驗證失敗 | `text/html` 或  `application/json` | 錯誤說明 |
+| `404 Not found` | 錯誤的URL | `text/html` 或  `application/json` | 錯誤說明 |
+| `50x Server Error` | 伺服器錯誤 | `text/html` 或  `application/json` | 錯誤說明 |
 
 **表8:事件錯誤代碼**
 
@@ -137,7 +137,7 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> 驗證Token無效：&lt;details&gt; <p>注意： 如果驗證器錯誤，或使用生產驗證器存取 <span class="filepath"> *.test.expressplay.com的測試API時 </span> ，就會發生這種情況，反之亦然。 </p> <p importance="high">注意： 測試SDK和進階測試工具(ATT)僅適用於 <span class="filepath"> *.test.expressplay.com </span>，而生產裝置必須 <span class="filepath"> 使用*.service.expressplay.com </span>。 </p> </td> 
+   <td> 驗證Token無效：&lt;details&gt; <p>注意： 如果驗證器錯誤，或使用生產驗證器存取<span class="filepath"> *.test.expressplay.com </span>的測試API時，也會發生這種情況，反之亦然。 </p> <p importance="high">注意： 測試SDK和進階測試工具(ATT)僅適用於<span class="filepath"> *.test.expressplay.com </span>，而生產裝置必須使用<span class="filepath"> *.service.expressplay.com </span>。 </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -221,19 +221,19 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td> <span class="codeph"> 小 </span> 孩必須有32個十六進位字元長 </td> 
+   <td> <span class="codeph"> 小 </span> 孩長度必須為32個十六進位字元 </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> 小 </span> 數在^後必須長64個字元 </td> 
+   <td> <span class="codeph"> 小 </span> 數字必須在^後長64個字元 </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td> 無效的 <span class="codeph"> 孩子 </span> </td> 
+   <td> 無效的<span class="codeph">小子</span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> 無效的加密金鑰或kek密 <span class="codeph"> 鑰 </span> </td> 
+   <td> 無效的加密密鑰或<span class="codeph"> kek </span> </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -241,7 +241,7 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
   </tr> 
   <tr> 
    <td> -6001 </td> 
-   <td> 指定的 <span class="codeph"> FPExtension參 </span> 數無效 </td> 
+   <td> 指定的<span class="codeph"> FPExtension </span>參數無效 </td> 
   </tr> 
   <tr> 
    <td> -6002 </td> 
@@ -249,7 +249,7 @@ FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌
   </tr> 
   <tr> 
    <td> -6003 </td> 
-   <td> 指定的 <span class="codeph"> iv參 </span> 數無效 </td> 
+   <td> 指定的<span class="codeph"> iv </span>參數無效 </td> 
   </tr> 
   <tr> 
    <td> -6004 </td> 
