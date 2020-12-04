@@ -4,11 +4,14 @@ title: 關於證書
 uuid: 0b7818b4-bd6a-4f2e-94c2-565e0d735bf8
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
 
-# 關於證書 {#about-certificates}
+# 關於證書{#about-certificates}
 
 Adobe Primetime DRM SDK提供下列組態：
 
