@@ -6,15 +6,18 @@ title: 以廣告取代時間範圍
 uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
 
-# 以廣告取代時間範圍{#replace-time-ranges-with-an-ad}
+# 以ad{#replace-time-ranges-with-an-ad}取代時間範圍
 
 您可以將廣告插入VOD內容。
 
-在這種情況下， `TimeRanges` 將從時 `begin` 間軸 `end` 中移 `localTime` 除和中之間。 替換為「 `AdBreak` 至 `begin` 」 `begin+replaceDuration`。 如果取代持續時間不存在為參數，伺服器會在傳回的Adbreak上做出判斷。
+在這種情況下，`localTime`中`begin`和`end`之間的`TimeRanges`會從時間軸中移除。 它們被`begin`的`AdBreak`替換為`begin+replaceDuration`。 如果取代持續時間不存在為參數，伺服器會在傳回的Adbreak上做出判斷。
 
 >[!NOTE]
 >
