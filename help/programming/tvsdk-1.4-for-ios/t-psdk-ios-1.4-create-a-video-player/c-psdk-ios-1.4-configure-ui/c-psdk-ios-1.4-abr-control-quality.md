@@ -6,6 +6,9 @@ title: 視訊品質的可調式位元速率(ABR)
 uuid: e5752d7e-fa7d-407c-96df-c3830a35c66e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
@@ -42,19 +45,19 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
 
 例如，如果串流具有下列描述檔：
 
-* 1: 300000
-* 2: 700000
-* 3: 1500000
-* 4: 2400000
-* 5: 4000000
+* 1:300000
+* 2:700000
+* 3:150000
+* 4:240000
+* 5:400000
 
 如果您指定300000到2000000的範圍，TVSDK只會考慮設定檔1、2和3。 這可讓應用程式因應各種網路狀況進行調整，例如從WiFi切換至3G或切換至手機、平板電腦或桌上型電腦等各種裝置。
 
-## 配置自適應位速率 {#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
+## 配置自適應位速率{#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
 
 若要設定TVSDK可調式位元速率參數：
 
-1. 設定例項 `PTABRControlParameters` 以設定初始、最小和最大位元速率設定。
+1. 配置`PTABRControlParameters`實例以設定初始、最小和最大位速率設定。
 
    預設值會顯示在下列程式碼片段中，但您的應用程式可針對每個參數設定任何整數值。
 
@@ -72,7 +75,7 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. 使用已設 `PTMediaPlayer` 定的例項更新您的 `PTABRControlParameters` 例項。
+1. 使用已配置的`PTABRControlParameters`實例更新您的`PTMediaPlayer`實例。
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,10 +84,10 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
 
 請記住：
 
-* 應用程式必須先將 `abrControlParameters` 屬性設定在 `PTMediaPlayer` 上，才 `PTMediaPlayerItem` 能設定初始和最小位元速率設定的執行個體。
+* 應用程式必須先在`PTMediaPlayer`上設定`abrControlParameters`屬性，才能設定`PTMediaPlayerItem`例項，讓初始和最小位元速率設定生效。
 
    內容播放開始後，設定新例項只會影響最大位元速率設定。
 
-* 若要在播放期間更新最大位元速率設定，請建立新 `PTABRControlParameters` 的例項並在播放器例項上設定。
-* 您只能在iOS 8.0和更新版本上，在播放期間更新最大位元速率設定。 對於舊版，會 `maxBitrate` 使用內容播放開始前設定的值。
+* 若要在播放期間更新最大位元速率設定，請建立新的`PTABRControlParameters`例項，並在播放器例項上加以設定。
+* 您只能在iOS 8.0和更新版本上，在播放期間更新最大位元速率設定。 對於舊版，會使用在內容播放開始前設定的`maxBitrate`值。
 
