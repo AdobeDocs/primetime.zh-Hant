@@ -1,6 +1,6 @@
 ---
-description: 要測試您的DRM解決方案，您需要一個視頻應用程式，該應用程式可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
-seo-description: 要測試您的DRM解決方案，您需要一個視頻應用程式，該應用程式可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
+description: 要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
+seo-description: 要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
 seo-title: 播放您的受保護內容
 title: 播放您的受保護內容
 uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
@@ -13,21 +13,21 @@ ht-degree: 0%
 ---
 
 
-# 播放您的受保護內容 {#playback-your-protected-content}
+# 播放受保護的內容{#playback-your-protected-content}
 
-要測試您的DRM解決方案，您需要一個視頻應用程式，該應用程式可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
+要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
 
 1. 從ExpressPlay伺服器傳回的代號回應使用授權伺服器URL，以測試您是否可以播放受保護的內容。
 
-   * **Widevine** —— 直接從您的ExpressPlay授權Token要求接收到Widevine回應。
-   * **PlayReady** —— 從您的授權Token請求傳回的JSON物件取得授權伺服器URL和Token。
-   * **FairPlay** —— 直接從您的ExpressPlay授權Token要求接收到FairPlay回應。
+   * **Widevine**  —— 直接從您的ExpressPlay授權Token要求接收到Widevine回應。
+   * **PlayReady** -從您的授權Token請求傳回的JSON物件取得授權伺服器URL和Token。
+   * **FairPlay**  —— 直接從您的ExpressPlay授權Token要求接收到FairPlay回應。
 
 1. 使用您自己的播放器或現有的Adobe範例播放器，測試受保護內容的播放。
 
    提供您受保護內容的URL（M3U8或MPD資訊清單的位置，視您正在測試的DRM解決方案而定）。
 
-   視您所測試的播放器提供的介面而定，可能會要求您在輸入欄位中個別提供授權URL和Token，作為字串或貼至文字方塊中的JSON物件，或作為URL中的查詢參數。
+   視您所測試的播放器提供的介面而定，可能會要求您在輸入欄位中個別提供授權URL和Token作為字串，或是貼入文字方塊中的JSON物件，或是當做URL中的查詢參數。
 
    以下列出測試播放器的一些可能性：
 
@@ -49,14 +49,14 @@ ht-degree: 0%
    https://drmtest2.adobe.com/TVSDK_HTML5/samples/reference/reference_player.html
    ```
 
-   **在測試FairPlay設定時檢查播放：** 當您使用ExpressPlay授權伺服器時，FairPlay需要一些額外的步驟來播放內容。 如果您使用 [!DNL curl] 測試連線(如授權中所述 [](../../multi-drm-workflows/quick-start/handle-the-licensing.md))，您需 *要按如下方式編輯M3U8資訊清單* （您的封裝內容）:
+   **在測試FairPlay設定時檢查播放：** FairPlay在使用ExpressPlay授權伺服器時，需要額外的步驟來播放內容。如果您使用[!DNL curl]來測試連線（如[Licensing](../../multi-drm-workflows/quick-start/handle-the-licensing.md)所述），則需要&#x200B;*編輯您的M3U8 manifest*（您的封裝內容），如下所示：
 
-1. 將您從授權Token要求中收回的回覆加入資訊清單 `#EXT-X-KEY:` 中的標籤；和
-1. 將該URL的通訊協定從回應（現在在資訊清單中）從變更 `https://` 為 `skd://`。
+1. 將您從授權Token要求中收到的回應新增至資訊清單中的`#EXT-X-KEY:`標籤；和
+1. 將該URL的通訊協定從回應（現在位於資訊清單中）從`https://`變更為`skd://`。
 
    以下是使用FairPlay測試播放的完整範例，包括授權步驟：
 
-1. 使用FairPlay授權Token請求以取得您的授權Token URL。 (請使用您自己的「生產客戶驗證器」，並務必使用與用來封裝 `iv` FairPlay內容相同的CEK。) 執行下列命令以取得範例內容的授權Token URL:
+1. 使用FairPlay授權Token請求以取得您的授權Token URL。 （請使用您自己的「生產客戶驗證器」，並務必使用用來封裝FairPlay內容的相同CEK和`iv`。） 執行下列命令以取得範例內容的授權Token URL:
 
    ```
    curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
@@ -74,7 +74,7 @@ ht-degree: 0%
    SSwcDq1ZnRtXunFLueTw6LAL52aZllMLasCSzYRMaAVHw 
    ```
 
-1. 將傳回的授權Token URL回應放入您的M3U8資訊清單中， *並將授權Token URL的配置從* 變更為 `sdk://``https://`。 以下是M3U8資訊清單中#EXT-X-KEY標籤的範例：
+1. 將傳回的授權Token URL回應放入您的M3U8資訊清單中，並&#x200B;*將授權Token URL的配置從`https://`變更為* `sdk://`。 以下是M3U8資訊清單中#EXT-X-KEY標籤的範例：
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES, 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >上述資訊僅適用於FairPlay設定的測試。 視您設定FairPlay處理常式的方式而定，它可能不適用於您的生產設定。 如需詳 [細資訊，請參閱「在iOS應用程式中啟用Apple FairPlay](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) 」。
+   >上述資訊僅適用於FairPlay設定的測試。 視您設定FairPlay處理常式的方式而定，它可能不適用於您的生產設定。 如需詳細資訊，請參閱[在iOS應用程式中啟用Apple FairPlay。](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
 
 如果您的視訊播放，您已成功封裝並授權您的內容。 如果您的視訊無法播放，請查看疑難排解頁面，以取得一些解決問題的可能方案。
 
