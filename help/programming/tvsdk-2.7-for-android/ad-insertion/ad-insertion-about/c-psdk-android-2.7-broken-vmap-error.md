@@ -7,11 +7,14 @@ title: 中斷的VMAP的客戶端錯誤處理
 uuid: 7cc68c86-bb49-4a1b-a1ec-65ca4c94d75d
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
-# 中斷的VMAP的客戶端錯誤處理 {#client-error-handling-for-broken-vmap}
+# 中斷的VMAP {#client-error-handling-for-broken-vmap}客戶端錯誤處理
 
 當TVSDK在廣告伺服器回應中遇到中斷的VMAP時，會派單1109(NETWORK_AD_URL_FAILED)錯誤。
 
@@ -19,7 +22,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 讓我們考慮廣告伺服器回應指向VMAP XML的案例。 假設廣告伺服器回應有四個可用廣告槽，每個插槽指向相同的VMAP。 最後，假設此VMAP已中斷。
 
-在此案例中，如果已啟用「懶惰廣告解析」( [Enable lazy ad resoling](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)),TVSDK會派出兩個1109錯誤（不是預期的錯誤）:在時間軸上的每個剖析傳遞過程中都會傳送一個錯誤。 這是因為啟用延遲廣告解析時，TVSDK會以2遍解析廣告：第一個傳遞會發生在前段廣告的內容播放開始之前，而第二個傳遞會發生在播放開始後，中段廣告和後段廣告。
+在此案例中，如果啟用延遲廣告解析（[啟用延遲廣告解析](../../../tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)）,TVSDK會派出兩個1109錯誤（不是預期的錯誤）:在時間軸上的每個剖析傳遞過程中都會傳送一個錯誤。 這是因為啟用延遲廣告解析時，TVSDK會以2遍解析廣告：第一個傳遞會發生在前段廣告的內容播放開始之前，而第二個傳遞會發生在播放開始後，中段廣告和後段廣告。
 
 >[!NOTE]
 >
