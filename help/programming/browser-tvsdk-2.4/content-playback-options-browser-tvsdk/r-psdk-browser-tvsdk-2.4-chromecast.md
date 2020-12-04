@@ -6,11 +6,14 @@ title: 適用於瀏覽器TVSDK的Google Cast應用程式
 uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
 
-# 適用於瀏覽器TVSDK的Google Cast應用程式{#google-cast-app-for-browser-tvsdk}
+# 瀏覽器TVSDK適用的Google Cast應用程式{#google-cast-app-for-browser-tvsdk}
 
 您可以從以TVSDK為基礎的傳送者應用程式轉換任何串流，並使用瀏覽器TVSDK在Chromecast上播放串流。
 
@@ -29,17 +32,17 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 傳送者和接收者使用Cast SDK來傳送訊息。
 
-## 基本工作流程 {#section_FAF680FF29DA4D24A50AC0A2B6402B58}
+## 基本工作流{#section_FAF680FF29DA4D24A50AC0A2B6402B58}
 
 以下是此程式的概述：
 
 1. 傳送者應用程式會建立與接收者應用程式的連線。
 1. 傳送者應用程式會傳送訊息，將媒體載入接收者應用程式。
 1. 接收器應用程式會開始播放。
-1. 傳送者應用程式會傳送播放控制訊息至接收者應用程式，例如播放、暫停、搜尋、快進、快倒轉、倒轉、音量變更等。
+1. 傳送者應用程式會將播放控制訊息（例如播放、暫停、搜尋、快進、快倒轉、倒轉、音量變更等）傳送至接收者應用程式。
 1. 接收器應用程式會對這些訊息做出反應。
 
-## 消息格式 {#section_1624159DD51D4C87B3E5803DEEBCB6B7}
+## 消息格式{#section_1624159DD51D4C87B3E5803DEEBCB6B7}
 
 您必須定義訊息，讓傳送者和接收者瞭解。 以下是尋道訊息的範例：
 
@@ -57,7 +60,7 @@ Custom Message Namespace
 var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime"; 
 ```
 
-## 建立連接 {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
+## 建立連接{#section_B4D40CABDD3E46FDBE7B5651DFF91653}
 
 >[!IMPORTANT]
 >
@@ -65,7 +68,7 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
 
 要建立連接，發送方和接收方必須完成以下任務：
 
-* 傳送者必須在「傳送者應用程式開發」中檢閱平 [台的檔案](https://developers.google.com/cast/docs/sender_apps)。
+* 傳送者必須檢閱位於[傳送者應用程式開發](https://developers.google.com/cast/docs/sender_apps)的平台檔案。
 * 接收器使用Cast接收器API來建立與傳送者應用程式的連線。 例如：
 
    ```js
@@ -81,13 +84,13 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
    window.castReceiverManager.start(); 
    ```
 
-## 訊息處理 {#section_3E4814546F5946C9B3E7A1AE384B4FF8}
+## 消息處理{#section_3E4814546F5946C9B3E7A1AE384B4FF8}
 
 要向接收方發送消息，請參閱發送方平台的文檔。
 
 >[!IMPORTANT]
 >
->您必須在所有消息中包含自 `MSG_NAMESPACE` 定義消息名稱空間。
+>您必須在所有消息中包含自定義消息namespace `MSG_NAMESPACE`。
 
 若是接收器應用程式，請依照轉播接收器API的檔案進行。
 
