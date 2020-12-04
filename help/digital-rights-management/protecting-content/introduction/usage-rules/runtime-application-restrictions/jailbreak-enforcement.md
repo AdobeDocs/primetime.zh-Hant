@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Jailbreak強制執行（需要Adobe Primetime DRM）{#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-在支援越獄偵測的平台（例如Android和iOS行動裝置）上，您可以啟用越獄強制，在裝置上偵測到內容時， [!DNL jailbreak/root] 禁止播放內容。
+在支援越獄偵測的平台（例如Android和iOS行動裝置）上，如果裝置上偵測到[!DNL jailbreak/root]，您可啟用越獄執行，以禁止播放內容。
 
 >[!NOTE]
 >
