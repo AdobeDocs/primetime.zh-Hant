@@ -4,11 +4,14 @@ title: 命令列使用
 uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
 
-# 命令列使用 {#command-line-usage}
+# 命令行用法{#command-line-usage}
 
 「撤銷清單管理器」位於DVD的\Reference Implementation\Command Line Tools目錄中。 若要執行工具，請使用下列其中一種語法：
 
@@ -30,7 +33,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 ```
 
 * `destfile` 指出將寫入撤銷清單的位置。
-* `crlNumber` 是「證書撤銷清單」(CRL)的非負版本號。 每次更新CRL時，此數字應遞增。
+* `crlNumber` 是「證書撤銷清單」(CRL)的非負版本號。每次更新CRL時，此數字應遞增。
 
 下表包含上述語法中所示命令行選項的說明：
 
@@ -44,7 +47,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c配置檔案</span> </td> 
-   <td colname="2" class="- topic/entry ">指定配置檔案的位置。 如果未使用此選項，「撤銷清單管理員」會在工作目錄 <span class="filepath"> 中尋找flashaccessools.properties</span> 。 </td> 
+   <td colname="2" class="- topic/entry ">指定配置檔案的位置。 如果未使用此選項，「撤銷清單管理員」將在工作目錄中尋找<span class="filepath"> flashaccessools.properties</span>。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d檔案名</span> </td> 
@@ -52,7 +55,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-e日期</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">（選擇性）撤銷清單的到期日。 使用 <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> 或 <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> （例如，2009-01-31-14:30:00代表1月31日下午2:30）。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">（選擇性）撤銷清單的到期日。 使用格式<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span>或<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>（例如，2009-01-31-14:30:00代表1月31日2:30 PM）。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-f檔案名[certfile]</span> </td> 
@@ -68,7 +71,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在指定日期廢止 <span class="codeph"> issuyerName</span><span class="codeph"> 和serialNumber</span> 所識別的憑證。 issuberName <span class="codeph"> 必須遵循509名稱格式(例如</span> CN=12345,O=Adobe Systems Incorporated,C=US <span class="codeph"></span>)。 以十六進位形式指定序列號。 將撤銷日期指定 <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> 或 <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>，例如2008年12月1日午夜的2008-12-1或2008-1-00:00:00。 如果未指定撤銷日期，則會使用目前日期。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在指定日期廢止<span class="codeph"> issuberName</span>和<span class="codeph"> serialNumber</span>所識別的憑證。 <span class="codeph"> issuberName</span>必須遵循509名稱格式（例如，<span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>）。 以十六進位形式指定序列號。 將撤銷日期指定為<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span>或<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>，例如2008-12-1或2008-12-1-00:00:00的午夜。08. 如果未指定撤銷日期，則會使用目前日期。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
