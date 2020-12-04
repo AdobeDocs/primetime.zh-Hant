@@ -23,5 +23,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此使用規則受Adobe Access用戶端3.0版及更新版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱「 [最低客戶端版本](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)」。
+>此使用規則受Adobe Access用戶端3.0版及更新版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱[最低客戶端版本](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)。
 
