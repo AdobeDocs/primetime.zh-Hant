@@ -6,17 +6,20 @@ title: 實作事件偵聽器和回呼
 uuid: bb1980f3-340b-4d36-ae7e-c9fc1d145233
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
 
-# 實作事件偵聽器和回呼 {#implement-event-listeners-and-callbacks}
+# 實施事件偵聽器和回呼{#implement-event-listeners-and-callbacks}
 
 事件處理常式可讓您回應TVSDK事件。
 
 發生事件時，TVSDK的事件機制會呼叫您已註冊的事件處理常式，並傳遞事件資訊。
 
-TVSDK將監聽器定義為介面內的公用內部 `MediaPlayer` 介面。
+TVSDK將監聽器定義為`MediaPlayer`介面內的公用內部介面。
 
 您的應用程式必須針對任何影響您應用程式的TVSDK事件實作事件接聽程式。
 
@@ -34,9 +37,9 @@ TVSDK將監聽器定義為介面內的公用內部 `MediaPlayer` 介面。
 
    >[!NOTE]
    >
-   >對於大多數事件，TVSDK會將引數傳遞給事件監聽器。 這些值提供事件的相關資訊，可協助您決定下一步要做什麼。 枚舉 `MediaPlayerEvent` 列出了所有調度的事件 `MediaPlayer` 。 如需詳細資訊，請參閱events-summary。
+   >對於大多數事件，TVSDK會將引數傳遞給事件監聽器。 這些值提供事件的相關資訊，可協助您決定下一步要做什麼。 `MediaPlayerEvent`枚舉列出了`MediaPlayer`調度的所有事件。 如需詳細資訊，請參閱events-summary。
 
-   例如，如果是 `mPlayer` 的實例， `MediaPlayer`則以下是如何添加和構建事件偵聽器：
+   例如，如果`mPlayer`是`MediaPlayer`的實例，則以下是如何添加和構建事件偵聽器：
 
    ```java
    mPlayer.addEventListener(MediaPlayerEvent.STATUS_CHANGED, new StatusChangeEventListener() { 
@@ -51,35 +54,35 @@ TVSDK將監聽器定義為介面內的公用內部 `MediaPlayer` 介面。
    }); 
    ```
 
-## 播放事件的順序 {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## 播放事件的順序{#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
 TVSDK會依照一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件實施動作。
 
 下列範例顯示播放期間發生的某些事件的順序。
 
-成功載入媒體資源時， `MediaPlayer.replaceCurrentResource`事件順序為：
+通過`MediaPlayer.replaceCurrentResource`成功載入媒體資源時，事件順序為：
 
-1. `MediaPlayerEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.INITIALIZING`
+1. `MediaPlayerEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.INITIALIZING`
 
-1. `MediaPlayerEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.INITIALIZED`
+1. `MediaPlayerEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.INITIALIZED`
 
 >[!TIP]
 >
->在主線程上載入媒體資源。 如果您在背景執行緒上載入媒體資源，此作業或後續作業可能會擲回錯誤，例如 `MediaPlayerException`並退出。
+>在主線程上載入媒體資源。 如果在後台線程上載入媒體資源，則此操作或後續操作可能會拋出錯誤，如`MediaPlayerException`，然後退出。
 
-在準備播放時， `MediaPlayer.prepareToPlay`事件的順序為：
+當透過`MediaPlayer.prepareToPlay`準備播放時，事件的順序為：
 
-1. `MediaPlayerEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.PREPARING`
+1. `MediaPlayerEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayerEvent.TIMELINE_UPDATED` 廣告。
-1. `MediaPlayerEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.PREPARED`
+1. `MediaPlayerEvent.STATUS_CHANGED` 狀態  `MediaPlayerStatus.PREPARED`
 
 對於即時／線性串流，當播放視窗前進並解決其他機會時，事件順序為：
 
 1. `MediaPlayerEvent.ITEM_UPDATED`
 1. `MediaPlayerEvent.TIMELINE_UPDATED` 是否插入廣告
 
-## 廣告活動順序 {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## 廣告活動順序{#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
 當您的播放包含廣告時，TVSDK會依一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件來實施動作。
 
@@ -137,12 +140,12 @@ mediaPlayer.addEventListener(MediaPlayerEvent.AD_CLICK, new AdClickedEventListen
     });
 ```
 
-## DRM事件順序 {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## DRM事件順序{#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
 TVSDK響應於DRM相關操作（例如當有新的DRM元資料可用時）來調度數字版權管理(DRM)事件。 您的播放器可以實作回應這些事件的動作。
 
-要獲得所有與DRM相關的事件的通知，請監聽 `MediaPlayerEvent.DRM_METADATA`。 TVSDK會透過類別發佈其他DRM `DRMManager` 事件。
+要獲得所有與DRM相關的事件的通知，請監聽`MediaPlayerEvent.DRM_METADATA`。 TVSDK會透過`DRMManager`類別分派其他DRM事件。
 
-## 載入器事件順序 {#section_5638F8EDACCE422A9425187484D39DCC}
+## 載入器事件的順序{#section_5638F8EDACCE422A9425187484D39DCC}
 
-當載入器事 `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` 件發生時，TVSDK會派單。
+當載入器事件發生時，TVSDK會派單`MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`。
