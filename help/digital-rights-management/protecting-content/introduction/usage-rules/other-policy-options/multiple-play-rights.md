@@ -4,11 +4,14 @@ title: 多重播放權
 uuid: 90f898bf-ffa2-44f0-a01a-0af8868500ee
 translation-type: tm+mt
 source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
-# 多重播放權 {#multiple-play-rights}
+# 多重播放權限{#multiple-play-rights}
 
 您可以針對您套用至不同平台或應用程式的不同使用規則指定多個播放權限參數。
 
