@@ -6,6 +6,9 @@ title: QoS事件
 uuid: fd657cf0-c6d4-4e9a-b212-7d09d483cae9
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算（例如緩衝或搜尋）的事件。
 
-要獲得所有QoS相關事件的通知，請向以下事件的對象注 `MediaPlayer` 冊事件偵聽器：
+要獲得所有QoS相關事件的通知，請向`MediaPlayer`對象註冊以下事件的事件偵聽器：
 
 | 事件 | 意義 |
 |---|---|
