@@ -6,15 +6,18 @@ title: 實作自訂商機產生器
 uuid: 6a6a6aa4-51f8-4e3c-9255-d87b488b820d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 3%
 
 ---
 
 
-# 實作自訂商機產生器 {#implement-a-custom-opportunity-generator}
+# 實施自定義業務機會生成器{#implement-a-custom-opportunity-generator}
 
 通過實施OpportunityGenerator類，您可以實施自己的機會生成器。
 
-1. 透過實作介 `ContentFactory` 面和覆寫來實 `ContentFactory` 作您的自訂 `retrieveGenerators`。
+1. 實施`ContentFactory`介面並覆寫`retrieveGenerators`，以實作自訂`ContentFactory`。
 
    例如：
 
@@ -30,7 +33,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
    }
    ```
 
-1. 註冊 `ContentFactory` 至 `MediaPlayer`。
+1. 將`ContentFactory`註冊到`MediaPlayer`。
 
    例如：
 
@@ -47,14 +50,14 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
    itemLoader.load(resource, id, config);
    ```
 
-1. 建立自定義業務機會生成器類，以實施該 `OpportunityGenerator` 類。
+1. 建立實施`OpportunityGenerator`類的自定義業務機會生成器類。
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. 在自定義業務機會生成器中，覆 `doConfigure`蓋 `doUpdate` 和 `doCleanup`:
+   1. 在自定義業務機會生成器中，覆蓋`doConfigure` 、 `doUpdate`和`doCleanup` :
 
       ```java
       @Override 
@@ -75,7 +78,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. 對於每 `TimedMetadata` 組或 `TimedMetadata`組，建立具有以下屬性的業務機會：
+   1. 對於每個`TimedMetadata`或`TimedMetadata`組，建立具有以下屬性的業務機會：
 
       ```java
       Opportunity( 
@@ -86,7 +89,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
       ); 
       ```
 
-   1. 對於建立的每個機會，請 `resolve` 致電 `OpportunityGeneratorClient:getClient().resolve(opportunity);`。
+   1. 對於建立的每個業務機會，請在`OpportunityGeneratorClient:getClient().resolve(opportunity);`上調用`resolve`。
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
