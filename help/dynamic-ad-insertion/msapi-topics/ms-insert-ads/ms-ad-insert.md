@@ -6,11 +6,14 @@ title: 廣告插入請求
 uuid: e42b3228-bff7-4202-86ed-7f631f3016ae
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
 
-# 廣告插入請求 {#requests-for-ad-insertion}
+# 廣告插入請求{#requests-for-ad-insertion}
 
 所有廣告插入請求都使用相同的URL結構和相同的基本查詢參數。 額外的查詢參數可讓資訊清單伺服器搭配各種用戶端和情況運作。
 
@@ -22,8 +25,8 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
 >[!NOTE]
 >
->參數 `__sid__` 由雙下划線字元包圍。
+>`__sid__`參數由雙下划線字元包圍。
 
-資訊清單伺服器會維護個別用戶端或用戶端群組的工作階段，以確保不同用戶端的API互動順序保持不同。 客 `__sid__` 戶端在引導URL中傳送至資訊清單伺服器的資訊清單伺服器在其環境中應是唯一的。 資訊清單伺服器使用它來建構全域唯一ID，並傳回給用戶端。
+資訊清單伺服器會維護個別用戶端或用戶端群組的工作階段，以確保不同用戶端的API互動順序保持不同。 客戶端在引導URL中發送到manifest伺服器的`__sid__`在其環境中應是唯一的。 資訊清單伺服器使用它來建構全域唯一ID，並傳回給用戶端。
 
 其餘的查詢參數與不同的客戶端和情況有關。
