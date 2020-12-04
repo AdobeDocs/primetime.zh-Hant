@@ -6,6 +6,9 @@ title: 設定廣告插入中繼資料
 uuid: fc37e0ae-6acf-4a78-a468-f7b5b123b45e
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 >
 >Adobe Primetime廣告決策之前稱為Auditude。
 
-1. 建立實 `AuditudeSettings` 例。
+1. 建立`AuditudeSettings`例項。
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
@@ -32,7 +35,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
    auditudeSettings.zoneId = "zoneid";
    ```
 
-1. 使用媒 `MediaResource` 體串流URL和先前建立的廣告中繼資料來建立例項。
+1. 使用媒體串流URL和先前建立的廣告中繼資料，建立`MediaResource`例項。
 
    ```js
    mediaResource = new AdobePSDK.MediaResource ( 
@@ -41,17 +44,17 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
          auditudeSettings);
    ```
 
-1. 通過方 `MediaResource` 法載入對 `MediaPlayer.replaceCurrentResource(resource)` 像。
+1. 通過`MediaPlayer.replaceCurrentResource(resource)`方法載入`MediaResource`對象。
 
-   開始 `MediaPlayer` 載入和處理媒體串流資訊清單。
+   `MediaPlayer`開始載入並處理媒體串流資訊清單。
 
-1. 當轉換 `MediaPlayer` 為「已初始化」狀態時，通過屬性以實例形式獲得媒 `MediaPlayerItem` 體流特 `MediaPlayer.CurrentItem` 性。
-1. （選用）查詢 `MediaPlayerItem` 例項以查看串流是否為即時，不論其是否有替代音軌。
+1. 當`MediaPlayer`轉換為「已初始化」狀態時，通過`MediaPlayer.CurrentItem`屬性以`MediaPlayerItem`實例的形式獲得媒體流特性。
+1. （選用）查詢`MediaPlayerItem`例項，以查看串流是否為即時，無論其是否具有替代音軌。
 
    這些資訊可協助您準備播放的UI。 例如，如果您知道有兩個音軌，則可加入UI控制項，以在這些音軌之間切換。
 
-1. 致電 `MediaPlayer.prepareToPlay` 啟動廣告工作流程。
+1. 呼叫`MediaPlayer.prepareToPlay`以啟動廣告工作流程。
 
-   廣告解析後並置於時間軸上後，會轉 `  MediaPlayer ` 換為「已準備」狀態。
-1. 呼叫 `MediaPlayer.play` 以開始播放。
+   廣告解析並置於時間軸上後，`  MediaPlayer `會轉換為「已準備」狀態。
+1. 呼叫`MediaPlayer.play`以開始播放。
 瀏覽器TVSDK現在會在您的媒體播放時加入廣告。
