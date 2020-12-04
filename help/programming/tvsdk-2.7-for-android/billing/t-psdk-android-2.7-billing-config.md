@@ -6,11 +6,14 @@ title: 設定帳單量度
 uuid: d8656ab2-fdd8-4fe4-8578-a6c8ecd378e2
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# 設定帳單量度 {#configure-billing-metrics}
+# 設定帳單量度{#configure-billing-metrics}
 
 如果您使用預設設定，您就不需要執行其他動作來啟用或設定帳單。 如果您從Adobe啟用代表取得不同的設定參數，請在初始化媒體播放器之前，使用BillingMetricsConfiguration類別來設定這些參數。
 
