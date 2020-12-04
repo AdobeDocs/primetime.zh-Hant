@@ -4,11 +4,14 @@ title: 關於證書註冊角色
 uuid: 100776c2-6622-4b94-bc9b-5d4a04fd3260
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
-# 關於證書註冊角色 {#about-certificate-enrollment-roles}
+# 關於證書註冊角色{#about-certificate-enrollment-roles}
 
 憑證註冊程式至少需要兩名員工：管理員和請求者。 Primetime DRM SDK授權人指派帳戶管理員。 只能有一個帳戶管理員。 帳戶管理員可以指定一個次要管理員。
 
