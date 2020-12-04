@@ -6,15 +6,18 @@ title: 事件類別
 uuid: 5e63d43c-6112-4958-b8cd-ccf123affd08
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
 
-# 事件類別 {#events-classes}
+# 事件類{#events-classes}
 
 這些類別說明TVSDK為回應各種活動而將事件派單至您的媒體播放器。
 
-套件： [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/package-detail.html)
+套件：[com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/package-detail.html)
 
 | 名稱 | 意義 |
 |---|---|
@@ -26,9 +29,9 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 | [DRMMetadataInfoEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/DRMMetadataInfoEvent.html) | 類別。 新的DRM元資料與當前項相關聯。 |
 | [LoadInformationEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/LoadInformationEvent.html) | 類別。 目前播放的媒體串流有下載資訊。 |
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | 類別。 已建立媒體播放器項目。 |
-| [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | 類別。 載入操作已完成。 派送給 `MediaPlayerItemLoader` 通知客戶。 |
+| [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | 類別。 載入操作已完成。 由`MediaPlayerItemLoader`派送以通知其客戶。 |
 | [MediaPlayerStatusChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html) | 類別。 媒體播放器狀態已變更。 |
-| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | 類別。 已點 `MediaPlayerView` 選。 |
+| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | 類別。 已點按`MediaPlayerView`。 |
 | [PlaybackRateEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html) | 類別。 媒體播放器的播放速率會變更。 |
 | [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | 類別。 由於網路或機器狀況，媒體播放器的自適應位速率切換算法已切換到另一個配置檔案。 |
 | [SeekEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html) | 類別。 玩家開始搜尋，或搜尋作業完成。 |
