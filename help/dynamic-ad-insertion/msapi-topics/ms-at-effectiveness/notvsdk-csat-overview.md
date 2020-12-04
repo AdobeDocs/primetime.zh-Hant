@@ -6,11 +6,14 @@ title: 非TVSDK用戶端追蹤概觀
 uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 0%
 
 ---
 
 
-# 非TVSDK用戶端追蹤概觀 {#overview-of-non-tvsdk-client-side-tracking}
+# 非TVSDK用戶端追蹤概述{#overview-of-non-tvsdk-client-side-tracking}
 
 出版業者可建立與HLS相容的視訊播放器，可搭配Primetime資訊清單伺服器端和追蹤工作流程運作。 即時串流和隨選視訊(VOD)案例的資訊清單伺服器介面略有不同。
 
@@ -21,9 +24,9 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 * 廣告Pod進度
 * 內容pod進度
 
-資訊清單伺服器API會假設任何使用它的視訊播放器都符合最低需求。 如需詳 [細資訊，請參閱視訊播放器](../../msapi-topics/ms-player-req.md) 「需求」。
+資訊清單伺服器API會假設任何使用它的視訊播放器都符合最低需求。 如需詳細資訊，請參閱[視訊播放器需求](../../msapi-topics/ms-player-req.md)。
 
-## 用戶端追蹤工作流程 {#section_cst_flow}
+## 用戶端追蹤工作流程{#section_cst_flow}
 
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
@@ -39,7 +42,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   URL包含傳送命令至資訊清 [單伺服器中所述的元素](../../msapi-topics/ms-getting-started/ms-sending-cmd.md)。
+   URL包含[傳送命令至資訊清單伺服器](../../msapi-topics/ms-getting-started/ms-sending-cmd.md)中所述的元素。
 
 1. 資訊清單伺服器會建立該播放器的作業階段，並產生唯一的作業階段ID。 它會建立新的變型M3U8播放清單URL，並以JSON回應的形式傳回至播放器。 JSON具有下列語法：
 
@@ -114,24 +117,24 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
    >[!NOTE]
    >
-   >播放器選擇串流層級播放清單URL以取得內容串流。 資訊清單伺服器從CDN擷取原始播放清單。 有些編碼器可能會在title屬性中插入其 `#EXTINF` 他詳細資訊，例如：
+   >播放器選擇串流層級播放清單URL以取得內容串流。 資訊清單伺服器從CDN擷取原始播放清單。 有些編碼器可能會在`#EXTINF`標題屬性中插入其他詳細資訊，例如：
    >
    >
    ```
    >#EXTINF:6.006,LTC=2017-08-23T13:25:47+00:00
    >```
 
-   由於資訊清單伺服器無法推斷非標準屬性的含義以修改廣告銜接播放清單，資訊清單伺服器會移除除此標籤中的持續時間資訊以外的所有其他屬性。 有關詳 [細資訊，請參見HLS規範中的](https://tools.ietf.org/html/rfc8216#section-4.3.2.1) DIFF條目。
+   由於資訊清單伺服器無法推斷非標準屬性的含義以修改廣告銜接播放清單，資訊清單伺服器會移除除此標籤中的持續時間資訊以外的所有其他屬性。 有關詳細資訊，請參見HLS規範中的[ILVOF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1)條目。
 
 
-1. 若要請求追蹤資訊，播放器會針對所選位元速率，將含 `pttrackingposition` 有任何英數字元值的查詢參數附加至串流層級播放清單URL。 例如：
+1. 若要請求追蹤資訊，播放器會附加查詢參數`pttrackingposition`及任何英數字元值至所選位元速率的串流層級播放清單URL。 例如：
 
    ```
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. 資訊清單伺服器會傳回填入 [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) 或 [](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) VMAP物件的播放清單檔案，其中包含目前要求之串流層級m3u8檔案的廣告追蹤資料。
+1. 資訊清單伺服器會傳回填入[JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md)或[VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md)物件的播放清單檔案，其中包含目前請求之串流層級m3u8檔案的廣告追蹤資料。
 
    >[!NOTE]
    >
@@ -139,7 +142,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
    >[!NOTE]
    >
-   >資訊清單伺服器會根據引導URL中的 `pttrackingversion` 值來產生廣告追蹤物件。 如果省略 `pttrackingversion` 或具有無效值，則資訊清單伺服器會自動將廣告追蹤資訊填入每個請求的串流 `#EXT-X-MARKER` 層級播放清單中的標籤中。 如需詳 [細資訊，請參閱](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md)。
+   >資訊清單伺服器會根據引導URL中的`pttrackingversion`值，產生廣告追蹤物件。 如果省略`pttrackingversion`或其值無效，則資訊清單伺服器會自動在每個請求的串流層級播放清單中的`#EXT-X-MARKER`標籤中填入廣告追蹤資訊。 如需詳細資訊，請參閱[。](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
 
 1. 播放器會在適當的時間針對每個廣告追蹤事件要求每個廣告追蹤URL。
 
