@@ -6,11 +6,14 @@ title: 系統與軟體需求
 uuid: e0f58dac-96b6-41d1-bc4c-543bb3b4823b
 translation-type: tm+mt
 source-git-commit: 51302d6eaeccdd51b227171cfbd72fca3aeec115
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
 
-# 系統與軟體需求{#system-and-software-requirements}
+# 系統和軟體要求{#system-and-software-requirements}
 
 TVSDK需要媒體內容、資訊清單內容、DRM和軟體版本的特定屬性。
 
