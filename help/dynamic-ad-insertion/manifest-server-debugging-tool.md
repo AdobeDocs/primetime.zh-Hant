@@ -21,9 +21,9 @@ ht-degree: 0%
 ---
 
 
-# 資訊清單伺服器除錯工具 {#manifest-server-debugging-tool}
+# 資訊清單伺服器除錯工具{#manifest-server-debugging-tool}
 
-## 除錯工具概觀 {#overview-of-debugging-tool}
+## 除錯工具{#overview-of-debugging-tool}的概觀
 
 除錯工具可讓發佈者透過在HTTP標題中即時檢查資訊清單伺服器傳回的除錯資訊，或在需要更詳細的資訊時，檢查事實後的工作階段記錄，來調查可能代價昂貴的廣告插入問題。 像Akamai這樣的Adobe合作夥伴可以使用此工具除錯其與Primetime廣告決策的整合。
 
@@ -35,11 +35,11 @@ ht-degree: 0%
 
 若要支援上述所有情況，此工具不需要或使用播放器發行者代碼。
 
-當您啟動資訊清單伺服器工作階段時，可以在請求URL上設定參數，要求其記錄除錯資訊。 使用該參數的不同值，您也可以要求資訊清單伺服器在HTTP標題中傳回指定的除錯資訊片段，但標題只能包含有限的資訊量。 您可從Adobe取得存取完整記錄檔的認證，資訊清單伺服器會定期（例如每小時）儲存在封存伺服器上。 一旦您擁有該伺服器的認證後，就可以隨時直接存取。
+當您啟動資訊清單伺服器工作階段時，可在請求URL上設定參數，要求其記錄除錯資訊。 使用該參數的不同值，您也可以要求資訊清單伺服器在HTTP標題中傳回指定的除錯資訊片段，但標題只能包含有限的資訊量。 您可從Adobe取得存取完整記錄檔的認證，資訊清單伺服器會定期（例如每小時）儲存在封存伺服器上。 一旦您擁有該伺服器的認證後，就可以隨時直接存取。
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
-## 除錯工具選項 {#debugging-tool-options}
+## 調試工具選項{#debugging-tool-options}
 
 在叫用除錯工具時，您有數個選項可供選擇，以瞭解資訊清單伺服器在HTTP標題中傳回的資訊。 這些選項不會影響清單伺服器在記錄檔中的位置。
 
@@ -47,13 +47,13 @@ ht-degree: 0%
 
 在啟動資訊清單伺服器工作階段的除錯記錄時，您可將ptdebug參數新增至請求URL，以指定資訊清單伺服器在HTTP標題中傳回的下列選項：
 
-* ptdebug=true除記錄外的所 `TRACE_HTTP_HEADER` 有記錄， `call/response data` 且大部分 `TRACE_AD_CALL` 記錄。
-* ptdebug=AdCall Only TRACE_AD_*type* （例如，TRACE_AD_CALL）記錄。
+* ptdebug=true除`TRACE_HTTP_HEADER`和`TRACE_AD_CALL`記錄中大多數`call/response data`以外的所有記錄。
+* ptdebug=AdCall Only TRACE_AD_*type*（例如TRACE_AD_CALL）記錄。
 * ptdebug=僅標題TRACE_HTTP_HEADER記錄。
 
 這些選項不會影響清單伺服器在記錄檔中的位置。 您無法控制這一點，但記錄檔是文字檔，因此您可以套用各種工具來擷取並重新格式化您感興趣的資訊。
 
-以下是傳回的HTTP標題範例 `ptdebug=Header`。 某些十六進位數字的長字串會取代為 `. . .` 清楚說明。
+以下是`ptdebug=Header`時傳回的HTTP標題範例。 某些十六進位數字的長字串會由`. . .`取代，以清楚說明問題。
 
 ```
 X-ADBE-AI-DBG-1 TRACE_MISC    HTTP request received
@@ -82,7 +82,7 @@ X-ADBE-AI-DBG-16 TRACE_HTTP_HEADER  MAIN  RESPONSE Access-Control-Allow-Origin  
 X-ADBE-AI-DBG-17 TRACE_MISC   Done
 ```
 
-## 記錄格式 {#formats-of-log-records}
+## 日誌記錄的格式{#formats-of-log-records}
 
 每個記錄都有一個類型和一組欄位，其中有些欄位可能是可選的。 直到記錄類型的所有記錄欄位都相同。 它們會提供作業的時間戳記和資訊。 記錄類型可識別記錄的事件類型，而後續欄位則提供記錄事件的相關資訊。
 
@@ -99,7 +99,7 @@ X-ADBE-AI-DBG-17 TRACE_MISC   Done
 | record_type | 字串 | 記錄的事件類型 |
 | 其他欄位 | *** | 取決於事件類型 |
 
-### TRACE_REQUEST_INFO記錄 {#trace-request-info-records}
+### TRACE_REQUEST_INFO記錄{#trace-request-info-records}
 
 此類型的記錄記錄HTTP請求的結果。 TRACE_REQUEST_INFO以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
 
@@ -128,7 +128,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 ?u=cecebae72a919de350b9ac52602623f3&z=189938&ptcueformat=turner& sid =yk-cnnlive-003 &ptdebug=true 0 0 0 Variant 111.22.3.44 111.22.3.45 127.0.0.1:46383
 ```
 
-### TRACE_HTTP_HEADER記錄 {#trace-http-header-records}
+### TRACE_HTTP_HEADER記錄{#trace-http-header-records}
 
 在資訊清單伺服器與用戶端、廣告伺服器或內容伺服器之間進行HTTP呼叫期間交換的此類記錄記錄HTTP標頭。 TRACE_HTTP_HEADER以外的欄位以表中顯示的順序顯示，並以頁籤分隔。
 
@@ -174,7 +174,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
     UNKNOWN RESPONSE  Via MS4xIH. . .
 ```
 
-### TRACE_AD_CALL記錄 {#trace-ad-call-records}
+### TRACE_AD_CALL記錄{#trace-ad-call-records}
 
 此類型的記錄會記錄資訊清單伺服器和要求的結果。 TRACE_AD_CALL以外的欄位以表中顯示的順序顯示，並以頁籤分隔。
 
@@ -195,7 +195,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 200 8 https://ad.stg2.auditude.com/adserver/a?cip=0.0.0.0&g=1000012&of=1.5 &ptcueformat=turner&ptdebug=true&tl=l,150,30,m&tm=63&u=ceceb. . . Auditude IvpIyC. . . 150 PD94bWw. . .
 ```
 
-### TRACE_AD_INSERT、TRACE_AD_RESOLVE和TRACE_AD_REDIRECT記錄 {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
+### TRACE_AD_INSERT、TRACE_AD_RESOLVE和TRACE_AD_REDIRECT記錄{#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
 
 此類型的記錄會記錄記錄類型所指示之廣告請求的結果。 記錄類型以外的欄位按表中顯示的順序顯示，以制表符分隔。
 
@@ -237,7 +237,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 ```
 
-### TRACE_TRACKING_URL記錄 {#trace-tracking-url-records}
+### TRACE_TRACKING_URL記錄{#trace-tracking-url-records}
 
 此類型的記錄會記錄資訊清單伺服器和要求的結果。 TRACE_TRACKING_URL以外的欄位會依表格中的順序顯示，並以標籤分隔。
 
@@ -256,15 +256,15 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
     sid:3086f5cd . . .;pts:0    200
 ```
 
-### TRACE_TROCKING_NO_MEDIA_TO_TRANSCODE記錄 {#trace-transcoding-no-media-to-transcode-records}
+### TRACE_TROCKING_NO_MEDIA_TO_TRANSCODE記錄{#trace-transcoding-no-media-to-transcode-records}
 
 此類型的記錄記錄遺失廣告創意。 表中將顯示TRACE_TRONDING_NO_MEDIA_TO_TRANSCODE以外的唯一欄位。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
-| ad_id | 字串 | 完全限定的廣 `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` 告ID Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` 協定：AUDITUDE, VAST`)` |
+| ad_id | 字串 | 完全限定的廣告ID `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID:`PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]`協定：AUDITUDE, VAST`)` |
 
-### TRACE_TROCKING_REQUESTED記錄 {#trace-transcoding-requested-records}
+### TRACE_TROCKING_REQUESTED記錄{#trace-transcoding-requested-records}
 
 此類型的記錄記錄資訊清單伺服器傳送至CRS的轉碼請求結果。 TRACE_DROCKING_REQUESTED以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
 
@@ -276,7 +276,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | 旗標 | 字串 | ID3指出轉碼請求是否包含新增ID3標籤的請求 |
 | target_duration | 字串 | 轉碼創意素材的目標持續時間（秒） |
 
-### TRACE_TRACKING_REQUEST記錄 {#trace-tracking-request-records}
+### TRACE_TRACKING_REQUEST記錄{#trace-tracking-request-records}
 
 此類型的記錄會指出執行伺服器端追蹤的要求。 TRACE_TRACKING_REQUEST以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
 
@@ -286,7 +286,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | start | 浮水 | PTS碎片開始時間（秒，精確到毫秒） |
 | end | 浮水 | PTS片段結束時間（秒數，精確到毫秒） |
 
-### TRACE_TRACKING_REQUEST_URL記錄 {#trace-tracking-request-url-records}
+### TRACE_TRACKING_REQUEST_URL記錄{#trace-tracking-request-url-records}
 
 此類型的記錄提供伺服器端追蹤的追蹤URL。 TRACE_TRACKING_REQUEST_URL以外的欄位以表中顯示的順序顯示，並以頁籤分隔。
 
@@ -296,7 +296,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | ad_system | 字串 | 廣告系統（例如auditude） |
 | url | 字串 | Ping的URL |
 
-### TRACE_WEBVTT_REQUEST記錄 {#trace-webvtt-request-records}
+### TRACE_WEBVTT_REQUEST記錄{#trace-webvtt-request-records}
 
 此類型記錄會要求資訊清單伺服器為WEBVTT標題提供資訊。 TRACE_WEBVTT_REQUEST以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
 
@@ -307,16 +307,16 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | start | 浮水 | 分割開始時間（秒數，精確到毫秒） |
 | end | 浮水 | 分割結束時間（秒數，精確到毫秒） |
 
-### TRACE_WEBVTT_RESPONSE記錄 {#trace-webvtt-response-records}
+### TRACE_WEBVTT_RESPONSE記錄{#trace-webvtt-response-records}
 
-記錄 ``of ``日誌服 ``type ``務器中 ``responses ``該標 ``manifest ``題的 ``sends ``記 ``clients ``錄 `` `answer` ````requests ```for```WEBVTT ``到該標題。 TRACE_WEBVTT_RESPONSE &#39;&#39;以外的欄位按表中顯示的順序顯示，分隔的選 `by`項卡。
+將``type ``&lt;a1/>``manifest ``伺服器``sends ``記錄到`` `answer` ````clients ````requests ```for```WEBVTT ``標題。 ``responses ````of ``TRACE_WEBVTT_RESPONSE &quot;以外的欄位按表中顯示的順序顯示，分隔`by`頁籤。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
 | 狀態 | 字串 | 傳回的HTTP狀態代碼 |
 | 響應 | 字串 | 傳送給用戶端的Base64編碼回應 |
 
-### TRACE_WEBVTT_SOURCE記錄 {#trace-webvtt-source-records}
+### TRACE_WEBVTT_SOURCE記錄{#trace-webvtt-source-records}
 
 此類型的記錄會記錄資訊，以回應資訊清單伺服器對WEBVTT標題的要求。 TRACE_WEBVTT_SOURCE以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
 
@@ -326,81 +326,81 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | 來源 | 字串 | Base64編碼的原始VTT內容 |
 
 
-### TRACE_MISC記錄 {#trace-misc-records}
+### TRACE_MISC記錄{#trace-misc-records}
 
 此類型的記錄可讓資訊清單伺服器記錄未計畫在擷取廣告時的事件和資訊。 TRACE_MISC以外的欄位由消息字串組成。 可能出現的訊息包括：
 
 * 已忽略廣告：AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
-* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*seconds*, ignore=ignore *, redirectAd=****redirectAdURL, priority=priority*
+* AdPlacement adManifestURL=*adManifestURL*,durationSeconds=*秒*,ignore=*ignore*,redirectAd=*redirectAd*, prioriryoritory=*priority&lt;a9/*
 * 廣告位置傳回null。
 * 成功銜接廣告。
-* 廣告呼叫失敗： *錯誤消息*。
-* 新增User-Agent以擷取原始資訊清單： *user-agent*。
-* 新增Cookie以擷取原始資訊清單： [cookie]
-* 請求的URL *錯誤訊息*。 （無法解析變型URL）
-* 呼叫的url:URL獲 *得傳回：回應程式碼*。 （即時URL）
-* 呼叫的url:URL傳 *回代碼：回應程式碼*。 (VOD URL)
+* 廣告呼叫失敗：*錯誤消息*。
+* 新增User-Agent以擷取原始資訊清單：*user-agent*。
+* 新增Cookie以擷取原始資訊清單：[cookie]
+* 錯誤的URL *請求的URL錯誤消息*。 （無法解析變型URL）
+* 呼叫的url:URL *獲得返回：響應代碼*。 （即時URL）
+* 呼叫的url:URL *返回代碼：響應代碼*。 (VOD URL)
 * 解決廣告時發現衝突：其中一個——中間輥開始端或中間輥結束端落在中間輥(VOD)中包含的前輥或前輥內。
-* URI的處理程式檢測到未處理的異常： *請求URL*。
+* URI的處理程式檢測到未處理的異常：*請求URL*。
 * 已完成變型資訊清單的產生。 （變體）
 * 已完成變型資訊清單的產生。
-* 處理VAST重新導向*重新導向URL *錯誤： *錯誤消息*。
-* 無法擷取廣告資訊清單URL *的播放清單*。
+* 處理VAST重新導向*重新導向URL *錯誤：*錯誤消息*。
+* 無法擷取&#x200B;*廣告資訊清單URL*&#x200B;的廣告播放清單。
 * 無法產生目標資訊清單。 (HLSManifestResolver)
-* 無法解析第一個廣告呼叫回應： *錯誤消息*。
-* 無法處理*GET|POST *路徑請求： *請求URL*。 （即時/VOD）
-* 無法處理即時資訊清單請求： *請求URL*。 （即時）
-* 無法傳回變型資訊清單： *錯誤消息*。
-* 無法驗證組ID: *群組ID*。
-* 正在擷取原始資訊清單： *內容URL*。 （即時）
-* 遵循廣泛的重新導向： *重新導向URL*。
+* 無法解析第一個廣告呼叫回應：*錯誤消息*。
+* 無法處理*GET|POST *路徑請求：*請求URL*。 （即時/VOD）
+* 無法處理即時資訊清單請求：*請求URL*。 （即時）
+* 無法傳回變型資訊清單：*錯誤消息*。
+* 無法驗證組ID:*群組ID*。
+* 正在擷取原始資訊清單：*內容URL*。 （即時）
+* 遵循廣泛的重新導向：*重新導向URL*。
 * 找到空的可用。 (VOD)
 * 找到*數字*廣告。 (VOD)
 * 收到HTTP請求。 （第一條訊息）
 * 忽略廣告，因為廣告回應持續時間（*廣告回應持續時間*秒）與實際廣告持續時間（*實際持續時間*秒）之間的差異大於限制。 (HLSManifestResolver)
 * 忽略未提供ID值的可用值。 (GroupAdResolver.java)
-* 正在忽略提供無效時間值的可用：*vailId的時間*= *可用ID*。
-* 正在忽略提供無效持續時間值的可用值：*vailId的持續時間*= *可用ID*。
+* 正在忽略提供無效時間值的可用：*time *for availId = *avail ID*。
+* 正在忽略提供無效持續時間值的可用值：*duration *for availId = *avail ID*。
 * 初始化新會話。 （變體）
 * 無效的HTTP方法。 一定是GET。 (VOD)
 * 無效的HTTP方法。 追蹤要求必須是GET。 （即時）
-* 請求的URL *錯誤訊息無效*。 （變體）
+* 無效的URL *請求的URL錯誤消息*。 （變體）
 * 無效的組。 (HLSManifestResolver)
 * 請求無效。 標題不是有效的追蹤請求。 (VOD)
 * 請求無效。 標題請求必須在會話建立後進行。 (VOD)
 * 請求無效。 必須在建立工作階段後提出追蹤要求。 (VOD)
-* 過載組ID的伺服器實例無效： *群組ID*。 （即時）
-* 已達到VAST重導的限 *制*。
-* 進行廣告呼叫： *廣告呼叫URL*。
-* 找不到以下項目的清單： *內容URL*。 （即時）
-* 找不到可用ID的匹配可用值： *可用ID*。 (HLSManifestResolver)
+* 過載組ID的伺服器實例無效：*群組ID*。 （即時）
+* 已達到VAST重定向的限制- *number*。
+* 進行廣告呼叫：*廣告呼叫URL*。
+* 找不到以下項目的清單：*內容URL*。 （即時）
+* 找不到可用ID的匹配可用值：*可用ID*。 (HLSManifestResolver)
 * 找不到播放會話。 (HLSManifestResolver)
-* 處理資訊清單內容URL *的VOD請求*。
+* 處理資訊清單&#x200B;*內容URL*&#x200B;的VOD請求。
 * 正在處理變型。
-* 處理資訊清單內容URL *的標題請求*。
+* 處理資訊清單&#x200B;*內容URL*&#x200B;的標題請求。
 * 正在處理追蹤請求。 (VOD)
 * 重新導向廣告回應空白。 (VASTStAX)
-* 請求： *URL*。
+* 請求：*URL*。
 * 傳回GET請求的錯誤回應，因為找不到播放作業。 (VOD)
 * 由於內部伺服器錯誤，傳回GET要求的錯誤回應。
-* 針對指定無效資產的GET請求傳回錯誤回應： *廣告請求ID*。 (VOD)
-* 針對指定無效或空的群組ID的GET請求傳回錯誤回應： *群組ID*。 (VOD)
+* 針對指定無效資產的GET請求傳回錯誤回應：*廣告請求ID*。 (VOD)
+* 針對指定無效或空的群組ID的GET請求傳回錯誤回應：*群組ID*。 (VOD)
 * 傳回指定無效追蹤位置值之GET要求的錯誤回應。 (VOD)
 * 以無效語法傳回GET要求的錯誤回應- *要求URL*。 （即時/VOD）
-* 使用不支援的HTTP方法傳回請求的錯誤回應： *GET|POST*。 （即時/VOD）
+* 使用不支援的HTTP方法傳回請求的錯誤回應：*GET|POST*。 （即時/VOD）
 * 從快取傳回資訊清單。 (VOD)
 * 伺服器過載。 不需要廣告插圖請求即可繼續。 （變體）
 * 開始產生目標資訊清單。 (HLSManifestResolver)
-* 開始從以下位置生成變型清單： *內容URL*。 （變體）
+* 開始從以下位置生成變型清單：*內容URL*。 （變體）
 * 開始將廣告聯繫到資訊清單中。 (VODHLSResolver)
-* 試圖在 *HH:MM:SS處縫製廣告*:AdPlacement adManifestURL=*ad Manifest URL*,*adManifest URL*=*seconds, ignore*=*ignore*, redirectAd=** redirect adRedirect adPriority=priorityDuration。 (HLSManifestResolver)
+* 嘗試在&#x200B;*HH:MM:SS*&#x200B;處接合廣告：AdPlacement adManifestURL=*廣告資訊清單URL*,durationSeconds=*秒*,ignore=*ignore*,redirectAd=*redirect ad*, pririoriority=*priririority&lt;a1111/>。*(HLSManifestResolver)
 * 由於無效的時間軸而無法取得廣告——傳回不含廣告的內容。 (VOD)
 * 無法取得廣告——傳回不含廣告的內容。 (VOD)
 * 無法取得廣告查詢，且未提供內容URL。 (VOD)
 * 收到有效的URL。 （VOD/變型）
 * 找不到變體M3U8。 （變體）
 
-### TRACE_TRACKING_URL記錄 {#trace-tracking-url-records-1}
+### TRACE_TRACKING_URL記錄{#trace-tracking-url-records-1}
 
 資訊清單伺服器在伺服器端追蹤工作流程期間呼叫追蹤URL後，會產生此類記錄。 TRACE_TRACKING_URL以外的欄位會依表格中的順序顯示，並以標籤分隔。
 
@@ -411,7 +411,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | url | 字串 | URL pinged |
 | state | 字串 | HTTP狀態代碼 |
 
-### TRACE_PLAYBACK_PROGRESS記錄 {#trace-playback-progress-records}
+### TRACE_PLAYBACK_PROGRESS記錄{#trace-playback-progress-records}
 
 資訊清單伺服器在接收有關伺服器端追蹤工作流程期間播放進度的訊號時，產生此類記錄。 TRACE_PLAYBACK_PROGRESS以外的欄位按表中顯示的順序顯示，並以制表符分隔。
 
@@ -431,6 +431,6 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 >
 >最後四個欄位為選用。
 
-## 有用的資源 {#helpful-resources}
+## 實用資源{#helpful-resources}
 
-* 請參閱 [Adobe Primetime學習與支援頁面的完整說明檔案](https://helpx.adobe.com/support/primetime.html) 。
+* 請參閱[Adobe Primetime學習與支援](https://helpx.adobe.com/support/primetime.html)頁面的完整說明檔案。
