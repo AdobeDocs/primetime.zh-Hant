@@ -6,35 +6,38 @@ title: Primetime播放器事件摘要
 uuid: ed3be4c2-8df3-4d96-a30b-74c196262798
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '632'
+ht-degree: 0%
 
 ---
 
 
-# Primetime播放器事件摘要 {#primetime-player-events-summary-overview}
+# 黃金時段播放器事件摘要{#primetime-player-events-summary-overview}
 
 您的應用程式可監聽TVSDK所傳送的事件，以監控播放器中的活動和播放器的變更狀態。
 
-## 事件 {#events}
+## 事件{#events}
 
 TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個事件都對應一個監聽器類，並帶有您必須實施的回調方法。
 
 >[!TIP]
 >
->事件代碼是枚舉的常 `MediaPlayerEvent` 數。
+>事件代碼是`MediaPlayerEvent`枚舉的常數。
 
 ## AdBreakCompletedEventListener {#section_D7A74A4EACA44E54806D040491B7D879}
 
 * **意思**廣告插播已完成。
 
-* **要實作的回呼** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
+* **回呼以實作** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
 * **事件代碼** `AD_BREAK_COMPLETE`
 
-## AdBreakKliptedEventListener {#section_7AE5442442484F45B521D3309691C59C}
+## AdBreakKlipsedEventListener {#section_7AE5442442484F45B521D3309691C59C}
 
 * **意指**在播放期間跳過廣告插播。
 
-* **要實作的回呼** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
+* **回呼以實作** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
 * **事件代碼** `AD_BREAK_SKIPPED`
 
@@ -42,7 +45,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**廣告插播已開始播放。
 
-* **要實作的回呼** `onAdBreakStarted(AdBreakPlaybackEvent event)`
+* **回呼以實作** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
 * **事件代碼** `AD_BREAK_START`
 
@@ -50,7 +53,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意指**在播放期間點選了廣告。
 
-* **要實作的回呼** `onAdClicked(AdClickEvent event)`
+* **回呼以實作** `onAdClicked(AdClickEvent event)`
 
 * **事件代碼** `AD_CLICK`
 
@@ -58,7 +61,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**廣告播放完成。
 
-* **要實作的回呼** `onAdCompleted(AdPlaybackEvent event)`
+* **回呼以實作** `onAdCompleted(AdPlaybackEvent event)`
 
 * **事件代碼** `AD_COMPLETE`
 
@@ -66,7 +69,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意指**播放期間報告進度。
 
-* **要實作的回呼** `onAdProgress(AdPlaybackEvent event)`
+* **回呼以實作** `onAdProgress(AdPlaybackEvent event)`
 
 * **事件代碼** `AD_PROGRESS`
 
@@ -74,7 +77,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思** Primetime廣告決策及解決方案已完成。 此事件僅適用於VOD內容。
 
-* **要實作的回呼** `onAdResolutionComplete()`
+* **回呼以實作** `onAdResolutionComplete()`
 
 * **事件代碼** `AD_RESOLUTION_COMPLETE`
 
@@ -82,7 +85,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**廣告播放已開始。
 
-* **要實作的回呼** `onAdStarted(AdPlaybackEvent event)`
+* **回呼以實作** `onAdStarted(AdPlaybackEvent event)`
 
 * **事件代碼** `AD_START`
 
@@ -90,7 +93,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**已偵測到新的音軌。
 
-* **要實作的回呼** `onAudioUpdated(MediaPlayerItemEvent event)`
+* **回呼以實作** `onAudioUpdated(MediaPlayerItemEvent event)`
 
 * **事件代碼** `AUDIO_TRACK_UPDATED`
 
@@ -98,7 +101,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**播放器已開始緩衝。
 
-* **要實作的回呼** `onBufferingBegin(BufferEvent event)`
+* **回呼以實作** `onBufferingBegin(BufferEvent event)`
 
 * **事件代碼** `BUFFERING_BEGIN`
 
@@ -106,7 +109,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**播放器已停止緩衝。
 
-* **要實作的回呼** `onBufferingEnd(BufferEvent event)`
+* **回呼以實作** `onBufferingEnd(BufferEvent event)`
 
 * **事件代碼** `BUFFERING_END`
 
@@ -114,7 +117,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**已準備緩衝區。
 
-* **要實作的回呼** `onBufferPrepared()`
+* **回呼以實作** `onBufferPrepared()`
 
 * **事件代碼** `BUFFER_PREPARED`
 
@@ -122,7 +125,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**已偵測到新的標題軌道。
 
-* **要實作的回呼** `onCaptionsUpdated(MediaPlayerItemEvent event)`
+* **回呼以實作** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
 * **事件代碼** `CAPTIONS_UPDATED`
 
@@ -130,7 +133,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**在媒體串流中偵測到新的DRM中繼資料。
 
-* **要實作的回呼** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
+* **回呼以實作** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
 * **事件代碼** `DRM_METADATA`
 
@@ -138,7 +141,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意指**已建立新的媒體播放器項目。
 
-* **要實作的回呼** `onItemCreated(MediaPlayerItemEvent event)`
+* **回呼以實作** `onItemCreated(MediaPlayerItemEvent event)`
 
 * **事件代碼** `ITEM_CREATED`
 
@@ -146,7 +149,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**已建立目前項目的新載入資訊。
 
-* **要實作的回呼** `onLoadComplete(MediaPlayerItemEvent event)`
+* **回呼以實作** `onLoadComplete(MediaPlayerItemEvent event)`
 
 * **事件代碼** `ITEM_UPDATED`
 
@@ -154,7 +157,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**已載入新區段。
 
-* **要實作的回呼** `onLoadInformation(LoadInformationEvent event)`
+* **回呼以實作** `onLoadInformation(LoadInformationEvent event)`
 
 * **事件代碼** `LOAD_INFORMATION_AVAILABLE`
 
@@ -162,7 +165,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**主要資訊清單或播放清單已更新。
 
-* **要實作的回呼** `onMainManifestUpdated(MediaPlayerItemEvent event)`
+* **回呼以實作** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
 * **事件代碼** `MANIFEST_UPDATED`
 
@@ -170,7 +173,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**操作失敗。
 
-* **要實作的回呼** `onNotification(NotificationEvent event)`
+* **回呼以實作** `onNotification(NotificationEvent event)`
 
 * **事件代碼** `OPERATION_FAILED`
 
@@ -178,7 +181,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意指**播放範圍已更新。
 
-* **要實作的回呼** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
+* **回呼以實作** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
 * **事件代碼** `PLAYBACK_RANGE_UPDATED`
 
@@ -186,7 +189,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**螢幕上會顯示新的播放速率。
 
-* **要實作的回呼** `onRatePlaying(PlaybackRateEvent event)`
+* **回呼以實作** `onRatePlaying(PlaybackRateEvent event)`
 
 * **事件代碼** `RATE_PLAYING`
 
@@ -194,7 +197,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意指**已設定MediaPlayer的rate屬性。
 
-* **要實作的回呼** `onRateSelected(PlaybackRateEvent event)`
+* **回呼以實作** `onRateSelected(PlaybackRateEvent event)`
 
 * **事件代碼** `RATE_SELECTED`
 
@@ -202,7 +205,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**播放已開始。
 
-* **要實作的回呼** `onPlayStart()`
+* **回呼以實作** `onPlayStart()`
 
 * **事件代碼** `PLAY_START`
 
@@ -210,7 +213,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意指** MediaPlayer的目前設定檔已變更。
 
-* **要實作的回呼** `onProfileChanged(ProfileEvent event)`
+* **回呼以實作** `onProfileChanged(ProfileEvent event)`
 
 * **事件代碼** `PROFILE_CHANGED`
 
@@ -218,7 +221,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思是**播放達到時間軸預訂。
 
-* **要實作的回呼** `onReservationReached(ReservationEvent event)`
+* **回呼以實作** `onReservationReached(ReservationEvent event)`
 
 * **事件代碼** `RESERVATION_REACHED`
 
@@ -226,7 +229,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**開始搜尋操作。
 
-* **要實作的回呼** `onSeekBegin(SeekEvent event)`
+* **回呼以實作** `onSeekBegin(SeekEvent event)`
 
 * **事件代碼** `SEEK_BEGIN`
 
@@ -234,7 +237,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**搜索操作已完成。
 
-* **要實作的回呼** `onSeekEnd(SeekEvent event)`
+* **回呼以實作** `onSeekEnd(SeekEvent event)`
 
 * **事件代碼** `SEEK_END`
 
@@ -242,7 +245,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**由於內部播放規則或外部業務規則，搜尋位置已調整。
 
-* **要實作的回呼** `onPositionAdjusted(SeekEvent event)`
+* **回呼以實作** `onPositionAdjusted(SeekEvent event)`
 
 * **事件代碼** `SEEK_POSITION_ADJUSTED`
 
@@ -250,15 +253,15 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**介質大小可用。
 
-* **要實作的回呼** `onSizeAvailable(SizeAvailableEvent event)`
+* **回呼以實作** `onSizeAvailable(SizeAvailableEvent event)`
 
 * **事件代碼** `SIZE_AVAILABLE`
 
 ## StatusChangeEventListener {#section_310D2327089D46358F9CE03EA76F3287}
 
-* **意思** MediaPlayer狀態已變更。
+* **意指** MediaPlayer狀態已變更。
 
-* **要實作的回呼** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
+* **回呼以實作** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
 * **事件代碼** `STATUS_CHANGED`
 
@@ -266,7 +269,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**播放頭已變更。
 
-* **要實作的回呼** `onTimeChanged(TimeChangeEvent event)`
+* **回呼以實作** `onTimeChanged(TimeChangeEvent event)`
 
 * **事件代碼** `TIME_CHANGED`
 
@@ -274,15 +277,15 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**操作完成，所需時間為操作。
 
-* **要實作的回呼** `onTimedEvent(TimedEventEvent event)`
+* **回呼以實作** `onTimedEvent(TimedEventEvent event)`
 
 * **事件代碼** `TIMED_EVENT`
 
 ## TimelineMetadataAddedInBackgroundEventListener {#section_7B923C7116154CCFBAE1FCA92C928EB2}
 
-* **意思**新的計時中繼資料已新增至背景項目。
+* **意思**新增計時中繼資料至背景項目。
 
-* **要實作的回呼** `onTimedMetadata(TimedMetadataEvent event)`
+* **回呼以實作** `onTimedMetadata(TimedMetadataEvent event)`
 
 * **事件代碼** `TIMED_METADATA_ADDED_IN_BACKGROUND`
 
@@ -290,7 +293,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意指**在媒體串流中偵測到新的計時中繼資料。
 
-* **要實作的回呼** `onTimedMetadata(TimedMetadataEvent event)`
+* **回呼以實作** `onTimedMetadata(TimedMetadataEvent event)`
 
 * **事件代碼** `TIMED_METADATA_AVAILABLE`
 
@@ -298,6 +301,6 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 * **意思**時間軸已修改。 廣告可能已新增至時間軸或從時間軸移除。
 
-* **要實作的回呼** `onTimelineUpdated(TimelineEvent event)`
+* **回呼以實作** `onTimelineUpdated(TimelineEvent event)`
 
 * **事件代碼** `TIMELINE_UPDATED`
