@@ -6,11 +6,14 @@ title: 刪除和取代VOD串流中的廣告
 uuid: 8f51c413-a8c9-46c1-aec6-0d536feaaeb7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 0%
 
 ---
 
 
-# 廣告刪除和取代API變更 {#ad-deletion-and-replacement-api-changes}
+# 廣告刪除和取代API變更{#ad-deletion-and-replacement-api-changes}
 
 TVSDK支援程式化刪除和取代VOD串流中的廣告內容。
 
@@ -25,7 +28,7 @@ TVSDK的下列變更支援及刪除和取代。
    * `property PTTimeRangeCollectionType type` 表示時間範圍的類型。
    * `property NSArray* ranges` 用於設定時間範圍。
 
-      陣列中預期的對象類型 `PTReplacementTimeRange` 為或 `CMTimeRange`。
+      陣列中預期的對象類型為`PTReplacementTimeRange`或`CMTimeRange`。
 
       >[!TIP]
       >
@@ -33,19 +36,19 @@ TVSDK的下列變更支援及刪除和取代。
 
    * `PTTimeRangeCollectionType` 是enum，用於定義以下定義範圍的行為： `PTTimeRangeCollection`
 
-      * `PTTimeRangeCollectionTypeMarkRanges`:範圍類型為「標 *記」*。 這些範圍會用來將內容中的範圍標示為「廣告」。
+      * `PTTimeRangeCollectionTypeMarkRanges`:範圍類型為「標 *記」*。這些範圍會用來將內容中的範圍標示為「廣告」。
 
-      * `PTTimeRangeCollectionTypeDeleteRanges`:範圍的類型為「刪除」。 在廣告插入前，會從主要內容移除定義的範圍。
-      * `PTTimeRangeCollectionTypeReplaceRanges`:範圍的類型為「取代」。 定義的範圍從主範圍以Ads(Ad信令模式設定為 `PTAdSignalingModeCustomTimeRanges`)替換。
+      * `PTTimeRangeCollectionTypeDeleteRanges`:範圍的類型為「刪除」。在廣告插入前，會從主要內容移除定義的範圍。
+      * `PTTimeRangeCollectionTypeReplaceRanges`:範圍的類型為「取代」。定義的範圍從主窗口以Ads（Ad信令模式設定為`PTAdSignalingModeCustomTimeRanges`）替換。
 
 * `PTReplacementTimeRange` -定義以下單一範圍的新公共類 `PTTimeRangeCollection`:
 
    * `property CMTimeRange range` -定義範圍的開始和持續時間。
-   * `property long replacementDuration` -如果類型為 `TimeRangeCollection` , `PTTimeRangeCollectionTypeReplaceRanges`則 `replacementDuration` 用於建立持續時間為的位置機會（廣告插入） `replacementDuration`。 如果未 `replacementDuration` 設定，廣告伺服器將確定該位置機會的廣告持續時間和數量。
+   * `property long replacementDuration` -如果類型為 `TimeRangeCollection` , `PTTimeRangeCollectionTypeReplaceRanges`則 `replacementDuration` 用於建立持續時間為的位置機會（廣告插入） `replacementDuration`。如果未設定`replacementDuration`，廣告伺服器將確定該位置機會的廣告持續時間和數量。
 
 * `PTAdSignalingMode`:
 
-   * `PTAdSignalingModeCustomTimeRanges` -新增新類型 `PTAdSignalingMode`。 此模式會與根據取代範圍 `PTTimeRangeCollection` 的廣告插 `PTTimeRangeCollectionReplace` 入類型搭配使用。
+   * `PTAdSignalingModeCustomTimeRanges` -新增新類型 `PTAdSignalingMode`。此模式與`PTTimeRangeCollection`搭配使用，類型為`PTTimeRangeCollectionReplace`，以根據取代範圍進行廣告插入。
 
 * `PTAdMetadata`:
 
@@ -67,4 +70,4 @@ TVSDK的下列變更支援及刪除和取代。
 
 * `PTAdMetadata`:
 
-   * `property NSArray* externalAdRanges` -此屬性先前用來定義C3範圍以進行標籤。 現在已不再提倡，因為這些範圍是透過設定 `PTTimeRangeCollection`的。
+   * `property NSArray* externalAdRanges` -此屬性先前用來定義C3範圍以進行標籤。現在已不再提倡，因為這些範圍是透過`PTTimeRangeCollection`設定。
