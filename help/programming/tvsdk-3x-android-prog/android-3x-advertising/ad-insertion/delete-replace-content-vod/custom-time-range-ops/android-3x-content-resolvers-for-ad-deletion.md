@@ -6,11 +6,14 @@ title: 廣告刪除／取代的內容解析器
 uuid: d43d54be-e04a-49dd-a695-e4e8f981ccb4
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# 廣告刪除／取代的內容解析器 {#content-resolvers-for-ad-deletion-replacement}
+# 廣告刪除／取代的內容解析器{#content-resolvers-for-ad-deletion-replacement}
 
 您可以使用多個內容解析器來處理不同的時間軸操作。
 
