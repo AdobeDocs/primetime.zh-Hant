@@ -4,6 +4,9 @@ title: 請求證書（請求者）
 uuid: f0d7f65d-681d-430f-b67b-3bdceb4b6d37
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
       >[!NOTE]
       >
-      >若要複製CSR資訊，請選取開始標籤和結束標籤之間的文字， `(-----BEGIN CERTIFICATE REQUEST-----)` 但不包括 `(-----END CERTIFICATE REQUEST-----)`。
+      >要複製CSR資訊，請選擇`(-----BEGIN CERTIFICATE REQUEST-----)`開頭標籤和`(-----END CERTIFICATE REQUEST-----)`結尾標籤之間的文本（不包括）。
 
-1. 按一下按 **[!UICONTROL Submit Request]** 鈕。
+1. 按一下&#x200B;**[!UICONTROL Submit Request]**&#x200B;按鈕。
 
    系統會寄送電子郵件給帳戶和次要管理員以進行審查。 請求者是Cc&#39;d。
 
