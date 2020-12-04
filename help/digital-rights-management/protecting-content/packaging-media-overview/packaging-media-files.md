@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 概觀 {#packaging-media-files-overview}
+# 概述{#packaging-media-files-overview}
 
 封裝是指對視訊內容加密和套用DRM原則的程式。 您可以使用媒體封裝API來封裝檔案。 Primetime DRM Java SDK只能封裝漸進式下載內容，例如MP4。
 
@@ -29,14 +29,14 @@ ht-degree: 0%
 >
 >該體系結構允許在內容打包時指定使用DRM策略並將其綁定到內容。 用戶端必須先取得指定電腦的授權，才能播放內容。 授權會指定所執行的使用規則，並提供必須用來解密內容的金鑰。 DRM策略表示用於生成許可證的模板。 不過，授權伺服器在發行授權時可能會覆寫使用規則。 授權可能因此類限制而無效，例如過期時間或播放視窗。
 
-Primetime DRM提供用於傳入CEK的API。 如果未指定CEK,SDK會隨機產生它。 通常，您需要針對每個內容區段使用不同的CEK。 不過，在動態串流中，您可能會針對構成該內容的所有檔案使用相同的CEK。 因此，使用者只需要單一授權，即可順暢地從一個位元速率轉換至另一個位元速率。 如果您想要針對多個內容使用相同的金鑰和授權，則需要將相同的物 `DRMParameters` 件傳 `MediaEncrypter.encryptContent()`遞至或使用傳入CEK `V2KeyParameters.setContentEncryptionKey()`。 如果您想要針對每個內容區段使用不同的金鑰和授權，則必須為每個檔案建立 `DRMParameters` 新的例項。
+Primetime DRM提供用於傳入CEK的API。 如果未指定CEK,SDK會隨機產生它。 通常，您需要針對每個內容區段使用不同的CEK。 不過，在動態串流中，您可能會針對構成該內容的所有檔案使用相同的CEK。 因此，使用者只需要單一授權，即可順暢地從一個位元速率轉換至另一個位元速率。 如果您想要針對多個內容使用相同的金鑰和授權，您需要將相同的`DRMParameters`物件傳遞至`MediaEncrypter.encryptContent()`，或使用`V2KeyParameters.setContentEncryptionKey()`傳入CEK。 如果您想要針對每個內容區段使用不同的金鑰和授權，則必須為每個檔案建立新的`DRMParameters`例項。
 
-當您使用按鍵旋轉封裝內容時，可以控制所使用的旋轉按鍵以及按鍵變更的頻率。 `F4VDRMParameters` 並實 `FLVDRMParameters` 現接 `KeyRotationParameters` 口。 通過此介面，可以啟用密鑰旋轉。 您也需要指定 `RotatingContentEncryptionKeyProvider`。 對於每個加密的示例，此類確定要使用的旋轉密鑰。 您可以實作您自己的提供者，或使 `TimeBasedKeyProvider` 用SDK隨附的內容。 此實作會在指定秒數後隨機產生新金鑰。
+當您使用按鍵旋轉封裝內容時，可以控制使用的旋轉按鍵和按鍵變更的頻率。 `F4VDRMParameters` 並實 `FLVDRMParameters` 現該 `KeyRotationParameters` 介面。通過此介面，可以啟用密鑰旋轉。 您還需要指定`RotatingContentEncryptionKeyProvider`。 對於每個加密的示例，此類確定要使用的旋轉密鑰。 您可以實作您自己的提供者，或使用SDK隨附的`TimeBasedKeyProvider`。 此實作會在指定秒數後隨機產生新金鑰。
 
-在某些情況下，您可能需要將內容中繼資料儲存為個別檔案，並將它與內容分開提供給用戶端。 在這種情況下，您需要調用， `MediaEncrypter.encryptContent()`它將返回對 `MediaEncrypterResult` 像。 呼叫 `MediaEncrypterResult.getKeyInfo()` 並將結果轉寄給 `V2KeyStatus`。 然後擷取內容中繼資料，並將它儲存在檔案中。
+在某些情況下，您可能需要將內容中繼資料儲存為個別檔案，並將它與內容分開提供給用戶端。 在這種情況下，您需要調用`MediaEncrypter.encryptContent()` ，它返回`MediaEncrypterResult`對象。 呼叫`MediaEncrypterResult.getKeyInfo()`並將結果轉存至`V2KeyStatus`。 然後擷取內容中繼資料，並將它儲存在檔案中。
 
 所有這些工作都可使用Java API完成。
 
-如需 *Java API的詳細資訊* ，請參閱Adobe Primetime DRM API參考。
+如需Java API的詳細資訊，請參閱&#x200B;*Adobe Primetime DRM API參考*。
 
-如需 *有關Media Packager參考實作的資訊* ，請參閱使用Adobe Primetime DRM參考實作。
+如需Media Packager參考實作的相關資訊，請參閱&#x200B;*使用Adobe Primetime DRM參考實作*。
