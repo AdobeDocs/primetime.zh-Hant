@@ -4,21 +4,24 @@ title: 替代音訊
 uuid: cc38ded2-45b7-4be4-8f46-a919fdaf79cf
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
 
-# 替代音訊 {#alternate-audio}
+# 備用音頻{#alternate-audio}
 
 替代或延遲系結的音訊可讓您在視訊軌的可用音軌間切換。 如此，使用者就可在播放視訊時選取語言軌道。
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-當TVSDK建立目 `MediaPlayerItem` 前視訊的例項時，會為每個可用 `AudioTrack` 的音軌建立項目。 項目包含屬 `name` 性，此字串通常包含該追蹤語言的使用者可識別描述。 項目也包含是否依預設使用該追蹤的資訊。
+當TVSDK建立目前視訊的`MediaPlayerItem`例項時，會為每個可用的音軌建立`AudioTrack`項目。 項目包含`name`屬性，此字串通常包含該追蹤語言的使用者可識別描述。 項目也包含是否依預設使用該追蹤的資訊。
 
 在播放視訊時，您可以要求提供可用音軌的清單、選擇性讓使用者選擇一個音軌，並設定視訊與選取的音軌一起播放。
 
-雖然很少，但若在建立音軌後有其他音軌可用， `MediaPlayerItem`TVSDK會觸發事 `MediaPlayerItem.AUDIO_UPDATED` 件。
+雖然很少，但若在建立`MediaPlayerItem`後有其他音軌可用，TVSDK會觸發`MediaPlayerItem.AUDIO_UPDATED`事件。
 
 ## 新增API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -26,7 +29,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 **hasAlternateAudio**
 
-如果指定的媒體有替代音軌（除預設音軌外），此布林值函式會傳回 `true`。 如果沒有替代音軌，函式會傳回 `false`。
+如果指定的媒體具有預設音軌以外的替代音軌，則此布爾函式返回`true`。 如果沒有替代音軌，函式將返回`false`。
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const { 
