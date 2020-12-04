@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 概述——使用參考實作 {#overview-using-the-reference-implementations}
+# 概述——使用參考實施{#overview-using-the-reference-implementations}
 
 Adobe Access產品隨附下列元件的參考實作：
 
