@@ -4,11 +4,14 @@ title: Adobe Primetime DRM SDK —— 概觀
 uuid: d6bdd66e-02b3-48b8-9355-60238b9115a4
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM SDK —— 概觀 {#adobe-primetime-drm-sdk-an-overview}
+# Adobe Primetime DRM SDK —— 概觀{#adobe-primetime-drm-sdk-an-overview}
 
 >[!NOTE]
 >
@@ -22,5 +25,5 @@ Primetime DRM支援多種商業模型，包括隨選視訊、租片和電子影�
 
 * 透過Adobe Flash Media Server軟體串流
 * 使用Adobe的HTTP動態串流技術，透過HTTP提供漸進式下載
-* 允許下載內容庫，以便在消費者方便時進行本機播放
+* 允許下載內容庫以方便消費者在本機播放
 
