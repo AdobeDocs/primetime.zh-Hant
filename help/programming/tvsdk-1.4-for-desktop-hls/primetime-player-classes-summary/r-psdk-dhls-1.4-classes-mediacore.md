@@ -6,18 +6,21 @@ title: Mediacore類別
 uuid: f43d6968-cb08-4a8e-aebd-7934763df680
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '692'
+ht-degree: 0%
 
 ---
 
 
-# Mediacore類別{#mediacore-classes}
+# Mediacore類{#mediacore-classes}
 
 您可以使用Primetime Player API來自訂播放器的行為。 這些類別會描述您的媒體播放器及其資源。
 
-若要查看TVSDK的完整API檔案，請前往 [Adobe Primetime API參考](https://help.adobe.com/en_US/primetime/api/index.html)。
+若要查看TVSDK的完整API檔案，請至[Adobe Primetime API參考](https://help.adobe.com/en_US/primetime/api/index.html)。
 
 這些類別會說明您的媒體播放器及其資源。
-套件： [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/package-detail.html)
+套件：[com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/package-detail.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_2801E01282A948E6917910CA2FD1E05C"> 
  <thead> 
@@ -28,7 +31,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a> </span> </td> 
    <td colname="2"> 封裝所有自適應位速率控制參數的類。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -44,23 +47,23 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td colname="2"> 控制隱藏字幕是否可見的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ContentFactory.html" format="html" scope="external"> ContentFactory</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ContentFactory.html" format="html" scope="external"> ContentFactory</a> </span> </td> 
    <td colname="2"> 用於建立和管理廣告工作流中使用的各種元件的工廠基礎類。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> DefaultAdPolicySelector(預 <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultAdPolicySelector.html" format="html" scope="external"> 設AdPolicySelector)</a></span> </td> 
+   <td colname="1"><span class="codeph"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultAdPolicySelector.html" format="html" scope="external"> DefaultAdPolicySelector</a></span> </td> 
    <td colname="2"> 廣告播放行為的預設實作。 允許應用程式自訂廣告行為的介面。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultContentFactory.html" format="html" scope="external"> DefaultContentFactory</a></span> </td> 
-   <td colname="2">預設實作 <span class="codeph"> MediaPlayerClient工廠</span> ，支援中繼資料和廣告解析程式。 </td> 
+   <td colname="2">預設實作<span class="codeph"> MediaPlayerClient</span>工廠，同時支援中繼資料和廣告解析程式。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayer.html" format="html" scope="external"> DefaultMediaPlayer</a></span> </td> 
-   <td colname="2">MediaPlayer介面的預設 <span class="codeph"> 類別實作</span> 。 </td> 
+   <td colname="2"><span class="codeph"> MediaPlayer</span>介面的預設類別實作。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerConfig.html" format="html" scope="external"> DefaultMediaPlayerConfig</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerConfig.html" format="html" scope="external"> DefaultMediaPlayerConfig</a> </span> </td> 
    <td colname="2"> 媒體播放器預設實作的設定類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -73,10 +76,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html" format="html" scope="external"> MediaPlayer</a></span> </td> 
-   <td colname="2">DefaultMediaPlayer類別的 <span class="codeph"> 公用介面</span> 。 包含事件、PlayerState和可見性的枚舉。 </td> 
+   <td colname="2"><span class="codeph"> DefaultMediaPlayer</span>類別的公用介面。 包含事件、PlayerState和可見性的枚舉。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerConfig.html" format="html" scope="external"> MediaPlayerConfig</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerConfig.html" format="html" scope="external"> MediaPlayerConfig</a> </span> </td> 
    <td colname="2"> 媒體播放器設定類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -93,7 +96,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html" format="html" scope="external"> MediaPlayerItemLoader</a></span> </td> 
-   <td colname="2">載入媒體播放器資源並建立對應MediaPlayerItem物 <span class="codeph"> 件的類</span> 。 </td> 
+   <td colname="2">載入媒體播放器資源並建立對應<span class="codeph"> MediaPlayerItem</span>物件的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerStatus.html" format="html" scope="external"> MediaPlayerStatus</a></span> </td> 
@@ -101,7 +104,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerView.html" format="html" scope="external"> MediaPlayerView</a></span> </td> 
-   <td colname="2">MediaPlayer用於視訊演算的 <span class="codeph"> 檢視類</span> 。 </td> 
+   <td colname="2"><span class="codeph"> MediaPlayer</span>用於視訊演算的檢視類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaResource.html" format="html" scope="external"> MediaResource</a></span> </td> 
