@@ -6,6 +6,9 @@ title: 特定於供應商的安全資訊
 uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Adobe Primetime DRM解決方案中包含作業系統和應用程式伺服器。
 
 若要尋找您作業系統和應用程式伺服器的廠商特定安全性資訊，請參閱「使用Adobe Primetime DRM金鑰伺服器」。
 
-## 作業系統安全性資訊 {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
+## 作業系統安全資訊{#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
 在確保作業系統安全時，必須實施作業系統供應商描述的措施。
 
@@ -73,7 +76,7 @@ Adobe Primetime DRM解決方案中包含作業系統和應用程式伺服器。
  </tbody> 
 </table>
 
-## 應用程式伺服器安全性資訊 {#section_22986936F1A547CEAB2D97E9E9D4825C}
+## 應用程式伺服器安全資訊{#section_22986936F1A547CEAB2D97E9E9D4825C}
 
 在保護應用程式伺服器時，必須實施伺服器供應商描述的措施。
 
