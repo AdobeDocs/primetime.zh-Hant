@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# DRM客戶端阻止訪問受保護內容的塊清單 {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
+# DRM客戶端的塊清單，限制訪問受保護的內容{#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
 此區塊清單會指定無法存取受保護內容的Primetime DRM用戶端。 您可以按客戶端版本和平台阻止清單客戶端。
 
@@ -27,8 +27,8 @@ Primetime DRM客戶端版本可由下表中指定的屬性標識：
 | 作業系統 | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | 完全符合 | 平台 |
 | 建築 | `“32”, “64”` | 完全符合 | 32位元或64位元 |
 | 螢幕類型 | `“PC”, “Mobile”, “TV”` | 完全符合 |  |
-| 執行時期版本 | 有效的版本號碼。 例如， `“2.0.0”, "3.0", "4.0", "11.0"`等等。 | 如果用戶端版本小於或等於指定版本，則相符項目。 | 版本編號指定為數字和句點(&quot;。&quot;)的組合 任何長度。 |
-| Primetime DRM庫版本 | 有效的版本號碼。 例如， `“2.0.0”`。 | 如果用戶端版本小於或等於指定版本，則相符項目。 | 版本編號指定為數字和句號(&quot;。&quot;)的組合 任何長度。 |
+| 執行時期版本 | 有效的版本號碼。 例如，`“2.0.0”, "3.0", "4.0", "11.0"`等。 | 如果用戶端版本小於或等於指定版本，則相符項目。 | 版本編號指定為數字和句點(&quot;。&quot;)的組合 任何長度。 |
+| Primetime DRM庫版本 | 有效的版本號碼。 例如，`“2.0.0”`。 | 如果用戶端版本小於或等於指定版本，則相符項目。 | 版本編號指定為數字和句點(&quot;。&quot;)的組合 任何長度。 |
 | OEM廠商 | OEM廠商字串，可位於發佈給將Primetime DRM發佈至裝置之客戶的執行時期憑證中。 | 完全符合 | 使用移植套件之裝置的OEM廠商識別字串。 |
 | 模型 | 可在發佈給將Primetime DRM發佈至裝置之客戶的「執行階段憑證」中找到的模型字串。 例如， `"iOS_Mobile", "Android_Mobile", "Chrome", "ChromeOS_ARM", "WindowsOnARM", "AVE"` | 完全符合 | 使用移植套件之裝置的裝置型號識別字串。 |
 
