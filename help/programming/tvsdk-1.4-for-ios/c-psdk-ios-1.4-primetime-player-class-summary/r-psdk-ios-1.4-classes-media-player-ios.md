@@ -6,11 +6,14 @@ title: 媒體播放器類別
 uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '432'
+ht-degree: 0%
 
 ---
 
 
-# 媒體播放器類別 {#media-player-classes}
+# 媒體播放器類{#media-player-classes}
 
 您可以使用Primetime Player Objective-C API來自訂播放器的行為。
 
@@ -33,7 +36,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDefaultMediaPlayerClientFactory.html" format="html" scope="external"> PTDefaultMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> 在TVSDK中預 <span class="codeph"> 設實作PTMediaPlayerClientFactory</span> 。 它提供了可用 <span class="codeph"> 的PTOportunityResolver</span>、 <span class="codeph"> PTContentResolver</span>和 <span class="codeph"></span> PTAdPolicySelector實例。 </td> 
+   <td colname="2"> 在TVSDK中預設實作<span class="codeph"> PTMediaPlayerClientFactory</span>。 它提供可用的<span class="codeph"> PTOportunityResolver</span>、<span class="codeph"> PTContentResolver</span>和<span class="codeph"> PTAdPolicySelector</span>實例。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html" format="html" scope="external"> PTMediaPlayer</a></span> </td> 
@@ -41,7 +44,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTMediaPlayerClientFactory.html" format="html" scope="external"> PTMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> 描述定制媒體播放器客戶端工廠應實施的方法的協定，以提供可用的 <span class="codeph"> PTOportunityResolver</span> 、 <span class="codeph"> PTContentResolver</span> 和 <span class="codeph"></span> PTAdPolicySelector實例。 </td> 
+   <td colname="2"> 描述自定義媒體播放器客戶端工廠應實施的方法以提供可用的<span class="codeph"> PTOportunityResolver</span>、<span class="codeph"> PTContentResolver</span>和<span class="codeph"> PTAdPolicySelector</span>實例的協定。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerItem.html" format="html" scope="external"> PTMediaPlayerItem</a></span> </td> 
@@ -65,12 +68,12 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOportunityResolver</a> 類 </span> 、 <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> PTOportunityResolver協定</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> </a> </span> PTOportunityResolverclass、 <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> </a> PTOportunityResolverprotocol</span> </td> 
    <td colname="2"> 用於處理資訊清單內提示的類別，這些提示將用作Adobe Primetime廣告決策程式的位置。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolverDelegate.html" format="html" scope="external"> PTOportunityResolverDelegate</a></span> </td> 
-   <td colname="2"> 描述自定義業務機會解析器( <span class="codeph"> PTOportunityResolver</span> )用於向委派通信業務機會解析狀態的方法的協定。 </td> 
+   <td colname="2"> 描述自定義業務機會解析器(<span class="codeph"> PTOportunityResolver</span>)用於向委派通信業務機會解析狀態的協定。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTSDK.html" format="html" scope="external"> PTSDK</a></span> </td> 
