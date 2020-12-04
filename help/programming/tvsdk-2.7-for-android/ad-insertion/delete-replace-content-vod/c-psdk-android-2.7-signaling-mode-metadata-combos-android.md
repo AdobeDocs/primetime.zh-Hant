@@ -6,11 +6,14 @@ title: 從廣告信號模式和廣告中繼資料組合中對廣告插入和刪�
 uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
 
-# 從廣告信號模式和廣告中繼資料組合中對廣告插入和刪除的影響 {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# 從廣告信號模式和廣告中繼資料組合{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}對廣告插入和刪除的影響
 
 您可以使用不同的廣告信令模式和廣告中繼資料組合來標籤、刪除和取代VOD串流中的時間範圍。 不同的信令模式和元資料組合導致不同的行為。
 
@@ -26,7 +29,7 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
    <th class="entry"> 廣告信令模式 </th> 
    <th class="entry"> 廣告中繼資料 </th> 
    <th class="entry"> 已建立解析器 </th> 
-   <th class="entry"><span class="codeph"> 已建立PlacementInformations</span> </th> 
+   <th class="entry"><span class="codeph"> 位置</span> 資訊建立 </th> 
    <th class="entry"> 結果行為 </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
    <td> 刪除， Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
-     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li id="li_439886CB38AA46239C2E40352443888A"><span class="codeph"> PlacementInfo(Type.SERVER_MAP,Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> 刪除範圍，插入廣告 </td> 
@@ -67,7 +70,7 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
    <td></td> 
    <td> 取代，Auditude </td> 
    <td> 刪除， Auditude </td> 
-   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
+   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE、Mode.REPLACE)</span> </td> 
    <td> 已取代範圍 </td> 
   </tr> 
   <tr> 
@@ -134,7 +137,7 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
    <td></td> 
    <td> 取代，Auditude </td> 
    <td> 刪除， Auditude </td> 
-   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
+   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE、Mode.REPLACE)</span> </td> 
    <td> 已取代範圍 </td> 
   </tr> 
   <tr> 
@@ -169,7 +172,7 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
    <td></td> 
    <td> 取代，Auditude </td> 
    <td> 刪除， Auditude </td> 
-   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
+   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE、Mode.REPLACE)</span> </td> 
    <td> 以廣告取代範圍 </td> 
   </tr> 
   <tr> 
@@ -218,7 +221,7 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
    <td></td> 
    <td> 取代，Auditude </td> 
    <td> 刪除， Auditude </td> 
-   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
+   <td><span class="codeph"> PlacementInfo(Type.CUSTOM_TIME_RANGE, Mode.DELETE)、PlacementInfo(Type.CUSTOM_TIME_RANGE、Mode.REPLACE)</span> </td> 
    <td> 以廣告取代範圍 </td> 
   </tr> 
   <tr> 
