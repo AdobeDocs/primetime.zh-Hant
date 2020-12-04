@@ -6,28 +6,31 @@ title: 傳送計時中繼資料物件時，可儲存這些物件
 uuid: 38e72a9b-571a-48da-9c17-80be453e6a98
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
 
-# 傳送計時中繼資料物件時，可儲存這些物件 {#store-timed-metadata-objects-as-they-are-dispatched}
+# 將計時的中繼資料物件傳送至{#store-timed-metadata-objects-as-they-are-dispatched}時儲存
 
 您的應用程式必須在適當的時間使用適當的PTTimedMetadata物件。
 
-在內容剖析期間（在播放之前）,TVSDK會識別已訂閱的標籤，並通知您的應用程式這些標籤。 與每個時間關聯的時間 `PTTimedMetadata` 是播放時間軸上的絕對時間。
+在內容剖析期間（在播放之前）,TVSDK會識別已訂閱的標籤，並通知您的應用程式這些標籤。 與每個`PTTimedMetadata`相關聯的時間是播放時間軸上的絕對時間。
 
 您的應用程式必須完成下列工作：
 
 1. 追蹤目前的播放時間。
-1. 將當前播放時間與調度的對象匹 `PTTimedMetadata` 配。
+1. 將當前播放時間與已調度的`PTTimedMetadata`對象匹配。
 
-1. 使用開 `PTTimedMetadata` 始時間等於目前播放時間的位置。
+1. 使用`PTTimedMetadata`，其中開始時間等於目前播放時間。
 
    >[!NOTE]
    >
-   >以下程式碼假設一次只 `PTTimedMetadata` 有一個例項。 如果有多個例項，應用程式必須將它們正確儲存在字典中。 一種方法是在給定時間建立陣列，並將所有實例儲存在該陣列中。
+   >下面的代碼假定一次只有一個`PTTimedMetadata`實例。 如果有多個例項，應用程式必須將它們正確儲存在字典中。 一種方法是在給定時間建立陣列，並將所有實例儲存在該陣列中。
 
-   以下示例說明如何按每 `PTTimedMetadata` 個的開 `NSMutableDictionary (timedMetadataCollection)` 始時間在鍵中保存對象 `timedMetadata`。
+   以下示例說明如何按每個`timedMetadata`的開始時間將`PTTimedMetadata`對象保存在`NSMutableDictionary (timedMetadataCollection)`鍵中。
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -52,9 +55,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
    }
    ```
 
-## 剖析Nielsen ID3標籤 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
+## 剖析Nielsen ID3標籤{#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-若要擷取ID3標籤以進行剖析，請在方法上使 `onMediaPlayerSubscribedTagIdentified` 用：
+若要擷取ID3標籤以進行剖析，請在`onMediaPlayerSubscribedTagIdentified`方法上使用下列：
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
