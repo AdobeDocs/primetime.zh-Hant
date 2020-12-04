@@ -4,22 +4,25 @@ title: 使用Java API更新原則
 uuid: 23c50f05-799e-4f5a-869b-4b5e29a36ce1
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
 
-# 使用Java API更新原則 {#updating-a-policy-using-the-java-api}
+# 使用Java API {#updating-a-policy-using-the-java-api}更新策略
 
 要使用Java API更新策略，請執行以下步驟：
 
-1. 設定您的開發環境，並將「設定開發環境」中提 [及的所有JAR檔案包括在項目](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) 中。
-1. 建立實 `Policy` 例並從檔案或資料庫讀取策略。
+1. 設定您的開發環境並包括[在項目中設定開發環境](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)中提及的所有JAR檔案。
+1. 建立`Policy`實例並從檔案或資料庫讀取策略。
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. 通過設 `Policy` 置對象屬性（如其名稱和使用規則）來更新對象。
+1. 通過設定`Policy`對象的屬性（如其名稱和使用規則）來更新&lt;a0/>對象。
 
    ```java
      // Change the policy name.  
@@ -44,7 +47,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
      }
    ```
 
-1. 序列化更新 `Policy` 的物件，並將它儲存在檔案或資料庫中。
+1. 序列化更新的`Policy`物件，並將它儲存在檔案或資料庫中。
 
    ```java
       // Serialize the policy.  
@@ -58,4 +61,4 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
       out.close(); 
    ```
 
-有關此示例代碼的完整原始碼，請 `com.adobe.flashaccess.samples.policy.UpdatePolicy` 參見Reference Implementation命令行工具&quot;samples&quot;目錄。
+有關此示例代碼的完整原始碼，請參見Reference Implementation Command Line Tools &quot;samples&quot;目錄中的`com.adobe.flashaccess.samples.policy.UpdatePolicy`。
