@@ -6,11 +6,14 @@ title: 略過一段時間的廣告插播
 uuid: be39cb2b-c274-447a-8fb5-89b3e9598622
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
 
-# 略過一段時間的廣告插播 {#skip-ad-breaks-for-a-period-of-time}
+# 在{#skip-ad-breaks-for-a-period-of-time}期間略過廣告插播
 
 依預設，當使用者搜尋廣告插播時，TVSDK會強制播放廣告插播。 如果從先前的中斷完成所經過的時間在特定分鐘內，您可以自訂跳過廣告中斷的行為。
 
@@ -25,14 +28,14 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
    >[!NOTE]
    >
-   >當廣告出現在即時點時，SKIP廣告分段政策可能無法如預期般適用於即時串流。 例如，對於前段，SKIP會造成廣告中斷結尾的搜尋，其可能大於即時點。 在此情況下，TVSDK可能會尋找廣告的中間位置。
+   >當廣告出現在即時點時，SKIP廣告中斷政策可能無法如預期般適用於即時串流。 例如，對於前段，SKIP會造成廣告中斷結尾的搜尋，其可能大於即時點。 在此情況下，TVSDK可能會尋找廣告的中間位置。
 
 * REMOVE_AFTER
 * 移除
 
    >[!NOTE]
    >
-   >廣 `REMOVE` 告插播政策已定於淘汰。 Adobe建議您使用廣 `SKIP` 告插播政策來取代 `REMOVE`。
+   >`REMOVE`廣告插播政策將被淘汰。 Adobe建議您使用`SKIP`廣告插播政策來取代`REMOVE`。
 
 下列自訂廣告政策選擇器範例會在使用者觀看廣告插播後的5分鐘（塗鴉牆時鐘時間）跳過廣告。
 
@@ -49,7 +52,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
    }
    ```
 
-1. 延伸 `AdPolicySelector`。
+1. 延伸`AdPolicySelector`。
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
