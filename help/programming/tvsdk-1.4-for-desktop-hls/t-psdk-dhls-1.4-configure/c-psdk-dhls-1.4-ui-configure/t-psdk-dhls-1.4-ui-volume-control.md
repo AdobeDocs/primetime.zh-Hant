@@ -6,18 +6,21 @@ title: 提供音量控制
 uuid: c51e99b6-efd1-414e-9ef7-77bd53e0d6c0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# 提供音量控制{#provide-volume-control}
+# 提供卷控制{#provide-volume-control}
 
 您可以設定音量的使用者介面控制項。
 
 1. 等待MediaPlayer實例處於此命令的有效狀態。
 
    除「已發佈」(RELEASED)之外的任何狀態都有效。
-1. 在實例上調用volume set方法 `MediaPlayer` 來設定音頻音量。
+1. 在`MediaPlayer`實例上調用volume set method以設定音頻音量。
 
    ```
    public function set volume(value:Number):void
@@ -47,7 +50,8 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
       <li id="li_B00BC6F4812D4000891358F762C8E492">如果介於0和1之間，則結果為 </li> 
       <li id="li_03B7F30662554F299320040CAC2DEB7A">1，如果結果大於1 </li> 
-      </ul> <p>提示： 此邏輯會根據片語/primetime-sdk-name的舊版處理從用戶端提供的值 <span class="codeph"></span>，其中卷值介於0到100之間。 </p> </td> 
+      </ul> <p>提示： 此邏輯會根據舊版的 
+      <span class="codeph">phrates/primetime-sdk-name</span>，其中卷值介於0到100之間。 </p> </td> 
    </tr> 
    </tbody> 
    </table>
