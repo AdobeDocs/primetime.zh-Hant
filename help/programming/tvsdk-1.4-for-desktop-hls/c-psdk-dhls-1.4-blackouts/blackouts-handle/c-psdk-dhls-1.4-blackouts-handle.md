@@ -6,17 +6,20 @@ title: 處理即時串流中的封鎖期
 uuid: df933087-c8a8-49eb-a016-6dfd971c219c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '539'
+ht-degree: 0%
 
 ---
 
 
-# 處理即時串流中的封鎖期{#handle-blackouts-in-live-streams}
+# 處理即時流中的封鎖{#handle-blackouts-in-live-streams}
 
 您可以處理即時視訊串流中的封鎖期，並在封鎖期間提供替代內容。
 
 在即時串流中發生封鎖時，您的播放器會使用事件處理常式來偵測封鎖，並提供替代內容給不符合主串流觀賞資格的使用者。 您的播放器會偵測封鎖期的開始和結束，從主串流切換播放至替代串流，並在封鎖期結束時切換回主串流。
 
-在用戶端應用程式中，您可在TVSDK中訂閱封鎖標籤。 在收到新計時元數 *據對象的通知* ，您將解析計時元資料對象的資料，以標識對象是否指示封鎖進入或退出。 對於已識別的封鎖期，您會呼叫相關的TVSDK元素，以在封鎖期開始時切換至替代內容，並在封鎖期結束時再次呼叫主要內容。
+在用戶端應用程式中，您可在TVSDK中訂閱封鎖標籤。 當收到新&#x200B;*計時元資料*&#x200B;對象的通知時，您將解析計時元資料對象的資料，以標識該對象指示封鎖進入或退出。 對於已識別的封鎖期，您會呼叫相關的TVSDK元素，以在封鎖期開始時切換至替代內容，並在封鎖期結束時再次呼叫主要內容。
 
 >[!TIP]
 >
@@ -35,15 +38,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    TVSDK本身並不偵測封鎖標籤；您必須訂閱封鎖標籤，才能在資訊清單檔案剖析期間遇到標籤時收到通知。
 1. 為您的播放器已訂閱的標籤建立事件接聽程式。
 
-   當您的播放器在前景（主要內容）或背景（替代內容）串流清單中訂閱（例如封鎖標籤）的標籤時，TVSDK會派單 `TimedMetadataEvent` 並為 `TimedMetadataObject` 建立 `TimedMetadataEvent`。
+   當您的播放器在前景（主要內容）或背景（替代內容）串流清單中訂閱（例如封鎖標籤）的標籤時，TVSDK會調度`TimedMetadataEvent`並為`TimedMetadataEvent`建立`TimedMetadataObject`。
 1. 為前景和背景串流的計時中繼資料事件實施處理常式。
 
    在這些處理常式中，從計時中繼資料事件物件取得封鎖期的開始和結束時間。
-1. 準備好 `MediaPlayer` 停電。
+1. 準備`MediaPlayer`以備封鎖。
 
-   當進入 `MediaPlayer` PREPARED狀態時，您可計算並準備封鎖範圍，並在對象上設 `MediaPlayer` 置它們。
+   當`MediaPlayer`進入PREPARED狀態時，可計算並準備封鎖範圍，並在`MediaPlayer`對象上設定它們。
 
-1. 對於播放頭位置的每次更新，請檢查清單 `TimedMetadataObjects`。
+1. 對於播放頭位置的每次更新，請檢查`TimedMetadataObjects`的清單。
 
    這是您的播放器偵測封鎖期開始和結束的地方，並追蹤封鎖期發生的時間。
 
