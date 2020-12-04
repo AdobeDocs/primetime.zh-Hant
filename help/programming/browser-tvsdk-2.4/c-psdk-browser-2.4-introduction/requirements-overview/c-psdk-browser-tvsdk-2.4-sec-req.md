@@ -6,11 +6,14 @@ title: 安全性考量
 uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
 
-# 安全性考量{#security-considerations}
+# 安全注意事項{#security-considerations}
 
 瀏覽器TVSDK需注意一些安全性考量。
 
