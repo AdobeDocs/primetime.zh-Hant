@@ -15,7 +15,7 @@ ht-degree: 0%
 
 如果使用以身分為基礎的授權，伺服器會先檢查有效的驗證Token，再核發授權。
 
-如需處 [理驗證Token的詳細資訊](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) ，請參閱使用者驗證。
+如需處理驗證Token的詳細資訊，請參閱[使用者驗證](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication)。
 
 >[!NOTE]
 >
