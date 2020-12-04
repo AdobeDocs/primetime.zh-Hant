@@ -6,6 +6,9 @@ title: 為Safari HLS啟用FairPlay
 uuid: 6a250a31-cc4b-4c4b-b1e9-893ee3ca5d78
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '438'
+ht-degree: 0%
 
 ---
 
@@ -21,11 +24,11 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
    範例應用程式必須能夠播放受FairPlay保護的內容，並透過由ExpressPlay提供支援的Primetime DRM處理授權。
 * 使用FairPlay保護封裝的HLS內容（M3U8資訊清單）範例。
 
-要充分利用此處的資訊，請從子部分參考伺服器開始瞭解多DRM工作 [流：Multi-DRM Workflows Guide中的ExpressPlay Entitlement Server(SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) 。 請先閱讀有關如何設定權益和金鑰伺服器的檔案，以下資訊將會更有用。
+要充分利用此處的資訊，請瞭解從[參考伺服器子部分開始的多DRM工作流：Multi-DRM Workflows Guide中的ExpressPlay Entitlement Server(SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf)範例。 請先閱讀有關如何設定權益和金鑰伺服器的檔案，以下資訊將會更有用。
 您需要下列項目：
 
-* 您的 *ExpressPlay生產* 、客戶驗證器
-* 內容金鑰與您的 `iv` 內容封裝所在位置相同。
+* 您的&#x200B;*production* ExpressPlay的客戶驗證器
+* 與您的內容封裝所在的相同內容金鑰和`iv`。
 * FairPlay公開金鑰憑證的位置。
 
 若要修改您的FairPlay / Safari應用程式：
@@ -38,12 +41,12 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
    var myServerCertificatePath = './my_fairplay.cer';
    ```
 
-1. 對ExpressPlay執行手動FairPlay *授權Token* 要求，以取得授權Token URL。
+1. 執行手動FairPlay授權&#x200B;*Token*&#x200B;要求ExpressPlay以取得授權Token URL。
 
        您可透過下列其中一種方式完成此步驟：
    
    * 使用您自己的ExpressPlay Production Customer Authenticator。
-   * 請使用與此請求中 `iv` 用來封裝您要播放之內容的相同內容金鑰。
+   * 在此請求中，請使用與您要播放的內容封裝相同的內容金鑰和`iv`。
 
       從shell執行下列命令，並取代您的ExpressPlay客戶驗證器，以取得範例內容的授權Token URL:
 
@@ -71,11 +74,11 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
         ExpressPlayToken=<base64-encoded ExpressPlay token>';
    ```
 
-1. 在您的應用程式播放受保護的內容之前，請先將內容的URL配置從變更 `skd://` 為 `https://`。
+1. 在您的應用程式播放受保護的內容之前，請先將內容的URL配置從`skd://`變更為`https://`。
 
    您必須先在應用程式中新增此URL配置變更，才能呼叫允許播放的授權伺服器。
 
-   必須變更通訊協定，因為提供密鑰管理系統中內容金鑰存取權的內容ID會封裝在M3U8資訊清單中，並附有通訊 `skd://` 協定。 當播放器準備好取得播放受保護內容的授權時，它需要先切換通訊協定，以便與ExpressPlay授權伺服器通訊。 在下列範例中，修改 `myServerProcessSPCPath` 為包含授權伺服器要求的正確URL配置：
+   必須變更通訊協定，因為提供密鑰管理系統中內容金鑰存取權的內容ID會封裝在M3U8資訊清單中，並附有`skd://`通訊協定。 當播放器準備好取得播放受保護內容的授權時，它需要先切換通訊協定，以便與ExpressPlay授權伺服器通訊。 在以下範例中，`myServerProcessSPCPath`已修改為包含授權伺服器要求的正確URL配置：
 
    ```js
    extractContentId(initData) {  
