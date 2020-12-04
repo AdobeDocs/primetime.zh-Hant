@@ -6,6 +6,9 @@ title: ID3標籤
 uuid: 5c016260-5ced-480e-897a-11ffe7f34441
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -25,13 +28,13 @@ ID3標籤提供音訊或視訊檔案的相關資訊，例如檔案的標題或�
 * 名稱=不存在
 * ID = 0
 
-1. 實作事件偵聽器， `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED` 並將其註冊到對 `MediaPlayer` 像。
+1. 實作`TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`的事件偵聽器，並將其註冊到`MediaPlayer`對象。
 
    TVSDK會在偵測到ID3中繼資料時呼叫此接聽程式。
 
    >[!NOTE]
    >
-   >自訂廣告提示會使用相 `onTimedMetadata` 同事件來指出偵測到新標籤。 這不應造成任何混淆，因為會在資訊清單層級偵測到自訂廣告提示，而ID3標籤內嵌在串流中。 如需詳細資訊，請參閱custom-tags-configure。
+   >自訂廣告提示使用相同的`onTimedMetadata`事件來指示偵測到新標籤。 這不應造成任何混淆，因為會在資訊清單層級偵測到自訂廣告提示，而ID3標籤內嵌在串流中。 如需詳細資訊，請參閱custom-tags-configure。
 
 1. 擷取中繼資料。
 
