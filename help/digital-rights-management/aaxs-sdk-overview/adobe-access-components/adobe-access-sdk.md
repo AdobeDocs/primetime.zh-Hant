@@ -6,6 +6,9 @@ title: Java SDK、Flash Player和Adobe AIR用戶端
 uuid: 6b6c5aa2-56ee-4476-a05b-dcbbe3b9001e
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
 
 Adobe Access的主要元件包括Java SDK、Flash Player和Adobe AIR用戶端執行時期環境。
 
-如需設定SDK的詳細資訊，請參閱使用Adobe Access SDK *保護內容中的設定SDK。*
+如需設定SDK的詳細資訊，請參閱&#x200B;*使用Adobe Access SDK保護內容中的設定SDK。*
 
 Adobe Access SDK可讓您開發數位版權管理解決方案，該解決方案可與貴組織現有的商業基礎架構整合，例如內容管理、帳單和使用者存取控制系統。 Flash Player和Adobe AIR可讓您建立並輕鬆部署應用程式，讓消費者透過這些應用程式存取和檢視大型數位內容資料庫。
 
@@ -24,13 +27,13 @@ Adobe Access是以Java SDK形式提供，提供您可從中建立伺服器實作
 
 SDK中提供的Java API將於下列子節中說明。
 
-## 管理裝置群組網域的Java API {#java-apis-for-managing-device-group-domains}
+## 用於管理設備組域{#java-apis-for-managing-device-group-domains}的Java API
 
 這些API可讓伺服器處理用戶端要求加入和離開裝置群組網域。
 
 裝置群組網域是可彼此共用授權的裝置的邏輯集合。 為了達到此目的，每台設備必須先加入／註冊到同一個域。 在伺服器上執行的Adobe Access SDK必須處理裝置網域加入（註冊）請求，以及裝置網域離開（取消註冊）請求。 未加入任何網域的裝置將會取得系結至該裝置的授權，無法共用給任何其他裝置。
 
-## 保護內容的Java API {#java-apis-for-protecting-content}
+## 用於保護內容{#java-apis-for-protecting-content}的Java API
 
 這些API可用來定義權限並準備內容以供散發。 內容保護API包括：
 
@@ -42,7 +45,7 @@ SDK中提供的Java API將於下列子節中說明。
 
    內容封裝API用於加密內容並從封裝內容擷取中繼資料。
 
-## Java API，用於發行授權 {#java-apis-for-issuing-licenses}
+## 用於發行{#java-apis-for-issuing-licenses}授權的Java API
 
 當用戶端向伺服器要求授權時，會使用這些API。 SDK支援來自用戶端的下列要求：
 
@@ -58,9 +61,9 @@ SDK中提供的Java API將於下列子節中說明。
 
    為了向後相容，SDK有API可處理針對AIR 1.5版及舊版用戶端所建立之AIR應用程式的要求，以及受保護的內容。
 
-## 參考實作 {#reference-implementation}
+## 參考實施{#reference-implementation}
 
-SDK包含參考實作、簡單的Adobe Access部署，示範如何使用Java API。 參考實作提供授權伺服器、Watched Folder Packager、Adobe Access Manager AIR應用程式，以及以Java API為基礎的內容封裝與原則管理命令列工具。 若要進一步瞭解Adobe Access參考實作，請參閱保 *護內容*。
+SDK包含參考實作、簡單的Adobe Access部署，示範如何使用Java API。 參考實作提供授權伺服器、Watched Folder Packager、Adobe Access Manager AIR應用程式，以及以Java API為基礎的內容封裝與原則管理命令列工具。 若要進一步瞭解Adobe Access參考實作，請參閱&#x200B;*保護內容*。
 
 ## Adobe Access Server for Protected Streaming {#adobe-access-server-for-protected-streaming}
 
@@ -70,7 +73,7 @@ SDK包含參考實作、簡單的Adobe Access部署，示範如何使用Java API
 
 Flash Player是輕量型的瀏覽器外掛程式和執行時期，可提供一貫而引人入勝的使用者體驗、令人驚艷的音訊／視訊播放以及廣泛的觸及面。 Flash Player提供高品質的串流或下載視訊內容播放。 對於內容發佈者，Flash Player提供自訂內容周圍播放畫面的方式，讓您透過使用橫幅和覆蓋的廣告獲得更深入的品牌體驗和獲利。 對於消費者，Flash Player提供直覺式且視覺上吸引人的視訊內容檢視方式。
 
-如需Flash Player的詳細資訊，請造訪： [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)
+如需Flash Player的詳細資訊，請造訪：[www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)
 
 ## Adobe AIR {#adobe-air}
 
@@ -78,10 +81,10 @@ Adobe AIR是跨作業系統執行時期，可讓內容製作者設計自訂的�
 
 企業可完全控制使用者介面，並可設計使用者體驗來反映和強化其品牌。 Adobe AIR內建支援播放使用Adobe Access SDK保護的內容，協助您建立自訂、端對端的內容發佈鏈。
 
-如需Adobe AIR的詳細資訊，請造訪： [www.adobe.com/go/air](https://www.adobe.com/go/air)
+如需Adobe AIR的詳細資訊，請造訪：[www.adobe.com/go/air](https://www.adobe.com/go/air)
 
-## 原生iOS和Android應用程式 {#native-ios-and-android-applications}
+## 原生iOS和Android應用程式{#native-ios-and-android-applications}
 
 原生iOS和Android應用程式僅適用於Adobe Primetime客戶，Adobe Access DRM 4.0和更新版本可用於保護在行動裝置上原生（非Flash）應用程式中使用的視訊。 為了讓應用程式使用此受保護的內容，必須使用Adobe Primetime用戶端程式庫來實作。
 
-如需Adobe Primetime的詳細資訊，請造訪： [https://www.adobe.com/solutions/primetime.html](https://www.adobe.com/solutions/primetime.html)
+如需Adobe Primetime的詳細資訊，請造訪：[https://www.adobe.com/solutions/primetime.html](https://www.adobe.com/solutions/primetime.html)
