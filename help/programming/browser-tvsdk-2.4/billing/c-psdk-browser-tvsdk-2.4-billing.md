@@ -6,11 +6,14 @@ title: 帳單量度
 uuid: e09b77b3-89d3-44d6-be4e-e1612fbf89fc
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#billing-metrics-overview}
+# 概述{#billing-metrics-overview}
 
 為了迎合只想支付所用費用（而非固定費率，不論實際用途）的客戶，Adobe會收集使用量度，並使用這些度量來決定向客戶收取的費用。
 
