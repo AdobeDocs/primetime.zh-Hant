@@ -6,11 +6,14 @@ title: VOD廣告解析與插入
 uuid: c1017483-5b4f-4d71-9589-fb2327b4572b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
 
-# VOD廣告解析與插入{#vod-ad-resolving-and-insertion}
+# VOD廣告解析和插入{#vod-ad-resolving-and-insertion}
 
 對於隨選視訊(VOD)內容，TVSDK會在主要內容中剪接廣告，以增加時間軸持續時間。
 
@@ -24,7 +27,7 @@ TVSDK會以下列方式插入廣告：
 
 >[!IMPORTANT]
 >
->在實作自 `AdPolicySelector`訂時，可以根據自訂的類型，為中的每種 `AdBreakTimelineItem` （前滾、中滾或後滾） `AdPolicyInfo`類型指定不同的原則 `AdBreakTimelineItem`。 例如，您可以在播放中段內容後保留該內容，但在播放後移除前段內容。
+>實作自訂`AdPolicySelector`時，可根據`AdBreakTimelineItem`的類型，為`AdPolicyInfo`中的每種`AdBreakTimelineItem`類型（前滾、中滾或後滾）指定不同的原則。 例如，您可以在播放中段內容後保留該內容，但在播放後移除前段內容。
 
 播放開始後，內容中不會再發生其他變更。 廣告不能是：
 
