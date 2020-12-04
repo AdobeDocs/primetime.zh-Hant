@@ -6,11 +6,14 @@ title: 顯示具有當前播放時間位置的搜索拖曳條
 uuid: 3a13f4a5-538d-4e7e-ac24-043927f3f2ee
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
-# 顯示具有當前播放時間位置的搜索拖曳條 {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# 顯示當前播放時間位置{#display-a-seek-scrub-bar-with-the-current-playback-time-position}的搜索拖曳欄
 
 您可以顯示正在播放的內容的目前和剩餘時間。
 
