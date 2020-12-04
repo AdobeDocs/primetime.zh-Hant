@@ -6,11 +6,14 @@ title: 播放前的DRM驗證
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
 source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 1%
 
 ---
 
 
-# 播放前的DRM驗證 {#drm-authentication-before-playback}
+# 播放{#drm-authentication-before-playback}之前的DRM驗證
 
 當視訊的DRM中繼資料與媒體串流分開時，您應在開始播放之前先進行驗證。
 
@@ -19,9 +22,9 @@ source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-在此示例中，您可以使 `DRMHelper` 用方法下載DRM元資料檔案的內容、對其進行解析，並檢查是否需要DRM驗證。
+在此示例中，可以使用`DRMHelper`方法下載DRM元資料檔案的內容，對其進行解析，並檢查是否需要DRM驗證。
 
-1. 使用 `loadDRMMetadata` 以載入中繼資料URL內容，並將下載的位元組剖析為 `DRMMetadata`。
+1. 使用`loadDRMMetadata`載入中繼資料URL內容，並將下載的位元組剖析為`DRMMetadata`。
 
    >[!TIP]
    >
@@ -46,9 +49,9 @@ source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 
    如果使用者不知道此作業是非同步的，他們可能會想知道為什麼尚未開始播放。 例如，當下載和解析DRM元資料時，可以顯示旋轉輪。
 
-1. 在中實施回呼 `DRMLoadMetadataListener`。
+1. 在`DRMLoadMetadataListener`中實作回呼。
 
-   呼叫 `loadDRMMetadata` 這些事件處理常式。
+   `loadDRMMetadata`會呼叫這些事件處理常式。
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -71,7 +74,7 @@ source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
    * `onLoadMetadataUrlComplete` 偵測中繼資料URL何時完成載入。
    * `onLoadMetadataUrlError` 表示無法載入中繼資料。
 
-1. 載入完成後，請檢查物 `DRMMetadata` 件以判斷是否需要DRM驗證。
+1. 載入完成後，檢查`DRMMetadata`對象以確定是否需要DRM驗證。
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
