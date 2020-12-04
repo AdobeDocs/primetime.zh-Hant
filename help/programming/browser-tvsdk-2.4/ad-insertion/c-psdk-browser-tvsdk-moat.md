@@ -6,11 +6,14 @@ title: 來自Moat的廣告測量
 uuid: a29c1e74-df15-47d2-9bd6-1d366c5cdf37
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
 
-# 來自Moat的廣告測量 {#ad-measurement-from-moat}
+# 來自Moat {#ad-measurement-from-moat}的廣告測量
 
 TVSDK會從FreeWheel和其他提供VAST回應的伺服器取得資訊。 FreeWheel在VAST響應中提供來自Moat服務的資訊。 Moat服務以更準確的方式計算廣告曝光數，更能顯示創意人員捕捉或忽略觀眾的興趣。
 
