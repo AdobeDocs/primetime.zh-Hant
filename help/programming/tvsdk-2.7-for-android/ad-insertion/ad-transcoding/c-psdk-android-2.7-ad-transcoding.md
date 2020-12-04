@@ -7,13 +7,13 @@ uuid: c3961628-39aa-444c-9c93-9f1e267d9cd4
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
 
 
-# 使用Adobe Creative Repackaging Service(CRS)重新封裝不相容的廣告 {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# 使用Adobe Creative Repackaging Service(CRS){#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}重新封裝不相容的廣告
 
 某些協力廠商廣告（或創意素材）無法銜接至HTTP即時串流(HLS)內容串流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇將不相容的廣告重新封裝至相容的M3U8視訊。
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 >
 >對於CRS 3.0版（及舊版）客戶，從CRS 3.1版開始，下列變更已改善安全性和效能：
 >
->* CRS 3.1會繼續處理 `https:` 重新封裝的內容是否使用 `https:`。 這降低了某些播放器呈現不安全內容的可能性。
+>* 如果重新封裝的內容使用`https:`,CRS 3.1會繼續使用`https:`。 這降低了某些播放器呈現不安全內容的可能性。
    >
    >
 * CRS 3.1可大幅降低網路呼叫，縮短視訊啟動時間。
@@ -36,13 +36,13 @@ ht-degree: 0%
 
 
 
-如需CRS的詳細資訊，請參 [閱Creative Packaging Service(CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf)。
+如需CRS的詳細資訊，請參閱[創意封裝服務(CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf)。
 
 ## 在TVSDK應用程式中啟用CRS{#enable-crs-in-tvsdk-applications}
 
 若要在TVSDK應用程式中啟用CRS，您必須在Auditude設定中設定下列資訊：
 
-1. 在中啟用CRS `AuditudeSettings`。
+1. 在`AuditudeSettings`中啟用CRS。
 
    ```
    ... 
