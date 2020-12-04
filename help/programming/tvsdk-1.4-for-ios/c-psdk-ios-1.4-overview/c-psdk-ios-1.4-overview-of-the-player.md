@@ -6,11 +6,14 @@ title: Primetime TVSDK功能
 uuid: 838d407c-84e1-4818-bec2-4abd7cbf5308
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# Primetime TVSDK功能 {#primetime-tvsdk-features}
+# Primetime TVSDK功能{#primetime-tvsdk-features}
 
 iOS專用的TVSDK包含多種功能，並提供下列主要功能：
 
