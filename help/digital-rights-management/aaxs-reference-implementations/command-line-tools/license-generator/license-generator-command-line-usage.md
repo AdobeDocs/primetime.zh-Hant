@@ -4,11 +4,14 @@ title: 命令列使用
 uuid: b3a995de-653e-491a-9262-86dc56b9ce31
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
 
-# 命令列使用 {#command-line-usage}
+# 命令行用法{#command-line-usage}
 
 若要產生授權，請使用下列語法：
 
@@ -22,7 +25,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 </i class="+ topic>
 ```
 
-`metadata` 是包含Adobe Access DRM中繼資料的。metadata檔案。 此檔案可使用Media Packager選項從受保護的 `-d -m` 內容取得。
+`metadata` 是包含Adobe Access DRM中繼資料的。metadata檔案。使用Media Packager的`-d -m`選項，可從受保護的內容取得此檔案。
 
 若要顯示先前產生的授權，請使用下列語法：
 
@@ -50,7 +53,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    <td colname="2" class="- topic/entry "> 指定配置檔案的位置。 如果未使用此選項，License Generator會在工作目錄中尋找flashaccessools.properties。 命令行上指定的選項優先於配置檔案中顯示的選項。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d許 <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> 可檔案</span></i> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph">許可證檔案</span></i> </p> </td> 
    <td colname="2" class="- topic/entry "> 顯示已產生之授權的相關資訊。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -63,7 +66,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry ">請勿詢問是否應覆寫目標檔案。 如果目標檔案已存在且 <span class="codeph"> 未設定</span> -o，則將返回錯誤。 </td> 
+   <td colname="2" class="- topic/entry ">請勿詢問是否應覆寫目標檔案。 如果目標檔案已存在且未設定<span class="codeph"> -o</span> ，則將返回錯誤。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -75,7 +78,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r recipient-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">為指定的收件者產生授權。 可以使用設備或域證書。 可以 <span class="+ topic/ph pr-d/codeph codeph"> 指定多 </span>個-r選項，為多個收件者建立許可證。 </td> 
+   <td colname="2" class="- topic/entry ">為指定的收件者產生授權。 可以使用設備或域證書。 可以指定多個<span class="+ topic/ph pr-d/codeph codeph"> -r </span>選項，為多個收件人建立許可證。 </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root根檔案名</span> </td> 
