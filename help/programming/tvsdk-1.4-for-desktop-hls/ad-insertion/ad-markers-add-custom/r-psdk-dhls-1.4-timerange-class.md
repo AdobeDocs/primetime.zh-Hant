@@ -6,6 +6,9 @@ title: TimeRange類
 uuid: 5d0c979e-cc63-4fdd-becc-b0e3987b0891
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-該集 `TimeRange` 中的每個規格代表播放時間軸上由TVSDK內部維護且必須適當標示為廣告相關時段的區段。
+集合中的每個`TimeRange`規格代表播放時間軸上由TVSDK內部維護且必須適當標示為廣告相關時段的區段。
 
-類別 `TimeRange` 是簡單的資料結構，可顯示時間軸上的開始位置和結束位置。 這兩個唯讀屬性抽象了播放時間軸中時間範圍的概念。
+`TimeRange`類別是簡單的資料結構，可顯示時間軸上的開始位置和結束位置。 這兩個唯讀屬性抽象了播放時間軸中時間範圍的概念。
 
 >[!TIP]
 >
