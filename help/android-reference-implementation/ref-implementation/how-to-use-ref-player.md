@@ -4,11 +4,14 @@ title: 如何使用Primetime參考實作
 uuid: 9eb262c4-d987-493a-92a4-311118c5f01e
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
 
-# 如何使用Primetime參考實作 {#how-to-use-the-primetime-reference-implementation}
+# 如何使用Primetime參考實作{#how-to-use-the-primetime-reference-implementation}
 
 Primetime參考實作是一個模組化播放器，已細分為個別功能，您可透過專業功能管理員輕鬆修改。 這些功能管理員可當做連接應用程式與TVSDK程式庫的橋梁。
 
@@ -19,6 +22,6 @@ Primetime參考實作是一個模組化播放器，已細分為個別功能，�
 * 關閉您未使用的功能，以挑選並選擇應用程式的功能。
 * 自訂UI元件，而不需對功能進行任何變更。
 
-我們提供Primetime參考實作，以協助您瞭解TVSDK並輕鬆修改功能管理員以自訂您的播放器。 不過，請參閱 [TVSDK 1.4 for Android程式設計人員指南](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) ，以取得TVSDK程式庫的詳細資訊。
+我們提供Primetime參考實作，以協助您瞭解TVSDK並輕鬆修改功能管理員以自訂您的播放器。 不過，請參閱[TVSDK 1.4 for Android程式設計人員指南](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf)以取得TVSDK程式庫的詳細資訊。
 
-要以Javadoc格式輕鬆訪問參考實施API文檔，請按一下 [此處](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html)。
+要輕鬆訪問Javadoc格式的參考實現API文檔，請按一下[此處](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html)。
