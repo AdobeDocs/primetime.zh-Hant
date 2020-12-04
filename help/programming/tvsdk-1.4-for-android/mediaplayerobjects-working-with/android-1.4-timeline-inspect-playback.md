@@ -6,6 +6,9 @@ title: 檢查播放時間軸
 uuid: b5ede131-1037-449b-bc3f-a066fdc92fc5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '285'
+ht-degree: 0%
 
 ---
 
@@ -16,20 +19,20 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 以下是如下螢幕擷取畫面中所示的範例實作。  ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. 使用方 `Timeline` 法訪問 `MediaPlayer` 中的對 `getTimeline` 像。
+1. 使用`getTimeline`方法訪問`MediaPlayer`中的`Timeline`對象。
 
-   類 `Timeline` 封裝了與時間軸內容相關的資訊，該時間軸內容與實例當前載入的媒體項相關 `MediaPlayer` 聯。 該 `Timeline` 類可訪問基礎時間軸的只讀視圖。 類提 `Timeline` 供了getter方法，該方法通過對象清單提供迭代 `TimelineMarker` 器。
+   `Timeline`類封裝了與`MediaPlayer`實例當前載入的媒體項相關聯的時間軸內容相關的資訊。 `Timeline`類提供對基礎時間軸的只讀視圖的訪問。 `Timeline`類提供getter方法，該方法通過`TimelineMarker`對象清單提供迭代器。
 
-1. 逐步瀏覽清單， `TimelineMarkers` 並使用傳回的資訊來實作時間軸。
+1. 重複`TimelineMarkers`清單，並使用傳回的資訊來實作時間軸。
 
        「TimelineMarker」物件包含兩項資訊：
    
    * 標籤在時間軸上的位置（以毫秒為單位）
    * 時間軸上標籤的持續時間（以毫秒為單位）
 
-1. 實作監聽器回呼接 `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 口，並向對象注 `Timeline` 冊它。
+1. 實作偵聽器回呼介面`MediaPlayer.PlaybackEventListener.onTimelineUpdated`，並將其註冊到`Timeline`對象。
 
-   此物 `Timeline` 件可呼叫您的監聽器，告知您的應用程式播放時間軸中可能發生的 `OnTimelineUpdated` 變更。
+   `Timeline`物件可呼叫您的`OnTimelineUpdated`接聽程式，通知您的應用程式有關播放時間軸中可能發生的變更。
 
 ```java
 // access the timeline object 
