@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 設定偏好設定概觀 {#setting-preferences-overview}
+# 設定首選項概述{#setting-preferences-overview}
 
-除了Packager Server URL，以下指定的所有偏好設定都會儲存在伺服器 [!DNL flashaccess-refimpl-packager.properties] 的檔案中。 您可以直接在屬性檔案或透過AIR應用程式修改所有設定。 密碼儲存在伺服器的屬性檔案中時會進行加密。 在UI中輸入未加密的密碼，並在密碼儲存在檔案中之前加密。
+除了Packager Server URL之外，下面指定的所有首選項都儲存在伺服器的[!DNL flashaccess-refimpl-packager.properties]檔案中。 您可以直接在屬性檔案或透過AIR應用程式修改所有設定。 密碼儲存在伺服器的屬性檔案中時會進行加密。 在UI中輸入未加密的密碼，並在密碼儲存在檔案中之前加密。
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ ht-degree: 0%
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Packager Server URL </td> 
-   <td colname="2" class="- topic/entry "> 執行flashaccess-packager. <span class="filepath"> war的伺服器位置 </span>;例如， <span class="filepath"> https://localhost:8080 </span> </td> 
+   <td colname="2" class="- topic/entry "> 運行<span class="filepath"> flashaccess-packager.war </span>的伺服器位置；例如<span class="filepath"> https://localhost:8080 </span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 資源目錄 </td> 
@@ -41,7 +41,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 授權伺服器URL </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端應向其請求授權之伺服器的URL;例如， <span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端應向其請求授權之伺服器的URL;例如，<span class="filepath"> https://mylicenseserver.com:8080 </span> </p> </td> 
   </tr> 
  </tbody> 
 </table>
