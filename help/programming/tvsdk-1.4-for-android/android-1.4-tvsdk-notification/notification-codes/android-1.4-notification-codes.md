@@ -6,6 +6,9 @@ title: 通知代碼
 uuid: edbce737-28fd-4309-be5a-2e33fcc156b6
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span> </td> 
-   <td colname="2">通知類型。 根據平台，此屬性會參照可能具有 <span class="codeph"> INFO</span>、 <span class="codeph"> WARN</span>或 <span class="codeph"> ERROR值的列舉類型</span>。 這是通知的頂層群組。 </td> 
+   <td colname="2">通知類型。 根據平台，此屬性是指可能值為<span class="codeph"> INFO</span>、<span class="codeph"> WARN</span>或<span class="codeph"> ERROR</span>的列舉類型。 這是通知的頂層群組。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 代碼</span> </td> 
@@ -39,15 +42,15 @@ TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 名稱</span> </td> 
-   <td colname="2">包含代碼的人類可讀描述的字串，如 <span class="codeph"> SEEK_ERROR</span>。 </td> 
+   <td colname="2">包含代碼的人類可讀描述的字串，如<span class="codeph"> SEEK_ERROR</span>。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 中繼資料</span> </td> 
-   <td colname="2">包含通知其他相關資訊的金鑰／值配對。 例如，名為 <span class="codeph"></span> URL的索引鍵會與與與通知相關的URL值配對，例如導致錯誤的無效URL。 </td> 
+   <td colname="2">包含通知其他相關資訊的金鑰／值配對。 例如，名為<span class="codeph"> URL</span>的索引鍵會與與通知相關的URL值配對，例如導致錯誤的無效URL。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2">直接影響此通知 <span class="codeph"> 的其他MediaPlayerNotification</span> 物件的參考。 例如，廣告插入失敗的通知會直接與時間線插入衝突對應。 並非所有通知都提供內部通知。 </td> 
+   <td colname="2">對直接影響此通知的其他<span class="codeph"> MediaPlayerNotification</span>物件的參考。 例如，廣告插入失敗的通知會直接與時間線插入衝突對應。 並非所有通知都提供內部通知。 </td> 
   </tr> 
  </tbody> 
 </table>
