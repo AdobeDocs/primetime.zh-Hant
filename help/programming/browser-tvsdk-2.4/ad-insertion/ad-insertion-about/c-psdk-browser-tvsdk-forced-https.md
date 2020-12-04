@@ -6,6 +6,9 @@ title: 透過HTTPS安全載入廣告
 uuid: 10657f59-cfbf-4c75-9249-fc154952bc51
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '73'
+ht-degree: 0%
 
 ---
 
