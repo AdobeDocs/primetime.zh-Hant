@@ -6,6 +6,9 @@ title: 刪除範圍
 uuid: 2f4afa0d-69e3-4929-8dbd-b553c8a64d96
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 >[!NOTE]
 >
->如果您只想從內容移除特定範圍，而且廣告地圖必須如廣告伺服器所定義般使用，請建立例項，並指定類型為具有已定義自訂範圍的 `CustomRangeMetadata` DELETE作業。
+>如果您只想從內容移除特定範圍，而且廣告地圖必須如廣告伺服器所定義般使用，請建立`CustomRangeMetadata`例項，並指定類型為具有已定義自訂範圍的DELETE作業。
 
 使用Adobe Primetime廣告決策廣告刪除範圍。
 
