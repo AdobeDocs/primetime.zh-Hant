@@ -4,17 +4,20 @@ title: 概觀
 uuid: 7363d241-6947-4a9c-80e5-e50be71066b9
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#overview}
+# 概述{#overview}
 
 內容提供者可使用Adobe® Access™，將原則套用至媒體檔案。 使用原則管理API，管理員可以建立、檢視政策的詳細資訊，以及更新政策。
 
-原 *則* ，定義使用者檢視內容的方式；它是資訊的集合，其中包含安全性設定、驗證要求和使用權限。 當套用原則時，加密和簽署可讓內容提供者不論內容的散布範圍有多廣，都能維持其內容的控制。 使用Adobe® Flash® Media Server或HTTP伺服器可傳送受保護的檔案。 您可在使用Adobe® AIR®、Adobe® Flash® Player和Adobe® Primetime SDK for iOS建立的自訂播放器中下載和播放。 策略是許可證伺服器生成許可證時要使用的模板。 客戶端在請求許可證之前也可以參考該策略，以確定是否需要在向伺服器發出許可證請求之前提示用戶進行驗證。
+*policy*&#x200B;定義使用者如何檢視內容；它是資訊的集合，其中包含安全性設定、驗證要求和使用權限。 當套用原則時，加密和簽署可讓內容提供者不論內容的散布範圍有多廣，都能維持對內容的控制。 使用Adobe® Flash® Media Server或HTTP伺服器可傳送受保護的檔案。 您可在使用Adobe® AIR®、Adobe® Flash® Player和Adobe® Primetime SDK for iOS建立的自訂播放器中下載和播放。 策略是許可證伺服器生成許可證時要使用的模板。 客戶端在請求許可證之前也可以參考該策略，以確定是否需要在向伺服器發出許可證請求之前提示用戶進行驗證。
 
-策略指定授予客戶機的一個或多個權限。 通常，策略至少包括「正確播放」。 您也可以指定多個「播放權」，每個「播放權」具有不同的限制。 當客戶遇到具有多重播放權限的授權時，會使用第一個符合其所有限制的授權。 例如，此功能可用於在不同平台上強制執行不同的輸出保護設定。 如需說明此範例的范常式式碼，請 `CreatePolicyWithOutputProtection.java` 參閱參考實作命令列工具「範例」目錄。
+策略指定授予客戶機的一個或多個權限。 通常，策略至少包括「正確播放」。 您也可以指定多個「播放權」，每個「播放權」具有不同的限制。 當客戶遇到具有多重播放權限的授權時，會使用第一個符合其所有限制的授權。 例如，此功能可用於在不同平台上強制執行不同的輸出保護設定。 如需說明此範例的范常式式碼，請參閱參考實作命令列工具&quot;samples&quot;目錄中的`CreatePolicyWithOutputProtection.java`。
 
 您可以使用原則管理API來完成下列工作：
 
@@ -22,6 +25,6 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 * 檢視原則詳細資訊
 * 管理策略更新清單
 
-如需本章所討論之Java API的詳細資訊，請參閱 *Adobe Access API參考*。
+如需本章所討論之Java API的詳細資訊，請參閱&#x200B;*Adobe Access API Reference*。
 
-如需政策管理員參考實作的詳細資訊，請參 *閱使用Adobe存取參考實作*。
+如需策略管理器參考實作的詳細資訊，請參閱&#x200B;*使用Adobe存取參考實作*。
