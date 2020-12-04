@@ -6,11 +6,14 @@ title: 媒體播放器類別
 uuid: 705c71b6-4e5e-46b5-a59d-13df977b04f2
 translation-type: tm+mt
 source-git-commit: b13f2d3f083a6ca333a4edba1c8d7261f7d448ad
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
 
-# 媒體播放器類別 {#media-player-classes}
+# 媒體播放器類{#media-player-classes}
 
 您可以使用Primetime Player Objective-C API來自訂播放器的行為。
 
