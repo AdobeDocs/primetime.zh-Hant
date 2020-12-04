@@ -6,6 +6,9 @@ title: 設定帳單量度
 uuid: 04d3b53e-f08c-49d0-ba42-5375f1307d2e
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 0%
 
 ---
 
@@ -33,5 +36,5 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
    _player.replaceCurrentResource(_resource, config);
    ```
 
-   其中 `_player` 是實例 `AdobePSDK.MediaPlayer` 和 `_resource` 實例 `AdobePSDK.MediaResource`。
+   其中`_player`是`AdobePSDK.MediaPlayer`的例項，而`_resource`是`AdobePSDK.MediaResource`的例項。
 
