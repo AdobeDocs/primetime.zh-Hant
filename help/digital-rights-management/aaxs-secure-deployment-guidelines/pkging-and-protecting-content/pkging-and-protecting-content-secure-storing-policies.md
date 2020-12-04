@@ -4,6 +4,9 @@ title: 安全地儲存策略
 uuid: b1ac236f-6637-46d4-8405-a819d6093314
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 0%
 
 ---
 
@@ -14,4 +17,4 @@ Adobe Access SDK在開發應用程式時提供極大的彈性，可用於內容�
 
 在打包中使用策略之前，不會對其進行簽署或以其他方式保護其不受修改。 如果您擔心封裝工具的使用者會修改原則，請考慮簽署原則，以確保無法修改。
 
-如需有關使用SDK建立應用程式的詳細資訊，請參閱 *Adobe Access API參考*。
+如需有關使用SDK建立應用程式的詳細資訊，請參閱&#x200B;*Adobe Access API Reference*。
