@@ -6,6 +6,9 @@ title: AC-3 5.1格式
 uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Primetime無法防止ISP中斷或電纜斷開等故障。 不過，Primetime串�
 
 音訊轉碼器3（AC-3，又稱為Dolby Digital®）5.1格式可讓內容供應商壓縮多聲道音訊檔案的大小，而不會影響音效品質。 AC-3是5.1格式，這表示它提供5個全頻寬頻道，以提供更豐富的使用體驗。
 
-如需詳細資訊，請 [參閱Dolby Digital 5.1](https://www.dolby.com/us/en/technologies/dolby-digital.html)。
+如需詳細資訊，請參閱[Dolby Digital 5.1](https://www.dolby.com/us/en/technologies/dolby-digital.html)。
 
 >[!IMPORTANT]
 >
@@ -42,7 +45,7 @@ TVSDK僅支援Amazon Fire TV第1代裝置上的AC-3 5.1功能。
 * 多聲道AAC音訊
 * 跨不同轉碼器的ABR(AAC - AC3)
 
-## 選擇支援的介質 {#section_E1DFA1F472EA4BDE846C71A3343E275A}
+## 選擇支援的介質{#section_E1DFA1F472EA4BDE846C71A3343E275A}
 
 以下是TVSDK找到包含AC-3和AAC媒體的資訊清單時所發生的典型工作流程：
 
@@ -56,7 +59,7 @@ TVSDK僅支援Amazon Fire TV第1代裝置上的AC-3 5.1功能。
 >
 >應用程式無法取得有關已忽略描述檔的資訊。
 
-## 確定輸出模式 {#section_64145D9824594C36AADBF0482C528767}
+## 確定輸出模式{#section_64145D9824594C36AADBF0482C528767}
 
 在處理AC-3媒體時，如果Android裝置已連接至喇叭系統，則決定以環繞模式或立體聲模式播放內容取決於裝置的設定方式。
 
