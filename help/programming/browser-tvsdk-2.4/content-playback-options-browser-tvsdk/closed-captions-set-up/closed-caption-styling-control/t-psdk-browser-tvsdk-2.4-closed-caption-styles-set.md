@@ -6,6 +6,9 @@ title: 設定隱藏字幕樣式
 uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 您可以設定隱藏字幕文字的格式，例如字型、大小、顏色、邊緣和不透明度。
 
-1. 等待至 `MediaPlayer` 少處於「已準備」狀態。
+1. 等待`MediaPlayer`至少處於「已準備」狀態。
 
-   有關狀態的詳細資訊，請參 [閱等待有效狀態](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md)。
-1. 建立例 `TextFormat` 項。
+   有關狀態的詳細資訊，請參閱[等待有效狀態](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md)。
+1. 建立`TextFormat`實例。
 
    您現在可以提供所有隱藏字幕樣式參數，或稍後再設定。
 
@@ -37,9 +40,9 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
        safeArea) → {AdobePSDK.TextFormat}
    ```
 
-1. （選用）取得目前的隱藏字幕樣式設定 `MediaPlayer.ccStyle`。
+1. （可選）取得目前包含`MediaPlayer.ccStyle`的隱藏字幕樣式設定。
 
-   傳回值是介面的例 `TextFormat` 項。
+   返回值是`TextFormat`介面的實例。
 
    如果先前未設定樣式，則會傳回TextFormat物件，其中包含每個屬性的預設值：
 
@@ -47,7 +50,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
    ccStyle :AdobePSDK.TextFormat
    ```
 
-1. 要更改樣式設定，請使 `MediaPlayer.ccStyle`用，傳遞介面的實 `TextFormat` 例。
+1. 要更改樣式設定，請使用`MediaPlayer.ccStyle` ，傳遞`TextFormat`介面的實例。
 
    即使目前的媒體串流沒有隱藏字幕，您仍可使用此方法。
 
