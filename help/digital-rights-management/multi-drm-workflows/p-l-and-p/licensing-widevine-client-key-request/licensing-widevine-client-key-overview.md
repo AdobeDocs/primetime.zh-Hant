@@ -6,11 +6,14 @@ title: 用戶端金鑰要求工作流程總覽
 uuid: 2f01f0ae-adbf-42fa-a908-4b5b9410a26d
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
 
-# 用戶端金鑰要求工作流程 {#client-key-request-workflow-overview}
+# 用戶端金鑰要求工作流程{#client-key-request-workflow-overview}
 
 若要播放內容封裝產生的DASH內容，TVSDK用戶端將需要取得在封裝程式期間在擷取關鍵字工作流程中傳遞的內容解密金鑰。 客戶端內容解密密鑰通常由Widevine/PlayReady許可伺服器響應於來自客戶端的一個或多個HTTP/HTTPS帖子而傳遞給客戶端。
 
