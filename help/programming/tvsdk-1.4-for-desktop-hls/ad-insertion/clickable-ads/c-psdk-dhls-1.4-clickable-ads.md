@@ -6,23 +6,26 @@ title: 可點選廣告
 uuid: edefbc66-2d30-441d-9c30-256588504463
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '397'
+ht-degree: 0%
 
 ---
 
 
-# 可點選廣告 {#clickable-ads}
+# 可點選廣告{#clickable-ads}
 
 TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您建立播放器UI時，您必須決定當使用者點按可點按的廣告時如何回應。
 
 對於Flash Runtime的TVSDK，只有線性廣告可點選。
 
-## 回應廣告的點按次數 {#respond-to-clicks-on-ads}
+## 回應廣告的點按次數{#respond-to-clicks-on-ads}
 
 當使用者按一下廣告或相關按鈕時，您的應用程式會負責回應。 TVSDK會提供您目標URL的相關資訊。
 
 此範例顯示管理廣告點按的一種可能方式。
 
-1. 每次播放廣告時，在媒體播放器上方顯示一個按鈕。 點按廣告的使用者會重新導向至廣告URL。 此按鈕是的一部分 [!DNL ClickableAdsOverlay.xml]。
+1. 每次播放廣告時，在媒體播放器上方顯示一個按鈕。 點按廣告的使用者會重新導向至廣告URL。 此按鈕是[!DNL ClickableAdsOverlay.xml]的一部分。
 
    ```xml
       <?xml version="1.0"?> 
@@ -35,7 +38,7 @@ TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您�
    </s:VGroup>
    ```
 
-1. 在我們的媒體播放器範例中加入此覆蓋， [!DNL psdkdemo.xml]。
+1. 在我們的媒體播放器範例[!DNL psdkdemo.xml]中加入此覆蓋。
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +48,7 @@ TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您�
    </psdk:ClickableAdsOverlay
    ```
 
-1. 若要讓檢視只在廣告播放時顯示，請監聽 `onAdStart` 及 `onAdComplete` 寄送的事件。
+1. 若要讓檢視僅在廣告播放時顯示，請監聽`onAdStart`和`onAdComplete`事件，由傳送。
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -64,7 +67,7 @@ TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您�
    }
    ```
 
-1. 在可點選廣告上監控使用者互動。 當使用者觸碰或按一下廣告或按鈕時，請通知TVSDK `notifyClick`。
+1. 在可點選廣告上監控使用者互動。 當使用者觸碰或按一下廣告或按鈕時，請以`notifyClick`通知TVSDK。
 
    ```
    private function onAdsOverlayClicked():void {     
@@ -72,9 +75,9 @@ TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您�
    }
    ```
 
-1. 聽聽活 `AdclickEvent.AD_CLICK` 動。
+1. 監聽`AdclickEvent.AD_CLICK`事件。
 
-   如果廣告正在播放，TVSDK會調 `AdClickEvent.AD_CLICK` 度事件，您可從中擷取點進URL和相關資訊。
+   如果廣告正在播放，TVSDK會調度`AdClickEvent.AD_CLICK`事件，您可從中擷取點進URL和相關資訊。
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
