@@ -6,17 +6,20 @@ title: VAST和VMAP的廣告備援行為
 uuid: 612416b9-d070-42e2-b68b-74ba52023345
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
 
-# VAST和VMAP的廣告備援行為 {#ad-fallback-behavior-for-vast-and-vmap}
+# VAST和VMAP {#ad-fallback-behavior-for-vast-and-vmap}的廣告備援行為
 
 當Primetime廣告決策遇到空白或媒體類型對HLS無效的VAST廣告（創意廣告）時，它會評估備援廣告以判斷要傳回的內容。
 
 <!--<a id="section_9F60AF00CE9645848EAAF8C06A9E426B"></a>-->
 
-在TVSDK中，唯一有效的媒體類 `application/x-mpegURL` 型為(M3U8)。
+在TVSDK中，唯一有效的媒體類型是`application/x-mpegURL`(M3U8)。
 
 當有獨立的後援廣告時，Primetime廣告決策外掛程式會依下列順序檢查這些廣告，並傳回第一個具有有效媒體類型的廣告：
 
