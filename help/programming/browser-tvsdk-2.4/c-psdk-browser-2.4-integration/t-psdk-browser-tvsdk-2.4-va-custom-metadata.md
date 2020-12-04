@@ -6,6 +6,9 @@ title: 實作自訂中繼資料支援
 uuid: 6e23311c-a393-4485-919e-4cf6412789b1
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
