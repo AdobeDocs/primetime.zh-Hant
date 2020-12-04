@@ -6,15 +6,18 @@ title: 考量事項和最佳實務
 uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '348'
+ht-degree: 0%
 
 ---
 
 
-# 考量事項和最佳實務{#considerations-and-best-practices}
+# 考慮事項和最佳做法{#considerations-and-best-practices}
 
 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
 
-## 考量事項 {#section_tvsdk_considerations}
+## 注意事項{#section_tvsdk_considerations}
 
 使用TVSDK時，請記住下列資訊：
 
@@ -44,7 +47,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
       如果您在設定廣告插入中繼資料時設定廣告相關呼叫，則所有廣告相關呼叫都會使用Android預設使用者代理或自訂使用者代理。
 
-## 最佳實務 {#section_tvsdk_best_practices}
+## 最佳做法{#section_tvsdk_best_practices}
 
 以下是TVSDK的建議實務：
 
