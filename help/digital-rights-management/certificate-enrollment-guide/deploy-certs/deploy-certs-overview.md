@@ -4,11 +4,14 @@ title: 部署憑證概觀
 uuid: e6413f9f-69a5-4881-bb13-47a80cf32a48
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '125'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#deploy-certificates-overview}
+# 概述{#deploy-certificates-overview}
 
 若要將憑證新增至Adobe Primetime DRM屬性檔案，請使用私密金鑰將PKCS#7檔案轉換為PFX檔案，並產生PEM檔案或DER檔案。
 
