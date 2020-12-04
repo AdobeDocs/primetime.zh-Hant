@@ -6,11 +6,14 @@ title: 構建用於DVR的增強控制條
 uuid: 08f943e8-90da-4860-92dd-dd289fd68cba
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
 
-# 構建用於DVR的增強控制條{#construct-a-control-bar-enhanced-for-dvr}
+# 構建增強的DVR控制條{#construct-a-control-bar-enhanced-for-dvr}
 
 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
 
@@ -34,7 +37,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
       對於控制列：
    1. 新增覆蓋至代表播放範圍的控制列。
-   1. 當使用者開始搜尋時，使用屬性檢查所要的搜尋位置是否在可尋找的范 `MediaPlayer.seekableRange` 圍內。
+   1. 當使用者開始搜尋時，使用`MediaPlayer.seekableRange`屬性檢查所要的搜尋位置是否在可搜尋範圍內。
 
       例如：
 
@@ -49,7 +52,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       }
       ```
 
-      您也可以選擇使用常數尋找用戶端即時 `MediaPlayer.LIVE_POINT` 點。
+      您也可以選擇使用`MediaPlayer.LIVE_POINT`常數尋找用戶端即時點。
 
       ```
       private function onSeekToLiveClick(event:MouseEvent):void { 
