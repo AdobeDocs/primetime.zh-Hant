@@ -6,6 +6,9 @@ title: 播放清單中的替代音軌
 uuid: 68f01375-9d57-4839-a1c0-7e022b374012
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '346'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 * 如果主要內容有替代的音軌，則廣告必須至少有一個僅音訊串流。
 * 廣告的僅限音訊串流的每個區段持續時間必須等於廣告視訊串流的區段持續時間。
 
-主音軌包含在具有標籤的音軌集合 `default` 中。 替代音訊串流的中繼資料會包含在具有之標籤的播放清單 `#EXT-X-MEDIA` 中 `TYPE=AUDIO`。
+主音軌包含在具有`default`標籤的音軌集合中。 替代音訊串流的中繼資料會包含在具有`TYPE=AUDIO`之`#EXT-X-MEDIA`標籤的播放清單中。
 
 例如，指定多個替代音訊串流的M3U8資訊清單可能如下所示：
 
