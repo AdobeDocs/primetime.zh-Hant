@@ -6,11 +6,14 @@ title: 播放和容錯
 uuid: 511f16b9-2b86-42c1-8d89-09b26534200b
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#playback-and-failover-overview}
+# 概述{#playback-and-failover-overview}
 
 透過網際網路串流需要持續穩定的連線，才能播放來自遠端伺服器的串流。 不過，檢視器的網際網路連線或串流播放的可變性，意味著遠端播放可能沒有本機播放的媒體品質。
 
