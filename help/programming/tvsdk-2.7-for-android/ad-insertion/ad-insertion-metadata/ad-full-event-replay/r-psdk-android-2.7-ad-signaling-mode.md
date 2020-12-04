@@ -6,17 +6,20 @@ title: 廣告信令模式
 uuid: 111b7e43-e97c-4069-a273-4f9f6280453e
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
 
-# 廣告信令模式 {#ad-signaling-mode-overview}
+# 廣告信令模式{#ad-signaling-mode-overview}
 
 廣告信令模式指定視頻流應在何處獲得廣告資訊。
 
-有效值為 `DEFAULT`、 `SERVER_MAP`和 `MANIFEST_CUES`。
+有效值為`DEFAULT`、`SERVER_MAP`和`MANIFEST_CUES`。
 
-下表說明了各種HLS `AdSignalingMode` 串流類型的值的影響：
+下表說明`AdSignalingMode`值對各種類型HLS串流的影響：
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
