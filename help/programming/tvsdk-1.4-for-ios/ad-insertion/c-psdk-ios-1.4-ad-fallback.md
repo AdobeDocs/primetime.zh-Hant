@@ -6,21 +6,24 @@ title: 廣泛廣告和VMAP廣告的廣告後援
 uuid: 290f0aeb-7314-4615-b477-24e65d5857ac
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 0%
 
 ---
 
 
-# 廣泛廣告和VMAP廣告的廣告後援 {#ad-fallback-for-vast-and-vmap-ads}
+# 廣泛廣告和VMAP廣告的廣告後援{#ad-fallback-for-vast-and-vmap-ads}
 
 對於啟用後援規則的數位視訊廣告服務範本(VAST)廣告（或創意素材）,TVSDK會將無效媒體類型的廣告視為空白廣告，並嘗試在其位置使用後援廣告。 您可以設定備援行為的某些方面。
 
-VAST/Digital Video Multiple Ad Playlist(VMAP)規格指出，對於啟用VAST備援的廣告，空白廣告會自動觸發備援廣告的使用。 當VAST廣告為空時，TVSDK會在備援廣告中尋找有效的HLS媒體類型取代。 當包裝函式中的VAST廣告具有無效的媒體類型時，TVSDK會將此廣告視為空白。 您可以設定TVSDK是否應針對VMAP內嵌的廣告執行相同動作。 如需VAST功能的詳細資 `fallbackOnNoAd` 訊，請參 [閱數位視訊廣告服務範本(VAST)3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast)。
+VAST/Digital Video Multiple Ad Playlist(VMAP)規格指出，對於啟用VAST備援的廣告，空白廣告會自動觸發備援廣告的使用。 當VAST廣告為空時，TVSDK會在備援廣告中尋找有效的HLS媒體類型取代。 當包裝函式中的VAST廣告具有無效的媒體類型時，TVSDK會將此廣告視為空白。 您可以設定TVSDK是否應針對VMAP內嵌的廣告執行相同動作。 有關VAST `fallbackOnNoAd`功能的詳細資訊，請參閱[數字視頻廣告服務模板(VAST)3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast)。
 
-## 定義VMAP內嵌廣告的備援廣告行為 {#section_D90BB3C6E539472EABF000C0F616DBE2}
+## 定義VMAP內嵌廣告的備援廣告行為{#section_D90BB3C6E539472EABF000C0F616DBE2}
 
 當VMAP內嵌廣告包含無效的媒體類型時，您可以開啟備援。
 
-1. 當線 `FallbackOnInvalidCreativeEnabled` 性／內 `YES` 嵌廣告的媒體類型對HLS無效時，設定為VMAP回退。
+1. 將`FallbackOnInvalidCreativeEnabled`設為`YES`，當線性／內嵌廣告的媒體類型對HLS無效時，VMAP會回落。
 
    >[!NOTE]
    >
@@ -31,11 +34,11 @@ VAST/Digital Video Multiple Ad Playlist(VMAP)規格指出，對於啟用VAST備�
    adMetadata.isFallbackOnInvalidCreativeEnabled = YES;
    ```
 
-## VAST和VMAP的廣告備援行為 {#section_5B6716CC49CC4C40964CFE9F122C57A6}
+## VAST和VMAP {#section_5B6716CC49CC4C40964CFE9F122C57A6}的廣告備援行為
 
 當Primetime廣告決策遇到空白或媒體類型對HLS無效的VAST廣告（創意廣告）時，它會評估備援廣告以判斷要傳回的內容。
 
-在TVSDK中，唯一有效的媒體類 `application/x-mpegURL` 型為(M3U8)。
+在TVSDK中，唯一有效的媒體類型是`application/x-mpegURL`(M3U8)。
 
 當有獨立的後援廣告時，Primetime廣告決策外掛程式會依下列順序檢查這些廣告，並傳回具有有效媒體類型的第一個廣告：
 
