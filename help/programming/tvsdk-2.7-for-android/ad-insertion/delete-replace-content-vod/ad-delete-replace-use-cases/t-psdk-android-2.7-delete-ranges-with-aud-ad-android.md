@@ -6,6 +6,9 @@ title: 刪除範圍
 uuid: 637829a7-efa8-4b83-9a04-ef01c043621f
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 >[!TIP]
 >
->若要僅從內容移除特定範圍，請建立例 `CustomRangeMetadata` 項並指定類型為使用已定義 `DELETE` 自訂範圍的作業。
+>若要僅從內容移除特定範圍，請建立`CustomRangeMetadata`例項，並指定類型為使用已定義自訂範圍的`DELETE`作業。
 
 廣告地圖必須依廣告伺服器的定義使用。
 
