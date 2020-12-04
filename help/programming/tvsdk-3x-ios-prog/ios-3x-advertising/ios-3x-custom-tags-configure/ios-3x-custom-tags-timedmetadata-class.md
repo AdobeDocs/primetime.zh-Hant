@@ -7,13 +7,13 @@ uuid: d76b2a6b-2995-4559-b15d-82ded4c27eea
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
 
-# 計時中繼資料類別 {#timed-metadata-class}
+# 計時中繼資料類別{#timed-metadata-class}
 
 當TVSDK偵測到播放清單／資訊清單中的訂閱標籤時，播放器會自動嘗試處理標籤並以PTTimedMetadata物件的形式公開標籤。
 
@@ -36,7 +36,7 @@ ht-degree: 0%
   <tr> 
    <td colname="col1"><span class="codeph"> 名稱</span> </td> 
    <td colname="col02"><span class="codeph"> NSString</span></td> 
-   <td colname="col2"> 計時中繼資料的名稱。 如果類型為 <span class="codeph"> TAG</span>，則值代表提示／標籤名稱。 如果類型為 <span class="codeph"> ID3</span>，則為null。 </td> 
+   <td colname="col2"> 計時中繼資料的名稱。 如果類型為<span class="codeph"> TAG</span>，則值代表提示／標籤名稱。 如果類型為<span class="codeph"> ID3</span>，則為null。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> 時間</span> </td> 
