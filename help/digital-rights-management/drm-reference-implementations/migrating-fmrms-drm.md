@@ -6,6 +6,9 @@ title: 從FMRMS 1.0或1.5移轉至Adobe Primetime DRM 2.0或更新版本
 uuid: 49ecbbd2-d83b-4bf2-841e-c3f9e5d5e141
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '554'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 1. 匯入授權資訊：
 
-   1. 若要從LiveCycle ES將授權資訊匯入您以Primetime DRM為基礎的伺服器，請參閱資料夾中的範例資料庫指 [!DNL Reference Implementation\Server\migration\db] 令碼。
+   1. 若要從LiveCycle ES將授權資訊匯入您的Primetime DRM伺服器，請參閱[!DNL Reference Implementation\Server\migration\db]資料夾中的範例資料庫指令碼。
    1. 運行示例指令碼，將相關資料從MySQL、Oracle或SQL Server資料庫導出為CSV檔案格式。
    1. 從LiveCycle ES匯出資料後，請將資料匯入您的資料庫。
 
@@ -29,31 +32,32 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
       * 正在應用的DRM策略的ID
       * 內容封裝的時間
       * 內容加密金鑰
-      在您將1.x內容中繼資料轉換為Primetime DRM中繼資料格式之前，需要這些資訊。 在參考實施中，此資料儲存在許可證資料庫表中，由使用 `RefImplMetadataConvReqHandler`。 有關詳細資訊，請參 `FMRMSv1RequestHandler` 見和 `FMRMSv1MetadataHandler`。
+
+      在您將1.x內容中繼資料轉換為Primetime DRM中繼資料格式之前，需要這些資訊。 在參考實施中，此資料儲存在許可證資料庫表中，並由`RefImplMetadataConvReqHandler`使用。 如需詳細資訊，請參閱`FMRMSv1RequestHandler`和`FMRMSv1MetadataHandler`。
 
 
 1. 將FMRMS政策轉換為Primetime DRM格式：
 
    1. 在您套用DRM原則以轉換中繼資料並核發1.0版或1.5版內容的授權之前，請先將現有的DRM原則轉換為Primetime DRM格式。
 
-      該資 `Reference Implementation\Server\migration` 料夾包含建立以舊版DRM原則為基礎之Primetime DRM原則的范常式式碼。 若要從FMRMS 1.0移轉至Primetime DRM，請參閱范 `V1_0PolicyConverter.java` 例。
-   1. 執行指令碼來編譯范 `ant-f build-migration.xml build-1.0-converter` 常式式碼，指令碼會在和目錄中搜尋1.0和Primetime DRM [!DNL libs/1.0] 程 [!DNL libs/flashaccess] 式庫。
+      `Reference Implementation\Server\migration`資料夾包含范常式式碼，以建立以舊版DRM原則為基礎的Primetime DRM原則。 若要從FMRMS 1.0移轉至Primetime DRM，請參閱`V1_0PolicyConverter.java`範例。
+   1. 運行`ant-f build-migration.xml build-1.0-converter`指令碼編譯示例代碼，該指令碼在[!DNL libs/1.0]和[!DNL libs/flashaccess]目錄中搜索1.0和Primetime DRM庫。
 
-   1. 編輯 [!DNL converter.properties] 檔案以指向您的LiveCycle ES伺服器。
-   1. 執 `ant -f build-migration.xml migrate-all-1.0-policies` 行以將所有FMRMS 1.0 DRM策略轉換為Primetime DRM格式。
+   1. 編輯[!DNL converter.properties]檔案，以指向您的LiveCycle ES伺服器。
+   1. 運行`ant -f build-migration.xml migrate-all-1.0-policies`將所有FMRMS 1.0 DRM策略轉換為Primetime DRM格式。
 
-      若要從FMRMS 1.5移轉至Primetime DRM，請參閱范 `V1_5PolicyConverter.java` 例。
+      若要從FMRMS 1.5移轉至Primetime DRM，請參閱`V1_5PolicyConverter.java`範例。
 
-   1. 執行指令碼來編譯范 `ant-f build-migration.xml build-1.5-converter` 常式式碼，指定1.5和3.0程式庫位於和目 [!DNL libs/1.5] 錄 [!DNL libs/flashaccess] 中。
+   1. 運行`ant-f build-migration.xml build-1.5-converter`指令碼編譯示例代碼，該指令碼預期1.5和3.0庫位於[!DNL libs/1.5]和[!DNL libs/flashaccess]目錄中。
 
-   1. 編輯 [!DNL converter.properties] 檔案以指向您的LiveCycle ES伺服器。
-   1. 執 `ant -f build-migration.xml migrate-all-1.5-policies` 行以將所有FMRMS 1.5 DRM策略轉換為Primetime DRM格式。
+   1. 編輯[!DNL converter.properties]檔案，以指向您的LiveCycle ES伺服器。
+   1. 運行`ant -f build-migration.xml migrate-all-1.5-policies`將所有FMRMS 1.5 DRM策略轉換為Primetime DRM格式。
 
-      轉換的DRM策略被保存為一組檔案。 所 `DRM PolicyConverter` 述生成CSV格式的檔案，該檔案包括將舊DRM策略ID映射到新DRM策略ID。 您可以將此檔案導入 [!DNL PolicyConversion] 到引用實現資料庫中的表，該表由使用 `RefImplMetadataConvReqHandler`。
+      轉換的DRM策略被保存為一組檔案。 `DRM PolicyConverter`生成CSV格式的檔案，該檔案包括將舊DRM策略ID映射到新DRM策略ID。 您可以將此檔案導入到參考實施資料庫中的[!DNL PolicyConversion]表，其中`RefImplMetadataConvReqHandler`使用該檔案。
 
-1. 支援1.x相容性要求與 `FMRMSv1RequestHandler` 和屬 `FMRMSv1MetadataHandler` 性：
+1. 支援`FMRMSv1RequestHandler`和`FMRMSv1MetadataHandler`屬性的1.x相容性要求：
 
    1. 在相關資料移轉至以Primetime DRM為基礎的伺服器後，實作1.x相容性要求的支援。
 
-      如需如何處理這些請求類型的範例，請參 `RefImplUpgradeV1ClientHandler` 閱 `RefImplMetadataConvReqHandler` 參考實作。
+      如需如何處理這些請求類型的範例，請參閱參考實作中的`RefImplUpgradeV1ClientHandler`和`RefImplMetadataConvReqHandler`。
 
