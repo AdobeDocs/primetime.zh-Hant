@@ -6,15 +6,18 @@ title: 實用程式類
 uuid: 060d5587-c1ef-4b58-9cad-49826201a79f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
 
-# 實用程式類 {#utility-classes}
+# 實用程式類{#utility-classes}
 
 這些類提供了處理各種資訊的方法。
 
-套件： [com.adobe.mediacore.utils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/package-summary.html)
+套件：[com.adobe.mediacore.utils](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/package-summary.html)
 
 | 類別名稱 | 說明 |
 |---|---|
