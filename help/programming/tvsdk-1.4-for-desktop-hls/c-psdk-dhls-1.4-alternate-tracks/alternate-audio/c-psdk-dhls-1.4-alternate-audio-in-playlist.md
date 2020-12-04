@@ -6,6 +6,9 @@ title: 播放清單中的替代音軌
 uuid: ec98cb6d-aa82-4473-83b6-f12c875f17cb
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 >
 >若要將替代音訊與主媒體的視訊軌道混合，則替代音軌的時間戳記必須與主音軌中音訊的時間戳記相符。
 
-主音軌包含在具有標籤的音軌集合 `default` 中。 替代音訊串流的中繼資料會包含在具有之標籤的播放清單 `#EXT-X-MEDIA` 中 `TYPE=AUDIO`。
+主音軌包含在具有`default`標籤的音軌集合中。 替代音訊串流的中繼資料會包含在具有`TYPE=AUDIO`之`#EXT-X-MEDIA`標籤的播放清單中。
 
 例如，指定多個替代音訊串流的M3U8資訊清單可能如下所示：
 
