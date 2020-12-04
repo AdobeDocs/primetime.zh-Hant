@@ -1,6 +1,6 @@
 ---
-description: 若要在TVSDK應用程式中實作FairPlay串流，您必須編寫資源載入器，該載入器會傳送取得授權的要求至您的FairPlay串流伺服器。
-seo-description: 若要在TVSDK應用程式中實作FairPlay串流，您必須編寫資源載入器，該載入器會傳送取得授權的要求至您的FairPlay串流伺服器。
+description: 若要在TVSDK應用程式中實作FairPlay串流，您需要編寫資源載入器，將授權取得要求傳送至FairPlay串流伺服器。
+seo-description: 若要在TVSDK應用程式中實作FairPlay串流，您需要編寫資源載入器，將授權取得要求傳送至FairPlay串流伺服器。
 seo-title: TVSDK應用程式中的Apple FairPlay
 title: TVSDK應用程式中的Apple FairPlay
 uuid: 4384d379-37cd-46c5-8c25-0cda16bdebb8
@@ -13,9 +13,9 @@ ht-degree: 0%
 ---
 
 
-# TVSDK應用程式中的Apple FairPlay  {#apple-fairplay-in-tvsdk-applications}
+# TVSDK應用程式中的Apple FairPlay {#apple-fairplay-in-tvsdk-applications}
 
-若要在TVSDK應用程式中實作FairPlay串流，您必須編寫資源載入器，該載入器會傳送取得授權的要求至您的FairPlay串流伺服器。
+若要在TVSDK應用程式中實作FairPlay串流，您需要編寫資源載入器，將授權取得要求傳送至FairPlay串流伺服器。
 
 資源載入程式碼負責以下任務：
 
@@ -31,17 +31,17 @@ https://fp-gen.service.expressplay.com
 
 「資源載入器」會格式化請求，並附加ExpressPlay Token，以授權播放至URL。 在取得ExpressPlay Token時，有幾個選項需要考慮。 這些選項取決於您封裝內容的方式。
 
-當您封裝內容時，Packager會將 `skd:` URL插入M3U8資訊清單中。 在登入 `skd:` 後，您可以將任何資料放入資訊清單中。 您可以在應用程式碼中使用此資料來完成上述工作。 例如，您可以使用 `skd:{content_id}` 它，讓您的應用程式可判斷所播放內容的ID，並為該特定內容請求代號。 例如，您也可以使用 `skd:{entitlement_server_url}?cid={content_id}`，讓您的應用程式不需要硬式編碼權益伺服器URL。
+當您封裝內容時，封裝程式會在您的M3U8資訊清單中插入`skd:` URL。 在`skd:`項目之後，您可將任何資料放入資訊清單中。 您可以在應用程式碼中使用此資料來完成上述工作。 例如，您可以使用`skd:{content_id}`，讓您的應用程式可以判斷所播放內容的ID，並請求該特定內容的Token。 例如，您也可以使用`skd:{entitlement_server_url}?cid={content_id}`，讓您的應用程式不需要硬式編碼權益伺服器URL。
 
-當播放開始時，如果您已透過其 `skd:` 他頻道瞭解內容ID，則您可能不需要URL中的任何資訊。 第二個範例是測試您設定的理想解決方案，但您也可以在生產環境中使用它。
+當播放開始時，如果您已透過其他頻道瞭解內容ID，則可能不需要`skd:` URL中的任何資訊。 第二個範例是測試您設定的理想解決方案，但您也可以在生產環境中使用它。
 
 >[!TIP]
 >
->您決定格式 `skd:`。
+>確定`skd:`的格式。
 
-您的內容是使用通訊協定取得， `skd:` 但您的授權要求會使用 `https:`。 處理這些通訊協定的最常用選項是：
+您的內容是使用`skd:`通訊協定取得，但您的授權要求使用`https:`。 處理這些通訊協定的最常用選項是：
 
-* **端對端播放的初始測試** ：封裝內容時，請選取 `skd:` URL。 在測試您的應用程式時，請手動從ExpressPlay取得授權，並在載入器中硬式編碼授權( `https:` URL)和內容URL。
+* **端對端播放的初始測試封** 裝內容時，請選取 `skd:` URL。在測試您的應用程式時，請手動從ExpressPlay取得授權，並在載入器中硬式編碼授權(`https:` URL)和內容URL。
 
    例如：
 
@@ -53,7 +53,7 @@ https://fp-gen.service.expressplay.com
        ExpressPlayToken={copy_your_token_to_here}";
    ```
 
-* **大多數其他案例** ：在封裝內容時，請選取唯一 `skd:` 代表內容ID的URL。 在您的載入器中，剖析 `skd:` URL，將它傳送至您的伺服器以取得Token，然後使用產生的Token作為URL。
+* **大多數其** 他案例在封裝內容時，請選取唯 `skd:` 一代表內容ID的URL。在您的載入器中，剖析`skd:` URL，將它傳送至您的伺服器以取得Token，然後使用產生的Token做為URL。
 
    例如：
 
@@ -155,21 +155,21 @@ https://fp-gen.service.expressplay.com
 
 您可以在TVSDK應用程式中實作Apple FairPlay串流（Apple的DRM解決方案）。
 
-1. 透過實作，建立您的FairPlay客戶資源載入器 `PTAVAssetResourceLoaderDelegate`。
+1. 實施`PTAVAssetResourceLoaderDelegate`以建立FairPlay客戶資源載入器。
 
-   如需詳細資訊，請參 [閱TVSDK應用程式中的Apple FairPlay](../../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)。
+   如需詳細資訊，請參閱「TVSDK應用程式中的[Apple FairPlay」。](../../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
 
    >[!NOTE]
    >
-   >請確定您遵循 *FairPlay串流程式指南* (FairPlayStreaming_PG.pdf *)中的指示，此指示包含在* FairPlay Server SDK中，以開發FPS感應應用程式 [](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip))。
+   >請確定您遵循&#x200B;*FairPlay串流程式指南*(*FairPlayStreaming_PG.pdf*)中的指示，此指示包含在[FairPlay Server SDK中，以開發FPS-Aware App](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip))。
 
-   該方 `resourceLoader:shouldWaitForLoadingOfRequestedResource` 法等效於中的內容 `AVAssetResourceLoaderDelegate`。
+   `resourceLoader:shouldWaitForLoadingOfRequestedResource`方法等效於`AVAssetResourceLoaderDelegate`中的內容。
 
    >[!IMPORTANT]
    >
-   >在ExpressPlay授權伺服器案例中，若要播放內容，請將ExpressPlay FairPlay伺服器授權要求URL中的URL配置從 `skd://` 變 `https://` 更為( `https://`或)。
+   >在ExpressPlay授權伺服器案例中，若要播放內容，請將ExpressPlay FairPlay伺服器授權要求URL中的URL配置從`skd://`變更為`https://`（或`https://`）。
 
-1. 向註冊 *FairPlay* Customer Resource Loader `registerPTAVAssetResourceLoader`。
+1. 使用`registerPTAVAssetResourceLoader`註冊&#x200B;*FairPlay*&#x200B;客戶資源載入器。
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  
