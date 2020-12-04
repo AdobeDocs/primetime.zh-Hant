@@ -6,6 +6,9 @@ title: 使用Cookie
 uuid: a3b966fd-1263-458d-8303-b4e898372ee1
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 若要使用Cookie:
 
-建立URI `cookieManager` 的Cookie，並將其新增至CookieStore。
+建立`cookieManager`，並將URI的Cookie新增至CookieStore。
 
 例如：
 
@@ -45,7 +48,7 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 >
 >啟用302重新導向後，廣告請求可重新導向至與Cookie所屬網域不同的網域。
 
-TVSDK會在執 `cookieManager` 行時期查詢此項資訊，檢查是否有與URL關聯的Cookie，並自動使用這些Cookie。
+TVSDK會在執行時期查詢此`cookieManager`，檢查是否有任何與URL相關的Cookie，並自動使用這些Cookie。
 
 更新C++ Cookie時，會呼叫事件MediaPlayerEvent.COOKIES_UPDATED。 此cookiesUpdatedEvent有一個方法getCookieString()，可傳回Cookie的字串值。
 
