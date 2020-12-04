@@ -4,11 +4,14 @@ title: 必要條件
 uuid: 5c85ce72-28a9-45d8-b951-46a697e362ea
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
 
 
-# 必要條件 {#prerequisites}
+# 先決條件{#prerequisites}
 
 在封裝內容之前，需要Primetime DRM Packager憑證。 必須透過Primetime DRM憑證註冊程式提出要求。 只需要封包器憑證（無授權伺服器或傳輸）。 請在「認證要求」電子郵件中指出要求憑證與DRM服務搭配使用。
 
