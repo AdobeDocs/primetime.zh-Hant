@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Desktop HLS的TVSDK 1.4發行說明 {#tvsdk-for-desktop-hls-release-notes}
+# TVSDK 1.4 for Desktop HLS發行說明{#tvsdk-for-desktop-hls-release-notes}
 
 案頭版HLS的TVSDK發行說明說明TVSDK DHLS中有哪些新增或變更、已解決和已知問題。
 
-## 新功能 {#new-features}
+## 新功能{#new-features}
 
 **1.4.31**
 
@@ -30,7 +30,7 @@ ht-degree: 0%
    * 依預設，所有轉碼資產都將裝載在Akamai的Adobe擁有的CDN上。 在最新版本中，Adobe Creative Repackaging Service(CRS)提供將轉碼創作元素上傳至客戶指定之多個CDN的功能。
    * 新增API至TVSDK，以啟用在未使用預設URL時指定最終的CRS創意URL。 請參閱檔案以瞭解如何使用這些新API。
 
-### 舊版的新功能 {#new-features-previous}
+### 舊版{#new-features-previous}的新功能
 
 **1.4.30**
 
@@ -38,7 +38,7 @@ ht-degree: 0%
 
 為了迎合只想支付所用費用（而非固定費率，不論實際用途）的客戶，Adobe會收集使用量度，並使用這些度量來決定向客戶收取的費用。
 
-**1.4.24**
+**一點四點二四**
 
 * **持久網路連接**
 
@@ -47,20 +47,20 @@ ht-degree: 0%
 
 在這個版本中，Mac上的Apple Safari和Mozilla Firefox不支援此功能。
 
-**1.4.19**
+**一點四點一九**
 
 * VPAID廣告的串流完整性支援。
 * 已針對Firefox 42及更新版本，在Flash Player FP 20.0.0.267中啟用靜音標籤選項，方法是修正擱置問題。
 
-**1.4.18**
+**一點四點一八**
 
 * Primetime Desktop HLS TVSDK現在支援VPAID 2.0線性SWF創意素材，以提供豐富的互動串流內廣告體驗。
 
 **1.4.10**
 
-* **廣告備援、廣告選擇邏輯中的菊花鏈(Zendesk #3103)** 對於啟用備援規則的VAST廣告（創意人員）,TVSDK會將具有無效MIME類型的廣告視為空廣告，並嘗試在其位置使用備援廣告。 您可以設定備援行為的某些方面。
+* **廣告備援、廣告選擇邏輯中的菊花鏈(Zendesk #3103)** 對於啟用備援規則的VAST廣告（創意人員）,TVSDK會將具有無效MIME類型的廣告視為空廣告，並嘗試在其位置使用備援廣告。您可以設定備援行為的某些方面。
 
-如需詳細資訊，請參 [閱VAST和VMAP廣告的廣告後援](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)。
+如需詳細資訊，請參閱[VAST和VMAP廣告的廣告後援](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)。
 
 **1.4.8**
 
@@ -91,11 +91,11 @@ ht-degree: 0%
 
 **1.4.0**
 
-* **使用替代內容取代封鎖訊號** 1.4 TVSDK更新的一部份，TVSDK現在也支援針對線性內容進行區域封鎖並從區域封鎖中返回。 TVSDK現在可以並行處理兩個資訊清單檔案，主要和替代檔案，以便在顯示替代原始程式設計的替代程式設計時，監控封鎖訊號。
+* **使用替代內容** 取代封鎖訊號在1.4 TVSDK更新中，TVSDK現在也支援針對線性內容進行區域封鎖並返回。TVSDK現在可以並行處理兩個資訊清單檔案，主要和替代檔案，以便在顯示替代原始程式設計的替代程式設計時，監控封鎖訊號。
 
-* **移除／取代C3廣告** ：現在，您不需要額外的準備工作，就能將新廣告動態插入從C3視訊視訊(VOD)資產。 TVSDK現在提供API來移除自訂內容範圍並動態插入新廣告。 此強大的新功能在廣播期間播放即時／線性內容時也很有用，而且會立即下拉以做為隨選內容，而無需適當的時間來「清理」資產。
+* **移除／取代C3** AdsNow，您不需要額外的準備工作，就能將新廣告動態插入從C3視訊視訊(VOD)資產。TVSDK現在提供API來移除自訂內容範圍並動態插入新廣告。 此強大的新功能在廣播期間播放即時／線性內容時也很有用，而且會立即下拉以做為隨選內容，而無需適當的時間來「清理」資產。
 
-## 已解決問題 {#resolved-issues}
+## 已解決問題{#resolved-issues}
 
 >[!NOTE]
 >
@@ -109,9 +109,9 @@ ht-degree: 0%
 
    在DHLS上更新PMP展示的localhost Token。
 
-### 已解決舊版中的問題 {#resolved-issues-previous}
+### 已解決舊版{#resolved-issues-previous}中的問題
 
-**1.4.38版** (891)
+**1.4.38** (891)版
 
 * Zendesk #30731 - TVSDK不會在AdBreak中播放多個VPAID廣告。
 
@@ -121,11 +121,11 @@ ht-degree: 0%
 
    當發生ABR切換時，視訊播放器可重複時段的最後一段。 因此，有時會重複最後一段預播。 這個問題已經修正。
 
-**1.4.35版** (879)
+**1.4.35** (879)版
 
 * Zendesk #26058 —— 支援原生VPAID事件
 
-**1.4.33版** (873)
+**1.4.33** (873)版
 
 * Zendesk #21701 —— 傳送1401 CRS要求的原始創意URL，而非標準化URL。
 
@@ -155,7 +155,7 @@ ht-degree: 0%
 
    此問題與Zendesk #26592中的問題相同。 當媒體播放器處於VOD串流的PREPARED狀態時，允許搜尋操作的問題已經修正。
 
-**1.4.32版** (867)
+**版本1.4.32** (867)
 
 * Zendesk #26592當從繼續點開始播放時，不會觸發追蹤事件
 
@@ -253,7 +253,7 @@ TVSDK在此版本中已解決下列問題：
 
 通過允許客戶在Opportunity實例上單獨設定自定義參數，以便客戶不必覆蓋OpportunityGenerator，此問題得到瞭解決。
 
-**1.4.26版** (839)
+**版本1.4.26** (839)
 
 * Zendesk #18854 —— 根據CRS規則更新創意選擇邏輯
    * 提供支援以根據CRS規則更新創意選擇邏輯
@@ -274,7 +274,7 @@ TVSDK在此版本中已解決下列問題：
 
    * 透過串流完整性工作流程載入rules.xml檔案來修正
 
-**1.4.24版** (817)
+**1.4.24** (817)版
 
 * Zendesk #19851 —— 當播放器適應不同的位元速率時，它會在新位元速率上跳回數個畫格，讓體驗變得尷尬
 
@@ -344,7 +344,7 @@ DRM適配器在下載一小部分段後重置無法正確恢復的問題已經�
 
 參考播放器未播放任何串流，且在啟動時拋出例外的問題已經修正。
 
-**1.4.22版** (791)
+**版本1.4.22** (791)
 
 * Zendesk #17580 - Primetime執行時期錯誤，代碼為3357
 
@@ -358,7 +358,7 @@ DRM適配器在下載一小部分段後重置無法正確恢復的問題已經�
 
 **1.4.21版** (782)
 
-* Zendesk #19580 TVSDK會在傳送通知前等待內容解析程式完 `PTTimedMetadataChangedNotification` 成
+* Zendesk #19580 TVSDK等待內容解析器完成後再傳送`PTTimedMetadataChangedNotification`通知
 
 **注意**:此問題需要Flash Player 21.0.0.182或更新版本。
 
@@ -491,7 +491,7 @@ DRM適配器在下載一小部分段後重置無法正確恢復的問題已經�
 
 Cookie操作程式碼中可能會截斷Cookie值的錯誤已修正。
 
-**1.4.16版** (1.4.16.684)
+**版本1.4.16** (1.4.16.684)
 
 * Zendesk #3732 —— 新增Chrome中Proxy的串流完整性支援（需要Flash Player FP 19.0.0.207或更新版本）
 
@@ -539,7 +539,7 @@ Cookie操作程式碼中可能會截斷Cookie值的錯誤已修正。
 
 此問題與Zendesk #17973相同。
 
-**1.4.15版** (1.4.15.678)
+**版本1.4.15** (1.4.15.678)
 
 * Zendesk #4377:因為廣告原則，在跳過廣告插播時觸發AD_BREAK_KRIPPED事件。
 
@@ -658,11 +658,11 @@ TrickPlay現在接受高於16倍的費率：+/- 32、+/-64和+/-128。
 
 修正當串流在外部螢幕上播放時，會切換至較高位元速率串流時，Mac上Firefox偶爾會發生Flash Player當機的問題。（需要Flash Player 18.0.0.160）
 
-* Zendesk #3268 —— 台式機：視訊播放器在40/50秒 `+-` 後開始閃爍，在90秒後開始 `+-` 黑色
+* Zendesk #3268 —— 台式機：視訊播放器在`+-` 40/50秒後開始閃爍，在`+-` 90秒後開始變黑
 
 修正Mac Chrome上，串流會開始閃爍，最終變成黑色的問題。 （需要Flash Player 18.0.0.161）
 
-* Zendesk #3304 —— 未填充VAST 3.0 `[ERRORCODE]` 宏
+* Zendesk #3304 —— 未填充VAST 3.0 `[ERRORCODE]`宏
 
    * 如果內嵌廣告的創意不佳，則會公開錯誤代碼400。
    * `[ERRORCODE]` 巨集將是URL編碼
@@ -711,8 +711,8 @@ HLS格式的MIME類型區分大小寫，這是不正確的，而且已經更改�
 
 **1.4.4版**
 
-* Zendesk #1561 —— 續： `[Adobe Primetime]` 更新：Desktop PSDK中PROGRAM-DATE-TIME的HLS用戶端容錯支援（需要Flash Player 16.0.0.305版或更新版本）
-* Zendesk #2197 —— 追蹤 `[Ads]` 廣告錯誤
+* Zendesk #1561 —— 續：`[Adobe Primetime]`更新：Desktop PSDK中PROGRAM-DATE-TIME的HLS用戶端容錯支援（需要Flash Player 16.0.0.305版或更新版本）
+* Zendesk #2197 - `[Ads]`追蹤廣告錯誤
 * Zendesk #2286 —— 功能要求：提供廣告載入狀態(VPAID)的資訊
 * Zendesk #2285 —— 功能要求：在指定的逾時期間後略過廣告
 * 錯誤#3921755 - Flash Player中的OpenSSL程式庫更新至1.0.1L版（需要Flash Player 16.0.0.305版或更新版本）
@@ -722,8 +722,8 @@ HLS格式的MIME類型區分大小寫，這是不正確的，而且已經更改�
 * Zendesk #1303 —— 隱藏字幕的垂直偏移(需要Flash Player 16.0.0.235版或更新版本，預期發行日期：（2014年12月）
 * Zendesk #1870 —— 開啟和關閉隱藏字幕(需要Flash Player 16.0.0.235版或更新版本，預期發行日期：（2014年12月）
 * Zendesk #2110 —— 在VPAID廣告期間嘗試進入全螢幕後，播放會卡住(需要Flash Player 16.0.0.235版或更新版本，預期發行日期：（2014年12月）
-* Zendesk #2199 - `[VPAID]` Player在尋找過去廣告插播時未回應
-* Zendesk #2358 —— 續： `[Analytics]` 章節資料不正確
+* Zendesk #2199 - `[VPAID]`播放器在搜尋過去廣告插播時未回應
+* Zendesk #2358 —— 續：`[Analytics]`章節資料不正確
 
 **1.4.1版**
 
@@ -735,12 +735,12 @@ HLS格式的MIME類型區分大小寫，這是不正確的，而且已經更改�
 * Zendesk #1423 - HLS播放失敗正在鎖定Flash Player（未報告錯誤）
 * Zendesk #1674 - ClosedCaption未顯示，當0x03 ETX代碼遺失時，708標題顯示正確。
 
-## 已知問題 {#known-issues}
+## 已知問題{#known-issues}
 
 * 隱藏字幕無法處理純音訊內容，因為字幕系統需要視訊才能運作。
 沒有視訊，就沒有視訊區尺寸，沒有視訊區尺寸，就無法顯示標題的任何圖形。
 * 由於Chrome沙盒限制，Google Chrome中的串流完整性稍慢。
-* 在TVSDK 1.4中，如果您停用autoPlay，當播放器閒置至少一分鐘時，可能會發生DRM錯誤。 若要解決此問題，當您停用autoPlay但預先載入資產時，請 `ReferenceCore.as` 變更下列內容以修改 `onPlaybackManagerPrepared`:
+* 在TVSDK 1.4中，如果您停用autoPlay，當播放器閒置至少一分鐘時，可能會發生DRM錯誤。 若要解決此問題，當您停用autoPlay但預先載入資產時，請變更`onPlaybackManagerPrepared`的內容以修改`ReferenceCore.as`:
 
 ```
 if (_playbackManager.autoPlay) {
@@ -753,7 +753,7 @@ _playbackManager.pause();
 
 * **1.4.13** PTPLAY-8501版——當VMAP傳回兩個直接MP4非轉碼廣告時，相同的回落廣告會播放兩次。
 
-* **1.4.2版** 在Flash Player 16版中，當播放器進入空的緩衝事件後，ABR「關閉」邏輯發現問題。 此問題可防止位元速率在播放器進入緩衝狀態後，在頻寬不佳的環境中關閉。 若要解決此問題，請讓您的應用程式在緩衝狀態 `BufferControlParameters.initialBufferTime` (即 `BufferControlParameters.playbackBufferTime` ，在事件上)期間將應用程式設為暫時相同，然後將它重設回事件上的設定 `BufferEvent.BUFFERING_BEGIN``BufferEvent.BUFFERING_END` 值。 此問題的修正將在Flash Player 16版的下一個修補程式版本中提供。
+* **1.4.2版** 在Flash Player 16版中，當播放器進入空的緩衝事件後，ABR「關閉」邏輯發現問題。此問題可防止位元速率在播放器進入緩衝狀態後，在頻寬不佳的環境中關閉。 若要解決此問題，請讓您的應用程式在緩衝狀態期間（即在`BufferEvent.BUFFERING_BEGIN`事件上）將`BufferControlParameters.initialBufferTime`暫時設定為與`BufferControlParameters.playbackBufferTime`相同，然後將它重設回`BufferEvent.BUFFERING_END`事件上的設定值。 此問題的修正將在Flash Player 16版的下一個修補程式版本中提供。
 
 * **1.4.0版**
 
@@ -767,6 +767,6 @@ _playbackManager.pause();
    * 錯誤#3779889 —— 在視訊分析中，當特技播放達到結束時，未進行完整呼叫
    * 錯誤#VA-779 —— 使用心率支援參考實作的增強視訊分析不會傳送位元速率變更事件心率——特技播放不會在範例應用程式中實作。
 
-## 有用的資源 {#helpful-resources}
+## 實用資源{#helpful-resources}
 
-* 請參閱 [Adobe Primetime學習與支援頁面的完整說明檔案](https://helpx.adobe.com/support/primetime.html) 。
+* 請參閱[Adobe Primetime學習與支援](https://helpx.adobe.com/support/primetime.html)頁面的完整說明檔案。
