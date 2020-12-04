@@ -6,6 +6,9 @@ title: 故障切換
 uuid: 53cf611f-59e6-4728-a287-b98907d7f7bb
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
