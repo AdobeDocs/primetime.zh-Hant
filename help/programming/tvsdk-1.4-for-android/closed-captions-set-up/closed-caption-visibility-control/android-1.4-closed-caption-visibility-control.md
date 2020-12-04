@@ -7,13 +7,13 @@ uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
 
-# 概觀 {#control-closed-caption-visibility}
+# 概述{#control-closed-caption-visibility}
 
 您可以控制隱藏字幕的可見度。 當可見性開啟時，會顯示目前選取的軌道。 如果您變更了目前的軌道，可見度設定會維持不變。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->隱藏字幕的可見度值在中定義 `MediaPlayer.Visibility`。
+>隱藏字幕的可見度值定義在`MediaPlayer.Visibility`中。
 >
 >
 ```java
@@ -33,14 +33,14 @@ ht-degree: 0%
 >}
 >```
 
-1. 等待MediaPlayer至少擁有PREPARED狀態(請 [參閱等待有效狀態](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md))。
+1. 等待MediaPlayer至少擁有PREPARED狀態（請參閱[等待有效狀態](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)）。
 1. 若要取得隱藏字幕的目前可見性設定，請使用MediaPlayer中的getter方法，此方法會傳回可見性值。
 
    ```java
    Visibility getCCVisibility() throws IllegalStateException;
    ```
 
-1. 若要變更隱藏字幕的可見度，請使用setter方法，從中傳遞可見度值 `MediaPlayer.Visibility`。
+1. 若要變更隱藏字幕的可見度，請使用setter方法，從`MediaPlayer.Visibility`傳遞可見度值。
 
    例如：
 
