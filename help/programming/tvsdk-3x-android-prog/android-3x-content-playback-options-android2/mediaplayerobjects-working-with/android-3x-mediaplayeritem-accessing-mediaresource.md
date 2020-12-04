@@ -6,11 +6,14 @@ title: MediaPlayerItem存取MediaResource資訊的方法
 uuid: 46845583-0a76-4411-a8bc-0a16ebfe8e6e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayerItem存取MediaResource資訊的方法 {#mediaplayeritem-methods-for-accessing-mediaresource-information}
+# 用於訪問MediaResource資訊{#mediaplayeritem-methods-for-accessing-mediaresource-information}的MediaPlayerItem方法
 
 MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表示的內容流的資訊。
 
@@ -25,11 +28,11 @@ MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表�
 | List`<DRMMetadataInfo>` getDRMMetadataInfos(); | 列出在資訊清單中發現的所有DRM中繼資料物件。 |
 | **隱藏字幕** |  |
 | boolean hasClosedCaptions(); | 如果隱藏字幕音軌可用，則為true。 |
-| List`<ClosedCaptionsTrack>` getClosedActionsTracks(); | 提供可用隱藏字幕音軌的清單。 |
+| List`<ClosedCaptionsTrack>` getClosedConsedActionsTracks(); | 提供可用隱藏字幕音軌的清單。 |
 | ClosedCaptionsTrack獲取SelectedClosedCaptionsTrack(); | 擷取使用SelectClosedCaptionsTrack選取的目前隱藏字幕軌道。 |
 | selectClosedCaptionsTrack(ClosedCaptionsTrack closedCaptionsTrack) | 將隱藏字幕軌道設定為當前隱藏字幕軌道。 |
 | **替代音軌** |  |
-| boolean hasAlternateAudio(); | 如果串流有替代的音軌，則為true。 注意： 主音軌（預設）也是替代音軌清單的一部分。  適用於Android的TVSDK會將主要音軌視為替代音軌清單中的項目之一。 因此，MediaPlayerItem.hasAlternateAudio傳回false的唯一情況是當串流完全沒有音訊時。 如果內容只有一個音軌，此方法會傳回true，並傳回 `MediaPlayerItem.getAudioTracks` 包含單一元素（預設音軌）的清單。 |
+| boolean hasAlternateAudio(); | 如果串流有替代的音軌，則為true。 注意： 主音軌（預設）也是替代音軌清單的一部分。  適用於Android的TVSDK會將主要音軌視為替代音軌清單中的項目之一。 因此，MediaPlayerItem.hasAlternateAudio傳回false的唯一情況是當串流完全沒有音訊時。 如果內容只有一個音軌，此方法會傳回true，而`MediaPlayerItem.getAudioTracks`會傳回包含單一元素（預設音軌）的清單。 |
 | List`<AudioTrack>` getAudioTracks(); | 提供可用替代音軌的清單。 |
 | AudioTrack getSelectedAudioTrack(); | 擷取使用selectAudioTrack選取的音軌。 |
 | selectAudioTrack（AudioTrack音訊Track） | 選擇音軌作為當前音軌。 |
