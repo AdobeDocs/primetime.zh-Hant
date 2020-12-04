@@ -6,17 +6,20 @@ title: 創意選擇規則範例
 uuid: 0342de7e-b9cd-48e3-8bd1-e463bd6d0495
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
 
-# 創意選擇規則範例 {#sample-creative-selection-rules}
+# 創意選擇規則範例{#sample-creative-selection-rules}
 
 在AdobeTVSDKConfig.json中，您可以指定特定區域的預設規則和規則。
 
-## 預設規則範例 {#section_xy4_3fx_hz}
+## 預設規則範例{#section_xy4_3fx_hz}
 
-以下是僅定義預設規 [!DNL AdobeTVSDKConfig.json] 則的檔案示例：
+以下是[!DNL AdobeTVSDKConfig.json]檔案的範例，僅定義預設規則：
 
 ```
 {
@@ -64,9 +67,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 }
 ```
 
-## 預設規則範例及其他區域規則 {#section_ocv_3fx_hz}
+## 預設規則範例，附加區域規則{#section_ocv_3fx_hz}
 
-以下是定義預設規 [!DNL AdobeTVSDKConfig.json] 則的檔案範例，加上特定區域ID的其他規則(在本例中為 **zone&quot;1234&quot;**):
+以下是定義預設規則的[!DNL AdobeTVSDKConfig.json]檔案範例，加上特定區域ID的其他規則（在此例中，區域&#x200B;**&quot;1234&quot;**）:
 
 ```
 {
