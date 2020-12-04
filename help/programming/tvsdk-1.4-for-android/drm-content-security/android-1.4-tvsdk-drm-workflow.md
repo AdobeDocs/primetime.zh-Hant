@@ -6,11 +6,14 @@ title: 在TSVDK應用程式中實現Primetime DRM
 uuid: fe0f1672-3cfd-4cdc-846b-0ee92f6dcf2b
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
 
-# 在TSVDK應用程式中實現Primetime DRM {#implementing-primetime-drm-in-a-tsvdk-application}
+# 在TSVDK應用程式{#implementing-primetime-drm-in-a-tsvdk-application}中實現Primetime DRM
 
 Primetime DRM已整合至TVSDK，可簡化在TVSDK應用程式中實作內容保護。
 
