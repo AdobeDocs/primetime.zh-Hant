@@ -6,6 +6,9 @@ title: TimeRange類
 uuid: adf4f1ad-6b3b-48ac-a388-ee1fd54f770b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 集中的每個TimeRange規格代表播放時間軸上由TVSDK內部維護且必須適當標示為廣告相關時段的區段。
 
-類別 `TimeRange` 是簡單的資料結構，可顯示時間軸上的開始位置和結束位置。 這兩個唯讀屬性抽象了播放時間軸中時間範圍的概念。
+`TimeRange`類別是簡單的資料結構，可顯示時間軸上的開始位置和結束位置。 這兩個唯讀屬性抽象了播放時間軸中時間範圍的概念。
 
 >[!TIP]
 >
 >這兩個值都以毫秒錶示。
 
-以下是該類的摘 `TimeRange` 要：
+以下是`TimeRange`類的摘要：
 
 ```java
 public final class TimeRange {
