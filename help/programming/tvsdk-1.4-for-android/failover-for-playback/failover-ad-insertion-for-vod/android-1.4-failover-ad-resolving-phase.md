@@ -6,11 +6,14 @@ title: 廣告解析階段
 uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 0%
 
 ---
 
 
-# 廣告解析階段{#ad-resolving-phase}
+# 廣告分辨階段{#ad-resolving-phase}
 
 TVSDK會連絡廣告傳送服務，例如Adobe Primetime廣告決策，並嘗試取得與廣告的視訊串流對應的主要播放清單檔案。 在廣告解析階段，TVSDK會對遠端廣告傳送伺服器進行HTTP呼叫，並分析伺服器的回應。
 
