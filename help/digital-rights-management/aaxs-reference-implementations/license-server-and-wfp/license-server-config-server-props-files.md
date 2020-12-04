@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 伺服器屬性檔案 {#server-properties-files}
+# 伺服器屬性檔案{#server-properties-files}
 
 伺服器需要兩個配置檔案，一個用於許可證伺服器，一個用於包裝器。 兩個檔案都必須放在類路徑上。 屬性檔案包含Adobe所核發之憑證的位置。 這些憑據可以指定為。pfx檔案和密碼，或通過為儲存在HSM上的憑據提供別名和密碼來指定。
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 要正確準備憑據的密碼，請執行以下操作：
 
-1. 前往 [!DNL Reference Implementation\Server\refimpl\scrambler]。
+1. 前往[!DNL Reference Implementation\Server\refimpl\scrambler]。
 1. 在命令提示符下，輸入命令：
 
    ```
@@ -39,4 +39,4 @@ ht-degree: 0%
 >
 >上例使用分號(;)作為分隔字元。 對於Microsoft Windows以外的平台，請使用冒號(:)作為分隔字元。
 
-該實用程式將輸出加密口令，您必須將其複製到文 [!DNL .properties] 件。
+該實用程式輸出加密口令，您必須將其複製到[!DNL .properties]檔案。
