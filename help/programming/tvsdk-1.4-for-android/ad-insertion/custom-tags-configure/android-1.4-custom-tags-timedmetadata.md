@@ -7,7 +7,7 @@ uuid: 3debfad4-084f-4fb5-b699-ea5e8fd1ed51
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -29,29 +29,29 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> 計時中繼資料的唯一識別碼。 此值通常從cue/tag ID屬性中擷取。 否則，提供唯一隨機值。 使用 <span class="codeph"> getId </span>。 </td> 
+   <td colname="col2"> 計時中繼資料的唯一識別碼。 此值通常從cue/tag ID屬性中擷取。 否則，提供唯一隨機值。 使用<span class="codeph"> getId </span>。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> 中繼資料 </span> </td> 
+   <td colname="col1"> <span class="codeph"> 中繼資料  </span> </td> 
    <td colname="col02"> 中繼資料 </td> 
-   <td colname="col2"> 從播放清單／資訊清單自訂標籤中處理／擷取的資訊。 使用 <span class="codeph"> getMetadata </span>。 </td> 
+   <td colname="col2"> 從播放清單／資訊清單自訂標籤中處理／擷取的資訊。 使用<span class="codeph"> getMetadata </span>。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> 名稱 </span> </td> 
+   <td colname="col1"> <span class="codeph"> 名稱  </span> </td> 
    <td colname="col02"> 字串 </td> 
-   <td colname="col2"> 計時中繼資料的名稱。 如果類型為 <span class="codeph"> TAG </span>，則值代表提示／標籤名稱。 如果類型為 <span class="codeph"> ID3 </span>，則為null。 使用 <span class="codeph"> getName </span>。 </td> 
+   <td colname="col2"> 計時中繼資料的名稱。 如果類型為<span class="codeph"> TAG </span>，則值代表提示／標籤名稱。 如果類型為<span class="codeph"> ID3 </span>，則為null。 使用<span class="codeph"> getName </span>。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> 時間 </span> </td> 
+   <td colname="col1"> <span class="codeph"> 時間  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> 相對於主要內容開始的時間位置（以毫秒為單位），在主要內容開始時，此計時中繼資料會出現在串流中。 使用 <span class="codeph"> getTime </span>。 </td> 
+   <td colname="col2"> 相對於主要內容開始的時間位置（以毫秒為單位），在主要內容開始時，此計時中繼資料會出現在串流中。 使用<span class="codeph"> getTime </span>。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> 類型 </td> 
-   <td colname="col2"> 計時中繼資料的類型。 使用 <span class="codeph"> getType </span>。 
+   <td colname="col2"> 計時中繼資料的類型。 使用<span class="codeph"> getType </span>。 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG —— 指出計時中繼資料是從播放清單／資訊清單中的標籤建立。 </li> 
      <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 —— 表示計時中繼資料是從媒體串流的ID3標籤建立。 </li> 
