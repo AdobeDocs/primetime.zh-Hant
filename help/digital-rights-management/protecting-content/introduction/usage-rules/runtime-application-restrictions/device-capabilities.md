@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 播放受保護內容所需的裝置功能 {#device-capabilities-required-to-play-protected-content}
+# 播放受保護內容{#device-capabilities-required-to-play-protected-content}所需的裝置功能
 
 所需的設備功能指定訪問內容所需的硬體功能。 使用移植套件的裝置可取得硬體功能的相關資訊。
 
@@ -46,5 +46,5 @@ ht-degree: 0%
 >
 >Adobe Primetime DRM用戶端2.0.2版及更新版本支援此使用規則。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。
 >
->請參 [閱最低用戶端版本](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)。
+>請參閱[最低客戶端版本](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)。
 
