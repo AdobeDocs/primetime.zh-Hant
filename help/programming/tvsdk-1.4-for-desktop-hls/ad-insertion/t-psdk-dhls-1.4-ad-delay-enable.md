@@ -6,6 +6,9 @@ title: 啟用延遲廣告載入
 uuid: ac7c8801-7fa2-4f17-b79c-c603b3236948
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '345'
+ht-degree: 0%
 
 ---
 
@@ -14,14 +17,14 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 您可以指定是否允許在所有廣告載入並置於時間軸之前播放。 以這種方式開始播放，讓檢視者可更快速存取主要內容。 此功能僅適用於即時DVR，而且無法使用，例如VOD資產。
 
-1. 在中使用Boolean `delayAdLoading` 屬 `AdvertisingMetadata`性。
+1. 使用`AdvertisingMetadata`中的Boolean屬性`delayAdLoading`。
 
    * 若為false,TVSDK會等到所有廣告都解決並放置後，再轉換至PREPARED狀態。 預設為false。
    * 若為true,TVSDK只會解析初始廣告和轉場至「已準備」狀態。 其餘廣告會在播放期間解析並放置。
 
-1. 若要啟用Adobe Primetime廣告決策的延遲廣告載入，請在您建立廣告時 `true` 將此設定為 `AuditudeSettings`。
+1. 若要啟用Adobe Primetime廣告決策的延遲廣告載入，請在您建立`AuditudeSettings`時將此設定為`true`。
 
-   類會 `AuditudeSettings` 從中繼承此屬性， `AdvertisingMetadata`但不會繼承當前值。
+   `AuditudeSettings`類繼承了`AdvertisingMetadata`的此屬性，但不繼承當前值。
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings(); 
@@ -30,7 +33,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    auditudeSettings.delayAdLoading = true;
    ```
 
-1. 若要將廣告準確反映為拖曳桿上的提示，請聆聽 `TimelineEvent`。 `TIMELINE_UPDATED` 活動，並在您每次收到此活動時重新繪製拖曳列。
+1. 若要將廣告準確反映為拖曳列上的提示，請監聽`TimelineEvent`。 `TIMELINE_UPDATED` 活動，並在您每次收到此活動時重新繪製拖曳列。
 
    當VoD串流使用延遲廣告載入時，並非播放器進入「已準備」狀態時，所有廣告都會放在時間軸上，因此您必須明確重繪拖曳列。
 
