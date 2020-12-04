@@ -6,15 +6,18 @@ title: 播放期間的DRM驗證
 uuid: b3ff8edd-a3d4-470e-8899-580eca9fff4a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
 
-# 播放期間的DRM驗證 {#drm-authentication-during-playback}
+# 播放{#drm-authentication-during-playback}期間的DRM驗證
 
 當視訊的DRM中繼資料包含在媒體串流中時，您可以在播放期間執行驗證。
 
-透過授權輪換，資產會使用多份DRM授權加密。 每次發現新的DRM元資料時，所 `DRMHelper` 述方法用於檢查DRM元資料是否需要DRM驗證。
+透過授權輪換，資產會使用多份DRM授權加密。 每次發現新的DRM元資料時，`DRMHelper`方法被用來檢查DRM元資料是否需要DRM驗證。
 
 >[!TIP]
 >
@@ -35,7 +38,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
    };
    ```
 
-1. 使用 `DRMMetadata` 檢查是否需要驗證。
+1. 使用`DRMMetadata`檢查是否需要驗證。
 
    * 如果不需要驗證，則您不需要執行任何動作，而且播放會持續不中斷。
    * 如果需要驗證，請完成DRM驗證。
