@@ -28,50 +28,51 @@ MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表�
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> 即時串流 </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="2"> <span class="codeph"> live  </span> </td> 
    <td colname="3"> 如果串流是即時的，則為true;false（如果是VOD）。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> 隱藏字幕 </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
    <td colname="3"> 如果隱藏字幕音軌可用，則為true。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
    <td colname="3"> 提供可用隱藏字幕音軌的清單。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> 擷取使用selectClosedCaptionsTrack選取的隱藏字幕 <span class="codeph"> 軌道 </span>。 </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
+   <td colname="3"> 擷取使用<span class="codeph"> selectClosedCaptionsTrack </span>選取的隱藏字幕軌道。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> 替代音訊 </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
    <td colname="3"> <p>如果串流有替代的音軌，則為true。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
    <td colname="3"> 提供可用替代音軌的清單。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
    <td colname="3"> 
     <pre>
-      擷取目前選取的音軌，並選取 <span class="codeph"> AudioTrack </span>。 
+      擷取目前選取的音軌(以 
+     <span class="codeph"> selectAudioTrack </span>。 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> 計時中繼資料 </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
    <td colname="3"> 如果串流已關聯計時中繼資料，則返回true。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
    <td colname="3"> 提供與流相關聯的定時元資料對象的清單。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> 多個描述檔（位元速率） </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> 描述檔 </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> 描述檔  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -79,7 +80,7 @@ MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表�
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 媒體資源 </td> 
-   <td colname="2"> <span class="codeph"> 資源 </span> </td> 
+   <td colname="2"> <span class="codeph"> 資源  </span> </td> 
    <td colname="3"> 傳回與此項目關聯的媒體資源。 </td> 
   </tr> 
  </tbody> 
