@@ -6,15 +6,18 @@ title: 考量事項和最佳實務
 uuid: 62a5d641-6f37-4e4d-bbc2-414bf3681d9c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
-# 考量事項和最佳實務{#considerations-and-best-practices}
+# 考慮事項和最佳做法{#considerations-and-best-practices}
 
 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
 
-## 考量事項 {#section_tvsdk_considerations}
+## 注意事項{#section_tvsdk_considerations}
 
 使用TVSDK時，請記住下列資訊：
 
@@ -36,12 +39,12 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       "Adobe Flash Player"
       ```
 
-## 最佳實務 {#section_tvsdk_best_practices}
+## 最佳做法{#section_tvsdk_best_practices}
 
 以下是TVSDK的建議實務：
 
 * 使用HLS 3.0版或更新版本來取得程式內容。
 * 對於DHLS的TVSDK 1.4，預設會啟用延遲廣告載入。
 
-   對於沒有前置或中置的內容，您可以用來加 `AdvertisingMetadata.delayAdLoading` 速內容載入。
+   對於沒有前置或中置的內容，您可以使用`AdvertisingMetadata.delayAdLoading`來加速內容載入。
 
