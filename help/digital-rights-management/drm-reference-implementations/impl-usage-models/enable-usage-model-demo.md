@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 啟用使用模式示範{#enable-the-usage-model-demo}
 
-1. 在封裝時指定 `RI_UsageModelDemo=true` 自訂屬性。
+1. 在封裝時指定自訂屬性`RI_UsageModelDemo=true`。
 
    如果您使用Media Packager命令列工具封裝內容，請輸入：
 
