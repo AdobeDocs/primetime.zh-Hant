@@ -6,11 +6,14 @@ title: 封裝您的內容
 uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
 
-# 封裝您的內容 {#package-your-content}
+# 封裝您的內容{#package-your-content}
 
 封裝內容是準備視訊內容以便在網路上播放的程式。 封裝包括將原始視訊轉換為資訊清單檔案，並可選擇使用不同裝置和瀏覽器的不同DRM解決方案來加密內容。
 
@@ -25,7 +28,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 1. 封裝或取得內容以用於測試您的設定。
 
-   封裝時需要記住的一個要點是，您在此封裝步驟中使用的金鑰ID（內容ID）與您在後續的授權Token要求中必須提供的ID相同。 Key ID是唯一識別CEK的項目(可能會儲存在您自己的金鑰管理資料庫中，或是使用 [ExpressPlay的Key Storage Service儲存](https://www.expressplay.com/developer/key-storage/)。
+   封裝時需要記住的一個要點是，您在此封裝步驟中使用的金鑰ID（內容ID）與您在後續的授權Token要求中必須提供的ID相同。 密鑰ID是唯一標識CEK的項目（可以儲存在您自己的密鑰管理資料庫中，或使用[ExpressPlay的密鑰儲存服務](https://www.expressplay.com/developer/key-storage/)儲存CEK）。
 
    >[!NOTE]
    >
@@ -33,7 +36,7 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 <!--<a id="example_52AF76B730174B79B6088280FCDF126D"></a>-->
 
-以下是使用Adobe Offline Packager for Widevine的封裝範例。 Packager使用配置檔案(例如 [!DNL widevine.xml])，其外觀類似：
+以下是使用Adobe Offline Packager for Widevine的封裝範例。 Packager使用配置檔案（例如[!DNL widevine.xml]），其外觀如下：
 
 ```
 <config> 
@@ -54,18 +57,18 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 * `in_path` -此入口指向您本機封裝機器上來源視訊的位置。
 * `out_type` -此條目描述打包輸出的類型，在本例中為DASH（用於HTML5上的Widevine保護）。
 * `out_path` -您希望輸出移至本機電腦的位置。
-* `drm_sys` -您要封裝的DRM解決方案。 這可以是 `widevine`、 `fairplay`或 `playready`。
+* `drm_sys` -您要封裝的DRM解決方案。這可以是`widevine`、`fairplay`或`playready`。
 
-* `frag_dur` 和是 `target_dur` 與視訊播放相關的DASH特定持續時間項目。
+* `frag_dur` 和 `target_dur` 與視訊播放相關的DASH特定持續時間項目。
 
-* `key_file_path` -此為授權檔案在包裝機器上的位置，用作您的內容加密金鑰(CEK)。 它是Base-64編碼的16位元組十六進位字串。
-* `widevine_content_id` -這是Widevine的「沸點板」;總是這樣 `2a`。 (請勿將此與混淆 `widevine_key_id`。)
+* `key_file_path` -此為授權檔案在包裝機器上的位置，用作您的內容加密金鑰(CEK)。它是Base-64編碼的16位元組十六進位字串。
+* `widevine_content_id` -這是Widevine的「沸點板」;總是這樣 `2a`。（請勿將此與`widevine_key_id`混淆。）
 
 * `widevine_provider` -為了我們的目的，請始終將此設定為 `intertrust`。
 
-* `widevine_key_id` -這是您在條目中指定的許可證的標 `key_file_path` 識符。 換言之，這可識別您用來加密內容的金鑰。 此ID是您自行建立的16位元組HEX字串。
+* `widevine_key_id` -這是您在條目中指定的許可證的標 `key_file_path` 識符。換言之，這可識別您用來加密內容的金鑰。 此ID是您自行建立的16位元組HEX字串。
 
-如 [Packager檔案所述](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf),「最佳實務是，建立組態檔，其中包含您要用來產生輸出的常用選項。 然後，通過提供特定選項作為命令行參數來建立輸出。」 在這種情況下，我們的配置檔案相當完整，因此您可以按如下方式建立輸出：
+如[Packager文檔](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)中所述，「作為最佳做法，建立一個配置檔案，其中包含用於生成輸出的常用選項。 然後，通過提供特定選項作為命令行參數來建立輸出。」 在這種情況下，我們的配置檔案相當完整，因此您可以按如下方式建立輸出：
 
 ```
 java -jar OfflinePackager.jar -conf_path widevine.xml -out_path test_dash/ 
@@ -73,5 +76,5 @@ java -jar OfflinePackager.jar -conf_path widevine.xml -out_path test_dash/
 
 >[!NOTE]
 >
->命令行參數優先於配置檔案參數。 在此示例中，所需的一切都在配置檔案中，但我們已使用覆蓋在配置檔案中指定的輸出路徑 `-out_path test_dash/`。
+>命令行參數優先於配置檔案參數。 在此示例中，所需的一切都在配置檔案中，但我們已使用`-out_path test_dash/`覆蓋了配置檔案中指定的輸出路徑。
 
