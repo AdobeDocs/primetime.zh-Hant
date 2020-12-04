@@ -6,11 +6,14 @@ title: 播放清單中的替代音軌
 uuid: 6241d3e4-6e07-44fb-bc0e-5d49d1a76824
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
 
-# 播放清單中的替代音軌 {#section_BC8C1C74A5A24A8CA68C1E7E721EE742}
+# 播放清單中的替代音軌{#section_BC8C1C74A5A24A8CA68C1E7E721EE742}
 
 視頻的播放清單可以為主視頻內容指定不限數量的替代音軌。 例如，您可能想要在視訊內容中加入不同的語言，或允許使用者在播放內容時在裝置上切換不同的音軌。
 
@@ -25,7 +28,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 * 如果主要內容有替代的音軌，則廣告必須至少有一個僅音訊串流。
 * 廣告的僅限音訊串流的每個區段持續時間必須等於廣告視訊串流的區段持續時間。
 
-主音軌包含在具有標籤的音軌集合 `default` 中。 替代音訊串流的中繼資料會包含在具有之標籤的播放清單 `#EXT-X-MEDIA` 中 `TYPE=AUDIO`。
+主音軌包含在具有`default`標籤的音軌集合中。 替代音訊串流的中繼資料會包含在具有`TYPE=AUDIO`之`#EXT-X-MEDIA`標籤的播放清單中。
 
 例如，指定多個替代音訊串流的M3U8資訊清單可能如下所示：
 
