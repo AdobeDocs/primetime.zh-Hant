@@ -7,6 +7,9 @@ title: 暫停和還原MediaPlayer
 uuid: 624a87df-df65-4358-915b-c09a3a4fa224
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -15,11 +18,11 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 當裝置螢幕關閉且必須由您的應用程式處理時，暫停並還原TVSDK MediaPlayer。
 
-您可以在Android廣播接收器內處 `MediaPlayer` 理暫停和還原操作，以進行畫面開啟／關閉。
+您可以在Android廣播接收器內的`MediaPlayer`上處理暫停和還原操作，以用於開啟／關閉螢幕。
 
-TVSDK無法判斷片段（或活動）是何時在背景或前景。 此外，當裝置畫 `SurfaceView` 面關閉時（但活動已暫停）,Android不會毀損。 不過，當 `SurfaceView` 裝置 *將您的應用程式置於背景時* ，會遭到銷毀。 TVSDK無法偵測這些變更，因此必須由您的應用程式處理。
+TVSDK無法判斷片段（或活動）是何時在背景或前景。 此外，當裝置畫面關閉時（但活動暫停）,Android `SurfaceView`不會毀損。 不過，當裝置將您的應用程式置於背景時，`SurfaceView` *does*&#x200B;會毀損。 TVSDK無法偵測這些變更，因此必須由您的應用程式處理。
 
-下列范常式式碼，說明當裝置畫面在應用程式層級開啟或關閉 `MediaPlayer` 時，應用程式如何處理暫停和復原：
+在應用程式層級開啟和關閉裝置畫面時，應用程式如何處理暫停和還原`MediaPlayer`的范常式式碼：
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 
