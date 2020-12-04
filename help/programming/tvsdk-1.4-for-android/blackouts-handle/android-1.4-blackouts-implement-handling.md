@@ -6,6 +6,9 @@ title: 實施封鎖處理
 uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +78,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }; 
    ```
 
-1. 在時間 `TimedMetadata` 運行時處理 `MediaPlayer` 對象。
+1. 在`MediaPlayer`時間運行時處理`TimedMetadata`對象。
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -183,7 +186,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
 
    >[!NOTE]
    >
-   >目前針對多位元速率即時串流，有時可調整位元速率(ABR)描述檔會不同步。 這會導致相 `timedMetadata` 同已訂閱標籤的物件重複。 為避免不正確的不可查找計算，強烈建議在計算後檢查重疊的不可查找範圍，例如在以下示例中：
+   >目前針對多位元速率即時串流，有時可調整位元速率(ABR)描述檔會不同步。 這會導致相同訂閱標籤的`timedMetadata`物件重複。 為避免不正確的不可查找計算，強烈建議在計算後檢查重疊的不可查找範圍，例如在以下示例中：
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
