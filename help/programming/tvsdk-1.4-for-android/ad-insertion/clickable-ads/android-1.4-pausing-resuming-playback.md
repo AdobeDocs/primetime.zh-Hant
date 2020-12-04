@@ -6,15 +6,18 @@ title: 暫停並繼續播放
 uuid: a8fec392-3a71-4086-abf1-23522d023680
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '67'
+ht-degree: 0%
 
 ---
 
 
-# 暫停並繼續播放 {#pause-and-resume-playback}
+# 暫停並繼續播放{#pause-and-resume-playback}
 
 當使用者按一下廣告時，您的應用程式應暫停播放主要視訊內容。
 
-覆寫Android `onPause` 活動 `onResume` 中的和。
+從Android活動覆寫`onPause`和`onResume`。
 
 ```java
 @Override 
