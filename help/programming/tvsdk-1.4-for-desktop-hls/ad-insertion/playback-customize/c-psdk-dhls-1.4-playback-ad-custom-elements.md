@@ -31,7 +31,8 @@ TVSDK提供您可用來自訂包含廣告之內容的播放行為的類別和方
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">控制廣告插播是否應標示為已被檢視者觀看，如果是，應於何時標籤。 使用 
     <pre>
-     adBreakAsWatched <span class="codeph"> 屬性</span> 。
+     the 
+     <span class="codeph"> adBreakAsWatched</span>屬性。
     </pre> </td> 
   </tr> 
   <tr> 
