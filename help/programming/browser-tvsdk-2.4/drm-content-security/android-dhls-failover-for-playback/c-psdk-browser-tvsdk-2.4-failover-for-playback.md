@@ -6,23 +6,26 @@ title: 播放和容錯
 uuid: 5d75e55d-9c01-4a36-9bdf-891289821c6b
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
 
-# 播放和容錯 {#playback-and-failover}
+# 播放和故障切換{#playback-and-failover}
 
 透過網際網路串流需要持續穩定的連線，才能播放來自遠端伺服器的串流。 不過，檢視器的網際網路連線或串流播放的可變性，意味著遠端播放可能無法在本機播放媒體的品質。
 
 Primetime無法防止ISP中斷或電纜斷開等故障。 不過，Primetime串流提供容錯保護，以保護播放不受某些遠端伺服器故障或作業故障的影響，為檢視者提供更佳的體驗。 瀏覽器TVSDK建置容錯保護，將播放中斷降至最低，並在傳輸問題下實現順暢播放。 當整個轉譯或片段無法使用時，視訊播放器會自動切換至備份媒體集。
 
-## 媒體播放 {#media-playback}
+## 媒體播放{#media-playback}
 
 對於即時和VOD媒體，瀏覽器TVSDK會下載與中解析度位元速率相關聯的播放清單，然後下載由播放清單定義的中解析度位元速率媒體區段，以開始播放。
 
 瀏覽器TVSDK會快速選取高解析度位元速率播放清單及其相關媒體，並繼續下載程式。
 
-## 遺失播放清單容錯功能 {#section_81A5822C108449E1A0E94A6E25DE9E8E}
+## 缺少播放清單故障切換{#section_81A5822C108449E1A0E94A6E25DE9E8E}
 
 例如，當整個播放清單遺失時，當頂層資訊清單檔案中指定的M3U8檔案未下載時，瀏覽器TVSDK會嘗試復原。 如果無法復原，您的應用程式會決定下一個步驟。
 
