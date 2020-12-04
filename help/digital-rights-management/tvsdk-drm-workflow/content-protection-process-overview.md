@@ -4,6 +4,9 @@ title: 授權取得程式概觀
 uuid: c2eedd0a-3e3a-4c2f-a781-855f0ba65b15
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '339'
+ht-degree: 0%
 
 ---
 
@@ -29,6 +32,6 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 1. 如果需要驗證且現在已完成，請從授權伺服器下載授權。
 1. 播放內容。
 
-如果未發生任何錯誤，且使用者獲得檢視內容的成功授權，Primetime會調度物件，而 `DRMStatusEvent` 應用程式會開始播放。 對 `DRMStatusEvent` 像包含相關許可證資訊，該資訊標識用戶的策略和權限。 例如，可 `DRMStatusEvent` 能會保留有關內容是否可離線使用、授權到期等資訊。
+如果未發生任何錯誤，且使用者已成功獲得檢視內容的授權，Primetime會調度`DRMStatusEvent`物件，而應用程式會開始播放。 `DRMStatusEvent`物件包含相關的授權資訊，可識別使用者的原則和權限。 例如，`DRMStatusEvent`可能會包含有關內容是否可離線使用、授權到期等資訊。
 
-應用程式可使用授權資訊來通知使用者其原則的狀態。 例如，應用程式可顯示使用者在狀態列中檢視內容的剩餘天數。 如果允許使用者離線存取，則會快取授權，並將加密內容下載至使用者的機器。 內容可在授權快取期間定義期間存取。 事件中包含的detail屬性 `DRM.voucherObtained`。 應用程式會決定將內容儲存在本機的位置，以便離線使用。 您也可以使用類別預先載入授 `DRMManager` 權。
+應用程式可使用授權資訊來通知使用者其原則的狀態。 例如，應用程式可顯示使用者在狀態列中檢視內容的剩餘天數。 如果允許使用者離線存取，則會快取授權，並將加密內容下載至使用者的機器。 內容可在授權快取期間定義期間存取。 事件中的detail屬性包含`DRM.voucherObtained`。 應用程式會決定將內容儲存在本機的位置，以便離線使用。 您也可以使用`DRMManager`類別預先載入授權。
