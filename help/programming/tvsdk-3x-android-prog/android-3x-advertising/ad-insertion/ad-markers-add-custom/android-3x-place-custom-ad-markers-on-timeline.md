@@ -6,33 +6,36 @@ title: 在時間軸上放置自訂廣告標籤
 uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
 translation-type: tm+mt
 source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# 在時間軸上放置自訂廣告標籤 {#place-custom-ad-markers-on-the-timeline}
+# 將自訂廣告標籤置於時間軸{#place-custom-ad-markers-on-the-timeline}
 
 此範例顯示在播放時間軸上包含自訂廣告標籤的建議方式。
 
-1. 將帶外廣告定位資訊轉換為類清單／陣 `RepaceTimeRange` 列。
-1. 建立類別的例 `CustomRangeMetadata` 項，並使用其方法 `setTimeRangeList` 搭配list/array作為其引數來設定其時間範圍清單。
-1. 使用其 `setType` 方法將類型設定為 `MARK_RANGE`。
-1. 使用具 `MediaPlayerItemConfig.setCustomRangeMetadata` 有實例的方 `CustomRangeMetadata` 法作為其參數來設定自定義範圍元資料。
-1. 使用 `MediaPlayer.replaceCurrentResource` 具有實例 `MediaPlayerItemConfig` 的方法作為其參數，設定使新資源成為當前資源。
-1. 等待事 `STATE_CHANGED` 件，事件會報告播放器處於狀 `PREPARED` 態。
-1. 呼叫以開始視訊播放 `MediaPlayer.play`。
+1. 將帶外廣告定位資訊轉換為`RepaceTimeRange`類的清單／陣列。
+1. 建立`CustomRangeMetadata`類的實例，並將其`setTimeRangeList`方法與list/array一起使用作為其參數來設定其時間範圍清單。
+1. 使用其`setType`方法將類型設定為`MARK_RANGE`。
+1. 使用`MediaPlayerItemConfig.setCustomRangeMetadata`方法及`CustomRangeMetadata`例項作為其引數來設定自訂範圍中繼資料。
+1. 使用`MediaPlayer.replaceCurrentResource`方法和`MediaPlayerItemConfig`實例作為其參數，設定使新資源成為當前資源。
+1. 等待`STATE_CHANGED`事件，該事件會報告播放器處於`PREPARED`狀態。
+1. 呼叫`MediaPlayer.play`以開始視訊播放。
 
 以下是完成此示例中任務的結果：
 
-* 例如， `ReplaceTimeRange` 如果某個項目在播放時間軸上與另一個項目重疊，則該項目的開始位置早於已放置的結束位置， `ReplaceTimeRange` TVSDK會無訊息地調整違規項目的開始， `ReplaceTimeRange` 以避免衝突。
+* 例如，如果`ReplaceTimeRange`與播放時間軸上的另一個重疊，則`ReplaceTimeRange`的開始位置早於已放置的結束位置，TVSDK會無訊息地調整違規`ReplaceTimeRange`的開始位置，以避免衝突。
 
-   如此可讓調整後的 `ReplaceTimeRange` 時間比原來指定的短。 如果調整導致持續時間為零，TVSDK會以無訊息的方式放棄違規 `ReplaceTimeRange`。
+   這會使調整後的`ReplaceTimeRange`比原本指定的短。 如果調整導致持續時間為零，TVSDK會以無訊息的方式捨棄違規的`ReplaceTimeRange`。
 
 * TVSDK會尋找自訂廣告插播的鄰近時間範圍，並將它們叢集為個別廣告插播。
 
 與任何其他時間範圍不相鄰的時間範圍會轉換為包含單一廣告的廣告分段。
 
-* 如果應用程式嘗試載入其組態包含的媒體資源，而 `CustomRangeMetadata` 該媒體資源只能用於內容自訂廣告標籤，則如果基礎資產不是VOD類型，TVSDK會引發例外。
+* 如果應用程式嘗試載入其設定包含`CustomRangeMetadata`的媒體資源，而該媒體資源僅能用於內容自訂廣告標籤，則TVSDK會在基礎資產不是VOD類型時引發例外。
 
 * 處理自訂廣告標籤時，TVSDK會停用其他廣告解析機制（例如Adobe Primetime廣告決策）。
 
