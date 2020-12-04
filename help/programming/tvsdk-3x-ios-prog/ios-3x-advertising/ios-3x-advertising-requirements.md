@@ -6,11 +6,14 @@ title: 廣告需求
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
-# 廣告需求 {#advertising-requirements}
+# 廣告需求{#advertising-requirements}
 
 您可以使用Adobe Primetime廣告決策介面，將廣告插入VOD和即時／線性內容。
 
