@@ -4,11 +4,14 @@ title: Packager偏好設定
 uuid: 3e9c971d-3a5f-4f3e-97e7-baab63b1f67f
 translation-type: tm+mt
 source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 0%
 
 ---
 
 
-# Packager偏好設定 {#packager-preferences}
+# Packager首選項{#packager-preferences}
 
 此標籤包含封裝內容所需的設定。 下表說明這些偏好設定：
 
@@ -19,7 +22,7 @@ source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
 | 密鑰加密選項 | 指定內容加密金鑰在封裝時的加密方式 |
 | 授權伺服器憑證 | Adobe核發的授權伺服器憑證。 檔案必須位於資源目錄中。 CEK會以授權伺服器的公開金鑰加密。 只有許可證伺服器私鑰的持有者才能解密CEK。 |
 | Packager Credential | Adobe核發的封裝憑證。 此檔案用於在封裝期間簽署中繼資料。 |
-| 檔案名稱 | 包 `PKCS#12` 含憑證和私密金鑰的(.pfx)檔案。 檔案必須位於資源目錄中。 |
+| 檔案名稱 | 包含證書和私鑰的`PKCS#12`(.pfx)檔案。 檔案必須位於資源目錄中。 |
 | 檔案密碼 | .pfx檔案的密碼 |
 | 全域監視資料夾屬性 | 指定此伺服器上配置的所有Watched資料夾的常用設定。 |
 | 檢查時間間隔（以毫秒為單位） | 指定「監視的資料夾」檢查新內容封裝的頻率。 伺服器會重複所有已設定的「監視資料夾」，然後在此時間內休眠。 |
