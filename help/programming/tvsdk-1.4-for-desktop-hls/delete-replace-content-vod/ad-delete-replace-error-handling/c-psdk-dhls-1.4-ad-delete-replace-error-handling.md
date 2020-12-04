@@ -6,22 +6,25 @@ title: 廣告刪除和取代錯誤處理
 uuid: ab153591-0011-44b4-87f9-be0302c2295e
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 0%
 
 ---
 
 
-# 廣告刪除和取代錯誤處理 {#ad-deletion-and-replacement-error-handling}
+# 廣告刪除和替換錯誤處理{#ad-deletion-and-replacement-error-handling}
 
 TVSDK會根據特定問題處理時間範圍錯誤，或合併或重新排序未正確定義的時間範圍。
 
-TVSDK會執行預 `timeRanges` 設合併和重新排序，以處理錯誤。 首先，它會依開始時間對客戶定義的時間 *範圍* 排序。 根據這種排序順序，它然後合併相鄰範圍，如果範圍之間有子集和交集，則將其連接。
+TVSDK會執行預設合併和重新排序，處理`timeRanges`錯誤。 首先，它會依&#x200B;*begin*&#x200B;時間對客戶定義的時間範圍進行排序。 根據這種排序順序，它然後合併相鄰範圍，如果範圍之間有子集和交集，則將其連接。
 
 TVSDK可處理下列時間範圍錯誤：
 
 * 順序錯誤- TVSDK會重新排序時間範圍。
 * 子集- TVSDK合併時間範圍子集。
 * 交集- TVSDK會合併相交的時間範圍。
-* 取代範圍衝突- TVSDK會從衝突群組中最早出現的位置 `timeRange` 選擇取代持續時間。
+* 取代範圍衝突- TVSDK會從衝突群組中最早出現的`timeRange`選擇取代持續時間。
 
 TVSDK可處理信令模式衝突，如下所示：
 
@@ -29,11 +32,11 @@ TVSDK可處理信令模式衝突，如下所示：
 * 如果已定義DELETE範圍或MARK範圍，且信令模式為CUSTOM_RANGE,TVSDK會刪除或標籤這些範圍。 在此案例中沒有廣告插入。
 * 如果DELETE範圍或MARK範圍定義取代持續時間，TVSDK會忽略此持續時間。
 
-當伺服器未返回有效時 `AdBreaks`:
+當伺服器未返回有效的`AdBreaks`時：
 
-* TVSDK會產生並處理 `NOPTimelineOperation` 空白項目 `AdBreak`。 沒有廣告播放。
+* TVSDK會針對空的`AdBreak`產生並處理`NOPTimelineOperation`。 沒有廣告播放。
 
-## 時間範圍錯誤範例 {#time-range-error-examples}
+## 時間範圍錯誤示例{#time-range-error-examples}
 
 TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍規格。
 
