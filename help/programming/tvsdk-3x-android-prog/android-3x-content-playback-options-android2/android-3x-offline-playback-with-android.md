@@ -5,11 +5,14 @@ seo-title: 使用Android的離線播放
 title: 使用Android的離線播放
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
 
-# 使用Android的離線播放 {#offline-playback-with-android}
+# 使用Android {#offline-playback-with-android}的離線播放
 
 已引入下列API，可指示TVSDK在下載清單時忽略網路連線狀態。 網路連接狀態通常用於自適應位元速率流(ABR)，以確定是嘗試備援還是等待網路恢復。
 
@@ -20,7 +23,7 @@ boolean NetworkConfiguration::getOfflinePlayback()
 
 您可以啟用此設定並忽略網路連接。
 
-設 `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` 為true。 布林值的預設值為false。
+將`com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback`設為true。 布林值的預設值為false。
 
 ```
 // example of NetworkConfiguration
