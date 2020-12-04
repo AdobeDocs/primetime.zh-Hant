@@ -6,11 +6,14 @@ title: HTML5 TVSDK上的主要要求工作流程
 uuid: a1f50eba-4301-49a1-b2e5-9add6687cff8
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
 
 
-# HTML5 TVSDK上的主要要求工作流程{#key-request-workflow-on-html-tvsdk}
+# HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}上的主要要求工作流程
 
 代碼可以通過DRMManager請求密鑰。
 
@@ -31,7 +34,7 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-您的程式碼必須先呼叫此API，才能以正常方式開始播放內容。 MediaPlayer.vo.protection.ProtectionData記載於下列網址： [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+您的程式碼必須先呼叫此API，才能以正常方式開始播放內容。 MediaPlayer.vo.protection.ProtectionData記載於下列網址：[https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
 以下是PlayReady和Widevine授權伺服器URL的範例保護資料物件。
 
