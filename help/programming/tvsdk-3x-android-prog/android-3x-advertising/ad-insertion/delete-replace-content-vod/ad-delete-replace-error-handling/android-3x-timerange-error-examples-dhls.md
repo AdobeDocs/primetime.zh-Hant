@@ -6,11 +6,14 @@ title: 時間範圍錯誤範例
 uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
 
-# 時間範圍錯誤範例 {#time-range-error-examples}
+# 時間範圍錯誤示例{#time-range-error-examples}
 
 TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍規格。
 
