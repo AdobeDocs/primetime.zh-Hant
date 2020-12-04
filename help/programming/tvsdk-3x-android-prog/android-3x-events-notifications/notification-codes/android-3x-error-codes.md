@@ -3,11 +3,14 @@ title: PSDK錯誤代碼
 description: 有關各種錯誤代碼、警告和原生錯誤代碼的資訊。
 translation-type: tm+mt
 source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 6%
 
 ---
 
 
-# PSDK錯誤代碼 {#psdk-error-codes}
+# PSDK錯誤代碼{#psdk-error-codes}
 
 閱讀以瞭解PSDK錯誤碼、警告和原生錯誤碼。
 
@@ -38,7 +41,7 @@ source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>3</td>
+    <td>1</td>
     <td>目前播放器狀態不支援此作業。</td>
   </tr>
   <tr>
@@ -119,7 +122,7 @@ source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
   <tr>
     <td>NOT_IMPLEMENTED</td>
     <td>19</td>
-    <td>未實作功能。</td>
+    <td>功能未實作。</td>
   </tr>
   <tr>
     <td>PRE_ROLL_DISABLED</td>
@@ -223,7 +226,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr>
   <tr>
     <td>解碼器失敗</td>
-    <td>3</td>
+    <td>1</td>
     <td>解碼器在執行時期失敗。</td>
   </tr>
   <tr>
@@ -259,7 +262,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr>
     <td>NOT_IMPLEMENTED</td>
     <td>10</td>
-    <td>未實作功能。</td>
+    <td>功能未實作。</td>
   </tr>
   <tr>
     <td>記憶體不足</td>
@@ -598,7 +601,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   </tr>
   <tr>  
     <td>FILE_OPEN_ERROR</td>
-    <td>78</td>
+    <td>58</td>
     <td>無法開啟檔案。</td>
   </tr>
   <tr>
