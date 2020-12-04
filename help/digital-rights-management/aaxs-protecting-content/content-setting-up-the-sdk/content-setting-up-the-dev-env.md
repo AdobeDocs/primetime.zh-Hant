@@ -6,6 +6,9 @@ title: 設定開發環境
 uuid: 1f192783-9c9a-4342-909a-4881248a85ad
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '466'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Adobe Access SDK提供兩種類型：
 | 預先產生授權 | 可用 | 可用 |
 | 內嵌授權 | 可用 | 可用 |
 
-## 設定開發環境 {#setting-up-the-development-environment}
+## 設定開發環境{#setting-up-the-development-environment}
 
 從DVD複製下列SDK檔案，以便用於您的開發環境和Java類路徑：
 
@@ -48,7 +51,7 @@ Adobe Access SDK提供兩種類型：
 * jaxb-api.jar
 * jaxb-impl.jar
 * jaxb-libs.jar
-* relanchingDatatype.jar
+* relaxngDatatype.jar
 * rm-pdrl.jar
 * xsdlib.jar
 
