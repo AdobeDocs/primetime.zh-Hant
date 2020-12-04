@@ -6,11 +6,14 @@ title: 停用或啟用302重新導向最佳化
 uuid: 7561839f-aec6-4a59-a07a-7e4fa043fdc2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 1%
 
 ---
 
 
-# HTTP 302重新導向最佳化 {#http-302-redirect-optimization}
+# HTTP 302重新導向最佳化{#http-302-redirect-optimization}
 
 302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
 
@@ -20,7 +23,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 ## 停用或啟用302重新導向最佳化{#disable-or-enable-redirect-optimization}
 
-使用屬 `useRedirectedUrl` 性開啟(true)或關閉(false)302重新導向。
+使用`useRedirectedUrl`屬性開啟(true)或關閉(false)302重新導向。
 例如：
 
 ```java
