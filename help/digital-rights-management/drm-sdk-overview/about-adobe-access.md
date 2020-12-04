@@ -6,6 +6,9 @@ title: 關於Adobe Primetime DRM
 uuid: 4c445ccb-0a8e-490f-b840-8654fcaa106c
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
