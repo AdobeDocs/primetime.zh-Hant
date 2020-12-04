@@ -6,11 +6,14 @@ title: 部分插入廣告插入
 uuid: 799acdd8-fbb9-43b4-955a-3f56825d1e87
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
 
-# 部分插入廣告插入 {#partial-ad-break-insertion}
+# 部分插入廣告插入{#partial-ad-break-insertion}
 
 TVSDK提供類似電視的體驗，讓您能夠在廣告中間加入即時串流。
 
@@ -18,11 +21,11 @@ TVSDK提供類似電視的體驗，讓您能夠在廣告中間加入即時串流
 
 例如，如果使用者在90秒廣告插播（3個30秒廣告）的中間加入，在第二個廣告中加入10秒（亦即在廣告插播的40秒），則第二個廣告會在剩餘期間（20秒）內播放，接著第三個廣告。
 
-## 追蹤廣告 {#section_03AFAEAA8DA44399952DC51C5E12951E}
+## 追蹤廣告{#section_03AFAEAA8DA44399952DC51C5E12951E}
 
 部分播放廣告（第二個廣告）的廣告追蹤器不會觸發。 在上述範例中，只會觸發第三個廣告的追蹤器。
 
-## 使用前滾的行為 {#section_7DFBFB12E63343D1A0C614F0CF9F1714}
+## 前滾{#section_7DFBFB12E63343D1A0C614F0CF9F1714}的行為
 
 當播放前段廣告時，此功能會運作。 預先播放廣告結束後，串流會從即時點播放。
 
