@@ -6,11 +6,14 @@ title: 實作播放／暫停按鈕
 uuid: b0ce4103-819e-4a1c-8238-1d7728ec8770
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
 
-# 實作播放／暫停按鈕 {#implement-a-play-pause-button}
+# 實作播放／暫停按鈕{#implement-a-play-pause-button}
 
 您可以設定呼叫TVSDK方法的按鈕來暫停和播放媒體。
 
