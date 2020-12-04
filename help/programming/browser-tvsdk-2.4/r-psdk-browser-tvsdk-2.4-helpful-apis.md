@@ -6,6 +6,9 @@ title: 適用於Adobe Flash Player的實用API
 uuid: eae314c0-fd9e-480f-ae1c-9b5f3eb4db4b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-如果支援，您可使用 `forceFlash` 參數來覆寫播放技術判斷順序，並強制實作使用Flash Player。
+如果支援，您可使用`forceFlash`參數來覆寫播放技術判斷順序，並強制實作使用Flash Player。
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
