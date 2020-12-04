@@ -6,11 +6,14 @@ title: 廣告插入中繼資料
 uuid: 8848c939-1f12-4145-8025-453b4fe79aae
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#ad-insertion-metadata-overview}
+# 概述{#ad-insertion-metadata-overview}
 
 為了讓廣告解析程式運作，廣告提供者（例如Adobe Primetime廣告決策）需要設定值，才能啟用您與提供者的連線。
 
@@ -20,16 +23,17 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
    發佈者在將視訊內容和廣告資訊送出至Adobe Primetime廣告決策伺服器時，會指派mediaID。 Adobe Primetime廣告決策會使用此ID，從伺服器擷取視訊的相關廣告資訊。
 
-* （可選） `defaultMediaId`，指定符合下列條件時提供的廣告：
+* （可選）`defaultMediaId`，指定符合下列條件時所提供的廣告：
 
    * 您對廣告伺服器的請求無效，或內容設定不正確。
    * Adobe Primetime廣告決策在傳播資料時遇到延誤。
    * 其中一個Adobe Primetime廣告決策後端程式運作不良或無法使用。
+
    >[!TIP]
    >
-   >Adobe建議使用 `defaultMediaId`。
+   >Adobe建議使用`defaultMediaId`。
 
-* 您 `zoneID`由Adobe指派的公司或網站識別。
+* 由Adobe指派的`zoneID`可識別您的公司或網站。
 * 您指派的廣告伺服器的網域。
 * 其他定位參數。
 
