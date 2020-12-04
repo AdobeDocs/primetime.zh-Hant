@@ -6,11 +6,14 @@ title: 支援的HLS功能
 uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 0%
 
 ---
 
 
-# 支援的HLS功能 {#supported-hls-features}
+# 支援的HLS功能{#supported-hls-features}
 
 瀏覽器TVSDK支援許多您可實作的HLS功能，以新增功能至視訊應用程式。
 
@@ -23,7 +26,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 >[!TIP]
 >
->在下方的功能表格中，支 ![援的圖示](assets/supported15.png) ，表示目前版本支援此功能。
+>在以下的功能表格中，![支援的圖示](assets/supported15.png)表示目前版本支援此功能。
 
 >[!TIP]
 >
@@ -81,13 +84,13 @@ Removed Nielsen row
 
  -->
 
-## HLS整合 {#hls-integrations}
+## HLS整合{#hls-integrations}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | 整合 | VOD + Live | Adobe Analytics VHL整合 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 
-## HLS進階廣告插入功能(CSAI) {#hls-advanced-ad-insertion}
+## HLS進階廣告插入功能(CSAI){#hls-advanced-ad-insertion}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -98,7 +101,7 @@ Removed Nielsen row
 | 廣告插入 | VOD | 配套廣告、橫幅廣告和可點選廣告 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 廣告插入 | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
-## HLS核心廣告插入功能(CSAI) {#hls-core-ad-insertion}
+## HLS核心廣告插入功能(CSAI){#hls-core-ad-insertion}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -111,7 +114,7 @@ Removed Nielsen row
 | 廣告插入 | VOD + Live | VMAP 1.0 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 廣告插入 | VOD + Live | CRS v3.1 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 
-## HLS內容保護功能 {#hls-content-protection}
+## HLS內容保護功能{#hls-content-protection}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -119,7 +122,7 @@ Removed Nielsen row
 | 內容保護 | VOD + Live | Sample-AES | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 內容保護 | VOD | DRM | Adobe Access | 不支援 | FairPlay |
 
-## HLS進階播放功能 {#hls-advanced-playback}
+## HLS高級回放功能{#hls-advanced-playback}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -133,7 +136,7 @@ Removed Nielsen row
 | 播放 | VOD + Live | 帳單 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 播放 | VOD + Live | 瀏覽 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 
-## HLS核心播放 {#hls-core-playback}
+## HLS核心播放{#hls-core-playback}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
