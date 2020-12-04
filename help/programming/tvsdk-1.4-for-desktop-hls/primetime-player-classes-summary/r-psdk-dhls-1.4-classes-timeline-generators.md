@@ -6,15 +6,18 @@ title: 時間軸產生器類
 uuid: 1e36b738-0684-44f0-b3c3-dd656c70f705
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '214'
+ht-degree: 0%
 
 ---
 
 
-# 時間軸產生器類{#timeline-generators-classes}
+# 時間軸生成器類{#timeline-generators-classes}
 
 這些類別有助於在時間軸中偵測放置內容（例如廣告）的機會。
 
-套件： [com.adobe.mediacore.timeline.generators](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/generators/package-detail.html)
+套件：[com.adobe.mediacore.timeline.generators](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/generators/package-detail.html)
 
 | 名稱 | 說明 |
 |---|---|
