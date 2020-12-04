@@ -6,11 +6,14 @@ title: 顯示具有當前回放位置的查找拖曳條
 uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
 
-# 顯示具有當前回放位置的查找拖曳條{#display-a-seek-scrub-bar-with-the-current-playback-position}
+# 顯示具有當前回放位置的搜索拖曳條{#display-a-seek-scrub-bar-with-the-current-playback-position}
 
 TVSDK支援搜尋特定位置（時間），其中串流為隨選視訊(VOD)和即時串流中的滑動視窗播放清單。
 
@@ -31,7 +34,7 @@ TVSDK支援搜尋特定位置（時間），其中串流為隨選視訊(VOD)和�
    有效狀態包括「已準備」、「已完成」、「暫停」和「正在播放」。
 
 1. 監聽適當事件，以查看使用者在何時清理。
-1. 將請求的搜尋位置（毫秒）傳遞至 `MediaPlayer.seek` 方法。
+1. 將請求的尋道位置（毫秒）傳遞至`MediaPlayer.seek`方法。
 
    ```
    function seek(position:Number):void;
@@ -43,10 +46,10 @@ TVSDK支援搜尋特定位置（時間），其中串流為隨選視訊(VOD)和�
    >
    >這會將播放磁頭移動到流中的新位置，但最終計算位置可能與指定的搜索位置不同。
 
-1. 等待TVSDK派送事 `SeekEvent.SEEK_END` 件。
+1. 等待TVSDK派單`SeekEvent.SEEK_END`事件。
 1. 使用event.actualPosition擷取最終調整的播放位置。
 
-       這很重要，因為搜尋後的實際開始位置可能與請求的位置不同。 可能會套用各種規則，包括：
+       這很重要，因為搜尋後的實際開始位置可能與請求的位置不同。各種規則可能適用，包括：
    
    * 如果搜尋或其他重新定位在廣告插播的中間結束或跳過廣告插播，則播放行為會受到影響。
    * 如果在段邊界附近尋找，則尋找位置將調整為段的開頭。
