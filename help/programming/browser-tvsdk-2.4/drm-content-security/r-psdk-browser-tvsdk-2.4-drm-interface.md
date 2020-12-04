@@ -6,11 +6,14 @@ title: DRM介面總覽
 uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
 
-# DRM介面總覽{#drm-interface-overview}
+# DRM介面概述{#drm-interface-overview}
 
 瀏覽器TVSDK提供DRM介面，您可用來播放受不同DRM解決方案（包括FairPlay、PlayReady和Widevine）保護的內容。
 
@@ -20,7 +23,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 >
 >DRM支援適用於使用Microsoft PlayReady（在Windows 8.1和Edge的Internet Explorer上）和Widevine（在Google Chrome上）DRM系統保護的MPEG-Dash串流。 DRM支援適用於使用FairPlay保護的Safari上的HLS串流。
 
-DRM工作流的關鍵介面是 `DRMManager`。 您可透過MediaPlayer `DRMManager` 例項取得例項的參考：
+DRM工作流的關鍵介面是`DRMManager`。 您可透過MediaPlayer例項取得對`DRMManager`例項的參考：
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -29,7 +32,7 @@ DRM工作流的關鍵介面是 `DRMManager`。 您可透過MediaPlayer `DRMManag
 
 以下是播放受DRM保護內容的高階工作流程：
 
-1. 若要附加DRM系統特定資料，讓Browser TVSDK在受保護串流的授權取得程式中使用，請先進行下列呼叫，然後再叫用 `mediaPlayer.replaceCurrentResource`:
+1. 若要附加瀏覽器TVSDK將在受保護串流的授權取得程式中使用的DRM系統特定資料，請在叫用`mediaPlayer.replaceCurrentResource`前先進行下列呼叫：
 
    ```js
    var protectionData = { 
@@ -92,7 +95,7 @@ DRM工作流的關鍵介面是 `DRMManager`。 您可透過MediaPlayer `DRMManag
    drmManager.setProtectionData(protectionData);
    ```
 
-1. 當未設定保護資料時，從DRM系統的PSSH框（如果適用）中檢索必要資訊（如許可證URL）。
+1. 當未設定保護資料時，從DRM系統的PSSH框（如果適用）中檢索許可證URL等必要資訊。
 
    >[!TIP]
    >
@@ -100,14 +103,14 @@ DRM工作流的關鍵介面是 `DRMManager`。 您可透過MediaPlayer `DRMManag
 
 1. 預設情況下，DRM許可證的會話類型是臨時的，這意味著在會話關閉後不儲存許可證。
 
-   您可以使用中的API指定會話類型 `DRMManager`。  為了向後相容，會話類 `temporary`型包括 `persistent-license`、 `persistent-usage-record`和 `persistent`。
+   您可以使用`DRMManager`中的API來指定作業類型。  為了向後相容，會話類型包括`temporary`、`persistent-license`、`persistent-usage-record`和`persistent`。
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. 當使用 `sessionType` DRM `persistent-license` 或 `persistent`時，可以通過調用來返回DRM許可證 `DRMManager.returnLicense`。
+1. 當使用的`sessionType`是`persistent-license`或`persistent`時，可以通過調用`DRMManager.returnLicense`來返回DRM許可證。
 
    ```js
    var onLicenseReturnFunc = function () { 
