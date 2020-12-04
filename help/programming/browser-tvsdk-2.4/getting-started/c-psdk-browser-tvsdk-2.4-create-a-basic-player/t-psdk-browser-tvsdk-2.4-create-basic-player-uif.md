@@ -6,15 +6,18 @@ title: 使用UI架構建立基本播放器
 uuid: d1a82dbb-1c05-4d0c-b6bc-e07cbede93cb
 translation-type: tm+mt
 source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
 
-# 使用UI架構建立基本播放器{#create-a-basic-player-using-the-ui-framework}
+# 使用UI Framework{#create-a-basic-player-using-the-ui-framework}建立基本播放器
 
 若要使用UI架構建立基本播放器：
 
-1. 建立您 `<div>` 的播放器例項。
+1. 為您的播放器例項建立`<div>`。
 
    例如：
 
@@ -33,7 +36,7 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
    </script>
    ```
 
-   當建立播放器時，指定的 `<div>` 元素會獲得CSS類別 `ptp-main-video-div-style`。 產生的DOM會顯示如下：
+   建立播放器時，指定的`<div>`元素會獲得`ptp-main-video-div-style`的CSS類別。 產生的DOM會顯示如下：
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -70,7 +73,7 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
    </div>
    ```
 
-從呼叫傳回的物 `ptp.videoPlayer()` 件會提供包住TVSDK媒體播放器API的行為，並可程式化控制播放。 當您呼叫媒體播放器例項時，使用者介面會根據媒體播放器引發的事件自行更新：
+從呼叫`ptp.videoPlayer()`傳回的物件會提供包住TVSDK媒體播放器API的行為，並可程式化控制播放。 當您呼叫媒體播放器例項時，使用者介面會根據媒體播放器引發的事件自行更新：
 
 ```js
 <script> 
