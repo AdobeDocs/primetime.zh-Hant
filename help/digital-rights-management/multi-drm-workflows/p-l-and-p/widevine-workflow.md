@@ -6,11 +6,14 @@ title: 適用於Widevine和PlayReady的多DRM工作流程
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
 
-# 適用於Widevine和PlayReady的多DRM工作流程 {#multi-drm-workflow-for-widevine-and-playready}
+# 適用於Widevine和PlayReady {#multi-drm-workflow-for-widevine-and-playready}的多DRM工作流程
 
 此多DRM工作流程可引導您完成使用Widevine和PlayReady加密的DASH內容的設定、封裝、授權和播放。
 
@@ -20,7 +23,7 @@ Primetime TVSDK僅支援在TVSDK 2.X版中，在HTML5和Android上播放Widevine
 >
 >尚未制定支援Android TVSDK 1.X播放Widevine加密DASH內容的計畫。
 
-## DASH內容與常用加密總覽 {#section_33A881158F724835B4B89AAE97302B17}
+## DASH內容與常用加密總覽{#section_33A881158F724835B4B89AAE97302B17}
 
 破折號內容包含以xml編寫的主資訊清單，其中指向視訊和音訊檔案以供播放。 在下方的範例中，DASH資訊清單指向視訊URL video/1080_30.mp4，以及音訊URL audio/1080_30.mp4，與資訊清單的URL相關。
 
@@ -44,7 +47,7 @@ Primetime TVSDK僅支援在TVSDK 2.X版中，在HTML5和Android上播放Widevine
 </MPD>
 ```
 
-以下是套用通用加密的資訊清單範例。 資訊清單中的Widevine內容保護XML元 `<ContentProtection>` 素（區塊）包含base64編碼pssh（保護系統特定標題）方塊。 pssh框包含初始化內容解密所需的資料。 此資料也內嵌在資訊清單所參照的視訊／音訊內容中。 DASH內容可能包含多個內容保護元素，例如1代表PlayReady,1代表Widevine。
+以下是套用通用加密的資訊清單範例。 資訊清單中的Widevine內容保護XML元素（`<ContentProtection>`區塊）包含base64編碼pssh（保護系統特定標題）方塊。 pssh框包含初始化內容解密所需的資料。 此資料也內嵌在資訊清單所參照的視訊／音訊內容中。 DASH內容可能包含多個內容保護元素，例如1代表PlayReady,1代表Widevine。
 
 ```
 <?xml version="1.0" ?>
