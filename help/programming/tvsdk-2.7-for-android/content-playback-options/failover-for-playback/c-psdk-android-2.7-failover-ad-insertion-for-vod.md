@@ -6,15 +6,18 @@ title: 針對VOD的廣告插入和容錯
 uuid: 1f813065-9310-4495-9fbb-d90eda8ac8bd
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
 
-# 針對VOD的廣告插入和容錯 {#advertising-insertion-and-failover-for-vod}
+# VOD {#advertising-insertion-and-failover-for-vod}的廣告插入和故障切換
 
 隨選視訊(VOD)廣告插入程式由廣告解析、廣告插入和廣告播放階段組成。 對於廣告追蹤，TVSDK必須通知遠端追蹤伺服器有關每個廣告的播放進度。 當發生非預期情況時，TVSDK會採取適當的動作。
 
-## 廣告解析階段 {#section_5DD3A7DA79E946298BFF829A60202E1C}
+## 廣告解析階段{#section_5DD3A7DA79E946298BFF829A60202E1C}
 
 TVSDK會連絡廣告傳送服務，例如Adobe Primetime廣告決策，並嘗試取得與廣告的視訊串流對應的主要播放清單檔案。 在廣告解析階段，TVSDK會對遠端廣告傳送伺服器進行HTTP呼叫，並分析伺服器的回應。
 
@@ -39,7 +42,7 @@ TVSDK支援下列類型的廣告提供者：
 
 TVSDK會針對錯誤發出警告通知，並繼續處理。
 
-## 廣告插入階段 {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
+## 廣告插入階段{#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
 
 TVSDK會將替代內容（廣告）插入與主要內容對應的時間軸。
 
@@ -49,7 +52,7 @@ TVSDK會將替代內容（廣告）插入與主要內容對應的時間軸。
 
 TVSDK會針對錯誤發出警告通知，並繼續處理。
 
-## 廣告播放階段 {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
+## 廣告播放階段{#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
 
 TVSDK會下載廣告區段，並在裝置螢幕上呈現廣告區段。
 
@@ -69,4 +72,4 @@ TVSDK會將觸發的事件轉送至您的應用程式，包括在下列情況下
 
    您的應用程式需要採取適當的動作。
 
-不論是否發生錯誤，TVSDK都會針對每 `onAdBreakComplete` 個錯誤 `onAdBreakStart` 和 `onAdComplete` 每個錯誤呼叫 `onAdStart`。 不過，如果無法下載區段，時間軸中可能會有空隙。 當間隙足夠大時，播放磁頭位置中的值和報告的廣告進度可能會出現不連續。
+不論是否發生錯誤，TVSDK都會針對每個`onAdBreakStart`呼叫`onAdBreakComplete`，並針對每個`onAdStart`呼叫`onAdComplete`。 不過，如果無法下載區段，時間軸中可能會有空隙。 當間隙足夠大時，播放磁頭位置中的值和報告的廣告進度可能會出現不連續。
