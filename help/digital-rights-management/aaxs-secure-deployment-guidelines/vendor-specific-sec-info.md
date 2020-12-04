@@ -4,6 +4,9 @@ title: 特定於供應商的安全資訊
 uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 使用本節中提供的連結，查找作業系統和應用伺服器的特定於供應商的安全資訊。
 
-## 作業系統安全性資訊 {#section-B6D9D6CEA7CC42A8A20346600EFB5E4E}
+## 作業系統安全資訊{#section-B6D9D6CEA7CC42A8A20346600EFB5E4E}
 
 在確保作業系統安全時，請仔細實施作業系統供應商描述的措施，包括：
 
@@ -69,7 +72,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
  </tbody> 
 </table>
 
-## 應用程式伺服器安全性資訊 {#section-EBB4EF371CFF4A848694CC240B23D404}
+## 應用程式伺服器安全資訊{#section-EBB4EF371CFF4A848694CC240B23D404}
 
 在保護應用程式伺服器時，必須實施伺服器供應商描述的措施，包括：
 
