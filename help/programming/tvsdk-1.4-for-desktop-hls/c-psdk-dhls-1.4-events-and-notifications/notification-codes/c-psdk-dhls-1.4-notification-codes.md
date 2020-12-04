@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# 概觀 {#notification-codes-overview}
+# 概述{#notification-codes-overview}
 
 TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷中繼資料。
 
@@ -40,20 +40,21 @@ TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">資訊通知事件，從300000到3999999 </li> 
     </ul> <p>每個頂層範圍（例如錯誤）會分成子範圍，例如101000到101999代表播放錯誤。 </p>
     <pre>
-     枚舉 <span class="codeph"></span> mediacore.PSDKErrorCode列出可能的值。
+     枚舉 
+     <span class="codeph"> mediacore.PSDKErrorCode</span>列出可能的值。
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 名稱 </td> 
-   <td colname="2">包含代碼的人類可讀描述的字串，如 <span class="codeph"> SEEK_ERROR</span>。 </td> 
+   <td colname="2">包含代碼的人類可讀描述的字串，如<span class="codeph"> SEEK_ERROR</span>。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 中繼資料 </td> 
-   <td colname="2">包含通知其他相關資訊的金鑰／值配對。 例如，名為 <span class="codeph"></span> URL的索引鍵會與與與通知相關的URL值配對，例如導致錯誤的無效URL。 </td> 
+   <td colname="2">包含通知其他相關資訊的金鑰／值配對。 例如，名為<span class="codeph"> URL</span>的索引鍵會與與通知相關的URL值配對，例如導致錯誤的無效URL。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
-   <td colname="2">直接影響此通知 <span class="codeph"> 的其他MediaPlayerNotification</span> 物件的參考。 例如，廣告插入失敗的通知會直接與時間線插入衝突對應。 並非所有通知都提供內部通知。 </td> 
+   <td colname="2">對直接影響此通知的其他<span class="codeph"> MediaPlayerNotification</span>物件的參考。 例如，廣告插入失敗的通知會直接與時間線插入衝突對應。 並非所有通知都提供內部通知。 </td> 
   </tr> 
  </tbody> 
 </table>
