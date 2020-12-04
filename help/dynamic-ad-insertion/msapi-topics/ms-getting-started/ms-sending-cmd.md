@@ -6,15 +6,18 @@ title: 傳送命令至資訊清單伺服器
 uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# 傳送命令至資訊清單伺服器 {#send-a-command-to-the-manifest-server}
+# 將命令發送到Manifest伺服器{#send-a-command-to-the-manifest-server}
 
 使用HTTP GET命令與資訊清單伺服器互動。
 
-1. 傳送使 `HTTP GET` 用下列模式建構的引導URL請求：
+1. 傳送`HTTP GET`請求，請求使用下列模式建構的引導URL:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,11 +25,11 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
     ?{query parameters}
    ```
 
-* **需要PublisherAssetID** 。 特定內容的發行者唯一ID。
+* **需** 要PublisherAssetIDR。特定內容的發行者唯一ID。
 
-* **需要內容URL** 。 內容M3U8檔案的URL,Base64編碼為在資訊清單伺服器URL中安全。 內容URL必須指向變數的M3U8檔案，即使只有一個位元速率串流亦然。
+* **需要** 內容URLRred。內容M3U8檔案的URL,Base64編碼為在資訊清單伺服器URL中安全。 內容URL必須指向變數的M3U8檔案，即使只有一個位元速率串流亦然。
 
-* **查詢參數** ：部分為必要參數，部分為可選參數。 這些是請求中最多樣的部分。 他們會告訴資訊清單伺服器提出要求的用戶端類型，以及資訊清單伺服器要做什麼。
+* **查詢** 參數有些是必需的，有些是可選的。這些是請求中最多樣的部分。 他們會告訴資訊清單伺服器提出要求的用戶端類型，以及資訊清單伺服器要做什麼。
 
    例如：
 
