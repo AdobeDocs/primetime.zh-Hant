@@ -6,15 +6,18 @@ title: 新增時間軸UpdatedEvent的監聽器
 uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
 
-# 新增時間軸UpdatedEvent的監聽器{#add-listeners-for-timelineupdatedevent}
+# 為TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}添加監聽器
 
 若要接收有關時間軸更新的通知，請註冊適當的事件接聽程式。
 
-每次時間軸更新時，都會 `MediaPlayer` 使用 `AdobePSDK.TimelineEvent` 類型派單 `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`。
+每次時間軸更新時，`MediaPlayer`都會以類型`AdobePSDK.PSDKEventType.TIMELINE_UPDATED`調度`AdobePSDK.TimelineEvent`。
 1. 實作適當的監聽器。
 
    ```js
