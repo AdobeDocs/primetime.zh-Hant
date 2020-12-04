@@ -6,13 +6,16 @@ title: 在您的播放器中設定XSTS Token
 uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
 translation-type: tm+mt
 source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
 # 在您的播放器中設定XSTS Token{#set-the-xsts-token-in-your-player}
 
-在Xbox360中，您會以非同步方式設定代號，以回應 `MediaPlayer.RequestKeyAttribute` 事件。
+在Xbox360中，您會以非同步方式設定Token，以回應`MediaPlayer.RequestKeyAttribute`事件。
 
 設定XSTS Token。
 
