@@ -6,6 +6,9 @@ title: 設定PTMediaPlayer
 uuid: 698034d3-1260-416f-83b0-6b7d058750a0
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ TVSDK提供工具來建立進階視訊播放器應用程式（您的Primetime播
 
 PTMediaPlayer介面可封裝媒體播放器物件的功能與行為。
 
-若要設定您的 `PTMediaPlayer`:
+要設定`PTMediaPlayer`:
 
 1. 從使用者介面擷取媒體的URL，例如在文字欄位中。
 
@@ -26,15 +29,15 @@ PTMediaPlayer介面可封裝媒體播放器物件的功能與行為。
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
    ```
 
-1. 建立 `PTMetadata`。
+1. 建立`PTMetadata`。
 
-   假設您的方法 `createMetada` 準備中繼資料(請參 [閱廣告](../../ios-3x-advertising/ios-3x-advertising-requirements.md))。
+   假設您的方法`createMetada`準備中繼資料（請參閱[ Advertising](../../ios-3x-advertising/ios-3x-advertising-requirements.md)）。
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. 使用 `PTMediaPlayerItem` 您的例項建立 `PTMetadata` 內容。
+1. 使用您的`PTMetadata`實例建立`PTMediaPlayerItem`。
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
@@ -47,7 +50,7 @@ PTMediaPlayer介面可封裝媒體播放器物件的功能與行為。
    [self addObservers]
    ```
 
-1. 使用 `PTMediaPlayer` 您的新功能建立 `PTMediaPlayerItem`。
+1. 使用新的`PTMediaPlayerItem`建立`PTMediaPlayer`。
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
@@ -55,7 +58,7 @@ PTMediaPlayer介面可封裝媒體播放器物件的功能與行為。
 
 1. 在您的播放器上設定屬性。
 
-   以下是部分可用屬 `PTMediaPlayer` 性：
+   以下是一些可用的`PTMediaPlayer`屬性：
 
    ```
    player.autoPlay                    = YES;  
@@ -84,7 +87,7 @@ PTMediaPlayer介面可封裝媒體播放器物件的功能與行為。
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. 呼叫 `play` 以開始媒體播放。
+1. 呼叫`play`以開始媒體播放。
 
    ```
    [player play];
