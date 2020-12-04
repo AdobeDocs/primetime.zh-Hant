@@ -6,15 +6,18 @@ title: 實作自訂機會偵測器
 uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 2%
 
 ---
 
 
-# 實作自訂機會偵測器 {#implement-a-custom-opportunity-detector}
+# 實作自訂機會檢測器{#implement-a-custom-opportunity-detector}
 
 您可以實作介面PlacementOpportunityDetector，來實作您自己的機會檢測器。
 
-1. 建立自訂 `AdvertisingFactory` 例項並覆寫 `createOpportunityDetector`。 例如：
+1. 建立自訂`AdvertisingFactory`例項並覆寫`createOpportunityDetector`。 例如：
 
    ```java
    new AdvertisingFactory() { 
@@ -27,7 +30,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    }
    ```
 
-1. 向註冊廣告客戶端工廠 `MediaPlayer`。 例如：
+1. 向`MediaPlayer`註冊廣告客戶端工廠。 例如：
 
    ```java
    // register the custom advertising factory with media player 
@@ -35,16 +38,16 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. 建立可擴展該類的自定義機會檢測器 `PlacementOpportunityDetector` 類。
+1. 建立可擴展`PlacementOpportunityDetector`類的自定義機會檢測器類。
    1. 在自訂機會檢測器中，覆寫此函式：
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      包 `timedMetadataList` 含可用清單， `TimedMetadata`將其排序。 中繼資料包含要傳送給廣告提供者的定位參數和自訂參數。
+      `timedMetadataList`包含可用`TimedMetadata`的清單，該清單已排序。 中繼資料包含要傳送給廣告提供者的定位參數和自訂參數。
 
-   1. 請針對每 `TimedMetadata`個項目建立 `List<PlacementOpportunity>`。 清單可以是空的，但不能是空的。 `PlacementOpportunity` 應具有下列屬性：
+   1. 對於每個`TimedMetadata`，建立`List<PlacementOpportunity>`。 清單可以是空的，但不能是空的。 `PlacementOpportunity` 應具有下列屬性：
 
       ```java
       PlacementOpportunity( 
@@ -54,7 +57,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
       )
       ```
 
-   1. 為所有檢測到的定時元資料對象建立放置機會後，只需返回列 `PlacementOpportunity` 表。
+   1. 為所有檢測到的定時元資料對象建立放置機會後，只需返回`PlacementOpportunity`清單。
 
 這是自訂位置機會檢測器範例：
 
