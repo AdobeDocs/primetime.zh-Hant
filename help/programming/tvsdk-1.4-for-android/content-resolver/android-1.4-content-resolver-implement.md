@@ -6,17 +6,20 @@ title: 建置自訂內容解析程式
 uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 1%
 
 ---
 
 
-# 建置自訂內容解析程式 {#implement-a-custom-content-resolver}
+# 實作自訂內容解析器{#implement-a-custom-content-resolver}
 
 您可以根據預設解析器實作您自己的內容解析器。
 
 當TVSDK偵測到新商機時，會透過註冊的內容解析器重複，尋找能夠解決該商機的內容解析器。 選擇返回true的第一個用於解決業務機會。 如果沒有內容解析程式，則會略過該商機。 由於內容解析程式通常是非同步的，所以內容解析程式負責在程式完成時通知。
 
-1. 建立自訂 `AdvertisingFactory` 例項並覆寫 `createContentResolver`。
+1. 建立自訂`AdvertisingFactory`例項並覆寫`createContentResolver`。
 
    例如：
 
@@ -43,7 +46,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    }
    ```
 
-1. 向註冊廣告客戶端工廠 `MediaPlayer`。
+1. 向`MediaPlayer`註冊廣告客戶端工廠。
 
    例如：
 
@@ -53,9 +56,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. 將物件 `AdvertisingMetadata` 傳遞至TVSDK的方式如下：
-   1. 建立對 `AdvertisingMetadata` 像和對 `MetadataNode` 像。
-   1. 將對象 `AdvertisingMetadata` 保存到 `MetadataNode`。
+1. 將`AdvertisingMetadata`物件傳遞至TVSDK，如下所示：
+   1. 建立`AdvertisingMetadata`對象和`MetadataNode`對象。
+   1. 將`AdvertisingMetadata`對象保存到`MetadataNode`。
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +66,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
                   advertisingMetadata);
    ```
 
-1. 建立可擴充類別的自訂廣告解析程 `ContentResolver` 式類別。
+1. 建立可擴充`ContentResolver`類別的自訂廣告解析程式類別。
    1. 在自訂廣告解析程式中，覆寫此受保護的函式：
 
       ```java
@@ -71,13 +74,13 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
                         PlacementOpportunity placementOpportunity)
       ```
 
-      中繼資料包含您 `AdvertisingMetada`的。 將其用於下列向 `TimelineOperation` 量產生。
+      中繼資料包含您的`AdvertisingMetada`。 用於以下`TimelineOperation`向量生成。
 
-   1. 針對每個職位安排機會，建立 `Vector<TimelineOperation>`。
+   1. 對於每個職位安排機會，建立一個`Vector<TimelineOperation>`。
 
       向量可以是空的，但不是空的。
 
-      此範例提 `TimelineOperation` 供了以下結構 `AdBreakPlacement`:
+      此範例`TimelineOperation`提供`AdBreakPlacement`的結構：
 
       ```java
       AdBreakPlacement(AdBreak.createAdBreak( 
@@ -92,8 +95,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
    1. 解決廣告後，請呼叫下列其中一個函式：
 
-      * 如果廣告解析成功： `notifyResolveComplete(Vector<TimelineOperation> proposals)`
-      * 如果廣告解析失敗： `notifyResolveError(Error error)`
+      * 如果廣告解析成功：`notifyResolveComplete(Vector<TimelineOperation> proposals)`
+      * 如果廣告解析失敗：`notifyResolveError(Error error)`
+
       例如，如果失敗：
 
       ```java
