@@ -6,6 +6,9 @@ title: 回呼的事件類型和類
 uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
  <thead> 
   <tr rowsep="1"> 
    <th colname="2" class="entry"> 當您監聽此事件名稱(AdobePSDK.EventType)時 </th> 
-   <th class="entry">phrases/browser-tvsdk-name會將事件傳遞至此物件類型的回呼(<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th class="entry">phrases/browser-tvsdk-name會將事件傳遞給您此物件類型的回呼(<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
