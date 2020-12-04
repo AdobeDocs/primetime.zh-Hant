@@ -4,11 +4,14 @@ title: 要求憑證總覽
 uuid: 3a4e79d7-1832-49d8-bcf2-a029b3729e6d
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#request-certificates-overview}
+# 概述{#request-certificates-overview}
 
 若要使用Adobe Primetime DRM Production SDK，請重複下列步驟以要求每個憑證（授權伺服器、封裝工具和傳輸）。 評估版SDK和試用版SDK使用單一憑證。
 
