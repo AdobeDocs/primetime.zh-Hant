@@ -6,11 +6,14 @@ title: 插入廣告
 uuid: 555ef6af-5ae3-4d8d-9b35-9bbfc68e393e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#insert-ads-overview}
+# 概述{#insert-ads-overview}
 
 廣告插入可解析隨選視訊(VOD)、即時串流以及具有廣告追蹤和廣告播放的線性串流廣告。 TVSDK會向廣告伺服器提出所需要求，接收指定內容的廣告資訊，並將廣告分階段置於內容中。
 
