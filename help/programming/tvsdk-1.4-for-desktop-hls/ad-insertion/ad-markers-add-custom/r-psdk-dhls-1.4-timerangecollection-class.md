@@ -6,6 +6,9 @@ title: TimeRangeCollection類
 uuid: da781df4-6b19-47e1-8dc5-ea83c139f061
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
 
@@ -26,4 +29,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-系列類型的定義值 `MARK_RANGES`為 `DELETE_RANGES`、和 `REPLACE_RANGES`。 您可以使 `TimeRangeCollection`用這三種類型建立。
+系列類型的定義值為`MARK_RANGES`、`DELETE_RANGES`和`REPLACE_RANGES`。 您可以使用這三種類型建立`TimeRangeCollection`。
