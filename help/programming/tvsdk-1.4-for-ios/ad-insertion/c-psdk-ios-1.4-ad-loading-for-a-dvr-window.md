@@ -6,11 +6,14 @@ title: DVR視窗的載入廣告
 uuid: 67bc3924-3d17-4d1a-b9a7-be8d0488a970
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
 
-# DVR視窗的載入廣告 {#load-ad-for-a-dvr-window}
+# DVR視窗{#load-ad-for-a-dvr-window}的載入廣告
 
 您可以決定是只解析使用者目前即時點之後發生的廣告，還是也要解析目前即時點之前發生的廣告。
 
@@ -20,15 +23,15 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 >
 >在目前即時點之後解析廣告的速度較快，但如果使用者向後搜尋，這個選項會防止播放器播放先前顯示的廣告。
 
-## 控制DVR視窗的廣告載入 {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## 控制DVR視窗{#section_2D93E2E947644D66B6F6ED1DD6742C25}的廣告載入
 
 若要控制DVR視窗的廣告載入：
 
-若要載入整個串流的所有廣告，請將屬 `PTAdMetadata.enableDVRAds` 性設為 `YES`。
+若要載入整個串流的所有廣告，請將`PTAdMetadata.enableDVRAds`屬性設為`YES`。
 
 >[!NOTE]
 >
->預設值為， `NO`且此選項僅從目前即時點載入廣告。
+>預設值為`NO`，此選項僅從目前即時點載入廣告。
 
 例如：
 
