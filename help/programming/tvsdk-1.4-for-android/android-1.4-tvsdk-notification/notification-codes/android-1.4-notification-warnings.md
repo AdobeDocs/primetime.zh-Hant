@@ -6,11 +6,14 @@ title: 警告通知代碼
 uuid: 32b54e6c-f107-4e8e-aad6-34e1057719b0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
 
-# 警告通知代碼 {#warning-notification-codes}
+# 警告通知代碼{#warning-notification-codes}
 
 此表證明了有關WARN類型通知的詳細資訊。
 
@@ -37,10 +40,10 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 200000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION _FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR </span><span class="codeph"> SEEK_ERROR </span> </td> 
-   <td colname="4"><span class="codeph"> 說明 </span> </td> 
+   <td colname="1"><span class="codeph"> 200000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION _FAIL  </span> </td> 
+   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR  </span><span class="codeph"> SEEK_ERROR  </span> </td> 
+   <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> <p>播放相關操作失敗，但可能會繼續播放。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -51,9 +54,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 201000 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> AD_RESOLVE_FAIL </span><span class="codeph"> RESOURCE_PLACEMENT_失敗 </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
+   <td colname="1"><span class="codeph"> 201000  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_RESOLVE_FAIL  </span><span class="codeph"> RESOURCE_PLACEMENT_失敗 </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID  </span> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>廣告解析程式無法解析／插入廣告內容。 可繼續播放。 </p> </td> 
   </tr> 
@@ -79,14 +82,14 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000 </span> </td> 
+   <td colname="1"><span class="codeph"> 204000  </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_警告</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span><span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME說</span><span class="codeph"> 明</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
    <td colname="5"> <p> 背景資訊清單下載時發生錯誤。 更新背景資訊清單時，會以TVSDK警告的形式傳送任何問題，且不會造成播放停止。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_警告</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> 說明</span> </td> 
@@ -100,15 +103,15 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"><span class="codeph"> 209100 </span> </td> 
-   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING </span> </td> 
+   <td colname="1" morerows="1"><span class="codeph"> 郵編：209100  </span> </td> 
+   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING  </span> </td> 
    <td colname="3" morerows="1"> <p>無 </p> </td> 
-   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE </span><span class="codeph"> NATIVE_ERROR_NAME說 </span><span class="codeph"> 明 </span> </p> </td> 
-   <td colname="5"> <p>低級AVE庫發出錯誤。 </p> <p>有關 <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> 這些元資料欄位值的詳細資訊</a> ，請參閱NATIVE_ERROR通知的詳細資訊。 </p> </td> 
+   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE  </span><span class="codeph"> NATIVE_ERROR_NAME說 </span><span class="codeph"> 明  </span> </p> </td> 
+   <td colname="5"> <p>低級AVE庫發出錯誤。 </p> <p>有關這些元資料欄位的值的詳細資訊，請參閱NATIVE_ERROR通知</a>的<a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external">詳細資訊。 </a></p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_CODE</span><span class="codeph"> DRM_ERROR_STRING</span> </p> </td> 
-   <td colname="5"> DRM次要錯誤碼和DRM伺服器錯誤字串。 有關 <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> 這些元資料欄位值的詳細資訊</a> ，請參閱NATIVE_ERROR通知的詳細資訊。</td> 
+   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_</span> <span class="codeph"> CODEDRM_ERROR_STRING</span> </p> </td> 
+   <td colname="5"> DRM次要錯誤碼和DRM伺服器錯誤字串。 有關這些元資料欄位的值的詳細資訊，請參閱NATIVE_ERROR通知</a>的<a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external">詳細資訊。</a></td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>TimeRangeCollection</b> </td> 
@@ -118,17 +121,17 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000 </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210000  </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> 無 </td> 
    <td colname="5"> 廣告信令模式被定義為自訂範圍，但沒有定義任何範圍。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001 </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號210001  </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 說明 </span> </td> 
+   <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> <p> 一個或多個時間範圍無效，將被忽略或修改。 </p> <p> DESCRIPTION是包含無效範圍說明的字串。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -139,7 +142,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 280000 </span> </td> 
+   <td colname="1"><span class="codeph"> 280000  </span> </td> 
    <td colname="2"><span class="codeph"> TRICKPLAY_RATE_CHANGE_FAIL</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> 說明</span> </td> 
@@ -153,8 +156,8 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 299999 </span> </td> 
-   <td colname="2"><span class="codeph"> GENERIC_WARNING </span> </td> 
+   <td colname="1"><span class="codeph"> 郵編：299999  </span> </td> 
+   <td colname="2"><span class="codeph"> GENERIC_WARNING  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>標籤一般警告事件。 並非由TVSDK實際核發。 它只是警告事件對應數值代碼範圍結尾的標籤。 </p> </td> 
@@ -162,4 +165,4 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
  </tbody> 
 </table>
 
->[注意！] adID和來源(URL)可透過PTAdAsset在通知中繼資料中使用金鑰來 `AD_ASSET` 擷取。
+>[注意！] adID和來源(URL)可透過PTAdAsset在通知中繼資料中擷取並加上 `AD_ASSET` 金鑰。
