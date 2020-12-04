@@ -6,11 +6,14 @@ title: 實作事件偵聽器和回呼
 uuid: 63f62c60-505e-4f83-bc0d-58895d85a75a
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
 
-# 實作事件偵聽器和回呼{#implement-event-listeners-and-callbacks}
+# 實施事件偵聽器和回呼{#implement-event-listeners-and-callbacks}
 
 事件處理常式可讓瀏覽器TVSDK回應事件。
 
@@ -24,11 +27,11 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
       >[!IMPORTANT]
       >
-      >播放事件 `STATUS_CHANGED` 提供播放器狀態，包括錯誤。 任何狀態都可能會影響您播放器的下一步。
+      >播放事件`STATUS_CHANGED`提供播放器狀態，包括錯誤。 任何狀態都可能會影響您播放器的下一步。
 
    * **其他事件**:可選，視您的應用程式而定。
 
-      例如，如果您在播放中加入廣告，請監聽所有 `AdBreakPlaybackEvent` 和事 `AdPlaybackEvent` 件。
+      例如，如果您在播放中加入廣告，請監聽所有`AdBreakPlaybackEvent`和`AdPlaybackEvent`事件。
 
 1. 為每個事件實施事件偵聽器。
 
@@ -36,8 +39,8 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
    例如：
 
-   * 事件類型： `AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * 事件屬性： `MediaPlayerStatus.<event>` 使用如下：
+   * 事件類型：`AdobePSDK.PSDKEventType.STATUS_CHANGED`
+   * 事件屬性：`MediaPlayerStatus.<event>`的用法如下：
 
 ```js
 player.addEventListener( 
@@ -52,7 +55,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. 使用將回呼偵聽程式註冊 `MediaPlayer` 到對象中 `MediaPlayer.addEventListener`。
+1. 使用`MediaPlayer.addEventListener`將回呼偵聽器註冊到`MediaPlayer`對象。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
