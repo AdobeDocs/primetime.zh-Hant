@@ -6,31 +6,35 @@ title: 在媒體播放器中載入媒體資源
 uuid: 1a27b83b-afa6-48c7-a701-e11b2d280810
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '221'
+ht-degree: 0%
 
 ---
 
 
-# 在媒體播放器中載入媒體資源 {#load-a-media-resource-in-the-media-player}
+# 在媒體播放器中載入媒體資源{#load-a-media-resource-in-the-media-player}
 
 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
 
 1. 設定媒體播放器以播放新資源。
 
-   呼叫並傳遞現有例項，以取代 `MediaPlayer.replaceCurrentResource()` 目前可播放的 `MediaResource` 項目。
+   呼叫`MediaPlayer.replaceCurrentResource()`並傳遞現有的`MediaResource`例項，以取代目前可播放的項目。
 
    這將啟動資源載入進程。
 
-1. 向實例 `MediaPlayerEvent.STATUS_CHANGED` 註冊事 `MediaPlayer` 件。 在回呼中，請至少檢查下列狀態值：
+1. 向`MediaPlayer`實例註冊`MediaPlayerEvent.STATUS_CHANGED`事件。 在回呼中，請至少檢查下列狀態值：
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
-   透過這些事件， `MediaPlayer` 物件會在成功載入媒體資源時通知您的應用程式。
-1. 當媒體播放器的狀態變更為時 `INITIALIZED`，您可以呼叫 `MediaPlayer.prepareToPlay()`。
 
-   此狀態表示介質已成功載入。 新功能 `MediaPlayerItem` 已可供播放。 呼叫 `prepareToPlay()` 會啟動廣告解析度和位置處理程式（如果有的話）。
+   透過這些事件，`MediaPlayer`物件會在應用程式成功載入媒體資源時通知您。
+1. 當媒體播放器的狀態變更為`INITIALIZED`時，您可呼叫`MediaPlayer.prepareToPlay()`。
 
-如果發生故障，媒體播放器會切換至狀 `ERROR` 態。
+   此狀態表示介質已成功載入。 新的`MediaPlayerItem`已可供播放。 呼叫`prepareToPlay()`會啟動廣告解析度和位置處理程式（如果有的話）。
+
+如果發生故障，媒體播放器會切換至`ERROR`狀態。
 
 以下簡化的范常式式碼說明載入媒體資源的程式：
 
