@@ -6,6 +6,9 @@ title: 疑難排解
 uuid: 06b86067-1ff6-4b4e-922f-7f968260ba19
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   請確定密碼已使用類加密 `ScrambleUtil` 。
+   請確定密碼已使用`ScrambleUtil`類加密。
 
 * 如果顯示以下錯誤消息：
 
@@ -37,5 +40,5 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   請確定您使用「參考實 *施」中提供的密碼擾碼器類別*。 此剪貼器公用程式與Adobe Primetime DRM Server針對受保護串流提供的公用程式不同。
+   請確定您使用Reference Implementation *隨附的密碼擾碼器類別*。 此剪貼器公用程式與Adobe Primetime DRM Server針對受保護串流提供的公用程式不同。
 
