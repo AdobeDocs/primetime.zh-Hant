@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# 考量事項和最佳實務 {#considerations-and-best-practices}
+# 注意事項和最佳做法{#considerations-and-best-practices}
 
 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
 
-## 考量事項 {#section_tvsdk_considerations}
+## 注意事項{#section_tvsdk_considerations}
 
 使用TVSDK時，請記住下列資訊：
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 
       使用者代理字串的值預設為作業系統指派的值。
 
-## 最佳實務 {#section_tvsdk_best_practices}
+## 最佳做法{#section_tvsdk_best_practices}
 
 以下是TVSDK的建議實務：
 
