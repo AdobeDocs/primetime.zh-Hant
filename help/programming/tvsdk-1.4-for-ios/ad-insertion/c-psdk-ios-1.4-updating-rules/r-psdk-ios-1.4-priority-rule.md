@@ -7,6 +7,9 @@ title: 優先順序規則
 uuid: a0924b3e-45cb-45ca-8a98-ed7d42aaed14
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 1%
 
 ---
 
@@ -37,7 +40,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td><span class="codeph"> 項目</span></td> 
    <td><span class="codeph"> 字串</span></td> 
    <td><span class="codeph"> 主機</span></td> 
-   <td>目前僅支 <span class="codeph"> 援主機</span> 。 當符合併定義值屬性 <span class="codeph"> 時</span> , <span class="codeph"></span> 必須存在此屬性。</td> 
+   <td>目前僅支援<span class="codeph">主機</span>。 當定義<span class="codeph">與</span>和<span class="codeph">值</span>屬性時，必須存在此屬性。</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matches</span></td> 
@@ -45,31 +48,31 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td><span class="codeph"> 多重</span></td> 
    <td>可能的值：
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span> —— 等於</li> 
-     <li><span class="codeph"> ne</span> —— 不等於</li> 
-     <li><span class="codeph"> co</span> —— 包含</li> 
-     <li><span class="codeph"> nc</span> —— 不包含</li> 
-     <li><span class="codeph"> sw</span> —— 開始於</li> 
-     <li><span class="codeph"> ew</span> —— 結尾為</li> 
+     <li><span class="codeph"> eq</span> -等於</li> 
+     <li><span class="codeph"> ne</span> - not equals</li> 
+     <li><span class="codeph"> co</span> - contains</li> 
+     <li><span class="codeph"> nc</span> -不包含</li> 
+     <li><span class="codeph"> sw</span> -開頭為</li> 
+     <li><span class="codeph"> ew</span> -結尾為</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> 字串</span></td> 
    <td><span class="codeph"> 優先順序</span></td> 
-   <td>值必須始終為優 <span class="codeph"> 先</span></td> 
+   <td>值必須始終為<span class="codeph"> priority</span></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> values</span></td> 
+   <td><span class="codeph"> 值</span></td> 
    <td><span class="codeph"> 陣列</span></td> 
    <td></td> 
-   <td> <p>TVSDK會在來源創 <span class="codeph"> 作項目上使</span> 用 <span class="codeph"> 「符合」屬性</span> ，並比對此陣列中定義的值</p> </td> 
+   <td> <p>TVSDK將使用來源創意素材的<span class="codeph">項目</span>上的<span class="codeph">符合</span>屬性，並比對此陣列中定義的值</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> 串流</span></td> 
    <td><span class="codeph"> 字串</span></td> 
    <td></td> 
-   <td> <p>值可以是 <span class="codeph"> vod</span> 或 <span class="codeph"> live</span></p> </td> 
+   <td> <p>值可以是<span class="codeph"> vod</span>或<span class="codeph"> live</span></p> </td> 
   </tr> 
  </tbody> 
 </table>
