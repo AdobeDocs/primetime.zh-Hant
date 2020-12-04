@@ -6,6 +6,9 @@ title: Adobe Primetime DRM的新增功能
 uuid: 3c8da594-a231-4496-bffc-130775ecae50
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -35,9 +38,9 @@ Primetime DRM SDK提供Java API來完成這些工作。 SDK包括授權伺服器
 
 以下說明的功能是此版本的新功能。
 
-## 新功能 {#section_F6BA874CEAE24610920BC3A4C6D20EBA}
+## 新功能{#section_F6BA874CEAE24610920BC3A4C6D20EBA}
 
-* **硬停止(Hard Stop)** -您可以指定在播放窗口的結尾處是否停止或繼續播放。
-* **與解析度相關的輸出控制** -您可以根據像素解析度指定輸出約束。
-* **授權伺服器回應匿名化** -為了使用Primetime DRM授權伺服器通訊協定來增強隱私權，傳輸憑證序號將會設為授權伺服器回應支援用戶端的零位。
+* **硬停止-** 您可以指定在播放窗口的末尾停止或繼續播放。
+* **與解析度相關的輸出控制-** 您可以根據像素解析度指定輸出約束。
+* **授權伺服器回應匿名化-** 為了使用Primetime DRM授權伺服器通訊協定來增強隱私權，傳輸憑證序號將會設為授權伺服器回應支援用戶端的零位。
 
