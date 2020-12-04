@@ -6,15 +6,18 @@ title: 帳單量度
 uuid: 6ae9eb1e-4b03-467f-b80a-96313bd01543
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
 
-# 帳單量度 {#billing-metrics}
+# 帳單量度{#billing-metrics}
 
 為了迎合只想支付所用費用（而非固定費率，不論實際用途）的客戶，Adobe會收集使用量度，並使用這些度量來決定向客戶收取的費用。
 
-每當播放器產生串流開始事件時，TVSDK就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段稱為計費時段。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
+每當播放器產生串流開始事件時，TVSDK就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段（稱為計費持續時間）可能不同。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
 
 這些消息包含以下資訊：
 
