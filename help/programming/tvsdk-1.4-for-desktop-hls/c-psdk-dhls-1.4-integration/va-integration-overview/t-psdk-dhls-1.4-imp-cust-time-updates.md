@@ -6,11 +6,14 @@ title: 實作自訂時間更新
 uuid: 2b46eca9-3815-4c44-ab5e-21678c35f410
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
 
-# 實作自訂時間更新{#implement-custom-time-updates}
+# 實施自訂時間更新{#implement-custom-time-updates}
 
 在某些分析實作中，用戶端應用程式可能會想要提供與TVSDK localTime值所報告的播放頭位置不同的播放頭位置。 例如，在LINEAR串流播放期間，可以相對於每個節目的開始時間提供其播放頭。
 
