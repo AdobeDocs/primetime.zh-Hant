@@ -6,11 +6,14 @@ title: 具有廣告插入功能的DVR
 uuid: ed6cd8fe-ceb2-45c8-a76d-bc0532babd99
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# 具有廣告插入功能的DVR {#dvr-with-ad-insertion}
+# 廣告插入{#dvr-with-ad-insertion}的DVR
 
 依預設，具備DVR支援的即時串流會顯示檢視器可暫停和搜尋的範圍。
 
