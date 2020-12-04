@@ -6,11 +6,14 @@ title: 播放和暫停影片
 uuid: 4053ea9e-6b74-41e9-ad04-087ad13e3698
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 0%
 
 ---
 
 
-# 播放和暫停影片{#play-and-pause-a-video}
+# 播放並暫停影片{#play-and-pause-a-video}
 
 您可以新增瀏覽器TVSDK行為來暫停和播放按鈕。
 
@@ -28,7 +31,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
       void pause() throws IllegalStateException;
       ```
 
-1. 監聽事件 `AdobePSDK.MediaPlayerStatusChangeEvent` 以檢查錯誤或採取其他適當的動作。
+1. 監聽`AdobePSDK.MediaPlayerStatusChangeEvent`事件以檢查錯誤或採取其他適當動作。
 
-   當呼叫暫停或播放方法並傳遞事件物件的相關資訊（包括新狀態，例如或）時，瀏覽器TVSDK會觸發 `MediaPlayerStatus.PLAYING` 此事 `MediaPlayerStatus.PAUSED`件。
+   當呼叫暫停或播放方法並傳遞事件物件的相關資訊（包括新狀態，例如`MediaPlayerStatus.PLAYING`或`MediaPlayerStatus.PAUSED`）時，瀏覽器TVSDK會觸發此事件。
 
