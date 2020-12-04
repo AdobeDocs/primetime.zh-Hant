@@ -6,6 +6,9 @@ title: 載入器事件
 uuid: 0ad37715-14b1-457c-892f-0db0d6220f0c
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDK會回應載入媒體項目，而調度媒體播放器項目事件。
 
-這些事件提供了另一種工作流程。 建立時，不需要實施此介面 `MediaPlayer`。 當您想要擁有時，請使用這個 `MediaPlayerItemLoader`。
+這些事件提供了另一種工作流程。 建立`MediaPlayer`時，不需要實施此介面。 當您想要擁有`MediaPlayerItemLoader`時，請使用此選項。
 
-要獲知與載入媒體播放器資源相關的事件，請向對象註冊以下事件的監 `MediaPlayerItemLoader` 聽器。
+要獲知與載入媒體播放器資源相關的事件，請向`MediaPlayerItemLoader`對象註冊以下事件的偵聽器。
 
 | 事件 | 意義 |
 |---|---|
