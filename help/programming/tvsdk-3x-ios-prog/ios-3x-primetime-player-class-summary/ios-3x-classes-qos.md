@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# QoS類 {#qos-classes}
+# QoS類{#qos-classes}
 
 這些類別提供的資訊可協助您判斷播放器的效能。
 
@@ -32,7 +32,7 @@ ht-degree: 0%
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">平台作業系統版本 </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">TVSDK程式庫的版本號碼 </li> 
      <li id="li_30D38320C2A3440E92C0A477FFFBF9A0">設備的型號名稱 </li> 
-     <li id="li_2D15164B987E405685B96A900EBF041D">裝置製造商名稱 </li> 
+     <li id="li_2D15164B987E405685B96A900EBF041D">裝置製造商的名稱 </li> 
      <li id="li_B78485CB9580444DB9694404706BA191">設備UUID </li> 
      <li id="li_841EA77499B44F0692192F9DE1A798E4">裝置螢幕的寬度／高度 </li> 
     </ul> </td> 
