@@ -4,6 +4,9 @@ title: Adobe AIR
 uuid: fc50e34b-2d0b-4e36-b77e-870dce20dc0d
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '169'
+ht-degree: 0%
 
 ---
 
@@ -14,4 +17,4 @@ Adobe AIR是跨作業系統執行時期，可讓內容製作者設計自訂的�
 
 企業可完全控制使用者介面，並可設計使用者體驗來反映和強化其品牌。 Adobe AIR內建支援播放使用Adobe Primetime DRM SDK保護的內容，協助建立自訂的端對端內容發佈鏈。
 
-如需Adobe AIR的詳細資訊，請造訪： [www.adobe.com/go/air](https://www.adobe.com/go/air)
+如需Adobe AIR的詳細資訊，請造訪：[www.adobe.com/go/air](https://www.adobe.com/go/air)
