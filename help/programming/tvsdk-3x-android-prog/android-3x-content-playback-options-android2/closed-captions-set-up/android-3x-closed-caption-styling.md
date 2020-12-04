@@ -13,22 +13,22 @@ ht-degree: 0%
 ---
 
 
-# 控制隱藏字幕樣式 {#control-closed-caption-styling}
+# 控制隱藏字幕樣式{#control-closed-caption-styling}
 
 您可以使用TextFormat類別來提供隱藏字幕音軌的樣式資訊，此類別會設定播放器所顯示隱藏字幕的樣式。
 
 此類別封裝隱藏字幕樣式資訊，例如字型類型、大小、色彩和背景不透明度。
 
-## 設定隱藏字幕樣式 {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
+## 設定隱藏字幕樣式{#section_C9B5E75C70DD42E59DC4DD0F308C8216}
 
 您可以使用TVSDK方法來設定隱藏字幕文字的樣式。
 
-1. 等待媒體播放器至少處於狀 `PREPARED` 態。
-1. 建立例 `TextFormatBuilder` 項。
+1. 等待媒體播放器至少處於`PREPARED`狀態。
+1. 建立`TextFormatBuilder`實例。
 
    您現在可以提供所有隱藏字幕樣式參數，或稍後再設定。
 
-   TVSDK會將隱藏字幕樣式資訊封裝在介面 `TextFormat` 中。 類 `TextFormatBuilder` 建立實現此介面的對象。
+   TVSDK會將隱藏字幕樣式資訊封裝在`TextFormat`介面中。 `TextFormatBuilder`類建立實現此介面的對象。
 
    ```java
    public TextFormatBuilder( 
@@ -46,16 +46,16 @@ ht-degree: 0%
       java.lang.String safeArea)
    ```
 
-1. 要獲取對實現介面的對象的引 `TextFormat` 用，請調用 `TextFormatBuilder.toTextFormat` public方法。
+1. 要獲取對實現`TextFormat`介面的對象的引用，請調用`TextFormatBuilder.toTextFormat`公用方法。
 
-   這會傳回 `TextFormat` 可套用至媒體播放器的物件。
+   這會傳回可套用至媒體播放器的`TextFormat`物件。
 
    `public TextFormat toTextFormat()`
 
 
 1. （可選）執行下列任一操作，以取得目前的隱藏字幕樣式設定：
 
-   * 使用傳回值是介面 `MediaPlayer.getCCStyle` 的例項，取得所有樣式設 `TextFormat` 定。
+   * 獲取所有具有`MediaPlayer.getCCStyle`的樣式設定返回值是`TextFormat`介面的實例。
 
       ```java
       /** 
@@ -67,7 +67,7 @@ ht-degree: 0%
       public TextFormat getCCStyle() throws MediaPlayerException;
       ```
 
-   * 透過介面getter方法一次取得一 `TextFormat` 個設定。
+   * 透過`TextFormat`介面getter方法一次取得一個設定。
 
       ```java
       public java.lang.String getFontColor(); 
@@ -85,7 +85,7 @@ ht-degree: 0%
 
 1. 要更改樣式設定，請執行下列操作之一：
 
-   * 使用setter方法 `MediaPlayer.setCCStyle`，傳遞介面的實 `TextFormat` 例：
+   * 使用setter方法`MediaPlayer.setCCStyle` ，傳遞`TextFormat`介面的實例：
 
       ```java
       /** 
@@ -101,9 +101,9 @@ ht-degree: 0%
       public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
       ```
 
-   * 使用定 `TextFormatBuilder` 義單個setter方法的類。
+   * 使用`TextFormatBuilder`類別，它定義各個setter方法。
 
-      該 `TextFormat` 介面定義不可變對象，因此只有getter方法和無設定器。 您只能使用類設定隱藏字幕樣 `TextFormatBuilder` 式參數：
+      `TextFormat`介面定義不可變對象，因此只有getter方法和無設定器。 您只能使用`TextFormatBuilder`類別來設定隱藏字幕樣式參數：
 
       ```java
       // set font type 
@@ -128,7 +128,7 @@ ht-degree: 0%
 
       >[!IMPORTANT]
       >
-      >**顏色設定：** 在Android TVSDK 2.X中，對隱藏字幕的色彩樣式進行了增強。 該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：
+      >**色彩設定：** 在Android TVSDK 2.X中，已對隱藏字幕的色彩樣式進行增強。該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：
       >
       >* FFFFFF =黑色
       >* 000000 =白色
@@ -138,7 +138,7 @@ ht-degree: 0%
          >等等。
 
       >
-      >在應用程式中，每當您將顏色樣式資訊傳遞至時 `TextFormatBuilder`，您仍會像以前一樣使用列舉，但現在您必須 `Color``getValue()` 新增顏色才能將值當做字串取得。 例如：
+      >在應用程式中，每當您將色彩樣式資訊傳遞至`TextFormatBuilder`時，您仍會像以前一樣使用`Color`列舉，但現在您必須將`getValue()`新增至色彩，才能將值當成字串。 例如：
       >
       >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
@@ -146,7 +146,7 @@ ht-degree: 0%
 
 設定隱藏字幕樣式是非同步操作，因此變更可能需要數秒鐘才會顯示在畫面上。
 
-## 隱藏字幕樣式選項 {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
+## 隱藏字幕樣式選項{#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
 
 您可以指定數個標題樣式選項，而這些選項會覆寫原始標題中的樣式選項。
 
@@ -168,7 +168,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->在定義預設值(例如 `DEFAULT`)的選項中，該值是指最初指定標題時的設定。
+>在定義預設值的選項（例如`DEFAULT`）中，該值是指最初指定標題時的設定。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -180,25 +180,25 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> 字型 </td> 
-   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由 <span class="codeph"> TextFormat.Font枚舉定義的值，並表示(例如，有序列或無序列 </span> )的單間距。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 帶有序列的單空間通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
+   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由<span class="codeph"> TextFormat.Font </span>枚舉定義的值，並表示（例如，帶有或不帶有序列）。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 帶有序列的單空間通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 大小 </td> 
-   <td colname="2"> <p>字幕大小。 </p> <p> 只能設定為由TextFormat.Size枚舉定義的 <span class="codeph"> 值 </span> : 
+   <td colname="2"> <p>字幕大小。 </p> <p> 只能設定為<span class="codeph"> TextFormat.Size </span>枚舉定義的值： 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> 中 </span> -標準尺寸 </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> 大 </span> 型——大約30% </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE  </span> -大約30%（中） </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> 小 </span> 型——大約比中型小30% </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT </span> -標題的預設大小；與介質相同 </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT  </span> -標題的預設大小；與介質相同 </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 字型邊緣 </td> 
-   <td colname="2"> <p>用於字型邊緣的效果，例如凸起或無。 </p> <p>只能設為由TextFormat.FontEdge枚舉定義的 <span class="codeph"> 值 </span> 。 </p> </td> 
+   <td colname="2"> <p>用於字型邊緣的效果，例如凸起或無。 </p> <p>只能設定為由<span class="codeph"> TextFormat.FontEdge </span>枚舉定義的值。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 字型顏色 </td> 
-   <td colname="2"> <p>字型顏色。 </p> <p>只能設定為由TextFormat.Color枚舉定 <span class="codeph"> 義的 </span> 值。 </p> </td> 
+   <td colname="2"> <p>字型顏色。 </p> <p>只能設定為<span class="codeph"> TextFormat.Color </span>枚舉定義的值。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 邊緣顏色 </td> 
@@ -214,7 +214,7 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 字型不透明度 </td> 
-   <td colname="2"> <p>文字的不透明度。 </p> <p>以0（完全透明）到100（完全不透明）的百分比表示。 <span class="codeph"> 字型的 </span> DEFAULT_OPACITY為100。 </p> </td> 
+   <td colname="2"> <p>文字的不透明度。 </p> <p>以0（完全透明）到100（完全不透明）的百分比表示。 <span class="codeph"> 字型的DEFAULT_ </span> OPACITY為100。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景不透明度 </td> 
@@ -235,7 +235,7 @@ public TextFormatBuilder(
  </tbody> 
 </table>
 
-## 標題格式範例 {#section_58E8E82494EC4683B010FFDE67485CF9}
+## 標題格式示例{#section_58E8E82494EC4683B010FFDE67485CF9}
 
 以下是一些範例，說明如何指定隱藏字幕格式。
 
