@@ -6,6 +6,9 @@ title: 即時／線性廣告解析與插入
 uuid: 18c6733a-e827-4b1c-9cd5-796d57cbdb05
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 * **Pre-roll**，此為內容的開頭。
 
-即使持續時間比提示點取代持續時間長或短，瀏覽器TVSDK仍接受廣告插播。 依預設，瀏覽器TVSDK支援在解析 `#EXT-X-CUE` 和放置廣告時，提示作為有效的廣告標籤。 此標籤需要以秒為單位 `DURATION` 的中繼資料欄位和提示的唯一ID。 例如：
+即使持續時間比提示點取代持續時間長或短，瀏覽器TVSDK仍接受廣告插播。 依預設，瀏覽器TVSDK支援`#EXT-X-CUE`提示作為解析和放置廣告時的有效廣告標籤。 此標籤需要以秒為單位的中繼資料欄位`DURATION`和提示的唯一ID。 例如：
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -28,7 +31,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 您可以定義並訂閱其他提示（標籤）。
 
-播放開始後，視訊引擎會定期重新整理資訊清單檔案。 瀏覽器TVSDK可解析任何新廣告，並在資訊清單中定義的即時或線性串流中遇到提示點時插入廣告。 在解析並插入廣告後，瀏覽器TVSDK會再次計算虛擬時間軸，並調度事 `AdobePSDK.PSDKEventType.TIMELINE_UPDATED` 件。
+播放開始後，視訊引擎會定期重新整理資訊清單檔案。 瀏覽器TVSDK可解析任何新廣告，並在資訊清單中定義的即時或線性串流中遇到提示點時插入廣告。 在解析並插入廣告後，瀏覽器TVSDK會再次計算虛擬時間軸，並調度`AdobePSDK.PSDKEventType.TIMELINE_UPDATED`事件。
 
 >[!TIP]
 >
