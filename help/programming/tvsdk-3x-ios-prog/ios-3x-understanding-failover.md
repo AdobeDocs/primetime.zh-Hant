@@ -6,11 +6,14 @@ title: 故障切換
 uuid: 064886ab-afa2-4afc-b795-d094b31934b8
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
 
-# 故障切換 {#failover}
+# 故障切換{#failover}
 
 當變型播放清單具有相同位元速率的多個轉譯，且其中一個轉譯停止運作時，就會發生容錯處理。 TVSDK會在轉譯之間切換。
 
