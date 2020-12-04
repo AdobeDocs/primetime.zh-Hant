@@ -4,11 +4,14 @@ title: 播放視窗
 uuid: a06a1e28-8f14-4231-bb88-61aa7e33cace
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '138'
+ht-degree: 0%
 
 ---
 
 
-# 播放視窗{#playback-window}
+# 播放窗口{#playback-window}
 
 播放視窗會指定授權在第一次用來播放受保護內容後的有效期間。
 
