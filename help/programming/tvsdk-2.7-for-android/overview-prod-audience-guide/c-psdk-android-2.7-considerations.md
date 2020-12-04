@@ -6,15 +6,18 @@ title: 考量事項和最佳實務
 uuid: 049da1f4-028b-49d2-9ebd-e5d9edcbaf8a
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
 
-# 考量事項和最佳實務{#considerations-and-best-practices}
+# 考慮事項和最佳做法{#considerations-and-best-practices}
 
 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
 
-## 考量事項 {#section_tvsdk_considerations}
+## 注意事項{#section_tvsdk_considerations}
 
 使用TVSDK時，請記住下列資訊：
 
@@ -44,7 +47,7 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
    如果您在設定廣告插入中繼資料時設定廣告相關呼叫，則所有廣告相關呼叫都會使用Android預設使用者代理或自訂使用者代理。
 
-## 最佳實務 {#section_tvsdk_best_practices}
+## 最佳做法{#section_tvsdk_best_practices}
 
 以下是TVSDK的建議實務：
 
@@ -52,4 +55,4 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 * 在主(UI)執行緒上執行大部分的TVSDK作業，而非在背景執行緒上。
 * 針對Android的TVSDK 2.5，預設會開啟延遲廣告解析。
 
-   對於沒有前置或中置的內容，您可以使用來加 `AdvertisingMetadata.setPreroll(false)` 速內容載入。
+   對於沒有前置或中置的內容，您可以使用`AdvertisingMetadata.setPreroll(false)`來加速內容載入。
