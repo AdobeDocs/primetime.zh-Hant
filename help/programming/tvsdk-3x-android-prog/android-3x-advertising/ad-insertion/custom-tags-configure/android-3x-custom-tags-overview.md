@@ -4,6 +4,9 @@ title: 自訂VOD資產範例
 uuid: 25927d5f-ac16-45f4-bf0d-92f1ab394c05
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
@@ -40,6 +43,6 @@ seg5.ts
 
 您的應用程式可以設定下列案例：
 
-* 當標籤或 `#EXT-X-ASSET` 您已訂閱的任何其他自訂標籤名稱集存在於檔案中時，會發出通知。
-* 當在串流中找 `#EXT-X-AD` 到標籤或任何其他自訂標籤名稱時插入廣告。
+* 當`#EXT-X-ASSET`標籤或您已訂閱的任何其他自訂標籤名稱集存在檔案時，會出現通知。
+* 在串流中找到`#EXT-X-AD`標籤或任何其他自訂標籤名稱時插入廣告。
 
