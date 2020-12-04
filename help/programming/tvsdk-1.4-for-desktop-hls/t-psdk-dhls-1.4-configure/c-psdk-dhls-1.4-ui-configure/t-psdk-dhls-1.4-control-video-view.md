@@ -7,7 +7,7 @@ uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描述檔開關或內容切換等而變更）維持視訊檢視的外觀比例。
 
-通過指定不同的比例策略，可以覆蓋預設的外 *觀比例行為*。 使用物件的屬性指 `MediaPlayerView` 定縮放原 `scalePolicy` 則。 預設 `MediaPlayerView`比例原則會與類別的例項一起設 `MaintainAspectRatioScalePolicy` 定。 若要重設比例原則，請以您自己的原則 `MaintainAspectRatioScalePolicy` 取代 `MediaPlayerView.scalePolicy` 預設的on例項。 (不能將屬 `scalePolicy` 性設定為空值。)
+通過指定不同的&#x200B;*比例策略*，可以覆蓋預設長寬比行為。 使用`MediaPlayerView`物件的`scalePolicy`屬性指定縮放原則。 `MediaPlayerView`的預設比例策略是使用`MaintainAspectRatioScalePolicy`類的實例設定的。 若要重設比例原則，請以您自己的原則取代`MediaPlayerView.scalePolicy`上的預設例項`MaintainAspectRatioScalePolicy`。 （不能將`scalePolicy`屬性設定為空值。）
 
-1. 實作介 `MediaPlayerViewScalePolicy` 面以建立您自己的縮放原則。
+1. 實作`MediaPlayerViewScalePolicy`介面以建立您自己的縮放原則。
 
-   它有 `MediaPlayerViewScalePolicy` 一種方法：
+   `MediaPlayerViewScalePolicy`有一個方法：
 
    ```
    public function adjust(viewPort:Rectangle, 
@@ -32,12 +32,13 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描
 
    >[!NOTE]
    >
-   >TVSDK使用物 `StageVideo` 件來顯示視訊，而由於物件不在 `StageVideo` 顯示清單中，因此參數 `viewPort` 會包含視訊的絕對座標。
+   >TVSDK使用`StageVideo`物件來顯示視訊，而由於`StageVideo`物件不在顯示清單中，因此`viewPort`參數會包含視訊的絕對座標。
    >
    >
    >例如：
    >
-   >```
+   >
+   ```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -60,14 +61,14 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描
    >}
    >```
 
-1. 將您的實作指派給 `MediaPlayerView` 屬性。
+1. 將實施指派給`MediaPlayerView`屬性。
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. 將您的檢視新增至Media Player的屬 `view` 性。
+1. 將您的檢視新增至Media Player的`view`屬性。
 
    ```
    addChild(view); 
