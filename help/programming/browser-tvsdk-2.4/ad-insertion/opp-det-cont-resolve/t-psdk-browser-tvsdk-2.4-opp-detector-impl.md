@@ -6,11 +6,14 @@ title: 實作自訂商機產生器
 uuid: b80da2da-32d5-41f7-86ca-936d6f25b015
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '95'
+ht-degree: 4%
 
 ---
 
 
-# 實作自訂商機產生器{#implement-a-custom-opportunity-generator}
+# 實施自定義業務機會生成器{#implement-a-custom-opportunity-generator}
 
 通過擴展OpportunityGenerator介面，您可以實施自己的機會生成器。
 
