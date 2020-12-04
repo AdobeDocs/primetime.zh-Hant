@@ -6,13 +6,16 @@ title: Primetime DRM介面總覽
 uuid: 9e6f6ae6-7193-40fe-bc9d-d8de33705f5d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
-# Primetime DRM介面總覽 {#primetime-drm-interface-overview}
+# Primetime DRM介面概述{#primetime-drm-interface-overview}
 
-Primetime DRM解決方案的主要用戶端元素是DRM管理器。 Android SDK隨附的範例應用程式也包含一 `DRMHelper` 個類別，可用來讓特定DRM作業更容易實作。
+Primetime DRM解決方案的主要用戶端元素是DRM管理器。 Android SDK隨附的範例應用程式也包含`DRMHelper`類別，可用來讓某些DRM作業更容易實作。
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
@@ -30,10 +33,10 @@ Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程�
 
    >[!TIP]
    >
-   >此API只會在引 `DRMManager` 發後傳回有效 `MediaPlayerEvent.DRM_METADATA` 物件。 如果您在觸 `getDRMManager()` 發此事件之前呼叫，可能會傳回NULL。
+   >此API只有在`MediaPlayerEvent.DRM_METADATA`引發後才會傳回有效的`DRMManager`物件。 如果您在觸發此事件之前呼叫`getDRMManager()`，則可能會傳回NULL。
 
-* 幫 `DRMHelper` 助類，在實施DRM工作流時非常有用。
-* 一種 `DRMHelper` 元資料載入器方法，當DRM元資料位於與媒體分離的URL中時，載入該元資料。
+* `DRMHelper`幫助類，在實施DRM工作流時非常有用。
+* `DRMHelper`中繼資料載入器方法，當DRM中繼資料位於與媒體不同的URL時，會載入該方法。
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +44,7 @@ Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程�
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* 一種 `DRMHelper` 檢查DRM元資料並確定是否需要驗證的方法。
+* 一種檢查DRM元資料並確定是否需要驗證的`DRMHelper`方法。
 
    ```java
    /** 
@@ -82,4 +85,4 @@ Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程�
 
 * 通知應用程式各種DRM活動和狀態的事件。
 
-有關DRM的詳細資訊，請參 [閱DRM文檔](https://helpx.adobe.com/primetime/user-guide.html)。
+有關DRM的詳細資訊，請參閱[DRM文檔](https://helpx.adobe.com/primetime/user-guide.html)。
