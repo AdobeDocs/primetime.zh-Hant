@@ -6,15 +6,18 @@ title: 廣告插入和位置
 uuid: 1d4d6364-1c49-402b-9b72-8c185b1c94e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 
-# 廣告插入和位置{#ad-insertion-and-placement}
+# 廣告插入和放置{#ad-insertion-and-placement}
 
 有幾種方式可判斷廣告插入和廣告位置。
 
-## 廣告插入 {#section_1F7581B987704E318E064082190E8243}
+## 廣告插入{#section_1F7581B987704E318E064082190E8243}
 
 以下是決定廣告插入所用程式的概述：
 
@@ -22,7 +25,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 1. **廣告解析度**:TVSDK與廣告伺服器通訊以擷取廣告以接合至內容。
 1. **廣告位置**:TVSDK會載入指定的廣告，並將它們放置在內容時間軸上指定位置的廣告分段，並視需要重新計算虛擬時間軸。
 
-## 廣告位置 {#section_B9D63F7409A2447F9FF209289BE5D3D5}
+## 廣告位置{#section_B9D63F7409A2447F9FF209289BE5D3D5}
 
 TVSDK可從下列來源取得可能的廣告位置：
 
