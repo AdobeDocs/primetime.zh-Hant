@@ -6,6 +6,9 @@ title: 缺少段故障切換
 uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 1. 循環檢視每個可用變數中的每個可用位元速率。
 1. 略過區段並發出警告。
 
-當TVSDK無法取得替代區段時，會觸發錯 `CONTENT_ERROR` 誤通知。 此通知包含內部通知與程式碼 `DOWNLOAD_ERROR` 一起。 如果出現問題的串流是替代音軌，則會產生錯 `AUDIO_TRACK_ERROR` 誤通知。
+當TVSDK無法取得替代區段時，會觸發`CONTENT_ERROR`錯誤通知。 此通知包含內部通知，內含代碼`DOWNLOAD_ERROR`代碼。 如果存在問題的流是備用音軌，則生成`AUDIO_TRACK_ERROR`錯誤通知。
 
-如果視訊引擎持續無法取得區段，會將連續區段跳至5，然後停止播放並發出程 `NATIVE_ERROR` 式碼5。
+如果視訊引擎持續無法取得區段，會將連續區段跳至5，然後停止播放，並發出代碼5的`NATIVE_ERROR`。
 
 >[!NOTE]
 >
