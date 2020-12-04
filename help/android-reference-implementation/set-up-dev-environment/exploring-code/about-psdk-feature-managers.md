@@ -6,24 +6,30 @@ description: 功能管理員可讓您控制個別功能，而不需遍歷整個T
 seo-description: 功能管理員可讓您控制個別功能，而不需遍歷整個TVSDK，以搜尋可分散在多個位置的功能的程式碼。
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '422'
+ht-degree: 0%
 
 ---
 
 
-# 功能管理員 {#feature-managers}
+# 功能管理器{#feature-managers}
 
 功能管理員可讓您控制個別功能，而不需遍歷整個TVSDK，以搜尋可分散在多個位置的功能的程式碼。 功能管理員將程式碼簡化為每個功能的一個類別。 功能管理員會等待TVSDK事件的觸發器，然後通知使用功能管理員來處理結果的類別。 功能管理員會為類別提供所需資訊。
 
 功能管理員會執行下列工作：
 
 * **觸發TVSDK功能。**
-這些是觸發TVSDK功能的函式呼叫。 例如，當播 `PlaybackManager.play()` 放器應用程式需要啟動視訊播放時，就會呼叫。
+這些是觸發TVSDK功能的函式呼叫。例如， 
+`PlaybackManager.play()` 在播放器應用程式需要啟動視訊播放時呼叫。
 
 * **監聽TVSDK事件。**
-功能管理員需要監聽TVSDK事件，才能從TVSDK取得資訊。 例如， `AdsManager` 監聽TVSDK廣告事件，以便在廣告中斷開始時收到通知。
+功能管理員需要監聽TVSDK事件，才能從TVSDK取得資訊。例如， 
+`AdsManager` 監聽TVSDK廣告事件，以便在廣告中斷開始時收到通知。
 
 * **將事件調度到處理程式。**
-功能管理員從TVSDK接收並處理事件後，會通知用戶端處理該事件。 例如，在收 `AdsManager` 到廣告插播開始事件後，它會告訴播放器片段在UI中反映此變更（停用拖曳列、顯示廣告覆蓋等）。
+功能管理員從TVSDK接收並處理事件後，會通知用戶端處理該事件。例如，在 
+`AdsManager` 收到廣告插播開始事件時，會告訴播放器片段在UI中反映此變更（停用拖曳列、顯示廣告覆蓋等）。
 
 Primetime參考實作包含下列功能管理員：
 
