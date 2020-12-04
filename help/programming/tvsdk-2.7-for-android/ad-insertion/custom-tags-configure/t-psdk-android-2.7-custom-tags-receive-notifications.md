@@ -6,15 +6,18 @@ title: 新增計時中繼資料通知的監聽器
 uuid: 336882e7-e2d8-49b8-a23d-f236c7e6a594
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '174'
+ht-degree: 0%
 
 ---
 
 
-# 新增計時中繼資料通知的監聽器 {#add-listeners-for-timed-metadata-notifications}
+# 為計時中繼資料通知新增監聽器{#add-listeners-for-timed-metadata-notifications}
 
 若要接收資訊清單中標籤的通知，您必須實作適當的事件接聽程式。
 
-您可以監聽計時的中繼資料，以 `onTimedMetadata`通知您的應用程式相關活動。 每次在剖析內容時識別唯一的訂閱標籤時，TVSDK會準備新物件並 `TimedMetadata` 分派此事件。 物件包含您所訂閱之標籤的名稱、此標籤將出現的播放中的本機時間，以及其他資料。
+您可以監聽`onTimedMetadata`來監視計時中繼資料，該監聽會通知您的應用程式相關活動。 每次在剖析內容時識別唯一的訂閱標籤時，TVSDK會準備新的`TimedMetadata`物件並分派此事件。 物件包含您所訂閱之標籤的名稱、此標籤將出現的播放中的本機時間，以及其他資料。
 
 1. 聽聽活動。
 
@@ -38,4 +41,4 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
    }; 
    ```
 
-ID3中繼資料使用相 `onTimedMetadata` 同的監聽器來指出ID3標籤的存在。 不過，這不會造成任何混淆，因為您可以使 `TimedMetadata` 用屬 `type` 性來區分TAG和ID3。 如需ID3標籤的詳細資訊，請參 [閱ID3標籤](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md)。
+ID3中繼資料使用相同的`onTimedMetadata`監聽器來指示ID3標籤的存在。 但是，這不會造成任何混淆，因為您可以使用`TimedMetadata` `type`屬性來區分TAG和ID3。 如需ID3標籤的詳細資訊，請參閱[ID3標籤](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md)。
