@@ -6,19 +6,22 @@ title: 使用廣告自訂播放
 uuid: e0d3dfb2-b2d2-4590-aa19-26bea916a252
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#customize-playback-with-ads}
+# 概述{#customize-playback-with-ads}
 
 當播放到廣告插播、傳遞廣告插播或廣告插播結束時，TVSDK會為目前播放頭的定位定義一些預設行為。
 
 >[!TIP]
 >
->您可以使用類來覆蓋預設 `AdBreakPolicySelector` 行為。
+>您可以使用`AdBreakPolicySelector`類別來覆寫預設行為。
 
-預設行為會隨使用者在正常播放期間或在視訊中搜尋或使用快進或倒轉（特技播放）重新放置廣告而改變，視其是否通過廣告插播而定。
+預設行為會隨使用者在正常播放期間或在視訊中搜尋或使用快進或倒轉（特技播放）重新放置廣告而改變，視其是否通過廣告插播而有所不同。
 
 您可以透過下列方式自訂廣告播放行為：
 
