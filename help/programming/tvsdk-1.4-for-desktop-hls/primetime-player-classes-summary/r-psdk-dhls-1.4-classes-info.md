@@ -6,15 +6,18 @@ title: 資訊類別
 uuid: 491ea40b-5a8d-4b6a-b369-a8848c6bd9b6
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
 
-# 資訊類別{#info-classes}
+# 資訊類{#info-classes}
 
 這些類提供有關介質的資訊。
 
-套件： [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/package-detail.html)
+套件：[com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/package-detail.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_BC74F0C72F7C443B92C9B28750D812A6"> 
  <thead> 
@@ -50,7 +53,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> 追蹤</a></span></td> 
-   <td colname="2">定義音軌抽象化的類別，用於定義 <span class="codeph"> AudioTrack</span><span class="codeph"> 和ClosedCaptionsTrack</span>。 </td> 
+   <td colname="2">定義用於定義<span class="codeph"> AudioTrack</span>和<span class="codeph"> ClosedCaptionsTrack</span>的音軌抽象化的類別。 </td> 
   </tr> 
  </tbody> 
 </table>
