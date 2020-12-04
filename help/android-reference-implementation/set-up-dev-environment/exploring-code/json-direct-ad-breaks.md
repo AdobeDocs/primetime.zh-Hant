@@ -6,6 +6,9 @@ description: 當類型值為直接廣告分段時，詳細資訊JSON物件
 seo-description: 當類型值為直接廣告分段時，詳細資訊JSON物件
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 下列程式碼區塊會定義當類型值為直接廣告插播時的詳細資料JSON物件。
 
-傳回 `MetadataNode` 的項目 `IFeedItemAdapter:getStreamMetadata()` 包含以下詳細資訊JSON物件值的字串 `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` 表示法類型和值的索引鍵。
+`IFeedItemAdapter:getStreamMetadata()`傳回的`MetadataNode`包含鍵類型為`com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY`的項目，以及下方詳細資訊JSON物件值的字串表示法值。
 
 ```
 “metadata”: { 
@@ -50,10 +53,10 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 | 屬性 | 說明 |
 |---|---|
-| `tag` | 映射到中的標籤欄位的字串 `com.adobe.mediacore.timeline.advertising.AdBreak`。 |
-| `time` | 指出廣告分段的開始時間，對應至中的時間欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`。 值0表示前段廣告。 |
-| `replace` | 指出廣告分段取代持續時間，對應至中 `replaceDuration` 的欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`。 |
-| `ad-list` | 在指定廣告插播期間要播放的廣告清單，對應至中的 `List<Ad>` 欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`。 |
+| `tag` | 映射至`com.adobe.mediacore.timeline.advertising.AdBreak`中標籤欄位的字串。 |
+| `time` | 指出廣告分段的開始時間，對應至`com.adobe.mediacore.timeline.advertising.AdBreak`中的時間欄位。 值0表示前段廣告。 |
+| `replace` | 指出廣告分段取代持續時間，對應至`com.adobe.mediacore.timeline.advertising.AdBreak`的`replaceDuration`欄位。 |
+| `ad-list` | 要在指定廣告分段期間播放的廣告清單，對應至`com.adobe.mediacore.timeline.advertising.AdBreak`中的`List<Ad>`欄位。 |
 
 下列程式碼區塊會定義廣告清單陣列的JSON物件。
 
@@ -74,7 +77,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 | 屬性 | 說明 |
 |---|---|
-| `url` | 廣告內容的URL，對應至中的URL欄位 `com.adobe.mediacore.timeline.advertising.Ad`。 |
-| `duration` | 廣告的持續時間，對應至中的持續時間欄位 `com.adobe.mediacore.timeline.advertising.Ad`。 |
+| `url` | 廣告內容的URL，會對應至`com.adobe.mediacore.timeline.advertising.Ad`中的url欄位。 |
+| `duration` | 廣告的持續時間，對應至`com.adobe.mediacore.timeline.advertising.Ad`中的持續時間欄位。 |
 | `tag` | 描述字串。 |
 
