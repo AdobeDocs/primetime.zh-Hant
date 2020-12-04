@@ -6,15 +6,18 @@ title: 針對VOD的廣告插入和容錯
 uuid: 98505f63-ac43-4ff5-9f7b-895b6135df47
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '694'
+ht-degree: 0%
 
 ---
 
 
-# 針對VOD的廣告插入和容錯{#advertising-insertion-and-failover-for-vod}
+# VOD{#advertising-insertion-and-failover-for-vod}的廣告插入和故障切換
 
 隨選視訊(VOD)廣告插入程式由廣告解析、廣告插入和廣告播放階段組成。 對於廣告追蹤，TVSDK必須通知遠端追蹤伺服器有關每個廣告的播放進度。 當出現意外情況時，會採取適當的動作。
 
-## 廣告解析階段 {#section_0D45C6094D724B55868B48F9A3557A8B}
+## 廣告解析階段{#section_0D45C6094D724B55868B48F9A3557A8B}
 
 TVSDK會連絡廣告傳送服務，例如Adobe Primetime廣告決策，並嘗試取得與廣告的視訊串流對應的主要播放清單檔案。 在廣告解析階段，TVSDK會對遠端廣告傳送伺服器進行HTTP呼叫，並分析伺服器的回應。
 
@@ -36,17 +39,17 @@ TVSDK支援下列類型的廣告提供者：
 
 TVSDK會針對錯誤發出警告通知，並繼續處理。
 
-## 廣告插入階段 {#section_1B18E8B5768B4873B3346294175B7340}
+## 廣告插入階段{#section_1B18E8B5768B4873B3346294175B7340}
 
 TVSDK會將替代內容（廣告）插入與主要內容對應的時間軸。
 
 當廣告解析階段完成時，TVSDK會提供已分組為廣告插播的廣告資源順序清單。 每個廣告插播都使用以毫秒(ms)表示的開始時間值，定位在主要內容時間軸上。 廣告分段中的每個廣告都有持續時間屬性，也以毫秒錶示。 廣告插播中的廣告被一個接一個地連結在一起。 因此，廣告分段的持續時間等於個別合成廣告的持續時間之和。
 
-在此階段中，可能會發生故障切換，而且廣告插入期間時間軸上可能會發生衝突。 對於廣告分段開始時間／持續時間值的特定組合，廣告區段可能會重疊。 重疊發生在廣告分段的最後一部分與下一個廣告分段中第一個廣告的開頭相交時。 在這些情況下，放棄稍後的廣告插播，並繼續廣告插入程式，並將下一個項目列在清單中，直到所有廣告插播被插入或丟棄。
+在此階段中，可能會發生故障切換，而且廣告插入期間時間軸上可能會發生衝突。 對於廣告分段開始時間／持續時間值的特定組合，廣告區段可能會重疊。 重疊發生在廣告分段的最後一部分與下一個廣告分段中第一個廣告的開頭相交時。 在這些情況下，捨棄稍後的廣告插播，並繼續廣告插入程式與清單中的下一個項目，直到所有廣告插播被插入或捨棄。
 
 TVSDK會針對錯誤發出警告通知，並繼續處理。
 
-## 廣告播放階段 {#section_64777BD2CDA84EACB0A4EA6D68367CF5}
+## 廣告播放階段{#section_64777BD2CDA84EACB0A4EA6D68367CF5}
 
 TVSDK會下載廣告區段，並在裝置螢幕上呈現廣告區段。
 
@@ -66,4 +69,4 @@ TVSDK會下載廣告區段，並在裝置螢幕上呈現廣告區段。
 
    您的應用程式需要採取適當的動作。
 
-不論是否發生錯誤，TVSDK都會針對每 `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` 個錯誤 `AdBreakPlaybackEvent.AD_BREAK_STARTED` 和 `AdPlaybackEvent.AD_COMPLETED` 每個錯誤呼叫 `AdPLaybackEvent.AD_STARTED`。 不過，如果無法下載區段，時間軸中可能會有空隙。 當間隙足夠大時，播放磁頭位置中的值和報告的廣告進度可能會出現不連續。
+不論是否發生錯誤，TVSDK都會針對每個`AdBreakPlaybackEvent.AD_BREAK_STARTED`呼叫`AdBreakPlaybackEvent.AD_BREAK_COMPLETE`，並針對每個`AdPLaybackEvent.AD_STARTED`呼叫`AdPlaybackEvent.AD_COMPLETED`。 不過，如果無法下載區段，時間軸中可能會有空隙。 當間隙足夠大時，播放磁頭位置中的值和報告的廣告進度可能會出現不連續。
