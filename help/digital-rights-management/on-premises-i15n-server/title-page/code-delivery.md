@@ -4,6 +4,9 @@ title: 程式碼傳送／封裝內容
 uuid: 13de2fd4-9079-496c-a087-25176c118864
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
