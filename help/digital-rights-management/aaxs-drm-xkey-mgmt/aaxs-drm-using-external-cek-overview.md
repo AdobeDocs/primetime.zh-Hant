@@ -6,11 +6,14 @@ title: Adobe Access DRM External CEK概觀
 uuid: ea0bba63-7743-4216-863f-392500998eb6
 translation-type: tm+mt
 source-git-commit: 92e04cbb5e94f60c8d06e94b826ff9361c10ef97
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Access DRM External CEK概觀 {#adobe-access-drm-external-cek-overview}
+# Adobe Access DRM External CEK概觀{#adobe-access-drm-external-cek-overview}
 
 客戶可搭配使用Adobe Access(AAXS)DRM和其內容金鑰管理系統(CKMS)及外部CEK功能。
 
