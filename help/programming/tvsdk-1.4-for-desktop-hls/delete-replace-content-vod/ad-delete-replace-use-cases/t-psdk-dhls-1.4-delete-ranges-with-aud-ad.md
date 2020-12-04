@@ -6,11 +6,14 @@ title: 使用Primetime廣告決策廣告刪除範圍
 uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
 
-# 使用Primetime廣告決策廣告刪除範圍{#delete-ranges-with-primetime-ad-decisioning-ad}
+# 使用Primetime廣告決策廣告{#delete-ranges-with-primetime-ad-decisioning-ad}刪除範圍
 
 從時間軸移除localTime中開始和結束之間的TimeRange。
 
