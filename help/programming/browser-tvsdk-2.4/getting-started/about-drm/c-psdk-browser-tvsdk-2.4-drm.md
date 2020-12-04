@@ -6,15 +6,18 @@ title: 數位版權管理
 uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
 source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# 數位版權管理 {#digital-rights-management}
+# 數位版權管理{#digital-rights-management}
 
 您可以完成數位版權管理(DRM)專屬的工作流程。
 
-您可以監聽事件以 `AdobePSDK.DRMMetadataInfoEvent` 處理DRM工作流程：
+您可以監聽`AdobePSDK.DRMMetadataInfoEvent`事件以處理DRM工作流：
 
 ```js
 ... 
@@ -22,15 +25,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## 新增數位版權管理 {#add-digital-rights-management}
+## 新增數位版權管理{#add-digital-rights-management}
 
-1. 新增 `DRMMetadataInfoAvailableEvent` 以取得 `DRMMetadata`。
+1. 新增`DRMMetadataInfoAvailableEvent`以取得`DRMMetadata`。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. 在步驟1 `onDRMMetadataInfoAvailable` 中實作行上方的章節。
+1. 在步驟1中，實作行上方的`onDRMMetadataInfoAvailable`區段。
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
