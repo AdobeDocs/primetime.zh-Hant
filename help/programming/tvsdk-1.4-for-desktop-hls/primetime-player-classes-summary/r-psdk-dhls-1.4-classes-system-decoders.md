@@ -6,15 +6,18 @@ title: 系統解碼器類
 uuid: b333166b-3a13-48c5-a5d7-d8a64f0cd736
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '128'
+ht-degree: 1%
 
 ---
 
 
-# 系統解碼器類 {#system-decoders-classes}
+# 系統解碼器類{#system-decoders-classes}
 
 這些類為資料包和標籤提供解碼和解析。
 
-套件： [com.adobe.mediacore.system.decoders](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/system/decoders/package-detail.html)
+套件：[com.adobe.mediacore.system.decoders](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/system/decoders/package-detail.html)
 
 | 名稱 | 說明 |
 |---|---|
