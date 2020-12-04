@@ -6,11 +6,14 @@ title: 透過HTTPS安全載入廣告
 uuid: 18be77cc-c59b-4982-b8c1-e4451495edd2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '52'
+ht-degree: 0%
 
 ---
 
 
-# 透過HTTPS安全載入廣告 {#secure-ad-loading-over-https}
+# 透過HTTPS {#secure-ad-loading-over-https}安全載入廣告
 
 Adobe Primetime提供選項，可透過HTTPS要求對Primetime廣告伺服器和CRS相關呼叫的首次呼叫。
 
