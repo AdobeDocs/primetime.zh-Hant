@@ -6,6 +6,9 @@ title: 廣告播放階段
 uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -30,4 +33,4 @@ TVSDK會下載廣告區段，並在裝置螢幕上呈現廣告區段。
 
    您的應用程式需要採取適當的動作。
 
-不論是否發生錯誤，TVSDK都會針對每個錯誤呼叫 `onAdBreakStart` onAdBreakComplete `onAdComplete` 和每個 `onAdStart`錯誤。 不過，如果無法下載區段，時間軸中可能會有空隙。 當間隙足夠大時，播放磁頭位置中的值和報告的廣告進度可能會出現不連續。
+不論是否發生錯誤，TVSDK都會針對每個`onAdBreakStart`和`onAdComplete`呼叫onAdBreakComplete。 `onAdStart`不過，如果無法下載區段，時間軸中可能會有空隙。 當間隙足夠大時，播放磁頭位置中的值和報告的廣告進度可能會出現不連續。
