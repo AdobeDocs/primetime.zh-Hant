@@ -6,6 +6,9 @@ title: Widevine DRM
 uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
 source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 0%
 
 ---
 
@@ -26,9 +29,9 @@ source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
 >
 > Widevine CBCS Scheme需要最低的Android 7.1版(API Level 25)。
 
-## 設定授權伺服器詳細資訊 {#license-server-details}
+## 設定許可證伺服器詳細資訊{#license-server-details}
 
-在載入MediaPlayer資 `com.adobe.mediacore.drm.DRMManager` 源之前，請呼叫下列API:
+在載入MediaPlayer資源前，請呼叫下列`com.adobe.mediacore.drm.DRMManager` API:
 
 ```java
 public static void setProtectionData(
@@ -37,9 +40,9 @@ String licenseServerURL,
 Map<String, String> requestProperties)
 ```
 
-### 引數 {#arguments-license-server}
+### 參數{#arguments-license-server}
 
-* `drm` - `"com.widevine.alpha"` 為Widevine。
+* `drm` -  `"com.widevine.alpha"` for Widevine。
 
 * `licenseServerURL` -接收授權要求的Widevine授權伺服器URL。
 
@@ -55,24 +58,24 @@ DRMManager.setProtectionData(
   null);
 ```
 
-## 提供自訂回呼 {#custom-callback}
+## 提供自訂回呼{#custom-callback}
 
-在載入MediaPlayer資 `com.adobe.mediacore.drm.DRMManager` 源之前，請呼叫下列API。
+在載入MediaPlayer資源前，請呼叫下列`com.adobe.mediacore.drm.DRMManager` API。
 
 ```java
 public static void setMediaDrmCallback(
 MediaDrmCallback callback)
 ```
 
-### 引數 {#arguments-custom-callback}
+### 參數{#arguments-custom-callback}
 
 * `callback` -自訂實作MediaDrmCallback，以取代預設值 `com.adobe.mediacore.drm.WidevineMediaDrmCallback`。
 
-如需詳細資訊，請 [參閱Android TVSDK 3.11 API檔案](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)。
+如需詳細資訊，請參閱[Android TVSDK 3.11 API檔案](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)。
 
-## 擷取目前載入之MediaPlayer資源的PSSH方塊 {#pssh-box-mediaplayer-resoource}
+## 擷取目前載入之MediaPlayer資源{#pssh-box-mediaplayer-resoource}的PSSH方塊
 
-呼叫下列 `com.adobe.mediacore.drm.DRMManager` API，最好是在自訂回呼實作中。
+請呼叫下列`com.adobe.mediacore.drm.DRMManager` API，最好是在自訂回呼實作中。
 
 ```java
 public static byte[] getPSSH()
@@ -84,4 +87,4 @@ API返回與載入的Widevine媒體資源關聯的「保護系統特定報頭框
 
 >[!NOTE]
 >
-> `getPSSH()` API僅支援單一播放器例項。 多個播放器或「立即啟動」功能應依序初始化，以接收正確的方塊。
+> `getPSSH()` API僅支援單一播放器例項。多個播放器或「立即啟動」功能應依序初始化，以接收正確的方塊。
