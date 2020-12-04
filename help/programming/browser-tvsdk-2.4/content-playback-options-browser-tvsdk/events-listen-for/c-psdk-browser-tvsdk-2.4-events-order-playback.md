@@ -6,6 +6,9 @@ title: 播放事件的順序
 uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,16 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 下列範例顯示包含播放事件的某些事件的順序。
 
-* 成功載入媒體資源時， `replaceCurrentResource`事件順序為：
+* 通過`replaceCurrentResource`成功載入媒體資源時，事件順序為：
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* 在準備播放時， `MediaPlayer.prepareToPlay`事件的順序為：
+* 當透過`MediaPlayer.prepareToPlay`準備播放時，事件的順序為：
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
