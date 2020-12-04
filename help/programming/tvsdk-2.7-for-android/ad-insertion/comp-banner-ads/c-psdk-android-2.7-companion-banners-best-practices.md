@@ -6,15 +6,18 @@ title: 配套橫幅廣告的最佳實務
 uuid: d844babb-20ab-4380-9487-eb1c24b58877
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
 
-# 配套橫幅廣告 {#companion-banner-ads}
+# 配套橫幅廣告{#companion-banner-ads}
 
 TVSDK支援輔助橫幅廣告，這些廣告是線性廣告隨附的廣告，通常會線上性廣告結束後保留在頁面上。 您的應用程式負責顯示隨附線性廣告的配套橫幅。
 
-## 配套橫幅廣告的最佳實務 {#best-practices-for-companion-banner-ads}
+## 配套橫幅廣告的最佳實務{#best-practices-for-companion-banner-ads}
 
 顯示配套廣告時，請遵循下列建議：
 
