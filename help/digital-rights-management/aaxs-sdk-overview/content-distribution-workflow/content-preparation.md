@@ -6,11 +6,14 @@ title: 內容準備
 uuid: 7a3562c6-6033-4e28-8f0a-18e3cb8987b9
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
 
-# 內容準備 {#content-preparation}
+# 內容準備{#content-preparation}
 
 使用Adobe Access時，工作流程的不同點會包含兩個關鍵步驟。 每個資產必須準備一次內容，以建立受保護的內容。 內容獲取是多次完成，每個想要觀看受保護資產的消費者只需一次。
 
