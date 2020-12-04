@@ -13,16 +13,16 @@ ht-degree: 15%
 ---
 
 
-# Primetime 發行說明 {#release-notes}
+# Primetime 發行說明  {#release-notes}
 
 + [發行說明概觀](home.md)
-+ Primetime廣告插入 {#ptai}
++ 黃金時段廣告插入{#ptai}
    + [PTAI 20.10.1發行說明](ptai-20x-release-notes.md)
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
 + iOS版TVSDK {#tvsdk-ios}
    + [iOS版TVSDK 3.12發行說明](tvsdk-3x-ios.md)
    + [iOS版TVSDK 1.4發行說明](tvsdk-1-4-ios.md)
-+ Android專用的TVSDK {#tvsdk-android}
++ 適用於Android {#tvsdk-android}的TVSDK
    + [TVSDK 3.12 for Android版本注意事項](tvsdk-3x-android.md)
    + [TVSDK 2.7 for Android版本注意事項](tvsdk-27-android.md)
    + [Android專用TVSDK 2.4.1版本注意事項](tvsdk-24-android.md)
@@ -35,7 +35,7 @@ ht-degree: 15%
    + [Primetime Offline Packager第2版發行](offline-packager-2x-release-note.md)
 + Primetime Streaming Server {#streaming-server}
    + [Primetime Streaming Server 1版](primetime-streaming-server-1x.md)
-+ Playstation 4的TVSDK {#tvsdk-playstation}
++ Playstation 4 {#tvsdk-playstation}的TVSDK
    + [TVSDK 2.1 PlayStation 4發行說明](tvsdk-21-ps4.md)
-+ 數位版權管理 {#drm}
++ 數位版權管理{#drm}
    + [DRM 5.3.1發行說明](drm-531-release-notes.md)
