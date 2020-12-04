@@ -6,24 +6,27 @@ title: 使用DRMContentData預載許可證
 uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
 # 使用DRMContentData預載許可證{#using-drmcontentdata-to-pre-load-licenses}
 
-下列步驟說明使用物件預先載入受保護媒體檔案授權的工作 `DRMContentData` 流程。
+下列步驟說明使用`DRMContentData`物件預先載入受保護媒體檔案授權的工作流程。
 
 1. 取得封裝內容的二進位DRM中繼資料。
 
-   如果使用Primetime DRM Java Reference Implementations Packager，則會自動產生副檔名的中繼資 [!DNL .metadata] 料檔案。 例如，您可以使用類別下載此中繼資 `URLLoader` 料。 如果使用HLS或HDS內容，則中繼資料會參照在內容資訊清單檔案( [!DNL .m3u8] 或 [!DNL .f4m]** )中，或以Base64編碼字串的形式包含在資訊清單檔案中（在使用前必須先Base64解碼）。
-1. 建立物 `DRMContentData` 件，將中繼資料傳遞至建構函式函式：
+   如果使用Primetime DRM Java Reference Implementations Packager，則此中繼資料檔案會自動產生副檔名[!DNL .metadata]。 例如，您可以使用`URLLoader`類別下載此中繼資料。 如果使用HLS或HDS內容，則中繼資料會參考在內容資訊清單檔案（[!DNL .m3u8]或[!DNL .f4m]）中，或是以Base64編碼字串（在使用前必須經Base64解碼）包含在資訊清單檔案中的&#x200B;*。*
+1. 建立`DRMContentData`物件，將中繼資料傳遞至建構函式函式：
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. 其餘步驟與「內容保護流程詳細資訊」中描述的 *工作流相同*。
+1. 其餘步驟與&#x200B;*內容保護流程詳細資訊*&#x200B;中描述的工作流相同。
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 
