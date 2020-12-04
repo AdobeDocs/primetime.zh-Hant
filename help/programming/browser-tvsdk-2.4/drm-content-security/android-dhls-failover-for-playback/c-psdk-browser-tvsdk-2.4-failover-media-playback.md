@@ -6,17 +6,20 @@ title: 媒體播放
 uuid: 454f84fe-8077-4f37-8e62-1d6ba0fcde27
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
 
-# 媒體播放 {#media-playback}
+# 媒體播放{#media-playback}
 
 對於即時和VOD媒體，瀏覽器TVSDK會下載與中解析度位元速率相關聯的播放清單，然後下載由播放清單定義的中解析度位元速率媒體區段，以開始播放。
 
 瀏覽器TVSDK會快速選取高解析度位元速率播放清單及其相關媒體，並繼續下載程式。
 
-## 遺失播放清單容錯功能 {#section_81A5822C108449E1A0E94A6E25DE9E8E}
+## 缺少播放清單故障切換{#section_81A5822C108449E1A0E94A6E25DE9E8E}
 
 例如，當整個播放清單遺失時，當頂層資訊清單檔案中指定的M3U8檔案未下載時，瀏覽器TVSDK會嘗試復原。 如果無法復原，您的應用程式會決定下一個步驟。
 
