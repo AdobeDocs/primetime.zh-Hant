@@ -6,11 +6,14 @@ title: 使用隱藏字幕
 uuid: 6e105316-a166-45c1-b6b0-70c89c97c297
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#work-with-closed-captions-overview}
+# 概述{#work-with-closed-captions-overview}
 
 當聲音聽不見或觀眾聽不到時，隱藏字幕會將視訊的音訊部分顯示為畫面上的文字。
 
@@ -26,8 +29,8 @@ TVSDK支援轉換下列格式：
 您可以執行下列動作：
 
 * 選取可用標題軌道作為目前軌道，並監聽表示其他可用軌道的事件。
-* 使用介面開啟（可見）或關閉（不可見）隱藏字幕 `MediaPlayer` 。
+* 使用`MediaPlayer`介面開啟（可見）或關閉（不可見）關閉字幕。
 * 選取樣式選項，以決定底層視訊引擎呈現隱藏字幕的方式。
 
-   使用介 `MediaPlayerItem` 面來選取字型或字型顏色等格式。
+   使用`MediaPlayerItem`介面來選擇字型或字型顏色等格式。
 
