@@ -6,11 +6,14 @@ title: 從可用字軌中選擇目前的字幕軌
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#work-with-closed-captions}
+# 概述{#work-with-closed-captions}
 
 當聲音聽不見或觀眾聽不到時，隱藏字幕會將視訊的音訊部分顯示為畫面上的文字。
 
@@ -24,5 +27,5 @@ TVSDK支援轉換下列格式：
 您可以：
 
 * 選取可用標題軌道作為目前軌道，並監聽表示其他可用軌道的事件。
-* 使用介面開啟或關閉隱藏字幕（可見或不可見） `MediaPlayer` 。
-* 選取樣式選項，以決定底層視訊引擎呈現隱藏字幕的方式。 使用介 `MediaPlayerItem` 面來選取字型或字型顏色等格式。
+* 使用`MediaPlayer`介面開啟或關閉（可見或不可見）關閉的字幕。
+* 選取樣式選項，以決定底層視訊引擎呈現隱藏字幕的方式。 使用`MediaPlayerItem`介面來選擇字型或字型顏色等格式。
