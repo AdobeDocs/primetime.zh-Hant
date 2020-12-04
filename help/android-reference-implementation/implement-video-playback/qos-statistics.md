@@ -7,23 +7,23 @@ uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
 source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
 
-# 顯示QoS播放和裝置統計資料 {#display-qos-playback-and-device-statistics}
+# 顯示QoS回放和設備統計資訊{#display-qos-playback-and-device-statistics}
 
 您可以設定您的播放器，視需要從QoSProvider讀取播放和裝置統計資料。
 
-該類 `QoSProvider` 提供了各種統計資訊，包括幀速率、配置檔案位速率、緩衝所花費的總時間、緩衝嘗試次數、從第一個視頻片段獲取第一個位元組所花的時間、轉換第一個幀所花的時間、當前緩衝長度和緩衝時間。
+`QoSProvider`類別提供各種統計資料，包括影格速率、描述檔位元速率、緩衝的總花費時間、緩衝嘗試次數、從第一視訊片段取得第一個位元組所花的時間、轉換第一個影格所花的時間、目前緩衝的長度和緩衝時間。
 
-參考實作提供 `QoSManager` 可啟用QoS覆蓋顯示的類別。 您也可以在「設定」使用者介面中啟用QoS可見性：
+參考實作提供`QoSManager`類別，您可在其中啟用QoS覆蓋的顯示。 您也可以在「設定」使用者介面中啟用QoS可見性：
 
 ![](assets/qos-configuration.jpg)
 
-通 `QoSManager` 過獲取設備資訊、附加到媒體播放器並使用最新的QoS資訊更新來跟蹤QoS統計。
+`QoSManager`通過獲取設備資訊、連接到媒體播放器並使用最新的QoS資訊更新來跟蹤QoS統計資訊。
 
 **啟用或禁用QoS統計報告**
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >變更布林值以停 `false` 用QoS報告。
+   >將布林值變更為`false`會停用QoS報告。
 
 2. 添加事件偵聽程式：
 
@@ -53,7 +53,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >當播放器活動將被破壞時，請務必呼叫 [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) ，將其從媒體播放器中分離，以清除QOS提供器。
+   >當播放器活動將被銷毀時，請務必調用[qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider())，通過將其從媒體播放器中分離來清除QOS提供器。
 
 **相關API檔案**
 
