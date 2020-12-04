@@ -6,6 +6,9 @@ title: 可點選廣告
 uuid: dc02cba7-34ad-4c74-9ceb-2fc1050d54aa
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -16,20 +19,20 @@ TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您�
 
 在iOS適用的TVSDK中，只有線性廣告可點選。
 
-## 回應廣告的點按次數 {#section_537AF2593FDB4257B81AAE2103B0C719}
+## 回應廣告的點按次數{#section_537AF2593FDB4257B81AAE2103B0C719}
 
 當使用者點按廣告、配套橫幅廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供您點按之目標URL的相關資訊。
 
-1. 若要設定TVSDK的事件偵聽器，並提供點進資訊，請新增觀察器 `PTMediaPlayerAdClickNotification`。
+1. 若要設定TVSDK的事件偵聽器，並提供點進資訊，請新增`PTMediaPlayerAdClickNotification`的觀察器。
 
    >[!NOTE]
    >
    >當使用者點按廣告、配套橫幅廣告或相關按鈕時，TVSDK會派單此通知，包括點按目的地的相關資訊。
 
 1. 在可點選廣告上監控使用者互動。
-1. 當使用者觸碰或按一下廣告或按鈕時，若要通知TVSDK，請使用 `[_player notifyClick:_currentAd.primaryAsset];`。
-1. 聽取TVSDK `PTMediaPlayerAdClickNotification` 的活動。
-1. 若要擷取點進URL和相關資訊，請使用物 `PTMediaPlayerAdClickURLKey` 件。
+1. 當使用者觸碰或按一下廣告或按鈕時，若要通知TVSDK，請使用`[_player notifyClick:_currentAd.primaryAsset];`。
+1. 監聽來自TVSDK的`PTMediaPlayerAdClickNotification`事件。
+1. 若要擷取點進URL和相關資訊，請使用`PTMediaPlayerAdClickURLKey`物件。
 1. 暫停影片。
 1. 使用點進資訊來顯示廣告點進URL及相關資訊。
 
