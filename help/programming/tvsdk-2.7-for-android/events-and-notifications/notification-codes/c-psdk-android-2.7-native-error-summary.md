@@ -4,11 +4,14 @@ title: NATIVE_ERROR通知的詳細資訊
 uuid: 750ee0e2-15d4-4602-9574-94015a6e1b57
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '6888'
+ht-degree: 2%
 
 ---
 
 
-# NATIVE_ERROR通知的詳細資訊 {#details-for-the-native-error-notification}
+# NATIVE_ERROR通知{#details-for-the-native-error-notification}的詳細資訊
 
 當TVSDK處理原生錯誤時，會傳回下列部分或全部中繼資料索引鍵值為字串。
 
@@ -31,7 +34,7 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> NATIVE_ERROR</span> </td> 
-   <td colname="col2">通知的簡短說明(例如 <span class="codeph"> AAXS_InvalidVoucher</span> 或 <span class="codeph"> DECODER_FAILED</span>)。 </td> 
+   <td colname="col2">通知的簡短說明（例如，<span class="codeph"> AAXS_InvalidVoucher</span>或<span class="codeph"> DECODER_FAILED</span>）。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> 說明</span> </td> 
@@ -39,11 +42,11 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> PSDK_ERROR_CODE</span> </td> 
-   <td colname="col2"><span class="codeph"> com.adobe.mediacore.PSDKErrorCode</span> numeric值，例如"13")。 </td> 
+   <td colname="col2"><span class="codeph"> com.adobe.mediacore.</span> PSDKErrorCoodumeric值，例如"13")。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> PSDK_ERROR</span> </td> 
-   <td colname="col2"><span class="codeph"> com.adobe.mediacore.PSDKErrorCode</span> (例如， <span class="codeph"> kECNetworkError</span>)。 </td> 
+   <td colname="col2"><span class="codeph"> com.adobe.mediacore.</span> PSDKErrorCodeas字串(例如 <span class="codeph"> kECNetworkError</span>)。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> 警告</span> </td> 
@@ -79,7 +82,7 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AD_TYPE</span> </td> 
-   <td colname="col2">廣告類型(MediaResource.Type列舉 <span class="codeph"> 中的常數</span> )。 </td> 
+   <td colname="col2">廣告類型（<span class="codeph"> MediaResource.Type</span>列舉的常數）。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AD_DURATION</span> </td> 
@@ -107,7 +110,7 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> CONTENT_ERROR</span> </td> 
-   <td colname="col2">片段下載期間錯誤的說 <span class="codeph"> 明</span>。 </td> 
+   <td colname="col2">片段下載期間的錯誤說明（例如<span class="codeph"> ts</span>）。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>音軌錯誤</b> </td> 
@@ -144,15 +147,15 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
  </tbody> 
 </table>
 
-## NATIVE_ERROR:DRM值 {#section_D240082B93D34902A18C3923C1C717B3}
+## NATIVE_ERROR:DRM值{#section_D240082B93D34902A18C3923C1C717B3}
 
-Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些DRM `NATIVE_ERROR` 通知。
+Adobe視訊引擎的視訊編碼器介面會在`NATIVE_ERROR`中繼資料物件中傳回這些DRM通知。
 
-向Adobe報告DRM錯誤時，請確定您已包含和，以 `NATIVE_SUBERROR_CODE` 取得疑 `DRM_ERROR_STRING` 難排解協助。
+向Adobe報告DRM錯誤時，請務必包含`NATIVE_SUBERROR_CODE`和`DRM_ERROR_STRING`以取得疑難排解協助。
 
 >[!TIP]
 >
->此清單提供有關錯誤的TVSDK特定資訊。 如需完整說明，請 [參閱Adobe Flash Platform的ActionScript執行時期錯誤ActionScript參考](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html#3300)。
+>此清單提供有關錯誤的TVSDK特定資訊。 如需完整說明，請參閱[ActionScript執行時期錯誤ActionScript參考（適用於Adobe Flash Platform](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html#3300)）。
 
 <table id="table_CD59A859865F4FFDBAA249C89C74770A"> 
  <thead> 
@@ -181,16 +184,16 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3301 </td> 
+   <td colname="col1"> 郵編：3301 </td> 
    <td colname="col2"><span class="codeph"> AAXS_AuthenticationFailed</span> </td> 
    <td colname="col3"> <p>伺服器無法驗證或授權客戶端。 </p> 
     <ul id="ul_BE77AC1848FB4C09B6318359ACF1B8EE"> 
      <li id="li_6FB37D317D174E8488C5070D20CD241C">配銷商軟體應採取必要行動，以重新建立使用者的認證或引導使用者取得內容存取權。 </li> 
      <li id="li_BE071D59805B42D38E3E7650BC936417">配銷商應確認配銷商的授權與驗證機制運作正常。 <p>如果發佈商不打算使用驗證或授權功能，他們應檢查違規內容的政策是否需要驗證，並查看診斷策略／授權差異。 </p> </li> 
-    </ul> <p>有關此錯誤代碼的詳細資訊，請參 <a href="https://forums.adobe.com/thread/1277149" format="https" scope="external"> 閱DRM錯誤3301的原因和解析度</a>。 </p> </td> 
+    </ul> <p>有關此錯誤代碼的詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1277149" format="https" scope="external"> DRM錯誤3301的原因和解析度</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3302 </td> 
+   <td colname="col1"> 郵編：3302 </td> 
    <td colname="col2"><span class="codeph"> AAXS_RequireSSL</span> </td> 
    <td colname="col3"> <p>在Access 4.0和更新版本中，當遠端金鑰URL未使用HTTPS做為配置時，此錯誤會在iOS上引發。 需要HTTPS。 </p> 
     <ul id="ul_3D47777BBCA14B67B107FBBE3E37E40C"> 
@@ -199,56 +202,56 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3303 </td> 
+   <td colname="col1"> 郵編：3303 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ContentExpired</span> </td> 
    <td colname="col3"> <p>您檢視的內容已根據內容提供者設定的規則過期。 subErrorId包含用戶端特定的錯誤或行錯誤。 </p> <p> 
      <ul id="ul_1E4B3B8AE87A4E79997553BB2A0E52B9"> 
-      <li id="li_EE3F2EEBF73743B9A38E4FCB7531E275">配銷商的軟體應嘗試從伺服器重新取得授權一次，以判斷是否有新的未過期授權。 <p>如果沒有可用的許可證或許可證已過期，允許用戶獲取新的許可證，或通知用戶無法監視內容。如果內容包含過期／終止日期已失效的策略，則許可證伺服器日誌會報告 <span class="codeph"> PolicyEvaluationException</span> ，並聲明策略終止日期已失效（伺服器錯誤代碼303）。 檢查伺服器的日誌檔案以驗證。 </p> <p>如果可能，客戶應檢查包裝期間使用的原則，以查看其是否已過期。 Java命令行工具是： 
+      <li id="li_EE3F2EEBF73743B9A38E4FCB7531E275">配銷商的軟體應嘗試從伺服器重新取得授權一次，以判斷是否有新的未過期授權。 <p>如果沒有可用的授權或授權已過期，請允許使用者取得新的授權，或通知使用者內容無法觀看。如果內容已封裝有過期／結束日期的原則，授權伺服器記錄會報告<span class="codeph"> PolicyEvaluationException</span>，並指出原則結束日期已過期（伺服器錯誤碼303）。 檢查伺服器的日誌檔案以驗證。 </p> <p>如果可能，客戶應檢查包裝期間使用的原則，以查看其是否已過期。 Java命令行工具是： 
         <code>
          java&nbsp;-jar&nbsp;libs/AdobePolicyManager.jar&nbsp;&nbsp;&nbsp;detail&nbsp;demo.pol
         </code> </p> </li> 
       <li id="li_50DBE680D8F04E7DA3E29C65A93188E7">配銷商應確認授權到期日是否依預期設定。 </li> 
-     </ul> </p> <p>如需此錯誤碼的詳細資訊，請參 <a href="https://forums.adobe.com/thread/1300813" format="https" scope="external"> 閱使用即時串流的AMS/FMS的3303（內容過期）</a>。 </p> </td> 
+     </ul> </p> <p>如需此錯誤程式碼的詳細資訊，請參閱使用即時串流的AMS/FMS的<a href="https://forums.adobe.com/thread/1300813" format="https" scope="external"> 3303（內容已過期）?</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3304 </td> 
+   <td colname="col1"> 三三零四年 </td> 
    <td colname="col2"><span class="codeph"> AAXS_AuthorizationFailed</span> </td> 
-   <td colname="col3">有關此錯誤代碼的詳細資訊，請參 <a href="https://forums.adobe.com/thread/1277149" format="https" scope="external"> 閱DRM錯誤3301的原因和解析度</a>。 </td> 
+   <td colname="col3">有關此錯誤代碼的詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1277149" format="https" scope="external"> DRM錯誤3301的原因和解析度</a>。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3305 </td> 
+   <td colname="col1"> 郵編：3305 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ServerConnectionFailed</span> </td> 
    <td colname="col3"> <p>由於網路延遲或客戶端離線，與許可證或域伺服器的連接超時。 通常subErrorId包含HTTP傳回程式碼。 </p> 
     <ul id="ul_938C7D8F07F64B4FA71A09DDF37E2E64"> 
      <li id="li_6648EA0049094E369BD9AE9CCA6B148D">配銷商的軟體應嘗試連接至已知正常的伺服器。 <p>如果嘗試失敗，提示用戶重新連接到網路。 如果嘗試成功，請記錄它。 </p> </li> 
      <li id="li_2ECA2C04BA08449DA3AD79A52EFAA229">配銷商應確認使用中的任何授權和網域伺服器皆已連線，且可從用戶端網路上檢視。 </li> 
-    </ul> <p>有關此錯誤代碼的詳細資訊，請參 <a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> 閱DRM 3305 [ServerConnectionFailed]原因和解析</a>。 </p> </td> 
+    </ul> <p>有關此錯誤代碼的詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> DRM 3305 [ServerConnectionFailed]原因和解析度</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3306 </td> 
+   <td colname="col1"> 郵編：3306 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ClientUpdateRequire</span> </td> 
    <td colname="col3"> 使用Android專用的較新版TVSDK。 <p>目前的用戶端無法完成所要求的動作，但更新的用戶端可以完成請求。 </p> <p>這可能有幾個原因： 
      <ul id="ul_2EC4D42D5273439FA1AFDA1A2578B3D6"> 
-      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">已使用此客戶端上不可用的共用域。 在Chrome上播放時，可能會發生這種情況，但不會是其他瀏覽器，反之亦然。 <p> <p>提示：Chrome使用的PHDS/PHLS金鑰與其他瀏覽器所使用的不同。 如需詳細資訊，請參 <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> 閱https://adobeprimetime.zendesk.com/agent/tickets/2891</a>。 </p> </p> </li> 
+      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">已使用此客戶端上不可用的共用域。 在Chrome上播放時，可能會發生這種情況，但不會是其他瀏覽器，反之亦然。 <p> <p>提示：Chrome使用的PHDS/PHLS金鑰與其他瀏覽器所使用的不同。 如需詳細資訊，請參閱<a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>。 </p> </p> </li> 
       <li id="li_3B633FB699234DCEA136E9BE3CC3386D">當應用程式在5.0之前的iOS版本上執行時，會嘗試新增多個DRMSassion。 </li> 
       <li id="li_F7ED993AF0B941A7A27216B4D587A999">只支援第2版時，中繼資料的版本為3或更新版本。 </li> 
      </ul> </p> 
     <ul id="ul_EE4AE6AD4F1745A5B5623E53B599DB62"> 
      <li id="li_7A83869D4262443DA35FA1DF8D3097DD">配銷商的軟體應提醒使用者並中止作業。 <p>如果軟體可以判斷是否提供升級，請以適當的方式引導使用者前往該平台。 </p> </li> 
      <li id="li_AF9C2711FDE54DA196EB9D2864632000">若因共用網域而發生問題，配銷商將需要向Adobe洽詢更新的執行階段或程式庫。 <p>若是Flash執行階段，授權代理商可強制其應用程式直接升級。 若是資料庫，配銷商需要取得更新的資料庫、重建其應用程式，並將它部署給其使用者。 </p> <p>如果因多個DRMSassion而發生問題，授權代理商將需要更新其應用程式，以在新增多個DRMSassion之前檢查iOS版本號碼。 或者，他們可以限制將應用程式散發至iOS v5和更新版本。 </p> <p>如果因為中繼資料版本高於第2版而發生問題，則問題可能已損毀中繼資料。 他們可以嘗試重建中繼資料並查看結果。 如果他們仍然發現問題，請記錄問題並呈報至Adobe。 </p> </li> 
-    </ul> <p>有關此錯誤代碼的詳細資訊，請參 <a href="https://forums.adobe.com/thread/1266675" format="https" scope="external"> 閱How to remedy a 3306 DRMErrorEvent錯誤代碼</a> </p> </td> 
+    </ul> <p>有關此錯誤代碼的詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1266675" format="https" scope="external">如何補救3306 DRMErrorEvent錯誤代碼</a> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3307 </td> 
+   <td colname="col1"> 郵編：3307 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InternalFailure</span> </td> 
    <td colname="col3"> <p>這通常代表Adobe Access程式碼中的錯誤，且未預期，除非有下列已知錯誤。 subErrorId包含用戶端特定的錯誤或行錯誤。 </p> 
     <ul id="ul_79F4A9655A2148519B1E9509C41F78C3"> 
-     <li id="li_0E093AB4D6BD489B852279E6C1525A15">如果瀏覽器是Windows版Chrome，而Flash版本是11.6（SWF版本19或更新版本），授權代理商的軟體應假設使用者按下資訊列上的 <span class="uicontrol"> Deny</span> ，並視為3368。 </li> 
+     <li id="li_0E093AB4D6BD489B852279E6C1525A15">如果瀏覽器是Windows版Chrome，而Flash版本是11.6（SWF版本19或更新版本），授權代理商的軟體應假設使用者按下資訊列上的<span class="uicontrol">拒絕</span>，並視為3368。 </li> 
      <li id="li_0215D1089B344861A2C0A73E1067CFEF">如果3307發生在瀏覽器非Chrome或Flash版本非11.6時，授權代理商應呈報給Adobe。 </li> 
-    </ul> <p>重要： <span class="codeph"> 3307:1107296344(FailedToGetBrokerHandle)</span> ，可能發生在Chrome瀏覽器版本24-28。 </p> </td> 
+    </ul> <p>重要：<span class="codeph"> 3307:1107296344(FailedToGetBrokerHandle)</span>可能發生在Chrome瀏覽器版本24-28。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3308 </td> 
+   <td colname="col1"> 郵編：3308 </td> 
    <td colname="col2"><span class="codeph"> AAXS_WrongLicenseKey</span> </td> 
    <td colname="col3"> <p>當使用的授權包含解密內容的錯誤金鑰時，就會擲出此錯誤。 subErrorId包含用戶端特定的錯誤或行錯誤。 </p> <p>產生此錯誤的方式似乎只有兩種： 
      <ul id="ul_1C955BD74C7843809D1B5A0CDCA5ED7B"> 
@@ -270,8 +273,8 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3309 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_CorruptedAdditionalHeader </span> </td> 
+   <td colname="col1"> 郵編：3309 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_CorruptedAdditionalHeader  </span> </td> 
    <td colname="col3"> <p>如果標題大於65536位元組，就會發生此情況。 </p> 
     <ul id="ul_82C0F688519B4F43A764D59A891F1903"> 
      <li id="li_E66AC9149A0649E88A79C5289C12C395">配銷商的軟體應記錄導致錯誤的內容。 </li> 
@@ -279,32 +282,32 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3310 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_AppIDMismatch </span> </td> 
+   <td colname="col1"> 三三一零年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_AppIDMismatch  </span> </td> 
    <td colname="col3">Android應用程式與使用中的應用程式不符。 <p>未使用正確的AIR應用程式或Flash SWF。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3311 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_AppVersionMismatch </span> </td> 
+   <td colname="col1"> 郵編：3311 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_AppVersionMismatch  </span> </td> 
    <td colname="col3"> 沒有使用。 此問題仍可能由AIR中的1.x版堆疊產生。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3312 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_LicenseIntegrity </span> </td> 
+   <td colname="col1"> 郵編：3312 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_LicenseIntegrity  </span> </td> 
    <td colname="col3"> 若要修正此問題，請從伺服器重新下載授權。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3313 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_WriteMicrosafedFailed </span> </td> 
-   <td colname="col3"> <p>當系統無法寫入檔案系統時，會發生此問題。 <span class="codeph"> subErrorId</span> 包含用戶端特定錯誤或行錯誤。 </p> <p>在Microsoft Windows上，當加密內容的licenseID或policyID過長時，Active X或NPAPI外掛flash播放器可能會擲出錯誤3313。 這是因為Windows中的最大路徑長度。 （Pepper plugin沒有此問題。） </p> <p>請參閱watson 3549660 </p> 
+   <td colname="col1"> 郵編：3313 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_WriteMicrosafedFailed  </span> </td> 
+   <td colname="col3"> <p>當系統無法寫入檔案系統時，會發生此問題。 <span class="codeph"> subErrorId</span> 包含用戶端特定的錯誤或行錯誤。 </p> <p>在Microsoft Windows上，當加密內容的licenseID或policyID過長時，Active X或NPAPI外掛flash播放器可能會擲出錯誤3313。 這是因為Windows中的最大路徑長度。 （Pepper plugin沒有此問題。） </p> <p>請參閱watson 3549660 </p> 
     <ul id="ul_DFD527D1E1224A439766DF7BED878E3B"> 
      <li id="li_FAF8FD98A4E8478CA7A92F770676ADFC">配銷商的軟體應提示使用者確認其使用者目錄未鎖定，或是已滿或已鎖定的磁碟區。 </li> 
-     <li id="li_6D1136EA750A459BBECEEE5F73F527BB">如果配銷商使用AIR而非Flash，則問題可能是路徑長度限制所致。 <p>配銷商應將其AIR應用程式的名稱縮短至合理的名稱。 此外，使用較短的授權ID和原則 <span class="codeph"> ID</span> ，再次 <span class="codeph"> 發佈內容</span>。 </p> </li> 
+     <li id="li_6D1136EA750A459BBECEEE5F73F527BB">如果配銷商使用AIR而非Flash，則問題可能是路徑長度限制所致。 <p>配銷商應將其AIR應用程式的名稱縮短至合理的名稱。 此外，使用較短的<span class="codeph"> licenseID</span>和<span class="codeph"> policyID</span>再次發佈內容。 </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3314 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_CrobutedDRMMetadata </span> </td> 
+   <td colname="col1"> 郵編：3314 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_CrobutedDRMMetadata  </span> </td> 
    <td colname="col3"> <p>此錯誤通常表示內容已與測試PKI憑證封裝，而播放器是使用生產PKI建立，反之亦然。 subErrorId包含用戶端特定的錯誤或行錯誤。 </p> 
     <ul id="ul_A122EF304CAF48A8B4DA1E3F4413E29B"> 
      <li id="li_A9A1A5B23E884C22A71E2DE7535FEB3B">配銷商的軟體應記錄導致錯誤的內容。 </li> 
@@ -312,51 +315,51 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3315 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_PermissionDenied </span> </td> 
-   <td colname="col3"> <p>有已知錯誤，當預期使用3305時，會擲回此錯誤代碼。 如需詳細資訊，請參 <a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> 閱DRM 3305 [ServerConnectionFailed]的原因和解析度</a>。 </p> <p>AIR載入的遠端SWF不允許存取Flash Access功能。 如果在網路訪問期間發生安全錯誤，也可能拋出此錯誤代碼。 例如，目標伺服器不使用crossdomain.xml連接客戶端，或者無法訪問crossdomain.xml。 </p> <p>如需詳細資訊，請參 <a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> 閱「DRM錯誤3315」（DRM錯誤3315）可能的根本原因和解析度</a>。 </p> </td> 
+   <td colname="col1"> 郵編：3315 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_PermissionDenied  </span> </td> 
+   <td colname="col3"> <p>有已知錯誤，當預期使用3305時，會擲回此錯誤代碼。 如需詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> DRM 3305 [ServerConnectionFailed]原因和解析度</a>。 </p> <p>AIR載入的遠端SWF不允許存取Flash Access功能。 如果在網路訪問期間發生安全錯誤，也可能拋出此錯誤代碼。 例如，目標伺服器不使用crossdomain.xml連接客戶端，或者無法訪問crossdomain.xml。 </p> <p>如需詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> DRM錯誤3315可能的根本原因和解析度</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3316 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NOTUSED_MOVED </span> </td> 
-   <td colname="col3"> 是 <span class="codeph"> ADOBECPSHIM_MinorErr_MissingAdobeCPModule</span>。 由於與Flash錯誤碼衝突，已移至3344。 </td> 
+   <td colname="col1"> 郵編：3316 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NOTUSED_MOVED  </span> </td> 
+   <td colname="col3"> 是<span class="codeph"> ADOBECPSHIM_MinorErr_MissingAdobeCPModule</span>。 由於與Flash錯誤碼衝突，已移至3344。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3317 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_LoadAdobeCPFailed </span> </td> 
+   <td colname="col1"> 郵編：3317 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_LoadAdobeCPFailed  </span> </td> 
    <td colname="col3"> <p>重要： 這是罕見的錯誤，通常不會發生在生產環境中。 </p> <p>如果發生錯誤，您可以執行下列其中一項作業： 
      <ul id="ul_BC435E61623444BB98A86216531DC892"> 
       <li id="li_FA433D0758B642D2AFDCF04906B3FE18">如果您使用AIR，請重新安裝。 </li> 
-      <li id="li_F08D9AAFF46244F8842DEE5FD9CBBE0A">如果您使用Flash Player，請再次下 <span class="codeph"> 載AdobeCP</span> 模組。 </li> 
+      <li id="li_F08D9AAFF46244F8842DEE5FD9CBBE0A">如果您使用Flash Player，請再次下載<span class="codeph"> AdobeCP</span>模組。 </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3318 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_IncomplativeAdobeCPVersion </span> </td> 
+   <td colname="col1"> 郵編：3318 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_IncomplativeAdobeCPVersion  </span> </td> 
    <td colname="col3"> 不適用於Android。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3319 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_MissingAdobeCPGetAPI </span> </td> 
+   <td colname="col1"> 郵編：3319 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_MissingAdobeCPGetAPI  </span> </td> 
    <td colname="col3"> 不適用於Android。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3320 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_HostAuthenticateFailed </span> </td> 
+   <td colname="col1"> 三三二零年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_HostAuthenticateFailed  </span> </td> 
    <td colname="col3"> 不適用於Android。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3321 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_I15n失敗 </span> </td> 
+   <td colname="col1"> 郵編：3321 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_I15n失敗  </span> </td> 
    <td colname="col3"> <p>為客戶端提供密鑰的過程失敗。 subErrorId包含特定於客戶端、特定於伺服器或線路錯誤。 </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
-     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">配銷商的軟體應至少重試一次。 <p>如果您在Windows上使用Google Chrome，請提供如何允許不在沙盒中的外掛程式存取的說明。 如需詳細資訊，請 <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> 參閱Google Chrome的無沙盒存取遭拒</a>。 </p> </li> 
+     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">配銷商的軟體應至少重試一次。 <p>如果您在Windows上使用Google Chrome，請提供如何允許不在沙盒中的外掛程式存取的說明。 如需詳細資訊，請參閱<a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Google Chrome的取消沙盒存取denied</a>。 </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">配銷商應完成下列任一項工作： 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">如果錯誤在所有平台上都一致，您應將問題呈報給Adobe。 </li> 
        <li id="li_0C6EB7B912FA41E59657216498DA3515">如果錯誤僅限於Windows上的Chrome，請引導使用者允許未沙盒的外掛程式存取。 </li> 
-      </ul> <p>配銷商應將其SWF更新至版本19或更新版本，而Chrome專用的3321錯誤會擲回3368錯誤。 錯誤3368可由配銷商的軟體加以處理。 這項變更是在Chrome Stable頻道26.0.1410.43版中引進的。 </p> <p>提示：錯誤 <span class="codeph"> 3321:1090519056</span> （Flash Player 11.1版到11.6版可能會發生錯誤）。我們建議您升級至最新的Flash Player版本。 </p> </li> 
-    </ul> <p>如需詳細資訊，請參 <a href="https://forums.adobe.com/thread/1277138" format="https" scope="external"> 閱「DRM錯誤3321原因與解析度」</a>。 </p> </td> 
+      </ul> <p>配銷商應將其SWF更新至版本19或更新版本，而Chrome專用的3321錯誤會擲回3368錯誤。 錯誤3368可由配銷商的軟體加以處理。 這項變更是在Chrome Stable頻道26.0.1410.43版中引進的。 </p> <p>提示：Flash Player 11.1版至11.6版可能會發生錯誤<span class="codeph"> 3321:1090519056</span>。我們建議您升級至最新的Flash Player版本。 </p> </li> 
+    </ul> <p>如需詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1277138" format="https" scope="external"> DRM錯誤3321原因與解析度</a>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>全域商店損毀錯誤</b> </td> 
@@ -364,12 +367,12 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
    <td colname="col3"> </td>
   </tr> 
   <tr> 
-   <td colname="col1"> 3322 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailed </span> </td> 
+   <td colname="col1"> 三三二二年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailed  </span> </td> 
    <td colname="col3"> <p>設備似乎與初始化時存在的配置不匹配。 subErrorId包含用戶端特定或行錯誤。 </p> <p>配銷商軟體應完成下列任一項工作： 
      <ul id="ul_444401051A2E407B95BC44491E9BB71C"> 
-      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>如果裝置未使用Flash Player，而且使用AIR、iOS等，請呼叫 <span class="codeph"> DRMManager.resetDRMVouchers()</span>。 </p> <p>如果iOS在開發階段發生問題，請要求開發人員確認在從協力廠商搶鮮版散發系統（例如HockeyApp）下載的建置與從Xcode本機建置之間切換時，是否發現問題。 在從HockeApp分發的組建版本和從Xcode分發的組建版本之間切換時，不會完全覆寫先前安裝的屬性。 這種情況可能會觸發3322錯誤。 </p> <p>若要解決此問題，開發人員應先從裝置移除舊版建置，然後再安裝新的建置。 </p> </li> 
-      <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">如果裝置使用Flash Player，而且3322或3346錯誤碼無法使用，請參閱Adobe的指示，說明如何在 <a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM Error 3322/3346/3368（Chrome，資訊列問題）中以程式設計方式重設您的DRM授權商店</a>。 </li> 
+      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>如果裝置未使用Flash Player，而且使用AIR、iOS等，請呼叫<span class="codeph"> DRMManager.resetDRMVouchers()</span>。 </p> <p>如果iOS在開發階段發生問題，請要求開發人員確認在從協力廠商搶鮮版散發系統（例如HockeyApp）下載的建置與從Xcode本機建置之間切換時，是否發現問題。 在從HockeApp分發的組建版本和從Xcode分發的組建版本之間切換時，不會完全覆寫先前安裝的屬性。 這種情況可能會觸發3322錯誤。 </p> <p>若要解決此問題，開發人員應先從裝置移除舊版建置，然後再安裝新的建置。 </p> </li> 
+      <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">如果裝置使用Flash Player，且無法從3322或3346錯誤碼使用，請參閱Adobe的指示，瞭解如何在Chrome的<a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM Error 3322/3346/3368(Info-Bar Problems)中程式設計重設您的DRM授權商店a1/&gt;。</a> </li> 
      </ul> </p> <p>此錯誤預期不會經常發生。 在使用漫遊配置檔案的公司環境中，如果用戶正在查看受DRM保護的內容，則當用戶從不同電腦登錄時發生的機會錯誤3322增加。 如果可能，配銷商應嘗試從使用者取得此項資訊。 </p> <p>如果錯誤經常發生，請呈報至Adobe。 您必須通知Adobe重設授權商店是否確實（或未）解決問題，並告知Adobe發生錯誤的瀏覽器。 </p> <p>如需詳細資訊，請參閱下列文章： 
      <ul id="ul_C468409D1EA046178CA7F54DCDCB84EA"> 
       <li id="li_20C8CA3853574CE486F21E7A3667DAB9"><a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> https://forums.adobe.com/message/5520902</a> </li> 
@@ -379,8 +382,8 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3323 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_CorruptGlobalStateStore </span> </td> 
+   <td colname="col1"> 郵編：3323 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_CorruptGlobalStateStore  </span> </td> 
    <td colname="col3"> <p>DRM客戶端使用的檔案已意外修改。 subErrorId包含用戶端特定或行錯誤。 </p> 
     <ul id="ul_96EA771046CA4B2B9FAE24D493F43FF2"> 
      <li id="li_D2693CD8EFEF46108828BA17E3F54FF6">配銷商的軟體應引導使用者以與3322相同的方式重設。 </li> 
@@ -388,19 +391,19 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3324 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_MachineTokenInvalid </span> </td> 
-   <td colname="col3"> 重設此應用程式的DRM本機儲存空間。 調用DRMManager.resetDRM。 <p>許可證伺服器可能無法連接到證書撤銷清單(CRL)伺服器以刷新其CRL檔案，或者客戶機正在請求已被許可證伺服器撤銷的許可證／驗證。 </p> <p>在伺服器記錄檔中，錯誤碼111是MachineTokenInvalid。 但是，在客戶端級別，錯誤代碼111被轉換為錯誤代碼3324。 </p> <p>DRM授權伺服器管理員應檢查客戶的授權伺服器是否能夠擷取Adobe CRL檔案。 如果客戶使用Tomcat<span class="filepath"> ，則客戶可以檢查tomcat/temp/</span> directory以查看是否有4個CRL檔案。 </p> 
+   <td colname="col1"> 三三二四年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_MachineTokenInvalid  </span> </td> 
+   <td colname="col3"> 重設此應用程式的DRM本機儲存空間。 調用DRMManager.resetDRM。 <p>許可證伺服器可能無法連接到證書撤銷清單(CRL)伺服器以刷新其CRL檔案，或者客戶機正在請求已被許可證伺服器撤銷的許可證／驗證。 </p> <p>在伺服器記錄檔中，錯誤碼111是MachineTokenInvalid。 但是，在客戶端級別，錯誤代碼111被轉換為錯誤代碼3324。 </p> <p>DRM授權伺服器管理員應檢查客戶的授權伺服器是否能夠擷取Adobe CRL檔案。 如果客戶使用Tomcat，則客戶可以檢查<span class="filepath"> tomcat/temp/</span>目錄，以查看是否有4個CRL檔案。 </p> 
     <ul id="ul_23B7F1A104AF49E79EA87DB8E15E337E"> 
      <li id="li_855D87F251184FE688A8D5FA0F6C9EF5">如果檔案位於此目錄中，請按兩下Windows資源管理器和CRL查看器應用程式中的檔案，確定是否有任何檔案已過期。 </li> 
      <li id="li_58EC4EDA2B5146188A0FF7B33C91E2FD">如果tomcat/temp/中沒有檔案，則可以假定此許可證伺服器由於防火牆／路由問題從未能夠訪問Adobe CRL伺服器。 </li> 
-    </ul> <p>如需詳細資訊，請參閱 <a href="https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_secure_deployment_guidelines.pdf" format="http" scope="external"> 防火牆規則</a>。 </p> <p>如果CRL檔案不可用或已過期，則必須確認是否可以訪問許可證伺服器。 在客戶的許可證伺服器上開啟網路嗅探器，重新啟動伺服器，並讓客戶端嘗試向伺服器請求許可證。 您可以觀察網路流量，以查看對下列URL端點的呼叫是否成功： <p>提示： 您也可以在瀏覽器中輸入下列CRL URL，以查看您是否可以手動下載每個檔案。 </p> 
+    </ul> <p>如需詳細資訊，請參閱<a href="https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_secure_deployment_guidelines.pdf" format="http" scope="external">防火牆規則</a>。 </p> <p>如果CRL檔案不可用或已過期，則必須確認是否可以訪問許可證伺服器。 在客戶的許可證伺服器上開啟網路嗅探器，重新啟動伺服器，並讓客戶端嘗試向伺服器請求許可證。 您可以觀察網路流量，以查看對下列URL端點的呼叫是否成功： <p>提示： 您也可以在瀏覽器中輸入下列CRL URL，以查看您是否可以手動下載每個檔案。 </p> 
      <ul id="ul_9B65C7ABBDEC4AC9BF3755FFD3587971"> 
       <li id="li_6867A9050E8D421C9138AC853D1784C9"><a href="https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl</a> </li> 
       <li id="li_6431689260554EAFAFDA2EC31798DCB5"><a href="https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl</a> </li> 
       <li id="li_2939674D0F854ADEB67E45FD216288A2"><a href="https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessRootCA.crl</a> </li> 
       <li id="li_96386E00BE9D4CB99D100057A5F7C6DD">crl3.adobe.com/AdobeSystemsIncorporated FlashAccessRuntime/LatestCRL.crl</li> 
-     </ul> </p> <p>如果防火牆規則已開啟且目前沒有3324錯誤，則可能會發生暫時網路問題。 檢查客戶的伺服器日誌(可能位於 <span class="codeph"> /tomcat/logs/</span> directory中)，以確定當許可證伺服器嘗試提取證書撤銷清單時是否發生錯誤。 <p>重要： 當大量（或拆分）的客戶端在更新CRL檔案時向臨時網路問題報告3324錯誤時，可能會發生錯誤。 解決網路問題時，3324問題也已解決。 </p> </p> <p>如果所有4個CRL檔案都存在於 <span class="filepath"> tomcat/temp/</span> directory中，並且客戶端仍然收到3324錯誤代碼，則CRL檔案可能存在檔案訪問問題。 要解決此問題，您可能需要查看日誌並清除現有的CRL檔案。 </p> <p>如果沒有伺服器問題，請提示使用者重設，如3322所述。 </p> </td> 
+     </ul> </p> <p>如果防火牆規則已開啟且目前沒有3324錯誤，則可能會發生暫時網路問題。 檢查客戶的伺服器日誌（可能位於<span class="codeph"> /tomcat/logs/</span>目錄），以確定當許可證伺服器嘗試獲取證書撤銷清單時是否發生錯誤。 <p>重要： 當大量（或拆分）的客戶端在更新CRL檔案時向臨時網路問題報告3324錯誤時，可能會發生錯誤。 解決網路問題時，3324問題也已解決。 </p> </p> <p>如果CRL檔案中的所有4個都存在於<span class="filepath"> tomcat/temp/</span>目錄中，並且客戶端仍然收到3324個錯誤代碼，則CRL檔案可能存在檔案訪問問題。 要解決此問題，您可能需要查看日誌並清除現有的CRL檔案。 </p> <p>如果沒有伺服器問題，請提示使用者重設，如3322所述。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>伺服器儲存損壞錯誤</b> </td> 
@@ -408,23 +411,23 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
    <td colname="col3"> </td>
   </tr> 
   <tr> 
-   <td colname="col1"> 3325 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_CorruptServerStateStore </span> </td> 
-   <td colname="col3"> <p>DRM客戶端使用的檔案已意外修改。 <span class="codeph"> subErrorId</span> 包含用戶端特定或行錯誤。 </p> 
+   <td colname="col1"> 郵編：3325 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_CorruptServerStateStore  </span> </td> 
+   <td colname="col3"> <p>DRM客戶端使用的檔案已意外修改。 <span class="codeph"> subErrorId</span> 包含特定於客戶端或行的錯誤。 </p> 
     <ul id="ul_860D2402DA61460AB0D938F1116F6D64"> 
      <li id="li_CF368C43452B4265B62ADA3E223894BA">配銷商的軟體應再次重試該操作，因為AdobeCP已在內部刪除了違規的伺服器存放區，且應成功重試。 如果重試失敗，請記錄問題。 </li> 
      <li id="li_51A5803A1F754970BB4EBD6494F5DC96">如果重試失敗的速率高於使用者群中硬碟的預期失敗率，請將問題呈報給Adobe。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3326 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_StorePharketingDetected </span> </td> 
-   <td colname="col3"> 調用 <span class="codeph"> DRMManager.resetDRM</span>。 <p>授權存放區已遭竄改／損毀，無法再使用。 </p> <p>配銷商的軟體應以3322所述的相同方式引導使用者重設。 </p> </td> 
+   <td colname="col1"> 郵編：3326 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_StorePharketingDetected  </span> </td> 
+   <td colname="col3"> 調用<span class="codeph"> DRMManager.resetDRM</span>。 <p>授權存放區已遭竄改／損毀，無法再使用。 </p> <p>配銷商的軟體應以3322所述的相同方式引導使用者重設。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3327 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_ClockHappertingDetected </span> </td> 
-   <td colname="col3"> 修正時鐘或再次取 <span class="codeph"> 得Authn/Lic/Domain</span> 授權。 </td> 
+   <td colname="col1"> 郵編：3327 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_ClockHappertingDetected  </span> </td> 
+   <td colname="col3"> 修正時鐘或再次獲取<span class="codeph"> Authn/Lic/Domain</span>許可證。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>驗證／授權／網域伺服器錯誤</b> </td> 
@@ -432,18 +435,18 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
    <td colname="col3"> </td>
   </tr> 
   <tr> 
-   <td colname="col1"> 3328 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_ServerErrorTryAgain </span> </td> 
-   <td colname="col3"> <p>這是伺服器端錯誤，伺服器無法從用戶端完成請求。 例如，當伺服器忙、HTTP/500、伺服器沒有解密請求所需的密鑰等時，可能會發生此錯誤。 </p> <p>在客戶端上，沒有辦法確定出了什麼問題。 客戶必須檢閱Adobe Access伺服器記錄檔(通常稱為 <span class="codeph"> AdobeFlashAccess.log</span>)，以判斷出錯之處。 記錄檔中始終有描述性的堆疊追蹤，以指出問題。 <span class="codeph"> subErrorId</span> 包含伺服器特定或行錯誤。 </p> <p>配銷商應查看伺服器記錄，以識別是哪個伺服器傳送此錯誤。 對於具有子錯誤代碼101的3328錯誤，伺服器無法解密請求。 客戶必須驗證安裝在許可證伺服器上的許可證／傳輸伺服器證書是否與打包期間使用的證書匹配並對應。 </p> <p>此外，如果客戶使用「參考實作」，則必須確保在指定主要和其他憑證的 <span class="codeph"> flashaccess-refimpl.properties</span> 檔案中沒有錯字。 </p> </td> 
+   <td colname="col1"> 郵編：3328 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_ServerErrorTryAgain  </span> </td> 
+   <td colname="col3"> <p>這是伺服器端錯誤，伺服器無法從用戶端完成請求。 例如，當伺服器忙、HTTP/500、伺服器沒有解密請求所需的密鑰等時，可能會發生此錯誤。 </p> <p>在客戶端上，沒有辦法確定出了什麼問題。 客戶必須檢閱Adobe Access伺服器記錄檔（通常稱為<span class="codeph"> AdobeFlashAccess.log</span>），以判斷出錯之處。 記錄檔中始終有描述性的堆疊追蹤，以指出問題。 <span class="codeph"> subErrorId</span> 包含伺服器特定或行錯誤。 </p> <p>配銷商應查看伺服器記錄，以識別是哪個伺服器傳送此錯誤。 對於具有子錯誤代碼101的3328錯誤，伺服器無法解密請求。 客戶必須驗證安裝在許可證伺服器上的許可證／傳輸伺服器證書是否與打包期間使用的證書匹配並對應。 </p> <p>此外，如果客戶使用「參考實作」，則必須確保<span class="codeph"> flashaccess-refimpl.properties</span>檔案中沒有字型錯誤，而指定了主要和其他憑證。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3329 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_ApplicationSpecificError </span> </td> 
-   <td colname="col3"> <p>Flash Access不知道應用程式特定的子錯誤碼。 <span class="codeph"> subErrorId</span> 包含來自發佈者自訂授權伺服器的伺服器特定錯誤。 伺服器在應用程式特定的命名空間中傳回錯誤。 </p> </td> 
+   <td colname="col1"> 郵編：3329 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_ApplicationSpecificError  </span> </td> 
+   <td colname="col3"> <p>Flash Access不知道應用程式特定的子錯誤碼。 <span class="codeph"> subErrorId</span> 包含來自發佈者自訂授權伺服器的伺服器特定錯誤。伺服器在應用程式特定的命名空間中傳回錯誤。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3330 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NeedAuthentication </span> </td> 
+   <td colname="col1"> 三三三零 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NeedAuthentication  </span> </td> 
    <td colname="col3"> <p>當內容設定為要求用戶端在取得授權之前進行驗證時，就會發生此錯誤。 </p> 
     <ul id="ul_712D29B8B5A6401FB014C4A283918E32"> 
      <li id="li_2D56905EB50D4FDEAD69CA8EAE38AD1A">配銷商的軟體應驗證使用者，然後再次取得授權。 <p>如果您的服務不想使用驗證，請記錄造成此錯誤的內容的識別碼。 </p> </li> 
@@ -456,28 +459,28 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
    <td colname="col3"> </td>
   </tr> 
   <tr> 
-   <td colname="col1"> 3331 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_ContentNotYetValid </span> </td> 
+   <td colname="col1"> 郵編：3331 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_ContentNotYetValid  </span> </td> 
    <td colname="col3"> <p>取得的授權尚無效。 要解決此問題，請檢查客戶機時鐘設定是否正確。 要設定客戶端時鐘，請重新打包內容或修改許可證伺服器配置。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3332 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_CachedLicenseExpired </span> </td> 
+   <td colname="col1"> 三三三二年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_CachedLicenseExpired  </span> </td> 
    <td colname="col3"> 從伺服器重新取得授權。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3333 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_PlaybackWindowExpired </span> </td> 
+   <td colname="col1"> 郵編：3333 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_PlaybackWindowExpired  </span> </td> 
    <td colname="col3"> <p>您必須通知使用者，在原則到期之前，他們無法播放此內容。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3334 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_InvalidDRMPlatform </span> </td> 
-   <td colname="col3"> <p>此平台不允許播放內容，因為例如，內容提供者已設定Adobe Access，以拒絕平台上Adobe Access的內容，或共用網域系結授權系結至用於不同分區的共用網域Token。 </p> <p>如果內容未使用適當的（CDM功能選定）封裝器認證來封裝，CDM可能會擲出此錯誤。 </p> <p>如果內容封裝有不正確的PHDS/PHLS憑證，則內容可能適用於Chrome，但不適用於其他瀏覽器（反之亦然）。 <p>提示： 這是因為Chrome使用不同的PHDS/PHLS憑證。 </p>若要確認正在使用哪個憑證，請轉儲內容中繼資料的詳細資料，並尋找收件 <i>者憑證</i>。 如需詳細資訊，請參 <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> 閱https://adobeprimetime.zendesk.com/agent/tickets/2891</a>。 </p> </td> 
+   <td colname="col1"> 三三三四年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_InvalidDRMPlatform  </span> </td> 
+   <td colname="col3"> <p>此平台不允許播放內容，因為例如，內容提供者已設定Adobe Access，以拒絕平台上Adobe Access的內容，或共用網域系結授權系結至用於不同分區的共用網域Token。 </p> <p>如果內容未使用適當的（CDM功能選定）封裝器認證來封裝，CDM可能會擲出此錯誤。 </p> <p>如果內容封裝有不正確的PHDS/PHLS憑證，則內容可能適用於Chrome，但不適用於其他瀏覽器（反之亦然）。 <p>提示： 這是因為Chrome使用不同的PHDS/PHLS憑證。 </p>若要確認正在使用哪個憑證，請轉儲內容中繼資料的詳細資料，並尋找<i>收件者憑證</i>。 如需詳細資訊，請參閱<a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3335 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_InvalidDRMVersion </span> </td> 
+   <td colname="col1"> 三三三五年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_InvalidDRMVersion  </span> </td> 
    <td colname="col3"> 升級至Android專用的TVSDK最新版本。 <p>要解決此問題，請完成以下任務之一： 
      <ul id="ul_BF1742948BC9461CB8686DE70124D3CD"> 
       <li id="li_690D440C94CC45A0AE55EC319B1C4C23">升級AIR </li> 
@@ -485,13 +488,13 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3336 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_InvalidRuntimePlatform </span> </td> 
+   <td colname="col1"> 郵編：3336 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_InvalidRuntimePlatform  </span> </td> 
    <td colname="col3"> <p>此平台不允許播放內容，因為例如，內容提供者已設定「存取」，以拒絕平台上FP/AIR的內容。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3337 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_InvalidRuntimeVersion </span> </td> 
+   <td colname="col1"> 三三三七 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_InvalidRuntimeVersion  </span> </td> 
    <td colname="col3"> 升級至Android專用的最新版TVSDK。 <p>如果內容或伺服器設定為拒絕播放特定版本的Flash或AIR執行階段，就會發生此情況。 </p> 
     <ul id="ul_B0732D941256483CABBDD30C9BF43249"> 
      <li id="li_72782B1D638F48C0B87084689FB9C798">如果使用者使用可升級Flash的作業系統，配銷商的軟體應提示使用者升級Flash，然後再試一次。 否則，建議使用者使用不同的機器。 </li> 
@@ -499,37 +502,37 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3338 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_UnknownConnectionType </span> </td> 
-   <td colname="col3"> <p>無法檢測連接類型，策略要求您開啟「輸出保護」。 只有當內容封裝為需要數位或模擬輸出保護時，才會出現此問題。 </p> <p>11.8.800.168舊版Flash Player中的問題，有時會在原則指出內容保護為「 <span class="codeph"> USE IF AVAILABLE」的內容上發生錯誤3338</span>。 此問題已在11.8.800.168版及更新版本中修正。 </p> 
+   <td colname="col1"> 郵編：3338 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_UnknownConnectionType  </span> </td> 
+   <td colname="col3"> <p>無法檢測連接類型，策略要求您開啟「輸出保護」。 只有當內容封裝為需要數位或模擬輸出保護時，才會出現此問題。 </p> <p>11.8.800.168舊版Flash Player中的問題，有時會在原則指出內容保護為<span class="codeph"> USE IF AVAILABLE</span>的內容上發生錯誤3338。 此問題已在11.8.800.168版及更新版本中修正。 </p> 
     <ul id="ul_4B6CA26A53F84838B5B95400925464D4"> 
-     <li id="li_CBD890F467E449EBB5116E1561252058">配銷商的軟體選擇不需要輸出保護的內容變體（例如HD串流的SD變體）。 <p>如果錯誤3338發生在 <span class="codeph"> USE_IF_AVAILABLE內容上， </span> 請檢查播放器版本號。 如果播放器版本低於11.8.800.168，建議使用者升級Flash Player。 如果錯誤3338發生在11.8.800.168以上的版本上，請記錄導致錯誤的內容。 </p> </li> 
-     <li id="li_62886C1D96264B129928A7E29E6C70E1">配銷商應檢查哪些內容造成此錯誤，並驗證內容的原則是否設定 <span class="codeph"> NO_PROTECTION</span> 或 <span class="codeph"> USE_IF_AVAILABLE</span> ，以用於模擬和數位輸出。 <p>如果內容不慎封裝為 <span class="codeph"> NO_OUTPUT</span><span class="codeph"> 或REQUIRED</span>，請重新封裝內容。 如果正確封裝內容，請參閱診斷原則／授權差異。 否則呈報至Adobe。 </p> </li> 
-    </ul> <p>如需詳細資訊，請 <a href="https://forums.adobe.com/message/5518688" format="https" scope="external"> 參閱「當您的DRM原則設為USE_IF_AVAILABLE時，發生未預期的3338錯誤？」</a> </p> </td> 
+     <li id="li_CBD890F467E449EBB5116E1561252058">配銷商的軟體選擇不需要輸出保護的內容變體（例如HD串流的SD變體）。 <p>如果<span class="codeph"> USE_IF_AVAILABLE </span>內容發生錯誤3338，請檢查播放器版本號。 如果播放器版本低於11.8.800.168，建議使用者升級Flash Player。 如果錯誤3338發生在11.8.800.168以上的版本上，請記錄導致錯誤的內容。 </p> </li> 
+     <li id="li_62886C1D96264B129928A7E29E6C70E1">配銷商應檢查哪些內容造成此錯誤，並驗證內容的策略是將模擬和數字輸出設定為<span class="codeph"> NO_PROTECTION</span>或<span class="codeph"> USE_IF_AVAILABLE</span>。 <p>如果內容不慎與<span class="codeph"> NO_OUTPUT</span>或<span class="codeph"> REQUIRED</span>一起封裝，請重新封裝內容。 如果正確封裝內容，請參閱診斷原則／授權差異。 否則呈報至Adobe。 </p> </li> 
+    </ul> <p>如需詳細資訊，請參閱<a href="https://forums.adobe.com/message/5518688" format="https" scope="external">當您的DRM原則設為USE_IF_AVAILABLE時，取得非預期的3338錯誤？</a> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3339 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoAnalogPlaybackAllowed </span> </td> 
+   <td colname="col1"> 郵編：3339 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoAnalogPlaybackAllowed  </span> </td> 
    <td colname="col3"> 無法在模擬設備上播放。 若要解決此問題，請連接數位裝置。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3340 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoAnalogProtectionAvail </span> </td> 
+   <td colname="col1"> 三三四零年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoAnalogProtectionAvail  </span> </td> 
    <td colname="col3"> 無法播放內容，因為連接的模擬外部顯示設備（顯示器／電視）沒有正確的功能（例如，設備沒有Macrovision或ACP）。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3341 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoDigitalPlaybackAllowed </span> </td> 
+   <td colname="col1"> 三三四一年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoDigitalPlaybackAllowed  </span> </td> 
    <td colname="col3"> 無法在數位裝置上播放內容。 <p>重要： 此問題不應發生在生產環境中，因為內容發佈者不應禁止數位播放。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3342 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoDigitalProtectionAvail </span> </td> 
+   <td colname="col1"> 三三四二年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoDigitalProtectionAvail  </span> </td> 
    <td colname="col3"> 連接的數字外部顯示設備（顯示器／電視）沒有正確的功能。 例如，設備沒有HDCP。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3343 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_IntegrityVerificationFailed </span> </td> 
+   <td colname="col1"> 三三四三年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_IntegrityVerificationFailed  </span> </td> 
    <td colname="col3"> <p>不適用於Android。 </p> <p>目前已知此錯誤會在新版Flash發行後開始發生。 之所以會發生，是因為Flash在開啟時會升級Flash，使Flash在瀏覽器重新啟動之前處於不良狀態。 </p> 
     <ul id="ul_A0AC4A77550E40409A04BD33748EA987"> 
      <li id="li_F41C1ABD838D41ABB0DF65093E664A29">配銷商軟體應完成下列工作： 
@@ -541,30 +544,30 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3344 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_MissingAdobeCPModule </span> </td> 
+   <td colname="col1"> 三三四四年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_MissingAdobeCPModule  </span> </td> 
    <td colname="col3"> 不適用於Android。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3345 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DRMNoAccessError </span> </td> 
+   <td colname="col1"> 三三四五年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DRMNoAccessError  </span> </td> 
    <td colname="col3"> <p>不適用於Android。 </p> <p>當部分Flash或AIR未正確安裝時，就會發生此錯誤。 </p> <p>配銷商軟體應執行下列其中一項作業： 
      <ul id="ul_D1188E2D4FDF4BD89A04F5629D75D981"> 
       <li id="li_B33FBCA5D4534D668B86A5E93DB3A809">要求使用者解除安裝並重新安裝AIR。 </li> 
-      <li id="li_B7D2388E9FA84C26AF1C87B48AF9EF16">若為Flash Player，請呼 <span class="codeph"> 叫System.update</span>。 </li> 
+      <li id="li_B7D2388E9FA84C26AF1C87B48AF9EF16">若是Flash Player，請呼叫<span class="codeph"> System.update</span>。 </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3346 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_MigrationFailed </span> </td> 
+   <td colname="col1"> 三三四六年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_MigrationFailed  </span> </td> 
    <td colname="col3"> 
     <ul id="ul_518AD4931CC64EB3A962DD451E6C5067"> 
      <li id="li_3C44F0740B08490E9C62D89C40B57DC2">配銷商軟體應執行下列其中一項作業： 
       <ul id="ul_7D90526684BF4EB2BBADCF598AA13086"> 
-       <li id="li_D15B4BEDAF7340F6B9BC886DF6E346EC">如果是AIR，請 <span class="codeph"> 呼叫DRMManager.resetDRMVouchers()</span> </li> 
-       <li id="li_40A51D35408249CFA28DBC49FDA3408B">如果Flash因錯誤3322或3346錯誤碼而無法使用，使用者應前往 <a href="https://forums.adobe.com/message/5535907#5535907" format="http" scope="external"> https://forums.adobe.com/message/5535907#5535907</a> ，並依照Adobe文章的指示，以程式設計方式重設其DRM授權商店。 </li> 
+       <li id="li_D15B4BEDAF7340F6B9BC886DF6E346EC">如果是AIR，請呼叫<span class="codeph"> DRMManager.resetDRMVouchers()</span> </li> 
+       <li id="li_40A51D35408249CFA28DBC49FDA3408B">如果Flash因錯誤3322或3346錯誤碼而無法使用，使用者應前往<a href="https://forums.adobe.com/message/5535907#5535907" format="http" scope="external"> https://forums.adobe.com/message/5535907#5535907</a>並依照Adobe文章的指示，以程式設計方式重設其DRM授權商店。 </li> 
       </ul> </li> 
-     <li id="li_0464471E4A094C80BF2986694341921A">如果此錯誤頻發，配銷商應將頻率播放器版本和瀏覽器版本的詳細資訊提供給Adobe。 </li> 
+     <li id="li_0464471E4A094C80BF2986694341921A">如果此錯誤頻發，配銷商應向Adobe提供頻率播放器版本和瀏覽器版本的詳細資訊。 </li> 
     </ul> <p>如需詳細資訊，請參閱下列論壇文章： 
      <ul id="ul_44E0077FEAA749CC9549BF3846065304"> 
       <li id="li_2BE3B2443380415DA73B7AA3B6547B31"><a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Chrome中的DRM錯誤3322/3346/3368（資訊列問題）</a> </li> 
@@ -572,155 +575,155 @@ Adobe視訊引擎的視訊編碼器介面會在中繼資料物件中傳回這些
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3347 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_IndeficDeviceCapability </span> </td> 
+   <td colname="col1"> 三三四七年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_IndeficDeviceCapability  </span> </td> 
    <td colname="col3"> <p>此錯誤的主要含義是授權有用戶端的DRM憑證指出其無法滿足的限制。 下列「硬體功能」是在發出用戶端DRM憑證時定義的： 
      <ul id="ul_1EB6F1469C244CF0BA52C212495C053D"> 
-      <li id="li_646043CE045C4DE2BBC939E1F4963DFE"><b>非用戶可訪問匯流排</b>。 如果 <b>為真</b>，解密的媒體絕不會流過匯流排，也不會流入應用程式可存取的主記憶體。 <p>如果 <b>為false</b>，則在解密後，應用程式可能會存取內容。 </p> </li> 
-      <li id="li_02AAECAF4D35447BA10554541B46DE67"><b>硬體信任根</b>。 如果 <b>為true</b>，則啟動時在設備上載入的所有軟體都將通過僅在硬體中提供的密鑰或摘要進行驗證。 <p>當針對用戶端的DRM憑證開啟授權時，這兩個限制都會在用戶端進行檢查，而且立即發生故障。 在核發授權之前，您也可以在伺服器端檢查這些限制。 </p> </li> 
-     </ul> </p> <p>此錯誤的次要含義是授權已設定「Jailbreak Enforcement」（越獄執行）政策，且裝置上已偵測到越獄。 此檢查會在用戶端定期執行，且無法在伺服器端進行檢查。 </p> <p>配銷商可以更新政策並移除限制。 對於設備功能策略，請使用 <span class="codeph"> -devCapabilitiesV1標誌發出策略更新命令</span> ，不使用參數。 對於jailbreak強制，請設 <span class="codeph"> 定policy.enforceJailbreak=false</span>。 </p> </td> 
+      <li id="li_646043CE045C4DE2BBC939E1F4963DFE"><b>非用戶可訪問匯流排</b>。如果<b>true</b>，解密的媒體絕不會流過匯流排或進入應用程式可以訪問該匯流排的主記憶體。 <p>如果<b>false</b>，則在解密後，應用程式可能會存取內容。 </p> </li> 
+      <li id="li_02AAECAF4D35447BA10554541B46DE67"><b>硬體信任根</b>。如果<b>true</b>，則在啟動時在設備上載入的所有軟體都將通過僅在硬體中提供的密鑰或摘要進行驗證。 <p>當針對用戶端的DRM憑證開啟授權時，這兩個限制都會在用戶端進行檢查，而且立即發生故障。 在核發授權之前，您也可以在伺服器端檢查這些限制。 </p> </li> 
+     </ul> </p> <p>此錯誤的次要含義是授權已設定「Jailbreak Enforcement」（越獄執行）政策，且裝置上已偵測到越獄。 此檢查會在用戶端定期執行，且無法在伺服器端進行檢查。 </p> <p>配銷商可以更新政策並移除限制。 對於設備功能策略，請使用<span class="codeph"> -devCapabilitiesV1</span>標誌發出策略更新命令，而不使用參數。 對於越獄強制，請設定<span class="codeph"> policy.enforceJailbreak=false</span>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3348 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_HardStopIntervalExpired </span> </td> 
+   <td colname="col1"> 三三四八年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_HardStopIntervalExpired  </span> </td> 
    <td colname="col3"> 硬停止間隔已過期。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3349 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_ServerVersionTooHigh </span> </td> 
+   <td colname="col1"> 三三四九年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_ServerVersionTooHigh  </span> </td> 
    <td colname="col3"> 伺服器運行的版本高於客戶端支援的最高版本。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3350 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_ServerVersionTooLow </span> </td> 
+   <td colname="col1"> 三三五零 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_ServerVersionTooLow  </span> </td> 
    <td colname="col3"> 伺服器的執行版本低於用戶端支援的最低版本。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3351 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DomainTokenInvalid </span> </td> 
+   <td colname="col1"> 郵編：3351 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DomainTokenInvalid  </span> </td> 
    <td colname="col3"> 網域Token無效。 若要解決此問題，請再次向網域註冊。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3352 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DomainTokenTooOld </span> </td> 
+   <td colname="col1"> 三三五二年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DomainTokenTooOld  </span> </td> 
    <td colname="col3"> 網域Token比授權所需的Token舊。 若要解決此問題，請再次向網域註冊。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3353 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DomainTokenTooNew </span> </td> 
+   <td colname="col1"> 三三五三年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DomainTokenTooNew  </span> </td> 
    <td colname="col3"> 網域Token比授權所需的Token新。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3354 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DomainTokenExpired </span> </td> 
+   <td colname="col1"> 三三五四年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DomainTokenExpired  </span> </td> 
    <td colname="col3"> 網域Token已過期。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3355 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DomainJoinFailed </span> </td> 
+   <td colname="col1"> 三三五五年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DomainJoinFailed  </span> </td> 
    <td colname="col3"> 域連接失敗。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3356 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoEncorpedRoot </span> </td> 
+   <td colname="col1"> 郵編：3356 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoEncorpedRoot  </span> </td> 
    <td colname="col3"> 找不到V3葉片許可證的根許可證。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3357 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoValidEmbeddedLicense </span> </td> 
+   <td colname="col1"> 三三五七年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoValidEmbeddedLicense  </span> </td> 
    <td colname="col3"> 未找到有效的嵌入式許可證。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3358 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoACPProtectionAvail </span> </td> 
+   <td colname="col1"> 三三五八年 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoACPProtectionAvail  </span> </td> 
    <td colname="col3"> 由於連接的模擬設備沒有ACP保護，因此無法回放。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3359 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoCGMSAProtectionAvail </span> </td> 
+   <td colname="col1"> 郵編：3359 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoCGMSAProtectionAvail  </span> </td> 
    <td colname="col3"> 由於連接的模擬設備沒有CGMS-A保護，因此無法播放。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3360 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_DomainRegistrationRequired </span> </td> 
+   <td colname="col1"> 三三六零 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_DomainRegistrationRequired  </span> </td> 
    <td colname="col3"> 內容需要網域註冊。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3361 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NotRegisteredToDomain </span> </td> 
+   <td colname="col1"> 郵編：3361 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NotRegisteredToDomain  </span> </td> 
    <td colname="col3"> 電腦未註冊到指定元資料的域。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3362 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_OperationTimeoutError </span> </td> 
-   <td colname="col3"> 非同步操作所花費的時間 <span class="codeph"> 比maxOperationTimeout</span>長。 僅由iOS DRMNative Framework傳回。 </td> 
+   <td colname="col1"> 郵編：3362 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_OperationTimeoutError  </span> </td> 
+   <td colname="col3"> 非同步操作所花費的時間超過<span class="codeph"> maxOperationTimeout</span>。 僅由iOS DRMNative Framework傳回。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3363 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_UnsupportedIOSPlaylistError </span> </td> 
+   <td colname="col1"> 郵編：3363 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_UnsupportedIOSPlaylistError  </span> </td> 
    <td colname="col3"> 傳入的M3U8播放清單含有不支援的內容。 僅由iOS DRMNative Framework傳回。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3364 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoDeviceId </span> </td> 
-   <td colname="col3"> <p>框架請求設備ID，但返回的值為空。 </p> <p>使用者不應在Chrome設定中 <span class="uicontrol"> 選取「允許受保護內容的識別碼</span> 」核取方塊。 </p> </td> 
+   <td colname="col1"> 郵編：3364 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoDeviceId  </span> </td> 
+   <td colname="col3"> <p>框架請求設備ID，但返回的值為空。 </p> <p>使用者不應在Chrome設定中選取「允許保護內容的識別碼<span class="uicontrol">」核取方塊。</span> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3365 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_IncognitoModeNotAllowed </span> </td> 
-   <td colname="col3"> <p>此瀏覽器／平台組合不允許在Incognito模式下播放受DRM保護的內容。 </p> <p>配銷商的軟體應建議使用者退出Incognito模式或使用不同的瀏覽器。 如需詳細資訊，請參 <a href="https://forums.adobe.com/thread/1266622" format="https" scope="external"> 閱「DRM錯誤3365原因與解析度」</a>。 </p> </td> 
+   <td colname="col1"> 郵編：3365 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_IncognitoModeNotAllowed  </span> </td> 
+   <td colname="col3"> <p>此瀏覽器／平台組合不允許在Incognito模式下播放受DRM保護的內容。 </p> <p>配銷商的軟體應建議使用者退出Incognito模式或使用不同的瀏覽器。 如需詳細資訊，請參閱<a href="https://forums.adobe.com/thread/1266622" format="https" scope="external"> DRM錯誤3365原因與解析度</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3366 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_BadParameter </span> </td> 
+   <td colname="col1"> 郵編：3366 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_BadParameter  </span> </td> 
    <td colname="col3"> <p>主機執行時期會以錯誤的參數呼叫存取程式庫。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3367 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_BadSignature </span> </td> 
+   <td colname="col1"> 郵編：3367 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_BadSignature  </span> </td> 
    <td colname="col3"> m3u8資訊清單簽署失敗。 僅由iOS DRMNative Framework或AVE傳回。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3368 </td> 
+   <td colname="col1"> 郵編：3368 </td> 
    <td colname="col2"><span class="codeph"> AAXS_UserSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>用戶取消了操作或輸入了不允許訪問系統的設定。 </p> <p>只有當SWF版本為19或更新版本時，才會擲回此錯誤。 為了向後相容，當SWF為18版或更舊版本時，會擲出3321。 </p> <p>配銷商的軟體應引導使用者說明如何允許無沙盒外掛程式存取。 如需詳細資訊，請參 <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> 閱Chrome中Google Chrome的無沙盒存取遭拒</a> , <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> DRM Error 3322/3346/3368 in Chrome（資訊列問題）</a>。 </p> </td> 
+   <td colname="col3"> <p>用戶取消了操作或輸入了不允許訪問系統的設定。 </p> <p>只有當SWF版本為19或更新版本時，才會擲回此錯誤。 為了向後相容，當SWF為18版或更舊版本時，會擲出3321。 </p> <p>配銷商的軟體應引導使用者說明如何允許無沙盒外掛程式存取。 如需詳細資訊，請參閱Chrome中<a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Google Chrome的無沙盒存取被拒絕</a>和<a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> DRM錯誤3322/3346/3368（資訊列問題）</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3369 </td> 
+   <td colname="col1"> 郵編：3369 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InterfaceNotAvailable</span> </td> 
    <td colname="col3"> <p>不提供所需的瀏覽器介面。 此問題僅發生在Pepper上。 Flash外掛程式和瀏覽器版本可能不相符。 </p> <p>散發者的軟體應引導使用者確保已安裝最新版本的瀏覽器。 </p> <p> 如果此錯誤的發生率增加，且與發佈的瀏覽器更新相對應，請呈報至Adobe。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3370 </td> 
+   <td colname="col1"> 三三七零 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ContentIdSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>使用者已停用「允許 <span class="uicontrol"> 保護內容識別碼</span> 」設定。 </p> <p>提示： Pepper 13.0.0.x版或更新版本會出現此錯誤。 </p> <p>配銷商的軟體應引導使用者啟用「允許 <span class="uicontrol"> 保護內容識別碼</span> 」設定。 </p> <p>配銷商的營運團隊應引導使用者啟用「允許 <span class="uicontrol"> 保護內容識別碼</span> 」設定。 </p> <p>如需詳細資訊，請參 <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> 閱https://forums.adobe.com/message/6518323#6518323</a>。 </p> </td> 
+   <td colname="col3"> <p>用戶已禁用<span class="uicontrol">允許受保護內容的標識符設定。</span> </p> <p>提示： Pepper 13.0.0.x版或更新版本會出現此錯誤。 </p> <p>配銷商的軟體應引導使用者啟用「允許保護內容識別碼<span class="uicontrol">」設定。</span> </p> <p>配銷商的營運團隊應引導使用者啟用「允許保護內容識別碼<span class="uicontrol">」設定。</span> </p> <p>如需詳細資訊，請參閱<a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3371 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoOPConstraintInPixel約束</span><span class="codeph"></span> </td> 
+   <td colname="col1"> 郵編：3371 </td> 
+   <td colname="col2"><span class="codeph"> AAXS_</span><span class="codeph"> NoOPConstraintInPixelConstraints</span> </td> 
    <td colname="col3"> <p>基於許可證中輸出保護約束的格式錯誤的解析。 </p> <p>配銷商的軟體應顯示錯誤訊息。 要求使用者以內容標題向配銷商報告問題。 </p> <p>配銷商應以有效政策重新封裝內容。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3372 </td> 
+   <td colname="col1"> 郵編：3372 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ResolutionLagerThanMaxResolution</span> </td> 
    <td colname="col3"> <p>內容的解析度大於輸出保護約束中指定的最大解析度。 </p> <p>如果授權代理商的營運團隊在記錄中發現此錯誤，則應檢閱以解析度為基礎的輸出保護政策，並視需要重新封裝內容。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3373 </td> 
+   <td colname="col1"> 郵編：3373 </td> 
    <td colname="col2"><span class="codeph"> AAXS_MinorErr_DisplayResolutionLagerThanConstrain</span> </td> 
    <td colname="col3"> <p>內容的解析度大於當前活動的輸出保護約束所指定的解析度。 </p> <p>如果授權代理商的營運團隊在記錄中發現此錯誤，則應檢閱以解析度為基礎的輸出保護政策，並視需要重新封裝內容。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3374 </td> 
+   <td colname="col1"> 郵編：3374 </td> 
    <td colname="col2"><span class="codeph"> AAXS_MinorErr_ClientCommProcessFailed</span> </td> 
    <td colname="col3"> <p>在用戶端通訊處理期間失敗，例如請求產生、回應處理、錯誤驗證Token等。 </p> <p>如果授權代理商的營運團隊在記錄中發現此錯誤，則應檢閱以解析度為基礎的輸出保護政策，並視需要重新封裝內容。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## NATIVE_ERROR:視訊播放值 {#section_7079501250C2487499639F92EC774525}
+## NATIVE_ERROR:視訊播放值{#section_7079501250C2487499639F92EC774525}
 
-AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NATIVE_ERROR` 通知。
+AVE的Video Encoder介面會在`NATIVE_ERROR`中繼資料物件中傳回這些視訊播放通知。
 
 <table id="table_5EEB1F60E5854452A8B0BABBE9B32651"> 
  <thead> 
@@ -752,7 +755,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
    <td colname="col3"> 由於檔案結束(EOF)條件，無法操作。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"><span class="codeph"> 解碼器失敗</span> </td> 
    <td colname="col3"> 解碼器在執行時期失敗。 </td> 
   </tr> 
@@ -763,72 +766,72 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 5 </td> 
-   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND  </span> </td> 
    <td colname="col3"> 找不到資源。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 6 </td> 
-   <td colname="col2"><span class="codeph"> GENERIC_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> GENERIC_ERROR  </span> </td> 
    <td colname="col3"> 一般錯誤。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 7 </td> 
-   <td colname="col2"><span class="codeph"> 不可恢復錯誤 </span> </td> 
+   <td colname="col2"><span class="codeph"> 不可恢復錯誤  </span> </td> 
    <td colname="col3"> 視訊引擎無法從中復原的錯誤狀況。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
-   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RESCOVERABLE </span> </td> 
+   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RESCOVERABLE  </span> </td> 
    <td colname="col3"> 網路錯誤，正在嘗試恢復。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 9 </td> 
-   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE </span> </td> 
+   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE  </span> </td> 
    <td colname="col3"> 無法確定資源的大小。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 10 </td> 
-   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED </span> </td> 
-   <td colname="col3"> 未實作功能。 </td> 
+   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED  </span> </td> 
+   <td colname="col3"> 功能未實作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
-   <td colname="col2"><span class="codeph"> 記憶體不足 </span> </td> 
+   <td colname="col2"><span class="codeph"> 記憶體不足  </span> </td> 
    <td colname="col3"> 記憶體不足。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 12 </td> 
-   <td colname="col2"><span class="codeph"> PARSE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> PARSE_ERROR  </span> </td> 
    <td colname="col3"> 解析媒體檔案時出錯。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 13 </td> 
-   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN  </span> </td> 
    <td colname="col3"> 資源有大小，但未知。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
-   <td colname="col2"><span class="codeph"> UNDER_FLOW </span> </td> 
+   <td colname="col2"><span class="codeph"> UNDER_FLOW  </span> </td> 
    <td colname="col3"> 底流。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 15 </td> 
-   <td colname="col2"><span class="codeph"> 不支援的組態 </span> </td> 
+   <td colname="col2"><span class="codeph"> 不支援的組態  </span> </td> 
    <td colname="col3"> 不支援設定。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION  </span> </td> 
    <td colname="col3"> 不支援操作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
-   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT </span> </td> 
+   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT  </span> </td> 
    <td colname="col3"> 尚未初始化。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 18 </td> 
-   <td colname="col2"><span class="codeph"> INVALID_PARAMETER </span> </td> 
+   <td colname="col2"><span class="codeph"> INVALID_PARAMETER  </span> </td> 
    <td colname="col3"> 參數無效。 </td> 
   </tr> 
   <tr> 
@@ -853,7 +856,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 23 </td> 
-   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED </span> </td> 
+   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED  </span> </td> 
    <td colname="col3"> 未指定資源。 </td> 
   </tr> 
   <tr> 
@@ -883,7 +886,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> 不支援容器類型。 </td> 
   </tr> 
   <tr> 
@@ -958,7 +961,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
-   <td colname="col2"><span class="codeph"> 網路關閉 </span> </td> 
+   <td colname="col2"><span class="codeph"> 網路關閉  </span> </td> 
    <td colname="col3"> 用戶的網路連接已關閉。 播放可能隨時停止，並會在連線可用時繼續。 </td> 
   </tr> 
   <tr> 
@@ -1008,17 +1011,17 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
-   <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
+   <td colname="col2"><span class="codeph"> LIVE_HOLD  </span> </td> 
    <td colname="col3">媒體閱讀器無法載入區段，因為它已到達即時視窗的尾端。 當伺服器將新媒體廣告至即時視窗時，區段載入將會繼續。 在下列情況下，通常會到達此狀態： 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
-     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">bufferTime <span class="codeph"> 太高</span> （等於或高於即時視窗持續時間）。 </li> 
+     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48"><span class="codeph"> bufferTime</span>太高（等於或高於即時窗口持續時間）。 </li> 
      <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">一個或多個插入／擦除API的組合取代了添加的多個介質。 </li> 
      <li id="li_1B14716B2157492AB1859306D1250523">下一時段是有待更換媒體的即時時段（由於InsertBy API呼叫） </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
-   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLANG </span> </td> 
+   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLANG  </span> </td> 
    <td colname="col3"> 媒體中的音訊和視訊交錯無法正確執行。 這是封裝錯誤。 當差異超過兩秒時，就會發出警告。 </td> 
   </tr> 
   <tr> 
@@ -1083,7 +1086,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 68 </td> 
-   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> 不支援URL中使用的Web通訊協定。 </td> 
   </tr> 
   <tr> 
@@ -1132,7 +1135,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
    <td colname="col3"> 內部資料結構中沒有音頻接收器。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> 無法開啟檔案。 </td> 
   </tr> 
@@ -1153,7 +1156,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 82 </td> 
-   <td colname="col2"><span class="codeph"> SECURITY_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> SECURITY_ERROR  </span> </td> 
    <td colname="col3"> 由於安全性限制，載入內容失敗。 </td> 
   </tr> 
   <tr> 
@@ -1173,7 +1176,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   </tr> 
   <tr> 
    <td colname="col1"> 87 </td> 
-   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND  </span> </td> 
    <td colname="col3"> 找不到密鑰。 </td> 
   </tr> 
   <tr> 
@@ -1204,7 +1207,7 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">在特技播放模式中播放媒體時 <i>發生錯誤</i> 。 特技播放模式已結束，而串流已暫停。 呼叫 <span class="codeph"> Play()</span> ，以正常模式播放媒體。 </td> 
+   <td colname="col3">在<i>特技播放</i>模式中播放媒體時發生錯誤。 特技播放模式已結束，而串流已暫停。 呼叫<span class="codeph"> Play()</span>以正常模式播放媒體。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
@@ -1214,9 +1217,9 @@ AVE的Video Encoder介面會在中繼資料物件中傳回這些視訊播放 `NA
  </tbody> 
 </table>
 
-## NATIVE_ERROR:加密值 {#section_39365E545CAC49B9A4D4678657BB2155}
+## NATIVE_ERROR:加密值{#section_39365E545CAC49B9A4D4678657BB2155}
 
-Adobe視訊引擎的加密模組會在中繼資料物件中傳回這些 `NATIVE_ERROR` 通知。
+Adobe視訊引擎的加密模組會在`NATIVE_ERROR`中繼資料物件中傳回這些通知。
 
 | NATIVE_ERROR_CODE元資料鍵的值 | NATIVE_ERROR_NAME元資料鍵的值 | 意義 |
 |---|---|---|
