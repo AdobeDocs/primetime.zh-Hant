@@ -6,11 +6,14 @@ title: 構建用於DVR的增強控制條
 uuid: 988dcaf5-896d-4da1-8b78-5acf5a317aa3
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# 構建用於DVR的增強控制條 {#construct-a-control-bar-enhanced-for-dvr}
+# 建構DVR {#construct-a-control-bar-enhanced-for-dvr}增強的控制列
 
 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
 
@@ -29,7 +32,7 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
 
 ![](assets/dvr-window.PNG){width=&quot;684&quot;}
 
-1. 若要實作具有DVR支援的控制列，請依照「顯示具有目前播放位置的尋 [找拖曳列」中的步驟進行。](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) 有下列差異：
+1. 要實施具有DVR支援的控制條，請遵循[顯示具有當前播放位置的搜索拖曳條中的步驟。](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) 有下列差異：
 
    * 您可以實作僅針對可尋找範圍（而非播放範圍）映射的控制列。
 
@@ -38,7 +41,7 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
 
       對於控制列：
    1. 新增覆蓋至代表播放範圍的控制列。
-   1. 當用戶開始尋道時，使用檢查所需的尋道位置是否在可尋道範圍內 `MediaPlayer.getSeekableRange`。
+   1. 當用戶開始尋道時，使用`MediaPlayer.getSeekableRange`檢查所需的尋道位置是否在可尋找範圍內。
 
       例如：
 
@@ -49,7 +52,7 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
       }
       ```
 
-      您也可以選擇使用常數尋找用戶端即時 `MediaPlayer.LIVE_POINT` 點。
+      您也可以選擇使用`MediaPlayer.LIVE_POINT`常數尋找用戶端即時點。
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
