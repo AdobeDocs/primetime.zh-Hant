@@ -23,7 +23,7 @@ Adobe Primetime DRM Server URL使用下列格式：
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
 ```
 
-例如，若是監聽連接埠8080 `mylicenseserver.com` 的授權伺服器主機名稱，以及呼叫租用戶 *`tenant1`*，您應針對您封裝內容時所指定的授權伺服器URL使用下列語法：
+例如，若是監聽連接埠8080的授權伺服器主機名稱`mylicenseserver.com`，以及名為&#x200B;*`tenant1`*&#x200B;的租用戶，您應針對您封裝內容時所指定的授權伺服器URL使用下列語法：
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1
