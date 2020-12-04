@@ -7,7 +7,7 @@ uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 TVSDK支援在廣告插播時顯示線性視訊播放器——廣告介面定義(VPAID)廣告。 VPAID 1.0版需要Flash，而2.0版也可與Browser TVSDK和JavaScript搭配使用。
 
-若要正確顯示VPAID廣告，您必須在例項中提供廣 `AdContainerView`告容器( `MediaPlayerContext` )。
+若要正確顯示VPAID廣告，您必須在`MediaPlayerContext`例項中提供廣告容器(`AdContainerView`)。
 
 VPAID廣告的限制：
 
