@@ -7,13 +7,13 @@ uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
 
-# 控制隱藏字幕的可見度{#control-closed-caption-visibility}
+# 控制隱藏字幕可見度{#control-closed-caption-visibility}
 
 您可以控制隱藏字幕的可見度。 當可見性開啟時，會顯示目前選取的軌道。 如果您變更了目前的軌道，可見度設定會維持不變。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->隱藏字幕的可見度值在中定義 `ClosedCaptionsVisibility`。
+>隱藏字幕的可見度值定義在`ClosedCaptionsVisibility`中。
 >
 >
 ```
@@ -31,14 +31,14 @@ ht-degree: 0%
 >public static const VISIBLE:String = visible;
 >```
 
-1. 等待至 `MediaPlayer` 少具有PREPARED狀態(請 [參閱等待有效狀態](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
-1. 若要取得隱藏字幕的目前可見度設定，請使用中的getter方 `MediaPlayer`法，其會傳回可見度值。
+1. 等待`MediaPlayer`至少具有PREPARED狀態（請參閱[等待有效狀態](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)）。
+1. 若要取得隱藏字幕的目前可見性設定，請使用`MediaPlayer`中的getter方法，此方法會傳回可見性值。
 
    ```
    public function get ccVisibility():String
    ```
 
-1. 若要變更隱藏字幕的可見度，請使用setter方法，從中傳遞可見度值 `ClosedCaptionsVisibility`。
+1. 若要變更隱藏字幕的可見度，請使用setter方法，從`ClosedCaptionsVisibility`傳遞可見度值。
 
    例如：
 
