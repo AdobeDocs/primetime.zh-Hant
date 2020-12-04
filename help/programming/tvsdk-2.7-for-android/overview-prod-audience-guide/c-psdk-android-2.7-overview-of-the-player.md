@@ -6,11 +6,14 @@ title: Primetime TVSDK功能
 uuid: 20ef9abf-1a33-4afc-bb2e-4910e3398a7a
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
 
-# Primetime TVSDK功能 {#primetime-tvsdk-features}
+# Primetime TVSDK功能{#primetime-tvsdk-features}
 
 適用於Android 2.7的TVSDK包含多種可在播放器中實作的功能。
 
@@ -22,7 +25,7 @@ TVSDK功能：
    * 支援全事件重播
    * 隱藏字幕(608、708、WebVTT)和替代形式的音訊，以提高協助功能
    * 標題中的文字樣式控制
-   * DVR功能、快進和快倒帶(後兩者稱為 *特技播放模式*)
+   * DVR功能、快進和快倒帶（後兩者稱為&#x200B;*trick-play mode*）
    * 自適應位速率(ABR)邏輯和ABR控制的初始設定
    * 即時資訊清單容錯支援
    * 可調整的播放緩衝器
