@@ -6,24 +6,27 @@ title: 回應廣告的點按次數
 uuid: 31852f01-c900-48e3-ae23-7fb131c22594
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
 
-# 回應廣告的點按次數{#respond-to-clicks-on-ads}
+# 回應廣告點按{#respond-to-clicks-on-ads}
 
 當使用者點按廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供您點按之目標URL的相關資訊。
 
-1. 若要設定TVSDK的事件接聽程式，並提供點進資訊，請註冊 `AdClickedEventListener.onAdClicked`。
+1. 若要設定TVSDK的事件接聽程式，並提供點進資訊，請註冊`AdClickedEventListener.onAdClicked`。
 
    當使用者點按廣告或相關按鈕時，TVSDK會派單此通知，包括點按目的地的相關資訊。
 1. 在可點選廣告上監控使用者互動。
-1. 當使用者觸碰或按一下廣告或按鈕時，若要通知TVSDK，請 `notifyClick` 呼叫 `MediaPlayerView`。
-1. 聽取TVSDK `onAdClick(AdClickEvent event)` 的活動。
-1. 若要擷取點進URL和相關資訊，請使用例項的getter方 `AdClickEvent` 法。
+1. 當使用者接觸或按一下廣告或按鈕時，若要通知TVSDK，請在`MediaPlayerView`上呼叫`notifyClick`。
+1. 監聽來自TVSDK的`onAdClick(AdClickEvent event)`事件。
+1. 若要擷取點進URL和相關資訊，請使用`AdClickEvent`例項的getter方法。
 1. 暫停影片。
 
-   如需暫停視訊的詳細資訊，請參 [閱暫停並繼續播放](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md)。
+   如需暫停視訊的詳細資訊，請參閱[暫停並繼續播放。](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md)。
 1. 使用點進資訊來顯示廣告點進URL及相關資訊。
 
        例如，您可以以下列其中一種方式顯示資訊：
