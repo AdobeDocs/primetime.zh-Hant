@@ -6,11 +6,14 @@ title: 一般工作流程
 uuid: aafe0030-8a59-4090-aeac-76867777eaa5
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
 
-# 一般工作流程{#typical-workflow}
+# 典型工作流{#typical-workflow}
 
 這是典型的Primetime DRM參考實作工作流程，其中同時包含命令列工具和授權伺服器：
 
