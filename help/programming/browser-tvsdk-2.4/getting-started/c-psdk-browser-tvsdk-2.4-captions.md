@@ -17,7 +17,7 @@ ht-degree: 3%
 
 您可以在播放視訊內容時顯示標題。
 
-若要處理標題，您必須新增事件偵 `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` 聽器：
+若要處理標題，您必須新增`AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`事件接聽程式：
 
 ```js
 ... 
