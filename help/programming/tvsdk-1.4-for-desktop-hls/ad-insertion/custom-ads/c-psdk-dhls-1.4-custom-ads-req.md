@@ -6,11 +6,14 @@ title: 自訂廣告需求
 uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
 
-# 自訂廣告需求 {#custom-ad-requirements}
+# 自訂廣告需求{#custom-ad-requirements}
 
 TVSDK播放器可播放數位視訊播放器廣告介面定義(VPAID)廣告並顯示廣告載入狀態。 如果廣告中有錯誤，或廣告載入時間過長，TVSDK會忽略這些廣告。
 
@@ -24,7 +27,7 @@ TVSDK支援下列功能：
 * 隨選視訊(VOD)內容上的線性VPAID廣告
 * Flash VPAID廣告
 
-   VPAID廣告必須以Flash為基礎，而廣告回應必須將VPAID廣告的媒體類型識別為 `application/x-shockwave-flash`。
+   VPAID廣告必須以Flash為基礎，而廣告回應必須將VPAID廣告的媒體類型識別為`application/x-shockwave-flash`。
 
 不支援下列功能：
 
@@ -33,7 +36,7 @@ TVSDK支援下列功能：
 * 即時內容中的VPAID廣告
 * JavaScript VPAID廣告
 
-## 載入狀態 {#section_5F55C0101CD44A65BCFE1D124CBDF239}
+## 載入狀態{#section_5F55C0101CD44A65BCFE1D124CBDF239}
 
 TVSDK會派單下列事件：
 
@@ -43,14 +46,14 @@ TVSDK會派單下列事件：
 * `AdPlaying`
 * `AdStopped`
 
-事件 `AdStopped` 後，TVSDK會繼續視訊內容。
+在`AdStopped`事件後，TVSDK會繼續視訊內容。
 
 >[!TIP]
 >
 >如果您指定零值，TVSDK會嘗試載入廣告，直到其載入或發生錯誤為止。
 
-## 忽略廣告 {#section_3EA452F420884335AE90DF23C17E416A}
+## 忽略廣告{#section_3EA452F420884335AE90DF23C17E416A}
 
 如果廣告載入時間太長，或廣告中有錯誤，TVSDK會忽略廣告，而廣告pod中的下一個廣告會自動播放。
 
-如果 `AuditudeSettings.customAdLoadTimeout` 設定指定大於零的秒數，TVSDK會嘗試將廣告載入指定的持續時間。 如果無法載入廣告，則會跳過廣告。 例如，如果您設 `AuditudeSettings.customAdLoadTimeout:5`定，TVSDK會嘗試載入廣告最多5秒。 如果廣告仍未載入，則會忽略該廣告。
+如果`AuditudeSettings.customAdLoadTimeout`設定指定大於零的秒數，TVSDK會嘗試將廣告載入指定的持續時間。 如果無法載入廣告，則會跳過廣告。 例如，如果您設定`AuditudeSettings.customAdLoadTimeout:5`,TVSDK會嘗試載入廣告最多5秒。 如果廣告仍未載入，則會忽略該廣告。
