@@ -6,11 +6,14 @@ title: 顯示具有當前回放位置的查找拖曳條
 uuid: 30a9237c-bbd5-457e-a93c-662570711986
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
 
-# 顯示具有當前回放位置的查找拖曳條 {#display-a-seek-scrub-bar-with-the-current-playback-position}
+# 顯示具有當前播放位置{#display-a-seek-scrub-bar-with-the-current-playback-position}的搜索拖曳欄
 
 TVSDK支援搜尋特定位置（時間），其中串流為滑動視窗播放清單、視訊隨選(VOD)和即時串流。
 
@@ -29,8 +32,8 @@ TVSDK支援搜尋特定位置（時間），其中串流為滑動視窗播放清
 1. 等待播放器處於有效狀態以進行搜尋。
 
    有效狀態包括「已準備」、「完成」、「暫停」和「正在播放」。
-1. 使用原生 `SeekBar` 設定， `OnSeekBarChangeListener`可決定使用者何時拖曳。
-1. 將請求的搜尋位置（毫秒）傳遞至 `MediaPlayer.seek` 方法。
+1. 使用原生`SeekBar`來設定`OnSeekBarChangeListener`，此設定會決定使用者在何時拖曳。
+1. 將請求的尋道位置（毫秒）傳遞至`MediaPlayer.seek`方法。
 
    ```java
    void seek(long position) throws MediaPlayerException;
@@ -42,11 +45,11 @@ TVSDK支援搜尋特定位置（時間），其中串流為滑動視窗播放清
    >
    >此步驟會將播放磁頭移至串流中的新位置，但最終計算位置可能與指定的搜尋位置不同。
 
-1. 傾聽並 `MediaPlayerEvent.OPERATION_FAILED` 採取適當行動。
+1. 監聽`MediaPlayerEvent.OPERATION_FAILED`並採取適當的動作。
 
    此事件會傳遞適當的警告。 您的應用程式會決定如何繼續，而選項包括再次嘗試搜尋或從上一個位置繼續播放。
 
-1. 等待TVSDK呼叫回 `MediaPlayerEvent.SEEK_END` 呼。
+1. 等待TVSDK呼叫`MediaPlayerEvent.SEEK_END`回呼。
 1. 使用回呼的位置參數擷取最終調整的播放位置。
 
    這很重要，因為搜尋後的實際開始位置可能與請求的位置不同。 如果搜尋或其他重新定位在廣告插播的中間結束或跳過廣告插播，規則（包括播放行為）可能會受到影響。
