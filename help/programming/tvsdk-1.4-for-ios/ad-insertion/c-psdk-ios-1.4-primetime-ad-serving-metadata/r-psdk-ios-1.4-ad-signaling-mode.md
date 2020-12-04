@@ -6,6 +6,9 @@ title: 廣告信令模式
 uuid: 46f919f9-8ca1-46ff-b7a4-c9a03b5f1ccd
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 廣告信令模式指定視頻流應在何處獲得廣告資訊。
 
-有效值為 `PTAdSignalingModeDefault`、 `PTAdSignalingModeManifestCues`和 `PTAdSignalingModeServerMap`。
+有效值為`PTAdSignalingModeDefault`、`PTAdSignalingModeManifestCues`和`PTAdSignalingModeServerMap`。
 
-下表說明了各種HLS流類 `AdSignalingMode` 型的值的影響：
+下表說明`AdSignalingMode`值對各種HLS串流類型的影響：
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
