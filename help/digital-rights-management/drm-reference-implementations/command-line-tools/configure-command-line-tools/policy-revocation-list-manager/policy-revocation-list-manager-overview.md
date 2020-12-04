@@ -4,21 +4,24 @@ title: DRM撤銷清單管理員
 uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
-# DRM撤銷清單管理員 {#policy-revocation-list-manager}
+# DRM撤銷清單管理器{#policy-revocation-list-manager}
 
-使用Primetime DRM撤銷清單管理器命令列工具( [!DNL AdobeRevocationListManager.jar])來建立和管理撤銷清單，並檢查原則是否已撤銷。
+使用Primetime DRM撤銷清單管理器命令列工具([!DNL AdobeRevocationListManager.jar])來建立和管理撤銷清單，並檢查原則是否已撤銷。
 
-在運行之 [!DNL AdobeRevocationListManager.jar]前，必須在配置檔案的 *Policy Update List Manager和Revocation List Manager Properties* （策略更新清單管理器和撤銷清單管理器屬性）部分設定屬性。
+在運行[!DNL AdobeRevocationListManager.jar]之前，必須在配置檔案的&#x200B;*策略更新清單管理器和撤銷清單管理器屬性*&#x200B;部分中設定屬性。
 
 >[!NOTE]
 >
 >您也可以從命令行指定所有「撤銷清單管理器」屬性。
 
-## 撤銷清單管理員命令列使用 {#revocation-list-manager-command-line-usage}
+## 撤銷清單管理器命令行用法{#revocation-list-manager-command-line-usage}
 
 ```
 java -jar AdobeRevocationListManager.jar 
@@ -38,7 +41,7 @@ java -jar AdobeRevocationListManager.jar
 ```
 
 * `destfile` 指定保存撤銷清單屬性的檔案的名稱。
-* `crlNumber` 表示「證書撤銷清單」(CRL)的非負版本號。 每次更新CRL時，都需要增加此數字。
+* `crlNumber` 表示「證書撤銷清單」(CRL)的非負版本號。每次更新CRL時，都需要增加此數字。
 
 **表5:命令行選項**
 
@@ -52,7 +55,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c配置檔案</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">指定配置檔案的名稱和位置。 </p><p class="- topic/p ">如果您未指定名稱或位置，DRM撤銷清單管理員會在目前工作目錄中 <span class="filepath"> 搜尋flashaccessols.properties</span> 。 </p><p>注意： 在命令行上指定的選項優先於在配置檔案中指定的選項。 </p>指定配置檔案的位置。 如果您未套用此選項，「撤銷清單管理員」會在工作目錄 <span class="filepath"> 中搜尋flashaccessools.properties</span> 。 </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">指定配置檔案的名稱和位置。 </p><p class="- topic/p ">如果您未指定名稱或位置，DRM撤銷清單管理器會在目前工作目錄中搜尋<span class="filepath"> flashaccessools.properties</span>。 </p><p>注意： 在命令行上指定的選項優先於在配置檔案中指定的選項。 </p>指定配置檔案的位置。 如果您未套用此選項，「撤銷清單管理員」會在工作目錄中搜尋<span class="filepath"> flashaccessools.properties</span>。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d檔案名</span> </td> 
@@ -72,7 +75,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">請勿詢問是否應覆寫目標檔案。 如果目標檔案已存在且 <span class="codeph"> 未設定</span> -o，則會發生錯誤。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">請勿詢問是否應覆寫目標檔案。 如果目標檔案已存在且未設定<span class="codeph"> -o</span> ，則會出現錯誤。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -80,7 +83,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">廢止由issuyerName和serialNumber在指 <span class="codeph"> 定日期識</span> 別的憑證 <span class="codeph"></span> 。 issuberName <span class="codeph"></span> 必須使用509名稱格式。 例如， <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>。 </p> <p>您必須以十六進位格式指定序列號。 您也需要以下列其中一種格式指定撤銷日期： 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">撤銷在指定日期由<span class="codeph"> issuberName</span>和<span class="codeph"> serialNumber</span>識別的憑證。 <span class="codeph"> issuberName</span>必須使用509名稱格式。 例如，<span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>。 </p> <p>您必須以十六進位格式指定序列號。 您也需要以下列其中一種格式指定撤銷日期： 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> </li> 
@@ -89,7 +92,7 @@ java -jar AdobeRevocationListManager.jar
  </tbody> 
 </table>
 
-## 配置屬性 {#configuration-properties}
+## 配置屬性{#configuration-properties}
 
 您必須套用認證才能簽署撤銷清單。 以下「撤銷清單管理器」屬性指定PKCS12檔案，該檔案包括用於簽署撤銷清單（許可證伺服器證書）的憑據，以及證書的密碼：
 
