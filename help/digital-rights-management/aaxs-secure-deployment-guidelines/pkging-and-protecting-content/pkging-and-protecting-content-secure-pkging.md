@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# 安全地封裝內容 {#securely-packaging-content}
+# 安全地封裝內容{#securely-packaging-content}
 
 Adobe Access Media Packager命令行工具的配置檔案需要在打包過程中使用的PKCS12憑證。
 
-在Reference Implementation Command Line工具中，PKCS12憑證檔案的密碼會以明文儲存在flashaccess.properties檔案中。 因此，在保護托管此檔案的電腦時，請格外小心，並確保其位於安全環境中。 (請參 [閱物理安全和訪問](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md))。
+在Reference Implementation Command Line工具中，PKCS12憑證檔案的密碼會以明文儲存在flashaccess.properties檔案中。 因此，在保護托管此檔案的電腦時，請格外小心，並確保其位於安全環境中。 （請參閱[物理安全和訪問](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)）。
 
 Packager也使用「授權伺服器」和「授權伺服器傳輸」憑證。 必須保護此資訊的完整性和機密性。 僅允許授權實體使用封裝程式。 如果您的任何私密金鑰遭到危害，請立即通知Adobe Systems Incorporated，以便撤銷憑證。
 
