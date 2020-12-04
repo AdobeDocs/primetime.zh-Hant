@@ -6,24 +6,27 @@ title: 實作自訂機會偵測器
 uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# 實作自訂機會偵測器{#implement-a-custom-opportunity-detector}
+# 實作自訂機會檢測器{#implement-a-custom-opportunity-detector}
 
 您可以建置自己的機會檢測器。
 
-* 如果您的業務機會生成器基 `TimedMetadata` 於與當前媒體流關聯的對象，則應擴展或 `SpliceOutOpportunityGenerator` 擴展 `TimedMetadataOpportunityGenerator`。
+* 如果您的業務機會生成器基於與當前媒體流關聯的`TimedMetadata`對象，則應擴展`SpliceOutOpportunityGenerator`或`TimedMetadataOpportunityGenerator`。
 
-* 如果您的機會生成器基於外部服務（如CIS）提供的帶外資料，則應擴展該生成器 `OpportunityGenerator`。
+* 如果您的業務機會生成器基於外部服務（如CIS）提供的帶外資料，則應擴展`OpportunityGenerator`。
 
 1. 建立自訂商機產生器。
 
        如果您的自訂商機產生器是以「TimedMetadata」物件為基礎，請擴充「TimedMetadataOpportunityGenerator」並覆寫下列方法：
    
    * `doConfigure` -在建立媒體播放器項目後調用此方法，並提供機會生成器以建立初始的機會集（如果需要）
-   * `doProcess` -每次偵測到新的時候都會呼 `TimedMetadata` 叫此方法（例如，每次播放清單／資訊清單重新整理時，即時／線性串流）
+   * `doProcess` -每次偵測到新的時候都會 `TimedMetadata` 呼叫此方法（例如，每次播放清單／資訊清單重新整理時，即時／線性串流）
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
