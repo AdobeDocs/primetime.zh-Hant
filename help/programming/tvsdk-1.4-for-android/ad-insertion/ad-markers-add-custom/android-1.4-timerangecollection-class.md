@@ -6,6 +6,9 @@ title: TimeRangeCollection類
 uuid: 5705dc9d-4325-44b0-b5aa-196d09c3a67e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '124'
+ht-degree: 0%
 
 ---
 
@@ -32,4 +35,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-參 `type` 數是建構函式方法簽名中的第一個位置參數，是列舉的例 `TimeRangeCollection#Type` 項。 這是課程的一 `TimeRangeCollection` 部分。 此枚舉當前定義的值 `MARK_RANGES`為 `DELETE_RANGES`、和 `REPLACE_RANGES`。 您可以使用這 `TimeRangeCollection` 三種類型來建立物件。
+`type`參數是建構函式方法簽名中的第一個位置參數，是`TimeRangeCollection#Type`列舉的例項。 這是`TimeRangeCollection`類的一部分。 此枚舉當前定義的值為`MARK_RANGES` 、 `DELETE_RANGES`和`REPLACE_RANGES`。 您可以使用這三種類型建立`TimeRangeCollection`對象。
