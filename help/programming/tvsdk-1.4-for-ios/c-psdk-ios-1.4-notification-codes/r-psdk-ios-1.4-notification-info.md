@@ -6,11 +6,14 @@ title: 資訊通知代碼
 uuid: 10145ce6-9eb0-4829-85dd-1acfe97b07e8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '192'
+ht-degree: 4%
 
 ---
 
 
-# 資訊通知代碼{#info-notification-codes}
+# INFO通知代碼{#info-notification-codes}
 
 此表提供了有關INFO類型通知的詳細資訊。
 
@@ -35,36 +38,36 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_START </span> </td> 
+   <td colname="1"><span class="codeph"> 300000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_START  </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> 無 </td> 
    <td colname="5"> 播放已開始。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300001 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號300001  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE  </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> 無 </td> 
    <td colname="5"> 播放已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_START </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號300002  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_START  </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> <p> 無 </p> </td> 
    <td colname="5"> 已啟動搜索操作。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300003 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號300003  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_COMPLETE  </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> 搜索操作已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300005 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 郵遞區號300005  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> 播放器狀態已變更。 當狀態為ERROR時，內部通知是觸發交換機到ERROR狀態的錯誤通知對象。 </td> 
@@ -77,10 +80,10 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 302000 </span> </td> 
-   <td colname="2"><span class="codeph"> 位元速率變更 </span> </td> 
+   <td colname="1"><span class="codeph"> 302000  </span> </td> 
+   <td colname="2"><span class="codeph"> 位元速率變更  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 位元速率 </span> </td> 
+   <td colname="4"><span class="codeph"> 位元速率  </span> </td> 
    <td colname="5"> 視訊的位元速率已變更。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -91,8 +94,8 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 304000 </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 郵編304000  </span> </td> 
+   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>音軌已變更。 </p> </td> 
@@ -105,8 +108,8 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 307000 </span> </td> 
-   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 郵編307000  </span> </td> 
+   <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>字幕音軌變了。 </p> </td> 
