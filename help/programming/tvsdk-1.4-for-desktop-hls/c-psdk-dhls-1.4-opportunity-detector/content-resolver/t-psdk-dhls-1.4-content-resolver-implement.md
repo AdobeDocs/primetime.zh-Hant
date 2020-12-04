@@ -6,18 +6,21 @@ title: 建置自訂內容解析程式
 uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
 
-# 建置自訂內容解析程式{#implement-a-custom-content-resolver}
+# 實作自訂內容解析器{#implement-a-custom-content-resolver}
 
 您可以根據預設解析器實作您自己的內容解析器。
 
-當TVSDK偵測到新商機時，會透過註冊的內容解析器重複，尋找能夠使用方法解決該商機的 `canResolve` 機會。 選擇返回true的第一個用於解決業務機會。 如果沒有內容解析程式，則會略過該商機。 由於內容解析程式通常是非同步的，因此當程式完成時，內容解析程式負責通知TVSDK。
+當TVSDK偵測到新商機時，它會重複透過註冊的內容解析器尋找能夠使用`canResolve`方法解決該商機的內容解析器。 選擇返回true的第一個用於解決業務機會。 如果沒有內容解析程式，則會略過該商機。 由於內容解析程式通常是非同步的，因此當程式完成時，內容解析程式負責通知TVSDK。
 
-* 內容解析程式呼 `client.place` 叫，以指定TVSDK需要執行的時間軸作業（通常是廣告插播位置）。
-* 如果解析過程成 `client.notifyCompleted` 功，或進程失敗，則內容解 `client.notifyFailed` 析程式將調用。
+* 內容解析程式會呼叫`client.place`，以指定TVSDK需要執行的時間軸作業（通常是廣告插播位置）。
+* 如果解析過程成功，內容解析器將調用`client.notifyCompleted`；如果過程失敗，則調用`client.notifyFailed`。
 
 1. 建立自訂的業務機會解析程式。
 
