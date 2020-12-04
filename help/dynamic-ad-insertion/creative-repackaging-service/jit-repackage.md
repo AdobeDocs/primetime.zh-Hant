@@ -6,15 +6,18 @@ title: JIT重新封裝的詳細工作流程
 uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
 
-# JIT重新封裝的詳細工作流程 {#detailed-workflows-for-jit-repackaging}
+# JIT重新封裝的詳細工作流程{#detailed-workflows-for-jit-repackaging}
 
 用戶端視訊播放器或資訊清單伺服器可與CRS互動，以達成JIT重新封裝。 兩者都使用相同的廣告選擇邏輯。
 
-## JIT重新打包由Manifest伺服器啟動 {#section_1F1C1B7DD146403890C2B43E24FEF0EB}
+## JIT重新打包由Manifest Server {#section_1F1C1B7DD146403890C2B43E24FEF0EB}啟動
 
 ![](assets/ssai_JIT-workflow_web.png)
 
@@ -26,7 +29,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
    >[!NOTE]
    >
-   >在多CDN設定中，資訊清單伺服器使用 `ptcdn` 引導URL中的參數來識別CDN伺服器。
+   >在多CDN設定中，資訊清單伺服器使用引導URL中的`ptcdn`參數來識別CDN伺服器。
 
 1. 資訊清單伺服器會檢查回應：
 
@@ -37,7 +40,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
 對於該創意素材的所有後續要求，資訊清單伺服器會從CDN擷取HLS版本，並將其插入內容串流。
 
-## JIT重新包裝：由客戶發起 {#section_FBC97D40043F4FDD98247A08BB6195B0}
+## 由客戶{#section_FBC97D40043F4FDD98247A08BB6195B0}啟動的JIT重新打包
 
 <!--<a id="fig_hkn_ndt_3z"></a>-->
 
@@ -54,7 +57,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
       >[!NOTE]
       >
-      >在多CDN設定中，資訊清單伺服器使用 `ptcdn` 引導URL中的參數來識別CDN伺服器。
+      >在多CDN設定中，資訊清單伺服器使用引導URL中的`ptcdn`參數來識別CDN伺服器。
 
 1. 用戶端會檢查來自CDN伺服器的回應。
 
@@ -64,7 +67,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 1. 廣告伺服器要求將非HLS廣告轉碼至HLS。
 1. CRS會建立HLS版本，並將它上傳至CDN伺服器以供日後使用。
 
-## 廣告格式優先順序和時間表 {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
+## 廣告格式優先順序和時間表{#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
 
 資訊清單伺服器和用戶端使用相同的選擇邏輯來決定播放可用廣告的優先順序。 HLS格式化廣告優先，其次是MP4、FLV和WebM。
 
