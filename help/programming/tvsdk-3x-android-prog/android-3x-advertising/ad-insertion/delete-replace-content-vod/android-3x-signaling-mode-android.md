@@ -6,11 +6,14 @@ title: 從廣告信號模式和廣告中繼資料組合中對廣告插入和刪�
 uuid: 49abab49-4e52-477d-b7ed-688ee63e7473
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
 
-# 從廣告信號模式和廣告中繼資料組合中對廣告插入和刪除的影響 {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# 從廣告信號模式和廣告中繼資料組合{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}對廣告插入和刪除的影響
 
 您可以使用不同的廣告信令模式和廣告中繼資料組合來標籤、刪除和取代VOD串流中的時間範圍。 不同的信令模式和元資料組合導致不同的行為。
 
@@ -22,7 +25,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 **伺服器地圖**
 
-| **廣告中繼資料** | **已建立解析器** | **`PlacementInformations`已建立&#x200B;** | **結果行為** |
+| **廣告中繼資料** | **已建立解析器** | **`PlacementInformations`已建立** | **結果行為** |
 |--- |--- |--- |--- |
 |  | 刪除 | 刪除 | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)` | 已刪除範圍 |
 | 刪除， Auditude | 刪除， Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),` <br>`PlacementInfo (Type.SERVER_MAP, Mode.INSERT)` | 刪除範圍，插入廣告 |
