@@ -6,6 +6,9 @@ title: 查看公用API
 uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
 source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
 
 權益要求和回應是透過授權伺服器與客戶權益服務之間相互驗證的SSL連線來傳遞。
 
-HTTPS URI配置( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2))用來定義權益端點，而HTTP POST請求方法( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3))則用於請求。 權益端點以及指示後端權益的標幟是必要項目，而且必須在封裝時包含在原則中。
+HTTPS URI配置([https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2))用於定義權益端點，而HTTP POST請求方法([https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3))用於請求。 權益端點以及指示後端權益的標幟是必要項目，而且必須在封裝時包含在原則中。
 
-## 權益要求 {#section_BFBFEF0795CA46D6842C479256B95F95}
+## 權益要求{#section_BFBFEF0795CA46D6842C479256B95F95}
 
 權益要求的正文將會是JSON物件，如下所示。
 
@@ -52,7 +55,7 @@ HTTPS URI配置( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://too
 }
 ```
 
-## 權益回應 {#section_F15A9FD6BAD946B3B4C5C14612F90154}
+## 權益回應{#section_F15A9FD6BAD946B3B4C5C14612F90154}
 
 權益回應的正文是JSON物件。
 
