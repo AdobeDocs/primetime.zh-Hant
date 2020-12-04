@@ -6,11 +6,14 @@ title: 鍵旋轉
 uuid: 6ac3b828-2cd1-42df-b9ee-4daa8e553d5e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# 鍵旋轉 {#key-rotation}
+# 密鑰輪替{#key-rotation}
 
 建立包時，可以選擇以下加密選項。 不過，您無法在取得授權期間修改加密選項：
 
