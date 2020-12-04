@@ -6,6 +6,9 @@ title: 記錄類
 uuid: 8b07472e-b529-4c35-b49b-a499debfcff0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 這些類別可讓您自訂記錄。
 
-套件： [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
+套件：[com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -38,7 +41,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> 記錄器</a> </span></td> 
-   <td colname="2">介面。 為片語實作自訂記錄器所需的 <code>primetime-sdk-name</code> 方法。 </td> 
+   <td colname="2">介面。 為<code>primetime-sdk-name</code>片語實作自訂記錄器所需的方法。 </td> 
   </tr> 
  </tbody>
 </table>
