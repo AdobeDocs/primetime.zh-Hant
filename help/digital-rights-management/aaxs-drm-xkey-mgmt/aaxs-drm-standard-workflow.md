@@ -6,11 +6,14 @@ seo-description: 標準AAXS DRM工作流程
 uuid: b996eb2c-8e37-4a29-a972-e09c69d2461d
 translation-type: tm+mt
 source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# 標準AAXS DRM工作流程{#standard-aaxs-drm-workflow}
+# 標準AAXS DRM Workflow{#standard-aaxs-drm-workflow}
 
 1. （封裝）AAXS Java SDK會產生隨機CEK。
 1. （封裝）CEK用於加密內容。
