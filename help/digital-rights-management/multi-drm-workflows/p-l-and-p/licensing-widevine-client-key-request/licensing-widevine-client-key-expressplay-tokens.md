@@ -6,6 +6,9 @@ title: Expressplay Token
 uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
 source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-提供給參數的內容加密密鑰儲存ID或CEKSID和 `kid``contentKey` 提供給參數的內容加密密鑰或CEK必須與用於打包的內容加密密鑰儲存ID和內容加密密鑰匹配。 以下文字是Token伺服器回應的範例：
+內容加密密鑰儲存ID或CEKSID（指定給`kid`參數）和內容加密密鑰或CEK（指定給`contentKey`參數）必須匹配用於打包的內容加密密鑰儲存ID和內容加密密鑰。 以下文字是Token伺服器回應的範例：
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
