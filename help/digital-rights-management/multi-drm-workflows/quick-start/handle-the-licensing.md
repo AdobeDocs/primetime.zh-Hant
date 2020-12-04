@@ -17,7 +17,7 @@ ht-degree: 0%
 
 授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法（已授權）的使用者可獲得授權（金鑰），以解密並播放其內容供應商的加密內容。
 
-在使用者裝置上的應用程式或網頁播放受DRM保護的內容之前，它必須從您（客戶）操作的權益或店面伺服器取得Token。 Adobe提供範例參考伺服器，以供下列用途使用： [參考伺服器：範例ExpressPlay Entitlement Server(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)。
+在使用者裝置上的應用程式或網頁播放受DRM保護的內容之前，它必須從您（客戶）操作的權益或店面伺服器取得Token。 Adobe提供範例參考伺服器，以供下列用途使用：[參考伺服器：範例ExpressPlay Entitlement Server(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)。
 
 您的權益或店面伺服器必須先向相關的ExpressPlay伺服器要求授權Token，然後再與您自己的後端系統進行檢查，以判斷特定使用者是否有權觀看要求的內容。 從授權Token請求傳回的回應是授權伺服器的現成可用URL，或回應包含JSON結構中的URL，視您使用的DRM解決方案而定。
 
@@ -30,7 +30,7 @@ ht-degree: 0%
 
 1. 提出授權Token要求。
 
-   若是快速啟動的案例（您只想確定相關的各種元件彼此搭配運作），您可能會想使用類似的方式來提出授權Token要求（而不是一開始啟動應用程式並從那裡執行和測試呼叫）。 [!DNL curl] 例如：
+   若是快速啟動的案例，而您只想確定所涉及的各種元件彼此搭配運作，則可能會想使用[!DNL curl]之類的項目來提出授權Token要求（而不是一開始啟動並執行應用程式並從那裡測試呼叫）。 例如：
 
    * Widevine:
 
