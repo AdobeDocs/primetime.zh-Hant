@@ -6,6 +6,9 @@ title: 使用Cookie
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
 source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 若要使用Cookie:
 
-1. 建立URI `cookieManager` 的Cookie，並將其新增至CookieStore。
+1. 建立`cookieManager`，並將URI的Cookie新增至CookieStore。
 
    例如：
 
@@ -45,13 +48,13 @@ source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
    >
    >啟用302重新導向後，廣告請求可重新導向至與Cookie所屬網域不同的網域。
 
-   TVSDK會在執 `cookieManager` 行時期查詢此項資訊，檢查是否有與URL關聯的Cookie，並自動使用這些Cookie。
+   TVSDK會在執行時期查詢此`cookieManager`，檢查是否有任何與URL相關的Cookie，並自動使用這些Cookie。
 
-   如果在播放期間需要在應用程式中更新Cookie，請勿使用 `networkConfiguration.setCookieHeaders` API，因為更新會發生在JAVA Cookie儲存區。
+   如果在播放期間需要在應用程式中更新Cookie，請勿使用`networkConfiguration.setCookieHeaders` API，因為更新會發生在JAVA Cookie儲存區。
 
    `networkConfiguration.setCookieHeaders` API會將Cookie設定至TVSDK的C++ CookieStore。
 
-   當使用JAVA Cookies並在應用程式和TVSDK之間共用時，請使用JAVA CookieStore僅管理Cookies。
+   當使用JAVA Cookie並在應用程式和TVSDK之間共用時，請使用JAVA CookieStore僅管理Cookie。
 
    在初始化播放之前，請使用Cookie管理器將Cookie設定為CookieStore，如上所述。
 
@@ -68,7 +71,7 @@ source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
    >將此&#39;setReadSetCookieHeader&#39;設定為false後，請使用JAVA Cookie管理員來設定關鍵要求的Cookie。
 
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
-每當C++ Cookie（來自http回應的Cookie）中有更新時，就會觸發此回呼API。 應用程式需要監聽此回呼，並可依此更新其JAVA CookieStore，如此其JAVA網路呼叫就可利用Cookie，如下所示：
+每當C++ Cookie（來自http回應的Cookie）中有更新時，就會觸發此回呼API。應用程式需要監聽此回呼，並可依此更新其JAVA CookieStore，如此其JAVA網路呼叫就可利用Cookie，如下所示：
 
    ```
    private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener() {
