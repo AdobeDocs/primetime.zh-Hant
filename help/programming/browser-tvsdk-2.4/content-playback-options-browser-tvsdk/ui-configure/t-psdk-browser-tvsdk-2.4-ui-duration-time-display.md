@@ -6,6 +6,9 @@ title: 顯示視訊的持續時間、目前時間和剩餘時間
 uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 您可以使用瀏覽器TVSDK來擷取可顯示在搜尋列上之媒體的相關資訊。
 
 1. 等待您的播放器至少處於「已準備」狀態。
-1. 使用屬性擷取目前的播放磁頭 `MediaPlayer.currentTime` 時間。
+1. 使用`MediaPlayer.currentTime`屬性擷取目前的播放磁頭時間。
 
    此屬性會傳回虛擬時間軸上目前的播放磁頭位置（以毫秒為單位）。 時間會相對於可能包含多個替代內容例項的已解析串流來計算，例如，多個廣告或廣告片段會拼接到主串流中。 對於即時／線性串流，傳回的時間一律在播放視窗範圍內。
 
@@ -24,7 +27,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    ```
 
 1. 擷取串流的播放範圍並決定持續時間。
-   1. 使用屬 `mediaPlayer.playbackRange` 性來取得虛擬時間軸時間範圍。
+   1. 使用`mediaPlayer.playbackRange`屬性來取得虛擬時間軸時間範圍。
 
    1. 要確定持續時間，請從範圍結束處減去開始。
 
@@ -148,7 +151,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
    } 
    ```
 
-1. 監聽並 `AdobePSDK.TimeChangeEvent` 相應地更新seekbar。
+1. 監聽`AdobePSDK.TimeChangeEvent`並相應地更新seekbar。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
