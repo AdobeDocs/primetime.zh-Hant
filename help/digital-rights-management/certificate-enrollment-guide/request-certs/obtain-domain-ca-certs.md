@@ -4,6 +4,9 @@ title: 獲取域CA證書
 uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
 例如，使用OpenSSL，可以產生自簽名的CA憑證，如下所示：
 
-1. 建立名為的檔案， [!DNL ca-extensions.txt] 包含：
+1. 建立名為[!DNL ca-extensions.txt]的檔案，其中包含：
 
    ```
    keyUsage=critical,keyCertSign  
