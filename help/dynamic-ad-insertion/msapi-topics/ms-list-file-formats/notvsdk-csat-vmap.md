@@ -6,17 +6,20 @@ title: 用於追蹤URL的VMAP格式
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# 用於追蹤URL的VMAP格式 {#vmap-format-for-tracking-urls}
+# 用於追蹤URL {#vmap-format-for-tracking-urls}的VMAP格式
 
-如果用戶端要求追蹤資訊，資訊清單伺服器會傳回格式化檔案。 其格式和內容取決於查詢參數的值 `pttrackingversion`
+如果用戶端要求追蹤資訊，資訊清單伺服器會傳回格式化檔案。 其格式和內容取決於查詢參數`pttrackingversion`的值
 
-## 單一VMAP格式 {#vmap}
+## 單一VMAP格式{#vmap}
 
-如果下列範例的格式來自一般的VMAP區塊， `pttrackingversion=vmap` 資訊清單伺服器會傳送的VMAP檔案。 本發明結構簡單，避免了不必要的重複，使結構更加清晰。 省略號（三個點，以空格分隔）表示某些URL內和某些代碼區塊之間的省略資訊。 未縮短的URL會出現在多行上，但會出現在VMAP檔案的單行上。
+如果`pttrackingversion=vmap`的格式如下例，則清單伺服器發送的VMAP檔案來自典型的VMAP塊。 本發明結構簡單，避免了不必要的重複，使結構更加清晰。 省略號（三個點，以空格分隔）表示某些URL內和某些代碼區塊之間的省略資訊。 未縮短的URL會出現在多行上，但會出現在VMAP檔案的單行上。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
