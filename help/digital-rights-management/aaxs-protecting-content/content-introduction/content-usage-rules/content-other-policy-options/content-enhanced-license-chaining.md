@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 增強的授權鏈結 {#enhanced-license-chaining}
+# 增強的授權鏈結{#enhanced-license-chaining}
 
 允許使用父根授權來更新授權，以批次更新授權。
 
