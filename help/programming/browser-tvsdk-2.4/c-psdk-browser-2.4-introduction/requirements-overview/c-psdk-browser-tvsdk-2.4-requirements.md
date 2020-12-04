@@ -6,11 +6,14 @@ title: 需求
 uuid: 9726b083-f52a-410c-8ab4-47b4913d5172
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# 概觀 {#requirements-overview}
+# 概述{#requirements-overview}
 
 瀏覽器TVSDK需要媒體內容、資訊清單內容和軟體版本的特定屬性。
 
