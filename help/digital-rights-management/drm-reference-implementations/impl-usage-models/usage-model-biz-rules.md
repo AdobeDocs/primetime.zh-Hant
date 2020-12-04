@@ -6,13 +6,16 @@ title: 使用模式示範業務規則
 uuid: c55f85be-5ecb-4a78-b47d-7001ec207d3a
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
 # 使用模式示範業務規則{#usage-model-demo-business-rules}
 
-當使用者要求授權時，Reference Implementation伺服器會檢查用戶端所傳送的中繼資料，以判斷內容是否是使用屬性封裝 `RI_UsageModelDemo` 的。 如果是，則伺服器應用以下業務規則。
+當使用者要求授權時，參考實作伺服器會檢查用戶端所傳送的中繼資料，以判斷內容是否使用`RI_UsageModelDemo`屬性封裝。 如果是，則伺服器應用以下業務規則。
 
 * 如果DRM策略之一需要驗證：
 
@@ -20,14 +23,16 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
       如果找不到用戶的名稱，請完成以下任務：
 
-      * 如果 `Customer.IsSubscriber` 屬性設為 `true`，您需要為使用模型產生授 *`Subscription`* 權並傳送給使用者。
+      * 如果`Customer.IsSubscriber`屬性設為`true`，則需要為&#x200B;*`Subscription`*&#x200B;使用模式產生授權，並傳送給使用者。
 
-      * 在資料庫表中搜 `CustomerAuthorization` 索用戶名和內容ID的記錄。
+      * 在`CustomerAuthorization`資料庫表中搜索用戶名和內容ID的記錄。
+
       如果您可以找到使用者記錄，請完成下列工作：
 
-      * 如果屬 `CustomerAuthorization.UsageType` 性設為， `DTO`請為DTO使用模式產生授權，並傳送給使用者。
+      * 如果`CustomerAuthorization.UsageType`屬性設為`DTO`，請為DTO使用模式產生授權並傳送給使用者。
 
-      * 如果屬 `CustomerAuthorization.UsageType` 性設為，請 `VOD`為VOD使用模式產生授權，並傳送給使用者。
+      * 如果`CustomerAuthorization.UsageType`屬性設為`VOD`，請為VOD使用模型產生授權並傳送給使用者。
+
       如果DRM策略不允許匿名訪問，請完成以下任務：
 
       * 如果請求中沒有有效的驗證Token，您必須傳回「需要驗證」錯誤。
