@@ -1,16 +1,12 @@
 ---
-source-git-commit: cb347453d4a08b869842aaaaca61538095978c91
+source-git-commit: 8c828661016782f79257c11708bf7cac618853b7
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '460'
-ht-degree: 6%
+source-wordcount: '378'
+ht-degree: 7%
 
 ---
 # Contribute文章
-
-| EXL-PR | EXL | 預覽 | 啟動 | 已發佈 | 說明 |
-|--- |--- |--- |--- |--- |--- |
-| [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/lastBuild/) | [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/lastBuild) | [預覽URL](https://experienceleague.corp.adobe.com/docs/primetime/programming/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [即時URL](https://experienceleague.adobe.com/docs/primetime/programming/home.html?lang=en) | [Authoring 指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 我們歡迎來自社群的貢獻，以及來自檔案團隊以外的Adobe員工。
 
@@ -20,13 +16,13 @@ ht-degree: 6%
 
 ## 關於您對Adobe內容的貢獻
 
-請參閱 [Adobe Docs投稿人指南](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)。
+請參閱[Adobe Docs投稿人指南](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)。
 
 您的貢獻方式取決於您的身份，以及您想要貢獻的變更：
 
 ### 小幅變更
 
-如果您是出於好處而提供小幅更新，請造訪文章，然後按一下文章中的「 **Edit** 」（編輯）連結，該連結會前往文章的GitHub來源。 然後，只要使用GitHub UI進行更新即可。 如需詳細資訊， [請參閱一般的Adobe Docs投稿人指南](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) 。
+如果您是出於善意而提供小幅更新，請造訪文章，然後按一下文章中的&#x200B;**Edit**&#x200B;連結，該連結會前往文章的GitHub來源。 然後，只要使用GitHub UI進行更新即可。 如需詳細資訊，請參閱一般[Adobe Docs投稿人指南](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)。
 
 Adobe使用條款涵蓋您提交之本回購檔案及程式碼範例的輕微更正或澄清。
 
@@ -40,13 +36,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Adobe員工的重大變更
 
-如果您是Adobe Experience Cloud解決方案產品團隊的技術撰稿人、計畫經理或開發人員，而您的工作是撰寫或撰寫技術文章，則應使用私人儲存庫 [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs)。 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+如果您是Adobe Experience Cloud解決方案產品團隊的技術撰稿人、計畫經理或開發人員，而您的工作是撰寫或撰寫技術文章，則應使用私人儲存庫[https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs)。<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## 工具與設定
 
 社群參與者可使用GitHub UI進行基本編輯，或將repo分叉以作出重大貢獻。
 
-如需詳細 [資訊，請參閱Adobe Docs投稿人指南](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) 。
+如需詳細資訊，請參閱[Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)。
 
 ## 如何使用標籤格式化主題
 
