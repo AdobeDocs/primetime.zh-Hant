@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -309,7 +309,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_WEBVTT_RESPONSE記錄{#trace-webvtt-response-records}
 
-將``type ``&lt;a1/>``manifest ``伺服器``sends ``記錄到`` `answer` ````clients ````requests ```for```WEBVTT ``標題。 ``responses ````of ``TRACE_WEBVTT_RESPONSE &quot;以外的欄位按表中顯示的順序顯示，分隔`by`頁籤。
+此類型的記錄會回應資訊清單伺服器傳送給用戶端的字幕要求。 `WEBVTT``TRACE_WEBVTT_RESPONSE`以外的欄位會依表格中的順序顯示，並以標籤分隔。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
