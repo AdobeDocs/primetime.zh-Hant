@@ -2,7 +2,7 @@
 title: PTAI 20.12.1發行說明
 description: PTAI發行說明說明Primetime廣告插入2020年的新增或變更、已解決和已知問題。
 translation-type: tm+mt
-source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
+source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Primetime廣告插入20.12.1發行說明說明2020年Primetime廣告插入中有
 
 ### 舊版的增強功能和修正
 
-#### 201.11.1版
+#### 20.11.1版
 
 **時間：** 2020年11月5日星期四東部時間凌晨2點到5點
 
@@ -32,7 +32,7 @@ Primetime廣告插入20.12.1發行說明說明2020年Primetime廣告插入中有
 
 * 維護更新。
 
-#### 201.10.2版
+#### 20.10.2版
 
 **時間：** 2020年10月29日星期四東部時間12:01 AM至06:00
 
@@ -40,7 +40,7 @@ Primetime廣告插入20.12.1發行說明說明2020年Primetime廣告插入中有
 
 * 維護更新。
 
-#### 201.10.1版
+#### 20.10.1版
 
 **時間：** 2020年10月13日星期二東部時間03:00 00 07:00
 
