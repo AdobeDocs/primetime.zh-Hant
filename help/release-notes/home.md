@@ -4,10 +4,10 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 35%
+source-wordcount: '280'
+ht-degree: 34%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 35%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
-## PTAI 20.10.1中的增強功能和修正
+## PTAI 20.12.1的增強功能和修正
 
-此版本的重點是維護更新。
+此版本包含修補程式，可解決客戶端間歇性連線問題。
 
 ## TVSDK 3.12 Android中的修正
 
