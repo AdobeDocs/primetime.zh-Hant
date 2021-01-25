@@ -4,9 +4,9 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: c17145da29d148f3dbfe1bcd1011acfa7177bc25
+source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '279'
 ht-degree: 34%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
-## PTAI 21.1.1的增強功能和修正
+## PTAI 21.1.2的增強功能和修正
 
-此版本包含支援附屬機構提供的SCTE35型提示格式。
+此版本包括Primetime廣告插入後端記憶體叢集的升級。
 
 ## TVSDK 3.12 Android中的修正
 
