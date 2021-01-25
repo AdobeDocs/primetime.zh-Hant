@@ -1,20 +1,30 @@
 ---
-title: PTAI 21.1.1發行說明
+title: PTAI 21.1.2發行說明
 description: PTAI發行說明說明2021年黃金時段廣告插入的新增或變更、已解決和已知問題。
 translation-type: tm+mt
-source-git-commit: c17145da29d148f3dbfe1bcd1011acfa7177bc25
+source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
 
-# Primetime廣告插入21.1.1發行說明
+# Primetime廣告插入21.1.2發行說明
 
-Primetime廣告插入21.1.1發行說明說明2021年Primetime廣告插入中有哪些新增或變更、已解決的問題和已知問題。
+Primetime廣告插入21.x.x發行說明說明2021年Primetime廣告插入中有哪些新增或變更、已解決的問題和已知問題。
 
-## PTAI 21.1.1的新增功能
+## PTAI 21.1.2的新增功能
+
+**時間：** 2021年1月19日星期二東部時間零時30分至08時30分
+
+**變更**
+
+* 維護更新：Primetime廣告插入後端記憶體快取叢集的升級。
+
+### 舊版的增強功能和修正
+
+#### 21.1.1版
 
 **時間：** 2021年1月13日星期三東部時間上午1點到4點
 
