@@ -4,7 +4,7 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
+source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 34%
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
-## PTAI 21.1.2的增強功能和修正
+## PTAI 21.2.1的增強功能和修正
 
-此版本包括Primetime廣告插入後端記憶體叢集的升級。
+此版本包含DASH輸出最佳化支援：基於時間的節點整合。
 
 ## TVSDK 3.12 Android中的修正
 
