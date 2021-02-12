@@ -4,7 +4,7 @@ seo-title: Adobe Primetime移轉說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 42%
@@ -23,7 +23,7 @@ ht-degree: 42%
 | [Primetime 發行說明](/help/release-notes/home.md) | 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。 |
 | [Primetime 程式設計說明](/help/programming/home.md) | 可讓您在 Android 裝置上使用 Java 和使用 iOS 裝置上使用 Objective-C 來學習開發應用程式和影片播放程式。 |
 | [參考實作](/help/android-reference-implementation/home.md) | 協助了解 TVSDK 並修改功能管理員，以自訂您的個人播放器。 |
-| [Primetime Ad Insertion 說明](/help/dynamic-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
+| [Primetime Ad Insertion 說明](/help/primetime-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
 | [數位版權管理](/help/digital-rights-management/home.md) | 協助您進一步瞭解Digital Rights Management(DRM)中的各種使用者案例 |
 | [Primetime API參考](/help/reference/api-references.md) | 提供有關 TVSDK 函數、資料結構和其他程式設計建構的詳細資訊。 |
 | [封存](https://helpx.adobe.com/primetime/archives.html) | 下載已封存檔案的PDF。 |
