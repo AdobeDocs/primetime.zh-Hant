@@ -5,9 +5,9 @@ seo-title: 使用Adobe Creative Repackaging Service(CRS)重新封裝不相容的
 title: 使用Adobe Creative Repackaging Service(CRS)重新封裝不相容的廣告
 uuid: ef542d13-6d52-4429-8a1e-0af2df236f12
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,6 @@ ht-degree: 0%
 >
 
 
-
-如需CRS的詳細資訊，請參閱[創意封裝服務(CRS)](../../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md)。
 
 ## 在TVSDK應用程式中啟用CRS {#enable-crs-in-tvsdk-applications}
 
