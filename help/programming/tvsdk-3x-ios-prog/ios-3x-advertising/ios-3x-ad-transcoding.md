@@ -5,9 +5,9 @@ seo-title: 使用Adobe Creative Repackaging Service重新封裝不相容的廣�
 title: 使用Adobe Creative Repackaging Service重新封裝不相容的廣告
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ ht-degree: 0%
 當TVSDK第一次遇到不相容的廣告時，播放器會忽略廣告，並向創意重新封裝服務(CRS)發出請求，以將廣告重新封裝為相容格式。 CRS會嘗試產生廣告的多位元速率M3U8轉譯，並將這些轉譯儲存在Primetime內容傳送網路(CDN)上。 下次TVSDK收到指向該廣告的廣告回應時，播放器會從CDN使用HLS相容的M3U8版本。
 
 若要啟用此選用功能，請連絡您的Adobe代表。
-
-如需CRS的詳細資訊，請參閱[創意封裝服務(CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md)。
 
 ## CRS廣告傳送{#section_900FDDA5454143718F1EB4C9732C8E1C}的多個CDN支援
 
