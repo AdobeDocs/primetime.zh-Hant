@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Ad Insertion 說明
 translation-type: tm+mt
-source-git-commit: c6fe809ec079e08f5b1baba7ceeeb5a46b6e0a5a
+source-git-commit: bde82bd062a7980e08cdf2642c9e64be8f074a6e
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 + [Adobe Primetime廣告插入](home.md)
 + Primetime廣告插入公告{#announcements}
    + [公告](announcements/overview.md)
-   + [發行說明](/help/release-notes/ptai-20x-release-notes.md)
+   + [發行說明](/help/release-notes/ptai-21x-release-notes.md)
 + 開始使用Primetime廣告插入{#get-started}
    + [概觀](getting-started/get-started-overview.md)
    + [準備使用Primetime廣告插入](getting-started/setup-ptai.md)
