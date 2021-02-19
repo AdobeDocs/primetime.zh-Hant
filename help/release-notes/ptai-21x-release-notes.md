@@ -1,28 +1,36 @@
 ---
-title: PTAI 21.2.1發行說明
+title: PTAI 21.2.2發行說明
 description: PTAI發行說明說明2021年黃金時段廣告插入的新增或變更、已解決和已知問題。
 translation-type: tm+mt
-source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
+source-git-commit: 61a6c039685c3c6a937e2c98ffa3baf51455507b
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
 
-# Primetime廣告插入21.2.1發行說明
+# 黃金時段廣告插入21.2.2發行說明
 
 Primetime廣告插入21.x.x發行說明說明2021年Primetime廣告插入中有哪些新增或變更、已解決的問題和已知問題。
 
-## PTAI 21.2.1的新增功能
+## PTAI 21.2.2的新增功能
+
+**時間：** 2021年2月23日星期二東部時間凌晨1時至4時
+
+**變更**
+
+* 新增支援HLS串流中的EXT-X-IMAGE-STREAM-INF串流插入／同步。 此功能是透過伺服器端組態來啟用的。 請連絡您的技術帳戶代表以啟用此功能。
+
+### 舊版的增強功能和修正
+
+#### 21.2.1版
 
 **時間：** 2021年2月3日星期三東部時間凌晨1點到4點
 
 **變更**
 
 * 新增對DASH輸出最佳化的支援：基於時間的節點整合。
-
-### 舊版的增強功能和修正
 
 #### 21.1.2版
 
