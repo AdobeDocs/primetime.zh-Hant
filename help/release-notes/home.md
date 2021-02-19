@@ -4,10 +4,10 @@ seo-title: Adobe Primetime發行說明
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
+source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 34%
+source-wordcount: '297'
+ht-degree: 32%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
 
-## PTAI 21.2.1的增強功能和修正
+## PTAI 21.2.2的增強功能和修正
 
-此版本包含DASH輸出最佳化支援：基於時間的節點整合。
+該版本包括對HLS流中EXT-X-IMAGE-STREAM-INF流插入／同步的支援。 此功能是透過伺服器端組態來啟用的。 請連絡您的技術帳戶代表以啟用此功能。
 
 ## TVSDK 3.12 Android中的修正
 
