@@ -29,7 +29,7 @@ ht-degree: 0%
          + [MediaPlayer物件的生命週期和狀態](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-object-lifecycle-states.md)
          + [MediaPlayerItem存取MediaResource資訊的方法](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayeritem-accessing-mediaresource.md)
          + [重複使用或移除MediaPlayer例項](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-reuse-or-remove.md)
-         + [檢查播放時間軸](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
+         + [Inspect播放時間軸](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
          + [暫停和還原MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-suspend-and-restore.md)
       + 監聽黃金時段播放器事件{#listen-primetime-player-events}
          + [概觀](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-events-listen-for.md)
@@ -117,7 +117,7 @@ ht-degree: 0%
          + [回應廣告的點按次數](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-respond-to-ad-clicks.md)
          + [區隔可點按的廣告流程](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-separate-clickable-ad-process.md)
          + [暫停並繼續播放](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md)
-      + [使用Adobe CRS總覽重新封裝不相容的廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
+      + [使用AdobeCRS概觀重新封裝不相容的廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
       + 廣泛廣告和VMAP廣告的廣告後援{#ad-fallback}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback.md)
          + [定義VMAP內嵌廣告的備援廣告行為](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-set-up.md)
@@ -220,7 +220,7 @@ ht-degree: 0%
       + [廣告信令模式](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
    + [配套橫幅廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-companion-banner-ads/ios-3x-companion-banner-ads.md)
    + [可點選廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-clickable-ads.md)
-   + [使用Adobe Creative Repackaging Service重新封裝不相容的廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-transcoding.md)
+   + [使用Adobe創意重新封裝服務重新封裝不相容的廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-transcoding.md)
    + [來自Moat的廣告度量](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-measurements-from-moat.md)
    + [VPAID 2.0廣告支援](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-vpaid-2.0-ads.md)
    + [廣泛廣告和VMAP廣告的廣告後援](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-fallback.md)
@@ -283,7 +283,7 @@ ht-degree: 0%
       + [QoS類](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-qos.md)
       + [時間軸課程](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline.md)
       + [時間軸廣告課程](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline-advertising.md)
-      + [數位版權管理課程](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-digital-rights-management-ios.md)
+      + [Digital Rights Management類](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-digital-rights-management-ios.md)
       + [視訊分析類別](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
    + 通知代碼{#notification-codes}
       + [TVSDK通知系統](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/c-ios-notification-codes.md)
@@ -304,7 +304,7 @@ ht-degree: 0%
          + [MediaPlayer物件的生命週期和狀態](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-object-lifecycle-states.md)
          + [MediaPlayerItem存取MediaResource資訊的方法](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/r-psdk-android-2.7-mediaplayeritem-methods-for-accessing-mediaresource.md)
          + [重複使用或移除MediaPlayer例項](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
-         + [檢查播放時間軸](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
+         + [Inspect播放時間軸](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [暫停和還原MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
       + 監聽Primetime Player活動   {#listen-primetime-player-events}
          + [概觀](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
@@ -390,7 +390,7 @@ ht-degree: 0%
          + [回應廣告的點按次數](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-respond-to-ad-clicks.md)
          + [區隔可點按的廣告流程](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-separate-clickable-ad-process.md)
          + [暫停並繼續播放](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-pausing-resuming-playback.md)
-      + [使用Adobe Creative Repackaging Service(CRS)重新封裝不相容的廣告](tvsdk-2.7-for-android/ad-insertion/ad-transcoding/c-psdk-android-2.7-ad-transcoding.md)
+      + [使用Adobe創意重新封裝服務(CRS)重新封裝不相容的廣告](tvsdk-2.7-for-android/ad-insertion/ad-transcoding/c-psdk-android-2.7-ad-transcoding.md)
       + 廣泛廣告和VMAP廣告的廣告後援{#ad-fallback}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/ad-fallback/c-psdk-android-2.7-ad-fallback.md)
          + [定義VMAP內嵌廣告的備援廣告行為](tvsdk-2.7-for-android/ad-insertion/ad-fallback/t-psdk-android-2.7-ad-fallback-set-up.md)
@@ -503,7 +503,7 @@ ht-degree: 0%
          + [MediaPlayer物件生命週期](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-object-lifecycle-states.md)
          + [存取MediaResource資訊的MediaPlayer方法](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-mediaresource.md)
          + [重設、重複使用或移除MediaPlayer例項](tvsdk-1.4-for-android/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/android-1.4-mediaplayer-reset-reuse-instance.md)
-         + [檢查播放時間軸](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
+         + [Inspect播放時間軸](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
       + [ID3標籤](tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)
       + [緩衝](tvsdk-1.4-for-android/buffering-configuration/android-1.4-buffering-times-set.md)
       + [立即啟動](tvsdk-1.4-for-android/buffering-configuration/instant-on/android-1.4-instant-on.md)
@@ -538,7 +538,7 @@ ht-degree: 0%
          + [回應廣告的點按次數](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-respond-to-ad-clicks.md)
          + [區隔可點按的廣告流程](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-separate-clickable-ad-process.md)
          + [暫停並繼續播放](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md)
-      + [使用Adobe Creative Repackaging Service重新封裝不相容的廣告](tvsdk-1.4-for-android/ad-insertion/ad-transcoding/android-1.4-ad-transcoding.md)
+      + [使用Adobe創意重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-android/ad-insertion/ad-transcoding/android-1.4-ad-transcoding.md)
       + [廣泛廣告和VMAP廣告的廣告後援](tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)
       + [來自Moat的廣告度量](tvsdk-1.4-for-android/ad-insertion/android-1.4-ad-measurements-from-moat.md)
       + [VPAID 2.0廣告支援](tvsdk-1.4-for-android/ad-insertion/vpaid-2.0-ads/android-1.4-vpaid-2.0-ads.md)
@@ -674,7 +674,7 @@ ht-degree: 0%
       + [廣告信令模式](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/r-psdk-ios-1.4-ad-signaling-mode.md)
    + [配套橫幅廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-companion-banner-ads/c-psdk-ios-1.4-companion-banner-ads.md)
    + [可點選廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-clickable-ads.md)
-   + [使用Adobe Creative Repackaging Service重新封裝不相容的廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-transcoding.md)
+   + [使用Adobe創意重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-transcoding.md)
    + [來自Moat的廣告度量](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-measurements-from-moat.md)
    + [VPAID 2.0廣告支援](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md)
    + [廣泛廣告和VMAP廣告的廣告後援](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md)
@@ -737,7 +737,7 @@ ht-degree: 0%
       + [QoS類](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-qos.md)
       + [時間軸課程](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline.md)
       + [時間軸廣告課程](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline-advertising.md)
-      + [數位版權管理課程](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-digital-rights-management-ios.md)
+      + [Digital Rights Management類](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-digital-rights-management-ios.md)
       + [視訊分析類別](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
    + 通知代碼{#notification-codes}
       + [TVSDK通知系統](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/c-psdk-ios-1.4-notification-codes.md)
@@ -756,7 +756,7 @@ ht-degree: 0%
          + StageVideo功能與限制{#stagevideo}
             + [概觀](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stagevideo-capabilities.md)
             + [檢查StageVideo是否可用](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/t-psdk-dhls-1.4-stage-video-available.md)
-            + [Flash 15支援StageVideo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-flash15-support.md)
+            + [Flash15支援StageVideo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-flash15-support.md)
             + [StageVideo最低需求](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md)
             + [StageVideo和HTML覆蓋](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-and-overlays.md)
    + 內容播放選項{#content-playback-options}
@@ -799,7 +799,7 @@ ht-degree: 0%
       + 重複使用或移除MediaPlayer例項{#reuse-or-remove-mediaplayer}
          + [重設或重複使用MediaPlayer例項](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-reset-reuse-instance.md)
          + [發行MediaPlayer實例和資源](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-release-instance.md)
-      + [檢查播放時間軸](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
+      + [Inspect播放時間軸](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
    + 緩衝{#buffering}
       + [緩衝時間策略](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/c-psdk-dhls-1.4-buffering-policies.md)
       + [設定緩衝時間](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/t-psdk-dhls-1.4-buffering-times-set.md)
@@ -832,7 +832,7 @@ ht-degree: 0%
          + [資訊清單標籤的通知](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-notifications.md)
          + [訂閱自訂標籤](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-subscribe.md)
          + [新增計時中繼資料通知的監聽器](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-receive-notifications.md)
-      + [使用Adobe Creative Repackaging Service重新封裝不相容的廣告](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
+      + [使用Adobe創意重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
       + [廣泛廣告和VMAP廣告的廣告後援](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-fallback/c-psdk-dhls-1.4-ad-fallback.md)
       + 自訂廣告{#custom-ads}
          + [自訂廣告需求](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/c-psdk-dhls-1.4-custom-ads-req.md)
@@ -881,7 +881,7 @@ ht-degree: 0%
       + [替代音訊](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/c-psdk-dhls-1.4-alternate-audio.md)
       + [播放清單中的替代音軌](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/c-psdk-dhls-1.4-alternate-audio-in-playlist.md)
       + [存取替代音軌](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/t-psdk-dhls-1.4-alternate-audio-implement.md)
-   + 將TVSDK與Adobe Analytics {#integrating-tvsdk-analytics}整合
+   + 整合TVSDK與Adobe Analytics{#integrating-tvsdk-analytics}
       + [視訊分析](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/c-psdk-dhls-1.4-va-integration-overview.md)
       + [初始化和設定視訊分析](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-integrate-heartbeats.md)
       + [實作自訂中繼資料支援](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-custom-metadata.md)
@@ -971,16 +971,16 @@ ht-degree: 0%
       + 廣告{#ads}
          + [廣告概觀](browser-tvsdk-2.4/getting-started/about-ads/c-psdk-browser-tvsdk-2.4-ads.md)
          + [新增廣告](browser-tvsdk-2.4/getting-started/about-ads/t-psdk-browser-tvsdk-2.4-add-adverts.md)
-      + [數位版權管理](browser-tvsdk-2.4/getting-started/about-drm/c-psdk-browser-tvsdk-2.4-drm.md)
+      + [Digital Rights Management](browser-tvsdk-2.4/getting-started/about-drm/c-psdk-browser-tvsdk-2.4-drm.md)
       + [緩衝](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-buffering.md)
       + [量度](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-metrics.md)
-      + [使用媒體來源清單強制Flash備援](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-force-flash-fallback.md)
+      + [使用媒體來源清單強制Flash回退](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-force-flash-fallback.md)
       + [除錯和記錄](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-debugging.md)
    + 用戶介面框架{#user-interface-framework}
       + [UI架構](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-ui-framework.md)
       + [設定播放器的外觀](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md)
    + 內容播放選項{#content-playback-options}
-      + [Flash容錯功能](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-flash-failover.md)
+      + [Flash故障切換](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-flash-failover.md)
       + [設定MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-mediaplayer-set-up.md)
       + 初始化特定視訊的媒體播放器{#initialize-specific-video}
          + [建立媒體資源](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-create.md)
@@ -1019,7 +1019,7 @@ ht-degree: 0%
          + [MediaPlayer物件的生命週期和狀態](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-object-lifecycle-states.md)
          + [存取MediaResource資訊的MediaPlayer屬性](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/r-psdk-browser-tvsdk-2.4-mediaplayer-methods-for-accessing-mediaresource.md)
          + [重複使用或移除MediaPlayer例項](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-reuse-or-remove.md)
-         + [檢查播放時間軸](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
+         + [Inspect播放時間軸](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
          + [新增時間軸UpdatedEvent的監聽器](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
       + 使用隱藏字幕{#closed-captions}
          + [概觀](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/c-psdk-browser-tvsdk-2.4-closed-captions-set-up.md)
@@ -1072,7 +1072,7 @@ ht-degree: 0%
       + 可點選廣告{#clickable-ads}
          + [概觀](browser-tvsdk-2.4/ad-insertion/clickable-ads/c-psdk-browser-tvsdk-2.4-clickable-ads.md)
          + [處理可點選廣告](browser-tvsdk-2.4/ad-insertion/clickable-ads/t-psdk-browser-tvsdk-2.4-handle-clickable-ads.md)
-   + 整合瀏覽器TVSDK與Adobe Analytics {#integrating-browser}
+   + 整合瀏覽器TVSDK與Adobe Analytics{#integrating-browser}
       + [視訊分析](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/c-psdk-browser-tvsdk-2.4-va-integration-overview.md)
       + [初始化和設定視訊分析](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-va-integrate-heartbeats.md)
       + [實作自訂中繼資料支援](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-va-custom-metadata.md)
@@ -1095,5 +1095,5 @@ ht-degree: 0%
       + [概觀](browser-tvsdk-2.4/billing/c-psdk-browser-tvsdk-2.4-billing.md)
       + [設定帳單量度](browser-tvsdk-2.4/billing/t-psdk-browser-tvsdk-2.4-billing-config.md)
       + [傳輸帳單量度](browser-tvsdk-2.4/billing/r-psdk-browser-tvsdk-2.4-billing-data-format.md)
-   + [適用於Adobe Flash Player的實用API](browser-tvsdk-2.4/r-psdk-browser-tvsdk-2.4-helpful-apis.md)
+   + [適用於AdobeFlash Player的實用API](browser-tvsdk-2.4/r-psdk-browser-tvsdk-2.4-helpful-apis.md)
    + [Primetime播放器類別摘要](browser-tvsdk-2.4/c-psdk-browser-tvsdk-2.4-class-summary.md)
