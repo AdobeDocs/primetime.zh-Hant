@@ -64,7 +64,7 @@ ht-degree: 7%
       + [概觀](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [權益管理員概述](paytvpass-entitlement/entitlement-overvivew.md)
       + [整合Primetime驗證](paytvpass-entitlement/integrate-pass.md)
-      + [設定Adobe Analytics報表](paytvpass-entitlement/pass-analytics-setup.md)
+      + [配置Adobe Analytics報告](paytvpass-entitlement/pass-analytics-setup.md)
       + [相關API檔案](paytvpass-entitlement/pass-apis-callbacks.md)
    + 視訊分析{#video-analytics}
       + [視訊分析](video-analytics/video-analytics-overview.md)
