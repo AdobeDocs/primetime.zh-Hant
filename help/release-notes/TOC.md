@@ -16,7 +16,7 @@ ht-degree: 14%
 # Primetime 發行說明  {#release-notes}
 
 + [發行說明概觀](home.md)
-+ 黃金時段廣告插入{#ptai}
++ 黃金時段Ad Insertion{#ptai}
    + [PTAI 21.2.2發行說明](ptai-21x-release-notes.md)
    + [PTAI 20.12.1發行說明](ptai-20x-release-notes.md)
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
@@ -38,5 +38,5 @@ ht-degree: 14%
    + [Primetime Streaming Server 1版](primetime-streaming-server-1x.md)
 + Playstation 4 {#tvsdk-playstation}的TVSDK
    + [TVSDK 2.1 PlayStation 4發行說明](tvsdk-21-ps4.md)
-+ 數位版權管理{#drm}
++ Digital Rights Management{#drm}
    + [DRM 5.3.1發行說明](drm-531-release-notes.md)
