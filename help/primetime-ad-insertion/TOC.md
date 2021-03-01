@@ -2,7 +2,7 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Ad Insertion 說明
+user-guide-title: Primetime Ad Insertion 支援
 translation-type: tm+mt
 source-git-commit: bde82bd062a7980e08cdf2642c9e64be8f074a6e
 workflow-type: tm+mt
@@ -12,15 +12,15 @@ ht-degree: 4%
 ---
 
 
-# Primetime Ad Insertion 說明 {#ad-insertion}
+# Primetime Ad Insertion 支援 {#ad-insertion}
 
-+ [Adobe Primetime廣告插入](home.md)
-+ Primetime廣告插入公告{#announcements}
++ [Adobe PrimetimeAd Insertion](home.md)
++ PrimetimeAd Insertion公告{#announcements}
    + [公告](announcements/overview.md)
    + [發行說明](/help/release-notes/ptai-21x-release-notes.md)
-+ 開始使用Primetime廣告插入{#get-started}
++ 開始使用PrimetimeAd Insertion{#get-started}
    + [概觀](getting-started/get-started-overview.md)
-   + [準備使用Primetime廣告插入](getting-started/setup-ptai.md)
+   + [準備使用PrimetimeAd Insertion](getting-started/setup-ptai.md)
    + [整合您的廣告伺服器](getting-started/integrate-ad-server.md)
    + [整合您的CDN](getting-started/integrate-cdn.md)
    + [在即時／線性串流中使用廣告插入](getting-started/ad-insertion-live-linear-stream.md)
@@ -48,7 +48,7 @@ ht-degree: 4%
    + [關鍵量度和資料維度](advanced-telemetry/key-metrics.md)
 + [即時事件監控](live-event-monitoring.md)
 + 參考{#technical-reference}
-   + [API參考／引導API](technical-reference/bootstrap-api.md)
+   + [API參考/BootstrapAPI](technical-reference/bootstrap-api.md)
    + 最佳做法{#best-practices}
       + [概觀](best-practices/best-practices-overview.md)
       + [最佳化視訊啟動時間](best-practices/optimize-video-startup-time.md)
