@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Primetime 發行說明
 user-guide-description: 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。
 translation-type: tm+mt
-source-git-commit: 61a6c039685c3c6a937e2c98ffa3baf51455507b
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -24,7 +24,7 @@ ht-degree: 14%
    + [iOS版TVSDK 3.12發行說明](tvsdk-3x-ios.md)
    + [iOS版TVSDK 1.4發行說明](tvsdk-1-4-ios.md)
 + 適用於Android {#tvsdk-android}的TVSDK
-   + [TVSDK 3.12 for Android版本注意事項](tvsdk-3x-android.md)
+   + [TVSDK 3.13 for Android版本注意事項](tvsdk-3x-android.md)
    + [TVSDK 2.7 for Android版本注意事項](tvsdk-27-android.md)
    + [Android專用TVSDK 2.4.1版本注意事項](tvsdk-24-android.md)
    + [TVSDK 1.4 for Android版本注意事項](tvsdk-1-4-android.md)
