@@ -1,24 +1,24 @@
 ---
-title: TVSDK 3.12 for Android版本注意事項
-seo-title: TVSDK 3.12 for Android版本注意事項
-description: TVSDK 3.12 for Android發行說明說明TVSDK Android 3.12中的新增或變更內容、已解決和已知問題以及裝置問題
-seo-description: TVSDK 3.12 for Android發行說明說明TVSDK Android 3.12中的新增或變更內容、已解決和已知問題以及裝置問題
+title: TVSDK 3.13 for Android版本注意事項
+seo-title: TVSDK 3.13 for Android版本注意事項
+description: TVSDK 3.13 for Android發行說明說明TVSDK Android 3.13中的新增或變更內容、已解決和已知問題以及裝置問題
+seo-description: TVSDK 3.13 for Android發行說明說明TVSDK Android 3.13中的新增或變更內容、已解決和已知問題以及裝置問題
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '5418'
+source-wordcount: '5471'
 ht-degree: 0%
 
 ---
 
 
-# TVSDK 3.12 for Android發行說明{#tvsdk-for-android-release-notes}
+# TVSDK 3.13 for Android發行說明{#tvsdk-for-android-release-notes}
 
-TVSDK 3.12 for Android發行說明說明TVSDK Android 3.12中的新增或變更內容、已解決和已知問題以及裝置問題。
+TVSDK 3.13 for Android發行說明說明TVSDK Android 3.13中的新增或變更、已解決和已知問題以及裝置問題。
 
 Android參考播放器隨附於Android TVSDK，位於您散發的範例／目錄中。 隨附的README.md檔案說明如何建立參考播放器。
 
@@ -34,6 +34,14 @@ Android參考播放器隨附於Android TVSDK，位於您散發的範例／目錄
 
 發行說明的[功能矩陣](#feature-matrix)一節中列出了完整的支援與不支援功能集。
 
+## Android TVSDK 3.13
+
+Widevine DRM串流會凍結FireTV裝置上ABR開關的黑色影格，包括Fire TV第3代墜飾和Fire TV Cube第1代和第2代裝置。
+
+若要解決此問題，請在開始播放之前，先針對指定的Fire TV裝置設定API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)`。 預設值為false。
+
+### 舊版的新功能和增強功能
+
 ## Android TVSDK 3.12
 
 Primetime Reference應用程式的圖檔版本現已更新為5.6.4版。
@@ -41,8 +49,6 @@ Primetime Reference應用程式的圖檔版本現已更新為5.6.4版。
 若要使用Android Studio來設定及執行參考應用程式，請依照TVSDK zip(`TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`)中提供的讀我檔案指示進行。
 
 在[已解決的問題](#resolved-issues)一節中，會提及目前版本中修正的主要客戶問題。
-
-### 舊版的新功能和增強功能
 
 **Android TVSDK 3.11**
 
@@ -192,7 +198,7 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
 
 * **透過HTTPS安全載入廣告**
 
-   Adobe Primetime提供選項，可要求對primetime廣告伺服器和CRS進行透過https的首次呼叫。
+   Adobe Primetime提供選項，可要求在https上首次呼叫黃金時段廣告伺服器和CRS。
 
 * **新增至CRS請求的AdSystem和Creative Id**
 
@@ -265,7 +271,7 @@ Android 2.5.1中發行的重要新功能。
 
 * **延遲廣告解析度-** TVSDK不會等到非預先播放廣告的解析度後，再開始播放，因此會縮短啟動時間。在所有廣告都解決之前，仍不允許搜尋和特技播放等API。 這適用於CSAI使用的VOD串流。 在廣告解析完成前，不允許搜尋和快進等操作。 對於即時串流，無法在即時事件期間啟用此功能以取得廣告解析度。
 
-* **永久網路連線-** 此功能可讓TVSDK建立並儲存永久網路連線的內部清單。這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在之後將其毀損。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
+* **永久網路連線-** 此功能可讓TVSDK建立並儲存永久網路連線的內部清單。這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器進行*keep-alive*&#x200B;連線。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
 
 * **並行下載-** 並行下載視訊和音訊，而非串列下載，可減少啟動延遲。此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降到最低。
@@ -294,9 +300,9 @@ Android 2.5.1中發行的重要新功能。
 
 * **工作流程支援**
 
-   * **直接帳單整合-** 這會將帳單量度傳送至Adobe Analytics後端，Adobe Primetime會針對客戶使用的串流進行認證。
+   * **直接計費整合-** 這會傳送帳單量度至Adobe Analytics後端，Adobe Primetime會針對客戶使用的串流進行認證。
 
-   TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需的定期使用報告。 在每個串流開始事件上，TVSDK都會使用Adobe Analytics資料插入API，將計費量度(例如內容類型、啟用廣告插入的標幟，以及啟用drm的標幟（根據計費串流的持續時間）傳送至Adobe Analytics Primetime擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 此帳單使用報表會按要求定期傳送給客戶。 這是計費功能的第一階段，僅支援使用計費。 您可使用說明檔案中所述的API，根據銷售合約來設定此API。 此功能預設為啟用。 若要關閉此功能，請參閱參考播放器範例。
+   TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需的定期使用報告。 在每個串流開始事件上，TVSDK使用Adobe Analytics資料插入API，將計費量度(例如內容類型、啟用廣告插入的標幟，以及啟用DRM的標幟（根據可計費串流的持續時間）傳送至Adobe Analytics黃金時段擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 此帳單使用報表會按要求定期傳送給客戶。 這是計費功能的第一階段，僅支援使用計費。 您可使用說明檔案中所述的API，根據銷售合約來設定此API。 此功能預設為啟用。 若要關閉此功能，請參閱參考播放器範例。
 
    * **改進的容錯移轉支** 援——實作其他策略，以在主機伺服器、播放清單檔案和區段發生故障時，仍能持續不間斷播放。
 
@@ -414,7 +420,7 @@ Android 2.5.1中發行的重要新功能。
 
 | 功能 | 內容類型 | HLS |
 |---|---|---|
-| Adobe Analytics VHL整合 | VOD + Live | Y |
+| Adobe AnalyticsVHL整合 | VOD + Live | Y |
 | 帳單 | VOD + Live | Y |
 
 ## 已解決問題{#resolved-issues}
@@ -543,7 +549,7 @@ Android 2.5.1中發行的重要新功能。
 
    * 已修正藍本，以避免當機。
 
-* ZD #32256 —— 授權輪換與金鑰輪換問題- Adobe Access
+* ZD #32256 —— 許可輪換和密鑰輪換問題-Adobe訪問
 
    * 已修正使用SampleAES內容的DRM中繼資料來初始化區段的問題。 適用於AES128內容。
 
@@ -622,7 +628,7 @@ WebViewDebbuging預設為False。 若要啟用除錯，請使用setWebContentsDe
 * Zendesk#32794- 1080P解析度串流未在Android上播放
 
    我們在2.5中變更了SizeAvailableEvent和Previouly、getHeight()和getWidth()方法，用以傳回媒體格式傳回的「影格高度」和「影格寬度」。 現在，它分別返回解碼器返回的輸出高度和輸出寬度。
-* Zendesk #19359 Flash Player因設定層級資訊清單中的#EXT-X-FAXS-CM屬性位置而當機。
+* Zendesk #19359Flash Player因在設定層級資訊清單中的#EXT-X-FAXS-CM屬性位置而當機。
 
    #EXT-X-FAXS-CM標籤必須一律出現在頂端播放清單中，個別位元速率或區段才會出現在播放清單中。
 
