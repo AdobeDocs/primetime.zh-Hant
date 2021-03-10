@@ -1,13 +1,10 @@
 ---
 description: 本指南提供如何使用瀏覽器TVSDK開發視訊播放器應用程式的相關資訊。
-seo-description: 本指南提供如何使用瀏覽器TVSDK開發視訊播放器應用程式的相關資訊。
-seo-title: 產品概觀與受眾
 title: 產品概觀與受眾
-uuid: 902baabf-5e85-4d9c-8b5a-70ec0842e1bc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ ht-degree: 0%
 
 ## 產品概觀{#section_1C66E736CEFD4246B7C7C99AADD48118}
 
-Adobe Primetime軟體開發套件（瀏覽器TVSDK）是一套工具套件，可讓您在瀏覽器型視訊播放應用程式中新增進階視訊播放功能、內容保護和廣告。 瀏覽器TVSDK提供JavaScript API來建立以瀏覽器為基礎的視訊應用程式，並包含下列模式的播放支援：
+Adobe Primetime軟體開發套件(Browser TVSDK)是一套工具套件，可讓您在瀏覽器型視訊播放應用程式中加入進階的視訊播放功能、內容保護和廣告。 瀏覽器TVSDK提供JavaScript API來建立以瀏覽器為基礎的視訊應用程式，並包含下列模式的播放支援：
 
 * 僅限HTML5
 * HTML5含自動flash備援
