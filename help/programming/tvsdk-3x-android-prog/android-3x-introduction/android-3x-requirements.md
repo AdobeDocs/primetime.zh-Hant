@@ -1,13 +1,10 @@
 ---
 description: TVSDK對媒體內容、資訊清單內容、DRM和軟體版本有特定需求。
-seo-description: TVSDK對媒體內容、資訊清單內容、DRM和軟體版本有特定需求。
-seo-title: 需求
 title: 需求
-uuid: 06e61b9f-cda2-4813-8da4-fb3e0d88ad35
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
@@ -32,7 +29,7 @@ TVSDK對媒體內容、資訊清單內容、DRM和軟體版本有特定需求。
 
 檢查串流和播放清單（清單）的限制和要求，包括DRM加密金鑰。
 
-| Adobe Access DRM | 如果受DRM保護的流是多位速率(MBR)，則用於MBR的DRM加密密鑰應與所有位速率流中使用的密鑰相同。 |
+| Adobe存取DRM | 如果受DRM保護的流是多位速率(MBR)，則用於MBR的DRM加密密鑰應與所有位速率流中使用的密鑰相同。 |
 |---|---|
 | 廣告變型資訊清單 | 必須與主要內容的轉譯具有相同的位元速率轉譯。 |
 
