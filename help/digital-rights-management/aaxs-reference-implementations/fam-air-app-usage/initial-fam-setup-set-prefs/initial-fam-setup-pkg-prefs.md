@@ -1,9 +1,9 @@
 ---
-seo-title: Packager偏好設定
 title: Packager偏好設定
-uuid: 3e9c971d-3a5f-4f3e-97e7-baab63b1f67f
+description: Packager偏好設定
+copied-description: true
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 | 偏好設定 | 說明 |
 |--- |--- |
-| 許可證伺服器傳輸證書 | Adobe核發的伺服器傳輸憑證。 此憑證用於保護用戶端與授權伺服器之間的通訊安全。 檔案必須位於資源目錄中。 |
+| 許可證伺服器傳輸證書 | 伺服器傳輸證書，由Adobe頒發。 此憑證用於保護用戶端與授權伺服器之間的通訊安全。 檔案必須位於資源目錄中。 |
 | 啟用HSM | 指定證書和憑據是否儲存在HSM中。 如果是，將禁用與證書和憑據相關的首選項，並且必須指定HSM頁籤上的屬性。 |
 | 密鑰加密選項 | 指定內容加密金鑰在封裝時的加密方式 |
-| 授權伺服器憑證 | Adobe核發的授權伺服器憑證。 檔案必須位於資源目錄中。 CEK會以授權伺服器的公開金鑰加密。 只有許可證伺服器私鑰的持有者才能解密CEK。 |
-| Packager Credential | Adobe核發的封裝憑證。 此檔案用於在封裝期間簽署中繼資料。 |
+| 授權伺服器憑證 | 授權伺服器憑證，由Adobe核發。 檔案必須位於資源目錄中。 CEK會以授權伺服器的公開金鑰加密。 只有許可證伺服器私鑰的持有者才能解密CEK。 |
+| Packager Credential | 由Adobe核發的封裝憑證。 此檔案用於在封裝期間簽署中繼資料。 |
 | 檔案名稱 | 包含證書和私鑰的`PKCS#12`(.pfx)檔案。 檔案必須位於資源目錄中。 |
 | 檔案密碼 | .pfx檔案的密碼 |
 | 全域監視資料夾屬性 | 指定此伺服器上配置的所有Watched資料夾的常用設定。 |
