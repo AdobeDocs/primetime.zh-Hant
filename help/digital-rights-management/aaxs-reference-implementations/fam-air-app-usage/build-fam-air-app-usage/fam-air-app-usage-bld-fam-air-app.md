@@ -1,9 +1,9 @@
 ---
-seo-title: 建立Flash Access Manager AIR應用程式
-title: 建立Flash Access Manager AIR應用程式
-uuid: 00927eb3-b8eb-4dd4-b528-91b70760c8cd
+title: 建立Flash Access管理器AIR應用程式
+description: 建立Flash Access管理器AIR應用程式
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -11,22 +11,22 @@ ht-degree: 0%
 ---
 
 
-# 建立Flash Access Manager AIR應用程式{#building-the-flash-access-manager-air-application}
+# 構建Flash Access管理器AIR應用程式{#building-the-flash-access-manager-air-application}
 
-若要從原始碼建立Flash Access Manager AIR檔案，您需要在電腦上安裝Flex和AIR SDK。 您必須先使用[!DNL amxmlc]編譯器，將MXML程式碼編譯為SWF檔案，才能封裝並執行應用程式。 [!DNL amxmlc]編譯器可在Flex 4或更新版本SDK的[!DNL bin]目錄中找到。 視需要，您可將路徑環境變數設為包含Flex SDK bin目錄，讓在命令列上執行公用程式變數變得更輕鬆。
+若要從原始碼建立Flash Access管理器AIR檔案，您需要在電腦上安裝Flex和AIR SDK。 您必須先使用[!DNL amxmlc]編譯器將程式碼編譯MXML為SWF檔案，才能封裝並執行應用程式。 [!DNL amxmlc]編譯器可在Flex4或更新版SDK的[!DNL bin]目錄中找到。 如果需要，您可以將路徑環境變數設定為包含FlexSDK bin目錄，以便更輕鬆地在命令行上運行實用程式。
 
-請依照下列程式來建立Flash Access Manager AIR檔案：
+請依照下列程式建立Flash Access管理器AIR檔案：
 
-1. 開啟命令shell或終端機，並導覽至Flash Access Manager AIR應用程式的專案資料夾（「參考實作」目錄中的[!DNL UI Tools\Flash Access Manager]）。
+1. 開啟命令shell或終端機，並導覽至Flash Access管理器AIR應用程式的專案資料夾（位於參考實作目錄中的[!DNL UI Tools\Flash Access Manager]）。
 1. 輸入以下命令：
 
    ```
    amxmlc src\FlashAccessmanager.mxml
    ```
 
-   運行[!DNL amxmlc]會生成[!DNL FlashAccessManager.swf] ，該&lt;a1/>包含應用程式的編譯代碼。
+   運行[!DNL amxmlc]會生成[!DNL FlashAccessManager.swf] ，該包含應用程式的編譯代碼。
 
-Adobe AIR SDK包含AIR開發人員工具(ADT)公用程式，以封裝AIR應用程式並產生憑證。 AIR應用程式應以數位方式簽署；安裝未正確簽署或完全未簽署的應用程式時，使用者會收到警告。 若要使用命令列產生憑證，請在與AIR應用程式相同的檔案夾中開啟主控台視窗，然後輸入下列：
+Adobe AIRSDK包含AIR開發人員工具(ADT)公用程式，以封裝AIR應用程式並產生憑證。 AIR應用程式應以數位方式簽署；安裝未正確簽署或完全未簽署的應用程式時，使用者會收到警告。 若要使用命令列產生憑證，請在與AIR應用程式相同的檔案夾中開啟主控台視窗，然後輸入下列：
 
 ```
 adt -certificate -cn SelfSigned 1024-RSA testCert.pfx  
