@@ -1,13 +1,10 @@
 ---
 description: 如果用戶端要求JSON格式的追蹤資訊，資訊清單伺服器會以其中一種JSON格式傳回檔案。
-seo-description: 如果用戶端要求JSON格式的追蹤資訊，資訊清單伺服器會以其中一種JSON格式傳回檔案。
-seo-title: 追蹤URL的JSON格式
 title: 追蹤URL的JSON格式
-uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
