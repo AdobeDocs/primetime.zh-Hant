@@ -1,9 +1,9 @@
 ---
-seo-title: 防火牆規則
 title: 防火牆規則
-uuid: a5667030-c4d0-42e3-b56e-20a12c903954
+description: 防火牆規則
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -37,7 +37,7 @@ ht-degree: 0%
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">使用者驗證的URL。 只有當您使用Adobe Access Client API執行使用者驗證時，才能存取此URL。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">使用者驗證的URL。 只有當您使用Adobe存取用戶端API來執行使用者驗證時，才能存取此URL。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -78,11 +78,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端用來將FMRMS 1.x DRM中繼資料轉換為Adobe Access DRM中繼資料的URL。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用戶端用來將FMRMS 1.x DRM中繼資料轉換為Adobe存取DRM中繼資料的URL。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES web service URL。 如果內容是使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器，並提示您升級至Adobe Access。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ESWeb服務URL。 如果內容是使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器，並提示您升級至Adobe存取。 </p> <p class="- topic/p ">注意：<i class="+ topic/ph hi-d/i ">此URL必須使用SSL(HTTPS)</i>。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -93,11 +93,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->內部防火牆只能允許透過反向代理與Adobe Access授權伺服器進行連線，且只能與上述URL連線。 為改善可擴充性，反向proxy和Adobe Access之間的連線將會透過HTTP進行。
+>內部防火牆只能允許通過反向代理與Adobe訪問許可證伺服器進行連接，並且只能與上面列出的URL連接。 為了改善可擴充性，反向proxy和Adobe存取之間的連線將會透過HTTP。
 
 ## 傳出URL {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-授權伺服器需要透過防火牆存取，才能從Adobe下載下列CRL:
+授權伺服器需要透過防火牆的存取權，才能從Adobe下載下列CRL:
 
 * h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
 * ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
