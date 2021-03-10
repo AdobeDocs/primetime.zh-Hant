@@ -1,9 +1,9 @@
 ---
-seo-title: 部署Primetime DRM Key Server概觀
 title: 部署Primetime DRM Key Server概觀
-uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
+description: 部署Primetime DRM Key Server概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 0%
@@ -86,7 +86,7 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Primetime DRM憑據{#primetime-drm-credentials}
 
-若要處理來自Primetime DRM iOS和Xbox 360用戶端的金鑰要求，Primetime DRM金鑰伺服器必須配置有Adobe核發的一組認證。 這些憑據可以儲存在PKCS#12([!DNL .pfx])檔案或HSM中。
+要處理來自Primetime DRM iOS和Xbox 360客戶端的密鑰請求，Primetime DRM密鑰伺服器必須配置有由Adobe發出的一組憑據。 這些憑據可以儲存在PKCS#12([!DNL .pfx])檔案或HSM中。
 
 [!DNL .pfx]檔案可隨處取用，但為方便設定，Adobe建議將[!DNL .pfx]檔案放入租用戶的設定目錄。 有關詳細資訊，請參見[鍵伺服器配置檔案](#key-server-configuration-files)。
 
@@ -146,7 +146,7 @@ KeyServer.ConfigRoot/
 
 所有租用戶配置檔案包括：
 
-* 金鑰伺服器憑證——指定Adobe所核發的一或多個金鑰伺服器憑證（憑證和私密金鑰）。 可以指定為[!DNL .pfx]檔案和口令的路徑，或儲存在HSM上的憑據的別名。 可以在此處指定數個此類憑據，可以是檔案路徑或密鑰別名，也可以是兩者。
+* 密鑰伺服器憑據——指定由Adobe頒發的一個或多個密鑰伺服器憑據（證書和私鑰）。 可以指定為[!DNL .pfx]檔案和口令的路徑，或儲存在HSM上的憑據的別名。 可以在此處指定數個此類憑據，可以是檔案路徑或密鑰別名，也可以是兩者。
 
 **iOS**&#x200B;租用戶配置檔案包括：
 
