@@ -1,13 +1,10 @@
 ---
 description: 您可以使用MediaPlayerItemConfig類別，在TVSDK中全域設定自訂標籤名稱。
-seo-description: 您可以使用MediaPlayerItemConfig類別，在TVSDK中全域設定自訂標籤名稱。
-seo-title: 標籤的Config類方法
 title: 標籤的Config類方法
-uuid: b75aebac-4b94-4c42-bed4-3c17ad989cd1
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
