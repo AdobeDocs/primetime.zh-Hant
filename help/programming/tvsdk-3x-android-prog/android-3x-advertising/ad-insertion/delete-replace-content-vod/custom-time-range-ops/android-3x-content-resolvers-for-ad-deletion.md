@@ -1,13 +1,10 @@
 ---
 description: 您可以使用多個內容解析器來處理不同的時間軸操作。
-seo-description: 您可以使用多個內容解析器來處理不同的時間軸操作。
-seo-title: 廣告刪除／取代的內容解析器
 title: 廣告刪除／取代的內容解析器
-uuid: d43d54be-e04a-49dd-a695-e4e8f981ccb4
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
