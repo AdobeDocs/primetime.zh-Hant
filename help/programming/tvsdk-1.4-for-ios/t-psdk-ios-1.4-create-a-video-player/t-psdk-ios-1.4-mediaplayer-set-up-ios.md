@@ -1,13 +1,10 @@
 ---
 description: PTMediaPlayer介面可封裝媒體播放器物件的功能與行為。
-seo-description: PTMediaPlayer介面可封裝媒體播放器物件的功能與行為。
-seo-title: 設定PTMediaPlayer
 title: 設定PTMediaPlayer
-uuid: 78549406-7e33-4bca-a25e-1e433f6a75d7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
