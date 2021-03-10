@@ -1,13 +1,10 @@
 ---
 description: 來自TVSDK的事件會指出播放器的狀態、發生的錯誤、您所要求的動作的完成，例如視訊開始播放，或是隱式發生的動作，例如廣告完成。
-seo-description: 來自TVSDK的事件會指出播放器的狀態、發生的錯誤、您所要求的動作的完成，例如視訊開始播放，或是隱式發生的動作，例如廣告完成。
-seo-title: 監聽Primetime Player活動
 title: 監聽Primetime Player活動
-uuid: bd0a428c-fa51-41a6-950a-9d6843c6e177
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
