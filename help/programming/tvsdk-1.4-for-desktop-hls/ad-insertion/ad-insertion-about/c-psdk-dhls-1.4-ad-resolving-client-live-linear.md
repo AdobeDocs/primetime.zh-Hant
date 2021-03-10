@@ -1,13 +1,10 @@
 ---
 description: 對於即時／線性內容，TVSDK會以相同持續時間的廣告分段來取代主串流內容區塊，如此時間軸持續時間就會維持不變。
-seo-description: 對於即時／線性內容，TVSDK會以相同持續時間的廣告分段來取代主串流內容區塊，如此時間軸持續時間就會維持不變。
-seo-title: 即時／線性廣告解析與插入
 title: 即時／線性廣告解析與插入
-uuid: 69f287aa-b707-442b-8e07-16f81b242c4b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
