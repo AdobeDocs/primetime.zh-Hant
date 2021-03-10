@@ -1,9 +1,9 @@
 ---
-seo-title: 封裝媒體檔案概觀
 title: 封裝媒體檔案概觀
-uuid: 9509bcdc-ee4d-4025-9bb6-9b8ac439b926
+description: 封裝媒體檔案概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -37,6 +37,6 @@ Primetime DRM提供用於傳入CEK的API。 如果未指定CEK,SDK會隨機產�
 
 所有這些工作都可使用Java API完成。
 
-如需Java API的詳細資訊，請參閱&#x200B;*Adobe Primetime DRM API參考*。
+如需Java API的詳細資訊，請參閱&#x200B;*Adobe PrimetimeDRM API參考*。
 
-如需Media Packager參考實作的相關資訊，請參閱&#x200B;*使用Adobe Primetime DRM參考實作*。
+有關Media Packager參考實作的資訊，請參閱&#x200B;*使用Adobe PrimetimeDRM參考實作*。
