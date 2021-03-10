@@ -1,13 +1,10 @@
 ---
 description: 從您建立MediaPlayer例項到您終止（重複使用或移除）該例項時，此例項會完成狀態間的一系列轉換。
-seo-description: 從您建立MediaPlayer例項到您終止（重複使用或移除）該例項時，此例項會完成狀態間的一系列轉換。
-seo-title: MediaPlayer物件生命週期
 title: MediaPlayer物件生命週期
-uuid: 1452ae3a-7ce9-439e-951c-9d3db63b1d20
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
