@@ -1,9 +1,9 @@
 ---
-seo-title: 內嵌授權
 title: 內嵌授權
-uuid: e3d55376-07de-479c-9a53-04bc8071ced4
+description: 內嵌授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -21,5 +21,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Primetime DRM 2.0用戶端會忽略內嵌在內容中的任何授權，然後嘗試從中繼資料中指定的授權伺服器取得授權。 不過，如果中繼資料指出沒有可用的授權伺服器，則Primetime DRM 2.0用戶端必須先升級，您才能檢視內容。
+>Adobe PrimetimeDRM 2.0客戶端忽略嵌入在內容中的任何許可證，然後嘗試從元資料中指定的許可證伺服器獲取許可證。 不過，如果中繼資料指出沒有可用的授權伺服器，則Primetime DRM 2.0用戶端必須先升級，您才能檢視內容。
 
