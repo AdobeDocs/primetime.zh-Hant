@@ -1,9 +1,9 @@
 ---
-seo-title: 命令列使用
 title: 命令列使用
-uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
+description: 命令列使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
@@ -71,7 +71,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在指定日期廢止<span class="codeph"> issuberName</span>和<span class="codeph"> serialNumber</span>所識別的憑證。 <span class="codeph"> issuberName</span>必須遵循509名稱格式（例如，<span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>）。 以十六進位形式指定序列號。 將撤銷日期指定為<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span>或<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>，例如2008-12-1或2008-12-1-00:00:00的午夜。08. 如果未指定撤銷日期，則會使用目前日期。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在指定日期廢止<span class="codeph"> issuberName</span>和<span class="codeph"> serialNumber</span>所識別的憑證。 <span class="codeph"> issuberName</span>必須遵循509名稱格式(例如，<span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>)。 以十六進位形式指定序列號。 將撤銷日期指定為<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span>或<span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>，例如2008-12-1或2008-12-1-00:00:00的午夜。08. 如果未指定撤銷日期，則會使用目前日期。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
