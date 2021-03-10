@@ -1,9 +1,9 @@
 ---
-seo-title: 在您的BEES伺服器上設定SSL
 title: 在您的BEES伺服器上設定SSL
-uuid: 041a106e-8b21-4018-815d-b7ea48c3de03
+description: 在您的BEES伺服器上設定SSL
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
