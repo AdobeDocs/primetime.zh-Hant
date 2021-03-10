@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK程式庫的通知部分可讓您建立記錄與除錯系統，以便用於診斷與驗證。
-seo-description: 瀏覽器TVSDK程式庫的通知部分可讓您建立記錄與除錯系統，以便用於診斷與驗證。
-seo-title: 通知系統
 title: 通知系統
-uuid: 69c4ff1d-3167-413b-ab49-942a5ddc34d7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
