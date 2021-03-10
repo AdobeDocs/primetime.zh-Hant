@@ -1,13 +1,10 @@
 ---
-description: 若要使用本機產生的憑證撤銷清單(CRL)和政策更新清單，請使用Adobe Primetime DRM API來驗證簽名。
-seo-description: 若要使用本機產生的憑證撤銷清單(CRL)和政策更新清單，請使用Adobe Primetime DRM API來驗證簽名。
-seo-title: 使用本機產生的CRL
+description: 若要使用本機產生的憑證撤銷清單(CRL)和原則更新清單，請使用Adobe PrimetimeDRM API來驗證簽名。
 title: 使用本機產生的CRL
-uuid: 2e20b8ca-8606-4c27-b585-2f020b93be32
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 使用本地生成的CRL {#consuming-locally-generated-crls}
 
-若要使用本機產生的憑證撤銷清單(CRL)和政策更新清單，請使用Adobe Primetime DRM API來驗證簽名。
+若要使用本機產生的憑證撤銷清單(CRL)和原則更新清單，請使用Adobe PrimetimeDRM API來驗證簽名。
 
 下列API會確認清單未遭竄改，且清單已由正確的授權伺服器簽署：
 
