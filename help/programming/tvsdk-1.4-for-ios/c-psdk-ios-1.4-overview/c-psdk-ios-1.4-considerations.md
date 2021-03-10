@@ -1,13 +1,10 @@
 ---
 description: 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
-seo-description: 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
-seo-title: 考量事項和最佳實務
 title: 考量事項和最佳實務
-uuid: b37a5710-e811-4c3e-be8c-7c34ee5944e5
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 使用TVSDK時，請記住下列資訊：
 
-* Adobe Primetime無法在iOS模擬器上運作。
+* Adobe Primetime不在iOS模擬器上工作。
 
    您必須使用真正的裝置進行測試。
 * 僅HTTP即時串流(HLS)內容支援播放。
@@ -31,7 +28,7 @@ ht-degree: 0%
 
    * 時間軸調整無法在初始設定後修訂。
 
-      例如，廣告播放後，無法從時間軸移除。 如果使用者在簡報中尋找回來，即使原則是移除廣告，也會重新播放相同的廣告。
+      例如，廣告播放後，無法從時間軸移除。 如果使用者在簡報中尋找回來，即使原則是移除廣告，也會重播相同的廣告。
    * 根據編碼器精度，實際編碼媒體持續時間可能與串流資源清單中記錄的持續時間不同。
 
       在理想的虛擬時間軸和實際播放時間軸之間沒有可靠的重新同步方法。 廣告管理和視訊分析的串流播放進度追蹤必須使用實際播放時間，因此報告和使用者介面行為可能無法精確追蹤媒體和廣告內容。
