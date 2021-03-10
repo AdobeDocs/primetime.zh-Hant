@@ -1,9 +1,9 @@
 ---
-seo-title: 封裝內容
 title: 封裝內容
-uuid: 5d1d4b9d-f241-4291-9577-e9de5a8b92be
+description: 封裝內容
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 封裝內容{#packaging-content}
 
-封裝內容時，必須指定授權伺服器URL。 Adobe Access Server URL的格式如下：
+封裝內容時，必須指定授權伺服器URL。 Adobe Access ServerURL的格式為：
 
 ```
 http(s):// license-server-host:port/flashaccessserver/tenant-name
