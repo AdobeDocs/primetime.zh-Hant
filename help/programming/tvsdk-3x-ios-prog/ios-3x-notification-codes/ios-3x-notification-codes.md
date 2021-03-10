@@ -1,9 +1,9 @@
 ---
-seo-title: 通知代碼
 title: 通知代碼
-uuid: 845709f9-6141-4873-a1e1-abee9fa90832
+description: 通知代碼
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6'
 ht-degree: 0%
