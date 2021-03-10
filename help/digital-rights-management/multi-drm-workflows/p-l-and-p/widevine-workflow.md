@@ -1,13 +1,10 @@
 ---
 description: 此多DRM工作流程可引導您完成使用Widevine和PlayReady加密的DASH內容的設定、封裝、授權和播放。
-seo-description: 此多DRM工作流程可引導您完成使用Widevine和PlayReady加密的DASH內容的設定、封裝、授權和播放。
-seo-title: 適用於Widevine和PlayReady的多DRM工作流程
 title: 適用於Widevine和PlayReady的多DRM工作流程
-uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
