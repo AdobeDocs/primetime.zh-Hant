@@ -1,13 +1,10 @@
 ---
 description: MediaResource類代表MediaPlayer實例要載入的內容。
-seo-description: MediaResource類代表MediaPlayer實例要載入的內容。
-seo-title: 建立媒體資源
 title: 建立媒體資源
-uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
