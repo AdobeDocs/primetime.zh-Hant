@@ -1,14 +1,11 @@
 ---
 description: 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入」和「延遲廣告解析」功能可以降低此啟動延遲。 3.0版中的「懶惰廣告解決」已大幅變更。 在3.0之前的懶惰廣告載入中，廣告解析分為兩個步驟，即僅解析PREPARED狀態之前的預卷廣告，以及PREPARED狀態之後的中間卷和後卷廣告。 這已變更，廣告分段現在會在廣告分段位置之前的指定間隔內解決。
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入」和「延遲廣告解析」功能可以降低此啟動延遲。 3.0版中的「懶惰廣告解決」已大幅變更。 在3.0之前的懶惰廣告載入中，廣告解析分為兩個步驟，即僅解析PREPARED狀態之前的預卷廣告，以及PREPARED狀態之後的中間卷和後卷廣告。 這已變更，廣告分段現在會在廣告分段位置之前的指定間隔內解決。
-seo-title: 即時廣告解決
+keywords: Lazy；廣告解析；廣告載入
 title: 即時廣告解決
-uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
