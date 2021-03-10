@@ -1,13 +1,10 @@
 ---
 description: 要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
-seo-description: 要測試您的DRM解決方案，您需要一個視頻應用程式，它可以處理您正在使用的特定DRM解決方案。 此播放器可以是Adobe提供的範例播放器，或您自己的TVSDK視訊應用程式。
-seo-title: 播放您的受保護內容
 title: 播放您的受保護內容
-uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
