@@ -1,13 +1,10 @@
 ---
 description: 您可以新增TVSDK行為來暫停和播放按鈕。
-seo-description: 您可以新增TVSDK行為來暫停和播放按鈕。
-seo-title: 播放和暫停影片
 title: 播放和暫停影片
-uuid: 24b26364-5cb8-4a95-9574-cc52ddfa876b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
