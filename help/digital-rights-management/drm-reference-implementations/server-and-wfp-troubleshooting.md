@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 疑難排解
 title: 疑難排解
-uuid: 06b86067-1ff6-4b4e-922f-7f968260ba19
+description: 疑難排解
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '98'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -40,5 +38,5 @@ ht-degree: 0%
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   請確定您使用Reference Implementation *隨附的密碼擾碼器類別*。 此剪貼器公用程式與Adobe Primetime DRM Server針對受保護串流提供的公用程式不同。
+   請確定您使用Reference Implementation *隨附的密碼擾碼器類別*。 此擾碼器公用程式與Adobe PrimetimeDRM伺服器針對受保護串流提供的公用程式不同。
 
