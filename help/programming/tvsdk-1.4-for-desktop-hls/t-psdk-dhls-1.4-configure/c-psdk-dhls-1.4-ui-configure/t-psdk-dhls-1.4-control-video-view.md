@@ -1,13 +1,10 @@
 ---
 description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
-seo-description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
-seo-title: 控制視訊檢視的位置和大小
 title: 控制視訊檢視的位置和大小
-uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
