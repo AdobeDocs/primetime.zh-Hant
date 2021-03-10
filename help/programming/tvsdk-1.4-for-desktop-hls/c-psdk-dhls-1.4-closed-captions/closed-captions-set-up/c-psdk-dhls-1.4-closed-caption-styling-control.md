@@ -1,13 +1,10 @@
 ---
 description: 您可以使用ClosedCaptionStyles類別，提供隱藏字幕軌道的樣式資訊。 如此可設定播放器所顯示之隱藏字幕的樣式。
-seo-description: 您可以使用ClosedCaptionStyles類別，提供隱藏字幕軌道的樣式資訊。 如此可設定播放器所顯示之隱藏字幕的樣式。
-seo-title: 控制隱藏字幕樣式
 title: 控制隱藏字幕樣式
-uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
-source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -77,11 +74,11 @@ public function TextFormat(
       &nbsp;AVCaptionStyle.CURSIVE, 
       &nbsp;AVCaptionStyle.SMALL_CAPITALS 
       &nbsp;]; 
-     </code> </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 帶有序列的單空間通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
+     </code> </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 單空間與serifs通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 大小 </td> 
-   <td colname="2"> <p>字幕大小。 </p> <p> 只能設定為<span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span>陣列定義的值： 
+   <td colname="2"> <p>字幕大小。 </p> <p> 只能設定為由<span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span>陣列定義的值： 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> 中 </span> -標準尺寸 </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> LARGE  </span> -大約30%（中） </li> 
