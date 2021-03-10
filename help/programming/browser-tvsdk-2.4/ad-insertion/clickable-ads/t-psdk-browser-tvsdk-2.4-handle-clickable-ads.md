@@ -1,13 +1,10 @@
 ---
 description: MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣告相關事件。 這些事件提供廣告和廣告分段資訊，供您的應用程式用來提供點進功能。
-seo-description: MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣告相關事件。 這些事件提供廣告和廣告分段資訊，供您的應用程式用來提供點進功能。
-seo-title: 處理可點選廣告
 title: 處理可點選廣告
-uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
