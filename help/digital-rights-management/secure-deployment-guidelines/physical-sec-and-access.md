@@ -1,13 +1,10 @@
 ---
-description: 實際保護您的Adobe Primetime DRM環境對於防止未經授權的存取至關重要。
-seo-description: 實際保護您的Adobe Primetime DRM環境對於防止未經授權的存取至關重要。
-seo-title: 物理安全性和訪問
+description: 物理保護您的Adobe PrimetimeDRM環境對於防止未經授權的訪問至關重要。
 title: 物理安全性和訪問
-uuid: a5b00012-f2e5-4afa-8c59-46910fa325da
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 物理安全和訪問{#physical-security-and-access}
 
-實際保護您的Adobe Primetime DRM環境對於防止未經授權的存取至關重要。
+物理保護您的Adobe PrimetimeDRM環境對於防止未經授權的訪問至關重要。
 
 Primetime DRM環境的物理安全範圍從將伺服器置於安全室的鎖和鑰匙中到與其他電腦隔離的安全警報籠中，具有兩部分身份驗證（如徽章和指紋），並且由閉路電視(CCTV)持續監控。 您實施的安全性程度取決於您組織的政策、徽章或金鑰遺失時的潛在損失和嚴重性，以及其他法律規範要求。
 
