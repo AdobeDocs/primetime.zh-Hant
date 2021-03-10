@@ -1,9 +1,9 @@
 ---
-seo-title: 概觀
 title: 概觀
-uuid: 2bbf0aa1-df35-429d-84df-db357fa53e47
+description: 概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 如果客戶端和伺服器都支援第5版協定，請求URL為「元資料中的許可證伺服器URL」 + &quot; [!DNL /flashaccess/license/v4]&quot;。 如果協定版本3是客戶端或伺服器所支援的最大值，則Primetime DRM客戶端會向「License Server URL in metadata」 + &quot; [!DNL /flashaccess/license/v3]&quot;發送驗證請求。 否則，驗證請求會傳送至「中繼資料中的授權伺服器URL」+「 [!DNL /flashaccess/license/v1]」
 
-裝置可針對相同內容（相同的授權ID）擁有多份授權，但特定授權ID和DRM政策ID只能有一份授權。 如果收到具有重複LicenseID/PolicyID的授權，則新授權僅在新授權的發行日期晚於現有授權的發行日期時，才會取代舊授權。 此邏輯用於處理內嵌在內容中的授權。 因此，建議不要在內容區塊中嵌入多個具有相同DRM原則ID的授權。 同樣的邏輯也適用於透過`DRMManager.storeVoucher()` ActionScript3 API傳遞給用戶端的授權；如果用戶端已擁有授權，且日後發行日期已過，則可能會忽略所提供的授權。
+裝置可針對相同內容（相同的授權ID）擁有多份授權，但特定授權ID和DRM政策ID只能有一份授權。 如果收到具有重複LicenseID/PolicyID的授權，則新授權僅在新授權的發行日期晚於現有授權的發行日期時，才會取代舊授權。 此邏輯用於處理內嵌在內容中的授權。 因此，建議不要在內容區塊中嵌入多個具有相同DRM原則ID的授權。 同樣的邏輯適用於透過`DRMManager.storeVoucher()`ActionScript3 API傳遞給用戶端的授權；如果用戶端已擁有授權，且日後發行日期已過，則可能會忽略所提供的授權。
 
 ## 授權要求處理類別{#section_190E3BEF316C4B09ACC21E4C2BAC5C75}
 
