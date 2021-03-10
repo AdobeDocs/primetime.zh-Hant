@@ -1,13 +1,10 @@
 ---
 description: 視訊播放器廣告服務介面定義(VPAID)2.0提供播放視訊廣告的通用介面。 它為使用者提供豐富的媒體體驗，讓出版業者能夠更精準地鎖定廣告、追蹤廣告印象，並從視訊內容獲利。
-seo-description: 視訊播放器廣告服務介面定義(VPAID)2.0提供播放視訊廣告的通用介面。 它為使用者提供豐富的媒體體驗，讓出版業者能夠更精準地鎖定廣告、追蹤廣告印象，並從視訊內容獲利。
-seo-title: VPAID 2.0廣告支援
 title: VPAID 2.0廣告支援
-uuid: e45e91d2-2aef-4d69-ac80-228d23e8fd7b
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -34,7 +31,7 @@ ht-degree: 0%
 * 非線性廣告，例如覆蓋廣告、動態伴侶廣告、可最小化廣告、可收合廣告和可展開廣告
 * 預先載入VPAID廣告
 * 即時內容中的VPAID廣告
-* Flash VPAID廣告
+* FlashVPAID廣告
 
 ## API
 
