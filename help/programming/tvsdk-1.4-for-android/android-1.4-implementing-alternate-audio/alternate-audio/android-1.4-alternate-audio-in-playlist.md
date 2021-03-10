@@ -1,13 +1,10 @@
 ---
 description: 視頻的播放清單可以為主視頻內容指定不限數量的替代音軌。 例如，您可能想要在視訊內容中加入不同的語言，或允許使用者在播放內容時在裝置上切換不同的音軌。
-seo-description: 視頻的播放清單可以為主視頻內容指定不限數量的替代音軌。 例如，您可能想要在視訊內容中加入不同的語言，或允許使用者在播放內容時在裝置上切換不同的音軌。
-seo-title: 播放清單中的替代音軌
 title: 播放清單中的替代音軌
-uuid: 56720bc8-795d-4a12-ae40-2095d6392666
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
