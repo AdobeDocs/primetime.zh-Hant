@@ -1,14 +1,11 @@
 ---
-seo-title: 功能管理員
 title: 功能管理員
-uuid: 3d78544e-4819-4122-bfd3-01522a067aa9
 description: 功能管理員可讓您控制個別功能，而不需遍歷整個TVSDK，以搜尋可分散在多個位置的功能的程式碼。
-seo-description: 功能管理員可讓您控制個別功能，而不需遍歷整個TVSDK，以搜尋可分散在多個位置的功能的程式碼。
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 0%
+source-wordcount: '390'
+ht-degree: 1%
 
 ---
 
