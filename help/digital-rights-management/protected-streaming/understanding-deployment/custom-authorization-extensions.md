@@ -1,13 +1,10 @@
 ---
 description: 您可以在取得授權期間叫用自訂授權邏輯，以決定是否應將授權發給要求的用戶端。
-seo-description: 您可以在取得授權期間叫用自訂授權邏輯，以決定是否應將授權發給要求的用戶端。
-seo-title: 自訂授權擴充功能
 title: 自訂授權擴充功能
-uuid: 588b05e5-3402-4586-bbd4-58b7e9a58ee4
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
