@@ -1,13 +1,10 @@
 ---
 description: 您可以根據預設解析器實作解析器。
-seo-description: 您可以根據預設解析器實作解析器。
-seo-title: 實作自訂商機／內容解析程式
 title: 實作自訂商機／內容解析程式
-uuid: 0023f516-12f3-4548-93de-b0934789053b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
