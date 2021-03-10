@@ -1,9 +1,9 @@
 ---
-seo-title: 如何使用Primetime參考實作
 title: 如何使用Primetime參考實作
-uuid: 9eb262c4-d987-493a-92a4-311118c5f01e
+description: 如何使用Primetime參考實作
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
