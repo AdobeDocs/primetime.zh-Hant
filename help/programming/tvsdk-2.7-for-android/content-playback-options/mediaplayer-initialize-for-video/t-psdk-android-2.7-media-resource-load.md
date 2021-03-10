@@ -1,13 +1,10 @@
 ---
 description: 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
-seo-description: 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
-seo-title: 在媒體播放器中載入媒體資源
 title: 在媒體播放器中載入媒體資源
-uuid: 0334fa69-1d92-44d8-8891-2bc90a1ea498
 translation-type: tm+mt
-source-git-commit: 67975894814fbed8cfc49764a54b80d123032a49
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
