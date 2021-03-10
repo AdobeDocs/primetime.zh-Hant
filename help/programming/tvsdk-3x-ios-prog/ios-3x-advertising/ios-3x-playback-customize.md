@@ -1,13 +1,10 @@
 ---
 description: 當播放到廣告插播、傳遞廣告插播或廣告插播結束時，TVSDK會為目前播放頭的定位定義一些預設行為。
-seo-description: 當播放到廣告插播、傳遞廣告插播或廣告插播結束時，TVSDK會為目前播放頭的定位定義一些預設行為。
-seo-title: 使用廣告自訂播放
 title: 使用廣告自訂播放
-uuid: b21a2b1b-5376-41cb-a772-a8945fd56f3c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '982'
 ht-degree: 0%
 
 ---
