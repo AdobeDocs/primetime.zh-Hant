@@ -1,19 +1,16 @@
 ---
 description: 出版業者可建立與HLS相容的視訊播放器，可搭配Primetime資訊清單伺服器端和追蹤工作流程運作。 即時串流和隨選視訊(VOD)案例的資訊清單伺服器介面略有不同。
-seo-description: 出版業者可建立與HLS相容的視訊播放器，可搭配Primetime資訊清單伺服器端和追蹤工作流程運作。 即時串流和隨選視訊(VOD)案例的資訊清單伺服器介面略有不同。
-seo-title: 非TVSDK用戶端追蹤概觀
 title: 非TVSDK用戶端追蹤概觀
-uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
 
 
-# 非TVSDK用戶端追蹤概述{#overview-of-non-tvsdk-client-side-tracking}
+# 非TVSDK用戶端追蹤{#overview-of-non-tvsdk-client-side-tracking}概觀
 
 出版業者可建立與HLS相容的視訊播放器，可搭配Primetime資訊清單伺服器端和追蹤工作流程運作。 即時串流和隨選視訊(VOD)案例的資訊清單伺服器介面略有不同。
 
@@ -31,7 +28,7 @@ ht-degree: 1%
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
 1. Player從發佈者取得資訊清單伺服器URL。
-1. 播放器會附加特定於其廣告插入需求的查詢參數，並傳送HTTP GET要求至產生的引導URL。 引導URL具有以下語法：
+1. 播放器會附加特定於其廣告插入需求的查詢參數，並傳送HTTPGET要求至產生的BootstrapURL。 BootstrapURL具有下列語法：
 
    ```URL
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
@@ -151,7 +148,7 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >資訊清單伺服器會根據引導URL中的`pttrackingversion`值，產生廣告追蹤物件。 如果省略`pttrackingversion`或其值無效，則資訊清單伺服器會自動在每個請求的串流層級播放清單中的`#EXT-X-MARKER`標籤中填入廣告追蹤資訊。 如需詳細資訊，請參閱[。](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
+   >資訊清單伺服器會根據BootstrapURL中的`pttrackingversion`值來產生廣告追蹤物件。 如果省略`pttrackingversion`或其值無效，則資訊清單伺服器會自動在每個請求的串流層級播放清單中的`#EXT-X-MARKER`標籤中填入廣告追蹤資訊。 如需詳細資訊，請參閱[。](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
 
 1. 播放器會在適當的時間針對每個廣告追蹤事件要求每個廣告追蹤URL。
 
