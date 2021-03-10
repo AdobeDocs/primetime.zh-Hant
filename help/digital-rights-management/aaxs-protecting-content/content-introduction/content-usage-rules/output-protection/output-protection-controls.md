@@ -1,9 +1,9 @@
 ---
-seo-title: 輸出保護控制
 title: 輸出保護控制
-uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
+description: 輸出保護控制
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
@@ -29,32 +29,32 @@ ht-degree: 0%
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">必要</b> — 模擬複製保護(ACP)或複製生成管理系統——必須啟用模擬(CGMS-A)輸出保護，以便向外部設備播放內容。Adobe Access用戶端必須使用ACP或CGMS-A啟用輸出保護。在同時支援這兩種裝置上，Adobe Access 3.0用戶端會嘗試同時啟用這兩種裝置。 但是，只有一個必須啟用才能播放內容。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">必要</b> — 模擬複製保護(ACP)或複製生成管理系統——必須啟用模擬(CGMS-A)輸出保護，以便向外部設備播放內容。Adobe訪問客戶端必須使用ACP或CGMS-A啟用輸出保護。在同時支援這兩者的設備上，AdobeAccess 3.0客戶端將嘗試同時啟用這兩者。 但是，只有一個必須啟用才能播放內容。 </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">需要ACP</b> — 需要ACP輸出保護。CGMS-A不允許播放。Adobe Access 2.0用戶端不支援此選項。 如果設定，Adobe Access 2.0用戶端的行為就會如同已指定「無播放」選項。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">需要ACP</b> — 需要ACP輸出保護。CGMS-A不允許播放。AdobeAccess 2.0客戶端不支援此選項。 如果設定，AdobeAccess 2.0客戶端將像指定了「無回放」選項一樣運行。 </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A必要</b> — 需要CGMS-A輸出保護。不允許在ACP上播放。 Adobe Access 2.0用戶端不支援此選項。 如果設定，Adobe Access 2.0用戶端的行為就會如同已指定「無播放」選項。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A必要</b> — 需要CGMS-A輸出保護。不允許在ACP上播放。 AdobeAccess 2.0客戶端不支援此選項。 如果設定，AdobeAccess 2.0客戶端將像指定了「無回放」選項一樣運行。 </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">使用(如果可用</b> )— 嘗試啟用ACP和CGMS-A輸出保護（如果可用），如果不可用則允許播放。Adobe Access 3.0客戶端將嘗試啟用ACP和CGMS-A（如果可能）。 Adobe Access 2.0用戶端僅會嘗試啟用ACP或CGMS-A。例如，Adobe Access用戶端會嘗試啟用ACP或CGMS-A。如果嘗試成功，則不會啟用其他選項。 如果嘗試失敗，則會再次嘗試啟用另一個選項。 即使兩次嘗試都失敗，內容仍會播放。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">使用(如果可用</b> )— 嘗試啟用ACP和CGMS-A輸出保護（如果可用），如果不可用則允許播放。AdobeAccess 3.0客戶端將嘗試啟用ACP和CGMS-A（如果可能）。 AdobeAccess 2.0客戶端將僅嘗試啟用ACP或CGMS-A。例如，Adobe訪問客戶端將嘗試啟用ACP或CGMS-A。如果嘗試成功，則不會啟用其他選項。 如果嘗試失敗，則會再次嘗試啟用另一個選項。 即使兩次嘗試都失敗，內容仍會播放。 </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">使用ACP(如果可用</b> )— 嘗試啟用ACP輸出保護（如果可用），但如果不可用則允許播放。CGMS-A上不提供保護。Adobe Access 2.0用戶端不支援此選項。 如果設定，Adobe Access 2.0用戶端的行為就會如同指定了「無保護」選項。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">使用ACP(如果可用</b> )— 嘗試啟用ACP輸出保護（如果可用），但如果不可用則允許播放。CGMS-A上不提供保護。AdobeAccess 2.0客戶端不支援此選項。 如果設定，AdobeAccess 2.0客戶端將像指定了「無保護」選項一樣運行。 </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">使用CGMS-A（如果可用） </b>— 嘗試啟用CGMS-A輸出保護（如果可用），但如果不可用則允許播放。ACP上不提供保護。 Adobe Access 2.0用戶端不支援此選項。 如果設定，Adobe Access 2.0用戶端的行為就會如同指定了「無保護」選項。 </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">使用CGMS-A（如果可用） </b>— 嘗試啟用CGMS-A輸出保護（如果可用），但如果不可用則允許播放。ACP上不提供保護。 AdobeAccess 2.0客戶端不支援此選項。 如果設定，AdobeAccess 2.0客戶端將像指定了「無保護」選項一樣運行。 </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">是 </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
