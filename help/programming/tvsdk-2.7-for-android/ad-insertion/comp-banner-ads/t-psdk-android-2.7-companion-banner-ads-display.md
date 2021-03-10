@@ -1,13 +1,10 @@
 ---
 description: 若要顯示橫幅廣告，您必須建立橫幅例項，並允許TVSDK監聽廣告相關事件。
-seo-description: 若要顯示橫幅廣告，您必須建立橫幅例項，並允許TVSDK監聽廣告相關事件。
-seo-title: 顯示橫幅廣告
 title: 顯示橫幅廣告
-uuid: 7246dfab-860f-4b55-9554-49738a483406
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ TVSDK提供與透過`AdPlaybackEventListener.onAdBreakStart`事件的線性廣�
 
 * HTML程式碼片段
 * iFrame頁面的URL
-* 靜態影像或Adobe Flash SWF檔案的URL
+* 靜態影像或AdobeFlashSWF檔案的URL
 
 對於每個配套廣告，TVSDK會指出您的應用程式有哪些類型。
 
