@@ -1,14 +1,11 @@
 ---
 description: 解決媒體資源的另一種方式是使用MediaPlayerItemLoader。 當您想要取得特定媒體串流的相關資訊而不執行個體化MediaPlayer例項時，這個功能會很有用。
-seo-description: 解決媒體資源的另一種方式是使用MediaPlayerItemLoader。 當您想要取得特定媒體串流的相關資訊而不執行個體化MediaPlayer例項時，這個功能會很有用。
-seo-title: 使用MediaPlayerItemLoader載入媒體資源
 title: 使用MediaPlayerItemLoader載入媒體資源
-uuid: a7ec8f58-7357-4757-a402-e879dd6caec8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 0%
+source-wordcount: '168'
+ht-degree: 1%
 
 ---
 
