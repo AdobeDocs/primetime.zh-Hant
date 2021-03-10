@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 軟體需求
 title: 軟體需求
-uuid: 9faa229b-1abf-4b55-b293-247777bcb1db
+description: 軟體需求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -20,7 +18,7 @@ ht-degree: 0%
 
 ## 程式碼傳送／封裝內容{#code-delivery-package-contents}
 
-Adobe Primetime DRM On Promiess Indificialization Server套件包含下列內容：
+Adobe PrimetimeDRM On Promiess Personalization Server軟體包包含以下內容：
 
 * [!DNL flashaccess.war] -個人化伺服器
 * [!DNL flashaccess-kgs.war] -可選的密鑰生成伺服器
@@ -47,7 +45,7 @@ Adobe Primetime DRM On Promiess Indificialization Server套件包含下列內容
 
 要使用內部個人化伺服器，您必須首先獲得兩個數字證書（證書）:
 
-* *個人化傳輸憑證* -由Adobe核發
+* *個人化運輸憑證* -由Adobe核發
 * *個性化CA憑證* -由Symantec(VeriSign)頒發
 
 若要取得這些憑證，請透過Zendesk票證提交要求至：[https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
