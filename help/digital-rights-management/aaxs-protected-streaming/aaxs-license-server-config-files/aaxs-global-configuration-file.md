@@ -1,9 +1,9 @@
 ---
-seo-title: 全局配置檔案
 title: 全局配置檔案
-uuid: 10370bc0-36ab-4e43-9e75-c46a7177874c
+description: 全局配置檔案
+copied-description: true
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
