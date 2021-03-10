@@ -1,9 +1,9 @@
 ---
-seo-title: 必要條件
 title: 必要條件
-uuid: 5c85ce72-28a9-45d8-b951-46a697e362ea
+description: 必要條件
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
