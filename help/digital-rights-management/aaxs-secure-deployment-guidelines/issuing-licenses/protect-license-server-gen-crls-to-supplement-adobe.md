@@ -1,9 +1,9 @@
 ---
-seo-title: 產生CRL以補充Adobe發佈的CRL
-title: 產生CRL以補充Adobe發佈的CRL
-uuid: 4e93f6d3-5a04-44e9-9e6b-e878798b68f5
+title: 產生CRL以補充由Adobe發佈的CRL
+description: 產生CRL以補充由Adobe發佈的CRL
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# 產生CRL以補充Adobe{#generate-crls-to-supplement-those-published-by-adobe}發佈的CRL
+# 生成CRL以補充Adobe{#generate-crls-to-supplement-those-published-by-adobe}發佈的CRL
 
-Adobe Access可讓您建立CRL，以補充Adobe發佈的機器CRL。 Adobe Access SDK會檢查並強制執行Adobe CRL，但您可以建立廢止其他電腦憑證的CRL，以禁止其他用戶端電腦。 若要這麼做，您必須將CRL傳遞至Adobe Access SDK，然後，在核發授權時，SDK會檢查Adobe CRL和您自己的CRL。
+「Adobe存取」可讓您建立CRL，以補充Adobe所發佈的機器CRL。 Adobe存取SDK會檢查並強制執行AdobeCRL，但是，您可以建立廢止其他電腦憑證的CRL，來禁止其他用戶端電腦。 為此，您必須將CRL傳遞至Adobe存取SDK，然後，在簽發授權時，SDK會檢查AdobeCRL和您自己的CRL。
 
-如需有關產生CRL的詳細資訊，請參閱&#x200B;*Adobe Access API Reference*&#x200B;中的`RevocationListFactory`。
+要瞭解有關生成CRL的詳細資訊，請參閱&#x200B;*Adobe訪問API參考*&#x200B;中的`RevocationListFactory`。
