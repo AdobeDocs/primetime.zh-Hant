@@ -1,9 +1,9 @@
 ---
-seo-title: 播放受保護內容所需的裝置功能
 title: 播放受保護內容所需的裝置功能
-uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
+description: 播放受保護內容所需的裝置功能
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -42,5 +42,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此使用規則受Adobe Access用戶端2.0.2版及更新版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱[最低客戶端版本](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)。
+>此使用規則受Adobe訪問客戶端2.0.2版和更高版本的支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱[最低客戶端版本](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)。
 
