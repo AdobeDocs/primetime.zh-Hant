@@ -1,9 +1,9 @@
 ---
-seo-title: 配置路徑和類路徑
 title: 配置路徑和類路徑
-uuid: cf10fafa-125e-450c-83ae-60b990dab6b5
+description: 配置路徑和類路徑
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 1%
@@ -28,7 +28,7 @@ ht-degree: 1%
    * 開發伺服器——僅應使用[!DNL adobe-flashaccess-certs-prerelease.jar]。
    * 生產伺服器——僅應使用[!DNL adobe-flashaccess- certs.jar]
 
-分發包括[!DNL shared]資料夾，其中包括jar檔案和預配置的[!DNL AdobeInitial.properties]檔案。 Adobe建議您透過[!DNL catalina.properties]檔案將這些項目新增至`common.loader`。 例如：
+分發包括[!DNL shared]資料夾，其中包括jar檔案和預配置的[!DNL AdobeInitial.properties]檔案。 Adobe建議您通過[!DNL catalina.properties]檔案將這些項目添加到`common.loader`。 例如：
 
 ```
 common.loader=<Any Pre-Existing Values>,${catalina.home}/shared/classes,${catalina.home}/shared/lib/*.jar
