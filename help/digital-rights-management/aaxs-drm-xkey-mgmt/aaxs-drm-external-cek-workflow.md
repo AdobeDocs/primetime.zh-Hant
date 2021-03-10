@@ -1,13 +1,10 @@
 ---
-seo-title: AAXS DRM外部CEK工作流程
 title: AAXS DRM外部CEK工作流程
 description: 此工作流程與大多數現有的DRM系統不同，因為它不需要使用任何中央儲存庫或內容密鑰管理系統(CKMS)
-seo-description: 此工作流程與大多數現有的DRM系統不同，因為它不需要使用任何中央儲存庫或內容密鑰管理系統(CKMS)
-uuid: b313594b-0feb-4f27-bf02-f04b955e2140
 translation-type: tm+mt
-source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
