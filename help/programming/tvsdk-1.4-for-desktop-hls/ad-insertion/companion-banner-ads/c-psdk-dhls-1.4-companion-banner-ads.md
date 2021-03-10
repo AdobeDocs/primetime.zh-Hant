@@ -1,13 +1,10 @@
 ---
 description: TVSDK支援輔助橫幅廣告，這些廣告是線性廣告隨附的廣告，通常會線上性廣告結束後保留在頁面上。 您的應用程式負責顯示隨附線性廣告的配套橫幅。
-seo-description: TVSDK支援輔助橫幅廣告，這些廣告是線性廣告隨附的廣告，通常會線上性廣告結束後保留在頁面上。 您的應用程式負責顯示隨附線性廣告的配套橫幅。
-seo-title: 配套橫幅廣告
 title: 配套橫幅廣告
-uuid: 388a1683-342c-4f3b-97c8-cfcb6c5cfee1
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -71,7 +68,7 @@ AdBannerAsset的內容會描述配套的橫幅。
   </tr> 
   <tr> 
    <td colname="col1"> 靜態URL </td> 
-   <td colname="col2"> <p>有時候，配套橫幅也會有靜態URL，即影像或<span class="filepath"> .swf</span>（flash橫幅）的直接URL。 </p> <p>如果您不想使用html或iframe，則可使用影像或swf的直接URL，在Flash階段中顯示橫幅。 在這種情況下，您可以使用staticURL來顯示橫幅。 </p> <p>重要： 您必須檢查靜態URL是否為有效字串，因為此屬性可能不一定都可用。 </p> </td> 
+   <td colname="col2"> <p>有時候，配套橫幅也會有靜態URL，即影像或<span class="filepath"> .swf</span>（flash橫幅）的直接URL。 </p> <p>如果您不想使用html或iframe，則可以使用影像或swf的直接URL，在Flash階段中顯示橫幅。 在這種情況下，您可以使用staticURL來顯示橫幅。 </p> <p>重要： 您必須檢查靜態URL是否為有效字串，因為此屬性可能不一定都可用。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -86,7 +83,7 @@ TVSDK會提供與透過`AdPlaybackEvent.AD_STARTED`事件的線性廣告相關�
 
 * HTML程式碼片段
 * iFrame頁面的URL
-* 靜態影像或Adobe Flash SWF檔案的URL
+* 靜態影像或AdobeFlashSWF檔案的URL
 
 對於每個配套廣告，TVSDK會指出您的應用程式有哪些類型。
 
