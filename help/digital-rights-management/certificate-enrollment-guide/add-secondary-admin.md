@@ -1,9 +1,9 @@
 ---
-seo-title: 建立輔助管理員
 title: 建立輔助管理員
-uuid: 2a360226-2fcb-432f-bdeb-3fa9ef0019ee
+description: 建立輔助管理員
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ht-degree: 0%
 
    1. 按一下 **[!UICONTROL Save]**.
 
-      管理員會收到電子郵件，指出其Adobe Primetime DRM帳戶註冊已完成。
+      管理員收到一封電子郵件，指出其Adobe PrimetimeDRM帳戶註冊已完成。
 
 1. 如果您邀請了使用者，請執行下列動作：
 
