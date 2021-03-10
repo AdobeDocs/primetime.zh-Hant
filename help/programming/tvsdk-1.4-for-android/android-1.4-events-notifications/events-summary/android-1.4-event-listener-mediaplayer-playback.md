@@ -1,13 +1,10 @@
 ---
 description: TVSDK會在媒體播放作業發生時（例如視訊開始播放）分派播放事件。
-seo-description: TVSDK會在媒體播放作業發生時（例如視訊開始播放）分派播放事件。
-seo-title: 播放事件
 title: 播放事件
-uuid: 809a8e0e-f4d8-4013-b04a-49fb93d7ca8a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
