@@ -1,9 +1,9 @@
 ---
-seo-title: 租賃／隨選視訊
 title: 租賃／隨選視訊
-uuid: 11e357e5-f683-40c4-a59c-0ae7c10d6cb4
+description: 租賃／隨選視訊
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
