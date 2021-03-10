@@ -1,13 +1,10 @@
 ---
 description: 這些類提供有關介質的資訊。
-seo-description: 這些類提供有關介質的資訊。
-seo-title: 資訊類別
 title: 資訊類別
-uuid: 49d6dc60-573e-41a6-aef9-2094c2699673
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
