@@ -1,9 +1,9 @@
 ---
-seo-title: 封裝加密內容
 title: 封裝加密內容
-uuid: 1e271167-107d-41df-8a7c-3075cb3acc0c
+description: 封裝加密內容
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -51,7 +51,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >如果要封裝HLS、HDS或DASH內容，您必須使用不同的封裝工具，例如[Adobe Primetime Offline Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)。
+   >如果要封裝HLS、HDS或DASH內容，您必須使用不同的封裝工具，例如[Adobe PrimetimeOffline Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)。
 
 1. 將加密的檔案對象（在本例中為[!DNL sample_encrypted.mp4]和[!DNL sample_encrypted.mp4.metadata]）複製到`<Your Content Server - Tomcat Install Dir>\webapps\ROOT`。
 
@@ -59,4 +59,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如需有關封裝內容、建立原則等命令列工具的詳細資訊，請參閱[Adobe Primetime DRM命令列工具](../drm-reference-implementations/command-line-tools/command-line-tools-overview.md)。
+>有關用於打包內容、建立策略等的命令行工具的詳細資訊，請參閱[Adobe PrimetimeDRM命令行工具](../drm-reference-implementations/command-line-tools/command-line-tools-overview.md)。
