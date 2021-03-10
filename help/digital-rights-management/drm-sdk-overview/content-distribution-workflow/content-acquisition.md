@@ -1,13 +1,10 @@
 ---
-description: '當消費者從網站或CDN取得受保護的內容檔案時，消費者也必須取得包含解密視訊的金鑰的授權，才能播放視訊。 下列步驟說明執行Flash Player或Adobe AIR之電腦存取受保護內容的一般工作流程 '
-seo-description: '當消費者從網站或CDN取得受保護的內容檔案時，消費者也必須取得包含解密視訊的金鑰的授權，才能播放視訊。 下列步驟說明執行Flash Player或Adobe AIR之電腦存取受保護內容的一般工作流程 '
-seo-title: 內容獲取
+description: '當消費者從網站或CDN取得受保護的內容檔案時，消費者也必須取得包含解密視訊的金鑰的授權，才能播放視訊。 下列步驟說明執行Flash Player或Adobe AIR的電腦如何存取受保護內容的一般工作流程 '
 title: 內容獲取
-uuid: 80253746-bc31-43f0-b28b-7a1aa7fe34a7
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -15,15 +12,15 @@ ht-degree: 0%
 
 # 內容獲取{#content-acquisition}
 
-當消費者從網站或CDN取得受保護的內容檔案時，消費者也必須取得包含解密視訊的金鑰的授權，才能播放視訊。 下列步驟說明執行Flash Player或Adobe AIR之電腦存取受保護內容的一般工作流程：
+當消費者從網站或CDN取得受保護的內容檔案時，消費者也必須取得包含解密視訊的金鑰的授權，才能播放視訊。 下列步驟說明執行Flash Player或Adobe AIR的電腦如何存取受保護內容的一般工作流程：
 
 1. 消費者造訪零售商的網站，並選擇要觀看的視訊。 消費者會嘗試使用Flash Player或Adobe AIR應用程式，將受保護的視訊下載或串流至電腦。
 
    如果這是消費者第一次嘗試使用此特定電腦存取受保護的內容，則Flash Player或Adobe AIR執行時期必須先依照步驟2所述個人化。 如果執行時期用戶端已經個人化，則會依步驟3所述進行取得授權的程式。
 
-1. Flash Player或Adobe AIR執行時期用戶端會從Adobe代管伺服器取得唯一的數位憑證（稱為&#x200B;*機器憑證*）。
+1. Flash Player或Adobe AIR運行時客戶端從Adobe托管的伺服器獲得唯一數字證書（稱為&#x200B;*機器證書*）。
 
-   指派唯一憑證的程式稱為&#x200B;*個人化*。 個人化可唯一識別用來播放內容的電腦和Flash Player或Adobe AIR執行時期。
+   指派唯一憑證的程式稱為&#x200B;*個人化*。 個人化可唯一識別用於播放內容的電腦和Flash Player或Adobe AIR執行時期。
 
    個人化程式允許下載的授權系結至安裝用戶端的特定電腦。 每台電腦都有唯一的電腦憑證（機器私鑰和機器證書）。 如果某個特定用戶端遭到危害，該用戶端可能會被撤銷，且無法取得新內容的授權。
 
@@ -38,7 +35,7 @@ ht-degree: 0%
 
    如果許可證允許，客戶端儲存許可證以啟用對許可證的&#x200B;*離線訪問*。 授權快取可讓消費者在每次想要檢視內容時，不必重新取得授權，就能檢視受保護的內容。
 
-1. 當Flash Player或Adobe AIR執行階段用戶端取得授權後，用戶端會從授權中擷取CEK，而消費者可檢視其授權存取的內容。
+1. 當Flash Player或Adobe AIR執行時期用戶端擁有授權後，用戶端會從授權中擷取CEK，而消費者可以檢視其有權存取的內容。
 
    <!--<a id="fig_s43_gc2_44"></a>-->
 
