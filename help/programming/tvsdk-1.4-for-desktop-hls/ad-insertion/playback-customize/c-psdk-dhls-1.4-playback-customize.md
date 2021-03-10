@@ -1,13 +1,10 @@
 ---
 description: 當播放到廣告插播、傳遞廣告插播或廣告插播結束時，TVSDK會為目前播放頭的定位定義一些預設行為。
-seo-description: 當播放到廣告插播、傳遞廣告插播或廣告插播結束時，TVSDK會為目前播放頭的定位定義一些預設行為。
-seo-title: 使用廣告自訂播放
 title: 使用廣告自訂播放
-uuid: e7c9f4b1-15c9-43a2-be00-1ca4bfd17e43
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 >
 >您可以使用`AdPolicySelector`類別來覆寫預設行為。
 
-預設行為會隨使用者在正常播放期間或在視訊中搜尋或使用快進或倒轉（特技播放）重新放置廣告而改變，視其是否通過廣告插播而有所不同。
+預設行為會隨使用者在正常播放期間或在視訊中搜尋或使用快進或倒轉（特技播放）重新放置廣告而改變，視其是否通過廣告插播而定。
 
 您可以透過下列方式自訂廣告播放行為：
 
