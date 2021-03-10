@@ -1,13 +1,10 @@
 ---
-description: 為了讓廣告解析程式運作，廣告提供者（例如Adobe Primetime廣告決策）需要設定值，才能啟用您與提供者的連線。
-seo-description: 為了讓廣告解析程式運作，廣告提供者（例如Adobe Primetime廣告決策）需要設定值，才能啟用您與提供者的連線。
-seo-title: 廣告插入中繼資料
+description: 為了讓廣告解析程式運作，廣告提供者(例如Adobe Primetime廣告決策)需要設定值才能啟用您與提供者的連線。
 title: 廣告插入中繼資料
-uuid: 676e81b9-4c2b-487e-bc68-74879ca2966b
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 概述{#ad-nsertion-metadata-overview}
 
-為了讓廣告解析程式運作，廣告提供者（例如Adobe Primetime廣告決策）需要設定值，才能啟用您與提供者的連線。
+為了讓廣告解析程式運作，廣告提供者(例如Adobe Primetime廣告決策)需要設定值才能啟用您與提供者的連線。
 
 TVSDK包含Primetime廣告決策庫。 您的內容若要包含來自Primetime廣告決策伺服器的廣告，您的應用程式必須提供下列必要的`AuditudeSettings`資訊：
 
