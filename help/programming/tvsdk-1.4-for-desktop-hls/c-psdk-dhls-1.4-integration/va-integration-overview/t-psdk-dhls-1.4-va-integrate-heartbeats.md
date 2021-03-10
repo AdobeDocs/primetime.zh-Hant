@@ -1,13 +1,10 @@
 ---
 description: 您可以設定您的播放器來追蹤和分析視訊使用。
-seo-description: 您可以設定您的播放器來追蹤和分析視訊使用。
-seo-title: 初始化和設定視訊分析
 title: 初始化和設定視訊分析
-uuid: ece5ddc1-3f7b-4878-b1bc-1fec0a459add
 translation-type: tm+mt
-source-git-commit: 6cb3463be8986d8a1dc718655bd929a0f07ac00d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -20,13 +17,13 @@ ht-degree: 0%
 在啟動視訊追蹤（視訊心率）之前，請確定您有下列項目：
 
 * Desktop HLS的TVSDK
-* 設定／初始化資訊——請連絡您的Adobe代表，以取得特定視訊追蹤帳戶資訊：
+* 設定／初始化資訊——請洽詢您的Adobe代表，以取得您的特定視訊追蹤帳戶資訊：
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
    <td colname="col1"> AppMeasurement追蹤伺服器端點 </td> 
-   <td colname="col2"> Adobe Analytics（舊稱SiteCatalyst）後端收集端點的URL。 </td> 
+   <td colname="col2"> Adobe Analytics(之前稱為SiteCatalyst)後端收集端點的URL。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 視訊分析追蹤伺服器端點 </td> 
@@ -46,7 +43,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> 發行者 </td> 
-   <td colname="col2"> 這是Publisher ID，由其Adobe代表提供給客戶。 <p>提示： 此ID不僅是具有品牌／電視名稱的字串。 </p> </td> 
+   <td colname="col2"> 這是發行者ID，由客戶的Adobe代表提供。 <p>提示： 此ID不僅是具有品牌／電視名稱的字串。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -57,7 +54,7 @@ ht-degree: 0%
 
        請記住下列資訊：
    
-   * 執行個體化需要Adobe提供的Marketing Cloud組織ID輸入參數。
+   * 實例化需要Marketing Cloud組織ID輸入參數，該參數由Adobe提供。
 
       這是字串值。
    * VisitorAPI程式庫的唯一設定選項是後端端點的URL，可為目前使用者提供唯一識別碼。
