@@ -1,13 +1,10 @@
 ---
 description: 使用選用的pttrackingmode、pttrackingversion和pttrackingposition查詢參數，以取得要傳送目前視訊廣告追蹤資訊的URL。 回應會隨追蹤版本以及視訊串流是即時或隨選(VOD)而異。
-seo-description: 使用選用的pttrackingmode、pttrackingversion和pttrackingposition查詢參數，以取得要傳送目前視訊廣告追蹤資訊的URL。 回應會隨追蹤版本以及視訊串流是即時或隨選(VOD)而異。
-seo-title: 播放器與資訊清單伺服器互動的API
 title: 播放器與資訊清單伺服器互動的API
-uuid: ab7a19e7-6c28-4960-a56b-3b33c525e6b3
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
