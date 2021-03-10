@@ -1,13 +1,10 @@
 ---
 description: 對於啟用後援規則的數位視訊廣告服務範本(VAST)廣告（或創意素材）,TVSDK會將無效媒體類型的廣告視為空白廣告，並嘗試在其位置使用後援廣告。 您可以設定備援行為的某些方面。
-seo-description: 對於啟用後援規則的數位視訊廣告服務範本(VAST)廣告（或創意素材）,TVSDK會將無效媒體類型的廣告視為空白廣告，並嘗試在其位置使用後援廣告。 您可以設定備援行為的某些方面。
-seo-title: 廣泛廣告和VMAP廣告的廣告後援
 title: 廣泛廣告和VMAP廣告的廣告後援
-uuid: 5469cd22-7121-49f0-8833-2a525c7ef7d0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
