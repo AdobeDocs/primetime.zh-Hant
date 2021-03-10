@@ -1,13 +1,10 @@
 ---
 description: 這些類別會說明您的媒體播放器及其資源。
-seo-description: 這些類別會說明您的媒體播放器及其資源。
-seo-title: 媒體播放器類別
 title: 媒體播放器類別
-uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -69,7 +66,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> </a> </span> PTOportunityResolverclass、 <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> </a> PTOportunityResolverprotocol</span> </td> 
-   <td colname="2"> 用於處理資訊清單內提示的類別，這些提示將用作Adobe Primetime廣告決策程式的位置。 </td> 
+   <td colname="2"> 用於處理資訊清單內提示的類別，這些類別將用作Adobe Primetime廣告決策程式的位置。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolverDelegate.html" format="html" scope="external"> PTOportunityResolverDelegate</a></span> </td> 
