@@ -1,13 +1,10 @@
 ---
 description: TVSDK提供工具來建立進階視訊播放器應用程式（您的Primetime播放器），讓您可與其他Primetime元件整合。 此外，它還提供多種功能，可讓視訊播放品質發揮最大。
-seo-description: TVSDK提供工具來建立進階視訊播放器應用程式（您的Primetime播放器），讓您可與其他Primetime元件整合。 此外，它還提供多種功能，可讓視訊播放品質發揮最大。
-seo-title: 設定媒體播放器
 title: 設定媒體播放器
-uuid: 1f672484-b340-4f92-8a47-dad4c9f3b3fc
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
