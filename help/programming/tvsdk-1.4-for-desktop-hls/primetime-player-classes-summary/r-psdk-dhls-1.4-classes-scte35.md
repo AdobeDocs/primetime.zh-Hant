@@ -1,13 +1,10 @@
 ---
 description: 這些類別可讓TVSDK包含SCTE 35接頭。
-seo-description: 這些類別可讓TVSDK包含SCTE 35接頭。
-seo-title: SCTE 35班
 title: SCTE 35班
-uuid: 7f3754fd-90f1-4457-9e31-d40740435489
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
