@@ -1,9 +1,9 @@
 ---
-seo-title: 處理驗證請求
 title: 處理驗證請求
-uuid: 036582d4-611c-4772-b247-81a3144fd5d6
+description: 處理驗證請求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -21,5 +21,5 @@ ht-degree: 0%
 
 * 請求處理常式類別為`com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationHandler`
 * 請求消息類為`com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationRequestMessage`
-* 如果客戶端和伺服器都支援第5版協定，請求URL為「元資料中的許可證伺服器URL:+ &quot;/flashaccess/authn/v4&quot;。 如果用戶端或伺服器支援的通訊協定版本3是最高版本，Adobe Access用戶端會傳送驗證要求至「中繼資料中的授權伺服器URL」+「/flashaccess/authn/v3」。 否則，驗證要求會傳送至「中繼資料中的授權伺服器URL」+「/flashaccess/authn/v1」
+* 如果客戶端和伺服器都支援第5版協定，請求URL為「元資料中的許可證伺服器URL:+ &quot;/flashaccess/authn/v4&quot;。 如果客戶端或伺服器支援的協定版本3是最大版本，Adobe訪問客戶端將向「License Server URL in metadata」 + &quot;/flashaccess/authn/v3&quot;發送驗證請求。 否則，驗證要求會傳送至「中繼資料中的授權伺服器URL」+「/flashaccess/authn/v1」
 
