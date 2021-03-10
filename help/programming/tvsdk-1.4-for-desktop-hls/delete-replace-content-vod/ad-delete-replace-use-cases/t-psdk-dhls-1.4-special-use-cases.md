@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 特殊使用案例
 title: 特殊使用案例
-uuid: 066bc256-4fdf-4083-b23e-0a916b3b532f
+description: 特殊使用案例
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
@@ -63,6 +61,6 @@ TVSDK偏好自訂範圍設定，而非標準廣告設定。 例如，如果已�
    }
    ```
 
-1. 使用替換持續時間標籤和刪除範圍
+1. 具有替換持續時間的MARK和DELETE範圍
 
    額外的替換持續時間將被忽略。
