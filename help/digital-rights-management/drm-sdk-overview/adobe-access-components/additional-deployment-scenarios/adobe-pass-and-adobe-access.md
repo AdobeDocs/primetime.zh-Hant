@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Primetime驗證與Adobe Primetime DRM
-title: Adobe Primetime驗證與Adobe Primetime DRM
-uuid: 44fe3956-efb5-4fc5-97e2-37abb6554322
+title: Adobe Primetime身份驗證和Adobe PrimetimeDRM
+description: Adobe Primetime身份驗證和Adobe PrimetimeDRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe Primetime驗證與Adobe Primetime DRM {#adobe-primetime-authentication-and-adobe-primetime-drm}
+# Adobe Primetime身份驗證和Adobe PrimetimeDRM {#adobe-primetime-authentication-and-adobe-primetime-drm}
 
 Adobe Primetime驗證([https://www.adobe.com/products/adobepass/](https://www.adobe.com/products/adobepass/))可跨多個內容提供者提供使用者／裝置驗證和授權。 使用者必須有有效的有線電視或衛星電視訂閱。
 
@@ -19,9 +19,9 @@ Adobe Primetime驗證([https://www.adobe.com/products/adobepass/](https://www.ad
 
 ![](assets/AdobePass_web.png)
 
-Adobe Primetime驗證可與Adobe Primetime DRM搭配使用，以保護媒體內容。 在此案例中，視訊播放器(SWF)可載入另一個名為&#x200B;*Access Enabler*&#x200B;的SWF，由Adobe Systems代管。 *Access Enabler*&#x200B;用來連線至Adobe Primetime驗證服務，並協助SAML SSO與MVPD（多頻道視訊程式設計代理商）身分提供者系統整合。 這包括將使用者的瀏覽器短暫重新導向至MVPD登入頁面，然後保留AuthN Token，最後以快取的AuthN工作階段返回內容網站。
+Adobe Primetime驗證可與Adobe期貨DRM一起使用，以保護媒體內容。 在此案例中，視訊播放器(SWF)可載入另一個名為&#x200B;*Access Enabler*&#x200B;的SWF，由Adobe Systems代管。 *Access Enabler*&#x200B;用於連接Adobe Primetime驗證服務，並促進SAML SSO與MVPD（多頻道視訊程式設計代理商）身分提供者系統的整合。 這包括將使用者的瀏覽器短暫重新導向至MVPD登入頁面，然後保留AuthN Token，最後以快取的AuthN工作階段返回內容網站。
 
-然後，*Access Enabler*&#x200B;便於在Adobe Primetime驗證服務和MVPD之間進行後端授權。 MVPD會維護商業邏輯，並決定使用者有權使用哪些內容。 權益會持續存在該內容資源的額外AuthZ Token中，並傳回給用戶端。
+然後，*Access Enabler*&#x200B;便於在Adobe Primetime身份驗證服務和MVPD之間進行後端授權。 MVPD會維護商業邏輯，並決定使用者有權使用哪些內容。 權益會持續存在該內容資源的額外AuthZ Token中，並傳回給用戶端。
 
 驗證和授權Token使用Primetime DRM用戶端的唯一ID和私密金鑰進行簽署，以避免竄改或欺騙。 此標籤只能通過&#x200B;*Access Enabler*&#x200B;訪問。
 
