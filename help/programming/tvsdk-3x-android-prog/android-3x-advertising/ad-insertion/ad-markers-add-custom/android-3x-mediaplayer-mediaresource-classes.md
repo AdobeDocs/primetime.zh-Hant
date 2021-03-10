@@ -1,13 +1,10 @@
 ---
 description: MediaResource代表MediaPlayer例項即將載入的內容。
-seo-description: MediaResource代表MediaPlayer例項即將載入的內容。
-seo-title: MediaPlayer和MediaResource類
 title: MediaPlayer和MediaResource類
-uuid: e198f599-22ca-4ea4-bbbb-e239c79174ae
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---
