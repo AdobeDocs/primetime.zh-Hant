@@ -1,9 +1,9 @@
 ---
-seo-title: 部分加密級別
 title: 部分加密級別
-uuid: 462ca2d0-0d37-43a8-b8a0-8a25ecf73ce1
+description: 部分加密級別
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
