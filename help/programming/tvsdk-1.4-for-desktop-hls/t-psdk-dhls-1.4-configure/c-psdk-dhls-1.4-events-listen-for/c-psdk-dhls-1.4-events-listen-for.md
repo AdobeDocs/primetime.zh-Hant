@@ -1,13 +1,10 @@
 ---
-description: 來自TVSDK的事件會指出播放器的狀態、發生的錯誤、您所要求的動作的完成，例如視訊開始播放，或是隱式發生的動作，例如廣告完成。
-seo-description: 來自TVSDK的事件會指出播放器的狀態、發生的錯誤、您所要求的動作的完成，例如視訊開始播放，或是隱式發生的動作，例如廣告完成。
-seo-title: 監聽Primetime Player活動
+description: 來自TVSDK的事件會指出播放器的狀態、發生的錯誤、您所要求的動作的完成，例如視訊開始播放，或是隱含發生的動作，例如廣告完成。
 title: 監聽Primetime Player活動
-uuid: e72782bf-9d26-4285-85e4-fd4d803c1bbe
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 概述{#listen-for-primetime-player-events-overview}
 
-來自TVSDK的事件會指出播放器的狀態、發生的錯誤、您所要求的動作的完成，例如視訊開始播放，或是隱式發生的動作，例如廣告完成。
+來自TVSDK的事件會指出播放器的狀態、發生的錯誤、您所要求的動作的完成，例如視訊開始播放，或是隱含發生的動作，例如廣告完成。
 
 由於您的應用程式需要回應其中許多事件，因此您必須實作事件處理常式，並向TVSDK註冊這些常式。 這些常式會呼叫相關的TVSDK方法以適當回應。
 
