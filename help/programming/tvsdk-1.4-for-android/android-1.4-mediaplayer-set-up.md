@@ -1,13 +1,10 @@
 ---
 description: Android專用的MediaPlayer介面可封裝媒體播放器的功能與行為。
-seo-description: Android專用的MediaPlayer介面可封裝媒體播放器的功能與行為。
-seo-title: 設定MediaPlayer
 title: 設定MediaPlayer
-uuid: 492b4693-acdf-4213-98e5-d6f0f1ae086d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ TVSDK提供`MediaPlayer`介面（`DefaultMediaPlayer`類別）的一個實作。
 
 >[!TIP]
 >
->只與`DefaultMediaPlayer`介面公開的方法交互。`MediaPlayer`
+>只與`MediaPlayer`介面公開的方法交互。`DefaultMediaPlayer`
 
 1. 使用公用`DefaultMediaPlayer.create`工廠方法執行個體化MediaPlayer，並傳遞Java Android應用程式內容物件。
 
