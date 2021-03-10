@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 實作章節支援
 title: 實作章節支援
-uuid: 6e2c3994-d28b-489f-ae60-9b876125a871
+description: 實作章節支援
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---
