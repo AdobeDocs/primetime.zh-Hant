@@ -1,13 +1,10 @@
 ---
 description: 當聲音聽不見或觀眾聽不到時，隱藏字幕會將視訊的音訊部分顯示為畫面上的文字。
-seo-description: 當聲音聽不見或觀眾聽不到時，隱藏字幕會將視訊的音訊部分顯示為畫面上的文字。
-seo-title: 使用隱藏字幕
 title: 使用隱藏字幕
-uuid: 6e105316-a166-45c1-b6b0-70c89c97c297
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
