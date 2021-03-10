@@ -1,13 +1,10 @@
 ---
 description: '在確定防火牆規則時，請考慮下列類型的URL '
-seo-description: '在確定防火牆規則時，請考慮下列類型的URL '
-seo-title: 防火牆規則
 title: 防火牆規則
-uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -44,7 +41,7 @@ ht-degree: 0%
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">驗證用戶。 </p> <p>如果您使用Adobe Primetime DRM用戶端API進行使用者驗證，則此URL必須可供存取。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">驗證用戶。 </p> <p>如果您使用Adobe PrimetimeDRM用戶端API進行使用者驗證，則此URL必須可存取。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -93,7 +90,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES web service URL。 如果內容已使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器。 這些客戶會收到升級至Adobe Primetime DRM的提示。 </p> <p class="- topic/p ">注意：此URL必須使用SSL(HTTPS)。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ESWeb服務URL。 如果內容已使用舊版FMRMS發佈，此URL可讓舊版用戶端連線至伺服器。 系統會提示這些客戶升級至Adobe PrimetimeDRM。 </p> <p class="- topic/p ">注意：此URL必須使用SSL(HTTPS)。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
