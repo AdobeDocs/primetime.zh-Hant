@@ -1,9 +1,9 @@
 ---
-seo-title: 處理同步請求
 title: 處理同步請求
-uuid: e2623afb-7a57-402d-a8a1-07bcf6324d41
+description: 處理同步請求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: eed2ed2512c2c462cd43637d83d80bf9a5c0d490
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
