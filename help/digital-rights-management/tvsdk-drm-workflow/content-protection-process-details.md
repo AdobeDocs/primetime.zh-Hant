@@ -1,9 +1,9 @@
 ---
-seo-title: 授權取得程式詳細資訊
 title: 授權取得程式詳細資訊
-uuid: 4825c49e-fa6f-4c98-9d21-a2743930ca2e
+description: 授權取得程式詳細資訊
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 3fdef12b717bb6f70ca27d9278de61d709f8349c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -88,7 +88,7 @@ ht-degree: 0%
 
       >[!NOTE]
       >
-      >Adobe建議使用更安全的機制來提供認證。 如需參考，請參閱[KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)。
+      >Adobe建議使用更安全的機制來提供憑證。 如需參考，請參閱[KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)。
 
    1. 如果驗證方法為`UNKNOWN`，則必須使用自訂驗證方法。
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 
       >[!NOTE]
       >
-      >或者，無論使用何種驗證方法，`.setAuthenticationToken()`都可用來將自訂資料從用戶端傳送至授權伺服器。 這是API的超載，因為此機制是在取得授權時，將動態自訂資料從用戶端傳送至授權伺服器的唯一方式。 在[Primetime DRM(Adobe Access)論壇](https://forums.adobe.com/community/adobe_access)的多個論壇貼文中，對自訂資料傳輸方法進行了深入討論。
+      >或者，無論使用何種驗證方法，`.setAuthenticationToken()`都可用來將自訂資料從用戶端傳送至授權伺服器。 這是API的超載，因為此機制是在取得授權時，將動態自訂資料從用戶端傳送至授權伺服器的唯一方式。 在[Primetime DRM(Adobe存取)論壇](https://forums.adobe.com/community/adobe_access)的多個論壇文章中，對自訂資料傳輸方法進行了深入討論。
 
 1. 如果驗證失敗，您的應用程式必須返回步驟6。
 
