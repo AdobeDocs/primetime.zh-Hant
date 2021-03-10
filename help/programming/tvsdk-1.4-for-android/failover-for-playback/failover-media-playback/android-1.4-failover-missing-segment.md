@@ -1,13 +1,10 @@
 ---
 description: 當缺少段時（例如，當特定段無法下載時），會嘗試通過各種故障切換嘗試進行恢復。 如果無法恢復，則會發出錯誤。
-seo-description: 當缺少段時（例如，當特定段無法下載時），會嘗試通過各種故障切換嘗試進行恢復。 如果無法恢復，則會發出錯誤。
-seo-title: 缺少段故障切換
 title: 缺少段故障切換
-uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
