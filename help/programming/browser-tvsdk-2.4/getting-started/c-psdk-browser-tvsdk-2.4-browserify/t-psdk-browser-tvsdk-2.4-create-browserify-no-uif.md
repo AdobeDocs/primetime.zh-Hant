@@ -1,19 +1,16 @@
 ---
 description: 使用您應用程式中瀏覽器TVSDK提供的「瀏覽器化」程式庫檔案，建立與瀏覽器化相容的播放器。
-seo-description: 使用您應用程式中瀏覽器TVSDK提供的「瀏覽器化」程式庫檔案，建立與瀏覽器化相容的播放器。
-seo-title: 建立不含UI-Framework的瀏覽器相容播放器
 title: 建立不含UI-Framework的瀏覽器相容播放器
-uuid: c4315bc8-c75d-4dd9-8680-946c1197be1e
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
 
-# 建立不含UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}的Browserify相容播放器
+# 建立不含UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}的與瀏覽器相容的播放器
 
 使用您應用程式中瀏覽器TVSDK提供的「瀏覽器化」程式庫檔案，建立與瀏覽器化相容的播放器。
 
