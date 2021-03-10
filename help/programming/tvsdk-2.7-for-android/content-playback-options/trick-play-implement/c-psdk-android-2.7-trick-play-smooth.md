@@ -1,13 +1,10 @@
 ---
 description: 如果您的系統可存取硬體輔助解碼，則可比使用iFrame格式的純軟體TVSDK實作更順暢的特技播放。
-seo-description: 如果您的系統可存取硬體輔助解碼，則可比使用iFrame格式的純軟體TVSDK實作更順暢的特技播放。
-seo-title: 更順暢的特技播放作業
 title: 更順暢的特技播放作業
-uuid: 4749bfa0-17bf-4444-a167-987249945325
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -23,6 +20,6 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Adobe建議您針對較新的Android裝置將播放速度限制為兩倍，而不要針對較舊的Android裝置使用此功能。
+>Adobe建議您將較新Android裝置的播放速度限制為兩倍，而不要對較舊的Android裝置使用此功能。
 
 若要更順暢地播放特技，請將`ABRControlParameters.maxPlayoutRate`設為所需的正常速度倍數（例如，將2.0設為雙速度）。 如果後續對`MediaPlayer.setRate()`的呼叫有小於或等於您為`maxPlayoutRate`設定之值的引數，TVSDK會使用一般描述檔來產生更順暢的特技播放。 否則，它會使用iFrame描述檔進行滴答作業。
