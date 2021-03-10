@@ -1,13 +1,10 @@
 ---
 description: TVSDK功能由設定驅動，並透過MediaPlayer實作。
-seo-description: TVSDK功能由設定驅動，並透過MediaPlayer實作。
-seo-title: 將設定資訊傳遞至MediaPlayer以建立功能管理員
 title: 將設定資訊傳遞至MediaPlayer以建立功能管理員
-uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
