@@ -1,13 +1,10 @@
 ---
 description: 執行個體化MediaPlayer，並將其檢視置入影格版面。
-seo-description: 執行個體化MediaPlayer，並將其檢視置入影格版面。
-seo-title: 設定MediaPlayer
 title: 設定MediaPlayer
-uuid: 49c3edb9-b6e2-49f8-b4aa-f230af7de6b0
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
