@@ -1,13 +1,10 @@
 ---
 description: 若是即時串流廣告插入，您可能需要先退出廣告插播，才能播放該插播中的所有廣告。
-seo-description: 若是即時串流廣告插入，您可能需要先退出廣告插播，才能播放該插播中的所有廣告。
-seo-title: 實作早期廣告插播傳回
 title: 實作早期廣告插播傳回
-uuid: 984b6ed0-c929-49a3-9553-e30d1a7758ed
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
