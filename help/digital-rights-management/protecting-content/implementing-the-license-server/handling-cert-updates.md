@@ -1,9 +1,9 @@
 ---
-seo-title: 在Adobe核發的憑證到期時處理憑證更新
-title: 在Adobe核發的憑證到期時處理憑證更新
-uuid: abc0ca3e-a78f-4078-9480-7116843cce05
+title: 當Adobe核發的憑證到期時處理憑證更新
+description: 當Adobe核發的憑證到期時處理憑證更新
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 當Adobe核發的憑證到期{#handling-certificate-updates-when-adobe-issued-certificates-expire}時，處理憑證更新
 
-您可能需要向Adobe取得新的憑證。 例如，當評估憑證過期或從評估憑證切換至生產憑證時，生產憑證會過期。 每當憑證過期且您不想重新封裝使用舊憑證的內容時，您就可讓授權伺服器同時知道舊憑證和新憑證。
+您可能需要從Adobe獲得新證書。 例如，當評估憑證過期或從評估憑證切換至生產憑證時，生產憑證會過期。 每當憑證過期且您不想重新封裝使用舊憑證的內容時，您就可讓授權伺服器同時知道舊憑證和新憑證。
 
 要使用新證書更新伺服器：
 
@@ -48,7 +48,7 @@ ht-degree: 0%
    * 確保當前憑據已傳遞給`LicenseHandler`建構子：
 
       * 在參考實作中，使用`LicenseHandler.ServerCredential`屬性設定它。
-      * 在Adobe Primetime DRM Server for Protected Streaming中，目前憑證必須是flashaccess-tenant.xml檔案中`LicenseServerCredential`元素中指定的第一個憑證。
+      * 在Adobe PrimetimeDRM Server for Protected Streaming中，目前憑證必須是flashaccess-tenant.xml檔案中`LicenseServerCredential`元素中指定的第一個憑證。
    * 確保向`AsymmetricKeyRetrieval`提供當前和舊憑據
 
       * 在參考實施中，使用`LicenseHandler.ServerCredential`和`AsymmetricKeyRetrieval.ServerCredential. n`屬性來設定它。
@@ -72,7 +72,7 @@ ht-degree: 0%
 1. 更新封裝工具，以確定其是使用目前的認證封裝內容。 請確定封裝時使用最新的授權伺服器憑證、傳輸憑證和封裝憑證。
 1. 按如下方式更新密鑰伺服器的許可證伺服器證書：
 
-   * 在Flashaccess-keyserver-tenant.xml中加入舊的和新的Key Server憑證，以更新Adobe Primetime DRM Key Server租用戶設定檔中的憑證。
+   * 在Flashaccess-keyserver-tenant.xml中同時包含舊的和新的Key Server憑證，以更新Adobe PrimetimeDRM Key Server租用戶設定檔中的憑證。
    * 確保將當前證書傳遞到`HandlerConfiguration.setKeyServerCertificate()`方法。
 
       * 在參考實作中，使用`HandlerConfiguration.KeyServerCertificate`屬性設定它。
