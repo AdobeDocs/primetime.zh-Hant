@@ -1,9 +1,9 @@
 ---
-seo-title: 核發授權時的機器計數
 title: 核發授權時的機器計數
-uuid: d57f8b0b-0363-4b26-bd71-76f4abe5b68f
+description: 核發授權時的機器計數
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此比較不適用於允許匿名存取的部署。 但是，在這些情況下，使用者可使用`MachineId.getUniqueID()`，但是，如果使用者從Flash和Adobe AIR®執行階段存取內容，則此ID不會相同，而且當使用者重新格式化其硬碟時，此ID將無法存在。
+>此比較不適用於允許匿名存取的部署。 但是，在這些情況下，使用者可以使用`MachineId.getUniqueID()`，但是，如果使用者同時從Flash和Adobe AIR®執行階段存取內容，則此ID不相同，如果使用者重新格式化其硬碟，則此ID將無法存留。
 
-若要進一步瞭解`MachineToken.getMachineId()`和`MachineId.matches()`，請參閱&#x200B;*Adobe Access API Reference*。
+若要進一步瞭解`MachineToken.getMachineId()`和`MachineId.matches()`，請參閱&#x200B;*Adobe存取API參考*。
