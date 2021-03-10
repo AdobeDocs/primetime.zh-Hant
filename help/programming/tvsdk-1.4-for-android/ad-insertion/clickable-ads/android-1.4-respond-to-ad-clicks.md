@@ -1,13 +1,10 @@
 ---
 description: 當使用者點按廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供您點按之目標URL的相關資訊。
-seo-description: 當使用者點按廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供您點按之目標URL的相關資訊。
-seo-title: 回應廣告的點按次數
 title: 回應廣告的點按次數
-uuid: 31852f01-c900-48e3-ae23-7fb131c22594
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
