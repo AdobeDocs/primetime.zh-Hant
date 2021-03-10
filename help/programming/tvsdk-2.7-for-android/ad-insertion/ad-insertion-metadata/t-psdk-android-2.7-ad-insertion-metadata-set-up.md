@@ -1,13 +1,10 @@
 ---
-description: 使用輔助類別AuditudeSettings（可延伸MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
-seo-description: 使用輔助類別AuditudeSettings（可延伸MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
-seo-title: 設定廣告插入中繼資料
+description: 使用輔助類AuditudeSettings（可擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
 title: 設定廣告插入中繼資料
-uuid: 5c807fad-4927-4547-b58c-f37e505e651c
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # 設定廣告插入中繼資料{#set-up-ad-insertion-metadata}
 
-使用輔助類別AuditudeSettings（可延伸MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
+使用輔助類AuditudeSettings（可擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
 
 >[!TIP]
 >
->Adobe Primetime廣告決策先前稱為Auditude。
+>Adobe Primetime廣告決策之前稱為Auditude。
 
 廣告中繼資料位於`MediaResource.Metadata`屬性中。 當開始播放新視訊時，您的應用程式負責設定正確的廣告中繼資料。
 
@@ -29,7 +26,7 @@ ht-degree: 0%
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. 設定Adobe Primetime廣告決策`mediaID`、`zoneID`、`<ph conkeyref="phrases/primetime-sdk-name"/>`和選用的定位參數。
+1. 設定Adobe Primetime廣告決策`mediaID`、`zoneID`、`<ph conkeyref="phrases/primetime-sdk-name"/>`和選用定位參數。
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
