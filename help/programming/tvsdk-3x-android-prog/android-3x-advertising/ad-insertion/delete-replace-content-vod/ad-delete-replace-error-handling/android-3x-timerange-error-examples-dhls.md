@@ -1,13 +1,10 @@
 ---
 description: TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍規格。
-seo-description: TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍規格。
-seo-title: 時間範圍錯誤範例
 title: 時間範圍錯誤範例
-uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -17,9 +14,9 @@ ht-degree: 0%
 
 TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍規格。
 
-**刪除時間範圍**
+**DELETE時間範圍**
 
-在以下示例中，定義了四個相交的DELETE時間範圍。 TVSDK將4個時間範圍合併為1，因此實際刪除範圍是0-50秒。
+在下例中，定義了四個相交的DELETE時間範圍。 TVSDK將4個時間範圍合併為1，因此實際刪除範圍是0-50秒。
 
 ```
 "time-ranges": {
