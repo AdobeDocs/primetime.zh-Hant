@@ -1,13 +1,10 @@
 ---
 description: TVSDK支援搜尋特定位置（時間），其中串流為隨選視訊(VOD)和即時串流中的滑動視窗播放清單。
-seo-description: TVSDK支援搜尋特定位置（時間），其中串流為隨選視訊(VOD)和即時串流中的滑動視窗播放清單。
-seo-title: 顯示具有當前回放位置的查找拖曳條
 title: 顯示具有當前回放位置的查找拖曳條
-uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
