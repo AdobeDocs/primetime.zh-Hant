@@ -1,9 +1,9 @@
 ---
-seo-title: 關於證書註冊角色
 title: 關於證書註冊角色
-uuid: 100776c2-6622-4b94-bc9b-5d4a04fd3260
+description: 關於證書註冊角色
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
