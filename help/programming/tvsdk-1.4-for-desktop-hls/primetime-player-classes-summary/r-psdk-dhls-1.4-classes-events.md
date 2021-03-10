@@ -1,13 +1,10 @@
 ---
 description: 這些類別說明TVSDK為回應各種活動而將事件派單至您的媒體播放器。
-seo-description: 這些類別說明TVSDK為回應各種活動而將事件派單至您的媒體播放器。
-seo-title: 事件類別
 title: 事件類別
-uuid: 5e63d43c-6112-4958-b8cd-ccf123affd08
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
