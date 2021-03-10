@@ -1,13 +1,10 @@
 ---
-seo-title: 概觀
 title: 概觀
 description: TVSDK Primetime參考Android專案的設定方式，使其與Eclipse相容，而不需進行任何重大設定或IDE變更。
-seo-description: TVSDK Primetime參考Android專案的設定方式，使其與Eclipse相容，而不需進行任何重大設定或IDE變更。
-uuid: 2854af18-af1a-4c4e-8d96-650f3e15a7aa
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
