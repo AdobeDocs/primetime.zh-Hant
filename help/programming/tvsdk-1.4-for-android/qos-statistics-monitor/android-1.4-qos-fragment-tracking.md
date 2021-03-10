@@ -1,13 +1,10 @@
 ---
 description: 服務品質(QoS)提供視訊引擎執行情形的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
-seo-description: 服務品質(QoS)提供視訊引擎執行情形的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
-seo-title: 使用載入資訊在片段層級追蹤
 title: 使用載入資訊在片段層級追蹤
-uuid: a6572823-d525-4ce0-806a-3feb20678cb0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
