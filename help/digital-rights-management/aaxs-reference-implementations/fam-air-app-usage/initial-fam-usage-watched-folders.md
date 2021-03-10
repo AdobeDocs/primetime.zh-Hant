@@ -1,9 +1,9 @@
 ---
-seo-title: Watched Folders
 title: Watched Folders
-uuid: b0073c35-4599-4477-9f5b-28fba889f649
+description: Watched Folders
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
