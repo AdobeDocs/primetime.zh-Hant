@@ -1,21 +1,18 @@
 ---
-description: Password Scrambler公用程式會加密Adobe Primetime DRM Server的受保護串流設定檔密碼。
-seo-description: Password Scrambler公用程式會加密Adobe Primetime DRM Server的受保護串流設定檔密碼。
-seo-title: 密碼剪輯器
+description: Password Scrambler實用程式加密Adobe PrimetimeDRM伺服器的受保護流配置檔案的密碼。
 title: 密碼剪輯器
-uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
 
-# 密碼簽名器{#password-scrambler}
+# 密碼簽字器{#password-scrambler}
 
-Password Scrambler公用程式會加密Adobe Primetime DRM Server的受保護串流設定檔密碼。
+Password Scrambler實用程式加密Adobe PrimetimeDRM伺服器的受保護流配置檔案的密碼。
 
 若要執行剪貼簿，請輸入：
 
