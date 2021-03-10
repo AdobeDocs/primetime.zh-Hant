@@ -1,13 +1,10 @@
 ---
 description: 如果選擇HSM來儲存伺服器憑據，則必須將私鑰和證書載入到HSM並建立pkcs11.cfg配置檔案。
-seo-description: 如果選擇HSM來儲存伺服器憑據，則必須將私鑰和證書載入到HSM並建立pkcs11.cfg配置檔案。
-seo-title: HSM配置
 title: HSM配置
-uuid: 3610840b-082e-4a73-8aa5-5065f9232e0b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ ht-degree: 0%
 
 必須在&#x200B;*LicenseServer.ConfigRoot*&#x200B;目錄中找到配置檔案。
 
-如需範例PKCS11設定檔案，請參閱Adobe Primetime DRM DVD上的[!DNL Adobe Primetime DRM Server for Protected Streaming/configs]目錄。
+有關PKCS11配置檔案示例，請參見Adobe PrimetimeDRM DVD上的[!DNL Adobe Primetime DRM Server for Protected Streaming/configs]目錄。
 
 有關[!DNL pkcs11.cfg]檔案的格式，請參見Sun PKCS11提供程式文檔。
 
