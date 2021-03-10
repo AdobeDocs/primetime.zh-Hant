@@ -1,9 +1,9 @@
 ---
-seo-title: DRM客戶端阻止訪問受保護內容的塊清單
 title: DRM客戶端阻止訪問受保護內容的塊清單
-uuid: c05aa6f8-32d9-42aa-a9c5-0d0629d49778
+description: DRM客戶端阻止訪問受保護內容的塊清單
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # DRM客戶端的塊清單，限制訪問受保護的內容{#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
-**Adobe Access DRM模組版本限制存取受保護的內容。**
+**Adobe存取DRM模組版本限制存取受保護的內容。**
 
 指定無法訪問內容的DRM客戶端。 由DRM客戶端版本和平台指定。
 
