@@ -1,13 +1,10 @@
 ---
 description: 隨選視訊(VOD)廣告插入程式由廣告解析、廣告插入和廣告播放階段組成。 對於廣告追蹤，TVSDK必須通知遠端追蹤伺服器有關每個廣告的播放進度。 當發生非預期情況時，TVSDK會採取適當的動作。
-seo-description: 隨選視訊(VOD)廣告插入程式由廣告解析、廣告插入和廣告播放階段組成。 對於廣告追蹤，TVSDK必須通知遠端追蹤伺服器有關每個廣告的播放進度。 當發生非預期情況時，TVSDK會採取適當的動作。
-seo-title: 針對VOD的廣告插入和容錯
 title: 針對VOD的廣告插入和容錯
-uuid: 1f813065-9310-4495-9fbb-d90eda8ac8bd
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
