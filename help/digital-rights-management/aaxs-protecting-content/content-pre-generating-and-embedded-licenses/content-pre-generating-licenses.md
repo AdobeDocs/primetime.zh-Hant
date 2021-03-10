@@ -1,9 +1,9 @@
 ---
-seo-title: 預先產生的授權
 title: 預先產生的授權
-uuid: 31430753-11f1-4ce5-b402-cf4279119a05
+description: 預先產生的授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->即使沒有Adobe Access License Server可供用戶端要求授權，仍需要授權伺服器URL。 在這種情況下，「授權伺服器URL」應指定識別授權發行者的URL。
+>即使沒有Adobe存取授權伺服器供用戶端要求授權，仍需要授權伺服器URL。 在這種情況下，「授權伺服器URL」應指定識別授權發行者的URL。
 
 如果策略使用「增強的許可證連結」，則必須指定許可證伺服器憑據才能解密策略(`setRootKeyRetrievalInfo()`)中的根加密密鑰。
 
