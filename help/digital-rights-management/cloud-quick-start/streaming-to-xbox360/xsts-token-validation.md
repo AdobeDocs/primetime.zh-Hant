@@ -1,9 +1,9 @@
 ---
-seo-title: Xbox Live XSTS Token驗證
 title: Xbox Live XSTS Token驗證
-uuid: 9647f8ee-32d6-4bed-bae2-8b36a72d04ce
+description: Xbox Live XSTS Token驗證
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
