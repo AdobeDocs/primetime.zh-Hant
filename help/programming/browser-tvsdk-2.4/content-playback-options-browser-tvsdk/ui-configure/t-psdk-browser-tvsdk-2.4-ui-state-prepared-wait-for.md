@@ -1,13 +1,10 @@
 ---
 description: 您必須先將播放器設為有效狀態，才能使用大部分的瀏覽器TVSDK播放器方法。
-seo-description: 您必須先將播放器設為有效狀態，才能使用大部分的瀏覽器TVSDK播放器方法。
-seo-title: 等待有效狀態
 title: 等待有效狀態
-uuid: 0add29a8-fbd8-483a-8c99-e4bc6de9e3d3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
