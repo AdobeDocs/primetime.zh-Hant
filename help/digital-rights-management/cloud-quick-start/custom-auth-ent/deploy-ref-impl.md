@@ -1,9 +1,9 @@
 ---
-seo-title: 部署BEES參考實作
 title: 部署BEES參考實作
-uuid: 5ee7b066-8ae8-48ba-a3f0-8cc14b19d5c5
+description: 部署BEES參考實作
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 0%
