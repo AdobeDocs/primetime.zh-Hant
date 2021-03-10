@@ -1,13 +1,10 @@
 ---
 description: 視訊播放器廣告服務介面定義(VPAID)提供播放視訊廣告的通用介面。 VPAID為使用者提供豐富型媒體體驗，讓出版業者能夠更精確地鎖定廣告、追蹤廣告曝光，並從視訊內容獲利。
-seo-description: 視訊播放器廣告服務介面定義(VPAID)提供播放視訊廣告的通用介面。 VPAID為使用者提供豐富型媒體體驗，讓出版業者能夠更精確地鎖定廣告、追蹤廣告曝光，並從視訊內容獲利。
-seo-title: 自訂廣告需求
 title: 自訂廣告需求
-uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -25,9 +22,9 @@ TVSDK支援下列功能：
 
 * VPAID規格的1.0和2.0版
 * 隨選視訊(VOD)內容上的線性VPAID廣告
-* Flash VPAID廣告
+* FlashVPAID廣告
 
-   VPAID廣告必須以Flash為基礎，而廣告回應必須將VPAID廣告的媒體類型識別為`application/x-shockwave-flash`。
+   VPAID廣告必須以Flash為基礎，廣告回應必須將VPAID廣告的媒體類型識別為`application/x-shockwave-flash`。
 
 不支援下列功能：
 
