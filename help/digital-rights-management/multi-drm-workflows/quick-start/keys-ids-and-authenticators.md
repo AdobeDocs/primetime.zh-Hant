@@ -1,13 +1,10 @@
 ---
 description: 要實施DRM，您需要特定的憑證和金鑰，包括內容加密金鑰或CEK來加密您的內容、用於保護與ExpressPlay伺服器通信的客戶驗證器，以及用於識別儲存在密鑰管理系統中的內容加密密鑰的CEKSID。
-seo-description: 要實施DRM，您需要特定的憑證和金鑰，包括內容加密金鑰或CEK來加密您的內容、用於保護與ExpressPlay伺服器通信的客戶驗證器，以及用於識別儲存在密鑰管理系統中的內容加密密鑰的CEKSID。
-seo-title: 金鑰、ID和驗證器
 title: 金鑰、ID和驗證器
-uuid: 9e5b1a64-b4e9-442f-ac15-26831aaf585d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -31,7 +28,7 @@ ht-degree: 0%
 openssl rand 16 -hex > cek_hex_file
 ```
 
-或（適用於Adobe Offline Packager）:
+或(適用於AdobeOffline Packager):
 
 1. 產生16位元組的十六進位編碼字串，如上所述，或使用其他工具。 它看起來會像這樣：
 
@@ -44,7 +41,7 @@ openssl rand 16 -hex > cek_hex_file
 
 **相同的鑰匙，不同的名字？** -是的，您可能會在其他地方看到其他名稱所參照的CEK，例如：
 
-* ** [!DNL [somefile].bin]** - Adobe Offline Packager將CEK稱為[!DNL [somefile].bin];例如，* [!DNL Keyfile.bin]* —— 此為Adobe Offline Packager使用的CEK，其形式為您用於封裝內容的機器上的檔案。
+* ** [!DNL [somefile].bin]** - 「Adobe離線軟體包」將CEK稱為[!DNL [somefile].bin];例如，* [!DNL Keyfile.bin]* —— 這是AdobeOffline Packager使用的CEK，形式為用於打包內容的電腦上的檔案。
 
    您的隨機CEK十六進位字串是「Base64」，並儲存為檔案（例如[!DNL keyfile.bin]），通常位於[!DNL offlinepkgr/]下方的[!DNL creds]目錄中。 在Packager配置檔案中（例如，如果您要為Widevine DRM打包，則可將其調用為[!DNL widevine.xml]），您在配置檔案中的CEK如下：
 
