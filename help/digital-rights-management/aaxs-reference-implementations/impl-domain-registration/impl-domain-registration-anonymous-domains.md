@@ -1,9 +1,9 @@
 ---
-seo-title: 匿名網域
 title: 匿名網域
-uuid: ee29ae4d-65b2-48de-b441-18c8cf55de32
+description: 匿名網域
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 1. 檢查設備是否已向域註冊：
 
-   1. 在`DomainMembership`表格中查閱網域名稱。 對於找到的每台電腦GUID，請與請求中的電腦GUID進行比較。 如果這是新機器，請將條目添加到`DomainMembership`表中。
+   1. 在`DomainMembership`表格中查閱網域名稱。 對於找到的每個電腦GUID，請與請求中的電腦GUID進行比較。 如果這是新機器，請將條目添加到`DomainMembership`表中。
 
    1. 如果是新裝置且已達到最大會籍，則傳回錯誤`DOM_LIMIT_REACHED (502)`。
 
