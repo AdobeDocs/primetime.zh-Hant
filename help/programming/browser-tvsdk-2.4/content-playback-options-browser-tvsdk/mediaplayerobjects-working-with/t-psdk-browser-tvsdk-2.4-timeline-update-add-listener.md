@@ -1,13 +1,10 @@
 ---
 description: 若要接收有關時間軸更新的通知，請註冊適當的事件接聽程式。
-seo-description: 若要接收有關時間軸更新的通知，請註冊適當的事件接聽程式。
-seo-title: 新增時間軸UpdatedEvent的監聽器
 title: 新增時間軸UpdatedEvent的監聽器
-uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
