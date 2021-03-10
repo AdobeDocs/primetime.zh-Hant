@@ -1,13 +1,10 @@
 ---
 description: 當變型播放清單具有相同位元速率的多個轉譯，且其中一個轉譯停止運作時，就會發生容錯處理。 TVSDK會在轉譯之間切換。
-seo-description: 當變型播放清單具有相同位元速率的多個轉譯，且其中一個轉譯停止運作時，就會發生容錯處理。 TVSDK會在轉譯之間切換。
-seo-title: 故障切換
 title: 故障切換
-uuid: 064886ab-afa2-4afc-b795-d094b31934b8
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
