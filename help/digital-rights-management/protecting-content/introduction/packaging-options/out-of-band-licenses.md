@@ -1,9 +1,9 @@
 ---
-seo-title: 帶外授權
 title: 帶外授權
-uuid: 43397ce5-6c52-429d-b7fa-fa8c91cf9742
+description: 帶外授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
