@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK目前支援播放清單和片段不含擴充功能的串流。
-seo-description: 瀏覽器TVSDK目前支援播放清單和片段不含擴充功能的串流。
-seo-title: 無延伸串流
 title: 無延伸串流
-uuid: c69ba62b-a940-4211-920d-2e559849fd6d
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
