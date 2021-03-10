@@ -1,13 +1,10 @@
 ---
 description: UI架構是瀏覽器TVSDK上的UI層，可提供各種與視訊播放器相關的UI架構。 您可建立高度可自訂的播放器，方法是進行適合您環境的點狀變更。
-seo-description: UI架構是瀏覽器TVSDK上的UI層，可提供各種與視訊播放器相關的UI架構。 您可建立高度可自訂的播放器，方法是進行適合您環境的點狀變更。
-seo-title: UI架構
 title: UI架構
-uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
-source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
