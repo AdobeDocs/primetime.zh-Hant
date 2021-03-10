@@ -1,9 +1,9 @@
 ---
-seo-title: 運行用於受保護流的DRM伺服器
 title: 運行用於受保護流的DRM伺服器
-uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
+description: 運行用於受保護流的DRM伺服器
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 運行用於受保護流的DRM伺服器{#running-the-drm-server-for-protected-streaming}
 
-在啟動Adobe Primetime DRM Server for Protected Streaming之前，建議您驗證設定檔中的設定有效性。
+在啟動Adobe PrimetimeDRM Server for Protected Streaming之前，建議您驗證配置檔案中設定的有效性。
 
 您可以使用隨授權伺服器提供的公用程式來驗證設定的有效性。 (請參見本指南中的&#x200B;*配置驗證器*。
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 ## 日誌檔案{#log-files}
 
-Adobe Primetime DRM Server for Protected Streaming應用程式產生的記錄檔位於LicenseServer.LogRoot所指定的目錄中。
+由Adobe PrimetimeDRM Server for Protected Streaming應用程式生成的日誌檔案位於LicenseServer.LogRoot指定的目錄中。
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Adobe Primetime DRM Server for Protected Streaming應用程式產生的記錄檔
 
 ### 全局日誌檔案{#section_1CFA90748142439C9F3BE380969539DA}
 
-全局日誌檔案[!DNL flashaccess-global.log]位於&#x200B;*LicenseServer.LogRoot*&#x200B;中。 日誌可包括Adobe Primetime DRM Java SDK或日誌消息在伺服器初始化期間可能生成的日誌消息。
+全局日誌檔案[!DNL flashaccess-global.log]位於&#x200B;*LicenseServer.LogRoot*&#x200B;中。 日誌可以包括在伺服器初始化期間Adobe PrimetimeDRM Java SDK或日誌消息可能已生成的日誌消息。
 
 ### 分區日誌檔案{#section_5660137CD6AA40519E72A4315534846B}
 
@@ -64,7 +64,7 @@ Adobe Primetime DRM Server for Protected Streaming應用程式產生的記錄檔
 
 一旦許可證伺服器讀取其中一個許可證伺服器配置檔案（全局或租用戶配置），配置資訊就快取在記憶體中。 因此，每個授權要求都不需要從磁碟讀取檔案。 但是，伺服器還允許修改配置檔案中的大部分值，而無需伺服器重新啟動即可使更改生效。
 
-每當您修改配置檔案時，許可證伺服器都會儲存上次修改檔案的時間。 在可配置的時間間隔內，伺服器檢查檔案修改時間是否已更改。 如果已更改，伺服器會自動重新載入配置檔案的內容。
+每當您修改配置檔案時，許可證伺服器都會儲存上次修改檔案的時間。 在可配置的時間間隔內，伺服器檢查檔案修改時間是否已更改。 如果更改了，伺服器會自動重新載入配置檔案的內容。
 
 如果要控制伺服器檢查更新的頻率，您需要在全局配置檔案的`Caching`元素中設定`refreshDelaySeconds`屬性。 例如，如果`refreshDelaySeconds`設為3600秒，則伺服器將在設定檔案修改時間起算的最多一小時內更新設定。 如果`refreshDelaySeconds`設為0，則伺服器會在每次要求時檢查組態更新。 不建議您在任何生產環境中將`refreshDelaySeconds`設為低值，因為這樣做會影響效能。
 
