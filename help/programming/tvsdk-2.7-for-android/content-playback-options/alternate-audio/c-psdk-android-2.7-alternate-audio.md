@@ -1,13 +1,10 @@
 ---
 description: 替代音效可讓您在視訊音軌的可用音軌間切換。 當視訊播放時，使用者可以選擇偏好的語言軌道。
-seo-description: 替代音效可讓您在視訊音軌的可用音軌間切換。 當視訊播放時，使用者可以選擇偏好的語言軌道。
-seo-title: 替代音訊
 title: 替代音訊
-uuid: 86aa5393-6a9e-49db-807b-7299e6b4ab2b
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
