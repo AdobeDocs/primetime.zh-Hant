@@ -1,13 +1,10 @@
 ---
 description: Primetime DRM解決方案的主要用戶端元素是DRM管理器。 Android SDK隨附的範例應用程式也包含DRMHelper類別，可用來讓某些DRM作業更容易實作。
-seo-description: Primetime DRM解決方案的主要用戶端元素是DRM管理器。 Android SDK隨附的範例應用程式也包含DRMHelper類別，可用來讓某些DRM作業更容易實作。
-seo-title: Primetime DRM介面總覽
 title: Primetime DRM介面總覽
-uuid: 9e6f6ae6-7193-40fe-bc9d-d8de33705f5d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
