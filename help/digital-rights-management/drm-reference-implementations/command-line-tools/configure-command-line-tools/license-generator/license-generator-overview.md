@@ -1,9 +1,9 @@
 ---
-seo-title: 概觀
 title: 概觀
-uuid: 857390be-dd14-46c0-b8f7-2bc661c515d4
+description: 概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
@@ -29,7 +29,7 @@ java -jar AdobeLicenseGenerator.jar -m
 </i class="+ topic>
 ```
 
-* `metadata` -包含Adobe Primetime DRM中繼資料。
+* `metadata` -包括Adobe PrimetimeDRM元資料。
 
    您可以使用Media Packager中的`-d -m`選項，從受保護的內容擷取此檔案。
 
@@ -42,7 +42,7 @@ java -jar AdobeLicenseGenerator.jar -d
 </i class="+ topic>
 ```
 
-* `license` -包含由授權產生器產生的Adobe Primetime DRM授權。
+* `license` -包含由授權產生器產生的Adobe PrimetimeDRM授權。
 
 **表6:選項**
 
@@ -111,11 +111,11 @@ java -jar AdobeLicenseGenerator.jar -d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>設定當前支援的最低客戶端版本。 如果您未設定此屬性，預設會自動支援所有版本。 </p> <p>您可以設定此值，以控制較舊的用戶端如何回應他們不支援的授權需求。 指定<span class="codeph"> x</span>（適用於Adobe Primetime DRM x.0），其中<span class="codeph"> x</span>代表主要發行版本號碼。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>設定當前支援的最低客戶端版本。 如果您未設定此屬性，預設會自動支援所有版本。 </p> <p>您可以設定此值，以控制較舊的用戶端如何回應他們不支援的授權需求。 指定<span class="codeph"> x</span>(針對Adobe PrimetimeDRM x.0)，其中<span class="codeph"> x</span>代表主要發行版本號碼。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> 金鑰伺服器憑證，是Adobe核發的License Server憑證，由金鑰伺服器使用。 僅當元資料/DRM策略指示密鑰發送到iOS設備需要密鑰伺服器時，才應用此證書。 </td> 
+   <td colname="2" class="- topic/entry "> 金鑰伺服器憑證，此為由金鑰伺服器使用的Adobe授權伺服器憑證。 僅當元資料/DRM策略指示密鑰發送到iOS設備需要密鑰伺服器時，才應用此證書。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> </td> 
