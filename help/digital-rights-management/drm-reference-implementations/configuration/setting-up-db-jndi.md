@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 設定許可證伺服器資料庫
 title: 設定許可證伺服器資料庫
-uuid: aa6185f2-8e9d-4b65-971a-b7534d910580
+description: 設定許可證伺服器資料庫
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # 設定許可證伺服器資料庫{#set-up-the-license-server-database}
 
-參考實施許可證伺服器需要一個資料庫來支援以下內容：
+參考實施許可證伺服器需要資料庫來支援以下內容：
 
 * 使用者驗證
 * 使用模式示範業務規則
