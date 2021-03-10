@@ -1,9 +1,9 @@
 ---
-seo-title: 需求
 title: 需求
-uuid: 29046834-66ca-42f6-a77f-fd00bbace2ec
+description: 需求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 68f1318db89cf9422f5969f669c11f3784560db6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 您的構建環境必須符合以下最低要求：
 
 * Microsoft Windows Server 2008或Red Hat® Enterprise Linux® 5.6
-* Oracle Java JRE 1.6（建立自定義授權擴展時需要Oracle Java JDK 1.6）
+* OracleJava JRE 1.6(OracleJava JDK 1.6是建立自訂授權擴充功能的必要條件)
 * DVD的[!DNL Third Party\Tomcat\6.0.18]資料夾中提供的Apache Tomcat® 6
-* Adobe已核發的認證
+* Adobe頒發的證書
 
