@@ -1,9 +1,9 @@
 ---
-seo-title: 策略更新清單管理器概述
 title: 策略更新清單管理器概述
-uuid: d030e159-02f5-4a28-b7e8-2cf5fd58b9f1
+description: 策略更新清單管理器概述
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # 策略更新清單管理器概述{#policy-update-list-manager-overview}
 
-在使用「原則更新清單管理員」之前，請確定您符合「要求」中所列的要求，且設定檔包含必要資訊（請參閱&#x200B;*使用Adobe存取參考實作*&#x200B;中的設定檔）。
+在使用「策略更新清單管理器」之前，請確保您滿足「要求」中列出的要求，並且配置檔案包含所需資訊(請參閱&#x200B;*中的「使用Adobe訪問參考實施」中的配置檔案*)。
