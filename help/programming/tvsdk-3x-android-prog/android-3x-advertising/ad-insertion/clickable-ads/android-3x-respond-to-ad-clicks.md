@@ -1,13 +1,10 @@
 ---
 description: 當使用者點按廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供您點按之目標URL的相關資訊。
-seo-description: 當使用者點按廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供您點按之目標URL的相關資訊。
-seo-title: 回應廣告的點按次數
 title: 回應廣告的點按次數
-uuid: abc5de2f-3ab0-4e00-908c-ea8b31387d4f
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -20,7 +17,7 @@ TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您�
 對於Android專用的TVSDK，只有線性廣告可點選。
 當使用者點按廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供您點按之目標URL的相關資訊。
 
-1. 若要設定TVSDK的事件偵聽器，並提供點進資訊，請註冊`AdClickedEventListener.onAdClicked`。
+1. 若要設定TVSDK的事件接聽程式，並提供點進資訊，請註冊`AdClickedEventListener.onAdClicked`。
 
    當使用者點按廣告或相關按鈕時，TVSDK會派單此通知，包括點按目的地的相關資訊。
 1. 在可點選廣告上監控使用者互動。
