@@ -1,13 +1,10 @@
 ---
 description: 302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
-seo-description: 302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
-seo-title: HTTP 302重新導向最佳化
 title: HTTP 302重新導向最佳化
-uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '149'
 ht-degree: 1%
 
 ---
@@ -23,9 +20,9 @@ ht-degree: 1%
 >
 >只有在支援`XMLHttpRequest`物件中`responseURL`屬性的認證瀏覽器才支援此功能。
 
-若是Flash備援，請記住下列資訊：
+對於Flash備援，請記住以下資訊：
 
-* 您的使用者必須已安裝Adobe Flash Player 23版或更新版本。
+* 您的用戶必須安裝AdobeFlash Player23版或更高版本。
 * 如果停用串流完整性，則僅認證的瀏覽器才支援302重新導向。
 
 ## 停用302重新導向最佳化{#disabling-redirect-optimization}
