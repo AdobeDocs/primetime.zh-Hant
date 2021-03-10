@@ -1,9 +1,9 @@
 ---
-seo-title: BEES錯誤代碼
 title: BEES錯誤代碼
-uuid: 7b2d0dd1-9a43-47e3-b932-a4eaf784ae7a
+description: BEES錯誤代碼
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
