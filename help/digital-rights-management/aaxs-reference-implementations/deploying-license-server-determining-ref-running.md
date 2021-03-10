@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 確定Reference Implementation License Server是否正常運行
 title: 確定Reference Implementation License Server是否正常運行
-uuid: 84d32c94-7594-464e-a883-5338b52de2bf
+description: 確定Reference Implementation License Server是否正常運行
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -50,7 +48,7 @@ ht-degree: 0%
 
 1. 將生成的2個檔案複製到Tomcat [!DNL webapps\ROOT\Content]資料夾。
 1. 導覽至`Reference Implementation\Sample Video Players\Desktop\Flash Player\Release`並將內容複製到Tomcat `webapps\ROOT\SVP\`資料夾。
-1. 安裝Flash Player 10.1或更新版本。
+1. 安裝Flash Player10.1或更新版本。
 1. 開啟網頁瀏覽器並導覽至下列URL:
 
    `https:// localhost:8080/SVP/player.html`
