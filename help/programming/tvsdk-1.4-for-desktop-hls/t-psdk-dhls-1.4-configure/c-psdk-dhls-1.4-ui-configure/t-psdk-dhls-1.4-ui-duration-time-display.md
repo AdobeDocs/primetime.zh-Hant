@@ -1,13 +1,10 @@
 ---
 description: 您可以使用TVSDK來擷取可顯示在搜尋列上之媒體的相關資訊。
-seo-description: 您可以使用TVSDK來擷取可顯示在搜尋列上之媒體的相關資訊。
-seo-title: 顯示視訊的持續時間、目前時間和剩餘時間
 title: 顯示視訊的持續時間、目前時間和剩餘時間
-uuid: 64536ba7-33a1-49f8-a947-5700e1e9c032
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -44,6 +41,6 @@ ht-degree: 0%
 
       TVSDK會派單`MediaPlayerItemEvent.ITEM_UPDATED`事件，指出媒體項目已重新整理，且其屬性（包括播放範圍）已更新。
 
-1. 使用Flex SDK中公開提供的`MediaPlayer`和`HSlider`類別上可用的方法來設定搜尋列參數。
+1. 使用FlexSDK中公開提供的`MediaPlayer`和`HSlider`類別上可用的方法來設定搜尋列參數。
 
 1. 使用計時器定期檢索當前時間並更新`SeekBar`。
