@@ -1,13 +1,10 @@
 ---
 description: 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
-seo-description: 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
-seo-title: 構建用於DVR的增強控制條
 title: 構建用於DVR的增強控制條
-uuid: 83c56def-a454-4f26-bdfc-2ef2497ef9bd
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
