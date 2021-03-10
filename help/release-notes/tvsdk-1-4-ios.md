@@ -1,16 +1,12 @@
 ---
 title: iOS版TVSDK 1.4發行說明
-seo-title: iOS版TVSDK 1.4發行說明
 description: iOS版本注意事項TVSDK 1.4說明TVSDK iOS 1.4中的新增或變更、已解決和已知問題以及裝置問題
-seo-description: TVSDK 1.4 for Android發行說明說明TVSDK iOS 1.4中的新增或變更、已解決和已知問題以及裝置問題
-uuid: c1df12bd-aa21-47e8-ade4-1e497882ce9b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '6578'
+source-wordcount: '6550'
 ht-degree: 0%
 
 ---
@@ -74,11 +70,11 @@ API變更：
 
 **1.4.31版**
 
-* **帳單** 量度為了容納只想支付所使用費用（而非固定費率，不論實際使用情形）的客戶，Adobe會收集使用量度，並使用這些量度來判斷向客戶收取的費用。
+* **帳單** 量度Adobe會收集使用量度，並使用這些量度來決定向客戶收取多少費用，以容納只想支付其使用費用的客戶，而非不考慮實際使用的固定費率。
 
-每當TVSDK產生串流開始事件時，播放器就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段（稱為計費持續時間）可能不同。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合約會決定實際值。
+每當TVSDK產生串流開始事件時，播放器就會定期傳送HTTP訊息至Adobe的帳單系統。 標準VOD、專業VOD（啟用中間卷廣告）和即時內容的時段（稱為計費持續時間）可能不同。 每種內容類型的預設持續時間為30分鐘，但您的Adobe合約會決定實際值。
 
-* **CRS** AdsTVSDK的多CDN支援現在支援CRS廣告的多CDN。透過提供CRS廣告的FTP詳細資訊，您可以指定CDN位置，而非預設的Adobe擁有的CDN位置，例如Akamai。
+* **CRS** AdsTVSDK的多CDN支援現在支援CRS廣告的多CDN。透過提供CRS廣告的FTP詳細資訊，您可以指定CDN位置，而非預設Adobe擁有的CDN（例如Akamai）。
 
 **1.4.29版**
 
@@ -116,7 +112,7 @@ Primetime iOS TVSDK現在支援VPAID 2.0 Javascript創意素材，以提供豐�
 
 * 目前不支援下列功能：
 
-   * 數位版權管理(DRM)
+   * Digital Rights Management(DRM)
    * 廣告橫幅
    * 電視標籤語言(TVML)
 
@@ -134,7 +130,7 @@ Primetime iOS TVSDK現在支援VPAID 2.0 Javascript創意素材，以提供豐�
 
 * **具有替代內容替換的封鎖信號**
 
-在1.4 TVSDK更新中，我們現在也支援針對線性內容進行區域封鎖並重新啟用。 TVSDK現在可以並行處理兩個資訊清單檔案，主要和替代檔案，以便在顯示替代原始程式設計的替代程式設計時，監控封鎖訊號。
+在1.4 TVSDK更新中，我們現在也支援針對線性內容進行區域封鎖並重新啟用。 TVSDK現在可以並行處理主要和替代的兩個資訊清單檔案，以便監控封鎖訊號，即使替代原始程式設計顯示替代程式設計。
 
 **1.4.8版**
 
@@ -147,7 +143,7 @@ Primetime iOS TVSDK現在支援VPAID 2.0 Javascript創意素材，以提供豐�
 
 * **現場個人化支援**
 
-支援Adobe個人化伺服器的內部部署，以自訂用戶端的個人化要求，以前往不同的端點。
+支援Adobe個性化伺服器的現場安裝，以定制客戶端的個性化請求，以轉到不同的端點。
 
 * **基於解析度的輸出保護**
 
@@ -157,7 +153,7 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 
 * **視訊心率程式庫(VHL)更新至1.4.1.1版**
 
-   * 新增使用Adobe Analytics Video Essentials搭售其他SDK或播放器之不同分析使用案例的能力。
+   * 新增搭配Adobe Analytics視訊基本工具，搭售其他SDK或播放器的不同分析使用案例的能力。
    * 已移除trackAdBreakStart和trackAdBreakComplete方法來最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
    * 追蹤廣告時不再需要播放頭屬性。
    * 新增對Marketing Cloud訪客ID的支援。
@@ -170,7 +166,7 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 
 * **具有替代內容替換的封鎖信號**
 
-   * 在1.4 TVSDK更新中，TVSDK現在也支援針對線性內容進行區域封鎖後進入和返回。 TVSDK現在可以並行處理兩個資訊清單檔案，主要和替代檔案，以便在顯示替代原始程式設計的替代程式設計時，監控封鎖訊號。
+   * 在1.4 TVSDK更新中，TVSDK現在也支援針對線性內容進行區域封鎖後進入和返回。 TVSDK現在可以並行處理主要和替代的兩個資訊清單檔案，以便監控封鎖訊號，即使替代原始程式設計顯示替代程式設計。
 
 * **移除／取代C3廣告**
 
@@ -198,7 +194,7 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 
 * TVSDK 1.4.28已通過iOS 10 Beta 7認證。
 * DRM支援透過新增forceHTTPS和isForcingHTTPS API來強制HTTPS。
-* 將VHL程式庫更新為1.5.8、將Adobe Mobile程式庫更新為4.8.4，以及將記錄器公用程式程式庫更新為7.0版部署目標。
+* 將VHL程式庫更新為1.5.8、將Mobile程式庫Adobe為4.8.4，以及將記錄器公用程式程式庫更新為7.0版部署目標。
 
 **1.4.19版**
 
@@ -212,7 +208,7 @@ DRM策略現在可以根據設備的輸出保護功能指定允許的最高解�
 
    **注意**:請記住下列編譯准則：
 
-   * TVSDK tvOs支援僅限非Adobe DRM加密串流。 您必須移除tvOS建置設定中drmNativeInterface.framework的參考。 仍支援AES加密串流。
+   * TVSDK tvOs支援僅限非AdobeDRM加密串流。 您必須移除tvOS建置設定中drmNativeInterface.framework的參考。 仍支援AES加密串流。
    * Apple要求所有Apple TV應用程式都必須啟用位元程式碼，因此您必須在專案設定中開啟此旗標。
 
 ## 已解決1.4 {#resolved-issues-in}中的問題
@@ -302,7 +298,7 @@ Comment Type: draft
    使用Charles（Drop connection和403）封鎖HLS Live和VOD內容時，未收到PTMediaPlayerStatusError
 * (ZD #29242)- Airplay視訊播放失敗並啟用廣告
 
-   當廣告啟用且AirPlay啟用時，開始播放視訊時，視訊播放不會開始，且不會顯示錯誤
+   當廣告啟用且AirPlay啟用開始播放視訊時，視訊播放不會開始，且不會顯示錯誤
 * (ZD#33341)- DRMIinterface.h會在Xcode 9中觸發建置警告
 
    修正DRMIinterface.h中參數清單中遺漏「void」字詞的兩個區塊原型
@@ -430,7 +426,7 @@ TVSDK現在會公開兩種類型，可用來篩選必要的標題類型。
 
 * (ZD# 28481)- FER中斷，因為這些FER串流的廣告插播結束時附加了不正確的鍵
 
-對於FER串流，廣告分段前的索引鍵會插入廣告分段結束後的索引鍵。 此問題已解決，方法是在廣告分段結尾附加&#x200B;*最後一個看見的索引鍵*。
+對於FER串流，廣告分段前的索引鍵會插入廣告分段結束後的索引鍵。 此問題已解決，方法是在廣告插播的結尾附加&#x200B;*最後一個看見的索引鍵*。
 
 **版本1.4.33** （iOS 6.0+專用1.4.33.803）
 
@@ -442,9 +438,9 @@ TVSDK現在會公開兩種類型，可用來篩選必要的標題類型。
 
 此問題已解決，方法是更新資源載入，以便從所有可用的捆綁包中查找。
 
-* (ZD# 27460)Midroll首次廣告呼叫- POST至cdn.auditude<span></span>.com返回403。
+* (ZD# 27460)Midroll首次廣告呼叫-POST至cdn.auditude<span></span>.com返回403。
 
-新的CDN帳戶無法處理POST CDN請求。 此問題已解決，方法是更新程式碼，將`cdn.auditude.com`廣告要求設為GET，而非POST。
+新的CDN帳戶無法處理POSTCDN請求。 此問題已解決，方法是更新程式碼，使`cdn.auditude.com`廣告要求成為GET，而非POST。
 
 **1.4.32版** （iOS 6.0+專用1.4.32.792）
 
@@ -590,7 +586,7 @@ TVSDK在此版本中已解決下列問題：
 
 * (ZD #19629)-進入Airplay至ATV 4時即時視訊暫停
 
-此問題已解決，方法是在移除舊項目後，但在新增項目至AVQueuePlayer之前新增等候期。 沒有等候期，通知會傳送至錯誤的項目。
+此問題已解決，方法是在移除舊項目後，但在新增項目至AVQueuePlayer之前新增等候期。 沒有等候期，通知會傳送至不正確的項目。
 
 * (ZD #19856)-預設啟用時不顯示字幕
 
@@ -673,7 +669,7 @@ Apple不建議使用的符號已移除。
 
 * (ZD #21782)- iOS錯誤代碼10100
 
-TVSDK在Adobe Access DRM串流上開始播放時傳回101000錯誤的問題已經修正。
+TVSDK在Adobe存取DRM串流上開始播放時傳回101000錯誤的問題已經修正。
 
 * (ZD #21889)-線上廣告和離線內容播放失敗
 
@@ -685,13 +681,13 @@ TVSDK在Adobe Access DRM串流上開始播放時傳回101000錯誤的問題已�
 
 * (ZD #22257)- TVSDK無法播放DRM串流
 
-已修正TVSDK在Adobe Access DRM串流上開始播放時傳回101000錯誤的問題。
+TVSDK在Adobe存取DRM串流上開始播放時傳回101000錯誤的問題已修正。
 
 **iOS 6.0+版本1.4.22** (1.4.22.627)
 
 * (ZD #18709)-適用於iOS的TVSDK當機
 
-某些Adobe Access DRM保護串流發生當機的問題已經修正。
+某些Adobe存取DRM保護串流發生當機的問題已經修正。
 
 * (ZD #18850)-根據CRS規則更新創意選擇邏輯
 
@@ -848,9 +844,9 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 * Zendesk #18072 - Android M —— 應用程式當機
 
-當檢查描述檔和層級是否受支援時，當呼叫MediaCodecList和MediaCodecInfo API時，會發生此損毀。 Adobe正尋求Google的支援，以取得更多見解。 此問題已解決，方法是提前載入所有轉碼器資訊，以避免只在需要轉碼器資訊時呼叫這些API。
+當檢查描述檔和層級是否受支援時，當呼叫MediaCodecList和MediaCodecInfo API時，會發生此損毀。 Adobe正在尋求谷歌對更多洞察力的支援。 此問題已解決，方法是提前載入所有轉碼器資訊，以避免只在需要轉碼器資訊時呼叫這些API。
 
-* Zendesk #18074 —— 阿拉伯文字幕在Nexus與Android 6.0上無法運作
+* Zendesk #18074 —— 阿拉伯文字幕無法用於Nexus with Android 6.0
 
 此問題已透過支援Android CTS字型圖而解決。
 
@@ -862,7 +858,7 @@ Akamai Token化的串流需要在區段請求上傳送Cookie，而這在iOS 7和
 
 已新增中繼資料，以在通知M3U8_PARSER_ERROR發生時公開內容。
 
-* (ZD #4437)- Adobe Primetime SDK內當機
+* (ZD #4437)-Adobe PrimetimeSDK內當機
 
 修正準備字幕／替代音訊時報告的當機問題。
 
