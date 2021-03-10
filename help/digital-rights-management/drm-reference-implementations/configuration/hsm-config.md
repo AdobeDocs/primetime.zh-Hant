@@ -1,13 +1,10 @@
 ---
 description: 可以使用支援HSM的Sun PKCS#11提供程式配置參考實現。 雖然不需要使用HSM，但建議使用。
-seo-description: 可以使用支援HSM的Sun PKCS#11提供程式配置參考實現。 雖然不需要使用HSM，但建議使用。
-seo-title: HSM配置
 title: HSM配置
-uuid: 2741ac40-aa42-4aa7-9864-037f3ed3dee2
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -30,5 +27,5 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
 
 >[!NOTE]
 >
->自Java 1.7起，64位元Sun Java for Windows不再支援Adobe Primetime DRM與HSM裝置通訊所需的PKCS#11介面。 如果您打算使用HSM，請確定您使用32位元版本的Java，或使用支援完整PKCS#11介面的JDK。
+>從Java 1.7開始，64位Sun Java for Windows不再支援Adobe PrimetimeDRM與HSM設備通信所需的PKCS#11介面。 如果您打算使用HSM，請確定您使用32位元版本的Java，或使用支援完整PKCS#11介面的JDK。
 
