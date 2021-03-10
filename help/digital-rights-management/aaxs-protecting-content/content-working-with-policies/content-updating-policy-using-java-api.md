@@ -1,9 +1,9 @@
 ---
-seo-title: 使用Java API更新原則
 title: 使用Java API更新原則
-uuid: 23c50f05-799e-4f5a-869b-4b5e29a36ce1
+description: 使用Java API更新原則
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
    Policy policy = new Policy(policyBytes);
    ```
 
-1. 通過設定`Policy`對象的屬性（如其名稱和使用規則）來更新&lt;a0/>對象。
+1. 通過設定`Policy`對象的屬性（如其名稱和使用規則）來更新對象。
 
    ```java
      // Change the policy name.  
