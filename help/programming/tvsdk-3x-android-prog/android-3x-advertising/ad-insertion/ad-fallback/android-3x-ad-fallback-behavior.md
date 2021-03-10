@@ -1,13 +1,10 @@
 ---
 description: 當Primetime廣告決策遇到空白或媒體類型對HLS無效的VAST廣告（創意廣告）時，它會評估備援廣告以判斷要傳回的內容。
-seo-description: 當Primetime廣告決策遇到空白或媒體類型對HLS無效的VAST廣告（創意廣告）時，它會評估備援廣告以判斷要傳回的內容。
-seo-title: VAST和VMAP的廣告備援行為
 title: VAST和VMAP的廣告備援行為
-uuid: 612416b9-d070-42e2-b68b-74ba52023345
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
