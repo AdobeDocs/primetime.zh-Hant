@@ -1,13 +1,10 @@
 ---
 description: 您可以輕鬆建立以參考實施架構為基礎的自訂使用者介面。
-seo-description: 您可以輕鬆建立以參考實施架構為基礎的自訂使用者介面。
-seo-title: 建立自訂使用者介面
 title: 建立自訂使用者介面
-uuid: b785f6a4-3ef8-4f7a-a087-0d6551da9750
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
