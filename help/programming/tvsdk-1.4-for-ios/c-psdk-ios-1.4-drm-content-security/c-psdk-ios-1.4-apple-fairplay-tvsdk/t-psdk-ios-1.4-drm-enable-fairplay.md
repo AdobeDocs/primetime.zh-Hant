@@ -1,13 +1,10 @@
 ---
 description: 您可以在TVSDK應用程式中實作Apple FairPlay串流（Apple的DRM解決方案）。
-seo-description: 您可以在TVSDK應用程式中實作Apple FairPlay串流（Apple的DRM解決方案）。
-seo-title: 在TVSDK應用程式中啟用Apple FairPlay
 title: 在TVSDK應用程式中啟用Apple FairPlay
-uuid: fafffdb9-09f9-45fb-9957-3c6e95ed55f9
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
