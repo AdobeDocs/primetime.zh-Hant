@@ -1,13 +1,10 @@
 ---
 description: 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
-seo-description: 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
-seo-title: 構建用於DVR的增強控制條
 title: 構建用於DVR的增強控制條
-uuid: 71bfceef-baf0-40ad-a7a0-fa2e22d24e31
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -32,7 +29,7 @@ ht-degree: 0%
 
 ![](assets/dvr-window.PNG){width=&quot;684&quot;}
 
-1. 要實現具有DVR支援的控制條，請遵循[顯示具有當前回放位置的搜索拖曳條中的步驟……](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)，但有下列差異：
+1. 要實施具有DVR支援的控制條，請遵循[顯示具有當前回放位置的搜索拖曳條中的步驟……](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)，但有下列差異：
 
    * 您可以實作僅針對可尋找範圍（而非播放範圍）映射的控制列。
 
