@@ -1,12 +1,10 @@
 ---
 description: 所有視訊播放程式都必須提供資訊清單伺服器所仰賴的功能，以插入廣告並啟用廣告追蹤。
-seo-description: 所有視訊播放程式都必須提供資訊清單伺服器所仰賴的功能，以插入廣告並啟用廣告追蹤。
-seo-title: 視訊播放器需求
 title: 視訊播放器需求
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
