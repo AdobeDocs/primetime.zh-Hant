@@ -1,9 +1,9 @@
 ---
-seo-title: 離線播放的預載授權概觀
 title: 離線播放的預載授權概觀
-uuid: 71e5169b-7f70-4723-9f9b-fdff822c5876
+description: 離線播放的預載授權概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 0%
