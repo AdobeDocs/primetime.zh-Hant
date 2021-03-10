@@ -1,9 +1,9 @@
 ---
-seo-title: 程式碼傳送／封裝內容
 title: 程式碼傳送／封裝內容
-uuid: 13de2fd4-9079-496c-a087-25176c118864
+description: 程式碼傳送／封裝內容
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 程式碼傳送／封裝內容{#code-delivery-package-contents}
 
-Adobe Primetime DRM On Promiess Indificialization Server套件包含下列內容：
+Adobe PrimetimeDRM On Promiess Personalization Server軟體包包含以下內容：
 
 * [!DNL flashaccess.war] -個人化伺服器
 * [!DNL flashaccess-kgs.war] -可選的密鑰生成伺服器
