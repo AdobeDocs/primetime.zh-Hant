@@ -1,13 +1,10 @@
 ---
 description: 廣告信令模式指定視頻流應在何處獲得廣告資訊。
-seo-description: 廣告信令模式指定視頻流應在何處獲得廣告資訊。
-seo-title: 廣告信令模式
 title: 廣告信令模式
-uuid: 6e6e72cf-4de4-4ac1-9726-7521e47ccd83
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
