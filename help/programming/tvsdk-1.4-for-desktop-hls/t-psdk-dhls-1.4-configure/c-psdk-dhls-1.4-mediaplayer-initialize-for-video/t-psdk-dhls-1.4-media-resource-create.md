@@ -1,13 +1,10 @@
 ---
 description: MediaResource類代表MediaPlayer實例要載入的內容。
-seo-description: MediaResource類代表MediaPlayer實例要載入的內容。
-seo-title: 建立媒體資源
 title: 建立媒體資源
-uuid: 3d03d92f-69b3-4da8-9b16-25a264115ae5
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -43,7 +40,7 @@ MediaResource類代表MediaPlayer實例要載入的內容。
       </tr> 
       <tr> 
       <td colname="col1"><span class="codeph"> 中繼資料</span> </td> 
-      <td colname="col2"> <p><span class="codeph">中繼資料</span>類別的例項，可能包含要載入內容的自訂資訊。 </p> <p>內容的範例是要置於主要內容內的替代或廣告內容。 如果使用廣告，請在使用此建構函式前先設定<span class="codeph"> AuditudeSettings</span>。 如需詳細資訊，請參閱<a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local">廣告插入中繼資料</a>。 </p> </td> 
+      <td colname="col2"> <p><span class="codeph">中繼資料</span>類別的例項，可能包含要載入內容的自訂資訊。 </p> <p>內容的範例是要置於主要內容內的替代或廣告內容。 如果使用廣告，請在使用此建構函式前先設定<span class="codeph"> AuditudeSettings</span>。 如需詳細資訊，請參閱<a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local">Ad Insertion中繼資料</a>。 </p> </td> 
       </tr> 
     </tbody> 
    </table>
