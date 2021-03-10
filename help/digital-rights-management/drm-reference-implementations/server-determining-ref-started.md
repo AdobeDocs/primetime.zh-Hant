@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 檢查許可證伺服器是否正確啟動
 title: 檢查許可證伺服器是否正確啟動
-uuid: a6a034c9-b3c4-4e26-b901-d2c132c00c52
+description: 檢查許可證伺服器是否正確啟動
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
