@@ -1,9 +1,9 @@
 ---
-seo-title: '用於封裝內容和建立撤銷清單的命令列工具 '
 title: '用於封裝內容和建立撤銷清單的命令列工具 '
-uuid: 2c740521-2004-4320-88e1-118b84e80e31
+description: '用於封裝內容和建立撤銷清單的命令列工具 '
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 使用參考實施中可用的命令行工具的要求如下：
 
 * 所有命令列工具都需要Java 1.5或更新版本。
-* Adobe核發的Packager和License Server憑證（憑證和密碼）。 您需要認證來加密和簽署視訊檔案、簽署原則更新和撤銷清單，以及預先產生授權。
+* 由Adobe核發的Packager和License Server憑證（憑證和密碼）。 您需要認證來加密和簽署視訊檔案、簽署原則更新和撤銷清單，以及預先產生授權。
 
 >[!NOTE]
 >
@@ -51,4 +51,4 @@ ht-degree: 0%
 
 您可以從DVD上的[!DNL \Reference Implementation\Command Line Tools]目錄複製所需的檔案，該目錄包含預設的[!DNL flashaccesstools.properties]配置檔案，而[!DNL libs]目錄包含工具的JAR檔案。
 
-[!DNL samples]目錄包含數個示範Adobe Access SDK API使用情形的範例Java來源檔案。 要構建並運行示例，請使用[!DNL build-samples.xml] Ant指令碼。
+[!DNL samples]目錄包含幾個示例Java源檔案，用於演示Adobe訪問SDK API的用法。 要構建並運行示例，請使用[!DNL build-samples.xml] Ant指令碼。
