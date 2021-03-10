@@ -1,9 +1,9 @@
 ---
-seo-title: 取得個人化伺服器憑證
 title: 取得個人化伺服器憑證
-uuid: ae1e848e-0a19-4ec3-8419-ce5fd783c279
+description: 取得個人化伺服器憑證
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 要使用內部個人化伺服器，您必須首先獲得兩個數字證書（證書）:
 
-* *個人化傳輸憑證* -由Adobe核發
+* *個人化運輸憑證* -由Adobe核發
 * *個性化CA憑證* -由Symantec(VeriSign)頒發
 
 要獲取這些證書，請執行以下操作：
