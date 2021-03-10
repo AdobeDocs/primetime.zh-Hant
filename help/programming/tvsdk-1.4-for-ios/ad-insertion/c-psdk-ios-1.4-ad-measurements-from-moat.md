@@ -1,13 +1,10 @@
 ---
 description: TVSDK會從FreeWheel和其他提供VAST回應的伺服器取得資訊。 FreeWheel在VAST響應中提供來自Moat服務的資訊。 Moat服務以更準確的方式計算廣告曝光數，更能顯示創意人員捕捉或忽略觀眾的興趣。
-seo-description: TVSDK會從FreeWheel和其他提供VAST回應的伺服器取得資訊。 FreeWheel在VAST響應中提供來自Moat服務的資訊。 Moat服務以更準確的方式計算廣告曝光數，更能顯示創意人員捕捉或忽略觀眾的興趣。
-seo-title: 來自Moat的廣告度量
 title: 來自Moat的廣告度量
-uuid: 76fa9ca0-58bd-44fe-82ce-72fdf6fcc28c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
