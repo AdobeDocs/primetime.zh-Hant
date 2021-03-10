@@ -1,9 +1,9 @@
 ---
-seo-title: 配置並運行命令行工具
 title: 配置並運行命令行工具
-uuid: b65f8621-54fa-4927-b2f4-d2fd60350fc1
+description: 配置並運行命令行工具
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
