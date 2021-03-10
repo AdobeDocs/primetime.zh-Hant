@@ -1,25 +1,22 @@
 ---
-description: Adobe Primetime DRM是高價值視訊內容的進階數位版權管理(DRM)和內容保護解決方案。 在支援建立Java API的應用程式中，您可以使用Primetime DRM SDK來指定DRM原則、將這些原則套用至內容，以及加密該內容。
-seo-description: Adobe Primetime DRM是高價值視訊內容的進階數位版權管理(DRM)和內容保護解決方案。 在支援建立Java API的應用程式中，您可以使用Primetime DRM SDK來指定DRM原則、將這些原則套用至內容，以及加密該內容。
-seo-title: Adobe Primetime DRM的新增功能
-title: Adobe Primetime DRM的新增功能
-uuid: 3c8da594-a231-4496-bffc-130775ecae50
+description: Adobe PrimetimeDRM是高價值視聽內容的先進Digital Rights Management(DRM)和內容保護解決方案。 在支援建立Java API的應用程式中，您可以使用Primetime DRM SDK來指定DRM原則、將這些原則套用至內容，以及加密該內容。
+title: Adobe PrimetimeDRM的新增功能
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM的新增功能{#what-is-new-in-adobe-primetime-drm}
+# Adobe PrimetimeDRM的新增功能{#what-is-new-in-adobe-primetime-drm}
 
-Adobe Primetime DRM是高價值視訊內容的進階數位版權管理(DRM)和內容保護解決方案。 在支援建立Java API的應用程式中，您可以使用Primetime DRM SDK來指定DRM原則、將這些原則套用至內容，以及加密該內容。
+Adobe PrimetimeDRM是高價值視聽內容的先進Digital Rights Management(DRM)和內容保護解決方案。 在支援建立Java API的應用程式中，您可以使用Primetime DRM SDK來指定DRM原則、將這些原則套用至內容，以及加密該內容。
 
 >[!NOTE]
 >
->Primetime DRM之前稱為Adobe Access，之前稱為Flash Access。
+>Primetime DRM先前稱為「Adobe存取」，在之前稱為「Flash Access」。
 
 以下是內容保護流程的高級逐步介紹：
 
