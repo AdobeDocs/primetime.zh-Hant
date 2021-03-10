@@ -1,13 +1,10 @@
 ---
 description: 您可以傳送Token請求至適當的Expressplay Token伺服器，為其加密內容產生Expressplay Token。
-seo-description: 您可以傳送Token請求至適當的Expressplay Token伺服器，為其加密內容產生Expressplay Token。
-seo-title: Expressplay Token
 title: Expressplay Token
-uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
-source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
@@ -40,4 +37,4 @@ https://wv.service.expressplay.com/hms/wv/rights/
 然後，您可以
 
 * 使用傳回的URL和查詢作為授權伺服器URL，或
-* 從URL取出查詢，然後以HTTP POST標題的形式個別傳入ExpressPlayToken
+* 從URL取出查詢，然後以HTTPPOST標題的形式個別傳入ExpressPlayToken
