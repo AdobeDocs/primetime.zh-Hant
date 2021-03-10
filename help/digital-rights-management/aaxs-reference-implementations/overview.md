@@ -1,9 +1,9 @@
 ---
-seo-title: 概述——使用參考實作
 title: 概述——使用參考實作
-uuid: 4009b6d1-b315-4117-8c26-c2f6ee0cefc2
+description: 概述——使用參考實作
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # 概述——使用參考實施{#overview-using-the-reference-implementations}
 
-Adobe Access產品隨附下列元件的參考實作：
+「Adobe訪問」產品隨附以下元件的參考實施：
 
 * 命令列工具
 * 授權伺服器與受監視的資料夾封裝程式
-* Flash Access Manager AIR應用程式
+* Flash Access管理器AIR應用程式
 
 >[!NOTE]
 >
->您應部署Adobe Access Server for Protected Streaming、參考實作或您自己的授權伺服器。
+>您應部署「保護串流的Adobe Access Server」、參考實作或您自己的授權伺服器。
