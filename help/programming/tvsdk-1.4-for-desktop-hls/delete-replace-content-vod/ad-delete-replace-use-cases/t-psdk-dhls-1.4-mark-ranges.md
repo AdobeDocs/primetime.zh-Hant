@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 標籤範圍
 title: 標籤範圍
-uuid: d98efb92-701e-4ee2-b574-823c1e5d5149
+description: 標籤範圍
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '26'
+source-wordcount: '24'
 ht-degree: 0%
 
 ---
