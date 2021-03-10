@@ -1,13 +1,10 @@
 ---
 description: PTMediaPlayer物件代表您的媒體播放器。 PTMediaPlayerItem代表播放器上的音訊或視訊。
-seo-description: PTMediaPlayer物件代表您的媒體播放器。 PTMediaPlayerItem代表播放器上的音訊或視訊。
-seo-title: 使用MediaPlayer物件
 title: 使用MediaPlayer物件
-uuid: 0c33ebd6-b11a-4e62-8c1c-880cfceff474
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
