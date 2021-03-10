@@ -1,9 +1,9 @@
 ---
-seo-title: 概觀
 title: 概觀
-uuid: f4ae10ca-6e2a-4313-80a0-4c7377dba000
+description: 概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 概述{#overview}
 
-為了向用戶端發行授權，您必須部署Adobe Access授權伺服器。 授權伺服器使用Adobe® Access™ SDK執行下列工作：
+為了向客戶機發放許可證，您必須部署Adobe訪問許可證伺服器。 授權伺服器使用Adobe® Access™ SDK執行下列工作：
 
 * 如果支援使用者名稱／密碼驗證，請處理驗證要求。
 * 處理授權要求
@@ -24,4 +24,4 @@ ht-degree: 0%
 
 此外，伺服器需要提供商業邏輯來驗證使用者、判斷使用者是否獲得檢視內容的授權，以及選擇性地追蹤授權使用情況。
 
-如需本章所討論之Java API的詳細資訊，請參閱&#x200B;*Adobe Access API Reference*。
+有關本章中討論的Java API的詳細資訊，請參閱&#x200B;*Adobe訪問API參考*。
