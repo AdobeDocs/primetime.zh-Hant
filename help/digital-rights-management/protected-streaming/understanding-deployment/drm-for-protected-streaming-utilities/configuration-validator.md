@@ -1,13 +1,10 @@
 ---
-description: Adobe建議您在設定檔中進行變更時，在啟動伺服器之前，先執行Configuration Validator公用程式。 此公用程式可在請求處理期間，提早偵測大部分的設定錯誤，以免造成失敗。
-seo-description: Adobe建議您在設定檔中進行變更時，在啟動伺服器之前，先執行Configuration Validator公用程式。 此公用程式可在請求處理期間，提早偵測大部分的設定錯誤，以免造成失敗。
-seo-title: 配置驗證器
+description: Adobe建議，如果在配置檔案中進行更改，則應在啟動伺服器之前運行配置驗證器實用程式。 此公用程式可在請求處理期間，提早偵測大部分的設定錯誤，以免造成失敗。
 title: 配置驗證器
-uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 配置驗證器{#configuration-validator}
 
-Adobe建議您在設定檔中進行變更時，在啟動伺服器之前，先執行Configuration Validator公用程式。 此公用程式可在請求處理期間，提早偵測大部分的設定錯誤，以免造成失敗。
+Adobe建議，如果在配置檔案中進行更改，則應在啟動伺服器之前運行配置驗證器實用程式。 此公用程式可在請求處理期間，提早偵測大部分的設定錯誤，以免造成失敗。
 
 要運行驗證器，請鍵入：
 
