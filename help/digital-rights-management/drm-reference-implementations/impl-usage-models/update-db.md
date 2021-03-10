@@ -1,9 +1,9 @@
 ---
-seo-title: 更新參考實作DB
 title: 更新參考實作DB
-uuid: 2883045e-ad62-466d-94a2-fc45ded2a4f5
+description: 更新參考實作DB
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
