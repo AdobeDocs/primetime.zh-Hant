@@ -1,9 +1,9 @@
 ---
-seo-title: 字幕和隱藏字幕
 title: 字幕和隱藏字幕
-uuid: 4a484aa8-ac3f-4fcc-846f-0faaedd9b3ca
+description: 字幕和隱藏字幕
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '12'
 ht-degree: 0%
