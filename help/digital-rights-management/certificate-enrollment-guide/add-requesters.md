@@ -1,9 +1,9 @@
 ---
-seo-title: 添加請求者
 title: 添加請求者
-uuid: 1b3b4895-1ece-4794-b0cc-10bbdcc37438
+description: 添加請求者
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # 添加請求者{#add-requesters}
 
-Adobe Primetime DRM授權廠商最多可有5個申請者。 不過，Adobe建議您將請求者人數限制在開發Primetime DRM解決方案的個人。 請求者負責將私鑰儲存在安全位置。
+一個Adobe PrimetimeDRM被授權人最多可以有五個請求者。 但是，Adobe建議您將請求人數限制在開發Primetime DRM解決方案的個人。 請求者負責將私鑰儲存在安全位置。
 
-1. 管理員使用有效的Adobe ID登入「認證註冊」網站，其中包含被授權人的網域名稱。
+1. 管理員使用包含被授權人網域名稱的有效Adobe ID登入認證註冊網站。
 1. 在「Home（首頁）」上，按一下&#x200B;**[!UICONTROL Add a Requester]**。
 1. 在「用戶帳戶」頁籤上，執行以下操作之一：**
 
