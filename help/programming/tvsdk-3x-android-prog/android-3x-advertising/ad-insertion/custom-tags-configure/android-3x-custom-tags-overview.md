@@ -1,9 +1,9 @@
 ---
-seo-title: 自訂VOD資產範例
 title: 自訂VOD資產範例
-uuid: 25927d5f-ac16-45f4-bf0d-92f1ab394c05
+description: 自訂VOD資產範例
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
