@@ -1,9 +1,9 @@
 ---
-seo-title: Primetime Player類摘要
 title: Primetime Player類摘要
-uuid: 19dbe885-0f04-4d58-a625-27d1aef6ded8
+description: Primetime Player類摘要
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '12'
 ht-degree: 0%
