@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK可偵測主m3u8資料清單中的即時串流播放資訊變更，並在串流播放時更新播放資訊。 瀏覽器TVSDK支援動態位元速率描述檔集，當描述檔從主資料清單中出現或消失時，包括更新間不重疊的描述檔位元速率。
-seo-description: 瀏覽器TVSDK可偵測主m3u8資料清單中的即時串流播放資訊變更，並在串流播放時更新播放資訊。 瀏覽器TVSDK支援動態位元速率描述檔集，當描述檔從主資料清單中出現或消失時，包括更新間不重疊的描述檔位元速率。
-seo-title: 即時主資訊清單更新
 title: 即時主資訊清單更新
-uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
