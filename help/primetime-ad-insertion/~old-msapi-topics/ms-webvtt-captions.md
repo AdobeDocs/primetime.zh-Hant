@@ -1,13 +1,10 @@
 ---
 description: 資訊清單伺服器支援所有HLS視訊格式的發佈者啟用WebVTT標題。 當收到將廣告插入WebVTT註解內容的請求時，它會正確執行。
-seo-description: 資訊清單伺服器支援所有HLS/DASH視訊格式的發佈者啟用WebVTT標題。 當收到將廣告插入WebVTT註解內容的請求時，它會正確執行。
-seo-title: 支援WebVTT標題
 title: 支援WebVTT標題
-uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
