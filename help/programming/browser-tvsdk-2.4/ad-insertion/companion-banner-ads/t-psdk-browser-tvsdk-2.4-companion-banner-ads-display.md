@@ -1,13 +1,10 @@
 ---
 description: 若要顯示橫幅廣告，您必須建立橫幅例項，並允許瀏覽器TVSDK監聽廣告相關事件。
-seo-description: 若要顯示橫幅廣告，您必須建立橫幅例項，並允許瀏覽器TVSDK監聽廣告相關事件。
-seo-title: 顯示橫幅廣告
 title: 顯示橫幅廣告
-uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ ht-degree: 0%
 
 * HTML程式碼片段
 * iFrame頁面的URL
-* 靜態影像或Adobe Flash SWF檔案的URL
+* 靜態影像或AdobeFlashSWF檔案的URL
 
 對於每個配套廣告，瀏覽器TVSDK會指出您的應用程式有哪些類型。
 
