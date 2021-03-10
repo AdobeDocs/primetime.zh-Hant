@@ -1,13 +1,10 @@
 ---
 description: 完整事件重播(FER)內容是即時串流，透過將#EXT-X-ENDLIST標籤新增至資訊清單檔案的結尾，轉換為VOD。 該串流保留其廣告提示標籤。
-seo-description: 完整事件重播(FER)內容是即時串流，透過將#EXT-X-ENDLIST標籤新增至資訊清單檔案的結尾，轉換為VOD。 該串流保留其廣告提示標籤。
-seo-title: FER廣告解析和插入
 title: FER廣告解析和插入
-uuid: 85da0e92-17fe-4001-a53c-085dadd09756
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
