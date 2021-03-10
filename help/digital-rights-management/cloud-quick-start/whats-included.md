@@ -1,13 +1,10 @@
 ---
-description: Adobe為不想開發和維護其專屬Primetime DRM授權伺服器的Adobe Primetime DRM客戶提供雲端DRM服務。 借由使用本服務，客戶可以降低DRM授權發行的操作和開發複雜性。 Primetime Cloud DRM可向所有能執行Primetime Browser TVSDK視訊應用程式（例如iOS、Android、桌上型電腦和Xbox360）的裝置發行DRM授權。 此DRM服務由Adobe代管和維護，全年無休的運作時間。
-seo-description: Adobe為不想開發和維護其專屬Primetime DRM授權伺服器的Adobe Primetime DRM客戶提供雲端DRM服務。 借由使用本服務，客戶可以降低DRM授權發行的操作和開發複雜性。 Primetime Cloud DRM可向所有能執行Primetime Browser TVSDK視訊應用程式（例如iOS、Android、桌上型電腦和Xbox360）的裝置發行DRM授權。 此DRM服務由Adobe代管和維護，全年無休的運作時間。
-seo-title: 背景
+description: Adobe為不想開發和維護自己Primetime DRM License Server的Adobe PrimetimeDRM客戶提供雲DRM服務。 借由使用本服務，客戶可以降低DRM授權發行的操作和開發複雜性。 Primetime Cloud DRM可向所有能執行Primetime Browser TVSDK視訊應用程式（例如iOS、Android、桌上型電腦和Xbox360）的裝置發行DRM授權。 此DRM服務由Adobe代管和維護，全天候運作。
 title: 背景
-uuid: 11a5b9ea-ebd2-47e0-b078-af2a3e1f7bf6
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # 背景{#background}
 
-Adobe為不想開發和維護其專屬Primetime DRM授權伺服器的Adobe Primetime DRM客戶提供雲端DRM服務。 借由使用本服務，客戶可以降低DRM授權發行的操作和開發複雜性。 Primetime Cloud DRM可向所有能執行Primetime Browser TVSDK視訊應用程式（例如iOS、Android、桌上型電腦和Xbox360）的裝置發行DRM授權。 此DRM服務由Adobe代管和維護，全年無休的運作時間。
+Adobe為不想開發和維護自己Primetime DRM License Server的Adobe PrimetimeDRM客戶提供雲DRM服務。 借由使用本服務，客戶可以降低DRM授權發行的操作和開發複雜性。 Primetime Cloud DRM可向所有能執行Primetime Browser TVSDK視訊應用程式（例如iOS、Android、桌上型電腦和Xbox360）的裝置發行DRM授權。 此DRM服務由Adobe代管和維護，全天候運作。
 
 >[!NOTE]
 >
->Adobe Primetime DRM之前稱為Adobe Access，之前稱為Flash Access。
+>Adobe PrimetimeDRM原名「Adobe存取」，在此之前稱為「Flash Access」。
 
 ## Primetime Cloud DRM {#section_788D0DD5F6DB41678FD87CFBD21B25FD}包含哪些內容
 
@@ -36,8 +33,8 @@ Adobe為不想開發和維護其專屬Primetime DRM授權伺服器的Adobe Prime
 
    * **policy_ios_localkeyserver** -在iOS裝置上，將從Cloud DRM取得DRM授權。此外，用戶端將從本機HTTP伺服器取得所有HLS AES解密金鑰，而非雲端DRM。 在中斷運作的iOS裝置上不允許播放。
 
-   * **policy_adobePass**  —— 用戶端必須先驗證（先前稱為Adobe Pass），否則授權將被拒絕。
+   * **policy_adobePass**  —— 用戶端必須先驗證(先前稱為Adobe Pass)，否則授權將被拒絕。
 
-* Adobe Policy Manager工具，以建立其他DRM政策
+* Adobe策略管理器工具，用於建立其他DRM策略
 * 用於封裝的範例視訊內容
 
