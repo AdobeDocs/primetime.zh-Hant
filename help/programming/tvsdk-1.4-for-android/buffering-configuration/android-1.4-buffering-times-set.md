@@ -1,13 +1,10 @@
 ---
 description: 為提供更順暢的檢視體驗，TVSDK有時會緩衝視訊串流。 您可以設定播放器緩衝的方式。
-seo-description: 為提供更順暢的檢視體驗，TVSDK有時會緩衝視訊串流。 您可以設定播放器緩衝的方式。
-seo-title: 設定緩衝時間
 title: 設定緩衝時間
-uuid: 5a3945a4-1935-4797-b19d-84989850a487
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
