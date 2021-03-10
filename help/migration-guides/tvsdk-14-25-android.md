@@ -1,17 +1,13 @@
 ---
 title: Android專用的TVSDK 1.4至2.5(Java)
-seo-title: Android專用的TVSDK 1.4至2.5(Java)
 description: TVSDK 2.5在效能、安全性、更佳的整合等方面，提供比1.4版更多的優點。
-seo-description: TVSDK 2.5在效能、安全性、更佳的整合等方面，提供比1.4版更多的優點。
-uuid: aaab7aec-cb5b-4840-82e8-7112a8d98a8a
 contentOwner: vishgupt
 products: SG_PRIMETIME
 topic-tags: migration
-discoiquuid: 8d9136bf-b3ae-450c-bd8a-0bb246527886
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2323'
 ht-degree: 0%
 
 ---
@@ -60,7 +56,7 @@ TVSDK 2.5在效能、安全性、更佳的整合等方面，提供比1.4版更�
 | Moat整合 | 支援Moat的廣告可檢視性測量。 |
 | VHL 2.0 | 最新最佳化視訊心率程式庫整合，可自動收集Adobe Analytics的使用資料。 |
 | 故障切換支援 | 實作其他策略以繼續不中斷播放，儘管主機伺服器、播放清單檔案和區段失敗。 |
-| 直接計費整合 | 傳送帳單量度至Adobe Analytics後端，Adobe Primetime會針對客戶使用的串流進行認證。 |
+| 直接計費整合 | 傳送帳單量度至Adobe Analytics後端，Adobe Primetime已針對客戶使用的串流認證。 |
 
 >[!NOTE]
 >
@@ -81,7 +77,7 @@ psdk.jar檔案使用協力廠商程式庫來支援不同的功能。 要防止�
 { *; }
 ```
 
-在`build.gradle`檔案中，您需要包含編譯指令，以包含以TVSDK為基礎的JAR檔案。 如果您的應用程式包含Adobe Video Analytics，則您需要在應用程式中加入編譯指令，以取得Adobe Video Analytics整合所需的其他Jar
+在`build.gradle`檔案中，您需要包含編譯指令，以包含以TVSDK為基礎的JAR檔案。 如果您的應用程式包含Adobe視訊分析，則您需要在應用程式中包含Adobe視訊分析整合所需之其他Jar的編譯指令
 
 ```java
 # Compile Adobe TVSDK jars compile files('libs/psdk-va.jar')
