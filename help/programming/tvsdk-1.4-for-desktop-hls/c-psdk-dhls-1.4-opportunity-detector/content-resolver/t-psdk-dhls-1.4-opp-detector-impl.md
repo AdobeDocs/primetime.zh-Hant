@@ -1,13 +1,10 @@
 ---
 description: 您可以建置自己的機會檢測器。
-seo-description: 您可以建置自己的機會檢測器。
-seo-title: 實作自訂機會偵測器
 title: 實作自訂機會偵測器
-uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
