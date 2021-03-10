@@ -1,9 +1,9 @@
 ---
-seo-title: 同步要求
 title: 同步要求
-uuid: 976a0ae1-bece-437e-b95b-6cd222525d13
+description: 同步要求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -23,5 +23,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此使用規則受Adobe Access用戶端3.0版及更新版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱[最低客戶端版本](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)。
+>此使用規則受3.0版及更高版本的Adobe存取用戶端支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。 請參閱[最低客戶端版本](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)。
 
