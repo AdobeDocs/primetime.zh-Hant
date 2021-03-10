@@ -1,9 +1,9 @@
 ---
-seo-title: 在參考實作中設定自訂開始時間
 title: 在參考實作中設定自訂開始時間
-uuid: ec404e61-9dce-4bd3-ac48-c2dbd834b6f8
+description: 在參考實作中設定自訂開始時間
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 在參考實作{#set-a-custom-start-time-in-the-reference-implementation}中設定自訂開始時間
 
-您可以使用「設定」介面中的DVR控制項面板，在參考實作中啟用及編輯開始位置。 當您編輯這些參數時，SharedPreferences中的設定會更新，而播放器也會更新。
+您可以使用「設定」介面中的DVR控制項面板，來啟用和編輯參考實作中的開始位置。 當您編輯這些參數時，SharedPreferences中的設定會更新，而播放器也會更新。
 
 1. 開啟「Primetime設定」對話方塊。
 1. 選擇&#x200B;**[!UICONTROL DVR controls]**。
