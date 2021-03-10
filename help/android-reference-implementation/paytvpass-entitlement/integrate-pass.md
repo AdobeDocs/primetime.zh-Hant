@@ -1,13 +1,10 @@
 ---
-description: 自訂您的參考實作，以整合Adobe Primetime驗證以用於您的生產環境。
-seo-description: 自訂您的參考實作，以整合Adobe Primetime驗證以用於您的生產環境。
-seo-title: 整合Primetime驗證
+description: 自訂您的參考實作，為您的生產環境整合Adobe Primetime驗證。
 title: 整合Primetime驗證
-uuid: 34cdf1da-261e-462c-a194-4fcb439e5dfb
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 整合Primetime驗證{#integrate-primetime-authentication}
 
-自訂您的參考實作，以整合Adobe Primetime驗證以用於您的生產環境。
+自訂您的參考實作，為您的生產環境整合Adobe Primetime驗證。
 
 Primetime驗證服務的「參考實作」整合現成可用的展示。 不過，若要在生產就緒播放器中使用整合，您必須實作下列自訂設定：
 
@@ -58,7 +55,7 @@ Primetime驗證服務的「參考實作」整合現成可用的展示。 不過�
 
    此外，您可能需要變更您的應用程式用來連線至Primetime驗證服務的URL。 這些包括Primetime驗證接移和生產伺服器URL，以及Token驗證服務的URL。 請洽詢您的Adobe Primetime代表以取得詳細資訊。 1.簽署申請人ID。
 
-   為了在Primetime認證系統中建立節目編排者的身份，節目編排者請求者ID被發送到Primetime認證系統。 作為新增的安全層，要求者ID必須先由程式設計人員簽署，才能將它傳送至Adobe。 Adobe建議程式設計人員在受信任的網路上設定服務，以簽署要求者ID。
+   為了在Primetime認證系統中建立節目編排者的身份，節目編排者請求者ID被發送到Primetime認證系統。 作為安全性的新增層，在將請求者ID傳送至Adobe之前，必須由程式設計人員簽署。 Adobe建議程式設計師設定服務，以在受信任的網路上簽署請求者ID。
 
    Primetime參考實作示範如何簽署請求者ID，但僅供展示之用。 Adobe強烈建議，簽署憑證和簽名產生器程式碼（位於`com.adobe.primetime.reference.crypto`下）不應包含在生產應用程式中。 相反，您應將其移至值得信賴的網路服務。
 
