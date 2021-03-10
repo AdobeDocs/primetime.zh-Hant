@@ -1,9 +1,9 @@
 ---
-seo-title: 處理網域註冊請求
 title: 處理網域註冊請求
-uuid: d92db6c2-5a16-41ea-a1aa-541c59780678
+description: 處理網域註冊請求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 處理域註冊請求{#handle-domain-registration-requests}
 
-如果DRM中繼資料指出需要進行網域註冊才能播放內容，用戶端應用程式應叫用`DRMManager.addToDeviceGroup()` ActionScript API或`joinLicenseDomain()` iOS API。 如果客戶機尚未向指定的域伺服器註冊（或如果應用程式正在強制重新加入），則會發送域註冊請求。 域伺服器確定是否允許客戶機加入域並向客戶機發出一個或多個域證書。
+如果DRM元資料指示需要域註冊才能播放內容，則客戶端應用程式應調用`DRMManager.addToDeviceGroup()`ActionScriptAPI或`joinLicenseDomain()` iOS API。 如果客戶機尚未向指定的域伺服器註冊（或如果應用程式正在強制重新加入），則會發送域註冊請求。 域伺服器確定是否允許客戶機加入域並向客戶機發出一個或多個域證書。
 
 * 請求處理常式類別為`com.adobe.flashaccess.sdk.protocol.domain.DomainRegistrationHandler`
 * 請求消息類為`com.adobe.flashaccess.sdk.protocol.domain.DomainRegistrationRequestMessage`
