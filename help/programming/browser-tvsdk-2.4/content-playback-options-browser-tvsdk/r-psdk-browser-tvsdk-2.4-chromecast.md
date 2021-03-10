@@ -1,13 +1,10 @@
 ---
 description: 您可以從以TVSDK為基礎的傳送者應用程式轉換任何串流，並使用瀏覽器TVSDK在Chromecast上播放串流。
-seo-description: 您可以從以TVSDK為基礎的傳送者應用程式轉換任何串流，並使用瀏覽器TVSDK在Chromecast上播放串流。
-seo-title: 適用於瀏覽器TVSDK的Google Cast應用程式
 title: 適用於瀏覽器TVSDK的Google Cast應用程式
-uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
