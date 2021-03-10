@@ -1,16 +1,12 @@
 ---
 title: TVSDK 2.7 for Android版本注意事項
-seo-title: TVSDK 2.7 for Android版本注意事項
 description: TVSDK 2.7 for Android發行說明說明TVSDK Android 2.7中的新增或變更、已解決和已知問題以及裝置問題
-seo-description: TVSDK 2.7 for Android發行說明說明TVSDK Android 2.7中的新增或變更、已解決和已知問題以及裝置問題
-uuid: 4013b97d-29f9-435b-8772-b19df7054282
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '4123'
+source-wordcount: '4095'
 ht-degree: 0%
 
 ---
@@ -73,7 +69,7 @@ TVSDK現在會視需要取消持續區段的下載，並動態切換至適當的
 
 * **透過HTTPS安全載入廣告**
 
-   Adobe Primetime提供選項，可要求對primetime廣告伺服器和CRS進行透過https的首次呼叫。
+   Adobe Primetime提供選項，可要求在https上首次呼叫黃金時段廣告伺服器和CRS。
 
 * **新增至CRS請求的AdSystem和Creative Id**
 
@@ -132,7 +128,7 @@ Android 2.5.1中發行的重要新功能。
       * **改進的ABR邏** 輯——新的ABR邏輯以緩衝區長度、緩衝區長度變化率和測量頻寬為基礎。這確保了ABR在頻寬波動時選擇正確的比特率，並且還通過監視緩衝器長度變化的速率來優化比特率切換的實際發生的次數。
       * **部分區段下載／子區段-** TVSDK會進一步縮小每個片段的大小，以便盡快開始播放。ts片段必須每隔兩秒有一個關鍵影格。
       * **延遲廣告解析度-** TVSDK不會等到非預先播放廣告的解析度後，再開始播放，因此會縮短啟動時間。在所有廣告都解決之前，仍不允許搜尋和特技播放等API。 這適用於CSAI使用的VOD串流。 在廣告解析完成前，不允許搜尋和快進等操作。 對於即時串流，無法在即時事件期間啟用此功能以取得廣告解析度。
-      * **永久網路連線-** 此功能可讓TVSDK建立並儲存永久網路連線的內部清單。這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在之後將其毀損。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
+      * **永久網路連線-** 此功能可讓TVSDK建立並儲存永久網路連線的內部清單。這些連線會重複用於多個請求，而不是為每個網路請求開啟新連線，然後在其後銷毀。 如此可提高網路程式碼的效率並減少延遲，進而提高播放效能。
 當TVSDK開啟連線時，會要求伺服器進行*keep-alive*&#x200B;連線。 有些伺服器可能不支援此類連線，在這種情況下，TVSDK會回到每次要求的連線上。 此外，雖然永久連線預設會開啟，但TVSDK現在有設定選項，讓應用程式可視需要關閉永久連線。
       * **並行下載-** 並行下載視訊和音訊，而非串列下載，可減少啟動延遲。此功能可讓HLS Live和VOD檔案播放，最佳化伺服器的可用頻寬使用，降低在執行中進入緩衝區的可能性，並將下載和播放之間的延遲降到最低。
       * **平行廣告下載-** TVSDK會在點擊廣告插播前，平行預取與內容播放平行的廣告，因此可順暢地播放廣告和內容。
@@ -152,7 +148,7 @@ Android 2.5.1中發行的重要新功能。
 
 * **工作流程支援**
 
-   * **直接帳單整合-** 這會將帳單量度傳送至Adobe Analytics後端，Adobe Primetime會針對客戶使用的串流進行認證。TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需的定期使用報告。 在每個串流開始事件上，TVSDK都會使用Adobe Analytics資料插入API，將計費量度(例如內容類型、啟用廣告插入的標幟，以及啟用drm的標幟（根據計費串流的持續時間）傳送至Adobe Analytics Primetime擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 此帳單使用報表會按要求定期傳送給客戶。 這是計費功能的第一階段，僅支援使用計費。 您可使用說明檔案中所述的API，根據銷售合約來設定此API。 此功能預設為啟用。 若要關閉此功能，請參閱參考播放器範例。
+   * **直接計費整合-** 這會傳送帳單量度至Adobe Analytics後端，Adobe Primetime會針對客戶使用的串流進行認證。TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需的定期使用報告。 在每個串流開始事件上，TVSDK使用Adobe Analytics資料插入API，將計費量度(例如內容類型、啟用廣告插入的標幟，以及啟用DRM的標幟（根據可計費串流的持續時間）傳送至Adobe Analytics黃金時段擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 此帳單使用報表會按要求定期傳送給客戶。 這是計費功能的第一階段，僅支援使用計費。 您可使用說明檔案中所述的API，根據銷售合約來設定此API。 此功能預設為啟用。 若要關閉此功能，請參閱參考播放器範例。
    * **改進的容錯移轉支** 援——實作其他策略，以在主機伺服器、播放清單檔案和區段發生故障時，仍能持續不間斷播放。
 
 * **廣告**
@@ -265,7 +261,7 @@ Android 2.5.1中發行的重要新功能。
 
 | 功能 | 內容類型 | HLS |
 |---|---|---|
-| Adobe Analytics VHL整合 | VOD + Live | Y |
+| Adobe AnalyticsVHL整合 | VOD + Live | Y |
 | 帳單 | VOD + Live | Y |
 
 ## 已解決問題{#resolved-issues}
@@ -304,7 +300,7 @@ Android 2.5.1中發行的重要新功能。
    * 已修正邏輯。 在使用具有webm和3gpp格式的媒體檔案時，CRS請求將發送給webm。 當使用具有3gpp格式的媒體檔案時，CRS要求會針對最高位元速率的3gpp檔案傳送。
 * ZD #33125 - Android應用程式在VMAP中當機時會有特定的DoubleClick標籤。
    * 已修正藍本，以避免當機。
-* ZD #32256 —— 授權輪換與金鑰輪換問題- Adobe Access。
+* ZD #32256 —— 許可證輪替和密鑰輪替問題-Adobe訪問。
    * 已修正使用SampleAES內容的DRM中繼資料來初始化區段的問題。 適用於AES128內容。
 * ZD #33619 —— 快速轉送正在成長的播放清單內容，其停留在即時點附近的緩衝狀態。
    * 以特技播放模式跨越即時點時，已處理案例。
@@ -352,7 +348,7 @@ Player因回應xml有空標籤而停留在「準備」狀態。 現在問題已�
    * 通過新的DrmManager（上下文內容）建立DrmManager時存在一些問題。 實施DRMService類，該類將提供DRMManager。
 * Zendesk#32794- 1080P解析度串流未在Android上播放。
    * 我們在2.5中變更了SizeAvailableEvent和Previouly、getHeight()和getWidth()方法，用以傳回媒體格式傳回的影格高度和影格寬度。 現在，它分別返回解碼器返回的輸出高度和輸出寬度。
-* Zendesk #19359 Flash Player因設定層級資訊清單中的#EXT-X-FAXS-CM屬性位置而當機。
+* Zendesk #19359Flash Player因在設定層級資訊清單中的#EXT-X-FAXS-CM屬性位置而當機。
    * #EXT-X-FAXS-CM標籤必須一律出現在頂端播放清單中，個別位元速率或區段才會出現在播放清單中。
 
 **Android TVSDK 2.5.2**
