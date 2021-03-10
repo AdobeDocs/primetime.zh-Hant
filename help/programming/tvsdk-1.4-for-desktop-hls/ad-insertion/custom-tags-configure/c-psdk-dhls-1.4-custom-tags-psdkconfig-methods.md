@@ -1,13 +1,10 @@
 ---
 description: 您可以使用MediaPlayerItemConfig類別，或使用MediaPlayerItemConfig類別，在TVSDK中設定自訂標籤名稱，以串流為基礎。
-seo-description: 您可以使用MediaPlayerItemConfig類別，或使用MediaPlayerItemConfig類別，在TVSDK中設定自訂標籤名稱，以串流為基礎。
-seo-title: 標籤的Config類方法
 title: 標籤的Config類方法
-uuid: 3317fc8b-c13c-4e7d-8334-aa8cdf40fa05
 translation-type: tm+mt
-source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
