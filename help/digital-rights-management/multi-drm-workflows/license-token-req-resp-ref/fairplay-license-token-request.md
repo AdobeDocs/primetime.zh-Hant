@@ -1,13 +1,10 @@
 ---
 description: FairPlay授權Token介面提供製作和測試服務。
-seo-description: FairPlay授權Token介面提供製作和測試服務。
-seo-title: FairPlay授權Token要求／回應
 title: FairPlay授權Token要求／回應
-uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '814'
 ht-degree: 4%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 4%
 
 FairPlay授權Token介面提供製作和測試服務。 此要求會傳回可兌換為FairPlay授權的Token。
 
-**方法：GET, POST** （含www-url編碼的內文，包含兩種方法的參數）
+**方法：GET、POST** （含www-url編碼內文，其中包含兩種方法的參數）
 
 **URL:**
 
