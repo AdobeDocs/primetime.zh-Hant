@@ -1,13 +1,10 @@
 ---
-description: Adobe Primetime DRM解決方案中包含作業系統和應用程式伺服器。
-seo-description: Adobe Primetime DRM解決方案中包含作業系統和應用程式伺服器。
-seo-title: 特定於供應商的安全資訊
+description: 您的Adobe PrimetimeDRM解決方案中包含作業系統和應用程式伺服器。
 title: 特定於供應商的安全資訊
-uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # 特定於供應商的安全資訊{#vendor-specific-security-information}
 
-Adobe Primetime DRM解決方案中包含作業系統和應用程式伺服器。
+您的Adobe PrimetimeDRM解決方案中包含作業系統和應用程式伺服器。
 
-若要尋找您作業系統和應用程式伺服器的廠商特定安全性資訊，請參閱「使用Adobe Primetime DRM金鑰伺服器」。
+要查找特定於供應商的作業系統和應用程式伺服器的安全資訊，請參閱使用Adobe PrimetimeDRM密鑰伺服器。
 
 ## 作業系統安全資訊{#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
@@ -30,7 +27,7 @@ Adobe Primetime DRM解決方案中包含作業系統和應用程式伺服器。
 * 移除不必要的服務和應用程式
 * 備份檔案
 
-以下是Adobe Primetime DRM支援的作業系統相關資訊：
+以下是Adobe PrimetimeDRM支援的作業系統相關資訊：
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_ugl_kjz_n4"> 
  <thead class="- topic/thead "> 
