@@ -1,13 +1,10 @@
 ---
 description: AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視訊播放通知。
-seo-description: AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視訊播放通知。
-seo-title: NATIVE_ERROR視訊播放值
 title: NATIVE_ERROR視訊播放值
-uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -47,7 +44,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
    <td colname="col3"> 由於檔案結束(EOF)條件，無法操作。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"><span class="codeph"> 解碼器失敗</span> </td> 
    <td colname="col3"> 解碼器在執行時期失敗。 </td> 
   </tr> 
@@ -254,7 +251,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr> 
    <td colname="col1"> 44 </td> 
    <td colname="col2"><span class="codeph"> 網路關閉  </span> </td> 
-   <td colname="col3"> 用戶的網路連接已關閉。 播放可能隨時停止，並會在連線可用時繼續。 </td> 
+   <td colname="col3"> 用戶的網路連接已關閉。 播放可能隨時停止，並會在連接可用時繼續。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 45 </td> 
@@ -324,7 +321,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHORIZED</span> </td> 
-   <td colname="col3"> Flash Player中尚未啟用HLS播放。 請參閱AuthorizedFeatures.enableHLSPlayback。 </td> 
+   <td colname="col3"> 未在Flash Player中啟用HLS回放。 請參閱AuthorizedFeatures.enableHLSPlayback。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
@@ -427,7 +424,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
    <td colname="col3"> 內部資料結構中沒有音頻接收器。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> 無法開啟檔案。 </td> 
   </tr> 
@@ -442,7 +439,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
    <td colname="col3"> 無法從檔案讀取。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> 剖析ID3資料時發生錯誤。 </td> 
   </tr> 
