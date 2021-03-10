@@ -1,13 +1,10 @@
 ---
 description: 視訊播放器廣告服務介面定義(VPAID)2.0提供播放視訊廣告的通用介面。 它為使用者提供豐富的媒體體驗，讓出版業者能夠更精準地鎖定廣告、追蹤廣告印象，並從視訊內容獲利。
-seo-description: 視訊播放器廣告服務介面定義(VPAID)2.0提供播放視訊廣告的通用介面。 它為使用者提供豐富的媒體體驗，讓出版業者能夠更精準地鎖定廣告、追蹤廣告印象，並從視訊內容獲利。
-seo-title: VPAID 2.0廣告支援
 title: VPAID 2.0廣告支援
-uuid: 462692b5-c4b3-4488-adb3-f309809d64ad
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ ht-degree: 0%
    如需詳細資訊，請參閱[IAB VPAID 2.0](https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/)。
 * 具有隨選視訊(VOD)內容的線性VPAID廣告
 * 在即時內容中，瀏覽器TVSDK支援前置JavaScript VPAID廣告。
-* 在Flash備援模式中，瀏覽器TVSDK僅支援Flash型VPAID廣告。
+* 在Flash備援模式中，瀏覽器TVSDK僅支援Flash式VPAID廣告。
 * 線性JavaScript VPAID廣告
 
    VPAID廣告必須以JavaScript為基礎，而廣告回應必須將VPAID廣告的媒體類型識別為`application/javascript`。
@@ -36,7 +33,7 @@ ht-degree: 0%
 * 非線性廣告，例如覆蓋廣告、動態伴侶廣告、可最小化廣告、可收合廣告和可展開廣告。
 * 預先載入VPAID廣告
 * 即時內容中的VPAID廣告
-* Flash VPAID廣告
+* FlashVPAID廣告
 
 ## API {#section_0DB1D383CA5047B281BC808BC082C69B}
 
