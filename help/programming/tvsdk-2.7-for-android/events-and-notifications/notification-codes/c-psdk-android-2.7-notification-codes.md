@@ -1,13 +1,10 @@
 ---
 description: TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷中繼資料。
-seo-description: TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷中繼資料。
-seo-title: 通知代碼
 title: 通知代碼
-uuid: 24476204-5c35-4ff9-810d-77698ea18b53
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
