@@ -1,13 +1,10 @@
 ---
 description: TVSDK提供在實作封鎖期（包括方法、中繼資料和通知）時有用的API元素。
-seo-description: TVSDK提供在實作封鎖期（包括方法、中繼資料和通知）時有用的API元素。
-seo-title: 封鎖API元素
 title: 封鎖API元素
-uuid: f87f4ed0-3f97-48bd-bceb-28357a978964
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
