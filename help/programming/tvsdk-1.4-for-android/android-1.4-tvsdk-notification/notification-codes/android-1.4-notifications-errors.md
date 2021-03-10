@@ -1,13 +1,10 @@
 ---
 description: 此表提供了有關ERROR類型通知的詳細資訊。
-seo-description: 此表提供了有關ERROR類型通知的詳細資訊。
-seo-title: 錯誤通知代碼
 title: 錯誤通知代碼
-uuid: cc21473d-924e-475d-96ea-352233f664ef
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '615'
 ht-degree: 4%
 
 ---
