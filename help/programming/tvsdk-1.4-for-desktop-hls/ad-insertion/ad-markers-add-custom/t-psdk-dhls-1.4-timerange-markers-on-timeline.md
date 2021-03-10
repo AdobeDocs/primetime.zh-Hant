@@ -1,13 +1,10 @@
 ---
 description: 此範例顯示在播放時間軸中加入TimeRange規格的建議方式。
-seo-description: 此範例顯示在播放時間軸中加入TimeRange規格的建議方式。
-seo-title: 將TimeRange廣告標籤置於時間軸
 title: 將TimeRange廣告標籤置於時間軸
-uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ ht-degree: 0%
 
 * 假設載入的媒體播放器項目指向VOD資產。 當您的應用程式嘗試載入中繼資料包含`TimeRange`規格的媒體資源時，TVSDK會檢查此項，這些規格僅能用於自訂廣告標籤功能的內容。 如果基礎資產不是VOD類型，TVSDK程式庫會擲回例外。
 
-* 在處理自訂廣告標籤時，TVSDK會停用其他廣告解析機制(透過Adobe Primetime廣告決策（先前稱為Auditude）或其他廣告布建系統)。 您可以使用TVSDK提供的各種廣告解析器模組或自訂廣告標籤機制。 使用自訂廣告標籤API時，廣告內容會被視為已解析並置於時間軸上。
+* 處理自訂廣告標籤時，TVSDK會停用其他廣告解析機制(透過Adobe Primetime廣告決策（先前稱為Auditude）或其他廣告布建系統)。 您可以使用TVSDK提供的各種廣告解析器模組或自訂廣告標籤機制。 使用自訂廣告標籤API時，廣告內容會被視為已解析並置於時間軸上。
 
 <!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
