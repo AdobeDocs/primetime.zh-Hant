@@ -1,9 +1,9 @@
 ---
-seo-title: 儲存憑證
 title: 儲存憑證
-uuid: dbce523c-32d9-423f-bc95-39786f85fc29
+description: 儲存憑證
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -17,11 +17,11 @@ SDK支援多種儲存憑證的方式（公開金鑰憑證及其相關的私密�
 
 >[!NOTE]
 >
->Adobe建議使用HSM以提高安全性。 如需詳細資訊，請參閱Adobe Access安全部署准則。
+>Adobe建議使用HSM以發揮最大的安全性。 如需詳細資訊，請參閱Adobe存取安全部署准則。
 
 >[!NOTE]
 >
->從Java1.7開始，64位元Sun Java for Windows不支援Adobe Access DRM與HSM裝置通訊所需的PKCS11介面。 如果您打算使用HSM，請使用32位版本的Java，或使用支援完整PKCS11介面的JDK。
+>從Java1.7開始，64位Sun Java for Windows不支援AdobeAccess DRM與HSM設備通信所需的PKCS11介面。 如果您打算使用HSM，請使用32位版本的Java，或使用支援完整PKCS11介面的JDK。
 
 您可以在硬體安全性模組(HSM)上保留私密金鑰，並使用SDK從HSM取得的憑證。 要使用儲存在HSM上的憑據，請使用可與HSM通信的JCE提供程式來獲取私鑰的句柄。 然後，將包含公鑰的私鑰句柄、提供者名稱和證書傳遞到`ServerCredentialFactory.getServerCredential()`。
 
