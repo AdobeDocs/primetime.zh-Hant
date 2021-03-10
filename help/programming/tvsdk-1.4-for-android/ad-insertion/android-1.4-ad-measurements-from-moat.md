@@ -1,13 +1,10 @@
 ---
 description: TVSDK會從FreeWheel和其他提供VAST回應的廣告伺服器取得資訊。 FreeWheel在VAST響應中提供來自Moat服務的資訊。 Moat服務會以更準確的方式計算廣告曝光數，以更準確地顯示創意人員是否擷取或忽略觀眾的興趣。
-seo-description: TVSDK會從FreeWheel和其他提供VAST回應的廣告伺服器取得資訊。 FreeWheel在VAST響應中提供來自Moat服務的資訊。 Moat服務會以更準確的方式計算廣告曝光數，以更準確地顯示創意人員是否擷取或忽略觀眾的興趣。
-seo-title: 來自Moat的廣告度量
 title: 來自Moat的廣告度量
-uuid: 73ef3a14-7ad6-4e67-8ad3-eabbeb898a09
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '238'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ Moat是一項服務，可測量從瀏覽器到應用程式的多種用途的檢�
 
 VAST響應XML具有一個屬性和一個您的代碼可以讀取的元素、最外面的`Ad id`屬性和最外面的`Extension`元素。 無論如何，您的程式碼都可以使用TVSDK來儲存`Ad id`資訊和`Extension`資訊，然後以樹狀結構來組織資訊。 透過此組織，您的程式碼可以從任何層級擷取資料，並將資料傳遞至所需的任何位置。 最外緣`Ad id`屬性的值可讓您的程式碼協調相關促銷活動的資訊。
 
-例如，FreeWheel可以在「延伸功能」元素中傳回資料。 以下是範例元素。
+例如，FreeWheel可以傳回「延伸功能」元素中的資料。 以下是範例元素。
 
 ```xml
 <?xml version="1.0"?> 
