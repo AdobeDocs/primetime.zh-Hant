@@ -1,9 +1,9 @@
 ---
-seo-title: 安裝Tomcat
 title: 安裝Tomcat
-uuid: f7663eda-ad18-4a6e-bb9f-01c74721b047
+description: 安裝Tomcat
+copied-description: true
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
