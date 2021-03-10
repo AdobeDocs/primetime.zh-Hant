@@ -1,13 +1,10 @@
 ---
 description: TVSDK需要媒體內容、資訊清單內容和軟體版本的特定屬性。
-seo-description: TVSDK需要媒體內容、資訊清單內容和軟體版本的特定屬性。
-seo-title: 需求
 title: 需求
-uuid: 7e5fb176-4c3f-4c12-9080-3afced28627b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
