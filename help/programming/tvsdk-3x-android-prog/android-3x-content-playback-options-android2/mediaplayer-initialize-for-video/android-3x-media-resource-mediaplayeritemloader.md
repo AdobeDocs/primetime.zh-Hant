@@ -1,13 +1,10 @@
 ---
 description: 使用MediaPlayerItemLoader可協助您取得媒體串流的相關資訊，而不需執行個體化MediaPlayer例項。 這在預緩衝流中特別有用，以便可以無延遲地開始播放。
-seo-description: 使用MediaPlayerItemLoader可協助您取得媒體串流的相關資訊，而不需執行個體化MediaPlayer例項。 這在預緩衝流中特別有用，以便可以無延遲地開始播放。
-seo-title: 使用MediaPlayerItemLoader載入媒體資源
 title: 使用MediaPlayerItemLoader載入媒體資源
-uuid: 504063af-1dd4-4268-88e7-ad5a247fdff7
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
