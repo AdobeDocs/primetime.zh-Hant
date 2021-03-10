@@ -1,13 +1,10 @@
 ---
 description: 為了提供更順暢的檢視體驗，瀏覽器TVSDK有時會緩衝視訊串流。 您可以設定播放器緩衝的方式。
-seo-description: 為了提供更順暢的檢視體驗，瀏覽器TVSDK有時會緩衝視訊串流。 您可以設定播放器緩衝的方式。
-seo-title: 緩衝
 title: 緩衝
-uuid: 9937731d-013e-41e9-a4c9-f7a54a5e654d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '378'
 ht-degree: 0%
 
 ---
