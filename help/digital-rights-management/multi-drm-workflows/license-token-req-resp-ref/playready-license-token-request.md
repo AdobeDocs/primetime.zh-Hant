@@ -1,14 +1,11 @@
 ---
 description: PlayReady授權Token介面提供生產與測試服務。
-seo-description: PlayReady授權Token介面提供生產與測試服務。
-seo-title: 播放就緒授權Token請求／回應
 title: 播放就緒授權Token請求／回應
-uuid: 20ebd582-ebb9-4716-8c1e-df3e58d6ec14
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 3%
+source-wordcount: '898'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +16,7 @@ PlayReady授權Token介面提供生產與測試服務。
 
 此HTTP要求會傳回可兌換為PlayReady授權的Token。
 
-**方法：GET, POST** （含www-url編碼的內文，包含兩種方法的參數）
+**方法：GET、POST** （含www-url編碼內文，其中包含兩種方法的參數）
 
 **URL:**
 
