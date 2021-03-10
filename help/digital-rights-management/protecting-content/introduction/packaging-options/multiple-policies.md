@@ -1,9 +1,9 @@
 ---
-seo-title: 多個DRM策略
 title: 多個DRM策略
-uuid: d1159b53-fa96-430b-aaf0-50800fb22bcb
+description: 多個DRM策略
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
