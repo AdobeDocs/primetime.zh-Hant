@@ -1,13 +1,10 @@
 ---
 description: 您的應用程式必須在適當的時間使用適當的TimedMetadata物件。
-seo-description: 您的應用程式必須在適當的時間使用適當的TimedMetadata物件。
-seo-title: 傳送計時中繼資料物件時，可儲存這些物件
 title: 傳送計時中繼資料物件時，可儲存這些物件
-uuid: 3d0ed022-829d-474e-83a9-152caeb5b317
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
