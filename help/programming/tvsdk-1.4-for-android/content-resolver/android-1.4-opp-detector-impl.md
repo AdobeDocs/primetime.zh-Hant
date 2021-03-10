@@ -1,13 +1,10 @@
 ---
 description: 您可以實作介面PlacementOpportunityDetector，來實作您自己的機會檢測器。
-seo-description: 您可以實作介面PlacementOpportunityDetector，來實作您自己的機會檢測器。
-seo-title: 實作自訂機會偵測器
 title: 實作自訂機會偵測器
-uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
