@@ -1,13 +1,10 @@
 ---
-seo-title: 權益資源ID的JSON物件
 title: 權益資源ID的JSON物件
-uuid: f5b659da-1732-404c-bf00-d32a0ae39aa1
 description: 當權益資源ID為簡單文字字串時，下列程式碼區塊提供JSON物件的範例。
-seo-description: 當權益資源ID為簡單文字字串時，下列程式碼區塊提供JSON物件的範例。
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '95'
 ht-degree: 0%
 
 ---
