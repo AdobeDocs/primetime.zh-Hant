@@ -1,13 +1,10 @@
 ---
-description: 對於熟悉Adobe Primetime Access DRM解決方案的人，Access和Premite Cloud DRM（採用ExpressPlay解決方案）之間有一些基本的架構差異。
-seo-description: 對於熟悉Adobe Primetime Access DRM解決方案的人，Access和Premite Cloud DRM（採用ExpressPlay解決方案）之間有一些基本的架構差異。
-seo-title: 從存取移轉至多DRM
+description: 對於熟悉AdobePrimetime Access DRM解決方案的人，Access和Primetime Cloud DRM（採用ExpressPlay解決方案）之間有一些基本的架構差異。
 title: 從存取移轉至多DRM
-uuid: 3e33ca9a-867e-46b8-bf88-8dbfe14ff786
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 從訪問遷移到多DRM {#migrating-from-access-to-multi-drm}
 
-對於熟悉Adobe Primetime Access DRM解決方案的人，Access和Premite Cloud DRM（採用ExpressPlay解決方案）之間有一些基本的架構差異。
+對於熟悉AdobePrimetime Access DRM解決方案的人，Access和Primetime Cloud DRM（採用ExpressPlay解決方案）之間有一些基本的架構差異。
 
 ## Access與多DRM的體系結構差異
 
