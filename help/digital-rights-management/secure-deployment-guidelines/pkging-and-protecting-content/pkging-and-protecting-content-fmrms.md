@@ -1,21 +1,18 @@
 ---
-description: Flash Media Rights Management Server 1.x和Adobe Primetime DRM使用不同的中繼資料來封裝內容並申請授權。 Primetime DRM若要使用FMRMS 1.x版內容，必須轉換中繼資料。
-seo-description: Flash Media Rights Management Server 1.x和Adobe Primetime DRM使用不同的中繼資料來封裝內容並申請授權。 Primetime DRM若要使用FMRMS 1.x版內容，必須轉換中繼資料。
-seo-title: 確保與Flash Media Rights Management Server 1.x相容
-title: 確保與Flash Media Rights Management Server 1.x相容
-uuid: dd70941e-9015-4fb0-b265-557b6252e051
+description: Flash媒體Rights Management伺服器1.x和Adobe PrimetimeDRM使用不同的中繼資料來封裝內容並申請授權。 Primetime DRM若要使用FMRMS 1.x版內容，必須轉換中繼資料。
+title: 確保與Flash介質Rights Management伺服器1.x相容
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
 
-# 確保與Flash Media Rights Management Server 1.x {#ensuring-compatibility-with-flash-media-rights-management-server-x}相容
+# 確保與Flash介質Rights Management伺服器1.x {#ensuring-compatibility-with-flash-media-rights-management-server-x}相容
 
-Flash Media Rights Management Server 1.x和Adobe Primetime DRM使用不同的中繼資料來封裝內容並申請授權。 Primetime DRM若要使用FMRMS 1.x版內容，必須轉換中繼資料。
+Flash媒體Rights Management伺服器1.x和Adobe PrimetimeDRM使用不同的中繼資料來封裝內容並申請授權。 Primetime DRM若要使用FMRMS 1.x版內容，必須轉換中繼資料。
 
 Primetime DRM SDK支援下列中繼資料轉換選項：
 
@@ -30,6 +27,6 @@ Primetime DRM SDK支援下列中繼資料轉換選項：
    >
    >Primetime DRM 1.x中繼資料不包含CEK。
 
-   若要轉換中繼資料，Primetime DRM需要存取Primetime DRM 1.x內容加密金鑰。 從Flash Media Rights Management Server 1.x移轉時，您可以繼續將內容加密金鑰儲存在LiveCycle ES資料庫，或建置自訂解決方案，將內容加密金鑰安全地儲存在其他位置。 如果您決定將內容加密金鑰儲存在LiveCycle ES資料庫中，請遵循&#x200B;***「LiveCycle® ES2**強化與安全性」中「保護對資料庫中敏感內容的存取」中所述的建議。*
+   若要轉換中繼資料，Primetime DRM需要存取Primetime DRM 1.x內容加密金鑰。 從Flash媒體Rights Management伺服器1.x遷移時，您可以繼續將內容加密密鑰儲存在LiveCycleES資料庫中，或實施自定義解決方案以安全地將內容加密密鑰儲存在另一個位置。 如果您決定將內容加密密鑰儲存在LiveCycleES資料庫中，請遵循&#x200B;***「針對LiveCycle®ES2**強化和安全」中*「保護對資料庫中敏感內容的訪問」中介紹的建議。
 
-如需使用Flash Media Rights Management Server 1.x確保與封裝內容相容的詳細資訊，請參閱[Adobe Primetime API參考資料](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)上的Adobe Primetime DRM API。
+有關使用Flash媒體Rights Management伺服器1.x確保與打包內容相容的詳細資訊，請參閱[Adobe PrimetimeAPI參考](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)上的Adobe PrimetimeDRM API。
