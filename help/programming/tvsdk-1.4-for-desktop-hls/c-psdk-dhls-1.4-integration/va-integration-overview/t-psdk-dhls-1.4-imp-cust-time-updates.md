@@ -1,13 +1,10 @@
 ---
 description: 在某些分析實作中，用戶端應用程式可能會想要提供與TVSDK localTime值所報告的播放頭位置不同的播放頭位置。 例如，在LINEAR串流播放期間，可以相對於每個節目的開始時間提供其播放頭。
-seo-description: 在某些分析實作中，用戶端應用程式可能會想要提供與TVSDK localTime值所報告的播放頭位置不同的播放頭位置。 例如，在LINEAR串流播放期間，可以相對於每個節目的開始時間提供其播放頭。
-seo-title: 實作自訂時間更新
 title: 實作自訂時間更新
-uuid: 2b46eca9-3815-4c44-ab5e-21678c35f410
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
