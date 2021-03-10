@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Access認證
-title: Adobe Access認證
-uuid: 22264bd0-f7df-43ff-a6e1-ad060cbc02ff
+title: Adobe存取認證
+description: Adobe存取認證
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Adobe Access認證{#adobe-access-credentials}
+# Adobe訪問憑據{#adobe-access-credentials}
 
-使用Adobe Access需要4種認證：
+使用Adobe訪問需要4種憑據：
 
 * **Packager**:在封裝期間用來簽署新增至加密內容的中繼資料
 * **授權伺服器**:用於保護中繼資料中的內容加密金鑰，並由授權伺服器用來簽署授權
