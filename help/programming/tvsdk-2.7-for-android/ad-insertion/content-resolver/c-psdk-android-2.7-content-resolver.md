@@ -1,13 +1,10 @@
 ---
 description: 機會生成器通過流中的自定義標籤、廣告信令模式自定義標籤等來識別放置機會。 機會生成器將這些放置機會發送給內容解析器，內容解析器根據放置機會的屬性和元資料定制內容／廣告插入工作流。
-seo-description: 機會生成器通過流中的自定義標籤、廣告信令模式自定義標籤等來識別放置機會。 機會生成器將這些放置機會發送給內容解析器，內容解析器根據放置機會的屬性和元資料定制內容／廣告插入工作流。
-seo-title: 自訂商機產生器和內容解析器
 title: 自訂商機產生器和內容解析器
-uuid: 97738b80-5cf8-494f-8811-449bceded220
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
