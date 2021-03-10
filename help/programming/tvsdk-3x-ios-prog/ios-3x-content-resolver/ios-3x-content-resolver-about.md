@@ -1,13 +1,10 @@
 ---
 description: 機會檢測器是TVSDK元件，可偵測串流中的自訂標籤並識別位置機會。 這些機會會傳送至內容解析器，內容解析器會根據放置機會屬性和中繼資料自訂內容／廣告插入工作流程。
-seo-description: 機會檢測器是TVSDK元件，可偵測串流中的自訂標籤並識別位置機會。 這些機會會傳送至內容解析器，內容解析器會根據放置機會屬性和中繼資料自訂內容／廣告插入工作流程。
-seo-title: 機會產生器和內容解決器
 title: 機會產生器和內容解決器
-uuid: c49494da-2145-40d7-8f4b-2ecaf2866ca4
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
