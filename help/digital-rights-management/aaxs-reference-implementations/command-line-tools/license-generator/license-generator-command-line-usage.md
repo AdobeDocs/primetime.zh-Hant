@@ -1,9 +1,9 @@
 ---
-seo-title: 命令列使用
 title: 命令列使用
-uuid: b3a995de-653e-491a-9262-86dc56b9ce31
+description: 命令列使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 </i class="+ topic>
 ```
 
-`metadata` 是包含Adobe Access DRM中繼資料的。metadata檔案。使用Media Packager的`-d -m`選項，可從受保護的內容取得此檔案。
+`metadata` 是包含Adobe訪問DRM元資料的。metadata檔案。使用Media Packager的`-d -m`選項，可從受保護的內容取得此檔案。
 
 若要顯示先前產生的授權，請使用下列語法：
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 </i class="+ topic>
 ```
 
-`license` 是包含授權產生器產生之Adobe Access授權的檔案。
+`license` 是包含授權產生器產生之Adobe存取授權的檔案。
 
 下表說明了可以指定的命令行選項以及前面提到的語法：
 
