@@ -1,13 +1,10 @@
 ---
 description: 'com.adobe.mediacore.timeline.TimelineMarker介面現在包含新方法 '
-seo-description: 'com.adobe.mediacore.timeline.TimelineMarker介面現在包含新方法 '
-seo-title: '從2.5.x懶惰廣告解析升級至3.0.0懶惰廣告解析（API/工作流程變更） '
 title: '從2.5.x懶惰廣告解析升級至3.0.0懶惰廣告解析（API/工作流程變更） '
-uuid: 5870ceb4-93a8-4c8b-b716-673396122644
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ com.adobe.mediacore.timeline.TimelineMarker介面現在包含新方法：
 
 **Placement.Type getPlacementType()**
 
-此方法將返回Placement.Type.PRE_ROLL、Placement.Type.MID_ROLL或Placement.Type.POST_ROLL的放置類型。 如果廣告中斷未解析，TimelineMarker介面上的`getDuration()`方法將傳回0。
+此方法將返回Placement.Type.PRE_ROLL、Placement.Type.MID_ROLL或Placement.Type.POST_ROLL的放置類型。 如果廣告中斷未解析，TimelineMarker介面上的`getDuration()`方法將會傳回0。
 
 >[!NOTE]
 >
