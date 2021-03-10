@@ -1,13 +1,12 @@
 ---
 title: Primetime 發行說明
-seo-title: Adobe Primetime發行說明
-description: 'null'
-seo-description: 'null'
+description: Primetime 發行說明
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 27%
+source-wordcount: '342'
+ht-degree: 28%
 
 ---
 
