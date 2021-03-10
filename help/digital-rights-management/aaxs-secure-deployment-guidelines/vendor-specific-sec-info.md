@@ -1,9 +1,9 @@
 ---
-seo-title: 特定於供應商的安全資訊
 title: 特定於供應商的安全資訊
-uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
+description: 特定於供應商的安全資訊
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 特定於供應商的安全資訊{#vendor-specific-security-information}
 
-本節包含與安全性相關的資訊，這些資訊與您的Adobe Access解決方案整合的作業系統和應用程式伺服器有關。
+本節包含與Adobe存取解決方案整合的作業系統和應用程式伺服器相關的安全性資訊。
 
 使用本節中提供的連結，查找作業系統和應用伺服器的特定於供應商的安全資訊。
 
@@ -26,7 +26,7 @@ ht-degree: 0%
 * 移除不必要的服務和應用程式
 * 備份檔案
 
-如需Adobe Access支援之作業系統的安全性資訊，請參閱本表中的資源。
+有關Adobe訪問支援的作業系統的安全資訊，請參見此表中的資源。
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-ugl-kjz-n4"> 
  <thead class="- topic/thead "> 
@@ -67,7 +67,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">網路時間協定(NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">為了進行正確的操作和取證分析，請在Adobe Access伺服器和Adobe Access封裝器上保持準確的時間。 使用NTP的安全版本來同步連接到Internet的所有系統上的時間。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">為了進行正確的操作和取證分析，請在Adobe訪問伺服器和Adobe訪問包裝器上保持準確的時間。 使用NTP的安全版本來同步連接到Internet的所有系統上的時間。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
