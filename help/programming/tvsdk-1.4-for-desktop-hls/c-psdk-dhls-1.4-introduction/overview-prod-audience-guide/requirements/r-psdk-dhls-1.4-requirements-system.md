@@ -1,13 +1,10 @@
 ---
 description: 若要使用TVSDK，請確定您的硬體、作業系統和應用程式版本均符合下列最低要求。
-seo-description: 若要使用TVSDK，請確定您的硬體、作業系統和應用程式版本均符合下列最低要求。
-seo-title: 系統與軟體需求
 title: 系統與軟體需求
-uuid: e0f58dac-96b6-41d1-bc4c-543bb3b4823b
 translation-type: tm+mt
-source-git-commit: 51302d6eaeccdd51b227171cfbd72fca3aeec115
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
