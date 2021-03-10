@@ -1,13 +1,10 @@
 ---
 description: 當您不再需要MediaResource時，應該發行MediaPlayer實例和資源。
-seo-description: 當您不再需要MediaResource時，應該發行MediaPlayer實例和資源。
-seo-title: 發行MediaPlayer實例和資源
 title: 發行MediaPlayer實例和資源
-uuid: e7b2112e-8add-4789-9345-5f829d39d639
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
