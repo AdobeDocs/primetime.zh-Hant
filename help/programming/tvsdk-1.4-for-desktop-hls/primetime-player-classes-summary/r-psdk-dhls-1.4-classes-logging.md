@@ -1,13 +1,10 @@
 ---
 description: 這些類別可讓您自訂記錄。
-seo-description: 這些類別可讓您自訂記錄。
-seo-title: 記錄類
 title: 記錄類
-uuid: 947f3ec8-c5fe-4a55-b306-f338205ab4e6
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
