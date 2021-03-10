@@ -1,13 +1,10 @@
 ---
 description: 您可以顯示目前作用中內容的持續時間。
-seo-description: 您可以顯示目前作用中內容的持續時間。
-seo-title: 顯示視訊的持續時間
 title: 顯示視訊的持續時間
-uuid: 02042070-9c55-4cbb-9dc1-49987451eb8f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
