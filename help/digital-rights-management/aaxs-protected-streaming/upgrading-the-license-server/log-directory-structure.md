@@ -1,9 +1,9 @@
 ---
-seo-title: 日誌目錄結構
 title: 日誌目錄結構
-uuid: 230c6a97-1bdc-47b7-9cd9-3ebeea1c3906
+description: 日誌目錄結構
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '16'
 ht-degree: 0%
