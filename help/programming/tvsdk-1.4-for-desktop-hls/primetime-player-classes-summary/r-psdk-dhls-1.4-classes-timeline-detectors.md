@@ -1,13 +1,10 @@
 ---
 description: 這些課程可協助偵測時間軸中的廣告機會。
-seo-description: 這些課程可協助偵測時間軸中的廣告機會。
-seo-title: 時間軸檢測器類別
 title: 時間軸檢測器類別
-uuid: 73452e8a-5f33-4004-b93a-e77a09a66add
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '101'
 ht-degree: 0%
 
 ---
