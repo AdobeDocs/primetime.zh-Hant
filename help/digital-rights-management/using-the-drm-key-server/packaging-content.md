@@ -1,9 +1,9 @@
 ---
-seo-title: 封裝內容
 title: 封裝內容
-uuid: 366c8470-b7ef-4a39-83c2-151ba9be9a32
+description: 封裝內容
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
