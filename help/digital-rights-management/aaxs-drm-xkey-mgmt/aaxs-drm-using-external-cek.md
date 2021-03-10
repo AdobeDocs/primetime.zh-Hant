@@ -1,13 +1,10 @@
 ---
 description: 使用外部CEK功能，使用您現有的CKMS來開發和封裝授權。
-seo-description: 使用外部CEK功能，使用您現有的CKMS來開發和封裝授權。
-seo-title: 使用外部CEK購買及封裝授權
 title: 使用外部CEK購買及封裝授權
-uuid: 1bfd8c6c-4ae9-47de-8247-085b5360127d
 translation-type: tm+mt
-source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -38,7 +35,7 @@ ht-degree: 0%
 >[!NOTE]
 >
 >* Java原始碼可以使用包含的ANT `build-samples.xml`構建
->* Flash Access SDK(`adobe-flashaccess-sdk.jar`)必須位於類路徑中
+>* Flash AccessSDK(`adobe-flashaccess-sdk.jar`)必須位於類路徑上
 
 >
 
@@ -55,7 +52,7 @@ ht-degree: 0%
 
 1. 確認[!DNL flashaccess-refimpl.properties]旁邊有[!DNL CEKDepot.properties]檔案
 
-1. 從Adobe Primetime Player開始申請授權
+1. 從Adobe Primetime播放器開始申請授權
 1. 觀察參照實施日誌中類似以下內容：
 
    ```
