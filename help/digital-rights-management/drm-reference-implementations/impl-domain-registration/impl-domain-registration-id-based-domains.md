@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 基於身份的域註冊邏輯
 title: 基於身份的域註冊邏輯
-uuid: bc13f7c2-9a20-4f80-b96f-05f7a0fcc343
+description: 基於身份的域註冊邏輯
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
