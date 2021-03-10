@@ -1,13 +1,10 @@
 ---
 description: 您可以指定是否允許在所有廣告載入並置於時間軸之前播放。 以這種方式開始播放，讓檢視者可更快速存取主要內容。 此功能僅適用於即時DVR，而且無法使用，例如VOD資產。
-seo-description: 您可以指定是否允許在所有廣告載入並置於時間軸之前播放。 以這種方式開始播放，讓檢視者可更快速存取主要內容。 此功能僅適用於即時DVR，而且無法使用，例如VOD資產。
-seo-title: 啟用延遲廣告載入
 title: 啟用延遲廣告載入
-uuid: ac7c8801-7fa2-4f17-b79c-c603b3236948
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -22,7 +19,7 @@ ht-degree: 0%
    * 若為false,TVSDK會等到所有廣告都解決並放置後，再轉換至PREPARED狀態。 預設為false。
    * 若為true,TVSDK只會解析初始廣告和轉場至「已準備」狀態。 其餘廣告會在播放期間解析並放置。
 
-1. 若要啟用Adobe Primetime廣告決策的延遲廣告載入，請在您建立`AuditudeSettings`時將此設定為`true`。
+1. 若要啟用延遲的廣告載入，請在您建立`AuditudeSettings`時，將此設定為`true`。
 
    `AuditudeSettings`類繼承了`AdvertisingMetadata`的此屬性，但不繼承當前值。
 
