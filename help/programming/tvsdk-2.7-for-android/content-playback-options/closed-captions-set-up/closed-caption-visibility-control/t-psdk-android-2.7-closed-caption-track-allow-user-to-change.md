@@ -1,13 +1,10 @@
 ---
 description: 此程式是如何建立按鈕的範例，讓使用者選取隱藏字幕軌道。
-seo-description: 此程式是如何建立按鈕的範例，讓使用者選取隱藏字幕軌道。
-seo-title: 允許使用者變更標題軌道
 title: 允許使用者變更標題軌道
-uuid: 043dc492-1dd4-4b7f-8541-d60a1d3d7c4a
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
