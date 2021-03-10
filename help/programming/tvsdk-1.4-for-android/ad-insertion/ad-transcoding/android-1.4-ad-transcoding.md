@@ -1,19 +1,16 @@
 ---
 description: 某些協力廠商廣告（或創意素材）無法銜接至HTTP即時串流(HLS)內容串流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇將不相容的廣告重新封裝至相容的M3U8視訊。
-seo-description: 某些協力廠商廣告（或創意素材）無法銜接至HTTP即時串流(HLS)內容串流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇將不相容的廣告重新封裝至相容的M3U8視訊。
-seo-title: 使用Adobe Creative Repackaging Service重新封裝不相容的廣告
-title: 使用Adobe Creative Repackaging Service重新封裝不相容的廣告
-uuid: eea3651f-2598-4efa-ba4d-dbd7afa7cb95
+title: 使用Adobe創意重新封裝服務重新封裝不相容的廣告
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 
-# 使用Adobe Creative Repackaging Service {#repackage-incompatible-ads-using-adobe-creative-repackaging-service}重新封裝不相容的廣告
+# 使用Adobe創意重新封裝服務{#repackage-incompatible-ads-using-adobe-creative-repackaging-service}重新封裝不相容的廣告
 
 某些協力廠商廣告（或創意素材）無法銜接至HTTP即時串流(HLS)內容串流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇將不相容的廣告重新封裝至相容的M3U8視訊。
 
