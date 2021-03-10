@@ -1,9 +1,9 @@
 ---
-seo-title: 轉換檔案
 title: 轉換檔案
-uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
+description: 轉換檔案
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -47,7 +47,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >雖然不需要，Adobe建議針對私密金鑰(private_key_password)和PFX(pfx_password)使用不同的密碼。
+   >雖然不需要，但Adobe建議對私密金鑰(private_key_password)和PFX(pfx_password)使用不同的密碼。
 
    此最終PEM檔案僅包含您的證書。
 
@@ -61,5 +61,5 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >DER檔案僅適用於HTTP動態串流封裝。
+   >DER檔案僅對HTTP Dynamic Streaming包裝器是必需的。
 
