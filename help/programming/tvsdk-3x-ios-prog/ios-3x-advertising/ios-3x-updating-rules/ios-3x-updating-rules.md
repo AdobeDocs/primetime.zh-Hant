@@ -1,14 +1,11 @@
 ---
 description: 您可以使用TVSDK設定檔(AdobeTVSDKonfig.json)來更新VAST/VMAP回應廣告創意選擇的優先順序。 您也可以使用此設定檔案來定義廣告創作人員的來源URL轉換規則。
-keywords: creative selection rules;AdobeTVSDKConfig;ad creative priorities;transformation rules
-seo-description: 您可以使用TVSDK設定檔(AdobeTVSDKonfig.json)來更新VAST/VMAP回應廣告創意選擇的優先順序。 您也可以使用此設定檔案來定義廣告創作人員的來源URL轉換規則。
-seo-title: 更新廣告創意選擇規則
+keywords: 創意選擇規則；AdobeTVSDKonfig；廣告創意優先順序；轉換規則
 title: 更新廣告創意選擇規則
-uuid: b7d316ef-323e-4769-83d9-036422ae1707
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -47,7 +44,7 @@ override protected function doRetrieveGenerators(item:MediaPlayerItem):Vector.<O
 } 
 ```
 
-要禁用即時流上的前滾，應該更改為僅包括SpliceOutOpportunityGenerator :
+要禁用即時流上的前滾，應將其更改為僅包括SpliceOutOpportunityGenerator:
 
 ```
 /** 
