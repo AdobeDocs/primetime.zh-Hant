@@ -1,13 +1,10 @@
 ---
-seo-title: 標準AAXS DRM工作流程
 title: 標準AAXS DRM工作流程
 description: 標準AAXS DRM工作流程
-seo-description: 標準AAXS DRM工作流程
-uuid: b996eb2c-8e37-4a29-a972-e09c69d2461d
 translation-type: tm+mt
-source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '103'
+source-wordcount: '95'
 ht-degree: 0%
 
 ---
