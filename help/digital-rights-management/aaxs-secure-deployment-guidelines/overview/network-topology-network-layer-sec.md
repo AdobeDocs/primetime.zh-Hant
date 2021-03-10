@@ -1,9 +1,9 @@
 ---
-seo-title: 網路層安全性
 title: 網路層安全性
-uuid: bd53bccf-1130-4189-97ec-4259bd25762f
+description: 網路層安全性
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -27,11 +27,11 @@ ht-degree: 0%
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">非軍事區 </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">區段必須至少存在於兩個層級，而應用程式伺服器則用來執行位於內部防火牆後方的Adobe Access。 將外部網路與包含Web伺服器的DMZ分離，而Web伺服器又必須與內部網路分離。 使用防火牆來實現分層。 對流經每個網路層的流量進行分類和控制，以確保僅允許所需資料的絕對最小值。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">區段必須至少存在於兩個層級中，而應用程式伺服器用來執行位於內部防火牆後方的Adobe存取。 將外部網路與包含Web伺服器的DMZ分離，而Web伺服器又必須與內部網路分離。 使用防火牆來實現分層。 對流經每個網路層的流量進行分類和控制，以確保僅允許所需資料的絕對最小值。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">專用IP地址 </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在Adobe Access應用程式伺服器上，將網路地址轉換(NAT)與RFC 1918專用IP地址一起使用。 指定私有IP位址(10.0.0.0/8、172.16.0.0/12和192.168.0.0/16)，使得攻擊者更難以透過網際網路將NAT內部主機的流量路由至網路。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">在Adobe訪問應用程式伺服器上，將網路地址轉換(NAT)與RFC 1918專用IP地址一起使用。 指定私有IP位址(10.0.0.0/8、172.16.0.0/12和192.168.0.0/16)，使得攻擊者更難以透過網際網路將NAT內部主機的流量路由至網路。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">防火牆 </p> </td> 
