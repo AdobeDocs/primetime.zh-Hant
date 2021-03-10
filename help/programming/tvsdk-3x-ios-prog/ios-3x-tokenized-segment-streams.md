@@ -1,13 +1,10 @@
 ---
 description: 透過內容傳送網路(CDN)傳送的HLS串流，有時可在資訊清單和區段要求上使用驗證Token進行驗證。 這些Token可以做為URL參數或Cookie標題提供。
-seo-description: 透過內容傳送網路(CDN)傳送的HLS串流，有時可在資訊清單和區段要求上使用驗證Token進行驗證。 這些Token可以做為URL參數或Cookie標題提供。
-seo-title: Token化區段串流
 title: Token化區段串流
-uuid: 62e3b858-2605-4960-b504-9010674f80ad
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
