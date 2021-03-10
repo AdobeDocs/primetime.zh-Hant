@@ -1,13 +1,10 @@
 ---
-description: 這些類別提供TVSDK和Adobe Video Analytics之間的介面。
-seo-description: 這些類別提供TVSDK和Adobe Video Analytics之間的介面。
-seo-title: 視訊分析類別
+description: 這些類別提供TVSDK與Adobe視訊分析之間的介面。
 title: 視訊分析類別
-uuid: ec66dea3-47ae-4c80-a2cb-b1c7cce1b94f
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 視訊分析類別{#video-analytics-classes}
 
-這些類別提供TVSDK和Adobe Video Analytics之間的介面。
+這些類別提供TVSDK與Adobe視訊分析之間的介面。
 
 套件：[com.adobe.mediacore.videoanalytics](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/package-detail.html)
 
