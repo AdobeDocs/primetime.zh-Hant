@@ -1,13 +1,10 @@
 ---
 description: 所有廣告插入請求都使用相同的URL結構和相同的基本查詢參數。 額外的查詢參數可讓資訊清單伺服器搭配各種用戶端和情況運作。
-seo-description: 所有廣告插入請求都使用相同的URL結構和相同的基本查詢參數。 額外的查詢參數可讓資訊清單伺服器搭配各種用戶端和情況運作。
-seo-title: 廣告插入請求
 title: 廣告插入請求
-uuid: e42b3228-bff7-4202-86ed-7f631f3016ae
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
