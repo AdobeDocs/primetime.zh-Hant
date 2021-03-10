@@ -1,9 +1,9 @@
 ---
-seo-title: 設定資料庫和配置JNDI資料源
 title: 設定資料庫和配置JNDI資料源
-uuid: 1326523f-c053-4169-a934-1b2d3907b1f4
+description: 設定資料庫和配置JNDI資料源
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
