@@ -1,13 +1,10 @@
 ---
 description: 對於隨選視訊(VOD)內容，TVSDK會在主要內容中剪接廣告，以增加時間軸持續時間。
-seo-description: 對於隨選視訊(VOD)內容，TVSDK會在主要內容中剪接廣告，以增加時間軸持續時間。
-seo-title: 解析並插入VOD廣告
 title: 解析並插入VOD廣告
-uuid: 69853c16-e252-472e-b33a-7a0e0c4b95dd
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 對於隨選視訊(VOD)內容，TVSDK會在主要內容中剪接廣告，以增加時間軸持續時間。
 
-播放前，TVSDK會解析已知廣告、在主要內容中插入廣告插播（如從Adobe Primetime廣告決策傳回的時間軸所述），並視需要重新計算虛擬時間軸。
+在播放之前，TVSDK會解析已知廣告、在主要內容中插入廣告插播(如從Adobe Primetime廣告決策傳回的時間軸所述)，並視需要重新計算虛擬時間軸。
 
 TVSDK會以下列方式插入廣告：
 
