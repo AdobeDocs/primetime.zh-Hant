@@ -1,13 +1,10 @@
 ---
 description: TVSDK支援輔助橫幅廣告，這些廣告是線性廣告隨附的廣告，通常會線上性廣告結束後保留在頁面上。 您的應用程式負責顯示隨附線性廣告的配套橫幅。
-seo-description: TVSDK支援輔助橫幅廣告，這些廣告是線性廣告隨附的廣告，通常會線上性廣告結束後保留在頁面上。 您的應用程式負責顯示隨附線性廣告的配套橫幅。
-seo-title: 配套橫幅廣告
 title: 配套橫幅廣告
-uuid: 522578ff-1f09-48f1-91f7-f074cfd34064
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -83,7 +80,7 @@ TVSDK會透過`PTMediaPlayerAdPlayStartedNotification`通知事件，提供與�
 
 * HTML程式碼片段
 * iFrame頁面的URL
-* 靜態影像或Adobe Flash SWF檔案的URL
+* 靜態影像或AdobeFlashSWF檔案的URL
 
 對於每個配套廣告，TVSDK會指出您的應用程式有哪些類型。
 
