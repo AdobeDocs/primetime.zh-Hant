@@ -1,13 +1,10 @@
 ---
 description: TVSDK中的這些變更支援刪除和取代。
-seo-description: TVSDK中的這些變更支援刪除和取代。
-seo-title: 廣告刪除和取代API變更
 title: 廣告刪除和取代API變更
-uuid: 9d208d3b-6459-4aaf-bc56-53c405ccc1b6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -76,7 +73,7 @@ TVSDK中的這些變更支援刪除和取代。
 
       MARK —— 每個有效標籤範圍`PlacementType.CUSTOM_RANGE`和`PlacementMode.MARK`只有一個機會
 
-      DELETE —— 每個有效刪除範圍`PlacementType.CUSTOM_RANGE`和`PlacementMode.DELETE`都有一個機會
+      DELETE-每個有效刪除範圍`PlacementType.CUSTOM_RANGE`和`PlacementMode.DELETE`的一個機會
 
       REPLACE —— 每個有效替換範圍有兩個機會：
 
