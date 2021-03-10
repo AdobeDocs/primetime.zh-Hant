@@ -1,14 +1,11 @@
 ---
 description: 當TVSDK在廣告伺服器回應中遇到中斷的VMAP時，會派單1109(NETWORK_AD_URL_FAILED)錯誤。
-keywords: 1109;NETWORK_AD_URL_FAILED;broken VMAP
-seo-description: 當TVSDK在廣告伺服器回應中遇到中斷的VMAP時，會派單1109(NETWORK_AD_URL_FAILED)錯誤。
-seo-title: 中斷的VMAP的客戶端錯誤處理
+keywords: 1109;NETWORK_AD_URL_FAILED；損壞的VMAP
 title: 中斷的VMAP的客戶端錯誤處理
-uuid: ab2c567d-d945-4ebe-b65a-c1f13518a576
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
