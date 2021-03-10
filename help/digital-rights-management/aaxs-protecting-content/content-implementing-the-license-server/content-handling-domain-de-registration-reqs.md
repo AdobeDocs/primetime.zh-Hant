@@ -1,9 +1,9 @@
 ---
-seo-title: 處理域取消註冊請求
 title: 處理域取消註冊請求
-uuid: 6f056b2b-374d-4e4d-926a-68605b2c923b
+description: 處理域取消註冊請求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 處理域取消註冊請求{#handling-domain-de-registration-requests}
 
-如果用戶端應用程式需要離開網域，則會叫用`DRMManager.removeFromDeviceGroup()` ActionScript API或`leaveLicenseDomain()` iOS API來啟動網域取消註冊程式。 域去配準是一個兩階段的過程。 用戶端首先傳送取消註冊預覽請求。 網域伺服器會檢查請求並判斷用戶端是否獲准離開網域（如果機器目前不屬於網域，則可能會傳回錯誤）。 在成功回應時，用戶端會刪除其網域憑證和任何核發給該網域的授權，然後傳送取消註冊請求。
+如果客戶端應用程式需要離開域，則會調用`DRMManager.removeFromDeviceGroup()`ActionScriptAPI或`leaveLicenseDomain()` iOS API來啟動域取消註冊過程。 域去配準是一個兩階段的過程。 用戶端首先傳送取消註冊預覽請求。 網域伺服器會檢查請求並判斷用戶端是否獲准離開網域（如果機器目前不屬於網域，則可能會傳回錯誤）。 在成功回應時，用戶端會刪除其網域憑證和任何核發給該網域的授權，然後傳送取消註冊請求。
 
 * 請求處理常式類別為`com.adobe.flashaccess.sdk.protocol.domain.DomainDeRegistrationHandler`
 * 請求消息類為`com.adobe.flashaccess.sdk.protocol.domain.DomainDeRegistrationRequestMessage`
