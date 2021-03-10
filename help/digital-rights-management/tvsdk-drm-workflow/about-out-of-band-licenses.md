@@ -1,9 +1,9 @@
 ---
-seo-title: 帶外授權概觀
 title: 帶外授權概觀
-uuid: 82e4529a-ee1b-4c0c-8885-e0e68319d1a0
+description: 帶外授權概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%
@@ -54,6 +54,6 @@ ht-degree: 0%
 
 當裝置的使用者叫用DRM工廠重設選項時，裝置憑證將會被清除。 若要繼續播放受保護的內容，應用程式必須再次執行裝置註冊程式。 如果應用程式傳送過期的預先產生授權，Primetime DRM用戶端會拒絕，因為授權已針對舊版裝置ID加密。
 
-* Flash API:[DRMManager.resetDRMVouchers()](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMManager.html#resetDRMVouchers()) -（僅能響應某些不可恢復的DRM錯誤代碼而調用。）
+* FlashAPI:[DRMManager.resetDRMVouchers()](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMManager.html#resetDRMVouchers()) -（僅能響應某些不可恢復的DRM錯誤代碼而調用。）
 * iOS API:[DRMManager resetDRM](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/interface_d_r_m_manager.html#a0dd6c9662428583196e0419d3ea69446)
 * Android API:[DRMManager.resetDRM()](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/com/adobe/ave/drm/DRMManager.html#resetDRM(com.adobe.ave.drm.DRMOperationErrorCallback,%20com.adobe.ave.drm.DRMOperationCompleteCallback))
