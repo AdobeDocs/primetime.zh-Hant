@@ -1,13 +1,10 @@
 ---
-description: 您可以使用Adobe Primetime廣告決策介面，將廣告插入VOD和即時／線性內容。 Primetime廣告決策可與TVSDK搭配使用，以識別廣告機會、解決廣告，並在視訊串流中插入已解決的廣告。
-seo-description: 您可以使用Adobe Primetime廣告決策介面，將廣告插入VOD和即時／線性內容。 Primetime廣告決策可與TVSDK搭配使用，以識別廣告機會、解決廣告，並在視訊串流中插入已解決的廣告。
-seo-title: 廣告需求
+description: 您可以使用Adobe Primetime廣告決策介面，在VOD和即時／線性內容中插入廣告。 Primetime廣告決策可與TVSDK搭配使用，以識別廣告機會、解決廣告，並在視訊串流中插入已解決的廣告。
 title: 廣告需求
-uuid: b68c8b1b-5fc1-4e6f-b640-9e9ad1ac61da
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 廣告及其要求{#advertising-requirements}
 
-您可以使用Adobe Primetime廣告決策介面，將廣告插入VOD和即時／線性內容。 Primetime廣告決策可與TVSDK搭配使用，以識別廣告機會、解決廣告，並在視訊串流中插入已解決的廣告。
+您可以使用Adobe Primetime廣告決策介面，在VOD和即時／線性內容中插入廣告。 Primetime廣告決策可與TVSDK搭配使用，以識別廣告機會、解決廣告，並在視訊串流中插入已解決的廣告。
 
 <!--<a id="section_282A8000A8BF4860A24F0D3F1A19BC9E"></a>-->
 
