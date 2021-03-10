@@ -1,13 +1,10 @@
 ---
 description: 廣告插入可解析隨選視訊(VOD)、即時串流以及具有廣告追蹤和廣告播放的線性串流的廣告。 TVSDK會向廣告伺服器提出所需要求，接收指定內容的廣告資訊，並將廣告分階段置於內容中。
-seo-description: 廣告插入可解析隨選視訊(VOD)、即時串流以及具有廣告追蹤和廣告播放的線性串流的廣告。 TVSDK會向廣告伺服器提出所需要求，接收指定內容的廣告資訊，並將廣告分階段置於內容中。
-seo-title: 插入廣告
 title: 插入廣告
-uuid: 25c79822-a861-427b-b6a8-24714b21aae4
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '157'
 ht-degree: 0%
 
 ---
