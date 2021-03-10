@@ -1,9 +1,9 @@
 ---
-seo-title: 更新DRM策略
 title: 更新DRM策略
-uuid: 6f7a1432-88e4-499b-a008-6c8cf0e9c09b
+description: 更新DRM策略
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d5986e9bc8689bf37abdf242a41aea5e768df754
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
