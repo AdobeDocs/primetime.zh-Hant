@@ -1,9 +1,9 @@
 ---
-seo-title: 關於證書
 title: 關於證書
-uuid: 0b7818b4-bd6a-4f2e-94c2-565e0d735bf8
+description: 關於證書
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 關於證書{#about-certificates}
 
-Adobe Primetime DRM SDK提供下列組態：
+Adobe PrimetimeDRM SDK提供下列組態：
 
 * Primetime DRM Production SDK
 * Primetime DRM評估SDK
@@ -34,7 +34,7 @@ Adobe Primetime DRM SDK提供下列組態：
    SDK會使用此憑證來保護用戶端與授權伺服器之間的通訊安全。
 * 域CA證書
 
-   想要實作網域伺服器的客戶需要網域CA憑證。 與其他憑證不同，網域CA憑證不是由Adobe核發。
+   想要實作網域伺服器的客戶需要網域CA憑證。 與其他證書不同，域CA證書不由Adobe頒發。
 
 >[!NOTE]
 >
