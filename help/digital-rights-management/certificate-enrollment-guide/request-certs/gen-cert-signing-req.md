@@ -1,9 +1,9 @@
 ---
-seo-title: 生成證書籤名請求（請求者）
 title: 生成證書籤名請求（請求者）
-uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
+description: 生成證書籤名請求（請求者）
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >Adobe建議在密鑰名稱中包括證書類型（lic、pkgr、trans、trial或eval）。 此命名慣例可讓您在授權伺服器上部署這些檔案更輕鬆。 此範例使用「mycompany-license.key」。 對於試用版和試用版，請使用「mycompany-eval.key」和「mycompany-trial.key」。
+   >Adobe建議在密鑰名中包括證書類型（lic、pkgr、trans、trial或eval）。 此命名慣例可讓您在授權伺服器上部署這些檔案更輕鬆。 此範例使用「mycompany-license.key」。 對於試用版和試用版，請使用「mycompany-eval.key」和「mycompany-trial.key」。
 
 1. 輸入密碼以保護私密金鑰。
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 1. 系統會提示您輸入私密金鑰的密碼。
 1. 建立您的私密金鑰和密碼的備份副本。
 
-   如果您遺失私密金鑰或私密金鑰已遭洩露，請連絡Adobe認證管理員以撤銷您的認證並要求新的認證。
+   如果您遺失私密金鑰或私密金鑰已洩露，請連絡Adobe憑證管理員以撤銷憑證並要求新的憑證。
 
    >[!NOTE]
    >
