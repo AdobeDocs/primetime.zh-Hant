@@ -1,14 +1,11 @@
 ---
 description: TVSDK包含可判斷有效率、目前率、特技播放是否受支援以及其他與快進和倒轉相關功能的方法、屬性和事件。
-seo-description: TVSDK包含可判斷有效率、目前率、特技播放是否受支援以及其他與快進和倒轉相關功能的方法、屬性和事件。
-seo-title: 比率變更API元素
 title: 比率變更API元素
-uuid: 0040d35c-f9cb-4066-9bee-828ed5541194
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 2%
+source-wordcount: '127'
+ht-degree: 3%
 
 ---
 
