@@ -1,13 +1,10 @@
 ---
 description: 您的應用程式可監聽TVSDK所傳送的事件，以監控播放器中的活動和播放器的變更狀態。
-seo-description: 您的應用程式可監聽TVSDK所傳送的事件，以監控播放器中的活動和播放器的變更狀態。
-seo-title: Primetime播放器事件摘要
 title: Primetime播放器事件摘要
-uuid: ed3be4c2-8df3-4d96-a30b-74c196262798
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -283,7 +280,7 @@ TVSDK會在您的應用程式必須回應的事件發生時通知您。 每個�
 
 ## TimelineMetadataAddedInBackgroundEventListener {#section_7B923C7116154CCFBAE1FCA92C928EB2}
 
-* **意思**新增計時中繼資料至背景項目。
+* **意思**新的計時中繼資料已新增至背景項目。
 
 * **回呼以實作** `onTimedMetadata(TimedMetadataEvent event)`
 
