@@ -1,13 +1,10 @@
 ---
 description: Primetime數位版權管理(DRM)系統的主要用戶端元素是DRM管理器。
-seo-description: Primetime數位版權管理(DRM)系統的主要用戶端元素是DRM管理器。
-seo-title: Primetime DRM介面總覽
 title: Primetime DRM介面總覽
-uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Primetime DRM介面概述{#primetime-drm-interface-overview}
 
-您可以使用Primetime數位版權管理(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商DRM解決方案，做為Adobe整合Primetime DRM解決方案的替代方案。
+您可以使用PrimetimeDigital Rights Management(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商DRM解決方案，做為Adobe整合Primetime DRM解決方案的替代方案。
 
 請洽詢您的Adobe代表，以取得有關協力廠商DRM解決方案可用性的最新資訊。
 
@@ -25,7 +22,7 @@ Primetime數位版權管理(DRM)系統的主要用戶端元素是DRM管理器。
 
 Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程式中實作內容保護。 您可以針對每個數位媒體檔案建立授權，以保護並管理視訊內容的權利。
 
-TVSDK支援將Primetime DRM整合為自訂DRM工作流程。 這表示您的應用程式必須在使用Flash DRManager播放串流之前，先實作DRM驗證工作流程。 若要啟用此功能，MediaPlayer會提供您DRM管理員進行驗證。
+TVSDK支援將Primetime DRM整合為自訂DRM工作流程。 這表示您的應用程式必須在使用FlashDRManager播放串流之前，先實作DRM驗證工作流程。 若要啟用此功能，MediaPlayer會提供您DRM管理員進行驗證。
 
 請參閱TVSDK套件中包含的DRM範例播放器程式碼。
 
@@ -58,7 +55,7 @@ TVSDK會在DRM中繼資料變更時發出`PTMediaPlayerItemDRMMetadataChanged`�
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-如需DRM的詳細資訊，請參閱[Adobe Primetime DRM檔案](https://help.adobe.com/en_US/primetime/drm)。
+有關DRM的詳細資訊，請參閱[Adobe PrimetimeDRM文檔](https://help.adobe.com/en_US/primetime/drm)。
 
 ## 在TSVDK應用程式{#implement-primetime-drm-in-a-tsvdk-application}中實施Primetime DRM
 
@@ -66,4 +63,4 @@ Primetime DRM已整合至TVSDK，可簡化在TVSDK應用程式中實作內容保
 
 如需使用Primetime DRM在TVSDK應用程式中實作內容保護的概觀和詳細資訊，請參閱：
 
-* [Adobe Primetime TVSDK-DRM工作流程(PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)
+* [Adobe PrimetimeTVSDK-DRM工作流程(PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)
