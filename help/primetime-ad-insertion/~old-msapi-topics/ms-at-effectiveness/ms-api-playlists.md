@@ -1,13 +1,10 @@
 ---
-description: 資訊清單伺服器會傳回M3U8格式的主播放清單，符合建議的HTTP即時串流標準。 它由一組變型傳輸流(TS)組成，每組傳輸流包含針對不同比特率和格式的相同內容的轉譯。 Adobe Primetime廣告插入新增EXT-X-MARKER指令標籤，以供用戶端視訊播放器解讀。
-seo-description: 資訊清單伺服器會傳回M3U8格式的主播放清單，符合建議的HTTP即時串流標準。 它由一組變型傳輸流(TS)組成，每組傳輸流包含針對不同比特率和格式的相同內容的轉譯。 Adobe Primetime廣告插入新增EXT-X-MARKER指令標籤，以供用戶端視訊播放器解讀。
-seo-title: EXT-X-MARKER指令
+description: 資訊清單伺服器會傳回M3U8格式的主播放清單，符合建議的HTTP即時串流標準。 它由一組變型傳輸流(TS)組成，每組傳輸流包含針對不同比特率和格式的相同內容的轉譯。 Adobe Primetime廣告插入添加了EXT-X-MARKER指令標籤，客戶端視頻播放器將解釋該標籤。
 title: EXT-X-MARKER指令
-uuid: e349bf89-b196-47b4-a362-9913fa28b2c6
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # EXT-X-MARKER指令{#ext-x-marker-directive}
 
-資訊清單伺服器會傳回M3U8格式的主播放清單，符合建議的HTTP即時串流標準。 它由一組變型傳輸流(TS)組成，每組傳輸流包含針對不同比特率和格式的相同內容的轉譯。 Adobe Primetime廣告插入新增EXT-X-MARKER指令標籤，以供用戶端視訊播放器解讀。
+資訊清單伺服器會傳回M3U8格式的主播放清單，符合建議的HTTP即時串流標準。 它由一組變型傳輸流(TS)組成，每組傳輸流包含針對不同比特率和格式的相同內容的轉譯。 Adobe Primetime廣告插入添加了EXT-X-MARKER指令標籤，客戶端視頻播放器將解釋該標籤。
 
-如需EXT-X-MARKER標籤的詳細資訊，請參閱[Adobe Primetime HTTP Live Streaming Profile](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf)。
+有關EXT-X-MARKER標籤的詳細資訊，請參閱[Adobe PrimetimeHTTP即時流配置檔案](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf)。
 
 >[!NOTE]
 >
