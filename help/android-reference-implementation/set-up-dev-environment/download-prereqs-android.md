@@ -1,13 +1,10 @@
 ---
-seo-title: 下載並設定先決條件軟體
 title: 下載並設定先決條件軟體
 description: 安裝程式非常簡單。 如果您的系統上已安裝JDK，則可以跳過此步驟，但請注意，您的JDK、Eclipse IDE和OS需要相容。
-seo-description: 安裝程式非常簡單。 如果您的系統上已安裝JDK，則可以跳過此步驟，但請注意，您的JDK、Eclipse IDE和OS需要相容。
-uuid: ca29144f-8088-4c8d-93cf-aa59007da034
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
