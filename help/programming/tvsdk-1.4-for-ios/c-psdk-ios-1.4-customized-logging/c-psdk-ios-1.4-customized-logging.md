@@ -1,13 +1,10 @@
 ---
 description: 您可以實作您自己的記錄系統。
-seo-description: 您可以實作您自己的記錄系統。
-seo-title: 自訂記錄
 title: 自訂記錄
-uuid: c5bdf266-4266-4896-b6e0-47710ce64e67
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '275'
 ht-degree: 0%
 
 ---
