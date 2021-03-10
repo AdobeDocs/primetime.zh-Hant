@@ -1,13 +1,10 @@
 ---
 description: TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷中繼資料。
-seo-description: TVSDK通知系統會產生各種錯誤、警告和資訊通知，以提供診斷中繼資料。
-seo-title: 'null'
-title: 'null'
-uuid: 20828188-817a-471c-acbc-aeb5f336356b
+title: 錯誤通知代碼
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 5%
 
 ---
@@ -243,7 +240,7 @@ ht-degree: 5%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 郵遞區號170010  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_ERROR  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_錯誤  </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> <p>Site Catalyst錯誤。 請參閱說明。 </p> </td> 
