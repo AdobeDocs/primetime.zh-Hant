@@ -1,13 +1,10 @@
 ---
 description: 在使用MediaPlayer檢視來播放視訊後，您可以使用TVSDK方法或手動隱藏並再次顯示視訊。
-seo-description: 在使用MediaPlayer檢視來播放視訊後，您可以使用TVSDK方法或手動隱藏並再次顯示視訊。
-seo-title: 隱藏視訊檢視
 title: 隱藏視訊檢視
-uuid: 7cc02bf4-41ee-4af0-98ba-df070b50b88d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '156'
 ht-degree: 1%
 
 ---
