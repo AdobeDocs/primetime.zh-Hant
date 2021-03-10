@@ -1,12 +1,10 @@
 ---
 description: '此表格提供「收入最佳化」通知的詳細資訊。 '
-seo-description: '此表格提供「收入最佳化」通知的詳細資訊。 '
-seo-title: 收入最佳化程式碼
 title: 收入最佳化程式碼
 translation-type: tm+mt
-source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -30,7 +28,7 @@ ht-degree: 0%
 
 | 事件詳細資料 | ContextMetadata |
 |---|---|
-| **在呼叫MediaPlayer::replaceCurrentResource** 時，TVSDK中已修補CONTENT_RESOURCE_STARTD。 | clientTimestamp, fallbackOnInvalidCreative, showStaticBanners, hasPreroll, event, adSignalingMode, resourceUrl, creativeRepackagingFormat, delayAdLoadingTolerance, zoneID, hasLivePrequestTimeout, adRequestTimeout, adAdAdAdAdT, resourceTypeLoading, res, readLaing, creativeRepackagingEnabled, mediaId, clientId |
+| **在呼叫MediaPlayer::replaceCurrentResource** 時，TVSDK中已修補CONTENT_RESOURCE_STARTD。 | clientTimestamp, fallbackOnInvalidCreative, showStaticBanners, hasPreroll, event, adSigningMode, resourceUrl, creativeRepackagingFormat, delayAdLoadingTolerance, zoneID, hasLivePrerol, adRequestTimeout, adAdAdTimeouet, demout, dedTypeLoading, res, resourceTypeLoing, creativeRepackagingEnabled, mediaId, clientId |
 | **當內容已進入準備狀態並可** 供播放時，CONTENT_PLAYBACK_STARTD已在TVSDK中修補。此事件不會在每次資訊清單上傳時派單——只會在初始載入時派單。 | clientTimestamp, contentURL, contentType, event, isLive, clientID |
 | **AD_OPPORTUNITY_** GENERATED在TVSDK中生成機會時打補丁。 | clientTimestamp, event, opportunityId, placementDuration, clientId |
 | **AD_OPPORTUNITY_RESOLVE_** STARTD在TVSDK中打補丁，當機會開始解析時。 | clientTimestamp, event, opportunityId, placementDuration, clientId |
