@@ -1,9 +1,9 @@
 ---
-seo-title: 最低用戶端版本
 title: 最低用戶端版本
-uuid: f2b56cff-96fa-4954-a08a-9b3e78f496d6
+description: 最低用戶端版本
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 最低客戶端版本{#minimum-client-version}
 
-Adobe Primetime DRM 2.0.2及更新版本推出一些Primetime DRM 2.0用戶端不瞭解的新使用規則。 借由設定最低支援的用戶端版本(`HandlerConfiguration.setMinSupportedClientVersion()`)，授權伺服器可控制舊版用戶端在遇到具有這些使用規則的授權時的行為。 根據此設定，伺服器可以指出較舊的用戶端是否可忽略他們不瞭解的使用規則，或較舊的用戶端是否無法使用這些使用規則使用授權。
+Adobe PrimetimeDRM 2.0.2及更新版本引入一些Primetime DRM 2.0用戶端無法瞭解的新使用規則。 借由設定最低支援的用戶端版本(`HandlerConfiguration.setMinSupportedClientVersion()`)，授權伺服器可控制舊版用戶端在遇到具有這些使用規則的授權時的行為。 根據此設定，伺服器可以指出較舊的用戶端是否可忽略他們不瞭解的使用規則，或較舊的用戶端是否無法使用這些使用規則使用授權。
 
 例如，
 
