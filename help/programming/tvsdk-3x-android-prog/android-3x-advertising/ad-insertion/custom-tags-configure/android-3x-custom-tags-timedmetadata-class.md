@@ -1,13 +1,10 @@
 ---
 description: 當TVSDK偵測到播放清單／資訊清單中的訂閱標籤時，播放器會自動嘗試以TimedMetadata物件的形式處理和公開標籤。
-seo-description: 當TVSDK偵測到播放清單／資訊清單中的訂閱標籤時，播放器會自動嘗試以TimedMetadata物件的形式處理和公開標籤。
-seo-title: 計時中繼資料類別
 title: 計時中繼資料類別
-uuid: c7b1c1d7-48b3-43c7-aa21-f800d894976d
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
