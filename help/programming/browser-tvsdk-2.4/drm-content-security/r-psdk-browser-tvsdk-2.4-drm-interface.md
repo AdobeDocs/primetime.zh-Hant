@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK提供DRM介面，您可用來播放受不同DRM解決方案（包括FairPlay、PlayReady和Widevine）保護的內容。
-seo-description: 瀏覽器TVSDK提供DRM介面，您可用來播放受不同DRM解決方案（包括FairPlay、PlayReady和Widevine）保護的內容。
-seo-title: DRM介面總覽
 title: DRM介面總覽
-uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -95,7 +92,7 @@ DRM工作流的關鍵介面是`DRMManager`。 您可透過MediaPlayer例項取�
    drmManager.setProtectionData(protectionData);
    ```
 
-1. 當未設定保護資料時，從DRM系統的PSSH框（如果適用）中檢索許可證URL等必要資訊。
+1. 當未設定保護資料時，從DRM系統的PSSH框（如果適用）中檢索必要資訊（如許可證URL）。
 
    >[!TIP]
    >
