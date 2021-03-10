@@ -1,13 +1,10 @@
 ---
 description: 您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實施多個片段。
-seo-description: 您應將播放器的UI邏輯與管理廣告點按的程式區隔。 其中一個方法是為活動實施多個片段。
-seo-title: 區隔可點按的廣告流程
 title: 區隔可點按的廣告流程
-uuid: a5254ac5-3005-483e-935e-acbbef03df0e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
