@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 信令模式和時間範圍
 title: 信令模式和時間範圍
-uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
+description: 信令模式和時間範圍
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -20,7 +18,7 @@ ht-degree: 0%
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> 標籤 </th> 
-   <th class="entry"> 刪除 </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> 取代 </th> 
   </tr> 
  </thead>
@@ -139,7 +137,7 @@ ht-degree: 0%
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> 標籤 </th> 
-   <th class="entry"> 刪除 </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> 取代 </th> 
   </tr> 
  </thead>
