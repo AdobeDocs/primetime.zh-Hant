@@ -1,9 +1,9 @@
 ---
-seo-title: 實作匿名網域註冊
 title: 實作匿名網域註冊
-uuid: 330d32fd-8c23-40f9-949b-635e5a9acc86
+description: 實作匿名網域註冊
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
