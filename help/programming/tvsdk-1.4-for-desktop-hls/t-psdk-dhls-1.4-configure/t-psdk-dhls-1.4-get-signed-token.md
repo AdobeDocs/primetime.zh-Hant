@@ -1,13 +1,10 @@
 ---
-description: Flash Runtime TVSDK需要有簽署的Token，以驗證您有權在您應用程式所在的網域上呼叫TVSDK API。
-seo-description: Flash Runtime TVSDK需要有簽署的Token，以驗證您有權在您應用程式所在的網域上呼叫TVSDK API。
-seo-title: 載入您的已簽署Token
+description: Flash執行階段TVSDK需要有簽名的Token，以驗證您有權在應用程式所在的網域上呼叫TVSDK API。
 title: 載入您的已簽署Token
-uuid: 8760eab3-3d6d-47c6-9aa7-f64f6aa5ddcf
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # 載入您的已簽署Token {#load-your-signed-token}
 
-Flash Runtime TVSDK需要有簽署的Token，以驗證您有權在您應用程式所在的網域上呼叫TVSDK API。
+Flash執行階段TVSDK需要有簽名的Token，以驗證您有權在應用程式所在的網域上呼叫TVSDK API。
 
-1. 請向Adobe代表取得您每個網域的簽名Token（每個網域可以是特定網域或萬用字元網域）。
+1. 從您的Adobe代表取得每個網域的簽名Token（其中每個網域可以是特定網域或萬用字元網域）。
 
-       若要取得Token，請提供Adobe應用程式儲存或載入的網域，或以SHA256雜湊的形式提供網域。作為回報，Adobe會為您提供每個網域的已簽署Token。 這些預付碼採用下列其中一種形式：
+       若要取得Token，請提供Adobe以儲存或載入您應用程式的網域，或以SHA256雜湊的形式提供網域。作為回報，Adobe會為您提供每個網域的已簽署Token。 這些預付碼採用下列其中一種形式：
    
    * [!DNL .xml]檔案，用作單一網域或萬用字元網域的Token。
 
@@ -35,7 +32,7 @@ Flash Runtime TVSDK需要有簽署的Token，以驗證您有權在您應用程�
 1. 如果您的Token檔案是單一XML檔案：
    1. 使用`utils.AuthorizedFeaturesHelper.loadFrom`下載儲存在指定URL（Token檔案）的資料，並從中擷取`authorizedFeatures`資訊。
 
-      這個步驟可能有所不同。 例如，您可能想在啟動應用程式之前先執行驗證，或是直接從內容管理系統(CMS)接收Token。
+      這個步驟可能有所不同。 例如，您可能想在啟動應用程式之前先執行驗證，或直接從您的內容管理系統(CMS)接收Token。
 
    1. 如果載入成功，TVSDK將調度`COMPLETED`事件，否則調度`FAILED`事件。 偵測到任一事件時，請採取適當的動作。
 
@@ -63,7 +60,7 @@ Flash Runtime TVSDK需要有簽署的Token，以驗證您有權在您應用程�
       此外，還監聽ERROR事件並採取適當的操作。
    1. 如果載入成功，請使用`AuthorizedFeaturesHelper`獲取包含PCKS-7編碼安全資料的`ByteArray`。
 
-      此資料會透過AVE V11 API使用，以取得Flash Runtime Player的授權確認。 如果位元組陣列沒有內容，請改用程式來尋找單網域Token檔案。
+      此資料會透過AVE V11 API使用，以從Flash執行階段播放器取得授權確認。 如果位元組陣列沒有內容，請改用程式來尋找單網域Token檔案。
    1. 使用`AuthorizedFeatureHelper.loadFeatureFromData`從位元組陣列獲取所需資料。
    1. 卸載[!DNL .swf]檔案。
 
