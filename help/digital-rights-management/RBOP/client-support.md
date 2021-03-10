@@ -1,13 +1,10 @@
 ---
 description: 本節說明不同版本的Flash Player和TVSDK所提供的功能。
-seo-description: 本節說明不同版本的Flash Player和TVSDK所提供的功能。
-seo-title: RBOP客戶端支援
 title: RBOP客戶端支援
-uuid: d1d0f788-7bc1-488c-807e-be47f83725e9
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ ht-degree: 0%
 
 **錯誤派單** -當播放內容的解析度超過DRM原則中定義之裝置組態所允許的解析度時，下列TVSDK平台會派單DRM執行階段錯誤：
 
-* Flash Player 18至20版
+* Flash Player第18至20版
 * Android —— 版本
 * iOS —— 版本
 
@@ -35,13 +32,13 @@ ht-degree: 0%
 
 
 
-**自動縮放** -用於縮放的技術視平台和Flash Player版本而定：
+**自動縮放** -用於縮放的技術因平台和Flash Player版本而異：
 
 * Flash Player第21版：支援RBOP的自動縮放功能（智慧位元速率切換）
-* Windows版Firefox 38及更新版本（含Access CDM）:Adobe會自動將較高位元速率的串流降級為較低的串流（而非下載低等級的串流）。
+* Windows版Firefox 38及更新版本（含Access CDM）:Adobe會自動將較高位元速率的串流降級為較低的串流（而非下載較低等級的串流）。
 
 >[!NOTE]
 >
 >這些平台會自動縮放視訊，並以低於或等於DRM原則所指定解析度的解析度顯示內容。 使用此功能，只要有符合DRM原則限制的可用串流，內容就會一律播放回用戶端。
 
-**舊版輸出保護** -使用18版之前Flash Player的用戶端只能處理舊版OP限制。使用Flash Player 18版及更新版本的用戶端可處理舊版或RBOP限制。 如果要設定RBOP限制，則還應為舊客戶機設定舊OP限制。 對於支援RBOP的客戶，RBOP限制比舊有的OP限制更勝一籌。
+**舊版輸出保護** -使用18版之前Flash Player的客戶端只能處理舊版OP限制。具有Flash Player版本18及更新版本的客戶端可處理舊版或RBOP限制。 如果要設定RBOP限制，則還應為舊客戶機設定舊OP限制。 對於支援RBOP的客戶，RBOP限制比舊有的OP限制更勝一籌。
