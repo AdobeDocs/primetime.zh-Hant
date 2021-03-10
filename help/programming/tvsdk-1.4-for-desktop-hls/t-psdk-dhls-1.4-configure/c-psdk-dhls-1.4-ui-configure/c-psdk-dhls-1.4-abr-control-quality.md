@@ -1,13 +1,10 @@
 ---
 description: HLS和DASH串流針對相同的視訊短脈衝串提供不同的位元速率編碼（描述檔）。 TVSDK可根據可用頻寬來選取每個突發串的品質等級。
-seo-description: HLS和DASH串流針對相同的視訊短脈衝串提供不同的位元速率編碼（描述檔）。 TVSDK可根據可用頻寬來選取每個突發串的品質等級。
-seo-title: 視訊品質的可調式位元速率(ABR)
 title: 視訊品質的可調式位元速率(ABR)
-uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
