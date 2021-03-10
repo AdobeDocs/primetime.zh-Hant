@@ -1,13 +1,10 @@
 ---
 description: ID3標籤提供音訊或視訊檔案的相關資訊，例如檔案的標題或藝術家的姓名。 在HLS流的傳輸流(TS)段級別檢測ID3標籤並調度事件。 應用程式可從標籤擷取資料。
-seo-description: ID3標籤提供音訊或視訊檔案的相關資訊，例如檔案的標題或藝術家的姓名。 在HLS流的傳輸流(TS)段級別檢測ID3標籤並調度事件。 應用程式可從標籤擷取資料。
-seo-title: ID3標籤
 title: ID3標籤
-uuid: 5c016260-5ced-480e-897a-11ffe7f34441
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
