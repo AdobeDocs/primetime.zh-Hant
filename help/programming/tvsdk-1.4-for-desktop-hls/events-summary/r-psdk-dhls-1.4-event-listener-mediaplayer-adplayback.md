@@ -1,13 +1,10 @@
 ---
 description: TVSDK會根據廣告相關作業（例如廣告開始播放時）來調度廣告播放事件。
-seo-description: TVSDK會根據廣告相關作業（例如廣告開始播放時）來調度廣告播放事件。
-seo-title: 廣告播放事件
 title: 廣告播放事件
-uuid: 63138237-2315-45ff-914d-369da18fdff7
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
