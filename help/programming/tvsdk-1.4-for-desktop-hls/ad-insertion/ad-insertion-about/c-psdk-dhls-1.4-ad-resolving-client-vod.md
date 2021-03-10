@@ -1,13 +1,10 @@
 ---
 description: 對於隨選視訊(VOD)內容，TVSDK會在主要內容中剪接廣告，以增加時間軸持續時間。
-seo-description: 對於隨選視訊(VOD)內容，TVSDK會在主要內容中剪接廣告，以增加時間軸持續時間。
-seo-title: VOD廣告解析與插入
 title: VOD廣告解析與插入
-uuid: c1017483-5b4f-4d71-9589-fb2327b4572b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
