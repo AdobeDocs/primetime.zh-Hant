@@ -1,9 +1,9 @@
 ---
-seo-title: 配置檔案屬性
 title: 配置檔案屬性
-uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
+description: 配置檔案屬性
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 0%
@@ -97,7 +97,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.useRootLicense</span> </td> 
-   <td colname="2" class="- topic/entry ">指出此政策是否具有根授權（請參閱<i class="+ topic/ph hi-d/i ">使用Adobe存取保護內容</i>中的<i class="+ topic/ph hi-d/i ">增強授權鏈結</i>）。 </td> 
+   <td colname="2" class="- topic/entry ">指示此策略是否具有根許可證(請參閱<i class="+ topic/ph hi-d/i ">使用Adobe訪問保護內容</i>中的<i class="+ topic/ph hi-d/i ">增強許可證連結</i>)。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.startDate</span> </td> 
