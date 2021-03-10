@@ -1,9 +1,9 @@
 ---
-seo-title: 配置檔案屬性
 title: 配置檔案屬性
-uuid: 13e158a6-c447-4e5e-884d-03fb4835c120
+description: 配置檔案屬性
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -25,11 +25,11 @@ ht-degree: 0%
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> 設定支援的最低用戶端版本。 如果未設定，預設會支援所有版本。 設定此值，以控制較舊的用戶端如何回應他們不支援的授權需求。 指定x（適用於Adobe Access x.0），其中x是主要的發行版本號碼。 </td> 
+   <td colname="2" class="- topic/entry "> 設定支援的最低用戶端版本。 如果未設定，預設會支援所有版本。 設定此值，以控制較舊的用戶端如何回應他們不支援的授權需求。 指定x(用於Adobe訪問x.0)，其中x是主要發行號。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> 金鑰伺服器憑證（Key Server使用之Adobe核發之授權伺服器憑證）。 只有在中繼資料／原則指出必須有金鑰伺服器才能傳送至iOS裝置時，才會使用此憑證。 </td> 
+   <td colname="2" class="- topic/entry "> 密鑰伺服器證書(密鑰伺服器使用的Adobe頒發的許可證伺服器證書)。 只有在中繼資料／原則指出必須有金鑰伺服器才能傳送至iOS裝置時，才會使用此憑證。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> </td> 
