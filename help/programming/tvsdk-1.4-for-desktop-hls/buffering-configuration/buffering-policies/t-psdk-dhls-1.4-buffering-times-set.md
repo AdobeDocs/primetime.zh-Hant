@@ -1,13 +1,10 @@
 ---
 description: MediaPlayer提供設定和取得初始緩衝時間和播放緩衝時間的方法。
-seo-description: MediaPlayer提供設定和取得初始緩衝時間和播放緩衝時間的方法。
-seo-title: 設定緩衝時間
 title: 設定緩衝時間
-uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
