@@ -1,9 +1,9 @@
 ---
-seo-title: 使用DRM策略概述
 title: 使用DRM策略概述
-uuid: 32423448-013c-4183-bea8-e14b6690abdb
+description: 使用DRM策略概述
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 DRM策略用作許可證伺服器在生成許可證時使用的模板。 客戶機也可以在請求許可之前參考DRM策略，以確定客戶機是否需要在向伺服器發出許可請求之前提示用戶進行驗證。
 
-您可以使用Adobe Flash Media Server或HTTP伺服器來提供受保護的內容。 使用者可在使用Primetime DRM SDK建立的自訂播放器中下載及播放受保護的內容。
+您可以使用AdobeFlash Media Server或HTTP伺服器來傳送受保護的內容。 使用者可在使用Primetime DRM SDK建立的自訂播放器中下載及播放受保護的內容。
 
 DRM策略指定授予客戶機的一個或多個權限。 通常，DRM策略至少包括&#x200B;*`Play Right`*。 您也可以指定多個「播放權限」，每個「播放權限」具有不同的限制。 當用戶端收到具有多重播放權限的授權時，會使用第一個符合所有限制的授權。 例如，您可以在不同平台上強制執行不同的輸出保護設定。
 
