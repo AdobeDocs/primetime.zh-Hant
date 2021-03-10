@@ -1,13 +1,10 @@
 ---
 description: 對於每個新視訊內容，初始化包含視訊內容相關資訊的MediaResource例項並載入媒體資源。 MediaResource類代表MediaPlayer實例要載入的內容。
-seo-description: 對於每個新視訊內容，初始化包含視訊內容相關資訊的MediaResource例項並載入媒體資源。 MediaResource類代表MediaPlayer實例要載入的內容。
-seo-title: 建立媒體資源
 title: 建立媒體資源
-uuid: d9fe982a-bedf-445c-b5be-f7918693782a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -40,7 +37,7 @@ ht-degree: 0%
     </tr> 
     <tr> 
     <td colname="col1"> <p>中繼資料 </p> </td> 
-    <td colname="col2"> <p><span class="codeph">中繼資料</span>類別的例項，可能包含要載入內容的自訂資訊。 </p> <p>內容的範例是要置於主要內容內的替代或廣告內容。 如果使用廣告，請設定<span class="codeph"> AuditudeSettings </span>。 如需詳細資訊，請參閱<a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local">廣告插入中繼資料</a>。 </p> </td> 
+    <td colname="col2"> <p><span class="codeph">中繼資料</span>類別的例項，可能包含要載入內容的自訂資訊。 </p> <p>內容的範例是要置於主要內容內的替代或廣告內容。 如果使用廣告，請設定<span class="codeph"> AuditudeSettings </span>。 如需詳細資訊，請參閱<a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local">Ad Insertion中繼資料</a>。 </p> </td> 
     </tr> 
     </tbody> 
     </table>
