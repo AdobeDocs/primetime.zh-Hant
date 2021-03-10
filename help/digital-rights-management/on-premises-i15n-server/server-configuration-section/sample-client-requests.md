@@ -1,9 +1,9 @@
 ---
-seo-title: 用戶端要求範例
 title: 用戶端要求範例
-uuid: 330d5e3c-1711-4375-bd11-e7702f0cde31
+description: 用戶端要求範例
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 1%
