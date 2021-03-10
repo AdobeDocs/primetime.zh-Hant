@@ -1,21 +1,17 @@
 ---
 title: 資訊清單伺服器除錯工具
-seo-title: 資訊清單伺服器除錯工具
 description: 資訊清單伺服器除錯工具
-seo-description: 資訊清單伺服器除錯工具
-uuid: 0b4f06f5-4b1f-4f88-980a-5b4df28e0094
 products: SG_PRIMETIME
 topic-tags: ad-insertion
-discoiquuid: 00b49659-ce56-4b5c-87cd-c357a0936641
-donotlocalize: false
+discoiqdonotlocalize: false
 moreHelpPaths: /content/help/en/primetime/morehelp/ad-insertion;/content/help/en/primetime/morehelp/ad-insertion
 pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '2422'
+source-wordcount: '2414'
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 
 # 資訊清單伺服器除錯工具{#manifest-server-debugging-tool}
 
-除錯工具可讓發佈者透過在HTTP標題中即時檢查資訊清單伺服器傳回的除錯資訊，或在需要更詳細的資訊時，檢查事實後的工作階段記錄，來調查可能代價昂貴的廣告插入問題。 像Akamai這樣的Adobe合作夥伴可以使用此工具除錯其與Primetime廣告決策的整合。
+除錯工具可讓發佈者透過在HTTP標題中即時檢查資訊清單伺服器傳回的除錯資訊，或在需要更詳細的資訊時，檢查事實後的工作階段記錄，來調查可能代價昂貴的廣告插入問題。 Adobe合作夥伴（例如Akamai）可使用此工具除錯其與Primetime廣告決策的整合。
 
 此工具支援任何主要資訊清單伺服器與追蹤組態的除錯與插入問題：
 
@@ -33,7 +29,7 @@ ht-degree: 0%
 
 若要支援上述所有情況，此工具不需要或使用播放器發行者代碼。
 
-當您啟動資訊清單伺服器工作階段時，可在請求URL上設定參數，要求其記錄除錯資訊。 使用該參數的不同值，您也可以要求資訊清單伺服器在HTTP標題中傳回指定的除錯資訊片段，但標題只能包含有限的資訊量。 您可從Adobe取得存取完整記錄檔的認證，資訊清單伺服器會定期（例如每小時）儲存在封存伺服器上。 一旦您擁有該伺服器的認證後，就可以隨時直接存取。
+當您啟動資訊清單伺服器工作階段時，可以在請求URL上設定參數，要求其記錄除錯資訊。 使用該參數的不同值，您也可以要求資訊清單伺服器在HTTP標題中傳回指定的除錯資訊片段，但標題只能包含有限的資訊量。 您可以從Adobe獲取憑據以訪問完整的日誌檔案，該日誌檔案由manifest伺服器定期（例如，每小時）保存到歸檔伺服器上。 一旦您擁有該伺服器的認證後，就可以隨時直接存取。
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
@@ -46,7 +42,7 @@ ht-degree: 0%
 在啟動資訊清單伺服器工作階段的除錯記錄時，您可將ptdebug參數新增至請求URL，以指定資訊清單伺服器在HTTP標題中傳回的下列選項：
 
 * ptdebug=true除`TRACE_HTTP_HEADER`和`TRACE_AD_CALL`記錄中大多數`call/response data`以外的所有記錄。
-* ptdebug=AdCall Only TRACE_AD_*type*（例如TRACE_AD_CALL）記錄。
+* ptdebug=AdCall OnlyTRACE_AD_*type*(例如TRACE_AD_CALL)記錄。
 * ptdebug=僅標題TRACE_HTTP_HEADER記錄。
 
 這些選項不會影響清單伺服器在記錄檔中的位置。 您無法控制這一點，但記錄檔是文字檔，因此您可以套用各種工具來擷取並重新格式化您感興趣的資訊。
@@ -104,7 +100,7 @@ X-ADBE-AI-DBG-17 TRACE_MISC   Done
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
 | 狀態 | 字串 | 傳回的HTTP狀態代碼 |
-| request_method | 字串 | HTTP方法（GET或POST） |
+| request_method | 字串 | HTTP方法(GET或POST) |
 | request_uri | 字串 | HTTP請求URI（無主機） |
 | request_length | 整數 | 請求長度（位元組） |
 | response_length | 整數 | 回應長度（位元組） |
@@ -172,7 +168,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
     UNKNOWN RESPONSE  Via MS4xIH. . .
 ```
 
-### TRACE_AD_CALL記錄{#trace-ad-call-records}
+### TRACEAD_CALL記錄{#trace-ad-call-records}
 
 此類型的記錄會記錄資訊清單伺服器和要求的結果。 TRACE_AD_CALL以外的欄位以表中顯示的順序顯示，並以頁籤分隔。
 
@@ -204,7 +200,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 | ad_type | 字串 | 廣告類型（直接或重新導向） |
 | ad_duration | 整數 | 來自廣告伺服器回應的廣告持續時間（秒） |
 | ad_content_url | 字串 | 來自廣告伺服器回應的廣告資訊清單檔案的URL |
-| ad_content_url_actual | 字串 | 已插入廣告資訊清單檔案的URL。 空，用於TRACE_AD_REDIRECT。 |
+| ad_content_url_actual | 字串 | 已插入廣告資訊清單檔案的URL。 TRACE_AD_REDIRECT為空。 |
 | ad_system_id | 字串 | 廣告系統，來自廣告伺服器回應（若未指定，則為Auditude） |
 | ad_id | 字串 | 來自廣告伺服器回應的廣告ID |
 | creative_id | 字串 | 來自廣告節點、來自廣告伺服器回應的創作者ID |
@@ -216,7 +212,7 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 >
 >ad_content_url_actual、ad_call_id和misc欄位為選用。
 
-對於TRACE_AD_RESOLVE和TRACE_AD_INSERT,ad_content_url_actual欄位中的URL用於轉碼廣告（如果有）。 否則，TRACE_AD_RESOLVE的欄位為空，TRACE_AD_INSERT的欄位與ad_content_url相同。
+對於TRACE_AD_RESOLVE和TRACE_AD_INSERT，如果有轉碼廣告，則ad_content_url_actual欄位中的URL會用於轉碼廣告。 否則，TRACE_AD_RESOLVE的欄位為空，或者TRACE_AD_INSERT的ad_content_url相同。
 
 例如：
 
@@ -237,7 +233,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_TRACKING_URL記錄{#trace-tracking-url-records}
 
-此類型的記錄會記錄資訊清單伺服器和要求的結果。 TRACE_TRACKING_URL以外的欄位會依表格中的順序顯示，並以標籤分隔。
+此類型的記錄會記錄資訊清單伺服器和要求的結果。 TRACE_TRACKING_URL以外的欄位，依表格中顯示的順序顯示，並以標籤分隔。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -254,17 +250,17 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
     sid:3086f5cd . . .;pts:0    200
 ```
 
-### TRACE_TROCKING_NO_MEDIA_TO_TRANSCODE記錄{#trace-transcoding-no-media-to-transcode-records}
+### TRACE轉碼_RODCING_NO_MEDIA_TO_TRANSCODE記錄{#trace-transcoding-no-media-to-transcode-records}
 
-此類型的記錄記錄遺失廣告創意。 表中將顯示TRACE_TRONDING_NO_MEDIA_TO_TRANSCODE以外的唯一欄位。
+此類型的記錄記錄遺失廣告創意。 表中只會出現TRACE_DROCKINING_NO_MEDIA_TO_TRANSCODE以外的欄位。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
 | ad_id | 字串 | 完全限定的廣告ID `(FQ_AD_ID: Q_AD_ID\[;Q_AD_ID\[;Q_AD_ID...\]\]` Q_AD_ID:`PROTOCOL:AD_SYSTEM:AD_ID\[:CREATIVE_ID\[:MEDIA_ID\]\]`協定：AUDITUDE, VAST) |
 
-### TRACE_TROCKING_REQUESTED記錄{#trace-transcoding-requested-records}
+### TRACE轉碼請求記錄{#trace-transcoding-requested-records}
 
-此類型的記錄記錄資訊清單伺服器傳送至CRS的轉碼請求結果。 TRACE_DROCKING_REQUESTED以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
+此類型的記錄記錄資訊清單伺服器傳送至CRS的轉碼請求結果。 除TRACE_DROCKINING_REQUESTED之外的欄位以表中顯示的順序顯示，並以頁籤分隔。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -276,7 +272,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_TRACKING_REQUEST記錄{#trace-tracking-request-records}
 
-此類型的記錄會指出執行伺服器端追蹤的要求。 TRACE_TRACKING_REQUEST以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
+此類型的記錄會指出執行伺服器端追蹤的要求。 TRACE_TRACKING_REQUEST以外的欄位會依表格中的順序顯示，並以標籤分隔。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -307,7 +303,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_WEBVTT_RESPONSE記錄{#trace-webvtt-response-records}
 
-將``type ````of ````manifest ``伺服器``sends ``記錄到`` `answer` ````clients ````requests ```for```WEBVTT ``標題。 ``responses ``TRACE_WEBVTT_RESPONSE &quot;以外的欄位按表中顯示的順序顯示，分隔`by`頁籤。
+將``type ````of ````manifest ``伺服器``sends ``記錄到`` `answer` ````clients ````requests ```for```WEBVTT ``標題。 ``responses ``TRACE_WEBVTT_RESPONSE &#39;&#39;以外的欄位按表中顯示的順序顯示，分隔為`by`頁籤。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -316,7 +312,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_WEBVTT_SOURCE記錄{#trace-webvtt-source-records}
 
-此類型的記錄會記錄資訊，以回應資訊清單伺服器對WEBVTT標題的要求。 TRACE_WEBVTT_SOURCE以外的欄位按表中顯示的順序顯示，並以頁籤分隔。
+此類型的記錄會記錄資訊，以回應資訊清單伺服器對WEBVTT標題的要求。 TRACE_WEBVTT_SOURCE以外的欄位以表中顯示的順序顯示，並以頁籤分隔。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -346,7 +342,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 * 無法擷取&#x200B;*廣告資訊清單URL*&#x200B;的廣告播放清單。
 * 無法產生目標資訊清單。 (HLSManifestResolver)
 * 無法解析第一個廣告呼叫回應：*錯誤消息*。
-* 無法處理*GET|POST *路徑請求：*請求URL*。 （即時/VOD）
+* 無法處理*GET|POST*路徑請求：*請求URL*。 （即時/VOD）
 * 無法處理即時資訊清單請求：*請求URL*。 （即時）
 * 無法傳回變型資訊清單：*錯誤消息*。
 * 無法驗證組ID:*群組ID*。
@@ -380,11 +376,11 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 * 重新導向廣告回應空白。 (VASTStAX)
 * 請求：*URL*。
 * 傳回GET請求的錯誤回應，因為找不到播放作業。 (VOD)
-* 由於內部伺服器錯誤，傳回GET要求的錯誤回應。
+* 因內部伺服器錯誤而傳回GET要求的錯誤回應。
 * 針對指定無效資產的GET請求傳回錯誤回應：*廣告請求ID*。 (VOD)
-* 針對指定無效或空的群組ID的GET請求傳回錯誤回應：*群組ID*。 (VOD)
+* 傳回指定無效或空白群組ID之GET要求的錯誤回應：*群組ID*。 (VOD)
 * 傳回指定無效追蹤位置值之GET要求的錯誤回應。 (VOD)
-* 以無效語法傳回GET要求的錯誤回應- *要求URL*。 （即時/VOD）
+* 以無效語法傳回GET請求的錯誤回應- *請求URL*。 （即時/VOD）
 * 使用不支援的HTTP方法傳回請求的錯誤回應：*GET|POST*。 （即時/VOD）
 * 從快取傳回資訊清單。 (VOD)
 * 伺服器過載。 不需要廣告插圖請求即可繼續。 （變體）
@@ -400,7 +396,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_TRACKING_URL記錄{#trace-tracking-url-records-1}
 
-資訊清單伺服器在伺服器端追蹤工作流程期間呼叫追蹤URL後，會產生此類記錄。 TRACE_TRACKING_URL以外的欄位會依表格中的順序顯示，並以標籤分隔。
+資訊清單伺服器在伺服器端追蹤工作流程期間呼叫追蹤URL後，會產生此類記錄。 TRACE_TRACKING_URL以外的欄位，依表格中顯示的順序顯示，並以標籤分隔。
 
 | 欄位 | 類型 | 說明 |
 |--- |--- |--- |
@@ -409,7 +405,7 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 | url | 字串 | URL pinged |
 | state | 字串 | HTTP狀態代碼 |
 
-### TRACE_PLAYBACK_PROGRESS記錄{#trace-playback-progress-records}
+### TRACE播放進度記錄{#trace-playback-progress-records}
 
 資訊清單伺服器在接收有關伺服器端追蹤工作流程期間播放進度的訊號時，產生此類記錄。 TRACE_PLAYBACK_PROGRESS以外的欄位按表中顯示的順序顯示，並以制表符分隔。
 
