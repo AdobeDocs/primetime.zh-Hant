@@ -1,13 +1,10 @@
 ---
 description: 機會檢測器是TVSDK元件，可偵測串流中的自訂標籤並識別位置機會。 這些機會會傳送至內容解析器，內容解析器會根據放置機會屬性和中繼資料自訂內容／廣告插入工作流程。
-seo-description: 機會檢測器是TVSDK元件，可偵測串流中的自訂標籤並識別位置機會。 這些機會會傳送至內容解析器，內容解析器會根據放置機會屬性和中繼資料自訂內容／廣告插入工作流程。
-seo-title: 機會產生器和內容解決器
 title: 機會產生器和內容解決器
-uuid: 593de6c0-042d-4a05-82d7-056a9a4500f3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ TVSDK包含預設的機會偵測器：
 
 TVSDK也包含預設內容解析器，可根據播放器項目中的中繼資料索引鍵提供要插入的內容：
 
-* `AuditudeResolver` 例 `AUDITUDE_METADATA_KEY`如，它能夠與Adobe Primetime廣告決策（先前稱為Auditude）伺服器通訊，並傳回要放置的廣告插播。
+* `AuditudeResolver` For  `AUDITUDE_METADATA_KEY`, For, For With Connessing toAdobe Primetime廣告決策（之前稱為Auditude）伺服器， and reguing ad breaks to be place.
 
 * `MetadataResolver` for  `JSON_METADATA_KEY`
 
