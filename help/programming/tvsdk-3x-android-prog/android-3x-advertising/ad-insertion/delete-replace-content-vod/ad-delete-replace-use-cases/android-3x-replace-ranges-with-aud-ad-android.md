@@ -1,13 +1,10 @@
 ---
 description: 您可以將廣告插入VOD內容。
-seo-description: 您可以將廣告插入VOD內容。
-seo-title: 以廣告取代時間範圍
 title: 以廣告取代時間範圍
-uuid: c1d93389-cba4-4db0-877d-dbdc5183683c
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
