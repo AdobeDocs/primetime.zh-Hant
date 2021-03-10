@@ -1,13 +1,10 @@
 ---
 description: 測試過程中常見的問題通常涉及您的ExpressPlay驗證器、傳輸協定和所需的服務請求參數。
-seo-description: 測試過程中常見的問題通常涉及您的ExpressPlay驗證器、傳輸協定和所需的服務請求參數。
-seo-title: 疑難排解快速入門
 title: 疑難排解快速入門
-uuid: 42256aa0-2efc-4602-aefc-3bab2dc58ec0
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -38,7 +35,7 @@ ht-degree: 0%
 * 由於裝置製造商的限制，AndroidTV PlayReady支援不時出現。 為了提供範例，
 
    * razer Forge裝置在PlayReady內容上有問題
-   * Amazon FireTV無法使用已加密音軌的DASH內容
+   * AmazonFireTV無法使用已加密音軌的DASH內容
 
 * 自TVSDK 2.4起，只有AndroidTV裝置通常同時支援PlayReady和Widevine DRM。 所有其他Android裝置通常僅支援Widevine。
 * 自TVSDK 2.4起，Android TVSDK目前要求PSSH方塊位於。mpd資訊清單中。 這與DASH標準相左，該標準指定PSSH方塊可以位於任何位置，例如內容本身，而不只是。mpd中。
