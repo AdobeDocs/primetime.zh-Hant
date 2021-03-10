@@ -1,9 +1,9 @@
 ---
-seo-title: 策略更新清單
 title: 策略更新清單
-uuid: 83cf0d14-bc55-4714-aa87-0fc6f1235a93
+description: 策略更新清單
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
