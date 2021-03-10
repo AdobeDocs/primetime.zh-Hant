@@ -1,13 +1,10 @@
 ---
 description: 您可以使用Primetime Player API來自訂播放器的行為。
-seo-description: 您可以使用Primetime Player API來自訂播放器的行為。
-seo-title: Mediacore類別
 title: Mediacore類別
-uuid: 2d4e41e6-e689-4f79-9021-1ab8ce0fe40d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 您可以使用Primetime Player API來自訂播放器的行為。
 
-若要查看TVSDK的完整API檔案，請至[Adobe Primetime API參考](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)。
+若要查看TVSDK的完整API檔案，請至[Adobe PrimetimeAPI參考](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)。
 
 這些類別會說明您的媒體播放器及其資源。
 套件：[com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/package-summary.html)
