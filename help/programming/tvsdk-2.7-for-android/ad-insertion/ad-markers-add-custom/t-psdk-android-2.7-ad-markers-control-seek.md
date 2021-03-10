@@ -1,13 +1,10 @@
 ---
 description: 您可以覆寫TVSDK在使用自訂廣告標籤時如何處理搜尋廣告的預設行為。
-seo-description: 您可以覆寫TVSDK在使用自訂廣告標籤時如何處理搜尋廣告的預設行為。
-seo-title: 控制搜尋自訂廣告標籤的播放行為
 title: 控制搜尋自訂廣告標籤的播放行為
-uuid: 248e914e-81b7-4aa5-a4d5-06ca2666e006
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
