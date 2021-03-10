@@ -1,14 +1,11 @@
 ---
 description: 通過實施OpportunityGenerator類，您可以實施自己的機會生成器。
-seo-description: 通過實施OpportunityGenerator類，您可以實施自己的機會生成器。
-seo-title: 實作自訂商機產生器
 title: 實作自訂商機產生器
-uuid: 6a6a6aa4-51f8-4e3c-9255-d87b488b820d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 3%
+source-wordcount: '100'
+ht-degree: 4%
 
 ---
 
