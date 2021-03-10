@@ -1,13 +1,10 @@
 ---
 description: 本指南提供如何使用TVSDK for Android（以Java實作）開發視訊播放器應用程式的相關資訊。
-seo-description: 本指南提供如何使用TVSDK for Android（以Java實作）開發視訊播放器應用程式的相關資訊。
-seo-title: 概觀
 title: 概觀
-uuid: 9c320389-e327-4e5f-888c-e2e5728365ca
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
