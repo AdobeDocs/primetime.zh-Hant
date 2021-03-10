@@ -1,17 +1,13 @@
 ---
 title: 瀏覽器TVSDK 2.4發行說明
-seo-title: 瀏覽器TVSDK 2.4發行說明
 description: 瀏覽器TVSDK 2.4發行說明說明瀏覽器TVSDK 2.4中的新功能、支援和不支援的功能及已知問題。
-seo-description: 瀏覽器TVSDK 2.4發行說明說明瀏覽器TVSDK 2.4中的新功能、支援和不支援的功能及已知問題。
-uuid: 3a1eb1a5-0e72-4658-beeb-bca8816570e7
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: d71886cb-f34b-47b2-9df7-168686478106
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '6834'
+source-wordcount: '6812'
 ht-degree: 0%
 
 ---
@@ -63,9 +59,9 @@ ht-degree: 0%
 
 以下增強功能和新增功能是瀏覽器TVSDK 2.4.11版本的一部分：
 
-· HLS Live細分故障切換支援MSE和Flash備用模式。
+·支援MSE和Flash備援模式的HLS Live段故障切換。
 
-·`AuditudeSettings.creativeRepackagingDomain` API現在也支援MSE。 之前只支援Flash備援模式。
+·`AuditudeSettings.creativeRepackagingDomain` API現在也支援MSE。 以前只支援Flash備援模式。
 
 ·本版本包含重要客戶問題的修正。 請參閱&#x200B;*問題已修正*&#x200B;清單。
 
@@ -101,15 +97,15 @@ AdobePSDK.ForceHttpsAdConfiguration類別。
 
 此更新包含重要客戶問題的修正。 請參閱&#x200B;*修正問題*&#x200B;以取得清單。
 
-**2.4.9版**
+**2.4.8版**
 
 以下增強功能和新增功能是瀏覽器TVSDK 2.4.8版的一部份：
 
 · SDK現在符合Chrome EME規範，而且從Chrome v58開始提供的最佳實務變更。 如需詳細資訊，請參閱[https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
 
-· UI Framework現在支援Flash、Ad和Targeting Info工作流程上的HLS Access DRM。
+· UI Framework現在支援HLS Access DRM的Flash、僅限廣告和定位資訊工作流程。
 
-· setDRMAuthenticateData API已新增至UI架構。 若要播放使用Adobe Access DRM保護的串流，請叫用此API。 或者，也可以在播放器中指定drmAuthenticateData屬性。 如需詳細資訊，請參閱[AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)。
+· setDRMAuthenticateData API已新增至UI架構。 若要播放使用Adobe存取DRM保護的串流，請叫用此API。 或者，也可以在播放器中指定drmAuthenticateData屬性。 如需詳細資訊，請參閱[AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)。
 
 **2.4.7版**
 
@@ -129,7 +125,7 @@ AdobePSDK.ForceHttpsAdConfiguration類別。
 
 ·將MediaPlayerItemConfig API新增至UI架構
 
-各種功能，包括advertisingMetadata、advertisingFactory、adSigningMode、networkConfiguration、customRangeMetadata、useHardwareDecoder、subscriberTags、thumbnailScrubber、billingMetricsConfig，都可透過MediaPlayerItemConfig進行設定。 如需詳細資訊，請參閱[瀏覽器TVSDK API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [檔案](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)中的AdobePSDK.MediaPlayerItemConfig檔案。
+各種功能，包括advertisingMetadata、advertisingFactory、adSigningMode、networkConfiguration、customRangeMetadata、useHardwareDecoder、subscriber、adTags、thumbnailScrubber、billingMetricsConfig，皆可透過MediaPlayerItemConfig進行設定。 如需詳細資訊，請參閱[瀏覽器TVSDK API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [檔案](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)中的AdobePSDK.MediaPlayerItemConfig檔案。
 
 在UI架構中，已修改透過播放器組態傳遞網路組態的方式。
 
@@ -201,7 +197,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 * **變形內容支援**
 
-   現在使用MSE和Flash播放時，支援變形內容播放。
+   現在使用MSE和Flash播放時支援變形內容播放。
 
 * **選擇性應用`withCredentials`**
 
@@ -241,7 +237,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 * **Sample-AES支援**
 
-   此版本新增支援MSE和Flash備援的Sample-AES加密內容播放。 已移除在Google Chrome上透過安全來源主控AES內容的要求。
+   此版本新增了對MSE和Flash備援的Sample-AES加密內容播放的支援。 已移除在Google Chrome上透過安全來源主控AES內容的要求。
 
 * **支援AAC容器**
 
@@ -419,7 +415,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 * *MP3音訊功能— 核心播放*
 * *MP4視訊功能— 核心播放*
-* *MP4視訊功能— 核心廣告插入*
+* *MP4視訊功能— 核心Ad Insertion*
 
 >[!NOTE]
 >
@@ -445,12 +441,12 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 |--- |--- |--- |--- |--- |--- |
 | 播放 | MP4 VOD | 一般播放（播放、暫停、搜尋） | 不支援 | Y | Y |
 
-**表3:核心廣告插入**
+**表3:核心Ad Insertion**
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| 廣告插入 | MP4 VOD | 預卷(MP4) | 不支援 | Y | Y |
-| 廣告插入 | MP4 VOD | 後置(MP4) | 不支援 | Y | Y |
+| Ad Insertion | MP4 VOD | 預卷(MP4) | 不支援 | Y | Y |
+| Ad Insertion | MP4 VOD | 後置(MP4) | 不支援 | Y | Y |
 
 有關HLS或DASH功能支援的詳細資訊，請參閱下文。
 
@@ -711,7 +707,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>內容保護</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>DRM</p> </td> 
-   <td><p>Adobe Access</p> </td> 
+   <td><p>Adobe存取</p> </td> 
    <td><p>不支援</p> </td> 
    <td><p>FairPlay</p> </td> 
   </tr> 
@@ -731,7 +727,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p><strong>HTML5:Safari, iOS Safari</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>前輥(MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -739,7 +735,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>中輥(HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -747,7 +743,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>平台限制</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>輥後(MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -755,7 +751,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>FER VOD</p> </td> 
    <td><p>廣告解析度與行為</p> </td> 
    <td><p>Y</p> </td> 
@@ -763,7 +759,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>平台限制</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>預設廣告原則</p> </td> 
    <td><p>Y</p> </td> 
@@ -771,7 +767,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>平台限制</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VAST 2.0/3.0</p> </td> 
    <td><p>Y</p> </td> 
@@ -779,7 +775,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VMAP 1.0</p> </td> 
    <td><p>Y</p> </td> 
@@ -787,7 +783,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Creative Repackaging（MP4到HLS）</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -810,7 +806,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p><strong>HTML5:Safari, iOS Safari</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>僅限廣告</p> </td> 
    <td><p>不支援</p> </td> 
@@ -818,7 +814,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>定位參數</p> </td> 
    <td><p>Y</p> </td> 
@@ -826,7 +822,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>自訂參數</p> </td> 
    <td><p>Y</p> </td> 
@@ -834,7 +830,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>自訂廣告原則</p> </td> 
    <td><p>Y</p> </td> 
@@ -842,7 +838,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>平台限制</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>延遲廣告載入</p> </td> 
    <td><p>Y</p> </td> 
@@ -850,7 +846,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p>平台限制</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>配套廣告、橫幅廣告、可點選廣告</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -858,7 +854,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p><strong> </strong></p> <p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>VPAID 2.0</p> </td> 
    <td><p>SWF</p> </td> 
@@ -883,7 +879,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td><p>整合</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>Adobe Analytics VHL整合</p> </td> 
+   <td><p>Adobe AnalyticsVHL整合</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -1109,49 +1105,49 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p><strong>HTML5 FF、IE、Chrome、Android Chrome</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>前滾(MP4/DASH)</p> </td> 
    <td><p>僅限VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>中橫(DASH)</p> </td> 
    <td><p>僅限VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>後置(MP4/DASH)</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>FER VOD</p> </td> 
    <td><p>廣告解析度與行為</p> </td> 
    <td><p>不支援</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>預設廣告原則</p> </td> 
    <td><p>僅限VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VAST 2.0/3.0</p> </td> 
    <td><p>僅限VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>VMAP 1.0</p> </td> 
    <td><p>僅限VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>Creative Repackaging（MP4到DASH）</p> </td> 
    <td><p>不支援</p> </td> 
@@ -1170,43 +1166,43 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td><p><strong>HTML5</strong> FF、IE、Chrome、Android Chrome</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>僅限廣告</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>定位參數</p> </td> 
    <td><p>僅限VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>自訂參數</p> </td> 
    <td><p>僅限VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>自訂廣告原則</p> </td> 
    <td><p>不支援</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Live</p> </td> 
    <td><p>延遲廣告載入</p> </td> 
    <td><p>不支援</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>配套廣告、橫幅廣告、可點選廣告</p> </td> 
    <td><p>不支援</p> </td> 
   </tr> 
   <tr> 
-   <td><p>廣告插入</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>VPAID 2.0</p> </td> 
    <td><p>不支援</p> </td> 
@@ -1227,7 +1223,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td><p>整合</p> </td> 
    <td><p>VOD + Live</p> </td> 
-   <td><p>Adobe Analytics VHL整合</p> </td> 
+   <td><p>Adobe AnalyticsVHL整合</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
   </tr> 
  </tbody> 
@@ -1311,9 +1307,9 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **20046**:節目日期時間在作為計時元資料對象接收時，作為密鑰而不是值接收。
 
-· **20047**:useDefaultResizeHandler會在Flash備援時引發錯誤。
+· **20047**:useDefaultResizeHandler會擲回錯誤，顯示Flash備援。
 
-· **20179**:Flash備援無法與Flash Player v25.0.0.171搭配使用。
+· **20179**:Flash備援無法與v25.0.0.171Flash Player一起使用。
 
 · **20293**:Firefox會停止某些HLS串流的緩衝資料，導致其停止。
 
@@ -1327,7 +1323,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **20613**:隱藏式字幕方塊彼此重疊，使其不易辨識。
 
-**核心廣告插入(CSAI)功能：**
+**核心Ad Insertion(CSAI)功能：**
 
 · **20043**:遺失包含多個廣告和第三方重新導向的廣告印象和廣告追蹤呼叫。
 
@@ -1377,7 +1373,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 · **19597**:&quot;未捕獲的TypeError:無法讀取未定義的屬性&#39;log&#39;」。
 
-· **19605**:adRequestDomain在Flash備援模式下無法使用。
+· **19605**:adRequestDomain在「Flash備援」模式中無法使用。
 
 · **19608**:HLS Live串流未插入VMAP廣告。 SDK現在會考慮提示標籤，而不依賴VMAP回應中的時間偏移值。
 
@@ -1391,7 +1387,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 2.4.7版中已修正下列問題：
 
-· **8397**:如果區段不是以關鍵影格開頭，則透過Adobe Media Server產生的HLS Live串流可能無法播放。
+· **8397**:如果區段未以關鍵影格開頭，則透過Adobe Medium伺服器產生的HLS即時串流可能無法播放。
 
 · **13606**:修正Chrome瀏覽器上HLS串流的多項搜尋相關問題。
 
@@ -1403,7 +1399,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 2.4.6版中已修正下列問題：
 
-· **18093**:當您在Flash備援模式中使用Flash Player第24版時，會傳回訂閱標籤旁之標籤的TimedMetadata。
+· **18093**:當您在「Flash Player備援」模式中使用Flash版本24時，會傳回訂閱標籤旁之標籤的TimedMetadata。
 
 **2.4.4版中修正的問題**
 
@@ -1444,7 +1440,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td>VOD + Live</td> 
    <td>一般播放（播放、暫停、搜尋）</td> 
-   <td><p>·不支援HLS以外的媒體格式。</p> <p>8799:Flash備援不會處理混合內容，因此必須確保內容、廣告和其他URL不會導致混合內容（同時保全和不安全的內容）。</p> <p>· 19271年：Flash備援模式不支援透過UI架構進行多檢視播放。</p> <p>· Flash後援在Windows 7的Microsoft Internet Explorer 8和9上無法運作，因為SDK不支援這些版本。</p> <p>· 20262:Flash備援會新增自訂參數至定位資訊清單。 此外，自訂參數的優先順序在Flash和MSE的情況下也不同。</p> <p>· 20653：瀏覽器TVSDK Flash備援在Win10中無法搭配Creators更新運作。</p> <p>· Flash備援可與Flash Player 23版及更新版本搭配使用。</p> <p>· 20087 - Chrome 59 Beta版，含</p> <p>Flash 25.0.0.171</p> <p>測試版（預設）,HLS播放無法在Flash備援模式上運作。 在加那利也沒問題。</p> </td> 
+   <td><p>·不支援HLS以外的媒體格式。</p> <p>8799:Flash後援不會處理混合內容，因此必須確保內容、廣告和其他URL不會導致混合內容（將安全與不安全的內容一起使用）。</p> <p>· 19271年：Flash備援模式不支援透過UI架構的多檢視播放。</p> <p>·Flash備援在Windows 7的Microsoft Internet Explorer 8和9上無法運作，因為SDK不支援這些版本。</p> <p>· 20262:Flash備援會新增自訂參數至定位資訊清單。 同時，在Flash和均方誤差情況下，自定義參數的優先順序順序也不同。</p> <p>· 20653：瀏覽器TVSDKFlash備援在Win10中無法使用Creators更新。</p> <p>·Flash備援可與Flash Player第23版及更新版本搭配使用。</p> <p>· 20087 - Chrome 59 Beta版，含</p> <p>Flash25.0.0.171</p> <p>Beta（預設）,HLS回放在Flash備援模式下不工作。 在加那利也沒問題。</p> </td> 
    <td><p>· 12563:具有音訊codec mp4a.40.02的虛線串流無法在Firefox上播放，因為MPD中不支援音訊codec字串。 支援音訊轉碼器mp4a.40.2。</p> <p>一五〇二九年：在UI-Framework中在multiView中切換視訊時，播放／暫停按鈕不會相應更新。</p> <p>· 16034：在Windows 8.1 IE中，呼叫reset()會導致未知的MIME類型錯誤。 請重新載入媒體以繼續播放。</p> <p>· 18235:有廣告的DASH vod串流會出現某些搜尋問題。</p> <p>· 18727:MSE不支援錯誤API</p> <p>一八七五零年：在某些情況下，SDK和UI架構的狀態變更事件可能會失序，而在UI架構中，資源載入後新增的事件監聽程式可能會遺失IDLE和初始化狀態變更事件。</p> <p>· 18889:如果MediaPlayer處於ERROR狀態，則不會傳回檢視物件。</p> <p>· 19039年：如果是AdobePSDK。 MediaPlayer。 seekToLocal()的值大於EOF，在出現MSE時，從頭開始播放。</p> <p>· 19049年：播放期間視訊遭封鎖時，Chrome、IE和Firefox上的Flash Player未報告錯誤狀態。</p> <p>· 17205:視訊播放會在播放未混音串流時停止數小時，而音訊仍繼續播放（Chromium期刊# 664033）。</p> <p>· 12308:指定composition_time_offset的DASH串流可能會在Chrome瀏覽器上套用timeStampOffset，導致負解碼時間，因此MEDIA_ERR_SRC_NOT_SUPPORTED錯誤（Chromium期刊#398141）。</p> <p>· 14126:由於MSE來源緩衝區中的內部間隙，Firefox（問題# 1316024）上的播放可能會停止。 嘗試搜尋以繼續播放。</p> <p>· 1915年：MS Edge和IE 11（Win 8.1和10）未在CORS重新導向時將原始碼設為null，但因為標題不是null而導致播放錯誤而失敗。</p> <p>· 19861：已播放媒體在來源緩衝區上附加行為的問題。 Chrome拒絕附加的片段，包括moov，造成後續的解碼錯誤。 （Chromium期號735335）</p> <p>19921年：某些HLS內容即使緩衝成功，仍會停止播放（Chromium問題#713540）</p> <p>· 20444：在IE和Edge上尋找緩衝範圍結束可能會導致播放停止。</p> <p>· 20511年：有時有廣告或沒有廣告時，HLS流會出現尋道拒絕。</p> <p>· 20743年：在Windows 10 Chrome上，HLS Live串流在MP4前滾播放前會播放數秒。</p> <p>· 21043:由於缺乏中繼資料，影片維度在初始載入時可能不正確。</p> <p>· 2115:如果播放清單中的視訊有前置廣告，則需要Android使用者手勢才能開始播放。</p> <p>· HLS Live不支援時間戳記變換。</p> <p>·不支援AAC-SSR音訊。</p> <p>不支援音訊轉碼器AC3和增強型AC3。</p> <p>·對於具有時間戳不連續但沒有不連續標籤的流</p> <p>·播放可能由於跳轉而出現錯誤和搜尋錯誤。</p> <p>·內容持續時間和播放持續時間可能不匹配。</p> <p>·表示法與轉譯之間的不連續性，應與其他方式相符，可能導致同步和停頓問題。</p> <p>·標題和WebVTT可能不會顯示在接近串流結尾的位置。</p> <p>·不支援跨時間戳記跳轉的音訊轉碼器變更。</p> <p>·不支援廣告插入。</p> <p>·快速轉發特技模式可能導致Win 8.1 IE 11上的播放回圈（MS問題#12446268）。</p> <p>破折號：</p> <p>·對於即時串流——支援動態類型的即時描述檔。</p> <p>·對於VoD串流——支援靜態類型的即時描述檔。</p> <p>針對VoD串流——不會針對廣告工作流程認證隨選設定檔。</p> </td> 
    <td><p>·不支援DASH Live和DASH Video on Demand串流。</p> <p>·全螢幕模式的iOS不支援PIP（畫中畫）視訊播放。</p> <p>在Safari（視訊標籤）擴充功能中，沒有正確內容類型標題的資訊清單較少無法運作。</p> </td> 
    <td><p>·傳送者應用程式中的應用程式ID必須與將「接收者」的URL註冊為「自訂接收者」應用程式時產生的ID相同。</p> <p>·參考播放器已通過DASH工作流程認證。 UI架構未通過認證。</p> <p>有關支援的媒體轉碼器清單，請參閱<a href="https://developers.google.com/cast/docs/media"><em>此處</em></a>。</p> </td> 
@@ -1460,7 +1456,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td>VOD + Live</td> 
    <td>可調式位元速率</td> 
-   <td><p>· 20079:在緩衝範圍內的尋道時，緩衝區重寫。</p> <p>2008年：Flash ABR的行為與MSE一致。</p> </td> 
+   <td><p>· 20079:在緩衝範圍內的尋道時，緩衝區重寫。</p> <p>2008年：FlashABR行為與MSE一致。</p> </td> 
    <td><p>·由於緩衝區相關限制，ABR串流中的僅音訊備援變數會被忽略。</p> <p>· 12289:ABR控制參數不適用於未經過混合的HLS/DASH串流的音訊。</p> </td> 
    <td> </td> 
    <td> </td> 
@@ -1484,7 +1480,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td>VOD + Live</td> 
    <td>資訊清單容錯</td> 
-   <td>二一零五六年：使用Flash備援，如果主串流在播放期間傳回404錯誤，即時串流不會發生容錯移轉。</td> 
+   <td>二一零五六年：使用Flash備援，如果主串流在播放期間傳回404錯誤，則即時串流不會發生容錯移轉。</td> 
    <td>資訊清單容錯功能僅適用於內容，不適用於廣告。</td> 
    <td>遺失的播放清單容錯功能僅適用於HTTP錯誤碼404的Safari。</td> 
    <td> </td> 
@@ -1500,8 +1496,8 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td>VOD + Live</td> 
    <td>QoS和播放器通知</td> 
-   <td>二一一二九年：若是Flash備援，則無法使用影格速率。</td> 
-   <td><p>· 11170:</p> <p>Timed_Event不適用於MSE的瀏覽器TVSDK，而Flash備援的瀏覽器TVSDK則不同。</p> <p>二一一二九年：不會針對即時串流計算影格速率。</p> </td> 
+   <td>二一一二九年：在「Flash後援」的情況下，影格速率不可用。</td> 
+   <td><p>· 11170:</p> <p>Timed_Event不適用於具有MSE的瀏覽器TVSDK，而瀏覽器TVSDK則不適用於具有Flash備援。</p> <p>二一一二九年：不會針對即時串流計算影格速率。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1516,7 +1512,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
   <tr> 
    <td>VOD + Live</td> 
    <td>自訂標籤</td> 
-   <td>一四七六三年：不支援以#開頭的自訂標籤。 現在會在Flash備援期間建立並報告此類標籤的TimedMetadata物件。</td> 
+   <td>一四七六三年：不支援以#開頭的自訂標籤。 現在會在「Flash備援」期間建立並報告此類標籤的TimedMetadata物件。</td> 
    <td>無法認證帶內自訂標籤的串流。</td> 
    <td> </td> 
    <td> </td> 
@@ -1572,7 +1568,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
    <td>VOD + Live</td> 
    <td>ID3剖析</td> 
    <td>20346年：SDK也應傳回ID3影格的文字編碼位元組。</td> 
-   <td><p>SDK會忽略音訊資料傳輸串流(ADTS)中可用的ID3標籤。</p> <p>· 12378:ID3計時中繼資料會在Flash和瀏覽器上以不同的時間解析，並具有MSE支援，因此參考播放器時間軸上的顯示行為也不同。</p> <p>· 19247年：UI架構不支援ID3剖析。</p> </td> 
+   <td><p>SDK會忽略音訊資料傳輸串流(ADTS)中可用的ID3標籤。</p> <p>· 12378:ID3計時中繼資料會在Flash和瀏覽器上以不同的時間進行剖析，並具有MSE支援，因此參考播放器時間軸上的顯示行為也不同。</p> <p>· 19247年：UI架構不支援ID3剖析。</p> </td> 
    <td><p>· 20323:Safari不會剖析用於傳送aac區段第一個範例時間戳記的PRIV ID3標籤（Safari問題#32422733）</p> <p>· 20350:在某些裝置（包括MAC OS X 10.1、iPad10）上，Safari在特技模式下不提供提示變更事件，因此未收到ID3影格。 （Safari問題#32450526）</p> </td> 
    <td> </td> 
   </tr> 
@@ -1618,7 +1614,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
  </tbody> 
 </table>
 
-**表19:核心廣告插入功能(CSAI)**
+**表19:核心Ad Insertion功能(CSAI)**
 
 <table> 
  <tbody> 
@@ -1676,7 +1672,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
  </tbody> 
 </table>
 
-**表20:進階廣告插入功能(CSAI)**
+**表20:進階Ad Insertion功能(CSAI)**
 
 <table> 
  <tbody> 
@@ -1728,7 +1724,7 @@ Browserify允許您在瀏覽器中使用node.js樣式模組。 您可以定義�
 
 | **內容類型** | **功能** | **Flash** | **Firefox、IE、Chrome、Android Chrome中的HTML5** | **iOS Safari中的HTML5** | **Chromecast（僅限DASH播放）** |
 |---|---|---|---|---|---|
-| VOD + Live | Adobe Analytics VHL整合 |  | 19004年：視訊分析追蹤無法透過UI設定器工具使用。 |  |  |
+| VOD + Live | Adobe AnalyticsVHL整合 |  | 19004年：視訊分析追蹤無法透過UI設定器工具使用。 |  |  |
 
 ## 實用資源{#helpful-resources}
 
