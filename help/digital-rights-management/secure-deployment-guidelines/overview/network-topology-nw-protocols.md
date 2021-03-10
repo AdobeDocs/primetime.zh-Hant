@@ -1,21 +1,18 @@
 ---
-description: 當您設定安全的網路架構時，Adobe Primetime DRM與企業網路中其他系統之間的互動需要網路通訊協定。
-seo-description: 當您設定安全的網路架構時，Adobe Primetime DRM與企業網路中其他系統之間的互動需要網路通訊協定。
-seo-title: Adobe Primetime DRM網路通訊協定
-title: Adobe Primetime DRM網路通訊協定
-uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
+description: 配置安全網路體系結構時，在Adobe PrimetimeDRM與企業網路中的其他系統之間交互時，需要網路協定。
+title: Adobe PrimetimeDRM網路協定
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM網路通訊協定{#adobe-primetime-drm-network-protocols}
+# Adobe PrimetimeDRM網路協定{#adobe-primetime-drm-network-protocols}
 
-當您設定安全的網路架構時，Adobe Primetime DRM與企業網路中其他系統之間的互動需要網路通訊協定。
+配置安全網路體系結構時，在Adobe PrimetimeDRM與企業網路中的其他系統之間交互時，需要網路協定。
 
 配置安全網路體系結構時，此交互需要以下網路協定：
 
@@ -40,12 +37,12 @@ ht-degree: 0%
 
 ## 應用程式伺服器{#ports-for-application-servers}的埠
 
-您可以設定Adobe Primetime DRM授權伺服器以使用任何網路埠。
+您可以配置Adobe PrimetimeDRM許可證伺服器以使用任何網路埠。
 
 這些埠必須在內部防火牆上啟用或禁用，具體取決於要允許連接到運行Primetime DRM的應用程式伺服器的客戶端的網路功能。
 
 ## 配置SSL {#configuring-ssl}
 
-只有在您需要支援Flash Media Rights Management Server 1.x用戶端時，才需要安全通訊端層(SSL)。
+只有在需要支援Flash媒體Rights Management伺服器1.x客戶端時，才需要安全套接字層(SSL)。
 
-Adobe Primetime DRM金鑰伺服器需要具備用戶端驗證的SSL。 如需詳細資訊，請參閱[使用Adobe Primetime DRM Key Server](../../using-the-drm-key-server/requirements.md)。
+Adobe PrimetimeDRM密鑰伺服器需要具有客戶端驗證的SSL。 有關詳細資訊，請參閱[使用Adobe PrimetimeDRM密鑰伺服器](../../using-the-drm-key-server/requirements.md)。
