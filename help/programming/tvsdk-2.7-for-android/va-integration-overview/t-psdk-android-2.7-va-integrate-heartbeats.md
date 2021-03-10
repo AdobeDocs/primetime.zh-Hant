@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 初始化和設定視訊分析
 title: 初始化和設定視訊分析
-uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
+description: 初始化和設定視訊分析
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 * Android專用的TVSDK 2.5。
 * 配置／初始化資訊
 
-   請連絡您的Adobe代表，以取得您的特定視訊追蹤帳戶資訊：
+   請洽詢您的Adobe代表，以取得您的特定視訊追蹤帳戶資訊：
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -31,7 +29,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> AppMeasurement追蹤伺服器端點 </td> 
-   <td colname="col2"> Adobe Analytics（舊稱SiteCatalyst）後端收集端點的URL。 </td> 
+   <td colname="col2"> Adobe Analytics(之前稱為SiteCatalyst)後端收集端點的URL。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 視訊分析追蹤伺服器端點 </td> 
@@ -84,7 +82,7 @@ ht-degree: 0%
    要配置載入時間選項：
 
 
-   1. 確認`ADBMobileConfig.json`檔案包含適當的值（由Adobe提供）。
+   1. 確認`ADBMobileConfig.json`檔案包含適當的值(由Adobe提供)。
    1. 確認此檔案位於`assets/`資料夾中。
 
       此資料夾必須位於應用程式源樹的根目錄中。
@@ -92,7 +90,7 @@ ht-degree: 0%
    1. 編譯並建立您的應用程式。
    1. 部署並執行整合的應用程式。
 
-      如需這些AppMeasurement設定的詳細資訊，請參閱「在Adobe Analytics中測量視訊」[。](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)
+      如需這些AppMeasurement設定的詳細資訊，請參閱[在Adobe Analytics測量視訊](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)。
 
 1. 初始化並設定視訊心率追蹤中繼資料。
 
