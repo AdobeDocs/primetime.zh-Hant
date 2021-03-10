@@ -1,13 +1,10 @@
 ---
 description: 依預設，當開始播放時，VOD媒體從0開始，而即時媒體從用戶端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
-seo-description: 依預設，當開始播放時，VOD媒體從0開始，而即時媒體從用戶端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
-seo-title: 在特定時間輸入串流
 title: 在特定時間輸入串流
-uuid: b315a967-77ad-4352-8a32-f228704d4b20
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '117'
 ht-degree: 1%
 
 ---
