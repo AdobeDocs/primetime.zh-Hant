@@ -1,13 +1,10 @@
 ---
 description: 適合VOD內容之一播放的廣告時間軸可能不適合後續播放。 您可以取代VOD時間軸，而不需變更內容。
-seo-description: 適合VOD內容之一播放的廣告時間軸可能不適合後續播放。 您可以取代VOD時間軸，而不需變更內容。
-seo-title: VOD的變更
 title: VOD的變更
-uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
