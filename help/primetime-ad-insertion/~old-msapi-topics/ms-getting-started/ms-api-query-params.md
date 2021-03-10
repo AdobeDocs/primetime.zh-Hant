@@ -1,13 +1,10 @@
 ---
 title: 資訊清單伺服器查詢參數
 description: 查詢參數會告訴資訊清單伺服器，用戶端傳送請求的類型，以及該用戶端希望資訊清單伺服器執行的動作。 有些是必要的，有些則具有特定的可接受格式或值。
-seo-title: 資訊清單伺服器查詢參數
-seo-description: 查詢參數會告訴資訊清單伺服器，用戶端傳送請求的類型，以及該用戶端希望資訊清單伺服器執行的動作。 有些是必要的，有些則具有特定的可接受格式或值。
-uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
