@@ -1,13 +1,10 @@
 ---
 description: 延遲系結音訊使用PTMediaPlayer來播放M3U8 HLS播放清單中指定且可包含數個替代音訊串流的視訊。
-seo-description: 延遲系結音訊使用PTMediaPlayer來播放M3U8 HLS播放清單中指定且可包含數個替代音訊串流的視訊。
-seo-title: 存取替代音軌
 title: 存取替代音軌
-uuid: 2915a74f-5ec3-457e-890d-5c79be39f37a
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
