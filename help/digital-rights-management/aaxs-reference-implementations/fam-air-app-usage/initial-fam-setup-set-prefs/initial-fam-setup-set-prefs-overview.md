@@ -1,9 +1,9 @@
 ---
-seo-title: 設定偏好設定概觀
 title: 設定偏好設定概觀
-uuid: d1c067b1-6c2b-460e-8d00-5a5bfee0789c
+description: 設定偏好設定概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
