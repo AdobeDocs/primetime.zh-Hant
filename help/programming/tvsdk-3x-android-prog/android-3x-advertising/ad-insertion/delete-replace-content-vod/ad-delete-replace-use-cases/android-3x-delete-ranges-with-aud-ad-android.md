@@ -1,13 +1,10 @@
 ---
 description: 您可以從時間軸移除localTime中開始和結束之間的TimeRange。
-seo-description: 您可以從時間軸移除localTime中開始和結束之間的TimeRange。
-seo-title: 刪除範圍
 title: 刪除範圍
-uuid: 2aaea7a0-5d52-49a1-901c-f71e4b081d91
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ ht-degree: 0%
 
 廣告地圖必須依廣告伺服器的定義使用。
 
-1. 若要使用Adobe Primetime廣告決策廣告刪除範圍：
+1. 若要刪除具有Adobe Primetime廣告決策廣告的範圍：
 
    ```
    {   
