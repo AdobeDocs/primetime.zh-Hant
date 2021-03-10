@@ -1,13 +1,10 @@
 ---
 description: 當使用者按一下廣告時，您的應用程式應暫停播放主要視訊內容。
-seo-description: 當使用者按一下廣告時，您的應用程式應暫停播放主要視訊內容。
-seo-title: 暫停並繼續播放
 title: 暫停並繼續播放
-uuid: a8fec392-3a71-4086-abf1-23522d023680
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '67'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
