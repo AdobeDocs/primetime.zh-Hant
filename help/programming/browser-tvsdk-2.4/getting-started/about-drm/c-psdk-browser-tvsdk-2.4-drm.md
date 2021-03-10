@@ -1,21 +1,18 @@
 ---
-description: 您可以完成數位版權管理(DRM)專屬的工作流程。
-seo-description: 您可以完成數位版權管理(DRM)專屬的工作流程。
-seo-title: 數位版權管理
-title: 數位版權管理
-uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
+description: 您可以完成Digital Rights Management(DRM)特定的工作流程。
+title: Digital Rights Management
 translation-type: tm+mt
-source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
 
-# 數位版權管理{#digital-rights-management}
+# Digital Rights Management{#digital-rights-management}
 
-您可以完成數位版權管理(DRM)專屬的工作流程。
+您可以完成Digital Rights Management(DRM)特定的工作流程。
 
 您可以監聽`AdobePSDK.DRMMetadataInfoEvent`事件以處理DRM工作流：
 
@@ -25,7 +22,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## 新增數位版權管理{#add-digital-rights-management}
+## 添加Digital Rights Management{#add-digital-rights-management}
 
 1. 新增`DRMMetadataInfoAvailableEvent`以取得`DRMMetadata`。
 
