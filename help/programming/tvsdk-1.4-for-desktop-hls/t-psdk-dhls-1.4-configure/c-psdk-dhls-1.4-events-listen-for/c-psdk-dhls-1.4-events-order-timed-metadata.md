@@ -1,13 +1,10 @@
 ---
 description: TVSDK會在遇到預設或自訂標籤時，或在清單中變更播放清單時，調度計時中繼資料事件並產生計時中繼資料。 事件會依照事件在資訊清單中的顯示順序來傳送。
-seo-description: TVSDK會在遇到預設或自訂標籤時，或在清單中變更播放清單時，調度計時中繼資料事件並產生計時中繼資料。 事件會依照事件在資訊清單中的顯示順序來傳送。
-seo-title: 計時中繼資料事件
 title: 計時中繼資料事件
-uuid: 69c43701-6ffa-45fe-a104-fe81391222e7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
