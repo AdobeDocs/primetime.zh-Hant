@@ -1,13 +1,10 @@
 ---
 description: 網路安全漏洞是對面向網際網路或面向內聯網的應用程式伺服器的首要威脅之一，您必須針對這些漏洞加強網路上的主機。
-seo-description: 網路安全漏洞是對面向網際網路或面向內聯網的應用程式伺服器的首要威脅之一，您必須針對這些漏洞加強網路上的主機。
-seo-title: 網路層安全性
 title: 網路層安全性
-uuid: c750c595-a784-47ce-be0b-17b8d60c5753
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ ht-degree: 0%
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">非軍事區 </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">當Primetime DRM位於內部防火牆後方時，區段必須存在於應用程式伺服器的至少兩個層級中，該應用程式伺服器用來執行Adobe Primetime DRM。 您必須將外部網路與包含Web伺服器的DMZ分離，並且Web伺服器必須與內部網路分離。 您可以使用防火牆來建置這些隔離層。 </p> <p>您可以分類並控制通過每個網路層的流量，以確保僅允許絕對最小的所需資料。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">當Primetime DRM位於內部防火牆後方時，區段必須存在於應用程式伺服器的至少兩個層級中，該應用程式伺服器用來執行Adobe PrimetimeDRM。 您必須將外部網路與包含Web伺服器的DMZ分離，並且Web伺服器必須與內部網路分離。 您可以使用防火牆來建置這些隔離層。 </p> <p>您可以分類並控制通過每個網路層的流量，以確保僅允許絕對最小的所需資料。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">專用IP地址 </p> </td> 
