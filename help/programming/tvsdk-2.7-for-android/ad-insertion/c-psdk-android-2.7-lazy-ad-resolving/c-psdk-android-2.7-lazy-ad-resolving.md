@@ -1,14 +1,11 @@
 ---
 description: 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入」和「延遲廣告解析」功能可以降低此啟動延遲。
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入」和「延遲廣告解析」功能可以降低此啟動延遲。
-seo-title: 懶惰廣告解析
+keywords: Lazy；廣告解析；廣告載入
 title: 懶惰廣告解析
-uuid: cf9ba788-b83f-43aa-94c4-db391d92a77b
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
