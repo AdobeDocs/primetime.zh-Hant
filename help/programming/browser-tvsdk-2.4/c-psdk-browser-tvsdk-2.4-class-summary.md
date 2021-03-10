@@ -1,13 +1,10 @@
 ---
 description: 您可以使用Primetime Player API來自訂播放器的行為。
-seo-description: 您可以使用Primetime Player API來自訂播放器的行為。
-seo-title: Primetime播放器類別摘要
 title: Primetime播放器類別摘要
-uuid: ca245d58-43a7-412a-93ac-a90d664b0eb9
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '63'
 ht-degree: 0%
 
 ---
@@ -17,4 +14,4 @@ ht-degree: 0%
 
 您可以使用Primetime Player API來自訂播放器的行為。
 
-若要查看瀏覽器TVSDK的完整API檔案，請至[Adobe Primetime API參考](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)。
+若要查看瀏覽器TVSDK的完整API檔案，請至[Adobe PrimetimeAPI參考](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)。
