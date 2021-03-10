@@ -1,13 +1,10 @@
 ---
 description: 您可以使用ExpressPlay的Bento4封裝程式，為Primetime Cloud DRM（由ExpressPlay提供）支援的任何DRM解決方案準備內容。
-seo-description: 您可以使用ExpressPlay的Bento4封裝程式，為Primetime Cloud DRM（由ExpressPlay提供）支援的任何DRM解決方案準備內容。
-seo-title: ExpressPlay Packager / Cloud DRM / TVSDK
 title: ExpressPlay Packager / Cloud DRM / TVSDK
-uuid: 0d2f5a8d-15c4-42ba-acb8-1dc8d5bc62de
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 1. 取得ExpressPlay帳戶並取得您的ExpressPlay客戶驗證器資訊。
 
    請參閱[Primetime DRM Cloud快速入門。](../../quick-start/quick-overview.md)
-1. 如果您要加密Primetime Access的內容，請向Adobe取得Primetime Adobe Access SDK，以及必要的憑證（授權、傳輸和封裝憑證）。
+1. 如果您要加密Primetime Access的內容，請從Adobe取得PrimetimeAdobe存取SDK，以及必要的憑證（授權、傳輸和封裝憑證）。
 1. 提供內容加密密鑰(CEK)和內容加密密鑰儲存ID(CEKSID)，以用於跨DRM系統。 （您使用OpenSSL或類似程式隨機產生這些項目。）
 
    CEK是您用來加密視訊檔案的實際金鑰。 您可以將它安全地儲存在自己的密鑰管理系統中自己的伺服器上，也可以使用ExpressPlay的[密鑰儲存解決方案](https://www.expressplay.com/developer/key-storage/)。
@@ -65,7 +62,7 @@ ht-degree: 0%
 
 1. 建立您的客戶。
 
-   客戶端應包括對店面伺服器的呼叫。 Adobe建議用戶端在使用者選擇某些內容後，以及在使用者經過驗證後呼叫店面。 然後，將從ExpressPlay傳回的Token傳遞至您的播放器，以用於授權要求。 以下是實作播放器DRM元件的簡介：
+   客戶端應包括對店面伺服器的呼叫。 Adobe建議用戶在選擇某些內容後，以及用戶通過身份驗證後，客戶端調用店面。 然後，將從ExpressPlay傳回的Token傳遞至您的播放器，以用於授權要求。 以下是實作播放器DRM元件的簡介：
 
    * HTML5的瀏覽器TVSDK
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
