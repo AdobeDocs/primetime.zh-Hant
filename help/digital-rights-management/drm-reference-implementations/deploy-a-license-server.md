@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 部署授權伺服器
 title: 部署授權伺服器
-uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
+description: 部署授權伺服器
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -31,7 +29,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >除非您需要向後與Flash Media Rights Management(FMRMS)v1.5內容相容，否則不要部署[!DNL edsws.war]。 （這是非常罕見的要求。）
+   >除非您需要向後相容Flash媒體Rights Management(FMRMS)v1.5內容，否則不要部署[!DNL edsws.war]。 （這是非常罕見的要求。）
    >
    >如果希望防止Tomcat解壓縮WAR檔案，請編輯`conf`目錄中的`server.xml`，並將`unpackWARs`設定為`false`。
 
