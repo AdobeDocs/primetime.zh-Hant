@@ -1,13 +1,10 @@
 ---
 description: 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。
-seo-description: 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。
-seo-title: 在MediaPlayer中載入媒體資源
 title: 在MediaPlayer中載入媒體資源
-uuid: ac31ccfe-161d-41a2-9a6e-38fae11ceab5
 translation-type: tm+mt
-source-git-commit: 7d61a6cd8cb2c381f85a19d9ccac3d235ffceaf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
