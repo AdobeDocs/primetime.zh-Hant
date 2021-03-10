@@ -1,13 +1,10 @@
 ---
 description: 媒體串流可以在播放清單／資訊清單檔案中以標籤形式攜帶其他中繼資料，而此檔案會指出廣告的放置。 您可以指定自訂標籤名稱，並在資訊清單檔案中出現特定標籤時收到通知。
-seo-description: 媒體串流可以在播放清單／資訊清單檔案中以標籤形式攜帶其他中繼資料，而此檔案會指出廣告的放置。 您可以指定自訂標籤名稱，並在資訊清單檔案中出現特定標籤時收到通知。
-seo-title: 自訂標籤
 title: 自訂標籤
-uuid: 648645c8-f7cc-4118-b169-cc5c473afe23
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->這項功能不適用於Apple電腦上的Safari，因為TVSDK會使用視訊標籤（而非Flash或MSE）來播放HLS內容。
+>這項功能不適用於Apple電腦上的Safari，因為TVSDK會使用視訊標籤來播放HLS內容，而非Flash或MSE。
 
 TVSDK針對特定#EXT廣告標籤提供現成可用的支援。 您的應用程式可以使用自訂標籤來增強廣告工作流程或支援封鎖場景。 為支援進階工作流程，TVSDK可讓您指定並訂閱資訊清單中的其他標籤。 當這些標籤出現在資訊清單檔案中時，您會收到通知。
 
