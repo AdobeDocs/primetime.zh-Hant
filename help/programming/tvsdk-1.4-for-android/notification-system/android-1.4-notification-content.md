@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerNotification物件提供播放器狀態、警告和錯誤變更的相關資訊。 停止播放視訊的錯誤也會導致播放器狀態變更。
-seo-description: MediaPlayerNotification物件提供播放器狀態、警告和錯誤變更的相關資訊。 停止播放視訊的錯誤也會導致播放器狀態變更。
-seo-title: 通知內容
 title: 通知內容
-uuid: 89fb8f63-b0d5-45cd-bdad-348529fd07d0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
