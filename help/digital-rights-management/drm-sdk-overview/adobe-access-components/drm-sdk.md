@@ -1,19 +1,16 @@
 ---
-description: Primetime DRM的主要元件包括Java SDK、Flash Player和Adobe AIR用戶端執行時期環境。
-seo-description: Primetime DRM的主要元件包括Java SDK、Flash Player和Adobe AIR用戶端執行時期環境。
-seo-title: Java SDK、Flash Player和Adobe AIR用戶端
+description: Primetime DRM的主要元件包括Java SDK，以及Flash Player和Adobe AIR用戶端執行時期環境。
 title: Java SDK、Flash Player和Adobe AIR用戶端
-uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM SDK {#section_522E57DFEEFF4794978FF2D366B83690}
+# Adobe PrimetimeDRM SDK {#section_522E57DFEEFF4794978FF2D366B83690}
 
 Primetime DRM是以Java SDK的形式提供，提供您可從中建立伺服器實作的建立區塊。 使用SDK，您可以建立適合您組織商業模型的Primetime DRM解決方案。
 
@@ -49,10 +46,10 @@ SDK中提供的Java API將於下列子節中說明。
 
    授權產生與贏取API可用來為使用者產生授權。
 
-* 支援Adobe AIR 1.5版用戶端和內容
+* 支援Adobe AIR1.5版用戶端和內容
 
    為了向後相容，SDK有API可處理針對AIR 1.5版及舊版用戶端所建立之AIR應用程式的要求，以及受保護的內容。
 
 ## 參考實施{#reference-implementation}
 
-SDK包含參考實作，即簡單的Adobe Primetime DRM部署，示範如何使用Java API。 參考實作提供授權伺服器、Watched Folder Packager、Primetime DRM Manager AIR應用程式，以及以Java API為基礎的內容封裝與原則管理命令列工具。 若要進一步瞭解Primetime DRM參考實作，請參閱保護內容。
+SDK包含參考實作、簡單的Adobe PrimetimeDRM部署，示範如何使用Java API。 參考實作提供授權伺服器、Watched Folder Packager、Primetime DRM Manager AIR應用程式，以及以Java API為基礎的內容封裝與原則管理命令列工具。 若要進一步瞭解Primetime DRM參考實作，請參閱保護內容。
