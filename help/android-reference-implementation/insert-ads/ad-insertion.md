@@ -1,13 +1,10 @@
 ---
 description: 參考實作說明如何設定廣告的播放器，包括設定廣告插入的視訊中繼資料，以及將前、中、後段廣告解析為VOD或即時／線性視訊串流。 它也說明如何處理可點選廣告。
-seo-description: 參考實作說明如何設定廣告的播放器，包括設定廣告插入的視訊中繼資料，以及將前、中、後段廣告解析為VOD或即時／線性視訊串流。 它也說明如何處理可點選廣告。
-seo-title: 廣告插入
 title: 廣告插入
-uuid: 75c1d77a-a7ff-4cb6-ad7f-7c83a950b7cb
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
