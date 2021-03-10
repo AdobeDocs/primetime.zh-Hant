@@ -1,17 +1,13 @@
 ---
 title: TVSDK 1.4 for Android版本注意事項
-seo-title: TVSDK 1.4 for Android版本注意事項
 description: TVSDK 1.4 for Android發行說明說明TVSDK Android 1.4中的新增或變更內容、已解決和已知問題以及裝置問題。
-seo-description: TVSDK 1.4 for Android發行說明說明TVSDK Android 1.4中的新增或變更內容、已解決和已知問題以及裝置問題。
-uuid: 8bd8ee42-7a1b-4c14-aad9-22804743e505
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '7830'
+source-wordcount: '7802'
 ht-degree: 0%
 
 ---
@@ -27,7 +23,7 @@ TVSDK 1.4 for Android發行說明說明TVSDK Android 1.4中的新增或變更內
 
 **透過HTTPS安全載入廣告**
 
-Adobe Primetime提供選項，可要求對primetime廣告伺服器和CRS進行HTTPS的首次呼叫。
+Adobe Primetime提供選項，可透過HTTPS要求對黃金時段廣告伺服器和CRS進行首次呼叫。
 
 **alwaysUseAudioOutputLatency(boolean val) in MediaPlayer類別**
 
@@ -96,7 +92,7 @@ Android上「內容略過」的錯誤修正。
 **1.4.31版**
 
 **CRS廣告的多CDN支援**
-* 依預設，所有轉碼資產都將裝載在Akamai的Adobe擁有的CDN上。 在最新版本中，Adobe Creative Repackaging Service(CRS)提供將轉碼創作元素上傳至客戶指定之多個CDN的功能。
+* 依預設，所有轉碼資產都將裝載在Akamai的Adobe擁有的CDN上。 在最新版本中，Adobe創意重新封裝服務(CRS)提供將轉碼創作元素上傳至客戶指定之多個CDN的功能。
 * 新增API至TVSDK，以啟用在未使用預設URL時指定最終的CRS創意URL。 請參閱檔案以瞭解如何使用這些新API。
 
 **1.4.18版**
@@ -104,7 +100,7 @@ Primetime Android TVSDK現在支援VPAID 2.0 Javascript創意素材，以提供�
 
 **1.4.17版**
 
-AC-3 5.1僅在Amazon FireTV上受支援。
+AC-3 5.1僅在AmazonFireTV上支援。
 
 **1.4.11版**
 
@@ -118,17 +114,17 @@ AC-3 5.1僅在Amazon FireTV上受支援。
 
 **1.4.7版**
 
-* **內部部署個人化支**&#x200B;援支援Adobe個人化伺服器的內部部署安裝，以自訂用戶端的個人化要求，以前往不同的端點。
+* **內部部署個性化支**&#x200B;持支援Adobe個性化伺服器的現場安裝，以定制客戶端的個性化請求，以轉到不同的端點。
 
 **1.4.6版**
 
-* **範例AES加密（需使用Flash Player 17.0.0.134版）**現在支援範例型AES加密。
+* **範例AES加密(需要Flash Player版本17.0.0.134)**現在支援範例型AES加密。
 
 **1.4.2版**
 
 * **視訊心率程式庫(VHL)更新至1.4.0.1版**
 
-   * 新增使用Adobe Analytics Video Essentials搭售其他SDK或播放器之不同分析使用案例的能力。
+   * 新增搭配Adobe Analytics視訊基本工具，搭售其他SDK或播放器的不同分析使用案例的能力。
    * 已移除trackAdBreakStart和trackAdBreakComplete方法來最佳化廣告追蹤。 廣告插播是從trackAdStart和trackAdComplete方法呼叫推斷而得。
    * 追蹤廣告時不再需要播放頭屬性。
 
@@ -136,7 +132,7 @@ AC-3 5.1僅在Amazon FireTV上受支援。
 
 **1.4.0版**
 
-* **使用替代內容** 取代封鎖訊號在1.4 TVSDK更新中，TVSDK現在也支援針對線性內容進行區域封鎖並返回。TVSDK現在可以並行處理兩個資訊清單檔案，主要和替代檔案，以便在顯示替代原始程式設計的替代程式設計時，監控封鎖訊號。
+* **使用替代內容** 取代封鎖訊號在1.4 TVSDK更新中，TVSDK現在也支援針對線性內容進行區域封鎖並返回。TVSDK現在可以並行處理主要和替代的兩個資訊清單檔案，以便監控封鎖訊號，即使替代原始程式設計顯示替代程式設計。
 
 * **移除／取代C3** AdsNow，您不需要額外的準備工作，就能將新廣告動態插入從C3視訊視訊(VOD)資產。TVSDK現在提供API來移除自訂內容範圍並動態插入新廣告。 此強大的新功能在廣播期間播放即時／線性內容時也很有用，而且會立即下拉以做為隨選內容，而無需適當的時間來「清理」資產。
 
@@ -214,7 +210,7 @@ TVSDK 1.4.43已通過Android裝置的認證，其Android裝置具有Android 6.0.
 
 * **1.4.18版：**
 
-   * Primetime已通過Amazon Fire TV認證。
+   * Primetime已獲得AmazonFire TV認證。
    * VPAID 2.0僅在Android 4.0及以上版本的裝置上受支援。
 
 ## 已解決1.4 {#resolved-issues-in}中的問題
@@ -233,7 +229,7 @@ TVSDK 1.4.43已通過Android裝置的認證，其Android裝置具有Android 6.0.
 
 * 票證#33902 —— 透過HTTPS安全廣告傳送
 
-   * Adobe Primetime提供選項，可要求對primetime廣告伺服器和CRS進行透過https的首次呼叫。
+   * Adobe Primetime提供選項，可要求在https上首次呼叫黃金時段廣告伺服器和CRS。
 
 * 票證#34493 —— 藍芽音頻延遲
 
@@ -255,7 +251,7 @@ TVSDK 1.4.43已通過Android裝置的認證，其Android裝置具有Android 6.0.
 
 **1.4.40版(1764)**
 
-* Zendesk #33068 —— 新裝置上的Amazon Lip同步問題。 此版本已修正同步對嘴問題。
+* Zendesk #33068 —— 新裝置上的Amazon同步對嘴問題。 此版本已修正同步對嘴問題。
 * Zendesk #32215 - Android TVSDK 1.4.38安全性問題`[Hotlist]`。 已更新至最新的OpenSSL-1.1.0和curl-7.55.1。
 * Zendesk #32920 —— 廣告插播內的空白畫面，無廣告插播完成。 修正VPAID容器可能陷入擱置狀態並處理Facebook VPAID廣告通常在單一\&amp;lt;AdParameters\&amp;gt中傳回多個CDATA區塊的問題；巨型節點。
 
@@ -300,8 +296,8 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
 * Zendesk #25023 —— 長視訊播放：視訊凍結，螢幕閃爍
 此問題已透過為CenturyLink機上盒裝置設定最大視訊格式尺寸來解決。
 
-* Zendesk #27460 —— 新的Akamai帳戶無法處理POST cdn請求。
-已更新程式碼，將`cdn.auditude.com`廣告要求設為GET，而非POST。
+* Zendesk #27460 —— 新的Akamai帳戶無法處理POSTcdn請求。
+已更新程式碼，讓`cdn.auditude.com`廣告要求成為GET而非POST。
 
 * Zendesk #28245 —— 當應用程式從背景移至前景時，播放狀態未正確通知
 此問題已解決，方法是在應用程式返回前景時，正確還原播放狀態以播放或暫停。
@@ -326,14 +322,14 @@ OpenSSL程式庫已更新為OpenSSL 1.0.2j版。
    * 通過改進AV解碼器線程的處理來修正。 具體地，每當輸入或輸出幀隊列被修改時，就運行特定於幀的內容類型的解碼器線程。
 
 * Zendesk #26551 —— 修復CRS故障
-   * 當請求為HEAD(http head)時，我們不需要讀取內容，因為內容是空的。 雖然可以嘗試讀取，但舊版Android(4.0.x)在呼叫read()時掛起，而較新的Android在呼叫read()時會傳回正確值(-1)。 因此，將程式碼變更為不讀取「head」的內容
+   * 當請求是HEAD(http head)時，我們不需要讀取內容，因為它是空的。 雖然可以嘗試讀取，但舊版Android(4.0.x)在呼叫read()時掛起，而較新的Android在呼叫read()時會傳回正確值(-1)。 因此，將程式碼變更為不讀取「head」的內容
 
 * Zendesk #26696訪問TrickPlayManager時空指針異常
    * 修正方法：在使用TrickPlayManager物件之前，先檢查TrickPlayManager物件是否為null。
 
 **1.4.30版(1659)**
 
-* Zendesk #22675即時／線性串流不會更新資產持續時間
+* Zendesk #22675資產持續時間未針對即時／線性串流進行更新
 此問題已解決，方法是在PTVideoAnalyticsTrackingMetadata中提供新的API assetDuration，以提供即時和線性串流的資產持續時間。
 
 * Zendesk #25853切換頻道時TVSDK中的記憶體洩漏
@@ -382,7 +378,7 @@ DRM適配器對象的記憶體洩漏已經定位並固定。
 
 **1.4.25版(1620)**
 
-* Zendesk #22900 —— 即時Adobe Primetime DRM串流不會在Android參考播放器上播放
+* Zendesk #22900 —— 即時Adobe PrimetimeDRM串流未在Android參考播放器上播放
 記憶體分配問題已修正。
 * Zendesk #23176 —— 當應用程式嘗試播放VPAID廣告時當機
 當機是因為應用程式未建立自訂廣告檢視來轉譯VPAID廣告。 當沒有自訂廣告檢視時，會忽略廣告伺服器回應中的VPAID廣告，以解決此問題。
@@ -486,7 +482,7 @@ LBA串流的時間跳轉已修正，其中音訊區段開始時間與視訊區�
 * Zendesk #18358 —— 播放器在位元速率切換時會因不同步中斷而凍結
 此問題已透過正確處理ABR拼接邊緣案例而解決。
 
-* Zendesk #19232 —— 使用TVSDK 1.4.18的應用程式在舊版Amazon OS 4上的行為異常
+* Zendesk #19232 —— 使用TVSDK 1.4.18的應用程式在舊版AmazonOS 4上的行為異常
 此問題已解決，方法是移除TVSDK播放器初始化程式中隱藏的網頁檢視建立，以避免與不支援Android Webview的裝置產生衝突。
 
 * Zendesk #19585 —— 當可調式位元速率轉換發生時，慢動作播放。
@@ -508,7 +504,7 @@ RENDITION_TIMEOUT_THRESHOLD已設為100ms，但發現它不足以用於某些流
 此問題已解決，因為它提供更完整的ID3 v2.4字串編碼支援以及ID3 v2.3支援。
 
 * Zendesk #20135 - TVSDK正在針對VOD內容觸發多個onComplete。
-此問題已解決，方法是將post_roll_complete事件偵聽器新增至正確位置，而非在狀態變更事件的完整案例。
+此問題已解決，方法是將post_roll_compelete事件偵聽器新增至正確位置，而非在狀態變更事件的完整案例。
 
 **1.4.19版(1521)**
 
@@ -536,7 +532,7 @@ RENDITION_TIMEOUT_THRESHOLD已設為100ms，但發現它不足以用於某些流
 * Zendesk #18229 - MediaPlayer.reset()呼叫後會忽略SetCCVisibility(VISIBLE)
 此問題已借由新增setCCVisibility(Visibility.INVISIBLE)而解決；至MediaPlayer類別中的reset()函式。
 
-* Zendesk #18328 - Amazon Fire TV第2代裝置上60FPS內容的畫格問題
+* Zendesk #18328 —— 針對60FPS內容，在AmazonFire TV第2代裝置上掉格問題
 此問題已解決，方法是將編碼的FPS套用至睡眠時間決策，並使用更好的編碼的FPS預測邏輯。
 
 **1.4.17版(1472)**
@@ -566,13 +562,13 @@ setSecure方法自API 17起就已推出，但由於API 17涵蓋4.2、4.2.1和4.2
 * Zendesk #17919 - Android —— 內容搜尋導致心率錯誤
 已解決當章節中有搜尋時，心率處於錯誤狀態的問題。
 
-* Zendesk #18053 - Adobe Primetime在Marshmallow上當機
+* Zendesk #18053 -Adobe Primetime在棉花糖上當機
 當TVSDK程式庫使用進行YUV -> RGB色彩轉換的neon程式碼時，TVSDK會在Android M OS上當機。 此問題已解決，方法是使用非霓虹版的程式碼更新造成此問題的函式。
 
 * Zendesk #18072 - Android M —— 應用程式當機
 在檢查描述檔和層級是否受支援時，呼叫MediaCodecList和MediaCodecInfo API時會發生當機。 此問題已解決，方法是提前載入所有的codec資訊，以避免僅在需要codec資訊時呼叫這些API。
 
-* Zendesk #18074 —— 阿拉伯文字幕在Nexus與Android 6.0上無法運作
+* Zendesk #18074 —— 阿拉伯文字幕無法用於Nexus with Android 6.0
 此問題已透過提供Android的CTS字型對應支援來解決。
 
 **1.4.15版更新(1438)**
@@ -642,7 +638,7 @@ setSecure方法自API 17起就已推出，但由於API 17涵蓋4.2、4.2.1和4.2
 * Zendesk #3992 —— 額外的特技播放速度。
 TrickPlay已更新，接受高於16倍的速率；+/- 32、+/-64和+/-128現在也允許使用。
 
-* Zendesk #4007 —— 將GEOB物件解譯為時間軸中繼資料（Android與Web）的一部份。
+* Zendesk #4007 —— 將GEOB物件解譯為時間軸中繼資料（Android與Web）的一部分。
 已新增setByteArray和getByteArray API。
 
 * PTPLAY-7301 —— 從隨機接入點開始立即啟動。
@@ -665,11 +661,11 @@ dispatch OperationFailedEvent，含警告通知。
 * Zendesk #2941 —— 即時資產在可見範圍內沒有「0」
 以前，在尋找即時串流的開頭時有3個區段緩衝區，現在可以尋找即時串流的開始（即第一個區段的開始）。
 
-* Zendesk #3169 —— 使用Adobe Analytics整合更新參考播放器參考播放器已以Adobe Analytics程式庫更新為範例，以進行植入。
+* Zendesk #3169 —— 更新參考播放器與Adobe Analytics整合參考播放器參考播放器已以Adobe Analytics資料庫更新為例進行植入。
 * Zendesk #3299 —— 無法解釋的特技遊戲行為
    * 已修正在停止特技播放後，可能需要數秒（有時需要25秒以上）才能返回播放狀態的錯誤。
    * 已修正在相同媒體上再次叫用特技播放，可能導致串流在目前時間凍結的錯誤。
-* Zendesk #3433 - Android和Flash —— 字幕問題
+* Zendesk #3433 - Android和Flash-字幕問題
 
 GetLine for WebVTT不會尊重&lt;CR>&lt;LF>調整的封包長度；最後一個標題可能包含先前標題中的字元。
 
@@ -702,9 +698,9 @@ Android範例參考播放器已增強，提供開啟除錯記錄檔並以電子�
 * Zendesk #2760 - TrickPlay模式期間忽略的DINSTRUCTION標籤
 * Zendesk #2805 —— 播放開始時播放器崩潰，與Zendesk #2719相同的修正
 * Zendesk #2817 - Android player —— 播放器有時候會掛起並停止播放，修正方法是將解碼緩衝區從2.0延伸至3.0秒
-* Zendesk #2839 - Adobe Primetime PSDK是否支援ARMv8晶片組？已新增Galaxy S6的當機修正。
+* Zendesk #2839 -Adobe PrimetimePSDK是否支援ARMv8晶片組？已新增Galaxy S6的當機修正。
 * Zendesk #2885 - Auditude當機播放，與Zendesk #2719相同的修正
-* Zendesk #2895 —— 在播放10分鐘後，一致地出現HLS即時故障
+* Zendesk #2895 —— 在播放10分鐘後始終如一地出現即時HLS故障
 * Zendesk #2925 —— 當將封包排入輸入佇列時，在某些裝置上，當我們將封包排入輸入佇列時，有關Android dev組建(1.4.5)的回饋，如果PTS為負數，則解碼器會進入奇怪的狀態，我們總會為未來封包取得負數輸出PTS。 如果輸入PTS為負值，則此修正會將其設為零，以避免此問題。
 * PTPLAY-4645 —— 關閉openssl中的RC4密碼支援。 已知RC4利用漏洞。 這表示如果嘗試連接僅支援RC4的伺服器，將失敗。
 
@@ -739,7 +735,7 @@ Android範例參考播放器已增強，提供開啟除錯記錄檔並以電子�
 * Zendesk #1158 - Huawei Valiant上播放失敗(Y301A1)
 * Zendesk #1709 —— 不正確的媒體大小和延伸視訊
 * Zendesk #1757 —— 僅在使用相同spa/pps資料的串流之間進行設定檔切換後播放音訊
-* Zendesk #2095 - HTTP 307狀態（重新導向）會導致Adobe播放器停止播放
+* Zendesk #2095 - HTTP 307狀態（重新導向）導致Adobe播放器停止播放
 * Zendesk #2126 —— 最後一個ADEVENT的TimedMetaData事件遺失，最後一個區段之後存在的已訂閱標籤未從AVE報告給PSDK
 * Zendesk #2227 - VideoEngine nativeReset和nativePause中的鎖定
 * 錯誤#3921755 - OpenSSL程式庫更新至1.0.1L版
