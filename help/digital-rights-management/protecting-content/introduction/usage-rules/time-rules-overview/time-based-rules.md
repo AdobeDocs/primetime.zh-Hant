@@ -1,9 +1,9 @@
 ---
-seo-title: 時間型規則概觀
 title: 時間型規則概觀
-uuid: 10b7766e-3b1a-4d8a-ba15-46976aa0847d
+description: 時間型規則概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
