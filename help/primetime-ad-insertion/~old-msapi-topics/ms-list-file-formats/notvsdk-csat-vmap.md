@@ -1,13 +1,10 @@
 ---
 description: 如果用戶端要求追蹤資訊，資訊清單伺服器會傳回格式化檔案。 其格式和內容取決於查詢參數pttrackingversion的值
-seo-description: 如果用戶端要求追蹤資訊，資訊清單伺服器會傳回格式化檔案。 其格式和內容取決於查詢參數pttrackingversion的值
-seo-title: 用於追蹤URL的VMAP格式
 title: 用於追蹤URL的VMAP格式
-uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
