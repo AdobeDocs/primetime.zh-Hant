@@ -1,13 +1,10 @@
 ---
 description: 這些類為資料包和標籤提供解碼和解析。
-seo-description: 這些類為資料包和標籤提供解碼和解析。
-seo-title: 系統解碼器類
 title: 系統解碼器類
-uuid: b333166b-3a13-48c5-a5d7-d8a64f0cd736
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '115'
 ht-degree: 1%
 
 ---
