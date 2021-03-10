@@ -1,13 +1,10 @@
 ---
 description: 替代或延遲系結的音訊可讓您在視訊軌的可用音軌間切換。 如此，使用者就可在播放視訊時選取語言軌道。
-seo-description: 替代或延遲系結的音訊可讓您在視訊軌的可用音軌間切換。 如此，使用者就可在播放視訊時選取語言軌道。
-seo-title: 替代音訊
 title: 替代音訊
-uuid: d7e61a2a-1985-4dba-9c6d-0e139ffde46a
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
