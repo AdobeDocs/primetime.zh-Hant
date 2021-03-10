@@ -1,21 +1,18 @@
 ---
-description: Adobe視訊引擎的加密模組會在NATIVE_ERROR中繼資料物件中傳回這些通知。
-seo-description: Adobe視訊引擎的加密模組會在NATIVE_ERROR中繼資料物件中傳回這些通知。
-seo-title: NATIVE_ERROR加密值
+description: Adobe視頻引擎的加密模組在NATIVE_ERROR元資料對象中返回這些通知。
 title: NATIVE_ERROR加密值
-uuid: 5e86ba61-93e9-47cf-adad-8794957a1f7c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 6%
+source-wordcount: '84'
+ht-degree: 8%
 
 ---
 
 
 # NATIVE_ERROR:加密值{#native-error-crypto-values}
 
-Adobe視訊引擎的加密模組會在NATIVE_ERROR中繼資料物件中傳回這些通知。
+Adobe視頻引擎的加密模組在NATIVE_ERROR元資料對象中返回這些通知。
 
 | NATIVE_ERROR_CODE元資料鍵的值 | NATIVE_ERROR_NAME元資料鍵的值 | 意義 |
 |---|---|---|
