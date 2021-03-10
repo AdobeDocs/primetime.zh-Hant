@@ -1,16 +1,12 @@
 ---
 title: Android專用TVSDK 2.4.1版本注意事項
-seo-title: Android專用TVSDK 2.4.1版本注意事項
 description: TVSDK 2.4.1 for Android發行說明說明TVSDK Android 2.4.1中新增和支援的功能以及已知問題和限制。
-seo-description: TVSDK 2.4.1 for Android發行說明說明TVSDK Android 2.4.1中新增和支援的功能以及已知問題和限制。
-uuid: 929fc577-e851-4e03-9201-13280cc6137a
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: a6dbcc4a-9e14-4452-9004-b39ed13fad6f
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1988'
+source-wordcount: '1963'
 ht-degree: 0%
 
 ---
@@ -22,7 +18,7 @@ TVSDK 2.4.1 for Android發行說明說明TVSDK Android 2.4.1中新增和支援�
 
 ## TVSDK Android 2.4.1 {#tvsdk-android}
 
-Adobe正在推出Android專用的TVSDK 2.4.1。
+Adobe將推出Android專用的TVSDK 2.4.1。
 
 若要使用此版本的TVSDK，請確定您的系統符合[系統需求](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_2.5.pdf#page=6)中所述的需求。
 
@@ -64,7 +60,7 @@ Javadoc是終極授權，因為它們會直接從TVSDK原始碼自動產生。
 
 * 內容保護功能
 
-   * **HLS的DRM** 所有視訊播放API都可搭配Adobe Access保護的加密視訊內容運作。支援下列DRM功能：
+   * **HLS的DRM** 所有視訊播放API都可搭配加密的視訊內容運作，並受到Adobe存取保護。支援下列DRM功能：
 
       * 授權輪換
       * 鍵旋轉
@@ -73,11 +69,11 @@ Javadoc是終極授權，因為它們會直接從TVSDK原始碼自動產生。
       * IV旋轉
 
 * **AES 128播放。** TVSDK可播放128位元的進階加密標準(AES)HLS內容。
-* **受保護的HLS(PHLS)提** 供一組有限的預建DRM原則，這是Adobe Access提供的子集，可讓即時和VOD串流的HLS上的輕量型DRM。
+* **受保護的HLS(PHLS)提** 供有限的預建DRM策略集，即Adobe訪問提供的子集，以便為即時和VOD流啟用HLS上的輕量級DRM。
 
 * 廣告／替代內容與獲利功能
 
-   * **追蹤伺服器端插入廣告。** TVSDK可追蹤Adobe Cloud廣告插入服務所插入的廣告。它支援VOD和即時／線性串流的VAST2、VAST3和VMAP格式的線性廣告。
+   * **追蹤伺服器端插入廣告。** TVSDK可追蹤由Adobe雲廣告插入服務插入的廣告。它支援VOD和即時／線性串流的VAST2、VAST3和VMAP格式的線性廣告。
    * **自訂HLS標籤。** 當自訂HLS標籤出 `MediaPlayerConfig` 現在串流中時，TVSDK會使用其類別來啟用通知播放器應用程式。
    * **用戶端廣告插入。** Auditude廣告插入程式庫可與Adobe Auditude伺服器搭配使用，以解析廣告，以便在前段、中段或後段位置動態插入即時、線性和VOD內容。
    * **自訂廣告解析器。** 此 `ContentResolver, OpportunityGenerator,` 和介 `MediaPlayerClientFactory` 面可讓您建置自訂廣告／替代內容解析程式，並註冊自訂商機偵測器以搭配TVSDK運作。`TestAdResolver`和`AuditudeResolver`類提供了實現內容解析器的C++示例。 您可在`samples/jspsdk/testapp/psdk.js`找到Javascript範例。
@@ -124,7 +120,7 @@ TVSDK會維護一組可重複使用的網路連線，因此不會產生針對每
 
 * **帳單**
 
-TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需的定期使用報告。 在每個串流開始事件上，TVSDK都會使用Adobe Analytics資料插入API，將計費量度(例如內容類型、啟用廣告插入的標幟，以及啟用drm的標幟（根據計費串流的持續時間）傳送至Adobe Analytics Primetime擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 此帳單使用報表會按要求定期傳送給客戶。 這是計費功能的第一階段，僅支援使用計費。 您可使用說明檔案中所述的API，根據銷售合約來設定此API。
+TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需的定期使用報告。 在每個串流開始事件上，TVSDK使用Adobe Analytics資料插入API，將計費量度(例如內容類型、啟用廣告插入的標幟，以及啟用DRM的標幟（根據可計費串流的持續時間）傳送至Adobe Analytics黃金時段擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 此帳單使用報表會按要求定期傳送給客戶。 這是計費功能的第一階段，僅支援使用計費。 您可使用說明檔案中所述的API，根據銷售合約來設定此API。
 
 ## 支援的功能{#supported-features}
 
@@ -240,7 +236,7 @@ TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需
  </tbody>
 </table>
 
-### 核心廣告插入功能(CSAI){#core-ad-insertion-features-csai}
+### 核心Ad Insertion功能(CSAI){#core-ad-insertion-features-csai}
 
 | **功能** | **內容類型** | **HLS** | **虛線** |
 |---|---|---|---|
@@ -251,7 +247,7 @@ TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需
 | VMAP 1.0 | VOD + Live | √ | √（僅限VOD預卷） |
 | MP4廣告 | VOD + Live | √（來自CRS） | √（來自CRS，僅預先登記） |
 
-### 進階廣告插入功能(CSAI){#advanced-ad-insertion-features-csai}
+### 進階Ad Insertion功能(CSAI){#advanced-ad-insertion-features-csai}
 
 <table> 
  <tbody>
@@ -380,7 +376,7 @@ TVSDK會自動收集量度，並遵守客戶銷售合約，以產生計費所需
 
 | **功能** | **內容類型** | **HLS** | **虛線** |
 |---|---|---|---|
-| Adobe Analytics VHL整合 | VOD + Live | √ | √ |
+| Adobe AnalyticsVHL整合 | VOD + Live | √ | √ |
 | 帳單 | VOD + Live | √ | 不支援 |
 
 ## 不支援的功能{#features-not-supported}
