@@ -1,9 +1,9 @@
 ---
-seo-title: 全域伺服器組態資料
 title: 全域伺服器組態資料
-uuid: f6d6cb01-2645-4cd2-83ec-0272323a67cd
+description: 全域伺服器組態資料
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
