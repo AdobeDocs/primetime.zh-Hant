@@ -1,9 +1,9 @@
 ---
-seo-title: 命令列使用
 title: 命令列使用
-uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
+description: 命令列使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 0%
@@ -112,7 +112,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeBlacklist名稱 </span> <i class="+ topic/ph hi-d/i ">/值</i> <span class="+ topic/ph pr-d/codeph codeph"> 對的 </span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> 名  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">應用程式執行時期無法存取受保護的內容。 值由逗號分隔的名稱：值對組成，格式如下： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os |應用程式 | release= stringValue  </span> </p> <p class="- topic/p ">例如，<span class="codeph"> os=Win,release=2.0.1,application=AIR </span>。 在更新期間，使用<span class="codeph"> -runtimeBlacklist </span>（不含其餘引數）從清單中刪除所有條目。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">應用程式執行時期無法存取受保護的內容。 值由逗號分隔的名稱：值對組成，格式如下： </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os |應用程式 | release= stringValue  </span> </p> <p class="- topic/p ">例如，<span class="codeph"> os=Win,release=2.0.1,application=AIR </span>。 在更新期間，使用<span class="codeph"> -runtimeBlacklist </span>（不含其餘引數）來從清單中刪除所有條目。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeLevel int  </span> </td> 
@@ -124,7 +124,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k名稱=值  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指定要添加到策略的自定義密鑰／值。 可以指定多個<span class="codeph"> -k </span>選項。 在更新期間，使用<span class="codeph"> -k </span>（不含其餘參數）來刪除所有屬性。 此資料的解譯或處理完全取決於Adobe Access授權伺服器的實作。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">指定要添加到策略的自定義密鑰／值。 可以指定多個<span class="codeph"> -k </span>選項。 在更新期間，使用<span class="codeph"> -k </span>（不含其餘參數）來刪除所有屬性。 此資料的解譯或處理完全取決於Adobe存取授權伺服器的實作。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -p名稱=值  </span> </td> 
