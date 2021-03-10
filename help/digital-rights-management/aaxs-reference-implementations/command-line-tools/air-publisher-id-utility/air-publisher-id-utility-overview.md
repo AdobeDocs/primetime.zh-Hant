@@ -1,9 +1,9 @@
 ---
-seo-title: AIR Publisher ID公用程式總覽
 title: AIR Publisher ID公用程式總覽
-uuid: 31aecc0e-ad9b-43ad-ba58-77d2c999f4a4
+description: AIR Publisher ID公用程式總覽
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
