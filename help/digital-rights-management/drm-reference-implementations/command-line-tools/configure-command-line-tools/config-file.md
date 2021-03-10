@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 關於命令行工具配置檔案
 title: 關於命令行工具配置檔案
-uuid: 8220921f-1fe9-439c-8134-dc16c2e3601b
+description: 關於命令行工具配置檔案
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 0143d98185b9a63ef978aba18e2f3c8728333155
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '144'
 ht-degree: 0%
 
 ---
