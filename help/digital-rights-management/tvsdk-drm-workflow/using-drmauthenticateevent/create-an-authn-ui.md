@@ -1,9 +1,9 @@
 ---
-seo-title: 建立驗證UI
 title: 建立驗證UI
-uuid: 4744bac0-c36e-4b0a-b3fb-d81c7f2e7617
+description: 建立驗證UI
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 1. 建立使用者介面以擷取使用者的驗證憑證。
 
-   以下是用於擷取使用者認證的簡單使用者介面的Flex範例。 它由包含兩個`TextInput`對象的面板對象組成，每個&lt;a0/>對象代表用戶名和口令憑據。 此面板還包含啟動`credentials()`方法的按鈕。
+   以下是用於檢索用戶憑據的簡單用戶介面的Flex示例。 它由包含兩個`TextInput`對象的面板對象組成，每個對象代表用戶名和口令憑據。 此面板還包含啟動`credentials()`方法的按鈕。
 
    ```xml
    <mx:Panel x="236.5"  
