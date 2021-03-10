@@ -1,9 +1,9 @@
 ---
-seo-title: 為伺服器屬性檔案準備密碼
 title: 為伺服器屬性檔案準備密碼
-uuid: 2d876eb0-b1a5-4c30-ae96-0a22f6a03910
+description: 為伺服器屬性檔案準備密碼
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 * 前往&#x200B;*`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* 確保[!DNL build-refimpl.xml]中的`sdkdir`屬性指向包含Adobe Access SDK的目錄
+* 確保[!DNL build-refimpl.xml]中的`sdkdir`屬性指向包含Adobe訪問SDK的目錄
 * 使用ANT運行以下命令：
 
    ```
@@ -52,4 +52,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->使用參考實作中提供的密碼置亂公用程式編碼的密碼，將無法與Adobe Access Server for Protected Streaming搭配使用。
+>使用隨參考實現提供的密碼置亂實用程式編碼的密碼將無法與Adobe Access Server的受保護流處理方案一起使用。
