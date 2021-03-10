@@ -1,9 +1,9 @@
 ---
-seo-title: 命令列使用
 title: 命令列使用
-uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
+description: 命令列使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -35,5 +35,5 @@ java -jar AdobePublisherIDUtility.jar
 
 >[!NOTE]
 >
->若要決定iOS應用程式的發佈者ID，請使用`-s`選項並指定用來簽署iOS應用程式的憑證。 ***Adobe Primetime是建立可播放受存取保護內容的iOS應用程式的必要工具***。
+>若要決定iOS應用程式的發佈者ID，請使用`-s`選項並指定用來簽署iOS應用程式的憑證。 ***Adobe Primetime必須建立可播放存取保護內容的iOS應用程式***。
 
