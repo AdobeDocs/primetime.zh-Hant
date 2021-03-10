@@ -1,13 +1,10 @@
 ---
 description: 您可以設定您的播放器來追蹤和分析視訊使用。
-seo-description: 您可以設定您的播放器來追蹤和分析視訊使用。
-seo-title: 初始化和設定視訊分析
 title: 初始化和設定視訊分析
-uuid: 262b1a28-2986-4fbb-a465-4ce8cefe18fb
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -20,7 +17,7 @@ ht-degree: 0%
 在啟動視訊追蹤（視訊心率）之前，請確定您有下列項目：
 
 * Android專用的TVSDK
-* 設定／初始化資訊——請連絡您的Adobe代表，以取得特定視訊追蹤帳戶資訊：
+* 設定／初始化資訊——請洽詢您的Adobe代表，以取得您的特定視訊追蹤帳戶資訊：
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -30,7 +27,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> AppMeasurement追蹤伺服器端點 </td> 
-   <td colname="col2"> Adobe Analytics（舊稱SiteCatalyst）後端收集端點的URL。 </td> 
+   <td colname="col2"> Adobe Analytics(之前稱為SiteCatalyst)後端收集端點的URL。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 視訊分析追蹤伺服器端點 </td> 
@@ -46,7 +43,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> 發行者 </td> 
-   <td colname="col2"> 這是Publisher ID，由其Adobe代表提供給客戶。 <p>提示： 此ID不僅是具有品牌／電視名稱的字串。 </p> </td> 
+   <td colname="col2"> 這是發行者ID，由客戶的Adobe代表提供。 <p>提示： 此ID不僅是具有品牌／電視名稱的字串。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -93,7 +90,7 @@ ht-degree: 0%
    1. 編譯並建立您的應用程式。
    1. 部署並執行整合的應用程式。
 
-      如需這些AppMeasurement設定的詳細資訊，請參閱「在Adobe Analytics中測量視訊」[。](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)
+      如需這些AppMeasurement設定的詳細資訊，請參閱[在Adobe Analytics測量視訊](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/)。
 1. 初始化並設定視訊心率追蹤中繼資料。
 
    >[!IMPORTANT]
