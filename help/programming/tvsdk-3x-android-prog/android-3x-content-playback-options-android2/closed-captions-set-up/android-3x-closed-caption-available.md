@@ -1,14 +1,11 @@
 ---
 description: 您可以從目前可用的隱藏字幕音軌清單中選取音軌。 這會變成目前的軌道，當可見性開啟時就會顯示。 某些音軌一開始可能無法使用，因此請監聽表示有更多音軌可供使用的事件。
-seo-description: 您可以從目前可用的隱藏字幕音軌清單中選取音軌。 這會變成目前的軌道，當可見性開啟時就會顯示。 某些音軌一開始可能無法使用，因此請監聽表示有更多音軌可供使用的事件。
-seo-title: 從可用字軌中選擇目前的字幕軌
 title: 從可用字軌中選擇目前的字幕軌
-uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 2%
 
 ---
 
