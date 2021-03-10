@@ -1,13 +1,10 @@
 ---
-description: 參考實作伺服器可協助您建立功能完整的授權伺服器，使用Adobe Primetime DRM Java SDK的所有功能。
-seo-description: 參考實作伺服器可協助您建立功能完整的授權伺服器，使用Adobe Primetime DRM Java SDK的所有功能。
-seo-title: 授權伺服器
+description: 參考實施伺服器可協助您建立使用Adobe PrimetimeDRM Java SDK所有功能的完整功能授權伺服器。
 title: 授權伺服器
-uuid: 39cb0d0f-f3dc-48e9-b6fd-6960a9ade291
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # 許可證伺服器{#license-server}
 
-參考實作伺服器可協助您建立功能完整的授權伺服器，使用Adobe Primetime DRM Java SDK的所有功能。
+參考實施伺服器可協助您建立使用Adobe PrimetimeDRM Java SDK所有功能的完整功能授權伺服器。
 
-在此實施中，根據資料庫中的用戶條目來驗證用戶。 此伺服器包含授權的展示商業邏輯，並提供Flash Media Rights Management Server 1.0和1.5的相容性支援。
+在此實施中，根據資料庫中的用戶條目來驗證用戶。 此伺服器包含授權的展示商業邏輯，並提供Flash媒體Rights Management伺服器1.0和1.5的相容性支援。
 
 ## 許可證伺服器要求{#license-server-requirements}
 
@@ -28,7 +25,7 @@ ht-degree: 0%
 * 確定您已安裝Java 1.6或更新版本
 * 要運行示例構建指令碼，請確保您有Ant 1.8或更高版本
 
-在安裝Tomcat和MySQL後，請連絡Adobe以取得一組必要的DRM憑證。
+安裝Tomcat和MySQL後，請與Adobe聯繫以獲得所需的DRM憑據集。
 
 ## 構建許可證伺服器{#build-the-license-server}
 
