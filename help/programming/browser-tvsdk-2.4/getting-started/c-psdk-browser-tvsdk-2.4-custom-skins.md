@@ -1,13 +1,10 @@
 ---
 description: 若要使用自訂外觀，您必須編寫類似default-video-controls.css的自訂內容，並參閱播放器中的這項新自訂內容。
-seo-description: 若要使用自訂外觀，您必須編寫類似default-video-controls.css的自訂內容，並參閱播放器中的這項新自訂內容。
-seo-title: 自訂外觀
 title: 自訂外觀
-uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
