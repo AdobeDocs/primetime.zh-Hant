@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerItem.timedMetadata屬性可讓您存取從播放清單／資訊清單標籤或從媒體串流內的ID3標籤建立的所有TimedMetadata物件。 MediaPlayerItem.hasTimedMetadata屬性可指出目前媒體中是否有已訂閱的自訂標籤。
-seo-description: MediaPlayerItem.timedMetadata屬性可讓您存取從播放清單／資訊清單標籤或從媒體串流內的ID3標籤建立的所有TimedMetadata物件。 MediaPlayerItem.hasTimedMetadata屬性可指出目前媒體中是否有已訂閱的自訂標籤。
-seo-title: 資訊清單標籤的通知
 title: 資訊清單標籤的通知
-uuid: 87bee41b-b44e-4d12-afd2-7a63023f992c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
