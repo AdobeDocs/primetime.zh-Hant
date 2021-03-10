@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK需注意一些安全性考量。
-seo-description: 瀏覽器TVSDK需注意一些安全性考量。
-seo-title: 安全性考量
 title: 安全性考量
-uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -17,11 +14,11 @@ ht-degree: 0%
 
 瀏覽器TVSDK需注意一些安全性考量。
 
-* **Adobe Flash Player**
+* **AdobeFlash Player**
 
-   * Flash Player不允許存取位於SWF產生網域以外的資料。
+   * Flash Player不允許存取SWF來源網域以外的資料。
 
-      若要允許存取，請在裝載資料之伺服器的根目錄上，以適當的權限來裝載跨網域原則檔案。 在瀏覽器TVSDK（Flash Player 23版及更新版本）的Flash備援模式中，您需要網域的授權Token。 若要產生代號，請連絡您的Adobe代表。
+      若要允許存取，請在裝載資料之伺服器的根目錄上，以適當的權限來裝載跨網域原則檔案。 在瀏覽器TVSDK(Flash版本23及更新版本)的Flash Player備援模式中，您需要網域的授權Token。 若要產生Token，請連絡您的Adobe代表。
 
 * **JavaScript**
 
