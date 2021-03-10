@@ -1,13 +1,10 @@
 ---
 description: 'Adobe® Access™是高價值視訊內容的進階數位版權管理與內容保護解決方案。 使用您使用Java API建立的工具，您可以建立原則、將原則套用至包含音訊和視訊內容的檔案，以及加密這些檔案。 執行這些任務的高級步驟如下 '
-seo-description: 'Adobe® Access™是高價值視訊內容的進階數位版權管理與內容保護解決方案。 使用您使用Java API建立的工具，您可以建立原則、將原則套用至包含音訊和視訊內容的檔案，以及加密這些檔案。 執行這些任務的高級步驟如下 '
-seo-title: 概觀
 title: 概觀
-uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -32,15 +29,15 @@ Adobe® Access™是高價值視訊內容的進階數位版權管理與內容保
 
 SDK提供Java API來完成這些工作，並包含授權伺服器的參考實作，以及以Java API為基礎的命令列工具。 如需詳細資訊，請參閱&#x200B;*使用Adobe存取參考實作*。
 
-## Adobe Access 5.2 {#section_06220EDE36B54DCB9CA7963B76DA8167}的新增功能
+## AdobeAccess 5.2 {#section_06220EDE36B54DCB9CA7963B76DA8167}的新增功能
 
-* **外部CEK**:將內容密鑰管理系統(CKMS)整合至DRM授權服務和內容封裝工作流程的能力，而不是加密CEK並將它捆綁在內容的中繼資料中。請參閱[Adobe Access DRM External CEK Overview](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)。
+* **外部CEK**:將內容密鑰管理系統(CKMS)整合至DRM授權服務和內容封裝工作流程的能力，而不是加密CEK並將它捆綁在內容的中繼資料中。請參閱[Adobe訪問DRM外部CEK概述](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)。
 
 * **授權（憑單）退貨**:用戶端可傳回（或刪除）發給用戶端的授權。
-* **Xbox Key Server**:能夠保護傳送至Xbox和Xbox 360的內容。（需要Adobe Primetime用戶端。）
+* **Xbox Key Server**:能夠保護傳送至Xbox和Xbox 360的內容。(需要Adobe Primetime客戶。)
 
 ## 自訂使用規則{#custom-usage-rules}
 
 指定自訂使用規則。 自訂資料可包含在授權伺服器核發的授權中。 此資料的解譯／處理完全由用戶端應用程式和授權伺服器的實作決定。
 
-範例使用案例：允許將其他商業規則安全地傳達為原則及／或內容授權的一部分，以擴充使用規則。 出於安全原因，由於這些使用規則是在自訂用戶端應用程式碼中強制執行的，因此應搭配AIR應用程式或Flash Player SWF允許清單選項使用此選項。 如需詳細資訊，請參閱[執行時期和應用程式限制](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)。
+範例使用案例：允許將其他商業規則安全地傳達為原則及／或內容授權的一部分，以擴充使用規則。 出於安全原因，因為這些使用規則是在自訂用戶端應用程式碼中強制執行的，所以應搭配AIR應用程式或Flash PlayerSWF允許清單選項使用此選項。 如需詳細資訊，請參閱[執行時期和應用程式限制](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)。
