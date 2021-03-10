@@ -1,9 +1,9 @@
 ---
-seo-title: 封裝媒體
 title: 封裝媒體
-uuid: f6e877be-d916-4766-bc44-99891a3df3a8
+description: 封裝媒體
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->檔案路徑必須引用包裝伺服器可用的檔案。 如果您在與封裝伺服器不同的機器上執行Flash Access Manager，您必須指定伺服器可存取的路徑（位於網路磁碟機或伺服器本身）。
+>檔案路徑必須引用包裝伺服器可用的檔案。 如果您在與打包伺服器不同的電腦上運行Flash Access管理器，則必須指定伺服器可以訪問的路徑（位於網路驅動器或伺服器本身）。
 
 下表說明「封裝媒體」偏好設定：
 
