@@ -1,13 +1,10 @@
 ---
 description: 此範例顯示在播放時間軸上包含自訂廣告標籤的建議方式。
-seo-description: 此範例顯示在播放時間軸上包含自訂廣告標籤的建議方式。
-seo-title: 在時間軸上放置自訂廣告標籤
 title: 在時間軸上放置自訂廣告標籤
-uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
 translation-type: tm+mt
-source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -37,7 +34,7 @@ ht-degree: 0%
 
 * 如果應用程式嘗試載入其設定包含`CustomRangeMetadata`的媒體資源，而該媒體資源僅能用於內容自訂廣告標籤，則TVSDK會在基礎資產不是VOD類型時引發例外。
 
-* 處理自訂廣告標籤時，TVSDK會停用其他廣告解析機制（例如Adobe Primetime廣告決策）。
+* 處理自訂廣告標籤時，TVSDK會停用其他廣告解析機制(例如，Adobe Primetime廣告決策)。
 
    您可以使用任何TVSDK廣告解析程式模組或自訂廣告標籤機制。 當您使用自訂廣告標籤時，廣告內容會被視為已解析，並置於時間軸上。
 
