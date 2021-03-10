@@ -1,9 +1,9 @@
 ---
-seo-title: 替代音訊
 title: 替代音訊
-uuid: cc38ded2-45b7-4be4-8f46-a919fdaf79cf
+description: 替代音訊
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
