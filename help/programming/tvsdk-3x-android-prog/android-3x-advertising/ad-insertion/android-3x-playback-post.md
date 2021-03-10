@@ -1,13 +1,10 @@
 ---
 description: 媒體播放的行為會受到搜尋、暫停、快進或倒轉以及廣告的影響。
-seo-description: 媒體播放的行為會受到搜尋、暫停、快進或倒轉以及廣告的影響。
-seo-title: 廣告的預設和自訂播放行為
 title: 廣告的預設和自訂播放行為
-uuid: f008eea1-f30f-4a7a-ad8b-9cde4bac121e
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
