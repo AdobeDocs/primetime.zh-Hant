@@ -1,13 +1,10 @@
 ---
 description: 您可以選擇使用預設廣告行為。
-seo-description: 您可以選擇使用預設廣告行為。
-seo-title: 使用預設播放行為
 title: 使用預設播放行為
-uuid: 20785251-eb2f-4cc0-b919-1a88c0b1c57c
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
