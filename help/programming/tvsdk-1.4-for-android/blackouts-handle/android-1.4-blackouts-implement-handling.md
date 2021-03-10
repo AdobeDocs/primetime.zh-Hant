@@ -1,13 +1,10 @@
 ---
 description: TVSDK提供API和范常式式碼，以處理封鎖期。
-seo-description: TVSDK提供API和范常式式碼，以處理封鎖期。
-seo-title: 實施封鎖處理
 title: 實施封鎖處理
-uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
