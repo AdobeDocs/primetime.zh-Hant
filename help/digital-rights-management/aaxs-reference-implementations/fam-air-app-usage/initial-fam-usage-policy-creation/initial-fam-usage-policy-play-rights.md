@@ -1,9 +1,9 @@
 ---
-seo-title: 播放權限
 title: 播放權限
-uuid: 90f2a7a6-6637-4d10-9afe-6d2e77fc4185
+description: 播放權限
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -29,6 +29,6 @@ ht-degree: 0%
 | SWF | 允許播放受保護內容的SWF URL清單。 |
 | AIR | 允許播放受保護內容的AIR應用程式清單。 發行者ID為必填，其餘欄位為選填欄位。 |
 
-Flash Access Manager支援包含多重播放權限的原則。 若要建立具有多個「播放權限」的原則，請使用「新增其他「播放權限」按鈕，並填入每個「播放權限」的所需屬性。
+Flash Access管理器支援包含多個播放權限的策略。 若要建立具有多個「播放權限」的原則，請使用「新增其他「播放權限」按鈕，並填入每個「播放權限」的所需屬性。
 
 在使用授權時，客戶會使用第一個符合所有需求的「播放權」。 可使用多個播放權限來指定不同作業系統的不同限制。 例如，可以指定一項權利（通過塊列出Macintosh和Linux上的DRM版本）和指定第二項權利（通過塊列出Windows上的DRM版本），並指定「輸出保護」在其他平台上「使用（如果可用）」（通過塊列出Windows上的DRM版本）。
