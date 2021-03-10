@@ -1,13 +1,10 @@
 ---
 description: 此表證明了有關WARN的詳細資訊。 類型通知。
-seo-description: 此表證明了有關WARN的詳細資訊。 類型通知。
-seo-title: 警告通知代碼
 title: 警告通知代碼
-uuid: 1ce5be07-f5bf-443c-b907-9768633e1300
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '272'
 ht-degree: 2%
 
 ---
