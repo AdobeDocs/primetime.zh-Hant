@@ -1,13 +1,10 @@
 ---
 description: 若要使用瀏覽器TVSDK，您必須建立並設定基本播放器。 若要播放視訊內容，您可以使用瀏覽器TVSDK或UI架構，以兩種方式建立基本播放器。
-seo-description: 若要使用瀏覽器TVSDK，您必須建立並設定基本播放器。 若要播放視訊內容，您可以使用瀏覽器TVSDK或UI架構，以兩種方式建立基本播放器。
-seo-title: 基本播放器
 title: 基本播放器
-uuid: 44a27458-be12-452f-92b9-3cef79439257
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
