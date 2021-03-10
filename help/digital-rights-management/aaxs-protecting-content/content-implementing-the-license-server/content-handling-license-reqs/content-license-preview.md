@@ -1,9 +1,9 @@
 ---
-seo-title: 授權預覽
 title: 授權預覽
-uuid: 3171647d-1437-48ab-9659-3eb363993618
+description: 授權預覽
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
