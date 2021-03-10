@@ -1,13 +1,10 @@
 ---
 description: 此表提供了有關ERROR類型通知的詳細資訊。
-seo-description: 此表提供了有關ERROR類型通知的詳細資訊。
-seo-title: 錯誤通知代碼
 title: 錯誤通知代碼
-uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '434'
 ht-degree: 5%
 
 ---
@@ -245,7 +242,7 @@ ht-degree: 5%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 郵遞區號170010  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_ERROR  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_錯誤  </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> <p>Site Catalyst錯誤。 請參閱說明。 </p> </td> 
