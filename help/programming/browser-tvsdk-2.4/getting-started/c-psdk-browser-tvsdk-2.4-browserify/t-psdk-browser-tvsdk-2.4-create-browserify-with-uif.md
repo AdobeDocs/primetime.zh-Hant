@@ -1,13 +1,10 @@
 ---
 description: 使用您應用程式中的瀏覽器TVSDK提供的瀏覽器化程式庫檔案，使用UI-Framework建立與瀏覽器化相容的播放器。
-seo-description: 使用您應用程式中的瀏覽器TVSDK提供的瀏覽器化程式庫檔案，使用UI-Framework建立與瀏覽器化相容的播放器。
-seo-title: 使用UI-Framework建立與瀏覽器相容的播放器
 title: 使用UI-Framework建立與瀏覽器相容的播放器
-uuid: 544fd872-5ca1-417d-8aab-69613caada0e
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
