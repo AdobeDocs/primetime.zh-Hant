@@ -1,13 +1,10 @@
 ---
 description: 事件處理常式可讓您回應TVSDK事件。
-seo-description: 事件處理常式可讓您回應TVSDK事件。
-seo-title: 實作事件偵聽器和回呼
 title: 實作事件偵聽器和回呼
-uuid: f186b39e-e634-4f64-977d-279147d76c5c
 translation-type: tm+mt
-source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
