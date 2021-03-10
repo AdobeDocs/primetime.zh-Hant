@@ -1,13 +1,10 @@
 ---
 description: 大部分廣告商都需要詳細資訊，瞭解廣告的檢視時間、時間長度，以及成功程度。 最有效的方式是讓用戶端播放器在播放廣告時傳送報表，但資訊清單伺服器也支援伺服器端和混合式廣告追蹤。
-seo-description: 大部分廣告商都需要詳細資訊，瞭解廣告的檢視時間、時間長度，以及成功程度。 最有效的方式是讓用戶端播放器在播放廣告時傳送報表，但資訊清單伺服器也支援伺服器端和混合式廣告追蹤。
-seo-title: 廣告追蹤
 title: 廣告追蹤
-uuid: 184b8c36-5e51-42a7-b905-53f2b7b15e49
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
