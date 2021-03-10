@@ -1,19 +1,17 @@
 ---
-title: Adobe Primetime API參考
-seo-title: Adobe Primetime API參考
+title: Adobe PrimetimeAPI參考
 description: API可協助您快速輕鬆地建立功能應用程式或整合。
-seo-description: API可協助您快速輕鬆地建立功能應用程式或整合。
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 1841f64e6f7a839f997b0710661898fda0d69bd6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime API參考{#api-references}
+# Adobe PrimetimeAPI參考{#api-references}
 
 + TVSDK 3.12 {#tvsdk-312}
    + [Android專用TVSDK 3.12](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
