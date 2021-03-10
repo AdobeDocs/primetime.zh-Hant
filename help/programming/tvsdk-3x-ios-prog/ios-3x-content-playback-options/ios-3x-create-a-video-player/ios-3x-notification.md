@@ -1,13 +1,10 @@
 ---
 description: 玩家可監聽一系列事件，以指出玩家的狀態。
-seo-description: 玩家可監聽一系列事件，以指出玩家的狀態。
-seo-title: 設定通知
 title: 設定通知
-uuid: b178b2eb-da40-456b-997a-46ae18d635fa
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
