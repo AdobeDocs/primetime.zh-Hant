@@ -1,13 +1,10 @@
 ---
 description: 自訂廣告標籤可讓您將一組代表時間軸區段的TimeRange規格傳遞至TVSDK。
-seo-description: 自訂廣告標籤可讓您將一組代表時間軸區段的TimeRange規格傳遞至TVSDK。
-seo-title: TimeRange類
 title: TimeRange類
-uuid: adf4f1ad-6b3b-48ac-a388-ee1fd54f770b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
