@@ -1,13 +1,10 @@
 ---
 description: 此版本包含播放器，並支援多種瀏覽器。
-seo-description: 此版本包含播放器，並支援多種瀏覽器。
-seo-title: 需求
 title: 需求
-uuid: 9726b083-f52a-410c-8ab4-47b4913d5172
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
