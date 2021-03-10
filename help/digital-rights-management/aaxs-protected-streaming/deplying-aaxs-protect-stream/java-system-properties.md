@@ -1,9 +1,9 @@
 ---
-seo-title: Java系統屬性
 title: Java系統屬性
-uuid: ad1f3d9b-7d95-4e19-a0f8-fd7d4dd4dc32
+description: Java系統屬性
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
