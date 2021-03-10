@@ -1,13 +1,10 @@
 ---
 description: 依預設，當使用者搜尋廣告插播時，TVSDK會強制播放廣告插播。 如果從先前的中斷完成所經過的時間在特定分鐘內，您可以自訂跳過廣告中斷的行為。
-seo-description: 依預設，當使用者搜尋廣告插播時，TVSDK會強制播放廣告插播。 如果從先前的中斷完成所經過的時間在特定分鐘內，您可以自訂跳過廣告中斷的行為。
-seo-title: 略過一段時間的廣告插播
 title: 略過一段時間的廣告插播
-uuid: be39cb2b-c274-447a-8fb5-89b3e9598622
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
@@ -35,7 +32,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >`REMOVE`廣告插播政策將被淘汰。 Adobe建議您使用`SKIP`廣告插播政策來取代`REMOVE`。
+   >`REMOVE`廣告插播政策將被淘汰。 Adobe建議您使用`SKIP`廣告插播策略來取代`REMOVE`。
 
 下列自訂廣告政策選擇器範例會在使用者觀看廣告插播後的5分鐘（塗鴉牆時鐘時間）跳過廣告。
 
