@@ -1,13 +1,10 @@
 ---
 description: 您可以使用TextFormat類別來提供隱藏字幕音軌的樣式資訊，此類別會設定播放器所顯示隱藏字幕的樣式。
-seo-description: 您可以使用TextFormat類別來提供隱藏字幕音軌的樣式資訊，此類別會設定播放器所顯示隱藏字幕的樣式。
-seo-title: 控制隱藏字幕樣式
 title: 控制隱藏字幕樣式
-uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
@@ -131,7 +128,7 @@ ht-degree: 0%
 
       >[!IMPORTANT]
       >
-      >**色彩設定：** 在Android TVSDK 2.X中，已對隱藏字幕的色彩樣式進行增強。該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在Photoshop等應用程式中使用的熟悉6位元組字串：
+      >**色彩設定：** 在Android TVSDK 2.X中，已對隱藏字幕的色彩樣式進行增強。該增強功能允許使用表示RGB顏色值的十六進位字串來設定隱藏字幕顏色。 RGB十六進位色彩表示法是您在例如Photoshop等應用程式中使用的熟悉的6位元組字串：
       >
       >* FFFFFF =黑色
       >* 000000 =白色
@@ -188,7 +185,7 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> 字型 </td> 
-   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由<span class="codeph"> TextFormat.Font </span>枚舉定義的值，並表示（例如，帶有或不帶有序列）。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 帶有序列的單空間通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
+   <td colname="2"> <p>字型類型。 </p> <p>只能設定為由<span class="codeph"> TextFormat.Font </span>枚舉定義的值，並表示（例如，帶有或不帶有序列）。 </p> <p>提示： 裝置上的實際可用字型可能會有所不同，並會視需要使用替代。 單空間與serifs通常用作替代，儘管這種替代可以是系統特定的。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 大小 </td> 
