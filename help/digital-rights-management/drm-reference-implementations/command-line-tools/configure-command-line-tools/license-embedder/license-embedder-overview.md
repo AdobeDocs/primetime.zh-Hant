@@ -1,9 +1,9 @@
 ---
-seo-title: 概觀
 title: 概觀
-uuid: 5487d1d3-7eb8-410d-a4b1-cde3e94c00a1
+description: 概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
