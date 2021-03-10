@@ -1,13 +1,10 @@
 ---
 description: 下列新API可讓您定義DRM回呼。
-seo-description: 下列新API可讓您定義DRM回呼。
-seo-title: 實現DRM回呼
 title: 實現DRM回呼
-uuid: a54c5ec2-299f-47b0-b65b-eed5656ab6aa
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
