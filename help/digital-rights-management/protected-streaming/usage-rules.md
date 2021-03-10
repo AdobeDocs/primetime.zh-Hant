@@ -1,13 +1,10 @@
 ---
-description: 有了Adobe Primetime DRM Server for Protected Streaming，您就可以使用設定檔案指定伺服器上的所有使用規則。
-seo-description: 有了Adobe Primetime DRM Server for Protected Streaming，您就可以使用設定檔案指定伺服器上的所有使用規則。
-seo-title: 關於使用規則
+description: 使用Adobe PrimetimeDRM Server for Protected Streaming，您可以使用配置檔案指定伺服器上的所有使用規則。
 title: 關於使用規則
-uuid: 4a794712-db58-43f5-b867-8871e58e12ae
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # 關於使用規則{#about-usage-rules}
 
-有了Adobe Primetime DRM Server for Protected Streaming，您就可以使用設定檔案指定伺服器上的所有使用規則。
+使用Adobe PrimetimeDRM Server for Protected Streaming，您可以使用配置檔案指定伺服器上的所有使用規則。
 
-在DRM策略中為受保護內容指定的任何使用規則都會被覆蓋。 因此，Adobe建議您在內容封裝期間使用簡單、匿名的DRM政策。 您可以設定的任何使用規則，皆可依每租用戶進行設定。
+在DRM策略中為受保護內容指定的任何使用規則都會被覆蓋。 因此，Adobe建議您在內容封裝期間使用簡單、匿名的DRM原則。 您可以設定的任何使用規則，皆可依每租用戶進行設定。
 
 Primetime DRM Server for Protected Streaming支援下列使用規則：
 
