@@ -1,9 +1,9 @@
 ---
-seo-title: 效能調整
 title: 效能調整
-uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
+description: 效能調整
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -28,9 +28,9 @@ ht-degree: 0%
 
 在某些情況下，Linux環境在執行需要隨機數字產生的與Primetime DRM相關的操作時可能會暫停，包括：
 
-* 啟動Adobe Primetime DRM授權伺服器
+* 啟動Adobe PrimetimeDRM許可證伺服器
 * 使用[!DNL AdobePolicyManager]實用程式生成策略
-* 將DRM保護的內容與Adobe Media Server或Primetime OfflinePackager封裝
+* 將受DRM保護的內容與Adobe Medium伺服器或Primetime OfflinePackager封裝
 
 這些操作中的延遲通常是由於Linux伺服器上的低熵池造成的。
 
