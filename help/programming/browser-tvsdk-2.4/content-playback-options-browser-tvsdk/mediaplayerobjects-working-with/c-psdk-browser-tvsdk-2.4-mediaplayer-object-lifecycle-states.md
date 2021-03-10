@@ -1,13 +1,10 @@
 ---
 description: 從建立MediaPlayer例項到終止該例項的那一刻起，該例項會從一個狀態轉換為下一個狀態。
-seo-description: 從建立MediaPlayer例項到終止該例項的那一刻起，該例項會從一個狀態轉換為下一個狀態。
-seo-title: MediaPlayer物件的生命週期和狀態
 title: MediaPlayer物件的生命週期和狀態
-uuid: fe76ea80-aaa8-43bc-9b81-85e0551f70dd
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
