@@ -1,9 +1,9 @@
 ---
-seo-title: 獲取域CA證書
 title: 獲取域CA證書
-uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
+description: 獲取域CA證書
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 獲取域CA證書{#obtain-domain-ca-certificates}
 
-與「授權伺服器」、「封裝器」或「傳輸」憑證不同，網域CA憑證不是由Adobe核發。 您可從認證機構取得此憑證，或產生自行簽署的憑證以用於此用途。
+與License Server、Packager或Transport證書不同，域CA證書不由Adobe頒發。 您可從認證機構取得此憑證，或產生自行簽署的憑證以用於此用途。
 
 域CA證書應使用1024位密鑰，並包含CA證書中所需的標準屬性：
 
