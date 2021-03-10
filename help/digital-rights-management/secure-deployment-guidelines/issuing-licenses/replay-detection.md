@@ -1,13 +1,10 @@
 ---
 description: 重放保護可防止攻擊者重放許可證請求消息，並可能導致對客戶端的拒絕服務(DoS)攻擊。
-seo-description: 重放保護可防止攻擊者重放許可證請求消息，並可能導致對客戶端的拒絕服務(DoS)攻擊。
-seo-title: 重放保護
 title: 重放保護
-uuid: 93749dd3-a42c-4866-ac54-1b20d6683c42
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
