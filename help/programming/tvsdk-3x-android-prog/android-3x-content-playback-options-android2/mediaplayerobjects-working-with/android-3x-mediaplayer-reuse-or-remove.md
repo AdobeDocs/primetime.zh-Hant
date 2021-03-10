@@ -1,13 +1,10 @@
 ---
 description: 您可以重設、重複使用或發行您不再需要的MediaPlayer例項。
-seo-description: 您可以重設、重複使用或發行您不再需要的MediaPlayer例項。
-seo-title: 重複使用或移除MediaPlayer例項
 title: 重複使用或移除MediaPlayer例項
-uuid: 74a46689-1708-4d26-9a4e-a4cdb0e55451
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
