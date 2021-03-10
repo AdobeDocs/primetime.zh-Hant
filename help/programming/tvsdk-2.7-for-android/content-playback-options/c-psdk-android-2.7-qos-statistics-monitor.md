@@ -1,13 +1,10 @@
 ---
 description: 服務質量(QoS)提供視訊引擎執行的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
-seo-description: 服務質量(QoS)提供視訊引擎執行的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
-seo-title: 服務質量統計
 title: 服務質量統計
-uuid: 8e990461-065b-4efa-b77c-b2b832f86f7d
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
