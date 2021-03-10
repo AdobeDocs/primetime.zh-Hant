@@ -1,13 +1,10 @@
 ---
 description: 當您的播放包含廣告時，TVSDK會依一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件實施動作。
-seo-description: 當您的播放包含廣告時，TVSDK會依一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件實施動作。
-seo-title: 廣告活動順序
 title: 廣告活動順序
-uuid: 34a6a606-2f2e-42de-88fd-c91202cafddf
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
