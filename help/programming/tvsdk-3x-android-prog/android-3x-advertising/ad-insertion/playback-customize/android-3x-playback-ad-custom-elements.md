@@ -1,13 +1,10 @@
 ---
 description: TVSDK提供您可用來自訂包含廣告之內容的播放行為的類別和方法。
-seo-description: TVSDK提供您可用來自訂包含廣告之內容的播放行為的類別和方法。
-seo-title: 廣告播放的API元素
 title: 廣告播放的API元素
-uuid: 56844663-d635-4b04-b61b-cb8f33ef5732
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
