@@ -1,13 +1,10 @@
 ---
 description: 您可以使用MediaPlayerItemConfig類別，在串流中設定自訂標籤名稱。
-seo-description: 您可以使用MediaPlayerItemConfig類別，在串流中設定自訂標籤名稱。
-seo-title: 標籤的Config類方法
 title: 標籤的Config類方法
-uuid: 222a0349-58d5-4bf3-9d03-e5920610faf5
 translation-type: tm+mt
-source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
