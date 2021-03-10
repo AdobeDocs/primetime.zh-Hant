@@ -1,13 +1,10 @@
 ---
 description: 授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法（已授權）的使用者可獲得授權（金鑰），以解密並播放其內容供應商的加密內容。
-seo-description: 授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法（已授權）的使用者可獲得授權（金鑰），以解密並播放其內容供應商的加密內容。
-seo-title: 授權
 title: 授權
-uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法（已授權）的使用者可獲得授權（金鑰），以解密並播放其內容供應商的加密內容。
 
-在使用者裝置上的應用程式或網頁播放受DRM保護的內容之前，它必須從您（客戶）操作的權益或店面伺服器取得Token。 Adobe提供範例參考伺服器，以供下列用途使用：[參考伺服器：範例ExpressPlay Entitlement Server(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)。
+在使用者裝置上的應用程式或網頁播放受DRM保護的內容之前，它必須從您（客戶）操作的權益或店面伺服器取得Token。 Adobe為此目的提供了示例參考伺服器：[參考伺服器：範例ExpressPlay Entitlement Server(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)。
 
 您的權益或店面伺服器必須先向相關的ExpressPlay伺服器要求授權Token，然後再與您自己的後端系統進行檢查，以判斷特定使用者是否有權觀看要求的內容。 從授權Token請求傳回的回應是授權伺服器的現成可用URL，或回應包含JSON結構中的URL，視您使用的DRM解決方案而定。
 
