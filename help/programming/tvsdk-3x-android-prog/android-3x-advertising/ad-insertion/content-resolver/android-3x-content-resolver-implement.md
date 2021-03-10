@@ -1,13 +1,10 @@
 ---
 description: 您可以根據預設解析器實作您自己的內容解析器。
-seo-description: 您可以根據預設解析器實作您自己的內容解析器。
-seo-title: 建置自訂內容解析程式
 title: 建置自訂內容解析程式
-uuid: 5f63cc1e-3f4b-460c-9151-2b9d364800e2
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '209'
 ht-degree: 2%
 
 ---
