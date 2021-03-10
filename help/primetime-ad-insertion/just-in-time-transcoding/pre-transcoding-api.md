@@ -1,13 +1,10 @@
 ---
 title: 預轉碼API
 description: 您可以使用即時重新封裝API來提前轉碼廣告創意素材，如此就可視需要提供內容相容版本，避免與即時(JIT)重新封裝相關的2-4分鐘延遲。
-seo-description: 您可以使用即時重新封裝API來提前轉碼廣告創意素材，如此就可視需要提供內容相容版本，避免與即時(JIT)重新封裝相關的2-4分鐘延遲。
-seo-title: 預轉碼API
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # 預轉碼和重新封裝API {#pre-transcoding-api}
 
-Primetime廣告插入提供預轉碼API，適用於預先知道創意URL的情況，例如大型直接銷售事件。  如此可免除與即時轉碼相關的2-4分鐘延遲。
+PrimetimeAd Insertion針對預先知道創意URL的情況（例如大型直銷事件）提供轉碼前API。  如此可免除與即時轉碼相關的2-4分鐘延遲。
 
 ## HTTP請求{#section_F616F5722F0B4AB7939EE2ECBEDDB297}
 
-傳送HTTP POST命令至指定的URL，以告知CRS您要轉碼的廣告創意素材，以及您想要使用哪些選項。 回應程式碼會報告成功或失敗以及其他資訊。
+傳送HTTPPOST命令至指定的URL，以告知CRS您要轉碼的廣告創意素材，以及您想要使用哪些選項。 回應程式碼會報告成功或失敗以及其他資訊。
 
-此請求需要使用者名稱和密碼。 您可向Adobe技術客戶經理取得這些資訊。 如果您需要驗證的相關資訊，請連絡您的Adobe Primetime啟用代表。
+此請求需要使用者名稱和密碼。 您可向Adobe技術客戶經理取得這些資訊。 如果您需要驗證相關資訊，請連絡您的Adobe Primetime啟用代表。
 
 若要將轉碼請求提交給CRS，請傳送HTTP訊息，如下所示：
 
@@ -81,7 +78,7 @@ Body中的`RepackageList`塊可以包含1到300個`Repackage`塊。 如果內文
    * `clientside` -產生與TVSDK用來與CDN通訊的URL相容的輸出。
    >[!IMPORTANT]
    >
-   >如果您希望重新封裝的廣告與「用戶端廣告插入」相容，您必須提供此參數。 如果您未提供此功能，重新封裝的廣告將只與「伺服器端廣告插入」相容。
+   >如果您想要重新封裝的廣告與用戶端Ad Insertion相容，您必須提供此參數。 如果您未提供此功能，則重新封裝的廣告將僅與伺服器端Ad Insertion相容。
 
    * `hls` -產生HLS相容的轉碼廣告創意。
    * `dash` -產生與DASH相容的轉碼廣告創意。
