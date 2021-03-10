@@ -1,13 +1,10 @@
 ---
 description: Primetime廣告插入使用Cookie進行內部用途，並方便使用串流和廣告伺服器。
-seo-description: Primetime廣告插入使用Cookie進行內部用途，並方便使用串流和廣告伺服器。
-seo-title: Cookie
 title: Cookie
-uuid: 514ca7bd-e5ef-41be-ac63-52ef2d2a60bb
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '86'
 ht-degree: 0%
 
 ---
