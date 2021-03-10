@@ -1,13 +1,10 @@
 ---
 description: 封裝內容是準備視訊內容以便在網路上播放的程式。 封裝包括將原始視訊轉換為資訊清單檔案，並可選擇使用不同裝置和瀏覽器的不同DRM解決方案來加密內容。
-seo-description: 封裝內容是準備視訊內容以便在網路上播放的程式。 封裝包括將原始視訊轉換為資訊清單檔案，並可選擇使用不同裝置和瀏覽器的不同DRM解決方案來加密內容。
-seo-title: 封裝您的內容
 title: 封裝您的內容
-uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -17,9 +14,9 @@ ht-degree: 0%
 
 封裝內容是準備視訊內容以便在網路上播放的程式。 封裝包括將原始視訊轉換為資訊清單檔案，並可選擇使用不同裝置和瀏覽器的不同DRM解決方案來加密內容。
 
-若要準備內容，您可以使用Adobe Offline Packager或其他工具，例如ExpressPlay的Bento4封裝程式。 封裝程式都會準備視訊以供播放（例如，將原始檔案分割並放入資訊清單中），並使用您選擇的DRM解決方案（PlayReady、Widevine、FairPlay、存取等）來保護視訊:
+若要準備內容，您可以使用AdobeOffline Packager或其他工具，例如ExpressPlay的Bento4封裝程式。 封裝程式都會準備視訊以供播放（例如，將原始檔案分割並放入資訊清單中），並使用您選擇的DRM解決方案（PlayReady、Widevine、FairPlay、存取等）來保護視訊:
 
-* [Adobe Offline Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)
+* [Adobe離線套件](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)
 * [ExpressPlay Packager](https://www.expressplay.com/developer/packaging-tools/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
@@ -32,11 +29,11 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >對於熟悉Adobe Access的人而言，這是不同解決方案運作方式的重要差異。 在Access中，授權金鑰內嵌在DRM中繼資料中，並與受保護的內容來回傳遞。 在此處所述的多DRM系統中，實際的授權不會傳遞，而是會安全地儲存並透過金鑰ID取得。
+   >對於熟悉Adobe存取的人來說，這是不同解決方案運作方式的重要差異。 在Access中，授權金鑰內嵌在DRM中繼資料中，並與受保護的內容來回傳遞。 在此處所述的多DRM系統中，實際的授權不會傳遞，而是會安全地儲存並透過金鑰ID取得。
 
 <!--<a id="example_52AF76B730174B79B6088280FCDF126D"></a>-->
 
-以下是使用Adobe Offline Packager for Widevine的封裝範例。 Packager使用配置檔案（例如[!DNL widevine.xml]），其外觀如下：
+以下是使用Widevine的Adobe離線封裝程式的封裝範例。 Packager使用配置檔案（例如[!DNL widevine.xml]），其外觀如下：
 
 ```
 <config> 
