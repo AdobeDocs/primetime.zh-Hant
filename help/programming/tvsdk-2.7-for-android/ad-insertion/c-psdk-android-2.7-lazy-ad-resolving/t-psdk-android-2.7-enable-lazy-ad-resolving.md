@@ -1,14 +1,11 @@
 ---
 description: 您可以使用現有的「延遲廣告載入」機制來啟用或停用「延遲廣告解析」功能（預設會啟用「延遲廣告解析」）。
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: 您可以使用現有的「延遲廣告載入」機制來啟用或停用「延遲廣告解析」功能（預設會啟用「延遲廣告解析」）。
-seo-title: 啟用延遲廣告解析
+keywords: Lazy;Ad resoling;Ad loading;delayLoading
 title: 啟用延遲廣告解析
-uuid: a084ee0b-53af-4600-91f6-d30ccc89699d
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
