@@ -1,13 +1,10 @@
 ---
 description: 這些類別說明有關錯誤、警告和某些活動的訊息，而TVSDK會針對登入和除錯而發出問題。
-seo-description: 這些類別說明有關錯誤、警告和某些活動的訊息，而TVSDK會針對登入和除錯而發出問題。
-seo-title: 通知類
 title: 通知類
-uuid: e231a2d0-6190-4251-87db-ca46d2aee60d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
