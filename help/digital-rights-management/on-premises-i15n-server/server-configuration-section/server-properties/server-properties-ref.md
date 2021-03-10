@@ -1,9 +1,9 @@
 ---
-seo-title: 伺服器屬性參考
 title: 伺服器屬性參考
-uuid: 24a187fe-9b7d-411f-a358-d10c70a5dd0e
+description: 伺服器屬性參考
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
@@ -55,7 +55,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> 內容快取 </td> 
-   <td>這些設定可控制個人化伺服器下載內容的位置，以及快取內容至磁碟的位置。 個性化伺服器將在啟動時檢查內容伺服器是否有新內容一次，然後按這些屬性指定的頻率／時間檢查。 <p>對於內部個人化伺服器，我們包括了一組初始內容快取資料。 請務必將快取資料夾（而非快取資料夾本身）的<i>CONTENTS</i>複製至已設定的<span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> contentServer.localDirectory</span>位置。 </p> </td> 
+   <td>這些設定可控制個人化伺服器下載內容的位置，以及快取內容至磁碟的位置。 個人化伺服器會在啟動時檢查內容伺服器是否有新內容一次，然後以這些屬性指定的頻率／時間檢查。 <p>對於內部個人化伺服器，我們包括了一組初始內容快取資料。 請務必將快取資料夾（而非快取資料夾本身）的<i>CONTENTS</i>複製至已設定的<span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> contentServer.localDirectory</span>位置。 </p> </td> 
    <td> 
     <ul id="ul_r4n_1r2_jr"> 
      <li id="li_CA5F562577B04B4A9966EF46E039A137"><span class="codeph"> contentServer.localDirectory =</span> [要儲存本地內容的目錄（通常為tomcat/temp）] </li> 
@@ -67,7 +67,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> 個人化CA CRL </td> 
-   <td> <p>此證書撤銷清單(CRL)分發點包含在個性化伺服器頒發的每台電腦證書中。 在授權伺服器上的機器憑證驗證期間，CRL將從憑證中所列的散布點下載(或從快取中讀取（如果已下載），並檢查以確定憑證尚未撤銷。 建議在完成建立和部署個性化CA CRL的過程後執行此伺服器配置更改。 在任何配置更改後重新啟動個性化伺服器。 </p> <p>要設定CRL分發點的URL，您需要設定<span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> cert.machine.crldp</span>欄位。 </p> </td> 
+   <td> <p>此證書撤銷清單(CRL)分發點包含在個性化伺服器頒發的每台電腦證書中。 在授權伺服器上的機器憑證驗證期間，CRL將從憑證中所列的散布點下載(或從快取中讀取（如果已下載），並檢查以確保憑證未被撤銷。 建議在完成建立和部署個性化CA CRL的過程後執行此伺服器配置更改。 在任何配置更改後重新啟動個性化伺服器。 </p> <p>要設定CRL分發點的URL，您需要設定<span class="filepath"> AdobeInitial.properties</span> <span class="codeph"> cert.machine.crldp</span>欄位。 </p> </td> 
    <td> 
     <ul id="ul_eq3_lv2_jr"> 
      <li id="li_5E37A9E318D742B6A5E1035120888819"><span class="codeph"> cert.machine.crldp =</span> [CRL分發點] </li> 
@@ -87,7 +87,7 @@ ht-degree: 0%
      <li id="li_610FAF239A554CE59DAC455174F0CF0A"><span class="codeph"> log.FileName =</span> [日誌檔案的前置詞。日期／時間和副檔名"。log"將新增至檔案名稱] </li> 
      <li id="li_1F2913B209BE4A0E8207FAAD052D1764"><span class="codeph"> log.RollInterval =</span> [指定日誌滾動的頻率。] </li> 
      <li id="li_3F46C15488114BB5B41035F710E7A19F"><span class="codeph"> log.RollSize =</span> [記錄檔達到此大小時滾動(當到達 <span class="codeph"> </span> RollInterval或 <span class="codeph"> </span> RollSize時，日誌將滾動，以先到者為準)] </li> 
-     <li id="li_DA32E862F7B0413885DA20633B682484"><span class="codeph"> log.ReportLogging.Enabled =</span>[ [true] | false ]指定是否應產生包含Adobe用來產生個人化報表之資料的個別檔案。] </li> 
+     <li id="li_DA32E862F7B0413885DA20633B682484"><span class="codeph"> log.ReportLogging.Enabled =</span>[ [true] | false ]指定是否應生成包含Adobe用於生成個性化報告的資料的單獨檔案。] </li> 
      <li id="li_465CC6D81B8A484CBF4E7A39F7AF86AA"><span class="codeph"> log.ReportLogging.FileName =</span> [報表記錄檔的首碼。日期／時間和<span class="filepath"> .log</span>副檔名將添加到檔案名中。 l<span class="codeph"> og.Level</span>屬性不適用於此日誌檔案，但<span class="codeph"> log.RollInterval</span>和<span class="codeph"> log.RollSize</span>屬性不適用。] </li> 
     </ul> </td> 
   </tr> 
