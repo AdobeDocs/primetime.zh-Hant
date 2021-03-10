@@ -1,13 +1,10 @@
 ---
 description: 以適當設定的pttimeline查詢參數傳送新廣告插入請求至資訊清單伺服器，以取代VOD時間軸。
-seo-description: 以適當設定的pttimeline查詢參數傳送新廣告插入請求至資訊清單伺服器，以取代VOD時間軸。
-seo-title: 取代VOD時間軸
 title: 取代VOD時間軸
-uuid: 17a6daa3-5ee5-48fb-8981-0d183aed0fe4
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
