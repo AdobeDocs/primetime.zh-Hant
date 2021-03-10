@@ -1,13 +1,10 @@
 ---
 description: 您可以使用通知在視訊應用程式中實作即時記錄。
-seo-description: 您可以使用通知在視訊應用程式中實作即時記錄。
-seo-title: 新增即時記錄與除錯
 title: 新增即時記錄與除錯
-uuid: 568ea2e7-963b-427e-9cb2-e261e4423902
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
