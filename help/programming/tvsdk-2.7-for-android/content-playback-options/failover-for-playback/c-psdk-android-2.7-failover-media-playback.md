@@ -1,13 +1,10 @@
 ---
 description: 對於即時和隨選視訊(VOD)媒體，TVSDK會下載與中解析度位元速率相關的播放清單，並下載該播放清單所定義的媒體區段，以開始播放。 它快速選擇高解析度位元速率播放清單及其相關媒體，並繼續下載程式。
-seo-description: 對於即時和隨選視訊(VOD)媒體，TVSDK會下載與中解析度位元速率相關的播放清單，並下載該播放清單所定義的媒體區段，以開始播放。 它快速選擇高解析度位元速率播放清單及其相關媒體，並繼續下載程式。
-seo-title: 媒體播放和故障切換
 title: 媒體播放和故障切換
-uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -35,7 +32,7 @@ break;
 
 ## 缺少段故障切換{#section_D8DF377CCB644D7FB936796DA0CC5A4B}
 
-當區段遺失時（例如，當特定區段無法下載時）,TVSDK會嘗試透過多種容錯移轉嘗試進行復原。 如果無法恢復，則會發出錯誤。
+當區段遺失時（例如，當特定區段無法下載時）,TVSDK會嘗試透過多種容錯嘗試進行復原。 如果無法恢復，則會發出錯誤。
 
 如果伺服器上遺失區段，例如資訊清單檔案不存在、無法下載區段等，TVSDK會嘗試透過下列選項進行故障切換：
 
