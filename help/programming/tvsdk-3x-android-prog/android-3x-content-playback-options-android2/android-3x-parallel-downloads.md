@@ -1,13 +1,10 @@
 ---
 description: 並行下載視訊和音訊，而非串連下載，可減少啟動延遲。
-seo-description: 並行下載視訊和音訊，而非串連下載，可減少啟動延遲。
-seo-title: 並行下載
 title: 並行下載
-uuid: 11d37a39-391d-4127-9aa7-c94eb8a6a6a8
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
