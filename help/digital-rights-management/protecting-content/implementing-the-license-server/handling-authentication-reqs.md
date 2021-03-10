@@ -1,9 +1,9 @@
 ---
-seo-title: 處理驗證請求
 title: 處理驗證請求
-uuid: abcb9cf6-668e-405c-9659-9ed1bcc33024
+description: 處理驗證請求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -21,5 +21,5 @@ ht-degree: 0%
 
 * 請求處理常式類別為`com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationHandler`
 * 請求消息類為`com.adobe.flashaccess.sdk.protocol.authentication.AuthenticationRequestMessage`
-* 如果客戶端和伺服器都支援第5版協定，請求URL為「元資料中的許可證伺服器URL:+ &quot; [!DNL /flashaccess/authn/v4]&quot;。 如果協定版本3是用戶端或伺服器支援的最高版本，Adobe Primetime DRM用戶端就會傳送驗證要求至「中繼資料中的授權伺服器URL」+「 [!DNL /flashaccess/authn/v3]」。 否則，驗證請求會傳送至「中繼資料中的授權伺服器URL」+「 [!DNL /flashaccess/authn/v1]」
+* 如果客戶端和伺服器都支援第5版協定，請求URL為「元資料中的許可證伺服器URL:+ &quot; [!DNL /flashaccess/authn/v4]&quot;。 如果客戶端或伺服器支援的協定版本3是最大值，則Adobe PrimetimeDRM客戶端會向「License Server URL in metadata」 + &quot; [!DNL /flashaccess/authn/v3]&quot;發送驗證請求。 否則，驗證請求會傳送至「中繼資料中的授權伺服器URL」+「 [!DNL /flashaccess/authn/v1]」
 
