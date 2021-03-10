@@ -1,9 +1,9 @@
 ---
-seo-title: 配置檔案屬性
 title: 配置檔案屬性
-uuid: f0d36240-e5fa-4bf9-9a82-7e963d03cdd0
+description: 配置檔案屬性
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
@@ -69,7 +69,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">設定為要封裝的內容發行授權所需的最低伺服器版本。 指定x(Adobe Access x.0)，其中x =主要版本號碼。 Adobe Access 3.0之前的伺服器不支援此設定。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">設定為要封裝的內容發行授權所需的最低伺服器版本。 指定x(Adobe存取x.0)，其中x =主要發行號。 AdobeAccess 3.0之前的伺服器不支援此設定。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert</span> </td> 
@@ -93,7 +93,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverless</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">如果為true，則沒有可從中取得授權的授權伺服器。 授權必須內嵌或取得帶外授權。 如果未指定，則預設為false。 僅支援Adobe Access Professional。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">如果為true，則沒有可從中取得授權的授權伺服器。 授權必須內嵌或取得帶外授權。 如果未指定，則預設為false。 僅在Adobe Access Professional支援。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
