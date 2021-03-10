@@ -1,13 +1,10 @@
 ---
-description: TVSDK支援在廣告插播時顯示線性視訊播放器——廣告介面定義(VPAID)廣告。 VPAID 1.0版需要Flash，而2.0版也可與Browser TVSDK和JavaScript搭配使用。
-seo-description: TVSDK支援在廣告插播時顯示線性視訊播放器——廣告介面定義(VPAID)廣告。 VPAID 1.0版需要Flash，而2.0版也可與Browser TVSDK和JavaScript搭配使用。
-seo-title: 在廣告插播中顯示線性VPAID廣告
+description: TVSDK支援在廣告插播時顯示線性視訊播放器——廣告介面定義(VPAID)廣告。 VPAID 1.0版需要Flash，而2.0版也適用於瀏覽器TVSDK和JavaScript。
 title: 在廣告插播中顯示線性VPAID廣告
-uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -15,14 +12,14 @@ ht-degree: 0%
 
 # 在廣告插播中顯示線性VPAID廣告{#display-linear-vpaid-ads-in-an-ad-break}
 
-TVSDK支援在廣告插播時顯示線性視訊播放器——廣告介面定義(VPAID)廣告。 VPAID 1.0版需要Flash，而2.0版也可與Browser TVSDK和JavaScript搭配使用。
+TVSDK支援在廣告插播時顯示線性視訊播放器——廣告介面定義(VPAID)廣告。 VPAID 1.0版需要Flash，而2.0版也適用於瀏覽器TVSDK和JavaScript。
 
 若要正確顯示VPAID廣告，您必須在`MediaPlayerContext`例項中提供廣告容器(`AdContainerView`)。
 
 VPAID廣告的限制：
 
 * VPAID廣告不一定有預先定義的持續時間，因為廣告可以是互動式的。 因此，廣告持續時間（由廣告伺服器回應定義）不一定完全對應於廣告的真實持續時間。
-* 對於VPAID 1.0廣告，TVSDK需要在裝置上安裝Flash Player 14.0.0.160或更新版本。 對於舊版Flash Player，此功能已停用，而且會略過VPAID 1.0廣告。
+* 對於VPAID 1.0廣告，TVSDK需要在裝置上安裝Flash播放器14.0.0.160或更新版本。 對於舊版Flash播放器，此功能已停用，而且會略過VPAID 1.0廣告。
 
 若要設定廣告容器，以便在廣告分隔內顯示VPAID廣告（1.0或2.0版）:
 
