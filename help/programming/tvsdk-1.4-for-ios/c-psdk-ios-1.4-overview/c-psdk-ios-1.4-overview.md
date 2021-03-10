@@ -1,13 +1,10 @@
 ---
-description: Adobe Primetime軟體開發套件(TVSDK)是一套工具套件，可讓您在應用程式中新增進階的視訊播放功能。
-seo-description: Adobe Primetime軟體開發套件(TVSDK)是一套工具套件，可讓您在應用程式中新增進階的視訊播放功能。
-seo-title: 概觀
+description: Adobe Primetime軟體開發套件(TVSDK)是一套工具套件，可讓您在應用程式中加入進階的視訊播放功能。
 title: 概觀
-uuid: 0b3fb26c-f3d1-4cf2-9859-89b052501eb3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 概述{#overview}
 
-Adobe Primetime軟體開發套件(TVSDK)是一套工具套件，可讓您在應用程式中新增進階的視訊播放功能。
+Adobe Primetime軟體開發套件(TVSDK)是一套工具套件，可讓您在應用程式中加入進階的視訊播放功能。
 
 * 如需TVSDK支援的功能清單，請參閱[Primetime Player TVSDK功能](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview-of-the-player.md)。
 * 有關使用TVSDK的特定硬體和軟體需求，請參閱[需求](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-requirements.md)。
