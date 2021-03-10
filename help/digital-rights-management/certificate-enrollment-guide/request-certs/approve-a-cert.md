@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 核准憑證（帳戶或次要管理員）
 title: 核准憑證（帳戶或次要管理員）
-uuid: 5b95e2e8-abe9-4aef-bcb4-9b98ba6604d1
+description: 核准憑證（帳戶或次要管理員）
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
@@ -26,9 +24,9 @@ ht-degree: 0%
 
    系統會寄送電子郵件給請求者，指出請求已被公司管理員之一拒絕。 此電子郵件的副本會傳送給公司管理員。
 
-當管理員核准憑證請求時，Adobe會驗證請求者的身分。 Adobe會以其個人資料中列出的電話號碼聯絡申請人。
+當管理員批准證書請求時，Adobe會驗證請求者的身份。 Adobe在其配置檔案中列出的電話號碼與請求者聯繫。
 
-Adobe管理員會嘗試在三天內連絡申請人兩次。 如果Adobe管理員無法聯絡請求者，會留出要求回電的訊息，或提供再次呼叫的時間。 如果Adobe管理員無法聯繫到請求者，系統會傳送電子郵件給管理員。
+Adobe管理員嘗試在三天內與請求者聯繫兩次。 如果Adobe管理員無法聯繫請求者，則他們會留出請求回叫的消息，或者提供他們再次呼叫的時間。 如果Adobe管理員無法聯繫到請求者，則向管理員發送電子郵件。
 
 >[!NOTE]
 >
