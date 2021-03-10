@@ -1,9 +1,9 @@
 ---
-seo-title: 加密內容
 title: 加密內容
-uuid: 03f33473-bcd4-4e06-a823-e944897cb28e
+description: 加密內容
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -26,6 +26,6 @@ ht-degree: 0%
 
 1. 使用`V2KeyParameters`物件設定金鑰和授權資訊。 使用`setPolicies`方法設定DRM策略。 通過調用`setLicenseServerUrl`和`setLicenseServerTransportCertificate`方法，設定客戶端聯繫許可證伺服器所需的資訊。 使用`setKeyProtectionOptions`方法設定CEK加密選項，並使用`setCustomProperties`方法設定其自定義屬性。 最後，根據所使用的加密類型，將`DRMKeyParameters`對象轉換為適當的類型(`VideoDRMParameters`、`AudioDRMParameters`)，並設定加密選項。
 
-1. 將輸入和輸出檔案以及加密選項傳遞至`MediaEncrypter.encryptContent`方法，以加密內容。
+1. 將輸入和輸出檔案及加密選項傳遞至`MediaEncrypter.encryptContent`方法，以加密內容。
 
 有關如何加密內容的示例代碼，請參見Reference Implementation Command Line Tools [!DNL samples/]目錄中的`com.adobe.flashaccess.samples.mediapackager.EncryptContent`。
