@@ -1,9 +1,9 @@
 ---
-seo-title: 輸出保護控制
 title: 輸出保護控制
-uuid: a0518392-cd33-4ef0-834c-f90145a9b421
+description: 輸出保護控制
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 控制輸出至外部轉換裝置的限制。 外部設備定義為未嵌入電腦中的任何視頻或音頻設備。 在輸出保護控制方案中，整合顯示器（如筆記型電腦）不被視為外部顯示器。
 
-Over the air(OTA) connection types are all block sleck default by listed but can be allow deced. 支援的OTA連接包括：Miracast、AirPlay、DLNA和WIDI。
+Over the air(OTA) connection types are all block sleck default by listed but can be allow deferenced. 支援的OTA連接包括：Miracast、AirPlay、DLNA和WIDI。
 
 **基於解析度的輸出保護：（可從5.3版升級。） **這可根據內容的垂直像素計數提供輸出保護，以根據垂直像素計數指定各種保護要求。
 
