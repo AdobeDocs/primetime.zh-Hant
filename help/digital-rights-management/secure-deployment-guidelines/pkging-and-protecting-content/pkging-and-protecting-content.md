@@ -1,13 +1,10 @@
 ---
 description: 有關內容封裝與保護的資訊可讓您保護內容。
-seo-description: 有關內容封裝與保護的資訊可讓您保護內容。
-seo-title: 包裝和保護內容
 title: 包裝和保護內容
-uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -27,11 +24,11 @@ ht-degree: 0%
 
 ## 安全地封裝內容{#securely-packaging-content}
 
-Adobe Primetime DRM Media Packager命令列工具的設定檔需要封裝期間使用的PKCS12憑證。
+Adobe PrimetimeDRM Media Packager命令行工具的配置檔案需要在打包過程中使用的PKCS12憑據。
 
 在Reference Implementation命令欄位工具中，PKCS12憑據檔案的口令以明文形式儲存在`flashaccess.properties`檔案中。 因此，當您保護存放此檔案的電腦並確保電腦在安全的環境中時，請格外小心。 有關詳細資訊，請參閱[物理安全和訪問](../../secure-deployment-guidelines/physical-sec-and-access.md)。
 
-封裝程式也會使用「授權伺服器」和「授權伺服器傳輸」憑證，而且必須保護這些資訊的完整性和機密性。 僅允許授權實體使用封裝程式。 如果您的私密金鑰受到危害，請立即通知Adobe Systems Incorporated，以便撤銷憑證。
+封裝程式也會使用「授權伺服器」和「授權伺服器傳輸」憑證，而且必須保護這些資訊的完整性和機密性。 僅允許授權實體使用封裝程式。 如果您的私密金鑰遭到破壞，請立即通知Adobe Systems Incorporated，以便撤銷憑證。
 
 >[!NOTE]
 >
@@ -49,7 +46,7 @@ Primetime DRM封裝API會在特定條件下發出警告。 請檢閱這些警告
 
 ## 安全地儲存策略{#securely-storing-policies}
 
-Adobe Primetime DRM SDK可讓您開發可用於內容封裝和原則建立的應用程式。
+Adobe PrimetimeDRM SDK可讓您開發可用於內容封裝和原則建立的應用程式。
 
 當您建立這些應用程式時，您可以允許部分使用者建立和修改原則，並限制其他使用者僅將現有原則套用至內容。 您必須實施必要的存取控制，並建立具有不同權限的使用者帳戶，才能建立原則和原則應用程式。
 
@@ -69,4 +66,4 @@ Adobe Primetime DRM SDK可讓您開發可用於內容封裝和原則建立的應
 >
 >請務必從受信任來源取得包含公開金鑰的授權伺服器憑證。 這樣，您可以確保它是許可證伺服器的密鑰，而不是無管理的公共密鑰。 如果攻擊者用其公共密鑰替換許可證伺服器的密鑰，他們可以解密您的內容。
 
-如需如何封裝內容的詳細資訊，請參閱[使用Adobe Primetime DRM SDK for Protecting Content](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf)。
+如需如何封裝內容的詳細資訊，請參閱[使用Adobe PrimetimeDRM SDK for Protecting Content](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf)。
