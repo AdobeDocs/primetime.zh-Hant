@@ -1,14 +1,11 @@
 ---
 description: 標準化規則定義URL轉換，以套用至從VAST/VMAP回應取得的來源創意URL。
-keywords: normalize rule;creative selection rules
-seo-description: 標準化規則定義URL轉換，以套用至從VAST/VMAP回應取得的來源創意URL。
-seo-title: 標準化規則
+keywords: 標準化規則；創意選擇規則
 title: 標準化規則
-uuid: eccae85b-907e-4e16-9bb8-6c2be6cb0ab6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '168'
 ht-degree: 1%
 
 ---
