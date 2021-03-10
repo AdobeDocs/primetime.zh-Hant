@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）的工具，您可將其與其他Primetime元件整合。
-seo-description: 瀏覽器TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）的工具，您可將其與其他Primetime元件整合。
-seo-title: 'null'
-title: 'null'
-uuid: 57b35a5f-87f8-41a2-ad85-300b999dc30b
+title: Flash故障切換
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -45,7 +42,7 @@ var player = new AdobePSDK.MediaPlayer(),
 
 1. 如果支援「媒體來源擴充功能」，請使用它，但不受已知限制。
 1. 如果支援，請直接使用`<video>`標籤，而不使用MSE。
-1. 請確定您至少使用Adobe Flash Player 23.0版。
+1. 請確定您至少使用AdobeFlash Player23.0版。
 1. 如果找不到合適的播放技術， `replaceCurrentResource`將返回錯誤。
 
 同一個`MediaPlayer`實例上的後續`replaceCurrentResource`調用遵循相同的進程。 這允許您在建立`MediaPlayerView`實例時指定的相同父`<DIV>`標籤中使用相同的`MediaPlayer`實例來播放各種資源類型。
