@@ -1,13 +1,10 @@
 ---
-description: 為了讓廣告解析程式運作，廣告提供者（例如Adobe Primetime廣告決策）需要設定值，才能啟用您與提供者的連線。
-seo-description: 為了讓廣告解析程式運作，廣告提供者（例如Adobe Primetime廣告決策）需要設定值，才能啟用您與提供者的連線。
-seo-title: 廣告插入中繼資料
+description: 為了讓廣告解析程式運作，廣告提供者(例如Adobe Primetime廣告決策)需要設定值才能啟用您與提供者的連線。
 title: 廣告插入中繼資料
-uuid: 3eb024c3-4bb5-4bee-943e-fe0c60379e60
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 廣告插入中繼資料{#ad-insertion-metadata}
 
-為了讓廣告解析程式運作，廣告提供者（例如Adobe Primetime廣告決策）需要設定值，才能啟用您與提供者的連線。
+為了讓廣告解析程式運作，廣告提供者(例如Adobe Primetime廣告決策)需要設定值才能啟用您與提供者的連線。
 
 TVSDK包含Primetime廣告決策程式庫。 您的內容若要包含來自Primetime廣告決策伺服器的廣告，您的應用程式必須提供下列必要的`AuditudeSettings`資訊：
 
@@ -31,11 +28,11 @@ TVSDK包含Primetime廣告決策程式庫。 您的內容若要包含來自Prime
 
 ## 設定廣告插入中繼資料{#set-up-ad-insertion-metadata}
 
-使用輔助類別AuditudeSettings（可延伸MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
+使用輔助類AuditudeSettings（可擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
 
 >[!TIP]
 >
->Adobe Primetime廣告決策先前稱為Auditude。
+>Adobe Primetime廣告決策之前稱為Auditude。
 
 廣告中繼資料位於`MediaResource.metadata`屬性中。 當開始播放新視訊時，您的應用程式負責設定正確的廣告中繼資料。
 
