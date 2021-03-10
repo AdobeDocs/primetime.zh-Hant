@@ -1,13 +1,10 @@
 ---
 description: 這些類別提供廣告、命名空間和追蹤的中繼資料。
-seo-description: 這些類別提供廣告、命名空間和追蹤的中繼資料。
-seo-title: 中繼資料類別
 title: 中繼資料類別
-uuid: 6d5099c8-d562-4635-9ef0-068cc6fb9f82
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
