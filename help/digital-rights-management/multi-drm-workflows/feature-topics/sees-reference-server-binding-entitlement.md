@@ -1,13 +1,10 @@
 ---
 description: SEES參考伺服器會示範如何使用ExpressPlay啟用裝置系結權益服務。
-seo-description: SEES參考伺服器會示範如何使用ExpressPlay啟用裝置系結權益服務。
-seo-title: 參考服務裝置系結權益
 title: 參考服務裝置系結權益
-uuid: 22ce2f8e-1758-4528-8caf-60d209839afe
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
