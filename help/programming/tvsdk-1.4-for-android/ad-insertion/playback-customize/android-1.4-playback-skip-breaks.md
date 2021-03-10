@@ -1,13 +1,10 @@
 ---
 description: 依預設，當使用者搜尋廣告插播時，TVSDK會強制播放廣告插播。 如果從先前的中斷完成所經過的時間在特定分鐘內，您可以自訂跳過廣告中斷的行為。
-seo-description: 依預設，當使用者搜尋廣告插播時，TVSDK會強制播放廣告插播。 如果從先前的中斷完成所經過的時間在特定分鐘內，您可以自訂跳過廣告中斷的行為。
-seo-title: 略過一段時間的廣告插播
 title: 略過一段時間的廣告插播
-uuid: f07d838b-3c1d-4cea-a3aa-dba33964ac81
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
