@@ -1,13 +1,10 @@
 ---
 description: TVSDK會根據特定問題處理時間範圍錯誤，或合併或重新排序未正確定義的時間範圍。
-seo-description: TVSDK會根據特定問題處理時間範圍錯誤，或合併或重新排序未正確定義的時間範圍。
-seo-title: 廣告刪除和取代錯誤處理
 title: 廣告刪除和取代錯誤處理
-uuid: ab153591-0011-44b4-87f9-be0302c2295e
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -40,7 +37,7 @@ TVSDK可處理信令模式衝突，如下所示：
 
 TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍規格。
 
-在以下示例中，定義了四個相交的DELETE時間範圍。 TVSDK將4個時間範圍合併為1，因此實際刪除範圍是0-50秒。
+在下例中，定義了四個相交的DELETE時間範圍。 TVSDK將4個時間範圍合併為1，因此實際刪除範圍是0-50秒。
 
 ```
 "time-ranges": {
