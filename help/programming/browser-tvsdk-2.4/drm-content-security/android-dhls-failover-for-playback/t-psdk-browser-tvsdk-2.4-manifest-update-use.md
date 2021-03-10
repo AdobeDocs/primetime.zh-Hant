@@ -1,13 +1,10 @@
 ---
 description: 您可以開啟此功能並檢查相關事件。
-seo-description: 您可以開啟此功能並檢查相關事件。
-seo-title: 使用即時主資訊清單更新
 title: 使用即時主資訊清單更新
-uuid: 4ec665ab-b7ce-4a45-a251-13a07eb4d789
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '56'
 ht-degree: 0%
 
 ---
