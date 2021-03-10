@@ -1,13 +1,10 @@
 ---
 description: 檢查串流和播放清單（資料清單）的限制和要求。
-seo-description: 檢查串流和播放清單（資料清單）的限制和要求。
-seo-title: 內容與資訊清單需求
 title: 內容與資訊清單需求
-uuid: 22ee7d02-b06d-4162-a8a4-a2391658fdb3
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
