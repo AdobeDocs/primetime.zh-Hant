@@ -1,13 +1,10 @@
 ---
 description: 您可以搭配DASH串流使用Android原生Widevine DRM。
-seo-description: 您可以搭配DASH串流使用Android原生Widevine DRM。
-seo-title: Widevine DRM
 title: Widevine DRM
-uuid: ceb2f18f-9e53-47d6-9d4b-7004ac1d22c9
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '85'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
