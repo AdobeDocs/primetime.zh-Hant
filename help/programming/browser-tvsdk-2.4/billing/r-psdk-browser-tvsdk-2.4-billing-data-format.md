@@ -1,13 +1,10 @@
 ---
-description: 瀏覽器TVSDK會以XML格式傳送帳單量度給Adobe。
-seo-description: 瀏覽器TVSDK會以XML格式傳送帳單量度給Adobe。
-seo-title: 傳輸帳單量度
+description: 瀏覽器TVSDK會以XML格式傳送帳單量度至Adobe。
 title: 傳輸帳單量度
-uuid: ed2638d2-7894-4840-b31a-51e48e0a3f49
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '61'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # 傳輸帳單量度{#transmit-billing-metrics}
 
-瀏覽器TVSDK會以XML格式傳送帳單量度給Adobe。
+瀏覽器TVSDK會以XML格式傳送帳單量度至Adobe。
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-如果您使用網路擷取工具來監控瀏覽器TVSDK傳送至Adobe的統計資料，您應該會看到下列單位：
+如果您使用網路擷取工具來監視瀏覽器TVSDK傳送至Adobe的統計資料，您應該會看到下列單位：
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
