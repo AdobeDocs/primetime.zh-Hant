@@ -1,9 +1,9 @@
 ---
-seo-title: 處理Adobe Primetime DRM要求
-title: 處理Adobe Primetime DRM要求
-uuid: ee10504d-84f0-472a-b58a-2a87fdeedfc1
+title: 處理Adobe PrimetimeDRM請求
+description: 處理Adobe PrimetimeDRM請求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1251'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 處理Adobe Primetime DRM要求{#process-adobe-primetime-drm-requests}
+# 處理Adobe PrimetimeDRM請求{#process-adobe-primetime-drm-requests}
 
 管理請求的一般方法是建立處理常式、剖析請求、設定回應資料或錯誤碼，並關閉處理常式。
 
@@ -29,20 +29,20 @@ ht-degree: 0%
 
 ## 使用電腦標識符{#use-machine-identifiers}
 
-所有Adobe Primetime DRM請求（支援FMRMS相容性的請求除外）都包含在個人化期間發送給用戶端之機器Token的相關資訊。 機器Token包含機器ID，此為個人化期間指派的識別碼。 您可以使用此識別碼來計算使用者要求授權或加入網域的電腦數目。
+所有Adobe PrimetimeDRM請求（支援FMRMS相容性的請求除外）都包括關於在個人化期間發送給客戶機的機器令牌的資訊。 機器Token包含機器ID，此為在個人化期間指派的識別碼。 您可以使用此識別碼來計算使用者要求授權或加入網域的電腦數目。
 
 您可以使用以下識別碼：
 
-* `getUniqueId()`方法會傳回在個別化期間指派給裝置的字串。 您可以將字串儲存在資料庫中，並依識別碼進行搜尋。 不過，如果使用者重新格式化硬碟並再次個人化，此識別碼會變更。 此識別碼在相同機器上，Adobe AIR和Adobe Flash Player在不同瀏覽器上的值也不同。
+* `getUniqueId()`方法會傳回在個別化期間指派給裝置的字串。 您可以將字串儲存在資料庫中，並依識別碼進行搜尋。 不過，如果使用者重新格式化硬碟並再次個人化，此識別碼會變更。 此識別碼在同一部機器上，Adobe AIR和AdobeFlash Player在不同瀏覽器中的值也不同。
 * 如果您想要更精確地電腦，可以使用`getBytes()`來儲存整個標識符。 要確定以前是否看到過該電腦，請獲取用戶名的所有標識符，並調用`matches()`檢查是否匹配。 由於`matches()`方法必須用來比較`MachineId.getBytes`傳回的值，因此只有在有少量值可供比較時，此選項才實用；例如，與特定用戶關聯的電腦。
 
 ## 用戶驗證{#user-authentication}
 
-Adobe Primetime DRM要求可包含驗證Token。
+Adobe PrimetimeDRM請求可以包含驗證令牌。
 
-如果使用了用戶名／密碼驗證，則請求可能包含由`AuthenticationHandler`生成的`AuthenticationToken`。 如果您想要存取並驗證Token，則需要使用`RequestMessageBase.getAuthenticationToken()`。 若要在用戶端上起始使用者名稱／密碼要求，請使用`DRMManager.authenticate()` ActionScript或iOS API。
+如果使用了用戶名／密碼驗證，則請求可能包含由`AuthenticationHandler`生成的`AuthenticationToken`。 如果您想要存取並驗證Token，則需要使用`RequestMessageBase.getAuthenticationToken()`。 若要在用戶端上起始使用者名稱／密碼要求，請使用`DRMManager.authenticate()`ActionScript或iOS API。
 
-如果客戶端和伺服器使用自訂驗證機制，則客戶端通過某些其他通道獲得驗證令牌，並使用`DRMManager.setAuthenticationToken` ActionScript 3.0 API設定自訂驗證令牌。 使用`RequestMessageBase.getRawAuthenticationToken()`取得自訂驗證Token。 伺服器實作會判斷自訂驗證Token是否有效。
+如果客戶端和伺服器使用自定義驗證機制，則客戶端通過某些其它通道獲得驗證令牌，並使用`DRMManager.setAuthenticationToken`ActionScript3.0 API設定自定義驗證令牌。 使用`RequestMessageBase.getRawAuthenticationToken()`取得自訂驗證Token。 伺服器實作會判斷自訂驗證Token是否有效。
 
 ## 重放保護{#replay-protection}
 
@@ -66,7 +66,7 @@ Adobe Primetime DRM要求可包含驗證Token。
 
 如果授權伺服器是裝載在視訊播放SWF以外的網域上，則需要跨網域DRM原則檔案([!DNL crossdomain.xml])，才能讓SWF向授權伺服器要求授權。 跨網域DRM原則檔案由XML檔案表示，讓伺服器指出其資料和檔案可供其他網域提供的SWF檔案使用。 任何從授權伺服器的跨網域DRM原則檔案中指定之網域提供的SWF檔案，都可從該授權伺服器存取資料或資產。
 
-Adobe建議開發人員在部署跨網域原則檔案時，只要允許受信任網域存取授權伺服器，並限制對Web伺服器上授權子目錄的存取，就應遵循最佳實務。
+Adobe建議開發人員在部署跨網域原則檔案時，只要允許受信任網域存取授權伺服器，並限制存取Web伺服器上的授權子目錄，就應遵循最佳實務。
 
 如需跨網域DRM原則檔案的詳細資訊，請參閱下列位置：
 
