@@ -1,13 +1,10 @@
 ---
 description: 這些類提供了處理各種資訊的方法。
-seo-description: 這些類提供了處理各種資訊的方法。
-seo-title: 實用程式類
 title: 實用程式類
-uuid: 060d5587-c1ef-4b58-9cad-49826201a79f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
