@@ -1,13 +1,10 @@
 ---
 description: TVSDK可播放具有不同位元速率之多個描述檔的視訊，並根據可用頻寬在視訊間切換，以提供多個品質等級。
-seo-description: TVSDK可播放具有不同位元速率之多個描述檔的視訊，並根據可用頻寬在視訊間切換，以提供多個品質等級。
-seo-title: 多位元速率
 title: 多位元速率
-uuid: 46eac41e-0b2a-42e3-8a88-54ad9fe34212
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
