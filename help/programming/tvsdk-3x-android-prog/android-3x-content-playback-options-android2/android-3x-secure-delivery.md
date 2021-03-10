@@ -1,12 +1,10 @@
 ---
 description: TVSDK推出透過HTTPS的安全傳送。
-seo-description: TVSDK推出透過HTTPS的安全傳送。
-seo-title: 透過HTTPS進行安全傳送
 title: 透過HTTPS進行安全傳送
 translation-type: tm+mt
-source-git-commit: 4a2271fc481b37bb0a437091de6efe98fcb348d9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
@@ -14,7 +12,7 @@ ht-degree: 0%
 
 # 透過HTTPS {#secure-delivery-https}的安全傳送
 
-Adobe Primetime TVSDK支援HTTPS傳送來自TVSDK的所有呼叫，其中包括
+Adobe PrimetimeTVSDK支援HTTPS傳送所有源自TVSDK的呼叫，其中包括
 
 * Auditude廣告伺服器呼叫
 * CRS請求
