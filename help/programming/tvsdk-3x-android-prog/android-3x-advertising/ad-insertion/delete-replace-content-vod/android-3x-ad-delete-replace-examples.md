@@ -1,13 +1,10 @@
 ---
 description: 以下是刪除和取代廣告的程式範例。
-seo-description: 以下是刪除和取代廣告的程式範例。
-seo-title: 刪除和取代廣告的範例
 title: 刪除和取代廣告的範例
-uuid: 6bf9d71a-73fe-4033-b97a-6b0cff8687f2
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '68'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
