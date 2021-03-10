@@ -1,9 +1,9 @@
 ---
-seo-title: 常見問答集
 title: 常見問答集
-uuid: 7e7409b5-9b3f-4dc3-96b6-42a06d9b1265
+description: 常見問答集
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 # 常見問答{#faq}
 
 * ECI變更的頻率為何？
-   * 每當新的Adobe DRM用戶端一發佈，就會新增ECI裝置記錄。
+   * 每當新的AdobeDRM客戶端被發佈時，就會添加ECI設備記錄。
 
 * ECI檔案有多大？
    * 它們通常不到1 KB（每個設備記錄）。
