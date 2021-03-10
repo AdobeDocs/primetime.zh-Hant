@@ -1,9 +1,9 @@
 ---
-seo-title: 授權產生器概觀
 title: 授權產生器概觀
-uuid: 9c191871-28f4-485e-b09f-038e499764bb
+description: 授權產生器概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
