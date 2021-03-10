@@ -1,17 +1,13 @@
 ---
 title: TVSDK轉換——針對JavaScript 1.3至2.0
-seo-title: TVSDK轉換——針對JavaScript 1.3至2.0
 description: 2.0版中，許多方法簽名和API元素名稱已變更。請檢閱這些表格，以檢視所有API變更詳細資訊。
-seo-description: 2.0版中，許多方法簽名和API元素名稱已變更。請檢閱這些表格，以檢視所有API變更詳細資訊。
-uuid: d2d1742d-c90c-43f5-94fc-8c4a57cb8ed4
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: migration
-discoiquuid: c732f54d-116c-43f3-bec4-5e71af208426
 translation-type: tm+mt
-source-git-commit: cfd6da49e85e13e29e8458ee98231a8b476867db
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '5058'
+source-wordcount: '5034'
 ht-degree: 0%
 
 ---
@@ -254,7 +250,7 @@ playerConfig.adFactory = factory;
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p> <strong>廣告</strong>:interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> readonly attribute AdAsset companionAssets;<br /> <br /> readonly attribute double duration;<br /> readonly attribute DomString id;<br /> const sungrided short ADTYPE_ LINER = 0;<br /> <br /> <br /> <br /> const unsignal= 1;reasensignal= 1;readonsignal adonsignal adonlest adonal adonalType;Readonly屬性AdInsertionType adInsertionType; <br /> <br /> 只讀屬性布爾可點選； <br /> readonly屬性boolean isCustomAdMarker;<br /> }; </p> </td> 
+   <td><p> <strong>廣告</strong>:interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> readonly attribute AdAsset companionAssets;<br /> <br /> readonly attribute double duration;<br /> readonly attribute DomString id;<br /> const sungrided short ADTYPE_ LINER = 0;<br /> <br /> <br /> <br /> const unsignal= 1;reasedonsignal= 1;readonsignal adonly adast adast adast adast adast attribute sortlineableshort adtyst adatribusignedType;Readonly屬性AdInsertionType adInsertionType; <br /> <br /> 只讀屬性布爾可點選； <br /> readonly屬性boolean isCustomAdMarker;<br /> }; </p> </td> 
    <td><p>interface Ad {<br />唯讀屬性AdAsset primaryAsset;<br />唯讀屬性AdAssetList companionAssets;<br /> <br />唯讀屬性雙持續時間；<br />唯讀屬性DomString id;<br />包含無符號的短ADTYPE_LINEAR = 0;<br /> contst unsigned short ADTYPE_NONLINEAR = 1;<br /> <br /> readonly屬性unsigned short type;<br /> readonly屬性AdInsertionType insertionType;<br />唯讀屬性物件追蹤器；<br /> <br /> <br /> }; </p> </td> 
   </tr> 
   <tr> 
@@ -267,7 +263,7 @@ playerConfig.adFactory = factory;
   </tr> 
   <tr> 
    <td><strong>AdList</strong>:（2.0版無變更）</td> 
-   <td><p>interface AdList {<br /> readonly attribute {&lt;a0/&gt; unsigned long length;<br /> getter Ad(unsigned long index);<br /> };</p> </td> 
+   <td><p>interface AdList {<br /> readonly attribute { unsigned long length;<br /> getter Ad(unsigned long index);<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>AdAssetList</strong>:（2.0版無變更）</td> 
@@ -321,15 +317,15 @@ playerConfig.adFactory = factory;
   </tr> 
   <tr> 
    <td><p>interface AdPolicy {<br /> readonly attribute short AD_POLICY_PLAY;<br /> readonly attribute short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> readonly attribute short AD_POLICY_PLAY_FROM_AD_BEGIN;readonly屬性short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br /> <br /> readonly屬性short AD_POLICY_SKIP_AD_BREAK;<br /> };</p> </td> 
-   <td><p> ...<br />只讀屬性short AD_POLICY_PLAY;<br />只讀屬性short AD_POLICY_PLAY_FROM_AD_BEGIN;<br />只讀屬性short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN;<br />只讀屬性shortAD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br />只讀屬性簡短AD_POLICY_SKIP_AD_BREAK;<br /> ...</p> </td> 
+   <td><p> ...<br />只讀屬性short AD_POLICY_PLAY;<br />只讀屬性short AD_POLICY_PLAY_FROM_AD_BEGIN;<br />只讀屬性short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN;<br />只讀屬性shortAD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br />唯讀屬性簡短AD_POLICY_SKIP_AD_BREAK;<br /> ...</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicyMode {<br />只讀屬性short AD_POLICY_MODE_PLAY;<br />只讀屬性short AD_POLICY_MODE_SEEK;<br />只讀屬性short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
+   <td><p>interface AdPolicyMode {<br />只讀屬性short AD_POLICY_MODE_PLAY;<br />只讀屬性short AD_POLICY_MODE_SEEK;<br />只讀屬性shortAD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
    <td><p> ...<br /> {readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly attribute short AD_POLICY_MODE_SEEK;<br /> readonly attribute short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><p>interface AdPolicyInfo {<br />唯讀屬性AdBreakTimelineItemList <br /> adBreakTimelineItems;<br />唯讀屬性AdTimelineItem adTimelineItem;<br />唯讀屬性double currentTime;<br />唯讀屬性double seekTo時間；<br />只讀屬性雙速率；<br />只讀屬性短模式；//AdPolicyMode<br /> };</p> </td> 
-   <td><p>interface AdPolicyInfo {<br />唯讀屬性AdBreakPlacementList <br /> adBreakList;<br />唯讀屬性Ad;<br />唯讀屬性double currentTime;<br />唯讀屬性double seekToTime;<br />唯讀屬性double readadadatritebrate double rate;&lt;a6&gt;只讀屬性短模式；//AdPolicyMode<br /> };<br /></p> </td> 
+   <td><p>interface AdPolicyInfo {<br />唯讀屬性AdBreakPlacementList <br /> adBreakList;<br />唯讀屬性Ad;<br />唯讀屬性double currentTime;<br />唯讀屬性double seekToTime;<br />唯讀屬性double readadadatritebrate double rate;<br />只讀屬性短模式；//AdPolicyMode<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyPolicyInfo);<br /> */<br />屬性Object selectPolicyForAdBreakCallbackCallbackCackfunc;<br /> /**<br /> * AdBreakTimelineItemList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyPolicyInfo);<br /> */<br />屬性對象選擇AdBreaksToPlayCallbackCallbackAllbackAckfunc;<br /> /**<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyPolicyInfo);<br /> */<br />屬性Object selectPolicyForSeekIntoAdAdcallbackFunc;<br /> /**<br /> * AdBreakWatchedPolicy selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br />屬性物件選擇WatchedPolicyForAdBreakCallbackFunc;<br /> };</p> </td> 
@@ -402,8 +398,8 @@ playerConfig.adFactory = factory;
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItemConfig {<br />屬性ContentFactory adFactory;<br />屬性StringList subscribeTags;<br /> <br />屬性StringList adTags;<br /> <br /> <br />屬性AdSigningMode adSingMode;&lt;alingMode;7/&gt; attribute CustomRangeMetadata customRangeMetadata;<br /> attribute NetworkConfiguration networkConfiguration;<br /> attribute AdvertisingMetadata;<br /> attribute Boolean useHardwareDecoder;<br /> };<br /></p> </td> 
-   <td><p>interface MediaPlayerConfig {<br /> <br /> <br /> <br />屬性StringList adTags;<br />屬性StringList subscribedTags;<br />屬性MediaPlayerClientFactory clientFactory;<br /> <br /> <br /> <br /> &lt;a9/&gt;a10/&gt; <br /> };<br /></p> </td> 
+   <td><p>interface MediaPlayerItemConfig {<br />屬性ContentFactory adFactory;<br />屬性StringList subscribeTags;<br /> <br />屬性StringList adTags;<br /> <br />屬性AdSigningMode adSigningMode;&lt;alingMode;7/&gt; attribute CustomRangeMetadata customRangeMetadata;<br /> attribute NetworkConfiguration networkConfiguration;<br /> attribute AdvertisingMetadata;<br /> attribute Boolean useHardwareDecoder;<br /> };<br /><br /></p> </td> 
+   <td><p>interface MediaPlayerConfig {<br /> <br /> <br /> <br />屬性StringList adTags;<br />屬性StringList subscribedTags;<br />屬性MediaPlayerClientFactory clientFactory;<br /> <br /> <br /> <br /> <br />a10/&gt; <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -462,7 +458,7 @@ playerConfig.adFactory = factory;
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td>應用程式需要呼叫AdobePSDK.initiateDRMWorkflow以啟動DRM工作流程。 沒有此呼叫，DRM影片將無法播放。<p>interface AdobePSDK<br /> {<br /> void initiateDRMWorkFlow（<br /> DomString appStoratePath, <br /> DomString publisherId, <br /> DomString appId, <br /> AppDopVersion, <br />布林privacyModeOn）;<br /> };</p> </td> 
+   <td>應用程式需要呼叫AdobePSDK.initiateDRMWorkflow以啟動DRM工作流程。 沒有此呼叫，DRM影片將無法播放。<p>interface AdobePSDK<br /> {<br /> void initiateDRMWorkFlow（<br /> DomString appStoratePath, <br /> DomString publisherId, <br /> DomString appId, <br /> AppDomStringVersion, <br />布林privacyModeOn）;<br /> };</p> </td> 
    <td>初始化是在內部完成的，不需要明確呼叫。</td> 
   </tr> 
  </tbody> 
@@ -561,8 +557,8 @@ playerConfig.adFactory = factory;
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>介面DRMManager :EventTarget {<br /> void acquireLicense（DRMMetadata中繼資料， <br /> DRMAcquireLicenseSettings設定， <br /> DRMAquireLicenseListener）;<br /> void acquirePreviewLicense(DRATAmetadata, &lt;ata, <br />QuireLicenseListener);<br /> void authenticate（DRMMetadata中繼資料， <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString使用者， <br /> DomString密碼， <br />DRAUTHENTICATELISTENER）;&lt;A11/&gt; &lt;A12/&gt; DRMMetadata createMetadataFromBytes(<br /> Uint8Array, DRMErrorListener);<br /> void initialize(DRMOperationCompleteListener);<br />屬性long maxOperationTime;<br /> <br /> void joinLicenseDomain（<br /> DRMLicenseDomain licenseDomain, <br />布林forceRefresh, <br /> DRMOperationCompleteListener）;<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> DRMOperationCompleteListener);<br /> <br /> void resetDRM(DRMOperationCompleteListener);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID, <br /> DomString policyID, <br /> boolean commitImmitely,<br /> DRMERer.31/&gt; void setAuthenticationToken（<br /> DRMMetadata中繼資料， <br /> DomString authenticationDomain, <br /> Uint8Array token, <br /> DRMOperationCompleteListener）;<br /> voidener storeLicenseBytes(Uint8Array licenseBytes, <br /> DRMOperationCompleteListener);<br /> };<br /><br /><br /></p> </td> 
-   <td><p>介面DRMManager :EventTarget {<br /> void acquireLicense（DRMMetadata中繼資料， <br /> DRMAcquireLicenseSettings設定， <br /> EventContext eventContext）;<br /> void acquirePreviewLicense(DREmetadata, &lt;ata, &lt;ata, adatata, &lt;a);<br /> void authenticate（DRMMetadata中繼資料， <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString使用者， <br /> DomString密碼， <br /> EventContext事件Context）;&lt;atextentextextextext);<br /> DRMMetadata createMetadataFromBytes(<br /> Uint8Array, EventContext eventContext);<br /> void initialize(EventContext eventContext);<br />屬性long maxOperationTime;<br />a17/&gt; void joinLicenseDomain（<br /> DRMLicenseDomain licenseDomain, <br />布林forceRefresh, <br /> EventContext eventContext）;<br /> void leaveLicenseDomain(&lt;a2/&gt; DRMLICENSEDomain licenseDomain, <br /> EventContext eventContext);<br /> <br /> void resetDRM(EventContext eventContext);<br /> void returnLicense（DomString serverURL, <br />Dom字串licenseID,<br /> DomString原則ID, <br />布林commitImmediately,<br /> EventContext）;<br /> void setAuthenticationToken（<br /> DRMMetadata中繼資料， <br /> DomString authenticationDomain、<br /> Uint8Array Token、<br /> EventContext eventContext）;<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> EventContext eventContextContextContext);&lt;a);<br /> };<br /><br /><br /><br /></p> </td> 
+   <td><p>介面DRMManager :EventTarget {<br /> void acquireLicense（DRMMetadata中繼資料， <br /> DRMAcquireLicenseSettings設定， <br /> DRMAquireLicenseListener）;<br /> void acquirePreviewLicense(DRATAmetadata, &lt;ata, <br />QuireLicenseListener);<br /> void authenticate（DRMMetadata中繼資料， <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString使用者， <br /> DomString密碼， <br />DRAUTHENTICATELISTENER）;&lt;A11/&gt; &lt;A12/&gt; DRMMetadata createMetadataFromBytes(<br /> Uint8Array, DRMErrorListener);<br /> void initialize(DRMOperationCompleteListener);<br />屬性long maxOperationTime;<br /> <br /> void joinLicenseDomain（<br /> DRMLicenseDomain licenseDomain, <br />布林forceRefresh, <br /> DRMOperationCompleteListener）;<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> DRMOperationCompleteListener);<br /> <br /> void resetDRM(DRMOperationCompleteListener);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID, <br /> DomString policyID, <br /> boolean commitImmitely,<br /> DRMeturnLicenseListelenster);&lt;alelester31/&gt; void setAuthenticationToken（<br /> DRMMetadata中繼資料， <br /> DomString authenticationDomain, <br /> Uint8Array token, <br /> DRMOperationCompleteListener）;<br /> voidener storeLicenseBytes(Uint8Array licenseBytes, <br /> DRMOperationCompleteListener);<br /> };<br /><br /><br /></p> </td> 
+   <td><p>介面DRMManager :EventTarget {<br /> void acquireLicense（DRMMetadata中繼資料， <br /> DRMAcquireLicenseSettings設定， <br /> EventContext eventContext）;<br /> void acquirePreviewLicense(DREmetadata, &lt;ata, &lt;ata, adatata, &lt;a);<br /> void authenticate（DRMMetadata中繼資料， <br /> DomString url,<br /> DomString &amp;authenticationDomain, <br /> DomString使用者， <br /> DomString密碼， <br /> EventContext事件Context）;&lt;atextentextextextext);<br /> DRMMetadata createMetadataFromBytes(<br /> Uint8Array, EventContext eventContext);<br /> void initialize(EventContext eventContext);<br />屬性long maxOperationTime;<br />a17/&gt; void joinLicenseDomain（<br /> DRMLicenseDomain licenseDomain, <br />布林forceRefresh, <br /> EventContext eventContext）;<br /> void leaveLicenseDomain(<br /> DRMLICENSEDomain licenseDomain, <br /> EventContext eventContext);<br /> <br /> void resetDRM(EventContext eventContext);<br /> void returnLicense（DomString serverURL, <br />Dom字串licenseID,<br /> DomString原則ID, <br />布林commitImmediately,<br /> EventContext）;<br /> void setAuthenticationToken（<br /> DRMMetadata中繼資料， <br /> DomString authenticationDomain、<br /> Uint8Array Token、<br /> EventContext eventContext）;<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> EventContext eventContextContextContext);&lt;a);<br /> };<br /><br /><br /></p> </td> 
   </tr> 
   <tr> 
    <td><p>類DRMErrorListener :<br /> public psdkutils::PSDKIinterfaceWithUserData {<br /> public:<br /> virtual void onDRMError(uint32_t major, <br /> uint32_t minor, <br /> const psdkutils:PSDKString&amp;errorString, <br /> const psdkutils::PSDKString&amp;errorServerUrl)= 0;<br /> <br />受保護：<br />虛擬~DRMErrorListener(){} <br /> }</p> </td> 
@@ -645,8 +641,8 @@ playerConfig.adFactory = factory;
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>介面MediaPlayer:EventTarget<br /> {<br /> void prepareToPlay(double position);<br /> void play();<br /> void pause();<br /> void seek(double position);<br /> void seekToLocal(double);<br /> void reset reset();<br /> void relere;a8/&gt; void replaceCurrentItem（MediaPlayerItem項目）;<br /> void replaceCurrentResource(MediaResource rsource, <br /> MediaPlayerItemConfig);<br /> void suspend();<br /> void restore();<br /> void notifyClick();<br /> <br />唯讀屬性TimeRange playbackRange;<br /><br /> readonly attribute TimeRange;<br /> readonly attribute double currentTime;<br /> readonly attribute double localTime;<br /> readonly attribute TimeRange bufferedRange;<br /> readonly attribute DRManager drmManager;<br /> readonly attributeMediaPlayerItem curredonlyItem currentItem;<br /> <br /> // PlayerStatus<br /> <br /> <br />包含未簽名的短PLAYER_STATUS_INITIALIZED;<br />包含未簽名的短PLAYER_STATUS_PREPARING;<br />包含未簽名的短PLAYER_STATUS_PREPAREPAREPAREPAREPAREPARED;&lt;averated;&lt;apalededed;&lt;atededed2/&gt; const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br />const unsigned short PLAYER_STATUS_ERROR;<br /> <br /><br />const unsigned short PLAYER_STATUS_RELEASED;<br /> <br /> readonly attribute unsigned short status;<br /> <br /> attribute unsigned short volume;<br /> attribute ABRControlParameters abrControlParameters;&lt;aters;&lt;atesBufers;<br />a7/&gt;不帶正負號的短VISIBLE;//For CC visibility<br /> const unsigned short INVISIBLE;//For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly attribute PlaybackMetrics;<br /> <br /> attribute doublerate;<br /> attribute Me PlayerView;<br />唯讀屬性時間軸；<br />屬性double currentTimeUpdateInterval;<br /> // setting this Not be supported for 2.0<br /> };<br /><br /></p> </td> 
-   <td><p>介面MediaPlayer:EventTarget<br /> {<br /> void prepareToPlay(int position);<br /> void play();<br /> void pause();<br /> void seek(int position);<br /> void seekToLocalTime(in position);<br /> void(void();<br /> void(void(a);<br /> void replaceCurrentItem(MediaResource source);<br /> <br /> <br /> <br /> <br /> <br /> <br />唯讀屬性TimeRangeRange;<br />屬性TimeRange seekableRange;<br /> readonly屬性double currentTime;<br /> readonly屬性double localTime;<br /> readonly屬性TimeRange bufferedRange;<br /> readonly attribute DRMManager drmManager;<br /> readonly attribute MediaPlayerItem currentItem;<br /> <br /> // PlayerState<br /> const short PLAYER_STATE_IDLE;<br /> const unsigned short PLAYER_ STATE_ INITIALIZING;<br /> constst unsigned short PLAYER_STATE_INITIALIZED;<br /> const unsigned short PLAYER_STATE_PREPARED;<br /> const unsigned short PLAYER_STATE_PLAYING;<br /> const sunsigned short PLAYER_ STATE_ STATED&lt;;a10/&gt;包含無符號短PLAYER_STATE_SEEKING;<br />包含無符號短PLAYER_STATE_COMPLETE;<br />包含無符號短PLAYER_STATE_ERROR;<br />包含無符號短PLAYER_STATE_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> readonly attribute unsigned short state;<br /> <br /> attribute unsigned short volume;<br /> attribute ABRControlParameters abrControlParameters;&lt;ates;&lt;aters19/&gt; <br /><br /><br />attribute BufferControlParameters bufferControlParameters;<br /> <br /> readonly unsigned short VISIBLE;//For CC visibility<br /> readonly unsigned short INVISIBLE;//For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly attribute PlaybackMetrics;<br /> attribute MediaPlayerPlayerConfig;<br /> attribute doublerate;<br /> attribute Media Player PlayerViewview;<br /> readonly屬性時間軸；<br /> <br /> <br /> };</p> </td> 
+   <td><p>介面MediaPlayer:EventTarget<br /> {<br /> void prepareToPlay(double position);<br /> void play();<br /> void pause();<br /> void seek(double position);<br /> void seekToLocal(double);<br /> void reset reset();<br /> void relere;a8/&gt; void replaceCurrentItem（MediaPlayerItem項目）;<br /> void replaceCurrentResource(MediaResource rsource, <br /> MediaPlayerItemConfig);<br /> void suspend();<br /> void restore();<br /> void notifyClick();<br /> <br />唯讀屬性TimeRange playbackRange;<br />唯讀屬性TimeRange seekableRange;&lt;ale&gt;只讀屬性double currentTime;<br />只讀屬性double localTime;<br />只讀屬性TimeRange bufferedRange;<br />只讀屬性DRMManager drmManager;<br />只讀屬性MediaPlayerItem currentItem;<br /> <br /> // PlayerStatus<br /> <br /> <br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const short unsigned short PLAYER_ STATUSING_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_RELEASED;<br /> <br /> readonly attribute unsigned short status;<br /> <br /> attribute shortvolume;<br /> attribute ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlParameters;<br /> <br /> const unsigned short VISIBLE;//For CC visibility<br /> const unsigned short INVISIBLE;//For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly attribute PlaybackMetrics;<br /> <br /> attribute doublerate;<br /> attribute MedimediaPlayerPlayerPlayerMer檢視檢視；<br />唯讀屬性時間軸；<br />屬性double currentTimeUpdateInterval;<br /> // setting this Not be supported for 2.0<br /> };<br /><br /><br /></p> </td> 
+   <td><p>介面MediaPlayer:EventTarget<br /> {<br /> void prepareToPlay(int position);<br /> void play();<br /> void pause();<br /> void seek(int position);<br /> void seekToLocalTime(in position);<br /> void(void();<br /> void(void(a);<br /> void replaceCurrentItem(MediaResource source);<br /> <br /> <br /> <br /> <br /> <br /> <br />唯讀屬性TimeRangeRange;<br />attributeTimeRange seekableRange;<br /> readonly屬性double currentTime;<br /> readonly屬性double localTime;<br /> readonly屬性TimeRange bufferedRange;<br /> readonly屬性DRManagerManager;<br /> readonly屬性MediaPlayerItem currentItem;<br /> <br /> // PlayerState<br /> const unsigned short PLAYER_STATE_IDLE;<br /> const unsigned short PLAYER;<br /> const short PLAYERSTATE_INITIALIZED;<br /> const unsigned short PLAYER_STATE_PREPARING;<br /> const unsigned short PLAYER_STATE_PLAYING;<br /> const short PLAYER_STATEPAUSED;<br /> const unsigned short PLAYER_STATE_SEEKING;<br /> const unsigned short PLAYER_STATE_COMPLETE;<br /> const unsigned short PLAYER_STATE_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> readonly attribute unsigned short state;<br /> <br /> attribute unsigned short volume;<br /> attribute ABRControlParameters abres;&lt;ates abatersatemes abBuferBuferBufeBuferscontrolParameters bufferControlParameters;<br /> <br />只讀未簽名的短VISIBLE;//For CC visibility<br /> readonly unsigned short INVISIBLE;//For CC visibility<br /> attribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly attribute PlaybackMetrics;<br /> attribute MediaPlayerConfig mediaPlayerConfig;<br /> atribute double rate rate rate;<br />屬性MediaPlayerView;<br />唯讀屬性時間軸；<br /> <br /> <br /> };<br /><br /><br /></p> </td> 
   </tr> 
   <tr> 
    <td><p>interface MediaPlayerStatus<br /> {<br /> // PlayerStatus<br />包含未簽署的短PLAYER_STATUS_IDLE;<br />包含未簽署的短PLAYER_STATUS_INITIALIZING;<br />包含未簽署的短PLAYER_STATUS_INITIALIZED;&lt;alizatedated;&lt;ated a5/&gt;player_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEEEKING;&lt;aing0/&gt; const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_SUNSPEDED;<br /> };<br /><br /><br /><br /></p> </td> 
@@ -946,7 +942,7 @@ playerConfig.adFactory = factory;
   </tr> 
   <tr> 
    <td>2.0版無變更</td> 
-   <td><p>interfaceTextFormat<br /> {<br /> // Color<br /> const unsigned short COLOR_DEFAULT = 0;<br /> const unsigned short COLOR_BLACK = 1;<br /> const unsigned short COLOR_GRAY = 2;<br /> const const short short onigned short COLOR/&gt; const unsigned short COLOR_BRIGHT_WHITE = 4;<br /> const unsigned short COLOR_DARK_RED = 5;<br /> const unsigned short COLOR_BRIGHT_RED = 6;<br /> const unsigned short short COLOR_DARK_GREEN = 8;<br /> const unsigned short COLOR_GREEN = 9;<br /> const unsigned short COLOR_BRIGHT_GREEN = 10;<br /> const unsigned short COLOR_DARK_BLUE = 111;<br /> constshort COLOR_BLUE = 12;<br /> const unsigned short COLOR_BRIGHT_BLUE = 13;<br /> const unsigned short COLOR_DARK_YELLOW = 14;<br /> const unsigned short COLOR_ YELLOW = 15;<br /> <br /><br />const unsigned short COLOR_BRIGHT_YELLOW = 16;<br /> const unsigned short COLOR_DARK_MAGENTA = 17;<br /> const unsigned short COLOR_BRIGHT_MAGENTA = 18;<br /> constCOLOR_DARK_CYAN = 20;<br />包含無符號短COLOR_CYAN = 21;<br />包含無符號短COLOR_BRIGHT_CYAN = 22;<br /> <br />&lt;readonly attribute unsigned short fontColor;<br />只讀屬性不帶符號短背景Color;<br /> readonly attribute unsigned short fillColor;<br /> readonly attribute unsigned short edgeColor;<br /> <br /> // Size<br /> const short SIZE_DEFAULT = 0;<br /> const short short SIZE_ SMALL = 1;&lt;alll/&gt; const unsigned short SIZE_MEDIUM = 2;<br /> const unsigned short SIZE_LARGE = 3;<br /> <br /> <br /><br />不帶符號的只讀屬性短大小；<br /> <br /> // FontEdge<br />包含不帶符號的無符號短FONT_EDGE_DEFAULT = 0 ;<br />包含不帶符號的短FONT_EDGE_NONE = 1 ;<br />包含不帶符號的短FONT_EDGE_ROASEDE = 2 ; <br /> const不帶正負號的短FONT_EDGE_DOSCREPT = 3 ;<br />包含不帶正負號的短FONT_EDGE_UNIFORM = 4 ;<br />包含不帶正負號的短FONT_EDGE_DROP_SHADOW_LEFT = 5 ;<br />包含不帶正負號的短FONT_EDGE_DROP_SHADOW_SHADOW_DROW_ROW;<br /> readonly attribute unsigned short fontEdge;<br /> <br /> // Font<br /> const unsigned short FONT_DEFAULT = 0;<br /> const unsigned short FONT_MONOSPACKED_ WITH_ SERIFS = 1;<br /> cons不帶正負號的短FONT_PORTIONAL_WITH_SERIFS = 2 ;<br />包含不帶正負號的短FONT_MONSPACED_WITH_SERIFS = 3 ;<br />包含不帶正負號的短FONT_CASURAL = 4 ;<br />包含不帶正負號的短FONT18/&gt;包含無符號的短FONT_SMALL_CAPPARIST = 6;<br />唯讀屬性無符號的短字型；<br />唯讀屬性無符號的短字型不透明；<br />唯讀屬性無符號的短背景不透明；<br />唯讀屬性無符號的短填充不透明；&lt;a23&gt; readonly attribute unsigned short DEFAULT_OPACITY;<br /> };<br /><br /></p> </td> 
+   <td><p>interfaceTextFormat<br /> {<br /> // Color<br /> const unsigned short COLOR_DEFAULT = 0;<br /> const unsigned short COLOR_BLACK = 1;<br /> const unsigned short COLOR_GRAY = 2;<br /> const const short short onigned short COLOR/&gt; const unsigned short COLOR_BRIGHT_WHITE = 4;<br /> const unsigned short COLOR_DARK_RED = 5;<br /> const unsigned short COLOR_BRIGHT_RED = 6;<br /> const unsigned short short COLOR_DARK_GREEN = 8;<br /> const unsigned short COLOR_GREEN = 9;<br /> const unsigned short COLOR_BRIGHT_GREEN = 10;<br /> const unsigned short COLOR_DARK_BLUE = 111;<br /> constshort COLOR_BLUE = 12;<br /> const unsigned short COLOR_BRIGHT_BLUE = 13;<br /> const unsigned short COLOR_DARK_YELLOW = 14;<br /> const unsigned short COLOR_ YELLOW = 15;<br />const unsigned short COLOR_BRIGHT_YELLOW = 16;<br /> const unsigned short COLOR_DARK_MAGENTA = 17;<br /> const short COLOR_BRIGHT_MAGENTA = 18;&lt;a219;<br />包含無符號短COLOR_DARK_CYAN = 20;<br />包含無符號短COLOR_CYAN = 21;<br />包含無符號短COLOR_BRIGHT_CYAN = 22;<br /><br />僅讀屬性unsigned short fontColor;<br /> readonly attribute unsigned short backgroundColor;<br /> readonly attribute unsigned short fillColor;<br /> readonly attribute unsigned short edgeColor;<br /> <br /> // Size &lt;asize &lt;ase unsize unsigned singe unsigned singe singested shorting shongested sh nunged shing short shing sh SIZE SIZE_ SHINGEDEST= 0;&lt;A33/&gt;包含無符號短SIZE_SMALL = 1;<br />包含無符號短SIZE_MEDIUM = 2;<br />包含無符號短SIZE_LARGE = 3;<br /> <br />只讀屬性短大小；<br /><br /> // FontEdge<br />包含無符號的短FONT_EDGE_DEFAULT = 0 ;<br />包含無符號的短FONT_EDGE_NONE = 1 ;<br />包含無符號的短FONT_EDGE_ROASED = 2 ;<br />const unsigned short FONT_EDGE_CONSERPTED = 3;<br /> const unsigned short FONT_EDGE_UNIFORM = 4;<br /> const unsigned short FONT_EDGE_SHADOW_LEFT unsigned = 5;<br /> const constshort FONTdrop_SHADOW_RIGHT = 6;<br />唯讀屬性unsigned short fontEdge;<br /> <br /> // Font<br />包含不帶正負號的短FONT_DEFAULT = 0;<br />包含不帶正負號的短FONT_MONOSPACED_WITH_WITH_WITH_WITH_WITifs = 1;<br />包含無符號短FONT_PROPORTIONAL_WITH_SERIFS = 2;<br />包含無符號短FONT_MONSPACED_WITH_SERIFS = 3;<br />包含無符號短FONT_CASUALY = 4;<br /> constunsigned short FONT_CURSIVE = 5;<br />包含無符號的短FONT_SMALL_CAPPALITES = 6;<br />唯讀屬性未符號的短字型；<br />唯讀屬性未符號的短字型不透明；<br />唯讀屬性的短背景不透明；<br />attribute unsigned short fillOpacity;<br /> readonly attribute unsigned short DEFAULT_OPACITY;<br /> };<br /><br /><br /><br /><br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -990,7 +986,7 @@ playerConfig.adFactory = factory;
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItem {<br />只讀屬性MediaResource資源；<br />只讀屬性long resourceId;<br />只讀屬性布爾live;<br /> <br />只讀屬性布爾有AlternateAudio;<br />只讀屬性AudioTrackList audioTracks;<br />attribute AudioTrack selectedAudioTrack;<br /> void selectAudioTrack(AudioTrack);<br /> <br /> readonly屬性boolean hasClosedCaptions;<br /> readonly屬性ClosedCaptionsList closedCaptionsTracks;<br /> readonly屬性ClosedCaptionsTrack;<br /> void selectCloselectClosedClosClodeConsClonsCledClonsedCloseCledCaptionsCaptionsClesCaptionstrack(<br /> ClosedCaptionsTrack);<br /> <br /> readonly屬性boolean hasTimedMetadata;<br /> readonly屬性TimedMetadataList timedMetadata;<br /> readonly屬性boolean dynamic;<br /> <br /> readonly屬性boolean isProtected;<br />only attribute DRMMetadataInfoList drmMetadataInfos;<br /> readonly attribute ProfileList profiles;<br /> readonly attribute Profile selectedProfile;<br /> <br /> readonly attribute bolean triglePlaySupported;<br /> readonly attribute ReadonlyfloatArray availablePlaybackRates;<br /> readonly屬性float selectedPlaybackRate;<br /> <br /> <br /> readonly屬性MediaPlayer mediaPlayer;<br /> readonly屬性MediaPlayerItemConfig;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerItem {<br />只讀屬性MediaResource資源；<br />只讀屬性long resourceId;<br />只讀屬性布爾live;<br /> <br />只讀屬性布爾有AlternateAudio;<br />只讀屬性AudioTrackList audioTracks;<br />attribute AudioTrack selectedAudioTrack;<br /> void selectAudioTrack(AudioTrack);<br /> <br /> readonly屬性boolean hasClosedCaptions;<br /> readonly屬性ClosedCaptionsList closedCaptionsTracks;<br /> readonly屬性ClosedCaptionsTrack;<br /> void selectClosedClosedClosCleClosClosClosClosedClotedClesCaptionsCaptionsClesCaptionstrack(<br /> ClosedCaptionsTrack);<br /> <br /> readonly屬性boolean hasTimedMetadata;<br /> readonly屬性TimedMetadataList timedMetadata;<br /> readonly屬性boolean dynamic;<br /> <br /> readonly屬性boolean isProtected;<br />only attribute DRMMetadataInfoList drmMetadataInfos;<br /> readonly attribute ProfileList profiles;<br /> readonly attribute Profile selectedProfile;<br /> <br /> readonly attribute bolean triglePlaySupported;<br /> readonly attribute ReadonlyfloatArray availablePlaybackRates;<br /> readonly屬性float selectedPlaybackRate;<br /> <br /> <br /> readonly屬性MediaPlayer mediaPlayer;<br /> readonly屬性MediaPlayerItemConfig;<br /> };</p> </td> 
    <td><p>interface MediaPlayerItem {<br />只讀屬性MediaResource資源；<br />只讀屬性long resourceId;<br />只讀屬性布林live;<br /> <br />只讀屬性布林hasAlternateAudio;<br />只讀屬性AudioTrackList audioTracks;<br />屬性audioTrack selectedAudioTrack;<br /> <br /> <br />唯讀屬性boolean hasClosedCaptions;<br />唯讀屬性ClosedCaptionsTrackList ccTracks;<br />屬性ClosedCaptionsTrack selectedCKrack;&lt;ack;<br />a13/&gt; <br /> <br /> readonly屬性boolean hasTimedMetadata;<br /> readonly屬性TimedMetadataList timedMetadata;<br /> readonly屬性boolean dynamic;<br /> <br /> readonly屬性boolean isProtected;20/&gt;唯讀屬性DRMMetadataInfoList drmMetadataInfos;<br />唯讀屬性ProfileList描述檔；<br /> <br /> <br />唯讀屬性布林特點PlaySupported;<br />唯讀屬性Int32Array availablePlaybackRates;<br /> <br /> readonly屬性StringList adTags;<br /> <br />唯讀屬性MediaPlayer mediaPlayer;<br /> <br /> };<br /><br /></p> </td> 
   </tr> 
  </tbody> 
@@ -1018,7 +1014,7 @@ playerConfig.adFactory = factory;
   </tr> 
   <tr> 
    <td><p>interface ClosedCaptionsTrack:Track<br /> {<br />唯讀屬性DomString名稱；//FromTrack<br />唯讀屬性DomString語言；//FromTrack<br />唯讀屬性布林預設值；// FromTrack<br />唯讀屬性布林自動選擇；//FromTrack<br /> <br /> <br /> const unsigned short SERVICE_608_CAPTIONS = 0;<br /> const unsigned short SERVICE_708_CAPTIONS = 1;<br /> const shortstst short SHORTIONS_WEB_VTT_CAPTIONS = 2;<br /> readonly attribute unsigned short serviceType;<br /> readonly attribute boolean forced;<br /> };</p> </td> 
-   <td><p>interface ClosedCaptionsTrack<br /> {<br />唯讀屬性DomString name;<br />唯讀屬性DomString語言；<br />唯讀屬性布林預設；<br /> <br /> <br />唯讀屬性布林活動；<br /> <br /> <br /> &lt;a10/&gt;<br /> <br /> };<br /></p> </td> 
+   <td><p>interface ClosedCaptionsTrack<br /> {<br />唯讀屬性DomString name;<br />唯讀屬性DomString語言；<br />唯讀屬性布林預設；<br /> <br /> <br />唯讀屬性布林活動；<br /> <br /> <br /> <br /><br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
    <td>2.0版無變更</td> 
@@ -1078,11 +1074,11 @@ throw new IllegalStateException("Invalid player state. prepareToPlay method
 must be called only once after replaceCurrentItem or replaceCurrentResource method.");
 ```
 
-ActionScript/JAVA也會從建構函式中拋出例外，以指出某些內部物件建立錯誤。 這些例外是內部處理的，不會傳播到應用程式。 例外情況將包含在發送給應用程式的警告通知中
+ActionScript/JAVA還會拋出來自建構子的異常，以指示某些內部對象建立不正確。 這些例外是內部處理的，不會傳播到應用程式。 例外情況將包含在發送給應用程式的警告通知中
 
 例如，如果未找到收到的廣告回應的有效媒體檔案，則無法建立有效的廣告資產物件或廣告。 因此，時間軸上不會放置任何廣告，並會傳送NotificationEvent.OperationFailed通知。
 
-從Adobe視訊引擎(AVE)非同步收到的錯誤或警告代碼會以一般事件傳送至應用程式。 通知事件包含所有收到的錯誤碼和任何其他中繼資料，例如URL、資源識別碼、控制代碼等。 如果錯誤嚴重且無法繼續播放目前的媒體，MediaPlayer會轉換為ERROR狀態，並傳送onStatusChanged回呼或MediaPlayerStatusChanged.STATUS_CHANGED事件。 如果播放可繼續，則會傳送一般通知事件。
+從Adobe視訊引擎(AVE)非同步接收的錯誤或警告代碼會作為一般事件傳送至應用程式。 通知事件包含所有收到的錯誤碼和任何其他中繼資料，例如URL、資源識別碼、控制代碼等。 如果錯誤嚴重且無法繼續播放目前的媒體，MediaPlayer會轉換為ERROR狀態，並傳送onStatusChanged回呼或MediaPlayerStatusChanged.STATUS_CHANGED事件。 如果播放可繼續，則會傳送一般通知事件。
 
 <table> 
  <tbody> 
@@ -1126,14 +1122,14 @@ ActionScript/JAVA也會從建構函式中拋出例外，以指出某些內部物
    <td> </td> 
    <td>-</td> 
    <td>-</td> 
-   <td>代碼為5的異常，說明= "CREATION_FAILED"和additionalInfo= &lt;按拋出此異常的方法傳遞的'</td> 
+   <td>代碼為5的例外，說明= "CREATION_FAILED"和additionalInfo= &lt;拋出此例外的方法傳遞的例外&gt;</td> 
   </tr> 
   <tr> 
    <td>kECUnsupported運行</td> 
    <td> </td> 
    <td>-</td> 
    <td>-</td> 
-   <td>代碼為5的異常，說明= "CREATION_FAILED"和additionalInfo= &lt;按拋出此異常的方法傳遞的'</td> 
+   <td>代碼為5的例外，說明= "CREATION_FAILED"和additionalInfo= &lt;拋出此例外的方法傳遞的例外&gt;</td> 
   </tr> 
   <tr> 
    <td>kECDataNotAvailable</td> 
@@ -1318,7 +1314,7 @@ ActionScript/JAVA也會從建構函式中拋出例外，以指出某些內部物
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interfaceDeviceInformation<br /> {<br />唯讀屬性DomString os;<br /> <br /> <br /> <br />唯讀屬性DomString id;<br />唯讀屬性intDPI;<br />唯讀屬性int heightPixels;<br />唯讀屬性int widthPixels;<br /> readonly屬性boolean seekToKeyFrame;<br /> };</p> </td> 
+   <td><p>interfaceDeviceInformation<br /> {<br />唯讀屬性DomString;<br /> <br /> <br /> <br />唯讀屬性DomString id;<br />唯讀屬性int DPI;<br />唯讀屬性int heightPixels;<br />唯讀屬性int widthPixels;<br /> readonly屬性boolean seekToKeyFrame;<br /> };</p> </td> 
    <td><p>interfaceDeviceInformation<br /> {<br />唯讀屬性DomString os;<br />唯讀屬性int sdk;<br />唯讀屬性DomString模型；<br />唯讀屬性DomString製造商；<br />唯讀屬性DomString id;<br />唯讀屬性intDPIditritp屬性diption;&lt;at;7/&gt; readonly attribute int heightPixels;<br /> readonly attribute int widthPixels;<br /> <br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
