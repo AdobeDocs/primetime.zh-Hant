@@ -1,13 +1,10 @@
 ---
 description: 當視訊的DRM中繼資料與媒體串流分開時，在開始播放之前先執行驗證。
-seo-description: 當視訊的DRM中繼資料與媒體串流分開時，在開始播放之前先執行驗證。
-seo-title: 播放前的DRM驗證
 title: 播放前的DRM驗證
-uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 1%
 
 ---
