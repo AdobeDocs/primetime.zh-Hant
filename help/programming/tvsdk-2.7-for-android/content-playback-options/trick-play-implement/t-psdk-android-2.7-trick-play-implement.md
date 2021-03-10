@@ -1,13 +1,10 @@
 ---
 description: 當使用者在媒體上快速前進或快速倒轉時，他們會處於特技播放模式。 若要進入特技播放模式，請將MediaPlayer播放速率設為1以外的值。
-seo-description: 當使用者在媒體上快速前進或快速倒轉時，他們會處於特技播放模式。 若要進入特技播放模式，請將MediaPlayer播放速率設為1以外的值。
-seo-title: 實作快速前進和倒退
 title: 實作快速前進和倒退
-uuid: 070a3331-43a3-4517-9cd9-06d817ffcfbd
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
