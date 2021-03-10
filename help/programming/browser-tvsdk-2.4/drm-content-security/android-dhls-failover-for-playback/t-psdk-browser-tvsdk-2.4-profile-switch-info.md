@@ -1,13 +1,10 @@
 ---
 description: 當媒體播放器將其當前配置式切換到新配置式時，您可以檢索有關交換機的資訊，包括交換機何時切換、寬度和高度資訊，或使用不同位速率的原因。
-seo-description: 當媒體播放器將其當前配置式切換到新配置式時，您可以檢索有關交換機的資訊，包括交換機何時切換、寬度和高度資訊，或使用不同位速率的原因。
-seo-title: 取得設定檔切換的相關資訊
 title: 取得設定檔切換的相關資訊
-uuid: 0ff1aeac-882a-4209-b19f-1aa3141404d9
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
