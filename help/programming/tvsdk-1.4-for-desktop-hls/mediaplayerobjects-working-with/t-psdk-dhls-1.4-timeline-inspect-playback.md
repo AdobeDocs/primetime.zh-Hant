@@ -1,19 +1,16 @@
 ---
 description: 您可以取得與目前由TVSDK播放之選取項目相關之時間軸的說明。 當應用程式顯示自訂拖曳列控制項時，最有用的方式是識別與廣告內容對應的內容區段。
-seo-description: 您可以取得與目前由TVSDK播放之選取項目相關之時間軸的說明。 當應用程式顯示自訂拖曳列控制項時，最有用的方式是識別與廣告內容對應的內容區段。
-seo-title: 檢查播放時間軸
-title: 檢查播放時間軸
-uuid: 2f903493-2d88-4af2-ac71-36300b49735b
+title: Inspect播放時間軸
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
 
 
-# 檢查播放時間軸{#inspect-the-playback-timeline}
+# Inspect播放時間軸{#inspect-the-playback-timeline}
 
 您可以取得與目前由TVSDK播放之選取項目相關之時間軸的說明。 當應用程式顯示自訂拖曳列控制項時，最有用的方式是識別與廣告內容對應的內容區段。
 
