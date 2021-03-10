@@ -1,13 +1,10 @@
 ---
-description: 您可以使用Adobe的Machotools工具來允許列出您的iOS應用程式。
-seo-description: 您可以使用Adobe的Machotools工具來允許列出您的iOS應用程式。
-seo-title: 允許列出您的iOS應用程式
+description: 您可以使用Adobe的machotools工具，來允許列出您的iOS應用程式。
 title: 允許列出您的iOS應用程式
-uuid: bc558f5f-d4e6-4c1c-81eb-f8bd61c63016
 translation-type: tm+mt
-source-git-commit: eb9f0a2f6d2118b953c711dfdc0402d1d923b016
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # 允許列出您的iOS應用程式{#allowlist-your-ios-application}
 
-您可以使用Adobe的Machotools工具來允許列出您的iOS應用程式。
+您可以使用Adobe的machotools工具，來允許列出您的iOS應用程式。
 
-通常，當您完成TVSDK應用程式時，可以使用Adobe Primetime DRM命令列工具來允許列出您的應用程式。
+通常，當您完成TVSDK應用程式時，可以使用Adobe PrimetimeDRM命令列工具來允許列出您的應用程式。
 
 >[!TIP]
 >
@@ -33,9 +30,9 @@ ht-degree: 0%
 
 由於重新簽署，您在提交至Apple App Store之前產生的允許清單資訊無法使用。
 
-為了使用此提交政策，Adobe已建立`machotools`工具，以指紋您的iOS應用程式以建立摘要值、簽署此值，並將此值插入您的iOS應用程式。 在您為iOS應用程式指紋後，就可以將應用程式送出至Apple App Store。 當使用者從App Store執行您的應用程式時，Primetime DRM會執行應用程式指紋的執行時期計算，並以先前在應用程式中插入的摘要值加以確認。 如果指紋符合，則確認應用程式已列出允許，並允許受保護的內容播放。
+為了使用此提交策略，Adobe已建立了`machotools`工具，該工具將為iOS應用程式指紋，以建立摘要值、簽署此值，並在iOS應用程式中插入此值。 在您為iOS應用程式指紋後，就可以將應用程式送出至Apple App Store。 當使用者從App Store執行您的應用程式時，Primetime DRM會執行應用程式指紋的執行時期計算，並以先前在應用程式中插入的摘要值加以確認。 如果指紋符合，則確認應用程式已列出允許，並允許受保護的內容播放。
 
-Adobe `machotools`工具包含在iOS TVSDK SDK的[!DNL [中……]/tools/DRM]資料夾。
+Adobe`machotools`工具包含在iOS TVSDK SDK的[!DNL [中……]/tools/DRM]資料夾。
 
 要使用`machotools`:
 
