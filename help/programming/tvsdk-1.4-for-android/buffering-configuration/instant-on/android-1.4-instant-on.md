@@ -1,13 +1,10 @@
 ---
 description: 「立即開啟」一詞指預先載入一或多個頻道，讓選擇頻道或切換頻道的使用者可立即看到內容播放。 緩衝已在使用者開始觀看時完成。
-seo-description: 「立即開啟」一詞指預先載入一或多個頻道，讓選擇頻道或切換頻道的使用者可立即看到內容播放。 緩衝已在使用者開始觀看時完成。
-seo-title: 立即啟動
 title: 立即啟動
-uuid: 4cb4d221-170f-46e8-af26-32f259377617
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
