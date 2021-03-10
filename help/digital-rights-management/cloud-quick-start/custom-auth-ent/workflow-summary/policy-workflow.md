@@ -1,9 +1,9 @@
 ---
-seo-title: 原則工作流程詳細資訊
 title: 原則工作流程詳細資訊
-uuid: b355fcf6-3416-440f-9b30-a155e20f9f74
+description: 原則工作流程詳細資訊
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ## 軟體包工作流詳細資訊{#package-workflow-details}
 
-在封裝Adobe Access保護內容時，您必須將其中一個BEES感知的DRM政策套用至內容。
+在打包受Adobe訪問保護的內容時，您必須對內容應用BEES感知的DRM策略之一。
 
 ## 驗證工作流程詳細資訊{#authentication-workflow-details}
 
