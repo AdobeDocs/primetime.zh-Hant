@@ -1,9 +1,9 @@
 ---
-seo-title: 使用DRMErrorEvent類概述
 title: 使用DRMErrorEvent類概述
-uuid: cbb9c1a7-3c50-479d-b7e5-63010a696dfa
+description: 使用DRMErrorEvent類概述
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
