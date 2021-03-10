@@ -1,19 +1,16 @@
 ---
 description: Primetime DRM可讓內容擁有者和發佈者控制其內容的發佈和體驗方式與地點，在內容生命週期中提供端對端保護。 它可加密視訊檔案，然後將這些檔案串流或下載至Microsoft® Windows®、Apple® Mac OS®、Linux®和Android®平台，並強制執行商業模型，例如線上視訊租賃。 消費者無論是線上或線下，都可以在方便的情況下享受高品質的內容。 Primetime DRM提供內容擁有者和發佈者可用來快速提供新服務的主要優勢，讓他們與競爭對手有所區隔。
-seo-description: Primetime DRM可讓內容擁有者和發佈者控制其內容的發佈和體驗方式與地點，在內容生命週期中提供端對端保護。 它可加密視訊檔案，然後將這些檔案串流或下載至Microsoft® Windows®、Apple® Mac OS®、Linux®和Android®平台，並強制執行商業模型，例如線上視訊租賃。 消費者無論是線上或線下，都可以在方便的情況下享受高品質的內容。 Primetime DRM提供內容擁有者和發佈者可用來快速提供新服務的主要優勢，讓他們與競爭對手有所區隔。
-seo-title: 關於Adobe Primetime DRM
-title: 關於Adobe Primetime DRM
-uuid: 4c445ccb-0a8e-490f-b840-8654fcaa106c
+title: 關於Adobe PrimetimeDRM
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
 
-# 關於Adobe Primetime DRM{#about-adobe-primetime-drm}
+# 關於Adobe PrimetimeDRM{#about-adobe-primetime-drm}
 
 Primetime DRM可讓內容擁有者和發佈者控制其內容的發佈和體驗方式與地點，在內容生命週期中提供端對端保護。 它可加密視訊檔案，然後將這些檔案串流或下載至Microsoft® Windows®、Apple® Mac OS®、Linux®和Android®平台，並強制執行商業模型，例如線上視訊租賃。 消費者無論是線上或線下，都可以在方便的情況下享受高品質的內容。 Primetime DRM提供內容擁有者和發佈者可用來快速提供新服務的主要優勢，讓他們與競爭對手有所區隔。
 
