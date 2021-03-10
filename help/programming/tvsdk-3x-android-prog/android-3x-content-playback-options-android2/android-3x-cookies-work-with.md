@@ -1,13 +1,10 @@
 ---
 description: 您可以使用TVSDK在Cookie標題中傳送任意資料，以進行作業管理、閘道存取等。
-seo-description: 您可以使用TVSDK在Cookie標題中傳送任意資料，以進行作業管理、閘道存取等。
-seo-title: 使用Cookie
 title: 使用Cookie
-uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -54,7 +51,7 @@ ht-degree: 0%
 
    `networkConfiguration.setCookieHeaders` API會將Cookie設定至TVSDK的C++ CookieStore。
 
-   當使用JAVA Cookie並在應用程式和TVSDK之間共用時，請使用JAVA CookieStore僅管理Cookie。
+   當使用JAVA Cookies並在應用程式和TVSDK之間共用時，請使用JAVA CookieStore僅管理Cookies。
 
    在初始化播放之前，請使用Cookie管理器將Cookie設定為CookieStore，如上所述。
 
