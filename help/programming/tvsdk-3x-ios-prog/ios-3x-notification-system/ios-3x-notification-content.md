@@ -1,13 +1,10 @@
 ---
 description: PTNotification物件提供播放器狀態、警告和錯誤變更的相關資訊。 停止播放視訊的錯誤也會導致播放器狀態變更。
-seo-description: PTNotification物件提供播放器狀態、警告和錯誤變更的相關資訊。 停止播放視訊的錯誤也會導致播放器狀態變更。
-seo-title: 通知內容
 title: 通知內容
-uuid: d42d2e89-1bdd-4be0-8a69-821fec6bbc75
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->TVSDK也使用&#x200B;*`notification`*&#x200B;來參考`NSNotifications`（`PTMediaPlayer`通知）*`event`*&#x200B;通知，並派送通知來提供播放器活動的相關資訊。
+>TVSDK也使用&#x200B;*`notification`*&#x200B;來參考`NSNotifications`（`PTMediaPlayer`通知）*`event`*&#x200B;通知，以提供播放器活動的相關資訊。
 
 TVSDK在發問`PTNotification`時也會發問`PTMediaPlayerNewNotificationItemEntryNotification`。
 
