@@ -1,9 +1,9 @@
 ---
-seo-title: 配置驗證器
 title: 配置驗證器
-uuid: 60ebd35c-290a-4f08-9bd0-178903857149
+description: 配置驗證器
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 配置驗證器{#configuration-validator}
 
-Adobe建議在對配置檔案進行任何更改之前，先運行Configuration Validator實用程式，然後再啟動伺服器。 此公用程式可在請求處理期間，提早偵測大部分的設定錯誤，以免造成失敗。
+Adobe建議在對配置檔案進行任何更改之前，先運行配置驗證器實用程式。 此公用程式可在請求處理期間，提早偵測大部分的設定錯誤，以免造成失敗。
 
 要運行驗證器，請使用命令：
 
