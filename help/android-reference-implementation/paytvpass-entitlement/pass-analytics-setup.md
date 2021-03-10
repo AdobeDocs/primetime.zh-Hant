@@ -1,28 +1,25 @@
 ---
 description: 您可以設定「參考實作」以使用Adobe Analytics報表。
-seo-description: 您可以設定「參考實作」以使用Adobe Analytics報表。
-seo-title: 設定Adobe Analytics報表
-title: 設定Adobe Analytics報表
-uuid: bdf8bb7f-a0c8-48a2-a632-0b872687f3fe
+title: 配置Adobe Analytics報告
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
 
 
-# 設定Adobe Analytics報表{#configure-adobe-analytics-reporting}
+# 配置Adobe Analytics報告{#configure-adobe-analytics-reporting}
 
 您可以設定「參考實作」以使用Adobe Analytics報表。
 
-「參考實作」的設定是使用Primetime SDK內隨附的Adobe Mobile Library，將Primetime驗證事件資料傳送至Adobe Analytics。 若要啟用和使用從應用程式傳送的事件資料，您必須先建立Adobe Analytics帳戶。 帳戶建立後：
+「參考實作」設定為使用Primetime SDK內隨附的Adobe行動資料庫，將Primetime驗證事件資料傳送至Adobe Analytics。 若要啟用和使用從應用程式傳送的事件資料，您必須先建立Adobe Analytics帳戶。 帳戶建立後：
 
 1. 使用您的帳戶資訊設定應用程式；和
 1. 建立處理規則以自訂事件資料在報表中的顯示方式。
 
-下表顯示傳送至Adobe Analytics的資料：
+下表列出了發送給Adobe Analytics的資料：
 
 | 動作名稱 | `a.media.pass.event.MvpdSelection` | 使用者在選擇對話方塊中選取多頻道視訊程式設計裝置(MVPD) |
 |---|---|---|
@@ -47,7 +44,7 @@ ht-degree: 0%
 
 1. 設定應用程式以搭配Adobe Marketing Cloud使用。
 
-   若要啟用將Primetime驗證資料傳送至Adobe Analytics，編譯時必須將[!DNL `ADBMobileConfig.json`]組態檔新增至「參考實作」。 請注意，這與Primetime SDK用來傳送視訊分析資料至Marketing Cloud的設定檔完全相同。 如需使用您的Adobe Analytics帳戶設定應用程式的詳細資訊，請參閱[Adobe Marketing Cloud檔案](https://microsite.omniture.com/t2/help/en_US/reference/)。
+   若要啟用將Primetime驗證資料傳送至Adobe Analytics，必須在編譯時將[!DNL `ADBMobileConfig.json`]組態檔新增至參考實作。 請注意，這與Primetime SDK用來傳送視訊分析資料至Marketing Cloud的設定檔完全相同。 請參閱[Adobe Marketing Cloud檔案](https://microsite.omniture.com/t2/help/en_US/reference/)，以取得有關使用您的Adobe Analytics帳戶配置應用程式的詳細資訊。
 1. 建立處理規則。
 
    「參考實作」所傳送的Primetime驗證事件資料不會自動出現在您的分析報表中。 您必須先建立處理規則，以利用資料。 請參閱[Adobe Analytics檔案，瞭解如何建立處理規則](https://microsite.omniture.com/t2/help/en_US/reference/processing_rules.html)。
