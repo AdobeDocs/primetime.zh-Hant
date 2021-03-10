@@ -1,13 +1,10 @@
 ---
 description: 您可以在播放視訊內容時顯示標題。
-seo-description: 您可以在播放視訊內容時顯示標題。
-seo-title: 標題
 title: 標題
-uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '55'
 ht-degree: 3%
 
 ---
