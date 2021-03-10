@@ -1,13 +1,10 @@
 ---
 description: 在某些情況下，您可能會想要限制使用者在購買或租用內容時，在多種裝置上播放內容。 如果客戶使用Expressplay，則可使用Expressplay API將使用者的Expressplay Token系結至使用者的機器。
-seo-description: 在某些情況下，您可能會想要限制使用者在購買或租用內容時，在多種裝置上播放內容。 如果客戶使用Expressplay，則可使用Expressplay API將使用者的Expressplay Token系結至使用者的機器。
-seo-title: 裝置系結
 title: 裝置系結
-uuid: 351fa33c-4226-4ed5-829c-56b563166fec
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
