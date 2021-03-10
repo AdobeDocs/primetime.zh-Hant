@@ -1,13 +1,10 @@
 ---
 description: 若要接收資訊清單中標籤的通知，您必須實作適當的事件接聽程式。
-seo-description: 若要接收資訊清單中標籤的通知，您必須實作適當的事件接聽程式。
-seo-title: 新增計時中繼資料通知的監聽器
 title: 新增計時中繼資料通知的監聽器
-uuid: bb996b4a-282e-4321-a9e9-513f0df45b70
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
