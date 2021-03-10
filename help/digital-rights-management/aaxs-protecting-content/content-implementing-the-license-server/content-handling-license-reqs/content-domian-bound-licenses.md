@@ -1,9 +1,9 @@
 ---
-seo-title: 發行限制網域的授權
 title: 發行限制網域的授權
-uuid: 175d3b7d-d1df-44ee-85ad-a0db4a1bdb9d
+description: 發行限制網域的授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
