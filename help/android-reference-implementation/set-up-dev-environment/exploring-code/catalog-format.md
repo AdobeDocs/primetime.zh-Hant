@@ -1,13 +1,10 @@
 ---
 description: Primetime參考實作使用以JSON為基礎的動態消息格式來回應。 使用IFeedItemAdapter介面的實現來解析此格式。
-seo-description: Primetime參考實作使用以JSON為基礎的動態消息格式來回應。 使用IFeedItemAdapter介面的實現來解析此格式。
-seo-title: 目錄格式
 title: 目錄格式
-uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -144,5 +141,5 @@ Primetime參考實作使用以JSON為基礎的動態消息格式來回應。 使
 | type | 值可以是黃金時段廣告、直接廣告插播或自訂廣告標籤。 <br/><br/>PSDK提供下列中繼資料類型的內建支援：黃金時段廣告服務（黃金時段廣告）的Auditude相關中繼資料、具有廣告URL的直接廣告插播（直接廣告插播），以及提供每個廣告標籤（自訂廣告標籤）之TimeRange的自訂廣告標籤。每種類型在PSDK中都有內建的AdProvider，可處理中繼資料。  <br/><br/>以下定義了每種格式的JSON格式。 |
 | 詳細資訊 | 包含廣告中繼資料屬性。 這兩種廣告中繼資料都有其專屬的屬性集，定義如下。 對於內建類型，包含的屬性會定義PSDK預期的該類型資料。 |
 | 權益 | 權益相關中繼資料 |
-| id | 用於Adobe Primetime付費電視通行證服務之授權要求的媒體資源ID。 ID可以是文字字串或HTML編碼的mRSS字串。 任何需要授權的媒體內容都必須包含有效的資源ID。 |
+| id | 用於針對Adobe Primetime付費電視通行證服務的授權要求的媒體資源ID。 ID可以是文字字串或HTML編碼的mRSS字串。 任何需要授權的媒體內容都必須包含有效的資源ID。 |
 
