@@ -1,13 +1,10 @@
 ---
 description: 在某些分析實作中，用戶端應用程式可能會想要提供與瀏覽器TVSDK localTime值所報告位置不同的播放頭位置。
-seo-description: 在某些分析實作中，用戶端應用程式可能會想要提供與瀏覽器TVSDK localTime值所報告位置不同的播放頭位置。
-seo-title: 實作自訂時間更新
 title: 實作自訂時間更新
-uuid: 26a0592c-a47b-4d65-b984-5e51533dcddc
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
