@@ -1,13 +1,10 @@
 ---
 description: 建立視訊分析管理員
-seo-description: 建立視訊分析管理員
-seo-title: 建立視訊分析管理員
 title: 建立視訊分析管理員
-uuid: d72e1dfe-df70-47cc-9e00-bd09017d6127
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
@@ -28,5 +25,5 @@ config變數是`IVAConfig`的具體實作，並包含執行時期`VideoHeartbeat
 
 >[!NOTE]
 >
->如果Android應用程式未設定Adobe Analytics帳戶，則即使已建立並啟用`VAManager`的例項，也不會產生視訊追蹤資料。
+>如果Android應用程式未設定Adobe Analytics帳戶，則視訊追蹤資料將不會產生，即使已建立並啟用`VAManager`的例項亦然。
 
