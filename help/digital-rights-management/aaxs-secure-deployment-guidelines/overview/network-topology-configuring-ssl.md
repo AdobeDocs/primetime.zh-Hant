@@ -1,9 +1,9 @@
 ---
-seo-title: 設定SSL
 title: 設定SSL
-uuid: aba7c7bb-63bb-4d51-b57e-329d2ad01590
+description: 設定SSL
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # 配置SSL {#configuring-ssl}
 
-只有在您需要支援Flash Media Rights Management Server 1.x用戶端時，才需要安全通訊端層(SSL)。 Adobe Access Key Server需要具備用戶端驗證的SSL。 如需詳細資訊，請參閱*使用Adobe Access Key Server *。
+只有在需要支援Flash媒體Rights Management伺服器1.x客戶端時，才需要安全套接字層(SSL)。 Adobe訪問密鑰伺服器需要具有客戶端驗證的SSL。 請參閱*使用Adobe訪問密鑰伺服器*以瞭解詳細資訊。
