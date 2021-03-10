@@ -1,13 +1,10 @@
 ---
 description: 您可以處理即時視訊串流中的封鎖期，並在封鎖期間提供替代內容。
-seo-description: 您可以處理即時視訊串流中的封鎖期，並在封鎖期間提供替代內容。
-seo-title: 處理即時串流中的封鎖期
 title: 處理即時串流中的封鎖期
-uuid: df933087-c8a8-49eb-a016-6dfd971c219c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
