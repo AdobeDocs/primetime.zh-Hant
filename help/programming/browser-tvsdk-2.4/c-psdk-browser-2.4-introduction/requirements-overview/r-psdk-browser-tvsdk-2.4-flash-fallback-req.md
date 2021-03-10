@@ -1,37 +1,34 @@
 ---
-description: 若要使用Flash Player，請確保您的環境符合必要的需求。
-seo-description: 若要使用Flash Player，請確保您的環境符合必要的需求。
-seo-title: Flash Player需求
+description: 要使用Flash Player，請確保您的環境符合必要的要求。
 title: Flash Player需求
-uuid: f181457b-2bb4-4baa-b2b7-d787f65fab75
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '142'
 ht-degree: 1%
 
 ---
 
 
-# Flash Player需求{#flash-player-requirements}
+# Flash Player要求{#flash-player-requirements}
 
-若要使用Flash Player，請確保您的環境符合必要的需求。
+要使用Flash Player，請確保您的環境符合必要的要求。
 
 <!--<a id="section_FEE654D506EC4D85AE77302AD2A27777"></a>-->
 
-以下是Flash Player的需求：
+以下是Flash Player的要求：
 
-* 若要播放`Primetime.js`，請至少安裝Flash Player 23版。
-* 若要提示更新Flash Player 23或更新版本，請至少安裝Flash Player 11.0.0版。
+* 若要播放`Primetime.js`，請至少安裝Flash Player23版。
+* 要提示更新Flash Player23版或更新版本，請至少安裝Flash Player11.0.0版。
 
 ## 包裝要求{#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
-使用Flash Player播放時需要下列SWF檔案：
+使用Flash Player播放需要下列SWF檔案：
 
 * 處理瀏覽器TVSDK API的主要應用程式SWF檔案。
-* 處理Flash Player安裝與更新的`playerProductInstall.swf` SWF檔案。
+* 處理Flash Player安裝和更新的`playerProductInstall.swf` SWF檔案。
 
-此外，在Flash中播放視訊需要授權Token檔案，該檔案可能是SWF或`.DAT`檔案。 SWF檔案的路徑、授權Token檔案，以及Token檔案名稱和類型，都可使用AdobePSDK API來指定。
+此外，Flash中的視訊播放需要授權Token檔案，該檔案可能是SWF或`.DAT`檔案。 SWF檔案的路徑、授權Token檔案，以及Token檔案名稱和類型，都可使用AdobePSDK API來指定。
 
 例如：
 
