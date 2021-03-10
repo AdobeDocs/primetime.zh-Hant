@@ -1,9 +1,9 @@
 ---
-seo-title: 產生授權
 title: 產生授權
-uuid: f91b0cc8-e0ed-4722-947b-22eb2bfba916
+description: 產生授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -17,4 +17,4 @@ ht-degree: 0%
 
 如果在`ContentInfo`物件中指定`ExternalKeyRetrieval`物件，則授權伺服器應使用相關的CEK ID來擷取插入授權的適當CEK。
 
-如需如何使用外部CEK工作流程的詳細資訊，請參閱[Adobe Primetime DRM外部CEK概觀](../../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)。
+如需如何使用外部CEK工作流程的詳細資訊，請參閱[Adobe PrimetimeDRM外部CEK概述](../../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)。
