@@ -1,13 +1,10 @@
 ---
 description: TVSDK會下載廣告區段，並在裝置螢幕上呈現廣告區段。
-seo-description: TVSDK會下載廣告區段，並在裝置螢幕上呈現廣告區段。
-seo-title: 廣告播放階段
 title: 廣告播放階段
-uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
