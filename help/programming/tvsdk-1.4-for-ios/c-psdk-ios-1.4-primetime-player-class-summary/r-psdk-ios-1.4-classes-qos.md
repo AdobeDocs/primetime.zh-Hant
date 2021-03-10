@@ -1,13 +1,10 @@
 ---
 description: 這些類別提供的資訊可協助您判斷播放器的效能。
-seo-description: 這些類別提供的資訊可協助您判斷播放器的效能。
-seo-title: QoS類
 title: QoS類
-uuid: fc175269-ec4a-415e-91f3-7fa036290fa6
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
