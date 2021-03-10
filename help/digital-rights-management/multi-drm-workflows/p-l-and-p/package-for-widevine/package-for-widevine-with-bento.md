@@ -1,13 +1,10 @@
 ---
 description: 我們使用Bento4封裝程式和Adobe離線封裝程式來製作加密的DASH內容。 Bento4將作為輸入的未加密mp4內容。
-seo-description: 我們使用Bento4封裝程式和Adobe離線封裝程式來製作加密的DASH內容。 Bento4將作為輸入的未加密mp4內容。
-seo-title: 使用Bento4封裝您的內容
 title: 使用Bento4封裝您的內容
-uuid: 88323a4e-d0b5-4a41-acec-7126d3e0c90b
 translation-type: tm+mt
-source-git-commit: 75702ea2a524d7b38bb9ac83cb094c8482b1098f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
@@ -72,11 +69,11 @@ where
 
 `-playready-header`的值是用於PlayReady授權購買。
 
-## 使用Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}封裝您的內容
+## 使用AdobeOffline Packager {#package-your-content-with-adobe-offline-packager}封裝您的內容
 
-Adobe Offline Packager會將輸入未加密的mp4內容。
+AdobeOffline Packager會將輸入未加密的mp4內容。
 
-**呼叫Adobe Offline Packager**
+**呼叫AdobeOffline Packager**
 
 典型的adobe離線封裝呼叫如下所示：
 
@@ -104,4 +101,4 @@ conf_path參數指向將包含以下內容的配置檔案：
 </config>
 ```
 
-因為某些Android裝置— 主要是Amazon Fire TV — 不支援音訊解密，音訊加密是選用的。
+因為某些Android裝置— 主要是Amazon火電— 不支援音訊解密，音訊加密是選用的。
