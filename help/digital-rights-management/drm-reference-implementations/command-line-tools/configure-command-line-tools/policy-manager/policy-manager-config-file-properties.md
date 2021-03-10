@@ -1,12 +1,10 @@
 ---
-description: 'null'
-keywords: hard stop
-seo-description: 'null'
-seo-title: 配置屬性
+keywords: 硬停
 title: 配置屬性
-uuid: 216921d1-a9c1-4650-9dce-c025836986e5
+description: 配置屬性
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
@@ -186,7 +184,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">非Flash應用程式（Adobe AIR、iOS、Android等）的允許清單 可播放受保護內容。 屬性必須使用下列格式：<span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">非Flash應用程式(Adobe AIR、iOS、Android等)的允許清單 可播放受保護內容。 屬性必須使用下列格式：<span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
