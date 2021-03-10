@@ -1,13 +1,10 @@
 ---
 description: AdAsset的內容會說明配套橫幅。
-seo-description: AdAsset的內容會說明配套橫幅。
-seo-title: 配套橫幅資料
 title: 配套橫幅資料
-uuid: f54aecea-5e11-45dd-97d0-5774ca631a4d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -47,7 +44,7 @@ AdAsset的內容會說明配套橫幅。
   </tr> 
   <tr> 
    <td colname="col1"> 靜態URL </td> 
-   <td colname="col2"> <p>有時候，配套橫幅也會有<span class="codeph"> staticURL</span>，此為影像或<span class="codeph"> .swf</span>（flash橫幅）的直接URL。 </p> <p>如果您不想使用html或iframe，則可使用影像或swf的直接URL，在Flash階段中顯示橫幅。 在這種情況下，您可以使用<span class="codeph"> staticURL</span>來顯示橫幅。 </p> <p>重要： 您必須檢查靜態URL是否為有效字串，因為此屬性可能不一定都可用。 </p> </td> 
+   <td colname="col2"> <p>有時候，配套橫幅也會有<span class="codeph"> staticURL</span>，此為影像或<span class="codeph"> .swf</span>（flash橫幅）的直接URL。 </p> <p>如果您不想使用html或iframe，則可以使用影像或swf的直接URL，在Flash階段中顯示橫幅。 在這種情況下，您可以使用<span class="codeph"> staticURL</span>來顯示橫幅。 </p> <p>重要： 您必須檢查靜態URL是否為有效字串，因為此屬性可能不一定都可用。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
