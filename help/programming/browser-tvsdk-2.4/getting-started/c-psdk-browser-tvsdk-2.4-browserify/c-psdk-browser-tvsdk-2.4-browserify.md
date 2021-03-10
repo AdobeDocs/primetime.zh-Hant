@@ -1,13 +1,10 @@
 ---
-description: 您可以使用瀏覽器TVSDK提供的JS檔案建立與瀏覽器相容的播放器。
-seo-description: 您可以使用瀏覽器TVSDK提供的JS檔案建立與瀏覽器相容的播放器。
-seo-title: 瀏覽器相容播放器
+description: 您可以使用瀏覽器TVSDK提供的JS檔案，建立與瀏覽器相容的播放器。
 title: 瀏覽器相容播放器
-uuid: 1832c826-d5d0-41b0-852f-286c8e4fa0f3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 概述{#browserify-compatible-player-overview}
 
-您可以使用瀏覽器TVSDK提供的JS檔案建立與瀏覽器相容的播放器。
+您可以使用瀏覽器TVSDK提供的JS檔案，建立與瀏覽器相容的播放器。
 
 瀏覽器TVSDK提供兩個與瀏覽器相容的JS檔案。 一種是與AdobePSDK模組搭配使用；這是用於開發沒有UI-Framework的應用程式。 二是與UI-Framework模組一起使用；它會傳回您使用UI-Framework編寫應用程式時使用的PTP命名空間。
 
