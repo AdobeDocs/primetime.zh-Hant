@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 在伺服器端設定視訊分析報表
 title: 在伺服器端設定視訊分析報表
-uuid: 46af6094-3607-4c37-968e-2633e3895315
+description: 在伺服器端設定視訊分析報表
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # 在伺服器端{#set-up-video-analytics-reporting-on-the-server-side}設定視訊分析報表
 
-您的Adobe代表將處理Adobe Analytics報表伺服器端設定的大部分方面。 如需詳細資訊，請參閱[Analytics說明與參考——報表套裝管理員](https://microsite.omniture.com/t2/help/en_US/reference/#Report_Suite_Manager)。
+您的Adobe代表將負責Adobe Analytics報表伺服器端設定的大部分工作。 如需詳細資訊，請參閱[Analytics說明與參考——報表套裝管理員](https://microsite.omniture.com/t2/help/en_US/reference/#Report_Suite_Manager)。
 1. 若要啟用報表套裝ID(RSID)的轉換層級：
    1. 訪問&#x200B;**[!UICONTROL Admin Tools]**。
    1. 選擇&#x200B;**[!UICONTROL Report Suites]**。
