@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK支援許多DASH功能，您可實作這些功能，以新增功能至視訊應用程式。
-seo-description: 瀏覽器TVSDK支援許多DASH功能，您可實作這些功能，以新增功能至視訊應用程式。
-seo-title: 支援的DASH功能
 title: 支援的DASH功能
-uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -86,7 +83,7 @@ ht-degree: 0%
 
 | 類別 | 內容類型 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
-| 整合 | VOD + Live | Adobe Analytics VHL整合 | ![](assets/supported15.png) |
+| 整合 | VOD + Live | Adobe AnalyticsVHL整合 | ![](assets/supported15.png) |
 | 整合 | VOD + Live | 帳單 | ![](assets/supported15.png) |
 | 整合 | VOD + Live | 瀏覽 | ![](assets/supported15.png) |
 
@@ -94,26 +91,26 @@ ht-degree: 0%
 
 | 類別 | 內容類型 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
-| 廣告插入 | VOD | 僅限廣告 | 不支援 |
-| 廣告插入 | VOD | 定位參數 | 僅限VOD |
-| 廣告插入 | VOD | 自訂參數 | 僅限VOD |
-| 廣告插入 | VOD + Live | 自訂廣告原則 | 不支援 |
-| 廣告插入 | VOD + Live | 延遲廣告載入 | 不支援 |
-| 廣告插入 | VOD | 配套廣告、橫幅廣告和可點選廣告 | 不支援 |
-| 廣告插入 | VOD | VPAID 2.0 | 不支援 |
+| Ad Insertion | VOD | 僅限廣告 | 不支援 |
+| Ad Insertion | VOD | 定位參數 | 僅限VOD |
+| Ad Insertion | VOD | 自訂參數 | 僅限VOD |
+| Ad Insertion | VOD + Live | 自訂廣告原則 | 不支援 |
+| Ad Insertion | VOD + Live | 延遲廣告載入 | 不支援 |
+| Ad Insertion | VOD | 配套廣告、橫幅廣告和可點選廣告 | 不支援 |
+| Ad Insertion | VOD | VPAID 2.0 | 不支援 |
 
 ## DASH核心廣告插入功能(CSAI){#dash-core-ad-insertion}
 
 | 類別 | 內容類型 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
-| 廣告插入 | VOD + Live | 前滾 | 僅限VOD |
-| 廣告插入 | VOD + Live | 中間卷 | 僅限VOD |
-| 廣告插入 | VOD + Live | 後置卷 | 僅限VOD |
-| 廣告插入 | FER VOD | 廣告解析度與行為 | 不支援 |
-| 廣告插入 | VOD + Live | 預設廣告原則 | 僅限VOD |
-| 廣告插入 | VOD + Live | VAST 2.0/3.0 | 僅限VOD |
-| 廣告插入 | VOD + Live | VMAP 1.0 | 僅限VOD |
-| 廣告插入 | VOD + Live | CRS v3.1 | 僅限VOD |
+| Ad Insertion | VOD + Live | 前滾 | 僅限VOD |
+| Ad Insertion | VOD + Live | 中間卷 | 僅限VOD |
+| Ad Insertion | VOD + Live | 後置卷 | 僅限VOD |
+| Ad Insertion | FER VOD | 廣告解析度與行為 | 不支援 |
+| Ad Insertion | VOD + Live | 預設廣告原則 | 僅限VOD |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | 僅限VOD |
+| Ad Insertion | VOD + Live | VMAP 1.0 | 僅限VOD |
+| Ad Insertion | VOD + Live | CRS v3.1 | 僅限VOD |
 
 ## DASH內容保護功能{#dash-content-protection}
 
@@ -152,7 +149,7 @@ ht-degree: 0%
        <li id="li_BC06B0A6EAAC4FC991C713775A8BB4DA">Chromecast </li> 
       </ul> </li> 
      <li id="li_D48B51C2208F423CB85D08886C2E1C66">在Windows 8.1和Edge的Internet Explorer上播放就緒 </li> 
-     <li id="li_2786AC19387241A296E015EE6FD07F2D">Windows Firefox專用的Adobe Access（僅限視訊） </li> 
+     <li id="li_2786AC19387241A296E015EE6FD07F2D">Windows Firefox的Adobe存取（僅限視訊） </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
