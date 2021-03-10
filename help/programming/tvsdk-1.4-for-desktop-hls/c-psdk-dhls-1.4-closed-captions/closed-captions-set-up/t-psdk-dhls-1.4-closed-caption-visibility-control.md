@@ -1,13 +1,10 @@
 ---
 description: 您可以控制隱藏字幕的可見度。 當可見性開啟時，會顯示目前選取的軌道。 如果您變更了目前的軌道，可見度設定會維持不變。
-seo-description: 您可以控制隱藏字幕的可見度。 當可見性開啟時，會顯示目前選取的軌道。 如果您變更了目前的軌道，可見度設定會維持不變。
-seo-title: 控制隱藏字幕的可見度
 title: 控制隱藏字幕的可見度
-uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
