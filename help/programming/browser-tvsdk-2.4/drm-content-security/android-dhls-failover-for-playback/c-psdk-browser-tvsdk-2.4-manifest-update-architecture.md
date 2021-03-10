@@ -1,13 +1,10 @@
 ---
 description: 以下說明瀏覽器TVSDK如何容納更新的主資料清單的資訊和範例。
-seo-description: 以下說明瀏覽器TVSDK如何容納更新的主資料清單的資訊和範例。
-seo-title: 即時主資訊清單更新架構
 title: 即時主資訊清單更新架構
-uuid: 6f253502-8dec-4b42-9ee1-99ad9bfd6080
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
