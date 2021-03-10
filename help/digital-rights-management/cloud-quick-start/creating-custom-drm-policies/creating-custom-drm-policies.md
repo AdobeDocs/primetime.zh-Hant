@@ -1,9 +1,9 @@
 ---
-seo-title: 建立自訂DRM原則（選用）
 title: 建立自訂DRM原則（選用）
-uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
+description: 建立自訂DRM原則（選用）
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
@@ -31,7 +31,7 @@ java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 
 如果您使用Primetime Cloud DRM自訂驗證／權益，並想要針對每個授權要求動態建立新的DRM原則（而非從預先產生的存放區提取原則）,Adobe建議您直接使用Primetime DRM Java SDK。 直接使用Java SDK比[!DNL AdobePolicyManager.jar]工具更快，該工具會自動將原則檔案輸出至磁碟，從而產生磁碟I/O開銷。
 
-使用Java SDK的范常式式碼可在[!DNL /Primetime DRM PolicyManager/sampleCode/]目錄中找到，名為[!DNL CreatePolicy.java]和[!DNL CreatePolicyWithOutputProtection.java]。 有關Java SDK的Javadoc和檔案，請參閱[An Overview of Adobe Primetime DRM SDK](../../../digital-rights-management/drm-sdk-overview/overview.md)
+使用Java SDK的范常式式碼可在[!DNL /Primetime DRM PolicyManager/sampleCode/]目錄中找到，名為[!DNL CreatePolicy.java]和[!DNL CreatePolicyWithOutputProtection.java]。 有關Java SDK的Javadoc和文檔，請參閱[Adobe PrimetimeDRM SDK](../../../digital-rights-management/drm-sdk-overview/overview.md)概觀
 
 若要建立並執行範例，請將。java檔案複製至。./libs/檔案夾並執行：
 
