@@ -1,9 +1,9 @@
 ---
-seo-title: 授權取得程式概觀
 title: 授權取得程式概觀
-uuid: c2eedd0a-3e3a-4c2f-a781-855f0ba65b15
+description: 授權取得程式概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 授權取得程式概觀{#license-acquisition-process-overview}
 
-在Primetime DRM的保護下，使用ActionScript 3(AS3)程式碼範例，讓應用程式播放內容的說明請見以下章節。 針對行動平台上的原生應用程式，會在適當時候顯示與此工作流程的細微差異。 不過，Primetime DRM工作流程在所有平台上都非常類似，因此您對AS3程式碼的瞭解會讓您將外推至其他平台變得相當簡單。
+以下各節使用ActionScript3(AS3)程式碼範例，說明如何讓您的應用程式在Primetime DRM的保護下播放內容。 針對行動平台上的原生應用程式，會在適當時候顯示與此工作流程的細微差異。 不過，Primetime DRM工作流程在所有平台上都非常類似，因此您對AS3程式碼的瞭解會讓您將外推至其他平台變得相當簡單。
 
 **授權取得程式：**
 
