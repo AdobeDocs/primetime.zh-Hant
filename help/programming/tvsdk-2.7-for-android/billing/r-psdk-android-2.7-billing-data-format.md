@@ -1,13 +1,10 @@
 ---
-description: TVSDK以XML格式將帳單量度傳送至Adobe。
-seo-description: TVSDK以XML格式將帳單量度傳送至Adobe。
-seo-title: 傳輸帳單量度
+description: TVSDK會以XML格式傳送帳單量度至Adobe。
 title: 傳輸帳單量度
-uuid: f4a7f50e-f457-434e-bf26-1e06cb15a038
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 傳送帳單量度{#transmit-billing-metrics}
 
-TVSDK以XML格式將帳單量度傳送至Adobe。
+TVSDK會以XML格式傳送帳單量度至Adobe。
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
