@@ -1,9 +1,9 @@
 ---
-seo-title: 需求
 title: 需求
-uuid: c8e87231-d8c1-48f1-8bb1-5d76f561f216
+description: 需求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 * Java 1.6或更新版本
 * Ant 1.8或更新版本（以使用範例建置指令碼）
 
-安裝Tomcat和MySQL後，請從Adobe取得憑證。
+安裝Tomcat和MySQL後，請從Adobe獲取憑據。
