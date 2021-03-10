@@ -1,9 +1,9 @@
 ---
-seo-title: 建立原則和封裝內容
 title: 建立原則和封裝內容
-uuid: ecf9bdd8-0bd2-4616-a6e5-a46bb55d16ab
+description: 建立原則和封裝內容
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 使用SDK支援的使用規則，您必須定義並建立支援您組織商業模型的原則，然後使用這些原則封裝您的內容。 一旦在封裝期間將原則套用至內容，您就可以控制內容，不論內容的散布範圍有多廣。
 
-Adobe Primetime DRM中的政策支援多種不同的使用規則，包括：
+Adobe PrimetimeDRM中的政策支援多種不同的使用規則，包括：
 
 * 指定消費者開始觀看內容後，授權的有效天數。
 * 允許授權快取。
-* 指定用戶端執行時期和可存取內容的版本（例如，使用者必須擁有特定的Adobe AIR應用程式或特定版本的Flash Player）。
+* 指定可存取內容的用戶端執行時期和版本(例如，使用者必須擁有特定的Adobe AIR應用程式或特定版本的Flash Player)。
 * 要求消費者在檢視受保護的內容或允許匿名存取之前，先使用使用者名稱和密碼來驗證自己。
 
 若要進一步瞭解封裝內容，請參閱&#x200B;*保護內容*。 如需進一步瞭解使用規則及其支援的商業模型，請參閱&#x200B;*使用規則*。
