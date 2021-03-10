@@ -1,13 +1,10 @@
 ---
 description: 您的應用程式可監聽TVSDK所傳送的事件，以監控播放器中的活動和播放器的變更狀態。
-seo-description: 您的應用程式可監聽TVSDK所傳送的事件，以監控播放器中的活動和播放器的變更狀態。
-seo-title: 播放事件
 title: 播放事件
-uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
