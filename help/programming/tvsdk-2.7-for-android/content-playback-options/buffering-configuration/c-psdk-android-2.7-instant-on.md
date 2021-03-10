@@ -1,13 +1,10 @@
 ---
 description: 立即啟用表示已預先載入一或多個頻道。 當使用者選擇頻道或切換頻道時，內容會立即播放。 緩衝在用戶開始監視時完成。
-seo-description: 立即啟用表示已預先載入一或多個頻道。 當使用者選擇頻道或切換頻道時，內容會立即播放。 緩衝在用戶開始監視時完成。
-seo-title: 立即啟動
 title: 立即啟動
-uuid: 7e14b779-2a36-4ff4-a365-9ac49a836ff3
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -50,7 +47,7 @@ TVSDK提供方法和狀態，允許您將「立即啟動」與媒體資源搭配
 
 >[!NOTE]
 >
->Adobe建議使用`MediaPlayerItemLoader`作為InstantOn。 若要使用`MediaPlayerItemLoader`而非`MediaPlayer`，請參閱media-resource-load-using-mediaplayeritemloader。
+>Adobe建議對InstantOn使用`MediaPlayerItemLoader`。 若要使用`MediaPlayerItemLoader`而非`MediaPlayer`，請參閱media-resource-load-using-mediaplayeritemloader。
 
 1. 確認已載入資源，且播放器已準備播放資源。
 1. 在呼叫`play`之前，請呼叫每個`MediaPlayer`實例的`prepareBuffer`。
