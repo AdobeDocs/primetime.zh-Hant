@@ -1,9 +1,9 @@
 ---
-seo-title: 同步要求
 title: 同步要求
-uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
+description: 同步要求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
