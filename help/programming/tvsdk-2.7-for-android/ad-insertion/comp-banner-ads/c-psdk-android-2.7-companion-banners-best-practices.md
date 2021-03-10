@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 配套橫幅廣告的最佳實務
 title: 配套橫幅廣告的最佳實務
-uuid: d844babb-20ab-4380-9487-eb1c24b58877
+description: 配套橫幅廣告的最佳實務
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
