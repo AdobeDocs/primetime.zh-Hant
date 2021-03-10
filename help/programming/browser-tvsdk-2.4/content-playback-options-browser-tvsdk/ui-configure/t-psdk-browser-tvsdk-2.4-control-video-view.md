@@ -1,13 +1,10 @@
 ---
 description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
-seo-description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
-seo-title: 控制視訊檢視的位置和大小
 title: 控制視訊檢視的位置和大小
-uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
@@ -27,7 +24,7 @@ ht-degree: 0%
 
 ## 非Flash備援藍本{#non-flash-fallback-scenarios}
 
-在非Flash備援藍本中，為使縮放原則正常運作，`View`建構函式中提供的視訊div元素應傳回`offsetWidth`和`offsetHeight`的非零值。 若要提供不正確的函式範例，有時在css中未明確設定視訊div元素的寬度和高度時，`View`建構函式會針對`offsetWidth`或`offsetHeight`傳回零。
+在非Flash的備援藍本中，為使縮放原則正常運作，`View`建構函式中提供的視訊div元素應傳回`offsetWidth`和`offsetHeight`的非零值。 若要提供不正確的函式範例，有時在css中未明確設定視訊div元素的寬度和高度時，`View`建構函式會針對`offsetWidth`或`offsetHeight`傳回零。
 
 >[!NOTE]
 >
