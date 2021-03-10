@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerStatus物件提供播放器狀態變更的相關資訊。 通知對象提供有關警告和錯誤的資訊。 停止播放視訊的錯誤也會導致播放器狀態變更。 您實作事件監聽程式，以擷取並回應事件（MediaPlayerEvent物件）。
-seo-description: MediaPlayerStatus物件提供播放器狀態變更的相關資訊。 通知對象提供有關警告和錯誤的資訊。 停止播放視訊的錯誤也會導致播放器狀態變更。 您實作事件監聽程式，以擷取並回應事件（MediaPlayerEvent物件）。
-seo-title: 播放器狀態、活動、錯誤和記錄的通知和事件
 title: 播放器狀態、活動、錯誤和記錄的通知和事件
-uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
