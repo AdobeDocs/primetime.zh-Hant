@@ -1,9 +1,9 @@
 ---
-seo-title: 多重播放權
 title: 多重播放權
-uuid: 90f898bf-ffa2-44f0-a01a-0af8868500ee
+description: 多重播放權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
