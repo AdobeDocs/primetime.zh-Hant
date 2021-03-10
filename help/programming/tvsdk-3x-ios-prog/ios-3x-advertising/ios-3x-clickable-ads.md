@@ -1,13 +1,10 @@
 ---
 description: TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您建立播放器UI時，您必須決定當使用者點按可點按的廣告時如何回應。
-seo-description: TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您建立播放器UI時，您必須決定當使用者點按可點按的廣告時如何回應。
-seo-title: 可點選廣告
 title: 可點選廣告
-uuid: 8b257483-8b90-47cf-be2a-095b6d5b8883
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
