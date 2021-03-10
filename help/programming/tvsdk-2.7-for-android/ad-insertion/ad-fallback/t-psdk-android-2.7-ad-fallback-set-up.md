@@ -1,13 +1,10 @@
 ---
 description: 當VMAP內嵌廣告包含無效的媒體類型時，您可以啟用備援。
-seo-description: 當VMAP內嵌廣告包含無效的媒體類型時，您可以啟用備援。
-seo-title: 定義VMAP內嵌廣告的備援廣告行為
 title: 定義VMAP內嵌廣告的備援廣告行為
-uuid: a7b5c9a6-f546-4d3a-9d49-7e5484acff7a
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
