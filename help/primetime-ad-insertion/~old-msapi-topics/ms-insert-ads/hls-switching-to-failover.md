@@ -1,13 +1,10 @@
 ---
 description: 如果Apple HLS堆棧無法檢索主集的任何流，則支援切換到故障切換／備份流。 對於Apple HLS裝置，為方便進行容錯，您可以傳訊manifest伺服器，將主播放清單中識別的主要和容錯串流視為分離集（使用其本身的UUID）。
-seo-description: 如果Apple HLS堆棧無法檢索主集的任何流，則支援切換到故障切換／備份流。 對於Apple HLS裝置，為方便進行容錯，您可以傳訊manifest伺服器，將主播放清單中識別的主要和容錯串流視為分離集（使用其本身的UUID）。
-seo-title: 促進HLS播放器切換到故障轉移／備份流
 title: 促進HLS播放器切換到故障轉移／備份流
-uuid: 2fea8a51-e4cb-4fc9-82d5-6305a1d96603
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -17,11 +14,11 @@ ht-degree: 0%
 
 如果Apple HLS堆棧無法檢索主集的任何流，則支援切換到故障切換／備份流。 對於Apple HLS裝置，為方便進行容錯，您可以傳訊manifest伺服器，將主播放清單中識別的主要和容錯串流視為分離集（使用其本身的UUID）。
 
-為方便切換至Apple HLS裝置上的容錯移轉或備份串流，您可以在引導URL中指定`ptfailover`參數。 如果您提供此參數，資訊清單伺服器會針對每個容錯移轉集建立個別的播放工作階段（決定銜接的廣告）。
+為方便切換至Apple HLS裝置上的容錯移轉或備份串流，您可在BootstrapURL中指定`ptfailover`參數。 如果您提供此參數，資訊清單伺服器會針對每個容錯移轉集建立個別的播放工作階段（決定銜接的廣告）。
 
 ## 詳細資訊
 
-當您在引導請求中包含`ptfailover=true`時，SSAI如何處理HLS切換到故障切換／備份：
+在Bootstrap請求中包含`ptfailover=true`時，SSAI如何處理HLS切換到故障切換／備份：
 
 * 當主播放清單包含主要和備份集時：
 
