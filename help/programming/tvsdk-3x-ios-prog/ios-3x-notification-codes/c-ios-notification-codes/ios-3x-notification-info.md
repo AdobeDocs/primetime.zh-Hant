@@ -1,13 +1,10 @@
 ---
 description: 此表提供了有關INFO類型通知的詳細資訊。
-seo-description: 此表提供了有關INFO類型通知的詳細資訊。
-seo-title: 資訊通知代碼
 title: 資訊通知代碼
-uuid: 21297863-dac1-45a4-ac9d-309d1f746f8b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '180'
 ht-degree: 4%
 
 ---
