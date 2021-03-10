@@ -1,13 +1,10 @@
 ---
-description: 您可以使用Primetime數位版權管理(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商的DRM解決方案，做為Adobe整合解決方案的替代方案。
-seo-description: 您可以使用Primetime數位版權管理(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商的DRM解決方案，做為Adobe整合解決方案的替代方案。
-seo-title: Widevine DRM
+description: 您可以使用PrimetimeDigital Rights Management(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商DRM解決方案來取代Adobe的整合解決方案。
 title: Widevine DRM
-uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
-source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Widevine DRM {#widevine-drm}
 
-您可以使用Primetime數位版權管理(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商的DRM解決方案，做為Adobe整合解決方案的替代方案。
+您可以使用PrimetimeDigital Rights Management(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商DRM解決方案來取代Adobe的整合解決方案。
 
-如需協力廠商DRM解決方案可用性的最新資訊，請連絡您的Adobe代表。
+請洽詢您的Adobe代表，以取得有關協力廠商DRM解決方案可用性的最新資訊。
 
 <!--<a id="section_1385440013EF4A9AA45B6AC98919E662"></a>-->
 
