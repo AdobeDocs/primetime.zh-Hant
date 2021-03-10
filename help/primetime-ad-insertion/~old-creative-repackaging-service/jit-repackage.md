@@ -1,13 +1,10 @@
 ---
 description: 用戶端視訊播放器或資訊清單伺服器可與CRS互動，以達成JIT重新封裝。 兩者都使用相同的廣告選擇邏輯。
-seo-description: 用戶端視訊播放器或資訊清單伺服器可與CRS互動，以達成JIT重新封裝。 兩者都使用相同的廣告選擇邏輯。
-seo-title: JIT重新封裝的詳細工作流程
 title: JIT重新封裝的詳細工作流程
-uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
