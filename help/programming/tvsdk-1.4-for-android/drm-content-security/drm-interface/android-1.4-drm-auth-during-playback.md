@@ -1,13 +1,10 @@
 ---
 description: 當視頻的DRM元資料被包括在媒體流中時，在播放期間執行驗證。
-seo-description: 當視頻的DRM元資料被包括在媒體流中時，在播放期間執行驗證。
-seo-title: 播放期間的DRM驗證
 title: 播放期間的DRM驗證
-uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ ht-degree: 0%
 >
 >本教學課程不處理網域系結的授權。 最好是在開始播放之前，先檢查您是否要處理網域系結授權。 如果是，請執行域驗證（如果需要）並加入域。
 
-1. 當在資產中發現新的DRM中繼資料時，會在應用程式層傳送事件。
+1. 在資產中發現新的DRM中繼資料時，會在應用程式層傳送事件。
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
