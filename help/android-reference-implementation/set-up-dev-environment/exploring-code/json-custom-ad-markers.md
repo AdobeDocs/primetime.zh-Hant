@@ -1,9 +1,9 @@
 ---
-seo-title: 自訂廣告標籤的JSON物件
 title: 自訂廣告標籤的JSON物件
-uuid: 2c05d9ce-a22f-4829-bfea-9dcf0dc7cd6d
+description: 自訂廣告標籤的JSON物件
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
