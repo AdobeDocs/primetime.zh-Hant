@@ -1,8 +1,7 @@
 ---
-uuid: a03d9753-0133-4d37-8136-cad6c78645e4
-translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
+translation-type: tm+mt
 source-wordcount: '26'
 ht-degree: 0%
 
