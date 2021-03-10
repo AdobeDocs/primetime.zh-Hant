@@ -1,13 +1,10 @@
 ---
 description: 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
-seo-description: 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
-seo-title: 考量事項和最佳實務
 title: 考量事項和最佳實務
-uuid: a65c9739-ed83-4519-8ae5-7ba4c8f1ca49
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 使用TVSDK時，請記住下列資訊：
 
-* Adobe Primetime無法在iOS模擬器上運作。
+* Adobe Primetime不在iOS模擬器上工作。
 
    您必須使用真正的裝置進行測試。
 
