@@ -1,16 +1,13 @@
 ---
 title: DRM 5.3.1發行說明
-seo-title: DRM 5.3.1發行說明
 description: DRM 5.3.1發行說明介紹DRM 5.3.1中的新功能和已知問題。
-seo-description: DRM 5.3.1發行說明介紹DRM 5.3.1中的新功能和已知問題。
-uuid: bb61b79f-a5b3-42ed-8016-495b1ac99ea6
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ DRM 5.3.1發行說明介紹DRM 5.3.1中的新功能和已知問題。
 
 * **安全停止-** 您可以指定在播放窗口的末尾停止或繼續播放。
 * **基於解析度的輸出保護(RBOP)-** 您可以根據像素解析度指定輸出約束。
-* **CDM門控-** 為了支援HTML5,Adobe已更新Adobe Primetime DRM（舊稱Adobe Access DRM）Java SDK隨附的「參考實作」授權伺服器，以便能夠在單一URL端點使用所有DRM通訊協定訊息。為了符合HTML5 EME（加密媒體擴展）規範，HTTP URL方法的這種整合是必要的，而CDM（內容解密模組）DRM供應商又需要該規範。 以前，這些是「參考實作」授權伺服器公開的唯一URL端點：
+* **CDM門控——為** 了支援HTML5,Adobe已更新了Adobe PrimetimeDRM(前稱Adobe訪問DRM)Java SDK隨附的參考實施許可伺服器，以便能夠在單個URL端點處使用所有DRM協定消息。為了符合HTML5 EME（加密媒體擴展）規範，HTTP URL方法的這種整合是必要的，而CDM（內容解密模組）DRM供應商又需要該規範。 以前，這些是「參考實作」授權伺服器公開的唯一URL端點：
 
    * /flashaccess/i15n/v3（個人化）
    * /flashaccess/license/v5（授權要求）
