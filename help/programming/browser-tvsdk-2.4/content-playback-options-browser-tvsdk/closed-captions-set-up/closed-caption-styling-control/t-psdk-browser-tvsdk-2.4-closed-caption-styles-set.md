@@ -1,13 +1,10 @@
 ---
 description: 您可以設定隱藏字幕文字的格式，例如字型、大小、顏色、邊緣和不透明度。
-seo-description: 您可以設定隱藏字幕文字的格式，例如字型、大小、顏色、邊緣和不透明度。
-seo-title: 設定隱藏字幕樣式
 title: 設定隱藏字幕樣式
-uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
