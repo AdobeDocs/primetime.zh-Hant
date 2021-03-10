@@ -1,13 +1,10 @@
 ---
 description: 透過網際網路串流需要持續穩定的連線，才能播放來自遠端伺服器的串流。 不過，檢視器的網際網路連線或串流播放的可變性，意味著遠端播放可能無法在本機播放媒體的品質。
-seo-description: 透過網際網路串流需要持續穩定的連線，才能播放來自遠端伺服器的串流。 不過，檢視器的網際網路連線或串流播放的可變性，意味著遠端播放可能無法在本機播放媒體的品質。
-seo-title: 播放和容錯
 title: 播放和容錯
-uuid: 5d75e55d-9c01-4a36-9bdf-891289821c6b
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
