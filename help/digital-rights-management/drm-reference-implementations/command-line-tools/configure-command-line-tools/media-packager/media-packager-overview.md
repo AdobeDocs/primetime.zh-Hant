@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 概觀
 title: 概觀
-uuid: f4474837-9460-479d-89c2-dd697e0fb997
+description: 概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -203,7 +201,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">設定為要封裝的內容發行授權所需的最低伺服器版本。 </p> <p class="- topic/p ">指定x（適用於Primetime DRM x.0），其中x代表主要發行號。 任何Adobe Primetime 3.0版之前的伺服器版本都不支援此設定。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">設定為要封裝的內容發行授權所需的最低伺服器版本。 </p> <p class="- topic/p ">指定x（適用於Primetime DRM x.0），其中x代表主要發行號。 任何早於Adobe Primetime3.0版的伺服器版本都不支援此設定。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n .domain.transportcert  </span> </td> 
