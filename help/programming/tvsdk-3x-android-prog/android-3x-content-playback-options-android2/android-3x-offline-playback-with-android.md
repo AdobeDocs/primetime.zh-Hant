@@ -1,12 +1,10 @@
 ---
 description: '已引入新的API，可指示TVSDK在下載清單時忽略網路連線狀態。 '
-seo-description: '已引入新的API，可指示TVSDK在下載清單時忽略網路連線狀態。 '
-seo-title: 使用Android的離線播放
 title: 使用Android的離線播放
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
