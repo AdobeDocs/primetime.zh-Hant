@@ -1,9 +1,9 @@
 ---
-seo-title: 命令列使用
 title: 命令列使用
-uuid: 5f24f18d-09ef-400a-9404-50a9fcf4316d
+description: 命令列使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -122,7 +122,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-o </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">覆蓋目標檔案（如果檔案已存在），但不提示。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">覆寫目標檔案（如果檔案已存在）而不出現提示。 </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph">檔案名[domain-transport-cert] </span> </p> </td> 
