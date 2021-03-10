@@ -1,14 +1,11 @@
 ---
 description: 您可以設定使用者介面控制項，以調整視訊的音量。
-seo-description: 您可以設定使用者介面控制項，以調整視訊的音量。
-seo-title: 提供音量控制
 title: 提供音量控制
-uuid: f1e959e0-1817-4ccb-8adc-3eba09c91887
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
