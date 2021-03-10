@@ -1,14 +1,11 @@
 ---
 description: 優先順序規則會定義廣告創作元素的優先順序，這些廣告創作元素將會從VAST/VMAP回應中選取來播放。
-keywords: priority rule;creative selection rules
-seo-description: 優先順序規則會定義廣告創作元素的優先順序，這些廣告創作元素將會從VAST/VMAP回應中選取來播放。
-seo-title: 優先順序規則
+keywords: 優先順序規則；創意選擇規則
 title: 優先順序規則
-uuid: 8716758f-686e-4927-8605-19c36091db65
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '169'
 ht-degree: 1%
 
 ---
