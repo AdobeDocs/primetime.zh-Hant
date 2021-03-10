@@ -1,13 +1,10 @@
 ---
 description: 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入解析」功能可降低此啟動延遲。 廣告現在可以在廣告插播位置之前的指定間隔內解決。 這是使用雙玩家方法實現的。
-seo-description: 廣告解析和廣告載入可能會造成使用者等待播放開始時無法接受的延遲。 「延遲廣告載入解析」功能可降低此啟動延遲。 廣告現在可以在廣告插播位置之前的指定間隔內解決。 這是使用雙玩家方法實現的。
-seo-title: 即時廣告解決方案
 title: 即時廣告解決方案
-uuid: f7b20439-3604-4d69-bdfe-2e0ad26f495b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
