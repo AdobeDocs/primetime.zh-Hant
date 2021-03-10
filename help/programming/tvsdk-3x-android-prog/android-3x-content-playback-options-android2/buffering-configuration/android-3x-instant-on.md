@@ -1,13 +1,10 @@
 ---
 description: 立即啟用表示已預先載入一或多個頻道。 當使用者選擇頻道或切換頻道時，內容會立即播放。 緩衝在用戶開始監視時完成。
-seo-description: 立即啟用表示已預先載入一或多個頻道。 當使用者選擇頻道或切換頻道時，內容會立即播放。 緩衝在用戶開始監視時完成。
-seo-title: 立即啟動
 title: 立即啟動
-uuid: 5b1ceace-cae7-44c7-b4b9-d45078d58cc3
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -50,7 +47,7 @@ TVSDK提供方法和狀態，允許您將「立即啟動」與媒體資源搭配
 
 >[!NOTE]
 >
->Adobe建議使用`MediaPlayerItemLoader`作為InstantOn。 若要使用`MediaPlayerItemLoader`而非`MediaPlayer`，請參閱[使用MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)載入媒體資源。
+>Adobe建議對InstantOn使用`MediaPlayerItemLoader`。 若要使用`MediaPlayerItemLoader`而非`MediaPlayer`，請參閱[使用MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)載入媒體資源。
 
 1. 確認已載入資源，且播放器已準備播放資源。
 1. 在呼叫`play`之前，請呼叫每個`MediaPlayer`實例的`prepareBuffer`。
