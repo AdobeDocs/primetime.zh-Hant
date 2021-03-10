@@ -1,9 +1,9 @@
 ---
-seo-title: Primetime Cloud DRM不支援哪些功能
 title: Primetime Cloud DRM不支援哪些功能
-uuid: 5168d916-8dc7-4b75-9536-89a74c2b04fd
+description: Primetime Cloud DRM不支援哪些功能
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
