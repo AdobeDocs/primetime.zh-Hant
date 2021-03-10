@@ -1,13 +1,10 @@
 ---
-description: 使用HTTP GET命令與資訊清單伺服器互動。
-seo-description: 使用HTTP GET命令與資訊清單伺服器互動。
-seo-title: 傳送命令至資訊清單伺服器
+description: 使用HTTPGET命令與manifest伺服器互動。
 title: 傳送命令至資訊清單伺服器
-uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 將命令發送到Manifest伺服器{#send-a-command-to-the-manifest-server}
 
-使用HTTP GET命令與資訊清單伺服器互動。
+使用HTTPGET命令與manifest伺服器互動。
 
 1. 傳送`HTTP GET`請求，請求使用下列模式建構的引導URL:
 
