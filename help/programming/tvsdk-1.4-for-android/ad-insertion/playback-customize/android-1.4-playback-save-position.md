@@ -1,13 +1,10 @@
 ---
 description: 您可以儲存視訊中目前的播放位置，並在未來作業中在相同位置繼續播放。
-seo-description: 您可以儲存視訊中目前的播放位置，並在未來作業中在相同位置繼續播放。
-seo-title: 儲存視訊位置並稍後繼續
 title: 儲存視訊位置並稍後繼續
-uuid: 322f780d-09ba-44b0-b2e5-46288bf58fda
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
