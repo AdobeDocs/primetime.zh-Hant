@@ -1,13 +1,10 @@
 ---
 description: TVSDK對媒體內容、資訊清單內容、DRM和軟體版本有特定需求。
-seo-description: TVSDK對媒體內容、資訊清單內容、DRM和軟體版本有特定需求。
-seo-title: 需求
 title: 需求
-uuid: 06e61b9f-cda2-4813-8da4-fb3e0d88ad35
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
