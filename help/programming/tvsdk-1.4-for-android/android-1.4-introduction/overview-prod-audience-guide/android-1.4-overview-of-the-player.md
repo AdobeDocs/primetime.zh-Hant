@@ -1,13 +1,10 @@
 ---
 description: '適用於Android的TVSDK包含多種功能，並提供下列主要功能 '
-seo-description: '適用於Android的TVSDK包含多種功能，並提供下列主要功能 '
-seo-title: Primetime TVSDK功能
 title: Primetime TVSDK功能
-uuid: 7a9218c7-a67c-49ac-83b0-fe40650a3625
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
