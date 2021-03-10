@@ -1,13 +1,10 @@
 ---
 description: 您可以監聽通知，也可以將自己的通知新增至通知歷史記錄。
-seo-description: 您可以監聽通知，也可以將自己的通知新增至通知歷史記錄。
-seo-title: 設定通知系統
 title: 設定通知系統
-uuid: caa6a306-dea9-45ee-b0b3-569b5f2527a1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
