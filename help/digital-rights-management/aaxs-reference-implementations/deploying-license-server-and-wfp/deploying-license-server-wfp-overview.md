@@ -1,9 +1,9 @@
 ---
-seo-title: 部署授權伺服器和受監視的資料夾封裝程式總覽
 title: 部署授權伺服器和受監視的資料夾封裝程式總覽
-uuid: 4b71f2f4-f971-4382-ae41-171f7dfdfe21
+description: 部署授權伺服器和受監視的資料夾封裝程式總覽
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
