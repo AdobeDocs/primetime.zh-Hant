@@ -1,13 +1,10 @@
 ---
 description: TVSDK支援解析和插入VOD和即時／線性串流的廣告。
-seo-description: TVSDK支援解析和插入VOD和即時／線性串流的廣告。
-seo-title: Primetime廣告伺服器中繼資料
 title: Primetime廣告伺服器中繼資料
-uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
-source-git-commit: 9d60bff4035963572e49fa49effa576ca854f799
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
