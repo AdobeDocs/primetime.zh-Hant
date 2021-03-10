@@ -1,13 +1,10 @@
 ---
 description: 例如，當整個播放清單遺失時，當頂層資訊清單檔案中指定的M3U8檔案未下載時，TVSDK會嘗試復原。 如果無法恢復，則您的應用程式將決定下一步。
-seo-description: 例如，當整個播放清單遺失時，當頂層資訊清單檔案中指定的M3U8檔案未下載時，TVSDK會嘗試復原。 如果無法恢復，則您的應用程式將決定下一步。
-seo-title: 遺失播放清單容錯功能
 title: 遺失播放清單容錯功能
-uuid: 91a537f3-3e69-4669-8f84-0292c19ac209
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
