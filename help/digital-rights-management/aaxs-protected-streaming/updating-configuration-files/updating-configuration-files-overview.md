@@ -1,9 +1,9 @@
 ---
-seo-title: 更新配置檔案概述
 title: 更新配置檔案概述
-uuid: e9be21cf-ad23-4ed6-8bef-f194bc1fd749
+description: 更新配置檔案概述
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 0%
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 要控制伺服器檢查更新的頻率，請在全局配置檔案的快取元素中設定`refreshDelaySeconds`屬性。 例如，如果`refreshDelaySeconds`設為3600秒，則從更新檔案至少需要1小時，伺服器才會偵測到任何組態更新。 如果`refreshDelaySeconds`設為0，伺服器會檢查每個請求的組態更新。 不建議將`refreshDelaySeconds`設為低值，因為這會影響效能。
 
-「快取」元素也會控制一次快取多少租戶的設定。 您可以將此值設定為小於租戶總數的數字，以限制用於快取配置資訊的記憶體量。 如果收到非快取中租用戶的要求，在處理要求之前先載入設定。 如果快取已滿，則會從快取中移除最近最少使用的租用戶。
+「快取」元素也會控制一次快取多少租戶的設定。 您可以將此值設定為小於租戶總數的數字，以限制用於快取配置資訊的記憶體量。 如果收到非快取中租用戶的要求，在可處理要求之前先載入設定。 如果快取已滿，則會從快取中移除最近最少使用的租用戶。
 
 如果在伺服器嘗試讀取檔案時將更改保存到配置檔案或[!DNL flashaccess-tenant.xml]中引用的任何證書檔案，或者如果發現檔案的時間戳在當前時間之前不到一秒或將來不到，則將使用該配置的快取版本，直到下次伺服器檢查更新為止。 如果沒有快取版本，則載入設定會失敗，並傳回錯誤給用戶端。 伺服器會在下次收到該租用戶的要求時，再次嘗試載入檔案。
