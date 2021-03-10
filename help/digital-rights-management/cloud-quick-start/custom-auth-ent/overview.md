@@ -1,9 +1,9 @@
 ---
-seo-title: 蜜蜂概觀
 title: 蜜蜂概觀
-uuid: c6ee7528-fdfa-4a56-bea2-a5e2dab6d428
+description: 蜜蜂概觀
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 您可以實作後端權益服務(BEES)，為您的Primetime Cloud DRM作業提供自訂權益。
 
-Primetime Cloud DRM預設會使用匿名授權傳送。 這表示所有傳送至Primetime Cloud DRM的授權要求都會傳回有效的授權，而不需執行任何額外的驗證／授權檢查（除非您套用了需要使用Adobe Primetime驗證的原則限制）。
+Primetime Cloud DRM預設會使用匿名授權傳送。 這表示傳送至Primetime Cloud DRM的所有授權要求都會傳回有效的授權，而不需執行任何額外的驗證／授權檢查(除非您套用了需要使用Adobe Primetime驗證的原則限制)。
 
 授權要求包含在內容封裝／加密期間採用的DRM原則。 DRM策略用於生成返回給客戶機的DRM許可。 在預設情況下，您必須在內容封裝時做出所有DRM政策決策。 想要對這些工作流程進行更精細控制的客戶有下列選項：
 
