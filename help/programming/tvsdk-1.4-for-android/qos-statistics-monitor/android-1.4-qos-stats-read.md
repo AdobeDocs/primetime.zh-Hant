@@ -1,13 +1,10 @@
 ---
 description: 您可以從QOSProvider類讀取播放、緩衝和設備統計資訊。
-seo-description: 您可以從QOSProvider類讀取播放、緩衝和設備統計資訊。
-seo-title: 讀取QOS播放、緩衝和設備統計資訊
 title: 讀取QOS播放、緩衝和設備統計資訊
-uuid: 19228a50-3721-4dc1-89b6-97458518e272
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '138'
 ht-degree: 1%
 
 ---
