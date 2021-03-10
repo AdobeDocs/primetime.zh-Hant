@@ -1,13 +1,10 @@
 ---
 description: 建立可處理HLS串流設定和播放作業的PlaybackManager。 不需要其他配置。
-seo-description: 建立可處理HLS串流設定和播放作業的PlaybackManager。 不需要其他配置。
-seo-title: 啟用視訊播放
 title: 啟用視訊播放
-uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
