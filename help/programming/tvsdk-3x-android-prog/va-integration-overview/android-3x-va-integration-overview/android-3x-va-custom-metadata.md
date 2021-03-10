@@ -1,13 +1,10 @@
 ---
 description: 您可以使用回呼函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
-seo-description: 您可以使用回呼函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
-seo-title: 實作自訂中繼資料支援
 title: 實作自訂中繼資料支援
-uuid: 4d1a8f6e-c2f6-4d7a-804d-c128adb5ae6f
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
