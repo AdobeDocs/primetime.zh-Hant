@@ -1,9 +1,9 @@
 ---
-seo-title: 基於身份的域
 title: 基於身份的域
-uuid: 34cad19b-1adb-4e0c-ac59-50632f6988f7
+description: 基於身份的域
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
