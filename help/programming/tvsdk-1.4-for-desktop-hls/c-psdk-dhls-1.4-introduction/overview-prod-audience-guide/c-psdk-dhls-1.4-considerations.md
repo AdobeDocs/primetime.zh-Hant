@@ -1,13 +1,10 @@
 ---
 description: 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
-seo-description: 若要最有效率地使用TVSDK，您應考慮其運作的特定詳細資訊，並遵循特定最佳實務。
-seo-title: 考量事項和最佳實務
 title: 考量事項和最佳實務
-uuid: 62a5d641-6f37-4e4d-bbc2-414bf3681d9c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -21,12 +18,12 @@ ht-degree: 0%
 
 使用TVSDK時，請記住下列資訊：
 
-* Adobe Primetime無法用於模擬器或模擬器。
+* Adobe Primetime不在模擬器或模擬器上工作。
 
    您必須使用真正的裝置進行測試。
 * 僅HTTP即時串流(HLS)內容支援播放。
 * 主視頻內容可以被多路復用，其中視頻和音頻流位於相同的轉譯中，或者非多路復用，其中視頻和音頻流位於不同的轉譯中。
-* TVSDK API是在ActionScript中實作。
+* TVSDK API是以ActionScript建置。
 * 視訊播放需要Adobe視訊引擎(AVE)。 這會影響訪問介質資源的方式和時間：
 
    * 在AVE提供的範圍內支援隱藏字幕。
