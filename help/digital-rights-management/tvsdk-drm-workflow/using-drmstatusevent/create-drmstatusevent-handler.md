@@ -1,9 +1,9 @@
 ---
-seo-title: 建立DRMStatusEvent處理程式
 title: 建立DRMStatusEvent處理程式
-uuid: 64f539d9-344c-4372-88b8-c8d098af9dd8
+description: 建立DRMStatusEvent處理程式
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
