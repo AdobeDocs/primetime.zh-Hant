@@ -1,13 +1,10 @@
 ---
 description: 當瀏覽器TVSDK要求不在您主要廣告伺服器上的廣告時，播放器需要向次要伺服器要求廣告。 視訊廣告服務範本(VAST)設定廣告伺服器與視訊播放器之間通訊的標準，是次要廣告伺服器在要求廣告時所傳送的回應。
-seo-description: 當瀏覽器TVSDK要求不在您主要廣告伺服器上的廣告時，播放器需要向次要伺服器要求廣告。 視訊廣告服務範本(VAST)設定廣告伺服器與視訊播放器之間通訊的標準，是次要廣告伺服器在要求廣告時所傳送的回應。
-seo-title: 廣告
 title: 廣告
-uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -41,7 +38,7 @@ ht-degree: 0%
 
 ## 創意{#section_0121F948CB074E49A8132D202786CAA4}
 
-此元素是VAST廣告的一部分，且包含`creative`元素，可支援線性廣告、非線性廣告或伴隨廣告。 在`creative`元素中，`id`、`sequence`和`adId`元素受支援。
+此元素是VAST廣告的一部分，並包含`creative`元素，可支援線性廣告、非線性廣告或配套廣告。 在`creative`元素中，`id`、`sequence`和`adId`元素受支援。
 
 以下是廣告類型的詳細資訊：
 
