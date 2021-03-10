@@ -1,13 +1,10 @@
 ---
 description: 隱藏式字幕和字幕有一些獨特的差異，您可以以不同的方式加以啟用。
-seo-description: 隱藏式字幕和字幕有一些獨特的差異，您可以以不同的方式加以啟用。
-seo-title: 字幕和隱藏字幕
 title: 字幕和隱藏字幕
-uuid: 91daf0be-087a-4be5-86c2-f8b83da43a8f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
