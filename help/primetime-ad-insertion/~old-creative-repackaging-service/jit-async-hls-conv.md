@@ -1,13 +1,10 @@
 ---
 description: CRS提供即時(JIT)和非同步重新封裝以及HLS到HLS的轉換。 重新封裝的結果是原始廣告創意的HLS格式版本。 CRS會視需要將HLS格式化版本放在內容放送網路(CDN)伺服器上使用。
-seo-description: CRS提供即時(JIT)和非同步重新封裝以及HLS到HLS的轉換。 重新封裝的結果是原始廣告創意的HLS格式版本。 CRS會視需要將HLS格式化版本放在內容放送網路(CDN)伺服器上使用。
-seo-title: CRS的主要用途
 title: CRS的主要用途
-uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 CRS提供即時(JIT)和非同步重新封裝以及HLS到HLS的轉換。 重新封裝的結果是原始廣告創意的HLS格式版本。 CRS會視需要將HLS格式化版本放在內容放送網路(CDN)伺服器上使用。
 
-在JIT重新封裝中，Adobe Primetime廣告插入會在首次遇到非HLS廣告創意素材時開始重新封裝程式。 這通常會導致在重新封裝程式期間失去執行廣告的機會。
+在JIT重新封裝Adobe Primetime廣告時，當廣告插入首次遇到非HLS廣告創意時，就會開始重新封裝程式。 這通常會導致在重新封裝程式期間失去執行廣告的機會。
 
 在非同步重新封裝中，廣告創意素材會在需要之前進行轉碼並儲存，以消除這些失去的機會。
 
