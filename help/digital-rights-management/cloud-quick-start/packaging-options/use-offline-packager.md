@@ -1,9 +1,9 @@
 ---
-seo-title: 使用隨附的Primetime Offline Packager
 title: 使用隨附的Primetime Offline Packager
-uuid: 16b535a9-81b5-43bc-9e42-a64eb6649d9a
+description: 使用隨附的Primetime Offline Packager
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 | 屬性名稱 | 說明 |
 |---|---|
-| `policy_file` | 原則檔案路徑。 Adobe應提供數種預先設定的政策供您選擇。 |
-| `pkgr_pfx` | Packager憑證路徑。 您必須在此處提供您自己的Adobe核發的封裝程式憑證([!DNL .pfx])。 |
-| `pkgr_pfx_pwd` | Packager認證密碼。 您必須在此處提供Adobe核發的封裝程式憑證密碼。 |
+| `policy_file` | 原則檔案路徑。 Adobe應提供數種預先設定的政策供選擇。 |
+| `pkgr_pfx` | Packager憑證路徑。 您必須在此處提供您自己的Adobe發佈的封裝憑證([!DNL .pfx])。 |
+| `pkgr_pfx_pwd` | Packager認證密碼。 您必須在此處為Adobe簽發的打包證書提供密碼。 |
 
 ## 使用命令行{#section_DFBE462679E34D62963BE201FD3321F9}進行包
 
