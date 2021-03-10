@@ -1,16 +1,12 @@
 ---
 title: Primetime Streaming Server版本
-seo-title: Primetime Streaming Server 1.x版本
 description: Primetime Streaming Server 1.3和1.4版本的新增功能。
-seo-description: Primetime Streaming Server 1.3和1.4版本的新增功能。
-uuid: be05db6b-713f-4406-940d-9f3a805f967b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
@@ -91,7 +87,7 @@ Primetime Streaming Server支援即時和VOD工作流程的MPEG-DASH封裝。 Li
 
 **即時到VOD轉換**
 
-現在提供新的元件錄制伺服器，可支援擷取即時串流並封存以供VOD播放。 它支援建立完整事件重播，以及部分活動的片段／反白顯示。 它可設定為錄制純音訊串流、移除即時內容中的廣告或儲存格。 Recording Server可與Primetime Streaming Server以及協力廠商Origins搭配使用。
+現在提供新的元件錄制伺服器，可支援擷取即時串流並封存以供VOD播放。 它支援建立完整事件重播，以及部分活動的片段／反白顯示。 它可設定為錄制純音訊串流、移除即時內容中的廣告或儲存格。 Recording Server可與Primetime Streaming Server及協力廠商Origins搭配使用。
 
 **Primetime Live Packager中的RTMP到HLS轉換**
 
@@ -105,7 +101,7 @@ usermgmt.jar現在隨Primetime Live Packager提供，可在傳送RTMP串流至Pr
 
 **PlaylistCreator工具，以建立HDS和HLS的頂層清單**
 
-Primetime Offline Packager現在提供一個精巧的公用程式PlaylistCreator.jar，可輕鬆建立HDS和HLS資產的頂級資訊清單檔案。
+Primetime Offline Packager現在提供一個精巧的公用程式PlaylistCreator.jar，可輕鬆建立HDS和HLS資產的頂層資訊清單檔案。
 
 **其他安全性功能，以整合硬體安全性模組**
 
@@ -121,7 +117,7 @@ Primetime Offline Packager已整合數種效能增強功能，以縮短夾層資
 
 Primetime Origin的JIT封裝功能已整合數種效能增強功能，以處理大量VOD資產的使用者要求。
 
-## Adobe Primetime Streaming Server 1.4 {#adobe-primetime-streaming-server}
+## Adobe PrimetimeStreaming Server 1.4 {#adobe-primetime-streaming-server}
 
 ### 最低系統需求{#minimum-system-requirements}
 
@@ -146,14 +142,14 @@ Primetime Origin的JIT封裝功能已整合數種效能增強功能，以處理�
 
 **軟體需求**
 
-* Oracle Java JRE 1.7(建議：Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
+* OracleJava JRE 1.7(建議：Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
 
 ### 安裝和配置Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
 
 **安裝串流伺服器**
 
 1. 從[Oracle站點](https://www.oracle.com/technetwork/java/javase/downloads/index.html)下載Java SE和JDK軟體，然後按照安裝說明操作。
-2. 將`Primetime- StreamingServer-1-4-0-b206-12042014.zip`的Adobe Primetime-Streaming Server 1.4封存檔解壓縮至磁碟。
+2. 將`Primetime- StreamingServer-1-4-0-b206-12042014.zip`的Adobe Primetime-Streaming Server 1.4存檔檔案解壓到磁碟。
 
 **啟動Primetime串流伺服器**
 
@@ -223,7 +219,7 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 
 **軟體需求**
 
-* Oracle Java JRE 1.7(建議：Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
+* OracleJava JRE 1.7(建議：Sun/Oracle熱點JVM)。 JConsole存取JMX API時需要JDK
 
 上述最低系統需求適用於Origin Server和Live Packager。
 
@@ -232,12 +228,12 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 **安裝Live Packager**
 
 1. 從[Oracle站點](https://www.oracle.com/technetwork/java/javase/downloads/index.html)下載Java SE和JDK軟體，然後按照安裝說明操作。
-1. 將Adobe Primetime - Live Packager 1.4封存檔案`Primetime-LivePackager-1-4-0-b206-12042014.zip`解壓縮至磁碟。
+1. 將Adobe Primetime- Live Packager 1.4存檔檔案`Primetime-LivePackager-1-4-0-b206-12042014.zip`解壓到磁碟。
 
 **安裝HTTP原始伺服器**
 
 1. 從[Oracle站點](https://www.oracle.com/technetwork/java/javase/downloads/index.html)下載Java JRE和JDK軟體，然後按照安裝說明操作。
-1. 將Adobe Primetime - HTTP Origin Server 1.4封存檔`Primetime-HttpOrigin-1-4-0-b206-12042014.zip`解壓縮至磁碟。
+1. 將Adobe Primetime- HTTP Origin Server 1.4存檔檔案`Primetime-HttpOrigin-1-4-0-b206-12042014.zip`解壓到磁碟。
 
 **要啟動Live** Packager要啟動Packager，請從Packager的根目錄執行以下命令：\
 `$packager_start.sh`
@@ -271,7 +267,7 @@ Refer the Primetime Streaming Server Getting Started document for the configurat
 
 分發檔案包含可用於測試軟體包的示例配置。
 
-擷取Adobe Primetime - Live Packager 1.4封存後，將目錄變更為Packager目錄，然後執行Packager_start.sh指令碼。 示例配置偵聽多點傳播地址239.235.0.3:14000，並在埠8080上運行本地源伺服器。 輸出被配置為寫入到`packager/webroot/_default_/_default_/ directory`。
+解壓縮Adobe Primetime- Live Packager 1.4檔案後，將目錄變更為packager目錄，然後執行packager_start.sh指令碼。 示例配置偵聽多點傳播地址239.235.0.3:14000，並在埠8080上運行本地源伺服器。 輸出被配置為寫入到`packager/webroot/_default_/_default_/ directory`。
 
 <!-- 
 
@@ -293,7 +289,7 @@ For more details about the configuration refer [the Primetime Live Packager docu
 
 若要解除安裝HTTP原始伺服器，請停止HTTP原始伺服器，並移除Primetime目錄中HTTP原始伺服器的httporigin目錄。
 
-## Adobe Primetime Offline Packager 1.4 {#adobe-primetime-offline-packager}
+## Adobe PrimetimeOffline Packager 1.4 {#adobe-primetime-offline-packager}
 
 ### 最低系統需求{#minimum-system-requirements-2}
 
@@ -314,14 +310,14 @@ For more details about the configuration refer [the Primetime Live Packager docu
 
 **軟體需求**
 
-* Oracle Java JRE 1.7或更高版本。
+* OracleJava JRE 1.7或更新版本。
 
 ### 安裝並配置Offline Packager {#install-and-configure-offline-packager}
 
 要安裝Offline Packager，請執行以下步驟：
 
 1. 從[Oracle站點](https://www.oracle.com/technetwork/java/javase/downloads/index.html)下載Java SE軟體，然後按照安裝說明操作。
-1. 將Adobe Primetime - Offline Packager 1.4封存檔`Primetime- OfflinePackager-1-4-0-b206-12042014.zip`解壓縮至磁碟。
+1. 將Adobe Primetime- Offline Packager 1.4存檔檔案`Primetime- OfflinePackager-1-4-0-b206-12042014.zip`解壓到磁碟。
 
 請參閱Primetime Offline Packager快速入門檔案，以取得[這裡](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)的設定詳細資訊。
 
