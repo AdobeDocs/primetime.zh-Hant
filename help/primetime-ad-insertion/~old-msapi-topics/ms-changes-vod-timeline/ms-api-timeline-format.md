@@ -1,13 +1,10 @@
 ---
 description: 您可以使用稱為pod的廣告和內容區段的格式化清單，指定或覆寫VOD內容中廣告插播的時間軸。
-seo-description: 您可以使用稱為pod的廣告和內容區段的格式化清單，指定或覆寫VOD內容中廣告插播的時間軸。
-seo-title: VOD時間軸格式
 title: VOD時間軸格式
-uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
