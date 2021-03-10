@@ -1,13 +1,10 @@
 ---
 description: 在封裝內容時，您必須指定授權伺服器URL。
-seo-description: 在封裝內容時，您必須指定授權伺服器URL。
-seo-title: 封裝內容
 title: 封裝內容
-uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 在封裝內容時，您必須指定授權伺服器URL。
 
-Adobe Primetime DRM Server URL使用下列格式：
+Adobe PrimetimeDRM伺服器URL使用下列格式：
 
 ```
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
