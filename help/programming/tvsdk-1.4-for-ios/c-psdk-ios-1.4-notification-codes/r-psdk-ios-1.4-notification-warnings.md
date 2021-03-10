@@ -1,14 +1,11 @@
 ---
 description: 此表證明了有關WARN類型通知的詳細資訊。
-seo-description: 此表證明了有關WARN類型通知的詳細資訊。
-seo-title: 警告通知代碼
 title: 警告通知代碼
-uuid: 136b5a65-b842-40fd-8ddd-efe01d73c388
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 3%
+source-wordcount: '366'
+ht-degree: 4%
 
 ---
 
@@ -139,7 +136,7 @@ ht-degree: 3%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 郵遞區號270006  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_WARNING  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_警告  </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> 說明  </span> </td> 
    <td colname="5"> <p>警告：請參閱sitecatalyst警告說明。 </p> </td> 
