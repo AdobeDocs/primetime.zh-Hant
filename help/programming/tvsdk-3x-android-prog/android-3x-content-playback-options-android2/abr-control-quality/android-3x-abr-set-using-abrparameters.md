@@ -1,13 +1,10 @@
 ---
 description: 您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新值。
-seo-description: 您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新值。
-seo-title: 使用ABRControlParameters配置自適應比特率
 title: 使用ABRControlParameters配置自適應比特率
-uuid: 283ccd3d-535b-43ca-8ca5-82d12df31798
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
