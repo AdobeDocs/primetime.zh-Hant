@@ -1,14 +1,11 @@
 ---
 description: 您可以使用TVSDK設定檔(AdobeTVSDKonfig.json)來更新VAST/VMAP回應廣告創意選擇的優先順序。 您也可以使用此設定檔案來定義廣告創作人員的來源URL轉換規則。
-keywords: creative selection rules;AdobeTVSDKConfig;ad creative priorities;transformation rules
-seo-description: 您可以使用TVSDK設定檔(AdobeTVSDKonfig.json)來更新VAST/VMAP回應廣告創意選擇的優先順序。 您也可以使用此設定檔案來定義廣告創作人員的來源URL轉換規則。
-seo-title: 更新廣告創意選擇規則
+keywords: 創意選擇規則；AdobeTVSDKonfig；廣告創意優先順序；轉換規則
 title: 更新廣告創意選擇規則
-uuid: 77d8e186-01b5-4d62-8686-28f431d18876
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '281'
 ht-degree: 0%
 
 ---
