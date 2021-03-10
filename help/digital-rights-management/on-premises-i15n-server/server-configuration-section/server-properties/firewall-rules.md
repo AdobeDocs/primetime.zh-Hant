@@ -1,9 +1,9 @@
 ---
-seo-title: 防火牆規則
 title: 防火牆規則
-uuid: f1629ceb-22de-4bb5-b73f-9b874d97ea8b
+description: 防火牆規則
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
