@@ -1,13 +1,10 @@
 ---
 description: 在您使用大部分TVSDK播放器方法之前，播放器必須處於有效狀態。
-seo-description: 在您使用大部分TVSDK播放器方法之前，播放器必須處於有效狀態。
-seo-title: 等待有效狀態
 title: 等待有效狀態
-uuid: ad9df366-c443-4e6b-a7ab-658d5691eb94
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
