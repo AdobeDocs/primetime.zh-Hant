@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 在iOS上自動播放
 title: 在iOS上自動播放
-uuid: d15bad24-be50-49e5-90f4-68dbda96fb6d
+description: 在iOS上自動播放
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '93'
 ht-degree: 0%
 
 ---
