@@ -1,13 +1,10 @@
 ---
 description: 若要讓用戶端播放器可使用隱藏字幕，您必須啟用隱藏字幕。 使用者可以開啟或關閉隱藏字幕，並選取格式。
-seo-description: 若要讓用戶端播放器可使用隱藏字幕，您必須啟用隱藏字幕。 使用者可以開啟或關閉隱藏字幕，並選取格式。
-seo-title: 公開隱藏字幕
 title: 公開隱藏字幕
-uuid: 7057014a-b14a-4790-8f7f-37d7a1fb8194
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
