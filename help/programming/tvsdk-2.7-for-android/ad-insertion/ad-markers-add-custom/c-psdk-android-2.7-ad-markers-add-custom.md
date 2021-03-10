@@ -1,13 +1,10 @@
 ---
 description: 透過使用自訂廣告標籤，您可以將主要內容的特定區段標示為廣告相關內容句點。
-seo-description: 透過使用自訂廣告標籤，您可以將主要內容的特定區段標示為廣告相關內容句點。
-seo-title: 新增自訂廣告標籤
 title: 新增自訂廣告標籤
-uuid: 712da406-094a-49b2-b21d-4d5d73fff8cf
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 您可能可以從其他帶外來源（例如外部CMS系統）取得與廣告內容時段定位相關的資訊。 您可以定義自訂標籤，透過此標籤，此帶外資訊可傳遞至時間軸管理器子系統。 其目的是以與指定廣告相關內容相符的方式來標籤內容區段，讓所有廣告特定播放事件的觸發方式與這些自訂廣告時段明確置於播放器時間軸上的方式相同。
 
-TVSDK不會在內部處理廣告追蹤，例如Adobe Primetime廣告決策何時解決廣告。 不過，TVSDK提供下列抽象化，以定義廣告相關內容在時間軸上的呈現方式：
+廣告追蹤不由TVSDK內部處理，例如Adobe Primetime廣告決策何時解決廣告。 不過，TVSDK提供下列抽象化，以定義廣告相關內容在時間軸上的呈現方式：
 
 * 廣告插播
 
