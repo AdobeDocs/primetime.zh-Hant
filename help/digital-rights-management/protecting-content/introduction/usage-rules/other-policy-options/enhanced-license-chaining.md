@@ -1,9 +1,9 @@
 ---
-seo-title: 增強的授權鏈結
 title: 增強的授權鏈結
-uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
+description: 增強的授權鏈結
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
