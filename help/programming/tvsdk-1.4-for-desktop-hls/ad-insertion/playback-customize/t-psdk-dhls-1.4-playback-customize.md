@@ -1,13 +1,10 @@
 ---
 description: 您可以自訂或覆寫廣告行為。
-seo-description: 您可以自訂或覆寫廣告行為。
-seo-title: 設定自訂播放
 title: 設定自訂播放
-uuid: 479ca1b0-6b3f-42fa-85e1-31d707da8730
 translation-type: tm+mt
-source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
