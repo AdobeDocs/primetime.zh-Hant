@@ -1,19 +1,16 @@
 ---
 description: 您可以取得與目前由TVSDK播放之選取項目相關之時間軸的說明。 當應用程式顯示自訂拖曳列控制項時，最有用的方式是識別與廣告內容對應的內容區段。
-seo-description: 您可以取得與目前由TVSDK播放之選取項目相關之時間軸的說明。 當應用程式顯示自訂拖曳列控制項時，最有用的方式是識別與廣告內容對應的內容區段。
-seo-title: 檢查播放時間軸
-title: 檢查播放時間軸
-uuid: d0fe7926-9b9a-4203-a1c7-e57ba25b882e
+title: Inspect播放時間軸
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# 檢查播放時間軸{#inspect-the-playback-timeline}
+# Inspect播放時間軸{#inspect-the-playback-timeline}
 
 您可以取得與目前由TVSDK播放之選取項目相關之時間軸的說明。 當應用程式顯示自訂拖曳列控制項時，最有用的方式是識別與廣告內容對應的內容區段。
 
@@ -30,7 +27,7 @@ ht-degree: 0%
    * 標籤在時間軸上的位置（以毫秒為單位）
    * 時間軸上標籤的持續時間（以毫秒為單位）
 
-1. 監聽`MediaPlayer`實例上的`MediaPlayerEvent.TIMELINE_UPDATED`事件，並實作`TimelineUpdatedEventListener.onTimelineUpdated()`回呼。
+1. 監聽`MediaPlayer`例項上的`MediaPlayerEvent.TIMELINE_UPDATED`事件，並實作`TimelineUpdatedEventListener.onTimelineUpdated()`回呼。
 
    `Timeline`物件可呼叫您的`OnTimelineUpdated`接聽程式，通知您的應用程式有關播放時間軸中可能發生的變更。
 
