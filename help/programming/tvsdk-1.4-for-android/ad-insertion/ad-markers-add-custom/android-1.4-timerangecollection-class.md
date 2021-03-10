@@ -1,13 +1,10 @@
 ---
 description: TimeRangeCollection實用程式類抽象了有序集合TimeRange規範的概念，並提供了將自身轉換為元資料實例的服務。
-seo-description: TimeRangeCollection實用程式類抽象了有序集合TimeRange規範的概念，並提供了將自身轉換為元資料實例的服務。
-seo-title: TimeRangeCollection類
 title: TimeRangeCollection類
-uuid: 5705dc9d-4325-44b0-b5aa-196d09c3a67e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
