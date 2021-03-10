@@ -1,13 +1,10 @@
 ---
 description: 完整事件重播(FER)是VOD資產，可當成即時/DVR資產，因此您的應用程式必須採取步驟，以確保正確放置廣告。
-seo-description: 完整事件重播(FER)是VOD資產，可當成即時/DVR資產，因此您的應用程式必須採取步驟，以確保正確放置廣告。
-seo-title: 在完整事件重播中啟用廣告
 title: 在完整事件重播中啟用廣告
-uuid: 69244069-ef61-42e4-b2f5-62ae2561d9e1
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
