@@ -1,13 +1,10 @@
 ---
 description: 此表證明了有關WARN類型通知的詳細資訊。
-seo-description: 此表證明了有關WARN類型通知的詳細資訊。
-seo-title: 警告通知代碼
 title: 警告通知代碼
-uuid: 32b54e6c-f107-4e8e-aad6-34e1057719b0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '407'
 ht-degree: 2%
 
 ---
@@ -165,4 +162,4 @@ ht-degree: 2%
  </tbody> 
 </table>
 
->[注意！] adID和來源(URL)可透過PTAdAsset在通知中繼資料中擷取並加上 `AD_ASSET` 金鑰。
+>[注意！] adID和來源(URL)可透過PTAdAsset在通知中繼資料中以金鑰擷 `AD_ASSET` 取。
