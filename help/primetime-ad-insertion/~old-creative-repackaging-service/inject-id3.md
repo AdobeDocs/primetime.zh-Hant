@@ -1,13 +1,10 @@
 ---
 description: CRS可將ID3計時中繼資料注入HLS格式廣告創意，以利用戶端廣告追蹤。
-seo-description: CRS可將ID3計時中繼資料注入HLS格式廣告創意，以利用戶端廣告追蹤。
-seo-title: 使用CRS插入ID3計時中繼資料標籤
 title: 使用CRS插入ID3計時中繼資料標籤
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
