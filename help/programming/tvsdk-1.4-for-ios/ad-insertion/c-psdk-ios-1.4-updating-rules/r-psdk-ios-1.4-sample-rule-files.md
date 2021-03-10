@@ -1,13 +1,10 @@
 ---
 description: 在AdobeTVSDKConfig.json中，您可以指定特定區域的預設規則和規則。
-seo-description: 在AdobeTVSDKConfig.json中，您可以指定特定區域的預設規則和規則。
-seo-title: 創意選擇規則範例
 title: 創意選擇規則範例
-uuid: 1d63e26c-6fe0-4643-a568-f1c34cf46c53
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
