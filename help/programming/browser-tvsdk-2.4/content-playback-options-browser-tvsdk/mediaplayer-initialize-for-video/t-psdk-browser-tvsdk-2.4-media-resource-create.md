@@ -1,13 +1,10 @@
 ---
 description: MediaResource類代表MediaPlayer實例要載入的內容。
-seo-description: MediaResource類代表MediaPlayer實例要載入的內容。
-seo-title: 建立媒體資源
 title: 建立媒體資源
-uuid: c25c037e-e9a0-430c-a150-b75a9ac051b1
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -42,7 +39,7 @@ MediaResource類代表MediaPlayer實例要載入的內容。
     </tr> 
     <tr> 
     <td colname="col1"> <p>中繼資料 </p> </td> 
-    <td colname="col2"> <p><span class="codeph">中繼資料</span>類別的例項，可能包含要載入內容的自訂資訊。 內容的範例是要置於主要內容內的替代或廣告內容。 如果使用廣告，請在使用此建構函式前先設定<span class="codeph"> AuditudeSettings </span>。 如需詳細資訊，請參閱<a href="../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md">Ad-insertion-metadata</a>。 </p> <p>提示： 如有必要，您可使用<span class="codeph"> forceFlash </span>參數來強制Flash備援，以建立媒體資源。 這可能很有用，因為目前並非瀏覽器TVSDK支援所有功能（例如即時廣告工作流程）。 Flash備援功能可用來播放視訊內容。 </p> </td> 
+    <td colname="col2"> <p><span class="codeph">中繼資料</span>類別的例項，可能包含要載入內容的自訂資訊。 內容的範例是要置於主要內容內的替代或廣告內容。 如果使用廣告，請在使用此建構函式前先設定<span class="codeph"> AuditudeSettings </span>。 如需詳細資訊，請參閱<a href="../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md">Ad-insertion-metadata</a>。 </p> <p>提示： 如有必要，您可以使用<span class="codeph"> forceFlash </span>參數來強制Flash回退。 這可能很有用，因為目前並非瀏覽器TVSDK支援所有功能（例如即時廣告工作流程）。 Flash後援用於播放視訊內容。 </p> </td> 
     </tr> 
     </tbody> 
    </table>
