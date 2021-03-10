@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表示的內容流的資訊。
-seo-description: MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表示的內容流的資訊。
-seo-title: 存取MediaResource資訊的MediaPlayer方法
 title: 存取MediaResource資訊的MediaPlayer方法
-uuid: 5d83491c-6577-46fe-98af-83f0fde7a7d0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
