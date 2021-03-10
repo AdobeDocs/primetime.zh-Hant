@@ -1,13 +1,10 @@
 ---
 description: TVSDK會連絡廣告傳送服務，例如Adobe Primetime廣告決策，並嘗試取得與廣告的視訊串流對應的主要播放清單檔案。 在廣告解析階段，TVSDK會對遠端廣告傳送伺服器進行HTTP呼叫，並分析伺服器的回應。
-seo-description: TVSDK會連絡廣告傳送服務，例如Adobe Primetime廣告決策，並嘗試取得與廣告的視訊串流對應的主要播放清單檔案。 在廣告解析階段，TVSDK會對遠端廣告傳送伺服器進行HTTP呼叫，並分析伺服器的回應。
-seo-title: 廣告解析階段
 title: 廣告解析階段
-uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
