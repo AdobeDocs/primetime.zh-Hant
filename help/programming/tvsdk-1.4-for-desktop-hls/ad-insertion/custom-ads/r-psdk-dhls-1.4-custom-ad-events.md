@@ -1,13 +1,10 @@
 ---
 description: TVSDK播放器會派單事件以顯示自訂廣告載入狀態，或忽略載入時間太長或有錯誤的廣告。 這些事件在events.CustomAdEvents中定義。
-seo-description: TVSDK播放器會派單事件以顯示自訂廣告載入狀態，或忽略載入時間太長或有錯誤的廣告。 這些事件在events.CustomAdEvents中定義。
-seo-title: 自訂廣告事件
 title: 自訂廣告事件
-uuid: 78e2ccf4-5943-4c60-84be-623182d9a300
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
