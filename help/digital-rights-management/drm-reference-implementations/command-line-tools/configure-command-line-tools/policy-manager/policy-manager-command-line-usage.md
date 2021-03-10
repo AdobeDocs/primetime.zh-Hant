@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 策略管理器命令行使用
 title: 策略管理器命令行使用
-uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
+description: 策略管理器命令行使用
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
@@ -88,7 +86,7 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">播放視窗，這是從第一次播放中可檢視內容的分鐘數。 </p> <p>如果未指定，或者使用<span class="codeph"> -w </span>但未指定分鐘數，則沒有播放窗口限制。 值必須是非負值。 </p> <p>可選<span class="codeph"> enableHS </span>或<span class="codeph"> disableHS </span>標誌信號是要啟用或禁用硬停止。 該標誌指示解密上下文在播放窗口的結尾處是否被破壞（啟用）或未被破壞（禁用）。 </p> <p>例如，若要指定內容只能檢視60分鐘，而且需要硬停止： 
      <codeblock>
        -w&amp;nbsp;60,enableHS 
-     </codeblock> </p> <p>注意： <i>Hard stop</i>目前不支援Flash Player、Android和iOS。 </p> </td> 
+     </codeblock> </p> <p>注意： <i>硬式停止</i>目前不支援Flash Player、Android和iOS。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l分鐘  </span> </td> 
