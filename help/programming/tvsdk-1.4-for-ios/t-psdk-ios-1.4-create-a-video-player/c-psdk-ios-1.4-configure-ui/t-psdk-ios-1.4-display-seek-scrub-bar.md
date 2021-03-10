@@ -1,13 +1,10 @@
 ---
 description: 您可以顯示正在播放的內容的目前和剩餘時間。
-seo-description: 您可以顯示正在播放的內容的目前和剩餘時間。
-seo-title: 顯示具有當前播放時間位置的搜索拖曳條
 title: 顯示具有當前播放時間位置的搜索拖曳條
-uuid: db57eb6f-3c67-4a64-a0f4-7e39027eb3e0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
