@@ -1,14 +1,11 @@
 ---
 description: 您可以設定一個邊來處理錯誤。
-seo-description: 您可以設定一個邊來處理錯誤。
-seo-title: 設定錯誤處理
 title: 設定錯誤處理
-uuid: fde47fa5-5ca5-4be5-a7e7-3227c5e4c670
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 1%
+source-wordcount: '90'
+ht-degree: 2%
 
 ---
 
