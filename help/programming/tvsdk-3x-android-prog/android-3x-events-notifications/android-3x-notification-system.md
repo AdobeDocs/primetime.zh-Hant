@@ -1,13 +1,10 @@
 ---
 description: 事件和通知可協助您管理視訊應用程式的非同步層面。
-seo-description: 事件和通知可協助您管理視訊應用程式的非同步層面。
-seo-title: 播放器狀態、活動、錯誤和記錄的通知和事件
 title: 播放器狀態、活動、錯誤和記錄的通知和事件
-uuid: c4a108e7-72aa-4c96-9538-b1385343d6af
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
