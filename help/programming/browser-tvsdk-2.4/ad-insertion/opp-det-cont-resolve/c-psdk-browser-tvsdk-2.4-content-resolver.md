@@ -1,13 +1,10 @@
 ---
 description: 機會偵測器是瀏覽器TVSDK元件，可偵測串流中的自訂標籤並識別位置商機。 這些機會會傳送至內容解析器，內容解析器會根據放置機會屬性和中繼資料自訂內容／廣告插入工作流程。
-seo-description: 機會偵測器是瀏覽器TVSDK元件，可偵測串流中的自訂標籤並識別位置商機。 這些機會會傳送至內容解析器，內容解析器會根據放置機會屬性和中繼資料自訂內容／廣告插入工作流程。
-seo-title: 自訂機會偵測器和內容解析器
 title: 自訂機會偵測器和內容解析器
-uuid: d4926933-5966-4cd8-8050-c81c5e3c8545
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
