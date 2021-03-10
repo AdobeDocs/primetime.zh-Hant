@@ -1,9 +1,9 @@
 ---
-seo-title: 內容保護
 title: 內容保護
-uuid: 14464697-4acd-4c67-b0aa-2251595814c9
+description: 內容保護
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6'
 ht-degree: 0%
