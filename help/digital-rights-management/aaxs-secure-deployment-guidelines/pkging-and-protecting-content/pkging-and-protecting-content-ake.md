@@ -1,9 +1,9 @@
 ---
-seo-title: 非對稱密鑰加密
 title: 非對稱密鑰加密
-uuid: 0aae25f1-a609-4c73-9aef-13f8ae63f6e1
+description: 非對稱密鑰加密
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -19,4 +19,4 @@ ht-degree: 0%
 
 ***注意：**請務必從受信任來源取得授權伺服器的憑證（包含公開金鑰），以確定它是授權伺服器的金鑰，而非流氓公開金鑰。如果攻擊者用其公鑰代替許可證伺服器的密鑰，他們將能夠解密您的內容。*
 
-如需封裝內容的詳細資訊，請參閱&#x200B;*使用Adobe Access SDK for Protecting Content*。
+如需封裝內容的詳細資訊，請參閱&#x200B;*使用Adobe存取SDK來保護內容*。
