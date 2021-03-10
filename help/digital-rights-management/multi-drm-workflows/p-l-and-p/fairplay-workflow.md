@@ -1,13 +1,10 @@
 ---
 description: DRM工作流程包括封裝您的內容、提供內容授權，以及從您自己的視訊應用程式中播放受保護的內容。 每個DRM解決方案的工作流程通常都很相似，但細節方面有一些不同。
-seo-description: DRM工作流程包括封裝您的內容、提供內容授權，以及從您自己的視訊應用程式中播放受保護的內容。 每個DRM解決方案的工作流程通常都很相似，但細節方面有一些不同。
-seo-title: FairPlay的多DRM工作流程
 title: FairPlay的多DRM工作流程
-uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -103,11 +100,11 @@ Apple的FairPlay DRM解決方案在您搭配ExpressPlay DRM服務使用時，需
 
 ### 封裝您的FairPlay內容{#package-your-content-for-fairplay}
 
-若要封裝內容，您可以使用Adobe Offline Packager或其他工具，例如ExpressPlay的Bento4封裝程式。
+若要封裝內容，您可以使用AdobeOffline Packager或其他工具，例如ExpressPlay的Bento4封裝程式。
 
 封裝程式會準備視訊以供播放（例如，將原始檔案分割並放入資訊清單中），並使用您選擇的DRM解決方案保護視訊（在此例中為FairPlay）:
 
-* [Adobe Offline Packager for FairPlay DRM](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
+* [AdobeOffline Packager for FairPlay DRM](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
 * [ExpressPlay Packagers - Bento4 for HLS](https://www.bento4.com/developers/hls/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
@@ -116,7 +113,7 @@ Apple的FairPlay DRM解決方案在您搭配ExpressPlay DRM服務使用時，需
 
 1. 封裝您的內容。
 
-   以下是使用Adobe Offline Packager的封裝範例。 Packager使用配置檔案（例如[!DNL fairplay.xml]），其外觀如下：
+   以下是使用「Adobe離線封裝程式」的封裝範例。 Packager使用配置檔案（例如[!DNL fairplay.xml]），其外觀如下：
 
    ```
    <config>
@@ -162,7 +159,7 @@ Apple的FairPlay DRM解決方案在您搭配ExpressPlay DRM服務使用時，需
 
 ### 設定FairPlay的策略{#setting-policies-for-fairplay}
 
-您可以使用權益伺服器來設定受FairPlay保護內容的政策。 您可以設定自己的權益，或使用Adobe提供的範例權益伺服器。
+您可以使用權益伺服器來設定受FairPlay保護內容的政策。 您可以設定自己的權益，或使用Adobe提供的權益伺服器範例。
 
 Adobe提供範例ExpressPlay權益伺服器(SEES)，顯示如何執行&#x200B;*時間型*&#x200B;和&#x200B;*裝置系結*&#x200B;權益。 此範例權益伺服器是以ExpressPlay服務為基礎。
 
