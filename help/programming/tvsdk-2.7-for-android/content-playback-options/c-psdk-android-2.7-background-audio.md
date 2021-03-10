@@ -1,9 +1,9 @@
 ---
-seo-title: 啟用背景音訊
 title: 啟用背景音訊
-uuid: 1e7319f5-ee16-47bd-bfd5-d3dcfe69bf4b
+description: 啟用背景音訊
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
