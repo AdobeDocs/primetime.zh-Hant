@@ -1,13 +1,10 @@
 ---
 description: .m3u8檔案中的#EXT-X-VERSION版本會影響您應用程式可用的功能，以及播放清單／資訊清單中有效的EXT標籤。
-seo-description: .m3u8檔案中的#EXT-X-VERSION版本會影響您應用程式可用的功能，以及播放清單／資訊清單中有效的EXT標籤。
-seo-title: '#EXT-X-VERSION需求'
 title: '#EXT-X-VERSION需求'
-uuid: c862df4a-88ba-4497-8b7c-b83fcb34b8bb
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -27,7 +24,7 @@ ht-degree: 0%
 * 此版本必須符合HLS播放清單中的功能和屬性；否則，可能會發生播放錯誤。
 
    如需詳細資訊，請參閱[HTTP即時串流規格](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1)。
-* Adobe建議至少使用第2版在基於用戶端中播放。
+* Adobe建議至少使用第2版在基於的客戶端中播放。
 
    客戶端和伺服器必須以下列方式實施版本：
 
