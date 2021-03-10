@@ -1,13 +1,10 @@
 ---
 description: 當您重設MediaPlayer例項時，它會傳回至MediaPlayerStatus中定義的未初始化IDLE狀態。
-seo-description: 當您重設MediaPlayer例項時，它會傳回至MediaPlayerStatus中定義的未初始化IDLE狀態。
-seo-title: 重設或重複使用MediaPlayer例項
 title: 重設或重複使用MediaPlayer例項
-uuid: b376096b-0aed-4ac2-96e5-e30a4eaf742e
 translation-type: tm+mt
-source-git-commit: c547002eb8946f8ccc5a79d0836f3f814e823b97
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
