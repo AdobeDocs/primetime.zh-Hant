@@ -1,17 +1,13 @@
 ---
 title: Primetime Offline Packager 2.x版本
-seo-title: Primetime Offline Packager 2.x版本
 description: Primetime Offline Packager 2.1和2.3.1版本的新增功能
-seo-description: Primetime Offline Packager 2.1和2.3.1版本的新增功能
-uuid: 01926a10-890d-477d-b832-e22847d957e0
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 933a0711-846a-4bb7-bf51-b300822a93d4
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -46,7 +42,7 @@ Primetime Offline Packager 2.1和2.3.1版本的新增功能
 | PTPUB-990 | 對於DASH，當指定參數`log_vi`和`iv_out_path`時，Offline Packager不會將生成的IV寫入磁碟。 |
 | PTPUB-980 | 使用配置檔案進行封裝時，使用參數`key_url`不會從提供的輸入中刪除引號。 |
 
-## Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager}
+## Adobe PrimetimeOffline Packager 2.3.1 {#adobe-primetime-offline-packager}
 
 ### 最低系統需求{#minimum-system-requirements}
 
@@ -70,12 +66,12 @@ Primetime Offline Packager 2.1和2.3.1版本的新增功能
 
 軟體需求
 
-* Oracle Java SE 1.8或更高版本
+* OracleJava SE 1.8或更新版本
 
-### Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager-1}
+### Adobe PrimetimeOffline Packager 2.3.1 {#adobe-primetime-offline-packager-1}
 
 1. 從[Oracle站點](https://www.oracle.com/technetwork/java/javase/downloads/index.html)下載Java SE軟體，然後按照安裝說明操作。
-1. 將名為`PrimetimeOfflinePackager-2-3-1-b47-10142016.zip`的Adobe Primetime Offline Packager 2.3.1封存檔案解壓縮至磁碟。
+1. 將名為`PrimetimeOfflinePackager-2-3-1-b47-10142016.zip`的Adobe PrimetimeOffline Packager 2.3.1歸檔檔案解壓到磁碟。
 
 ### 配置Offline Packager 2.3.1 {#configuring-the-offline-packager}
 
@@ -98,7 +94,7 @@ PTPUB-780新增對EXT-X-START標籤的支援
 * PTPUB-783 Offline Packager現在可處理空的WebVTT檔案。
 * PTPUB —— 當某些經過轉碼的MP4資產與離線封裝器封裝以產生MBR輸出時，Chrome上的HLS輸出中的781偽影。
 
-## Adobe Primetime Offline Packager 2.1 {#adobe-primetime-offline-packager-2}
+## Adobe PrimetimeOffline Packager 2.1 {#adobe-primetime-offline-packager-2}
 
 ### 最低系統需求{#minimum-system-requirements-1}
 
@@ -122,7 +118,7 @@ PTPUB-780新增對EXT-X-START標籤的支援
 
 **軟體需求**
 
-* Oracle Java SE 1.8或更高版本
+* OracleJava SE 1.8或更新版本
 
 ### 安裝Offline Packager 2.1 {#installing-offline-packager}
 
