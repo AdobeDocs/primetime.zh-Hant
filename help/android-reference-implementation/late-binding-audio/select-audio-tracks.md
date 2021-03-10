@@ -1,9 +1,9 @@
 ---
-seo-title: 選取音軌
 title: 選取音軌
-uuid: a827f426-956b-4a5f-90ba-db12010aa7c7
+description: 選取音軌
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
