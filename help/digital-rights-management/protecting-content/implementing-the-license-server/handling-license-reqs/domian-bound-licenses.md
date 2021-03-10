@@ -1,9 +1,9 @@
 ---
-seo-title: 發行網域限制授權
 title: 發行網域限制授權
-uuid: 706650b7-6044-4c01-9f5a-90779127c9e1
+description: 發行網域限制授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# 發行網域系結授權{#issuing-domain-bound-licenses}
+# 發佈網域限制授權{#issuing-domain-bound-licenses}
 
 要使用需要域註冊的DRM策略發佈許可證，客戶機的請求必須包括由策略中指定的域伺服器發出的有效域令牌。 當用戶端要求授權時，會自動為任何網域伺服器加入網域Token，此網域Token是在內容中繼資料中指定的，但前提是用戶端已向這些網域伺服器註冊。 如果選取的DRM政策需要網域註冊，則SDK會自動從請求中選取網域Token，以將授權系結至，或傳回錯誤（如果找不到適當的網域Token）。
 
