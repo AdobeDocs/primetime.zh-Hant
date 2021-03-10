@@ -1,9 +1,9 @@
 ---
-seo-title: 廣告
 title: 廣告
-uuid: 98dcb614-3bfc-4a6d-90cd-7ac9e8411d7a
+description: 廣告
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '3'
 ht-degree: 0%
