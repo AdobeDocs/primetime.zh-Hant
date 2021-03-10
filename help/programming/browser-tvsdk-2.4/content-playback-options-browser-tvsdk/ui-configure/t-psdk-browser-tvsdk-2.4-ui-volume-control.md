@@ -1,13 +1,10 @@
 ---
 description: 您可以設定音量的使用者介面控制項。
-seo-description: 您可以設定音量的使用者介面控制項。
-seo-title: 提供音量控制
 title: 提供音量控制
-uuid: 5f2f69cc-3969-4ca2-8ab9-5713fdf5cdb8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '87'
 ht-degree: 0%
 
 ---
