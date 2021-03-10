@@ -1,9 +1,9 @@
 ---
-seo-title: 內嵌授權
 title: 內嵌授權
-uuid: b8d8ee9b-7430-4899-9caf-47d6b64021b8
+description: 內嵌授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Access 2.0用戶端會忽略內容中內嵌的任何授權，並會嘗試從中繼資料中指定的授權伺服器取得授權。 不過，如果中繼資料指出沒有可用的授權伺服器，Adobe Access 2.0用戶端將需要升級才能檢視內容。
+>AdobeAccess 2.0用戶端會忽略內容中內嵌的任何授權，並會嘗試從中繼資料中指定的授權伺服器取得授權。 不過，如果中繼資料指出沒有可用的授權伺服器，AdobeAccess 2.0用戶端將需要升級才能檢視內容。
 
 請參閱[帶外授權](../../aaxs-protecting-content/content-introduction/packaging-options/content-out-of-band-licenses.md)。
