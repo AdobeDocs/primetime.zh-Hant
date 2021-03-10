@@ -1,13 +1,10 @@
 ---
 description: 您可以覆寫TVSDK在使用自訂廣告標籤時搜尋廣告的預設行為。
-seo-description: 您可以覆寫TVSDK在使用自訂廣告標籤時搜尋廣告的預設行為。
-seo-title: 控制搜尋自訂廣告標籤的播放行為
 title: 控制搜尋自訂廣告標籤的播放行為
-uuid: cf973caf-be29-46ce-bfa4-651e7653f8d4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ ht-degree: 0%
 
 當使用者搜尋超過一或多個自訂廣告時，您可讓TVSDK將播放頭重新定位至最近略過的自訂廣告的開頭。
 
-1. 將`DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED`列舉設定為字串值&quot;true&quot;（不是布林`true`）的中繼資料例項設定。
+1. 將`DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED`列舉設定為字串值&quot;true&quot;的中繼資料例項進行設定（不是布林`true`）。
 
    ```java
    Metadata metadata = new MetadataNode(); 
