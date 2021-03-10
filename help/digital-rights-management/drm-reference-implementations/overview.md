@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 關於參考實作
 title: 關於參考實作
-uuid: f08fdb4b-aaa8-4871-bb62-1a21d5abdd8d
+description: 關於參考實作
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,11 +13,11 @@ ht-degree: 0%
 
 # 關於引用實現{#about-the-reference-implementations}
 
-本指南說明Adobe Primetime DRM參考實作的安裝、設定和運作。
+本指南說明Adobe PrimetimeDRM參考實施的安裝、配置和操作。
 
 >[!NOTE]
 >
->Primetime DRM之前稱為Adobe Access，之前稱為Flash Access。
+>Primetime DRM之前稱為Adobe存取，在此之前稱為Flash Access。
 
 Primetime DRM參考實作包括下列元件：
 
