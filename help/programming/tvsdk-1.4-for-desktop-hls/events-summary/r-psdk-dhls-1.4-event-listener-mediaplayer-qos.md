@@ -1,13 +1,10 @@
 ---
 description: TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算（例如緩衝或搜尋）的事件。
-seo-description: TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算（例如緩衝或搜尋）的事件。
-seo-title: QoS事件
 title: QoS事件
-uuid: fd657cf0-c6d4-4e9a-b212-7d09d483cae9
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
