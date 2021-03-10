@@ -1,13 +1,10 @@
 ---
 description: 您可以建立替代的音訊功能管理員，將延遲系結或替代的音訊串流整合至您的播放器。
-seo-description: 您可以建立替代的音訊功能管理員，將延遲系結或替代的音訊串流整合至您的播放器。
-seo-title: 整合後期系結音訊
 title: 整合後期系結音訊
-uuid: cd2e259a-2af4-4d7b-a856-79bd087e8ca6
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
