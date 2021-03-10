@@ -1,13 +1,10 @@
 ---
 description: 本節介紹配置輸入的語法，強調有效和無效的輸入選項，並說明如何解釋省略的可選欄位。
-seo-description: 本節介紹配置輸入的語法，強調有效和無效的輸入選項，並說明如何解釋省略的可選欄位。
-seo-title: RBOP語法
 title: RBOP語法
-uuid: d9064e39-593a-4767-b835-287640b4c94a
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '461'
 ht-degree: 0%
 
 ---
