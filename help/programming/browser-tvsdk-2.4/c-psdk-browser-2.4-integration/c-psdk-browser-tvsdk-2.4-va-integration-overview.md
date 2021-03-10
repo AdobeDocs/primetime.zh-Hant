@@ -1,13 +1,10 @@
 ---
-description: 您可以透過整合瀏覽器TVSDK和Adobe Analytics來追蹤視訊的使用。
-seo-description: 您可以透過整合瀏覽器TVSDK和Adobe Analytics來追蹤視訊的使用。
-seo-title: 視訊分析
+description: 您可以整合Browser TVSDK和Adobe Analytics，以追蹤視訊的使用。
 title: 視訊分析
-uuid: 6351933b-c0f3-4e3e-ad27-bedc8eecc312
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '245'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # 視訊分析{#video-analytics}
 
-您可以透過整合瀏覽器TVSDK和Adobe Analytics來追蹤視訊的使用。
+您可以整合Browser TVSDK和Adobe Analytics，以追蹤視訊的使用。
 
-瀏覽器TVSDK中的視訊追蹤使用&#x200B;**Adobe Analytics Video Essentials**&#x200B;服務，該服務提供視訊參與度量，例如視訊檢視、視訊完成、廣告印象、視訊逗留時間等。 如需此服務的詳細資訊，請連絡您的Adobe代表。
+瀏覽器TVSDK中的視訊追蹤使用&#x200B;**Adobe Analytics視訊基本工具**&#x200B;服務，提供視訊參與度量，例如視訊檢視、視訊完成、廣告印象、視訊逗留時間等。 如需此服務的詳細資訊，請連絡您的Adobe代表。
 
 下列程式會摘要啟動播放器中視訊追蹤的步驟：
 
