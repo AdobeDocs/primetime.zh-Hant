@@ -1,13 +1,10 @@
 ---
 description: 在您成功載入MediaResource物件後，TVSDK會建立MediaPlayerItem類別的例項，以提供該資源的存取權。
-seo-description: 在您成功載入MediaResource物件後，TVSDK會建立MediaPlayerItem類別的例項，以提供該資源的存取權。
-seo-title: 關於MediaPlayerItem類
 title: 關於MediaPlayerItem類
-uuid: fc79c442-2e38-48c4-8ef9-6dce9ad6790a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
