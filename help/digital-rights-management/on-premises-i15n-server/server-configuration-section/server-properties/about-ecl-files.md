@@ -1,9 +1,9 @@
 ---
-seo-title: 關於ECI檔案
 title: 關於ECI檔案
-uuid: 124d8ab1-933b-4a1b-992a-919f3d799460
+description: 關於ECI檔案
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 除了CRL之外，您還需要定期更新嵌入式公共介面(ECI)檔案。 每當Adobe新增對新Primetime DRM用戶端平台的支援時(例如：iOS、Android、Windows FlashPlayer等)，就會建立新的ECI記錄。 為了支援該客戶機的個性化，需要在個性化伺服器上顯示相應的ECI記錄。
 
-由於Primetime DRM新用戶端的發行不常頻繁，Adobe將視需要發佈更新的ECI資料。 Adobe會定期收集ECI檔案，並將其裝載至下列位置進行散發：
+由於新Primetime DRM用戶端的發行不常頻繁，Adobe將視需要發佈更新的ECI資料。 Adobe會定期收集ECI檔案，並將其裝載至下列位置進行散發：
 
 ```
 http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
@@ -23,7 +23,7 @@ http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
 
 [!DNL Latest.txt]檔案將包含最新CRL散發檔案的URL。
 
-Adobe會依照下列方式建立ECI zip檔案：
+Adobe將按如下所述的方式建立ECI zip檔案：
 
 資料夾結構：
 
