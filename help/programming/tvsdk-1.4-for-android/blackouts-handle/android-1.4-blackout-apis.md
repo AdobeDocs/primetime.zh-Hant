@@ -1,13 +1,10 @@
 ---
 description: 您可以處理即時視訊串流中的封鎖期，並在封鎖期間提供替代內容。
-seo-description: 您可以處理即時視訊串流中的封鎖期，並在封鎖期間提供替代內容。
-seo-title: 封鎖API元素
 title: 封鎖API元素
-uuid: 263a8987-0c85-493a-9352-9605c877ba65
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
