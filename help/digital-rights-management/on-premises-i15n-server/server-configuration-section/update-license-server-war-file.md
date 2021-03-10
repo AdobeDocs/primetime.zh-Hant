@@ -1,9 +1,9 @@
 ---
-seo-title: 更新License Server WAR檔案
 title: 更新License Server WAR檔案
-uuid: 0cde53d6-185d-4bf2-84fc-0c31d17904a8
+description: 更新License Server WAR檔案
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
