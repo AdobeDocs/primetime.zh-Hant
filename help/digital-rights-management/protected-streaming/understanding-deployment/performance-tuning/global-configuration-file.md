@@ -1,13 +1,10 @@
 ---
 description: 本主題說明與效能相關的考量事項。 全域設定檔中任何名為flashaccess-global.xml的設定都會影響效能。
-seo-description: 本主題說明與效能相關的考量事項。 全域設定檔中任何名為flashaccess-global.xml的設定都會影響效能。
-seo-title: 全局配置檔案
 title: 全局配置檔案
-uuid: 254925b5-d441-4a35-ad6f-f99db5de7591
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
@@ -43,4 +40,4 @@ ht-degree: 0%
 
 * `<rollingFrequency>`  `rollingFrequency` 指定記錄檔的滾 *動頻率*。*`Rolling`* 是將任何新日誌檔案指定為活動日誌的進程。因此，以前活動的日誌檔案不再被修改，因此被視為&#x200B;*`rolled`*。 您可以將滾動間隔設定為`MINUTELY`、`HOURLY`、`TWICE-DAILY`、`DAILY`、`WEEKLY`、`MONTHLY`或`NEVER`。
 
-請參閱&#x200B;*使用Adobe Primetime DRM SDK保護內容*，以取得如何最佳化效能的秘訣。
+如需如何最佳化效能的秘訣，請參閱&#x200B;*使用Adobe PrimetimeDRM SDK保護內容*。
