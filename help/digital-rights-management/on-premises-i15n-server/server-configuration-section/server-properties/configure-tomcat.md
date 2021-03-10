@@ -1,9 +1,9 @@
 ---
-seo-title: 配置Tomcat
 title: 配置Tomcat
-uuid: 5f23aa33-29d7-4b41-87a4-59dc5b433de4
+description: 配置Tomcat
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
