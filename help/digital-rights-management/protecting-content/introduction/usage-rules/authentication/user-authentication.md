@@ -1,9 +1,9 @@
 ---
-seo-title: 使用規則
 title: 使用規則
-uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
+description: 使用規則
+copied-description: true
 translation-type: tm+mt
-source-git-commit: eed2ed2512c2c462cd43637d83d80bf9a5c0d490
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 使用規則{#usage-rules}
 
-下列主題說明您可在Adobe Primetime DRM政策中指定的使用規則。
+以下主題說明您可以在Adobe PrimetimeDRM策略中指定的使用規則。
 
 ## 用戶驗證{#user-authentication}
 
