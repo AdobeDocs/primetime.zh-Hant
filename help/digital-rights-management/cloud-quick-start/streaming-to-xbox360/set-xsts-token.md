@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 在您的播放器中設定XSTS Token
 title: 在您的播放器中設定XSTS Token
-uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
+description: 在您的播放器中設定XSTS Token
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
