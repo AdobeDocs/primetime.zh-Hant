@@ -1,9 +1,9 @@
 ---
-seo-title: SWF雜湊計算器
 title: SWF雜湊計算器
-uuid: c1823208-92d9-47c5-b550-f9cc370b543d
+description: SWF雜湊計算器
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
