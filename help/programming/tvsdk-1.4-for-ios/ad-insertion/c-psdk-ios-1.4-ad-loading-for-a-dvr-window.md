@@ -1,13 +1,10 @@
 ---
 description: 您可以決定是只解析使用者目前即時點之後發生的廣告，還是也要解析目前即時點之前發生的廣告。
-seo-description: 您可以決定是只解析使用者目前即時點之後發生的廣告，還是也要解析目前即時點之前發生的廣告。
-seo-title: DVR視窗的載入廣告
 title: DVR視窗的載入廣告
-uuid: 67bc3924-3d17-4d1a-b9a7-be8d0488a970
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
