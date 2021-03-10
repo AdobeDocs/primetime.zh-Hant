@@ -1,13 +1,10 @@
 ---
 description: 透過網際網路串流需要持續穩定的連線，才能播放來自遠端伺服器的串流。 不過，檢視器的網際網路連線或串流播放的可變性，意味著遠端播放可能無法在本機播放媒體的品質。
-seo-description: 透過網際網路串流需要持續穩定的連線，才能播放來自遠端伺服器的串流。 不過，檢視器的網際網路連線或串流播放的可變性，意味著遠端播放可能無法在本機播放媒體的品質。
-seo-title: AC-3 5.1格式
 title: AC-3 5.1格式
-uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
@@ -25,7 +22,7 @@ Primetime無法防止ISP中斷或電纜斷開等故障。 不過，Primetime串�
 
 >[!IMPORTANT]
 >
->TVSDK 1.4版僅支援Amazon FireTV上的AC-3 5.1格式。
+>TVSDK 1.4版僅支援AmazonFireTV的AC-3 5.1格式。
 
 TVSDK支援下列AC-3 5.1功能：
 
@@ -38,7 +35,7 @@ TVSDK支援下列AC-3 5.1功能：
 
    在直通模式下，TVSDK不會將媒體從AC-3 5.1格式解碼為多頻道脈衝碼調制(PCM)格式，而是會從解碼器修改或未修改（視裝置而定）杜比媒體。 該媒體被發送到音頻設備（揚聲器或接收器），以便音頻設備能夠解碼並播放杜比環繞串流。
 
-TVSDK僅支援Amazon Fire TV第1代裝置上的AC-3 5.1功能。
+TVSDK僅支援第1代裝置AmazonFire TV的AC-3 5.1功能。
 
 不支援下列AC-3 5.1功能：
 
