@@ -1,9 +1,9 @@
 ---
-seo-title: 使用DRMStatusEvent類概述
 title: 使用DRMStatusEvent類概述
-uuid: 9faf35fe-63ac-43a8-a945-4735c12efb04
+description: 使用DRMStatusEvent類概述
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
