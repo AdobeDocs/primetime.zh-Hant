@@ -1,13 +1,10 @@
 ---
 description: 若要在TVSDK應用程式中實作FairPlay串流，您需要編寫資源載入器，將授權取得要求傳送至FairPlay串流伺服器。
-seo-description: 若要在TVSDK應用程式中實作FairPlay串流，您需要編寫資源載入器，將授權取得要求傳送至FairPlay串流伺服器。
-seo-title: TVSDK應用程式中的Apple FairPlay
 title: TVSDK應用程式中的Apple FairPlay
-uuid: 4384d379-37cd-46c5-8c25-0cda16bdebb8
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ ht-degree: 0%
 1. 格式化請求。
 1. 提供必要的資訊給伺服器，讓伺服器可決定是否允許要求。
 
-例如，如果您使用ExpressPlay提供支援的Adobe Primetime Cloud DRM，您的資源載入器會將要求傳送至：
+例如，如果您使用由ExpressPlay提供支援的Adobe的Primetime Cloud DRM，您的資源載入器會將要求傳送至：
 
 ```
 https://fp-gen.service.expressplay.com
