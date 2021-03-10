@@ -1,13 +1,10 @@
 ---
 description: 功能管理員是TVSDK程式庫的包裝函式。
-seo-description: 功能管理員是TVSDK程式庫的包裝函式。
-seo-title: 參考實作結構
 title: 參考實作結構
-uuid: ae347a97-1500-476a-9fc8-c99e6b2ab8de
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
