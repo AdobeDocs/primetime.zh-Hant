@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerNotification提供與播放器狀態相關的資訊。
-seo-description: MediaPlayerNotification提供與播放器狀態相關的資訊。
-seo-title: 通知內容
 title: 通知內容
-uuid: c2321a49-1b60-4e44-b8e2-a023b764d779
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
