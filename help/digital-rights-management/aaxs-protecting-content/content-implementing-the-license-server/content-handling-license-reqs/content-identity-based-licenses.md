@@ -1,9 +1,9 @@
 ---
-seo-title: 身分型授權
 title: 身分型授權
-uuid: 3340833c-404a-4647-86b9-6f67ca354f58
+description: 身分型授權
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
