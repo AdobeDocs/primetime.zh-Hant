@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 以Adobe Primetime廣告決策廣告取代時間範圍
 title: 以Adobe Primetime廣告決策廣告取代時間範圍
-uuid: 101ac42d-5ba5-4487-af95-483a6594808a
+description: 以Adobe Primetime廣告決策廣告取代時間範圍
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
