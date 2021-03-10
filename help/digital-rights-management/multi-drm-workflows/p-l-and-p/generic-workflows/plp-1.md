@@ -1,13 +1,10 @@
 ---
 description: 您可以使用Adobe的Offline Packager，為Primetime Cloud DRM（由ExpressPlay提供支援）支援的任何DRM解決方案準備內容。
-seo-description: 您可以使用Adobe的Offline Packager，為Primetime Cloud DRM（由ExpressPlay提供支援）支援的任何DRM解決方案準備內容。
-seo-title: Primetime Packager / Cloud DRM / TVSDK
 title: Primetime Packager / Cloud DRM / TVSDK
-uuid: e54a0e4d-c8ea-46d4-b1b0-bed8a680f8f5
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -85,7 +82,7 @@ ht-degree: 0%
 
 1. 建立您的客戶。
 
-       客戶端應包括對店面伺服器的呼叫。Adobe建議用戶端在使用者選擇某些內容後，以及在使用者經過驗證後呼叫店面。 然後，將從ExpressPlay傳回的Token傳遞至您的播放器，以用於授權要求。 實作播放器DRM元件的簡介如下：
+       客戶端應包括對店面伺服器的呼叫。Adobe建議用戶在選擇某些內容後，以及用戶通過身份驗證後，客戶端調用店面。 然後，將從ExpressPlay傳回的Token傳遞至您的播放器，以用於授權要求。 實作播放器DRM元件的簡介如下：
    
    * [HTML5的瀏覽器TVSDK](https://help.adobe.com/en_US/primetime/psdk/browser_tvsdk/index.html#PSDKs-reference-DRM_interface_overview)
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
