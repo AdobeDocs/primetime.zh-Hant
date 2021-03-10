@@ -1,13 +1,10 @@
 ---
 description: 您可使用下列資訊來協助您設定播放器外觀。 對於每個視覺結構，預設行為中都會提到相應的行為。
-seo-description: 您可使用下列資訊來協助您設定播放器外觀。 對於每個視覺結構，預設行為中都會提到相應的行為。
-seo-title: 設定播放器的外觀
 title: 設定播放器的外觀
-uuid: 516ff846-d76d-4062-b64b-3032f7a70470
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
