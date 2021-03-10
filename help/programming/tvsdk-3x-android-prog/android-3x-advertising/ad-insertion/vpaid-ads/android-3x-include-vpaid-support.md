@@ -1,13 +1,10 @@
 ---
 description: 若要新增VPAID 2.0支援，請新增自訂廣告檢視和適當的聆聽器。
-seo-description: 若要新增VPAID 2.0支援，請新增自訂廣告檢視和適當的聆聽器。
-seo-title: 實作VPAID 2.0整合
 title: 實作VPAID 2.0整合
-uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
 translation-type: tm+mt
-source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '165'
 ht-degree: 2%
 
 ---
