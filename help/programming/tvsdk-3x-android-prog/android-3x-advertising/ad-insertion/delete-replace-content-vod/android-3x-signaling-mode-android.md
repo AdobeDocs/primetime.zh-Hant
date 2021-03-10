@@ -1,13 +1,10 @@
 ---
 description: 您可以使用不同的廣告信令模式和廣告中繼資料組合來標籤、刪除和取代VOD串流中的時間範圍。 不同的信令模式和元資料組合導致不同的行為。
-seo-description: 您可以使用不同的廣告信令模式和廣告中繼資料組合來標籤、刪除和取代VOD串流中的時間範圍。 不同的信令模式和元資料組合導致不同的行為。
-seo-title: 從廣告信號模式和廣告中繼資料組合中對廣告插入和刪除的影響
 title: 從廣告信號模式和廣告中繼資料組合中對廣告插入和刪除的影響
-uuid: 49abab49-4e52-477d-b7ed-688ee63e7473
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
