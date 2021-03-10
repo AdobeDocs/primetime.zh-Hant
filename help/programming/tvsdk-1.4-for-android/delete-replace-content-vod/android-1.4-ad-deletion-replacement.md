@@ -1,13 +1,10 @@
 ---
 description: 這些Android TVSDK API中的變更支援刪除和取代廣告。
-seo-description: 這些Android TVSDK API中的變更支援刪除和取代廣告。
-seo-title: 廣告刪除和取代API變更
 title: 廣告刪除和取代API變更
-uuid: 2bb8a331-6851-4442-99de-b01500a0e1e2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
