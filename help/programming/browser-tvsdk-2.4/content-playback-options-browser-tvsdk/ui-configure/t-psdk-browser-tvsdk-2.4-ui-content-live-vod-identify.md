@@ -1,13 +1,10 @@
 ---
 description: 您可能需要知道媒體內容是即時或VOD。
-seo-description: 您可能需要知道媒體內容是即時或VOD。
-seo-title: 識別內容是即時或VOD
 title: 識別內容是即時或VOD
-uuid: 5455801e-b5eb-4829-bde6-ef4440cd69c5
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
