@@ -1,13 +1,10 @@
 ---
-description: 協調授權與政策執行的一種方式，是將這些功能建置在權益伺服器中。 Adobe提供SEES參考權益伺服器，您可使用它來建立自己的伺服器。
-seo-description: 協調授權與政策執行的一種方式，是將這些功能建置在權益伺服器中。 Adobe提供SEES參考權益伺服器，您可使用它來建立自己的伺服器。
-seo-title: 參考伺服器範例ExpressPlay權益伺服器(SEES)
+description: 協調授權與政策執行的一種方式，是將這些功能建置在權益伺服器中。 Adobe提供SEES參考權益伺服器，您可使用它來建立您自己的伺服器。
 title: 參考伺服器範例ExpressPlay權益伺服器(SEES)
-uuid: 99e42f76-7730-42fc-a9a9-f6396ac12c02
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 參考伺服器：範例ExpressPlay Entitlement Server(SEES){#reference-server-sample-expressplay-entitlement-server-sees}
 
-協調授權與政策執行的一種方式，是將這些功能建置在權益伺服器中。 Adobe提供SEES參考權益伺服器，您可使用它來建立自己的伺服器。
+協調授權與政策執行的一種方式，是將這些功能建置在權益伺服器中。 Adobe提供SEES參考權益伺服器，您可使用它來建立您自己的伺服器。
 
 參考伺服器SEES會示範ExpressPlay Entitlement Service，其中顯示兩項服務：基本的時間型權益和裝置系結權益。
 
