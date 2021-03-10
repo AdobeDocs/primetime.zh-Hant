@@ -1,13 +1,10 @@
 ---
 description: 對於即時和VOD媒體，瀏覽器TVSDK會下載與中解析度位元速率相關聯的播放清單，然後下載由播放清單定義的中解析度位元速率媒體區段，以開始播放。
-seo-description: 對於即時和VOD媒體，瀏覽器TVSDK會下載與中解析度位元速率相關聯的播放清單，然後下載由播放清單定義的中解析度位元速率媒體區段，以開始播放。
-seo-title: 媒體播放
 title: 媒體播放
-uuid: 454f84fe-8077-4f37-8e62-1d6ba0fcde27
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
