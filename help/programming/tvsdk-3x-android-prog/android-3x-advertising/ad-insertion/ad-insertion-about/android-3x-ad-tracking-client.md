@@ -1,13 +1,10 @@
 ---
 description: TVSDK會自動追蹤VOD和即時／線性串流的廣告。
-seo-description: TVSDK會自動追蹤VOD和即時／線性串流的廣告。
-seo-title: 追蹤用戶端廣告
 title: 追蹤用戶端廣告
-uuid: 1c239ddf-3414-49b9-83ae-dcfcb0c4e283
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
