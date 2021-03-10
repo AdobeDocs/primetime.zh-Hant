@@ -1,9 +1,9 @@
 ---
-seo-title: 部署Adobe Primetime DRM Server以進行受保護的串流
-title: 部署Adobe Primetime DRM Server以進行受保護的串流
-uuid: 83ef8237-0026-4677-b42b-ea4b6de19630
+title: 部署Adobe PrimetimeDRM Server進行受保護的串流
+description: 部署Adobe PrimetimeDRM Server進行受保護的串流
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# 部署Adobe Primetime DRM Server for Protected Streaming{#deploying-the-adobe-primetime-drm-server-for-protected-streaming}
+# 部署Adobe PrimetimeDRM Server for Protected Streaming{#deploying-the-adobe-primetime-drm-server-for-protected-streaming}
 
-在部署Adobe Primetime DRM Server for Protected Streaming之前，您必須已安裝Java和Tomcat的版本，如「需求」主題所列。
+在部署用於受保護流的Adobe PrimetimeDRM伺服器之前，必須已安裝Java和Tomcat的版本，如「要求」主題中所列。
 
 Primetime DRM Server for Protected Streaming套件包含[!DNL flashaccesserver.war]。 如果您：
 
