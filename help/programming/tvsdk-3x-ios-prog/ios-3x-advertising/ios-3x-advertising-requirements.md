@@ -1,13 +1,10 @@
 ---
-description: 您可以使用Adobe Primetime廣告決策介面，將廣告插入VOD和即時／線性內容。
-seo-description: 您可以使用Adobe Primetime廣告決策介面，將廣告插入VOD和即時／線性內容。
-seo-title: 廣告需求
+description: 您可以使用Adobe Primetime廣告決策介面，在VOD和即時／線性內容中插入廣告。
 title: 廣告需求
-uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 廣告需求{#advertising-requirements}
 
-您可以使用Adobe Primetime廣告決策介面，將廣告插入VOD和即時／線性內容。
+您可以使用Adobe Primetime廣告決策介面，在VOD和即時／線性內容中插入廣告。
 
 <!--<a id="section_A2966DC850E140FE9400A1D9E412F819"></a>-->
 
