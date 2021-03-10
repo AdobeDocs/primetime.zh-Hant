@@ -1,13 +1,10 @@
 ---
-description: 使用Adobe Access時，工作流程的不同點會包含兩個關鍵步驟。 每個資產必須準備一次內容，以建立受保護的內容。 內容獲取是多次完成，每個想要觀看受保護資產的消費者只需一次。
-seo-description: 使用Adobe Access時，工作流程的不同點會包含兩個關鍵步驟。 每個資產必須準備一次內容，以建立受保護的內容。 內容獲取是多次完成，每個想要觀看受保護資產的消費者只需一次。
-seo-title: 內容準備
+description: 使用「Adobe存取」時，工作流程的不同點會包含兩個關鍵步驟。 每個資產必須準備一次內容，以建立受保護的內容。 內容獲取是多次完成，每個想要觀看受保護資產的消費者只需一次。
 title: 內容準備
-uuid: 7a3562c6-6033-4e28-8f0a-18e3cb8987b9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # 內容準備{#content-preparation}
 
-使用Adobe Access時，工作流程的不同點會包含兩個關鍵步驟。 每個資產必須準備一次內容，以建立受保護的內容。 內容獲取是多次完成，每個想要觀看受保護資產的消費者只需一次。
+使用「Adobe存取」時，工作流程的不同點會包含兩個關鍵步驟。 每個資產必須準備一次內容，以建立受保護的內容。 內容獲取是多次完成，每個想要觀看受保護資產的消費者只需一次。
 
-您必須先以FLV或F4V視訊格式編碼內容，建立一或多個原則，指定內容的使用規則，並使用Adobe Access SDK封裝內容，才能將內容發佈。
+您必須先以FLV或F4V視訊格式編碼內容，建立一或多個原則，指定內容的使用規則，並使用Adobe存取SDK封裝內容，才能將內容發佈。
 
 編碼、封裝和散發內容的步驟如下：
 
@@ -30,11 +27,11 @@ ht-degree: 0%
 
 1. 封裝內容並指定要套用的原則。
 
-   Adobe Access SDK會使用內容加密金鑰(CEK)加密內容，並將一或多個原則系結至內容。 結果是*受保護的內容檔案*只能由從對應的授權伺服器取得授權的消費者播放。
+   Adobe存取SDK會使用內容加密金鑰(CEK)加密內容，並將一或多個原則系結至內容。 結果是*受保護的內容檔案*只能由從對應的授權伺服器取得授權的消費者播放。
 
    在封裝期間，內容會使用CEK加密。 CEK使用許可證伺服器公共密鑰加密，並隨策略一起包括在DRM元資料中。 DRM元資料使用Packager私鑰進行簽名，元資料被包括在受保護的內容中。
 
 1. 將受保護的內容提供給消費者。
 
-   受保護的內容通常使用內容分發網路(CDN)來分發。 CDN可使用用戶端執行時期支援的任何機制，例如Flash Media Server、Adobe HTTP Dynamic Streaming用於多位元速率串流，或HTTP Web Server用於漸進式下載。
+   受保護的內容通常使用內容分發網路(CDN)來分發。 CDN可使用用戶端執行時期支援的任何機制，例如Flash Media Server、AdobeHTTP Dynamic Streaming多位元速率串流，或HTTP Web Server進行漸進式下載。
 
