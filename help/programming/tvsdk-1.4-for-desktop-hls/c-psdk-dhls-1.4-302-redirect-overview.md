@@ -1,14 +1,11 @@
 ---
 description: 302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
-seo-description: 302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
-seo-title: HTTP 302重新導向最佳化
 title: HTTP 302重新導向最佳化
-uuid: 58593d5f-a639-4d87-9589-dba6b2dbba38
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 0%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
 
@@ -23,8 +20,8 @@ ht-degree: 0%
 
 如果您啟用此功能，則只有下列條件中的&#x200B;*all*&#x200B;為true時，此功能才能正常運作；否則，不會發生重新導向最佳化，而302個回應會持續發生：
 
-* 您的應用程式是使用`-swf-version` 21或更新版本，編譯為Adobe Flash Player 11.8。
-* 您的使用者已安裝Adobe Flash Player 11.8或更新版本。
+* 您的應用程式是使用`-swf-version` 21或更高版本編譯為AdobeFlash Player11.8的。
+* 您的最終用戶安裝了AdobeFlash Player11.8或更高版本。
 
 >[!IMPORTANT]
 >
