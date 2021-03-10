@@ -1,13 +1,10 @@
 ---
 description: 當目前的播放時間符合開始時間時，您可以使用TimedMetadata。
-seo-description: 當目前的播放時間符合開始時間時，您可以使用TimedMetadata。
-seo-title: 使用計時中繼資料
 title: 使用計時中繼資料
-uuid: 98bb8c08-2794-42d6-b5c3-b1047ac804fe
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '152'
 ht-degree: 1%
 
 ---
