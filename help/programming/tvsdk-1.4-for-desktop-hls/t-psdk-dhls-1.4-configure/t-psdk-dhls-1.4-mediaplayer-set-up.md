@@ -1,13 +1,10 @@
 ---
 description: MediaPlayer介面可封裝媒體播放器的功能與行為。
-seo-description: MediaPlayer介面可封裝媒體播放器的功能與行為。
-seo-title: 設定MediaPlayer
 title: 設定MediaPlayer
-uuid: 4b27643c-9ccd-4abb-9793-475d06ee2a88
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ TVSDK提供`MediaPlayer`介面的單一實作：defaultMediaPlayer類別。 當�
 
 >[!NOTE]
 >
->僅與`DefaultMediaPlayer`介面公開的方法交互。`MediaPlayer`
+>僅與`MediaPlayer`介面公開的方法交互。`DefaultMediaPlayer`
 
 1. 使用應用程式載入的`authorizedFeatures`例項實例化`MediaPlayerContext`（請參閱[載入您的已簽署Token](../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)）。
 
