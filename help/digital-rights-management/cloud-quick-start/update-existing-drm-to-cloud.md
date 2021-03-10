@@ -1,9 +1,9 @@
 ---
-seo-title: 更新現有的DRM內容以使用Cloud DRM（可選）
 title: 更新現有的DRM內容以使用Cloud DRM（可選）
-uuid: cfabeb06-210f-45af-b8a6-8e0b03a76103
+description: 更新現有的DRM內容以使用Cloud DRM（可選）
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 ## 查找DRM元資料{#section_28721CB7966F40708AEC8637F2E9BB72}
 
-使用HTTP技術（例如HDS或HLS）的內容使用參照Adobe Access DRM中繼資料的資訊清單。 在HDS中，元資料由`<drmmeta>`標籤引用，在HLS中，元資料由`#EXT-X-FAXS-CM`標籤引用。 在任一情況下，中繼資料都可內嵌在資訊清單中，成為基本64編碼的點滴，或以二進位檔案從外部參照。 如果中繼資料內嵌／內嵌於資訊清單中，您可能必須先將中繼資料基本64解碼為二進位資料，再使用該資料來實例化DRM中繼資料。
+使用HTTP技術（例如HDS或HLS）的內容使用參考Adobe存取DRM中繼資料的資訊清單。 在HDS中，元資料由`<drmmeta>`標籤引用，在HLS中，元資料由`#EXT-X-FAXS-CM`標籤引用。 在任一情況下，中繼資料都可內嵌在資訊清單中，成為基本64編碼的點滴，或以二進位檔案從外部參照。 如果中繼資料內嵌／內嵌於資訊清單中，您可能必須先將中繼資料基本64解碼為二進位資料，再使用該資料來實例化DRM中繼資料。
 
 ## 使用隨附的OfflinePacakger.jar {#section_37C2091856E44AA380D742C72B4DD1A7}
 
@@ -36,4 +36,4 @@ ht-degree: 0%
 
 ## 使用Primetime DRM Java SDK重新標題{#section_7EDBAC4C78DF4CD5BE8410EEAD8437A2}
 
-更新現有的DRM中繼資料可透過使用Primetime DRM（先前稱為Adobe Access DRM）Java SDK進行程式化方式。 如需詳細資訊，請參閱SDK [!DNL /Reference Implmentation/Command Line Tools/samples/]套件中的[!DNL RegenerateMetadata.java]程式碼範例。 Adobe Access Java SDK不屬於本CloudDRM保護套件，必須直接向Adobe取得。 如需詳細資訊，請連絡您的Adobe業務聯絡人。
+更新現有的DRM元資料可通過使用Primetime DRM(先前稱為Adobe訪問DRM)Java SDK進行寫程式。 如需詳細資訊，請參閱SDK [!DNL /Reference Implmentation/Command Line Tools/samples/]套件中的[!DNL RegenerateMetadata.java]程式碼範例。 Adobe存取Java SDK不屬於本CloudDRM保護套件，必須直接從Adobe取得。 如需詳細資訊，請連絡您的Adobe業務聯絡人。
