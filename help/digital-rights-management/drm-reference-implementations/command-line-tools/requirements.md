@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 命令列工具需求
 title: 命令列工具需求
-uuid: 62f6e7ef-f593-4184-b217-2d086fead733
+description: 命令列工具需求
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---
@@ -16,7 +14,7 @@ ht-degree: 0%
 # 命令行工具要求{#command-line-tools-requirements}
 
 * Java 1.5或更新版本。
-* Adobe核發的封裝、傳輸和授權伺服器認證（憑證和密碼）。
+* 由Adobe核發的封裝、傳輸和授權伺服器憑證（憑證和密碼）。
 
    這些憑證可用來加密和簽署視訊檔案、簽署「原則更新」和「撤銷」清單，以及預先產生授權。
 
