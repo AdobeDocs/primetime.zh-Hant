@@ -1,9 +1,9 @@
 ---
-seo-title: 非SWF應用程式允許清單
 title: 非SWF應用程式允許清單
-uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
+description: 非SWF應用程式允許清單
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # 非SWF應用程式允許列出{#non-swf-application-isting}
 
-AIR是第一個提供應用程式允許清單的平台，以及您用來允許清單非SWF應用程式（Adobe AIR、iOS、Android等）的屬性名稱 保留其原名：`policy.allowedAIRApplication.n`。 這可讓所有非Flash應用程式在發佈前，先使用簽署憑證來簽署內容。 這稱為&#x200B;*應用程式ID*。 您可以使用[!DNL AdobePublisherIDUtility.jar]工具來擷取應用程式ID。 此允許清單將強制執行於支援Primetime DRM的任何用戶端。
+AIR是第一個提供應用程式允許清單的平台，以及您用來允許清單非SWF應用程式(Adobe AIR、iOS、Android等)的屬性名稱 保留其原名：`policy.allowedAIRApplication.n`。 這可讓所有非Flash應用程式在發佈前，先使用簽署憑證來簽署內容。 這稱為&#x200B;*應用程式ID*。 您可以使用[!DNL AdobePublisherIDUtility.jar]工具來擷取應用程式ID。 此允許清單將強制執行於支援Primetime DRM的任何用戶端。
 
 應用程式ID衍生自用於簽署特定應用程式之簽署憑證的公開金鑰。 如果憑證中的公開金鑰過期，則所有先前的內容都允許列在僅播放使用舊憑證簽署的應用程式時，新應用程式將不會播放（使用新憑證簽署）。
 
