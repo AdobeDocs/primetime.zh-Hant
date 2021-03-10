@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK支援許多MP3和MP4功能，您可實作這些功能，以新增應用程式的功能。
-seo-description: 瀏覽器TVSDK支援許多MP3和MP4功能，您可實作這些功能，以新增應用程式的功能。
-seo-title: 支援的MP3和MP4功能
 title: 支援的MP3和MP4功能
-uuid: 33e3130f-fc78-40b8-a4b7-2fcdd5a2b4f9
 translation-type: tm+mt
-source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
@@ -18,7 +15,7 @@ ht-degree: 0%
 瀏覽器TVSDK支援許多MP3和MP4功能，您可實作這些功能，以新增應用程式的功能。
 * [MP3音訊功能——核心播放](#core-playback)
 * [MP4音訊功能——核心播放](#mp4-audio-features)
-* [MP4視訊功能——核心廣告插入](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
+* [MP4視訊功能——核心Ad Insertion](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
 
 >[!TIP]
 >
@@ -46,5 +43,5 @@ ht-degree: 0%
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| 廣告插入 | MP4 VOD | 前滾 | 不支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 廣告插入 | MP4 VOD | 後置卷 | 不支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | MP4 VOD | 前滾 | 不支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | MP4 VOD | 後置卷 | 不支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
