@@ -1,13 +1,10 @@
 ---
 description: 即時啟動會在一或多個通道上預載部分媒體。 當使用者選取或切換頻道後，由於部分緩衝已完成，內容會更早開始。
-seo-description: 即時啟動會在一或多個通道上預載部分媒體。 當使用者選取或切換頻道後，由於部分緩衝已完成，內容會更早開始。
-seo-title: 立即啟動
 title: 立即啟動
-uuid: 23864919-9045-4223-9e47-464e38ebe5ef
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
