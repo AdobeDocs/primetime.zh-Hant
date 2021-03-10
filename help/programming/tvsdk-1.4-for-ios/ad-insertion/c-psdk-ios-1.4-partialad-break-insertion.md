@@ -1,13 +1,10 @@
 ---
 description: TVSDK提供類似電視的體驗，讓您能夠在廣告中間加入即時串流。
-seo-description: TVSDK提供類似電視的體驗，讓您能夠在廣告中間加入即時串流。
-seo-title: 部分插入廣告插入
 title: 部分插入廣告插入
-uuid: b6ee62da-c4d1-42f2-b03d-f73247f8e585
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
