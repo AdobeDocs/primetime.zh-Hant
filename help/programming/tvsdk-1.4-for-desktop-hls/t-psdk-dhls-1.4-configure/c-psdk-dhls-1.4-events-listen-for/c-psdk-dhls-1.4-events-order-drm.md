@@ -1,13 +1,10 @@
 ---
 description: TVSDK響應於DRM相關操作（例如當有新的DRM元資料可用時）來調度數字版權管理(DRM)事件。 您的播放器可以實作回應這些事件的動作。
-seo-description: TVSDK響應於DRM相關操作（例如當有新的DRM元資料可用時）來調度數字版權管理(DRM)事件。 您的播放器可以實作回應這些事件的動作。
-seo-title: DRM事件
 title: DRM事件
-uuid: 729fe524-1047-4188-b4e6-96bfc5af4ae0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
