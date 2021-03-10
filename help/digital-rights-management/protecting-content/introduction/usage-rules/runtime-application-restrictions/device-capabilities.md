@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 播放受保護內容所需的裝置功能
 title: 播放受保護內容所需的裝置功能
-uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
+description: 播放受保護內容所需的裝置功能
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -44,7 +42,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Primetime DRM用戶端2.0.2版及更新版本支援此使用規則。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。
+>此使用規則受Adobe PrimetimeDRM客戶端2.0.2版和更高版本支援。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。
 >
 >請參閱[最低客戶端版本](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)。
 
