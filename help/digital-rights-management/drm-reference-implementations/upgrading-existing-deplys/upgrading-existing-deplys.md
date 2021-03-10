@@ -1,13 +1,10 @@
 ---
-description: 若要升級支援3.0版參考實作授權伺服器或Watched Folder Packager的伺服器，您必須將部署在應用程式伺服器上的。war檔案取代為Adobe Primetime DRM參考實作伺服器所包含的檔案。
-seo-description: 若要升級支援3.0版參考實作授權伺服器或Watched Folder Packager的伺服器，您必須將部署在應用程式伺服器上的。war檔案取代為Adobe Primetime DRM參考實作伺服器所包含的檔案。
-seo-title: 升級現有部署
+description: 若要升級支援3.0版參考實作授權伺服器或Watched Folder Packager的伺服器，您必須將部署在應用程式伺服器上的。war檔案取代為Adobe PrimetimeDRM參考實作伺服器所包含的檔案。
 title: 升級現有部署
-uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 概述{#upgrade-existing-deployments-overview}
 
-若要升級支援3.0版參考實作授權伺服器或Watched Folder Packager的伺服器，您必須將部署在應用程式伺服器上的。war檔案取代為Adobe Primetime DRM參考實作伺服器所包含的檔案。
+若要升級支援3.0版參考實作授權伺服器或Watched Folder Packager的伺服器，您必須將部署在應用程式伺服器上的。war檔案取代為Adobe PrimetimeDRM參考實作伺服器所包含的檔案。
 
 要使用參考實施許可證伺服器的域註冊，需要幾個新的資料庫表。 您需要重新建立整個參考實施資料庫並運行`CreateSampleDB.sql`。
 
