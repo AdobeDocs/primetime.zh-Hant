@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 使用Ant準備密碼
 title: 使用Ant準備密碼
-uuid: 9419ab0d-b448-4881-9d26-35c00f0b13bc
+description: 使用Ant準備密碼
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '42'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
