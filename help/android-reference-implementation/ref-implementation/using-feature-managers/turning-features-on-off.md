@@ -1,13 +1,10 @@
 ---
 description: 您可以使用Manager Factory來開啟或關閉功能，而不需執行程式碼。
-seo-description: 您可以使用Manager Factory來開啟或關閉功能，而不需執行程式碼。
-seo-title: 使用ManagerFactory開啟或關閉功能
 title: 使用ManagerFactory開啟或關閉功能
-uuid: 385c2707-95f7-4628-8d25-67731151cb6a
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
