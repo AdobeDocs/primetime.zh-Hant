@@ -1,9 +1,9 @@
 ---
-seo-title: HSM配置
 title: HSM配置
-uuid: 1cc5be99-c24c-4c1e-9348-fb69f96d8ca5
+description: HSM配置
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 0%
@@ -24,5 +24,5 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->從Java 1.7開始，64位元Sun Java for Windows不支援Adobe Access DRM與HSM裝置通訊所需的PKCS11介面。 如果您打算使用HSM，請使用32位版本的Java，或使用支援完整PKCS11介面的JDK。
+>從Java 1.7開始，64位Sun Java for Windows不支援AdobeAccess DRM與HSM設備通信所需的PKCS11介面。 如果您打算使用HSM，請使用32位版本的Java，或使用支援完整PKCS11介面的JDK。
 
