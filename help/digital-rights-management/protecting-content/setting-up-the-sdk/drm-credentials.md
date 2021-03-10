@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Primetime DRM認證
-title: Adobe Primetime DRM認證
-uuid: 593a5157-5a8e-4916-9308-626e1ab8fad5
+title: Adobe PrimetimeDRM認證
+description: Adobe PrimetimeDRM認證
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Adobe Primetime DRM認證{#adobe-primetime-drm-credentials}
+# Adobe PrimetimeDRM憑據{#adobe-primetime-drm-credentials}
 
 您必須具備下列類型的認證才能使用Primetime DRM:
 
