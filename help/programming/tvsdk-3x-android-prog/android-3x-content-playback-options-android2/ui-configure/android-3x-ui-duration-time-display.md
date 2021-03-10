@@ -1,13 +1,10 @@
 ---
 description: 您可以使用TVSDK來擷取播放器在媒體中位置的資訊，並在搜尋列上顯示。
-seo-description: 您可以使用TVSDK來擷取播放器在媒體中位置的資訊，並在搜尋列上顯示。
-seo-title: 顯示視訊的持續時間、目前時間和剩餘時間
 title: 顯示視訊的持續時間、目前時間和剩餘時間
-uuid: 29bb6bc2-dab1-4f35-abcf-d3213605ee70
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
