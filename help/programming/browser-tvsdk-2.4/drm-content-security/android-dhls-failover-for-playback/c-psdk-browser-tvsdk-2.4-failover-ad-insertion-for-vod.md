@@ -1,13 +1,10 @@
 ---
 description: 隨選視訊(VOD)廣告插入程式由廣告解析、廣告插入和廣告播放階段組成。 對於廣告追蹤，瀏覽器TVSDK必須通知遠端追蹤伺服器有關每個廣告的播放進度。 當出現意外情況時，會採取適當的動作。
-seo-description: 隨選視訊(VOD)廣告插入程式由廣告解析、廣告插入和廣告播放階段組成。 對於廣告追蹤，瀏覽器TVSDK必須通知遠端追蹤伺服器有關每個廣告的播放進度。 當出現意外情況時，會採取適當的動作。
-seo-title: 針對VOD的廣告插入和容錯
 title: 針對VOD的廣告插入和容錯
-uuid: 33f7aad5-fc4f-459d-8c29-01ba1353dfcc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -26,9 +23,9 @@ ht-degree: 0%
 * 中繼資料廣告提供者
 
    廣告資料會編碼為純文字JSON檔案。
-* Adobe Primetime廣告決策與供應商
+* Adobe Primetime廣告決策提供商
 
-   瀏覽器TVSDK會傳送請求至Adobe Primetime廣告決策後端伺服器，包括一組定位參數和資產識別碼。 Adobe Primetime廣告決策會以包含所需廣告資訊的SMIL（同步化多媒體整合語言）檔案做出回應。
+   瀏覽器TVSDK會傳送要求（包括一組定位參數和資產識別碼）至Adobe Primetime廣告決策後端伺服器。 Adobe Primetime廣告決策會以包含所需廣告資訊的SMIL（同步化多媒體整合語言）檔案做出回應。
 
    在此階段中，可能會發生以下故障切換情形之一：
 
