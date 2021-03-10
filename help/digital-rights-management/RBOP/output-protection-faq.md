@@ -1,13 +1,10 @@
 ---
 description: 關於使用基於解析度的輸出保護的常見問題。
-seo-description: 關於使用基於解析度的輸出保護的常見問題。
-seo-title: RBOP常見問答集
 title: RBOP常見問答集
-uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: fa9e89dd63c8b4c9d6eee78258957cfd30c29088
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 關於使用基於解析度的輸出保護的常見問題。
 
-* **Q.** *當定義像素限制的數位輸出要求時，我在離開HDCP版本時會遇到剖析／格式錯誤，但我沒有任何HDCP要求。在這種情況下，我應如何設定數位輸出需求？* **A.** 由於用戶端目前不支援HDCP版本檢查，Adobe建議將HDCP版本設定為 `1.0`。這將確保您的配置格式正確，並且在支援HDCP版本檢查時，在將來語義上保持一致。 以下程式碼片段說明使用此HDCP值的設定。
+* **Q.** *當定義像素限制的數位輸出要求時，我在離開HDCP版本時會遇到剖析／格式錯誤，但我沒有任何HDCP要求。在這種情況下，我應如何設定數位輸出需求？* **A.** 由於HDCP版本檢查目前在客戶端中不受支援，Adobe建議將HDCP版本設定為 `1.0`。這將確保您的配置格式正確，並且在支援HDCP版本檢查時，在將來語義上保持一致。 以下程式碼片段說明使用此HDCP值的設定。
 
    ```
    { "pixelConstraints":  
