@@ -1,13 +1,10 @@
 ---
-description: 通常，所有Primetime DRM授權在建立時都會系結至獨特的裝置。 此系結可防止使用者在未取得授權的情況下，在不同裝置間共用授權。 除了依裝置進行系結外，Primetime DRM還提供將授權系結至裝置網域或裝置群組的能力。
-seo-description: 通常，所有Primetime DRM授權在建立時都會系結至獨特的裝置。 此系結可防止使用者在未取得授權的情況下，在不同裝置間共用授權。 除了依裝置進行系結外，Primetime DRM還提供將授權系結至裝置網域或裝置群組的能力。
-seo-title: 使用網域支援播放加密內容
+description: 通常，所有Primetime DRM授權在建立時都會系結至獨特的裝置。 此系結可防止使用者在未取得授權的情況下，跨不同裝置共用授權。 除了依裝置進行系結外，Primetime DRM還提供將授權系結至裝置網域或裝置群組的能力。
 title: 使用網域支援播放加密內容
-uuid: 8854cc0f-9bfc-4833-82d7-a3f46ac88e06
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # 設備域支援{#device-domain-support}
 
-通常，所有Primetime DRM授權在建立時都會系結至獨特的裝置。 此系結可防止使用者在未取得授權的情況下，在不同裝置間共用授權。 除了依裝置進行系結外，Primetime DRM還提供將授權系結至裝置網域或裝置群組的能力。
+通常，所有Primetime DRM授權在建立時都會系結至獨特的裝置。 此系結可防止使用者在未取得授權的情況下，跨不同裝置共用授權。 除了依裝置進行系結外，Primetime DRM還提供將授權系結至裝置網域或裝置群組的能力。
 
 如果內容中繼資料指定需要裝置網域註冊，應用程式就可以叫用API來加入裝置群組。 此操作會觸發要發送到域伺服器的域註冊請求。 一旦授權發放至裝置群組後，即可匯出授權並與已加入裝置群組的其他裝置共用。
 
