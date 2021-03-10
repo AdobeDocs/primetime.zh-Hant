@@ -1,14 +1,11 @@
 ---
 description: 當視訊的DRM中繼資料包含在媒體串流中時，您可以在播放期間執行驗證。
-seo-description: 當視訊的DRM中繼資料包含在媒體串流中時，您可以在播放期間執行驗證。
-seo-title: 播放期間的DRM驗證
 title: 播放期間的DRM驗證
-uuid: b3ff8edd-a3d4-470e-8899-580eca9fff4a
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 0%
+source-wordcount: '194'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +20,7 @@ ht-degree: 0%
 >
 >在開始播放之前，請確定您是否處理網域系結授權，以及是否需要網域驗證。 如果是，請完成域驗證並加入域。
 
-1. 當在資產中發現新的DRM中繼資料時，會在應用程式層傳送事件。
+1. 在資產中發現新的DRM中繼資料時，會在應用程式層傳送事件。
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
