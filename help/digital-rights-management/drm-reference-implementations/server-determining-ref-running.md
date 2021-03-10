@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 確定Reference Implementation License Server是否正常運行
 title: 確定Reference Implementation License Server是否正常運行
-uuid: afd82d6d-a11c-48ff-b48c-8f81d4b406a0
+description: 確定Reference Implementation License Server是否正常運行
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -57,7 +55,7 @@ ht-degree: 0%
 1. 將兩個生成的檔案複製到Tomcat伺服器上的[!DNL webapps\ROOT\Content]資料夾。
 1. 轉到[!DNL Reference Implementation\Sample Video Players\Desktop\Flash Player\Release]目錄，並將內容複製到Tomcat伺服器上的 [!DNL webapps\ROOT\SVP\] 資料夾。
 
-1. 安裝Flash Player 10.1版或更新版本。
+1. 安裝Flash Player10.1版或更新版本。
 1. 開啟網頁瀏覽器並前往下列URL:[!DNL        https:// localhost:8080/SVP/player.html]
 
 1. 前往下列URL，然後按一下&#x200B;**[!UICONTROL Play]**:[!DNL https:// localhost:8080/Content/] *`your_encrypted_FLV`*。
