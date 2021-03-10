@@ -1,9 +1,9 @@
 ---
-seo-title: 術語和核心概念
 title: 術語和核心概念
-uuid: dc269873-7b63-4c18-bada-5338f4da0edd
+description: 術語和核心概念
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 0%
@@ -33,11 +33,11 @@ ht-degree: 0%
 
 **內容封裝器**
 
-*內容* 封裝商是包裝內容以搭配Adobe Primetime DRM使用的組織。內容擁有者或發佈者可選擇封裝其內容，或徵求第三方服務來封裝其內容，並透過網際網路以電子方式發佈內容。
+*內容* 封裝商是負責封裝內容以搭配Adobe PrimetimeDRM使用的組織。內容擁有者或發佈者可選擇封裝其內容，或徵求第三方服務來封裝其內容，並透過網際網路以電子方式發佈內容。
 
 **數位憑證**
 
-*數位憑證* (也稱為 *憑證*)可將實體（例如個人、組織或系統）系結至特定的公開金鑰和私密金鑰對。數位憑證可視為驗證個人、系統或組織身分的電子憑證。
+*數位憑證* (也稱為 *憑證*)可將實體（例如個人、組織或系統）系結至特定的公開和私密金鑰對。數位憑證可視為驗證個人、系統或組織身分的電子憑證。
 
 **數位簽名**
 
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 **DRM中繼資料**
 
-用戶端（即Adobe® Flash® Player、Adobe® AIR®執行時期和Primetime用戶端）傳送以識別所要求內容的資訊。
+用戶端(即Adobe®Flash®播放器、Adobe® AIR®執行時期和Primetime用戶端)傳送以識別所要求內容的資訊。
 
 **授權**
 
