@@ -1,13 +1,10 @@
 ---
 description: 瀏覽器TVSDK支援許多您可實作的HLS功能，以新增功能至視訊應用程式。
-seo-description: 瀏覽器TVSDK支援許多您可實作的HLS功能，以新增功能至視訊應用程式。
-seo-title: 支援的HLS功能
 title: 支援的HLS功能
-uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '736'
 ht-degree: 0%
 
 ---
@@ -30,7 +27,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在Safari欄「平台限制」中，表示不支援使用案例，因為該平台不允許實作支援。 如果是插入，請使用SSAI。 如果播放限制對您很重要，請強制在Safari上回退至Flash，直到平台支援廣告插入使用案例。
+>在Safari欄「平台限制」中，表示不支援使用案例，因為該平台不允許實作支援。 如果是插入，請使用SSAI。 如果您有重要的播放限制，請強制回退至SafariFlash，直到平台支援廣告插入使用案例為止。
 
 <!--<a id="section_9FB9193D5763448CB228B96164661738"></a>-->
 
@@ -88,31 +85,31 @@ Removed Nielsen row
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| 整合 | VOD + Live | Adobe Analytics VHL整合 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| 整合 | VOD + Live | Adobe AnalyticsVHL整合 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 
 ## HLS進階廣告插入功能(CSAI){#hls-advanced-ad-insertion}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| 廣告插入 | VOD | 僅限廣告 | 不支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 廣告插入 | VOD + Live | 定位參數 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 廣告插入 | VOD + Live | 自訂廣告原則 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
-| 廣告插入 | VOD + Live | 延遲廣告載入 | ![支援的圖示](assets/supported15.png) | 不支援 | 平台限制 |
-| 廣告插入 | VOD | 配套廣告、橫幅廣告和可點選廣告 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 廣告插入 | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
+| Ad Insertion | VOD | 僅限廣告 | 不支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | VOD + Live | 定位參數 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | VOD + Live | 自訂廣告原則 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
+| Ad Insertion | VOD + Live | 延遲廣告載入 | ![支援的圖示](assets/supported15.png) | 不支援 | 平台限制 |
+| Ad Insertion | VOD | 配套廣告、橫幅廣告和可點選廣告 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
 ## HLS核心廣告插入功能(CSAI){#hls-core-ad-insertion}
 
 | 類別 | 內容類型 | 功能 | Flash | HTML5:FF、IE、Chrome、Android Chrome | HTML5:Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| 廣告插入 | VOD + Live | 前滾 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 廣告插入 | VOD + Live | 中間卷 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
-| 廣告插入 | VOD + Live | 後置卷 | 僅限VOD | 僅限VOD | 僅限VOD |
-| 廣告插入 | FER VOD | 廣告解析度與行為 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
-| 廣告插入 | VOD + Live | 預設廣告原則 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
-| 廣告插入 | VOD + Live | VAST 2.0/3.0 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 廣告插入 | VOD + Live | VMAP 1.0 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 廣告插入 | VOD + Live | CRS v3.1 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | VOD + Live | 前滾 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | VOD + Live | 中間卷 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
+| Ad Insertion | VOD + Live | 後置卷 | 僅限VOD | 僅限VOD | 僅限VOD |
+| Ad Insertion | FER VOD | 廣告解析度與行為 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
+| Ad Insertion | VOD + Live | 預設廣告原則 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | VOD + Live | VMAP 1.0 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| Ad Insertion | VOD + Live | CRS v3.1 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 
 ## HLS內容保護功能{#hls-content-protection}
 
@@ -120,7 +117,7 @@ Removed Nielsen row
 |--- |--- |--- |--- |--- |--- |
 | 內容保護 | VOD + Live | AES-128 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 內容保護 | VOD + Live | Sample-AES | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 內容保護 | VOD | DRM | Adobe Access | 不支援 | FairPlay |
+| 內容保護 | VOD | DRM | Adobe存取 | 不支援 | FairPlay |
 
 ## HLS高級回放功能{#hls-advanced-playback}
 
