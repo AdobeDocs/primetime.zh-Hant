@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: 允許播放受保護內容的Primetime DRM應用程式清單
 title: 允許播放受保護內容的Primetime DRM應用程式清單
-uuid: 23dd4faf-7992-4ee9-97ce-c6004ee995c2
+description: 允許播放受保護內容的Primetime DRM應用程式清單
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
@@ -21,4 +19,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您使用Adobe Flash Builder建立受保護的應用程式，您必須確定您未在除錯模式中部署應用程式。 當您在除錯模式中部署應用程式時，Flash Builder會附加`.debug`至AIR應用程式ID，如此會造成Primetime DRM中的允許清單功能異常運作。
+>如果您使用AdobeFlash Builder來建立受保護的應用程式，您必須確定您未在除錯模式中部署應用程式。 當您在除錯模式中部署應用程式時，Flash Builder會附加`.debug`至AIR應用程式ID，如此會造成Primetime DRM中的允許清單功能意外運作。
