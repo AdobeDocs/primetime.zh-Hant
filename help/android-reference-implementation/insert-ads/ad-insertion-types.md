@@ -1,13 +1,10 @@
 ---
 description: TVSDK目前提供TVSDK廣告、直接廣告插播和自訂廣告標籤的內建廣告供應商中繼資料支援。
-seo-description: TVSDK目前提供TVSDK廣告、直接廣告插播和自訂廣告標籤的內建廣告供應商中繼資料支援。
-seo-title: 廣告插入類型
 title: 廣告插入類型
-uuid: 6b5c3555-1ddd-4215-8bb2-03d16bb818c5
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
