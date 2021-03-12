@@ -3,10 +3,10 @@ title: Primetime 發行說明
 description: Primetime 發行說明
 copied-description: true
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 28%
+source-wordcount: '378'
+ht-degree: 26%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 28%
 # Primetime 發行說明
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案可提供特定版本的資訊、系統需求、限制、已修正問題和已知問題。
+
+## TVSDK 3.13 iOS中的增強功能和修正
+
+本版次針對即時、VOD和FER串流提供DEMUXED &#39;HLS/CMAF&#39;（前滾、移轉和後滾）廣告支援。
+
+如需其他修正和詳細資訊，請參閱「iOS適用的TVSDK發行說明」](../release-notes/tvsdk-3x-ios.md)[
 
 ## PTAI 21.2.2的增強功能和修正
 
