@@ -2,9 +2,9 @@
 description: 您可以使用Adobe Primetime廣告決策介面，在VOD和即時／線性內容中插入廣告。
 title: 廣告需求
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,4 @@ Primetime廣告決策可與TVSDK搭配使用，以識別廣告機會、解決廣
 * 如果主要內容包含僅音訊串流，則廣告內容也必須包含僅音訊串流。
 * 如果主內容包含字幕流，則廣告內容必須未加密。
 * 如果主要內容是多位元速率(MBR)，則廣告內容也必須是MBR。
-* 如果主要內容有替代的音軌，則每個廣告必須至少有一個僅限音訊的串流。
-
-如果廣告至少沒有一個僅限音訊的串流，則會略過廣告。
+* 如果主要內容有替代的音軌，則每個廣告至少必須有一個僅限音訊的串流，或者廣告應取消混音。 如果廣告至少沒有一個僅限音訊的串流，也沒有取消混音，則會略過廣告。
