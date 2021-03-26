@@ -5,15 +5,15 @@ description: Adobe Primetime規格
 seo-description: Adobe Primetime規格
 topic-tags: Adobe Primetime Specifications
 translation-type: tm+mt
-source-git-commit: 53014028cf1a9cb48f93781cbbb4aec3e2bcc523
+source-git-commit: 0bd926b510cd23268b6374ef81a09efcc5d1371a
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
 
-# Adobe PrimetimeAPI規格
+# Adobe Primetime規格
 
 Adobe Primetime將電視帶入每個IP連接的螢幕。 它為程式設計人員和營運人員提供模組化功能，讓他們在桌上型電腦和裝置上串流、保護、分析視訊並從中獲利。 推動這些體驗的是許多串流技術，用來為Primetime視訊播放器提供內容和廣告。
 
