@@ -3,15 +3,18 @@ title: Adobe PrimetimeAPI參考
 description: API可協助您快速輕鬆地建立功能應用程式或整合。
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
 
 
 # Adobe PrimetimeAPI參考{#api-references}
+
++ 黃金時段動態Ad Insertion{#server-side}
+   + [BootstrapAPI參考](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
 
 + TVSDK 3.12 {#tvsdk-312}
    + [Android專用TVSDK 3.12](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
