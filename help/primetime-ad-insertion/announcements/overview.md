@@ -2,7 +2,7 @@
 title: Adobe PrimetimeAd Insertion公告
 description: 關於Primetime最新功能發佈及其他相關新聞的公告Ad Insertion
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## 透過廣告解析逾時減少程式化廣告錯誤
 
-2000年12月1日發佈
+發佈日期：2020年12月1日
 
 Adobe的重點在於協助PrimetimeAd Insertion客戶將廣告庫存的獲利提升到最大。 我們特別注意降低滿足程式化需求的複雜性，根據eMarketer的資料，程式化需求佔美國數位視訊廣告支出的四分之三以上。 程式化銷售可讓出版業者將廣告庫存需求最大化，進而提高填滿率和收益。 但是，它也會增加廣告錯誤的曝光度，例如格式錯誤的VAST回應、HTTP錯誤，以及可能導致收入損失和／或檢視器體驗不佳的其他錯誤。
 
