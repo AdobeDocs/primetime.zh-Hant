@@ -1,11 +1,10 @@
 ---
-cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime 發行說明
 user-guide-description: 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。
 translation-type: tm+mt
-source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
