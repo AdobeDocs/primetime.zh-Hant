@@ -1,10 +1,9 @@
 ---
-cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Ad Insertion 支援
 translation-type: tm+mt
-source-git-commit: bde82bd062a7980e08cdf2642c9e64be8f074a6e
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 4%
