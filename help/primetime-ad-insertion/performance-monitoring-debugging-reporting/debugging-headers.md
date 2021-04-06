@@ -1,14 +1,15 @@
 ---
 title: 除錯標題
-description: null
+description: 除錯標題
+copied-description: true
+exl-id: 42c19089-2c61-4622-b53a-c28b8d495ef8
 translation-type: tm+mt
-source-git-commit: 45e5c8e6144adf4a405bde7d8d19505b7ad549e0
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '257'
 ht-degree: 7%
 
 ---
-
 
 # 除錯標題(X-ADBE-AI-X1){#debugging-headers}
 
@@ -22,12 +23,12 @@ SSAI會傳送HTTP標頭，這些標頭可用來收集資訊並決定生產作業
 | 名稱 | 說明 | 範例 |
 |--- |--- |--- |
 | isActivePreroll | 是否傳送前段廣告呼叫 | 0 |
-| isActiveMidroll | 是否已傳送Midroll-Roll廣告呼叫 | 1 |
+| isActiveMidroll | 是否已傳送Midroll-Roll廣告呼叫 | 3 |
 | 請求ID | 內部SSAI | 1594181097704 |
 | 作業ID | 請求的作業ID | 15126333-5ba9-49b8-a219-4f37e60d259c |
 | 串流類型 | u=variant, l=live, v=vod | v |
 | isBootstrap | 此請求是否為引導呼叫 | 0 |
-| 廣告分段計數 | 此資訊清單中的廣告插播總數 | 3 |
+| 廣告分段計數 | 此資訊清單中的廣告插播總數 | 1 |
 | 廣告分段持續時間總計 | 廣告分段的總持續時間，以秒為單位 | 30 |
 | 廣告呼叫計數 | 此請求中傳送的廣告呼叫數 | 2 |
 | 重新導向廣告呼叫計數 | 在此請求中傳送的重新導向廣告呼叫數 | 1 |
