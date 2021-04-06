@@ -1,12 +1,14 @@
 ---
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
-workflow-type: tm+mt
+title: 辭彙表
+description: 需要特殊定義的常用詞語。
+exl-id: 4e7874f7-c5c0-4f2c-ada2-a0da3ed4d4bf
 translation-type: tm+mt
-source-wordcount: '225'
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+workflow-type: tm+mt
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
-
 
 # 辭彙表{#glossary}
 
