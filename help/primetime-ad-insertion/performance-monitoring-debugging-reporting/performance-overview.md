@@ -1,15 +1,16 @@
 ---
 title: 監控、除錯和報告
-description: null
+description: 監控、除錯和報告
+copied-description: true
+exl-id: 4ad8baa2-f112-4efc-956b-6557cbf079ae
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
-
 # 監視、調試和報告{#monitoring-debugging-and-reporting}
 
-Primetime廣告插入提供主控台，其中包含用於監控廣告插入效能的控制面板，以及用於疑難排解和除錯的多種工具。 本節提供這些工具的概述。
+PrimetimeAd Insertion提供主控台，其中包含用於監控廣告插入效能的控制面板，以及用於疑難排解和除錯的多種工具。 本節提供這些工具的概述。
