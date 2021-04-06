@@ -1,14 +1,15 @@
 ---
 title: 詳細記錄
-description: null
+description: 詳細記錄
+copied-description: true
+exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2157'
 ht-degree: 0%
 
 ---
-
 
 # 詳細記錄{#verbose-logging}
 
@@ -17,10 +18,10 @@ ht-degree: 0%
 在啟動資訊清單伺服器工作階段的除錯記錄時，您可將`ptdebug`參數新增至請求URL，以指定資訊清單伺服器在HTTP標題中傳回的資訊：
 
 * `ptdebug=true`
-除TRACE_HTTP_HEADER和來自TRACE_AD_CALL記錄的大多數調用／響應資料之外的所有記錄。
+除TRACE_HTTP_HEADER和TRACE_AD_CALL記錄中的大多數調用／響應資料之外的所有記錄。
 
 * `ptdebug=AdCall`
-只有TRACE_AD_type（例如，TRACE_AD_CALL）記錄。
+只有TRACE_AD_type(例如TRACE_AD_CALL)記錄。
 
 * `ptdebug=Header`
 僅TRACE_HTTP_HEADER記錄。
@@ -47,7 +48,7 @@ ht-degree: 0%
 | 欄位 | 類型 | 說明 |
 |---|---|---|
 | 狀態 | 字串 | 傳回的HTTP狀態代碼 |
-| request_method | 字串 | HTTP方法（GET或POST） |
+| request_method | 字串 | HTTP方法(GET或POST) |
 | request_uri | 字串 | HTTP請求URI（無主機） |
 | request_length | 整數 | 請求長度（位元組） |
 | response_length | 整數 | 回應長度（位元組） |
@@ -98,7 +99,7 @@ ht-degree: 0%
 2015-03-25T06:10:01.064Z 1427263800573 6495aa. . . 189938 TRACE_HTTP_HEADER UNKNOWN RESPONSE Via MS4xIH. . .
 ```
 
-### TRACE_AD_CALL記錄{#tracing-ad-call-records}
+### TRACEAD_CALL記錄{#tracing-ad-call-records}
 
 此類型的記錄會記錄資訊清單伺服器和要求的結果。 `TRACE_AD_CALL`以外的欄位會依表格中的順序顯示，並以標籤分隔。
 
@@ -129,7 +130,7 @@ ht-degree: 0%
 | ad_type | 字串 | 廣告類型（直接或重新導向）。 |
 | ad_duration | 整數 | 廣告伺服器回應的廣告持續時間（秒）。 |
 | ad_content_url | 字串 | 來自廣告伺服器回應的廣告資訊清單檔案的URL。 |
-| **†** ad_content_url_actual | 字串 | 已插入廣告資訊清單檔案的URL。 空，用於TRACE_AD_REDIRECT。 |
+| **†** ad_content_url_actual | 字串 | 已插入廣告資訊清單檔案的URL。 TRACE_AD_REDIRECT為空。 |
 | ad_system_id | 字串 | 廣告系統，來自廣告伺服器回應（若未指定，則為Auditude）。 |
 | ad_id | 字串 | 來自廣告伺服器回應的廣告ID。 |
 | creative_id | 字串 | 來自廣告節點、來自廣告伺服器回應的創作者ID。 |
@@ -169,7 +170,7 @@ Records of this type log the results of manifest server ad requests. Fields beyo
 
 -->
 
-### TRACE_TROCKING_NO_MEDIA_TO_TRANSCODE記錄{#trace-transcoding-no-media-to-transcode}
+### TRACE轉碼_RODCING_NO_MEDIA_TO_TRANSCODE記錄{#trace-transcoding-no-media-to-transcode}
 
 此類型的記錄記錄遺失廣告創意。 表格中將顯示`TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE`以外的唯一欄位。
 
@@ -246,7 +247,7 @@ Records of this type log the results of manifest server ad requests. Fields beyo
 * 無法擷取廣告的廣告清單URL播放清單。
 * 無法產生目標資訊清單。 (HLSManifestResolver)
 * 無法解析第一個廣告呼叫回應：錯誤訊息。
-* 無法處理*GET|POST *路徑請求：請求URL。 （即時/VOD）
+* 無法處理*GET|POST*路徑請求：請求URL。 （即時/VOD）
 * 無法處理即時資訊清單請求：請求URL。 （即時）
 * 無法傳回變型資訊清單：錯誤訊息。
 * 無法驗證組ID:群組ID。
@@ -280,12 +281,12 @@ Records of this type log the results of manifest server ad requests. Fields beyo
 * 重新導向廣告回應空白。 (VASTStAX)
 * 請求：URL。
 * 傳回GET請求的錯誤回應，因為找不到播放作業。 (VOD)
-* 由於內部伺服器錯誤，傳回GET要求的錯誤回應。
+* 因內部伺服器錯誤而傳回GET要求的錯誤回應。
 * 針對指定無效資產的GET請求傳回錯誤回應：廣告請求ID。 (VOD)
-* 針對指定無效或空的群組ID的GET請求傳回錯誤回應：群組ID。 (VOD)
+* 傳回指定無效或空白群組ID之GET要求的錯誤回應：群組ID。 (VOD)
 * 傳回指定無效追蹤位置值之GET要求的錯誤回應。 (VOD)
-* 以無效語法傳回GET要求的錯誤回應——要求URL。 （即時/VOD）
-* 使用不支援的HTTP方法傳回請求的錯誤回應：取得|貼文。 （即時/VOD）
+* 以無效語法傳回GET請求的錯誤回應——請求URL。 （即時/VOD）
+* 使用不支援的HTTP方法傳回請求的錯誤回應：GET|POST。 （即時/VOD）
 * 從快取傳回資訊清單。 (VOD)
 * 伺服器過載。 不需要廣告插圖請求即可繼續。 （變體）
 * 開始產生目標資訊清單。 (HLSManifestResolver)
@@ -298,7 +299,7 @@ Records of this type log the results of manifest server ad requests. Fields beyo
 * 收到有效的URL。 （VOD/變型）
 * 找不到變體M3U8。 （變體）
 
-### TRACE_PLAYBACK_PROGRESS記錄{#trace-playback-progress-records}
+### TRACE播放進度記錄{#trace-playback-progress-records}
 
 資訊清單伺服器在接收有關伺服器端追蹤工作流程期間播放進度的訊號時，產生此類記錄。 `TRACE_PLAYBACK_PROGRESS`以外的欄位會依表格中的順序顯示，並以標籤分隔。
 
@@ -320,7 +321,7 @@ Records of this type log the results of manifest server ad requests. Fields beyo
 
 用戶端廣告插入要求通常會在變數的M3U8格式播放清單中指定多個位元速率。 資訊清單伺服器會產生並傳回新的變型M3U8檔案，其中包含每個位元速率的個別M3U8連結。 它也會產生唯一的群組ID，將這些M3U8系結在一起。
 
-資訊清單伺服器使用用戶端的引導URL請求中的資訊來擷取內容變體播放清單。 它產生包含串流層級內容之資訊清單伺服器連結的新變型播放清單。 用戶端會使用這些項目來建構廣告插入請求。 資訊清單伺服器的串流層級內容連結具有下列格式：
+資訊清單伺服器使用用戶端的BootstrapURL請求中的資訊來擷取內容變體播放清單。 它產生包含串流層級內容之資訊清單伺服器連結的新變型播放清單。 用戶端會使用這些項目來建構廣告插入請求。 資訊清單伺服器的串流層級內容連結具有下列格式：
 
 ```shell
 https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}/
@@ -331,7 +332,7 @@ https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}
 vod資訊清單伺服器會根據內容的播放清單類型來設定此值：即時／線性(
 `#EXT-X-PLAYLIST-TYPE:EVENT`)或VOD(`#EXT-X-PLAYLIST-TYPE:VOD`)
 
-* **PublisherAssetIDPublisher針對引導URL請求中提供的特定內容所提供的唯一ID。**
+* **PublisherAssetIDPublisher針對BootstrapURL要求中提供之特定內容的唯一ID。**
 
 
 * **轉**
@@ -345,4 +346,4 @@ manifest伺服器會產生此值，並使用它來確保廣告放置一致，不
 清單伺服器URL安全的base64會編碼內容串流的絕對URL。每個串流都有其專屬的URL。
 
 * **查詢**
-參數引導URL請求中提供的查詢參數。
+參數BootstrapURL請求中提供的查詢參數。
