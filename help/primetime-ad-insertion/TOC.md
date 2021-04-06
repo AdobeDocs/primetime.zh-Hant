@@ -3,10 +3,10 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Ad Insertion 支援
 translation-type: tm+mt
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 4%
 + [Adobe PrimetimeAd Insertion](home.md)
 + PrimetimeAd Insertion公告{#announcements}
    + [公告](announcements/overview.md)
-   + [發行說明](/help/release-notes/ptai-21x-release-notes.md)
+   + [發行說明](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-21x-release-notes.html)
 + 開始使用PrimetimeAd Insertion{#get-started}
    + [概觀](getting-started/get-started-overview.md)
    + [準備使用PrimetimeAd Insertion](getting-started/setup-ptai.md)
@@ -28,7 +28,7 @@ ht-degree: 4%
 + 即時轉碼{#just-in-time-transcoding}
    + [概觀](just-in-time-transcoding/jit-transcoding-overview.md)
    + [轉碼與標準化](just-in-time-transcoding/transcoding-and-normalization.md)
-   + [傳送和儲存](just-in-time-transcoding/delivery-and-storage.md)
+   + [傳送和儲存](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
    + [預轉碼API](just-in-time-transcoding/pre-transcoding-api.md)
    + [ID3插入支援](just-in-time-transcoding/id3-injection-support.md)
 + 進階功能{#advanced-features}
