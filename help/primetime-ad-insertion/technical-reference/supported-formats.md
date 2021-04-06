@@ -1,10 +1,11 @@
 ---
 title: 支援的格式
-description: null
+description: 支援的格式
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 126a5129ee4102802173f3203ec4fb829ad0b08d
+source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 # 支援的格式{#supported-formats}
 
-Primetime廣告插入會截取並支援廣告插入至下列媒體串流：
+PrimetimeAd Insertion會截取並支援廣告插入至下列媒體串流：
 
 ## HLS {#hls}
 
