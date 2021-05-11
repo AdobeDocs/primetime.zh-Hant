@@ -1,14 +1,14 @@
 ---
 description: 您可以設定您的播放器來追蹤和分析視訊使用。
 title: 初始化和設定視訊分析
+exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
-
 
 # 初始化並設定視訊分析{#initialize-and-configure-video-analytics}
 
@@ -56,7 +56,7 @@ ht-degree: 0%
    * 實例化需要Marketing Cloud組織ID輸入參數，該參數由Adobe提供。
 
       這是字串值。
-   * VisitorAPI程式庫的唯一設定選項是後端端點的URL，該URL會為目前使用者提供唯一識別碼。
+   * VisitorAPI程式庫的唯一設定選項是後端端點的URL，可為目前使用者提供唯一識別碼。
    * 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。
 
       如需實作訪客ID服務的詳細資訊，請參閱[訪客ID服務實作](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html)。
@@ -133,6 +133,7 @@ ht-degree: 0%
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
+
    4. 手動將即時／線性串流標示為完成。
 如果您在一個即時串流上有不同的集數，您可以使用完整的API手動將集數標示為完整。 這會結束目前視訊集的視訊追蹤工作階段，而您可以開始下一集的新追蹤工作階段。
       >[!TIP]
@@ -146,5 +147,5 @@ ht-degree: 0%
       videoAnalyticsProvider.detachMediaPlayer();
       videoAnalyticsProvider = null;
       // Create a new instance of VideoAnalyticsProvider to continue tracking.
-      } 
+      }
       ```
