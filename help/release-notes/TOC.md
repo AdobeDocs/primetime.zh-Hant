@@ -3,8 +3,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime 發行說明
 user-guide-description: 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。
-translation-type: tm+mt
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -14,28 +13,28 @@ ht-degree: 14%
 
 # Primetime 發行說明  {#release-notes}
 
-+ [發行說明概觀](home.md)
-+ 黃金時段Ad Insertion{#ptai}
-   + [PTAI 21.2.2發行說明](ptai-21x-release-notes.md)
++ [發行說明概述](home.md)
++ PrimetimeAd Insertion{#ptai}
+   + [PTAI 21.5.1發行說明](ptai-21x-release-notes.md)
    + [PTAI 20.12.1發行說明](ptai-20x-release-notes.md)
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
-+ iOS版TVSDK {#tvsdk-ios}
-   + [iOS版TVSDK 3.13發行說明](tvsdk-3x-ios.md)
-   + [iOS版TVSDK 1.4發行說明](tvsdk-1-4-ios.md)
-+ 適用於Android {#tvsdk-android}的TVSDK
-   + [TVSDK 3.13 for Android版本注意事項](tvsdk-3x-android.md)
-   + [TVSDK 2.7 for Android版本注意事項](tvsdk-27-android.md)
-   + [Android專用TVSDK 2.4.1版本注意事項](tvsdk-24-android.md)
-   + [TVSDK 1.4 for Android版本注意事項](tvsdk-1-4-android.md)
++ iOS適用的TVSDK {#tvsdk-ios}
+   + [iOS適用的TVSDK 3.13發行說明](tvsdk-3x-ios.md)
+   + [iOS適用的TVSDK 1.4發行說明](tvsdk-1-4-ios.md)
++ Android適用的TVSDK {#tvsdk-android}
+   + [Android適用的TVSDK 3.13發行說明](tvsdk-3x-android.md)
+   + [Android適用的TVSDK 2.7發行說明](tvsdk-27-android.md)
+   + [Android適用的TVSDK 2.4.1發行說明](tvsdk-24-android.md)
+   + [Android適用的TVSDK 1.4發行說明](tvsdk-1-4-android.md)
 + 瀏覽器TVSDK {#browser-tvsdk}
    + [瀏覽器TVSDK 2.4發行說明](tvsdk-24-browser.md)
-+ 案頭版TVSDK {tvsdk-desktop-hls}
-   + [Desktop HLS的TVSDK 1.4發行說明](tvsdk-1-4-desktop-hls.md)
-+ Primetime Offline Packager {#offline-packager}
++ 案頭HLS {tvsdk-desktop-hls}適用的TVSDK
+   + [案頭HLS適用的TVSDK 1.4發行說明](tvsdk-1-4-desktop-hls.md)
++ Primetime離線封裝程式{#offline-packager}
    + [Primetime Offline Packager第2版發行](offline-packager-2x-release-note.md)
-+ Primetime Streaming Server {#streaming-server}
-   + [Primetime Streaming Server 1版](primetime-streaming-server-1x.md)
-+ Playstation 4 {#tvsdk-playstation}的TVSDK
++ Primetime串流伺服器{#streaming-server}
+   + [Primetime串流伺服器第1版版本](primetime-streaming-server-1x.md)
++ Playstation 4適用的TVSDK {#tvsdk-playstation}
    + [TVSDK 2.1 PlayStation 4發行說明](tvsdk-21-ps4.md)
 + Digital Rights Management{#drm}
    + [DRM 5.3.1發行說明](drm-531-release-notes.md)
