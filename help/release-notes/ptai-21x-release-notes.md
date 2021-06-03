@@ -2,9 +2,9 @@
 title: PTAI 21.5.1發行說明
 description: PTAI發行說明介紹Primetime 2021年Ad Insertion的新增或變更、已解決且已知問題。
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 02e43df4d9b58b4b1ed8fdbc086771bbf3380c0f
+source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
@@ -15,20 +15,22 @@ PrimetimeAd Insertion21.x.x發行說明介紹PrimetimeAd Insertion2021年的新�
 
 ## PTAI 21.5.1的新功能
 
-當： 2021年5月26日，星期三，東部凌晨3點30分至6點30分
+當： 2021年5月26日，星期三東部時間凌晨3點30分至06點30分
 
 * 新增對以SCTE為基礎的提示格式的過時分段類型0x01(UPID)的支援。
+
 * 已為即將進行的儀表板更改添加新的遙測。
 
 ## 舊版的增強功能和修正
 
 ### 版本21.4.1
 
-**時間：** 2021年4月22日星期四凌晨2:00至凌晨5:00
+**時間：** 2021年4月22日星期四美國東部時間凌晨2點至5點
 
 **變更**
 
 * 會話請求限制將啟用，以防止潛在的DDOS攻擊。 工作階段將限制為每秒10個請求，最多有100個佇列的請求。 我們預計不會對根據HLS/DASH規格運作的播放器造成任何影響。
+
 * 其他維護與安全性增強功能
 
 ### 版本21.2.2
