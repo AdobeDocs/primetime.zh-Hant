@@ -60,7 +60,7 @@ ht-degree: 0%
     &quot;Bitrate::=down;Reason::=Failover;&quot;
     
     
-    &quot;* &quot;width`:以像素表示寬度的整數。
+    &quot;* &quot;width&grave;:以像素表示寬度的整數。
     * 「高度」:以像素表示高度的整數。
     
     >[!NOTE]
