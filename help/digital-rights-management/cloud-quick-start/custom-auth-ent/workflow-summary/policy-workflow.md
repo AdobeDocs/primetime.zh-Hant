@@ -27,8 +27,8 @@ ht-degree: 0%
 
 應用指示BEES要求的DRM策略，在策略中指定以下兩個自定義屬性：
 
-    * &#39;policy.customProp.1=bees.required=&lt;true>`
-    * &#39;policy.customProp.2=bees.url=&lt;url to=&quot;&quot; your=&quot;&quot; BEES=&quot;&quot; endpoint=&quot;&quot;>`
+    * &#39;policy.customProp.1=bees.required=&lt;true>&grave;
+    * &#39;policy.customProp.2=bees.url=&lt;url to=&quot;&quot; your=&quot;&quot; BEES=&quot;&quot; endpoint=&quot;&quot;>&grave;
 
 <!--<a id="example_F617FC49A4824C0CB234C92E57D876D3"></a>-->
 
