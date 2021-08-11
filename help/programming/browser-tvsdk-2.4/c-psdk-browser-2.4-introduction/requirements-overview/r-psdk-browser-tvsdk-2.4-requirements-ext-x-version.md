@@ -1,33 +1,32 @@
 ---
-description: .m3u8檔案中的#EXT-X-VERSION版本會影響您應用程式可用的功能，以及播放清單／資訊清單中有效的EXT標籤。
-title: '#EXT-X-VERSION需求'
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: .m3u8檔案中的「#」EXT-X-VERSION版本會影響應用程式可用的功能，以及播放清單/資訊清單中有效的EXT標籤。
+title: '''#''EXT-X-VERSION要求'
+exl-id: 1b7c205b-c6b1-416f-885a-d1cd23d8e803
+source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
 
 ---
 
+# `#`EXT-X-VERSION需求{#ext-x-version-requirements}
 
-# #EXT-X-VERSION要求{#ext-x-version-requirements}
-
-.m3u8檔案中的#EXT-X-VERSION版本會影響您應用程式可用的功能，以及播放清單／資訊清單中有效的EXT標籤。
+.m3u8檔案中的#EXT-X-VERSION版會影響應用程式可用的功能，以及播放清單/資訊清單中有效的EXT標籤。
 
 <!--<a id="section_8850183988124049A001758F117AD3A6"></a>-->
 
 以下是有關`#EXT-X-VERSION`標籤的一些資訊，該標籤指定HLS協定版本：
 
-* 此版本必須符合HLS播放清單中的功能和屬性；否則，可能會發生播放錯誤。 如需詳細資訊，請參閱[HTTP即時串流規格](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1)。
-* Adobe建議至少使用第2版在瀏覽器TVSDK用戶端中播放。
+* 版本必須符合HLS播放清單中的功能和屬性；否則，可能會發生播放錯誤。 如需詳細資訊，請參閱[HTTP即時串流規格](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1)。
+* Adobe建議在瀏覽器TVSDK型用戶端中使用至少第2版進行播放。
 
-   客戶端和伺服器必須以下列方式實施版本：
+   用戶端和伺服器必須透過下列方式實作版本：
 
 <table frame="all" colsep="1" rowsep="1" id="table_62EB98EDD9DE49EC84CB1C7D59BC40E6"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="1" class="entry"> 至少使用此版本 </th> 
-   <th colname="2" class="entry"> 若要使用這些功能 </th> 
+   <th colname="2" class="entry"> 使用這些功能 </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -35,7 +34,7 @@ ht-degree: 0%
    <td colname="1"> <span class="codeph"> EXT-X-VERSION:3  </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">浮點<span class="codeph">滅絕FF </span>持續時間值 <p>持續時間標籤(<span class="codeph"> #IFF:版本2中的</span>&lt;duration&gt;,&lt;title&gt;)已四捨五入為整數值。 第3版及以上版本需要在浮動點中精確顯示持續時間。 </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">浮點<span class="codeph"> OVIFA </span>持續時間值 <p>持續時間標籤(<span class="codeph"> #EXTINF:第2版中的</span>&lt;duration&gt;,&lt;title&gt;)會四捨五入為整數值。 第3版及更高版本要求在浮點中準確顯示持續時間。 </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
@@ -48,4 +47,3 @@ ht-degree: 0%
   </tr> 
  </tbody> 
 </table>
-
