@@ -1,17 +1,17 @@
 ---
-description: .m3u8檔案中的「#」EXT-X-VERSION版本會影響應用程式可用的功能，以及播放清單/資訊清單中有效的EXT標籤。
-title: '''#''EXT-X-VERSION要求'
+description: .m3u8檔案中的EXT-X-VERSION版本會影響應用程式可用的功能，以及播放清單/資訊清單中有效的EXT標籤。
+title: EXT-X-VERSION需求
 exl-id: 1b7c205b-c6b1-416f-885a-d1cd23d8e803
-source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
+source-git-commit: e2a796dc5eb017929297d127cc79b65ba51a0c75
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
-# `#`EXT-X-VERSION需求{#ext-x-version-requirements}
+# EXT-X-VERSION需求{#ext-x-version-requirements}
 
-.m3u8檔案中的#EXT-X-VERSION版會影響應用程式可用的功能，以及播放清單/資訊清單中有效的EXT標籤。
+.m3u8檔案中的`#EXT-X-VERSION`版本會影響應用程式可用的功能，以及播放清單/資訊清單中有效的EXT標籤。
 
 <!--<a id="section_8850183988124049A001758F117AD3A6"></a>-->
 
