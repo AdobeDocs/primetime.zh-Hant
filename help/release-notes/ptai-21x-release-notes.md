@@ -1,27 +1,56 @@
 ---
-title: PTAI 21.5.1發行說明
+title: PTAI 21.8.1發行說明
 description: PTAI發行說明介紹Primetime 2021年Ad Insertion的新增或變更、已解決且已知問題。
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-# PrimetimeAd Insertion21.5.1發行說明
+# PrimetimeAd Insertion21.8.1發行說明
 
-PrimetimeAd Insertion21.x.x發行說明介紹PrimetimeAd Insertion2021年的新增或變更、已解決的問題和已知問題。
+PrimetimeAd Insertion21.x.x發行說明描述PrimetimeAd Insertion2021年的新增或變更、已解決的問題和已知問題
 
-## PTAI 21.5.1的新功能
+<!---
+Primetime Ad Insertion 21.9.1
+When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+
+
+
+
+
+
+
+
+
+What:  Primetime Ad Insertion 21.9.1
+
+When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
+
+Changes:
+
+* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
+-->
+
+## PTAI 21.8.1的新功能
+
+當：2021年8月24日，星期二東部時間凌晨2點至5點
+
+* 新增對DASH Live/線性資料流的支援（已支援VOD）。
+
+## 舊版的增強功能和修正
+
+### 版本21.5.1
 
 當： 2021年5月26日，星期三東部時間凌晨3點30分至06點30分
+
+**變更**
 
 * 新增對以SCTE為基礎的提示格式的過時分段類型0x01(UPID)的支援。
 
 * 已為即將進行的儀表板更改添加新的遙測。
-
-## 舊版的增強功能和修正
 
 ### 版本21.4.1
 
