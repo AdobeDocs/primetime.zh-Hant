@@ -3,10 +3,10 @@ title: Primetime 發行說明
 description: Primetime 發行說明
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 29%
+source-wordcount: '301'
+ht-degree: 32%
 
 ---
 
@@ -24,13 +24,11 @@ ht-degree: 29%
 
 此版本推出對即時、VOD和FER資料流的DEMUXED &#39;HLS/CMAF&#39;（前段、midroll和postroll）廣告的支援。
 
-如需其他修正和詳細資訊，請參閱iOS適用的TVSDK發行說明](../release-notes/tvsdk-3x-ios.md)[
+如需其他修正和詳細資訊，請參閱[iOS適用的TVSDK發行說明](../release-notes/tvsdk-3x-ios.md)
 
-## TVSDK 3.13 Android中的修正
+## TVSDK 3.14 Android中的修正
 
-此版本針對FireTV裝置（包括Fire TV第3代吊墜和Fire TV Cube第1和第2代裝置）上的ABR開關上的Widevine DRM資料流凍結或顯示黑格的問題提供了解決方法。
-
-若要解決此問題，請在開始播放之前，為指定的Fire TV裝置設定API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)`。 預設值為false。
+此版本修正[!UICONTROL ClickTracking]、[!UICONTROL CustomClick]或[!UICONTROL CompanionClickTracking]回應中任何元素的[!UICONTROL CDATA]節點為空時，應用程式當機的問題。[!UICONTROL VAST]
 
 如需詳細資訊，請參閱Android適用的[ TVSDK發行說明](../release-notes/tvsdk-3x-android.md) 。
 

@@ -3,7 +3,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime 發行說明
 user-guide-description: 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 16%
@@ -22,7 +22,7 @@ ht-degree: 16%
    + [iOS適用的TVSDK 3.13發行說明](tvsdk-3x-ios.md)
    + [iOS適用的TVSDK 1.4發行說明](tvsdk-1-4-ios.md)
 + Android適用的TVSDK {#tvsdk-android}
-   + [Android適用的TVSDK 3.13發行說明](tvsdk-3x-android.md)
+   + [Android適用的TVSDK 3.14發行說明](tvsdk-3x-android.md)
    + [Android適用的TVSDK 2.7發行說明](tvsdk-27-android.md)
    + [Android適用的TVSDK 2.4.1發行說明](tvsdk-24-android.md)
    + [Android適用的TVSDK 1.4發行說明](tvsdk-1-4-android.md)
