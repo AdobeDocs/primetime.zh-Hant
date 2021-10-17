@@ -3,7 +3,7 @@ title: Primetime 發行說明
 description: Primetime 發行說明
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
+source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 32%
@@ -13,6 +13,12 @@ ht-degree: 32%
 # Primetime 發行說明
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案提供版本專屬資訊、系統需求、限制、已修正問題和已知問題。
+
+## TVSDK 3.14 Android中的修正
+
+此版本修正[!UICONTROL ClickTracking]、[!UICONTROL CustomClick]或[!UICONTROL CompanionClickTracking]回應中任何元素的[!UICONTROL CDATA]節點為空時，應用程式當機的問題。[!UICONTROL VAST]
+
+如需詳細資訊，請參閱Android適用的[ TVSDK發行說明](../release-notes/tvsdk-3x-android.md) 。
 
 ## PTAI 21.8.1中的增強功能和修正
 
@@ -25,12 +31,6 @@ ht-degree: 32%
 此版本推出對即時、VOD和FER資料流的DEMUXED &#39;HLS/CMAF&#39;（前段、midroll和postroll）廣告的支援。
 
 如需其他修正和詳細資訊，請參閱[iOS適用的TVSDK發行說明](../release-notes/tvsdk-3x-ios.md)
-
-## TVSDK 3.14 Android中的修正
-
-此版本修正[!UICONTROL ClickTracking]、[!UICONTROL CustomClick]或[!UICONTROL CompanionClickTracking]回應中任何元素的[!UICONTROL CDATA]節點為空時，應用程式當機的問題。[!UICONTROL VAST]
-
-如需詳細資訊，請參閱Android適用的[ TVSDK發行說明](../release-notes/tvsdk-3x-android.md) 。
 
 ## 另請參閱
 
