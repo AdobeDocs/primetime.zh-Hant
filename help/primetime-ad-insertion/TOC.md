@@ -2,11 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Ad Insertion 支援
-translation-type: tm+mt
-source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
+source-git-commit: 98882f0e36919635d99b0cd95f87f9736b692f73
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '176'
+ht-degree: 4%
 
 ---
 
@@ -17,49 +16,50 @@ ht-degree: 0%
 + PrimetimeAd Insertion公告{#announcements}
    + [公告](announcements/overview.md)
    + [發行說明](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-21x-release-notes.html)
-+ 開始使用PrimetimeAd Insertion{#get-started}
-   + [概觀](getting-started/get-started-overview.md)
++ Primetime快速入門Ad Insertion{#get-started}
+   + [概述](getting-started/get-started-overview.md)
    + [準備使用PrimetimeAd Insertion](getting-started/setup-ptai.md)
    + [整合您的廣告伺服器](getting-started/integrate-ad-server.md)
    + [整合您的CDN](getting-started/integrate-cdn.md)
-   + [在即時／線性串流中使用廣告插入](getting-started/ad-insertion-live-linear-stream.md)
-   + [使用廣告插入VOD](getting-started/ad-insertion-vod.md)
+   + [在即時/線性資料流中使用廣告插入](getting-started/ad-insertion-live-linear-stream.md)
+   + [對VOD使用廣告插入](getting-started/ad-insertion-vod.md)
    + [設定廣告追蹤](getting-started/set-up-ad-tracking.md)
 + 即時轉碼{#just-in-time-transcoding}
-   + [概觀](just-in-time-transcoding/jit-transcoding-overview.md)
-   + [轉碼與標準化](just-in-time-transcoding/transcoding-and-normalization.md)
-   + [傳送和儲存](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
-   + [預轉碼API](just-in-time-transcoding/pre-transcoding-api.md)
+   + [概述](just-in-time-transcoding/jit-transcoding-overview.md)
+   + [轉碼和標準化](just-in-time-transcoding/transcoding-and-normalization.md)
+   + [傳遞和儲存](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
+   + [轉碼前API](just-in-time-transcoding/pre-transcoding-api.md)
    + [ID3插入支援](just-in-time-transcoding/id3-injection-support.md)
 + 進階功能{#advanced-features}
    + [根據規則路由廣告](advanced-features/route-ads-based-on-rules.md)
    + [最佳化廣告體驗](advanced-features/optimize-ad-experiences.md)
    + [新增內容阻塞](advanced-features/add-content-bumpers.md)
-   + [情境式報告與定位](advanced-features/contextual-reporting-and-targeting.md)
+   + [內容報表與目標定位](advanced-features/contextual-reporting-and-targeting.md)
 + 效能：監控、除錯和報告{#performance}
-   + [概觀](performance-monitoring-debugging-reporting/performance-overview.md)
-   + 監視和調試{#monitor-debug}
+   + [概述](performance-monitoring-debugging-reporting/performance-overview.md)
+   + 監視和除錯{#monitor-debug}
       + [效能監控](performance-monitoring-debugging-reporting/performance-monitoring.md)
-      + [疑難排解與除錯](performance-monitoring-debugging-reporting/troubleshoot-and-debug.md)
-   + [報告與帳單](performance-monitoring-debugging-reporting/reporting-and-billing.md)
+      + [疑難排解和除錯](performance-monitoring-debugging-reporting/troubleshoot-and-debug.md)
+   + [報表和帳單](performance-monitoring-debugging-reporting/reporting-and-billing.md)
 + 高級遙測{#advanced-telemetry}
-   + [概觀](advanced-telemetry/advanced-telemetry-overview.md)
+   + [概述](advanced-telemetry/advanced-telemetry-overview.md)
    + [關鍵量度和資料維度](advanced-telemetry/key-metrics.md)
 + [即時事件監控](live-event-monitoring.md)
-+ 參考{#technical-reference}
-   + [API參考/BootstrapAPI](technical-reference/bootstrap-api.md)
-   + 最佳做法{#best-practices}
-      + [概觀](best-practices/best-practices-overview.md)
++ 參考 {#technical-reference}
+   + [BootstrapAPI](technical-reference/bootstrap-api.md)
+   + [報表API](assets/auditude-report-api.pdf)
+   + 最佳實務{#best-practices}
+      + [概述](best-practices/best-practices-overview.md)
       + [最佳化視訊啟動時間](best-practices/optimize-video-startup-time.md)
       + [分析效能](best-practices/analyze-performance.md)
       + [快取](best-practices/caching.md)
-      + [最佳化路由和通訊協定](best-practices/optimize-routes-protocols.md)
+      + [優化路由和協定](best-practices/optimize-routes-protocols.md)
       + [套用廣告解析度限制](best-practices/apply-ad-resolution-constraints.md)
    + [支援的CDN](technical-reference/supported-cdns.md)
-   + [資訊清單重寫](technical-reference/manifest-rewriting.md)
+   + [清單重寫](technical-reference/manifest-rewriting.md)
    + [詳細記錄](performance-monitoring-debugging-reporting/verbose-logging.md)
    + [詳細標題(X-ADBE-AI-X1)](performance-monitoring-debugging-reporting/debugging-headers.md)
-   + [傳送和儲存](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md)
-   + [促進HLS播放器切換到故障切換／備份流](technical-reference/hls-switching-to-failover.md)
+   + [傳遞和儲存](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md)
+   + [促進HLS播放器切換到故障轉移/備份流](technical-reference/hls-switching-to-failover.md)
    + [Cookie](technical-reference/cookies.md)
    + [視訊播放器需求](technical-reference/video-player-requirements.md)
