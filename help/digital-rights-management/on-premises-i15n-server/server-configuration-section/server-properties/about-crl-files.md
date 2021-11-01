@@ -2,55 +2,68 @@
 title: 關於CRL檔案
 description: 關於CRL檔案
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 126a323d-9433-4a1e-a617-2d3bbf717cce
+source-git-commit: 6a00df9c061da43f6efa49d927873db629568597
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
+# 關於CRL檔案 {#about-crl-files}
 
-# 關於CRL檔案{#about-crl-files}
+為了正常運行，個性化和許可證伺服器需要有多個快取到正在運行的應用程式伺服器（如Tomcat）上磁碟的證書吊銷清單(CRL)檔案。 必須定期下載新的CRL檔案並將其快取到磁碟上。 如果允許磁碟上CRL檔案的有效期失效，則個性化伺服器將拒絕對客戶端進行個性化，許可證伺服器將拒絕頒發許可證。
 
-為了正常運作，個人化和授權伺服器需要在執行中的應用程式伺服器（例如Tomcat）上，將數個憑證撤銷清單(CRL)檔案快取至磁碟。 新的CRL檔案必須定期在磁碟上下載和快取。 如果允許磁碟上CRL檔案的有效期失效，個性化伺服器將拒絕將客戶機個性化，而許可證伺服器將拒絕頒發許可證。
+快取到磁碟的CRL必須具有與相應URL匹配的檔案名。 冒號「：」和「/」斜線等特殊字元會在檔案名稱中轉換為底線「_」。
 
-快取至磁碟的CRL必須有與對應URL相符的檔案名稱。 在檔案名中，冒號&#39;:&#39;和&#39;/&#39;斜槓等特殊字元將轉換為下划線&#39;_&#39;。
+以下是個人化伺服器和許可證伺服器所使用的外部托管CRL的清單：
 
-以下是個人化和授權伺服器都使用的外部托管CRL清單：
+* **中間CRL:**
 
-* **中級CRL:**
-
-   * URL:[!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl>]
-   * 檔案：[!DNL http___crl2.adobe.com_Adobe_FlashAccessIntermediateCA.crl]
-   * 有效性：從建立開始大約12個月
+   * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl>]
+   * 檔案： [!DNL http___crl2.adobe.com_Adobe_FlashAccessIntermediateCA.crl]
+   * 有效性：從建立起大約12個月
 
 * **根CRL:**
 
-   * URL:[!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl>]
-   * 檔案：[!DNL http___crl2.adobe.com_Adobe_FlashAccessRootCA.crl]
-   * 有效性：從創作到創作約5年
+   * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl>]
+   * 檔案： [!DNL http___crl2.adobe.com_Adobe_FlashAccessRootCA.crl]
+   * 有效性：從創作開始大約5年
 
 * **最新CRL:**
 
-   * URL:[!DNL <ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl>]
-   * 檔案：[!DNL http___crl3.adobe.com_AdobeSystemsIncorporatedFlashAccessRuntime_LatestCRL.crl]
-   * 有效性：從創作開始約3個月
+   * URL: [!DNL <ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl>]
+   * 檔案： [!DNL http___crl3.adobe.com_AdobeSystemsIncorporatedFlashAccessRuntime_LatestCRL.crl]
+   * 有效性：建立後約3個月有效
 
-以下是僅由許可證伺服器使用的外部托管CRL:
+要了解許可證伺服器可以使用的外部托管CRL，請與Adobe支援聯繫。
 
-* URL:[!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl>]
-* 檔案：[!DNL http___crl2.adobe.com_Adobe_FlashAccessIndividualizationCA.crl]
-* 有效性：從創作開始約3個月
+<!---
 
-* URL:[!DNL <ht<span></span>tps://individualization-crl.primetime.adobe.com/FlashAccessIndividualizationCA.crl>]
-* 檔案：[!DNL http___individualization-crl.primetime.adobe.com_FlashAccessIndividualizationCA.crl]
-* 有效性：從創作開始約3個月
+Commenting out because of a security vulnerability reported in Jira PSIRT-20689. 
 
-* URL:[!DNL <ht<span></span>tps://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl]
-* 檔案：[!DNL http___individualization-crl.s3-website-us-east-1.amazonaws.com_FlashAccessIndividualizationCA.crl]
-* 有效性：從創作開始約3個月
+The following are externally hosted CRLs that are used only by the License Servers:
 
-除了上述CRL外，您還必須建立並維護額外的CRL。 這是個性化CA CRL，如本文檔的[建立個性化CA CRL](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md)部分中所指定。
+* URL: `https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl`
 
-CRL預計在到期前45天更新。 這應可讓您有足夠的時間從網際網路取得和安裝新產生的CRL。 您必須在CRL檔案過期之前小心更新。
+* File: `http___crl2.adobe.com_Adobe_FlashAccessIndividualizationCA.crl`
+
+* Validity: Good for approximately 3 months from creation
+
+* URL: `https://individualization-crl.primetime.adobe.com/FlashAccessIndividualizationCA.crl`
+
+* File: `http___individualization-crl.primetime.adobe.com_FlashAccessIndividualizationCA.crl`
+
+* Validity: Good for approximately 3 months from creation
+
+* URL: `https://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl`
+
+* File: `http___individualization-crl.s3-website-us-east-1.amazonaws.com_FlashAccessIndividualizationCA.crl`
+
+* Validity: Good for approximately 3 months from creation
+
+--->
+
+除了外部托管的CRL外，您還可以建立和維護附加的CRL。 這是個性化CA CRL，如 [建立個性化CA CRL](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) 一節。
+
+CRL計畫在過期45天前更新。 這樣，您就有足夠的時間從Internet獲取和安裝新生成的CRL。 您必須在CRL檔案過期之前對其進行更新。
