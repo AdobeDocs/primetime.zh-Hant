@@ -3,10 +3,10 @@ title: Primetime 發行說明
 description: Primetime 發行說明
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
+source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '305'
+ht-degree: 32%
 
 ---
 
@@ -14,23 +14,23 @@ ht-degree: 0%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案提供版本專屬資訊、系統需求、限制、已修正問題和已知問題。
 
-## TVSDK 3.14 Android中的修正
+## TVSDK 3.15 Android中的修正
 
-此版本修正[!UICONTROL ClickTracking]、[!UICONTROL CustomClick]或[!UICONTROL CompanionClickTracking]回應中任何元素的[!UICONTROL CDATA]節點為空時，應用程式當機的問題。[!UICONTROL VAST]
+此版本提供創意標籤遺失或應用程式當機問題的修正 [!UICONTROL url CDATA] 在中為空 [!UICONTROL VAST] 回應。
 
-如需詳細資訊，請參閱Android適用的[ TVSDK發行說明](../release-notes/tvsdk-3x-android.md) 。
+查看 [Android適用的TVSDK發行說明](../release-notes/tvsdk-3x-android.md) 以取得更多資訊。
 
 ## PTAI 21.10.1中的增強功能和修正
 
 此版本的重點是整合伺服器，移除非生產和非使用的伺服器。
 
-如需其他修正和詳細資訊，請參閱[Ad Insertion發行說明](/help/release-notes/ptai-21x-release-notes.md)。
+如需其他修正和詳細資訊，請參閱 [Ad Insertion發行說明](/help/release-notes/ptai-21x-release-notes.md).
 
 ## TVSDK 3.13 iOS中的增強功能和修正
 
 此版本推出對即時、VOD和FER資料流的DEMUXED &#39;HLS/CMAF&#39;（前段、midroll和postroll）廣告的支援。
 
-如需其他修正和詳細資訊，請參閱[iOS適用的TVSDK發行說明](../release-notes/tvsdk-3x-ios.md)。
+如需其他修正和詳細資訊，請參閱 [iOS適用的TVSDK發行說明](../release-notes/tvsdk-3x-ios.md).
 
 ## 另請參閱
 
