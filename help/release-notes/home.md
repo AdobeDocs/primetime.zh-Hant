@@ -3,10 +3,10 @@ title: Primetime 發行說明
 description: Primetime 發行說明
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 32%
+source-wordcount: '286'
+ht-degree: 34%
 
 ---
 
@@ -14,15 +14,13 @@ ht-degree: 32%
 
 歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案提供版本專屬資訊、系統需求、限制、已修正問題和已知問題。
 
+## PTAI 21.11.1中的增強功能和修正
+
+此 [!UICONTROL EXT-X-IMAGE-STREAM-INF] 現在可依每個區域設定。
+
 ## TVSDK 3.15 Android中的修正
 
 此版本提供創意標籤遺失或應用程式當機問題的修正 [!UICONTROL url CDATA] 在中為空 [!UICONTROL VAST] 回應。
-
-查看 [Android適用的TVSDK發行說明](../release-notes/tvsdk-3x-android.md) 以取得更多資訊。
-
-## PTAI 21.10.1中的增強功能和修正
-
-此版本的重點是整合伺服器，移除非生產和非使用的伺服器。
 
 如需其他修正和詳細資訊，請參閱 [Ad Insertion發行說明](/help/release-notes/ptai-21x-release-notes.md).
 

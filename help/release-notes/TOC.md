@@ -3,7 +3,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime 發行說明
 user-guide-description: 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 16%
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 + [發行說明 概述](home.md)
 + PrimetimeAd Insertion {#ptai}
-   + [PTAI 21.10.1發行說明](ptai-21x-release-notes.md)
+   + [PTAI 21.11.1發行說明](ptai-21x-release-notes.md)
    + [PTAI 20.12.1發行說明](ptai-20x-release-notes.md)
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
 + iOS適用的TVSDK {#tvsdk-ios}
