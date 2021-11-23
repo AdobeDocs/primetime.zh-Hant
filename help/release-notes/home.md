@@ -3,9 +3,9 @@ title: Primetime 發行說明
 description: Primetime 發行說明
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '291'
 ht-degree: 34%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 34%
 
 ## PTAI 21.11.1中的增強功能和修正
 
-此 [!UICONTROL EXT-X-IMAGE-STREAM-INF] 現在可依每個區域設定。
+此 [!UICONTROL EXT-X-IMAGE-STREAM-INF] 現在可依區域設定， [!UICONTROL Roku Trick] 完全支援播放。
 
 ## TVSDK 3.15 Android中的修正
 
