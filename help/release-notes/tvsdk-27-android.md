@@ -4,9 +4,9 @@ description: TVSDK 2.7 for Android™發行說明描述TVSDK Android™ 2.7中�
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ TVSDK現在取消正在進行的段下載（如有必要），並動態切換到
 * **部分Ad-Break插入**
 
    像電視一樣的體驗，即在廣告中間加入廣告，而不為部分觀看的廣告觸發跟蹤。\
-   示例**:**用戶在90秒廣告中間（40秒）加入，其中包括3個30秒廣告。 這是第二個廣告的10秒。
+   示例：用戶在90秒廣告中間（40秒）加入，其中包括3個30秒廣告。 這是第二個廣告的10秒。
    * 第二廣告在剩餘持續時間（20秒）後播放第三廣告。
    * 不會觸發播放的部分廣告（第二個廣告）的廣告跟蹤器。 只有第三個廣告的追蹤器被發射。
 
@@ -71,7 +71,7 @@ TVSDK現在取消正在進行的段下載（如有必要），並動態切換到
 
 * **添加到CRS請求的AdSystem和Creative Id**
 
-   * 現在，在1401和1403請求中將「AdSystem」和「CreativeId」作為新參數。
+   * 現在包括 `AdSystem` 和 `CreativeId` 作為1401和1403請求中的新參數。
 
 * **已刪除NetworkConfiguration類中的API setEncodeUrlForTracking** 因為URL中的不安全字元應進行編碼。
 
@@ -81,7 +81,8 @@ Android™ TVSDK v2.5.4提供以下更新和API更改：
 
 * 預設值的更改 `WebViewDebbuging`
 
-   `WebViewDebbuging` 預設情況下，值設定為False。 要啟用它，請在應用程式中調用setWebContentsDebuggingEnabled(true)。
+   的 `WebViewDebbuging` 值設定為 _假_ 預設值。 要啟用它，請撥打 `setWebContentsDebuggingEnabled` 至 _真_ 的子菜單。
+
 * 已更新OpenSSL和Curl版本升級 `libcurl` 到v7.57.0和OpenSSL到v1.0.2k。
 * VAST響應對象的應用級訪問引入了新的API NetworkAdInfo::getVastXml()，該API為應用程式提供了對VAST響應對象的訪問。
 
