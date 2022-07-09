@@ -3,10 +3,10 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime 發行說明
 user-guide-description: 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。
-source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
+source-git-commit: e46fc03542211ec21822cf9f52eb8f0172269564
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '116'
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 0%
 + [發行說明 概述](home.md)
 + 黃金時段Ad Insertion {#ptai}
 
-   + [PTAI 22.2.2發行說明](ptai-22x-release-notes.md)
+   + [PTAI 22.6.2發行說明](ptai-22x-release-notes.md)
    + [PTAI 21.11.1發行說明](ptai-21x-release-notes.md)
    + [PTAI 20.12.1發行說明](ptai-20x-release-notes.md)
    + [PTAI 19.11.1發行說明](ptai-19x-release-notes.md)
