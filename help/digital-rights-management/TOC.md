@@ -3,148 +3,147 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime 數位版權管理說明
 user-guide-description: 協助您進一步了解 Digital Rights Management (DRM) 中的各種使用者案例。
-translation-type: tm+mt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '2215'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 
-# Digital Rights Management幫助{#drm}
+# 數位版權管理說明 {#drm}
 
-+ [DRM概觀](home.md)
-+ 證書註冊指南{#certificate-enrollment-guide}
++ [DRM概述](home.md)
++ 證書註冊指南 {#certificate-enrollment-guide}
    + [關於證書](certificate-enrollment-guide/about-certs.md)
-   + [必要條件](certificate-enrollment-guide/prerequisites.md)
+   + [先決條件](certificate-enrollment-guide/prerequisites.md)
    + [關於證書註冊角色](certificate-enrollment-guide/about-cert-enrollment.md)
    + [添加請求者](certificate-enrollment-guide/add-requesters.md)
    + [建立輔助管理員](certificate-enrollment-guide/add-secondary-admin.md)
-   + 要求憑證{#request-certs}
-      + [概觀](certificate-enrollment-guide/request-certs/request-certs-overview.md)
-      + [產生憑證簽署要求](certificate-enrollment-guide/request-certs/gen-cert-signing-req.md)
-      + [申請憑證](certificate-enrollment-guide/request-certs/request-a-cert.md)
-      + [核准憑證](certificate-enrollment-guide/request-certs/approve-a-cert.md)
+   + 請求證書 {#request-certs}
+      + [概述](certificate-enrollment-guide/request-certs/request-certs-overview.md)
+      + [生成證書籤名請求](certificate-enrollment-guide/request-certs/gen-cert-signing-req.md)
+      + [請求證書](certificate-enrollment-guide/request-certs/request-a-cert.md)
+      + [批准證書](certificate-enrollment-guide/request-certs/approve-a-cert.md)
       + [獲取域CA證書](certificate-enrollment-guide/request-certs/obtain-domain-ca-certs.md)
-   + 部署憑證{#deploy-certs}
-      + [概觀](certificate-enrollment-guide/deploy-certs/deploy-certs-overview.md)
+   + 部署證書 {#deploy-certs}
+      + [概述](certificate-enrollment-guide/deploy-certs/deploy-certs-overview.md)
       + [轉換檔案](certificate-enrollment-guide/deploy-certs/convert-files.md)
-      + [部署憑證](certificate-enrollment-guide/deploy-certs/deploying-certs.md)
-   + [儲存金鑰](certificate-enrollment-guide/storing-keys.md)
-   + [續約憑證](certificate-enrollment-guide/renewing-certs.md)
+      + [部署證書](certificate-enrollment-guide/deploy-certs/deploying-certs.md)
+   + [儲存密鑰](certificate-enrollment-guide/storing-keys.md)
+   + [續訂證書](certificate-enrollment-guide/renewing-certs.md)
 + Adobe PrimetimeDRM SDK 5.3.1 {#drm-sdk-5-3-1}
-   + [Adobe PrimetimeDRM SDK —— 概觀](drm-sdk-overview/overview.md)
+   + [Adobe PrimetimeDRM SDK — 概述](drm-sdk-overview/overview.md)
    + [關於Adobe PrimetimeDRM](drm-sdk-overview/about-adobe-access.md)
-   + [主要功能](drm-sdk-overview/key-features.md)
+   + [關鍵功能](drm-sdk-overview/key-features.md)
    + [術語和核心概念](drm-sdk-overview/terminology-and-core-concepts.md)
-   + 內容發佈工作流程{#content-distribution-workflow}
+   + 內容分發工作流 {#content-distribution-workflow}
       + [內容準備](drm-sdk-overview/content-distribution-workflow/content-preparation.md)
       + [內容獲取](drm-sdk-overview/content-distribution-workflow/content-acquisition.md)
-   + Adobe PrimetimeDRM元件{#adobe-access-components}
-      + [概觀](drm-sdk-overview/adobe-access-components/adobe-access-sdk.md)
+   + Adobe PrimetimeDRM元件 {#adobe-access-components}
+      + [概述](drm-sdk-overview/adobe-access-components/adobe-access-sdk.md)
       + [Adobe PrimetimeDRM SDK](drm-sdk-overview/adobe-access-components/drm-sdk.md)
-      + [Adobe PrimetimeDRM Server for Protected Streaming](drm-sdk-overview/adobe-access-components/protected-streaming.md)
+      + [Adobe PrimetimeDRM伺服器，用於受保護的流](drm-sdk-overview/adobe-access-components/protected-streaming.md)
       + [AdobeFlash Player](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
       + [Adobe AIR](drm-sdk-overview/adobe-access-components/adobe-air.md)
-      + [原生iOS和Android應用程式](drm-sdk-overview/adobe-access-components/native-ios-and-android-apps.md)
+      + [本地iOS和Android應用程式](drm-sdk-overview/adobe-access-components/native-ios-and-android-apps.md)
    + [部署Adobe PrimetimeDRM](drm-sdk-overview/adobe-access-components/deploy-adobe-access/configure-adobe-access.md)
-   + 其他部署方案{#additional-deployment-scenarios}
-      + [UltraViolet媒體與Adobe PrimetimeDRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
-      + [Adobe Primetime身份驗證和Adobe PrimetimeDRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
-+ DRM快速入門手冊{#drm-quick-start}
-   + [快速入門](quick-start/getting-started.md)
+   + 其他部署方案 {#additional-deployment-scenarios}
+      + [UltraViolet媒體和Adobe PrimetimeDRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
+      + [Adobe Primetime認證和Adobe PrimetimeDRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
++ DRM快速入門手冊 {#drm-quick-start}
+   + [入門](quick-start/getting-started.md)
    + [安裝Tomcat](quick-start/install-tomcat.md)
-   + [針對受保護的串流設定和部署伺服器](quick-start/setup-deploy-drm-server-ps.md)
-   + [封裝加密內容](quick-start/package-content.md)
-   + [安裝Flash Player和播放測試內容](quick-start/install-fp-playback-test.md)
-   + [播放本機封裝的視訊](quick-start/playback-locally-pkgd-video.md)
+   + [設定和部署受保護流的伺服器](quick-start/setup-deploy-drm-server-ps.md)
+   + [包加密內容](quick-start/package-content.md)
+   + [安裝Flash Player和播放test內容](quick-start/install-fp-playback-test.md)
+   + [回放本地打包的視頻](quick-start/playback-locally-pkgd-video.md)
    + [後續步驟](quick-start/next-steps.md)
-+ Adobe Primetime雲DRM快速入門手冊{#cloud-drm-quickstart}
-   + [Primetime Cloud DRM包含哪些功能](cloud-quick-start/whats-included.md)
-   + [Primetime Cloud DRM不支援哪些功能](cloud-quick-start/not-supported.md)
-   + [必要條件](cloud-quick-start/prerequisites.md)
-   + 封裝選項{#packaging-options}
-      + [使用隨附的Primetime Offline Packager](cloud-quick-start/packaging-options/use-offline-packager.md)
-      + [使用協力廠商編碼器](cloud-quick-start/packaging-options/use-third-party-encoder.md)
++ Adobe Primetime雲DRM快速入門手冊 {#cloud-drm-quickstart}
+   + [黃金時段雲DRM包括什麼](cloud-quick-start/whats-included.md)
+   + [黃金時段雲DRM不支援什麼](cloud-quick-start/not-supported.md)
+   + [先決條件](cloud-quick-start/prerequisites.md)
+   + 打包選項 {#packaging-options}
+      + [使用隨附的Mogine Offline Packager](cloud-quick-start/packaging-options/use-offline-packager.md)
+      + [使用第三方編碼器](cloud-quick-start/packaging-options/use-third-party-encoder.md)
       + [使用Adobe Medium伺服器](cloud-quick-start/packaging-options/use-adobe-media-server.md)
-   + [測試封裝的內容](cloud-quick-start/test-packaged-content.md)
-   + [修剪錯誤](cloud-quick-start/triaging-errors/client-error-triaging.md)
-   + 自訂驗證／權益{#custom-auth-ent}
-      + [自訂驗證／權益（選用）](cloud-quick-start/custom-auth-ent/custom-overview.md)
-      + [蜜蜂概觀](cloud-quick-start/custom-auth-ent/overview.md)
-      + [蜜蜂工作流程](cloud-quick-start/custom-auth-ent/workflow-summary/policy-workflow.md)
+   + [Test打包的內容](cloud-quick-start/test-packaged-content.md)
+   + [篩選錯誤](cloud-quick-start/triaging-errors/client-error-triaging.md)
+   + 自定義身份驗證/權利 {#custom-auth-ent}
+      + [自定義身份驗證/權利（可選）](cloud-quick-start/custom-auth-ent/custom-overview.md)
+      + [蜂類概述](cloud-quick-start/custom-auth-ent/overview.md)
+      + [蜂類工作流](cloud-quick-start/custom-auth-ent/workflow-summary/policy-workflow.md)
       + [BEES錯誤代碼](cloud-quick-start/custom-auth-ent/error-codes.md)
-      + [建立BEES參考實作](cloud-quick-start/custom-auth-ent/build-ref-impl.md)
-      + [部署BEES參考實作](cloud-quick-start/custom-auth-ent/deploy-ref-impl.md)
-      + [在您的BEES伺服器上設定SSL](cloud-quick-start/custom-auth-ent/configure-ssl.md)
-   + [Adobe Primetime驗證（可選）](cloud-quick-start/primetime-authentication.md)
-   + [建立自訂DRM原則（選用）](cloud-quick-start/creating-custom-drm-policies/creating-custom-drm-policies.md)
-   + [更新現有的DRM內容以使用Cloud DRM（可選）](cloud-quick-start/update-existing-drm-to-cloud.md)
-   + [串流至Xbox360（選用）](cloud-quick-start/streaming-to-xbox360.md)
-+ 使用Adobe PrimetimeDRM密鑰伺服器{#using-key-server}
-   + [使用Primetime DRM Key Server的需求](using-the-drm-key-server/requirements.md)
-   + [部署Primetime DRM Key Server](using-the-drm-key-server/deployment-overview.md)
-   + [封裝內容](using-the-drm-key-server/packaging-content.md)
-+ Adobe PrimetimeDRM安全部署准則{#guidelines}
-   + 網路拓撲{#introduction}簡介
-      + [概觀](secure-deployment-guidelines/overview/network-topology.md)
-      + [網路層安全性](secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
+      + [構建BEES參考實現](cloud-quick-start/custom-auth-ent/build-ref-impl.md)
+      + [部署BEES參考實施](cloud-quick-start/custom-auth-ent/deploy-ref-impl.md)
+      + [在BEES伺服器上配置SSL](cloud-quick-start/custom-auth-ent/configure-ssl.md)
+   + [Adobe Primetime身份驗證（可選）](cloud-quick-start/primetime-authentication.md)
+   + [建立自定義DRM策略（可選）](cloud-quick-start/creating-custom-drm-policies/creating-custom-drm-policies.md)
+   + [更新現有DRM內容以使用雲DRM（可選）](cloud-quick-start/update-existing-drm-to-cloud.md)
+   + [流式處理到Xbox360（可選）](cloud-quick-start/streaming-to-xbox360.md)
++ 使用Adobe PrimetimeDRM密鑰伺服器 {#using-key-server}
+   + [使用黃金時段DRM密鑰伺服器的要求](using-the-drm-key-server/requirements.md)
+   + [部署Mogife DRM密鑰伺服器](using-the-drm-key-server/deployment-overview.md)
+   + [打包內容](using-the-drm-key-server/packaging-content.md)
++ Adobe PrimetimeDRM安全部署指南 {#guidelines}
+   + 網路拓撲簡介 {#introduction}
+      + [概述](secure-deployment-guidelines/overview/network-topology.md)
+      + [網路層安全](secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
       + [防火牆規則](secure-deployment-guidelines/overview/network-topology-firewall-rules.md)
       + [Adobe PrimetimeDRM網路協定](secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
       + [應用程式伺服器的埠](secure-deployment-guidelines/overview/network-topology-ports-for-app-srvs.md)
-      + [設定SSL](secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
+      + [配置SSL](secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
    + [特定於供應商的安全資訊](secure-deployment-guidelines/vendor-specific-sec-info.md)
-   + [物理安全性和訪問](secure-deployment-guidelines/physical-sec-and-access.md)
-   + [封裝和保護內容](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content.md)
-   + [確保與Flash介質Rights Management伺服器1.x相容](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-fmrms.md)
-   + 發出並保護許可證伺服器{#issuing-licenses}
+   + [物理安全和訪問](secure-deployment-guidelines/physical-sec-and-access.md)
+   + [打包和保護內容](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content.md)
+   + [確保與Flash媒體Rights Management伺服器1.x的相容性](secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-fmrms.md)
+   + 頒發和保護許可證伺服器 {#issuing-licenses}
       + [保護許可證伺服器](secure-deployment-guidelines/issuing-licenses/issuing-licenses-protect-license-server.md)
-      + [預先產生的授權](secure-deployment-guidelines/issuing-licenses/issuing-licenses-pre-gen.md)
-      + [管理網域](secure-deployment-guidelines/issuing-licenses/issuing-licenses-domains.md)
-+ 多DRM工作流程{#multi-drm-workflows}
-   + [多DRM工作流程](multi-drm-workflows/title-page/overview.md)
-   + Primetime DRM Cloud快速入門{#quick-start}
-      + [概觀](multi-drm-workflows/quick-start/quick-overview.md)
-      + [已布建（帳戶等）](multi-drm-workflows/quick-start/get-provisioned.md)
-      + [金鑰、ID和驗證器](multi-drm-workflows/quick-start/keys-ids-and-authenticators.md)
-      + [封裝您的內容](multi-drm-workflows/quick-start/package-your-content.md)
+      + [預生成許可證](secure-deployment-guidelines/issuing-licenses/issuing-licenses-pre-gen.md)
+      + [管理域](secure-deployment-guidelines/issuing-licenses/issuing-licenses-domains.md)
++ 多DRM工作流 {#multi-drm-workflows}
+   + [多DRM工作流](multi-drm-workflows/title-page/overview.md)
+   + 黃金時段DRM雲快速啟動 {#quick-start}
+      + [概述](multi-drm-workflows/quick-start/quick-overview.md)
+      + [獲取預配（帳戶等）](multi-drm-workflows/quick-start/get-provisioned.md)
+      + [密鑰、ID和身份驗證器](multi-drm-workflows/quick-start/keys-ids-and-authenticators.md)
+      + [打包您的內容](multi-drm-workflows/quick-start/package-your-content.md)
       + [設定策略](multi-drm-workflows/quick-start/what-about-policies.md)
-      + [授權](multi-drm-workflows/quick-start/handle-the-licensing.md)
-      + [播放您的受保護內容](multi-drm-workflows/quick-start/playback-protected-content.md)
-      + [疑難排解快速入門](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
-   + 工作流程：包、許可證和播放{#package-license-play}
-      + [FairPlay的多DRM工作流程](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
-      + [適用於Widevine和PlayReady的多DRM工作流程](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
-      + [使用Bento4封裝您的內容](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
-      + [使用AdobeOffline Packager封裝您的內容](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
+      + [許可](multi-drm-workflows/quick-start/handle-the-licensing.md)
+      + [播放受保護的內容](multi-drm-workflows/quick-start/playback-protected-content.md)
+      + [快速啟動故障排除](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
+   + 工作流：包、許可證和播放 {#package-license-play}
+      + [FairPlay的多DRM工作流](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
+      + [用於Widevine和PlayReady的多DRM工作流](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
+      + [使用Bento4打包您的內容](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
+      + [使用Adobe離線打包程式打包您的內容](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
       + [使用輸出保護策略](multi-drm-workflows/p-l-and-p/setting-policies-widevine.md)
-      + [用戶端金鑰要求工作流程總覽](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-overview.md)
-      + [Expressplay Token](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-expressplay-tokens.md)
-      + [Android PSDK上的索引鍵工作流程](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-android-psdk.md)
-      + [HTML5 TVSDK上的主要要求工作流程](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-html5-tvsdk.md)
-      + [裝置系結](multi-drm-workflows/p-l-and-p/licensing-widevine-client-device-binding.md)
-   + 一般工作流程{#generic-workflows}
-      + [Primetime Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/plp-1.md)
-      + [ExpressPlay Packager / Cloud DRM / TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/package-and-play.md)
-   + 功能主題{#feature-topics}
-      + [參考伺服器：範例ExpressPlay Entitlement Server(SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
-      + [參考服務：時間型權益](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-      + [參考服務：裝置系結權益](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
-      + [查看公用API](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
-   + ExpressPlay授權Token請求／回應參考{#license-token-req-resp-ref}
-      + [概觀](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
-      + [FairPlay授權Token要求／回應](multi-drm-workflows/license-token-req-resp-ref/fairplay-license-token-request.md)
-      + [播放就緒授權Token請求／回應](multi-drm-workflows/license-token-req-resp-ref/playready-license-token-request.md)
-      + [Widevine授權Token請求／回應](multi-drm-workflows/license-token-req-resp-ref/widevine-license-token-request.md)
-   + [從存取移轉至多DRM](multi-drm-workflows/access-vs-multi.md)
+      + [客戶端密鑰請求工作流概述](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-overview.md)
+      + [表達式令牌](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-expressplay-tokens.md)
+      + [Android PSDK上的密鑰請求工作流](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-android-psdk.md)
+      + [HTML5 TVSDK上的密鑰請求工作流](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-html5-tvsdk.md)
+      + [設備綁定](multi-drm-workflows/p-l-and-p/licensing-widevine-client-device-binding.md)
+   + 通用工作流 {#generic-workflows}
+      + [黃金時段打包器/雲DRM/TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/plp-1.md)
+      + [ExpressPlay打包器/雲DRM/TVSDK](multi-drm-workflows/p-l-and-p/generic-workflows/package-and-play.md)
+   + 功能主題 {#feature-topics}
+      + [參考伺服器：示例ExpressPlay權利伺服器(SEES)](multi-drm-workflows/feature-topics/sees-reference-server.md)
+      + [參考服務：基於時間的權利](multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+      + [參考服務：設備綁定權利](multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+      + [查看公共API](multi-drm-workflows/feature-topics/sees-reference-server-public-api.md)
+   + ExpressPlay許可證令牌請求/響應引用 {#license-token-req-resp-ref}
+      + [概述](multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)
+      + [FairPlay許可證令牌請求/響應](multi-drm-workflows/license-token-req-resp-ref/fairplay-license-token-request.md)
+      + [PlayReady許可證令牌請求/響應](multi-drm-workflows/license-token-req-resp-ref/playready-license-token-request.md)
+      + [WideVine許可證令牌請求/響應](multi-drm-workflows/license-token-req-resp-ref/widevine-license-token-request.md)
+   + [從訪問遷移到多DRM](multi-drm-workflows/access-vs-multi.md)
    + [辭彙表](multi-drm-workflows/glossary/glossary-cek.md)
-+ Adobe PrimetimeDRM On Promies Personalization Server Guide {#individualization-server}
-   + [軟體需求](on-premises-i15n-server/title-page/sw-requirements.md)
-   + 伺服器配置屬性{#configuration-properties}
-      + [將屬性套用至伺服器環境](on-premises-i15n-server/server-configuration-section/server-properties/apply-props-to-envs.md)
++ Adobe PrimetimeDRM On Premise個性化伺服器指南 {#individualization-server}
+   + [軟體要求](on-premises-i15n-server/title-page/sw-requirements.md)
+   + 伺服器配置屬性 {#configuration-properties}
+      + [將屬性應用於伺服器環境](on-premises-i15n-server/server-configuration-section/server-properties/apply-props-to-envs.md)
       + [加密密碼](on-premises-i15n-server/server-configuration-section/server-properties/encrypt-passwords.md)
-      + [伺服器屬性參考](on-premises-i15n-server/server-configuration-section/server-properties/server-properties-ref.md)
+      + [伺服器屬性引用](on-premises-i15n-server/server-configuration-section/server-properties/server-properties-ref.md)
       + [建立個性化CA CRL](on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md)
       + [配置路徑和類路徑](on-premises-i15n-server/server-configuration-section/server-properties/configure-path-classpath.md)
       + [配置Tomcat](on-premises-i15n-server/server-configuration-section/server-properties/configure-tomcat.md)
@@ -152,437 +151,437 @@ ht-degree: 0%
       + [防火牆規則](on-premises-i15n-server/server-configuration-section/server-properties/firewall-rules.md)
       + [關於CRL檔案](on-premises-i15n-server/server-configuration-section/server-properties/about-crl-files.md)
       + [關於ECI檔案](on-premises-i15n-server/server-configuration-section/server-properties/about-ecl-files.md)
-   + [監控](on-premises-i15n-server/server-configuration-section/monitoring.md)
-   + [更新License Server WAR檔案](on-premises-i15n-server/server-configuration-section/update-license-server-war-file.md)
-   + [生成內部DRM元資料](on-premises-i15n-server/server-configuration-section/gen-on-prem-drm-metadata.md)
-   + [用戶端整合](on-premises-i15n-server/server-configuration-section/client-integration.md)
-   + [用戶端要求範例](on-premises-i15n-server/server-configuration-section/sample-client-requests.md)
-   + [常見問答集](on-premises-i15n-server/server-configuration-section/faq.md)
-+ Primetime DRM Server for Protected Streaming 5.3.1 {#server-for-protected-streaming}
-   + [關於Adobe PrimetimeDRM Server for Protected Streaming](protected-streaming/about-drm-for-protected-streaming.md)
+   + [監視](on-premises-i15n-server/server-configuration-section/monitoring.md)
+   + [更新許可證伺服器WAR檔案](on-premises-i15n-server/server-configuration-section/update-license-server-war-file.md)
+   + [生成本地DRM元資料](on-premises-i15n-server/server-configuration-section/gen-on-prem-drm-metadata.md)
+   + [客戶端整合](on-premises-i15n-server/server-configuration-section/client-integration.md)
+   + [客戶端請求示例](on-premises-i15n-server/server-configuration-section/sample-client-requests.md)
+   + [常見問題](on-premises-i15n-server/server-configuration-section/faq.md)
++ 用於受保護的流5.3.1的黃金時段DRM伺服器 {#server-for-protected-streaming}
+   + [關於Adobe PrimetimeDRM伺服器，用於受保護的流](protected-streaming/about-drm-for-protected-streaming.md)
    + [關於使用規則](protected-streaming/usage-rules.md)
-   + [需求](protected-streaming/requirements.md)
-   + 瞭解部署{#understanding-deployment}
-      + [部署Adobe PrimetimeDRM Server進行受保護的串流](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
+   + [要求](protected-streaming/requirements.md)
+   + 瞭解部署 {#understanding-deployment}
+      + [部署Adobe PrimetimeDRM伺服器以進行受保護的流處理](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
       + [Java系統屬性](protected-streaming/understanding-deployment/java-system-properties.md)
-      + [關於Adobe PrimetimeDRM認證](protected-streaming/understanding-deployment/drm-credentials.md)
+      + [關於Adobe PrimetimeDRM憑據](protected-streaming/understanding-deployment/drm-credentials.md)
       + [HSM配置](protected-streaming/understanding-deployment/hsm-configuration.md)
-      + 設定許可證伺服器配置檔案{#configuration-files}
+      + 設定許可證伺服器配置檔案 {#configuration-files}
          + [許可證伺服器配置檔案](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-license-server-config-files.md)
          + [配置目錄結構](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-configuration-directory-structure.md)
          + [全局配置檔案](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-global-configuration-file.md)
-         + [租用戶配置檔案](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-tenant-configuration-file.md)
+         + [租戶配置檔案](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-tenant-configuration-file.md)
       + [跨域DRM策略檔案](protected-streaming/understanding-deployment/drm-crossdomain-policy-file.md)
-      + [自訂授權擴充功能](protected-streaming/understanding-deployment/custom-authorization-extensions.md)
+      + [自定義授權擴展](protected-streaming/understanding-deployment/custom-authorization-extensions.md)
       + [效能調整](protected-streaming/understanding-deployment/performance-tuning/global-configuration-file.md)
-      + [升級Adobe PrimetimeDRM Server以進行受保護的串流](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
-      + [運行用於受保護流的DRM伺服器](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
-      + [封裝內容](protected-streaming/understanding-deployment/packaging-content.md)
-      + 用於受保護流實用程式的DRM伺服器{#drm-for-protected-streaming-utilities}
-         + [配置驗證器](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/configuration-validator.md)
-         + [密碼剪輯器](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)
-         + [SWF雜湊計算器](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/swf-hash-calculator.md)
-+ 使用Adobe PrimetimeDRM SDK保護內容- 5.3.1 {#using-drm-sdk}
-   + [Adobe PrimetimeDRM的新增功能](protecting-content/introduction/whats-new.md)
-   + 使用規則與驗證{#usage-rules-authentication}
-      + [使用規則與驗證](protecting-content/introduction/usage-rules/authentication/user-authentication.md)
-      + [時間型規則](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
+      + [升級Adobe PrimetimeDRM伺服器以進行受保護的流處理](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
+      + [運行DRM伺服器以進行受保護的流處理](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
+      + [打包內容](protected-streaming/understanding-deployment/packaging-content.md)
+      + 用於受保護的流式處理實用程式的DRM伺服器 {#drm-for-protected-streaming-utilities}
+         + [配置驗證程式](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/configuration-validator.md)
+         + [密碼加擾器](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)
+         + [SWF哈希計算器](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/swf-hash-calculator.md)
++ 使用Adobe PrimetimeDRM SDK保護內容 — 5.3.1 {#using-drm-sdk}
+   + [Adobe PrimetimeDRM有什麼新聞嗎](protecting-content/introduction/whats-new.md)
+   + 使用規則和身份驗證 {#usage-rules-authentication}
+      + [使用規則和身份驗證](protecting-content/introduction/usage-rules/authentication/user-authentication.md)
+      + [基於時間的規則](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [同步要求](protecting-content/introduction/usage-rules/authentication/synchronization.md)
-   + 執行時期和應用程式限制{#runtime-application-restrictions}
-      + [允許播放受保護內容的Primetime DRM應用程式的清單……](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
-      + [允許Adobe®Flash®播放器SWF的清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
-      + [DRM客戶端阻止訪問受保護內容的塊清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
-      + [應用程式執行時期的區塊清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
-      + [DRM和執行時期的最低安全等級](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
-      + [播放受保護內容所需的裝置功能](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
-      + [越獄執行(需要Adobe PrimetimeDRM)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
-   + 其他DRM策略選項{#other-policy-options}
-      + [自訂使用規則](protecting-content/introduction/usage-rules/other-policy-options/custom-usage-rules.md)
-      + [增強的授權鏈結](protecting-content/introduction/usage-rules/other-policy-options/enhanced-license-chaining.md)
-      + [多重播放權](protecting-content/introduction/usage-rules/other-policy-options/multiple-play-rights.md)
-      + [遠端和本機iOS金鑰傳送](protecting-content/introduction/usage-rules/other-policy-options/remote-key-delivery.md)
+   + 運行時和應用程式限制 {#runtime-application-restrictions}
+      + [允許允許Mighine DRM應用程式播放受保護內容的清單……](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [允許Adobe®Flash®播放器SWF清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [阻止限制訪問受保護內容的DRM客戶端清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
+      + [阻止應用程式運行時清單](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
+      + [DRM和運行時的最低安全級別](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
+      + [播放受保護內容所需的設備功能](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
+      + [越獄強制(需要Adobe PrimetimeDRM)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
+   + 其他DRM策略選項 {#other-policy-options}
+      + [自定義用法規則](protecting-content/introduction/usage-rules/other-policy-options/custom-usage-rules.md)
+      + [增強的許可證連結](protecting-content/introduction/usage-rules/other-policy-options/enhanced-license-chaining.md)
+      + [多播放權限](protecting-content/introduction/usage-rules/other-policy-options/multiple-play-rights.md)
+      + [遠程和本地iOS密鑰交付](protecting-content/introduction/usage-rules/other-policy-options/remote-key-delivery.md)
    + [設備組域註冊](protecting-content/introduction/usage-rules/domain-registration.md)
    + [輸出保護控制](protecting-content/introduction/usage-rules/output-protection-controls.md)
-   + 封裝選項{#packaging-options}
-      + [鍵旋轉](protecting-content/introduction/packaging-options/key-rotation.md)
-      + [帶外授權](protecting-content/introduction/packaging-options/out-of-band-licenses.md)
-      + [加密音軌](protecting-content/introduction/packaging-options/encrypting-tracks.md)
+   + 打包選項 {#packaging-options}
+      + [密鑰輪替](protecting-content/introduction/packaging-options/key-rotation.md)
+      + [帶外許可證](protecting-content/introduction/packaging-options/out-of-band-licenses.md)
+      + [加密軌道](protecting-content/introduction/packaging-options/encrypting-tracks.md)
       + [加密指令碼資料](protecting-content/introduction/packaging-options/encrypting-script-data.md)
       + [部分加密級別](protecting-content/introduction/packaging-options/partial-encryption-level.md)
-      + [清晰內容的初始部分](protecting-content/introduction/packaging-options/initial-portion-content-clear.md)
-      + [自訂中繼資料](protecting-content/introduction/packaging-options/custom-metadata.md)
+      + [清除中內容的初始部分](protecting-content/introduction/packaging-options/initial-portion-content-clear.md)
+      + [自定義元資料](protecting-content/introduction/packaging-options/custom-metadata.md)
       + [多個DRM策略](protecting-content/introduction/packaging-options/multiple-policies.md)
    + 設定SDK {#setting-up-the-sdk}
-      + [設定您的開發環境](protecting-content/setting-up-the-sdk/setup-dev-env.md)
-      + [Adobe PrimetimeDRM認證](protecting-content/setting-up-the-sdk/drm-credentials.md)
-      + [申請憑證](protecting-content/setting-up-the-sdk/requesting-certs.md)
-      + [儲存憑證](protecting-content/setting-up-the-sdk/storing-credentials.md)
-   + 使用DRM策略{#working-policies}
-      + [概觀](protecting-content/working-policies-overview/working-with-policies.md)
+      + [設定開發環境](protecting-content/setting-up-the-sdk/setup-dev-env.md)
+      + [Adobe PrimetimeDRM憑據](protecting-content/setting-up-the-sdk/drm-credentials.md)
+      + [請求證書](protecting-content/setting-up-the-sdk/requesting-certs.md)
+      + [儲存憑據](protecting-content/setting-up-the-sdk/storing-credentials.md)
+   + 使用DRM策略 {#working-policies}
+      + [概述](protecting-content/working-policies-overview/working-with-policies.md)
       + [使用Java API建立DRM策略](protecting-content/working-policies-overview/creating-policy-using-java-api.md)
       + [使用Java API更新DRM策略](protecting-content/working-policies-overview/updating-policy-using-java-api.md)
-      + [DRM策略關鍵性](protecting-content/working-policies-overview/policy-criticality.md)
+      + [DRM策略關鍵程度](protecting-content/working-policies-overview/policy-criticality.md)
       + [使用DRM策略更新清單](protecting-content/working-policies-overview/policy-update-lists/working-with-policy-update-lists.md)
-   + 封裝媒體檔案{#packaging-media}
-      + [概觀](protecting-content/packaging-media-overview/packaging-media-files.md)
-      + [封裝選項](protecting-content/packaging-media-overview/content-packaging-options.md)
+   + 包媒體檔案 {#packaging-media}
+      + [概述](protecting-content/packaging-media-overview/packaging-media-files.md)
+      + [打包選項](protecting-content/packaging-media-overview/content-packaging-options.md)
       + [加密內容](protecting-content/packaging-media-overview/encrypting-content.md)
-      + [檢查加密的檔案內容](protecting-content/packaging-media-overview/examining-encrypted-file-content.md)
-   + 預先產生和內嵌授權{#pre-generating-and-embedded-licenses}
-      + [預先產生的授權](protecting-content/pre-generating-and-embedded-licenses/pre-generating-licenses.md)
-      + [內嵌授權](protecting-content/pre-generating-and-embedded-licenses/embedding-licenses.md)
-   + 實施許可證伺服器{#implementing-the-license-server}
-      + [概觀](protecting-content/implementing-the-license-server/implementing-license-overview.md)
-      + [授權伺服器部署選項](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
+      + [正在檢查加密的檔案內容](protecting-content/packaging-media-overview/examining-encrypted-file-content.md)
+   + 預生成和嵌入許可證 {#pre-generating-and-embedded-licenses}
+      + [預生成許可證](protecting-content/pre-generating-and-embedded-licenses/pre-generating-licenses.md)
+      + [嵌入許可證](protecting-content/pre-generating-and-embedded-licenses/embedding-licenses.md)
+   + 實施許可證伺服器 {#implementing-the-license-server}
+      + [概述](protecting-content/implementing-the-license-server/implementing-license-overview.md)
+      + [許可證伺服器部署選項](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
       + [處理Adobe PrimetimeDRM請求](protecting-content/implementing-the-license-server/processing-drm-requests.md)
-      + [處理取得伺服器版本要求](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
-      + [處理網域註冊請求](protecting-content/implementing-the-license-server/handling-domain-registration-reqs.md)
-      + [處理網域取消註冊請求](protecting-content/implementing-the-license-server/handling-domain-de-registration-reqs.md)
-      + [處理授權退貨要求](protecting-content/implementing-the-license-server/handling-license-return-reqs.md)
-      + [處理驗證請求](protecting-content/implementing-the-license-server/handling-authentication-reqs.md)
-      + 處理授權要求{#handling-license-reqs}
-         + [概觀](protecting-content/implementing-the-license-server/handling-license-reqs/license-handling-classes.md)
-         + [授權要求錯誤處理](protecting-content/implementing-the-license-server/handling-license-reqs/license-request-errors.md)
-         + [產生授權](protecting-content/implementing-the-license-server/handling-license-reqs/generating-licenses.md)
-         + [發行網域限制授權](protecting-content/implementing-the-license-server/handling-license-reqs/domian-bound-licenses.md)
-         + [為iOS用戶端發放遠端金鑰的授權(需要Adobe Primetime)](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
-         + [最低用戶端版本](protecting-content/implementing-the-license-server/handling-license-reqs/minimum-client-version.md)
-         + [授權預覽](protecting-content/implementing-the-license-server/handling-license-reqs/license-preview.md)
-         + [身分型授權](protecting-content/implementing-the-license-server/handling-license-reqs/identity-based-licenses.md)
+      + [處理獲取伺服器版本請求](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
+      + [處理域註冊請求](protecting-content/implementing-the-license-server/handling-domain-registration-reqs.md)
+      + [處理域註銷請求](protecting-content/implementing-the-license-server/handling-domain-de-registration-reqs.md)
+      + [處理許可證返回請求](protecting-content/implementing-the-license-server/handling-license-return-reqs.md)
+      + [處理身份驗證請求](protecting-content/implementing-the-license-server/handling-authentication-reqs.md)
+      + 處理許可證請求 {#handling-license-reqs}
+         + [概述](protecting-content/implementing-the-license-server/handling-license-reqs/license-handling-classes.md)
+         + [許可證請求錯誤處理](protecting-content/implementing-the-license-server/handling-license-reqs/license-request-errors.md)
+         + [生成許可證](protecting-content/implementing-the-license-server/handling-license-reqs/generating-licenses.md)
+         + [頒發域綁定許可證](protecting-content/implementing-the-license-server/handling-license-reqs/domian-bound-licenses.md)
+         + [為iOS客戶端發放遠程密鑰傳遞許可證(需要Adobe Primetime)](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
+         + [最低客戶端版本](protecting-content/implementing-the-license-server/handling-license-reqs/minimum-client-version.md)
+         + [許可證預覽](protecting-content/implementing-the-license-server/handling-license-reqs/license-preview.md)
+         + [基於身份的許可證](protecting-content/implementing-the-license-server/handling-license-reqs/identity-based-licenses.md)
          + [更新DRM策略](protecting-content/implementing-the-license-server/handling-license-reqs/updating-policies.md)
-      + 授權鏈結{#license-chaining}
-         + [增強的授權鏈結](protecting-content/implementing-the-license-server/license-chaining/gen-enhanced-license-chaining.md)
+      + 許可證連結 {#license-chaining}
+         + [增強的許可證連結](protecting-content/implementing-the-license-server/license-chaining/gen-enhanced-license-chaining.md)
       + [處理同步請求](protecting-content/implementing-the-license-server/handling-synch-reqs.md)
       + [處理FMRMS相容性](protecting-content/implementing-the-license-server/handling-fmrms-compatibility.md)
-      + [當Adobe核發的憑證到期時處理憑證更新](protecting-content/implementing-the-license-server/handling-cert-updates.md)
+      + [在Adobe頒發的證書過期時處理證書更新](protecting-content/implementing-the-license-server/handling-cert-updates.md)
       + [效能調整](protecting-content/implementing-the-license-server/performance-tuning.md)
-   + 撤銷客戶端憑據{#revoking-client-creds}
-      + [概觀](protecting-content/revoking-client-creds/revoking-creds-overview.md)
-      + [廢止DRM用戶端和執行時期認證](protecting-content/revoking-client-creds/revoking-drm-client-and-runtime-creds.md)
-      + [廢止機器認證](protecting-content/revoking-client-creds/revoking-machine-creds.md)
-   + [建立視訊播放器](protecting-content/creating-video-players.md)
+   + 撤消客戶端憑據 {#revoking-client-creds}
+      + [概述](protecting-content/revoking-client-creds/revoking-creds-overview.md)
+      + [撤消DRM客戶端和運行時憑據](protecting-content/revoking-client-creds/revoking-drm-client-and-runtime-creds.md)
+      + [撤消電腦憑據](protecting-content/revoking-client-creds/revoking-machine-creds.md)
+   + [建立視頻播放器](protecting-content/creating-video-players.md)
 + 基於解析度的輸出保護5.3.1 {#resolution-based-output-protection}
-   + [RBOP概觀](RBOP/about-rbop.md)
+   + [RBOP概述](RBOP/about-rbop.md)
    + [RBOP概念](RBOP/output-protection-concepts.md)
    + [RBOP客戶端支援](RBOP/client-support.md)
-   + [RBOP配置示例](RBOP/sample-output-protection-config.md)
+   + [示例RBOP配置](RBOP/sample-output-protection-config.md)
    + [RBOP語法](RBOP/output-protection-grammar.md)
-   + [RBOP常見問答集](RBOP/output-protection-faq.md)
+   + [RBOP常見問題](RBOP/output-protection-faq.md)
 + Adobe PrimetimeDRM參考實施5.3.1 {#drm-reference-implementation-5-3-1}
-   + [關於參考實作](drm-reference-implementations/overview.md)
-   + [一般工作流程](drm-reference-implementations/typical-scenario.md)
-   + 命令列工具{#command-line-tools}
-      + [概觀](drm-reference-implementations/command-line-tools/command-line-tools-overview.md)
-      + [命令列工具需求](drm-reference-implementations/command-line-tools/requirements.md)
-      + [安裝命令列工具](drm-reference-implementations/command-line-tools/install-command-line-tools.md)
-   + 配置並運行命令行工具{#configure-and-run}
-      + [概觀](drm-reference-implementations/command-line-tools/configure-command-line-tools/configure-command-line-tools.md)
+   + [關於引用實現](drm-reference-implementations/overview.md)
+   + [典型工作流](drm-reference-implementations/typical-scenario.md)
+   + 命令行工具 {#command-line-tools}
+      + [概述](drm-reference-implementations/command-line-tools/command-line-tools-overview.md)
+      + [命令行工具要求](drm-reference-implementations/command-line-tools/requirements.md)
+      + [安裝命令行工具](drm-reference-implementations/command-line-tools/install-command-line-tools.md)
+   + 配置並運行命令行工具 {#configure-and-run}
+      + [概述](drm-reference-implementations/command-line-tools/configure-command-line-tools/configure-command-line-tools.md)
       + [關於命令行工具配置檔案](drm-reference-implementations/command-line-tools/configure-command-line-tools/config-file.md)
       + [DRM策略管理器](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
-      + [策略管理器命令行使用](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
+      + [策略管理器命令行用法](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
       + [配置屬性](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-config-file-properties.md)
       + [非SWF應用程式允許清單](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
       + [SWF應用程式允許清單](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
-   + [DRM Media Packager](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
+   + [DRM介質打包器](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
    + [DRM策略更新清單管理器](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
-   + [DRM撤銷清單管理員](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
-   + [DRM授權產生器](drm-reference-implementations/command-line-tools/configure-command-line-tools/license-generator/license-generator-overview.md)
-   + [DRM授權嵌入程式](drm-reference-implementations/command-line-tools/configure-command-line-tools/license-embedder/license-embedder-overview.md)
-   + [AIR Publisher ID公用程式](drm-reference-implementations/command-line-tools/configure-command-line-tools/air-publisher-id-utility/air-publisher-id-utility-overview.md)
-   + [授權伺服器](drm-reference-implementations/license-server-and-wfp/license-server-and-wfp.md)
-   + 配置{#configuration}
+   + [DRM吊銷清單管理器](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
+   + [DRM許可證生成器](drm-reference-implementations/command-line-tools/configure-command-line-tools/license-generator/license-generator-overview.md)
+   + [DRM許可證嵌入程式](drm-reference-implementations/command-line-tools/configure-command-line-tools/license-embedder/license-embedder-overview.md)
+   + [AIR發佈者ID實用程式](drm-reference-implementations/command-line-tools/configure-command-line-tools/air-publisher-id-utility/air-publisher-id-utility-overview.md)
+   + [許可證伺服器](drm-reference-implementations/license-server-and-wfp/license-server-and-wfp.md)
+   + 配置 {#configuration}
       + [許可證伺服器屬性檔案](drm-reference-implementations/configuration/properties-file.md)
       + [為伺服器屬性檔案準備密碼](drm-reference-implementations/configuration/config-prep-pws-for-server-props-files.md)
       + [使用Ant準備密碼](drm-reference-implementations/configuration/config-prep-pws-for-server-with-ant.md)
       + [使用Java準備密碼](drm-reference-implementations/configuration/config-prep-pws-for-server-with-java.md)
-      + [遠端金鑰傳送屬性(iOS)](drm-reference-implementations/configuration/remote-key-properties.md)
+      + [遠程密鑰傳遞屬性(iOS)](drm-reference-implementations/configuration/remote-key-properties.md)
       + [設定許可證伺服器資料庫](drm-reference-implementations/configuration/setting-up-db-jndi.md)
       + [配置許可證伺服器資料庫](drm-reference-implementations/configuration/configure-db-jndi.md)
       + [HSM配置](drm-reference-implementations/configuration/hsm-config.md)
-      + [跨網域原則檔案](drm-reference-implementations/configuration/hsm-config-crossdomain-policy-file.md)
-   + [部署授權伺服器](drm-reference-implementations/deploy-a-license-server.md)
-   + [疑難排解](drm-reference-implementations/server-and-wfp-troubleshooting.md)
-   + [檢查許可證伺服器是否正確啟動](drm-reference-implementations/server-determining-ref-started.md)
-   + [確定Reference Implementation License Server是否正常運行](drm-reference-implementations/server-determining-ref-running.md)
-   + 實施使用模型{#implement-usage-models}
-      + [實作使用模型概觀](drm-reference-implementations/impl-usage-models/impl-usage-models-overview.md)
-      + [啟用使用模式示範](drm-reference-implementations/impl-usage-models/enable-usage-model-demo.md)
-      + [設定使用模式示範模式](drm-reference-implementations/impl-usage-models/config-server-for-demo-mode.md)
-      + [更新參考實作DB](drm-reference-implementations/impl-usage-models/update-db.md)
-      + [使用模式示範業務規則](drm-reference-implementations/impl-usage-models/usage-model-biz-rules.md)
-   + 域註冊{#implement-domain-registration}
-      + [概觀](drm-reference-implementations/impl-domain-registration/impl-domain-registration-overview.md)
-      + [實施基於身份的域註冊](drm-reference-implementations/impl-domain-registration/implement-domain-based-reg.md)
+      + [跨域策略檔案](drm-reference-implementations/configuration/hsm-config-crossdomain-policy-file.md)
+   + [部署許可證伺服器](drm-reference-implementations/deploy-a-license-server.md)
+   + [故障排除](drm-reference-implementations/server-and-wfp-troubleshooting.md)
+   + [檢查許可證伺服器是否已正確啟動](drm-reference-implementations/server-determining-ref-started.md)
+   + [確定引用實施許可證伺服器是否正常運行](drm-reference-implementations/server-determining-ref-running.md)
+   + 實施使用模式 {#implement-usage-models}
+      + [實施使用模型概述](drm-reference-implementations/impl-usage-models/impl-usage-models-overview.md)
+      + [啟用使用模型演示](drm-reference-implementations/impl-usage-models/enable-usage-model-demo.md)
+      + [配置使用模式演示模式](drm-reference-implementations/impl-usage-models/config-server-for-demo-mode.md)
+      + [更新引用實現DB](drm-reference-implementations/impl-usage-models/update-db.md)
+      + [使用模型演示業務規則](drm-reference-implementations/impl-usage-models/usage-model-biz-rules.md)
+   + 域註冊 {#implement-domain-registration}
+      + [概述](drm-reference-implementations/impl-domain-registration/impl-domain-registration-overview.md)
+      + [實現基於身份的域註冊](drm-reference-implementations/impl-domain-registration/implement-domain-based-reg.md)
       + [基於身份的域註冊邏輯](drm-reference-implementations/impl-domain-registration/impl-domain-registration-id-based-domains.md)
-      + [實作匿名網域註冊](drm-reference-implementations/impl-domain-registration/implement-anon-domain-reg.md)
-      + [匿名網域邏輯](drm-reference-implementations/impl-domain-registration/impl-domain-registration-anonymous-domains.md)
-   + [從FMRMS 1.0或1.5移轉至Adobe PrimetimeDRM 2.0或更新版本](drm-reference-implementations/migrating-fmrms-drm.md)
-   + 升級現有部署{#upgrade-existing-deploys}
-      + [升級現有部署概觀](drm-reference-implementations/upgrading-existing-deplys/upgrading-existing-deplys.md)
+      + [實現匿名域註冊](drm-reference-implementations/impl-domain-registration/implement-anon-domain-reg.md)
+      + [匿名域邏輯](drm-reference-implementations/impl-domain-registration/impl-domain-registration-anonymous-domains.md)
+   + [從FMRMS 1.0或1.5遷移到Adobe PrimetimeDRM 2.0或更高版本](drm-reference-implementations/migrating-fmrms-drm.md)
+   + 升級現有部署 {#upgrade-existing-deploys}
+      + [升級現有部署概述](drm-reference-implementations/upgrading-existing-deplys/upgrading-existing-deplys.md)
       + [設定域伺服器](drm-reference-implementations/upgrading-existing-deplys/upgrading-existing-deplys-setup-ds.md)
-+ Adobe PrimetimeTVSDK-DRM工作流程{#workflow}
-   + [TVSDK-DRM用戶端工作流程概觀](tvsdk-drm-workflow/overview.md)
-   + [Primetime DRM內容保護選項](tvsdk-drm-workflow/content-protection-options.md)
-   + [Primetime DRM在用戶端上](tvsdk-drm-workflow/drm-on-client.md)
-   + [Primetime DRM授權伺服器](tvsdk-drm-workflow/license-server.md)
-   + [授權取得程式概觀](tvsdk-drm-workflow/content-protection-process-overview.md)
-   + [授權取得程式詳細資訊](tvsdk-drm-workflow/content-protection-process-details.md)
-   + [預先載入授權以進行離線播放](tvsdk-drm-workflow/preloading-licenses/preloading-licenses.md)
++ Adobe PrimetimeTVSDK-DRM工作流 {#workflow}
+   + [TVSDK-DRM客戶端工作流概述](tvsdk-drm-workflow/overview.md)
+   + [黃金時段DRM內容保護選項](tvsdk-drm-workflow/content-protection-options.md)
+   + [客戶端上的黃金時段DRM](tvsdk-drm-workflow/drm-on-client.md)
+   + [黃金時段DRM許可證伺服器](tvsdk-drm-workflow/license-server.md)
+   + [許可證獲取過程概述](tvsdk-drm-workflow/content-protection-process-overview.md)
+   + [許可證獲取流程詳細資訊](tvsdk-drm-workflow/content-protection-process-details.md)
+   + [預載入用於離線播放的許可證](tvsdk-drm-workflow/preloading-licenses/preloading-licenses.md)
    + [使用DRMStatusEvent類](tvsdk-drm-workflow/using-drmstatusevent/using-drmstatusevent.md)
    + 使用DRMAuthenticateEvent類{#using-drmauthenticateevent}
       + [建立DRMAuthenticateEvent處理程式](tvsdk-drm-workflow/using-drmauthenticateevent/create-drmauthnevent-handler.md)
-      + [建立驗證UI](tvsdk-drm-workflow/using-drmauthenticateevent/create-an-authn-ui.md)
+      + [建立身份驗證UI](tvsdk-drm-workflow/using-drmauthenticateevent/create-an-authn-ui.md)
    + [使用DRMErrorEvent類](tvsdk-drm-workflow/using-drmerrorevent.md)
    + [使用DRMManager類](tvsdk-drm-workflow/using-drmmanager/using-drmmanager-overview.md)
    + [使用DRMContentData類](tvsdk-drm-workflow/using-drmcontentdata.md)
-   + [帶外授權](tvsdk-drm-workflow/about-out-of-band-licenses.md)
-   + [裝置網域支援](tvsdk-drm-workflow/device-domain-support.md)
-   + [授權預覽](tvsdk-drm-workflow/license-preview.md)
+   + [帶外許可證](tvsdk-drm-workflow/about-out-of-band-licenses.md)
+   + [設備域支援](tvsdk-drm-workflow/device-domain-support.md)
+   + [許可證預覽](tvsdk-drm-workflow/license-preview.md)
    + [提供內容](tvsdk-drm-workflow/delivering-content.md)
 + [DRM客戶端錯誤消息參考](client-error-message-reference.md)
-+ 將Adobe訪問DRM與外部密鑰管理系統{#external-cek}一起使用
-   + [Adobe存取DRM外部CEK概觀](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)
-   + [標準AAXS DRM工作流程](aaxs-drm-xkey-mgmt/aaxs-drm-standard-workflow.md)
-   + [AAXS DRM外部CEK工作流程](aaxs-drm-xkey-mgmt/aaxs-drm-external-cek-workflow.md)
-   + [使用外部CEK購買及封裝授權](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek.md)
-+ 使用Adobe Access Server進行受保護的串流{#adobe-access-server}
-   + [關於Adobe Access Server的受保護串流](aaxs-protected-streaming/about-aaxs-protect-stream.md)
++ 將Adobe訪問DRM與外部密鑰管理系統一起使用 {#external-cek}
+   + [Adobe訪問DRM外部CEK概述](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)
+   + [標準AAXS DRM工作流](aaxs-drm-xkey-mgmt/aaxs-drm-standard-workflow.md)
+   + [AAXS DRM外部CEK工作流](aaxs-drm-xkey-mgmt/aaxs-drm-external-cek-workflow.md)
+   + [使用外部CEK獲取許可證和包許可證](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek.md)
++ 使用Adobe Access Server進行受保護的流式處理 {#adobe-access-server}
+   + [關於Adobe Access Server的受保護流](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [使用規則](aaxs-protected-streaming/usage-rules.md)
-   + [需求](aaxs-protected-streaming/requirements.md)
-   + 部署Adobe Access Server保護流{#deploying-aaxs-protect-stream}
-      + [部署Adobe Access Server保護串流概觀](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
+   + [要求](aaxs-protected-streaming/requirements.md)
+   + 部署Adobe Access Server以進行受保護的流式處理 {#deploying-aaxs-protect-stream}
+      + [部署Adobe Access Server以獲得保護的流式處理概述](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
       + [Java系統屬性](aaxs-protected-streaming/deplying-aaxs-protect-stream/java-system-properties.md)
-      + [Adobe存取認證](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
+      + [Adobe訪問憑據](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
       + [HSM配置](aaxs-protected-streaming/deplying-aaxs-protect-stream/hsm-configuration.md)
-   + 許可證伺服器配置檔案{#aaxs-license-server-config-files}
+   + 許可證伺服器配置檔案 {#aaxs-license-server-config-files}
       + [配置目錄結構](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)
       + [全局配置檔案](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-global-configuration-file.md)
-      + [租用戶配置檔案](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-tenant-configuration-file.md)
+      + [租戶配置檔案](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-tenant-configuration-file.md)
    + [跨域策略檔案](aaxs-protected-streaming/aaxs-crossdomain-policy-file.md)
-   + [自訂授權擴充功能](aaxs-protected-streaming/custom-authorization-extensions.md)
-   + 效能調整{#performance-tuning}
+   + [自定義授權擴展](aaxs-protected-streaming/custom-authorization-extensions.md)
+   + 效能調整 {#performance-tuning}
       + [全局配置檔案](aaxs-protected-streaming/performance-tuning/global-configuration-file.md)
-   + 升級Adobe Access Server的受保護串流{#upgrading-the-license-server}
-      + [執行Adobe Access Server的受保護串流](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
+   + 將Adobe Access Server升級為受保護的流 {#upgrading-the-license-server}
+      + [運行Adobe Access Server以進行受保護的流式處理](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
       + [日誌檔案](aaxs-protected-streaming/upgrading-the-license-server/log-files.md)
       + [日誌目錄結構](aaxs-protected-streaming/upgrading-the-license-server/log-directory-structure.md)
-      + [全域記錄檔](aaxs-protected-streaming/upgrading-the-license-server/global-log-file.md)
+      + [全局日誌檔案](aaxs-protected-streaming/upgrading-the-license-server/global-log-file.md)
       + [分區日誌檔案](aaxs-protected-streaming/upgrading-the-license-server/partition-log-file.md)
-      + [租用戶記錄檔](aaxs-protected-streaming/upgrading-the-license-server/tenant-log-file.md)
-   + 更新配置檔案{#updating-configuration-files}
+      + [租戶日誌檔案](aaxs-protected-streaming/upgrading-the-license-server/tenant-log-file.md)
+   + 正在更新配置檔案 {#updating-configuration-files}
       + [更新配置檔案概述](aaxs-protected-streaming/updating-configuration-files/updating-configuration-files-overview.md)
       + [更新全局配置檔案](aaxs-protected-streaming/updating-configuration-files/updating-global-configuration.md)
-      + [更新租用戶配置檔案](aaxs-protected-streaming/updating-configuration-files/updating-tenant-configuration.md)
-   + [封裝內容](aaxs-protected-streaming/packaging-content.md)
-   + Adobe Access Server的受保護串流公用程式{#aaxs-protected-streaming-utilities}
-      + [配置驗證器](aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)
-      + [密碼剪貼器](aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)
-      + [SWF雜湊計算器](aaxs-protected-streaming/aaxs-protected-streaming-utilities/swf-hash-calculator.md)
-+ Adobe訪問安全部署准則{#adobe-access-secure-deployment-guidelines}
-   + 網路拓撲{#overview}簡介
+      + [更新租戶配置檔案](aaxs-protected-streaming/updating-configuration-files/updating-tenant-configuration.md)
+   + [打包內容](aaxs-protected-streaming/packaging-content.md)
+   + Adobe Access Server用於受保護的流式處理實用程式 {#aaxs-protected-streaming-utilities}
+      + [配置驗證程式](aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)
+      + [密碼加擾器](aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)
+      + [SWF哈希計算器](aaxs-protected-streaming/aaxs-protected-streaming-utilities/swf-hash-calculator.md)
++ Adobe訪問安全部署准則 {#adobe-access-secure-deployment-guidelines}
+   + 網路拓撲簡介 {#overview}
       + [網路拓撲概述](aaxs-secure-deployment-guidelines/overview/network-topology.md)
-      + [網路層安全性](aaxs-secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
+      + [網路層安全](aaxs-secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
       + [防火牆規則](aaxs-secure-deployment-guidelines/overview/network-topology-firewall-rules.md)
       + [Adobe訪問使用的網路協定](aaxs-secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
       + [應用程式伺服器的埠](aaxs-secure-deployment-guidelines/overview/network-topology-ports-for-app-srvs.md)
-      + [設定SSL](aaxs-secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
+      + [配置SSL](aaxs-secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
    + [特定於供應商的安全資訊](aaxs-secure-deployment-guidelines/vendor-specific-sec-info.md)
-   + [物理安全性和訪問](aaxs-secure-deployment-guidelines/physical-sec-and-access.md)
-   + 封裝和保護內容{#packaging}
-      + [保護伺服器的安全](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-the-server.md)
-      + [安全地封裝內容](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-pkging.md)
+   + [物理安全和訪問](aaxs-secure-deployment-guidelines/physical-sec-and-access.md)
+   + 打包和保護內容 {#packaging}
+      + [保護伺服器](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-the-server.md)
+      + [安全地打包內容](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-pkging.md)
       + [安全地儲存策略](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-storing-policies.md)
       + [非對稱密鑰加密](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ake.md)
-      + [確保與Flash介質Rights Management伺服器1.x相容](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
-   + Protect及核發授權{#issuing-licenses}
-      + [使用本機產生的CRL](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-local-crls.md)
-      + [使用由Adobe發佈的CRL](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
-      + [產生CRL以補充Adobe發佈的CRL](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
+      + [確保與Flash媒體Rights Management伺服器1.x的相容性](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
+   + Protect和頒發許可證 {#issuing-licenses}
+      + [正在使用本地生成的CRL](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-local-crls.md)
+      + [正在使用Adobe發佈的CRL](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
+      + [生成CRL以補充由Adobe發佈的CRL](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
       + [回滾檢測](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
-      + [核發授權時的機器計數](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
+      + [頒發許可證時的電腦計數](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [重放保護](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
-      + [維護受信任內容封裝器的允許清單](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
-      + [驗證Token的逾時](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
+      + [維護受信任內容包器的允許清單](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
+      + [驗證令牌超時](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
       + [覆蓋策略選項](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
-      + [預先產生的授權](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
-      + [管理網域](aaxs-secure-deployment-guidelines/issuing-licenses/managing-domains.md)
-+ Adobe存取SDK {#overview}概觀
-   + [Adobe存取SDK概觀](aaxs-sdk-overview/overview.md)
+      + [預生成許可證](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
+      + [管理域](aaxs-secure-deployment-guidelines/issuing-licenses/managing-domains.md)
++ Adobe訪問SDK概述 {#overview}
+   + [Adobe訪問SDK概述](aaxs-sdk-overview/overview.md)
    + [關於Adobe訪問](aaxs-sdk-overview/about-adobe-access.md)
-   + [主要功能](aaxs-sdk-overview/key-features.md)
+   + [關鍵功能](aaxs-sdk-overview/key-features.md)
    + [術語和核心概念](aaxs-sdk-overview/terminology-and-core-concepts.md)
-   + 內容發佈工作流程{#content-distribution-workflow}
+   + 內容分發工作流 {#content-distribution-workflow}
       + [內容準備](aaxs-sdk-overview/content-distribution-workflow/content-preparation.md)
       + [內容獲取](aaxs-sdk-overview/content-distribution-workflow/content-acquisition.md)
-   + [Adobe存取元件](aaxs-sdk-overview/adobe-access-components/adobe-access-sdk.md)
+   + [Adobe訪問元件](aaxs-sdk-overview/adobe-access-components/adobe-access-sdk.md)
    + [部署Adobe訪問](aaxs-sdk-overview/deploying-adobe-access/configure-adobe-access.md)
-   + 其他部署方案{#additional-scenarios}
+   + 其他部署方案 {#additional-scenarios}
       + [UltraViolet介質和Adobe訪問](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
-      + [Adobe Pass與Adobe](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
-+ 使用Adobe存取SDK保護內容{#using-adobe-access-sdk}
-   + [簡介](aaxs-protecting-content/content-introduction/content-whats-new.md)
-   + [使用者驗證](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
-   + [時間型規則](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
-   + 執行時期和應用程式限制{#runtime-and-application-restrictions}
-      + [允許Adobe® Primetime應用程式播放受保護內容的清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [Adobe Pass和Adobe](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
++ 使用Adobe訪問SDK保護內容 {#using-adobe-access-sdk}
+   + [導言](aaxs-protecting-content/content-introduction/content-whats-new.md)
+   + [用戶驗證](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
+   + [基於時間的規則](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
+   + 運行時和應用程式限制 {#runtime-and-application-restrictions}
+      + [允許Adobe(R)允許播放受保護內容的黃金時段應用程式清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
       + [允許Adobe®Flash®播放器SWF播放受保護內容的清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
-      + [DRM客戶端阻止訪問受保護內容的塊清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
-      + [限制存取受保護內容之應用程式執行時期的區塊清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
-      + [DRM和執行時期的最低安全等級](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
-      + [播放受保護內容所需的裝置功能](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
-      + [越獄執法(需要Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
-   + 其他策略選項{#content-other-policy-options}
-      + [增強的授權鏈結](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)
-      + [多重播放權](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-multiple-play-rights.md)
-      + [遠端和本機iOS金鑰傳送](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-remote-key-delivery.md)
+      + [阻止限制訪問受保護內容的DRM客戶端清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
+      + [阻止限制訪問受保護內容的應用程式運行時清單](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
+      + [DRM和運行時的最低安全級別](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
+      + [播放受保護內容所需的設備功能](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
+      + [越獄強制(需要Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
+   + 其他策略選項 {#content-other-policy-options}
+      + [增強的許可證連結](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)
+      + [多播放權限](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-multiple-play-rights.md)
+      + [遠程和本地iOS密鑰交付](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-remote-key-delivery.md)
       + [設備組域註冊](aaxs-protecting-content/content-introduction/content-usage-rules/content-domain-registration.md)
    + [輸出保護控制](aaxs-protecting-content/content-introduction/content-usage-rules/output-protection/output-protection-controls.md)
-   + 封裝選項{#packaging-option}
-      + [鍵旋轉](aaxs-protecting-content/content-introduction/packaging-options/content-key-rotation.md)
-      + [帶外授權](aaxs-protecting-content/content-introduction/packaging-options/content-out-of-band-licenses.md)
-      + [加密音軌](aaxs-protecting-content/content-introduction/packaging-options/content-encrypting-tracks.md)
+   + 打包選項 {#packaging-option}
+      + [密鑰輪替](aaxs-protecting-content/content-introduction/packaging-options/content-key-rotation.md)
+      + [帶外許可證](aaxs-protecting-content/content-introduction/packaging-options/content-out-of-band-licenses.md)
+      + [加密軌道](aaxs-protecting-content/content-introduction/packaging-options/content-encrypting-tracks.md)
       + [加密指令碼資料](aaxs-protecting-content/content-introduction/packaging-options/content-encrypting-script-data.md)
       + [部分加密級別](aaxs-protecting-content/content-introduction/packaging-options/content-partial-encryption-level.md)
-      + [清晰內容的初始部分](aaxs-protecting-content/content-introduction/packaging-options/content-initial-portion-content-clear.md)
-      + [自訂中繼資料](aaxs-protecting-content/content-introduction/packaging-options/content-custom-metadata.md)
+      + [清除中內容的初始部分](aaxs-protecting-content/content-introduction/packaging-options/content-initial-portion-content-clear.md)
+      + [自定義元資料](aaxs-protecting-content/content-introduction/packaging-options/content-custom-metadata.md)
       + [多個策略](aaxs-protecting-content/content-introduction/packaging-options/content-multiple-policies.md)
    + 設定SDK {#setting-up-the-sdk}
-      + [設定開發環境](aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)
-      + [Adobe存取認證](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
-      + [申請憑證](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
-      + [儲存憑證](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
-   + 使用策略{#working-with-policies}
+      + [建立開發環境](aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)
+      + [Adobe訪問憑據](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
+      + [請求證書](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
+      + [儲存憑據](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
+   + 使用策略 {#working-with-policies}
       + [使用策略](aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)
-      + [使用Java API建立原則](aaxs-protecting-content/content-working-with-policies/content-creating-policy-using-java-api.md)
-      + [使用Java API更新原則](aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md)
-      + [策略關鍵性](aaxs-protecting-content/content-working-with-policies/content-policy-criticality.md)
+      + [使用Java API建立策略](aaxs-protecting-content/content-working-with-policies/content-creating-policy-using-java-api.md)
+      + [使用Java API更新策略](aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md)
+      + [策略關鍵程度](aaxs-protecting-content/content-working-with-policies/content-policy-criticality.md)
       + [策略更新清單](aaxs-protecting-content/content-working-with-policies/protecting-content-policy-update-lists.md)
       + [使用策略更新清單](aaxs-protecting-content/content-working-with-policies/content-working-with-policy-update-lists.md)
-   + 封裝媒體檔案{#packaging-media-files}
-      + [封裝媒體檔案](aaxs-protecting-content/content-packaging-media-files/content-packaging-media-files-overview.md)
+   + 打包媒體檔案 {#packaging-media-files}
+      + [打包媒體檔案](aaxs-protecting-content/content-packaging-media-files/content-packaging-media-files-overview.md)
       + [加密內容](aaxs-protecting-content/content-packaging-media-files/content-encrypting-content.md)
-      + [檢查加密的檔案內容](aaxs-protecting-content/content-packaging-media-files/content-examining-encrypted-file-content.md)
-   + 預先產生和內嵌授權{#pre-generating-and-embedding-liceses}
-      + [預先產生和內嵌授權](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-pre-generating-embedded-licenses-overview.md)
-      + [預先產生的授權](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-pre-generating-licenses.md)
-      + [內嵌授權](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md)
-   + 實施許可證伺服器{#implementing-license-server}
-      + [實作授權伺服器](aaxs-protecting-content/content-implementing-the-license-server/content-implementing-license-server-overview.md)
-      + [授權伺服器部署選項](aaxs-protecting-content/content-implementing-the-license-server/content-license-server-deployment-options.md)
-   + 處理Adobe訪問請求{#processing-adobe-access-requests}
+      + [正在檢查加密的檔案內容](aaxs-protecting-content/content-packaging-media-files/content-examining-encrypted-file-content.md)
+   + 預生成和嵌入許可證 {#pre-generating-and-embedding-liceses}
+      + [預生成和嵌入許可證](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-pre-generating-embedded-licenses-overview.md)
+      + [預生成許可證](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-pre-generating-licenses.md)
+      + [嵌入許可證](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md)
+   + 實施許可證伺服器 {#implementing-license-server}
+      + [實施許可證伺服器](aaxs-protecting-content/content-implementing-the-license-server/content-implementing-license-server-overview.md)
+      + [許可證伺服器部署選項](aaxs-protecting-content/content-implementing-the-license-server/content-license-server-deployment-options.md)
+   + 處理Adobe訪問請求 {#processing-adobe-access-requests}
       + [處理Adobe訪問請求](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-processing-aaxs-requests-overview.md)
       + [使用電腦標識符](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-using-machine-ids.md)
-      + [使用者驗證](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-licenses-user-authentication.md)
+      + [用戶驗證](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-licenses-user-authentication.md)
       + [重放保護](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-replay-protection.md)
       + [回滾檢測](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md)
-      + [全域伺服器組態資料](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-global-server-config-data.md)
+      + [全局伺服器配置資料](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-global-server-config-data.md)
       + [跨域策略檔案](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-crossdomain-policy-file.md)
       + [處理獲取伺服器版本請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-get-server-version-reqs.md)
-      + [處理網域註冊請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-domain-registration-reqs.md)
+      + [處理域註冊請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-domain-registration-reqs.md)
       + [處理域取消註冊請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-domain-de-registration-reqs.md)
-      + [處理授權退貨要求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-return-reqs.md)
-      + [處理驗證請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-authentication-reqs.md)
-      + [處理授權要求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-handling-license-reqs.md)
-      + [處理授權要求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-handling-license-reqs-overview.md)
-      + [產生授權](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-generating-licenses.md)
-      + [授權鏈結](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-chaining.md)
-      + [增強的授權鏈結](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-gen-enhanced-license-chaining.md)
-      + [發行限制網域的授權](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-domian-bound-licenses.md)
-      + [為iOS用戶端發放遠端金鑰的授權(需要Adobe Primetime)](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-issuing-licenses-remote-ios.md)
+      + [處理許可證返回請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-return-reqs.md)
+      + [處理身份驗證請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-authentication-reqs.md)
+      + [處理許可證請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-handling-license-reqs.md)
+      + [處理許可證請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-handling-license-reqs-overview.md)
+      + [生成許可證](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-generating-licenses.md)
+      + [許可證連結](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-chaining.md)
+      + [增強的許可證連結](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-gen-enhanced-license-chaining.md)
+      + [頒發域綁定許可證](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-domian-bound-licenses.md)
+      + [為iOS客戶端發放遠程密鑰傳遞許可證(需要Adobe Primetime)](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-issuing-licenses-remote-ios.md)
       + [最低客戶端版本](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)
-      + [授權預覽](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-preview.md)
-      + 身分型授權{#licenses}
-         + [ID型授權概觀](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-identity-based-licenses.md)
+      + [許可證預覽](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-preview.md)
+      + 基於身份的許可證 {#licenses}
+         + [基於ID的許可證概述](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-identity-based-licenses.md)
          + [更新策略](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-updating-policies.md)
          + [處理同步請求](aaxs-protecting-content/content-implementing-the-license-server/content-handling-synch-reqs.md)
-         + 處理FMRMS相容性{#handling-fmrms-compatibility}
-            + [概觀](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-handling-fmrms-compatibility-overview.md)
+         + 處理FMRMS相容性 {#handling-fmrms-compatibility}
+            + [概述](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-handling-fmrms-compatibility-overview.md)
             + [升級客戶端](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-clients.md)
-            + [升級中繼資料](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-metadata.md)
-         + [當您的Adobe憑證到期時，處理憑證更新](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
+            + [升級元資料](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-metadata.md)
+         + [在Adobe頒發的證書過期時處理證書更新](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
          + [效能調整](aaxs-protecting-content/content-implementing-the-license-server/content-performance-tuning.md)
-         + [產生隨機數](aaxs-protecting-content/content-implementing-the-license-server/content-generating-random-nos.md)
-   + 廢止用戶端認證{#revoking-client-credentials}
-      + [廢止用戶端認證](aaxs-protecting-content/content-revoking-client-creds/content-revoking-client-creds-overview.md)
-      + [廢止DRM用戶端和執行時期認證](aaxs-protecting-content/content-revoking-client-creds/content-revoking-drm-client-and-runtime-creds.md)
-      + [廢止機器認證](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
-   + [建立視訊播放器](aaxs-protecting-content/content-creating-video-players.md)
-+ Adobe訪問參考實現{#reference-implementation}
-   + [概觀——使用參考實作](aaxs-reference-implementations/overview.md)
-   + [用於封裝內容和建立撤銷清單的命令列工具  ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
-   + 策略管理器{#policy-manager}
+         + [生成隨機數](aaxs-protecting-content/content-implementing-the-license-server/content-generating-random-nos.md)
+   + 撤消客戶端憑據 {#revoking-client-credentials}
+      + [撤消客戶端憑據](aaxs-protecting-content/content-revoking-client-creds/content-revoking-client-creds-overview.md)
+      + [撤消DRM客戶端和運行時憑據](aaxs-protecting-content/content-revoking-client-creds/content-revoking-drm-client-and-runtime-creds.md)
+      + [撤消電腦憑據](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
+   + [建立視頻播放器](aaxs-protecting-content/content-creating-video-players.md)
++ Adobe訪問參考實現 {#reference-implementation}
+   + [概述 — 使用引用實施](aaxs-reference-implementations/overview.md)
+   + [用於打包內容和建立撤消清單的命令行工具 ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + 策略管理器 {#policy-manager}
       + [使用策略管理器](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [配置檔案屬性](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)
-      + [命令列使用](aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md)
-   + Media Packager {#media-packager}
-      + [使用Media Packager](aaxs-reference-implementations/command-line-tools/media-packager/using-aaxs-media-packager.md)
+      + [命令行用法](aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md)
+   + 介質打包器 {#media-packager}
+      + [使用介質打包器](aaxs-reference-implementations/command-line-tools/media-packager/using-aaxs-media-packager.md)
       + [配置檔案屬性](aaxs-reference-implementations/command-line-tools/media-packager/media-packager-config-file-props.md)
-      + [命令列使用](aaxs-reference-implementations/command-line-tools/media-packager/media-packager-command-line-usage.md)
-   + 策略更新清單管理器{#policy-update-list-manager}
+      + [命令行用法](aaxs-reference-implementations/command-line-tools/media-packager/media-packager-command-line-usage.md)
+   + 策略更新清單管理器 {#policy-update-list-manager}
       + [策略更新清單管理器概述](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
       + [配置檔案屬性](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-config-file-props.md)
-      + [命令列使用](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-command-line-usage.md)
-   + 撤銷清單管理器{#policy-revocation-list-manager}
-      + [撤銷清單管理員概觀](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
+      + [命令行用法](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-command-line-usage.md)
+   + 吊銷清單管理器 {#policy-revocation-list-manager}
+      + [吊銷清單管理器概述](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
       + [配置檔案屬性](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/revocation-config-file-props.md)
-      + [命令列使用](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/revocation-command-line-usage.md)
-   + AIR Publisher ID公用程式{#air-publisher-id-utility}
-      + [AIR Publisher ID公用程式總覽](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-id-utility-overview.md)
-      + [命令列使用](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-command-line-usage.md)
-   + 許可證生成器{#license-generator}
-      + [授權產生器概觀](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-overview.md)
+      + [命令行用法](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/revocation-command-line-usage.md)
+   + AIR發佈者ID實用程式 {#air-publisher-id-utility}
+      + [AIR發佈者ID實用程式概述](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-id-utility-overview.md)
+      + [命令行用法](aaxs-reference-implementations/command-line-tools/air-publisher-id-utility/air-publisher-command-line-usage.md)
+   + 許可證生成器 {#license-generator}
+      + [許可證生成器概述](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-overview.md)
       + [配置檔案屬性](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-config-file-props.md)
-      + [命令列使用](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-command-line-usage.md)
-   + 許可證嵌入器{#license-embedder}
-      + [授權嵌入程式概觀](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-overview.md)
-      + [命令列使用](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-command-line-usage.md)
-   + 許可證伺服器和監視資料夾包裝器{#license-server-and-wfp}
-      + [授權伺服器與受監視的資料夾封裝程式總覽](aaxs-reference-implementations/license-server-and-wfp/license-server-wfp-overview.md)
-      + [需求](aaxs-reference-implementations/license-server-and-wfp/license-server-and-wfp-reqs.md)
-      + [建立授權伺服器](aaxs-reference-implementations/license-server-and-wfp/building-the-license-server.md)
+      + [命令行用法](aaxs-reference-implementations/command-line-tools/license-generator/license-generator-command-line-usage.md)
+   + 許可證嵌入器 {#license-embedder}
+      + [許可證嵌入程式概述](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-overview.md)
+      + [命令行用法](aaxs-reference-implementations/command-line-tools/license-embedder/license-embedder-command-line-usage.md)
+   + 許可證伺服器和受監視資料夾打包器{#license-server-and-wfp}
+      + [許可證伺服器和受監視資料夾打包器概述](aaxs-reference-implementations/license-server-and-wfp/license-server-wfp-overview.md)
+      + [要求](aaxs-reference-implementations/license-server-and-wfp/license-server-and-wfp-reqs.md)
+      + [構建許可證伺服器](aaxs-reference-implementations/license-server-and-wfp/building-the-license-server.md)
       + [配置](aaxs-reference-implementations/license-server-and-wfp/license-server-configuration.md)
       + [伺服器屬性檔案](aaxs-reference-implementations/license-server-and-wfp/license-server-config-server-props-files.md)
       + [為伺服器屬性檔案準備密碼](aaxs-reference-implementations/license-server-and-wfp/license-server-config-prep-pws-for-server-props-files.md)
       + [許可證伺服器屬性檔案](aaxs-reference-implementations/license-server-and-wfp/license-server-properties-file.md)
-      + [Packager屬性檔案](aaxs-reference-implementations/license-server-and-wfp/packager-properties-file.md)
-      + [Watched資料夾屬性](aaxs-reference-implementations/license-server-and-wfp/license-server-watched-folder-props.md)
-      + [設定資料庫和配置JNDI資料源](aaxs-reference-implementations/license-server-and-wfp/license-server-setting-up-db-jndi.md)
+      + [打包器屬性檔案](aaxs-reference-implementations/license-server-and-wfp/packager-properties-file.md)
+      + [監視的資料夾屬性](aaxs-reference-implementations/license-server-and-wfp/license-server-watched-folder-props.md)
+      + [設定資料庫並配置JNDI資料源](aaxs-reference-implementations/license-server-and-wfp/license-server-setting-up-db-jndi.md)
       + [HSM配置](aaxs-reference-implementations/license-server-and-wfp/license-server-hsm-config.md)
       + [跨域策略檔案](aaxs-reference-implementations/license-server-and-wfp/license-server-hsm-config-crossdomain-policy-file.md)
-   + 部署許可證伺服器和監視資料夾包裝器{#license-server-and-wfp}
-      + [部署授權伺服器和受監視的資料夾封裝程式總覽](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-overview.md)
-      + [疑難排解](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-troubleshooting.md)
-   + [確定Reference Implementation License Server是否正常運行](aaxs-reference-implementations/deploying-license-server-determining-ref-running.md)
-   + 實施使用模型{#usage-models}
-      + [實作使用模型概觀](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-usage-overview.md)
-      + [下載至擁有](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-download-to-own.md)
-      + [租賃／隨選視訊](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-rental-vod.md)
+   + 部署許可證伺服器和受監視資料夾打包程式 {#license-server-and-wfp}
+      + [部署許可證伺服器和受監視資料夾打包程式概述](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-overview.md)
+      + [故障排除](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-troubleshooting.md)
+   + [確定引用實施許可證伺服器是否正常運行](aaxs-reference-implementations/deploying-license-server-determining-ref-running.md)
+   + 實施使用模式 {#usage-models}
+      + [實施使用模型概述](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-usage-overview.md)
+      + [下載至自有](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-download-to-own.md)
+      + [租賃/視頻點播](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-rental-vod.md)
       + [訂閱](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-subscription.md)
-      + [廣告贊助](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-ad-funded.md)
-   + 實施域註冊{#domain-registration}
-      + [實作網域註冊概觀](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration.md)
+      + [廣告資助](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-ad-funded.md)
+   + 實現域註冊 {#domain-registration}
+      + [實現域註冊概述](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration.md)
       + [基於身份的域](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration-id-based-domains.md)
-      + [匿名網域](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration-anonymous-domains.md)
-   + [從FMRMS 1.0或1.5遷移到Adobe訪問2.0和更高版本](aaxs-reference-implementations/license-server-migrating-fmrms-aaxs.md)
+      + [匿名域](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration-anonymous-domains.md)
+   + [從FMRMS 1.0或1.5遷移到AdobeAccess 2.0及更高版本](aaxs-reference-implementations/license-server-migrating-fmrms-aaxs.md)
    + [升級現有部署](aaxs-reference-implementations/license-server-upgrading-existing-deplys.md)
    + [設定域伺服器](aaxs-reference-implementations/license-server-upgrading-existing-deplys-setup-ds.md)
-   + Flash Access管理器AIR應用程式使用{#flash-access-manager-air-app-usage}
-      + Flash Access管理器元件{#flash-manager-components}
-         + [建立Packager伺服器和AIR應用程式](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-overview.md)
-         + [建立Packager伺服器](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-pkg-srv.md)
-         + [建立Flash Access管理器AIR應用程式](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
+   + Flash Access管理器AIR應用程式用法 {#flash-access-manager-air-app-usage}
+      + Flash Access管理器元件 {#flash-manager-components}
+         + [構建Packager伺服器和AIR應用程式](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-overview.md)
+         + [構建打包伺服器](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-pkg-srv.md)
+         + [構建Flash Access經理AIR應用程式](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
       + [初始Flash Access管理器設定](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup.md)
-      + 設定首選項{#setting-preferences}
-         + [設定偏好設定概觀](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-set-prefs-overview.md)
-         + [Packager偏好設定](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md)
+      + 設定首選項 {#setting-preferences}
+         + [設定首選項概述](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-set-prefs-overview.md)
+         + [打包程式首選項](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md)
          + [策略更新清單首選項](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pul-prefs.md)
          + [HSM首選項](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-hsm-prefs.md)
-      + 策略建立{#policy-creation}
-         + [建立新原則](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-create-new.md)
-         + [基本政策選項](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-basic-policy-options.md)
+      + 策略建立 {#policy-creation}
+         + [建立新策略](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-create-new.md)
+         + [基本策略選項](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-basic-policy-options.md)
          + [播放權限](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-play-rights.md)
-         + [自訂資料](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-custom-data.md)
+         + [自定義資料](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-custom-data.md)
          + [更新現有策略](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-update-existing.md)
       + [策略更新清單](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-update-list.md)
-      + [封裝媒體](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-pkg-media.md)
-      + [Watched Folders](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-watched-folders.md)
+      + [包介質](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-pkg-media.md)
+      + [已監視資料夾](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-watched-folders.md)

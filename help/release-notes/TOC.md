@@ -5,8 +5,8 @@ user-guide-title: Primetime 發行說明
 user-guide-description: 提供版本特定的資訊、系統需求、限制、已修正問題和已知問題。
 source-git-commit: e46fc03542211ec21822cf9f52eb8f0172269564
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 16%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
