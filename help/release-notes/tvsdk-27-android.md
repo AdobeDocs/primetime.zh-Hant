@@ -4,9 +4,9 @@ description: TVSDK 2.7 for Android™發行說明描述TVSDK Android™ 2.7中�
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '4070'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -425,10 +425,10 @@ Adobe Primetime版本字串已添加到系統用戶代理。
 
 ## 有用的資源 {#helpful-resources}
 
-* [系統要求](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-requirements.html?lang=en)
-* [《 TVSDK 2.7 for Android™程式設計師指南》](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-overview-prod-audience-guide.html?lang=en)
+* [系統要求](/help/programming/tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)
+* [《 TVSDK 2.7 for Android™程式設計師指南》](/help/programming/tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
 * [TVSDK Android™ Javadoc for API參考](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
 * [TVSDK Android™ C++ API文檔](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html)  — 每個Java™類都有相應的C++類，而C++文檔包含的解釋性資料比Java™文檔更多，因此請參閱C++文檔以更深入地瞭解Java™ API。
-* [《 TVSDK 1.4到2.5 for Android™(Java™)遷移指南》](https://experienceleague.adobe.com/docs/primetime/migration/tvsdk-14-25-android.html?lang=en)
+* [《 TVSDK 1.4到2.5 for Android™(Java™)遷移指南》](/help/migration-guides/tvsdk-14-25-android.md)
 * 有關處理螢幕開/關方案，請參閱 `Application_Changes_for_Screen_On_Off.pdf` 檔案。
 * 請參閱以下網址的完整幫助文檔 [Adobe Primetime學習和支援](https://experienceleague.adobe.com/docs/primetime.html) 的子菜單。

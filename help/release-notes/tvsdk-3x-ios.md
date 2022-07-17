@@ -2,9 +2,9 @@
 title: 《 TVSDK 3.13 foriOS發行說明》
 description: 《 TVSDK 3.13 foriOS發行說明》介紹了TVSDKiOS3.13中的新增或更改內容、已解決和已知問題以及設備問題。
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '7587'
+source-wordcount: '7575'
 ht-degree: 0%
 
 ---
@@ -1205,6 +1205,6 @@ Akamai標籤化流要求根據段請求發送Cookie，而在iOS7和更早的版�
 
 ## 有用的資源 {#helpful-resources}
 
-* [《 TVSDK 3.4 foriOS程式設計師指南》](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-3x-ios-prog/introduction/ios-3x-overview.html?lang=en)
+* [《 TVSDK 3.4 foriOS程式設計師指南》](/help/programming/tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
 * [TVSDKiOS3.4 API參考](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
 * 請參閱以下網址的完整幫助文檔 [Adobe Primetime學習和支援](https://experienceleague.adobe.com/docs/primetime.html) 的子菜單。
