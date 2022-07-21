@@ -2,9 +2,9 @@
 title: 帳戶IQ儀表板
 description: 儀表板通過分析大量訂閱者資料幫助查明密碼共用實例。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
+source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,9 @@ ht-degree: 0%
 
 ![帳戶IQ儀表板](assets/dashboard-capture.png)
 
+
+*圖：儀表板*
+
 ## 平均共用分數 — 當前段的聚合 {#aggregated-sharing}
 
 「聚合共用分數」面板提供頂行讀出，概括了從帳戶和流量量角度共用的數量和影響。
@@ -23,9 +26,12 @@ ht-degree: 0%
 
 ![](assets/aggregate-sharing-score.png)
 
+
+*圖：平均共用分數面板 — 當前段的聚合*
+
 ![](assets/aggregate-sharing-score.svg)
 
-以下三個指標是聚合共用分數的元件。
+以下三個指標是平均共用分數的元件。
 
 ### 共用級別 {#sharing-level}
 
@@ -34,6 +40,9 @@ ht-degree: 0%
 基於在所選時間幀期間從所選程式設計師通道之一流化的一組所選MVPD中的每個帳戶計算的共用概率的平均值計算的值。
 
 ![](assets/sharing-level.png)
+
+
+*圖：共用級別*
 
 趨勢指示器顯示度量值與上一時間幀相比的百分比變化。
 
@@ -45,6 +54,9 @@ ht-degree: 0%
 
 ![](assets/usage-4mshared-accounts.png)
 
+
+*圖：來自共用帳戶的使用*
+
 ### 總體共用分數 {#overall-sharing-score}
 
 總體共用分數是共用分數的組合，包括「共用級別」和「共用帳戶的z使用」。
@@ -52,6 +64,9 @@ ht-degree: 0%
 它提供的價值旨在反映與行業相比共用的相對影響。 目的類似於信用評分，用一個數字來概括情況。 但在這種情況下，數量越大，潛在的傷害就越大。
 
 ![](assets/overall-sharing-score.png)
+
+
+*圖：總體共用分數*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -69,11 +84,17 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/top-mvpds.png)
 
+
+*圖：按總得分劃分的段中的頂級MVPD*
+
 ### 按渠道和MVPD共用分數 {#sharin-score-by-channels-and-mvpds}
 
 此表提供了共用當前段中MVPD的選定通道分數的比較視圖。
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
+
+
+*圖：按頻道和MVPD共用分數*
 
 ### 帳戶共用概率 {#accounts-sharing-probability}
 
@@ -86,8 +107,15 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/dashboard-ac-sharing-prob.png)
 
+
+*圖：不同共用概率範圍中的訂戶帳戶的數量和百分比*
+
 ### 通過共用概率級別計算的帳戶數和使用情況 {#number-of-accounts-usage-sharing-probability}
 
 此面板提供了帳戶的表格視圖，這些帳戶被劃分為從非常低(0-20%)到非常高(80=100%)的共用概率，每個五分之一的帳戶從共用帳戶的相關使用量。
 
 ![](assets/no-acc-usage-prob-level.png)
+
+
+*圖：在各種概率範圍內發生的帳戶、趨勢和使用次數*
+
