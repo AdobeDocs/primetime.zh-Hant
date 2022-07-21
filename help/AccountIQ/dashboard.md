@@ -1,13 +1,13 @@
 ---
 title: 帳戶IQ儀表板
-description: '儀表板通過分析大量訂閱者資料幫助查明密碼共用實例。  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: 儀表板通過分析大量訂閱者資料幫助查明密碼共用實例。
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # 儀表板 {#dashboard}
 
@@ -15,13 +15,15 @@ ht-degree: 0%
 
 ![帳戶IQ儀表板](assets/dashboard-capture.png)
 
-## 聚合共用分數 {#aggregated-sharing}
+## 平均共用分數 — 當前段的聚合 {#aggregated-sharing}
 
 「聚合共用分數」面板提供頂行讀出，概括了從帳戶和流量量角度共用的數量和影響。
 
 這些值有助於您瞭解訂閱者共用憑據的大小，從而提供了對此採取行動的必要性的度量。
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 以下三個指標是聚合共用分數的元件。
 
