@@ -2,7 +2,7 @@
 title: 帳戶IQ儀表板
 description: 儀表板通過分析大量訂閱者資料幫助查明密碼共用實例。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -28,8 +28,6 @@ ht-degree: 0%
 
 
 *圖：平均共用分數面板 — 當前段的聚合*
-
-![](assets/aggregate-sharing-score.svg)
 
 以下三個指標是平均共用分數的元件。
 

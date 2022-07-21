@@ -1,9 +1,10 @@
 ---
 title: 定義段和時間框架
 description: 定義段和時間框架
-source-git-commit: a23de698b073d271df9b04494ff59f5d5a194c9d
+exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
@@ -54,9 +55,8 @@ ht-degree: 0%
 
    中的頂級清單項 **段內渠道** 是 [程式](/help/AccountIQ/product-concepts.md#programmer-def) 公司和程式設計師名下的清單項目 [通道](/help/AccountIQ/product-concepts.md#channel-def)。 您可以在程式設計師下面選擇單個頻道，也可以選擇程式設計師，並且該程式設計師下面頻道的所有活動都包括在報告和圖形結果中。
 
-   ![](assets/programmer-channels.png)
-
-   *圖：通道選擇器中列出的程式設計師和通道*
+   <!--![](assets/programmer-channels.png)
+   *Figure: Programmers and channels listed in channels selector*-->
 
    >[!IMPORTANT]
    >
@@ -95,9 +95,7 @@ ht-degree: 0%
 
 1. 選擇 **周** 或 **月** 從 **聚合方式** 選項來設定評估的粒度。
 
-   ![](assets/granularity-timeframe-weekwise.png)
-
-   *圖：要選擇「粒度」和「時間」的日期選取器*
+   <!--![](assets/granularity-timeframe-weekwise.png)   *Figure: Date picker to select Granularity and time frame*-->
 
 1. 選擇粒度後，可使用向前或向後箭頭在時間上向前或向後移動。
 
