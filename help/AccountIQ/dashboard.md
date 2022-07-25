@@ -2,7 +2,7 @@
 title: 帳戶IQ儀表板
 description: 儀表板通過分析大量訂閱者資料幫助查明密碼共用實例。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 32ba300ce729eab7a6906d8fb0875e8f2bbe2d1d
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -110,7 +110,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ### 通過共用概率級別計算的帳戶數和使用情況 {#number-of-accounts-usage-sharing-probability}
 
-此面板提供了帳戶的表格視圖，這些帳戶被劃分為從非常低(0-20%)到非常高(80=100%)的共用概率，每個五分之一的帳戶從共用帳戶的相關使用量。
+此面板提供了帳戶的表格視圖，這些帳戶被劃分為從非常低(0-20%)到非常高(80-100%)的共用概率，每個五分之一的帳戶從共用帳戶的相關使用。
 
 ![](assets/no-acc-usage-prob-level.png)
 
