@@ -1,27 +1,37 @@
 ---
-title: PTAI 22.6.2發行說明
+title: PTAI 22.7.1發行說明
 description: PTAI發行說明書描述黃金時段Ad Insertion2022年的新增或變更、已解決及已知問題。
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
 
-# 黃金時段Ad Insertion22.6.2發行說明
+# 黃金時段Ad Insertion22.7.1發行說明
 
 黃金時段Ad Insertion22.xx.x發行說明描述黃金時段Ad Insertion2022年的新增或變更、已解決的問題及已知問題。
 
-## PTAI公司的新增功22.6.2
+## PTAI公司的新增功22.7.1
 
-時間：2022年6月29日，星期三，東部時間凌晨3點至6點
+時間：2022年7月20日，星期三，東部時間凌晨3點至6點
+
+* 增強廣告效能記錄功能，並引入與DASH工作流相關的可用度量。
+
+* 資料庫遷移。
+
+## 以前版本中的增強和修復
+
+### 22.6.2版
+
+**時間：** 2022年6月29日，星期三，東部時間凌晨3點至6點
+
+**更改**
 
 * 增強廣告效能日誌記錄，並提供有關可用損失的詳細資訊。
 
 * CRS的其他網路儲存源。
-
-## 以前版本中的增強和修復
 
 ### 22.6.1版
 
