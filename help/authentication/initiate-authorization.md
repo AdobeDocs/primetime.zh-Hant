@@ -82,7 +82,7 @@ ht-degree: 1%
 </br>
   **XML:**
   </br>
-    "`XML
+    ```XML
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <authorization>
     <expires>1348148289000</expires>
@@ -90,7 +90,7 @@ ht-degree: 1%
     <requestor>示例請求者ID</requestor>
     <resource>示例資源ID</resource>
     </authorization>
-    「」
+    ```
 
 
 
