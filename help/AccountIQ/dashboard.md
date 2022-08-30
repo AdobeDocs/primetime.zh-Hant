@@ -2,9 +2,9 @@
 title: 帳戶IQ儀表板
 description: 儀表板通過分析大量訂閱者資料幫助查明密碼共用實例。
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # 儀表板 {#dashboard}
 
 「控制面板」匯總和聚合圖表和報表的集合中的資料，這些圖表和報表旨在對帳戶共用的範圍和影響進行高級別概述。 它提供一頁，其中包含來自帳戶IQ的主要報告和度量。
-
-<table><tr><th>
-
-+++程式設計師儀表板
 
 ![帳戶IQ儀表板](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 *圖：在各種概率範圍內發生的帳戶、趨勢和使用次數*
 
-+++
 
-</th><th>
-
-+++MVPD的儀表板MVPD用戶的儀表板與程式設計師用戶的儀表板稍有不同。
-
-![](assets/dashboard-mvpd.png)
-
-
-*圖：MVPD的儀表板*
-
-## 按總體共用分數劃分的段內頂級程式設計師 {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*圖：顯示段中頂級程式設計師的面板*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers
