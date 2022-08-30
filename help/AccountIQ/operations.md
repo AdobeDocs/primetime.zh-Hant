@@ -1,13 +1,13 @@
 ---
 title: 帳戶IQ中的操作
 description: 帳戶IQ中的操作包括對訂閱者帳戶執行自動化和批量操作並跟蹤其效果。
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
+source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # 操作 {#operations-tab-next-steps}
 
@@ -61,13 +61,24 @@ ht-degree: 0%
 
    *圖：操作報告，以查看操作的影響*
 
-   x軸繪製評估週期，y軸繪製變數以測量操作的影響。
+   X軸表示評估期間，Y軸表示操作的影響（以評估期間段中的帳戶數計算）。 每個桿被分成三部分。
 
-   例如，在上圖中，y軸上的變數是帳戶數。 查看此圖表時，您可以比較操作段中的帳戶數與特定時間（如操作評估期的第2週）操作段外的帳戶數。 因此，您可以分析評估期間內操作段內和段外帳戶數的變化情況。
+   * 其中一部分表示仍滿足操作段標準的帳戶數。
 
-   因此，如果您的操作是向懷疑的帳戶發送警告電子郵件，而操作段中的帳戶共用概率超過90且使用5個以上設備來流內容，則在評估期開始時，該段中的帳戶超過700萬。 該數字在圖表所示的評估期間發生變化，從而指示操作的影響。 根據評估，您可以對疑似帳戶採取補救措施，或繼續操作，或調整策略以獲得更好的結果以限制憑據共用。
+   * 另一部分表示該期間的活動帳戶數，這些帳戶最初在該段中，但不再滿足該操作段的條件。
 
-2. 要關閉報告並返回主「操作」頁，請選擇 **操作** 選項 **操作** 的下界。
+   * 第三部分是該期間未活動的帳戶。
+   >[!NOTE]
+   >
+   >第一個欄表示在評估期間開始時滿足操作段條件的帳戶數。
+
+   隨著時間的推移，該圖形通過指示與原始標準（例如，共用概率超過90且使用的設備超過5台）或已變為非活動的帳戶數，來顯示操作（通過操作）的效果。
+
+<!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
+
+So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
+
+1. 要關閉報告並返回主「操作」頁，請選擇 **操作** 選項 **操作** 的下界。
 
 <!--
 
