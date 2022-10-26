@@ -2,9 +2,9 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime Ad Insertion 支援
-source-git-commit: 79cdd0b7ae33d7c1d2bec970ecd3654aea4fdab0
+source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '176'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 + [Adobe PrimetimeAd Insertion](home.md)
 + PrimetimeAd Insertion公告{#announcements}
    + [公告](announcements/overview.md)
-   + [發行說明](/help/release-notes/ptai-22x-release-notes.md)
+   + [發行說明](https://experienceleague.adobe.com/docs/primetime/release-notes/ptai/ptai-22x-release-notes.html)
 + Primetime快速入門Ad Insertion{#get-started}
    + [概述](getting-started/get-started-overview.md)
    + [準備使用PrimetimeAd Insertion](getting-started/setup-ptai.md)
