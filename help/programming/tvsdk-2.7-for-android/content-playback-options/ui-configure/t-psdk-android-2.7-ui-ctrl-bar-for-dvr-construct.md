@@ -1,44 +1,43 @@
 ---
-description: 您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
-title: 構建用於DVR的增強控制條
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以實作對VOD和即時串流具有DVR支援的控制列。 DVR支援包含可檢視視窗和用戶端即時點的概念。
+title: 構建增強的DVR控制欄
+exl-id: 8a764417-4425-44c0-9551-3077c8c0a323
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# 構建增強的DVR控制欄 {#construct-a-control-bar-enhanced-for-dvr}
 
-# 建構DVR {#construct-a-control-bar-enhanced-for-dvr}增強的控制列
+您可以實作對VOD和即時串流具有DVR支援的控制列。 DVR支援包含可檢視視窗和用戶端即時點的概念。
 
-您可以實作具有VOD和即時串流DVR支援的控制列。 DVR支援包括可檢視視窗和用戶端即時點的概念。
+* 對於VOD，可搜尋視窗的長度是整個資產的持續時間。
+* 對於即時串流，DVR（可查看）視窗的長度定義為從即時播放視窗開始到用戶端即時點結束的時間範圍。
 
-* 對於VOD，可檢視視窗的長度是整個資產的期間。
-* 對於即時串流，DVR（可檢視）視窗的長度會定義為從即時播放視窗開始並在用戶端即時點結束的時間範圍。
+   請記住以下資訊：
 
-   請記住下列資訊：
+   * 從即時視窗結尾減去緩衝長度，即可計算用戶端即時點。
 
-   * 用戶端即時點是透過從即時視窗端減去緩衝長度來計算。
-
-      目標持續時間是大於或等於清單中片段的最大持續時間的值。
+      目標持續時間值大於或等於資訊清單中片段的最大持續時間。
    * 預設值為10000毫秒。
-   * 用於即時回放的控制條通過首先在開始回放時將拇指定位在客戶端即時點以及通過顯示標籤不允許搜索的區域來支援DVR。
+   * 用於即時播放的控制條通過在開始播放時首先將拇指定位在客戶端即時點，並通過顯示標籤不允許搜索的區域的區域來支援DVR。
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
-![](assets/dvr-window.PNG){width=&quot;684&quot;}
+![](assets/dvr-window.PNG){width="684"}
 
-1. 要實施具有DVR支援的控制條，請遵循[顯示具有當前回放位置的搜索拖曳條中的步驟……](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)，但有下列差異：
+1. 若要實作具有DVR支援的控制列，請遵循 [顯示當前播放位置的搜索拖曳條……](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) 差異：
 
-   * 您可以實作僅針對可尋找範圍（而非播放範圍）映射的控制列。
+   * 您可以實作僅對應至可搜尋範圍的控制列，而非對於播放範圍。
 
-      任何用於搜尋的使用者互動都可視為可搜尋範圍內的安全。
-   * 您可以實作一個控制列，該控制列會對應至播放範圍，但也會顯示可檢視的範圍。
+      在可搜尋範圍內，任何搜尋的使用者互動都可視為安全。
+   * 您可以實作已對應播放範圍的控制列，但也會顯示可搜尋的範圍。
 
-      對於控制列：
-   1. 新增覆蓋至代表播放範圍的控制列。
-   1. 當用戶開始尋道時，使用`MediaPlayer.getSeekableRange`檢查所需的尋道位置是否在可尋找範圍內。
+      對於控制欄：
+   1. 在代表播放範圍的控制列中新增覆蓋。
+   1. 當使用者開始搜尋時，請使用 `MediaPlayer.getSeekableRange`.
 
       例如：
 
@@ -49,10 +48,8 @@ ht-degree: 0%
       }
       ```
 
-      您也可以選擇使用`MediaPlayer.LIVE_POINT`常數尋找用戶端即時點。
+      您也可以選擇使用來搜尋用戶端即時點 `MediaPlayer.LIVE_POINT` 常數。
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
       ```
-
-
