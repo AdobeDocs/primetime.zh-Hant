@@ -1,42 +1,42 @@
 ---
 title: 限制和已知問題
-description: '產品中的已知問題。 '
-source-git-commit: 4b840a1a722b3dd403d70f4ba838529d7d4d0b35
+description: 產品中的已知問題。
+exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
 
-
 # 已知問題和限制 {#known-issues}
 
-Adobe致力於通過其產品提供強大的功能和無縫的用戶體驗。 Account IQ的當前版本（版本1.0）為流式處理提供程式提供了高度信任的使用和訂閱共用分析。 但是，在即將發佈的版本中將解決以下限制。
+Adobe致力於透過其產品提供強大的功能和順暢的使用者體驗。 目前版本（1.1版）的帳戶IQ，能為串流提供者提供高度信賴的使用與訂閱共用分析。 不過，未來版本將解決下列限制。
 
-* 在儀表板或報表頁中定義組時，當前沒有添加度量的選項，如 **設備數** 以細化段。 此功能將在未來版本中提供。
+* 在控制面板或報表頁面中定義同類群組時，目前沒有可新增度量的選項，例如 **設備數** 來調整區段。 此功能將於近期推出。
 
-* 在估算個人賬戶的分數時，Account IQ採取了一種保守的方法，使公司能夠以高度的自信來採取行動分享。 但是，這種方法往往低估了在多個帳戶之間合計時的共用總量。
+* 在預估個別帳戶的共用分數時，帳戶IQ會採取保守的方法，讓公司能有極大的信賴來採取共用行動。 但是，此方法往往會低估在多個帳戶中匯總時的共用總量。
 
-* 的 [總體共用分數](/help/AccountIQ/dashboard.md#overall-sharing-score) 當前僅有因素 [共用級別](/help/AccountIQ/dashboard.md#sharing-level) 和 [來自共用帳戶的使用情況](/help/AccountIQ/dashboard.md#usage-from-shared-accounts)。 未來版本將考慮其他指標。
+* 此 [整體共用分數](/help/AccountIQ/dashboard.md#overall-sharing-score) 目前僅限 [共用層級](/help/AccountIQ/dashboard.md#sharing-level) 和 [來自共用帳戶的使用情況](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). 未來版本會納入其他量度。
 
-* 在儀表板或報表頁中定義組時，MVPD和通道的選擇器目前缺少搜索機制。
+* 在控制面板或報表頁面中定義同類群組時，MVPD和管道的選取器目前缺乏搜尋機制。
 
-* 在儀表板或報表頁中定義組時，最多只能選擇10個MVPD和程式設計師。
+* 在控制面板或報表頁面中定義同類群組時，僅限選取最多10個MVPD和程式設計人員（或個別頻道）。
 
-* 截至目前，導出帳戶統計資訊的選項僅限於導出1000個帳戶。
+* 截至目前，匯出帳戶統計資料的選項僅限於匯出1000個帳戶。
 
-* 要選擇的選項 [段類型](#segment-type) 當定義操作時 **固定帳戶數**。 的 **帳戶的變數數** 選項。
+* 要選取的選項 [區段類型](#segment-type) 定義操作時限於 **固定帳戶數**. 此 **帳戶的變數** 選項將在即將發行的版本中提供。
 
-* 左導航中的Benchmarking 、 Detection Models 、 Segments 、 Snapshots和Rules部分當前已禁用，並將在即將發佈的版本中提供。
+* 左側導覽中的基準、偵測模型、區段、快照和規則區段目前已停用，且將在即將推出的版本中使用。
 
-* 建立時 [操作](/help/AccountIQ/operation-affecting-user-segment.md)你只能識別兩種 [操作](/help/AccountIQ/operation-affecting-user-segment.md) 截至目前 — 併發監視規則和外部操作。
+* 建立 [作業](/help/AccountIQ/operation-affecting-user-segment.md)，您只能識別兩種 [動作](/help/AccountIQ/operation-affecting-user-segment.md) 截至目前 — 並行監視規則和外部操作。
 
-* 當前，只能建立和 [計畫](/help/AccountIQ/operation-affecting-user-segment.md#action)。 將來的版本將允許您暫停、恢復和完全管理它們。
+* 目前，只能建立和 [排程](/help/AccountIQ/operation-affecting-user-segment.md#action). 未來版本可讓您暫停、繼續並完全管理這些版本。
 
-* 由於使用的資料集較為有限，隔離模式沒有真正反映共用量。 因此，無法將隔離模式下的MVPD與任何其他MVPD進行比較。
+* 由於所使用的資料集較有限，隔離模式無法真正反映共用的量。 因此，隔離模式下的MVPD無法與任何其他MVPD進行比較。 <!--do we need to separate out this limitation, which is from a different persona i.e. only for Programmer persona?-->
 
-* 定義新 [分部](/help/AccountIQ/segments-timeframe.md) 對於可添加度量的操作。 但是，如果選擇已保存的段，則無法添加更多度量來細化段。
+* 定義新 [區段](/help/AccountIQ/segments-timeframe.md) 您可以為操作新增量度。 但如果您選取儲存的區段，則無法新增更多量度來調整區段。
 
-* 粒度和時間框架選擇器限於一週或一個月，這意味著資料只能在一週或一個月內進行評估。
+* 粒度和時間範圍選取器限制為一週或一個月，這表示只能在一週或一個月評估資料。
 
-* 預定義的時間間隔當前在粒度和時間範圍選擇器中被禁用，將來版本中將提供。
+* 預先定義的間隔目前在粒度和時間範圍選擇器中是停用的，未來版本將可供使用。

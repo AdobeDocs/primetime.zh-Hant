@@ -1,32 +1,33 @@
 ---
-title: 如何將帳戶IQ度量用於特定MVPD
-description: '如何使用和理解帳戶智商報告。  '
-source-git-commit: a23de698b073d271df9b04494ff59f5d5a194c9d
+title: 如何針對特定MVPD使用帳戶IQ量度
+description: 如何使用帳戶IQ報表，使其有意義。
+exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
+# 檢視特定MVPD的帳戶共用報表 <!--and programmer--> {#report-sp-mvpd}
 
-# 查看帳戶共用報告：特定MVPD <!--and programmer--> {#report-sp-mvpd}
+如果您以 [程式設計師](/help/AccountIQ/product-concepts.md#programmer-def)，則您可以檢視特定管道上的共用報表 [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) 訂閱者。
 
-如果您作為通道登錄到帳戶IQ應用程式 [程式](/help/AccountIQ/product-concepts.md#programmer-def)，則可以查看特定頻道查看器的共用報告 [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) 他們已經訂了。
+要在帳戶IQ中查看報告，請在您成功以程式設計師的身份登錄到應用程式後：
 
-要在帳戶IQ中查看報告，請在您以程式設計師身份成功登錄到應用程式後：
+1. 在使用 [如何定義區段](/help/AccountIQ/howto-select-segment-timeframe.md).
 
-1. 使用中的步驟定義訂閱者段以分析和查看報表 [如何定義段](/help/AccountIQ/howto-select-segment-timeframe.md)。
 
    >[!NOTE]
    >
-   >您可以選擇一個、兩個或多個MVPD，甚至可以選擇前10個MVPD的預設選擇（通過共用分數、使用情況或帳戶）。
+   >您可以選取一、兩個或多個管道，或甚至是前10個管道的預設選取（透過共用分數、使用量或帳戶）。
    >
    >
-   >但是，您可以選擇 [最多10個MVPD](/help/AccountIQ/limitations.md) 在 [段和時間框面板](/help/AccountIQ/segments-timeframe.md)。
+   >不過，您可以選取 [最多10個頻道](/help/AccountIQ/limitations.md) 從 [區段與時間範圍面板](/help/AccountIQ/segments-timeframe.md).
 
-1. 從左側導航中選擇所需的報告頁：
+1. 從左側導覽中選取所需的報表頁面：
 
-* [常規用法](/help/AccountIQ/general-usage-reports.md)
+* [一般用途](/help/AccountIQ/general-usage-reports.md)
 
    ![](assets/specific-mvpd-gen-usage.png)
 * [共用帳戶](/help/AccountIQ/shared-acc-reports.md)
@@ -36,23 +37,9 @@ ht-degree: 0%
 
    ![](assets/specific-mvpd-usage-pattern.png)
 
-* [儀表板](/help/AccountIQ/dashboard.md) （儀表板可從不同的報告頁面中查看所選圖形）。
+* [控制面板](/help/AccountIQ/dashboard.md) （控制面板可讓您一窺不同報表頁面中選取的圖形）。
 
    ![](assets/specific-mvpd-dashboard.png)
 
-每頁都反映活動。
+這些頁面都會反映所選區段的活動。
 
-<!--## If you are logged in as an MVPD {#report-sp-programmer}
-
-To view reports in Account IQ, once you have successfully logged in to the application as an MVPD:
-
-1. Select the desired programmer channel(s) from from the **Channels in segment** drop-down option.
-
-   ![select channels](assets/programmer-selection.png)
-
- 1. From the **Granularity and time frame** option, select the time interval to view reports. You can aggregate the time intervals week-wise or month-wise.
-
-1. Select a desired reports page from the left navigation-[General Usage](/help/AccountIQ/general-usage-reports.md), [Shared Accounts](/help/AccountIQ/shared-acc-reports.md), [Usage Patterns](/help/AccountIQ/usage-patterns.md), or even [Dashboard](/help/AccountIQ/dashboard.md) (dashboard gives a glimpse of the selected graphs from different reports pages).
-
-![reports for specific programmer](assets/report-forspecific-programmer.png)
--->
