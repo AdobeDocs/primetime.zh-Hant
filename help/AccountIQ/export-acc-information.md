@@ -2,16 +2,16 @@
 title: 導出共用分數高的帳戶的資訊
 description: 導出共用分數高的帳戶的資訊。
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # 導出共用分數高的帳戶的資訊 {#export-account-info-high-score}
 
-帳戶IQ可讓您選擇根據前1000個訂閱者帳戶的帳戶共用詳細資訊匯出 [共用機率](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). 匯出的CSV檔案中的資料會依照 [區段](/help/AccountIQ/product-concepts.md#segment-def)，針對 [指定時間範圍](/help/AccountIQ/product-concepts.md#time-frame-def).
+帳戶IQ可讓您選擇根據前1000個訂閱者帳戶的帳戶共用詳細資訊匯出 [共用機率](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). 匯出的CSV檔案中的資料會依訂閱者帳戶（即中所選MVPD）的共用機率遞減順序排序 [區段](/help/AccountIQ/product-concepts.md#segment-def)，針對 [指定時間範圍](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 匯出帳戶共用資訊的選項可在 [一般使用情況報表](/help/AccountIQ/general-usage-reports.md) 和 [共用帳戶報表](/help/AccountIQ/shared-acc-reports.md) 頁面。
 
@@ -99,13 +99,13 @@ ht-degree: 1%
 
 MVPD已授權資料流或授予該帳戶存取權（內容）的次數。
 
+>[!NOTE]
+>
+>此 **#驗證Z確定** 與 **播放請求數**;比 **播放請求數** 因為Adobe快取MVPD的授權通常為24小時。
+
 **播放請求數**
 
 時段內的實際資料流數。
-
->[!NOTE]
->
->**#驗證Z確定** 通常小於 **播放請求數** 因為Adobe會快取來自MVPD的授權長達24小時。 此欄不適用於MVPD。
 
 **通道數**
 
@@ -127,7 +127,7 @@ MVPD已授權資料流或授予該帳戶存取權（內容）的次數。
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 使用模式 | 一般使用者 | 旅行者或通勤者 | 大家庭 | 親朋好友 | 社交群組共用 | 一大群朋友 | 同時串流 | 社群分享 | 不確定行為 | 小家庭 | 第二個家 | 使用異常 |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **共用機率**
 

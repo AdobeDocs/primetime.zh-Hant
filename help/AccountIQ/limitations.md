@@ -2,7 +2,7 @@
 title: 限制和已知問題
 description: 產品中的已知問題。
 exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # 已知問題和限制 {#known-issues}
 
-Adobe致力於透過其產品提供強大的功能和順暢的使用者體驗。 目前版本（1.1版）的帳戶IQ，能為串流提供者提供高度信賴的使用與訂閱共用分析。 不過，未來版本將解決下列限制。
+Adobe致力於透過其產品提供強大的功能和順暢的使用者體驗。 目前版本（1.0版）的帳戶IQ，能為串流提供者提供高度信賴的使用與訂閱共用分析。 不過，未來版本將解決下列限制。
 
-* 在控制面板或報表頁面中定義同類群組時，目前沒有可新增度量的選項，例如 **設備數** 來調整區段。 此功能將於近期推出。
+* 在控制面板或報表頁面中定義同類群組時，目前沒有可新增度量的選項，例如 **設備數** 來調整區段。 此功能將在未來版本中提供。
 
 * 在預估個別帳戶的共用分數時，帳戶IQ會採取保守的方法，讓公司能有極大的信賴來採取共用行動。 但是，此方法往往會低估在多個帳戶中匯總時的共用總量。
 
@@ -29,7 +29,7 @@ Adobe致力於透過其產品提供強大的功能和順暢的使用者體驗。
 
 * 左側導覽中的基準、偵測模型、區段、快照和規則區段目前已停用，且將在即將推出的版本中使用。
 
-* 建立 [作業](/help/AccountIQ/operation-affecting-user-segment.md)，您只能識別兩種 [動作](/help/AccountIQ/operation-affecting-user-segment.md) 截至目前 — 並行監視規則和外部操作。
+* 建立 [操作](/help/AccountIQ/operation-affecting-user-segment.md)，您只能識別兩種 [動作](/help/AccountIQ/operation-affecting-user-segment.md) 截至目前 — 並行監視規則和外部操作。
 
 * 目前，只能建立和 [排程](/help/AccountIQ/operation-affecting-user-segment.md#action). 未來版本可讓您暫停、繼續並完全管理這些版本。
 

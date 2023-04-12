@@ -2,7 +2,7 @@
 title: 最佳實務
 description: 請閱讀以了解如何更妥善地使用帳戶IQ工具。
 exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -28,7 +28,6 @@ ht-degree: 0%
 ## 執行目標增量操作 {#incremental-targeted-action}
 
 使用已定義的目標群體，請採取動作。 從小開始，從定義明確的部分開始，可降低無意後果的風險，並能更好地了解結果。 無論您在路徑的哪個位置，您都可以隨時調整或展開作業的目標。
-
 從小開始、向上升是一種審慎的做法。 使用先前識別的區段，並針對特定目標採取動作（作為實驗）。
 
 使用「操作」工具定義目標段和操作時間範圍。 這可讓您在下一階段追蹤效果。

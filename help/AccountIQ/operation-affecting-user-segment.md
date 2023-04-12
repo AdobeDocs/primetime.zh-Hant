@@ -2,9 +2,9 @@
 title: 對使用者區段建立操作並追蹤效果
 description: 如何建立對定義的使用者區段產生影響並追蹤影響的操作。
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ if not fixed segment, then I won't initially evaluate or have initial set of 500
 
 您可以採取兩種動作：
 
-* 使用與帳戶IQ整合的系統的操作；例如 [併發監控](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)<!--, or Adobe Target-->.
+* 使用與帳戶IQ整合的系統的操作；例如 **併發監控** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * 建立及處理帳戶IQ外部且未與帳戶IQ系統整合之工作流程的動作。 例如，頻道程式設計員「N」向MVPD「C」的所有訂閱者發送大量電子郵件的動作。
 

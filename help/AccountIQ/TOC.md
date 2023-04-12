@@ -1,11 +1,11 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-description: Primetime Account IQ 可協助提供 Account IQ 元件的相關資訊，並逐步引導您了解使用各種元件的使用者歷程。
-source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
+user-guide-description: Primetime帳戶IQ說明提供帳戶IQ元件的相關資訊，並引導您了解使用各種元件的使用者歷程。
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 16%
+ht-degree: 0%
 
 ---
 
@@ -17,14 +17,15 @@ ht-degree: 16%
    + [區段與時間範圍](/help/AccountIQ/segments-timeframe.md)
    + [控制面板](/help/AccountIQ/dashboard.md)
    + 報表 {#reports-account-iq}
-      + [一般使用情況報表](/help/AccountIQ/general-usage-reports.md)
-      + [共用帳戶報表](/help/AccountIQ/shared-acc-reports.md)
+   + [一般使用情況報表](/help/AccountIQ/general-usage-reports.md)
+   + [共用帳戶報表](/help/AccountIQ/shared-acc-reports.md)
    + 共用元件 {#sharing-components}
       + [使用模式](/help/AccountIQ/usage-patterns.md)
    + 動作 {#further-next-steps-actions}
       + [操作](/help/AccountIQ/operations.md)
-+ How Tos {#use-aiq}
-   + [定義區段和時間範圍](/help/AccountIQ/howto-select-segment-timeframe.md)
++ 操作方式 {#use-aiq}
+   + [建立區段](/help/AccountIQ/build-segment.md)
+   + [選取區段和時間範圍](/help/AccountIQ/howto-select-segment-timeframe.md)
    + 匯出報表 {#export-reports}
       + [程式設計師 — 導出報告](/help/AccountIQ/export-segment-metrics-progr.md)
       + [MVPD — 匯出報表](/help/AccountIQ/export-segment-metrics-mvpd.md)
