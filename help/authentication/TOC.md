@@ -2,10 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime驗證
-user-guide-description: null
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+user-guide-description: Primetime驗證是TV Everywhere的權限解決方案，提供模組化架構，以判斷要求存取資源的人是否有權使用資源。
+source-git-commit: 9ce554b32564727488f85cef62abd5ce9c1c21f1
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
