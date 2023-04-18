@@ -5,7 +5,7 @@ user-guide-title: Primetime驗證
 user-guide-description: Primetime驗證是TV Everywhere的權限解決方案，提供模組化架構，以判斷要求存取資源的人是否有權使用資源。
 source-git-commit: 9ce554b32564727488f85cef62abd5ce9c1c21f1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '715'
 ht-degree: 0%
 
 ---
