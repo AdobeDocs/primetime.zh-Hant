@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime驗證
 user-guide-description: Primetime驗證是TV Everywhere的權限解決方案，提供模組化架構，以判斷要求存取資源的人是否有權使用資源。
-source-git-commit: 9ce554b32564727488f85cef62abd5ce9c1c21f1
+source-git-commit: 0afc48ae0e423c2a851b3bf22803fbd730999c04
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 0%
    + [Primetime驗證2.64.1發行說明](auth-rn-2641.md)
    + [Primetime Authentication 2.64發行說明](auth-rn-264.md)
    + [Primetime Authentication 2.63發行說明](auth-rn-263.md)
+   + [Primetime驗證2.62.1發行說明](auth-rn-2621.md)
    + [Primetime驗證iOS / tvOS 3.7.0發行說明](authn-rn-ios-tvos-370.md)
 + 技術說明 {#tech-notes}
    + Primetime驗證SDK {#primetime-authentication-sdks}
