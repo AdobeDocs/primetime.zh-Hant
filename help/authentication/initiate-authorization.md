@@ -1,13 +1,13 @@
 ---
 title: 啟動授權
 description: 啟動授權
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2f8a5499-e94f-40dd-9fb0-aac8e080de66
+source-git-commit: 5e775238f0e894f887be4c188903bdb04524c57a
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
-
 
 # 啟動授權 {#initiate-authorization}
 
@@ -82,15 +82,16 @@ ht-degree: 0%
 </br>
   * **XML:**
   </br>
-    ```XML
-    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <authorization>
-    <expires>1348148289000</expires>
-    <mvpd>sampleMvpdId</mvpd>
-    <requestor>sampleRequestorId</requestor>
-    <resource>sampleResourceId</resource>
-    </authorization>
-    ```
+
+    &quot;&#39;XML
+    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+    &lt;authorization>
+    &lt;expires>1348148289000&lt;/expires>
+    &lt;mvpd>sampleMvpdId&lt;/mvpd>
+    &lt;requestor>sampleRequestorId&lt;/requestor>
+    &lt;resource>sampleResourceId&lt;/resource>
+    &lt;/authorization>
+    &quot;
 
 
 
@@ -122,4 +123,3 @@ ht-degree: 0%
      Please go to http://www.ca.ble/upgrade in order to upgrade your subscription.</details>
    </error>
    ```
-
