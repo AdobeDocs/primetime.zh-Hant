@@ -1,22 +1,21 @@
 ---
-description: 依預設，當開始播放時，VOD媒體從0開始，而即時媒體從用戶端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
-title: 在特定時間輸入串流
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 預設情況下，當開始播放時，VOD媒體從0開始，而即時媒體從客戶端即時點(MediaPlayer.LIVE_POINT)開始。 可以覆蓋預設行為。
+title: 在特定時間輸入流
+exl-id: 98688357-8394-4b62-b117-3ae2c5b0fecb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# 在特定時間輸入流 {#enter-a-stream-at-a-specific-time}
 
-# 在特定時間輸入流{#enter-a-stream-at-a-specific-time}
+預設情況下，當開始播放時，VOD媒體從0開始，而即時媒體從客戶端即時點(MediaPlayer.LIVE_POINT)開始。 可以覆蓋預設行為。
 
-依預設，當開始播放時，VOD媒體從0開始，而即時媒體從用戶端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
+1. 將位置傳遞到 `MediaPlayer.prepareToPlay`。
 
-1. 將位置傳遞至`MediaPlayer.prepareToPlay`。
-
-   TVSDK會將指定位置視為資產的起點，而不需要搜尋作業。 如果位置不在可檢視的範圍內，TVSDK會使用預設位置。 如需詳細資訊，請參閱[在媒體播放器中載入媒體資源](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md)。
+   TVSDK將給定位置視為資產的起點，不需要查找操作。 如果位置不在可查找範圍內，則TVSDK使用預設位置。 有關詳細資訊，請參見 [在媒體播放器中載入媒體資源](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md)。
 
    例如：
 

@@ -1,42 +1,40 @@
 ---
-title: 疑難排解
-description: 疑難排解
+title: 故障排除
+description: 故障排除
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4af7b625-63d3-48b6-98a5-b8894dd0c67f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# 故障排除 {#troubleshooting}
 
-# 疑難排解{#troubleshooting}
+下面列出了常見的部署問題和解決方案：
 
-以下列出常見的部署問題和解決方案：
-
-* 如果您看到下列錯誤：
+* 如果您看到以下錯誤：
 
    ```
        "Error decoding the password for HandlerConfiguration.ServerTransportCredential.password  
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   請確定密碼是使用提供的`ScrambleUtil`類加密的。
+   確保使用提供的 `ScrambleUtil` 類。
 
-* 如果您看到下列錯誤：
+* 如果您看到以下錯誤：
 
    ```
        "Unable to load credential from file.pfx -- possibly wrong password."
    ```
 
-   請務必為PFX檔案指定正確的加密密碼。
+   確保為PFX檔案指定了正確的加密密碼。
 
-* 如果您看到下列錯誤：
+* 如果您看到以下錯誤：
 
    ```
        "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   請確定您使用了「參考實作」(Reference Implementation)中提供的密碼擾碼器類別(此擾碼器公用程式與「Adobe® Access™ Server for Protected Streaming」（受保護串流）中提供的不同)。
-
+   確保您使用了「參考實現」提供的密碼加擾器類(此加擾器實用程式與「受保護流」Adobe® Access™伺服器提供的加擾器實用程式不同)。

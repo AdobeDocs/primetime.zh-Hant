@@ -1,22 +1,21 @@
 ---
-description: 若要接收資訊清單中標籤的通知，請監聽AdobePSDK.TimedMetadataEvent。
-title: 新增計時中繼資料通知的監聽器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 要接收有關清單中標籤的通知，請偵聽AdobePSDK.TimedMetadataEvent。
+title: 為定時元資料通知添加偵聽器
+exl-id: eea2505f-595c-4bbe-9b68-ae395943c888
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
 
 ---
 
+# 為定時元資料通知添加偵聽器{#add-listeners-for-timed-metadata-notifications}
 
-# 為計時中繼資料通知新增監聽器{#add-listeners-for-timed-metadata-notifications}
+要接收有關清單中標籤的通知，請偵聽AdobePSDK.TimedMetadataEvent。
 
-若要接收資訊清單中標籤的通知，請監聽AdobePSDK.TimedMetadataEvent。
+新 `TimedMetadata` 建立對象，MediaPlayer調度 `AdobePSDK.TimedMetadataEvent`。
 
-當建立新的`TimedMetadata`物件時，MediaPlayer會調度`AdobePSDK.TimedMetadataEvent`。
-
-1. 實作適當的監聽器。
+1. 實施適當的偵聽器。
 
    ```js
    function onTimedMetadataEvent(event) { 
@@ -31,5 +30,4 @@ ht-degree: 0%
    player.addEventListener(AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE, onTimedMetadataEvent);
    ```
 
-ID3中繼資料會透過相同的`Events.TimedMetadataEvent`傳送。 您可以使用`timedMetadata.type`屬性來區分TAG和ID3。
-
+ID3元資料通過同一 `Events.TimedMetadataEvent`。 您可以使用 `timedMetadata.type` 用於區分TAG和ID3的屬性。

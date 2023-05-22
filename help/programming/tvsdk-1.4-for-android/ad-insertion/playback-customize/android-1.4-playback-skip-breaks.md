@@ -1,26 +1,25 @@
 ---
-description: 依預設，當使用者搜尋廣告插播時，TVSDK會強制播放廣告插播。 如果從先前的中斷完成所經過的時間在特定分鐘內，您可以自訂跳過廣告中斷的行為。
-title: 略過一段時間的廣告插播
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 預設情況下，當用戶搜索廣告時，TVSDK強制播放廣告。 如果從上一個中斷完成所經過的時間在特定分鐘數內，則可以自定義跳過廣告中斷的行為。
+title: 跳過一段時間的廣告中斷
+exl-id: 0d2d86e2-e1b5-4ede-bab3-75e15c47227f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
+# 跳過一段時間的廣告中斷 {#skip-ad-breaks-for-a-period-of-time}
 
-# 在{#skip-ad-breaks-for-a-period-of-time}期間略過廣告插播
-
-依預設，當使用者搜尋廣告插播時，TVSDK會強制播放廣告插播。 如果從先前的中斷完成所經過的時間在特定分鐘內，您可以自訂跳過廣告中斷的行為。
+預設情況下，當用戶搜索廣告時，TVSDK強制播放廣告。 如果從上一個中斷完成所經過的時間在特定分鐘數內，則可以自定義跳過廣告中斷的行為。
 
 >[!IMPORTANT]
 >
->當有內部搜尋要略過廣告時，可能會在播放中稍微暫停。
+>當內部尋道要跳過廣告時，回放可能會稍稍停頓。
 
-下列自訂廣告政策選擇器範例會在使用者觀看廣告插播後的5分鐘（塗鴉牆時鐘時間）跳過廣告。
+以下自定義廣告策略選擇器的示例在用戶觀看廣告中斷後的5分鐘（掛鐘時間）內跳過廣告。
 
-1. 當使用者觀看廣告插播時，節省目前的系統時間。
+1. 當用戶結束觀看廣告中斷時保存當前系統時間。
 
    ```java
    @Override 
@@ -32,7 +31,7 @@ ht-degree: 0%
    }
    ```
 
-1. 延伸預設廣告原則選擇器以覆寫預設行為。
+1. 擴展預設廣告策略選擇器以覆蓋預設行為。
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
@@ -188,4 +187,3 @@ ht-degree: 0%
        } 
    } 
    ```
-

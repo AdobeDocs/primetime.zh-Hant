@@ -1,26 +1,25 @@
 ---
-description: 使用MediaPlayerItemLoader可協助您取得媒體串流的相關資訊，而不需執行個體化MediaPlayer例項。 這在預緩衝流中特別有用，以便可以無延遲地開始播放。
+description: 使用MediaPlayerItemLoader可幫助您獲取有關媒體流的資訊，而無需實例化MediaPlayer實例。 這在預緩衝流中特別有用，以便可以無延遲地開始回放。
 title: 使用MediaPlayerItemLoader載入媒體資源
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: de61ec1c-f578-4e19-a131-51f36169c7ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
+# 使用MediaPlayerItemLoader載入媒體資源 {#load-a-media-resource-using-mediaplayeritemloader}
 
-# 使用MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}載入媒體資源
+使用MediaPlayerItemLoader可幫助您獲取有關媒體流的資訊，而無需實例化MediaPlayer實例。 這在預緩衝流中特別有用，以便可以無延遲地開始回放。
 
-使用MediaPlayerItemLoader可協助您取得媒體串流的相關資訊，而不需執行個體化MediaPlayer例項。 這在預緩衝流中特別有用，以便可以無延遲地開始播放。
-
-`MediaPlayerItemLoader`類別可協助您交換目前`MediaPlayerItem`的媒體資源，而不需將檢視附加到`MediaPlayer`例項，以分配視訊解碼硬體資源。 DRM保護內容需要其他步驟，但本手冊並未說明這些步驟。
+的 `MediaPlayerItemLoader` 類可幫助您為當前介質交換介質資源 `MediaPlayerItem` 不將視圖附加到 `MediaPlayer` 實例，它將分配視頻解碼硬體資源。 對於受DRM保護的內容，需要執行其他步驟，但本手冊沒有描述這些步驟。
 
 >[!IMPORTANT]
 >
->TVSDK不支援單一`QoSProvider`搭配`itemLoader`和`MediaPlayer`使用。 如果您的應用程式使用Instant On，則應用程式需要維護兩個`QoS`例項，並管理這兩個例項的資訊。 如需詳細資訊，請參閱[Instant-on](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md)。
+>TVSDK不支援單個 `QoSProvider` 與兩者合作 `itemLoader` 和 `MediaPlayer`。 如果您的應用程式使用「即時開啟」，則應用程式需要維護兩個 `QoS` 實例並管理兩個實例以獲取資訊。 請參閱 [即時](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md) 的子菜單。
 
-1. 建立`MediaPlayerItemLoader`實例。
+1. 建立實例 `MediaPlayerItemLoader`。
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -50,9 +49,9 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >為每個資源建立一個單獨的`MediaPlayerItemLoader`實例。 請勿使用一個`MediaPlayerItemLoader`實例來載入多個資源。
+   >建立單獨的實例 `MediaPlayerItemLoader` 為每個資源。 不要使用 `MediaPlayerItemLoader` 實例以載入多個資源。
 
-1. 實作`ItemLoaderListener`類別，以接收來自`MediaPlayerItemLoader`例項的通知。
+1. 實施 `ItemLoaderListener` 類，以接收來自 `MediaPlayerItemLoader` 實例。
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -77,13 +76,12 @@ ht-degree: 0%
    }
    ```
 
-   在`onLoadComplete()`回呼中，執行下列任一項作業：
+   在 `onLoadComplete()` 回調，執行下列操作之一：
 
-   * 請確定任何可能影響緩衝的項目（例如，選取WebVTT或音軌）皆已完成，並呼叫`prepareBuffer()`以立即啟動。
-   * 使用`replaceCurrentItem()`將項目附加到`MediaPlayer`實例。
-
-   如果調用`prepareBuffer()`，則在準備完成時，將在`onBufferPrepared`處理程式中收到BUFFER_PREPARED事件。
-1. 在`MediaPlayerItemLoader`實例上調用`load`並傳遞要載入的資源，以及（可選）內容ID和`MediaPlayerItemConfig`實例。
+   * 確保任何可能影響緩衝的內容（例如，選擇WebVTT或音頻軌道）已完成並呼叫 `prepareBuffer()` 利用瞬間的機會。
+   * 將項目附加到 `MediaPlayer` 實例 `replaceCurrentItem()`。
+   如果你打電話 `prepareBuffer()`，在 `onBufferPrepared` 處理程式。
+1. 呼叫 `load` 的 `MediaPlayerItemLoader` 實例和傳遞要載入的資源，並可選地傳遞內容ID和 `MediaPlayerItemConfig` 實例。
 
    ```java
    loader = createLoader(); 
@@ -91,18 +89,18 @@ ht-degree: 0%
    loader.load(res, 233, getConfig());
    ```
 
-1. 要從流開頭以外的點進行緩衝，請調用`prepareBuffer()`，其位置（以毫秒為單位）為啟動緩衝。
-1. 使用`replaceCurrentItem()`和`play()`方法，從此開始播放。`MediaPlayer`
-1. 等待空閒狀態並調用`replaceCurrentItem`。
+1. 要從流開頭以外的點進行緩衝，請調用 `prepareBuffer()` 開始緩衝的位置（以毫秒為單位）。
+1. 使用 `replaceCurrentItem()` 和 `play()` 方法 `MediaPlayer` 從那開始演奏。
+1. 等待空閒狀態和呼叫 `replaceCurrentItem`。
 1. 播放項目。
 
-   * 如果項目已載入但未緩衝：
+   * 如果已載入但未緩衝該項：
 
       1. 等待初始化狀態。
-      1. 呼叫`prepareToPlay()`。
+      1. 呼叫 `prepareToPlay()`。
       1. 等待PREPARED狀態。
-      1. 呼叫`play()`。
-   * 如果項目是緩衝的：
+      1. 呼叫 `play()`。
+   * 如果緩衝項：
 
       1. 等待緩衝區預準備事件。
-      1. 呼叫`play()`。
+      1. 呼叫 `play()`。

@@ -1,44 +1,43 @@
 ---
-description: 若是即時串流廣告插入，您可能需要先退出廣告插播，才能播放該插播中的所有廣告。
-title: 實作早期廣告插播傳回
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 對於即時流廣告插入，您可能需要先退出廣告分段，然後才能播放該分段中的所有廣告，直到完成。
+title: 實現早期廣告中斷返回
+exl-id: 584e870e-1408-41a9-bb6f-e82b921fe99e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
+# 實現早期廣告中斷返回{#implementing-an-early-ad-break-return}
 
-# 實作早期廣告插播傳回{#implementing-an-early-ad-break-return}
-
-若是即時串流廣告插入，您可能需要先退出廣告插播，才能播放該插播中的所有廣告。
+對於即時流廣告插入，您可能需要先退出廣告分段，然後才能播放該分段中的所有廣告，直到完成。
 
 >[!NOTE]
 >
->您必須訂閱剪接出／插入廣告標籤（`#EXT-X-CUE-OUT`、`#EXT-X-CUE-IN`和`#EXT-X-CUE`）。
+>必須訂閱剪接輸出/插入廣告標籤( `#EXT-X-CUE-OUT`。 `#EXT-X-CUE-IN`, `#EXT-X-CUE`)。
 
 以下是需要考慮的一些要求：
 
-* 剖析出現線上性或FER串流中的標籤，例如`EXT-X-CUE-IN`（或等效標籤標籤標籤）。
+* 分析標籤，如 `EXT-X-CUE-IN` （或等效標籤標籤）。
 
-   將標籤註冊為廣告早期返回點的標籤。 在播放期間，只播放`adBreaks`，直到此標籤位置覆寫由前導`EXE-X-CUE-OUT`標籤標籤的`adBreak`的持續時間。
+   將標籤註冊為早期返回點的標籤。 僅播放 `adBreaks` 直到回放期間此標籤位置，這將覆蓋 `adBreak` 標有前導 `EXE-X-CUE-OUT` 標籤。
 
-* 如果同一個`EXT-X-CUE-OUT`標籤存在兩個`EXT-X-CUE-IN`標籤，則顯示的第一個`EXT-X-CUE-IN`標籤是計數的標籤。
+* 如果是兩個 `EXT-X-CUE-IN` 同一標籤存在 `EXT-X-CUE-OUT` 標籤，第一個 `EXT-X-CUE-IN` 顯示的標籤是計數的標籤。
 
-* 如果`EXE-X-CUE-IN`標籤出現在時間軸中，但沒有前導`EXT-X-CUE-OUT`標籤，則會捨棄`EXE-X-CUE-IN`標籤。
+* 如果 `EXE-X-CUE-IN` 標籤出現在時間軸中，但不帶前導 `EXT-X-CUE-OUT` 標籤， `EXE-X-CUE-IN` 標籤被丟棄。
 
-   在即時串流中，如果前導`EXT-X-CUE-OUT`標籤剛從視窗移出，TVSDK將不會回應。
+   在直播流中，如果 `EXT-X-CUE-OUT` 標籤剛從窗口移出，TVSDK將不響應。
 
-* 當廣告插播有提早返回時，`adBreak`會播放，直到播放磁頭返回原本的位置（廣告插播應該結束時），並從該位置繼續播放主要內容。
+* 當廣告時段提前回來時， `adBreak` 播放，直到播放頭返回原始位置，而廣告中斷應該結束，然後從該位置繼續播放主要內容。
 
 ## SpliceOut和SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 
-`SpliceOut` 標 `SpliceIn` 記標籤廣告分段的開始和結束。`EXE-X-CUE`標籤的`SpliceOut`類型的持續時間可能為零，而`SpliceIn`類型的`EXE-X-CUE`標籤會標籤廣告分隔的結束。 它們會出現在單一標籤中，並依類型而有所不同。
+`SpliceOut` 和 `SpliceIn` 標籤標籤廣告分段的開始和結束。 持續時間 `SpliceOut` 類型 `EXE-X-CUE` 標籤可能為零，並且 `SpliceIn` 類型 `EXE-X-CUE` 標籤標籤廣告分段的結尾。 它們出現在一個標籤中，並且按類型不同。
 
-**一個不同類型的標籤**
+**具有不同類型的一個標籤**
 
-例如，以下是一個具有不同類型的標籤：
+例如，下面是一個具有不同類型的標籤：
 
 ```
 #EXTM3U#EXT-X-TARGETDURATION:10
@@ -65,13 +64,13 @@ https://server-host/path/file57.ts
 https://server-host/path/file58.ts
 ```
 
-在不同類型的一個標籤範例中，如果`SpliceOut`類型的持續時間為零，則`SpliceOut`和`SpliceIn`必須共同處理每個廣告分段。 目前，`SpliceOut`標籤具有非零持續時間且不需要配對`SpliceIn`標籤較典型。
+在具有不同類型的一個標籤示例中，如果 `SpliceOut` 類型為零， `SpliceOut` 和 `SpliceIn` 每次廣告都必須齊心協力。 當前， `SpliceOut` 具有非零持續時間且不需要配對的標籤 `SpliceIn` 標籤更為典型。
 
 **兩個獨立的標籤**
 
-較典型的情況是具有非零持續時間的`SpliceOut`標籤，且不需要配對`SpliceIn`標籤。 在這裡，配對`SpliceIn`標籤會在廣告插播播放期間標籤廣告插播的結尾，但廣告插播會在`SpliceIn`標籤位置被剪短，而主要內容會在此位置開始播放。
+更典型的情形是 `SpliceOut` 具有非零持續時間且不需要配對的標籤 `SpliceIn` 標籤。 這裡，一對 `SpliceIn` 標籤標籤在播放廣告中斷期間標籤廣告中斷的結束，但廣告中斷在播放 `SpliceIn` 標籤位置，主內容開始在此位置播放。
 
-例如，以下是兩個不同的標籤：
+例如，下面是兩個單獨的標籤：
 
 ```
 #EXT-X-CUE-OUT:ID=105,DURATION=30.0,TIME=1081.08
@@ -87,4 +86,3 @@ https://server-host/path/file58.ts
 #EXTINF:6.006000,no-desc
 /live/hls/nbc-fer/QualityLevels(2200000)/Fragments(video=14332589330665811,format=m3u8-aapl-v4)
 ```
-

@@ -1,16 +1,15 @@
 ---
 description: MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表示的內容流的資訊。
-title: 存取MediaResource資訊的MediaPlayer屬性
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 訪問MediaResource資訊的MediaPlayer屬性
+exl-id: 183a2992-06f2-4b1d-84c3-a6c2a7223e32
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-
-# 存取MediaResource資訊的MediaPlayer屬性{#mediaplayer-attributes-to-access-mediaresource-information}
+# 訪問MediaResource資訊的MediaPlayer屬性{#mediaplayer-attributes-to-access-mediaresource-information}
 
 MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表示的內容流的資訊。
 
@@ -24,62 +23,61 @@ MediaPlayerItem類中的方法允許您獲取有關由載入的MediaResource表�
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> 即時串流 </td> 
-   <td colname="2"> <span class="codeph"> live  </span> </td> 
-   <td colname="3"> 如果串流是即時的，則為true;false（如果是VOD）。 </td> 
+   <td colname="1"> 即時流 </td> 
+   <td colname="2"> <span class="codeph"> 活 </span> </td> 
+   <td colname="3"> 如果流是活的，則為true;如果為VOD，則為false。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> 隱藏字幕 </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
-   <td colname="3"> 如果隱藏字幕音軌可用，則為true。 </td> 
+   <td colname="2"> <span class="codeph"> 有ClosedCaptions </span> </td> 
+   <td colname="3"> 如果隱藏字幕磁軌可用，則為True。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
-   <td colname="3"> 提供可用隱藏字幕音軌的清單。 </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
+   <td colname="3"> 提供可用的隱藏字幕軌道清單。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
-   <td colname="3"> 擷取使用<span class="codeph"> selectClosedCaptionsTrack </span>選取的隱藏字幕軌道。 </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptontsTrack </span> </td> 
+   <td colname="3"> 檢索與 <span class="codeph"> selectClosedCaptionsTrack </span>。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="2"> 替代音訊 </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
-   <td colname="3"> <p>如果串流有替代的音軌，則為true。 </p> </td> 
+   <td colname="1" morerows="2"> 備用音頻 </td> 
+   <td colname="2"> <span class="codeph"> 有備用音頻 </span> </td> 
+   <td colname="3"> <p>如果流具有備用音頻軌道，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
-   <td colname="3"> 提供可用替代音軌的清單。 </td> 
+   <td colname="2"> <span class="codeph"> 音頻軌道 </span> </td> 
+   <td colname="3"> 提供可用備用音頻軌道的清單。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
+   <td colname="2"> <span class="codeph"> 選定的音頻軌道 </span> </td> 
    <td colname="3"> 
     <pre>
-      擷取目前選取的音軌(以 
-     <span class="codeph"> selectAudioTrack </span>。 
+      檢索當前選定的與 
+     <span class="codeph"> 選擇音頻軌道 </span>。 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"> 計時中繼資料 </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
-   <td colname="3"> 如果串流已關聯計時中繼資料，則返回true。 </td> 
+   <td colname="1" morerows="1"> 定時元資料 </td> 
+   <td colname="2"> <span class="codeph"> 有TimedMetadata </span> </td> 
+   <td colname="3"> 如果流已關聯定時元資料，則為True。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
-   <td colname="3"> 提供與流相關聯的定時元資料對象的清單。 </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="3"> 提供與流關聯的定時元資料對象的清單。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"> 多個描述檔（位元速率） </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> 描述檔  </span> </td> 
+   <td colname="1" morerows="1"> 多個配置檔案（位速率） </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> 配置檔案 </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> 提供與此流關聯的相關比特率配置檔案的清單。 <p>注意： 您可以擷取每個描述檔的位元速率，以及描述檔的高度和寬度。 </p> </td> 
+   <td colname="3"> 提供與此流關聯的關聯比特率配置檔案的清單。 <p>注：可檢索每個輪廓的比特率以及輪廓的高度和寬度。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 媒體資源 </td> 
-   <td colname="2"> <span class="codeph"> 資源  </span> </td> 
-   <td colname="3"> 傳回與此項目關聯的媒體資源。 </td> 
+   <td colname="2"> <span class="codeph"> 資源 </span> </td> 
+   <td colname="3"> 返回與此項關聯的媒體資源。 </td> 
   </tr> 
  </tbody> 
 </table>
-

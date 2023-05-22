@@ -1,20 +1,19 @@
 ---
-description: 您可以完成Digital Rights Management(DRM)特定的工作流程。
+description: 可以完成Digital Rights Management(DRM)特定的工作流。
 title: Digital Rights Management
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5a40252b-2917-4341-bc64-8642432ddda9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
+# Digital Rights Management {#digital-rights-management}
 
-# Digital Rights Management{#digital-rights-management}
+可以完成Digital Rights Management(DRM)特定的工作流。
 
-您可以完成Digital Rights Management(DRM)特定的工作流程。
-
-您可以監聽`AdobePSDK.DRMMetadataInfoEvent`事件以處理DRM工作流：
+你可以聽 `AdobePSDK.DRMMetadataInfoEvent` 處理DRM工作流的事件：
 
 ```js
 ... 
@@ -22,15 +21,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## 添加Digital Rights Management{#add-digital-rights-management}
+## 添加Digital Rights Management {#add-digital-rights-management}
 
-1. 新增`DRMMetadataInfoAvailableEvent`以取得`DRMMetadata`。
+1. 添加 `DRMMetadataInfoAvailableEvent` 去 `DRMMetadata`。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. 在步驟1中，實作行上方的`onDRMMetadataInfoAvailable`區段。
+1. 實施 `onDRMMetadataInfoAvailable` 欄的「字型」框中的字型)的字型名稱。
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -45,13 +44,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. 在setupVideo方法中建立DRManager。
+1. 在setupVideo方法中建立DRMManager。
 
    ```js
    var drmManager = player.drmManager;
    ```
 
-1. 通過複製以下示例，為Widevine和PlayReady建立保護資料：
+1. 通過複製以下示例為Widevine和PlayReady建立保護資料：
 
    ```js
    var protectionData = { 
@@ -75,15 +74,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    drmManager.setProtectionData(protectionData);
    ```
 
-1. 將資源URL變更為DASH測試串流。
+1. 將資源URL更改為DASHtest流。
 
    >[!TIP]
    >
-   >請確定您更新資源類型，因為現在是DASH。
+   >請確保更新資源類型，因為現在這是DASH。
 
    ```js
    var resourceUrl = "https://ptdemos.com/videos/dashdrm/stream.mpd"; 
    var resourceType = AdobePSDK.MediaResourceType.DASH;
    ```
 
-1. 測試您的設定。
+1. Test配置。

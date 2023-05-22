@@ -1,20 +1,19 @@
 ---
-description: 此程式是如何建立按鈕的範例，讓使用者選取隱藏字幕軌道。
-title: 允許使用者變更標題軌道
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 此過程是如何建立按鈕的示例，該按鈕允許用戶選擇隱藏字幕軌道。
+title: 允許用戶更改字幕軌道
+exl-id: cf273f06-ae0d-458c-aeef-7f70dad6106f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# 允許用戶更改字幕軌道 {#allow-users-to-change-the-caption-track}
 
-# 允許使用者變更標題軌道{#allow-users-to-change-the-caption-track}
+此過程是如何建立按鈕的示例，該按鈕允許用戶選擇隱藏字幕軌道。
 
-此程式是如何建立按鈕的範例，讓使用者選取隱藏字幕軌道。
-
-1. 建立按鈕以變更隱藏字幕軌道。
+1. 建立按鈕以更改隱藏字幕軌道。
 
    ```xml
    <Button 
@@ -28,7 +27,7 @@ ht-degree: 0%
      android:text="CC" /> 
    ```
 
-1. 將可用隱藏字幕音軌清單轉換為字串陣列。
+1. 將可用隱藏字幕軌道清單轉換為字串陣列。
 
    相應地標籤具有活動（即TVSDK已發現資料的頻道）的隱藏字幕軌道。
 
@@ -58,7 +57,7 @@ ht-degree: 0%
    } 
    ```
 
-1. 當使用者按一下按鈕時，會顯示對話方塊，列出所有預設的隱藏字幕軌道。
+1. 當用戶按一下該按鈕時，將顯示一個對話框，其中列出所有預設的隱藏字幕軌道。
 
    ```java
    public void selectClosedCaptioningClick(View view) { 

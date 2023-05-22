@@ -1,38 +1,37 @@
 ---
-description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
-title: 控制視訊檢視的位置和大小
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 可以使用MediaPlayerView對象控制視頻視圖的位置和大小。
+title: 控制視頻視圖的位置和大小
+exl-id: ab88a90f-4493-4f05-8da0-703ab3cf159e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
+# 控制視頻視圖的位置和大小{#control-the-position-and-size-of-the-video-view}
 
-# 控制視訊檢視的位置和大小{#control-the-position-and-size-of-the-video-view}
+可以使用MediaPlayerView對象控制視頻視圖的位置和大小。
 
-您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
+預設情況下，瀏覽器TVSDK會嘗試在由於應用程式、配置檔案開關、內容開關等更改而改變視頻大小或位置時保持視頻視圖的縱橫比。
 
-依預設，當視訊的大小或位置因應用程式、描述檔開關、內容開關等變更而變更時，瀏覽器TVSDK會嘗試維持視訊檢視的外觀比例。
-
-通過指定不同的&#x200B;*比例策略*，可以覆蓋預設長寬比行為。 使用`MediaPlayerView`物件的`scalePolicy`屬性指定縮放原則。 預設縮放原則`MediaPlayerView`是以`MaintainAspectRatioScalePolicy`類別的例項設定。 若要重設比例原則，請以您自己的原則取代`MediaPlayerView.scalePolicy`上的預設例項`MaintainAspectRatioScalePolicy`。
+可通過指定不同的長寬比行為來覆蓋預設長寬比行為 *規模策略*。 使用 `MediaPlayerView` 對象 `scalePolicy` 屬性。 的預設縮放策略 `MediaPlayerView` 是使用 `MaintainAspectRatioScalePolicy` 類。 要重置縮放策略，請替換 `MaintainAspectRatioScalePolicy` 上 `MediaPlayerView.scalePolicy` 你自己的政策。
 
 >[!IMPORTANT]
 >
->不能將`scalePolicy`屬性設定為空值。
+>無法設定 `scalePolicy` 屬性。
 
-## 非Flash備援藍本{#non-flash-fallback-scenarios}
+## 非Flash回退方案 {#non-flash-fallback-scenarios}
 
-在非Flash的備援藍本中，為使縮放原則正常運作，`View`建構函式中提供的視訊div元素應傳回`offsetWidth`和`offsetHeight`的非零值。 若要提供不正確的函式範例，有時在css中未明確設定視訊div元素的寬度和高度時，`View`建構函式會針對`offsetWidth`或`offsetHeight`傳回零。
+在非Flash回退方案中，為使縮放策略正確工作，在中提供的video div元素 `View` 建構子應返回非零值 `offsetWidth` 和 `offsetHeight`。 要提供錯誤函式的示例，有時在css中未顯式設定視頻div元素的寬度和高度時， `View` 建構子返回零 `offsetWidth` 或 `offsetHeight`。
 
 >[!NOTE]
 >
->CustomScalePolicy對一些瀏覽器的支援有限，尤其是IE、Edge和Safari 9。 對於這些瀏覽器，視訊的原生外觀比例無法變更。 不過，視訊的位置和尺寸會根據縮放原則強制執行。
+>CustomScalePolicy對少數瀏覽器（尤其是IE、Edge和Safari 9）的支援有限。 對於這些瀏覽器，無法更改視頻的本機寬高比。 但是，視頻的位置和尺寸將根據比例策略強制執行。
 
-1. 實作`MediaPlayerViewScalePolicy`介面以建立您自己的縮放原則。
+1. 實施 `MediaPlayerViewScalePolicy` 介面，建立您自己的縮放策略。
 
-   `MediaPlayerViewScalePolicy`有一個方法：
+   的 `MediaPlayerViewScalePolicy` 有一種方法：
 
    ```js
    /** 
@@ -64,14 +63,14 @@ ht-degree: 0%
    };
    ```
 
-1. 將實施指派給`MediaPlayerView`屬性。
+1. 將實施分配給 `MediaPlayerView` 屬性。
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(videoDiv); 
    view.scalePolicy= new MediaPlayerViewCustomScalePolicy();
    ```
 
-1. 將您的檢視新增至Media Player的`view`屬性。
+1. 將視圖添加到媒體播放器 `view` 屬性。
 
    ```
    mediaplayer.view = view;
@@ -79,7 +78,7 @@ ht-degree: 0%
 
 <!--<a id="example_ABCD79AE29DB4A668F9A8B729FE44AF9"></a>-->
 
-**例如：縮放視訊以填滿整個視訊檢視，而不需維持外觀比例：**
+**例如：縮放視頻以填充整個視頻視圖，而不保持縱橫比：**
 
 ```
 /** 
@@ -102,4 +101,3 @@ var view = new AdobePSDK.MediaPlayerView(videoDiv);
 view.scalePolicy = new MediaPlayerViewCustomScalePolicy (); 
 mediaPlayer.view = view;
 ```
-

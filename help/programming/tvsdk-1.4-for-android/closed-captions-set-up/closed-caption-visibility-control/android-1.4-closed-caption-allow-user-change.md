@@ -1,20 +1,19 @@
 ---
-description: 這是如何建立按鈕的範例，可讓使用者選擇隱藏字幕軌道。
-title: 範例允許使用者變更標題軌道
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 這是如何建立按鈕的示例，該按鈕允許用戶選擇隱藏字幕軌道。
+title: 示例允許用戶更改標題軌道
+exl-id: d7ba19ac-cbfa-4fb4-a92d-21a3d0f7c23f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# 示例：允許用戶更改字幕軌道{#example-allow-users-to-change-the-caption-track}
 
-# 範例：允許使用者變更標題track{#example-allow-users-to-change-the-caption-track}
+這是如何建立按鈕的示例，該按鈕允許用戶選擇隱藏字幕軌道。
 
-這是如何建立按鈕的範例，可讓使用者選擇隱藏字幕軌道。
-
-1. 建立簡單按鈕以變更隱藏字幕軌道。
+1. 建立一個簡單按鈕以更改隱藏字幕軌道。
 
    ```xml
       <Button 
@@ -28,7 +27,7 @@ ht-degree: 0%
      android:text="CC" /> 
    ```
 
-1. 將可用隱藏字幕音軌清單轉換為字串陣列。 具有活動（即TVSDK已發現資料的頻道）的隱藏字幕軌道會據以標籤：
+1. 將可用隱藏字幕軌道清單轉換為字串陣列。 具有活動（即TVSDK已發現資料的通道）的隱藏字幕軌道將相應標籤：
 
    ```java
    /** 
@@ -54,7 +53,7 @@ ht-degree: 0%
    } 
    ```
 
-1. 當使用者按一下按鈕時，會顯示對話方塊，列出所有預設的CC追蹤。
+1. 當用戶按一下該按鈕時，將顯示一個對話框，其中列出所有預設抄送軌道。
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
@@ -82,4 +81,3 @@ ht-degree: 0%
        ab.show(); 
    } 
    ```
-

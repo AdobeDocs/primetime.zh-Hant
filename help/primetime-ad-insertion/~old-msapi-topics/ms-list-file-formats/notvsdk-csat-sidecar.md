@@ -1,7 +1,6 @@
 ---
-description: 如果用戶端要求JSON格式的追蹤資訊，資訊清單伺服器會以其中一種JSON格式傳回檔案。
-title: 追蹤URL的JSON格式
-translation-type: tm+mt
+description: 如果客戶端請求JSON格式的跟蹤資訊，則清單伺服器以JSON格式之一發回檔案。
+title: 用於跟蹤URL的JSON格式
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '211'
@@ -10,13 +9,13 @@ ht-degree: 0%
 ---
 
 
-# 追蹤URL {#json-formats-for-tracking-urls}的JSON格式
+# 用於跟蹤URL的JSON格式 {#json-formats-for-tracking-urls}
 
-如果用戶端要求JSON格式的追蹤資訊，資訊清單伺服器會以其中一種JSON格式傳回檔案。
+如果客戶端請求JSON格式的跟蹤資訊，則清單伺服器以JSON格式之一發回檔案。
 
-## 追蹤版本1 {#json_v1}的JSON格式
+## 用於跟蹤版本1的JSON格式 {#json_v1}
 
-如果`pttrackingversion=v1`具有下列一般格式，資訊清單伺服器會傳送的JSON檔案：
+清單伺服器在 `pttrackingversion=v1` 具有以下一般格式：
 
 ```
 { 
@@ -32,11 +31,11 @@ ht-degree: 0%
 }, ...]}
 ```
 
-## 追蹤版本2 {#json_v2}的JSON格式
+## 用於跟蹤版本2的JSON格式 {#json_v2}
 
-如果`pttrackingversion=v2`具有下列範例的格式，則資訊清單伺服器會傳送的JSON檔案，此格式來自一般的JSON區塊。
+清單伺服器在 `pttrackingversion=v2` 具有以下示例的格式，該格式來自典型的JSON塊。
 
-本發明結構簡單，避免了不必要的重複，使結構更加清晰。 省略號（三個點，以空格分隔）表示某些URL內和某些代碼區塊之間的省略資訊。 未縮短的URL會出現在多行上，但會出現在JSON檔案的單行上。
+縮短了時間，避免了不必要的重複，使結構更加清晰。 省略號（三個點，用空格分隔）表示某些URL內和某些代碼塊之間省略的資訊。 未縮短的URL顯示在多行上，儘管它們顯示在JSON檔案的單行上。
 
 ```
 { 
@@ -364,11 +363,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->從`ad breaks`提取的`scte35`屬性的`offset`值可能為負數。 這是因為JSON V2附屬內容包含目前播放視窗中部分廣告插播的相關資訊。 因此，`scte35`屬性也包含此類廣告插播的相關資訊。
+>的 `offset` 值 `scte35` 從 `ad breaks` 可能是陰性。 這是因為JSON V2思德卡包含有關當前播放窗口中部分廣告分段的資訊。 所以， `scte35` 屬性還包含有關此類廣告分段的資訊。
 
-## 追蹤版本3 {#json_v3}的JSON格式
+## 用於跟蹤版本3的JSON格式 {#json_v3}
 
-如果`pttrackingversion=v3`具有下列一般格式，資訊清單伺服器會傳送的JSON檔案：
+清單伺服器在 `pttrackingversion=v3` 具有以下一般格式：
 
 ```
 { 

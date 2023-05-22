@@ -1,44 +1,43 @@
 ---
-description: 若要在TVSDK應用程式中實作FairPlay串流，您需要編寫資源載入器，將授權取得要求傳送至FairPlay串流伺服器。
-title: TVSDK應用程式中的Apple FairPlay
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 要在TVSDK應用中實施FairPlay流，您需要編寫資源載入器，該載入器向FairPlay流伺服器發送許可證獲取請求。
+title: AppleTVSDK應用中的FairPlay
+exl-id: 83fdc75b-f736-4091-ab80-e7f6e9723482
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
 
 ---
 
+# AppleTVSDK應用中的FairPlay  {#apple-fairplay-in-tvsdk-applications}
 
-# TVSDK應用程式中的Apple FairPlay {#apple-fairplay-in-tvsdk-applications}
-
-若要在TVSDK應用程式中實作FairPlay串流，您需要編寫資源載入器，將授權取得要求傳送至FairPlay串流伺服器。
+要在TVSDK應用中實施FairPlay流，您需要編寫資源載入器，該載入器向FairPlay流伺服器發送許可證獲取請求。
 
 資源載入程式碼負責以下任務：
 
-1. 決定要在何處傳送授權取得要求。
+1. 確定在何處發送許可證獲取請求。
 1. 格式化請求。
-1. 提供必要的資訊給伺服器，讓伺服器可決定是否允許要求。
+1. 向伺服器提供必要的資訊，以便伺服器能夠決定是否允許請求。
 
-例如，如果您使用由ExpressPlay提供支援的Adobe的Primetime Cloud DRM，您的資源載入器會將要求傳送至：
+例如，如果您使用由ExpressPlay提供支援的Adobe的Mogine Cloud DRM，則資源載入器將請求發送給：
 
 ```
 https://fp-gen.service.expressplay.com
 ```
 
-「資源載入器」會格式化請求，並附加ExpressPlay Token，以授權播放至URL。 在取得ExpressPlay Token時，有幾個選項需要考慮。 這些選項取決於您封裝內容的方式。
+資源載入器格式化請求並將授權回放的ExpressPlay令牌附加到URL。 獲取ExpressPlay令牌時，需要考慮幾個選項。 這些選項取決於您如何打包內容。
 
-當您封裝內容時，封裝程式會在您的M3U8資訊清單中插入`skd:` URL。 在`skd:`項目之後，您可將任何資料放入資訊清單中。 您可以在應用程式碼中使用此資料來完成上述工作。 例如，您可以使用`skd:{content_id}`，讓您的應用程式可以判斷所播放內容的ID，並請求該特定內容的Token。 例如，您也可以使用`skd:{entitlement_server_url}?cid={content_id}`，讓您的應用程式不需要硬式編碼權益伺服器URL。
+打包內容時，打包程式將插入 `skd:` M3U8清單中的URL。 在 `skd:` 條目，可將任何資料放入清單。 您可以在應用程式碼中使用此資料來完成上面列出的任務。 例如，您可以 `skd:{content_id}` 以便您的應用能夠確定正在播放的內容的ID，並請求該特定內容的令牌。 例如，您還可以 `skd:{entitlement_server_url}?cid={content_id}`，這樣您的應用就不需要硬編碼權利伺服器URL。
 
-當播放開始時，如果您已透過其他頻道瞭解內容ID，則可能不需要`skd:` URL中的任何資訊。 第二個範例是測試您設定的理想解決方案，但您也可以在生產環境中使用它。
+您可能不需要 `skd:` URL如果在播放開始時，您已通過其他頻道瞭解內容ID。 第二個示例是test設定的理想解決方案，但您也可以在生產環境中使用它。
 
 >[!TIP]
 >
->確定`skd:`的格式。
+>確定 `skd:`。
 
-您的內容是使用`skd:`通訊協定取得，但您的授權要求使用`https:`。 處理這些通訊協定的最常用選項是：
+您的內容是通過 `skd:` 協定，但您的許可證請求使用 `https:`。 處理這些協定的最常用選項是：
 
-* **端對端播放的初始測試封** 裝內容時，請選取 `skd:` URL。在測試您的應用程式時，請手動從ExpressPlay取得授權，並在載入器中硬式編碼授權(`https:` URL)和內容URL。
+* **端對端回放的初始測試** 打包內容時，選擇 `skd:` URL。 測試應用時，請手動從ExpressPlay獲取許可證並硬編碼許可證( `https:` URL)和載入程式中的內容URL。
 
    例如：
 
@@ -50,7 +49,7 @@ https://fp-gen.service.expressplay.com
        ExpressPlayToken={copy_your_token_to_here}";
    ```
 
-* **大多數其** 他案例在封裝內容時，請選取唯 `skd:` 一代表內容ID的URL。在您的載入器中，剖析`skd:` URL，將它傳送至您的伺服器以取得Token，然後使用產生的Token做為URL。
+* **大多數其他案例** 打包內容時，選擇 `skd:` 唯一表示內容ID的URL。 在載入器中，分析 `skd:` URL，將其發送到伺服器以獲取令牌，並使用結果令牌作為URL。
 
    例如：
 
@@ -148,25 +147,25 @@ https://fp-gen.service.expressplay.com
    }
    ```
 
-## 在TVSDK應用程式中啟用Apple FairPlay{#enable-apple-fairplay-in-tvsdk-applications}
+## 在TVSDK應用程式中啟用Apple公平播放{#enable-apple-fairplay-in-tvsdk-applications}
 
-您可以在TVSDK應用程式中實作Apple FairPlay串流（Apple的DRM解決方案）。
+您可以在TVSDK應用程式中實施Apple的DRM解決方案FairPlay Streaming。
 
-1. 實施`PTAVAssetResourceLoaderDelegate`以建立FairPlay客戶資源載入器。
+1. 通過實施FairPlay客戶資源載入器建立 `PTAVAssetResourceLoaderDelegate`。
 
-   如需詳細資訊，請參閱「TVSDK應用程式中的[Apple FairPlay」。](../../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
+   有關詳細資訊，請參見 [AppleTVSDK應用中的FairPlay](../../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)。
 
    >[!NOTE]
    >
-   >請確定您遵循&#x200B;*FairPlay串流程式指南*(*FairPlayStreaming_PG.pdf*)中的指示，此指示包含在[FairPlay Server SDK中，以開發FPS-Aware App](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip))。
+   >確保按照 *《 FairPlay流媒體節目指南》* ( *FairPlayStreaming_PG.pdf*)，包含於 [用於開發FPS感知應用的FairPlay Server SDK](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip))。
 
-   `resourceLoader:shouldWaitForLoadingOfRequestedResource`方法等效於`AVAssetResourceLoaderDelegate`中的內容。
+   的 `resourceLoader:shouldWaitForLoadingOfRequestedResource` 方法等效於中的內容 `AVAssetResourceLoaderDelegate`。
 
    >[!IMPORTANT]
    >
-   >在ExpressPlay授權伺服器案例中，若要播放內容，請將ExpressPlay FairPlay伺服器授權要求URL中的URL配置從`skd://`變更為`https://`（或`https://`）。
+   >在ExpressPlay許可證伺服器方案中，要回放內容，請更改ExpressPlay FairPlay伺服器許可證請求URL中的URL方案 `skd://` 至 `https://` 或 `https://`)。
 
-1. 使用`registerPTAVAssetResourceLoader`註冊&#x200B;*FairPlay*&#x200B;客戶資源載入器。
+1. 註冊 *公平遊戲* 客戶資源載入器 `registerPTAVAssetResourceLoader`。
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  
@@ -175,4 +174,4 @@ https://fp-gen.service.expressplay.com
      registerPTAVAssetResourceLoader:resourceLoader];
    ```
 
-如果您自行編寫FairPlay授權伺服器，或您使用協力廠商FairPlay授權伺服器，請洽詢您的授權伺服器廠商，以判斷您的授權伺服器URL、格式設定及任何其他需求。
+如果您自己編寫了FairPlay許可證伺服器，或者您正在使用第三方FairPlay許可證伺服器，請咨詢許可證伺服器供應商以確定許可證伺服器URL、格式設定和任何其他要求。

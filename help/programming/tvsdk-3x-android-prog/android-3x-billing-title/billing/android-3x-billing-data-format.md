@@ -1,22 +1,21 @@
 ---
-description: TVSDK會以XML格式傳送帳單量度至Adobe。
-title: 傳輸帳單量度
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK以XML格式向Adobe發送計費度量。
+title: 傳輸計費度量
+exl-id: 55009ce6-a814-4a20-bfa5-e8cf2d7ba923
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
+# 傳輸計費度量 {#transmit-billing-metrics}
 
-# 傳送帳單量度{#transmit-billing-metrics}
-
-TVSDK會以XML格式傳送帳單量度至Adobe。
+TVSDK以XML格式向Adobe發送計費度量。
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-如果您使用網路擷取工具來監控TVSDK傳送至Adobe的統計資料，您應該會看到下列單位：
+如果使用網路捕獲工具監視TVSDK傳輸到Adobe的統計資訊，則應看到以下單元：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +39,4 @@ TVSDK會以XML格式傳送帳單量度至Adobe。
 </request>
 ```
 
-布爾屬性`drmProtected`、`adsEnabled`和`midrollEnabled`只有在屬性為true時才會顯示。
+布爾屬性 `drmProtected`。 `adsEnabled`, `midrollEnabled` 只有在它們為真時才顯示。

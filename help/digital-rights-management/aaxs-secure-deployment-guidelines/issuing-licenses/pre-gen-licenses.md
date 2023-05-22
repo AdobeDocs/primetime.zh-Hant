@@ -1,16 +1,15 @@
 ---
-title: 預先產生的授權
-description: 預先產生的授權
+title: 預生成許可證
+description: 預生成許可證
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d0bdd722-fd0e-4f34-87e7-28a564daf82b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
 
 ---
 
+# 預生成許可證{#pre-generating-licenses}
 
-# 預先產生授權{#pre-generating-licenses}
-
-如果您預先產生包含時間型使用規則的授權，強烈建議授權包含同步要求(請參閱&#x200B;*使用Adobe存取SDK以保護內容*&#x200B;指南)，以便安全地強制授權到期。 如果您在授權中有任何時間限制，強烈建議在用戶端和伺服器之間實作「心搏」機制，因為心搏會同步用戶端的時間與伺服器時間。
+如果您是預生成包含基於時間的使用規則的許可證，強烈建議該許可證包括同步要求(請參閱 *使用Adobe訪問SDK保護內容* 指南)，因此可以安全地強制執行許可證過期。 如果您在許可證中有任何基於時間的限制，強烈建議在客戶端和伺服器之間實施「心跳」機制，因為心跳將使客戶端時間與伺服器時間同步。

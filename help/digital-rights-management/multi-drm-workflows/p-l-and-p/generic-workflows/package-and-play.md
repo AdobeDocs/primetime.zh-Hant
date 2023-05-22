@@ -1,43 +1,42 @@
 ---
-description: 您可以使用ExpressPlay的Bento4封裝程式，為Primetime Cloud DRM（由ExpressPlay提供）支援的任何DRM解決方案準備內容。
-title: ExpressPlay Packager / Cloud DRM / TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以使用ExpressPlay的Bento4打包程式為ExpressPlay支援的Mogine Cloud DRM支援的任何DRM解決方案準備內容。
+title: ExpressPlay打包器/雲DRM/TVSDK
+exl-id: ff937279-3866-4d0a-9a19-cf61726299e1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
 
 ---
 
+# ExpressPlay打包器/雲DRM/TVSDK {#expressplay-packager-cloud-drm-tvsdk}
 
-# ExpressPlay Packager / Cloud DRM / TVSDK {#expressplay-packager-cloud-drm-tvsdk}
+您可以使用ExpressPlay的Bento4打包程式為ExpressPlay支援的Mogine Cloud DRM支援的任何DRM解決方案準備內容。
 
-您可以使用ExpressPlay的Bento4封裝程式，為Primetime Cloud DRM（由ExpressPlay提供）支援的任何DRM解決方案準備內容。
+此任務介紹如何使用第三方工具準備受保護的內容，在本例中 *ExpressPlay Bento4工具*，用於各種DRM解決方案。 有關其他資訊，請參閱 *Bento4工具* 文檔 [快速播放](https://www.expressplay.com/developer/) 的子菜單。
+1. 獲取ExpressPlay帳戶並獲取ExpressPlay客戶驗證器資訊。
 
-本工作說明如何使用協力廠商工具來準備受保護的內容（在本例中為&#x200B;*ExpressPlay Bento4 Tools*），以便與各種DRM解決方案搭配使用。 如需詳細資訊，請參閱[ExpressPlay](https://www.expressplay.com/developer/)網站上的&#x200B;*Bento4 tools*&#x200B;說明檔案。
-1. 取得ExpressPlay帳戶並取得您的ExpressPlay客戶驗證器資訊。
+   請參閱 [黃金時段DRM雲快速啟動。](../../quick-start/quick-overview.md)
+1. 如果您正在為Mighile Access加密內容，請從Adobe獲取MighileAdobe訪問SDK以及所需的證書（許可證、傳輸和打包證書）。
+1. 提供內容加密密鑰(CEK)和內容加密密鑰儲存ID(CEKSID)，以在DRM系統中使用。 （您使用OpenSSL或類似程式隨機生成這些檔案。）
 
-   請參閱[Primetime DRM Cloud快速入門。](../../quick-start/quick-overview.md)
-1. 如果您要加密Primetime Access的內容，請從Adobe取得PrimetimeAdobe存取SDK，以及必要的憑證（授權、傳輸和封裝憑證）。
-1. 提供內容加密密鑰(CEK)和內容加密密鑰儲存ID(CEKSID)，以用於跨DRM系統。 （您使用OpenSSL或類似程式隨機產生這些項目。）
+   CEK是您用於加密視頻檔案的實際密鑰。 您可以將它安全地儲存在您自己的密鑰管理系統中的您自己的伺服器上，或者您可以使用ExpressPlay [關鍵儲存解決方案](https://www.expressplay.com/developer/key-storage/)。
 
-   CEK是您用來加密視訊檔案的實際金鑰。 您可以將它安全地儲存在自己的密鑰管理系統中自己的伺服器上，也可以使用ExpressPlay的[密鑰儲存解決方案](https://www.expressplay.com/developer/key-storage/)。
+   CEKSID是特定CEK的標識符。 您（通常）不會傳遞加密密鑰。 例如，在請求許可證令牌時，提供CEKSID。
 
-   CEKSID是特定CEK的識別碼。 您（通常）不會傳遞加密金鑰。 例如，在請求授權Token時，您會提供CEKSID。
+1. 如果您正在為Access加密內容，請利用您的CEK建立與您的內容關聯的Mogini時Access元資料。
 
-1. 如果您正在加密內容以存取，請利用您的CEK來建立與您的內容相關的Primetime Access中繼資料。
+1. 分段內容以準備 *本托4 MP4DASH* 工具欄。
 
-1. 將內容分段，以便為&#x200B;*Bento4 MP4DASH*&#x200B;工具準備。
-
-   在此步驟中，您可以使用&#x200B;*MP4FRAGMENT*&#x200B;工具。 您只需要將內容分割一次。 例如：
+   對於此步驟，您可以使用 *MP4片段* 工具欄。 您只需將內容分片一次。 例如：
 
    ```
    ./mp4fragment Unfragmented.mp4 Fragmented.mp4
    ```
 
-1. 使用&#x200B;*Bento4 MPDASH*&#x200B;工具來「DASH-ify」並加密您零散的內容。
+1. 使用 *本托4 MPDASH* 工具，用於「虛線」並加密零碎內容。
 
-   使用此命令指定您將使用的所有DRM系統，並傳遞從前述步驟生成的任何Primetime Access元資料。 例如：
+   使用此命令可指定將要使用的所有DRM系統，並傳遞從前面步驟生成的任何Mogini時訪問元資料。 例如：
 
    ```
    /mp4dash -f  
@@ -56,15 +55,15 @@ ht-degree: 0%
 
        此伺服器需要處理以下操作：
    
-   1. 客戶選擇內容。 此實作需要包含端點，讓用戶端為特定內容ID請求內容Token。
-   1. 客戶權益
-   1. 來自用戶端的授權Token(ExpressPlay)要求（[ExpressPlay授權Token要求／回應參考](../../license-token-req-resp-ref/license-req-resp-overview.md)）
+   1. 客戶選擇內容。 此實現需要包括客戶端請求特定內容ID的內容令牌的終結點。
+   1. 客戶權利
+   1. 來自客戶端的許可證令牌(ExpressPlay)請求( [ExpressPlay許可證令牌請求/響應引用](../../license-token-req-resp-ref/license-req-resp-overview.md))
 
-1. 建立您的客戶。
+1. 建立客戶端。
 
-   客戶端應包括對店面伺服器的呼叫。 Adobe建議用戶在選擇某些內容後，以及用戶通過身份驗證後，客戶端調用店面。 然後，將從ExpressPlay傳回的Token傳遞至您的播放器，以用於授權要求。 以下是實作播放器DRM元件的簡介：
+   客戶端應包括對您的店面伺服器的呼叫。 Adobe建議用戶在選擇某些內容後，在用戶經過身份驗證後，客戶端調用店面。 然後，將從ExpressPlay返回的令牌傳遞給您的播放器以用於許可證請求。 要實施玩家的DRM元件，請參閱：
 
-   * HTML5的瀏覽器TVSDK
+   * 用於HTML5的瀏覽器TVSDK
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
 
-1. 有了授權Token，用戶端現在可以從Token衍生要求URL，並對ExpressPlay進行授權要求，然後為使用者播放選取的受保護內容。
+1. 隨著許可證令牌的手持，客戶機現在可以從令牌中導出請求URL並向ExpressPlay發出許可證請求，然後為用戶播放所選的受保護內容。

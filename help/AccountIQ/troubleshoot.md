@@ -1,13 +1,13 @@
 ---
 title: 故障排除
 description: 無法查看或載入報告面板？ 還是無法導出報告？ 瞭解如何解決產品中常見的問題。
-source-git-commit: 4c6ae182059586275adbc89987444dd762dcb158
+exl-id: 2c3f22c4-5534-424c-b321-b57045bcb7a6
+source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
-
 
 # 解決帳戶IQ中的問題 {#troubleshoot}
 

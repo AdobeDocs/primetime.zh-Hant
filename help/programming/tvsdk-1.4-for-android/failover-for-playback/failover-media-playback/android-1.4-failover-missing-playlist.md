@@ -1,22 +1,21 @@
 ---
-description: 例如，當整個播放清單遺失時，當頂層資訊清單檔案中指定的M3U8檔案未下載時，TVSDK會嘗試復原。 如果無法恢復，則您的應用程式將決定下一步。
-title: 遺失播放清單容錯功能
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 當缺少整個播放清單時，例如，當在頂級清單檔案中指定的M3U8檔案未下載時，TVSDK會嘗試恢復。 如果無法恢復，則應用程式將確定下一步。
+title: 缺少播放清單故障轉移
+exl-id: aab2dde3-aee2-4ade-b8f9-91c72df0c747
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
 
 ---
 
+# 缺少播放清單故障轉移{#missing-playlist-failover}
 
-# 遺失播放清單容錯功能{#missing-playlist-failover}
+當缺少整個播放清單時，例如，當在頂級清單檔案中指定的M3U8檔案未下載時，TVSDK會嘗試恢復。 如果無法恢復，則應用程式將確定下一步。
 
-例如，當整個播放清單遺失時，當頂層資訊清單檔案中指定的M3U8檔案未下載時，TVSDK會嘗試復原。 如果無法恢復，則您的應用程式將決定下一步。
+如果缺少與中解析度位速率關聯的播放清單，TVSDK將搜索相同解析度的變型播放清單。 如果找到相同的解析度，則開始從匹配位置下載變型播放清單和段。 如果TVSDK找不到相同的解析度播放清單，它將嘗試循環播放其他比特率播放清單及其變體。 立即降低比特率是首選，然後是其變數，等等。 如果在嘗試查找有效播放清單時已用盡所有低比特率播放清單及其變體，則TVSDK將轉到最高比特率並從那裡計算下來。 如果找不到有效的播放清單，則進程將失敗，並且播放器將移到ERROR狀態。
 
-如果遺失與中解析度位元速率相關聯的播放清單，TVSDK會以相同解析度搜尋變型播放清單。 如果找到相同的解析度，就會開始從相符位置下載變型播放清單和區段。 如果TVSDK找不到相同的解析度播放清單，它會嘗試循環檢視其他位元速率播放清單及其變數。 位元速率立即降低是首選，然後是其變體，依此類推。 如果所有較低位元速率的播放清單及其變數在嘗試尋找有效播放清單時已用盡，TVSDK會移至最高位元速率，並從此計算。 如果找不到有效的播放清單，程式會失敗，而播放器會移至ERROR狀態。
-
-您的應用程式可判斷如何處理此情況。 例如，您可能想要關閉播放器活動，並將使用者導向目錄活動。 感興趣的事件是`STATE_CHANGED`事件，而對應的回呼是`onStateChanged`方法。 以下程式碼會監視播放器是否將內部狀態變更為ERROR:
+您的應用程式可以確定如何處理此情況。 例如，您可能希望關閉播放器活動並將用戶引導到目錄活動。 感興趣的事件是 `STATE_CHANGED` 事件，相應的回調是 `onStateChanged` 的雙曲餘切值。 下面是代碼，用於監視播放器是否將其內部狀態更改為ERROR:
 
 ```java
 case ERROR: 
@@ -24,13 +23,13 @@ case ERROR:
     break;
 ```
 
-如需詳細資訊，請參閱SDK中的[!DNL PlayerFragment.java]檔案：
+有關詳細資訊，請參見 [!DNL PlayerFragment.java] SDK中的檔案：
 
 ```
 […]/samples/PrimetimeReference/src/PrimetimeReference/src/com/adobe/primetime/reference/ui/player/
 ```
 
-如果客戶端網路關閉，您可以使用此代碼進行驗證。
+如果客戶端網路已關閉，則可以使用此代碼進行驗證。
 
 ```
 psdkutils::PSDKString 
@@ -38,7 +37,7 @@ getNetworkDownVerificationUrl() const { return
 _networkDownVerificationUrl; }
 ```
 
-API將提供用於驗證客戶端網路是否關閉的URL。 此URL應為有效的URL，會在http請求上傳回http回應代碼200。
+API將提供用於驗證客戶端網路是否關閉的url。 這應該是有效的url，它在http請求上返回http響應代碼200。
 
 ```
 psdkutils::PSDKErrorCode 
@@ -46,4 +45,4 @@ psdkutils::PSDKErrorCode
 _networkDownVerificationUrl = value; return psdkutils::kECSuccess; }
 ```
 
-如果未設定setNetworkDownVerificationUrl,TVSDK會依預設使用MainManifest URL來判斷網路是否關閉。
+如果未設定setNetworkDownVerificationUrl，則TVSDK預設使用MainManifest URL來確定網路是否關閉。

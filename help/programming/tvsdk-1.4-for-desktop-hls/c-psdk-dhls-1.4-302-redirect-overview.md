@@ -1,35 +1,34 @@
 ---
-description: 302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
-title: HTTP 302重新導向最佳化
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 302重定向優化將302個重定向響應的數量減到最少，這樣您的應用程式就可以更有效地平衡負載。
+title: HTTP 302重定向優化
+exl-id: 9b9d98ae-a509-47dc-a5ac-6be9b0f214c1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# HTTP 302重定向優化{#http-redirect-optimization}
 
-# HTTP 302重新導向最佳化{#http-redirect-optimization}
+302重定向優化將302個重定向響應的數量減到最少，這樣您的應用程式就可以更有效地平衡負載。
 
-302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
+如果重定向主清單請求，並且在您的播放器中啟用了302優化，則對該清單中資產的後續請求將使用最終域位置，這樣可避免額外的302響應。
 
-如果重新導向主資訊清單請求，而您的播放器中已啟用302最佳化，則後續從該資訊清單請求資產時，會使用最終網域位置，以避免額外302個回應。
+預設情況下禁用此功能，您可以更改此設定。
 
-此功能預設為停用，您可以變更此設定。
+如果啟用此功能，則只有在 *全部* 符合下列條件的；否則，不會進行重定向優化，並且會繼續出現302個響應：
 
-如果您啟用此功能，則只有下列條件中的&#x200B;*all*&#x200B;為true時，此功能才能正常運作；否則，不會發生重新導向最佳化，而302個回應會持續發生：
-
-* 您的應用程式是使用`-swf-version` 21或更高版本編譯為AdobeFlash Player11.8的。
-* 您的最終用戶安裝了AdobeFlash Player11.8或更高版本。
+* 您的應用程式已編譯為AdobeFlash Player11.8，使用 `-swf-version` 21或更高。
+* 您的最終用戶已安裝AdobeFlash Player11.8或更高版本。
 
 >[!IMPORTANT]
 >
->若要確保Cookie與廣告請求一起傳遞，請停用302重新導向。 啟用302重新導向後，廣告要求可能會重新導向至與Cookie產生來源網域不同的網域。
+>要確保Cookie與廣告請求一起傳遞，請禁用302重定向。 啟用302重定向後，廣告請求可能會重定向到與Cookie的發源域不同的域。
 
-## 停用或啟用302重新導向最佳化{#section_D6687FC44C61446F878008B629A5FA19}
+## 禁用或啟用302重定向優化 {#section_D6687FC44C61446F878008B629A5FA19}
 
-使用`useRedirectedUrl`屬性開啟(true)或關閉(false)302重新導向。
+使用 `useRedirectedUrl` 屬性以開啟(true)或關閉(false)重定向。
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
@@ -50,4 +49,3 @@ var mediaResource = new MediaResource( url, MediaResourceType.HLS, result);
 // load the resource 
 mediaPlayer.replaceCurrentResource( mediaResource, mediaPlayerItemConfig );
 ```
-

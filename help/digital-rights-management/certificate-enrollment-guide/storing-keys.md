@@ -1,18 +1,17 @@
 ---
-title: 儲存金鑰
-description: 儲存金鑰
+title: 儲存密鑰
+description: 儲存密鑰
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 922e1e2c-8d4a-41f6-8f4d-7db0522f39d4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# 儲存密鑰{#store-keys}
 
-# 儲存鍵{#store-keys}
+Adobe建議內容發佈者在安全、防篡改的硬體設備中儲存用於簽名和加密的加密私鑰。 儲存在軟體中的密鑰比儲存在硬體中的密鑰更容易受到危害。 例如，如果軟體密鑰被洩露，則通常會複製包含該密鑰的密鑰或檔案，從而難以檢測該違規。 儲存在硬體上的密鑰不易被發現受到危害。
 
-Adobe建議內容發佈者將加密私密金鑰儲存在安全、防竄改的硬體裝置中，以進行簽署和加密。 與儲存在硬體中的密鑰相比，儲存在軟體中的密鑰更容易受到危害。 例如，如果軟體金鑰被洩露，則通常會複製包含該金鑰的金鑰或檔案，使得很難偵測到該漏洞。 儲存在硬體上的金鑰較不易受到未察覺的危害。
-
-硬體安全性模組(HSM)是儲存和保護密鑰的專用硬體裝置。 如需詳細資訊，請參閱&#x200B;*使用Adobe PrimetimeDRM SDK保護內容*&#x200B;中的&#x200B;*儲存認證*。
+硬體安全模組(HSM)是專用硬體設備，用於儲存和保護加密密鑰。 有關詳細資訊，請參見 *儲存憑據* 在 *使用Adobe PrimetimeDRM SDK保護內容*。

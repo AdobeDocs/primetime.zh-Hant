@@ -1,27 +1,26 @@
 ---
-description: 以下是使用者如何選擇隱藏字幕軌道的範例。
-title: 允許使用者變更軌道
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 下面是用戶如何選擇隱藏字幕軌道的示例。
+title: 允許用戶更改軌道
+exl-id: 103ca0ad-2707-4e4f-87ee-f55041e4527a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
+# 允許用戶更改軌道{#allow-the-user-to-change-the-track}
 
-# 允許使用者變更track{#allow-the-user-to-change-the-track}
+下面是用戶如何選擇隱藏字幕軌道的示例。
 
-以下是使用者如何選擇隱藏字幕軌道的範例。
-
-1. 若要顯示可用的隱藏字幕軌道，請使用`MediaPlayerItem.closedCaptionsTracks`屬性。
+1. 要顯示可用的隱藏字幕軌道，請使用 `MediaPlayerItem.closedCaptionsTracks` 屬性。
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. 若要設定目前的隱藏字幕軌道，請使用`MediaPlayerItem.selectClosedCaptionsTrack`方法。
-1. 準備好媒體播放器項目後，使用` MediaPlayer.  currentItem `方法從媒體播放器中擷取它。
+1. 要設定當前的隱藏字幕軌道，請使用 `MediaPlayerItem.selectClosedCaptionsTrack` 的雙曲餘切值。
+1. 在準備媒體播放器項目後，使用 ` MediaPlayer.  currentItem ` 的雙曲餘切值。
 
    ```js
    // Select the cc track with index k. 
@@ -32,4 +31,3 @@ ht-degree: 0%
        item.selectClosedCaptionsTrack(tracks[k]); 
    }
    ```
-

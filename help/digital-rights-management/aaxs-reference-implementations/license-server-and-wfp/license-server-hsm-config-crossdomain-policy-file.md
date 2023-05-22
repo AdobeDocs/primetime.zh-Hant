@@ -2,15 +2,14 @@
 title: 跨域策略檔案
 description: 跨域策略檔案
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 93785cbb-f381-4568-a588-74235595cbe2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%
 
 ---
 
+# 跨域策略檔案 {#crossdomain-policy-file}
 
-# 跨域策略檔案{#crossdomain-policy-file}
-
-為了FlashRuntime用戶端向授權伺服器要求授權，需要跨網域原則檔案。 如需詳細資訊，請參閱&#x200B;*使用Adobe存取SDK來保護內容*。
+為了Flash運行時客戶端從許可證伺服器請求許可證，需要跨域策略檔案。 請參閱 *使用Adobe訪問SDK保護內容* 的子菜單。

@@ -1,26 +1,25 @@
 ---
-description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
-title: 控制視訊檢視的位置和大小
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 可以使用MediaPlayerView對象控制視頻視圖的位置和大小。
+title: 控制視頻視圖的位置和大小
+exl-id: 5e7ae557-7f2b-4697-85eb-e72d1f43a7fc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
+# 控制視頻視圖的位置和大小{#control-the-position-and-size-of-the-video-view}
 
-# 控制視訊檢視的位置和大小{#control-the-position-and-size-of-the-video-view}
+可以使用MediaPlayerView對象控制視頻視圖的位置和大小。
 
-您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
+預設情況下，TVSDK會嘗試在視頻大小或位置發生變化時（由於應用程式或配置檔案開關或內容開關等的更改）保持視頻視圖的寬高比。
 
-TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描述檔開關或內容切換等而變更）維持視訊檢視的外觀比例。
+可通過指定不同的長寬比行為來覆蓋預設長寬比行為 *規模策略*。 使用 `MediaPlayerView` 對象 `scalePolicy` 屬性。 的 `MediaPlayerView`的預設比例策略是使用 `MaintainAspectRatioScalePolicy` 類。 要重置縮放策略，請替換 `MaintainAspectRatioScalePolicy` 上 `MediaPlayerView.scalePolicy` 你自己的政策。 (無法設定 `scalePolicy` 屬性到空值。)
 
-通過指定不同的&#x200B;*比例策略*，可以覆蓋預設長寬比行為。 使用`MediaPlayerView`物件的`scalePolicy`屬性指定縮放原則。 `MediaPlayerView`的預設比例策略是使用`MaintainAspectRatioScalePolicy`類的實例設定的。 若要重設比例原則，請以您自己的原則取代`MediaPlayerView.scalePolicy`上的預設例項`MaintainAspectRatioScalePolicy`。 （不能將`scalePolicy`屬性設定為空值。）
+1. 實施 `MediaPlayerViewScalePolicy` 介面，建立您自己的縮放策略。
 
-1. 實作`MediaPlayerViewScalePolicy`介面以建立您自己的縮放原則。
-
-   `MediaPlayerViewScalePolicy`有一個方法：
+   的 `MediaPlayerViewScalePolicy` 有一種方法：
 
    ```
    public function adjust(viewPort:Rectangle, 
@@ -29,7 +28,7 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描
 
    >[!NOTE]
    >
-   >TVSDK使用`StageVideo`物件來顯示視訊，而由於`StageVideo`物件不在顯示清單中，因此`viewPort`參數會包含視訊的絕對座標。
+   >TVSDK使用 `StageVideo` 顯示視頻的對象，因為 `StageVideo` 對象不在顯示清單中， `viewPort` 參數包含視頻的絕對坐標。
    >
    >
    >例如：
@@ -58,14 +57,14 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描
    >}
    >```
 
-1. 將實施指派給`MediaPlayerView`屬性。
+1. 將實施分配給 `MediaPlayerView` 屬性。
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. 將您的檢視新增至Media Player的`view`屬性。
+1. 將視圖添加到媒體播放器 `view` 屬性。
 
    ```
    addChild(view); 
@@ -75,7 +74,7 @@ TVSDK依預設會嘗試在視訊大小或位置變更時（因應用程式、描
 
 <!--<a id="example_7B08ECCDA17B4DD191FC672BD1F4C850"></a>-->
 
-**例如：縮放視訊以填滿整個視訊檢視，而不需維持外觀比例：**
+**例如：縮放視頻以填充整個視頻視圖，而不保持縱橫比：**
 
 ```
 package com.adobe.mediacore.samples.utils { 
@@ -107,4 +106,3 @@ view.scalePolicy = new CustomScalePolicy();
 addChild(view); 
 mediaPlayer.view = view;
 ```
-

@@ -1,18 +1,17 @@
 ---
-title: 用戶端整合
-description: 用戶端整合
+title: 客戶端整合
+description: 客戶端整合
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7326eb86-c407-4422-bf74-d6b6e17bbf3e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
 
+# 客戶端整合{#client-integration}
 
-# 客戶機整合{#client-integration}
+為了引導客戶機針對本地個性化伺服器(而不是Adobe托管的全局個性化伺服器)進行個性化，客戶機應利用先前建立的本地DRM元資料。 使非個性化客戶端使用特殊元資料執行許可證獲取或初始化DRM將導致客戶端連接到定制個性化伺服器URL。
 
-為了引導客戶對內部個性化伺服器進行個性化(與Adobe代管的全局個性化伺服器相反)，客戶應使用先前建立的內部DRM元資料。 使用特殊元資料，使非個性化客戶端執行許可獲取或初始化DRM，將導致客戶端連接到定制個性化伺服器URL。
-
-[!DNL client_sample]資料夾中包含范常式式碼片段。
+示例代碼段包含在 [!DNL client_sample] 的子菜單。

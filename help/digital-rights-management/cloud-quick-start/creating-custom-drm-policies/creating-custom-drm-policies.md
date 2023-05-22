@@ -1,39 +1,38 @@
 ---
-title: 建立自訂DRM原則（選用）
-description: 建立自訂DRM原則（選用）
+title: 建立自定義DRM策略（可選）
+description: 建立自定義DRM策略（可選）
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a74f60b1-96a0-4fc4-bbf2-5db78f343562
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
+# 建立自定義DRM策略（可選）{#create-custom-drm-policies-optional}
 
-# 建立自訂DRM原則（可選）{#create-custom-drm-policies-optional}
-
-Primetime Cloud DRM Protection Kit隨附一些預先設定的原則，可在封裝期間使用。 如果需要其他原則設定，例如特定的SWF允許清單權限，則可使用隨附的Primetime DRM原則管理員來產生自訂原則。
+黃金時段雲DRM保護套件附帶了一些預配置的策略，可在打包期間使用。 如果需要其他策略配置，例如，特定的SWF允許清單權限，則包括的Mogine DRM策略管理器可用於生成自定義策略。
 
 >[!NOTE]
 >
->所有原則都必須使用ANONYMOUS驗證（非「使用者名稱密碼」或「自訂」）-不論是否使用「自訂驗證／權益」工作流程。
+>所有策略都必須使用ANONYMOUS身份驗證（不是用戶名密碼或自定義） — 無論是否使用自定義身份驗證/權利工作流。
 
-策略管理器中包含[!DNL flashaccesstools.properties]配置檔案，該配置檔案已修改，僅顯示Primetime Cloud DRM服務支援的可配置策略選項。 設定Primetime Cloud DRM服務不支援的原則選項，將會導致授權取得錯誤。 有關使用Primetime DRM策略管理器的資訊，請參閱：[Primetime DRM參考實施：策略管理器](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager)。
+策略管理器中包括 [!DNL flashaccesstools.properties] 配置檔案，已修改以僅公開Mogfire Cloud DRM服務支援的可配置策略選項。 設定黃金時段雲DRM服務不支援的策略選項將導致許可證獲取錯誤。 有關使用黃金時段DRM策略管理器的資訊，請參閱： [黃金時段DRM參考實現：策略管理器](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager)。
 
-若要建立新原則，請視需要更新[!DNL flashaccesstools.properties]檔案，然後使用命令：
+要建立新策略，請更新 [!DNL flashaccesstools.properties] 檔案，然後使用命令：
 
 ```
 java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 ```
 
-## 動態建立自訂驗證／權益的原則{#create-policies-dynamically-for-custom-auth-entitlement}
+## 動態建立自定義身份驗證/權利的策略{#create-policies-dynamically-for-custom-auth-entitlement}
 
-如果您使用Primetime Cloud DRM自訂驗證／權益，並想要針對每個授權要求動態建立新的DRM原則（而非從預先產生的存放區提取原則）,Adobe建議您直接使用Primetime DRM Java SDK。 直接使用Java SDK比[!DNL AdobePolicyManager.jar]工具更快，該工具會自動將原則檔案輸出至磁碟，從而產生磁碟I/O開銷。
+如果您正在使用Mogfise Cloud DRM自定義身份驗證/權利檔案，並且希望為每個許可請求動態建立新的DRM策略（而不是從預生成的池中提取策略），則Adobe建議您直接使用Migfise DRM Java SDK。 直接使用Java SDK比 [!DNL AdobePolicyManager.jar] 工具，它自動將策略檔案輸出到磁碟，導致磁碟I/O開銷。
 
-使用Java SDK的范常式式碼可在[!DNL /Primetime DRM PolicyManager/sampleCode/]目錄中找到，名為[!DNL CreatePolicy.java]和[!DNL CreatePolicyWithOutputProtection.java]。 有關Java SDK的Javadoc和文檔，請參閱[Adobe PrimetimeDRM SDK](../../../digital-rights-management/drm-sdk-overview/overview.md)概觀
+可在 [!DNL /Primetime DRM PolicyManager/sampleCode/] 目錄，命名 [!DNL CreatePolicy.java] 和 [!DNL CreatePolicyWithOutputProtection.java]。 有關Java SDK的Javadoc和文檔，請訪問 [Adobe PrimetimeDRM SDK概述](../../../digital-rights-management/drm-sdk-overview/overview.md)
 
-若要建立並執行範例，請將。java檔案複製至。./libs/檔案夾並執行：
+要生成和運行示例，請將.java檔案複製到……/libs/資料夾中並運行：
 
 ```
 javac -cp adobe-flashaccess-sdk.jar:. CreatePolicy.java

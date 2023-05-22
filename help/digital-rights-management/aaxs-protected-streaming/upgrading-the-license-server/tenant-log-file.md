@@ -1,16 +1,15 @@
 ---
-title: 租用戶記錄檔
-description: 租用戶記錄檔
+title: 租戶日誌檔案
+description: 租戶日誌檔案
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a242b5c9-443e-40a4-b50a-3b27e66ff2ac
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
 
 ---
 
+# 租戶日誌檔案{#tenant-log-file}
 
-# 租用戶日誌檔案{#tenant-log-file}
-
-每個租用戶的租用戶日誌檔案[!DNL flashaccess-tenant.log]位於&#x200B;*LicenseServer.LogRoot* [!DNL /flashaccesserver/tenants/]*tenantname*&#x200B;中。 租用戶記錄檔包含稽核資訊，說明為此租用戶產生的每個授權。
+每個租戶的租戶日誌檔案， [!DNL flashaccess-tenant.log]，位於 *LicenseServer.LogRoot* [!DNL /flashaccesserver/tenants/]*tenantname*。 租戶日誌包含描述為此租戶生成的每個許可證的審核資訊。

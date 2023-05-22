@@ -1,30 +1,29 @@
 ---
-title: 封裝內容
-description: 封裝內容
+title: 打包內容
+description: 打包內容
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 85950028-d58d-45b3-9337-9fcabe7cc4c0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
+# 打包內容{#packaging-content}
 
-# 封裝內容{#packaging-content}
-
-封裝內容時，必須指定授權伺服器URL。 Adobe Access ServerURL的格式為：
+打包內容時，必須指定許可證伺服器URL。 Adobe Access ServerURL的格式為：
 
 ```
 http(s):// license-server-host:port/flashaccessserver/tenant-name
 ```
 
-例如，若是在連接埠8080上監聽授權伺服器主機名稱&quot;mylicenseserver.com&quot;和名為&quot;tenant1&quot;的租用戶，在封裝時要指定的授權伺服器URL為：
+例如，對於在埠8080上偵聽的許可證伺服器主機名「mylicenseserver.com」和名為「tenant1」的租戶，在打包時要指定的許可證伺服器URL是：
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1
 ```
 
-如果每個租用戶使用不同的授權伺服器和傳輸憑證，請務必在封裝程式中指定正確的租用戶憑證。
+如果每個租戶使用不同的許可證伺服器和傳輸憑據，請確保在打包器中指定正確的租戶證書。
 
-為確保伺服器僅向已知打包員打包的內容發放許可證，請將打包員的證書包括在包裝員允許的租用戶配置檔案清單中。
+要確保伺服器僅向由已知打包器打包的內容頒發許可證，請將打包器的證書包括在打包器允許的租戶配置檔案清單中。

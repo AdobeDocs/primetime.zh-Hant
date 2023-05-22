@@ -1,24 +1,23 @@
 ---
-description: 您可以使用Adobe Primetime廣告決策介面，在VOD和即時／線性內容中插入廣告。
-title: 廣告需求
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以使用Adobe Primetime廣告決策介面在視頻點播和即時/線性內容中插入廣告。
+title: 廣告要求
+exl-id: b162e5b0-9f6c-46de-85de-97cec009a9b7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# 廣告超時 {#ad-timeout}
 
-# 廣告逾時{#ad-timeout}
+## AV基礎要求 {#av-foundation-requirements}
 
-## AV Foundation要求{#av-foundation-requirements}
+對於VOD內容，播放清單拼接應在35秒內完成，其中包括主內容清單的載入、廣告解析度和廣告清單的載入。
 
-如果是VOD內容，則播放清單拼接（包括主要內容資訊清單載入、廣告解析度和廣告資訊清單載入）應在35秒內完成。
+如果是Live內容，則每次更新播放清單時，播放清單拼接應在20秒內完成
 
-如果是即時內容，每次更新播放清單時，應在20秒內完成播放清單連結
-
-**與AdResolution逾時相關的API**
+**與AdResolution超時相關的API**
 
 ```
 /** @name Properties */
@@ -29,7 +28,7 @@ ht-degree: 0%
 @property (notatomic, assign) double adResolutionTimeout;
 ```
 
-您可以在設定廣告中繼資料時，設定PTAdMetadata::adResolutionTimeout，以設定adResolutionTimeout。
+在設定廣告元資料時，可以通過設定PTAdMetadata::adResolutionTimeout來設定adResolutionTimeout。
 
 ```
 // Create an instance of PTAuditudeMetadata and set its property
@@ -37,9 +36,9 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-之後，請依照以下章節：[Primetime廣告伺服器中繼資料](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。
+之後，請遵循以下部分： [黃金時段廣告伺服器元資料](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。
 
-**與AdManifest逾時相關的API**
+**與AdManifest超時相關的API**
 
 ```
 /** @name Properties */
@@ -50,7 +49,7 @@ adMetadata.adResolutionTimeout = 15 seconds
  @property (notatomic, assign) double adManifestTimeout; 
 ```
 
-您可以在設定廣告中繼資料時，設定PTAdMetadata::adManifestTimeout，以設定adManifestTimeout。
+在設定廣告元資料時，可以通過設定PTAdMetadata::adManifestTimeout來設定adManifestTimeout。
 
 
 ```
@@ -59,4 +58,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-之後，請依照以下章節：[Primetime廣告伺服器中繼資料](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。
+之後，請遵循以下部分： [黃金時段廣告伺服器元資料](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)。

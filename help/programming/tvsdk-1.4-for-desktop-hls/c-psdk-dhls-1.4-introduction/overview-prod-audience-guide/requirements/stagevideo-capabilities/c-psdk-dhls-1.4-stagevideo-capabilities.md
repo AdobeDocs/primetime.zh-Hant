@@ -1,40 +1,38 @@
 ---
-description: 在支援GPU（硬體）加速的裝置上，您可以使用flash.media.StageVideo物件，在裝置硬體上處理視訊。 StageVideo的可用性取決於系統不同部分的版本和功能，包括Flash Player、視頻硬體、作業系統、驅動程式、瀏覽器、網路連接和查看上下文。
-title: StageVideo功能與限制
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 在支援GPU（硬體）加速的設備上，可以使用flash.media.StageVideo對象在設備硬體上處理視頻。 StageVideo的可用性取決於系統不同部分的版本和功能，包括Flash Player、視頻硬體、作業系統、驅動程式、瀏覽器、網路連接和查看上下文。
+title: StageVideo功能和限制
+exl-id: 228ea2d0-5950-43f5-8cfd-640d1c482b05
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
+# 概述 {#stagevideo-capabilities-and-restrictions-overview}
 
-# 概述{#stagevideo-capabilities-and-restrictions-overview}
+在支援GPU（硬體）加速的設備上，可以使用flash.media.StageVideo對象在設備硬體上處理視頻。 StageVideo的可用性取決於系統不同部分的版本和功能，包括Flash Player、視頻硬體、作業系統、驅動程式、瀏覽器、網路連接和查看上下文。
 
-在支援GPU（硬體）加速的裝置上，您可以使用flash.media.StageVideo物件，在裝置硬體上處理視訊。 StageVideo的可用性取決於系統不同部分的版本和功能，包括Flash Player、視頻硬體、作業系統、驅動程式、瀏覽器、網路連接和查看上下文。
+的 `StageVideo` 類允許您利用硬體加速功能以設備的最高效能級別呈現視頻。 可用性和效能 `StageVideo` 受以下因素影響：
 
-`StageVideo`類別可讓您運用硬體加速功能，將視訊呈現在裝置的最高效能等級。 `StageVideo`的可用性和效能受以下因素影響：
+* **硬體加速**  — 當硬體加速可用時， `StageVideo` 在設備硬體上處理視頻。 當硬體加速不可用時， `StageVideo` 響應取決於您正在運行的Flash版本：
 
-* **硬體加速** -當有硬體加速時， `StageVideo` 在裝置硬體上處理視訊。當硬體加速不可用時，`StageVideo`響應取決於您運行的Flash版本：
-
-   * *Flash* 15和更新版本——當硬體加速不 `StageVideo` 可用時，會退回軟體，您不必做任何事。
+   * *Flash15及更高版本*  — 當硬體加速不可用時， `StageVideo` 退回到軟體，你什麼都不用做。
 
       >[!TIP]
       >
       >當硬體加速不可用時，效能可能會顯著下降。
 
-   * *Flash14和舊版* -當硬體加速不可用時，就 `StageVideo` 會無法使用。在瀏覽器或GPU不支援硬體加速或在Flash Player中關閉的小組組態中，使用TVSDK HLS堆疊的視訊顯示將會失敗。 在&#x200B;*HDS*&#x200B;管線中，您可以從`StageVideo`切換到在CPU中處理視頻的替代對象，如Video對象。
+   * *Flash14及更早版本*  — 當硬體加速不可用時， `StageVideo` 變得不可用。 在瀏覽器或GPU不支援硬體加速或Flash Player中關閉的一組小配置中，TVSDK HLS堆棧的視頻顯示將失敗。 在 *HDS* 管道，可從 `StageVideo` 到在CPU中處理視頻的備選對象，如Video對象。
 
-* **簡報內容** -在全螢幕檢視期間， `StageVideo` 一律可供使用，而效能將維持在裝置上可用的最高等級。當不檢視全螢幕時，視訊簡報會落在瀏覽器的內容下，使用瀏覽器的設定和功能。
+* **演示上下文**  — 在全屏查看期間， `StageVideo` 始終可用，並且效能將處於設備上可用的最高級別。 當不全屏查看時，視頻演示文稿位於瀏覽器的上下文下，其中使用了瀏覽器的設定和功能。
 
-* **wmode**  —— 在瀏覽器上下文中，設 `wmode` 定對效能至關重要。Adobe建議您將`wmode`設為`direct`，以確保在瀏覽器上下文中盡可能提供最佳效能。
+* **wmode（w模式）**  — 在瀏覽器上下文中， `wmode` 設定對效能至關重要。 Adobe建議您 `wmode` 設定為 `direct` 確保瀏覽器上下文中的最佳效能。
 
    >[!NOTE]
    >
-   >包含`wmode`、`StageVideo`和Flash的因素組合會產生不同的功能和限制，具體取決於硬體的運行速度和您使用的Flash版本。
+   >包括以下因素的組合 `wmode`。 `StageVideo`，並且Flash會導致不同的功能和限制，具體取決於硬體運行的速度以及您使用的Flash版本。
 
-   * *Flash15和更新版本* - `StageVideo` 提供所有可用的 `wmode` 設定。但是，如果將`wmode`設定為`direct`以外的設定，則效能會降低。
+   * *Flash15及更高版本* - `StageVideo` 所有可用 `wmode` 的子菜單。 但是，如果 `wmode` 設定 `direct`，效能會降低。
 
-   * *Flash14和舊版* -如果您設 `wmode` 定的設定不是 `direct`，則不 `StageVideo` 適用於所有瀏覽器。
-
+   * *Flash14及更早版本*  — 如果設定 `wmode` 設定 `direct`。 `StageVideo` 在所有瀏覽器中均不可用。

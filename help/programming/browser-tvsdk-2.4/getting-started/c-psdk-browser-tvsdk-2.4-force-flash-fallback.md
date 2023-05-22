@@ -1,20 +1,19 @@
 ---
-description: 來源清單中的forceflash旗標會強制URL的Flash後援。 對於此URL，您可以使用AdobeFlash Player來播放內容。
-title: 使用媒體來源清單強制Flash回退
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 源清單中的forceflash標誌強制Flash回退URL。 對於此URL，可以使用AdobeFlash Player播放內容。
+title: 使用媒體源清單強制Flash回退
+exl-id: 657bf9b1-d911-489d-80ca-2956b008431b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# 使用媒體源清單強制Flash回退{#forcing-the-flash-fallback-using-the-media-source-list}
 
-# 使用媒體來源清單強制Flash回退{#forcing-the-flash-fallback-using-the-media-source-list}
+源清單中的forceflash標誌強制Flash回退URL。 對於此URL，可以使用AdobeFlash Player播放內容。
 
-來源清單中的forceflash旗標會強制URL的Flash後援。 對於此URL，您可以使用AdobeFlash Player來播放內容。
-
-在媒體源清單（例如，在`sources.js`檔案中）中，可以將`forceflash`設定為`true`。 例如：
+在媒體源清單中(例如， `sources.js` 檔案) `forceflash` 至 `true`。 例如：
 
 ```js
 { 
@@ -31,4 +30,3 @@ ht-degree: 2%
         "forceflash" : true
 },
 ```
-

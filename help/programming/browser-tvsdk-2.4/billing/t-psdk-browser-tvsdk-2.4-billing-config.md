@@ -1,28 +1,27 @@
 ---
-description: 如果您使用預設設定，您就不需要執行其他動作來啟用或設定帳單。 如果您從Adobe啟用代表取得不同的設定參數，請在初始化媒體播放器之前，使用BillingMetricsConfiguration類別來設定這些參數。
-title: 設定帳單量度
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 如果使用預設配置，則無需執行其他任何操作即可啟用或配置計費。 如果您從Adobe啟用代表處獲得了不同的配置參數，請在初始化媒體播放器之前使用BillingMetricsConfiguration類設定這些參數。
+title: 配置計費度量
+exl-id: 1eb50822-77a0-4b3a-a84c-b6082bcd1cad
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
 
 ---
 
+# 配置計費度量{#configure-billing-metrics}
 
-# 設定帳單量度{#configure-billing-metrics}
+如果使用預設配置，則無需執行其他任何操作即可啟用或配置計費。 如果您從Adobe啟用代表處獲得了不同的配置參數，請在初始化媒體播放器之前使用BillingMetricsConfiguration類設定這些參數。
 
-如果您使用預設設定，您就不需要執行其他動作來啟用或設定帳單。 如果您從Adobe啟用代表取得不同的設定參數，請在初始化媒體播放器之前，使用BillingMetricsConfiguration類別來設定這些參數。
-
-大部分客戶應使用預設設定。
+大多數客戶應使用預設配置。
 
 >[!IMPORTANT]
 >
->您設定的組態在媒體播放器的使用期間仍有效。 初始化媒體播放器後，便無法變更設定。
+>您設定的配置在媒體播放器的生命週期中仍然有效。 初始化媒體播放器後，無法更改配置。
 
-若要設定帳單量度：
+要配置計費度量，請執行以下操作：
 
-* 輸入以下代碼範例。
+* 輸入以下代碼樣例。
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -33,5 +32,4 @@ ht-degree: 0%
    _player.replaceCurrentResource(_resource, config);
    ```
 
-   其中`_player`是`AdobePSDK.MediaPlayer`的例項，而`_resource`是`AdobePSDK.MediaResource`的例項。
-
+   何處 `_player` 是 `AdobePSDK.MediaPlayer` 和 `_resource` 是 `AdobePSDK.MediaResource`。

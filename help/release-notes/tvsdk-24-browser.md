@@ -1496,7 +1496,7 @@ AdobePSDK.ForceHttpsAdConfiguration類。
    <td>VOD + Live</td> 
    <td>QoS和播放器通知</td> 
    <td>21129:幀速率在Flash回退時不可用。</td> 
-   <td><p>· 11170:</p> <p>Timed_Event不適用於MSE的瀏覽器TVSDK，而不適用於Flash回退的瀏覽器TVSDK。</p> <p>21129:不計算即時流的幀速率。</p> </td> 
+   <td><p>• 11170:</p> <p>Timed_Event不適用於MSE的瀏覽器TVSDK，而不適用於Flash回退的瀏覽器TVSDK。</p> <p>21129:不計算即時流的幀速率。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1528,7 +1528,7 @@ AdobePSDK.ForceHttpsAdConfiguration類。
    <td>VOD + Live</td> 
    <td>302重定向</td> 
    <td> </td> 
-   <td><p>15787:302</p> <p>Windows Edge和IE瀏覽器不支援重定向優化，因為這些瀏覽器不支援XMLHttpRequest對象中的responseURL屬性。</p> </td> 
+   <td><p>15787: 302</p> <p>Windows Edge和IE瀏覽器不支援重定向優化，因為這些瀏覽器不支援XMLHttpRequest對象中的responseURL屬性。</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 

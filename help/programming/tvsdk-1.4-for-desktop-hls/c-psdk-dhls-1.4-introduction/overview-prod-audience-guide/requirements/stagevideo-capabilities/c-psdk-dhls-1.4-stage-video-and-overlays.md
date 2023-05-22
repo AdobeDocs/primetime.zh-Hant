@@ -1,49 +1,47 @@
 ---
-description: 您可搭配StageVideo使用HTML覆蓋，在Flash顯示清單視訊平面中顯示UI元素。 此平面位於StageVideo平面上方，因此StageVideo一律會顯示在任何Flash顯示清單元素後方。
-title: StageVideo和HTML覆蓋
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以將HTML疊加與StageVideo一起在Flash顯示清單視頻平面中顯示UI元素。 此平面位於StageVideo平面上方，因此StageVideo始終顯示在任何Flash顯示清單元素後面。
+title: StageVideo和HTML疊加
+exl-id: 6beda4c8-0981-4a38-bd5e-5714b9ec7efa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
+# StageVideo和HTML疊加{#stagevideo-and-html-overlays}
 
-# StageVideo和HTML覆蓋{#stagevideo-and-html-overlays}
+您可以將HTML疊加與StageVideo一起在Flash顯示清單視頻平面中顯示UI元素。 此平面位於StageVideo平面上方，因此StageVideo始終顯示在任何Flash顯示清單元素後面。
 
-您可搭配StageVideo使用HTML覆蓋，在Flash顯示清單視訊平面中顯示UI元素。 此平面位於StageVideo平面上方，因此StageVideo一律會顯示在任何Flash顯示清單元素後方。
-
-HTML覆蓋是UI元素，可在`StageVideo`在其自己的平面上轉譯的影片上，在Flash顯示平面中顯示。 在Flash15之前，當硬體加速無法使用時，您無法使用HTML覆蓋。 從Flash15開始，當`StageVideo`返回軟體演算時，會顯示HTML覆蓋。
+HTML疊加是UI元素，可在Flash顯示平面中顯示由 `StageVideo` 在自己的飛機上。 在Flash15之前，當硬體加速不可用時，不能使用HTML疊加。 從Flash15開始，HTML疊加顯示 `StageVideo` 退回到軟體呈現。
 
 >[!IMPORTANT]
 >
->視您系統的功能而定，當您使用HTML覆蓋時，效能可能會降低至較大或較小。
+>根據系統的功能，使用HTML疊加時，效能可能會降低到大或小的程度。
 
-請考慮下列資訊：
+請考慮以下資訊：
 
-* 第15號Flash Player:
+* 在Flash Player15中：
 
-   * 無論硬體加速是否可用，您都可以使用HTML覆蓋。
-   * 若要使用HTML覆蓋，請將`wmode`設為`opaque`。
+   * 您可以使用HTML覆蓋功能來驗證硬體加速是否可用。
+   * 要使用HTML疊加，請設定 `wmode` 至 `opaque`。
 
-* 第14號Flash Player:
+* 在Flash Player14中：
 
-   * 當硬體加速可用時，`StageVideo`會位於Flash顯示清單下方，因此您可以使用HTML覆蓋。
-   * 當無法使用硬體加速時，視訊會呈現在瀏覽器中所有其他元素的上方，以防止使用HTML覆蓋。
+   * 當硬體加速可用時， `StageVideo` 位於Flash顯示清單下方，因此可以使用HTML疊加。
+   * 當硬體加速不可用時，視頻會呈現在瀏覽器中所有其他元素之上，這會阻止使用HTML疊加。
 
-以下是搭配`StageVideo`使用HTML覆蓋的最低瀏覽器需求：
+以下是使用HTML疊加的瀏覽器最低要求 `StageVideo`:
 
-* Firefox 4和更新版本
-* Safari 4和更新版本
+* Firefox版本4及更高版本
+* Safari版本4及更高版本
 * Internet Explorer:
 
-   * Windows 7和更新版本上的9+版
+   * Windows 7及更高版本上的9+版
    * Windows XP上的10+版
 
-* Chrome 26及更新版本
+* Chrome版本26及更高版本
 
    >[!IMPORTANT]
    >
-   >Windows XP和Windows Vista上不支援Chrome Pepper。
-
+   >不支援Windows XP和Windows Vista上的Chrome Pepper。

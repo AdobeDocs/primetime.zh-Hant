@@ -1,23 +1,21 @@
 ---
-title: 最低用戶端版本
-description: 最低用戶端版本
+title: 最低客戶端版本
+description: 最低客戶端版本
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c4aebafe-33b4-4da3-9e79-53d6a7e9f22d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
+# 最低客戶端版本 {#minimum-client-version}
 
-# 最低客戶端版本{#minimum-client-version}
+Adobe PrimetimeDRM 2.0.2及更高版本引入了一些Mighide DRM 2.0客戶端所不瞭解的新使用規則。 通過設定最低支援的客戶端版本( `HandlerConfiguration.setMinSupportedClientVersion()`)，許可證伺服器可以控制當舊客戶端遇到使用這些使用規則的許可證時其行為。 基於此設定，伺服器可以指示較舊客戶端是否可以忽略他們不瞭解的使用規則，或者較舊客戶端是否無法使用這些使用規則使用許可證。
 
-Adobe PrimetimeDRM 2.0.2及更新版本引入一些Primetime DRM 2.0用戶端無法瞭解的新使用規則。 借由設定最低支援的用戶端版本(`HandlerConfiguration.setMinSupportedClientVersion()`)，授權伺服器可控制舊版用戶端在遇到具有這些使用規則的授權時的行為。 根據此設定，伺服器可以指出較舊的用戶端是否可忽略他們不瞭解的使用規則，或較舊的用戶端是否無法使用這些使用規則使用授權。
+比如說，
 
-例如，
-
-* 如果授權指定裝置功能需求（播放受保護內容所需的裝置功能[）,Primetime DRM用戶端2.0.2及更高版本可強制執行這些需求。](../../../protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
-* 如果授權伺服器不希望內容在不瞭解裝置功能需求的用戶端上播放，請將支援的用戶端最低版本設定為2（針對2.0.2）。 這將阻止伺服器在2.0.2之前向Primetime DRM客戶端發放許可證。如果授權是從一個用戶端傳輸至另一個用戶端，則也會強制執行最低用戶端版本。
-* 如果授權伺服器想要允許舊版用戶端忽略裝置功能需求，請將最低支援的用戶端版本設為1（適用於Primetime DRM 2.0）。 然後，伺服器會向任何2.0版及更新版本的用戶端發出授權。 如果用戶端升級或將授權轉讓給版本為2.0.2或更新版本的其他用戶端，則會強制執行授權中的裝置功能要求，因為用戶端可以支援該使用規則。
-
+* 如果許可證指定了設備功能要求( [播放受保護內容所需的設備功能](../../../protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md))，黃金時段DRM客戶端2.0.2及更高版本可以執行這些要求。
+* 如果許可證伺服器不希望內容在不瞭解設備功能要求的客戶端上播放，請將支援的最低客戶端版本設定為2(對於2.0.2)。 這將阻止伺服器在2.0.2之前向Mogine DRM客戶端發放許可證。如果許可證從一個客戶端傳輸到另一個客戶端，則還強制實施最低客戶端版本。
+* 如果許可證伺服器希望允許較舊的客戶端忽略設備功能要求，請將支援的最低客戶端版本設定為1（對於Mighine DRM 2.0）。 然後，伺服器向任何客戶端版本2.0及更高版本發放許可證。 如果客戶端升級或將許可證傳輸到版本為2.0.2或更高版本的另一台客戶端，則會強制執行許可證中的設備功能要求，因為客戶端隨後可以支援該使用規則。

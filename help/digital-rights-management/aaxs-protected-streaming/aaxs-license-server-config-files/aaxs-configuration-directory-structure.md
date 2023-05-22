@@ -1,22 +1,21 @@
 ---
-description: 「保護串流Adobe Access Server」需要兩種組態檔：全域組態檔(flashaccess-global.xml)和每個租用戶的租用戶組態檔(flashaccess-tenant.xml)。
+description: 「受保護流」的Adobe Access Server需要兩種類型的配置檔案：全局配置檔案(flashaccess-global.xml)和每個租戶的租戶配置檔案(flashaccess-tenant.xml)。
 title: 配置目錄結構
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6561c001-798c-4503-8afb-93580d957372
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# 許可證伺服器配置檔案和配置目錄結構 {#configuration-directory-structure}
 
-# 許可證伺服器配置檔案和配置目錄結構{#configuration-directory-structure}
+「受保護流式處理的Adobe Access Server」需要兩種類型的配置檔案：全局配置檔案(flashaccess-global.xml)和每個租戶的租戶配置檔案(flashaccess-tenant.xml)。
 
-「Adobe Access Server保護串流」需要兩種組態檔：每個租用戶的全域設定檔(flashaccess-global.xml)和租用戶設定檔(flashaccess-tenant.xml)。
+編輯配置檔案後，Adobe建議使用Adobe Access Server提供的用於受保護流的實用程式來驗證檔案的格式是否正確。 有關詳細資訊，請參閱「」[配置驗證程式](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)。
 
-編輯配置檔案後，Adobe建議使用「受保護流」的Adobe Access Server提供的實用程式來驗證檔案格式正確。 如需詳細資訊，請參閱「[Configuration Validator](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)」。
-
-為避免在配置檔案中以明文形式提供密碼，必須加密全局配置檔案和租用戶配置檔案中指定的所有密碼。 有關加密密碼的詳細資訊，請參閱「[密碼刪除程式](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)」。
+為避免在配置檔案中以明文方式提供密碼，必須對全局配置檔案和租戶配置檔案中指定的所有密碼進行加密。 有關加密密碼的詳細資訊，請參閱「」[密碼加擾器](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)。
 
 配置目錄具有以下結構：
 
@@ -43,4 +42,3 @@ ht-degree: 0%
  </i class="+ topic> 
 </i class="+ topic>
 ```
-

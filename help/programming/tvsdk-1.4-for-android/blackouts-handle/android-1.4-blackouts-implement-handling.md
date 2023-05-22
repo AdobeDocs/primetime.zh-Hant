@@ -1,22 +1,21 @@
 ---
-description: TVSDK提供API和范常式式碼，以處理封鎖期。
-title: 實施封鎖處理
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK提供API和示例代碼以處理封鎖期。
+title: 實現封鎖處理
+exl-id: 9b23674d-76d5-4879-b595-3a6e368c45cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
+# 實現封鎖處理{#implement-blackout-handling}
 
-# 實施封鎖處理{#implement-blackout-handling}
+TVSDK提供API和示例代碼以處理封鎖期。
 
-TVSDK提供API和范常式式碼，以處理封鎖期。
+要實現封鎖處理，包括在封鎖期間提供備用內容：
 
-要實施封鎖處理，包括在封鎖期期間提供替代內容，請執行以下操作：
-
-1. 設定您的應用程式，以偵測即時串流資訊清單中的封鎖標籤。
+1. 設定應用以檢測即時流清單中的封鎖標籤。
 
    ```java
    public void createMediaPlayer { 
@@ -27,7 +26,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 為前景和背景串流中的計時中繼資料事件建立事件接聽程式。
+1. 為前台流和後台流中的定時元資料事件建立事件偵聽器。
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -36,7 +35,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 為前景和背景串流實作計時中繼資料事件處理常式。
+1. 為前台流和後台流實現定時元資料事件處理程式。
 
    前景：
 
@@ -75,7 +74,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }; 
    ```
 
-1. 在`MediaPlayer`時間運行時處理`TimedMetadata`對象。
+1. 手柄 `TimedMetadata` 對象 `MediaPlayer` 時間。
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -98,7 +97,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    };
    ```
 
-1. 建立在封鎖期開始和結束時切換內容的方法。
+1. 建立用於在封鎖期開始和結束時切換內容的方法。
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -150,7 +149,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 如果封鎖期範圍在播放串流的DVR中，請更新不可查看的範圍。
+1. 如果封鎖範圍在播放流的DVR中，則更新不可查找的範圍。
 
    ```java
    // prepare and update blackout nonSeekable ranges 
@@ -183,7 +182,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
 
    >[!NOTE]
    >
-   >目前針對多位元速率即時串流，有時可調整位元速率(ABR)描述檔會不同步。 這會導致相同訂閱標籤的`timedMetadata`物件重複。 為避免不正確的不可查找計算，強烈建議在計算後檢查重疊的不可查找範圍，例如在以下示例中：
+   >目前，對於多位率即時流，有時可調位率(ABR)配置檔案會失去同步。 這會導致重複 `timedMetadata` 同一訂閱標籤的對象。 為避免不正確的不可瀏覽計算，強烈建議在計算後檢查重疊的不可瀏覽範圍，如下例所示：
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
@@ -209,4 +208,3 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
        nonSeekableRanges.removeAll(rangesToRemove); 
    }
    ```
-

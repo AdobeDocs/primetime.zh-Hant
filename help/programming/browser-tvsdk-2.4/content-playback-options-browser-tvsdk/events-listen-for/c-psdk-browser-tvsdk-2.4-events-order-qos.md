@@ -1,20 +1,19 @@
 ---
-description: 瀏覽器TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算，例如緩衝和搜尋事件。
+description: 瀏覽器TVSDK調度服務質量(QoS)事件，以通知您的應用程式可能影響QoS統計資訊計算的事件，如緩衝和查找事件。
 title: QoS事件
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b0fab68e-ef0f-4812-b4ad-3f69dcdf2d9e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # QoS事件{#qos-events}
 
-瀏覽器TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算，例如緩衝和搜尋事件。
+瀏覽器TVSDK調度服務質量(QoS)事件，以通知您的應用程式可能影響QoS統計資訊計算的事件，如緩衝和查找事件。
 
-要獲得所有QoS相關事件的通知，請建立`AdobePSDK.QOSProvider`實例，並將MediaPlayer實例附加到此`QOSProvider`實例：
+要獲得有關所有QoS相關事件的通知，請建立 `AdobePSDK.QOSProvider` 並將MediaPlayer實例附加到此 `QOSProvider` 實例：
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
@@ -22,7 +21,7 @@ var qosProvider = new AdobePSDK.QOSProvider();
 qosProvider.attachMediaPlayer(player);
 ```
 
-在應用程式中配置計時器以定期檢查`qosProvider`實例的`playbackInformation`屬性。 `playbackInformation`屬性提供當前回放統計資訊的快照。 例如：
+配置應用程式中的計時器以定期檢查 `playbackInformation` 屬性 `qosProvider` 實例。 的 `playbackInformation` 屬性提供當前播放統計資訊的快照。 例如：
 
 ```js
 var startTimer = function () { 
@@ -34,4 +33,3 @@ var startTimer = function () {
 } 
 window.setTimeout(startTimer, 500) 
 ```
-

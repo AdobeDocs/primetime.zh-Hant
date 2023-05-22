@@ -1,15 +1,14 @@
 ---
-title: 最佳化路由和通訊協定
+title: 優化路由和協定
 description: 優化路由和協定
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+exl-id: 837e4582-5813-48fd-a1a6-3143a06edacb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
+# 優化路由和協定 {#optimize-routes-and-protocols}
 
-# 優化路由和協定{#optimize-routes-and-protocols}
-
-Primetime廣告插入提供規則型URL重寫，以最佳化用戶端通訊協定和CDN傳送。  例如，可建立規則以強制Primetime廣告插入僅在HTTP通訊協定下從CDN擷取資源，即使Primetime廣告插入通訊協定在HTTPS之下亦然。  您可建立其他規則，將視訊和片段URL對應至內容CDN，以確保單一CDN傳送。
+黃金時段Ad Insertion提供基於規則的URL重寫，以優化客戶端協定和CDN分發。  例如，可以建立規則以強制MogineAd Insertion僅在HTTP協定下從CDN獲取資源，即使到MoginiqeAd Insertion的協定在HTTPS下。  可以建立將視頻和片段URL映射到內容CDN的其他規則，從而確保單個CDN的交付。

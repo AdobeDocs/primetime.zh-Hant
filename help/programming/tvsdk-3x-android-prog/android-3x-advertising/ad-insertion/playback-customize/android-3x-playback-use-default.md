@@ -1,59 +1,58 @@
 ---
 description: 您可以選擇使用預設廣告行為。
-title: 使用預設播放行為
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 使用預設回放行為
+exl-id: 0ea3d2bb-b4d4-4090-ab5f-b6c31c1abe32
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-
-# 使用預設的播放行為{#use-the-default-playback-behavior}
+# 使用預設回放行為 {#use-the-default-playback-behavior}
 
 您可以選擇使用預設廣告行為。
 
-1. 若要使用預設行為，請完成下列任一項工作：
+1. 要使用預設行為，請完成以下任務之一：
 
-   * 如果您實作自己的`AdvertisingFactory`類，請傳回`createAdPolicySelector`的null。
+   * 如果您實施自己的 `AdvertisingFactory` 類，返回空 `createAdPolicySelector`。
 
-   * 如果您沒有`AdvertisingFactory`類別的自訂實作，TVSDK會使用預設廣告原則選擇器。
+   * 如果沒有自定義實現 `AdvertisingFactory` 類，TVSDK使用預設的廣告策略選擇器。
 
-## 設定自訂播放{#set-up-customized-playback}
+## 設定自定義播放 {#set-up-customized-playback}
 
-您可以自訂或覆寫廣告行為。
+您可以自定義或覆蓋廣告行為。
 
-在自訂或覆寫廣告行為之前，請先向註冊廣告原則例項。
-若要自訂廣告行為，請執行下列其中一項作業：
+在可以自定義或覆蓋廣告行為之前，請向註冊廣告策略實例。
+要自定義廣告行為，請執行以下操作之一：
 
-* 實施`AdPolicySelector`介面及其所有方法。
+* 實施 `AdPolicySelector` 介面及其所有方法。
 
-   如果您需要覆寫&#x200B;**all**&#x200B;預設廣告行為，建議使用此選項。
+   如果需要覆蓋，建議使用此選項 **全部** 預設廣告行為。
 
-* 擴充`DefaultAdPolicySelector`類別，並僅提供需要自訂的行為實作。
+* 擴展 `DefaultAdPolicySelector` 類並僅為那些需要自定義的行為提供實現。
 
-   如果您只需要覆寫預設行為的&#x200B;**some**，建議使用此選項。
+   如果僅需要覆蓋，建議使用此選項 **有** 的子菜單。
 
-若要自訂廣告行為：
+要自定義廣告行為：
 
-1. 實施`AdPolicySelector`介面及其所有方法。
-1. 指派TVSDK透過廣告廠使用的原則例項。
+1. 實施 `AdPolicySelector` 介面及其所有方法。
+1. 通過廣告工廠分配TVSDK要使用的策略實例。
 
    >[!NOTE]
    >
-   >classCustomContentFactory擴展了ContentFactory &amp;lbrace;
+   >類CustomContentFactory擴展了ContentFactory &amp;lbrace;
    >...
    >@Override
-   >publicAdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem)&amp;lbrace;
-   >傳回新的CustomAdPolicySelector(mediaPlayerItem);
-   >&amp;rbraces;
+   >公共AdPolicySelector retrieveAdPolicySelector>>(MediaPlayerItem mediaPlayerItem)&amp;lbrace;
+   >返回新的CustomAdPolicySelector(mediaPlayerItem);
+   >&amp;rbrace;
    >...
-   >&amp;rbraces;
-   >//向媒體播放器註冊自訂內容工廠
-   >MediaPlayerItemConfig = new MediaPlayerItemConfig();
+   >&amp;rbrace;
+   >//使用媒體播放器註冊自定義內容工廠
+   >MediaPlayerItemConfig =新的MediaPlayerItemConfig();
    >config.setAdvertisingFactory(new CustomContentFactory());
-   >// this config will belled passed while loading >resource
+   >//此配置應稍後在載入>資源時傳遞
    >mediaPlayer.replaceCurrentResource(resource, config);
 
-1. 實作您的自訂。
+1. 實施您的自定義。

@@ -1,20 +1,19 @@
 ---
-description: 玩家可監聽一系列事件，以指出玩家的狀態。
+description: 玩家可以收聽指示玩家狀態的一系列事件。
 title: 設定通知
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 52039895-5529-4fc3-8e58-13309de12e80
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
+# 設定通知 {#set-up-notifications}
 
-# 設定通知{#set-up-notifications}
+玩家可以收聽指示玩家狀態的一系列事件。
 
-玩家可監聽一系列事件，以指出玩家的狀態。
-
-假設`PTMediaPlayer`是用戶端播放器的屬性，下例中的`self.player`代表`PTMediaPlayer`例項。 下列範例實作PTMediaPlayer中顯示的`addObservers`方法設定指示，並包含大部分通知：
+假設 `PTMediaPlayer` 是客戶端播放器的屬性， `self.player` 在以下示例中表示 `PTMediaPlayer` 實例。 以下示例實現 `addObservers` PTMediaPlayer中顯示的方法設定了指令並包含了大多數通知：
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerStatusChange:)  
@@ -43,9 +42,9 @@ ht-degree: 0%
       name:PTMediaPlayerAdCompletedNotification object:self.player]; 
 ```
 
-## iOS通知{#section_65D9B2DBF5574313BD3218AB02242BBB}
+## iOS通知 {#section_65D9B2DBF5574313BD3218AB02242BBB}
 
-`ThePTMediaPlayerNotifications` 類別會列出TVSDK派送給您播放器的通知。
+`ThePTMediaPlayerNotifications` 類列出TVSDK派發給您的播放器的通知。
 
 <table frame="all" colsep="1" rowsep="1" id="table_ios_notifications"> 
  <tbody> 
@@ -54,124 +53,124 @@ ht-degree: 0%
    <td colname="2"> <b>意義</b> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification  </span> </td> 
-   <td colname="2"> 廣告中斷結束。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakCompletedNotification </span> </td> 
+   <td colname="2"> 廣告結束。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification  </span> </td> 
-   <td colname="2"> 廣告插播開始。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdBreakStartedNotification </span> </td> 
+   <td colname="2"> 廣告開始了。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdClickNotification  </span> </td> 
-   <td colname="2"> 使用者按一下橫幅廣告。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdClickNotification </span> </td> 
+   <td colname="2"> 用戶按一下了標題廣告。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdCompletedNotification  </span> </td> 
-   <td colname="2"> 個別廣告結束。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdCompletedNotification </span> </td> 
+   <td colname="2"> 一個廣告結束。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification  </span> </td> 
-   <td colname="2"> 廣告進展；在廣告播放時不斷傳送。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdProgressNotification </span> </td> 
+   <td colname="2"> 廣告進行；在廣告播放時不斷發出。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification  </span> </td> 
-   <td colname="2"> 個別廣告開始。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerAdStartedNotification </span> </td> 
+   <td colname="2"> 一個廣告開始了。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTBackgroundManifestErrorNotification  </span> </td> 
-   <td colname="2"> 下載背景資訊清單失敗。 </td> 
+   <td colname="1"> <span class="codeph"> PTBackgroundManifestErrorNotification </span> </td> 
+   <td colname="2"> 下載後台清單失敗。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingCompletedNotification  </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingCompletedNotification </span> </td> 
    <td colname="2"> 緩衝已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingStartedNotification  </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerBufferingStartedNotification </span> </td> 
    <td colname="2"> 媒體播放器進入緩衝狀態。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted  </span> </td> 
-   <td colname="2"> 目前播放媒體的音軌變更已完成。 </td> 
+   <td colname="1"> <span class="codeph"> PTAudioTrackChangeCompleted </span> </td> 
+   <td colname="2"> 當前播放媒體的音頻軌道更改已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted  </span> </td> 
-   <td colname="2"> 開始對當前播放的媒體的音軌進行改變。 </td> 
+   <td colname="1"> <span class="codeph"> PTAudioTrackChangeStarted </span> </td> 
+   <td colname="2"> 開始對當前播放媒體的音頻軌道的更改。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification  </span> </td> 
-   <td colname="2"> 已設定<span class="codeph"> PTMediaPlayer </span>的不同<span class="codeph"> PTMediaPlayerItem </span>。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification </span> </td> 
+   <td colname="2"> 另一種 <span class="codeph"> PTMediaPlayerItem </span> 的 <span class="codeph"> PTMediaPlayer </span> 已設定。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerItemDRMMetadataChanged  </span> </td> 
-   <td colname="2"> DRM中繼資料已變更。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerItemDRMMetadataChanged </span> </td> 
+   <td colname="2"> DRM元資料已更改。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification  </span> </td> 
-   <td colname="2"> 有新的字幕和替代音軌(<span class="codeph"> PTMediaSelectionOption </span>)。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification </span> </td> 
+   <td colname="2"> 有新的字幕和備用音頻軌道( <span class="codeph"> PTMediaSelection選項 </span>)。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification  </span> </td> 
-   <td colname="2"> 新的<span class="codeph"> PTNotification </span>已新增至目前<span class="codeph"> PTMediaPlayerItem </span>的<span class="codeph"> PTNotificationHistoryItem </span>，即在通知歷史記錄中新增通知事件時。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification </span> </td> 
+   <td colname="2"> 新 <span class="codeph"> PTN認證 </span> 已添加到 <span class="codeph"> PTNotificationHistoryItem </span> 當前 <span class="codeph"> PTMediaPlayerItem </span>，即，將通知事件添加到通知歷史記錄時。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification  </span> </td> 
-   <td colname="2"> 媒體播放已結束。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification </span> </td> 
+   <td colname="2"> 媒體播放結束。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekCompletedNotification  </span> </td> 
-   <td colname="2"> 搜尋已完成。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekCompletedNotification </span> </td> 
+   <td colname="2"> 搜索已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekErrorNotification  </span> </td> 
-   <td colname="2"> 當前搜索操作失敗。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekErrorNotification </span> </td> 
+   <td colname="2"> 當前查找操作失敗。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification  </span> </td> 
-   <td colname="2"> 搜尋正在開始。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerSeekStartedNotification </span> </td> 
+   <td colname="2"> 尋找正在開始。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification  </span> </td> 
-   <td colname="2"> 開始播放。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification </span> </td> 
+   <td colname="2"> 播放已開始。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification  </span> </td> 
-   <td colname="2"> 播放器狀態已變更。 可能的狀態值包括： 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification </span> </td> 
+   <td colname="2"> 玩家狀態已更改。 可能的狀態值為： 
     <ul id="ul_DDBE8CAD5D5A46D2AAA6B98F0754A881"> 
-     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusCreated  </span> </p> </li> 
-     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing  </span> </p> </li> 
-     <li id="li_06E1576D50C646C19E88F0F14912F2C0"> <p> <span class="codeph"> PTMediaPlayerStatusInitialized  </span> </p> </li> 
-     <li id="li_E8B7157B5B234DFFABC2E5BEC241AB84"> <p> <span class="codeph"> PTMediaPlayerStatusReady  </span> </p> </li> 
-     <li id="li_FF2E66B390154EAA8791B4D874CC62E1"> <p> <span class="codeph"> PTMediaPlayerStatusPlaying  </span> </p> </li> 
-     <li id="li_6F3306832B7642E4BEE84068383AFAF3"> <p> <span class="codeph"> PTMediaPlayerStatusPaused  </span> </p> </li> 
-     <li id="li_AE579AB888954F89A7F1115CAC0655E6"> <p> <span class="codeph"> PTMediaPlayerStatusStopped  </span> </p> </li> 
-     <li id="li_A4CEB39374E84B4AA4F7202E67B9BE43"> <p> <span class="codeph"> PTMediaPlayerStatusCompleted  </span> </p> </li> 
-     <li id="li_C50EB9C459264641A9FF70EF901D7474"> <p> <span class="codeph"> PTMediaPlayerStatusError  </span> </p> </li> 
+     <li id="li_48F9AD580BCB4BB8A5C2DFED0DF9970F"> <p> <span class="codeph"> PTMediaPlayerStatusCreated </span> </p> </li> 
+     <li id="li_EDFB0765CF14422A95C9119DA3394163"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing </span> </p> </li> 
+     <li id="li_06E1576D50C646C19E88F0F14912F2C0"> <p> <span class="codeph"> PTMediaPlayerStatusInitialized </span> </p> </li> 
+     <li id="li_E8B7157B5B234DFFABC2E5BEC241AB84"> <p> <span class="codeph"> PTMediaPlayerStatusReady </span> </p> </li> 
+     <li id="li_FF2E66B390154EAA8791B4D874CC62E1"> <p> <span class="codeph"> PTMediaPlayerStatusPlaying </span> </p> </li> 
+     <li id="li_6F3306832B7642E4BEE84068383AFAF3"> <p> <span class="codeph"> PTMediaPlayerStatusPaused </span> </p> </li> 
+     <li id="li_AE579AB888954F89A7F1115CAC0655E6"> <p> <span class="codeph"> PTMediaPlayerStatusStopped </span> </p> </li> 
+     <li id="li_A4CEB39374E84B4AA4F7202E67B9BE43"> <p> <span class="codeph"> PTMediaPlayerStatusCompleted </span> </p> </li> 
+     <li id="li_C50EB9C459264641A9FF70EF901D7474"> <p> <span class="codeph"> PTMediaPlayerStatusError </span> </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerTimeChangeNotification  </span> </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerTimeChangeNotification </span> </td> 
    <td colname="2"> 播放當前時間已更改。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification  </span> </td> 
-   <td colname="2"> 目前播放器時間軸已變更。 </td> 
+   <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification </span> </td> 
+   <td colname="2"> 當前播放器時間線已更改。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification  </span> </td> 
-   <td colname="2"> TVSDK遇到第一次出現訂閱的標籤。 </td> 
+   <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification </span> </td> 
+   <td colname="2"> TVSDK遇到首次出現訂閱的標籤。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification  </span> </td> 
-   <td colname="2"> <p>在背景清單上標識預訂的標籤，並且根據該標籤準備新的<span class="codeph"> PTTimedMetadata </span>實例。 </p> </td> 
+   <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification </span> </td> 
+   <td colname="2"> <p>在背景清單上標識預訂的標籤和新的 <span class="codeph"> PTTimed元資料 </span> 實例是從它準備的。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## 通知的範例處理常式{#section_D729C2403A234DD09596829D26882ADC}
+## 通知的示例處理程式 {#section_D729C2403A234DD09596829D26882ADC}
 
-下列程式碼片段說明您使用通知的一些方式。
+以下代碼片段說明了一些使用通知的方法。
 
-使用`PTMediaPlayerAdBreakKey`讀取`PTAdBreak`實例：
+獲取 `PTAdBreak` 實例使用 `PTMediaPlayerAdBreakKey`:
 
 ```
  - (void) onMediaPlayerAdBreakStarted:(NSNotification *) notification { 
@@ -182,7 +181,7 @@ ht-degree: 0%
 } 
 ```
 
-設定`subtitlesOptions`和`audioOptions` :
+設定 `subtitlesOptions` 和 `audioOptions`:
 
 ```
  - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification \*) notification { 
@@ -194,7 +193,7 @@ ht-degree: 0%
 } 
 ```
 
-使用`PTMediaPlayerAdKey`讀取`PTAd`實例：
+獲取 `PTAd` 實例使用 `PTMediaPlayerAdKey`:
 
 ```
  - (void) onMediaPlayerAdPlayStarted:(NSNotification \*)  notification { 

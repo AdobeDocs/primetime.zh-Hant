@@ -1,24 +1,23 @@
 ---
-description: 您可以將pttrackingmode和pttrackingversion參數新增至您的BootstrapURL請求，以啟用用戶端廣告追蹤。
-title: 啟用用戶端廣告追蹤
-translation-type: tm+mt
+description: 通過向BootstrapURL請求添加pttrackingmode和pttrackingversion參數，可以啟用客戶端和跟蹤。
+title: 啟用客戶端廣告跟蹤
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 
-# 啟用用戶端廣告追蹤{#enable-client-side-ad-tracking}
+# 啟用客戶端廣告跟蹤 {#enable-client-side-ad-tracking}
 
-您可以將`pttrackingmode`和`pttrackingversion`參數新增至您的BootstrapURL請求，以啟用用戶端廣告追蹤。
+通過添加 `pttrackingmode` 和 `pttrackingversion` BootstrapURL請求的參數。
 
-啟用用戶端廣告追蹤後，您也可以使用追蹤API URL擷取廣告追蹤中繼資料。 如需詳細資訊，請參閱[查詢參數](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md)。
+啟用客戶端和跟蹤後，您還可以使用跟蹤API URL檢索和跟蹤元資料。 有關詳細資訊，請參閱 [查詢參數](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md)。
 
-若要執行用戶端廣告追蹤，請使用追蹤API URL。
+要執行客戶端和跟蹤，請使用跟蹤API URL。
 
-1. 新增下列查詢參數至資訊清單伺服器請求URL:
+1. 將以下查詢參數添加到清單伺服器請求URL:
 
    * `pttrackingmode=simple`
    * `pttrackingversion={format version}`

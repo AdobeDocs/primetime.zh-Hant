@@ -1,24 +1,23 @@
 ---
-title: 限制存取受保護內容之應用程式執行時期的區塊清單
-description: 限制存取受保護內容之應用程式執行時期的區塊清單
+title: 阻止限制訪問受保護內容的應用程式運行時清單
+description: 阻止限制訪問受保護內容的應用程式運行時清單
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7c9d9e31-1a8d-4c76-9f2c-fcda58de1a42
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
+# 阻止限制訪問受保護內容的應用程式運行時清單 {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
 
-# 限制存取受保護內容的應用程式執行時期區塊清單{#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
+指定無法訪問內容的黃金時段或Flash運行時的版本。 指定受限運行時(Flash Player、AIR或iOS)、平台和版本。
 
-指定無法存取內容的Primetime或Flash執行階段版本。 指定受限制的執行時期(Flash Player、AIR或iOS)、平台和版本。
+示例用例：與DRM客戶端阻止清單類似，Flash Player、AIR或iOS運行時的最新版本可以指定為獲取許可證和內容回放所需的最低版本。
 
-範例使用案例：與DRM用戶端區塊清單類似，Flash Player、AIR或iOS執行時期的最新版本可指定為取得授權和內容播放所需的最低版本。
+除了以下屬性外，應用程式運行時還可由DRM客戶端版本支援的任何屬性來標識：
 
-除了下列屬性外，應用運行時還可由DRM客戶端版本支援的任何屬性來標識：
-
-| **屬性** | **支援的值** | **符合條件** | **說明** |
+| **屬性** | **支援的值** | **匹配條件** | **說明** |
 |---|---|---|---|
-| 應用程式 | &quot;FlashPlayer&quot;、&quot;AIR&quot;、&quot;DRM_Library&quot;、&quot;AVE&quot; | 完全符合 | 識別應用程式執行時期的名稱。 |
+| 應用程式 | &quot;FlashPlayer&quot;、&quot;AIR&quot;、&quot;DRM_Library&quot;、&quot;AVE&quot; | 完全匹配 | 標識應用程式運行時的名稱。 |

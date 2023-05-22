@@ -1,6 +1,6 @@
 ---
-description: 您可以設定您的播放器來追蹤和分析視訊的使用情形。
-title: 初始化和設定視訊分析
+description: 您可以配置播放器以跟蹤和分析視頻使用。
+title: 初始化和配置視頻分析
 exl-id: 58d560d1-f668-4e1d-a817-b2e02008fdbe
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
@@ -9,70 +9,70 @@ ht-degree: 0%
 
 ---
 
-# 初始化和設定視訊分析{#initialize-and-configure-video-analytics}
+# 初始化和配置視頻分析{#initialize-and-configure-video-analytics}
 
-您可以設定您的播放器來追蹤和分析視訊的使用情形。
+您可以配置播放器以跟蹤和分析視頻使用。
 
-在啟用視訊追蹤（視訊心率）之前，請確定您有下列項目：
+在激活視頻跟蹤（視頻心跳）之前，請確保您有以下幾點：
 
-* 案頭HLS的TVSDK
-* 設定/初始化資訊 — 請聯絡您的Adobe代表，取得您特定的視訊追蹤帳戶資訊：
+* 用於案頭HLS的TVSDK
+* 配置/初始化資訊 — 有關特定視頻跟蹤帳戶資訊，請與Adobe代表聯繫：
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> AppMeasurement追蹤伺服器端點 </td> 
-   <td colname="col2"> Adobe Analytics(前身為SiteCatalyst)後端收集端點的URL。 </td> 
+   <td colname="col1"> AppMeasurement跟蹤伺服器終結點 </td> 
+   <td colname="col2"> Adobe Analytics(以前為SiteCatalyst)後端集合終結點的URL。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Video Analytics追蹤伺服器端點 </td> 
-   <td colname="col2"> video analytics後端收集端點的URL。 這是所有視訊心率追蹤呼叫的傳送位置。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的相關資訊，請參閱<a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external">實作ID服務</a>。 </p> </td> 
+   <td colname="col1"> 視頻分析跟蹤伺服器終結點 </td> 
+   <td colname="col2"> 視頻分析後端集合終結點的URL。 這是發送所有視頻心跳跟蹤呼叫的地方。 <p>提示：訪問者跟蹤伺服器的URL與分析跟蹤伺服器的URL相同。 有關實施訪問者ID服務的資訊，請參見 <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> 實施ID服務 </a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 帳戶名稱 </td> 
-   <td colname="col2"> 也稱為報表套裝ID(RSID)。 </td> 
+   <td colname="col1"> 帳戶名 </td> 
+   <td colname="col2"> 也稱為報告套件ID(RSID)。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Marketing Cloud組織ID </td> 
-   <td colname="col2"> 具現化Visitor元件所需的字串值。 </td> 
+   <td colname="col2"> 實例化訪問者元件所需的字串值。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 訪客追蹤伺服器端點 </td> 
-   <td colname="col2"> 後端端點的URL，可提供目前視訊檢視器的唯一識別碼。 </td> 
+   <td colname="col1"> 訪問者跟蹤伺服器端點 </td> 
+   <td colname="col2"> 為當前視頻查看器提供唯一標識符的後端終結點的URL。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 發佈者 </td> 
-   <td colname="col2"> 這是發佈者ID，由客戶代表提供給Adobe。 <p>提示： 此ID不只是具有品牌/電視名稱的字串。 </p> </td> 
+   <td colname="col2"> 這是發佈者ID，由客戶的Adobe代表提供給客戶。 <p>提示：此ID不僅是帶有品牌/電視名稱的字串。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-若要在播放器中設定視訊追蹤：
+要在播放器中配置視頻跟蹤，請執行以下操作：
 
-1. 實例化和設定VisitorAPI程式庫。
+1. 實例化並配置VisitorAPI庫。
 
-       請記住下列資訊：
+       請牢記以下資訊：
    
    * 實例化需要由Marketing Cloud提供的Adobe組織ID輸入參數。
 
       這是字串值。
-   * VisitorAPI程式庫的唯一設定選項是後端端點的URL，該URL會提供目前使用者的唯一識別碼。
-   * 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。
+   * VisitorAPI庫的唯一配置選項是提供當前用戶的唯一標識符的後端終結點的URL。
+   * 訪問者跟蹤伺服器的URL與分析跟蹤伺服器的URL相同。
 
-      如需實作訪客ID服務的相關資訊，請參閱訪客ID服務實作。
+      有關實施訪問者ID服務的資訊，請參閱訪問者ID服務實施。
 
    ```
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID"); 
    _visitor.trackingServer = "URL_OF_THE_VISITOR_TRACKER_SERVER”; 
    ```
 
-1. 實例化和設定AppMeasurement元件。
+1. 實例化並配置AppMeasurement元件。
 
-   AppMeasurement例項有許多設定選項。 如需詳細資訊，請參閱[Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer)檔案。 下列范常式式碼（`account`、`visitorNamespace`及`trackingServer`）中的選項為必要項目，而值則由Adobe提供。
+   AppMeasurement實例具有許多配置選項。 有關詳細資訊，請參見 [Adobe Analytics開發商](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) 文檔。 以下示例代碼中的選項( `account`。 `visitorNamespace`, `trackingServer`)，這些值由Adobe提供。
 
    >[!IMPORTANT]
    >
-   >必須確保已正確設定相依鏈。 AppMeasurement例項匯總（取決於）訪客API元件。
+   >必須確保正確設定依賴關係鏈。 AppMeasurement實例聚合（取決於）訪問者API元件。
 
    ```
    // Instantiate and configure AppMeasurement 
@@ -99,17 +99,17 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >在您的應用程式中，請在啟動視訊分析流程之前確認已填入`appMeasurementObject.visitor`，否則可能不會收到任何追蹤結果。 這些結果由日誌中的消息指示。 您可以新增空的追蹤呼叫(`appMeasurementObject.track`)、輪詢`visitor`屬性直到填入為止，然後起始視訊分析。
+   >在您的應用程式中，確保 `appMeasurementObject.visitor` 在啟動視頻分析流之前填充，或者您可能沒有得到任何跟蹤結果。 這些結果由日誌中的消息指示。 可以添加空磁軌調用( `appMeasurementObject.track`)，輪詢 `visitor` 屬性，然後啟動視頻分析。
 
-1. 初始化並設定視訊心率追蹤中繼資料。
+1. 初始化和配置視頻心跳跟蹤元資料。
 
    >[!IMPORTANT]
    >
-   >您可以停止視訊分析模組中繼，並視需要重新初始化。 重新初始化模組之前，請確定視訊分析中繼資料也更新為正確的內容中繼資料。 要重新建立元資料，請重複子步驟1和2。
+   >您可以停止視頻分析模組中流，並根據需要重新初始化它。 在重新初始化模組之前，請確保視頻分析元資料也更新為正確的內容元資料。 要重新建立元資料，請重複子步驟1和2。
 
-   1. 建立Video Analytics中繼資料的例項。
+   1. 建立視頻分析元資料的實例。
 
-      此例項包含啟用視訊心率追蹤所需的所有設定資訊。 例如：
+      此實例包含啟用視頻心跳跟蹤所需的所有配置資訊。 例如：
 
       ```
       private function getVideoAnalyticsTrackingMetadata():VideoAnalyticsMetadata {     
@@ -140,9 +140,9 @@ ht-degree: 0%
       } 
       ```
 
-   1. 將Video Analytics中繼資料新增至全域中繼資料例項。
+   1. 將視頻分析元資料添加到全局元資料實例。
 
-      準備好後，請在媒體資源或媒體播放器項目上設定全域中繼資料例項：
+      準備好後，在媒體資源或媒體播放器項目上設定全局元資料實例：
 
       ```
       var resourceMetadata:Metadata = _player.currentItem.resource.metadata; 
@@ -150,22 +150,22 @@ ht-degree: 0%
                                    getVideoAnalyticsTrackingMetadata());
       ```
 
-   1. 初始化Video Analytics追蹤器。
+   1. 初始化視頻分析跟蹤器。
 
-      建立媒體播放器例項後，您必須建立Video Analytics追蹤器例項，並提供媒體播放器例項的參考。
+      建立媒體播放器實例後，必須建立視頻分析跟蹤器實例並提供對媒體播放器實例的引用。
 
       >[!TIP]
       >
-      >請務必為每個內容播放工作階段建立新的追蹤器例項，並在您分離媒體播放器例項後移除先前的參考。
+      >始終為每個內容播放會話建立新的跟蹤器實例，並在分離媒體播放器實例後刪除以前的引用。
 
       ```
       _videoAnalyticsProvider = new VideoAnalyticsProvider(_appMeasurementObject); 
       _videoAnalyticsProvider.attachMediaPlayer(_player);
       ```
 
-   1. 銷毀Video Analytics追蹤器。
+   1. 銷毀視頻分析跟蹤器。
 
-      開始新內容播放工作階段之前，請銷毀視訊追蹤器的先前例項。 收到內容完成事件（或通知）後，請等待幾分鐘再銷毀視訊追蹤器例項。 若立即銷毀例項，可能會干擾Video Analytics追蹤器傳送視訊完成Ping的功能。
+      在開始新的內容播放會話之前，請銷毀視頻跟蹤器的先前實例。 收到內容完成事件（或通知）後，請等待幾分鐘，然後銷毀視頻跟蹤器實例。 立即銷毀實例可能會干擾視頻分析跟蹤程式發送視頻完成ping的能力。
 
       ```
       if (videoAnalyticsTracker) { 
@@ -174,10 +174,10 @@ ht-degree: 0%
       }
       ```
 
-   1. 手動將即時/線性資料流標示為完成。
+   1. 手動將Live/Linear流標籤為完成。
 
-      如果您的一個即時資料流上有各種集數，可以使用complete API手動將集數標示為已完成。 這會結束目前視訊集數的視訊追蹤工作階段，而您可以開始下一集的新追蹤工作階段。
+      如果您在一個即時流上有各種集數，則可以使用完整的API手動將集數標籤為完整。 這將結束當前視頻集的視頻跟蹤會話，並且您可以為下一集啟動新的跟蹤會話。
 
       >[!TIP]
       >
-      >此API為選用API，不是VOD視訊追蹤所需的API。
+      >此API是可選的，不需要用於VOD視頻跟蹤。

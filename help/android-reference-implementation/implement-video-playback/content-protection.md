@@ -1,36 +1,35 @@
 ---
-description: Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表示您的應用程式必須在播放串流之前，先實作DRM驗證工作流程。
+description: 該黃金時段播放器支援黃金時段DRM整合作為自定義DRM工作流。 這意味著您的應用程式必須在播放流之前實施DRM驗證工作流。
 title: DRM內容保護
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c1904d15-023f-49fb-95f9-d157d17b3516
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
+# DRM內容保護 {#drm-content-protection}
 
-# DRM內容保護{#drm-content-protection}
+該黃金時段播放器支援黃金時段DRM整合作為自定義DRM工作流。 這意味著您的應用程式必須在播放流之前實施DRM驗證工作流。
 
-Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表示您的應用程式必須在播放串流之前，先實作DRM驗證工作流程。
+要啟用此功能，TVSDK會為您提供DRM管理器進行身份驗證。 參考實現提供了以下工作流的示例：
 
-若要啟用此功能，TVSDK會提供DRM管理員以進行驗證。 參考實作提供下列工作流程的範例：
+* 如何通過Access內容保護載入和回放HLS流，並針對低錯誤率和快速啟動進行了優化。
+* 如何使用AES128內容保護載入和回放HLS流。
+* 如何通過PHLS內容保護載入和回放HLS流，並針對低錯誤率和快速啟動進行了優化。
 
-* 如何使用存取內容保護來載入和播放HLS串流，並針對低錯誤率和快速啟動進行最佳化。
-* 如何使用AES128內容保護來載入和播放HLS串流。
-* 如何使用PHLS內容保護來載入和播放HLS串流，並針對低錯誤率進行最佳化並快速啟動。
+所有受DRM保護的內容都由TVSDK中內置的DRM庫自動處理。 但是，您可以使用TVSDK API回調來公開錯誤處理、設備個性化優化和許可證獲取。
 
-所有受DRM保護的內容都會由TVSDK內建的DRM程式庫自動處理。 不過，您可以使用TVSDK API回呼來公開錯誤處理、裝置個人化最佳化和授權取得。
+## 向播放器添加內容保護 {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
 
-## 將內容保護新增至播放器{#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
-
-您可以建立播放管理員或使用管理員工廠，為播放器新增內容保護。
+可以通過建立播放管理器或使用管理器工廠將內容保護添加到播放器。
 
 要建立內容保護管理器：
 
 * 初始化DRM系統。
 
-   下面的代碼示例顯示在應用程式`onCreate()`函式中調用`loadDRMServices`，以確保在播放開始之前啟動DRM系統所需的任何初始化。
+   以下代碼示例顯示調用 `loadDRMServices` 在 `onCreate()` 功能，以確保在重放開始之前啟動DRM系統所需的任何初始化。
 
    ```java
    @Override 
@@ -40,9 +39,9 @@ Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表
     }
    ```
 
-* 預先載入DRM授權。
+* 預載入DRM許可證。
 
-   下列程式碼範例顯示內容清單載入完成時載入`VideoItems`。 這會導致從授權伺服器取得DRM授權並在本機快取，如此當播放開始時，內容會以最小延遲載入。
+   以下代碼示例顯示載入 `VideoItems` 內容清單載入完畢後。 這將導致從許可證伺服器獲取DRM許可證並在本地快取，因此當播放開始時，內容將以最小延遲載入。
 
    ```java
    DrmManager.preLoadDrmLicenses(item.getUrl(),  
@@ -62,17 +61,17 @@ Primetime播放器支援將Primetime DRM整合為自訂DRM工作流程。 這表
 
    >[!NOTE]
    >
-   >您可以在「設定」使用者介面中將Precache DRM授權設為「開啟」，以便在載入內容時預先取得DRM授權。 不過，最佳實務是預先載入特定項目，而非預先預先存取目錄中的所有授權。
+   >可以在「設定」用戶介面中將「預快取DRM許可證」設定為「開啟」，以便在載入內容時預快取DRM許可證。 但是，最佳做法是預載入特定項目，而不是預先刪除目錄中的所有許可證。
    >
    >![](assets/precache-drm-licenses.jpg)
 
-* 要使用`ManagerFactory`實施DRM錯誤處理，請確保在[!DNL PlayerFragment.java]檔案中包含以下代碼行：
+* 要使用 `ManagerFactory` 要實現DRM錯誤處理，請確保以下代碼行位於 [!DNL PlayerFragment.java] 檔案：
 
    ```java
    drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
    ```
 
-**相關API檔案**
+**相關API文檔**
 
-* [類別DrmManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/DrmManager.html)
+* [類DrmManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/DrmManager.html)
 * [DrmManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/DrmManager.DrmManagerEventListener.html)

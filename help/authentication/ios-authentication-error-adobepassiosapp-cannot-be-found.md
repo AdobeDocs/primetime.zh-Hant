@@ -1,44 +1,44 @@
 ---
 title: iOS驗證錯誤 — 找不到adobepass.ios.app
 description: iOS驗證錯誤 — 找不到adobepass.ios.app
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
-
 # iOS驗證錯誤 — 找不到adobepass.ios.app {#ios-authentication-error-adobepass.ios.app-cannot-be-found}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
 ## 問題 {#issue}
 
-使用者正在進行驗證流程，當他們成功輸入其提供者的認證後，就會重新導向回錯誤頁面、搜尋頁面或其他自訂頁面，通知他們 `adobepass.ios.app` 找不到/解決。
+用戶正在經歷驗證流，在他們成功輸入其提供商的憑據後，他們將被重定向回錯誤頁、搜索頁或某些其他自定義頁，通知他們 `adobepass.ios.app` 找不到/解決。
 
-## 說明 {#explanation}
+## 解釋 {#explanation}
 
-在iOS, `adobepass.ios.app` 作為最終重新導向URL，以指出AuthN流程已完成。 此時，應用程式需要向AccessEnabler提出請求，以取得AuthN代號並完成AuthN流程。
+在iOS, `adobepass.ios.app` 用作最終重定向URL以指示AuthN流已完成。 此時，應用需要向AccessEnabler發出請求，以獲取AuthN令牌並完成AuthN流。
 
-問題是 `adobepass.ios.app` 實際上不存在，且會在 `webView`. 舊版iOS DemoApp假設此錯誤一律會在AuthN流程結束時觸發，且已設定以據以處理(`indidFailLoadWithError`)。
+問題是 `adobepass.ios.app` 實際上不存在，並將在 `webView`。 iOSDemoApp的較舊版本假定此錯誤將始終在AuthN流的末尾觸發，並設定為相應地處理該錯誤(`indidFailLoadWithError`)。
 
-**注意：** 此問題已在舊版DemoApp中修正(隨附於iOS SDK下載)。
+**注：** 此問題已在DemoApp的較新版本(隨iOSSDK下載一起提供)中解決。
 
-不幸的是，這一假設並不正確。 有些所謂的「智慧」DNS或Proxy伺服器不會只是傳遞引發的錯誤，而會執行下列其中一項作業： 
+不幸的是，這一假設並不正確。 有些所謂的「智慧」DNS或代理伺服器不會簡單地傳遞引發的錯誤，而會執行下列操作之一： 
 
-- 建立自訂錯誤頁面
-- 轉送至搜尋頁面，或某些其他類型的客戶頁面或入口網站。
+- 建立自定義錯誤頁
+- 轉發到搜索頁面，或某些其他類型的客戶頁面或門戶。
 
-在這些情況下，回到iOS webView的回應就webView而言將是完全有效的回應，且不會觸發舊DemoApp所依賴的錯誤。
+在這些情況下，返回到iOSWebView的響應對於WebView來說將是完全有效的響應，不會觸發舊DemoApp所依賴的錯誤。
 
 ## 解決方案 {#solution}
 
-請勿假設與DemoApp相同。 請改為在執行請求前加以截取(在 `shouldStartLoadWithRequest`)並妥善處理。
+不要假設DemoApp與DemoApp相同。 相反，在請求執行之前攔截該請求(在 `shouldStartLoadWithRequest`)並妥善處理。
 
-如何在執行請求之前截取請求的範例：
+如何在請求執行之前攔截該請求的示例：
 
 ```obj-c
 - (BOOL)webView:(UIWebView*)localWebView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
@@ -58,9 +58,8 @@ return YES;
 }
 ```
 
-請注意以下幾點：
+需要注意的幾點：
 
-- 永不使用 `adobepass.ios.app` 直接放在程式碼中任何位置。 請改用常數 `ADOBEPASS_REDIRECT_URL`
-- 此 `return NO;` 語句將阻止頁面載入
-- 請務必確認 `getAuthenticationToken` 在您的程式碼中，呼叫一次，且只呼叫一次。 對進行多次呼叫 `getAuthenticationToken` 將導致未定義的結果。
-
+- 永不使用 `adobepass.ios.app` 直接在代碼的任何位置。 而是使用常數 `ADOBEPASS_REDIRECT_URL`
+- 的 `return NO;` 語句將阻止載入頁面
+- 確保 `getAuthenticationToken` 在您的代碼中，呼叫一次且只呼叫一次。 多個呼叫至 `getAuthenticationToken` 將生成未定義的結果。

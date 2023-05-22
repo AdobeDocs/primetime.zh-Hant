@@ -1,16 +1,15 @@
 ---
-title: 更新租用戶配置檔案
-description: 更新租用戶配置檔案
+title: 更新租戶配置檔案
+description: 更新租戶配置檔案
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ff2408c0-0fc2-46ca-a526-3c4c367289fc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
+# 更新租戶配置檔案{#updating-the-tenant-configuration-file}
 
-# 更新租用戶配置檔案{#updating-the-tenant-configuration-file}
-
-在[!DNL flashaccess-tenant.xml]中指定的所有值都可以隨時修改，這些更改將在伺服器下次重新載入配置檔案時生效。 此外，伺服器會檢查所有憑證(.pfx)檔案中的變更，並允許租用戶設定檔案中參考的清單憑證檔案。
+指定的所有值 [!DNL flashaccess-tenant.xml] 可以隨時修改，更改將在下次伺服器重新載入配置檔案時生效。 此外，伺服器檢查所有憑據(.pfx)檔案中的更改，並且打包器允許租戶配置檔案中引用的清單證書檔案。

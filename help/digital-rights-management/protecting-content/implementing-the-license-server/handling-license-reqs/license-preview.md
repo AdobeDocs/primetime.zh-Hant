@@ -1,20 +1,19 @@
 ---
-title: 授權預覽
-description: 授權預覽
+title: 許可證預覽
+description: 許可證預覽
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7e6b1062-7240-4dae-86bb-bd26e7be1f14
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
+# 許可證預覽{#license-preview}
 
-# 授權預覽{#license-preview}
+客戶端可以發送許可預覽請求，這意味著應用程式可以在要求用戶購買內容之前執行預覽操作，以確定用戶的電腦是否實際滿足回放所需的所有條件。
 
-用戶端可傳送授權預覽要求，這表示應用程式可先執行預覽作業，再要求使用者購買內容，以判斷使用者的機器是否實際符合播放所需的所有標準。
+*`License preview`* 指客戶預覽許可證（查看許可證允許的權限）的能力，而不是預覽內容（在決定購買前查看內容的一小部分）。 每台電腦所獨有的參數有：輸出可用及其保護狀態、運行時/DRM版本可用以及DRM客戶端安全級別。 許可預覽模式允許運行時/DRM客戶端test許可伺服器業務邏輯並將資訊提供回給用戶，以便他能夠作出知情的決定。 因此，客戶端可以看到有效許可證的外觀，但實際上不會收到解密內容的密鑰。 對許可證預覽的支援是可選的，並且僅當您實施使用此功能的自定義客戶端時才必要。
 
-*`License preview`* 指客戶預覽授權（查看授權許可的權利）的能力，而非預覽內容（在決定購買之前檢視內容的一小部分）。每部機器的某些參數是：輸出可用及其保護狀態、可用的運行時/DRM版本和DRM客戶機安全級別。 許可預覽模式允許運行時/DRM客戶端測試許可伺服器業務邏輯並向用戶提供資訊，以便他能夠做出知情決定。 因此，用戶端可以看到有效授權的外觀，但實際上無法收到解密內容的金鑰。 支援授權預覽是可選的，而且只有在您實作使用此功能的自訂用戶端時，才需要。
-
-若要判斷用戶端是傳送預覽要求還是授權取得要求，請呼叫`LicenseRequestMessage.getRequestPhase()`並與`LicenseRequestMessage.RequestPhase.Acquire`比較
+要確定客戶端是否發送了預覽請求或許可證獲取請求，請撥打 `LicenseRequestMessage.getRequestPhase()`並比較 `LicenseRequestMessage.RequestPhase.Acquire`

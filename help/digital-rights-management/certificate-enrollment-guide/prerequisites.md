@@ -1,21 +1,20 @@
 ---
-title: 必要條件
-description: 必要條件
+title: 先決條件
+description: 先決條件
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1550bade-5ee5-4af3-8529-31332c6d993b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# 先決條件 {#prerequisites}
 
-# 先決條件{#prerequisites}
+要使用證書註冊站點來請求證書，您需要瞭解以下資訊：
 
-若要使用「認證註冊」網站來申請憑證，您必須知道下列事項：
-
-* 公鑰基礎結構(PKI)的運作方式
-* 如何產生密鑰對並保護私密密鑰
-* 如何產生憑證簽署要求(CSR)
+* 公鑰基礎架構(PKI)的工作原理
+* 如何生成密鑰對並保護您的私鑰
+* 如何生成證書籤名請求(CSR)
 * 如何將PKCS#7轉換為PKCS#12、PEM和DER檔案

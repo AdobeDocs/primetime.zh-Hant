@@ -1,18 +1,17 @@
 ---
-title: 驗證Token的逾時
-description: 驗證Token的逾時
+title: 驗證令牌超時
+description: 驗證令牌超時
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ee9c5b2c-6a79-499c-bd60-718e33bc3a9b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# 驗證令牌超時{#timeout-for-authentication-tokens}
 
-# 驗證Token的逾時{#timeout-for-authentication-tokens}
+Adobe訪問SDK生成的所有身份驗證令牌都有一個超時間隔，以保護應用程式安全。 在處理身份驗證請求時，使用Adobe訪問SDK指定身份驗證令牌的過期時間。 過期後，驗證令牌不再有效，用戶必須向許可證伺服器重新驗證。
 
-所有由Adobe存取SDK產生的驗證Token都有逾時間隔，以保護應用程式的安全性。 在處理驗證要求時，會使用Adobe存取SDK來指定驗證Token的有效期。 一旦過期，驗證Token就不再有效，使用者必須向授權伺服器重新驗證。
-
-若要進一步瞭解驗證請求，請參閱&#x200B;*Adobe存取API參考*&#x200B;中的AuthenticationHandler。
+要瞭解有關身份驗證請求的詳細資訊，請參閱 *Adobe訪問API參考*。

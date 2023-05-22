@@ -1,44 +1,43 @@
 ---
-description: 事件處理常式可讓TVSDK回應事件。
-title: 實作事件偵聽器和回呼
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 事件處理程式允許TVSDK響應事件。
+title: 實現事件偵聽器和回調
+exl-id: eda5cd4e-4ee8-4b37-a179-242e8697f61f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
 
 ---
 
+# 實現事件偵聽器和回調{#implement-event-listeners-and-callbacks}
 
-# 實施事件偵聽器和回呼{#implement-event-listeners-and-callbacks}
+事件處理程式允許TVSDK響應事件。
 
-事件處理常式可讓TVSDK回應事件。
+當發生事件時，TVSDK的事件機制將調用您註冊的事件處理程式並將事件資訊傳遞給處理程式。
 
-發生事件時，TVSDK的事件機制會呼叫您已註冊的事件處理常式，並將事件資訊傳遞給處理常式。
+TVSDK將監聽器定義為 `MediaPlayer` 。
 
-TVSDK將監聽器定義為`MediaPlayer`介面中的公用內部介面。
+您的應用程式必須為影響您的應用程式的TVSDK事件實現事件偵聽器。
 
-您的應用程式必須針對影響您應用程式的TVSDK事件實作事件接聽程式。
+有關視頻分析事件的完整清單，請參閱跟蹤核心視頻播放。
 
-如需視訊分析事件的完整清單，請參閱追蹤核心視訊播放。
+1. 確定應用程式必須偵聽哪些事件。
 
-1. 決定您的應用程式必須監聽哪些事件。
-
-   * **必要事件**:監聽所有播放事件。
+   * **必需事件**:收聽所有播放事件。
 
       >[!IMPORTANT]
       >
-      >播放事件`onStateChanged`提供播放器狀態，包括錯誤。 任何狀態都可能會影響您播放器的下一步
+      >播放事件 `onStateChanged` 提供播放器狀態，包括錯誤。 任何狀態都可能影響玩家的下一步
 
-   * **其他事件**:可選，視您的應用程式而定。
+   * **其他事件**:可選，具體取決於您的應用程式。
 
-      例如，如果您在播放中整合廣告，請實作AdPlaybackEventListener回呼。
+      例如，如果在播放中合併廣告，則實施AdPlaybackEventListener回調。
 
-1. 為每個事件實施事件偵聽器。
+1. 為每個事件實現事件偵聽器。
 
-   TVSDK會將參數值傳回至您的事件接聽程式回呼。 這些值會提供有關事件的相關資訊，您可在監聽程式中用來執行適當動作。
+   TVSDK將參數值返回到事件監聽器回調。 這些值提供了有關事件的相關資訊，您可以在監聽器中使用這些事件執行相應的操作。
 
-   `MediaPlayer.EventListener` 列出所有回呼介面。每個介面會顯示每個事件傳回的回呼名稱和參數。
+   `MediaPlayer.EventListener` 列出所有回調介面。 每個介面都顯示為每個事件返回的回調名稱和參數。
 
    例如：
 
@@ -47,7 +46,7 @@ TVSDK將監聽器定義為`MediaPlayer`介面中的公用內部介面。
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. 使用`MediaPlayer.addEventListener`將回呼偵聽器註冊到`MediaPlayer`對象。
+1. 將回調偵聽器註冊到 `MediaPlayer` 對象使用 `MediaPlayer.addEventListener`。
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -59,37 +58,37 @@ TVSDK將監聽器定義為`MediaPlayer`介面中的公用內部介面。
    }
    ```
 
-## 播放事件的順序{#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## 播放事件的順序 {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
-TVSDK會依照一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件實施動作。
+TVSDK按通常預期的序列調度事件/通知。 您的玩家可以根據預期序列中的事件執行操作。
 
-下列範例顯示包含播放事件的某些事件的順序。
+以下示例顯示了包含回放事件的某些事件的順序。
 
-* 通過`MediaPlayer.replaceCurrentResource`成功載入媒體資源時，事件順序為：
+* 成功載入媒體資源時 `MediaPlayer.replaceCurrentResource`，事件順序為：
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
->在主線程上載入媒體資源。 如果您在背景執行緒上載入媒體資源，此作業或後續的TVSDK作業（或兩者）可能會擲回錯誤（例如`IllegalStateException`）並退出。
+>在主線程上載入媒體資源。 如果在後台線程上載入媒體資源，則此操作或後續的TVSDK操作或兩者都可能引發錯誤(例如， `IllegalStateException`)並退出。
 
-* 當透過`MediaPlayer.prepareToPlay`準備播放時，事件的順序為：
+* 準備通過 `MediaPlayer.prepareToPlay`，事件順序為：
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayerStatus.PREPARING`
 
-1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 廣告。
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態  `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 插入廣告。
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` 狀態 `MediaPlayerStatus.PREPARED`
 
-* 對於即時／線性串流，當播放視窗前進並解決其他機會時，事件順序為：
+* 對於即時/線性流，在回放期間，隨著回放窗口的提前和附加機會的解決，事件的順序是：
 
 1. `MediaPlayer.PlaybackEventListener.onUpdated`
-1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 是否插入廣告
+1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` 如果插入廣告
 1. `MediaPlayerItemEvent.ITEM_UPDATED`
-1. `TimelineEvent.TIMELINE_UPDATED` 是否插入廣告
+1. `TimelineEvent.TIMELINE_UPDATED` 如果插入廣告
 
-下列範例顯示事件的典型進展：
+以下示例顯示了事件的典型進展：
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,  
@@ -110,22 +109,22 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 });
 ```
 
-## 廣告活動順序{#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## 廣告活動順序 {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
-當您的播放包含廣告時，TVSDK會依一般預期的序列來傳送事件／通知。 您的播放器可以根據預期序列中的事件實施動作。
+當播放包括廣告時，TVSDK會按通常預期的序列發送事件/通知。 您的玩家可以根據預期序列中的事件執行操作。
 
-播放廣告時，事件的順序為：
+在播放廣告時，事件的順序是：
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* 廣告插播中的每個廣告都會傳送下列訊息：
+* 廣告分段中的每個廣告都派發以下內容：
 
    * `AdPlaybackEventListener.onAdStart`
-   * `AdPlaybackEventListener.onAdProgress` （在廣告播放期間多次）
-   * `AdPlaybackEventListener.onAdClick` （每次點按時）
+   * `AdPlaybackEventListener.onAdProgress` （廣告播放期間多次）
+   * `AdPlaybackEventListener.onAdClick` （對於每次按一下）
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdBreakComplete`
 
-下列範例顯示廣告播放事件的典型進展：
+以下示例顯示廣告播放事件的典型進展：
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -145,19 +144,19 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-播放廣告時，事件的順序為：
+在播放廣告時，事件的順序是：
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* 廣告插播中的每個廣告都會傳送下列訊息：
+* 廣告分段中的每個廣告都派發以下內容：
 
    * `AdPlaybackEventListener.onAdStart`
-   * `AdPlaybackEventListener.onAdProgress` （在廣告播放期間多次）
-   * `AdPlaybackEventListener.onAdClick` （每次點按時）
+   * `AdPlaybackEventListener.onAdProgress` （廣告播放期間多次）
+   * `AdPlaybackEventListener.onAdClick` （對於每次按一下）
    * `AdPlaybackEventListener.onAdStart`
 
 * `AdPlaybackEventListener.onAdBreakComplete`
 
-下列範例顯示廣告播放事件的典型進展：
+以下示例顯示廣告播放事件的典型進展：
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -177,11 +176,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-## QoS事件{#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
+## QoS事件 {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
 
-TVSDK會調度服務品質(QoS)事件，以通知您的應用程式可能會影響QoS統計資料的計算，例如緩衝和搜尋事件。
+TVSDK調度服務質量(QoS)事件，以通知您的應用程式可能影響QoS統計資訊計算的事件，如緩衝和查找事件。
 
-下列範例顯示這些事件的典型進展：
+以下示例顯示了這些事件的典型進展：
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.QOS,  
@@ -205,13 +204,13 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 });
 ```
 
-## DRM事件{#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## DRM事件 {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
-TVSDK響應於DRM相關操作（例如當有新的DRM元資料可用時）來調度數字版權管理(DRM)事件。 您的播放器可以實作回應這些事件的動作。
+TVSDK響應於諸如當新的DRM元資料變為可用時的DRM相關操作而調度數字權限管理(DRM)事件。 您的玩家可以實施響應這些事件的操作。
 
-要獲得所有與DRM相關的事件的通知，請監聽`onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`。 TVSDK會透過`DRMManager`類別分派其他DRM事件。
+要獲知所有與DRM相關的事件，請收聽 `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`。 TVSDK通過 `DRMManager` 類。
 
-以下示例顯示典型的進度：
+以下示例顯示了典型的晉升：
 
 ```
 mediaPlayer.addEventListener(MediaPlayer.Event.DRM, 
@@ -221,12 +220,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.DRM,
 }); 
 ```
 
-## 載入器事件{#section_5638F8EDACCE422A9425187484D39DCC}
+## 載入程式事件 {#section_5638F8EDACCE422A9425187484D39DCC}
 
-您的播放器可以根據下列事件實作動作：
+您的播放器可以基於以下事件實施操作：
 
 | 事件 | 意義 |
 |---|---|
-| `onLoadComplete (mediaPlayerItem playerItem)` | 媒體資源載入成功完成。 |
-| `onError` | 載入介質資源時發生問題。 |
-
+| `onLoadComplete (mediaPlayerItem playerItem)` | 媒體資源載入已成功完成。 |
+| `onError` | 載入媒體資源時出現問題。 |

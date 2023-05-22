@@ -1,33 +1,32 @@
 ---
-description: 當您向瀏覽器TVSDK註冊事件接聽程式時，您會指定要監聽的事件類型以及回呼的名稱。 發生事件時，瀏覽器TVSDK會呼叫您的回呼，並傳遞適當類型的事件物件給它。
-title: 回呼的事件類型和類
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 在瀏覽器TVSDK中註冊事件偵聽器時，指定要偵聽的事件類型和回調的名稱。 當發生事件時，瀏覽器TVSDK會調用您的回調，並將相應類型的事件對象傳遞給它。
+title: 回調的事件類型和類
+exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# 回調的事件類型和類{#event-types-and-classes-for-callbacks}
 
-# 回呼的事件類型和類{#event-types-and-classes-for-callbacks}
-
-當您向瀏覽器TVSDK註冊事件接聽程式時，您會指定要監聽的事件類型以及回呼的名稱。 發生事件時，瀏覽器TVSDK會呼叫您的回呼，並傳遞適當類型的事件物件給它。
+在瀏覽器TVSDK中註冊事件偵聽器時，指定要偵聽的事件類型和回調的名稱。 當發生事件時，瀏覽器TVSDK會調用您的回調，並將相應類型的事件對象傳遞給它。
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> 當您監聽此事件名稱(AdobePSDK.EventType) </th> 
-   <th class="entry">phrases/browser-tvsdk-name會將事件傳遞給您此物件類型的回呼(<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th colname="2" class="entry"> 偵聽此事件名稱(AdobePSDK.EventType)時 </th> 
+   <th class="entry">phrases/browser-tvsdk-name將事件傳遞給您對此對象類型的回調(<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_kj4_jc4_2y"> 
-     <li id="li_C00AD7DE32C94431A4550E21CAC1DCA5"><span class="codeph"> AD_STARTED</span> </li> 
+     <li id="li_C00AD7DE32C94431A4550E21CAC1DCA5"><span class="codeph"> 啟動(_S)</span> </li> 
      <li id="li_1A3EA7527B3642E9ADF39F3CC3D87EDC"><span class="codeph"> AD_PROGRESS</span> </li> 
-     <li id="li_9FB16D4B43EC4905909E881BC1C86E74"><span class="codeph"> AD_COMPLETED</span> </li> 
+     <li id="li_9FB16D4B43EC4905909E881BC1C86E74"><span class="codeph"> 完成(_C)</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> AdPlaybackEvent</span> </td> 
   </tr> 
@@ -36,21 +35,21 @@ ht-degree: 0%
     <ul id="ul_jpq_pc4_2y"> 
      <li id="li_782365D715684DDC835E16D08CC0BBDB"><span class="codeph"> AD_BREAK_STARTED</span> </li> 
      <li id="li_78D7EAEE99D04A35AD7C6EC60DDDC1CC"><span class="codeph"> AD_BREAK_COMPLETED</span> </li> 
-     <li id="li_6155ADAF5E964C458E92AFFB4F7D6347"><span class="codeph"> AD_BREAK_BRIKPED</span> </li> 
+     <li id="li_6155ADAF5E964C458E92AFFB4F7D6347"><span class="codeph"> 跳過AD_BREAK_SKPITED</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> AdBreakPlaybackEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> AD_CLICK</span> </td> 
+   <td colname="2"><span class="codeph"> 按一下(_C)</span> </td> 
    <td><span class="codeph"> AdClickEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_eny_tc4_2y"> 
-     <li id="li_13F95E4BF905425CA5A95ECC138CC078"><span class="codeph"> BUFFERING_BEGIN</span> </li> 
-     <li id="li_BA6F4E38E2F440FAAA4E70DF906A3350"><span class="codeph"> BUFFERING_END</span> </li> 
+     <li id="li_13F95E4BF905425CA5A95ECC138CC078"><span class="codeph"> 緩衝開始</span> </li> 
+     <li id="li_BA6F4E38E2F440FAAA4E70DF906A3350"><span class="codeph"> 緩衝結束</span> </li> 
     </ul> </td> 
-   <td><span class="codeph"> BufferEvent</span> </td> 
+   <td><span class="codeph"> 緩衝區事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> DRM_METADATA_INFO_AVAILABLE</span> </td> 
@@ -58,76 +57,75 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="2"><span class="codeph"> LOAD_INFORMATION_AVAILABLE</span> </td> 
-   <td><span class="codeph"> LoadInformationEvent</span> </td> 
+   <td><span class="codeph"> 載入資訊事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_kwy_cd4_2y"> 
-     <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> AUDIO_UPDATED</span> </li> 
-     <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> CAPTIONS_UPDATED</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> MASTER_UPDATED</span> </li> 
-     <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
-     <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEM_UPDATED</span> </li> 
+     <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> 已更新音頻(_U)</span> </li> 
+     <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> 字幕_已更新</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> 主更新</span> </li> 
+     <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> 建立項</span> </li> 
+     <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> 更新的項</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> MediaPlayerItemEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> STATUS_CHANGED</span> </td> 
-   <td><span class="codeph"> StatusChangeEvent</span> </td> 
+   <td colname="2"><span class="codeph"> 狀態_更改</span> </td> 
+   <td><span class="codeph"> 狀態更改事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> 操作失敗</span> </td> 
-   <td><span class="codeph"> NotificationEvent</span> </td> 
+   <td><span class="codeph"> 通知事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> RESERVATION_REACHED</span> </td> 
-   <td><span class="codeph"> ReservationEvent</span> </td> 
+   <td colname="2"><span class="codeph"> 已達保留</span> </td> 
+   <td><span class="codeph"> 保留事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_jfl_224_2y"> 
-     <li id="li_02B430978FA14A41A000DF8F9A345793"><span class="codeph"> RATE_SELECTED</span> </li> 
-     <li id="li_1EDC0664B59E49448040DF312C928FAA"><span class="codeph"> RATE_PLAYING</span> </li> 
+     <li id="li_02B430978FA14A41A000DF8F9A345793"><span class="codeph"> 選定速率</span> </li> 
+     <li id="li_1EDC0664B59E49448040DF312C928FAA"><span class="codeph"> 播放速率</span> </li> 
     </ul> </td> 
-   <td><span class="codeph"> PlaybackRateEvent</span> </td> 
+   <td><span class="codeph"> 播放速率事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PROFILE_CHANGED</span> </td> 
-   <td><span class="codeph"> ProfileEvent</span> </td> 
+   <td colname="2"><span class="codeph"> 配置檔案(_C)</span> </td> 
+   <td><span class="codeph"> 配置檔案事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAY_START</span> </td> 
+   <td colname="2"><span class="codeph"> 播放開始</span> </td> 
    <td><span class="codeph"> PSDKEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_nwg_w24_2y"> 
-     <li id="li_7CABB2AD7AB140E3BD4061460987BA40"><span class="codeph"> SEEK_POSITION_ADJUSTED</span> </li> 
-     <li id="li_D44BEC28BDBB408280F5AA77E06107B3"><span class="codeph"> SEEK_BEGIN</span> </li> 
-     <li id="li_EC000CF7E3DF4BC18443E368E347E7ED"><span class="codeph"> SEEK_END</span> </li> 
+     <li id="li_7CABB2AD7AB140E3BD4061460987BA40"><span class="codeph"> 查找位置已調整</span> </li> 
+     <li id="li_D44BEC28BDBB408280F5AA77E06107B3"><span class="codeph"> 查找開始</span> </li> 
+     <li id="li_EC000CF7E3DF4BC18443E368E347E7ED"><span class="codeph"> 查找結束</span> </li> 
     </ul> </td> 
-   <td><span class="codeph"> SeekEvent</span> </td> 
+   <td><span class="codeph"> 查找事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> SIZE_AVAILABLE</span> </td> 
-   <td><span class="codeph"> SizeAvailableEvent</span> </td> 
+   <td colname="2"><span class="codeph"> 可用大小(_A)</span> </td> 
+   <td><span class="codeph"> 大小可用事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> TIME_CHANGED</span> </td> 
-   <td><span class="codeph"> TimeChangeEvent</span> </td> 
+   <td colname="2"><span class="codeph"> 更改時間</span> </td> 
+   <td><span class="codeph"> 時間更改事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> TIMED_METADATA_AVAILABLE</span> </td> 
    <td><span class="codeph"> TimedMetadataEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> 時間軸已更新</span> </td> 
-   <td><span class="codeph"> TimelineEvent</span> </td> 
+   <td colname="2"><span class="codeph"> 時間軸_已更新</span> </td> 
+   <td><span class="codeph"> 時間軸事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAYBACK_RANGE_UPDATED</span> </td> 
+   <td colname="2"><span class="codeph"> 回放範圍更新</span> </td> 
    <td></td> 
   </tr> 
  </tbody> 
 </table>
-

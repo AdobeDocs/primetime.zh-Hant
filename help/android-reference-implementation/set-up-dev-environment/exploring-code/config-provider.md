@@ -1,19 +1,18 @@
 ---
-description: ConfigProvider類別會取得媒體播放器的設定。 您必須實作設定介面，讓功能管理員可以讀取設定資訊。
-title: ConfigProvider
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ConfigProvider類獲取媒體播放器的配置。 必須實現配置介面，以便功能管理器可以讀取配置資訊。
+title: 配置提供程式
+exl-id: 75613bfb-3c2b-4b53-b365-adc98f7e1164
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
+# 配置提供程式 {#configprovider}
 
-# ConfigProvider {#configprovider}
+ConfigProvider類獲取媒體播放器的配置。 必須實現配置介面，以便功能管理器可以讀取配置資訊。
 
-ConfigProvider類別會取得媒體播放器的設定。 您必須實作設定介面，讓功能管理員可以讀取設定資訊。
+使用 [配置提供程式](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html) 類以實現 `ICCConfig`。 `IAAConfig`。 `IPlaybackConfig`。 `IAdConfig`, `IQosConfig` 配置介面，以便功能管理器能夠讀取配置。 例如， `ICCConfig` 是 `CCManager` 配置。 配置檔案從JSON配置檔案接收配置參數。
 
-使用[ConfigProvider](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html)類別來實作`ICCConfig`、`IAAConfig`、`IPlaybackConfig`、`IAdConfig`和`IQosConfig`組態介面，讓功能管理員可以讀取組態。 例如，`ICCConfig`是`CCManager`配置的介面。 設定檔案會從JSON設定檔案接收設定參數。
-
-`ConfigProvider.java`檔案是Adobe實施配置介面的示例。 它會從`SharedPreferences`讀取設定，儲存設定。 您可以以任何適合您組織的方式儲存您的設定。 config實現為配置源提供了包裝函式。
+的 `ConfigProvider.java` file是Adobe實現配置介面的示例。 它從 `SharedPreferences`，其中儲存了配置。 您可以以任何適合您組織的方式儲存您的配置。 配置實現為配置源提供包裝。

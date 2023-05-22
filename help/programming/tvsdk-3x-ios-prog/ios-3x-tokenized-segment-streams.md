@@ -1,29 +1,27 @@
 ---
-description: 透過內容傳送網路(CDN)傳送的HLS串流，有時可在資訊清單和區段要求上使用驗證Token進行驗證。 這些Token可以做為URL參數或Cookie標題提供。
-title: Token化區段串流
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 通過內容分發網路(CDN)傳送的HLS流有時可以使用清單和段請求上的驗證令牌進行驗證。 這些令牌可以作為URL參數或cookie標頭提供。
+title: 標籤化段流
+exl-id: c7b441a7-63b6-4930-93a1-12ef6b72474e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
+# 標籤化段流 {#tokenized-segment-streams}
 
-# 已標籤的區段串流{#tokenized-segment-streams}
+通過內容分發網路(CDN)傳送的HLS流有時可以使用清單和段請求上的驗證令牌進行驗證。 這些令牌可以作為URL參數或cookie標頭提供。
 
-透過內容傳送網路(CDN)傳送的HLS串流，有時可在資訊清單和區段要求上使用驗證Token進行驗證。 這些Token可以做為URL參數或Cookie標題提供。
-
-在主資訊清單(m3u8)回應上提供作為Cookie的Token，即使區段請求是針對相同網域，也不會與區段(ts)請求共用。 若要在區段請求中啟用這些Cookie的共用，請在提供給播放器項目的`PTMetadata`例項上設定下列屬性： 
+在主清單(m3u8)響應上作為cookie提供的令牌不與段(ts)請求共用，即使段請求是針對同一域。 要在段請求中啟用這些Cookie的共用，請在 `PTMetadata` 提供給播放器項的實例： 
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 
 [metadata setValue:[NSNumber numberWithBool:YES] forKey:kSyncCookiesWithAVAsset]; 
 ```
 
-在串流開始播放之前，會向主資訊清單(m3u8)提出額外要求。
+在流開始播放之前對主清單(m3u8)發出附加請求。
 
 >[!IMPORTANT]
 >
->只有執行iOS 8或以上版本的裝置才支援此Cookie共用功能。
-
+>此Cookie共用功能僅在運行iOS8或更高版本的設備上受支援。

@@ -1,34 +1,33 @@
 ---
-description: 若要接收資訊清單中標籤的通知，請註冊適當的事件接聽程式。
-title: 新增計時中繼資料通知的監聽器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 要接收有關清單中標籤的通知，請註冊相應的事件偵聽器。
+title: 為定時元資料通知添加偵聽器
+exl-id: 1df8a4fc-8368-4a80-8f8b-00c1207e6602
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
+# 為定時元資料通知添加偵聽器{#add-listeners-for-timed-metadata-notifications}
 
-# 為計時中繼資料通知新增監聽器{#add-listeners-for-timed-metadata-notifications}
+要接收有關清單中標籤的通知，請註冊相應的事件偵聽器。
 
-若要接收資訊清單中標籤的通知，請註冊適當的事件接聽程式。
+您可以通過偵聽以下事件來監視定時元資料，這些事件會通知您的應用程式相關活動：
 
-您可以監聽下列事件來監控計時中繼資料，這些事件會通知您的應用程式相關活動：
-
-* `MediaPlayerItemEvent.ITEM_CREATED`:在建立對象 `TimedMetadata` 後，可以使用對象 `MediaPlayerItem` 的初始清單。
-
-   發生此情況時，此事件會通知您的應用程式。
-
-* `MediaPlayerItemEvent.ITEM_UPDATED`:對於資訊清單／播放清單定期重新整理的即時／線性串流，更新的播放清單／資訊清單中可能會顯示其他自訂標籤， `TimedMetadata` 因此可能會將其他物件新增至 `MediaPlayerItem.timedMetadata` 屬性。
+* `MediaPlayerItemEvent.ITEM_CREATED`:初始清單 `TimedMetadata` 對象在 `MediaPlayerItem` 的子菜單。
 
    發生此情況時，此事件會通知您的應用程式。
 
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`:每次建立新 `TimedMetadata` 物件時，MediaPlayer就會傳送此事件。
+* `MediaPlayerItemEvent.ITEM_UPDATED`:對於清單/播放清單定期刷新的即時/線性流，更新的播放清單/清單中可能會出現附加的自定義標籤，因此附加的 `TimedMetadata` 對象可能已添加到 `MediaPlayerItem.timedMetadata` 屬性。
 
-   對於在初始化階段建立的`TimedMetadata`對象，不會調度此事件。
+   發生此情況時，此事件會通知您的應用程式。
 
-1. 實作適當的監聽器。
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`:每次新 `TimedMetadata` 對象已建立，此事件由MediaPlayer調度。
+
+   未為 `TimedMetadata` 在初始化階段建立的對象。
+
+1. 實施適當的偵聽器。
 
    ```
    private function onItemCreated(event:MediaPlayerItemEvent):void { 
@@ -56,4 +55,4 @@ ht-degree: 0%
                            onTimedMetadataAvailable);
    ```
 
-ID3中繼資料會透過相同的`TimedMetadataEvent.TIMED_METADATA_AVAILABLE`傳送。 但是，這不會造成任何混淆，因為您可以使用TimedMetadata物件的`type`屬性來區分TAG和ID3。 如需ID3標籤的詳細資訊，請參閱[ID3標籤](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md)。
+ID3元資料通過同一 `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`。 但是，這不應引起任何混淆，因為您可以使用TimedMetadata對象 `type` 用於區分TAG和ID3的屬性。 有關ID3標籤的詳細資訊，請參見 [ID3標籤](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md)。

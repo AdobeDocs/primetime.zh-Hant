@@ -1,22 +1,21 @@
 ---
-description: TVSDK提供API和范常式式碼，以處理封鎖期。
-title: 實施封鎖處理
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK提供API和示例代碼以處理封鎖期。
+title: 實現封鎖處理
+exl-id: c7252467-a075-4227-b7bc-db1112a96a2b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# 實現封鎖處理{#implement-blackout-handling}
 
-# 實施封鎖處理{#implement-blackout-handling}
+TVSDK提供API和示例代碼以處理封鎖期。
 
-TVSDK提供API和范常式式碼，以處理封鎖期。
+要實現封鎖處理，包括在封鎖期間提供備用內容：
 
-要實施封鎖處理，包括在封鎖期期間提供替代內容，請執行以下操作：
-
-1. 設定您的應用程式，以偵測即時串流資訊清單中的封鎖標籤。
+1. 設定應用以檢測即時流清單中的封鎖標籤。
 
    ```
    private function startPlayback(resource:MediaResource):void { 
@@ -30,7 +29,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 為前景和背景串流中的計時中繼資料事件建立事件接聽程式。
+1. 為前台流和後台流中的定時元資料事件建立事件偵聽器。
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -42,7 +41,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 為前景和背景串流實作計時中繼資料事件處理常式。
+1. 為前台流和後台流實現定時元資料事件處理程式。
 
    前景：
 
@@ -124,7 +123,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 針對播放磁頭位置的每次更新事件，設定TimedMetadataObjects清單的檢查。
+1. 為每次更新到播放頭位置時都設定TimedMetadataObjects清單的檢查。
 
    ```
    private function onTimeChange(event:TimeChangeEvent):void { 
@@ -157,7 +156,7 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
    }
    ```
 
-1. 建立在封鎖期開始和結束時切換內容的方法。
+1. 建立用於在封鎖期開始和結束時切換內容的方法。
 
    ```
    public function initiate(event:TimerEvent=null):void { 
@@ -195,4 +194,3 @@ TVSDK提供API和范常式式碼，以處理封鎖期。
        } 
    }
    ```
-

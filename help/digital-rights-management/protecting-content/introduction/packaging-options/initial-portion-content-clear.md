@@ -1,18 +1,17 @@
 ---
-title: 清晰內容的初始部分
-description: 清晰內容的初始部分
+title: 清除中內容的初始部分
+description: 清除中內容的初始部分
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f291e0f5-ce26-41c4-b468-36b111cb7a1c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# 清除中內容的初始部分{#initial-portion-of-content-in-the-clear}
 
-# clear{#initial-portion-of-content-in-the-clear}中內容的初始部分
+此可選參數指定內容開始後將保持未加密的時間（秒）。
 
-此可選參數會指定內容開始時的一段時間（以秒為單位），該時間將保持未加密狀態。
-
-範例使用案例：這樣，當Primetime DRM用戶端在背景下載授權時，可縮短播放啟動時間。 視訊的未加密部分會在初始化和授權取得發生在背景時立即開始播放。 當此功能關閉時，使用者可能會注意到播放體驗有延遲，因為用戶端機器會先執行所有授權步驟，再進行視訊播放。
+示例用例：這允許在Mighile DRM客戶端在後台下載許可證時更快的回放啟動時間。 視頻的未加密部分在初始化和許可證獲取發生在後台時立即開始回放。 關閉此功能後，用戶可能會注意到播放體驗的延遲，因為客戶端電腦在任何視頻播放發生之前都會執行所有許可步驟。

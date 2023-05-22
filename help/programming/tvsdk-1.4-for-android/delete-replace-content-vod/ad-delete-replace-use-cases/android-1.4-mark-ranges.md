@@ -1,24 +1,23 @@
 ---
-description: 您可以將VOD內容中的時間間隔指定為廣告插播。
+description: 您可以將VOD內容中的時間間隔指定為廣告中斷。
 title: 標籤範圍
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cd661327-20b2-4a49-8002-6ecee86c2a2c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-
 # 標籤範圍{#mark-ranges}
 
-您可以將VOD內容中的時間間隔指定為廣告插播。
+您可以將VOD內容中的時間間隔指定為廣告中斷。
 
-在這種情況下，`localTime`中`begin`和`end`之間的`TimeRanges`將在時間軸中標籤為`AdBreak`。 其他廣告設定會被忽略。
+在這個例子中， `TimeRanges` 在 `begin` 和 `end` 在 `localTime` 將標籤為 `AdBreak` 在時間軸中。 忽略其他廣告設定。
 
 >[!NOTE]
 >
->如果您只想將內容中的特定範圍標示為廣告（沒有動態廣告插入），請建立`CustomRangeMetadata`例項，並使用已定義的自訂範圍將類型指定為MARK作業。
+>如果您只想將內容中的某些範圍標籤為廣告（不插入動態廣告），請建立 `CustomRangeMetadata` ，並將類型指定為具有定義的自定義範圍的MARK操作。
 
 1. 標籤範圍。
 
@@ -62,4 +61,3 @@ ht-degree: 0%
        "id": "vod_004"
    }
    ```
-

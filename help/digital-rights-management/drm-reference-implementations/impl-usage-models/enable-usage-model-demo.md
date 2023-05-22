@@ -1,21 +1,20 @@
 ---
-title: 啟用使用模式示範
-description: 啟用使用模式示範
+title: 啟用使用模型演示
+description: 啟用使用模型演示
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5d546f1a-ebf6-4c93-9a73-fa812cd71086
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
+# 啟用使用模型演示{#enable-the-usage-model-demo}
 
-# 啟用使用模式示範{#enable-the-usage-model-demo}
+1. 指定自定義屬性 `RI_UsageModelDemo=true` 打包時。
 
-1. 在封裝時指定自訂屬性`RI_UsageModelDemo=true`。
-
-   如果您使用Media Packager命令列工具封裝內容，請輸入：
+   如果使用Media Packager命令行工具打包內容，請輸入：
 
    ```
    java -jar AdobeMediaPackager.jar [<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
@@ -23,5 +22,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您未在封裝時啟用選用的示範模式，授權伺服器會根據其處理的第一個有效DRM政策來發行授權。
-
+>如果您在打包時未激活可選演示模式，則許可證伺服器會根據其處理的第一個有效DRM策略發放許可證。

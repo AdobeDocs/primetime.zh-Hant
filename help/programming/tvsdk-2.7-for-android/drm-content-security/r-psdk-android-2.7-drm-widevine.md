@@ -1,20 +1,19 @@
 ---
-description: 您可以搭配DASH串流使用Android原生Widevine DRM。
-title: Widevine DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以將Android本機Widevine DRM與DASH流一起使用。
+title: 維德文DRM
+exl-id: 6a011cd7-446a-4f3a-ae36-110618001bf3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
+# 維德文DRM {#widevine-drm}
 
-# Widevine DRM {#widevine-drm}
+您可以將Android本機Widevine DRM與DASH流一起使用。
 
-您可以搭配DASH串流使用Android原生Widevine DRM。
-
-開始播放前，請呼叫下列`com.adobe.mediacore.drm.DRMManager` API:
+呼叫以下 `com.adobe.mediacore.drm.DRMManager` 開始播放前的API:
 
 ```java
 public static void setProtectionData( 
@@ -23,14 +22,14 @@ public static void setProtectionData(
     Map<String, String> requestProperties)
 ```
 
-引數：
+參數：
 
-* `drm` -  `"com.widevine.alpha"` for Widevine。
+* `drm` - `"com.widevine.alpha"` 維迪文的。
 
-* `licenseServerURL` -接收授權要求的Widevine授權伺服器URL。
-* `requestProperties` -包含要包含在傳出授權請求中的額外標題。
+* `licenseServerURL`  — 接收許可證請求的WideVine許可證伺服器的URL。
+* `requestProperties`  — 包含要包括在傳出許可證請求中的額外標頭。
 
-例如，當使用Expressplay DRM封裝的內容時，請在播放前使用下列程式碼：
+例如，在使用為Expressplay DRM打包的內容時，在播放前使用以下代碼：
 
 ```java
 DRMManager.setProtectionData( 
@@ -39,4 +38,3 @@ DRMManager.setProtectionData(
 <i>token</i>",  
   null); 
 ```
-

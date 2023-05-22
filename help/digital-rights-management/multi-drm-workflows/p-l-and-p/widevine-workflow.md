@@ -1,28 +1,27 @@
 ---
-description: 此多DRM工作流程可引導您完成使用Widevine和PlayReady加密的DASH內容的設定、封裝、授權和播放。
-title: 適用於Widevine和PlayReady的多DRM工作流程
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 此多DRM工作流將引導您完成使用Widevine和PlayReady加密的DASH內容的設定、打包、許可和回放。
+title: 用於Widevine和PlayReady的多DRM工作流
+exl-id: 97adfa69-52ef-470b-903a-eff1f075b7be
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
+# 用於Widevine和PlayReady的多DRM工作流 {#multi-drm-workflow-for-widevine-and-playready}
 
-# 適用於Widevine和PlayReady {#multi-drm-workflow-for-widevine-and-playready}的多DRM工作流程
+此多DRM工作流將引導您完成使用Widevine和PlayReady加密的DASH內容的設定、打包、許可和回放。
 
-此多DRM工作流程可引導您完成使用Widevine和PlayReady加密的DASH內容的設定、封裝、授權和播放。
-
-Primetime TVSDK僅支援在TVSDK 2.X版中，在HTML5和Android上播放Widevine加密或PlayReady加密的DASH內容。DASH內容加密由通用加密規範定義，其完整細節不在本文檔的範圍之內。 本節提供DASH格式和加密規範的相關詳細資訊，以及有關可用於生成支援內容的某些工具的資訊。
+黃金時段TVSDK僅支援TVSDK 2.X版中在HTML5和Android上播放Widevine加密或PlayReady加密的DASH內容。DASH內容加密由通用加密規範定義，其全部詳細資訊不在本文檔的範圍之內。 本節提供DASH格式和加密規範的相關詳細資訊，以及可用於生成支援內容的某些工具的資訊。
 
 >[!NOTE]
 >
->尚未制定支援Android TVSDK 1.X播放Widevine加密DASH內容的計畫。
+>Android TVSDK 1.X播放Widevine加密的DASH內容的計畫尚未制定。
 
-## DASH內容與常用加密總覽{#section_33A881158F724835B4B89AAE97302B17}
+## DASH內容和常見加密概覽 {#section_33A881158F724835B4B89AAE97302B17}
 
-破折號內容包含以xml編寫的主資訊清單，其中指向視訊和音訊檔案以供播放。 在下方的範例中，DASH資訊清單指向視訊URL video/1080_30.mp4，以及音訊URL audio/1080_30.mp4，與資訊清單的URL相關。
+破折線內容由一個主清單組成，以xml格式編寫，該清單指向要播放的視頻和音頻檔案。 在下面的示例中，DASH清單指向與清單的URL相關的視頻url video/1080_30.mp4和音頻url audio/1080_30.mp4。
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
@@ -44,7 +43,7 @@ Primetime TVSDK僅支援在TVSDK 2.X版中，在HTML5和Android上播放Widevine
 </MPD>
 ```
 
-以下是套用通用加密的資訊清單範例。 資訊清單中的Widevine內容保護XML元素（`<ContentProtection>`區塊）包含base64編碼pssh（保護系統特定標題）方塊。 pssh框包含初始化內容解密所需的資料。 此資料也內嵌在資訊清單所參照的視訊／音訊內容中。 DASH內容可能包含多個內容保護元素，例如1代表PlayReady,1代表Widevine。
+下面是應用了公共加密的示例清單。 Widevine內容保護XML元素( `<ContentProtection>` 塊)中包含base64編碼的pssh（保護系統特定標頭）框。 pssh框包含初始化內容解密所需的資料。 此資料還嵌入到清單所引用的視頻/音頻內容中。 DASH內容可能具有多個內容保護元素，例如，1用於PlayReady,1用於Widevine。
 
 ```
 <?xml version="1.0" ?>
@@ -121,7 +120,7 @@ Primetime TVSDK僅支援在TVSDK 2.X版中，在HTML5和Android上播放Widevine
 </MPD>
 ```
 
-請注意，上述第一個範例僅針對每個串流參考一個檔案，而第二個範例則參照一系列小內容片段。 您也可以定義片段範本，例如：
+請注意，上面的第一個示例僅針對每個流引用一個檔案，而第二個示例則引用一系列小內容片段。 您也可以定義片段模板，而不是顯式引用片段，例如：
 
 ```
 <Representation bandwidth="348000" codecs="avc1.42c01e" height="360" id="1" width="640">
@@ -137,4 +136,4 @@ Primetime TVSDK僅支援在TVSDK 2.X版中，在HTML5和Android上播放Widevine
 </Representation>
 ```
 
-在此情況下，內容剖析器(TVSDK)預期會在Jaigo0.m4s、Jaigo1.m4s、Jaigo2.m4s等處尋找視訊內容。 這主要用於即時串流，其優點是不會要求用戶端不時重新下載資訊清單。
+在這種情況下，內容解析器(TVSDK)希望在Jaigo0.m4s、Jaigo1.m4s、Jaigo2.m4s等處查找視頻內容。 這主要用於即時流式處理，其優點是它不需要客戶端不時再次下載清單。

@@ -1,33 +1,32 @@
 ---
-description: 使用您應用程式中瀏覽器TVSDK提供的「瀏覽器化」程式庫檔案，建立與瀏覽器化相容的播放器。
-title: 建立不含UI-Framework的瀏覽器相容播放器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 使用應用中瀏覽器TVSDK提供的瀏覽器驗證庫檔案建立與瀏覽器相容的播放器。
+title: 建立與瀏覽器相容的播放器，而不使用UI-Framework
+exl-id: 27b5e1c5-49c3-44e4-9e34-0f50a50e36f5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
+# 建立與瀏覽器相容的播放器，而不使用UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}
 
-# 建立不含UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}的與瀏覽器相容的播放器
+使用應用中瀏覽器TVSDK提供的瀏覽器驗證庫檔案建立與瀏覽器相容的播放器。
 
-使用您應用程式中瀏覽器TVSDK提供的「瀏覽器化」程式庫檔案，建立與瀏覽器化相容的播放器。
+主題 [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) 列出了在建立基本視頻播放器時通常包含的瀏覽器TVSDK庫集。 要執行此操作，只需添加 `script` 標籤 `src` 指向庫的屬性。
 
-主題[](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)會列出您建立基本視訊播放器時通常包含的瀏覽器TVSDK程式庫集。 若要這麼做，您只需新增`script`標籤，其中`src`屬性指向程式庫。
+建立與瀏覽器相容的播放器的過程略有不同。 對於此，您使用 `require` 命令 [!DNL AdobePSDK.module.js] 檔案（由瀏覽器TVSDK提供）。 此檔案將基本播放器庫檔案捆綁在其相應的依賴關係中，並返回 `AdobePSDK` 用於為播放器實現功能的命名空間。
 
-建立與瀏覽器相容的播放器的程式稍有不同。 為此，您使用`require`命令，將[!DNL AdobePSDK.module.js]檔案（由瀏覽器TVSDK提供）包含在應用程式中。 此檔案會依相依性的適當順序組合基本播放器程式庫檔案，並傳回您用來實作播放器功能的`AdobePSDK`命名空間。
+瀏覽器TVSDK在發行包中提供以下瀏覽應用程式和生成檔案示例：
 
-瀏覽器TVSDK提供下列範例瀏覽器應用程式，並在發行套件中建立檔案：
+* [!DNL] [...]/samples/browserify/reference/build/Gruntfile.js
+* [!DNL] [...]/samples/browserify/reference/build/package.json
+* [!DNL] [...]/samples/browserify/reference/examples/sample.html
+* [!DNL] [...]/samples/browserify/reference/examples/sample.js
 
-* [!DNL [...]/samples/browserify/reference/build/Gruntfile.js]
-* [!DNL [...]/samples/browserify/reference/build/package.json]
-* [!DNL [...]/samples/browserify/reference/examples/sample.html]
-* [!DNL [...]/samples/browserify/reference/examples/sample.js]
+要建立與瀏覽相容的視頻播放器，請執行以下操作：
 
-若要建立與瀏覽器相容的視訊播放器：
-
-1. 需要與瀏覽器相容的庫檔案，以返回`AdobePSDK`命名空間：
+1. 需要與瀏覽器相容的庫檔案，以返回 `AdobePSDK` 命名空間：
 
    ```
    var AdobePSDK = require('./AdobePSDK.module.js'); 
@@ -37,7 +36,7 @@ ht-degree: 0%
    […]
    ```
 
-1. 按照[](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)中所述建立您的播放器。
+1. 按中所述建立您的播放器 [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)。
 
-   此工作的步驟1會取代基本播放器指示中的步驟，您在此步驟中會在應用程式檔案中來源化個別的基本播放器程式庫。
-您現在可以使用Browserify來整合應用程式檔案。
+   此任務中的步驟1將替換基本播放器說明中的步驟，在基本播放器說明中，您可以在應用程式檔案中為各個基本播放器庫提供原始碼。
+現在，您可以使用瀏覽功能捆綁應用程式檔案。

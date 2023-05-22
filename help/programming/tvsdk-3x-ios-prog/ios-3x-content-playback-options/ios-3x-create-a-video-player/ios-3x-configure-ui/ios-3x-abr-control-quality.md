@@ -1,66 +1,65 @@
 ---
-description: HLS和DASH串流針對相同的視訊短脈衝串提供不同的位元速率編碼（描述檔）。 TVSDK可根據可用頻寬來選取每個突發串的品質等級。
-title: 視訊品質的可調式位元速率(ABR)
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: HLS和DASH流為同一短視頻突發提供不同的比特率編碼（簡檔）。 TVSDK可以根據可用頻寬為每個突發選擇質量級別。
+title: 用於視頻質量的自適應比特率(ABR)
+exl-id: 97862cf7-7315-4ca6-a2b4-f9b98047edd9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
+# 用於視頻質量的自適應比特率(ABR) {#adaptive-bit-rates-abr-for-video-quality}
 
-# 視訊品質的可調式位元速率(ABR){#adaptive-bit-rates-abr-for-video-quality}
+HLS和DASH流為同一短視頻突發提供不同的比特率編碼（簡檔）。 TVSDK可以根據可用頻寬為每個突發選擇質量級別。
 
-HLS和DASH串流針對相同的視訊短脈衝串提供不同的位元速率編碼（描述檔）。 TVSDK可根據可用頻寬來選取每個突發串的品質等級。
+TVSDK持續監視比特率以確保內容以當前網路連接的最佳比特率播放。
 
-TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳位元速率播放。
-
-您可以為多位速率(MBR)串流設定自適應位速率(ABR)切換策略和初始、最小和最大位速率。 TVSDK會自動切換至位元速率，以在指定組態中提供最佳播放體驗。
+可以為多比特率(MBR)流設定自適應比特率(ABR)切換策略以及初始、最小和最大比特率。 TVSDK自動切換到在指定配置中提供最佳回放體驗的比特率。
 
 <table id="table_AF838E082235406AA359BF1C1A77F85F"> 
  <tbody> 
   <tr> 
-   <td colname="col01"> 初始位元速率 </td> 
-   <td colname="col2"> <p>第一段的所需播放位速率（以位／秒為單位）。 當播放開始時，第一個區段會使用最接近的描述檔，該描述檔等於或大於初始位元速率。 </p> <p> 如果定義了最小位元速率，且初始位元速率低於最小速率，則TVSDK會選擇位元速率低於最小速率的描述檔。 如果初始速率高於最大速率，TVSDK會選擇低於最大速率的最高速率。 </p> <p>如果初始比特率為零或未定義，則初始比特率由ABR策略確定。 </p> </td> 
+   <td colname="col01"> 初始比特率 </td> 
+   <td colname="col2"> <p>第一段的所需重放比特率（以位/秒為單位）。 當播放開始時，最接近的輪廓（等於或大於初始比特率）用於第一段。 </p> <p> 如果定義了最小比特率並且初始比特率低於最小速率，則TVSDK選擇具有高於最小比特率的最低比特率的配置檔案。 如果初始速率高於最大速率，則TVSDK選擇低於最大速率的最高速率。 </p> <p>如果初始比特率為零或未定義，則初始比特率由ABR策略確定。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col01"> 最低位元速率 </td> 
-   <td colname="col2"> <p>ABR可切換至的最低允許位速率。 ABR切換會忽略位速率低於此位速率的描述檔。 </p> </td> 
+   <td colname="col01"> 最小比特率 </td> 
+   <td colname="col2"> <p>ABR可切換到的最低允許比特率。 ABR切換忽略比此比特率更低的比特率的簡檔。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col01"> 最大位元速率 </td> 
-   <td colname="col2"> <p>ABR可切換的最高允許位速率。 ABR切換會忽略位速率高於此位速率的描述檔。 </p> </td> 
+   <td colname="col01"> 最大比特率 </td> 
+   <td colname="col2"> <p>ABR可切換到的最高允許比特率。 ABR切換忽略比此比特率更高的比特率的簡檔。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-請記住下列資訊：
+請牢記以下資訊：
 
-* TVSDK不會從位速率切換中分派事件。
-* 您可以隨時變更ABR設定，而播放器會切換使用最符合最新設定的設定檔。
+* TVSDK不從比特率交換中調度事件。
+* 您可以隨時更改ABR設定，播放器會切換使用與最近設定最接近的配置式。
 
-例如，如果串流具有下列描述檔：
+例如，如果流具有以下配置檔案：
 
-* 1:300000
-* 2:700000
-* 3:150000
-* 4:240000
-* 5:400000
+* 1: 300000
+* 2: 700000
+* 3: 1500000
+* 4: 2400000
+* 5: 4000000
 
-如果您指定300000到2000000的範圍，TVSDK只會考慮設定檔1、2和3。 這可讓應用程式因應各種網路狀況進行調整，例如從WiFi切換至3G或切換至手機、平板電腦或桌上型電腦等各種裝置。
+如果指定範圍為300000到2000000，則TVSDK僅考慮配置檔案1、2和3。 這允許應用程式根據各種網路條件進行調整，例如從WiFi切換到3G或者到各種設備，如電話、平板電腦或台式電腦。
 
-## 配置自適應位速率{#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
+## 配置自適應比特率 {#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
 
-若要設定TVSDK可調式位元速率參數：
+要配置TVSDK自適應比特率參數：
 
-1. 配置`PTABRControlParameters`實例以設定初始、最小和最大位速率設定。
+1. 配置實例 `PTABRControlParameters` 設定初始、最小和最大比特率設定。
 
-   預設值會顯示在下列程式碼片段中，但您的應用程式可針對每個參數設定任何整數值。
+   預設值顯示在以下代碼段中，但您的應用程式可以為這些參數中的每個參數設定任何整數值。
 
    >[!IMPORTANT]
    >
-   >以每秒位數(bps)為單位指定位速率設定。
+   >以位/秒(bps)指定位速率設定。
 
    ```
    // ARC (add autorelease for non-ARC) 
@@ -72,18 +71,18 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. 使用已配置的`PTABRControlParameters`實例更新您的`PTMediaPlayer`實例。
+1. 更新 `PTMediaPlayer` 已配置實例 `PTABRControlParameters` 實例。
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
    self.player.abrControlParameters = abrMetaData;
    ```
 
-請記住：
+請記住以下內容：
 
-* 應用程式必須先在`PTMediaPlayer`上設定`abrControlParameters`屬性，才能設定`PTMediaPlayerItem`例項，讓初始和最小位元速率設定生效。
+* 應用程式必須設定 `abrControlParameters` 屬性 `PTMediaPlayer` 配置前 `PTMediaPlayerItem` 要生效的初始和最小比特率設定的實例。
 
-   內容播放開始後，設定新例項只會影響最大位元速率設定。
+   在開始內容播放後，設定新實例只影響最大比特率設定。
 
-* 若要在播放期間更新最大位元速率設定，請建立新的`PTABRControlParameters`例項，並在播放器例項上加以設定。
-* 您只能在iOS 8.0和更新版本上，在播放期間更新最大位元速率設定。 對於舊版，會使用在內容播放開始前設定的`maxBitrate`值。
+* 要在回放期間更新最大比特率設定，請新建 `PTABRControlParameters` 實例並將其設定在播放器實例上。
+* 您只能在iOS8.0及更高版本上更新播放期間的最大比特率設定。 對於早期版本， `maxBitrate` 使用在開始內容播放之前設定的值。

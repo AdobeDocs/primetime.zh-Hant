@@ -1,40 +1,39 @@
 ---
-description: 您可以使用Adobe的machotools工具，來允許列出您的iOS應用程式。
+description: 您可以使用Adobe的machotools工具來允許列出您的iOS應用。
 title: 允許列出您的iOS應用程式
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3af75d9a-3b38-4d3c-9890-513a4abc1809
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
+# 允許列出您的iOS應用程式 {#allowlist-your-ios-application}
 
-# 允許列出您的iOS應用程式{#allowlist-your-ios-application}
+您可以使用Adobe的machotools工具來允許列出您的iOS應用。
 
-您可以使用Adobe的machotools工具，來允許列出您的iOS應用程式。
-
-通常，當您完成TVSDK應用程式時，可以使用Adobe PrimetimeDRM命令列工具來允許列出您的應用程式。
+通常，在完成TVSDK應用程式時，可以使用Adobe PrimetimeDRM命令行工具來允許列出您的應用。
 
 >[!TIP]
 >
->您也可以使用這些工具來建立DRM原則並加密內容。
+>您還可以使用這些工具建立DRM策略並加密內容。
 
-允許列出您的應用程式，可確保受保護的內容只能在視訊播放器中播放。 不過，允許列出iOS應用程式時，您必須完成與Apple的應用程式提交政策搭配使用的特殊程式。
+允許列出應用可確保只能在視頻播放器中播放受保護的內容。 但是，允許列出iOS應用程式要求您完成與Apple的應用程式提交策略配合使用的特殊程式。
 
-在送出iOS應用程式之前，您必須先簽名並發佈至Apple。
+在提交iOS應用之前，您需要簽名並將其發佈到Apple。
 
 >[!NOTE]
 >
->Apple會移除您開發人員的簽名，並使用自己的憑證重新簽署應用程式。
+>Apple刪除開發人員的簽名，並用自己的證書重新簽名應用程式。
 
-由於重新簽署，您在提交至Apple App Store之前產生的允許清單資訊無法使用。
+由於重新簽名，您在提交到AppleApp Store之前生成的允許清單資訊不可用。
 
-為了使用此提交策略，Adobe已建立了`machotools`工具，該工具將為iOS應用程式指紋，以建立摘要值、簽署此值，並在iOS應用程式中插入此值。 在您為iOS應用程式指紋後，就可以將應用程式送出至Apple App Store。 當使用者從App Store執行您的應用程式時，Primetime DRM會執行應用程式指紋的執行時期計算，並以先前在應用程式中插入的摘要值加以確認。 如果指紋符合，則確認應用程式已列出允許，並允許受保護的內容播放。
+要使用此提交策略，Adobe已建立 `machotools` 用於指紋iOS應用程式以建立摘要值、簽名此值並將此值注入iOS應用程式的工具。 在您為iOS應用指紋後，您可以將該應用提交到AppleApp Store。 當用戶從App Store運行您的應用時，Mighile DRM對應用程式指紋執行運行時計算，並使用先前在應用程式中注入的摘要值來確認它。 如果指紋匹配，則確認該應用被列為允許，並允許播放受保護的內容。
 
-Adobe`machotools`工具包含在iOS TVSDK SDK的[!DNL [中……]/tools/DRM]資料夾。
+Adobe `machotools` 工具包含在[!DNL]中的iOSTVSDK SDK中 [...]/tools/DRM]資料夾。
 
-要使用`machotools`:
+要使用 `machotools`:
 
 1. 生成密鑰對。
 
@@ -44,26 +43,26 @@ Adobe`machotools`工具包含在iOS TVSDK SDK的[!DNL [中……]/tools/DRM]資�
    openssl genrsa -des3 -out selfsigncert-ios.key 1024
    ```
 
-1. 出現提示時，輸入密碼以保護私密金鑰。
+1. 出現提示時，輸入密碼以保護私鑰。
 
-   密碼至少應包含12個字元，且字元應包含大寫和小寫ASCII字元與數字的混合。
-1. 要使用OpenSSL為您生成強口令，請開啟命令窗口並輸入以下內容：
+   密碼應至少包含12個字元，並且字元應包含大寫和小寫ASCII字元和數字的混合。
+1. 要使用OpenSSL為您生成強密碼，請開啟命令窗口並輸入以下命令：
 
    ```shell
    openssl rand -base64 8
    ```
 
-1. 產生憑證簽署要求(CSR)。
+1. 生成證書籤名請求(CSR)。
 
-   要使用OpenSSL生成CSR，請開啟「命令窗口」並輸入以下內容：
+   要使用OpenSSL生成CSR，請開啟「命令窗口」，然後輸入以下內容：
 
    ```shell
    openssl req -new -key selfsigncert-ios.key -out selfsigncert-ios.csr -batch
    ```
 
-1. 自行簽署憑證並輸入任何期間。
+1. 自簽名證書並輸入任何持續時間。
 
-   下列範例提供20年的有效期：
+   以下示例給出一個20年的到期日：
 
    ```shell
    openssl x509 -req -days 7300 -in selfsigncert-ios.csr  
@@ -77,10 +76,10 @@ Adobe`machotools`工具包含在iOS TVSDK SDK的[!DNL [中……]/tools/DRM]資�
      -inkey selfsigncert-ios.key -in selfsigncert-ios.crt
    ```
 
-   您可以使用自簽名憑證來簽署您的iOS應用程式。
+   您可以使用自簽名證書來簽署您的iOS應用。
 
 1. 更新PFX檔案和密碼的位置。
-1. 在Xcode中建立應用程式之前，請前往&#x200B;**[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]**，並將下列命令新增至您的執行指令碼：
+1. 在Xcode中生成應用程式之前，請轉至  **[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]** 並將以下命令添加到運行指令碼：
 
    ```shell
    mkdir -p "${PROJECT_DIR}/generatedRes" "${PROJECT_DIR}/machotools" sign  
@@ -90,17 +89,17 @@ Adobe`machotools`工具包含在iOS TVSDK SDK的[!DNL [中……]/tools/DRM]資�
      -pass PASSWORD
    ```
 
-1. 執行[!DNL machotools]以產生您的應用程式Publisher ID雜湊值。
+1. 執行 [!DNL machotools] 生成應用發佈者ID哈希值。
 
    ```shell
    ./machotools dumpMachoSignature -in ${PROJECT_DIR}/generatedRes/AAXSAppDigest.digest
    ```
 
-1. 建立新的DRM原則或更新您現有的原則，以包含傳回的發佈者ID雜湊值。
-1. 使用[!DNL AdobePolicyManager.jar]建立新的DRM原則（更新您現有的原則），將傳回的發佈者ID雜湊值、選用的應用程式ID，以及最小和最大版本屬性納入內含的[!DNL flashaccess-tools.properties]檔案。
+1. 建立新的DRM策略或更新現有策略以包括返回的發佈者ID哈希值。
+1. 使用 [!DNL AdobePolicyManager.jar]，建立新的DRM策略（更新現有策略），以在包含的中包括返回的發佈者ID哈希值、可選的應用ID以及最小和最大版本屬性 [!DNL flashaccess-tools.properties] 的子菜單。
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
    ```
 
-1. 使用新的DRM原則封裝內容，並確認在iOS應用程式中播放允許列出的內容。
+1. 使用新DRM策略打包內容，並確認在您的iOS應用中播放允許列出的內容。

@@ -4,7 +4,7 @@ description: 帳戶IQ中的操作包括對訂閱者帳戶執行自動化和批�
 exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
 source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---

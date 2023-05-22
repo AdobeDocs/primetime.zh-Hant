@@ -1,53 +1,52 @@
 ---
-title: 快速入門
-description: 快速入門
+title: 入門
+description: 入門
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d29d141e-913c-4b9d-979c-91c486414071
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
 
 ---
 
+# 入門 {#getting-started}
 
-# 開始使用{#getting-started}
+本文檔提供了快速設定和部署Adobe PrimetimeDRM生態系統的步驟，該生態系統使用漸進式下載來分發內容，而黃金時段DRM伺服器用於受保護的流式處理以分發許可證。 以下指南提供了有關每個步驟的其他詳細資訊：
 
-本檔案提供快速設定和部署Adobe PrimetimeDRM生態系統的步驟，該生態系統使用漸進式下載來散發內容，而Primetime DRM Server則用於受保護的串流以進行授權散發。 以下指南提供了每個步驟的其他詳細資訊：
+* *使用黃金時段DRM伺服器保護內容*
+* *使用黃金時段DRM伺服器進行受保護的流處理*
 
-* *使用Primetime DRM Server保護內容*
-* *使用Primetime DRM Server進行受保護的串流*
+用於受保護流的黃金時段DRM伺服器是不包括原始碼的功能最小的伺服器。 有關可修改的具有完整Java源的伺服器，請參見 *使用黃金時段DRM參考實現* 的子菜單。 如果設定了「參考許可證」伺服器，將 *設定和部署用於受保護流（許可證伺服器）的Mogine DRM伺服器* 的子菜單。
 
-Primetime DRM Server for Protected Streaming是功能最小且不包含原始碼的伺服器。 有關具有完整Java源的可修改伺服器，請參閱&#x200B;*使用Primetime DRM參考實施*&#x200B;指南。 如果您設定參考授權伺服器，它會取代&#x200B;*設定並部署Primetime DRM伺服器以用於受保護串流（授權伺服器）*&#x200B;步驟。
+## 先決條件 {#prerequisites}
 
-## 先決條件{#prerequisites}
+開始之前，請完成以下任務：
 
-開始之前，請完成下列工作：
+* 獲取兩台Windows或Linux電腦：
 
-* 取得兩部Windows或Linux電腦：
+   * 一台電腦將是許可證伺服器。
+   * 一台電腦將是Content Server。
 
-   * 其中一部電腦是授權伺服器。
-   * 其中一部電腦是Content Server。
-
-* 在兩部電腦上安裝下列應用程式：
+* 在兩台電腦上安裝以下應用程式：
 
    * Tomcat 6.0.18
-   * Java 1.6
+   * 爪哇一點六
 
-## 獲取證書{#obtain-certificates}
+## 獲取證書 {#obtain-certificates}
 
-在SDK軟體交付後，指定的公司認證管理員將會收到完成Adobe PrimetimeDRM認證註冊程式的邀請。 如需詳細資訊，請參閱&#x200B;*Primetime DRM認證註冊指南*。
+在交付SDK軟體後，指定的公司證書管理員將收到完成Adobe PrimetimeDRM證書註冊註冊過程的邀請。 有關詳細資訊，請參見 *黃金時段DRM證書註冊指南*。
 
-1. 管理員指派至少一人擔任認證請求者。
+1. 管理員至少指定一個人作為證書請求者。
 1. 證書請求者生成私鑰和CSR。
 1. 請求者提交證書請求。
-1. 公司管理員會核准請求。
+1. 公司管理員批准該請求。
 1. Adobe證書管理員確認提交。
-1. 請求者接收證書，用私鑰綁定證書，並部署證書。 如中所述。
+1. 請求者接收證書，將證書與私鑰綁定，並部署證書。 如中所述。
 
-   有關部署證書的詳細資訊，請參閱&#x200B;*部署Adobe PrimetimeDRM Server for Protected Streaming*&#x200B;指南。
-1. 必須針對每個憑證類型完成步驟3至6。
+   有關部署證書的詳細資訊，請參見 *部署Adobe PrimetimeDRM伺服器以進行受保護的流處理* 的子菜單。
+1. 必須針對每種證書類型完成步驟3到6。
 
-   對於Primetime DRM Production版本，請求者必須對有效期為兩年的授權伺服器、封裝和傳輸憑證個別提出要求。
+   對於黃金時段DRM製作版本，請求者必須對有效期為兩年的許可證伺服器、打包和傳輸證書分別提出請求。
 
-   使用Primetime DRM評估版或試用版的客戶只需要一份有效期分別為1年/90天的憑證。
+   使用黃金時段DRM評估版或試用版的客戶只需要一份有效期分別為1年/90天的證書。

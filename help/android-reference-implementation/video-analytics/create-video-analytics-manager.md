@@ -1,29 +1,27 @@
 ---
-description: 建立視訊分析管理員
-title: 建立視訊分析管理員
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 建立視頻分析管理器
+title: 建立視頻分析管理器
+exl-id: 8d2bbb39-10e2-43e8-8ed3-bc376b3f3cc8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
+# 建立視頻分析管理器 {#create-the-video-analytics-manager}
 
-# 建立視訊分析管理員{#create-the-video-analytics-manager}
+新的管理器類( `VAManager`)已添加到Android參考實現中。 `VAManager` 只是建立和銷毀實例 `VideoHeartbeat` 類。 引用實現建立 `VAManager` 實例 `MediaPlayer` 建立，並在 `MediaPlayer` 被毀。 這在 `PlayerFragment.java`。
 
-新的管理器類別(`VAManager`)已新增至Android參考實作。 `VAManager` 只需建立並銷毀類的實 `VideoHeartbeat` 例。當建立新的`MediaPlayer`時，參考實作會建立`VAManager`例項，並在銷毀`MediaPlayer`時銷毀該例項。 這在`PlayerFragment.java`中實施。
-
-## 若要建立新的視訊分析管理員
+## 建立新視頻分析管理器
 
 ```java
 VAManager vaManager = ManagerFactory.getVAManager(true, config, mediaPlayer);  
 vaManager.createVAProvider(getActivity().getApplicationContext()); 
 ```
 
-config變數是`IVAConfig`的具體實作，並包含執行時期`VideoHeartbeat`組態。
+config變數是 `IVAConfig` 包含運行時 `VideoHeartbeat` 配置。
 
 >[!NOTE]
 >
->如果Android應用程式未設定Adobe Analytics帳戶，則視訊追蹤資料將不會產生，即使已建立並啟用`VAManager`的例項亦然。
-
+>如果Android應用程式未配置Adobe Analytics帳戶，則即使Android的實例 `VAManager` 建立並啟用。

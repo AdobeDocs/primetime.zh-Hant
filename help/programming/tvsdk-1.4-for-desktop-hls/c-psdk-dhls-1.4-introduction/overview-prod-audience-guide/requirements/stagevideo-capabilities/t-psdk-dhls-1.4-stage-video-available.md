@@ -1,22 +1,21 @@
 ---
-description: 如果StageVideo無法使用，而您的應用程式嘗試使用StageVideo,TVSDK不會發出錯誤。 您的應用程式可以監聽StageVideoAvailabilityEvent，以判斷StageVideo是否可用。
+description: 如果StageVideo不可用，且您的應用程式嘗試使用StageVideo，則TVSDK不會發出錯誤。 您的應用程式可以通過偵聽StageVideoAvailabilityEvent來確定StageVideo是否可用。
 title: 檢查StageVideo是否可用
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 24136a14-8d7d-4569-9911-fac4e2de3227
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # 檢查StageVideo是否可用{#check-whether-stagevideo-is-available}
 
-如果StageVideo無法使用，而您的應用程式嘗試使用StageVideo,TVSDK不會發出錯誤。 您的應用程式可以監聽StageVideoAvailabilityEvent，以判斷StageVideo是否可用。
+如果StageVideo不可用，且您的應用程式嘗試使用StageVideo，則TVSDK不會發出錯誤。 您的應用程式可以通過偵聽StageVideoAvailabilityEvent來確定StageVideo是否可用。
 
-從Flash15和更高版本開始，當硬體`StageVideo`不可用時，它將返回軟體`StageVideo`。 對於Flash14和舊版，您可以確定`StageVideo`是否可用。 如果`StageVideo`不可用，您可以使用`StageVideoAvailabilityEvent`瞭解它不可用的原因。
+從Flash15及更高版本，當硬體 `StageVideo` 不可用，它將回退到軟體 `StageVideo`。 對於Flash14和更早版本，您可以確定 `StageVideo` 的子菜單。 如果 `StageVideo` 不可用，您可以 `StageVideoAvailabilityEvent` 來理解為什麼它不可用。
 
-1. 監聽`StageVideoAvailabilityEvent`以確定`StageVideo`是否可用。
+1. 聽 `StageVideoAvailabilityEvent` 確定 `StageVideo` 的子菜單。
 
    例如：
 
@@ -28,4 +27,4 @@ ht-degree: 1%
    }
    ```
 
-1. 如果`StageVideo`不可用，請檢查`flash.media.StageVideoAvailabilityReason`。
+1. 如果 `StageVideo` 不可用，檢查 `flash.media.StageVideoAvailabilityReason`。

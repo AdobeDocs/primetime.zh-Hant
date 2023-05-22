@@ -1,57 +1,57 @@
 ---
-title: Primetime 發行說明
-description: Primetime 發行說明
+title: 黃金時段發行說明
+description: 黃金時段發行說明
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
 source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
-# Primetime 發行說明
+# 黃金時段發行說明
 
-歡迎使用Adobe Primetime發行說明。 左側導覽中列出的檔案提供版本專屬資訊、系統需求、限制、已修正問題和已知問題。
+歡迎收看Adobe Primetime發行說明。 左側導航中列出的文檔提供特定於發行版的資訊、系統要求、限制、已修復問題和已知問題。
 
-## PTAI 22.9.2中的增強功能和修正
+## PTAI 22.9.2中的增強和修復
 
-此版本著重於增強廣告效能遙測資料，以包含廣告呼叫和可用記錄資料。
+本版本重點介紹對包括Ad調用和可用日誌記錄資料的廣播效能遙測資料的增強。
 
-如需其他修正和詳細資訊，請參閱 [Ad Insertion發行說明](/help/release-notes/ptai-22x-release-notes.md).
+有關其他修復和詳細資訊，請參見 [Ad Insertion發行說明](/help/release-notes/ptai-22x-release-notes.md)。
 
-## TVSDK 3.15 Android中的修正
+## TVSDK 3.15 Android中的修復
 
-此版本提供創意標籤遺失或應用程式當機問題的修正 [!UICONTROL url CDATA] 在中為空 [!UICONTROL VAST] 回應。
+此版本可解決在缺少創作標籤時或在 [!UICONTROL url CDATA] 空 [!UICONTROL VAST] 回應。
 
-如需其他修正和詳細資訊，請參閱 [Android適用的TVSDK發行說明](/help/release-notes/tvsdk-3x-android.md)
+有關其他修復和詳細資訊，請參見 [《 TVSDK for Android發佈說明》](/help/release-notes/tvsdk-3x-android.md)
 
-## TVSDK 3.13 iOS中的增強功能和修正
+## TVSDK 3.13中的增強和修復iOS
 
-此版本推出對即時、VOD和FER資料流的DEMUXED &#39;HLS/CMAF&#39;（前段、midroll和postroll）廣告的支援。
+該版本為LIVE,VOD和FER流提供對DEMUXED &#39;HLS/CMAF&#39;（前滾，midroll和poslor）廣告的支援。
 
-如需其他修正和詳細資訊，請參閱 [iOS適用的TVSDK發行說明](../release-notes/tvsdk-3x-ios.md).
+有關其他修復和詳細資訊，請參見 [《 TVSDK foriOS發行說明》](../release-notes/tvsdk-3x-ios.md)。
 
 ## 另請參閱
 
 | 使用手冊 | 說明 |
 |--- |--- |
-| [Primetime 程式設計說明](/help/programming/home.md) | 可讓您在 Android 裝置上使用 Java 和使用 iOS 裝置上使用 Objective-C 來學習開發應用程式和影片播放程式。 |
-| [Primetime移轉與轉換說明](/help/migration-guides/home.md) | 說明從您現有的 Primetime TVSDK 套裝轉換及移轉至新一代套裝的程序。 |
-| [參考實作](/help/android-reference-implementation/home.md) | 協助了解 TVSDK 並修改功能管理員，以自訂您的個人播放器。 |
-| [Primetime API參考](/help/reference/api-references.md) | 提供有關 TVSDK 函數、資料結構和其他程式設計建構的詳細資訊。 |
-| [Digital Rights Management](/help/digital-rights-management/home.md) | 協助您進一步了解Digital Rights Management(DRM)中的各種使用者案例 |
-| [Primetime Ad Insertion 支援](/help/primetime-ad-insertion/home.md) | 說明如何透過在伺服器上插入以使用者為目標的動態廣告，從內容創造營收，並透過個人化廣告吸引對象。 |
-| [封存](https://helpx.adobe.com/primetime/archives.html) | 下載已封存檔案的PDF。 |
+| [黃金時段節目幫助](/help/programming/home.md) | 允許您學習在Android設備上使用Java和在iOS設備上使用Objective-C開發應用程式和視頻播放器。 |
+| [黃金時段遷移和轉換幫助](/help/migration-guides/home.md) | 說明從現有Gimphire TVSDK套件遷移到下一代套件的轉換和遷移過程。 |
+| [參考實施](/help/android-reference-implementation/home.md) | 幫助瞭解TVSDK並修改功能管理器以自定義您的個人播放器。 |
+| [黃金時段API引用](/help/reference/api-references.md) | 提供有關TVSDK函式、資料結構和其他寫程式結構的詳細資訊。 |
+| [Digital Rights Management](/help/digital-rights-management/home.md) | 幫助您瞭解有關Digital Rights Management(DRM)中各種用戶場景的更多資訊 |
+| [黃金時段Ad Insertion幫助](/help/primetime-ad-insertion/home.md) | 解釋如何通過在伺服器上插入以用戶為目標的動態廣告來賺錢，以及如何通過個性化廣告吸引受眾。 |
+| [檔案](https://helpx.adobe.com/primetime/archives.html) | 下載存檔文檔的PDF。 |
 
-## 實用資源
+## 有用的資源
 
-* [了解Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
+* [瞭解Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
-* [併發監控](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [併發監視](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
-* [Primetime驗證](https://tve.helpdocsonline.com/home)
+* [黃金時段身份驗證](https://tve.helpdocsonline.com/home)
 
-* [Adobe Primetime DRM論壇](https://forums.adobe.com/community/adobe_access)
+* [Adobe PrimetimeDRM論壇](https://forums.adobe.com/community/adobe_access)
 
-* [Adobe Primetime開發人員資源](https://www.adobe.com/devnet/primetime.html)
+* [Adobe Primetime開發商資源](https://www.adobe.com/devnet/primetime.html)

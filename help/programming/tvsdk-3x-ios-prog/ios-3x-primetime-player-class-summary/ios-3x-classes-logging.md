@@ -1,18 +1,17 @@
 ---
-description: 這些類別可讓您自訂記錄。
-title: 記錄類
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 這些類使您能夠自定義日誌記錄。
+title: 日誌記錄類
+exl-id: 214c3744-dea8-448d-9d7e-68a18e02dd3b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
+# 日誌記錄類 {#logging-classes}
 
-# 記錄類{#logging-classes}
-
-這些類別可讓您自訂記錄。
+這些類使您能夠自定義日誌記錄。
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -24,15 +23,15 @@ ht-degree: 0%
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogEntry.html" format="html" scope="external"> PTLogEntry</a> </td> 
-   <td colname="2" rowsep="0"> 定義條目日誌並保存日誌消息資訊的類。 </td> 
+   <td colname="2" rowsep="0"> 定義條目日誌並保存有關日誌消息的資訊的類。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogFactory.html" format="html" scope="external"> PTLogFactory</a> </td> 
-   <td colname="2"> 啟用自訂記錄的類別。</td> 
+   <td colname="2"> 啟用自定義日誌記錄的類。</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> 協定。 為TVSDK實作自訂記錄器所需的方法。 </td> 
+   <td colname="2"> 協定。 為TVSDK實現自定義記錄器所需的方法。 </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,32 +1,31 @@
 ---
-description: TVSDK功能由設定驅動，並透過MediaPlayer實作。
-title: 將設定資訊傳遞至MediaPlayer以建立功能管理員
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK功能由配置驅動，並通過MediaPlayer實現。
+title: 通過將配置資訊傳遞給MediaPlayer建立功能管理器
+exl-id: 47377ceb-ed3e-4dca-9b55-82e4fe6b0194
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
+# 通過將配置資訊傳遞給MediaPlayer建立功能管理器 {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
 
-# 將設定資訊傳遞至MediaPlayer {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}以建立功能管理員
+TVSDK功能由配置驅動，並通過MediaPlayer實現。
 
-TVSDK功能由設定驅動，並透過MediaPlayer實作。
+* 配置是功能的特定設定清單，如ABR控制項的初始比特率和預設的隱藏字幕可見性。
 
-* 設定是特定功能設定的清單，例如ABR控制項的初始位元速率和預設的隱藏字幕可見度。
+   功能管理器需要獲取配置以確定功能行為。
 
-   功能管理員需要取得設定，才能判斷功能行為。
+   在黃金時段參考實現中，配置儲存在共用首選項中，但您可以以任何對您的環境有意義的方式儲存配置。
 
-   在Primetime參考實作中，設定會儲存在共用偏好設定中，但您可以以適合您環境的方式儲存設定。
+* `MediaPlayer` 是包含視頻資源的TVSDK媒體播放器對象。
 
-* `MediaPlayer` 是包含視訊資源的TVSDK媒體播放器物件。
+   功能管理器將TVSDK事件偵聽器註冊到此播放器對象，從回放會話中檢索資料並將TVSDK功能觸發到回放會話。
 
-   功能管理員將TVSDK事件偵聽器註冊至此播放器物件、從播放工作階段擷取資料，並觸發TVSDK功能至播放工作階段。
+每個特徵都具有相應的配置介面。 比如說， `CCManager` 使用 `ICCConfig` 來獲取配置。 `ICCConfig` 包含僅獲取與關閉字幕相關的配置資訊的方法。
 
-每個特徵都具有相應的配置介面。 例如，`CCManager`使用`ICCConfig`來檢索配置。 `ICCConfig` 包含僅獲取與隱藏字幕相關的配置資訊的方法。
-
-下列範例顯示[!DNL ICCConfig.java]檔案，其設定是從`MediaPlayer`接收有關隱藏字幕可見性、字型樣式和字型邊緣的資訊：
+以下示例顯示 [!DNL ICCConfig.java] 檔案，配置為從中接收有關隱藏標題可見性、字型樣式和字型邊緣的資訊 `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,11 +63,11 @@ TVSDK功能由設定驅動，並透過MediaPlayer實作。
 }
 ```
 
-使用TVSDK功能的應用程式可建立其功能管理員，其中包含組態提供者和`MediaPlayer`物件。 例如：
+使用TVSDK功能的應用程式可以使用配置提供程式和 `MediaPlayer` 的雙曲餘切值。 例如：
 
 ```java
 // This application needs to use the advertising workflow feature 
 AdsManager adsManager = new AdsManagerOn();
 ```
 
-功能管理器配置API檔案：[Javadoc](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/package-summary.html)
+功能管理器配置API文檔： [Javadoc](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/package-summary.html)

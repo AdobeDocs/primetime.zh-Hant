@@ -1,20 +1,19 @@
 ---
-title: 申請憑證
-description: 申請憑證
+title: 請求證書
+description: 請求證書
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 49021dba-c6e3-4d11-ab11-061c824b30df
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# 請求證書{#requesting-certificates}
 
-# 申請證書{#requesting-certificates}
+註冊是向Adobe請求證書的過程。 您可以生成密鑰並建立發送到Adobe的請求。 Adobe然後生成證書並將其發回給您。 Adobe不知道私鑰的內容。 因此，您必須有一種備份密鑰的方法，以便在出現硬體故障時恢復密鑰。
 
-註冊是向Adobe申請證書的過程。 您可以產生金鑰並建立傳送至Adobe的請求。 Adobe會產生憑證並傳回給您。 Adobe將不知道私鑰的內容。 因此，您必須能夠備份密鑰，以便在發生硬體故障時恢復密鑰。
+與許可證伺服器、打包程式或傳輸證書不同，域CA證書不是由Adobe頒發的。 您可以從證書頒發機構獲取此證書，或生成自簽名證書。
 
-與License Server、Packager或Transport證書不同，域CA證書不由Adobe頒發。 您可以從認證授權機構取得此憑證，或產生自簽的憑證。
-
-有關如何獲取Adobe訪問憑據的說明，請參閱&#x200B;*Adobe訪問證書註冊指南*。
+有關如何獲取Adobe訪問憑據的說明，請參閱 *Adobe訪問證書註冊指南*。

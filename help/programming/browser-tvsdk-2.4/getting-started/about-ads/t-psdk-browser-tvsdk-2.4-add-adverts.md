@@ -1,19 +1,18 @@
 ---
-title: 新增廣告
-description: 新增廣告
+title: 添加廣告
+description: 添加廣告
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 72f875ea-80ae-482b-94be-41116fff3614
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
+# 添加廣告 {#add-advertising}
 
-# 新增廣告{#add-advertising}
-
-1. 定義廣告中繼資料。
+1. 定義廣告元資料。
 
    ```js
    var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -22,14 +21,14 @@ ht-degree: 0%
      auditudeSettings.zoneId = "123869";
    ```
 
-1. 將廣告中繼資料新增至`MediaResource`。
+1. 將廣告元資料添加到 `MediaResource`。
 
    ```js
    var mediaResource =  
      new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
    ```
 
-1. 將設定添加到配置並添加`SpliceOut`解析器工廠。
+1. 將設定添加到配置並添加 `SpliceOut` 分析器工廠。
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -37,8 +36,8 @@ ht-degree: 0%
    config.advertisingFactory = new ExtCueOutContentFactory(auditudeSettings);
    ```
 
-1. 將`ExtCueOutContentFactory`新增至程式庫區段。
-1. 從程式庫區段下載`ExtCueOutContentFactory.js`，並將它放置在工作資料夾中。
+1. 添加 `ExtCueOutContentFactory` 的子菜單。
+1. 下載 `ExtCueOutContentFactory.js` 將其置於工作資料夾中。
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -48,4 +47,4 @@ ht-degree: 0%
    <script src= "ExtCueOutContentFactory.js"></script>
    ```
 
-1. 測試您的設定。
+1. Test配置。

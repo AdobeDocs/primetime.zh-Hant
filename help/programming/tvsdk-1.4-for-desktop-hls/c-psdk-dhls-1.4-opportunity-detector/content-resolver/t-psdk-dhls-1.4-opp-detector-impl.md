@@ -1,29 +1,28 @@
 ---
-description: 您可以建置自己的機會檢測器。
-title: 實作自訂機會偵測器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 你可以實施你自己的機會檢測器。
+title: 實施自定義機會檢測器
+exl-id: a3f6d6b3-4d5e-49bc-b8de-a1196305bbb4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
+# 實施自定義機會檢測器{#implement-a-custom-opportunity-detector}
 
-# 實作自訂機會檢測器{#implement-a-custom-opportunity-detector}
+你可以實施你自己的機會檢測器。
 
-您可以建置自己的機會檢測器。
+* 如果您的機會生成器基於 `TimedMetadata` 與當前媒體流關聯的對象，則應擴展 `SpliceOutOpportunityGenerator` 或 `TimedMetadataOpportunityGenerator`。
 
-* 如果您的業務機會生成器基於與當前媒體流關聯的`TimedMetadata`對象，則應擴展`SpliceOutOpportunityGenerator`或`TimedMetadataOpportunityGenerator`。
+* 如果您的機會生成器基於由外部服務（如CIS）提供的帶外資料，則應擴展 `OpportunityGenerator`。
 
-* 如果您的業務機會生成器基於外部服務（如CIS）提供的帶外資料，則應擴展`OpportunityGenerator`。
+1. 建立自定義機會生成器。
 
-1. 建立自訂商機產生器。
-
-       如果您的自訂商機產生器是以「TimedMetadata」物件為基礎，請擴充「TimedMetadataOpportunityGenerator」並覆寫下列方法：
+       如果您的自定義機會生成器基於「TimedMetadata」對象，則擴展「TimedMetadataOpportunityGenerator」並覆蓋以下方法：
    
-   * `doConfigure` -在建立媒體播放器項目後調用此方法，並提供機會生成器以建立初始的機會集（如果需要）
-   * `doProcess` -每次偵測到新的時候都會 `TimedMetadata` 呼叫此方法（例如，每次播放清單／資訊清單重新整理時，即時／線性串流）
+   * `doConfigure`  — 在建立媒體播放器項目後調用此方法，並提供機會生成器以根據需要建立初始機會集
+   * `doProcess`  — 每次新建時都調用此方法 `TimedMetadata` 檢測到（例如，對於每次播放清單/清單刷新時的即時/線性流）
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
@@ -47,7 +46,7 @@ ht-degree: 0%
    }
    ```
 
-1. 建立自訂內容工廠，使用自訂商機產生器。
+1. 建立使用自定義機會生成器的自定義內容工廠。
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -65,7 +64,7 @@ ht-degree: 0%
    }
    ```
 
-1. 註冊要播放的媒體串流的自訂內容工廠。
+1. 為要播放的媒體流註冊自定義內容工廠。
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig = new DefaultMediaPlayerItemConfig(); 
@@ -74,4 +73,3 @@ ht-degree: 0%
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

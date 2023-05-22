@@ -1,18 +1,17 @@
 ---
-title: 使用者驗證
-description: 使用者驗證
+title: 用戶驗證
+description: 用戶驗證
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7e21ff0e-ee0f-474f-9f22-8a4a77470c63
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# 用戶驗證 {#user-authentication}
 
-# 用戶驗證{#user-authentication}
+指定是否需要憑據（如用戶名和密碼）來獲取許可證。 如果指定了經過驗證（基於身份）的許可，則伺服器在頒發許可證之前驗證用戶。
 
-指定獲取許可證是否需要用戶名和密碼等憑據。 如果指定了已驗證（基於身份的）許可，則伺服器在發放許可之前對用戶進行驗證。
-
-**範例使用案例：** 訂閱服務可能需要先輸入使用者名稱／密碼，才能核發內容授權。含Digital Copy的DVD或Blu-ray光碟可能會提供程式碼或其他Token作為付款證明，可兌換為電子下載。
+**示例用例：** 訂閱服務可能要求在頒發內容許可證之前輸入用戶名/密碼。 帶有Digital Copy的DVD或藍光光碟可能提供代碼或其他令牌作為付款憑證，可以兌換為電子下載。

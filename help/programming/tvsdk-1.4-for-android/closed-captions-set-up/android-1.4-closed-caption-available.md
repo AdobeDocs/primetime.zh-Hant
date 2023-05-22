@@ -1,29 +1,28 @@
 ---
-description: 當聲音聽不見或觀眾聽不到時，隱藏字幕會將視訊的音訊部分顯示為畫面上的文字。
-title: 從可用字軌中選擇目前的字幕軌
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 當聲音不可聽或觀眾聽不到時，關閉字幕將視頻的音頻部分作為文本顯示在螢幕上。
+title: 從可用字幕資訊中選擇當前字幕資訊
+exl-id: 75970604-c318-4621-bad3-caab292c8a04
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# 從可用字幕資訊中選擇當前字幕資訊{#select-a-current-caption-track-from-among-available-tracks}
 
-# 從可用字幕中選擇當前字幕字幕{#select-a-current-caption-track-from-among-available-tracks}
-
-您可以從目前可用的隱藏字幕音軌清單中選取音軌。 這會變成目前的軌道，當可見性開啟時就會顯示。 某些音軌一開始可能無法使用，因此請監聽表示有更多音軌可供使用的事件。
+您可以從當前可用的隱藏字幕字幕字幕字幕資訊清單中選擇一個字幕資訊。 這將成為當前軌道，當可見性開啟時顯示。 某些軌道最初可能不可用，因此請偵聽表示更多已可用的事件。
 
 >[!TIP]
 >
->隱藏字幕一律啟用。 所有預設的隱藏字幕軌道皆視為存在。 預設音軌（例如CC1-CC4、CS1-CS6）列舉於`ClosedCaptionsTrack.DefaultCCTypes`。 當播放開始時，TVSDK會尋找這些頻道上的活動。 如果找到活動，則設定該跟蹤的`isActive`方法並調度`MediaPlayer.PlaybackEventListener.onUpdated`事件。
+>始終啟用隱藏字幕。 所有預設的隱藏字幕軌道都被視為存在。 預設磁軌（如CC1-CC4、CS1-CS6）在中枚舉 `ClosedCaptionsTrack.DefaultCCTypes`。 播放開始時，TVSDK會在這些頻道中查找活動。 如果它找到活動，它將 `isActive` 跟蹤和調度的方法 `MediaPlayer.PlaybackEventListener.onUpdated` 的子菜單。
 
-1. 等待媒體播放器至少處於「已準備」狀態。
-1. 聽聽這些活動：
+1. 等待媒體播放器至少處於PREPARED狀態。
+1. 聽聽這些事件：
 
-   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`:可使用隱藏字幕軌道的初始清單
+   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`:隱藏字幕軌道的初始清單可用
 
-1. 取得目前所有可用隱藏字幕音軌的清單。
+1. 獲取當前所有可用的隱藏字幕軌道的清單。
 
    例如：
 
@@ -32,7 +31,7 @@ ht-degree: 1%
          mediaPlayer.getCurrentItem().getClosedCaptionsTracks();
    ```
 
-1. 選取可用的追蹤作為目前的追蹤。
+1. 選擇可用的跟蹤作為當前跟蹤。
 
    例如：
 
@@ -47,6 +46,6 @@ ht-degree: 1%
    }
    ```
 
-1. 實作事件的監聽器，指出有更多可用的追蹤。 當TVSDK派單事件時，擷取目前可用軌道的清單。
+1. 為指示有更多磁軌可用的事件實現偵聽器。 當TVSDK派單事件時，檢索當前可用軌道清單。
 
-   每次發生事件時擷取清單，以確保您始終擁有最新的清單。
+   每次事件發生時檢索清單，以確保始終擁有最新的清單。

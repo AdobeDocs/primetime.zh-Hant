@@ -1,19 +1,18 @@
 ---
-title: 自訂授權擴充功能
-description: 在取得授權期間可以叫用自訂授權邏輯，以決定是否應將授權發給要求的用戶端。
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 自定義授權擴展
+description: 在許可獲取期間可以調用自定義授權邏輯以確定是否應向請求的客戶端頒發許可。
+exl-id: bf7870f5-11bf-4392-a422-506b47d684f9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
+# 自定義授權擴展 {#custom-authorization-extensions}
 
-# 自訂授權擴充功能{#custom-authorization-extensions}
+在許可獲取期間可以調用自定義授權邏輯以確定是否應向請求的客戶端頒發許可。
 
-在取得授權期間可以叫用自訂授權邏輯，以決定是否應將授權發給要求的用戶端。
+要實施您自己的客戶授權擴展，請首先查看 [!DNL SampleAuthorizer.java] 示例代碼位於samples目錄（此示例的編譯版本位於flashaccess-license-server-ext-sample.jar中）。
 
-若要實作您自己的客戶授權擴充功能，請先查看位於範例目錄中的[!DNL SampleAuthorizer.java]范常式式碼（此範例的編譯版本位於flashaccess-license-server-ext-sample.jar中）。
-
-若要建立您自己的擴充功能，請實作`com.adobe.flashaccess.server.license.extension.auth.IAuthorizer`介面，並確定`flashaccess-license-server-exts.jar`和`commons-logging.jar`位於建置路徑`adobe-flashaccess-sdk.jar`上，如果您使用`IMessageFacade`中的某些欄位，則也必須位於建置路徑上。 要部署副檔名，請將jar或類檔案複製到&#x200B;*LicenseServer.ConfigRoot* `/flashaccessserver/libs`。 如果需要更新jar或類檔案，則必須在使用更新版本之前重新啟動伺服器。 您也必須將授權者類別名稱新增至租用戶設定檔案。
+要構建自己的擴展，請實施 `com.adobe.flashaccess.server.license.extension.auth.IAuthorizer` 介面，確保 `flashaccess-license-server-exts.jar` 和 `commons-logging.jar` 在生成路徑上 `adobe-flashaccess-sdk.jar` 如果在中使用某些欄位，則還必須位於生成路徑上 `IMessageFacade`)。 要部署副檔名，請將jar或類檔案複製到 *LicenseServer.ConfigRoot* `/flashaccessserver/libs`。 如果需要更新jar或類檔案，則必須在使用更新的版本之前重新啟動伺服器。 還必須將授權器類名添加到租戶配置檔案。

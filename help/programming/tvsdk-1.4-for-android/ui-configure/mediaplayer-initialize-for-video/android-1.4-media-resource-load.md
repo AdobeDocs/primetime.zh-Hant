@@ -1,46 +1,44 @@
 ---
-description: 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
+description: 通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。 這是載入媒體資源的一種方法。
 title: 在MediaPlayer中載入媒體資源
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2d5e95bc-3962-4356-b90f-e550066f7a70
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
+# 在MediaPlayer中載入媒體資源 {#load-a-media-resource-in-the-mediaplayer}
 
-# 在MediaPlayer中載入媒體資源{#load-a-media-resource-in-the-mediaplayer}
+通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。 這是載入媒體資源的一種方法。
 
-直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
+1. 將MediaPlayer的可播放項目與要播放的新資源一起設定。
 
-1. 使用要播放的新資源設定MediaPlayer的可播放項目。
+   通過調用替換現有MediaPlayer的當前可播放項 `MediaPlayer.replaceCurrentItem` 通過現有 `MediaResource` 實例。
 
-   呼叫`MediaPlayer.replaceCurrentItem`並傳遞現有的`MediaResource`例項，以取代您現有的MediaPlayer目前可播放的項目。
-
-1. 向`MediaPlayer`實例註冊`MediaPlayer.PlaybackEventListener`介面的實現。
+1. 註冊 `MediaPlayer.PlaybackEventListener` 與 `MediaPlayer` 實例。
 
    * `onPrepared`
    * `onStateChanged`，並檢查是否已初始化和錯誤。
 
-1. 當媒體播放器的狀態更改為「已初始化」時，您可以調用`MediaPlayer.prepareToPlay`
+1. 當媒體播放器的狀態更改為INITIALIZED時，可以調用 `MediaPlayer.prepareToPlay`
 
-   「已初始化」狀態表示介質已成功載入。 呼叫`prepareToPlay`會啟動廣告解析度和位置處理程式（如果有的話）。
+   INITIALIZED狀態表示媒體已成功載入。 呼叫 `prepareToPlay` 啟動廣告解決和投放過程（如果有）。
 
-1. 當TVSDK呼叫`onPrepared`回呼時，媒體串流已成功載入並已準備好播放。
+1. 當TVSDK調用 `onPrepared` 回調，媒體流已成功載入並準備播放。
 
-   載入媒體串流時，會建立`MediaPlayerItem`。
+   載入媒體流時， `MediaPlayerItem` 的子菜單。
 
->如果發生故障， `MediaPlayer`將切換到ERROR狀態。 它也會呼叫您的`PlaybackEventListener.onStateChanged`回呼來通知您的應用程式。
+>如果出現故障， `MediaPlayer` 切換到「ERROR（錯誤）」狀態。 它還通過調用 `PlaybackEventListener.onStateChanged`回叫。
 >
->這會傳遞數個參數：
->* 類型`MediaPlayer.PlayerState`的`state`參數，其值為`MediaPlayer.PlayerState.ERROR`。
-   >
-   >
-* 類型`MediaPlayerNotification`的`notification`參數，包含有關錯誤事件的診斷資訊。
+>這會傳遞幾個參數：
+>* A `state` 類型參數 `MediaPlayer.PlayerState` 值 `MediaPlayer.PlayerState.ERROR`。
+>
+>* A `notification` 類型參數 `MediaPlayerNotification` 包含有關錯誤事件的診斷資訊。
 
 
-以下簡化的范常式式碼說明載入媒體資源的程式：
+以下簡化示例代碼說明了載入媒體資源的過程：
 
 ```java
 // mediaResource is a properly configured MediaResource instance 

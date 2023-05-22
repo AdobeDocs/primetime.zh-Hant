@@ -1,34 +1,33 @@
 ---
-description: MediaPlayer物件可封裝媒體播放器的行為和功能。
+description: MediaPlayer對象封裝媒體播放器的行為和功能。
 title: 設定MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f492b2bb-3280-4306-ac4b-8b8d0fd68409
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
-
 # 設定MediaPlayer{#set-up-the-mediaplayer}
 
-MediaPlayer物件可封裝媒體播放器的行為和功能。
+MediaPlayer對象封裝媒體播放器的行為和功能。
 
-1. 使用下列項目實例化`MediaPlayer`:
+1. 實例化 `MediaPlayer` 使用以下命令：
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. 建立`MediaPlayerView`實例：
+1. 建立 `MediaPlayerView` 實例：
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   其中`container`是包含`HTMLMediaElement`的目標`div`元素。
+   何處 `container` 是目標 `div` 包含 `HTMLMediaElement`。
 
-   例如，在HTML頁面上：
+   例如，在HTML頁上：
 
    ```
    <div id="videoDiv"> 
@@ -40,7 +39,7 @@ MediaPlayer物件可封裝媒體播放器的行為和功能。
    </div>
    ```
 
-   來電：
+   呼叫：
 
    ```js
    var view = new  
@@ -50,13 +49,13 @@ MediaPlayer物件可封裝媒體播放器的行為和功能。
          document.getElementById("videoDiv"));  
    ```
 
-1. 將`MediaPlayerView`實例附加到`MediaPlayer`實例：
+1. 連接 `MediaPlayerView` 實例 `MediaPlayer` 實例：
 
    ```js
    player.view = view;
    ```
 
-1. 將自訂控制項`div`元素附加至您的MediaPlayer例項。
+1. 附加自定義控制項 `div` 元素。
 
    例如，在HTML中：
 
@@ -68,7 +67,7 @@ MediaPlayer物件可封裝媒體播放器的行為和功能。
    </div>
    ```
 
-   來電：
+   呼叫：
 
    ```js
    if (typeof player.getView() !== 'undefined') { 
@@ -77,4 +76,4 @@ MediaPlayer物件可封裝媒體播放器的行為和功能。
    }
    ```
 
-`MediaPlayer`例項現已可用，並已正確設定，可在裝置螢幕上顯示視訊內容。
+的 `MediaPlayer` 實例現在可用，並且已正確配置為在設備螢幕上顯示視頻內容。

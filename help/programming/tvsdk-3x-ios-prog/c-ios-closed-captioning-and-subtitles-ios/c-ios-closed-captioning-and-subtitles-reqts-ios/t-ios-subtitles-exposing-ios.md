@@ -1,24 +1,23 @@
 ---
-description: TVSDK會使用PTMediaPlayerMediaSelectionOptionsAvailableNotification，通知您的播放器用戶端有關內部AVAsset的availableMediaCherationsWithMediaSelectionOptions的可用性。
-title: 顯示字幕
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK使用PTMediaPlayerMediaSelectionOptionsAvailableNotification通知播放器客戶端內部AVAsset的availableMediaCharitesWithMediaSelectionOptions的可用性。
+title: 曝光字幕
+exl-id: 42f15536-39ea-4d83-b501-b05086a0056b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
+# 曝光字幕 {#expose-subtitles}
 
-# 顯示字幕{#expose-subtitles}
+TVSDK使用PTMediaPlayerMediaSelectionOptionsAvailableNotification通知播放器客戶端內部AVAsset的availableMediaCharitesWithMediaSelectionOptions的可用性。
 
-TVSDK會使用PTMediaPlayerMediaSelectionOptionsAvailableNotification，通知您的播放器用戶端有關內部AVAsset的availableMediaCherationsWithMediaSelectionOptions的可用性。
+您可以通過 `PTMediaPlayerItem` 屬性 `subtitlesOptions`。
 
-您可以透過`PTMediaPlayerItem`屬性的`subtitlesOptions`存取可用的字幕。
+曝光字幕：
 
-要公開字幕：
-
-1. 將客戶機註冊為`PTMediaPlayerMediaSelectionOptionsAvailableNotification`通知的監聽器。
+1. 將客戶端註冊為 `PTMediaPlayerMediaSelectionOptionsAvailableNotification` 通知。
 
    ```
    [[NSNotificationCenter defaultCenter]  
@@ -26,8 +25,8 @@ TVSDK會使用PTMediaPlayerMediaSelectionOptionsAvailableNotification，通知�
      name:PTMediaPlayerMediaSelectionOptionsAvailableNotification object:self.player];
    ```
 
-   當您的客戶收到此通知時，`PTMediaPlayerItem`中的字幕就緒。
-1. 實作類似下列範例的`onMediaPlayerItemMediaSelectionOptionsAvailable`方法：
+   當您的客戶端收到此通知時， `PTMediaPlayerItem`。
+1. 實施 `onMediaPlayerItemMediaSelectionOptionsAvailable` 方法與以下示例類似：
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +35,4 @@ TVSDK會使用PTMediaPlayerMediaSelectionOptionsAvailableNotification，通知�
    }
    ```
 
-   如需替代音軌的詳細資訊，請參閱[替代音訊](../../alternate-audio/ios-3x-alternate-audio.md)。
+   有關備用音頻軌道的資訊，請參見  [備用音頻](../../alternate-audio/ios-3x-alternate-audio.md)。

@@ -1,24 +1,23 @@
 ---
-title: 設定廣告追蹤
-description: 設定廣告追蹤
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+title: 設定廣告跟蹤
+description: 設定廣告跟蹤
+exl-id: b5ebad0f-4e20-456a-892d-4c981ab26e51
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
+# 設定廣告跟蹤 {#ser-up-ad-tracking}
 
-# 設定廣告追蹤{#ser-up-ad-tracking}
+大多數廣告商都需要有關他們的廣告被瀏覽時間、瀏覽時間以及瀏覽成功程度的資訊。 黃金時段Ad Insertion支援客戶端、伺服器端和混合廣告跟蹤，以提供收集這些資訊的靈活性。
 
-大部分廣告商都需要有關廣告被檢視的時間、時間長度以及成功程度的資訊。 Primetime廣告插入支援用戶端、伺服器端和混合式廣告追蹤，以提供收集此資訊的彈性。
+## 使用VMAP/JSON的客戶端廣告跟蹤 {#client-side-ad-tracking-vmap-json}
 
-## 使用VMAP/JSON {#client-side-ad-tracking-vmap-json}進行用戶端廣告追蹤
+在客戶端廣告跟蹤中，伺服器向客戶端發送JSON、VMAP或清單內結構，指定跟蹤事件和URL以及廣告縫合播放清單。
 
-在用戶端廣告追蹤中，伺服器會傳送JSON、VMAP或資訊清單內結構給用戶端，以指定追蹤事件和URL以及廣告銜接播放清單。
-
-若要啟用用戶端廣告追蹤，請在[引導API](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)中指定下列參數。
+要啟用客戶端和跟蹤，請在 [BootstrapAPI](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)。
 
 * `pttrackingmode=simple`
 
@@ -26,32 +25,32 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->設定`pttrackingmode=simple`會導致初始引導API請求傳回JSON回應，而非HLS或DASH檔案。
+>設定 `pttrackingmode=simple` 將導致初始引導API請求返回JSON響應，而不是HLS或DASH文檔。
 
 <!-- **Daniel to check. The specified file in this statement does not exist.** 
 More information about `pttrackingmode`, `pttrackingversion` formats, can be found in [API Reference: Manifest server query parameters](manifest-server-query-parameters.md). -->
 
 <!--Show examples of how to request a sidecar] -->
 
-## 伺服器端廣告追蹤{#server-side-ad-tracking}
+## 伺服器端廣告跟蹤 {#server-side-ad-tracking}
 
-使用此方法，廣告追蹤資料會完全在伺服器端計算。 在更新客戶端應用程式不可行時，此功能非常有用。 不過，伺服器端廣告追蹤可能不符合用戶端播放活動。 例如，伺服器會認為廣告會在傳送區段後播放，即使使用者未檢視整個廣告亦然。
+利用該方法，在伺服器端完全計算廣告跟蹤資料。 當更新客戶端應用程式不可行時，此功能非常有用。 但是，伺服器端廣告跟蹤可能與客戶端播放活動不匹配。 例如，伺服器認為在傳遞段之後要播放的廣告，即使最終用戶不查看整個廣告。
 
-若要啟用伺服器端廣告追蹤，請在[引導API](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)中指定下列參數。
+要啟用伺服器端和跟蹤，請在 [BootstrapAPI](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)。
 
 `pttrackingmode=sstm`
 
-請參閱[引導API](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)的`pttrackingmode`章節。
+請參閱 `pttrackingmode` 部分 [BootstrapAPI](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)。
 
-所有廣告追蹤信標都會隨下列HTTP請求標題傳送：
+所有廣告跟蹤信標都使用以下HTTP請求標頭髮送：
 
 * `X-Forwarded-For`
 * `User-Agent`
 * `X-Device-User-Agent`
 
-這些值包含client/player user-agent和client IP位址。
+這些值包含客戶機/播放器用戶代理和客戶機IP地址。
 
-## 混合廣告追蹤{#hybrid-ad-tracking}
+## 混合廣告跟蹤 {#hybrid-ad-tracking}
 
-此方法類似伺服器端追蹤，但用戶端應用程式也會要求Primetime廣告插入的附屬資訊，以取得詳細的追蹤資訊。 混合式廣告追蹤可傳送非線性廣告，例如覆蓋和客戶應用程式的伴侶，同時仍依賴「Primetime廣告插入」來傳送個別廣告追蹤URL。
-若要啟用混合廣告追蹤，請參閱[引導API](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)中的`pttrackingmode`參數。
+這種方法類似於伺服器端跟蹤，但客戶端應用程式也從MighideAd Insertion請求十進位號，以獲取詳細的跟蹤資訊。 混合廣告跟蹤可以將諸如覆蓋和伴侶等非線性廣告發送到客戶端應用程式，同時仍然依靠黃金時段Ad Insertion發送單個廣告跟蹤URL。
+要啟用混合廣告跟蹤，請參閱 `pttrackingmode` 參數 [BootstrapAPI](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)。

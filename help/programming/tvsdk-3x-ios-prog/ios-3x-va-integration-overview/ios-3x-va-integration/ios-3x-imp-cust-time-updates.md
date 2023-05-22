@@ -1,24 +1,23 @@
 ---
-description: 在某些分析實作中，用戶端應用程式可能會想要提供與TVSDK的localTime值所報告位置不同的播放頭位置。 例如，線上性流回放期間，可以相對於每個節目的開始時間提供節目的播放頭。
-title: 實作自訂時間更新
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 在某些分析實現中，客戶端應用程式可能希望提供與TVSDK的localTime值報告的位置不同的播放頭位置。 例如，線上性流回放期間，可以相對於其開始時間提供每個節目的播放頭。
+title: 實施自定義時間更新
+exl-id: df35d422-d9dc-496d-8f6f-cf34d82ab046
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
+# 實施自定義時間更新 {#implement-custom-time-updates}
 
-# 實施自訂時間更新{#implement-custom-time-updates}
-
-在某些分析實作中，用戶端應用程式可能會想要提供與TVSDK的localTime值所報告位置不同的播放頭位置。 例如，線上性流回放期間，可以相對於每個節目的開始時間提供節目的播放頭。
+在某些分析實現中，客戶端應用程式可能希望提供與TVSDK的localTime值報告的位置不同的播放頭位置。 例如，線上性流回放期間，可以相對於其開始時間提供每個節目的播放頭。
 
 >[!TIP]
 >
->只有在您想要提供不同於預設位置的播放磁頭位置時，才會覆寫此方法。
+>僅當要提供與預設位置不同的播放頭位置時，才覆蓋此方法。
 
-要覆蓋預設播放頭位置：
+要覆蓋預設播放頭位置，請執行以下操作：
 
 ```
 vaTrackingMetadata.currentTimeUpdateBlock = ^CMTime () { 
@@ -29,4 +28,4 @@ vaTrackingMetadata.currentTimeUpdateBlock = ^CMTime () {
 
 >[!IMPORTANT]
 >
->在此程式碼範例中，500隻是範例值。 您需要為自訂播放頭位置使用不同的值。
+>在此代碼示例中，500隻是示例值。 您需要為自定義播放頭位置使用其他值。

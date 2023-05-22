@@ -1,24 +1,22 @@
 ---
-title: 透過HTTPS安全載入廣告
-description: 透過HTTPS安全載入廣告
+title: 通過HTTPS載入安全廣告
+description: 通過HTTPS載入安全廣告
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e12cb9d4-05d4-485e-b629-1af680b83e04
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
+# 通過HTTPS載入安全廣告{#secure-ad-loading-over-https}
 
-# 透過HTTPS安全載入廣告{#secure-ad-loading-over-https}
+Adobe Primetime提供了通過HTTPS請求Mighine廣告伺服器和CRS相關呼叫的選項。
 
-Adobe Primetime提供選項，可透過HTTPS要求對Primetime廣告伺服器和CRS相關呼叫的首次呼叫。
-
-預設情況下，該功能未啟用。 使用下列功能來啟用安全廣告載入。
+預設情況下不啟用該功能。 使用以下命令啟用安全廣告載入。
 
 ```
 AuditudeSettings auditudeSettings = new AuditudeSettings(); 
 auditudeSettings. getForceHttpsConfiguration().setAdServerCalls(true);
 ```
-

@@ -1,26 +1,25 @@
 ---
-description: 當視頻的DRM元資料被包括在媒體流中時，在播放期間執行驗證。
+description: 當視頻的DRM元資料被包括在媒體流中時，在回放期間執行驗證。
 title: 播放期間的DRM驗證
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3f190d37-291e-4a5e-811d-7e9984a6a44a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
+# 播放期間的DRM驗證 {#drm-authentication-during-playback}
 
-# 播放{#drm-authentication-during-playback}期間的DRM驗證
+當視頻的DRM元資料被包括在媒體流中時，在回放期間執行驗證。
 
-當視頻的DRM元資料被包括在媒體流中時，在播放期間執行驗證。
-
-請考慮授權輪換功能，其中資產會使用多份DRM授權加密。 每次發現新的DRM元資料時，使用`DRMHelper`方法檢查DRM元資料是否需要DRM驗證。
+請考慮許可證輪替功能，在該功能中，使用多個DRM許可證對資產進行加密。 每次發現新的DRM元資料時，使用 `DRMHelper` 方法來檢查DRM元資料是否需要DRM驗證。
 
 >[!NOTE]
 >
->本教學課程不處理網域系結的授權。 最好是在開始播放之前，先檢查您是否要處理網域系結授權。 如果是，請執行域驗證（如果需要）並加入域。
+>本教程不處理域綁定的許可證。 理想情況下，在開始播放之前，請檢查您是否正在處理域綁定許可證。 如果是，請執行域身份驗證（如果需要）並加入域。
 
-1. 在資產中發現新的DRM中繼資料時，會在應用程式層傳送事件。
+1. 當在資產中發現新的DRM元資料時，在應用層調度事件。
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -34,9 +33,9 @@ ht-degree: 0%
    };
    ```
 
-1. 使用`DRMMetadata`檢查是否需要驗證。 如果不能，則不要做；播放繼續不間斷。
-1. 否則，請執行DRM驗證。 由於此操作是非同步的，而且是在不同的線程中處理的，因此對用戶介面和視頻播放沒有影響。
-1. 如果驗證失敗，使用者就無法繼續檢視視訊，而播放也會停止。 否則，播放將會持續進行。
+1. 使用 `DRMMetadata` 檢查是否需要驗證。 否則，什麼也不做；播放繼續不間斷。
+1. 否則，執行DRM驗證。 由於此操作是非同步的，並且是在其他線程中處理的，因此它不會影響用戶介面或視頻播放。
+1. 如果驗證失敗，則用戶無法繼續觀看視頻，並停止播放。 否則，將不間斷地繼續播放。
 
 ```java
 DRMMetadataInfoEventListener drmMetadataInfoEventListener =  

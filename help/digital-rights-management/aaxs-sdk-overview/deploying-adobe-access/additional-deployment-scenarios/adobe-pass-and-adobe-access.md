@@ -1,32 +1,31 @@
 ---
-title: Adobe Pass與Adobe
-description: Adobe Pass與Adobe
+title: Adobe Pass和Adobe
+description: Adobe Pass和Adobe
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b9a90297-da24-416f-91de-6a31322f35fb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
 
 ---
 
+# Adobe Pass和Adobe {#adobe-pass-and-adobe-access}
 
-# Adobe Pass和Adobe訪問{#adobe-pass-and-adobe-access}
-
-Adobe Pass([](https://www.adobe.com/products/adobepass/))提供多個內容提供者的使用者／裝置驗證和授權。 使用者必須有有效的有線電視或衛星電視訂閱。
+Adobe Pass [](https://www.adobe.com/products/adobepass/))跨多個內容提供程式提供用戶/設備身份驗證和授權。 用戶必須有有效的有線電視或衛星電視訂閱。
 
 <!--<a id="fig_cln_bc2_44"></a>-->
 
 ![](assets/AdobePass_web.png)
 
-Adobe Pass可與Adobe存取一起使用，以保護媒體內容。 在此案例中，視訊播放器(SWF)可載入另一個名為&#x200B;*Access Enabler*&#x200B;的SWF，由Adobe Systems代管。 *Access Enabler*&#x200B;用於連接Adobe Pass服務，並促進SAML SSO與MVPD（多通道視訊程式設計代理商）身分提供者系統的整合。 這包括將使用者的瀏覽器短暫重新導向至MVPD登入頁面，然後保留AuthN Token，最後以快取的AuthN工作階段返回內容網站。
+Adobe Pass可以與Adobe訪問一起用於保護媒體內容。 在此方案中，視頻播放器(SWF)可以載入另一個SWF，稱為 *訪問啟用碼*&#x200B;由Adobe Systems主辦。 的 *訪問啟用碼* 用於連接到Adobe Pass服務，並促進SAML SSO與MVPD（多通道視頻寫程式分發伺服器）身份提供程式系統的整合。 這涉及將用戶的瀏覽器簡要重定向到MVPD登錄頁，然後保存AuthN令牌，最後使用快取的AuthN會話返回到內容網站。
 
-然後，*Access Enabler*&#x200B;便於在Adobe Pass服務和MVPD之間進行後端授權。 MVPD會維護商業邏輯，並決定使用者有權使用哪些內容。 權益會持續存在該內容資源的額外AuthZ Token中，並傳回給用戶端。
+的 *訪問啟用碼* 然後便於Adobe Pass服務和MVPD之間的後端授權。 MVPD維護業務邏輯並確定用戶有權訪問哪些內容。 該權利保留在該內容資源的附加AuthZ令牌中，並將其發回給客戶端。
 
-驗證和授權Token使用Adobe存取用戶端的唯一ID和私密金鑰進行簽署，以避免竄改或欺騙。 此標籤只能通過&#x200B;*Access Enabler*&#x200B;訪問。
+使用Adobe訪問客戶端的唯一ID和私鑰對認證和授權令牌進行簽名以避免篡改或欺騙。 只能通過 *訪問啟用碼*。
 
-視頻播放器可通過調用&#x200B;*Access Enabler*&#x200B;上的`getAuthorization`來觸發該過程。 當存在有效的AuthN/AuthZ代號時，*AccessEnabler*&#x200B;會向視訊播放器發出回呼，該回呼將包含用於播放視訊內容的短期媒體代號。
+視頻播放器可以通過呼叫來觸發該過程 `getAuthorization` 的 *訪問啟用碼*。 當存在有效的AuthN/AuthZ令牌時， *AccessEnabler* 向視頻播放器發出回叫，該視頻播放器將包含用於播放視頻內容的短時媒體令牌。
 
-Adobe Pass提供可部署至伺服器的媒體Token驗證器Java程式庫。 當使用Flash Access伺服器進行內容保護時，您可將媒體Token驗證器與AdobeAccess伺服器端外掛程式整合，以在成功驗證媒體Token後自動發行一般授權。 然後內容從CDN伺服器串流至用戶端。 為了獲得內容許可，可將短壽命媒體令牌提交到Adobe訪問伺服器，其中驗證令牌的有效性並可頒發許可證。
+Adobe Pass提供可部署到伺服器的媒體令牌驗證程式Java庫。 使用Flass Access伺服器進行內容保護時，可以將媒體令牌驗證器與Adobe訪問伺服器端插件整合，以便在成功驗證媒體令牌後自動頒發通用許可證。 然後，內容從CDN伺服器流式傳輸到客戶機。 為了獲得內容許可，可將短壽命媒體令牌提交到Adobe訪問伺服器，其中驗證令牌的有效性並且可以頒發許可證。
 
-長壽命的AuthN代號通常由&#x200B;*存取啟用碼*&#x200B;所有內容開發人員使用，以代表該MVPD訂閱者的AuthN。 此外，Adobe Access Server和令牌驗證器可由CDN或服務提供商代表內容提供商操作。
+長壽命AuthN令牌通常由 *訪問啟用碼* 跨所有內容開發商，以表示該MVPD訂閱伺服器的AuthN。 此外，Adobe Access Server和令牌驗證器可由CDN或服務提供商代表內容提供商操作。

@@ -1,19 +1,18 @@
 ---
-description: 如果您預先產生包含時間型使用規則的授權，授權應包含同步要求，以安全地強制授權到期。
-title: 預先產生的授權
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 如果預生成包含基於時間的使用規則的許可證，則許可證應包括同步要求，以安全地強制實施許可證到期。
+title: 預生成許可證
+exl-id: f3b6927d-66cf-4aa2-802d-d4b3a5652c63
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
+# 預生成許可證{#pre-generating-licenses}
 
-# 預先產生授權{#pre-generating-licenses}
+如果預生成包含基於時間的使用規則的許可證，則許可證應包括同步要求，以安全地強制實施許可證到期。
 
-如果您預先產生包含時間型使用規則的授權，授權應包含同步要求，以安全地強制授權到期。
+如果許可證中存在任何基於時間的限制，則在客戶端和伺服器之間實施「心跳」機制有助於將客戶端時間與伺服器時間同步。
 
-如果您在授權中有任何時間限制，在用戶端和伺服器之間實作「心搏」機制有助於同步用戶端時間與伺服器時間。
-
-如需詳細資訊，請參閱[使用Adobe PrimetimeDRM SDK來保護內容](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf)。
+有關詳細資訊，請參見 [使用Adobe PrimetimeDRM SDK保護內容](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf)。

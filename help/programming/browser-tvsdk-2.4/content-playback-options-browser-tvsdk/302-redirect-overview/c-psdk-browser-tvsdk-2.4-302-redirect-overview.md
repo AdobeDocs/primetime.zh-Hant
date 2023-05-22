@@ -1,33 +1,32 @@
 ---
-description: 302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
-title: HTTP 302重新導向最佳化
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 302重定向優化將302個重定向響應的數量減到最少，這樣您的應用程式就可以更有效地平衡負載。
+title: HTTP 302重定向優化
+exl-id: 80d5d38d-c998-4fc0-b527-b38e578d76e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# HTTP 302重定向優化 {#http-redirect-optimization}
 
-# HTTP 302重新導向最佳化{#http-redirect-optimization}
+302重定向優化將302個重定向響應的數量減到最少，這樣您的應用程式就可以更有效地平衡負載。
 
-302重新導向最佳化可將302個重新導向回應的數目減到最少，讓您的應用程式更有效率地平衡負載。
-
-如果重新導向主資訊清單請求，而您的播放器中已啟用302最佳化，則後續從該資訊清單請求資產時，會使用最終網域位置，以避免額外302個回應。 此功能預設為啟用，您可以變更此設定。
+如果重定向主清單請求，並且在您的播放器中啟用了302優化，則對該清單中資產的後續請求將使用最終域位置，這樣可避免額外的302響應。 預設情況下啟用此功能，您可以更改此設定。
 
 >[!IMPORTANT]
 >
->只有在支援`XMLHttpRequest`物件中`responseURL`屬性的認證瀏覽器才支援此功能。
+>僅在支援以下功能的認證瀏覽器中支援此功能 `responseURL` 屬性 `XMLHttpRequest` 的雙曲餘切值。
 
-對於Flash備援，請記住以下資訊：
+對於Flash回退，請記住以下資訊：
 
-* 您的用戶必須安裝AdobeFlash Player23版或更高版本。
-* 如果停用串流完整性，則僅認證的瀏覽器才支援302重新導向。
+* 您的最終用戶必須安裝AdobeFlash Player版本23或更高版本。
+* 如果禁用流完整性，則僅認證的瀏覽器支援302重定向。
 
-## 停用302重新導向最佳化{#disabling-redirect-optimization}
+## 禁用302重定向優化 {#disabling-redirect-optimization}
 
-您可以使用useRedirectedUrl屬性來啟用302重新導向(true)或停用(false)。
+可以使用useRedirectedUrl屬性啟用302重定向(true)或禁用(false)。
 
 例如：
 

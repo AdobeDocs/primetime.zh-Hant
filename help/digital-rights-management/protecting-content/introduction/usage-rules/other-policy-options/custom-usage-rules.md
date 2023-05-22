@@ -1,18 +1,17 @@
 ---
-title: 自訂使用規則
-description: 自訂使用規則
+title: 自定義用法規則
+description: 自定義用法規則
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c0d2572d-b59b-485e-b91e-22b000a171ee
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# 自定義用法規則 {#custom-usage-rules}
 
-# 自訂使用規則{#custom-usage-rules}
+您可以在許可證伺服器頒發的任何許可證中包含自定義資料。 該資料的解釋或處理由客戶端應用和許可證伺服器的實現確定。
 
-您可以在授權伺服器所核發的任何授權中包含自訂資料。 此資料的解釋或處理由用戶端應用程式和授權伺服器的實作決定。
-
-範例使用案例：允許將其他商業規則安全地傳達為Primetime DRM政策及／或內容授權的一部分，以擴充使用規則。 出於安全原因，由於這些使用規則是在自訂用戶端應用程式碼中強制執行的，因此您應結合AIR應用程式或Flash PlayerSWF的允許清單選項來套用此選項。
+示例用例：通過允許將其他業務規則安全地作為黃金時段DRM策略和/或內容許可證的一部分傳送，實現使用規則的可擴充性。 出於安全原因，由於這些使用規則是在自定義客戶端應用程式碼中強制實施的，因此您應將此選項與AIR應用程式或Flash PlayerSWF的允許清單選項一起應用。

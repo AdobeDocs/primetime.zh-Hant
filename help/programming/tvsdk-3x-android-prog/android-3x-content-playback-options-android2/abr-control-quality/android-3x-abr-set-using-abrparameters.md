@@ -1,33 +1,32 @@
 ---
-description: 您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新值。
+description: 您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新的控制值。
 title: 使用ABRControlParameters配置自適應比特率
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1f8a4a97-0341-43e7-afdf-801275bc8c94
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
+# 使用ABRControlParameters配置自適應比特率 {#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-# 使用ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}配置自適應位速率
+您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新的控制值。
 
-您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新值。
+以下條件適用於 `ABRControlParameters`:
 
-以下條件適用於`ABRControlParameters`:
+* 在構造時，必須提供所有參數的值。
+* 在構造後，不能更改個別值。
+* 如果指定的參數超出允許的範圍，則 `ArgumentError` 。
 
-* 在構建時，必須為所有參數提供值。
-* 在建構後，您無法變更個別值。
-* 如果您指定的參數超出允許的範圍，則會拋出`ArgumentError`。
-
-1. 確定初始、最小和最大位速率。
+1. 確定初始、最小和最大比特率。
 1. 確定ABR策略：
 
    * `ABR_CONSERVATIVE`
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. 在`ABRControlParameters`建構函式中設定ABR參數值，並將值指派給Media Player。
+1. 在 `ABRControlParameters` 建構子，並將值分配給媒體播放器。
 
    ```
    public ABRControlParameters(int initialBitRate, 

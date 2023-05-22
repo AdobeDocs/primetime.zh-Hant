@@ -2,28 +2,27 @@
 title: 支援的格式
 description: 支援的格式
 copied-description: true
-translation-type: tm+mt
 source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
 
 
-# 支援的格式{#supported-formats}
+# 支援的格式 {#supported-formats}
 
-PrimetimeAd Insertion會截取並支援廣告插入至下列媒體串流：
+黃金時段Ad Insertion截取並支援廣告插入到以下媒體流：
 
-## HLS {#hls}
+## 合肥光源 {#hls}
 
-- 混音音訊／視訊片段播放清單
-- CMAF和已解除混音的音訊／視訊播放清單，包括純音訊播放清單
+- 混合音頻/視頻片段播放清單
+- CMAF和取消混音的音頻/視頻播放清單，包括僅音頻播放清單
 - WebVTT
-- I-Frame串流播放清單(#EXT-X-I-FRAME-STREAM-INF)
-- Thubmanil影像播放清單(#EXT-X-IMAGE-STREAM-INF)
+- I幀流播放清單(#EXT-X-I-FRAME-STREAM-INF)
+- 影像播放清單(#EXT-X-IMAGE-STREAM-INF)
 
-## 虛線{#dash}
+## 短划線 {#dash}
 
-- CMAF和已解除混音的音訊／視訊播放清單，包括純音訊播放清單
+- CMAF和取消混音的音頻/視頻播放清單，包括僅音頻播放清單
 - WebVTT

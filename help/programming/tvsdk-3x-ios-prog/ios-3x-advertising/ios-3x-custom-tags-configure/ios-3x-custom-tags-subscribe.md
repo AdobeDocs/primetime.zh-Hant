@@ -1,27 +1,26 @@
 ---
-description: 每當內容資訊清單中出現這些物件時，TVSDK就會為訂閱的標籤準備PTTimedMetadata物件。
-title: 訂閱自訂標籤
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 每次在內容清單中遇到這些對象時，TVSDK都會為訂閱的標籤準備PTTimedMetadata對象。
+title: 訂閱自定義標籤
+exl-id: 5074e622-8824-4253-a668-485e2f68f156
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# 訂閱自定義標籤 {#subscribe-to-custom-tags}
 
-# 訂閱自訂標籤{#subscribe-to-custom-tags}
+每次在內容清單中遇到這些對象時，TVSDK都會為訂閱的標籤準備PTTimedMetadata對象。
 
-每當內容資訊清單中出現這些物件時，TVSDK就會為訂閱的標籤準備PTTimedMetadata物件。
+在播放開始之前，您必須訂閱標籤。
+要通知有關HLS清單中的自定義標籤：
 
-播放開始前，您必須訂閱標籤。
-要獲得有關HLS清單中自定義標籤的通知：
-
-1. 將包含自訂標籤的陣列傳遞至`PTSDKConfig`中的`setSubscribedTags`，以全域設定自訂廣告標籤名稱。
+1. 通過將包含自定義標籤的陣列傳遞到 `setSubscribedTags` 在 `PTSDKConfig`。
 
    >[!IMPORTANT]
    >
-   >使用HLS流時必須包含`#`前置詞。
+   >必須包括 `#` 使用HLS流時的前置詞。
 
    例如：
 

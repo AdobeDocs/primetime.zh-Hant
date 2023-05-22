@@ -1,37 +1,36 @@
 ---
-title: 開始使用Adobe Primetime廣告插入
-description: Adobe Primetime廣告插入快速入門
-translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+title: 開始使用Adobe PrimetimeAd Insertion
+description: Adobe PrimetimeAd Insertion
+exl-id: 629ea2a5-1b50-4451-a478-95d02f192145
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
 
 ---
 
+# 開始使用Adobe PrimetimeAd Insertion {#ptai-get-started}
 
-# 開始使用Adobe Primetime廣告插入{#ptai-get-started}
+黃金時段Ad Insertion協調提供內容和廣告的系統，以建立個性化的流中廣告體驗，然後跟蹤廣告商的廣告回放。
 
-Primetime廣告插入可協調提供內容和廣告的系統，以建立個人化的串流廣告體驗，然後追蹤廣告商的廣告播放。
+黃金時段Ad Insertion通過重新編寫視頻清單與視頻傳送客戶端應用程式交互，以便為每個觀看者提供有針對性的廣告和個性化體驗。 這些清單將從廣告伺服器傳送的內容和廣告組合在一起，並可選擇包括包含詳細廣告跟蹤指令的元資料。 黃金時段Ad Insertion支援客戶端和伺服器端廣告跟蹤。
 
-Primetime廣告插入可透過重新編寫視訊清單，與視訊傳送用戶端應用程式互動，為每位檢視者提供目標廣告和個人化體驗。 這些資訊清單結合了從廣告伺服器傳送的內容和廣告，並可選擇包含詳細廣告追蹤指示的中繼資料。 Primetime廣告插入支援用戶端和伺服器端廣告追蹤。
+正確設定系統後，典型工作流可能如下所示：
 
-在正確設定系統後，典型的工作流程可能如下所示：
+1. 客戶端應用程式生成 [BootstrapURL](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md) 提供有關視頻流的資訊，並向黃金時段Ad Insertion發送GET請求。  黃金時段Ad Insertion支援HLS和DASH，它們具有各種廣告信令格式。
 
-1. 用戶端應用程式會產生包含視訊串流資訊的[引導URL](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)，並傳送GET要求至Primetime廣告插入。  Primetime廣告插入支援HLS和DASH，具備多種廣告訊號格式。
+1. 黃金時段Ad Insertion通過將內容清單從發佈者的CDN發回到客戶端應用程式來響應。
 
-1. Primetime廣告插入會從發行者的CDN將內容資訊清單傳回用戶端應用程式，以回應。
+1. 客戶端應用程式選擇生成的清單中的適當流來播放並請求黃金時段Ad Insertion。
 
-1. 用戶端應用程式會在產生的資訊清單中選擇適當的串流以播放並要求插入Primetime廣告。
+1. 黃金時段Ad Insertion從內容CDN中提取所請求的流，解析/讀取任何提示資訊，對廣告伺服器進行呼叫並根據需要替換廣告分段。
 
-1. Primetime廣告插入從內容CDN擷取所要求的串流、剖析／讀取任何提示資訊、對廣告伺服器進行呼叫並視需要取代廣告插播。
+1. 黃金時段Ad Insertion通過重寫資源URL並檢測廣告創意是否需要轉碼來規範清單，請參閱 [即時廣告轉碼](/help/primetime-ad-insertion/just-in-time-transcoding/jit-transcoding-overview.md)。
 
-1. Primetime廣告插入會重寫資源URL並偵測廣告創意是否需要轉碼，借此標準化資訊清單，請參閱[即時廣告轉碼](/help/primetime-ad-insertion/just-in-time-transcoding/jit-transcoding-overview.md)。
+1. 黃金時段Ad Insertion提取所需廣告創意並將適當片段插入清單。
 
-1. Primetime廣告插入會擷取所需廣告創作元素，並將適當片段插入資訊清單。
+1. 黃金時段Ad Insertion將包括廣告在內的最終縫合清單遞送至客戶端應用程式以進行回放。
 
-1. Primetime廣告插入將最終的銜接清單（包括廣告）傳送至用戶端應用程式以供播放。
+1. 可以通過客戶端或伺服器端廣告跟蹤來測量廣告交付和可查看性，請參見 [設定廣告跟蹤](/help/primetime-ad-insertion/getting-started/set-up-ad-tracking.md)。
 
-1. 您可以透過用戶端或伺服器端廣告追蹤來測量廣告傳遞和可見性，請參閱[設定廣告追蹤](/help/primetime-ad-insertion/getting-started/set-up-ad-tracking.md)。
-
-Primetime廣告插入支援大部分的HLS/DASH用戶端和播放器組態。 有關支援的特定廣告信令格式的詳細資訊，請參閱[支援的提示格式](/help/primetime-ad-insertion/getting-started/ad-insertion-live-linear-stream.md)。
+黃金時段Ad Insertion支援大多數HLS/DASH客戶端和播放器配置。 有關支援的特定廣告信令格式的詳細資訊，請參閱 [支援的提示格式](/help/primetime-ad-insertion/getting-started/ad-insertion-live-linear-stream.md)。

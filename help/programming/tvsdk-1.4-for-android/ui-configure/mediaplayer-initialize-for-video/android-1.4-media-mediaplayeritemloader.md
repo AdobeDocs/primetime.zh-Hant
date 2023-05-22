@@ -1,37 +1,36 @@
 ---
-description: 解決媒體資源的另一種方式是使用MediaPlayerItemLoader。 當您想要取得特定媒體串流的相關資訊而不執行個體化MediaPlayer例項時，這個功能會很有用。
+description: 解析媒體資源的另一種方法是使用MediaPlayerItemLoader。 當您希望獲取有關特定媒體流的資訊而不實例化MediaPlayer實例時，此功能非常有用。
 title: 使用MediaPlayerItemLoader載入媒體資源
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9d129497-8a71-433a-a542-f49be519893b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
+# 使用MediaPlayerItemLoader載入媒體資源 {#load-a-media-resource-using-mediaplayeritemloader}
 
-# 使用MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}載入媒體資源
+解析媒體資源的另一種方法是使用MediaPlayerItemLoader。 當您希望獲取有關特定媒體流的資訊而不實例化MediaPlayer實例時，此功能非常有用。
 
-解決媒體資源的另一種方式是使用MediaPlayerItemLoader。 當您想要取得特定媒體串流的相關資訊而不執行個體化MediaPlayer例項時，這個功能會很有用。
+通過 `MediaPlayerItemLoader` 類，可以為相應的 `MediaPlayerItem` 不將視圖附加到 `MediaPlayer` 實例，這將導致視頻解碼硬體資源的分配。 獲取 `MediaPlayerItem` 實例是非同步的。
 
-通過`MediaPlayerItemLoader`類，您可以為相應的`MediaPlayerItem`交換媒體資源，而不將視圖附加到`MediaPlayer`實例，這將導致視頻解碼硬體資源的分配。 獲取`MediaPlayerItem`實例的過程是非同步的。
+1. 實施 `MediaPlayerItemLoader.LoaderListener` 回調介面。
 
-1. 實作`MediaPlayerItemLoader.LoaderListener`回呼介面。
-
-       此介面定義了兩種方法：
+       此介面定義兩種方法：
    
    * `LoaderListener.onError` 回調函式
 
-      TVSDK會使用此項來通知您的應用程式發生錯誤。 TVSDK提供錯誤碼作為參數，以及包含診斷資訊的描述字串。
+      TVSDK使用此功能通知您的應用程式發生錯誤。 TVSDK提供錯誤代碼作為參數和包含診斷資訊的描述字串。
 
    * `LoaderListener.onError` 回調函式
 
-      TVSDK會使用此資訊通知您的應用程式，要求的資訊以`MediaPlayerItem`例項的形式提供，並作為回呼的參數傳遞。
+      TVSDK使用此功能通知您的應用程式請求的資訊以 `MediaPlayerItem` 作為參數傳遞給回調的實例。
 
-1. 將此例項作為參數傳遞至`MediaPlayerItemLoader`的建構函式，以註冊至TVSDK。
-1. 呼叫`MediaPlayerItemLoader.load`，傳遞`MediaResource`物件的例項。
+1. 將此實例作為參數傳遞給TVSDK的建構子，將其註冊到TVSDK `MediaPlayerItemLoader`。
+1. 呼叫 `MediaPlayerItemLoader.load`，傳遞 `MediaResource` 的雙曲餘切值。
 
-   `MediaResource`物件的URL必須指向您要取得資訊的串流。 例如：
+   的URL `MediaResource` 對象必須指向要獲取資訊的流。 例如：
 
    ```java
    // instantiate the listener interface 
@@ -57,4 +56,3 @@ ht-degree: 0%
    // load the media resource 
    itemLoader.load(mediaResource); 
    ```
-

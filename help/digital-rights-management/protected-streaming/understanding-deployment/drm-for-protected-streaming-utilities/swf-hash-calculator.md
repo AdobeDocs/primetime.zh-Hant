@@ -1,20 +1,19 @@
 ---
-description: SWF雜湊計算器實用程式計算檔案中SWF應用程式的摘要。
-title: SWF雜湊計算器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: SWF哈希計算器實用程式計算位於檔案中的SWF應用程式的摘要。
+title: SWF哈希計算器
+exl-id: 245254fe-2fcb-41e8-94bd-0cbc8b39b2b5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
+# SWF哈希計算器{#swf-hash-calculator}
 
-# SWF雜湊計算器{#swf-hash-calculator}
+SWF哈希計算器實用程式計算位於檔案中的SWF應用程式的摘要。
 
-SWF雜湊計算器實用程式計算檔案中SWF應用程式的摘要。
-
-要運行散列器，請鍵入：
+要運行哈希器，請鍵入：
 
 ```
 Hasher.bat 
@@ -41,4 +40,4 @@ SWF Hash:
 </i class="+ topic>
 ```
 
-您可以使用此值來指定[!DNL flashaccess-tenant.xml]中的SWF摘要。
+可以使用此值指定中的SWF摘要 [!DNL flashaccess-tenant.xml]。

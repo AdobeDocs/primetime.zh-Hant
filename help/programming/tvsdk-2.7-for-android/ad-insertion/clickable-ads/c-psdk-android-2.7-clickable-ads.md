@@ -1,7 +1,6 @@
 ---
-description: TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您建立播放器UI時，您必須決定當使用者點按可點按的廣告時如何回應。
-title: 可點選廣告
-translation-type: tm+mt
+description: TVSDK提供資訊，以便您能夠對點擊廣告進行操作。 在建立播放器UI時，必須決定當用戶按一下可按一下廣告時如何響應。
+title: 可點擊的廣告
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '78'
@@ -10,8 +9,8 @@ ht-degree: 0%
 ---
 
 
-# 概述{#clickable-ads-overview}
+# 概述 {#clickable-ads-overview}
 
-TVSDK會提供您資訊，讓您能夠對點進式廣告採取行動。 當您建立播放器UI時，您必須決定當使用者點按可點按的廣告時如何回應。
+TVSDK提供資訊，以便您能夠對點擊廣告進行操作。 在建立播放器UI時，必須決定當用戶按一下可按一下廣告時如何響應。
 
-對於Android專用的TVSDK，只有線性廣告可點選。
+對於Android版TVSDK，只有線性廣告可點擊。

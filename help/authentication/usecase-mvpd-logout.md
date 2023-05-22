@@ -1,23 +1,23 @@
 ---
 title: MVPD註銷
 description: MVPD註銷
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: a2b57d02-9688-48e3-beff-1012cd361d0c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
-
 # MVPD註銷
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-可以透過傳送至IdP的SAML登出請求或呼叫自訂登出端點來實作登出使用案例。  以下請求和回應範例提供SAML登出實作的範例。
+註銷使用情形可以通過發送到IdP的SAML註銷請求或正在調用的自定義註銷終結點來實現。  下面的請求和響應示例提供了SAML註銷實現的示例。
 
-## 登出請求範例 {#sample-logout-request}
+## 註銷請求示例 {#sample-logout-request}
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +37,7 @@ ht-degree: 0%
 </samlp:LogoutRequest>
 ```
 
-## 登出回應範例 {#sample-logout-response}
+## 註銷響應示例 {#sample-logout-response}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

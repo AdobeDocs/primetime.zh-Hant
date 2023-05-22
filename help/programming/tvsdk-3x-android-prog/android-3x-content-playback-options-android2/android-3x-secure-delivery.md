@@ -1,28 +1,27 @@
 ---
-description: TVSDK推出透過HTTPS的安全傳送。
-title: 透過HTTPS進行安全傳送
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK引入了通過HTTPS的安全傳送。
+title: 通過HTTPS安全傳遞
+exl-id: 41e2c925-2145-4dfd-909a-aec57dbae9cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
+# 通過HTTPS安全傳遞 {#secure-delivery-https}
 
-# 透過HTTPS {#secure-delivery-https}的安全傳送
+Adobe PrimetimeTVSDK為來自TVSDK的所有呼叫提供HTTPS傳送支援，包括
 
-Adobe PrimetimeTVSDK支援HTTPS傳送所有源自TVSDK的呼叫，其中包括
-
-* Auditude廣告伺服器呼叫
+* 審核廣告伺服器呼叫
 * CRS請求
-* DRM授權呼叫
-* 視訊分析Ping
-* 計費Ping
+* DRM許可呼叫
+* 視頻分析Ping
+* 計費ping
 
-若要使用此功能，請確定為提供上述請求而設定的伺服器支援HTTPS。
+為了使用此功能，請確保為提供上述請求服務而配置的伺服器支援HTTPS。
 
-此新行為預設未啟用。 在呼叫`MediaPlayer.replaceCurrentResource()`之前，請使用下列功能啟用安全傳送
+預設情況下不啟用此新行為。 使用以下選項在呼叫前啟用安全傳遞 `MediaPlayer.replaceCurrentResource()`
 
 ```java
 MediaPlayerItemConfig config = new MediaPlayerItemConfig(context);

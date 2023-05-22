@@ -1,26 +1,25 @@
 ---
-description: 這些類別提供廣告、命名空間和追蹤的中繼資料。
-title: 中繼資料類別
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 這些類提供用於廣告、命名空間和跟蹤的元資料。
+title: 元資料類
+exl-id: 3d98c5e1-6792-419b-9638-f156f1eafd1b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
+# 元資料類{#metadata-classes}
 
-# 中繼資料類別{#metadata-classes}
+這些類提供用於廣告、命名空間和跟蹤的元資料。
 
-這些類別提供廣告、命名空間和追蹤的中繼資料。
-
-套件：[com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/package-summary.html)
+包： [com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/package-summary.html)
 
 | 名稱 | 說明 |
 |---|---|
-| [AdvertisingMetadata](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html) | 提供屬性的類別，該屬性應設定為解析特定媒體項目的廣告。 必須設定所有必要屬性，才能設定播放器，以成功解析廣告。 |
-| AuditudeMetadata | 已過時。 使用AuditudeSettings。 |
-| [AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/AuditudeSettings.html) | 專門用於擴展Phrase的Java `AdvertisingMetadata`的類。 提供要配置的屬性，用於解析給定媒體項目的短語廣告。 您必須設定所有必要屬性，包括區域ID、媒體ID和廣告伺服器URL，才能設定播放器以成功解析廣告。 |
-| [中繼資料](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/Metadata.html) | 定義一般介面，以針對您的播放器和其他物件設定所有可用的中繼資料。 |
-| [中繼資料節點](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/MetadataNode.html) | 用於儲存任意鍵值對的類似資料結構的類。 |
-| [TimedMetadata](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html) | 用於插入媒體流中的定時元資料的原始表示的類。 |
+| [廣告元資料](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html) | 提供應配置用於解析給定媒體項的廣告的屬性的類。 必須設定所有必需的屬性才能配置播放器以成功解析廣告。 |
+| 審核元資料 | 已棄用。 使用AuditudeSettings。 |
+| [音頻設定](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/AuditudeSettings.html) | 擴展Java的類 `AdvertisingMetadata` 特別是短語。 提供要配置的屬性以解析給定媒體項的短語廣告。 必須設定所有必需的屬性，包括區域ID、媒體ID和廣告伺服器URL，才能配置播放器以成功解析廣告。 |
+| [元資料](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/Metadata.html) | 定義用於配置播放器和其他對象的所有可用元資料的通用介面。 |
+| [元資料節點](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/MetadataNode.html) | 用於儲存任意鍵值對的類型資料結構類。 |
+| [TimedMetadata](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html) | 插入到媒體流中的定時元資料的原始表示的類。 |

@@ -1,22 +1,21 @@
 ---
 title: PSDK錯誤代碼
-description: 有關各種錯誤代碼、警告和原生錯誤代碼的資訊。
-translation-type: tm+mt
-source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+description: 有關各種錯誤代碼、警告和本機錯誤代碼的資訊。
+exl-id: 90d66c13-c40c-4602-83da-186c2b623375
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 6%
 
 ---
 
+# PSDK錯誤代碼 {#psdk-error-codes}
 
-# PSDK錯誤代碼{#psdk-error-codes}
-
-閱讀以瞭解PSDK錯誤碼、警告和原生錯誤碼。
+閱讀以瞭解PSDK錯誤代碼、警告和本機錯誤代碼。
 
 ## 錯誤
 
-下表提供有關ERROR類型通知的詳細資訊。 大多數錯誤都包含相關的元資料；例如，無法下載的資源的URL。 有些通知包含中繼資料，以指定問題是發生在主要視訊內容、替代音訊內容或廣告中。
+下表提供了有關ERROR類型通知的詳細資訊。 大多數錯誤都包含相關的元資料；例如，下載失敗的資源的URL。 某些通知包含元資料，用於指定是在主視頻內容、備用音頻內容還是廣告中出現問題。
 
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
@@ -27,150 +26,150 @@ ht-degree: 6%
   <tr>
     <td>成功</td>
     <td>0</td>
-    <td>由基礎API執行的操作成功。</td>
+    <td>基礎API執行的操作成功。</td>
   </tr>
   <tr>
-    <td>INVALID_ARGUMENT</td>
+    <td>無效_參數</td>
     <td>1</td>
-    <td>提供給基礎API的參數資料或格式無效。</td>
+    <td>提供給基礎API的參數的資料或格式無效。</td>
   </tr>
   <tr>
     <td>NULL_POINTER</td>
     <td>2</td>
-    <td>傳遞的引數之一為NULL，或其中一個內部成員未初始化。</td>
+    <td>傳入的參數之一為NULL，或某個內部成員未初始化。</td>
   </tr>
   <tr>
-    <td>ILLEGAL_STATE</td>
-    <td>1</td>
-    <td>目前播放器狀態不支援此作業。</td>
+    <td>非法狀態</td>
+    <td>3</td>
+    <td>在當前播放器狀態中不支援該操作。</td>
   </tr>
   <tr>
-    <td>INTERFACE_NOT_FOUND</td>
+    <td>未找到介面</td>
     <td>4</td>
-    <td>interfaceCast方法會在請求的介面未由此實施／繼承時引發此錯誤。</td>
+    <td>當請求的介面未由此實現/繼承時，interfaceCast方法將引發此錯誤。</td>
   </tr>
   <tr>  
     <td>建立失敗</td>
     <td>5</td>
-    <td>建立一個內部資源失敗。</td>
+    <td>建立內部資源之一失敗。</td>
   </tr>
   <tr>
-    <td>UNSUPPORTED_OPERATION</td>
+    <td>不支援的_OPERATION</td>
     <td>6</td>
-    <td>目前不支援所請求的作業。</td>
+    <td>當前不支援請求的操作。</td>
   </tr>
   <tr>
-    <td>DATA_NOT_AVAILABLE</td>
+    <td>資料_不可用</td>
     <td>7</td>
-    <td>請求的資料目前無法使用。</td>
+    <td>請求的資料當前不可用。</td>
   </tr>
   <tr>
-    <td>SEEK_ERROR</td>
+    <td>查找錯誤</td>
     <td>8</td>
-    <td>執行尋道操作時發生錯誤。</td>
+    <td>執行查找操作時出錯。</td>
   </tr>
   <tr>
-    <td>不支援的功能</td>
+    <td>不支援的_功能</td>
     <td>9</td>
-    <td>不支援此功能／函式。</td>
+    <td>不支援此功能/函式。</td>
   </tr>
   <tr>
-    <td>RANGE_ERROR</td>
+    <td>範圍_錯誤</td>
     <td>10</td>
     <td>指定的值超出範圍。</td>
   </tr>
   <tr>
     <td>CODEC_NOT_SUPPORTED</td>
     <td>11</td>
-    <td>TVSDK或基礎裝置不支援特定串流的音訊／視訊轉碼器。</td>
+    <td>TVSDK或基礎設備不支援給定流的音頻/視頻編解碼器。</td>
   </tr>
   <tr>
-    <td>MEDIA_ERROR</td>
+    <td>介質錯誤</td>
     <td>12</td>
-    <td>未找到指定的介質。</td>
+    <td>找不到指定的介質。</td>
   </tr>
   <tr>
     <td>網路錯誤</td>
     <td>13</td>
-    <td>下載片段或區段（視訊和音訊）時發生錯誤。</td>
+    <td>下載片段或段（視頻和音頻）時出錯。</td>
   </tr>
   <tr>
-    <td>GENERIC_ERROR</td>
+    <td>泛型_錯誤</td>
     <td>14</td>
-    <td>一般錯誤事件。 並非由TVSDK實際核發。 這只是對應於TVSDK錯誤事件的數值代碼範圍結尾的標籤。</td>
+    <td>一般錯誤事件。 不是TVSDK發的。 這只是與TVSDK錯誤事件對應的數字代碼範圍結束的標籤。</td>
   </tr>
   <tr>
-    <td>INVALID_SEEK_TIME</td>
+    <td>無效_SEEK_TIME</td>
     <td>15</td>
-    <td>提供的搜索時間無效。</td>
+    <td>提供的查找時間無效。</td>
   </tr>
   <tr>
     <td>AUDIO_TRACK_ERROR</td>
     <td>16</td>
-    <td>發生與音軌相關的錯誤（替代音訊）</td>
+    <td>與音頻軌道相關的錯誤（備用音頻）</td>
   </tr>
   <tr>
-    <td>ACCESS_FROM_DIFFERENT_THREAD</td>
+    <td>訪問自不同線程</td>
     <td>17</td>
-    <td>PSDK API是從與初始化PSDK的執行緒不同的執行緒呼叫。</td>
+    <td>PSDK API來自與初始化PSDK的線程不同的線程。</td>
   </tr>
   <tr>
-    <td>ELEMENT_NOT_FOUND</td>
+    <td>未找到元素</td>
     <td>18</td>
     <td>找不到元素。</td>
   </tr>
   <tr>
-    <td>NOT_IMPLEMENTED</td>
+    <td>未實現(_I)</td>
     <td>19</td>
-    <td>功能未實作。</td>
+    <td>功能未實現。</td>
   </tr>
   <tr>
-    <td>PRE_ROLL_DISABLED</td>
+    <td>禁用前_卷</td>
     <td>20</td>
-    <td>前置廣告已透過AdvertisingMetadata停用。</td>
+    <td>已通過AdvertisingMetadata禁用預卷。</td>
   </tr>
   <tr>
-    <td>PLAYBACK_NOT_AUTHORIZED</td>
+    <td>播放_未授權</td>
     <td>57</td>
-    <td>Flash Player中尚未啟用HLS播放。 請參閱AuthorizedFeatures.enableMediaPlayerHLSPlayback()。</td>
+    <td>未在Flash Player中啟用HLS回放。 請參見AuthorizedFeatures.enableMediaPlayerHLSPlayback()。</td>
   </tr>
   <tr>
-    <td>NETWORK_TIMEOUT</td>
+    <td>網路超時</td>
     <td>58</td>
-    <td>網路提取資源／連接伺服器時超時。</td>
+    <td>獲取資源/連接伺服器時網路超時。</td>
   </tr>
 </table>
 
 ## 警告
 
-下表提供有關WARN類型通知的詳細資訊。
-大多數警告都包含相關的元資料；例如，無法下載的資源的URL。 有些通知包含中繼資料，以指定問題是發生在主要視訊內容、替代音訊內容或廣告中。
+下表提供了有關WARN類型通知的詳細資訊。
+大多數警告都包含相關元資料；例如，無法下載的資源的URL。 某些通知包含元資料，用於指定是在主視頻內容、備用音頻內容還是廣告中出現問題。
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
     <th><b>錯誤名稱</b></th>
-    <th><b>程式碼</b></th>
+    <th><b>代碼</b></th>
     <th><b>說明</b></th>
   </tr>
   <tr>
-    <td>PLAYBACK_OPERATION_FAILED</td>
+    <td>回放操作失敗</td>
     <td>200</td>
-    <td>播放操作期間發生錯誤。 播放相關操作失敗</td>
+    <td>播放操作期間出錯。 與回放相關的操作失敗</td>
   </tr>
   <tr>  
-    <td>NATIVE_WARNING</td>
+    <td>本機警告</td>
     <td>201</td>
     <td>低級AVE庫發出錯誤。</td>
   </tr>
   <tr>
     <td>AD_RESOLVER_FAILED</td>
     <td>202</td>
-    <td>廣告外掛程式無法解析廣告。</td>
+    <td>廣告插件無法解析廣告。</td>
   </tr>
   <tr>
     <td>AD_MANIFEST_LOAD_FAILED</td>
     <td>203</td>
-    <td>無法載入廣告資訊清單。</td>
+    <td>無法載入Ad清單。</td>
   </tr>
   <tr>
     <td>AD_RESOLUTION_IN_PROGRESS</td>
@@ -184,30 +183,30 @@ ht-degree: 6%
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
     <th><b>錯誤名稱</b></th>
-    <th><b>程式碼</b></th>
+    <th><b>代碼</b></th>
     <th><b>說明</b></th>
   </tr>
   <tr>
-    <td>REVENUE_OPTIMIZATION_REPORTING</td>
+    <td>收入_優化_報告</td>
     <td>300</td>
-    <td>TVSDK詳細通知，以進一步報告和分析。</td>
+    <td>TVSDK詳細通知，用於進一步報告和分析。</td>
   </tr>
  </table>
 
-## 原生錯誤代碼
+## 本機錯誤代碼
 
-AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視訊播放通知。
+AVE的Video Encoder介面在NATIVE_ERROR元資料對象中返回這些視頻回放通知。
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
     <th><b>錯誤名稱</b></th>
-    <th><b>程式碼</b></th>
+    <th><b>代碼</b></th>
     <th><b>說明</b></th>
   </tr>
   <tr>  
-    <td>END_OF_PERIOD</td>
+    <td>期末</td>
     <td>-1</td>
-    <td>句號結束。</td>
+    <td>期末。</td>
   </tr>
   <tr>
     <td>成功</td>
@@ -217,52 +216,52 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr>
     <td>ASYNC_OPERATION_IN_PROGRESS</td>
     <td>1</td>
-    <td>非同步操作。 已發出操作請求。 以後將提供成功／失敗資訊。</td>
+    <td>非同步操作。 已發出操作請求。 以後將提供成功/失敗資訊。</td>
   </tr>
   <tr>
     <td>EOF</td>
     <td>2</td>
-    <td>由於檔案結束(EOF)條件，無法操作。</td>
+    <td>由於檔案結束(EOF)條件，無法執行操作。</td>
   </tr>
   <tr>
     <td>解碼器失敗</td>
-    <td>1</td>
-    <td>解碼器在執行時期失敗。</td>
+    <td>3</td>
+    <td>解碼器在運行時失敗。</td>
   </tr>
   <tr>
-    <td>DEVICE_OPEN_ERROR</td>
+    <td>設備開啟錯誤</td>
     <td>4</td>
     <td>無法開啟硬體解碼器。</td>
   </tr>
   <tr>
-    <td>FILE_NOT_FOUND</td>
+    <td>找不到檔案</td>
     <td>5</td>
     <td>找不到資源。</td>
   </tr>
   <tr>
-    <td>GENERIC_ERROR</td>
+    <td>泛型_錯誤</td>
     <td>6</td>
     <td>一般錯誤。</td>
   </tr>
   <tr>
-    <td>不可恢復錯誤</td>
+    <td>不可恢復_錯誤</td>
     <td>7</td>
-    <td>視訊引擎無法從中復原的錯誤狀況。</td>
+    <td>視頻引擎無法從中恢復的錯誤條件。</td>
   </tr>
   <tr>
-    <td>LOST_CONNECTION_RESCOVERABLE</td>
+    <td>LOST_CONNECTION_RECOVERABLE</td>
     <td>8</td>
     <td>網路錯誤，正在嘗試恢復。</td>
   </tr>
   <tr> 
-    <td>NO_FIXED_SIZE</td>
+    <td>無固定大小</td>
     <td>9</td>
     <td>無法確定資源的大小。</td>
   </tr>
   <tr>
-    <td>NOT_IMPLEMENTED</td>
+    <td>未實現(_I)</td>
     <td>10</td>
-    <td>功能未實作。</td>
+    <td>功能未實現。</td>
   </tr>
   <tr>
     <td>記憶體不足</td>
@@ -270,37 +269,37 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td>記憶體不足。</td>
   </tr>
   <tr>
-    <td>PARSE_ERROR</td>
+    <td>分析錯誤</td>
     <td>12</td>
-    <td>解析媒體檔案時出錯。</td>
+    <td>分析媒體檔案時出錯。</td>
   </tr>
   <tr>  
-    <td>SIZE_UNKNOWN</td>
+    <td>大小未知</td>
     <td>13</td>
     <td>資源有大小，但未知。</td>
   </tr>
   <tr>  
-    <td>UNDER_FLOW</td>
+    <td>下(_F)</td>
     <td>14</td>
-    <td>底流。</td>
+    <td>下流情況。</td>
   </tr>
   <tr> 
-    <td>不支援的組態</td>
+    <td>不支援的_配置</td>
     <td>15</td>
-    <td>不支援設定。</td>
+    <td>不支援配置。</td>
   </tr>
   <tr>  
-    <td>UNSUPPORTED_OPERATION</td>
+    <td>不支援的_OPERATION</td>
     <td>16</td>
     <td>不支援操作。</td>
   </tr>
   <tr>
-    <td>WAITING_FOR_INIT</td>
+    <td>等待初始化</td>
     <td>17</td>
     <td>尚未初始化。</td>
   </tr>
   <tr>  
-    <td>INVALID_PARAMETER</td>
+    <td>無效參數</td>
     <td>18</td>
     <td>參數無效。</td>
   </tr>
@@ -312,32 +311,32 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr>
     <td>OP_ONLY_ALLOWED_IN_PAUSED_STATE</td>
     <td>20</td>
-    <td>只有暫停時，才允許該操作。</td>
+    <td>僅在暫停時允許該操作。</td>
   </tr>
   <tr> 
     <td>OP_INVALID_WITH_AUDIO_ONLY_FILE</td>
     <td>21</td>
-    <td>操作不能用於僅音頻檔案。</td>
+    <td>操作不能僅用於音頻檔案。</td>
   </tr>
   <tr>
     <td>PREVIOUS_STEP_SEEK_IN_PROGRESS</td>
     <td>22</td>
-    <td>以前的搜索操作仍在進行中。</td>
+    <td>上一尋道操作仍在進行中。</td>
   </tr>
   <tr> 
-    <td>SOURCE_NOT_SPECIFIED</td>
+    <td>未指定源</td>
     <td>23</td>
     <td>未指定資源。</td>
   </tr>
   <tr>
-    <td>RANGE_ERROR</td>
+    <td>範圍_錯誤</td>
     <td>24</td>
     <td>指定的值超出範圍。</td>
   </tr>
   <tr>
-    <td>INVALID_SEEK_TIME</td>
+    <td>無效_SEEK_TIME</td>
     <td>25</td>
-    <td>無效的尋道時間。</td>
+    <td>無效的查找時間。</td>
   </tr>
   <tr>
     <td>FILE_STRUCTURE_INVALID</td>
@@ -345,7 +344,7 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td>指定的檔案不符合預期語法。</td>
   </tr>
   <tr>
-    <td>COMPONENT_CREATION_FAILURE</td>
+    <td>元件建立失敗</td>
     <td>27</td>
     <td>無法建立基本元件。</td>
   </tr>
@@ -360,17 +359,17 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td>不支援容器類型。</td>
   </tr>
   <tr>
-    <td>SEEK_FAILED</td>
+    <td>查找失敗</td>
     <td>30</td>
-    <td>搜索失敗。</td>
+    <td>查找失敗。</td>
   </tr>
   <tr>
     <td>CODEC_NOT_SUPPORTED</td>
     <td>31</td>
-    <td>不支援的轉碼器。</td>
+    <td>不支援的編解碼器。</td>
   </tr>
   <tr>
-    <td>NETWORK_UNAVAILABLE</td>
+    <td>網路不可用</td>
     <td>32</td>
     <td>網路不可用。</td>
   </tr>
@@ -380,69 +379,69 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td>從網路獲取資料時出錯。</td>
   </tr>
   <tr>
-    <td>溢位</td>
+    <td>溢出</td>
     <td>34</td>
-    <td>溢位。</td>
+    <td>溢出。</td>
   </tr>
   <tr>  
-    <td>VIDEO_PROFILE_NOT_SUPPORTED</td>
+    <td>支援VIDEO_PROFILE_NOT_SUPPORTED</td>
     <td>35</td>
-    <td>不支援的視訊設定檔。</td>
+    <td>不支援的視頻配置檔案。</td>
   </tr>
   <tr>
-    <td>PERIOD_NOT_LOADED</td>
+    <td>期間未載入</td>
     <td>36</td>
-    <td>嘗試對HOLD期間或尚未載入的期間執行操作。</td>
+    <td>嘗試在HOLD期間或尚未載入的期間執行操作。</td>
   </tr>
   <tr> 
-    <td>INVALID_REPLACE_DURATION</td>
+    <td>無效_REPLACE_DURATION</td>
     <td>37</td>
-    <td>指定的替換持續時間無效或延長到串流結尾。</td>
+    <td>指定的替換持續時間無效或延伸到流的末尾。</td>
   </tr>
   <tr>
-    <td>調用自錯誤線程</td>
+    <td>調用的_FROM_WRONG_THREAD</td>
     <td>38</td>
-    <td>無法從錯誤的執行緒呼叫API。 主要是應從主執行緒呼叫的API元素。</td>
+    <td>無法從錯誤的線程調用API。 大多數情況下，應僅從主線程調用的API元素。</td>
   </tr>
   <tr>
     <td>FRAGMENT_READ_ERROR</td>
     <td>39</td>
-    <td>片段讀取錯誤。 沒有故障切換。 引擎將嘗試讀取下一個片段。</td>
+    <td>片段讀取錯誤。 不存在故障轉移。 引擎將嘗試讀取下一個片段。</td>
   </tr>
   <tr>
     <td>中止</td>
     <td>40</td>
-    <td>此操作由明確的中止或銷毀調用中止。</td>
+    <td>該操作被顯式中止或銷毀調用中止。</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_HLS_VERSION</td>
     <td>41</td>
-    <td>無法播放此版本的HLS介質。</td>
+    <td>無法播放此版本的HLS媒體。</td>
   </tr>
   <tr>
     <td>CANNOT_FAIL_OVER</td>
     <td>42</td>
-    <td>不能故障切換。</td>
+    <td>無法故障轉移。</td>
   </tr>
   <tr> 
     <td>HTTP_TIME_OUT</td>
     <td>43</td>
-    <td>HTTP下載已逾時。</td>
+    <td>HTTP下載超時。</td>
   </tr>
   <tr>
-    <td>網路關閉</td>
+    <td>網路(_D)</td>
     <td>44</td>
-    <td>用戶的網路連接已關閉。 播放可能隨時停止，並會在連線可用時繼續。</td>
+    <td>用戶的網路連接已關閉。 播放可以隨時停止，並在連接可用時恢復。</td>
   </tr>
   <tr>
     <td>NO_USABLE_BITRATE_PROFILE</td>
     <td>45</td>
-    <td>在串流中找不到可用位速率描述檔。</td>
+    <td>在流中找不到可用比特率配置檔案。</td>
   </tr>
   <tr>
     <td>BAD_MANIFEST_SIGNATURE</td>
     <td>46</td>
-    <td>資訊清單的簽名不好。 它未通過資訊清單簽署測試。</td>
+    <td>清單的簽名錯誤。 未通過清單簽名test。</td>
   </tr>
   <tr>
     <td>CANNOT_LOAD_PLAYLIST</td>
@@ -450,44 +449,44 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td>無法載入播放清單。</td>
   </tr>
   <tr>
-    <td>REPLACEMENT_FAILED</td>
+    <td>替換失敗</td>
     <td>48</td>
-    <td>無法成功取代在「插入API」中指定的項目。 這表示插入成功，但替換未成功。 如果要更換的資訊清單已從時間軸移除，則更換可能會失敗。</td>
+    <td>在插入API中指定的替換無法成功。 這意味著插入成功，但替換未成功。 如果要替換的清單已從時間線中刪除，則替換可能失敗。</td>
   </tr>
   <tr>
-    <td>SWITCH_TO_ANSYMETRIC_PROFILE</td>
+    <td>SWITCH_TO_ASYMMETRIC_PROFILE</td>
     <td>49</td>
-    <td>DRM正在切換到非對稱配置檔案。 所有描述檔都預期會在持續時間內對齊。 如果沒有，則會擲出此警告，且播放中可能會出現跳轉。</td>
+    <td>DRM正在切換到非對稱配置檔案。 所有配置檔案預計在持續時間內對齊。 否則，將引發此警告，並且回放中可能出現跳轉。</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_BACKWARD</td>
     <td>50</td>
-    <td>即時視窗只會向前移動。 否則，將拋出此警告，並且不會讀取窗口。 因此，播放中可能會出現跳轉（或停止／長暫停）。</td>
+    <td>「即時」窗口只能向前移動。 否則，將引發此警告，並且不會讀取窗口。 因此，回放中可能會出現跳轉（或停止/長暫停）。</td>
   </tr>
   <tr>
-    <td>CURRENT_PERIOD_EXPIRED</td>
+    <td>當前期間已到期</td>
     <td>51</td>
-    <td>即時視窗會移至目前時段以外的位置。</td>
+    <td>即時窗口已超出當前時段。</td>
   </tr>
   <tr>
-    <td>CONTENT_LENGTH_MISMATCH</td>
+    <td>內容長度不匹配</td>
     <td>52</td>
-    <td>HTTP伺服器報告的內容長度不符合實際的媒體大小。</td>
+    <td>HTTP伺服器報告的內容長度與實際媒體大小不匹配。</td>
   </tr>
   <tr>
-    <td>PERIOD_HOLD</td>
+    <td>期間_保持</td>
     <td>53</td>
     <td>媒體讀取器無法進一步讀取，因為它已達到setHoldAt API設定的時間。</td>
   </tr>
   <tr>  
-    <td>LIVE_HOLD</td>
+    <td>即時保留(_H)</td>
     <td>54</td>
-    <td>媒體閱讀器無法載入區段，因為它已到達即時視窗的尾端。 當伺服器將新媒體廣告至即時視窗時，區段載入將會繼續。 在下列情況下，通常會到達此狀態：<ul><li>bufferTime太高（等於或高於即時視窗持續時間）。</li><li>一個或多個插入／擦除API的組合取代了添加的多個介質。</li><li>下一時段是有待更換媒體的即時時段（由於InsertBy API呼叫）</li></ul></td>
+    <td>介質讀取器無法載入段，因為它已到達即時窗口的末尾。 當伺服器將新媒體廣告到即時窗口時，將恢復段載入。 通常在以下情況下達到此狀態：<ul><li>bufferTime過高（等於或高於即時窗口持續時間）。</li><li>一個或多個插入/擦除API的組合替換了比它添加的介質多的介質。</li><li>下一個時段是具有掛起的介質替換（由於InsertBy API調用）的即時時段</li></ul></td>
   </tr>
   <tr>
-    <td>BAD_MEDIA_INTERLANG</td>
+    <td>BAD_MEDIA_INTERLEARG</td>
     <td>55</td>
-    <td>媒體中的音訊和視訊交錯無法正確執行。 這是封裝錯誤。 當差異超過兩秒時，就會發出警告。</td>
+    <td>媒體中的音頻和視頻交織操作不正確。 這是打包錯誤。 當差值超過兩秒時，將發出警告。</td>
   </tr>
   <tr>
     <td>DRM_NOT_AVAILABLE</td>
@@ -495,44 +494,44 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td></td>
   </tr>
   <tr>  
-    <td>PLAYBACK_NOT_AUTHORIZED</td>
+    <td>播放_未授權</td>
     <td>57</td>
-    <td>Flash Player中尚未啟用HLS播放。 請參閱AuthorizedFeatures.enableHLSPlayback。</td>
+    <td>未在Flash Player中啟用HLS回放。 請參見AuthorizedFeatures.enableHLSPlayback。</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
     <td>58</td>
-    <td>解碼器接收到不能解碼的壞樣本。 這通常不是致命錯誤，但表示音訊／視訊中可能有故障。 此錯誤的例項過多表示編碼錯誤或檔案錯誤。</td>
+    <td>解碼器接收了無法解碼的壞樣本。 這通常不是致命錯誤，但表示音頻/視頻中可能出現故障。 此錯誤的實例過多表示編碼錯誤或檔案錯誤。</td>
   </tr>
   <tr>
     <td>RANGE_SPANS_READ_HEAD</td>
     <td>59</td>
-    <td>開始播放後，「插入／取代」範圍不應包含讀取頭。</td>
+    <td>播放開始後，「插入/替換」範圍不應包含讀取頭。</td>
   </tr>
   <tr> 
-    <td>POSTROLL_WITH_LIVE_NOT_ALLOWED</td>
+    <td>POSTURL_WITH_LIVE_NOT_ALLOWED</td>
     <td>60</td>
-    <td>即時媒體上不允許插入滾動後內容。 但是，當伺服器將介質標籤為完整後，才允許使用。</td>
+    <td>在即時媒體上不允許插入卷後。 但是，在伺服器將介質標籤為完整後，才允許使用這些介質。</td>
   </tr>
   <tr>
     <td>內部錯誤</td>
     <td>61</td>
-    <td>這是一個非常罕見的問題，永遠不會發生。</td>
+    <td>這是一個非常罕見的，不該發生的問題。</td>
   </tr>
   <tr>  
     <td>SPS_PPS_FOUND_OUTSIDE_AVCC</td>
     <td>62</td>
-    <td>此串流不遵循一律將H264 SPS/PPS放入AVCC的封裝建議。 可能會看到搜尋／播放問題。</td>
+    <td>流不遵循始終將H264 SPS/PPS放入AVCC的打包建議。 可能發現查找/播放問題。</td>
   </tr>
   <tr>  
-    <td>PARTIAL_REPLACEMENT</td>
+    <td>部分替換</td>
     <td>63</td>
-    <td>在「插入API」中指定的取代僅完成部分。 當replaceDuration跨越時間軸持續時間時，就會發生此情況。</td>
+    <td>在插入API中指定的替換操作僅部分完成。 當replaceDuration跨越時間軸持續時間時會發生這種情況。</td>
   </tr>
   <tr>
     <td>RENDITION_M3U8_ERROR</td>
     <td>64</td>
-    <td>轉譯播放清單載入時發生錯誤。 這僅適用於AVE，不適用於FlashPlayer。</td>
+    <td>載入格式副本播放清單時出錯。 這隻適用於AVE，而不適用於FlashPlayer。</td>
   </tr>
   <tr>
     <td>NULL_OPERATION</td>
@@ -540,54 +539,54 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td>操作不執行任何操作。</td>
   </tr>
   <tr>
-    <td>SEGMENT_KLIPPED_ON_FAILURE</td>
+    <td>SEGMENT_SKPIPED_ON_FAILURE</td>
     <td>66</td>
-    <td>區段無法播放，且會在失敗時略過。</td>
+    <td>無法播放段，失敗時會跳過段。</td>
   </tr>
   <tr>
-    <td>INCOMPLATED_RENDER_MODE</td>
+    <td>不相容的RENDER_MODE</td>
     <td>67</td>
-    <td>不相容的演算模式。</td>
+    <td>不相容的呈現模式。</td>
   </tr>
   <tr>
     <td>PROTOCOL_NOT_SUPPORTED</td>
     <td>68</td>
-    <td>不支援URL中使用的Web通訊協定。</td>
+    <td>不支援URL中使用的Web協定。</td>
   </tr>
   <tr>
     <td>PARSE_ERROR_INCOMPLATIVE_VERSION</td>
     <td>69</td>
-    <td>解析媒體檔案時出錯。</td>
+    <td>分析媒體檔案時出錯。</td>
   </tr>
   <tr>  
-    <td>MANIFEST_FILE_UPPORTED_CHANGED</td>
+    <td>清單_檔案_意外_更改</td>
     <td>70</td>
-    <td>資訊清單檔案以非預期的方式變更。</td>
+    <td>清單檔案以意外方式更改。</td>
   </tr>
   <tr>
     <td>CANNOT_SPLIT_TIMELINE</td>
     <td>71</td>
-    <td>無法對時間軸執行拆分操作。</td>
+    <td>無法對時間線執行拆分操作。</td>
   </tr>
   <tr>
     <td>CANNOT_ERASE_TIMELINE</td>
     <td>72</td>
-    <td>無法對時間軸執行拭除操作。</td>
+    <td>無法對時間線執行擦除操作。</td>
   </tr>
   <tr>
-    <td>DID_NOT_GET_NEXT_FRAGMENT</td>
+    <td>DID_NOT_NEXT_FRAGMENTGET</td>
     <td>73</td>
-    <td>沒有找到下一個片段。</td>
+    <td>沒有找到下一個碎片。</td>
   </tr>
   <tr>
-    <td>NO_TIMELINE</td>
+    <td>無時間軸</td>
     <td>74</td>
-    <td>內部資料結構中沒有時間軸。</td>
+    <td>內部資料結構中不存在時間線。</td>
   </tr>
   <tr>
-    <td>LISTENER_NOT_FOUND</td>
+    <td>未找到監聽器</td>
     <td>75</td>
-    <td>在內部資料結構中未找到偵聽器。</td>
+    <td>在內部資料結構中找不到偵聽器。</td>
   </tr>
   <tr>
     <td>AUDIO_START_ERROR</td>
@@ -595,57 +594,57 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
     <td>無法啟動音頻。</td>
   </tr>
   <tr>
-    <td>NO_AUDIO_SINK</td>
+    <td>無音頻接收器</td>
     <td>77</td>
-    <td>內部資料結構中沒有音頻接收器。</td>
+    <td>內部資料結構中不存在音頻接收器。</td>
   </tr>
   <tr>  
-    <td>FILE_OPEN_ERROR</td>
-    <td>58</td>
+    <td>檔案_開啟_錯誤</td>
+    <td>78</td>
     <td>無法開啟檔案。</td>
   </tr>
   <tr>
-    <td>FILE_WRITE_ERROR</td>
+    <td>檔案寫入錯誤</td>
     <td>79</td>
     <td>無法寫入檔案。</td>
   </tr>
   <tr>
-    <td>FILE_READ_ERROR</td>
+    <td>檔案讀取錯誤</td>
     <td>80</td>
     <td>無法從檔案讀取。</td>
   </tr>
   <tr>
     <td>ID3PARSE_ERROR</td>
     <td>81</td>
-    <td>剖析ID3資料時發生錯誤。</td>
+    <td>分析ID3資料時出錯。</td>
   </tr>
   <tr>
-    <td>SECURITY_ERROR</td>
+    <td>安全性_錯誤</td>
     <td>82</td>
-    <td>由於安全性限制，載入內容失敗。</td>
+    <td>由於安全限制，載入內容失敗。</td>
   </tr>
   <tr>
-    <td>時間軸——太短</td>
+    <td>時間軸太短</td>
     <td>83</td>
-    <td>時間軸持續時間太短。 如果這是即時串流，則可能會發生頻繁的緩衝。</td>
+    <td>時間線持續時間太短。 如果這是即時流，則可能會發生頻繁的緩衝。</td>
   </tr>
   <tr>
     <td>AUDIO_ONLY_STREAM_START</td>
     <td>84</td>
-    <td>該串流已切換為僅限音訊的串流。</td>
+    <td>該流已切換為僅音頻流。</td>
   </tr>
   <tr>  
     <td>AUDIO_ONLY_STREAM_END</td>
     <td>85</td>
-    <td>該串流已從純音效切換為含視訊的串流。</td>
+    <td>該流已從僅音頻切換到帶視頻的流。</td>
   </tr>
   <tr>
-    <td>KEY_NOT_FOUND</td>
+    <td>未找到鍵</td>
     <td>87</td>
     <td>找不到密鑰。</td>
   </tr>
   <tr>
-    <td>INVALID_KEY</td>
+    <td>無效鍵</td>
     <td>88</td>
     <td>密鑰無效。</td>
   </tr>
@@ -657,26 +656,26 @@ AVE的Video Encoder介面會在NATIVE_ERROR中繼資料物件中傳回這些視�
   <tr>
     <td>MAIN_MANIFEST_UPDATE_TO_BE_HANDLED</td>
     <td>90</td>
-    <td>無法處理主資訊清單更新。</td>
+    <td>無法處理主清單更新。</td>
   </tr>
   <tr>
-    <td>UNJERVED_TIME_DINSTRUCTION_FOUND</td>
+    <td>URCERTED_TIME_DISCUNTIATION_FOUND</td>
     <td>91</td>
-    <td>發現未報告的時間不連續性。</td>
+    <td>發現未報告的時間中斷。</td>
   </tr>
   <tr>
-    <td>UNMATCHED_AV_DINSTRUCTION_FOUND</td>
+    <td>不匹配的AV_不連續性_找到</td>
     <td>92</td>
-    <td>發現音訊和視訊不連續。</td>
+    <td>發現音頻和視頻不連續。</td>
   </tr>
   <tr>
     <td>TRICKPLAY_ENDED_DUE_TO_ERROR</td>
     <td>93</td>
-    <td>以特技播放模式播放媒體時發生錯誤。 特技播放模式已結束，而串流已暫停。 呼叫Play()以正常模式播放媒體。</td>
+    <td>在特技播放模式下播放媒體時出錯。 特技播放模式已結束，流已暫停。 調用Play()以正常模式播放媒體。</td>
   </tr>
   <tr>
-    <td>LIVE_WINDOW_MOVED_AHEAD</td>
+    <td>LIVE_WINDOW_MOVED_AEW</td>
     <td>95</td>
-    <td>玩家已離開即時視窗，必須向前追趕。</td>
+    <td>玩家不在直播窗口，必須前進才能趕上。</td>
   </tr>
 </table>

@@ -1,98 +1,97 @@
 ---
 title: 程式設計師啟動指南
 description: 程式設計師啟動指南
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0aecdb81-9b97-4475-b0b0-654d916b2374
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
 
 ---
 
-
 # 程式設計師啟動指南 {#programmer-kickstart-guide}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-## 簡介 {#prog-kickstart-guide-intro}
+## 導言 {#prog-kickstart-guide-intro}
 
-歡迎使用Adobe Primetime TV Everywhere驗證。 我們期待與您合作。
+歡迎使用Adobe Primetime認證的TV Everywhere。 我們期待與你合作。
 
 >[!NOTE]
 >
->這是面向程式設計師（內容提供商）的Kickstart指南。 若您使用多頻道視訊程式設計經銷商(MVPD)，請務必查看 [MVPD啟動指南](/help/authentication/mvpd-kickstart-guide.md).
+>這是面向程式設計師（內容提供商）的Kickstart指南。 如果您使用的是多通道視頻節目分發伺服器(MVPD)，請確保 [MVPD啟動指南](/help/authentication/mvpd-kickstart-guide.md)。
 
 
-Adobe Primetime驗證聯絡人：
+Adobe Primetime身份驗證聯繫人：
 
-* 支援 — 適用於所有問題、事件或功能要求 `tve-support@adobe.com`
-* 在您的專案開始前，會為您的專案指派啟用連絡人。
+* 支援 — 針對所有問題、事件或功能請求， `tve-support@adobe.com`
+* 在項目啟動時，將為您的項目分配支援聯繫人。
 
-以下資訊概述了一些重要的第一步，以使我們能夠從一個堅實而高效的開始。 目標是要針對我們如何與合作夥伴合作以達成整合提供說明和期望。 請注意下方每個項目的「you will provide」/「Adobe將提供」章節。 這些會透過檢查清單列出，或在我們完成專案時提供指南。
+以下資訊概述了一些重要的第一步，以使我們能夠實現可靠而高效的開端。 其目標是就我們將如何與合作夥伴合作以實現整合提供解釋和期望。 請注意下面每個項目的「您將提供」/「Adobe將提供」部分。 這些是通過核對表列出的，或是在我們完成項目時提供的指南。
 
-本檔案假設程式設計人員已註冊，可與所選的MVPD合作夥伴合作。
+本文檔假定程式設計師已註冊以與所選MVPD合作夥伴一起工作。
 
-## 發行排程 {#release-schedule}
+## 發放計畫 {#release-schedule}
 
-Adobe衝刺開發週期已規劃好，讓您了解我們的發行排程時間，以及每個發行如何透過我們的開發系統進行推廣。
+Adobe衝刺開發週期已計畫出來，以便您能夠瞭解我們的發佈計畫時間以及每個發佈如何通過我們的開發系統進行推廣。
 
-每次衝刺完成後，都可進行QE，或在UAT伺服器上查看新實施。
+每次衝刺完成後，都可進行QE，或查看UAT伺服器上的新實施。
 
-大約每6週向Adobe資格預審伺服器發行一次。 （這是我們在實施最終QE時，提出的下一版的伺服器。） 這些組建將包含自上次放置以來在Sprint中完成的所有工作。 目前，合作夥伴可使用兩週的QE期間來測試此版本。
+大約每6週向Adobe資格預審伺服器發佈一次。 （這是我們在執行最終QE時存放建議的下一版本的伺服器。） 這些生成將包括自上次刪除後在短跑中完成的所有工作。 此時，合作夥伴可使用兩週的QE窗口來test此版本。
 
-假設在前兩週的測試期間未發生任何重大問題，則此版本將提升為即時生產。 這表示整合將可在Adobe發行環境中使用，但合作夥伴會在發行公開時選擇。
+假定在前兩週的測試窗口中未出現任何關鍵問題，則將將發佈提升為即時生產。 這意味著整合將在Adobe發行環境中提供，但合作夥伴選擇何時公開發行。
 
 <!--For the latest release schedule information, see the Release Calendar.-->
 
-## 支援檔案 {#supp-doc}
+## 支援文檔 {#supp-doc}
 
 Adobe將提供：
 
 * 部署指南： **`https://tve.zendesk.com/entries/498741-tve-deployment-guide`**
-* 訪問我們的Zendesk客戶支援系統。 您也可以在這裡找到一些程式的範例、資訊和教學課程影片。 為了在Zendesk上訪問此文檔，以及發佈在Zendesk上的其他文檔，您必須在註冊並建立帳戶 `https://tve.zendesk.com/home`. 您可以註冊的使用者數量沒有限制。  您可以查看並分享任何歸檔票證的評論。 所有支援問題均應處理至 `tve-support@adobe.com`.
+* 訪問我們的Zendesk客戶支援系統。 您也可以在此處找到有關某些進程的示例、資訊和視頻教程。 要在Zendesk上訪問此文檔，以及在其上發佈的其他文檔，您必須在以下位置註冊並建立帳戶： `https://tve.zendesk.com/home`。 您可以註冊的用戶數量沒有限制。  您可以查看並共用任何歸檔票證上的注釋。 所有支援問題均應處理到 `tve-support@adobe.com`。
 * [程式設計師整合指南](/help/authentication/programmer-integration-guide-overview.md)
-* 媒體令牌驗證程式庫： `https://tve.zendesk.com/entries/471323-media-token-validator-library`.
+* 媒體令牌驗證器庫： `https://tve.zendesk.com/entries/471323-media-token-validator-library`。
 
-## 測試環境設定 {#test-env-setup}
+## Test環境設定 {#test-env-setup}
 
-Adobe會先設定您的Adobe測試網站，Adobe會作為MVPD用於測試用途。 然後，您的團隊可以設定呼叫AdobeAPI的測試網站。 使用預設的MVPD選取器，並選取「Adobe」作為idP。
+Adobe將首先設定您的Adobetest站點，在該站點中，Adobe將充當MVPD，用於test。 然後，您的團隊可以設定調用testAPI的Adobe網站。 使用預設的MVPD選擇器，然後選擇「Adobe」作為idP。
 
 您將提供：
 
-1. 請求者ID。 這是字串，可唯一識別向Adobe Primetime驗證提出請求的網站或應用程式的品牌。 字串本身是任意的，但需要在Adobe和程式設計師之間達成一致
-1. 頻道資訊。 這是一組字串，用以識別要求者ID要求的內容頻道。 在許多情況下，通道與請求者ID相同。 不過，您可能有多個內容頻道，可以透過相同ID來請求。 頻道名稱字串應與有線電視頻道相對應。 有些MVPD會透過AuthN和/或AuthZ通訊協定來驗證此值。
-1. 網域名稱（允許用於該請求者ID）。 這將會是實際網域名稱的清單，由Adobe列出以接受要求者ID。 這可確保只有已核准的網域才能存取含有中繼資料的Adobe Primetime驗證。 注意：對於測試/測試而言，對生產有效的網域名稱可能不同，應提供並識別兩者。
+1. 請求者ID。 這是一個字串，它將唯一標識向Adobe Primetime身份驗證請求的網站或應用程式的品牌。 字串本身是任意的，但需要由Adobe和程式設計師商定
+1. 頻道資訊。 這是一組字串，它標識請求者ID請求的內容通道。 在很多情況下，通道和請求者ID是相同的。 但是，您可能有多個通道的內容，這些通道可以由同一ID請求。 頻道名稱字串應與有線電視頻道對應。 某些MVPD將通過AuthN和/或AuthZ協定驗證此值。
+1. 域名（該請求者ID允許使用）。 這將是實際域名的清單，該清單將由Adobe列出以接受請求者ID。 這確保只有您的已批准域才有權使用您的元資料存取Adobe Primetime身份驗證。 注：對生產有效的域名可能不同於測試/試運行，應提供並標識兩者。
 
-Adobe會設定帳戶，而Adobe會提供：
+Adobe將設定帳戶，Adobe將提供：
 
-* 登錄和密碼以訪問測試站點
+* 登錄和密碼以訪問test站點
 
 ## 使用MVPD進行設定 {#setup-mvpd}
 
-本節說明從Adobe測試網站移轉以搭配MVPD運作時，您需要什麼。
+本節介紹從Adobetest站點遷移以使用MVPD時需要什麼。
 
-您將提供（透過MVPD）:
+您將提供（通過MVPD）:
 
 * **兩組憑據**:
    * AuthN + AuthZ :已驗證和授權的用戶的登錄/密碼
    * AuthN +非AuthZ :已驗證但未授權的用戶的登錄/密碼
-* **資源ID**. 這是特定內容識別碼，將透過AuthZ通訊協定以MVPD驗證。 這可以是頻道、節目、集數或資產層級；應與您的MVPD同意。
+* **資源ID**。 這是將通過AuthZ協定通過MVPD驗證的特定內容標識符。 這可以在頻道、節目、劇集或資產級別；應與您的MVPD商定。
 
-Adobe Primetime驗證支援以MRSS為基礎的中繼資料結構，這表示資源ID可視需要而定，並可包含特定MVPD所特有的識別碼。
+Adobe Primetime驗證支援基於MRSS的元資料架構，這意味著資源ID可以根據需要是特定的，並且可以包括對特定MVPD唯一的標識符。
 
-**新MVPD整合**:請務必記住，您選擇的MVPD在完成任何整合時，都扮演著不可或缺的角色。 Adobe需要根據每個MVPD的規格來編寫程式碼。 在完成這些步驟之前，您將無法從對話方塊中選取該MVPD，或完成產品測試。 Adobe需要提前安排此工作，以適應下一個可用的衝刺。 （如需目前排程資訊，請參閱發行日曆。）
+**新MVPD整合**:必須記住，您選擇的MVPD在完成任何整合過程中都起著不可或缺的作用。 Adobe需要根據每個MVPD的規格編寫代碼。 在完成這些步驟之前，您將無法從對話框中選擇該MVPD，或完成產品測試。 Adobe需要提前安排這項工作，以適應下一次的短跑。 （有關當前計畫資訊，請參閱「發行日曆」。）
 
-**現有MVPD整合**:如果您選擇的MVPD已通過Adobe設定，則連接步驟應該更簡單（更快），並且通常可以通過配置更改實現連接。
+**現有MVPD整合**:如果您選擇的MVPD已使用Adobe設定，則連接步驟應該簡單得多（速度更快），並且通常可以通過配置更改來實現連接。
 
 >[!NOTE]
 >
->MVPD仍然必須啟用程式設計師，並簽收任何相關的商業交易。
+>MVPD仍然必須啟用程式設計師並簽署任何相關的商業協定。
 
-**QE與MVPD**:所有整合都將涉及聯合QE，而由於使用者最終是MVPD的客戶，因此許多使用者在推送「上線」前已設定測試週期。 由於這涉及MVPD資源的排程，因此這是可能的延遲區域。
+**QE與MVPD**:所有整合都將涉及聯合QE，而且由於最終用戶最終是MVPD的客戶，因此許多企業在推動「即時」之前都設定了test週期。 由於這涉及MVPD資源的調度，因此這是可能的延遲區域。
 
 <!--
 >[RELATEDINFORMATION]
 >[MVPD Kickstart Guide](help\authentication\mvpd-kickstart-guide.md)
 -->
-

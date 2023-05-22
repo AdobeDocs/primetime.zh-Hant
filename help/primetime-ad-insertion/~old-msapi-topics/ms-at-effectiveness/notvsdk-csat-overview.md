@@ -1,34 +1,33 @@
 ---
-description: 出版業者可建立與HLS相容的視訊播放器，可搭配Primetime資訊清單伺服器端和追蹤工作流程運作。 即時串流和隨選視訊(VOD)案例的資訊清單伺服器介面略有不同。
-title: 非TVSDK用戶端追蹤概觀
-translation-type: tm+mt
+description: 發佈者可以構建與HLS相容的視頻播放器，這些視頻播放器與黃金時段清單伺服器客戶端和廣告跟蹤工作流協作。 用於即時流和視頻點播(VOD)案例的到清單伺服器的介面略有不同。
+title: 非TVSDK客戶端跟蹤概述
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
-# 非TVSDK用戶端追蹤{#overview-of-non-tvsdk-client-side-tracking}概觀
+# 非TVSDK客戶端跟蹤概述 {#overview-of-non-tvsdk-client-side-tracking}
 
-出版業者可建立與HLS相容的視訊播放器，可搭配Primetime資訊清單伺服器端和追蹤工作流程運作。 即時串流和隨選視訊(VOD)案例的資訊清單伺服器介面略有不同。
+發佈者可以構建與HLS相容的視頻播放器，這些視頻播放器與黃金時段清單伺服器客戶端和廣告跟蹤工作流協作。 用於即時流和視頻點播(VOD)案例的到清單伺服器的介面略有不同。
 
-資訊清單伺服器提供API，讓自訂播放器可請求下列URL，以用於報告廣告追蹤事件：
+清單伺服器提供API以使自定義播放器能夠請求以下URL，它們可以使用這些URL報告和跟蹤事件：
 
 * 廣告印象
-* 廣告四分位數
-* 廣告Pod進度
-* 內容pod進度
+* 四分之一
+* 廣告POD進度
+* 內容包進度
 
-資訊清單伺服器API會假設任何使用它的視訊播放器都符合最低需求。 如需詳細資訊，請參閱[視訊播放器需求](/help/primetime-ad-insertion/~old-msapi-topics/ms-player-req.md)。
+清單伺服器API假定使用它的任何視頻播放器都滿足最低要求。 請參閱 [視頻播放器要求](/help/primetime-ad-insertion/~old-msapi-topics/ms-player-req.md) 的子菜單。
 
-## 用戶端追蹤工作流程{#section_cst_flow}
+## 客戶端跟蹤工作流 {#section_cst_flow}
 
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
-1. Player從發佈者取得資訊清單伺服器URL。
-1. 播放器會附加特定於其廣告插入需求的查詢參數，並傳送HTTPGET要求至產生的BootstrapURL。 BootstrapURL具有下列語法：
+1. Player從發佈伺服器獲取清單伺服器URL。
+1. Player附加特定於其廣告插入要求的查詢參數，並將HTTPGET請求發送到結果的BootstrapURL。 BootstrapURL具有以下語法：
 
    ```URL
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
@@ -42,9 +41,9 @@ ht-degree: 1%
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   URL包含[傳送命令至資訊清單伺服器](/help/primetime-ad-insertion/~old-msapi-topics/ms-getting-started/ms-sending-cmd.md)中所述的元素。
+   URL包括中所述的元素 [向清單伺服器發送命令](/help/primetime-ad-insertion/~old-msapi-topics/ms-getting-started/ms-sending-cmd.md)。
 
-1. 資訊清單伺服器會建立該播放器的作業階段，並產生唯一的作業階段ID。 它會建立新的變型M3U8播放清單URL，並以JSON回應的形式傳回至播放器。 JSON具有下列語法：
+1. 清單伺服器為該播放器建立會話並生成唯一會話ID。 它建立新的變型M3U8播放清單URL，並將其作為JSON響應返回給播放器。 JSON具有以下語法：
 
    ```JSON
    {
@@ -60,9 +59,9 @@ ht-degree: 1%
    https://pcor3.manifest.auditude.com/auditude/variant/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3B0ZGVtb3MuY29tL3ZpZGVvcy90b3NoZHVuZW5jcnlwdGVkL2hscy90ZXN0Mi5tM3U4.3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. Player會使用JSON回應的URL，從資訊清單伺服器要求新的變型M3U8主播放清單。
+1. 播放器使用JSON響應的URL從清單伺服器請求新的變型M3U8主播放清單。
 
-1. 資訊清單伺服器會傳回包含串流層級播放清單URL的新變型M3U8，其語法類似下列：
+1. 清單伺服器返回包含流級播放清單URL的新變型M3U8，其語法與以下內容類似：
 
    ```URL
    http{s}://{manifest-server:port}/auditude/{live|vod}/{PublisherAssetID}/
@@ -93,13 +92,13 @@ ht-degree: 1%
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. 播放器會選擇適當的單位元速率、串流層級資訊清單URL來播放廣告銜接內容。 例如：
+1. 播放器選擇用於播放廣告縫合內容的適當的單比特率、流級清單URL。 例如：
 
    ```URL
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. 資訊清單伺服器傳回串流層級資訊清單，其包含內容與廣告TS區段連結的連結。 例如：
+1. 清單伺服器返回包含到內容和廣告TS段連結的連結的流級清單。 例如：
 
    ```
       #EXTM3U
@@ -124,36 +123,36 @@ ht-degree: 1%
 
    >[!NOTE]
    >
-   >播放器選擇串流層級播放清單URL以取得內容串流。 資訊清單伺服器從CDN擷取原始播放清單。 有些編碼器可能會在`#EXTINF`標題屬性中插入其他詳細資訊，例如：
+   >播放器選擇流級播放清單URL以獲得內容流。 清單伺服器從CDN檢索原始播放清單。 某些編碼器可能會向 `#EXTINF` title屬性，例如：
    >
    >
    ```
    >#EXTINF:6.006,LTC=2017-08-23T13:25:47+00:00
    >```
 
-   由於資訊清單伺服器無法推斷非標準屬性的含義以修改廣告銜接播放清單，資訊清單伺服器會移除除此標籤中的持續時間資訊以外的所有其他屬性。 有關詳細資訊，請參見HLS規範中的[ILVOF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1)條目。
+   由於清單伺服器無法推斷非標準屬性的含義來修改廣告縫合播放清單，因此清單伺服器刪除此標籤中持續時間資訊之外的所有附加屬性。 查看 [滅絕](https://tools.ietf.org/html/rfc8216#section-4.3.2.1) 的子菜單。
 
-1. 若要請求追蹤資訊，播放器會附加查詢參數`pttrackingposition`及任何英數字元值至所選位元速率的串流層級播放清單URL。 例如：
+1. 要請求跟蹤資訊，播放器會附加查詢參數 `pttrackingposition` 將任意字母數字值添加到流級播放清單URL中。 例如：
 
    ```URL
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. 資訊清單伺服器會傳回填入[JSON](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md)或[VMAP](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md)物件的播放清單檔案，其中包含目前請求之串流層級m3u8檔案的廣告追蹤資料。
+1. 清單伺服器返回填充有  [JSON](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) 或 [VMAP](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) 包含當前請求的流級m3u8檔案的ad跟蹤資料的對象。
 
    >[!NOTE]
    >
-   >如果廣告插入目前要求的串流層級播放清單中，資訊清單伺服器只會產生廣告追蹤物件。 如果播放器播放的播放清單不含插入廣告，資訊清單伺服器會傳回廣告追蹤播放清單請求的HTTP狀態201。 如果播放器對未播放的串流提出廣告追蹤請求，資訊清單伺服器會傳回HTTP狀態500。 例如，如果目前的播放請求是500.m3u8，資訊清單伺服器會針對廣告追蹤請求傳回500.m3u8中的JSON|VMAP。 不過，如果播放器隨後切換串流以播放800.m3u8,500.m3u8中的廣告追蹤資訊會變成無效，導致404錯誤。
+   >如果廣告插入當前請求的流級播放清單中，則清單伺服器將僅生成廣告跟蹤對象。 如果播放器正在播放不包含插入廣告的播放清單，則清單伺服器返回廣告跟蹤播放清單請求的HTTP狀態201。 如果播放器對未播放的流發出廣告跟蹤請求，則清單伺服器將返回HTTP狀態500。 例如，如果當前播放請求針對500.m3u8，則清單伺服器返回500.m3u8中的JSON|VMAP作為廣告跟蹤請求。 但是，如果播放器隨後切換流以播放800.m3u8，則500.m3u8中的廣告跟蹤資訊變為無效，導致404錯誤。
 
    >[!NOTE]
    >
-   >資訊清單伺服器會根據BootstrapURL中的`pttrackingversion`值來產生廣告追蹤物件。 如果省略`pttrackingversion`或其值無效，則資訊清單伺服器會自動在每個請求的串流層級播放清單中的`#EXT-X-MARKER`標籤中填入廣告追蹤資訊。 如需詳細資訊，請參閱[。](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
+   >清單伺服器基於 `pttrackingversion` 值。 如果 `pttrackingversion` 省略或具有無效值，則清單伺服器將自動填充 `#EXT-X-MARKER` 每個請求的流級播放清單中的標籤。 請參閱 [更多詳細資訊](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md)。
 
-1. 播放器會在適當的時間針對每個廣告追蹤事件要求每個廣告追蹤URL。
+1. 播放器在適當的時間請求每個廣告跟蹤事件的每個廣告跟蹤URL。
 
 >[!NOTE]
 >
->對於即時串流，播放器必須重複步驟6到10，因為Packager會在即時事件的整個期間持續更新播放清單。
+>對於Live Streams，播放器必須重複步驟6到10，因為打包器在整個即時事件的整個持續時間內不斷更新播放清單。
 
-當播放視訊時，播放器必須追蹤播放頭位置，並搭配使用此位置與追蹤從Primetime廣告插入所收到的URL。 追蹤URL會依播放開始時的時間偏移分組。 對於每次時間偏移，每個廣告系統都有一個URL，要傳送追蹤資訊。 即時視訊和隨選視訊格式的其他詳細資訊不同。
+在播放視頻時，播放者必須跟蹤播放頭位置，並將此位置與跟蹤從黃金時段廣告插入接收的URL結合使用。 跟蹤URL按從播放開始的時間偏移分組。 對於每次偏移，每個廣告系統都有一個URL，要向其發送跟蹤資訊。 該格式的其他詳細資訊在即時視頻和視頻點播中有所不同。

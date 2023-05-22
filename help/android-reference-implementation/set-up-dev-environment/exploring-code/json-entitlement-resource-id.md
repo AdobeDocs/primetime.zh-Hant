@@ -1,18 +1,17 @@
 ---
-title: 權益資源ID的JSON物件
-description: 當權益資源ID為簡單文字字串時，下列程式碼區塊提供JSON物件的範例。
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 權利資源ID的JSON對象
+description: 當權利資源ID為簡單文本字串時，以下代碼塊提供了JSON對象的示例。
+exl-id: 396c43e7-404a-40f5-8113-a720e2c834e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
+# 權利資源ID的JSON對象 {#json-object-for-entitlement-resource-id}
 
-# 權益資源ID {#json-object-for-entitlement-resource-id}的JSON物件
-
-當權益資源ID為簡單文字字串時，下列程式碼區塊提供JSON物件的範例。 在這種情況下，資源ID是字串&quot;resource&quot;。
+當權利資源ID為簡單文本字串時，以下代碼塊提供了JSON對象的示例。 在這種情況下，資源ID是字串&quot;resource&quot;。
 
 ```
 "metadata" : { 
@@ -22,7 +21,7 @@ ht-degree: 0%
 }
 ```
 
-當權益資源ID是HTML編碼的mRSS字串時，下列程式碼區塊提供JSON物件的範例。
+當權利資源ID是HTML編碼的mRSS字串時，以下代碼塊提供了JSON對象的示例。
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 

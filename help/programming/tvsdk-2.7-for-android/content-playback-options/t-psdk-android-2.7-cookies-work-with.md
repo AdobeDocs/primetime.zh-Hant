@@ -1,33 +1,32 @@
 ---
-description: 您可以使用TVSDK在Cookie標題中傳送任意資料，以進行作業管理、閘道存取等。
+description: 可以使用TVSDK在Cookie標頭中發送任意資料，用於會話管理、門訪問等。
 title: 使用Cookie
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ea9d83f9-a047-4e24-98e5-f565b8a31a89
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
-
 # 使用Cookie {#work-with-cookies}
 
-您可以使用TVSDK在Cookie標題中傳送任意資料，以進行作業管理、閘道存取等。
+可以使用TVSDK在Cookie標頭中發送任意資料，用於會話管理、門訪問等。
 
-以下是對具有某些驗證的密鑰伺服器的示例請求：
+下面是對密鑰伺服器的示例請求，其中包含一些身份驗證：
 
-1. 您的客戶使用瀏覽器登入您的網站，其登入顯示此客戶可檢視內容。
-1. 您的應用程式會根據授權伺服器的需求產生驗證Token。
+1. 您的客戶在瀏覽器中登錄到您的網站，其登錄資訊顯示允許此客戶查看內容。
+1. 根據許可證伺服器預期的內容，您的應用程式生成一個驗證令牌。
 
-   此值會傳遞至TVSDK。
-1. TVSDK會在Cookie標題中設定此值。
-1. 當TVSDK向金鑰伺服器要求取得解密內容的金鑰時，要求會包含Cookie標題中的驗證值。
+   此值將傳遞給TVSDK。
+1. TVSDK在cookie標頭中設定此值。
+1. 當TVSDK向密鑰伺服器請求獲取密鑰以解密內容時，該請求在cookie頭中包含驗證值。
 
-   密鑰伺服器知道請求有效。
+   密鑰伺服器知道該請求有效。
 
-若要使用Cookie:
+要使用Cookie，請執行以下操作：
 
-建立`cookieManager`，並將URI的Cookie新增至CookieStore。
+建立 `cookieManager` 並將URI的Cookie添加到cookieStore。
 
 例如：
 
@@ -43,13 +42,13 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 
 >[!TIP]
 >
->啟用302重新導向後，廣告請求可重新導向至與Cookie所屬網域不同的網域。
+>當啟用302重定向時，可以將廣告請求重定向到不同於cookie所屬的域的域。
 
-TVSDK會在執行時期查詢此`cookieManager`，檢查是否有任何與URL相關的Cookie，並自動使用這些Cookie。
+TVSDK查詢此 `cookieManager` 在運行時，檢查是否存在與URL關聯的Cookie，並自動使用這些Cookie。
 
-更新C++ Cookie時，會呼叫事件MediaPlayerEvent.COOKIES_UPDATED。 此cookiesUpdatedEvent有一個方法getCookieString()，可傳回Cookie的字串值。
+更新C++ Cookie時調用事件MediaPlayerEvent.COOKIE_UPDATED。 此cookieUpdatedEvent具有為cookie返回字串值的getCookieString()方法。
 
-范常式式碼片段如下：
+下面是示例代碼段：
 
 ```
 private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener()  
@@ -62,4 +61,3 @@ public void onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)
  }  
 };
 ```
-

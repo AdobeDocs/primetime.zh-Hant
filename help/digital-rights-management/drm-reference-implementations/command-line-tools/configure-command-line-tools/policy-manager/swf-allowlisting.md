@@ -2,22 +2,21 @@
 title: SWF應用程式允許清單
 description: SWF應用程式允許清單
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ae8b7f52-897f-43f9-ac7b-665d4b8c16b8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
+# SWF應用程式允許清單 {#swf-application-allowlisting}
 
-# SWF應用程式允許列出{#swf-application-allowlisting}
+要允許列出SWF應用程式，可以遵循以下兩種策略之一：
 
-若要允許列出SWF應用程式，您可以遵循下列兩種策略之一：
+* 可以指定SWF的URL。 這是一種非常靈活的方法，尤其是在您定期重建SWF的開發環境中。
+* 可以指定SWFHASH。 這是您的SWF的加密摘要值。 此方法不那麼靈活（但要嚴格得多），因為SWFHASH將在應用程式更改和重建時更改。 在這種情況下，綁定到先前HASH的所有內容將無法在新播放器上播放，並且必須重新打包。 的 [!DNL PolicyManager.jar] 如果您指定 [!DNL .swf] 的子菜單。
 
-* 您可以指定SWF的URL。 這是非常有彈性的方式，尤其是在您定期重建SWF的開發環境中。
-* 您可以指定SWF雜湊。 這是SWF的加密摘要值。 此方法不那麼靈活（但要嚴格得多），因為當應用程式變更並重建時，SWF雜湊會改變。 在此情況下，系結至先前HASH的所有內容將無法在新播放器上播放，而且必須重新封裝。 如果您指定[!DNL .swf]檔案，[!DNL PolicyManager.jar]工具會自動計算雜湊。
+   另一方面，如果您通過Flash/Adobe Medium伺服器(FMS/AMS)使用黃金時段DRM，則可以提供指向特定SWF的路徑，FMS/AMS將自動散列SWF，以便您插入DRM策略，該策略用於打包由FMS/AMS流式傳輸的內容。
 
-   另一方面，如果您透過Flash/Adobe Medium伺服器(FMS/AMS)使用Primetime DRM，則可提供特定SWF的路徑，而FMS/AMS會自動雜湊SWF，讓您插入DRM原則，以封裝FMS/AMS串流的內容。
-
-如需詳細資訊，請參閱&#x200B;*Configuration properties*&#x200B;中的`policy.allowedSWFApplication.n`。
+請參閱 `policy.allowedSWFApplication.n` 在 *配置屬性* 的雙曲餘切值。

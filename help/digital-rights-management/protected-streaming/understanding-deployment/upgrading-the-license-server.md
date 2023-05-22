@@ -1,18 +1,17 @@
 ---
-title: 升級Adobe PrimetimeDRM Server以進行受保護的串流
-description: 升級Adobe PrimetimeDRM Server以進行受保護的串流
+title: 升級Adobe PrimetimeDRM伺服器以進行受保護的流處理
+description: 升級Adobe PrimetimeDRM伺服器以進行受保護的流處理
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6edfba1b-46a2-4cbd-bc14-feeef1a36ed6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
+# 升級Adobe PrimetimeDRM伺服器以進行受保護的流處理{#upgrading-the-adobe-primetime-drm-server-for-protected-streaming}
 
-# 升級Adobe PrimetimeDRM Server for Protected Streaming{#upgrading-the-adobe-primetime-drm-server-for-protected-streaming}
+如果要升級運行Mogfire DRM Server for Protected Streaming的伺服器，需要替換 `flashaccessserver.war` 已部署在應用程式伺服器上且最新Mogfire DRM包含的檔案的檔案。
 
-如果您想要升級執行Primetime DRM Server for Protected Streaming的伺服器，您需要將已部署在應用程式伺服器上的`flashaccessserver.war`檔案取代為最新Primetime DRM所包含的檔案。
-
-如果要使用新的配置選項，則需要更新伺服器的`flashaccess-tenant.xml`。 此外，您還需要更新[!DNL jsafe.dll]或[!DNL libjsafe.so]的最新Primetime DRM版本。
+如果要使用新的配置選項，則需要更新伺服器 `flashaccess-tenant.xml`。 您還需要更新 [!DNL jsafe.dll] 或 [!DNL libjsafe.so] 最新黃金時段DRM中包含的版本。

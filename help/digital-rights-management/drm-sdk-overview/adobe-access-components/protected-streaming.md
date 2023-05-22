@@ -1,16 +1,15 @@
 ---
-title: Adobe PrimetimeDRM Server for Protected Streaming
-description: Adobe PrimetimeDRM Server for Protected Streaming
+title: Adobe PrimetimeDRM伺服器，用於受保護的流
+description: Adobe PrimetimeDRM伺服器，用於受保護的流
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 490babeb-eb94-4dd9-a572-eba1d7f65278
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
+# Adobe PrimetimeDRM伺服器，用於受保護的流{#adobe-primetime-drm-server-for-protected-streaming}
 
-# Adobe PrimetimeDRM Server for Protected Streaming{#adobe-primetime-drm-server-for-protected-streaming}
-
-對於使用Primetime DRM保護內容(例如AdobeHTTP Dynamic Streaming)的串流使用案例，本軟體也包含Primetime DRM Server for Protected Streaming。 此解決方案可輕鬆部署在Servlet容器（例如Tomcat）上，並可達到高階的可擴充性與效能，以符合最大的內容散發需求。
+對於使用黃金時段DRM保護內容的流式使用情形，例如用於AdobeHTTP Dynamic Streaming，該軟體還包括黃金時段DRM伺服器，用於受保護流式處理。 此解決方案可以輕鬆地部署在Servlet容器（如Tomcat）上，並可實現高級別的可擴充性和效能以滿足最大的內容分發需求。

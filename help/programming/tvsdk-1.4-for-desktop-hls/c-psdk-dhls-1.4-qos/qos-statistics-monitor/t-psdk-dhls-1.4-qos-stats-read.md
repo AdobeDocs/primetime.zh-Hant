@@ -1,25 +1,24 @@
 ---
-description: 您可以從QOSProvider類讀取播放、緩衝和設備統計資訊。
-title: 讀取QOS播放、緩衝和設備統計資訊
-translation-type: tm+mt
+description: 可以從QOSProvider類讀取回放、緩衝和設備統計資訊。
+title: 讀取QOS回放、緩衝和設備統計資訊
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
 # 讀取QOS回放、緩衝和設備統計資訊{#read-qos-playback-buffering-and-device-statistics}
 
-您可以從QOSProvider類讀取播放、緩衝和設備統計資訊。
+可以從QOSProvider類讀取回放、緩衝和設備統計資訊。
 
-`QOSProvider`類別提供各種統計資料，包括緩衝、位元速率、影格速率、時間資料等資訊。
+的 `QOSProvider` 類提供各種統計資訊，包括有關緩衝、比特率、幀速率、時間資料等的資訊。
 
-此外，它還提供有關裝置的資訊，例如製造商、機型、作業系統、SDK版本和螢幕大小／密度。
+它還提供有關設備的資訊，如製造商、型號、作業系統、SDK版本和螢幕大小/密度。
 
 1. 實例化媒體播放器。
-1. 建立`QOSProvider`物件，並將它附加至媒體播放器。
+1. 建立 `QOSProvider` 對象，並將其附加到媒體播放器。
 
    ```
    // Create Media Player. 
@@ -27,9 +26,9 @@ ht-degree: 1%
    _mediaQosProvider.attachMediaPlayer(_mediaPlayer);
    ```
 
-1. （可選）閱讀播放統計資料。
+1. （可選）閱讀回放統計資訊。
 
-   讀取播放統計資訊的一個解決方案是具有計時器，該計時器定期從`QOSProvider`中讀取新的QoS值。 例如：
+   讀取回放統計資訊的一個解決方案是具有計時器，該計時器定期從 `QOSProvider`。 例如：
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
@@ -51,7 +50,7 @@ ht-degree: 1%
    }
    ```
 
-1. （可選）閱讀裝置特定資訊。
+1. （可選）讀取設備特定資訊。
 
    ```
    // Show device information 

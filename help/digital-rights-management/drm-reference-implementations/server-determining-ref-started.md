@@ -1,21 +1,20 @@
 ---
-title: 檢查許可證伺服器是否正確啟動
-description: 檢查許可證伺服器是否正確啟動
+title: 檢查許可證伺服器是否已正確啟動
+description: 檢查許可證伺服器是否已正確啟動
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 05995a75-9468-4237-9091-a07606297772
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
 
 ---
 
+# 檢查許可證伺服器是否已正確啟動 {#check-whether-the-license-server-started-properly}
 
-# 檢查許可證伺服器是否正確啟動{#check-whether-the-license-server-started-properly}
+有幾種方法可確定您的參考實施許可證伺服器是否已正確啟動。 一種方法是 [!DNL catalina.log] 日誌，但這可能不夠，因為許可證伺服器會登錄到其自己的日誌檔案。
+1. 檢查 [!DNL AdobeFlashAccess.log] 的子菜單。
 
-有幾種方法可判斷您的「參考實作授權伺服器」是否已正確啟動。 一種方法是檢查[!DNL catalina.log]日誌，但這可能不夠，因為許可證伺服器會登錄到其自己的日誌檔案。
-1. 檢查[!DNL AdobeFlashAccess.log]檔案。
-
-   Reference Implementation授權伺服器會在此處寫入記錄資訊。 此日誌檔案的位置由[!DNL log4j.xml]檔案指示，可修改為指向任何位置。 預設情況下，日誌檔案將複製到運行`catalina` Tomcat指令碼的工作目錄。
-1. 前往下列URL，並確認文字「License Server is setup correctly（授權伺服器已正確設定）」已顯示：
+   這是參考實施許可證伺服器寫入日誌資訊的位置。 此日誌檔案的位置由 [!DNL log4j.xml] 可修改為指向任何位置。 預設情況下，日誌檔案將複製到運行日誌的工作目錄 `catalina` Tomcat指令碼。
+1. 轉到以下URL，並驗證是否顯示了「License Server is setup correctly（許可證伺服器設定正確）」文本：
    [!DNL ht<span></span>tps://localhost:8080/flashaccess/license/v4]

@@ -1,63 +1,62 @@
 ---
-description: TVSDK支援搜尋特定位置（時間），其中串流為滑動視窗播放清單、視訊隨選(VOD)和即時串流。
-title: 顯示具有當前回放位置的查找拖曳條
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK支援在視頻點播(VOD)和即時流中尋找特定位置（時間），其中流是滑動窗口播放清單。
+title: 顯示具有當前回放位置的查找擦除欄
+exl-id: fb1a87ec-30ab-4dbe-9744-720eac523542
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
+# 顯示具有當前回放位置的查找擦除欄 {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# 顯示具有當前播放位置{#display-a-seek-scrub-bar-with-the-current-playback-position}的搜索拖曳欄
-
-TVSDK支援搜尋特定位置（時間），其中串流為滑動視窗播放清單、視訊隨選(VOD)和即時串流。
+TVSDK支援在視頻點播(VOD)和即時流中尋找特定位置（時間），其中流是滑動窗口播放清單。
 
 >[!TIP]
 >
->在即時串流中搜尋僅允許DVR使用。
+>只允許DVR在即時流中查找。
 
-1. 設定搜索回呼。
+1. 設定尋找回調。
 
-       搜尋是非同步的，因此TVSDK會調派下列搜尋相關事件：
+       搜索是非同步的，因此TVSDK會調度以下與搜索相關的事件：
    
-   * `MediaPlayerEvent.SEEK_BEGIN`，尋找開始的位置。
-   * `MediaPlayerEvent.SEEK_END`，其中尋找成功。
-   * `MediaPlayerEvent.OPERATION_FAILED`，而尋找失敗的地方。
+   * `MediaPlayerEvent.SEEK_BEGIN`，尋道開始的位置。
+   * `MediaPlayerEvent.SEEK_END`，其中查找成功。
+   * `MediaPlayerEvent.OPERATION_FAILED`，查找失敗的位置。
 
-1. 等待播放器處於有效狀態以進行搜尋。
+1. 等待玩家處於有效狀態以進行查找。
 
-   有效狀態包括「已準備」、「完成」、「暫停」和「正在播放」。
-1. 使用原生`SeekBar`來設定`OnSeekBarChangeListener`，此設定會決定使用者在何時拖曳。
-1. 將請求的尋道位置（毫秒）傳遞至`MediaPlayer.seek`方法。
+   有效狀態為「準備」、「完成」、「暫停」和「播放」。
+1. 使用本機 `SeekBar` 設定 `OnSeekBarChangeListener`，確定用戶正在清理的時間。
+1. 將請求的查找位置（毫秒）傳遞到 `MediaPlayer.seek` 的雙曲餘切值。
 
    ```java
    void seek(long position) throws MediaPlayerException;
    ```
 
-   您只能在資產可見的期間內搜尋。 對於隨選視訊，即從0到資產的持續時間。
+   您只能在資產的可尋的持續時間內查找。 對於視頻點播，從0到資產的持續時間。
 
    >[!TIP]
    >
-   >此步驟會將播放磁頭移至串流中的新位置，但最終計算位置可能與指定的搜尋位置不同。
+   >此步驟將播放頭移動到流中的新位置，但最終計算位置可能與指定的查找位置不同。
 
-1. 監聽`MediaPlayerEvent.OPERATION_FAILED`並採取適當的動作。
+1. 聽 `MediaPlayerEvent.OPERATION_FAILED` 採取適當行動。
 
-   此事件會傳遞適當的警告。 您的應用程式會決定如何繼續，而選項包括再次嘗試搜尋或從上一個位置繼續播放。
+   此事件會傳遞相應的警告。 您的應用程式確定如何繼續，這些選項包括再次嘗試查找或從上一位置繼續回放。
 
-1. 等待TVSDK呼叫`MediaPlayerEvent.SEEK_END`回呼。
-1. 使用回呼的位置參數擷取最終調整的播放位置。
+1. 等待TVSDK調用 `MediaPlayerEvent.SEEK_END` 回叫。
+1. 使用回調的位置參數檢索最終調整的播放位置。
 
-   這很重要，因為搜尋後的實際開始位置可能與請求的位置不同。 如果搜尋或其他重新定位在廣告插播的中間結束或跳過廣告插播，規則（包括播放行為）可能會受到影響。
+   這一點很重要，因為在搜索之後的實際開始位置可能與請求的位置不同。 如果搜索或其他重新定位結束於廣告分段的中間或跳過廣告分段，則規則（包括回放行為）可能會受到影響。
 
-1. 在顯示搜尋拖曳列時使用位置資訊。
+1. 在顯示查找清理欄時使用位置資訊。
 
 <!--<a id="example_EEB73818260C43C8B5AE12BA68548AB7"></a>-->
 
-**搜尋範例**
+**尋找示例**
 
-在此範例中，使用者將搜尋列拖曳至所要的位置。
+在本例中，用戶將搜索條掃描到所需位置。
 
 ```java
 //Use the native SeekBar to set an OnSeekBarChangeListener to 
@@ -92,4 +91,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

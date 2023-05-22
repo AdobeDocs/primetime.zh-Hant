@@ -1,6 +1,6 @@
 ---
-description: 您可以設定您的播放器來追蹤和分析視訊的使用情形。
-title: 初始化和設定視訊分析
+description: 您可以配置播放器以跟蹤和分析視頻使用。
+title: 初始化和配置視頻分析
 exl-id: dbb1e0b4-2a9e-4687-952d-4772440c1643
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
@@ -9,47 +9,47 @@ ht-degree: 0%
 
 ---
 
-# 初始化和設定視訊分析{#initialize-and-configure-video-analytics}
+# 初始化和配置視頻分析{#initialize-and-configure-video-analytics}
 
-您可以設定您的播放器來追蹤和分析視訊的使用情形。
+您可以配置播放器以跟蹤和分析視頻使用。
 
-在啟用視訊追蹤（視訊心率）之前，請確定您有下列項目：
+在激活視頻跟蹤（視頻心跳）之前，請確保您有以下幾點：
 
-* iOS適用的TVSDK
-* 設定/初始化資訊 — 請聯絡您的Adobe代表，取得您特定的視訊追蹤帳戶資訊：
+* iOSTVSDK
+* 配置/初始化資訊 — 有關特定視頻跟蹤帳戶資訊，請與Adobe代表聯繫：
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
-   <td colname="col2"> <p>重要： 此JSON設定檔案名稱必須保留<span class="codeph"> ADBMobileConfig.json </span>。 無法更改此配置檔案的名稱和路徑。 此檔案的路徑必須是<span class="codeph"> &lt;source root&gt;/AdobeMobile </span>。 </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col2"> <p>重要提示：此JSON配置檔案名必須保留 <span class="codeph"> ADBMobileConfig.json </span>。 無法更改此配置檔案的名稱和路徑。 此檔案的路徑必須為 <span class="codeph"> &lt;source root=""&gt;/AdobeMobile </span>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AppMeasurement追 </span> 蹤伺服器端點 </td> 
-   <td colname="col2"> Adobe Analytics(前身為SiteCatalyst)後端收集端點的URL。 </td> 
+   <td colname="col1"> <span class="codeph"> AppMeasurement </span> 跟蹤伺服器端點 </td> 
+   <td colname="col2"> Adobe Analytics(以前為SiteCatalyst)後端集合終結點的URL。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Video Analytics追蹤伺服器端點 </td> 
-   <td colname="col2"> video analytics後端收集端點的URL。 這是所有視訊心率追蹤呼叫的傳送位置。 <p>提示： 訪客追蹤伺服器的URL與分析追蹤伺服器的URL相同。 如需實作訪客ID服務的相關資訊，請參閱<a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external">實作ID服務</a>。 </p> </td> 
+   <td colname="col1"> 視頻分析跟蹤伺服器終結點 </td> 
+   <td colname="col2"> 視頻分析後端集合終結點的URL。 這是發送所有視頻心跳跟蹤呼叫的地方。 <p>提示：訪問者跟蹤伺服器的URL與分析跟蹤伺服器的URL相同。 有關實施訪問者ID服務的資訊，請參見 <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> 實施ID服務 </a>。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 帳戶名稱 </td> 
-   <td colname="col2"> 也稱為報表套裝ID(RSID)。 </td> 
+   <td colname="col1"> 帳戶名 </td> 
+   <td colname="col2"> 也稱為報告套件ID(RSID)。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Marketing Cloud組織ID </td> 
-   <td colname="col2"> 具現化Visitor元件所需的字串值。 </td> 
+   <td colname="col2"> 實例化訪問者元件所需的字串值。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 發佈者 </td> 
-   <td colname="col2"> 這是發佈者ID，由客戶代表提供給Adobe。 <p>提示： 此ID不只是具有品牌/電視名稱的字串。 </p> </td> 
+   <td colname="col2"> 這是發佈者ID，由客戶的Adobe代表提供給客戶。 <p>提示：此ID不僅是帶有品牌/電視名稱的字串。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-若要在播放器中設定視訊追蹤：
+要在播放器中配置視頻跟蹤，請執行以下操作：
 
-1. 確認`ADBMobileConfig.json`資源檔案中的載入時間選項正確。
+1. 確認中的載入時間選項 `ADBMobileConfig.json` 資源檔案正確。
 
    ```
    { 
@@ -78,27 +78,27 @@ ht-degree: 0%
    }
    ```
 
-   此JSON格式的設定檔案是與TVSDK搭配為資源。 您的播放器只會在載入時讀取這些值，而且當您的應用程式執行時，這些值會維持不變。
+   此JSON格式的配置檔案與TVSDK捆綁為資源。 播放器僅在載入時讀取這些值，並且這些值在應用程式運行時保持不變。
 
    要配置載入時間選項：
 
-   1. 確認`ADBMobileConfig.json`檔案包含Adobe提供的適當值。
-   1. 確認此檔案位於`AdobeMobile`資料夾中。
+   1. 確認 `ADBMobileConfig.json` 檔案包含由Adobe提供的相應值。
+   1. 確認此檔案位於 `AdobeMobile` 的子菜單。
 
-      此資料夾必須位於應用程式源樹的根目錄中。
-   1. 編譯並構建您的應用程式。
+      此資料夾必須位於應用程式源樹的根中。
+   1. 編譯並構建應用程式。
    1. 部署並運行捆綁的應用程式。
 
-      如需這些AppMeasurement設定的詳細資訊，請參閱在Adobe Analytics中測量視訊[。](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en)
-1. 初始化並設定視訊心率追蹤中繼資料。
+      有關這些AppMeasurement設定的詳細資訊，請參見 [Adobe Analytics視頻測量](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en)。
+1. 初始化和配置視頻心跳跟蹤元資料。
 
    >[!IMPORTANT]
    >
-   >您可以停止視訊分析模組中繼，並視需要重新初始化。 重新初始化模組之前，請確定視訊分析中繼資料也更新為正確的內容中繼資料。 要重新建立元資料，請重複子步驟1和2。
+   >您可以停止視頻分析模組中流，並根據需要重新初始化它。 在重新初始化模組之前，請確保視頻分析元資料也更新為正確的內容元資料。 要重新建立元資料，請重複子步驟1和2。
 
-   1. 建立Video Analytics中繼資料的例項。
+   1. 建立視頻分析元資料的實例。
 
-      此例項包含啟用視訊心率追蹤所需的所有設定資訊。 例如：
+      此實例包含啟用視頻心跳跟蹤所需的所有配置資訊。 例如：
 
       ```
       - (PTVideoAnalyticsTrackingMetadata *)getVideoAnalyticsTrackingMetadata 
@@ -124,9 +124,9 @@ ht-degree: 0%
       }
       ```
 
-   1. 將Video Analytics中繼資料新增至全域中繼資料例項。
+   1. 將視頻分析元資料添加到全局元資料實例。
 
-      準備好後，請在媒體資源或媒體播放器項目上設定全域中繼資料例項：
+      準備好後，在媒體資源或媒體播放器項目上設定全局元資料實例：
 
       ```
       - (PTMetadata *)createMetadata 
@@ -147,34 +147,34 @@ ht-degree: 0%
           mediaId:@"media-id" metadata:metadata] autorelease];
       ```
 
-   1. 初始化Video Analytics追蹤器。
+   1. 初始化視頻分析跟蹤器。
 
-      建立媒體播放器例項後，您必須建立Video Analytics追蹤器例項，並提供媒體播放器例項的參考。
+      建立媒體播放器實例後，必須建立視頻分析跟蹤器實例並提供對媒體播放器實例的引用。
 
       >[!TIP]
       >
-      >請務必為每個內容播放工作階段建立新的追蹤器例項，並在您分離媒體播放器例項後移除先前的參考。
+      >始終為每個內容播放會話建立新的跟蹤器實例，並在分離媒體播放器實例後刪除以前的引用。
 
       ```
       self.videoAnalyticsTracker =  
         [[[PTVideoAnalyticsTracker alloc] initWithMediaPlayer:self.player] autorelease];
       ```
 
-   1. 銷毀Video Analytics追蹤器。
+   1. 銷毀視頻分析跟蹤器。
 
-      開始新內容播放工作階段之前，請銷毀視訊追蹤器的先前例項。 收到內容完成事件（或通知）後，請等待幾分鐘再銷毀視訊追蹤器例項。 若立即銷毀例項，可能會干擾Video Analytics追蹤器傳送視訊完成Ping的功能。
+      在開始新的內容播放會話之前，請銷毀視頻跟蹤器的先前實例。 收到內容完成事件（或通知）後，請等待幾分鐘，然後銷毀視頻跟蹤器實例。 立即銷毀實例可能會干擾視頻分析跟蹤程式發送視頻完成ping的能力。
 
       ```
       self.videoAnalyticsTracker = nil;
       ```
 
-   1. 手動將即時/線性資料流標示為完成。
+   1. 手動將Live/Linear流標籤為完成。
 
-      如果您的一個即時資料流上有各種集數，可以使用complete API手動將集數標示為已完成。 這會結束目前視訊集數的視訊追蹤工作階段，而您可以開始下一集的新追蹤工作階段。
+      如果您在一個即時流上有各種集數，則可以使用完整的API手動將集數標籤為完整。 這將結束當前視頻集的視頻跟蹤會話，並且您可以為下一集啟動新的跟蹤會話。
 
       >[!TIP]
       >
-      >此API為選用API，不是VOD視訊追蹤所需的API。
+      >此API是可選的，不需要用於VOD視頻跟蹤。
 
       ```
       if (self.videoAnalyticsTracker) 

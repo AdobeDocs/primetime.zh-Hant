@@ -1,21 +1,19 @@
 ---
-title: 越獄執行(需要Adobe PrimetimeDRM)
-description: 越獄執行(需要Adobe PrimetimeDRM)
+title: 越獄強制(需要Adobe PrimetimeDRM)
+description: 越獄強制(需要Adobe PrimetimeDRM)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ae255709-7b2f-4cab-b249-a6918bef28f4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
-
 # 越獄強制(需要Adobe PrimetimeDRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-在支援越獄偵測的平台（例如Android和iOS行動裝置）上，如果裝置上偵測到[!DNL jailbreak/root]，您可啟用越獄執行，以禁止播放內容。
+在支援越獄檢測的平台上，如Android和iOS移動設備，如果 [!DNL jailbreak/root] 已在設備上檢測到。
 
 >[!NOTE]
 >
->此使用規則受Adobe PrimetimeDRM客戶端4.0版或更新版本支援。 但是，它對不支援越獄偵測的平台沒有影響。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。
-
+>Adobe PrimetimeDRM客戶端4.0版或更高版本支援此使用規則。 但是，它對不支援越獄檢測的平台沒有影響。 舊客戶端的行為取決於許可證伺服器支援的最低客戶端版本。

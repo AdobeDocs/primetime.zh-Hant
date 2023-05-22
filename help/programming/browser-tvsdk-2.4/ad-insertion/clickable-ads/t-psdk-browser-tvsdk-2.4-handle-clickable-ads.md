@@ -1,31 +1,30 @@
 ---
-description: MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣告相關事件。 這些事件提供廣告和廣告分段資訊，供您的應用程式用來提供點進功能。
-title: 處理可點選廣告
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayer提供notifyClick()函式，用於在播放可點擊廣告時調度與廣告相關的事件。 這些事件提供了您的應用可用於提供點擊功能的廣告和廣告中斷資訊。
+title: 處理可點擊的廣告
+exl-id: 25738592-f3fe-4f13-b2bb-26a5f942cd18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
+# 處理可點擊的廣告 {#handle-clickable-ads}
 
-# 處理可點選廣告{#handle-clickable-ads}
+MediaPlayer提供notifyClick()函式，用於在播放可點擊廣告時調度與廣告相關的事件。 這些事件提供了您的應用可用於提供點擊功能的廣告和廣告中斷資訊。
 
-MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣告相關事件。 這些事件提供廣告和廣告分段資訊，供您的應用程式用來提供點進功能。
-
-當可點按廣告播放時，MediaPlayer會觸發下列事件：
+播放可點擊廣告時，MediaPlayer將觸發以下事件：
 
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-`AdClickedEvent`包含處理點進函式所需的資訊。
+的 `AdClickedEvent` 包含處理「點擊」功能所需的資訊。
 
-1. 在您的播放器中提供控制項，讓使用者按一下可點選的廣告。
+1. 在播放器中提供控制項，供用戶按一下可點擊的廣告。
 
-   這可以是用於擷取使用者點按的按鈕或任何其他元素。
-1. 新增使用者廣告點按事件的事件接聽程式。
+   這可以是用於捕獲用戶按一下的按鈕或任何其他元素。
+1. 為用戶的ad click事件添加事件偵聽器。
 
    例如：
 
@@ -34,9 +33,9 @@ MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣�
    <i>your_click_control_id</i>]).addEventListener("click", onAdClick);
    ```
 
-1. 新增使用者點按事件的處理常式。
+1. 為用戶的按一下事件添加處理程式。
 
-   此處理常式需要提示MediaPlayer以觸發`AdClicked`事件。
+   此處理程式需要提示MediaPlayer啟動 `AdClicked` 的子菜單。
 
    ```
    onAdClick = function (event) { 
@@ -50,7 +49,7 @@ MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣�
    } 
    ```
 
-1. 新增MediaPlayer廣告開始、點按廣告和完成廣告通知的事件接聽程式。
+1. 為MediaPlayer廣告啟動、按一下廣告和完成廣告通知添加事件偵聽器。
 
    ```
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted); 
@@ -60,9 +59,9 @@ MediaPlayer提供notifyClick()函式，可在播放可點按廣告時分派廣�
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_CLICKED, onAdClickedEvent);
    ```
 
-1. 新增事件處理常式。
-a.處理廣告開始事件。
-這可以執行任何動作，例如為使用者設定UI。
+1. 添加事件處理程式。
+a.處理廣告啟動事件。
+這可以執行任何操作，例如為用戶設定UI。
 
    ```
    onAdStarted = function (event) { 
@@ -77,8 +76,8 @@ a.處理廣告開始事件。
    }
    ```
 
-   b.處理廣告點按事件。
-在此範例中，我們會從事件中取得廣告資訊，並使用該資訊開啟新的瀏覽器視窗：
+   b.處理廣告按一下的事件。
+在本示例中，我們從事件獲取廣告資訊，並使用該資訊開啟一個新的瀏覽器窗口：
 
    ```
    onAdClickedEvent = function (event) { 

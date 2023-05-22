@@ -1,21 +1,20 @@
 ---
-description: 若要升級執行Adobe Access Server保護串流的伺服器，請將部署在應用程式伺服器上的flashaccessserver.war檔案取代為最新Adobe存取隨附的檔案。 如果您想要使用上述新的設定選項，請更新您伺服器的flashaccess-tenant.xml。 您也需要將jsafe.dll或libjsafe.so更新至最新Adobe存取隨附的版本。
-title: 執行Adobe Access Server的受保護串流
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 要升級運行「受保護流」的Adobe Access Server的伺服器，請將部署在應用程式伺服器上的flashaccessserver.war檔案替換為最新Adobe訪問附帶的檔案。 如果希望使用上述新配置選項，請更新伺服器的flashaccess-tenant.xml。 您還需要將jsafe.dll或libjsafe.so更新到最新Adobe訪問附帶的版本。
+title: 運行Adobe Access Server以進行受保護的流式處理
+exl-id: 02ba87c9-d4ec-4d39-926e-5d98b1858349
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
 
 ---
 
+# 運行Adobe Access Server以進行受保護的流式處理{#running-the-adobe-access-server-for-protected-streaming}
 
-# 執行Adobe Access Server的受保護串流{#running-the-adobe-access-server-for-protected-streaming}
+要升級運行「受保護流」的Adobe Access Server的伺服器，請將部署在應用程式伺服器上的flashaccessserver.war檔案替換為最新Adobe訪問附帶的檔案。 如果希望使用上述新配置選項，請更新伺服器的flashaccess-tenant.xml。 您還需要將jsafe.dll或libjsafe.so更新到最新Adobe訪問附帶的版本。
 
-若要升級執行Adobe Access Server保護串流的伺服器，請將部署在應用程式伺服器上的flashaccessserver.war檔案取代為最新Adobe存取隨附的檔案。 如果您想要使用上述新的設定選項，請更新您伺服器的flashaccess-tenant.xml。 您也需要將jsafe.dll或libjsafe.so更新至最新Adobe存取隨附的版本。
-
-在執行「保護串流的Adobe Access Server」之前，Adobe建議您使用隨授權伺服器提供的公用程式來驗證組態檔是否有效。 如需詳細資訊，請參閱「[Configuration Validator](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)」。
+在運行用於受保護流的Adobe Access Server之前，Adobe建議使用隨許可證伺服器提供的實用程式來驗證配置檔案是否有效。 有關詳細資訊，請參閱「」[配置驗證程式](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)。
 
 要啟動Tomcat和許可證伺服器，請從Tomcat的bin目錄運行&quot;catalina.bat start&quot;或&quot;catalina.sh start&quot;。
 
-啟動伺服器後，請在瀏覽器視窗中開啟&#x200B;*https:// license-server-host:port/flashaccessserver/tenant-name/flashaccess/license/v1*，以確認其已正確設定。 如果租用戶設定已成功載入，則會顯示確認訊息。
+伺服器啟動後，通過開啟來驗證是否已正確配置 *https:// license-server-host:port/flashaccessserver/tenant name/flashaccess/license/v1* 按鈕。 如果租戶配置已成功載入，則顯示確認消息。

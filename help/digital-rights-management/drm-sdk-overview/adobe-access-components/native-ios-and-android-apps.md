@@ -1,18 +1,17 @@
 ---
-title: 原生iOS和Android應用程式
-description: 原生iOS和Android應用程式
+title: 本地iOS和Android應用程式
+description: 本地iOS和Android應用程式
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 26203ae3-5353-47db-9c72-d01c202d8e84
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# 本地iOS和Android應用程式{#native-ios-and-android-applications}
 
-# 原生iOS和Android應用程式{#native-ios-and-android-applications}
+本機iOS和Android應用程式僅供Adobe Primetime客戶使用，Adobe PrimetimeDRM 4.0及更高版本可用於保護移動設備上本機(非Flash)應用程式內使用的視頻。 為了使應用程式使用此受保護的內容，必須使用Adobe Primetime客戶端庫來實現。
 
-原生iOS和Android應用程式僅提供給Adobe Primetime客戶，Adobe PrimetimeDRM 4.0和更新版本可用於保護在行動裝置上原生(非Flash)應用程式中使用的視訊。 為使應用程式使用此受保護的內容，必須使用Adobe Primetime用戶端程式庫來建置。
-
-有關Adobe Primetime的更多資訊，請造訪：[https://www.adobe.com/solutions/primetime.html](https://www.adobe.com/solutions/primetime.html)
+有關Adobe Primetime的更多資訊，請訪問： [https://www.adobe.com/solutions/primetime.html](https://www.adobe.com/solutions/primetime.html)

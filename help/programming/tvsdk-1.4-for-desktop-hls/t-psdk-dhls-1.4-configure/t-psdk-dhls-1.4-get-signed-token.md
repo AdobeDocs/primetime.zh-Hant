@@ -1,43 +1,42 @@
 ---
-description: Flash執行階段TVSDK需要有簽名的Token，以驗證您有權在應用程式所在的網域上呼叫TVSDK API。
-title: 載入您的已簽署Token
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Flash運行時TVSDK需要一個簽名令牌來驗證您有權在應用程式所在的域上調用TVSDK API。
+title: 載入簽名標籤
+exl-id: fef6b764-dc65-412e-a990-3f0b1fef94dd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
+# 載入簽名標籤 {#load-your-signed-token}
 
-# 載入您的已簽署Token {#load-your-signed-token}
+Flash運行時TVSDK需要一個簽名令牌來驗證您有權在應用程式所在的域上調用TVSDK API。
 
-Flash執行階段TVSDK需要有簽名的Token，以驗證您有權在應用程式所在的網域上呼叫TVSDK API。
+1. 從您的Adobe代表處獲取每個域的簽名令牌（其中每個域可以是特定域或通配符域）。
 
-1. 從您的Adobe代表取得每個網域的簽名Token（其中每個網域可以是特定網域或萬用字元網域）。
-
-       若要取得Token，請提供Adobe以儲存或載入您應用程式的網域，或以SHA256雜湊的形式提供網域。作為回報，Adobe會為您提供每個網域的已簽署Token。 這些預付碼採用下列其中一種形式：
+       要獲取令牌，請提供與儲存或載入應用程式的域的Adobe，或者，最好將域作為SHA256哈希。 作為回報，Adobe為每個域提供簽名令牌。 這些令牌採用以下形式之一：
    
-   * [!DNL .xml]檔案，用作單一網域或萬用字元網域的Token。
+   * 安 [!DNL .xml] 用作單個域或通配符域的標籤的檔案。
 
       >[!NOTE]
       >
-      >萬用字元網域的Token涵蓋該網域及其所有子網域。 例如，域[!DNL mycompany.com]的萬用字元也會涵蓋[!DNL vids.mycompany.com]和[!DNL private.vids.mycompany.com];[!DNL vids.mycompany.com]的萬用字元也會涵蓋[!DNL private.vids.mycompany.com]。 *只有某些Flash Player版本才支援萬用字元網域Token。*
+      >通配符域的令牌覆蓋該域及其所有子域。 例如，域的通配符標籤 [!DNL mycompany.com] 也可以 [!DNL vids.mycompany.com] 和 [!DNL private.vids.mycompany.com];用於 [!DNL vids.mycompany.com] 也可以 [!DNL private.vids.mycompany.com]。 *只有某些Flash Player版本才支援通配符域令牌。*
 
-   * [!DNL .swf]檔案，包含多個網域的Token資訊（不包括萬用字元）（單一或萬用字元），您的應用程式可動態載入。
+   * A [!DNL .swf] 包含多個域（不包括通配符）（單個或通配符）的令牌資訊的檔案，您的應用程式可以動態載入這些資訊。
 
-1. 將Token檔案儲存在與應用程式相同的位置或網域中。
+1. 將令牌檔案儲存在與應用程式相同的位置或域中。
 
-   依預設，TVSDK會在此位置尋找代號。 或者，您也可以在HTML檔案的`flash_vars`中指定Token的名稱和位置。
-1. 如果您的Token檔案是單一XML檔案：
-   1. 使用`utils.AuthorizedFeaturesHelper.loadFrom`下載儲存在指定URL（Token檔案）的資料，並從中擷取`authorizedFeatures`資訊。
+   預設情況下，TVSDK在此位置中查找令牌。 或者，可以在中指定標籤的名稱和位置 `flash_vars` 你的HTML檔案。
+1. 如果令牌檔案是單個XML檔案：
+   1. 使用 `utils.AuthorizedFeaturesHelper.loadFrom` 下載儲存在指定URL（令牌檔案）上的資料，並提取 `authorizedFeatures` 資訊。
 
-      這個步驟可能有所不同。 例如，您可能想在啟動應用程式之前先執行驗證，或直接從您的內容管理系統(CMS)接收Token。
+      此步驟可能有所不同。 例如，您可能希望在啟動應用程式之前執行身份驗證，或者您可能直接從內容管理系統(CMS)接收令牌。
 
-   1. 如果載入成功，TVSDK將調度`COMPLETED`事件，否則調度`FAILED`事件。 偵測到任一事件時，請採取適當的動作。
+   1. TVSDK派單 `COMPLETED` 事件 `FAILED` 事件。 在檢測到任一事件時採取適當的操作。
 
-      這必須成功，您的應用程式才能以`MediaPlayerContext`的形式，將必要的`authorizedFeatures`物件提供給TVSDK。
-   此範例說明如何使用單一Token [!DNL .xml]檔案。
+      這必須成功，您的應用程式才能提供所需 `authorizedFeatures` 對象以TVSDK的形式 `MediaPlayerContext`。
+   此示例說明如何使用單令牌 [!DNL .xml] 的子菜單。
 
    ```
    private function loadDirectTokenURL():void { 
@@ -52,21 +51,21 @@ Flash執行階段TVSDK需要有簽名的Token，以驗證您有權在應用程�
     }
    ```
 
-1. 如果您的Token是[!DNL .swf]檔案：
-   1. 定義`Loader`類別，以動態載入[!DNL .swf]檔案。
-   1. 設定`LoaderContext`以指定載入在目前應用程式網域中，讓TVSDK在[!DNL .swf]檔案中選擇正確的Token。 如果未指定`LoaderContext`，則`Loader.load`的預設動作是在目前網域的子網域中載入。swf。
-   1. 請監聽COMPLETE事件，如果載入成功，TVSDK會調度該事件。
+1. 如果令牌是 [!DNL .swf] 檔案：
+   1. 定義 `Loader` 類以動態載入 [!DNL .swf] 的子菜單。
+   1. 設定 `LoaderContext` 指定當前應用程式域中的載入，這允許TVSDK在 [!DNL .swf] 的子菜單。 如果 `LoaderContext` 未指定，預設操作為 `Loader.load` 是在當前域的子域中載入.swf。
+   1. 偵聽COMPLETE事件，如果載入成功，TVSDK將調度該事件。
 
-      此外，還監聽ERROR事件並採取適當的操作。
-   1. 如果載入成功，請使用`AuthorizedFeaturesHelper`獲取包含PCKS-7編碼安全資料的`ByteArray`。
+      還要偵聽ERROR事件並採取相應的操作。
+   1. 如果載入成功，請使用 `AuthorizedFeaturesHelper` 去 `ByteArray` 包含PCKS-7編碼的安全資料。
 
-      此資料會透過AVE V11 API使用，以從Flash執行階段播放器取得授權確認。 如果位元組陣列沒有內容，請改用程式來尋找單網域Token檔案。
-   1. 使用`AuthorizedFeatureHelper.loadFeatureFromData`從位元組陣列獲取所需資料。
-   1. 卸載[!DNL .swf]檔案。
+      此資料通過AVE V11 API從Flash運行時播放器獲取授權確認。 如果位元組陣列沒有內容，請改用該過程查找單域令牌檔案。
+   1. 使用 `AuthorizedFeatureHelper.loadFeatureFromData` 從位元組陣列獲取所需資料。
+   1. 卸載 [!DNL .swf] 的子菜單。
 
-   下列範例說明如何使用多Token [!DNL .swf]檔案。
+   以下示例說明如何使用多令牌 [!DNL .swf] 的子菜單。
 
-   **多重Token範例1:**
+   **多標籤示例1:**
 
    ```
    private function onApplicationComplete(event:FlexEvent):void { 
@@ -110,7 +109,7 @@ Flash執行階段TVSDK需要有簽名的Token，以驗證您有權在應用程�
    } 
    ```
 
-   **多重代號範例2:**
+   **多令牌示例2:**
 
    ```
    private function tokenSwfLoadedHandler(e:Event):void { 
@@ -156,4 +155,3 @@ Flash執行階段TVSDK需要有簽名的Token，以驗證您有權在應用程�
        authorizedFeatureHelper.loadFrom(tokenUrl); 
    }
    ```
-

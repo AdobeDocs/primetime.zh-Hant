@@ -1,43 +1,42 @@
 ---
-description: TVSDK會根據特定問題處理時間範圍錯誤，或合併或重新排序未正確定義的時間範圍。
-title: 廣告刪除和取代錯誤處理
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK根據特定問題處理時間範圍錯誤，合併或重新排序未正確定義的時間範圍。
+title: 廣告刪除和替換錯誤處理
+exl-id: 86970989-82e0-4e6f-81fb-beee70870c69
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
+# 廣告刪除和替換錯誤處理 {#ad-deletion-and-replacement-error-handling}
 
-# 廣告刪除和替換錯誤處理{#ad-deletion-and-replacement-error-handling}
+TVSDK根據特定問題處理時間範圍錯誤，合併或重新排序未正確定義的時間範圍。
 
-TVSDK會根據特定問題處理時間範圍錯誤，或合併或重新排序未正確定義的時間範圍。
+TVSDK處理 `timeRanges` 執行預設合併和重新排序時出錯。 首先，它按 *開始* 時間。 根據此排序順序，它合併相鄰範圍，並在範圍之間存在子集和交叉點時將其連接。
 
-TVSDK會執行預設合併和重新排序，處理`timeRanges`錯誤。 首先，它會依&#x200B;*begin*&#x200B;時間對客戶定義的時間範圍進行排序。 根據這種排序順序，它然後合併相鄰範圍，如果範圍之間有子集和交集，則將其連接。
+TVSDK按如下方式處理時間範圍錯誤：
 
-TVSDK可處理下列時間範圍錯誤：
+* 無序 — TVSDK重新排序時間範圍。
+* 子集 — TVSDK合併時間範圍子集。
+* 交叉 — TVSDK合併交叉時間範圍。
+* 替換範圍衝突 — TVSDK從最早出現時選擇替換持續時間 `timeRange` 在衝突組中。
 
-* 順序錯誤- TVSDK會重新排序時間範圍。
-* 子集- TVSDK合併時間範圍子集。
-* 交集- TVSDK會合併相交的時間範圍。
-* 取代範圍衝突- TVSDK會從衝突群組中最早出現的`timeRange`選擇取代持續時間。
+TVSDK按如下方式處理信令模式衝突：
 
-TVSDK可處理信令模式衝突，如下所示：
+* 如果定義了REPLACE範圍，TVSDK將自動將信令模式更改為CUSTOM_RANGE。
+* 如果定義了DELETE範圍或MARK範圍，且信令模式為CUSTOM_RANGE，則TVSDK會刪除或標籤這些範圍。 在本例中沒有廣告插入。
+* 如果DELETE範圍或MARK範圍定義了替換持續時間，則TVSDK將忽略此持續時間。
 
-* 如果已定義REPLACE範圍，TVSDK會自動將信令模式變更為CUSTOM_RANGE。
-* 如果已定義DELETE範圍或MARK範圍，且信令模式為CUSTOM_RANGE,TVSDK會刪除或標籤這些範圍。 在此案例中沒有廣告插入。
-* 如果DELETE範圍或MARK範圍定義取代持續時間，TVSDK會忽略此持續時間。
+當伺服器未返回有效時 `AdBreaks`:
 
-當伺服器未返回有效的`AdBreaks`時：
+* TVSDK生成並處理 `NOPTimelineOperation` 為空 `AdBreak`。 沒有廣告。
 
-* TVSDK會針對空的`AdBreak`產生並處理`NOPTimelineOperation`。 沒有廣告播放。
+## 時間範圍錯誤示例 {#time-range-error-examples}
 
-## 時間範圍錯誤示例{#time-range-error-examples}
+TVSDK通過合併或替換適當的時間範圍來響應錯誤的時間範圍規範。
 
-TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍規格。
-
-在下例中，定義了四個相交的DELETE時間範圍。 TVSDK將4個時間範圍合併為1，因此實際刪除範圍是0-50秒。
+在以下示例中，定義了四個相交的DELETE時間範圍。 TVSDK將四個時間範圍合併為一個，因此實際刪除範圍是0到50s。
 
 ```
 "time-ranges": {
@@ -58,7 +57,7 @@ TVSDK會根據需要合併或取代時間範圍，以回應錯誤的時間範圍
 }
 ```
 
-在以下示例中，四個REPLACE時間範圍定義為衝突的時間範圍。 在此例中，TVSDK會以25個廣告取代0-50。 它會依排序順序排列第一個取代期間，因為後續範圍中會有衝突。
+在下例中，四個REPLACE時間範圍定義為衝突的時間範圍。 在這種情況下，TVSDK用25個廣告代替0到50個。 它與排序順序中的第一個替換持續時間相同，因為後續範圍記憶體在衝突。
 
 ```
 "time-ranges": {

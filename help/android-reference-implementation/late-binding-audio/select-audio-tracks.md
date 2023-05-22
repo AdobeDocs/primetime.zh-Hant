@@ -1,27 +1,26 @@
 ---
-title: 選取音軌
-description: 選取音軌
+title: 選擇音頻軌道
+description: 選擇音頻軌道
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d4a7260a-82dd-4b57-8037-b91815d9b954
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
+# 選擇音頻軌道{#select-the-audio-tracks}
 
-# 選擇音軌{#select-the-audio-tracks}
+要為後期綁定音頻選擇音頻軌道，請實現 [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html)。
 
-要選擇用於後期綁定音頻的音軌，請實施[IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html)。
-
-| 敬…… | 打電話…… |
+| 到…… | 呼叫…… |
 |---|---|
-| 取得可用AA音軌清單 | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
-| 取得目前選取的音軌 | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
-| 選取AA音軌 | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
+| 獲取可用AA軌道清單 | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
+| 獲取當前選定的軌道 | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
+| 選擇AA軌道 | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
-下列程式碼範例說明參考實作如何從TVSDK取得音軌，並將選取的音軌指派給相關媒體項目：
+以下代碼示例說明了引用實現如何從TVSDK獲取音頻軌道並將所選軌道分配給關聯的媒體項：
 
 ```java
 /** 

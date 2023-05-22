@@ -1,101 +1,101 @@
 ---
-title: JavaScript SDK逐步指南
-description: JavaScript SDK逐步指南
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: JavaScript SDK指南
+description: JavaScript SDK指南
+exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
 
 ---
 
-
-# JavaScript SDK逐步指南 {#javascript-sdk-cookbook}
+# JavaScript SDK指南 {#javascript-sdk-cookbook}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-## 簡介(#intro)
+## 導言(#intro)
 
-本文檔描述了程式設計師的高級應用程式為與Adobe Primetime身份驗證服務整合的JavaScript實施的權限工作流。 JavaScript API參考資料的連結會包含在其中。
+本文檔介紹程式設計師的高級應用程式為與Adobe Primetime身份驗證服務整合JavaScript而實施的權利工作流。 到JavaScript API Reference的連結貫穿整個過程。
 
-另請注意， [相關資訊](#related) 區段包含一組JavaScript程式碼範例的連結。
+另請注意 [相關資訊](#related) 節包括指向一組JavaScript代碼示例的連結。
 
 ## 權利流(#entitlement)
 
-1. [必要條件](#prereq)
-2. [啟動流程](#startup)
-3. [驗證流程](#authn)
-4. [授權流程](#authz)
-5. [檢視媒體流量](#logout)
+1. [先決條件](#prereq)
+2. [啟動流](#startup)
+3. [驗證流](#authn)
+4. [授權流](#authz)
+5. [查看媒體流](#logout)
 
 </br>
 
 ![](assets/javascript-flows.png)
 
 
-## 必要條件(#prereq)
+## 先決條件(#prereq)
 
-**相依性：**
+**依賴項：**
 
-- Adobe Primetime驗證庫(AccessEnabler)，請與您的Adobe Primetime驗證帳戶管理員合作安排此事。
-- 有效的Adobe Primetime驗證要求者ID，請與您的Adobe Primetime驗證帳戶管理員合作安排此事。
+- Adobe Primetime身份驗證庫(AccessEnabler)，與您的Adobe Primetime身份驗證客戶經理合作安排。
+- 有效的Adobe Primetime驗證請求者ID，請與Adobe Primetime驗證帳戶經理合作安排。
 
-建立回呼函式：
+建立回調函式：
 
 - `entitlementLoaded`
 
 </br>
 
-**觸發：** AccessEnabler已載入並完成初始化。
+**觸發器：** AccessEnabler已載入並完成初始化。
 
 - `displayProviderDialog(mvpds)`
 
-   **觸發：** `getAuthentication(),` 只有在使用者尚未選取提供者(MVPD)且尚未驗證時，mvpds參數才會是使用者可用的提供者陣列。
+   **觸發器：** `getAuthentication(),` 僅當用戶尚未選擇提供程式(MVPD)且尚未驗證時mvpds參數是用戶可用的提供程式陣列。
 
 - `setAuthenticationStatus(status, errorcode)`
 
-   **觸發：**
+   **觸發器：**
    - `checkAuthentication()`每次。
-   - `getAuthentication()` 只有在使用者已驗證且已選取提供者時。
+   - `getAuthentication()` 僅當用戶已經過身份驗證並已選擇提供程式時。
 
-   傳回的狀態為成功或失敗；errorcode描述了失敗的類型。
+   返回的狀態為成功或失敗；錯誤代碼描述了故障類型。
 
 - `createIFrame(width, height)`
 
-   **觸發：** `setSelectedProvider(providerID)`，且唯若選取的提供者已設定為顯示在IFrame中。
+   **觸發器：** `setSelectedProvider(providerID)`，僅當選定提供程式配置為在IFrame中顯示時。
 
    >[!NOTE]
    >
-   >提供程式被配置為將其身份驗證螢幕呈現為重定向或iFrame，程式設計師需要考慮這兩者。
+   >提供程式被配置為將其驗證螢幕呈現為重定向或iFrame，程式設計師需要考慮兩者。
 
 - `sendTrackingData(event, data)`
 
-   **觸發器：** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`.  此 `event` 參數指示發生了哪些權利事件；the `data` 參數是與事件相關的值清單。 
+   **觸發器：** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`。  的 `event` 參數指示發生了哪些權利事件；這樣 `data` 參數是與事件相關的值清單。 
 - `setToken(token, resource)`
 
-   **觸發：** `checkAuthorization()`和 `getAuthorization()` 在成功授權以檢視資源後。   此 `token` 參數是短期媒體代號；the `resource` 參數是使用者有權檢視的內容。
+   **觸發器：** `checkAuthorization()`和 `getAuthorization()` 在成功授權查看資源後。   的 `token` 參數是短壽命的媒體令牌；這樣 `resource` 參數是用戶有權查看的內容。
 
 - `tokenRequestFailed(resource, code, description)`
 
-   **觸發：**`checkAuthorization()`&#x200B;和`getAuthorization()`  授權失敗後。\
-   此 `resource` 參數是使用者嘗試檢視的內容；the `code` 參數是錯誤碼，指出發生的故障類型；the `description` 參數描述了與錯誤代碼相關的錯誤。
+   **觸發器：**`checkAuthorization()`&#x200B;和`getAuthorization()`  授權失敗。\
+   的 `resource` 參數是用戶嘗試查看的內容；這樣 `code` 參數是錯誤代碼，指示出現了哪種類型的故障；這樣 `description` 參數描述與錯誤代碼相關的錯誤。
 
 - `selectedProvider(mvpd)`
 
-   **觸發：** [`getSelectedProvider()`](#$getSelProv `mvpd` 參數提供有關用戶選擇的提供程式的資訊。
+   **觸發器：** [`getSelectedProvider()`](#$getSelProv The `mvpd` 參數提供有關用戶選擇的提供程式的資訊。
 
 - `setMetadataStatus(metadata, key, arguments)`
 
-   **觸發：** `getMetadata().`\
-   此 `metadata` 參數提供您請求的特定資料；key參數是 `getMetadata()`要求；和 `arguments` 參數是傳遞至的相同字典 `getMetadata()`.
+   **觸發器：** `getMetadata().`\
+   的 `metadata` 參數提供您請求的特定資料；key參數是 `getMetadata()`請求；和 `arguments` 參數是傳遞給的同一字典 `getMetadata()`。
 
 
-## 2.啟動流程
+## 2.啟動流
 
-**I.載入AccessEnabler JavaScript:**
+**我。載入AccessEnabler JavaScript:**
 
-**針對測試設定檔**
+**用於暫存配置檔案**
 
 ```JSON
 <script type="text/javascript"         
@@ -105,7 +105,7 @@ src="https://entitlement.auth-staging.adobe.com/entitlement/v4/AccessEnabler.js"
 
 或……
 
-**針對生產設定檔**
+**用於生產配置檔案**
 
 ```JSON
 <script type="text/javascript"         
@@ -113,77 +113,77 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 </script>"
 ```
 
-**觸發器：** 初始化完成時，Adobe Primetime驗證會呼叫 `entitlementLoaded()` 回呼函式。 這是應用程式與AccessEnabler通信的入口點。 
+**觸發器：** 初始化完成後，Adobe Primetime驗證將調用 `entitlementLoaded()` 回調函式。 這是您的應用程式與AccessEnabler通信的入口點。 
 
  
-**二。** 呼叫 `setRequestor()`建立程式設計師的身份；在程式設計師的 `requestorID` 和（可選）Adobe Primetime驗證端點的陣列。
+**二。** 呼叫 `setRequestor()`確定程式設計師的身份；程式設計師 `requestorID` 和（可選）一組Adobe Primetime驗證端點。
 
-**觸發器：** 無，但會啟用 `displayProviderDialog()` 需要時呼叫。
+**觸發器：** 無，但啟用 `displayProviderDialog()` 需要時被叫。
 
 
-**三。** 呼叫 `checkAuthentication()` 檢查現有驗證，而不啟動完整 [驗證流程].  如果此呼叫成功，您可以直接前往 `authorization flow`.  如果沒有，請繼續 `authentication flow`.
+**三。** 呼叫 `checkAuthentication()` 檢查現有驗證而不啟動完整驗證 [認證流]。  如果此調用成功，則可以直接轉到 `authorization flow`。  否則，繼續 `authentication flow`。
 
-**相依性：** 成功呼叫 `setRequestor()`（此相依性也會套用至所有後續呼叫）。
+**依賴關係：** 成功調用 `setRequestor()`（此依賴關係也適用於所有後續調用）。
 
- **觸發器：** `setAuthenticationStatus()` 回撥
+ **觸發器：** `setAuthenticationStatus()` 回調
 
 </br>
 
-## 3.驗證流程</span>
+## 3.驗證流</span>
 
 
-**相依性：** 成功呼叫 `setRequestor()`（此相依性也會套用至所有後續呼叫）。
+**依賴關係：** 成功調用 `setRequestor()`（此依賴關係也適用於所有後續調用）。
 
 
 呼叫 `getAuthentication()` 獲取驗證狀態OR以觸發提供程式驗證流。
 
-**觸發器：**
+**Trigers:**
 
-- `displayProviderDialog()`如果使用者尚未通過驗證
-- `setAuthenticationStatus()` 如果驗證已發生
+- `displayProviderDialog()`如果用戶尚未經過身份驗證
+- `setAuthenticationStatus()` 如果已進行身份驗證
 
-當AccessEnabler調用時，驗證流的完成 `setAuthenticationStatus()`with `isAuthenticated == 1`.
+當AccessEnabler調用時，驗證流的完成 `setAuthenticationStatus()`與 `isAuthenticated == 1`。
 
-## 4.授權流程(#authz)
+## 4.授權流(#authz)
 
-**相依性：**
+**依賴項：**
 
-- 成功呼叫 `setRequestor()` （此相依性也會套用至所有後續呼叫）。
-- 與MVPD同意的有效資源ID。 請注意， ResourceIDs應與任何其他裝置或平台上使用的ID相同，且在各MVPD上會相同。
+- 成功調用 `setRequestor()` （此依賴關係也適用於所有後續調用）。
+- 與MVPD一致的有效資源ID。 請注意，資源ID應與在任何其他設備或平台上使用的ID相同，並且在MVPD上應相同。
 
-呼叫 `getAuthorization()` 並傳遞所請求媒體的ResourceID。 成功的呼叫會傳回短媒體代號，確認使用者已獲得檢視要求媒體的授權。
+呼叫 `getAuthorization()` 並傳遞所請求介質的ResourceID。 成功的呼叫將返回短媒體令牌，該令牌確認用戶有權查看請求的媒體。
 
-- 如果呼叫通過：用戶具有有效的AuthN令牌，並且該用戶被授權觀看請求的媒體。
-- 如果呼叫失敗：檢查擲回的例外狀況，以判斷其類型（AuthN、AuthZ或其他類型）:
-- 如果呼叫是AuthN錯誤，則重新啟動AuthN流程。
-- 如果呼叫是AuthZ錯誤，則使用者無權觀看請求的媒體，因此應向使用者顯示某種錯誤訊息。
-- 如果有其他錯誤（連線錯誤、網路錯誤等） 然後向用戶顯示相應的錯誤消息。
+- 如果呼叫通過：用戶具有有效的AuthN令牌，並且用戶有權監視請求的媒體。
+- 如果呼叫失敗：檢查引發的異常以確定其類型（AuthN、AuthZ或其他）:
+- 如果調用是AuthN錯誤，則重新啟動AuthN流。
+- 如果調用是AuthZ錯誤，則用戶無權監視請求的媒體，應向用戶顯示某種錯誤消息。
+- 如果出現其他錯誤（連接錯誤、網路錯誤等） 然後向用戶顯示相應的錯誤消息。
 
-使用媒體代號驗證器驗證從成功 `getAuthorization()` 呼叫。
+使用媒體令牌驗證器驗證從成功的 `getAuthorization()` 呼叫。
 
  
-**相依性：** 短媒體令牌驗證器（隨AccessEnabler庫一起提供）
+**依賴關係：** 短媒體令牌驗證器（隨AccessEnabler庫一起提供）
 
-- 如果驗證通過：顯示/播放使用者請求的媒體。
-- 如果失敗：AuthZ代號無效，應拒絕媒體要求，且應向使用者顯示錯誤訊息。
+- 如果驗證通過：顯示/播放用戶請求的媒體。
+- 如果失敗：AuthZ令牌無效，應拒絕媒體請求，並應向用戶顯示錯誤消息。
 
-## 5.檢視媒體流量(#logout)
+## 5.查看媒體流(#logout)
 
-- 使用者會選取要檢視的媒體。
-   - 介質是否受保護？\
-           — 您的應用程式會檢查媒體是否受到保護：
-      - 如果媒體受到保護，您的應用程式就會啟動上方的授權(AuthZ)流程。
-      - 如果介質未受保護，則繼續「查看介質」流。
+- 用戶選擇要查看的介質。
+   - 介質是否受到保護？\
+           — 你的應用會檢查媒體是否受到保護：
+      - 如果媒體受到保護，則您的應用將啟動上面的授權(AuthZ)流。
+      - 如果介質未受保護，則繼續查看介質流。
       - 播放媒體
 
-## 設定訪客ID(#visitorID)
+## 配置訪問者ID(#visitorID)
 
-設定 [Experience CloudvisitorID](https://marketing.adobe.com/resources/help/en_US/mcvid/) 從分析的角度來看，值非常重要。 一旦設定EC visitorID值，SDK就會隨著每個網路呼叫傳送此資訊，而Adobe Primetime驗證服務會收集此資訊。 如此一來，您便能將Adobe Primetime驗證服務的分析資料與其他應用程式或網站可能提供的任何其他分析報表產生關聯。 如需如何設定EC visitorID的資訊，請參閱 [此處](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+配置 [Experience Cloud訪問者ID](https://marketing.adobe.com/resources/help/en_US/mcvid/) 從分析的角度來看，價值非常重要。 一旦設定了EC visitorID值，SDK將隨每個網路呼叫一起發送此資訊，而Adobe Primetime身份驗證服務將收集此資訊。 這樣，您將能夠將來自Adobe Primetime身份驗證服務的分析資料與來自其他應用程式或網站的任何其他分析報告相關聯。 有關如何設定EC visitorID的資訊可以找到 [這裡](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en)。
 
  
 >[!NOTE]
 >
->請注意，自JS SDK 3.1.0版開始，即提供此功能支援。 
+>請注意，從JS SDK 3.1.0版開始，可提供此功能支援。 
 
 <!--
 ### Related Information (#related)

@@ -1,22 +1,21 @@
 ---
-description: 您可以使用回呼函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
-title: 實作自訂中繼資料支援
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以使用回調函式提供有關內容、廣告和章節跟蹤調用的自定義元資料。
+title: 實施自定義元資料支援
+exl-id: 56580338-5104-4121-b441-5d92ba6f4610
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
+# 實施自定義元資料支援{#implement-custom-metadata-support}
 
-# 實作自訂中繼資料支援{#implement-custom-metadata-support}
+您可以使用回調函式提供有關內容、廣告和章節跟蹤調用的自定義元資料。
 
-您可以使用回呼函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
+回調函式在進行跟蹤調用之前即被調用，因此您的應用程式可以附加特定於廣告或章節的元資料。
 
-回呼函式會在進行追蹤呼叫之前呼叫，因此您的應用程式可以附加廣告或章節專屬的中繼資料。
-
-1. 叫用內容、廣告和章節的回呼函式。
+1. 調用內容、廣告和章節的回調函式。
 
    ```
    // Video Metadata Block 
@@ -34,4 +33,3 @@ ht-degree: 0%
        return {"mychapterid":"chapter-1234", "mychapter-sdkversion":Version.version} 
    };
    ```
-

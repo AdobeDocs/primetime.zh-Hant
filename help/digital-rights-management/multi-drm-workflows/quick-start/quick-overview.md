@@ -1,17 +1,16 @@
 ---
-description: 與您的Adobe代表合作以取得憑證，並在ExpressPlay中設定管理帳戶。 在您的Adobe和ExpressPlay帳戶設定後，您就可以開始針對不同的DRM解決方案實施和測試工作流程。
-title: Primetime DRM Cloud快速入門概觀
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 與您的Adobe代表合作以獲取證書，並在ExpressPlay中設定管理帳戶。 在設定Adobe和ExpressPlay帳戶後，您可以開始實施和test不同DRM解決方案的工作流。
+title: 黃金時段DRM雲快速入門概述
+exl-id: b44d0f69-c8c4-47c8-b246-a3a6f0b9442b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
+# 概述 {#primetime-drm-cloud-quick-start-overview}
 
-# 概述{#primetime-drm-cloud-quick-start-overview}
+與您的Adobe代表合作以獲取證書，並在ExpressPlay中設定管理帳戶。 在設定Adobe和ExpressPlay帳戶後，您可以開始實施和test不同DRM解決方案的工作流。
 
-與您的Adobe代表合作以取得憑證，並在ExpressPlay中設定管理帳戶。 在您的Adobe和ExpressPlay帳戶設定後，您就可以開始針對不同的DRM解決方案實施和測試工作流程。
-
-這些快速入門步驟可協助您完成多DRM設定程式；從取得必要的憑證和金鑰，到在ExpressPlay取得管理帳戶，到測試您受保護內容的封裝、授權和播放。
+這些快速啟動步驟可幫助您完成多DRM設定過程；從獲取所需的cert和key ，到在ExpressPlay上獲取管理帳戶，再到測試受保護內容的打包、許可和回放。

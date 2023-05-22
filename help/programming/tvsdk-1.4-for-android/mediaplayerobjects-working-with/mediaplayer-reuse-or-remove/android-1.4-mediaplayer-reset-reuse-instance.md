@@ -1,63 +1,62 @@
 ---
-description: 當您重設MediaPlayer例項時，它會傳回至MediaPlayerState中定義的未初始化IDLE狀態。
-title: 重設或重複使用MediaPlayer例項
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 重置MediaPlayer實例時，它將返回到MediaPlayerState中定義的未初始化的IDLE狀態。
+title: 重置或重用MediaPlayer實例
+exl-id: db8264f7-2f33-4441-86db-bb985edf7c3c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
 
 ---
 
+# 重置、重用或刪除MediaPlayer實例 {#reset-or-reuse-a-mediaplayer-instance}
 
-# 重設、重複使用或移除MediaPlayer例項{#reset-or-reuse-a-mediaplayer-instance}
+您可以重置、重用或釋放不再需要的MediaPlayer實例。
 
-您可以重設、重複使用或發行您不再需要的MediaPlayer例項。
-
-當您重設MediaPlayer例項時，它會傳回至MediaPlayerState中定義的未初始化IDLE狀態。
+重置MediaPlayer實例時，它將返回到MediaPlayerState中定義的未初始化的IDLE狀態。
 
 此操作在以下情況下非常有用：
 
-* 您想要重複使用`MediaPlayer`例項，但需要載入新的`MediaResource`（視訊內容）並取代先前的例項。
+* 要重用 `MediaPlayer` 但需要載入新實例 `MediaResource` （視頻內容），並替換上一個實例。
 
-   重設可讓您重複使用`MediaPlayer`例項，而不需釋放資源、重新建立`MediaPlayer`和重新分配資源。
+   重置允許重用 `MediaPlayer` 實例，而不需要釋放資源並重新建立 `MediaPlayer`，並重新分配資源。
 
-* 當`MediaPlayer`處於ERROR狀態且需要清除時。
+* 當 `MediaPlayer` 處於ERROR狀態，需要清除。
 
    >[!IMPORTANT]
    >
    >這是從ERROR狀態恢復的唯一方法。
 
-1. 調用`reset`將`MediaPlayer`實例返回其未初始化狀態：
+1. 呼叫 `reset` 返回 `MediaPlayer` 實例到其未初始化狀態：
 
    ```java
    void reset() throws IllegalStateException; 
    ```
 
-1. 使用`MediaPlayer.replaceCurrentResource`載入另一個`MediaResource`。
+1. 使用 `MediaPlayer.replaceCurrentResource` 載入 `MediaResource`。
 
    >[!TIP]
    >
-   >要清除錯誤，請載入相同的`MediaResource`。
+   >要清除錯誤，請載入相同的 `MediaResource`。
 
-1. 當您收到`STATUS_CHANGED`事件回呼並且狀態為PREPARED時，請啟動播放。
+1. 當您收到 `STATUS_CHANGED` 事件回調（狀態為PREPARED），啟動回放。
 
-## 發行MediaPlayer實例和資源{#release-a-mediaplayer-instance-and-resources}
+## 釋放MediaPlayer實例和資源{#release-a-mediaplayer-instance-and-resources}
 
-當您不再需要MediaResource時，應該發行MediaPlayer實例和資源。
+在不再需要MediaResource時，應釋放MediaPlayer實例和資源。
 
-釋放`MediaPlayer`對象時，將取消分配與此`MediaPlayer`對象關聯的基礎硬體資源。
+當您釋放 `MediaPlayer` 對象，與此關聯的基礎硬體資源 `MediaPlayer` 對象被取消分配。
 
-以下是發行MediaPlayer的一些理由：
+以下是發佈MediaPlayer的一些原因：
 
-* 保留不必要的資源可能會影響效能。
-* 留下不必要的`MediaPlayer`物件可持續耗用行動裝置的電池。
-* 如果裝置不支援同一視訊codec的多個執行個體，其他應用程式可能會發生播放失敗。
+* 保留不必要的資源會影響效能。
+* 留下不必要的 `MediaPlayer` 對象可導致移動設備的電池消耗持續。
+* 如果一台設備上不支援同一視頻編解碼器的多個實例，則其他應用程式可能會出現回放失敗。
 
-1. 釋放`MediaPlayer`。
+1. 釋放 `MediaPlayer`。
 
    ```java
    void release() throws IllegalStateException;
    ```
 
-在`MediaPlayer`實例發佈後，您無法再使用它。 如果在`MediaPlayer`介面發佈後調用了任何方法，則會拋出`IllegalStateException`。
+在 `MediaPlayer` 實例已發佈，您不能再使用它。 如果 `MediaPlayer` 介面在發佈後調用， `IllegalStateException` 。

@@ -1,20 +1,19 @@
 ---
-description: 通過擴展OpportunityGenerator介面，您可以實施自己的機會生成器。
-title: 實作自訂商機產生器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以通過擴展OpportunityGenerator介面來實現您自己的機會生成器。
+title: 實施自定義機會生成器
+exl-id: 45f9ed89-94c4-4e74-b20a-4789a25bd9b3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
+# 實施自定義機會生成器{#implement-a-custom-opportunity-generator}
 
-# 實施自定義業務機會生成器{#implement-a-custom-opportunity-generator}
+您可以通過擴展OpportunityGenerator介面來實現您自己的機會生成器。
 
-通過擴展OpportunityGenerator介面，您可以實施自己的機會生成器。
-
-1. 建立自訂商機產生器。
+1. 建立自定義機會生成器。
 
    例如：
 
@@ -44,7 +43,7 @@ ht-degree: 5%
    }; 
    ```
 
-1. 建立自訂內容工廠，使用自訂商機產生器。
+1. 建立使用自定義機會生成器的自定義內容工廠。
 
    例如：
 
@@ -66,9 +65,9 @@ ht-degree: 5%
    }; 
    ```
 
-1. 註冊要播放的媒體串流的自訂內容工廠。
+1. 為要播放的媒體流註冊自定義內容工廠。
 
-   在UI Framework播放器中，您可以指定自訂內容工廠，如下所示：
+   在UI Framework播放器中，可以按如下方式指定自定義內容工廠：
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -83,4 +82,3 @@ ht-degree: 5%
      } 
    }); 
    ```
-

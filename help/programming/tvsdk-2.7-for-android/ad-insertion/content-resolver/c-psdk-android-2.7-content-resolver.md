@@ -1,35 +1,34 @@
 ---
-description: 機會生成器通過流中的自定義標籤、廣告信令模式自定義標籤等來識別放置機會。 機會生成器將這些放置機會發送給內容解析器，內容解析器根據放置機會的屬性和元資料定制內容／廣告插入工作流。
-title: 自訂商機產生器和內容解析器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 機會生成器通過流中的定製標籤、以及信令模式定制標籤等來識別放置機會。 機會生成器將這些放置機會發送到內容解析器，內容解析器基於放置機會的屬性和元資料定制內容/廣告插入工作流。
+title: 定制機會生成器和內容解決器
+exl-id: 2ce859c4-6bf6-4ec5-82b1-2bc6a2316fd9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
 
 ---
 
+# 概述 {#customize-opportunity-generators-and-content-resolvers-overview}
 
-# 概述{#customize-opportunity-generators-and-content-resolvers-overview}
+機會生成器通過流中的定製標籤、以及信令模式定制標籤等來識別放置機會。 機會生成器將這些放置機會發送到內容解析器，內容解析器基於放置機會的屬性和元資料定制內容/廣告插入工作流。
 
-機會生成器通過流中的自定義標籤、廣告信令模式自定義標籤等來識別放置機會。 機會生成器將這些放置機會發送給內容解析器，內容解析器根據放置機會的屬性和元資料定制內容／廣告插入工作流。
+TVSDK包括以下預設機會生成器：
 
-TVSDK包含下列預設機會產生器：
+* `ManifestCuesOpportunityGenerator` 根據預設廣告提示生成機會( `#EXT-X-CUE`)。
 
-* `ManifestCuesOpportunityGenerator` 從預設廣告提示( `#EXT-X-CUE`)產生機會。
+* `AdSignalingModeOpportunityGenerator` 為指定的ad信令模式生成初始機會。 這會忽略任何提示或定時元資料資訊。
+* `CustomMarkerOpportunityGenerator` 生成替換C3廣告的機會。
+* `AuditudeResolver`當懶惰的廣告解決開啟時，「機會生成器」會產生機會。
 
-* `AdSignalingModeOpportunityGenerator` 為指定的廣告信令模式生成初始機會。這會忽略任何提示或計時中繼資料資訊。
-* `CustomMarkerOpportunityGenerator` 產生取代C3廣告的機會。
-* `AuditudeResolver`當懶惰的廣告解析開啟時，機會產生器會產生機會。
-
-TVSDK也包含預設內容解析器：
+TVSDK還包括預設內容解析器：
 
 * `CustomRangeResolver`
 * `JSONResolver`
-* `AuditudeResolver`，可與Primetime廣告決策通訊。
+* `AuditudeResolver`它可以與黃金時段廣告決策進行通信。
 
-您可以覆蓋預設的業務機會生成器和內容解析器，以如下方式自定義廣告工作流：
+您可以改寫預設的機會生成器和內容解析器，以通過以下方式自定義廣告工作流：
 
-* 識別廣告插入的自訂標籤
-* 建立自訂廣告提供者。
-* 將內容塗黑。
+* 識別廣告插入的自定義標籤
+* 建立自定義廣告提供程式。
+* 禁止內容。

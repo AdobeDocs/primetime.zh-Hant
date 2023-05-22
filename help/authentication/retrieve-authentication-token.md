@@ -1,59 +1,59 @@
 ---
-title: 擷取驗證Token
-description: 擷取驗證Token
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 檢索身份驗證令牌
+description: 檢索身份驗證令牌
+exl-id: 7fb03854-edad-41e7-b218-1858fc071876
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
-
-# 擷取驗證Token {#retrieve-authentication-token}
+# 檢索身份驗證令牌 {#retrieve-authentication-token}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-## 重設API端點 {#clientless-endpoints}
+## REST API終結點 {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## 說明 {#description}
 
-擷取驗證(AuthN)Token。  
+檢索身份驗證(AuthN)令牌。  
 
-| 端點 | 已呼叫  </br>依據 | 輸入   </br>Params | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
+| 端點 | 已調用  </br>按 | 輸入   </br>帕拉姆 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/authn</br></br>例如：</br></br>&lt;sp_fqdn>/api/v1/tokens/authn | 串流應用程式</br></br>或</br></br>程式設計人員服務 | 1.請求者（強制）</br>2.  deviceId（必要）</br>3.  device_info/X-Device-Info（強制）</br>4.  _deviceType_ （已淘汰）</br>5。  _deviceUser_ （已過時）</br>6.  _appId_ （已過時） | GET | 包含驗證資訊的XML或JSON，若失敗則顯示錯誤詳細資訊。 | 200 — 成功。  </br>404 — 找不到代號  </br>410 — 代號已過期 |
+| &lt;sp_fqdn>/api/v1/tokens/authn</br></br>例如：</br></br>&lt;sp_fqdn>/api/v1/tokens/authn | 流式處理應用</br></br>或</br></br>程式設計師服務 | 1。請求者（必需）</br>2.  設備ID（必需）</br>3.  device_info/X-Device-Info（必需）</br>4.  _設備類型_ （已棄用）</br>5.  _設備用戶_ （不建議使用）</br>6。  _應用ID_ （不建議使用） | GET | 包含驗證資訊或錯誤詳細資訊（如果失敗）的XML或JSON。 | 200 — 成功。  </br>404 — 未找到令牌  </br>410 — 令牌已過期 |
 
 {style="table-layout:auto"}
 
 
 | 輸入參數 | 說明 |
 | --- | --- |
-| 請求者 | 此操作對其有效的程式設計師請求者ID。 |
-| deviceId | 設備id位元組。 |
-| device_info/</br></br>X-Device-Info | 串流裝置資訊。</br></br>**附註**:此URL可以作為URL參數傳遞，但由於此參數的可能大小及GETURL長度的限制，因此URL應以X-Device-Info在http標題中傳遞。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | 裝置類型（例如Roku、PC）。</br></br>**附註**:device_info會取代此參數。 |
-| _deviceUser_ | 裝置使用者識別碼。</br></br>**附註**：若已使用，deviceUser的值應與 [建立註冊代碼](/help/authentication/registration-code-request.md) 請求。 |
-| _appId_ | 應用程式ID/名稱。 </br></br>**附註**:device_info會取代此參數。 若已使用， `appId` 的值應與 [建立註冊代碼](/help/authentication/registration-code-request.md) 請求。 |
+| 請求 | 此操作對其有效的程式設計師請求者ID。 |
+| 設備ID | 設備ID位元組。 |
+| 設備資訊/</br></br>X設備資訊 | 流設備資訊。</br></br>**注釋**:此URL可以作為URL參數傳遞，但由於此參數的可能大小和對GETURL長度的限制，它應作為X-Device-Info在http標頭中傳遞。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->。 |
+| _設備類型_ | 設備類型（例如Roku、PC）。</br></br>**注釋**:device_info將替換此參數。 |
+| _設備用戶_ | 設備用戶標識符。</br></br>**注釋**：如果使用，則deviceUser的值應與 [建立註冊代碼](/help/authentication/registration-code-request.md) 請求。 |
+| _應用ID_ | 應用程式ID/名稱。 </br></br>**注釋**:device_info將替換此參數。 如果使用， `appId` 應具有與 [建立註冊代碼](/help/authentication/registration-code-request.md) 請求。 |
 
 {style="table-layout:auto"}
 
 </br>
 
-### 範例回應 {#response}
+### 示例響應 {#response}
 
  
 
@@ -87,7 +87,7 @@ ht-degree: 0%
 
  
 
-#### 未找到驗證令牌：
+#### 找不到身份驗證令牌：
 
 **XML:**
 
@@ -108,4 +108,3 @@ ht-degree: 0%
         "message": "Not Found"
     }
 ```
-

@@ -1,30 +1,29 @@
 ---
-title: 設定使用模式示範模式
-description: 設定使用模式示範模式
+title: 配置使用模式演示模式
+description: 配置使用模式演示模式
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 593acfbd-fd37-4bab-ac8e-5cb62963fac4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# 配置使用模式演示模式{#configure-usage-model-demo-mode}
 
-# 配置使用模型演示模式{#configure-usage-model-demo-mode}
+在「參考實施」伺服器為使用模式演示頒發許可證之前，必須配置伺服器以指定為四種使用模式中的每種使用模式生成許可證的方式。 這意味著您需要為每個使用模型指定DRM策略。 「參考實施」(Reference Implementation)包括以下示例DRM策略， [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] 目錄：
 
-在「參考實作」伺服器為使用模式示範發行授權之前，您必須先設定伺服器，以指定四種使用模式各自產生授權的方式。 這表示您需要為每個使用模型指定DRM原則。 「參考實施」在[!DNL Reference Implementation/Server/Reference Implementation Server/resources/]目錄中包含以下DRM策略示例：
-
-* `dto-policy.pol` -（下載至擁有）
-* `vod-policy.pol` -（租金／隨選視訊）
-* `sub-policy.pol` -（訂閱）
-* `ad-policy.pol` -（廣告資助）
+* `dto-policy.pol`  — （自主下載）
+* `vod-policy.pol`  — （租賃/視頻點播）
+* `sub-policy.pol`  — （訂閱）
+* `ad-policy.pol`  — （廣告資助）
 
 >[!NOTE]
 >
 >您可以用自己的DRM策略替換這些示例策略。
 
-1. 在[!DNL flashaccess-refimpl.properties]中設定以下屬性，以指定您打算應用到每個使用模型的DRM策略：
+1. 在中設定這些屬性 [!DNL flashaccess-refimpl.properties] 要指定計畫應用於每個使用模型的DRM策略：
 
    ```
    # DRM Policy file name for Download To Own usage 
@@ -37,4 +36,4 @@ ht-degree: 0%
    RefImpl.UsageModelDemo.Policy.Free=ad-policy.pol
    ```
 
-1. 將示例策略檔案複製到[!DNL flashaccess-refimpl.properties]中`config.resourcesDirectory`屬性中指定的目錄。
+1. 將示例策略檔案複製到您在 `config.resourcesDirectory` 物業 [!DNL flashaccess-refimpl.properties]。

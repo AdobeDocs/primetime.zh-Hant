@@ -1,5 +1,5 @@
 ---
-description: '必須配置伺服器屬性以反映您的環境。 可以使用下列任一項執行此操作 '
+description: 必須配置伺服器屬性以反映您的環境。 可以使用下列任一項執行此操作
 title: 將屬性應用於伺服器環境
 exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
 source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf

@@ -1,31 +1,31 @@
 ---
-title: 註冊頁面
-description: 註冊頁面
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 註冊頁
+description: 註冊頁
+exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
+# 註冊頁 {#registration-page}
 
-# 註冊頁面 {#registration-page}
-
-## 重設API端點 {#clientless-endpoints}
+## REST API終結點 {#clientless-endpoints}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
 &lt;reggie_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
  </br>
 
@@ -33,31 +33,31 @@ ht-degree: 0%
 
 返回隨機生成的註冊代碼和登錄頁URI。
 
-| 端點 | 已呼叫  </br>依據 | 輸入   </br>參數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
+| 端點 | 已調用  </br>按 | 輸入   </br>參數 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestor/regcode</br>例如：</br>REGGEI_FQDN/reggie/v1/sampleRequestorId/regcode | 串流應用程式</br>或</br>程式設計人員服務 | 1.請求者  </br>    （路徑元件）</br>2.  deviceId（雜湊）   </br>    （強制）</br>3.  device_info/X-Device-Info（強制）</br>4.  mvpd（選用）</br>5。  ttl（可選）</br>6.  _deviceType_</br> 7.  _deviceUser_ （已過時）</br>8.  _appId_ （已過時） | POST | XML或JSON包含註冊代碼和資訊，若失敗則顯示錯誤詳細資訊。 請參閱下方的結構和範例。 | 201 |
+| &lt;reggie_fqdn>/reggie/v1/{requestor/regcode</br>例如：</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | 流式處理應用</br>或</br>程式設計師服務 | 1。請求  </br>    （路徑元件）</br>2.  設備ID（散列）   </br>    （強制）</br>3.  device_info/X-Device-Info（必需）</br>4.  mvpd（可選）</br>5.  ttl（可選）</br>6。  _設備類型_</br> 7。  _設備用戶_ （不建議使用）</br>8.  _應用ID_ （不建議使用） | POST | XML或JSON包含註冊代碼和資訊或錯誤詳細資訊（如果失敗）。 請參閱下面的架構和示例。 | 201 |
 
 {style="table-layout:auto"}
 
 | 輸入參數 | 說明 |
 | --- | --- |
-| 請求者 | 此操作對其有效的程式設計師請求者ID。 |
-| deviceId | 設備id位元組。 |
-| device_info/</br>X-Device-Info | 串流裝置資訊。</br>**附註**:此URL可以作為URL參數傳遞，但由於此參數的可能大小及GETURL長度的限制，因此URL應以X-Device-Info在http標題中傳遞。 </br>請參閱 [傳遞裝置和連線資訊](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| 請求 | 此操作對其有效的程式設計師請求者ID。 |
+| 設備ID | 設備ID位元組。 |
+| 設備資訊/</br>X設備資訊 | 流設備資訊。</br>**注釋**:此URL可以作為URL參數傳遞，但由於此參數的可能大小和對GETURL長度的限制，它應作為X-Device-Info在http標頭中傳遞。 </br>請參閱中的完整詳細資訊 [傳遞設備和連接資訊](/help/authentication/passing-client-information-device-connection-and-application.md)。 |
 | mvpd | 此操作對其有效的MVPD ID。 |
-| ttl | 此規則程式碼的存留時間應以秒為單位。</br>**附註**:允許的ttl最大值為36000秒（10小時）。 值較高會導致400 HTTP回應（錯誤要求）。 若 `ttl` 保留為空白，則Primetime驗證會設定30分鐘的預設值。 |
-| _deviceType_ | 裝置類型（例如Roku、PC）。</br>如果此參數設定正確，ESM將提供以下量度： [按設備類型劃分](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 使用無用戶端時，以便執行不同類型的分析，例如Roku、AppleTV和Xbox。</br>看， [在傳遞量度中使用無用戶端裝置類型參數的優點&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**附註**:device_info將替換此參數。 |
-| _deviceUser_ | 裝置使用者識別碼。 |
-| _appId_ | 應用程式ID/名稱。 </br>**附註**:device_info會取代此參數。 |
+| TTL | 此重編碼應在幾秒鐘內生存多久。</br>**注釋**:ttl允許的最大值為36000秒（10小時）。 值越高，將導致400個HTTP響應（錯誤請求）。 如果 `ttl` 為空，Mogife Authentication將預設值設定為30分鐘。 |
+| _設備類型_ | 設備類型（如Roku、PC）。</br>如果此參數設定正確，ESM將提供 [按設備類型分解](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 使用Clientless時，可以執行不同類型的分析，例如Roku、AppleTV和Xbox。</br>看， [在傳遞度量中使用無客戶端設備類型參數的好處&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**注釋**:device_info將替換此參數。 |
+| _設備用戶_ | 設備用戶標識符。 |
+| _應用ID_ | 應用程式ID/名稱。 </br>**注釋**:device_info將替換此參數。 |
 
 {style="table-layout:auto"}
 
 
 >[!CAUTION]
 >
->**串流裝置IP位址**
+>**流設備IP地址**
 ></br>
->對於用戶端對伺服器實作，串流裝置IP位址會以此呼叫隱式傳送。  針對伺服器對伺服器實作，其中 **regcode** 呼叫是程式設計員服務而不是流式設備，需要以下標題才能傳遞流式設備IP地址：
+>對於客戶端到伺服器實現，流設備IP地址隨此調用隱式發送。  對於伺服器到伺服器實施， **重碼** 呼叫是程式設計師服務，而不是流式設備，需要以下報頭才能傳遞流式設備IP地址：
 >
 >
 >
@@ -65,9 +65,9 @@ ht-degree: 0%
 >X-Forwarded-For : <streaming_device_ip> 
 >```
 >
->where `<streaming\_device\_ip>` 是串流裝置的公用IP位址。
+>何處 `<streaming\_device\_ip>` 是流設備公共IP地址。
 ></br></br>
->範例：</br>
+>示例：</br>
 >
 >
 ```
@@ -116,18 +116,18 @@ ht-degree: 0%
 
 | 元素名稱 | 說明 |
 | --------------- | ------------------------------------------------------------------------------------ |
-| id | 註冊代碼服務產生的UUID |
+| ID | 註冊代碼服務生成的UUID |
 | 代碼 | 註冊代碼服務生成的註冊代碼 |
-| 請求者 | 請求者ID |
+| 請求 | 請求者ID |
 | mvpd | Mvpd ID |
-| 產生 | 註冊代碼建立時間戳記（自1970年1月1日以來的毫秒） |
-| 過期 | 註冊代碼過期的時間戳記（自1970年1月1日以來的毫秒） |
-| deviceId | 唯一裝置ID（或XSTS代號） |
-| deviceType | 裝置類型 |
-| deviceUser | 使用者登入裝置 |
-| appId | 應用程式ID |
+| 生成 | 註冊代碼建立時間戳（自1970年1月1日以來以毫秒為單位） |
+| 過期 | 註冊代碼過期的時間戳（自1970年1月1日以來以毫秒為單位） |
+| 設備ID | 唯一設備ID（或XSTS令牌） |
+| 設備類型 | 設備類型 |
+| 設備用戶 | 用戶登錄到設備 |
+| 應用ID | 應用程式ID |
 | appVersion | 應用程式版本 |
-| registrationURL | 要向最終用戶顯示的登錄Web應用的URL |
+| 註冊URL | 要顯示給最終用戶的登錄Web應用的URL |
 
 {style="table-layout:auto"}
  </br>
@@ -155,7 +155,7 @@ ht-degree: 0%
 ```
  
 
-### 範例回應 {#sample-response}
+### 示例響應 {#sample-response}
 
 **XML:**
 
@@ -199,4 +199,3 @@ ht-degree: 0%
         }
     }
 ```
-

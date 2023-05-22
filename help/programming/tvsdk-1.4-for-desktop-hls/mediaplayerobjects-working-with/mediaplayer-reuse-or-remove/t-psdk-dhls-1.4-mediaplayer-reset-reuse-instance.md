@@ -1,43 +1,42 @@
 ---
-description: 當您重設MediaPlayer例項時，它會傳回至MediaPlayerStatus中定義的未初始化IDLE狀態。
-title: 重設或重複使用MediaPlayer例項
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 重置MediaPlayer實例時，它將返回到MediaPlayerStatus中定義的未初始化的IDLE狀態。
+title: 重置或重用MediaPlayer實例
+exl-id: e06a0052-ce0a-4a6c-8ebc-0666b109cf07
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
+# 重置或重用MediaPlayer實例{#reset-or-reuse-a-mediaplayer-instance}
 
-# 重設或重複使用MediaPlayer例項{#reset-or-reuse-a-mediaplayer-instance}
+您可以重置、重用或釋放不再需要的MediaPlayer實例。
 
-您可以重設、重複使用或發行您不再需要的MediaPlayer例項。
-
-當您重設MediaPlayer例項時，它會傳回至MediaPlayerStatus中定義的未初始化IDLE狀態。
+重置MediaPlayer實例時，它將返回到MediaPlayerStatus中定義的未初始化的IDLE狀態。
 
 此操作在以下情況下非常有用：
 
-* 您想要重複使用`MediaPlayer`例項，但需要載入新的`MediaResource`（視訊內容）並取代先前的例項。
+* 要重用 `MediaPlayer` 但需要載入新實例 `MediaResource` （視頻內容），並替換上一個實例。
 
-   重設可讓您重複使用`MediaPlayer`例項，而不需釋放資源、重新建立`MediaPlayer`和重新分配資源。 `replaceCurrentItem`和`replaceCurrentResource`方法會自動為您執行這些步驟，而不需呼叫reset方法。
+   重置允許重用 `MediaPlayer` 實例，而不需要釋放資源並重新建立 `MediaPlayer`，並重新分配資源。 的 `replaceCurrentItem` 和 `replaceCurrentResource` 方法會自動為您執行這些步驟，而無需調用reset方法。
 
-* 當`MediaPlayer`具有ERROR狀態且需要清除時。
+* 當 `MediaPlayer` 具有錯誤狀態，需要清除。
 
    >[!IMPORTANT]
    >
-   >這是從ERROR狀態中恢復的唯一方法。
+   >這是從ERROR狀態恢復的唯一方法。
 
-1. 調用`reset`將`MediaPlayer`實例返回其未初始化狀態：
+1. 呼叫 `reset` 返回 `MediaPlayer` 實例到其未初始化狀態：
 
    ```
    function reset():void; 
    ```
 
-1. 使用`MediaPlayer.replaceCurrentItem`或`MediaPlayer.replaceCurrentResource`載入另一個`MediaResource`。
+1. 使用 `MediaPlayer.replaceCurrentItem` 或 `MediaPlayer.replaceCurrentResource` 載入 `MediaResource`。
 
    >[!TIP]
    >
-   >要清除錯誤，請載入相同的`MediaResource`。
+   >要清除錯誤，請載入相同的 `MediaResource`。
 
-1. 收到狀態為`PREPARED`的`MediaPlaybackStatusChangeEvent.STATUS_CHANGED`時，開始播放。
+1. 當您收到 `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` 和 `PREPARED` 狀態，開始播放。

@@ -1,73 +1,73 @@
 ---
-title: 最低系統需求
-description: 最低系統需求
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 最低系統要求
+description: 最低系統要求
+exl-id: 57b21e2a-abd7-4b4b-85f1-25584a850e40
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
-
-# 最低系統需求 {#minimum-system-requirements}
+# 最低系統要求 {#minimum-system-requirements}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
 
 ## 概述 {#overview}
 
-本檔案說明在支援的平台上實作Adobe Primetime驗證整合的目前軟體和硬體需求。 下列所有支援的網頁/行動瀏覽器和作業系統均可受益於Adobe Primetime驗證團隊的完整支援，並符合同意的SLA。
+本文檔介紹了在受支援平台上實施Adobe Primetime身份驗證整合的當前軟體和硬體要求。 下面列出的所有支援的Web/移動瀏覽器和作業系統都將受益於Adobe Primetime身份驗證團隊的全面支援，這些支援與商定的SLA相符。
 
-雖然身為Adobe Primetime驗證團隊，我們鼓勵使用最新穩定版本的瀏覽器和作業系統；我們也確認目前使用的不相容/舊版平台和瀏覽器的存在。 這些過時的設備仍可能沒有問題，但更容易出錯。
+作為Adobe Primetime認證團隊，我們鼓勵使用瀏覽器和作業系統的最新版本；我們還確認存在當前正在使用的不相容/舊平台和瀏覽器。 這些過時的設備仍可能運行時沒有問題，但它們更容易出錯。
 
-緩解這些過時平台上出現的任何問題的初始方法應升級至最新版本；這可以是作業系統版本、瀏覽器版本或已安裝應用程式的版本。
+緩解這些過時平台上出現的任何問題的初始方法應升級到最新版本；這可以是作業系統版本、瀏覽器版本或已安裝應用程式的版本。
 
-Adobe Primetime驗證團隊會盡力解決這些平台上出現的任何問題。 
+這些平台上出現的任何問題都將由Adobe Primetime身份驗證團隊以盡力解決。 
 
-Adobe Primetime鼓勵我們的客戶和合作夥伴考慮升級至最新版本，以便除提升效能、效率和安全性外，還能從Adobe在任何潛在問題上的完整支援中受益。 
-
-
-## 瀏覽器和作業系統需求 {#browser-OS-system-requirements}
+Adobe Primetime鼓勵我們的客戶和合作夥伴考慮升級到最新版本，以便除效能、效率和安全性改進外，在任何潛在問題上都能獲得Adobe的全面支援。 
 
 
-| 網頁/行動瀏覽器(†) | 支援的版本 |
+## 瀏覽器和作業系統要求 {#browser-OS-system-requirements}
+
+
+| Web/Mobile瀏覽器(†) | 支援的版本 |
 |---|---|
-| Google Chrome | **70** 或更新版本 |
-| Mozilla Firefox | **57** 或更新版本 |
-| Apple Safari | **14** 或更新版本 |
-| Microsoft Edge | **100** 或更新版本 |
+| Google鉻 | **70** 或 |
+| Mozilla Firefox | **57** 或 |
+| Apple野生動物園 | **14** 或 |
+| Microsoft邊 | **100** 或 |
 
-(†)Adobe建議不要使用私人或無痕模式。
+(†)Adobe建議不要使用私人或隱姓埋名模式。
 
 | 作業系統 | 支援的版本 |
 |---|---|
-| *Android* | **7.0** (Nougat)或更新版本 |
-| *iOS* | **14** 或更新版本 |
-| *iPadOS* | **14** 或更新版本 |
-| *tvOS* | **14** 或更新版本 |
-| *Fire OS* | **5(Android 5.1)** 或更新版本 |
-| *Mac OS* | **10.13** 或更新版本 |
-| *Microsoft Windows* | **10** 或更新版本 |
+| *安卓* | **7.0** （努加特）或更高版本 |
+| *iOS* | **14** 或 |
+| *iPadOS* | **14** 或 |
+| *電視作業系統* | **14** 或 |
+| *Fire OS* | **5(Android 5.1)** 或 |
+| *MacOS* | **10.13** 或 |
+| *Microsoft窗* | **10** 或 |
 
 
 
 
 >[!NOTE]
 >
->第三方Cookie — 停用第三方Cookie時，Adobe Primetime驗證權限流程可能會失敗。  此問題只會在修改瀏覽器設定時傳入播放。 對於所有支援的瀏覽器，Primetime驗證應可搭配預設設定運作。\
+>第3方Cookie — 禁用第3方Cookie時，Adobe Primetime身份驗證權利流可能會失敗。  僅當修改瀏覽器設定時才會播放此問題。 對於所有支援的瀏覽器，黃金時段身份驗證應使用預設設定。\
  
 
-## 無客戶端(REST)實施的設備要求 {#general_clientless_reqs}
+## 無客戶端(REST)實現的設備要求 {#general_clientless_reqs}
 
  
-透過無用戶端實作使用Adobe Primetime驗證服務的任何裝置 **必須能**:
+通過無客戶端實施使用Adobe Primetime身份驗證服務的任何設備 **必須能夠**:
 
-* 提供不重複的雜湊裝置ID。 如果裝置未提供唯一雜湊裝置ID，則必須能保留Adobe Primetime驗證提供的唯一ID。 裝置應能將唯一ID永久保留在本機儲存空間，並在呼叫Adobe Primetime Authentication API時提供唯一ID作為裝置ID。
-* 使用HMAC-SHA1演算法產生數位簽名
+* 提供唯一的散列設備ID。 如果設備未提供唯一散列的設備ID，則它必須能夠保留由Adobe Primetime身份驗證提供的唯一ID。 設備應能夠永久保留其本地儲存中的唯一ID，並在調用Adobe Primetime驗證API時提供唯一ID作為設備ID。
+* 使用HMAC-SHA1算法生成數字簽名
 * 設定任意HTTP標頭
-* 使用RESTful Web服務
-* 剖析XML和JSON資料格式
-* 使用HTTPS傳送流量
+* 使用REST風格的Web服務
+* 分析XML和JSON資料格式
+* 使用HTTPS發送通信
 * 處理HTTP錯誤代碼

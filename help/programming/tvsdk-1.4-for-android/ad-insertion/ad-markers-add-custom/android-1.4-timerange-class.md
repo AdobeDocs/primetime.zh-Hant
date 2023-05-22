@@ -1,30 +1,29 @@
 ---
-description: 自訂廣告標籤可讓您將一組代表時間軸區段的TimeRange規格傳遞至TVSDK。
+description: 自定義廣告標籤允許您將一組表示時間線段的TimeRange規範傳遞給TVSDK。
 title: TimeRange類
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7451c4f6-40df-48b2-a2c7-6d7826724716
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
-
 # TimeRange類{#timerange-class}
 
-自訂廣告標籤可讓您將一組代表時間軸區段的TimeRange規格傳遞至TVSDK。
+自定義廣告標籤允許您將一組表示時間線段的TimeRange規範傳遞給TVSDK。
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-集中的每個TimeRange規格代表播放時間軸上由TVSDK內部維護且必須適當標示為廣告相關時段的區段。
+集中的每個TimeRange規範都表示播放時間線上由TVSDK內部維護的段，且必須將其適當標籤為與廣告相關的時段。
 
-`TimeRange`類別是簡單的資料結構，可顯示時間軸上的開始位置和結束位置。 這兩個唯讀屬性抽象了播放時間軸中時間範圍的概念。
+的 `TimeRange` 類是一個簡單的資料結構，它顯示時間線上的起始位置和結束位置。 這兩個只讀屬性抽象了回放時間軸中時間範圍的概念。
 
 >[!TIP]
 >
->這兩個值都以毫秒錶示。
+>這兩個值以毫秒為單位表示。
 
-以下是`TimeRange`類的摘要：
+下面是 `TimeRange` 類：
 
 ```java
 public final class TimeRange {
@@ -37,4 +36,3 @@ public final class TimeRange {
     public long getDuration() {...}
 }
 ```
-

@@ -1,30 +1,29 @@
 ---
-title: 封裝內容
-description: 封裝內容
+title: 打包內容
+description: 打包內容
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d408889c-f96d-43d3-af50-62cb5ecc2e28
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# 打包內容{#packaging-content}
 
-# 封裝內容{#packaging-content}
-
-封裝內容以進行遠端金鑰傳送時，請使用指定需要遠端金鑰傳送的原則。 HLS內容的M3U8（manifest檔案）中必須包含關鍵伺服器URL。 Primetime DRM金鑰伺服器URL的格式為：
+將內容打包以進行遠程密鑰傳遞時，請使用指定需要遠程密鑰傳遞的策略。 密鑰伺服器URL必須包含在HLS內容的M3U8（清單檔案）中。 黃金時段DRM密鑰伺服器URL的格式為：
 
 ```
 https://key-server-host:port/faxsks/tenant-name/key
 ```
 
-例如，若是位於連接埠443的Key Server主機名稱[!DNL mykeyserver.com]監聽，以及名為`tenant1`的租用戶，M3U8中要指定的Key Server URL為：
+例如，對於密鑰伺服器主機名 [!DNL mykeyserver.com] 正在偵聽埠443，並且租戶名為 `tenant1`,M3U8中要指定的關鍵伺服器URL是：
 
 ```
 https://mykeyserver.com:443/faxsks/tenant1/key
 ```
 
-iOS和Xbox 360用戶端都可使用相同的URL。 或者，如果伺服器針對每種用戶端類型設定了不同的租客，則可能會使用不同的URL。
+同一URL可用於iOS和Xbox 360客戶端。 或者，如果為伺服器配置了每種客戶端類型的單獨租戶，則可以使用不同的URL。
 
-只要授權伺服器URL指向正確設定的執行授權伺服器，即可在不需要關鍵伺服器的用戶端上播放相同的內容。
+只要許可證伺服器URL指向正確配置的正在運行的許可證伺服器，就可以在不需要密鑰伺服器的客戶端上播放相同的內容。

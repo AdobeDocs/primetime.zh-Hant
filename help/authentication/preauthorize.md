@@ -1,33 +1,33 @@
 ---
-title: iOS/tvOS API預先授權
-description: iOS/tvOS API預先授權
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: iOS/tvOS API預授權
+description: iOS/tvOS API預授權
+exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-
-# 預先授權 {#preauthorize}
+# 預授權 {#preauthorize}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-預授權API可用於獲取一個或多個資源的預授權決策，這樣應用程式可以實現UI提示和/或內容過濾。
+預授權API可用於獲得一個或多個資源的預授權決定，這樣應用程式可以實現UI提示和/或內容過濾。
 
 >[!IMPORTANT]
 >
 >授權API **必須** 在授予用戶對指定資源的訪問權限之前使用。
 
-如果預授權API響應結果包含一個或多個具有拒絕的預授權決定的資源，則可以包括附加錯誤資訊 **（請參閱下文附註）** 針對每個受影響的資源。
+如果預授權API響應結果包含具有拒絕的預授權決定的一個或多個資源，則可以包括附加的錯誤資訊 **（見下文附註）** 每個受影響的資源。
 
 >[!IMPORTANT]
 >
->增強的錯誤報告功能新增了拒絕的預先授權決策的其他錯誤資訊，因為必須在Adobe Primetime驗證設定端啟用，才可應要求提供。
+>增強的錯誤報告功能添加了拒絕的預授權決定的附加錯誤資訊，因為必須在Adobe Primetime驗證配置端啟用該功能，所以可在請求時使用。
 
-如果因Adobe Primetime驗證SDK錯誤或發生Adobe Primetime驗證服務錯誤而無法處理預先授權API請求，則會收到額外錯誤資訊（不論上述設定為何），且預先授權API回應結果中不會包含任何資源。
+如果由於Adobe Primetime驗證SDK錯誤而無法服務預授權API請求，或者在發生Adobe Primetime驗證服務錯誤時，則附加錯誤資訊（不管上述配置如何）和資源將作為預授權API響應結果的一部分而包括在內。
 
 </br>
 
@@ -38,16 +38,16 @@ ht-degree: 0%
 
 **參數：**
 
-- PreauthorizeRequest:用來傳遞API要求內容的要求物件；
-- AccessEnablerCallback:用來傳回API回應的回呼物件；
-- PreauthorizeResponse:用來傳回API回應內容的回應物件；
+- 預授權請求：用於傳遞API請求內容的請求對象；
+- AccessEnablerCallback:用於返回API響應的回調對象；
+- 預授權響應：用於返回API響應內容的響應對象；
 
  
 </br>
 
 ## `class PreauthorizeRequest`{#androidpreauthorizerequest}
 
-### **類別PreauthorizeRequest.Builder**
+### **類PreauthorizeRequest.Builder**
 
 ```
     ///
@@ -111,7 +111,7 @@ ht-degree: 0%
 ```
  
 
-## **列舉PreauthorizeRequest.Feature**
+## **枚舉預授權請求。功能**
 
 ```
     ///
@@ -159,21 +159,21 @@ ht-degree: 0%
     public List<Decision> getDecisions()
 ```
 
-### 範例：
+### 示例：
 
-本節重點說明某些可能的PreauthorizeResponse物件的JSON結構。
-
->[!IMPORTANT]
->
->下列範例顯示的JSON只能透過本檔案中顯示的模型類別存取。 您將無法存取這類JSON的屬性，除非透過公用方法的媒體。
+本節重點介紹某些可能的PreauthorizeResponse對象的JSON結構。
 
 >[!IMPORTANT]
 >
->通過增強錯誤報告功能的介質檢索的可能的其他錯誤清單記錄在 [進階錯誤報告](/help/authentication/enhanced-error-codes.md).
+>以下示例提供的JSON只能通過本文檔中顯示的模型類訪問。 除非通過公共方法的介質，否則您將無法訪問此類JSON的屬性。
+
+>[!IMPORTANT]
+>
+>通過增強錯誤報告功能的介質檢索到的可能的附加錯誤清單記錄在 [高級錯誤報告](/help/authentication/enhanced-error-codes.md)。
 
 #### 成功
 
-所有被請求的資源都有積極的授權決定
+所有請求的資源都有積極的預先核准決定
 
 ```JSON
     {
@@ -195,7 +195,7 @@ ht-degree: 0%
 ```
  
 
-一或多個資源具有拒絕的預先授權決定，且Adobe Primetime驗證設定中未啟用增強錯誤報告功能
+一個或多個資源具有被拒絕的預授權決定，並且在Adobe Primetime身份驗證配置中未啟用增強的錯誤報告功能
 
 ```JSON
     {
@@ -218,7 +218,7 @@ ht-degree: 0%
 ```
  
 
-一或多個資源具有拒絕的預授權決策，且在Adobe Primetime驗證設定中啟用了增強的錯誤報告功能
+一個或多個資源具有被拒絕的預授權決定，並且在Adobe Primetime驗證配置中啟用增強的錯誤報告功能
 
 ```JSON
     {
@@ -253,7 +253,7 @@ ht-degree: 0%
 
  
 
-Adobe Primetime驗證服務處理預先授權API請求時發生錯誤
+Adobe Primetime身份驗證服務在為預授權API請求提供服務時遇到錯誤
 
 ```JSON
     {
@@ -273,7 +273,7 @@ Adobe Primetime驗證服務處理預先授權API請求時發生錯誤
 
 #### 失敗
 
-Adobe Primetime驗證SDK在處理預先授權API請求時發生錯誤
+Adobe Primetime驗證SDK在為預授權API請求提供服務時遇到錯誤
 
 ```JSON
     {
@@ -406,7 +406,7 @@ Adobe Primetime驗證SDK在處理預先授權API請求時發生錯誤
 </br>
 
 
-## **程式碼範例** {#sample}
+## **示例代碼** {#sample}
 
 ```
 let resources: [String] = ["resource_1", "resource_2", "resource_3"];

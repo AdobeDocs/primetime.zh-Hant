@@ -1,22 +1,21 @@
 ---
-title: 允許播放受保護內容的Primetime DRM應用程式清單
-description: 允許播放受保護內容的Primetime DRM應用程式清單
+title: 允許允許Mighine DRM應用程式播放受保護內容的清單
+description: 允許允許Mighine DRM應用程式播放受保護內容的清單
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c5aced0f-2c38-4ae7-9a33-44877e57a993
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
+# 允許允許Mighine DRM應用程式播放受保護內容的清單 {#allowlist-for-primetime-drm-applications-allowed-to-play-protected-content}
 
-# 允許播放受保護內容{#allowlist-for-primetime-drm-applications-allowed-to-play-protected-content}的Primetime DRM應用程式的清單
+允許清單指定允許播放內容的AIR、iOS和Android應用程式。 它還指定AIR和iOS應用程式ID、最低版本、最高版本和發佈者ID。
 
-允許清單會指定允許播放內容的AIR、iOS和Android應用程式。 它也會指定AIR和iOS應用程式ID、最低版本、最高版本和發佈者ID。
-
-範例使用案例：使用此規則可限制特定應用程式的播放，或控制可存取內容的應用程式版本。
+示例用例：使用此規則可限制特定應用程式的回放，或控制可以訪問內容的應用程式的版本。
 
 >[!NOTE]
 >
->如果您使用AdobeFlash Builder來建立受保護的應用程式，您必須確定您未在除錯模式中部署應用程式。 當您在除錯模式中部署應用程式時，Flash Builder會附加`.debug`至AIR應用程式ID，如此會造成Primetime DRM中的允許清單功能意外運作。
+>如果使用AdobeFlash Builder構建受保護的應用程式，則必須確保未在調試模式下部署應用程式。 在調試模式下部署應用程式時，Flash Builder會附加 `.debug` 到AIR應用程式ID，這會導致黃金時段DRM中的允許清單功能出現意外行為。

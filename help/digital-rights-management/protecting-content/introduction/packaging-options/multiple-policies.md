@@ -2,17 +2,16 @@
 title: 多個DRM策略
 description: 多個DRM策略
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 74c3a425-f771-46cc-bfb7-8665ed8dceda
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# 多個DRM策略 {#multiple-drm-policies}
 
-# 多個DRM策略{#multiple-drm-policies}
+可以指定多個Mogife DRM策略以與單個內容部分關聯。 許可證伺服器確定使用哪個策略。
 
-您可以指定多個Primetime DRM策略，以便與單一內容區段建立關聯。 授權伺服器會決定使用哪個原則。
-
-範例使用案例：如果同一資產同時用於電子銷售和租賃模型，此選項可讓您為每個業務模型指定不同的使用規則集。 授權伺服器可以選取Primetime DRM政策，該政策應根據客戶購買或租賃內容而使用。
+示例用例：如果同一資產同時用於電子轉售和租賃模型，則此選項使您能夠為每個業務模型指定不同的使用規則集。 許可證伺服器可以根據客戶是購買還是租用內容來選擇應使用的黃金時段DRM策略。

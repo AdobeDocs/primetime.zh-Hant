@@ -2,26 +2,25 @@
 title: 許可證伺服器配置檔案
 description: 許可證伺服器配置檔案
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d48e88a4-caae-4f4e-b870-38da4f3a715e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
 
-
 # 許可證伺服器配置檔案{#license-server-configuration-files}
 
-Adobe PrimetimeDRM Server for Protected Streaming需要以下類型的配置檔案：
+用於受保護流的Adobe PrimetimeDRM伺服器需要以下類型的配置檔案：
 
-* 全局配置檔案([!DNL flashaccess-global.xml])
-* 每個租用戶的租用戶配置檔案([!DNL flashaccess-tenant.xml])
+* 全局配置檔案( [!DNL flashaccess-global.xml])
+* 每個租戶的租戶配置檔案( [!DNL flashaccess-tenant.xml])
 
-完成配置檔案編輯後，Adobe建議您使用Primetime DRM Server for Protected Streaming隨附的實用程式來驗證檔案的格式是否正確。
+編輯完配置檔案後，Adobe建議您使用Mogine DRM Server for Protected Streaming隨附的實用程式來驗證檔案格式是否完善。
 
-請參閱&#x200B;*Configuration Validator*。
+請參閱 *配置驗證程式*。
 
-如果您不想讓設定檔案中的密碼以明文提供，則必須使用Adobe提供的Scrambler工具，來加密您在全域和租用戶設定檔案中指定的所有密碼。
+如果希望避免在配置檔案中以明文形式提供密碼，則必須使用Adobe提供的Scrambler工具來加密在全局配置檔案和租戶配置檔案中指定的所有密碼。
 
-有關如何加密密碼的詳細資訊，請參見&#x200B;*密碼刪除程式*。
+請參閱 *密碼加擾器* 的子菜單。

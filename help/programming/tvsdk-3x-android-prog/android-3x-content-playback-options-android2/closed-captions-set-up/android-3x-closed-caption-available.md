@@ -1,25 +1,24 @@
 ---
-description: 您可以從目前可用的隱藏字幕音軌清單中選取音軌。 這會變成目前的軌道，當可見性開啟時就會顯示。 某些音軌一開始可能無法使用，因此請監聽表示有更多音軌可供使用的事件。
-title: 從可用字軌中選擇目前的字幕軌
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以從當前可用的隱藏字幕字幕字幕字幕資訊清單中選擇一個字幕資訊。 這將成為當前軌道，當可見性開啟時顯示。 某些軌道最初可能不可用，因此請偵聽表示更多已可用的事件。
+title: 從可用字幕資訊中選擇當前字幕資訊
+exl-id: 9f1a0f7e-44f8-4595-8879-568ab237ca1c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '198'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# 從可用字幕資訊中選擇當前字幕資訊 {#select-a-current-caption-track-from-among-available-tracks}
 
-# 從可用字軌{#select-a-current-caption-track-from-among-available-tracks}中選擇當前字軌
+您可以從當前可用的隱藏字幕字幕字幕字幕資訊清單中選擇一個字幕資訊。 這將成為當前軌道，當可見性開啟時顯示。 某些軌道最初可能不可用，因此請偵聽表示更多已可用的事件。
 
-您可以從目前可用的隱藏字幕音軌清單中選取音軌。 這會變成目前的軌道，當可見性開啟時就會顯示。 某些音軌一開始可能無法使用，因此請監聽表示有更多音軌可供使用的事件。
+1. 等待媒體播放器至少位於 `PREPARED` 狀態。
+1. 聽聽這些事件：
 
-1. 等待媒體播放器至少處於`PREPARED`狀態。
-1. 聽聽這些活動：
+   * `MediaPlayerEvent.STATUS_CHANGED` 狀態 `MediaPlayerStatus.INITIALIZED`:隱藏字幕軌道的初始清單可用。
 
-   * `MediaPlayerEvent.STATUS_CHANGED` 狀態為 `MediaPlayerStatus.INITIALIZED`:隱藏字幕軌道的初始清單可用。
-
-1. 取得目前所有可用隱藏字幕音軌的清單。
+1. 獲取當前所有可用的隱藏字幕軌道的清單。
 
    例如：
 
@@ -28,7 +27,7 @@ ht-degree: 2%
      mediaPlayer.getCurrentItem().getClosedCaptionsTracks();
    ```
 
-1. 選取可用的追蹤作為目前的追蹤。
+1. 選擇可用的跟蹤作為當前跟蹤。
 
    例如：
 
@@ -43,6 +42,6 @@ ht-degree: 2%
    }
    ```
 
-1. 實作事件的監聽器，指出有更多可用的追蹤。 當TVSDK派單事件時，擷取目前可用軌道的清單。
+1. 為指示有更多磁軌可用的事件實現偵聽器。 當TVSDK派單事件時，檢索當前可用軌道清單。
 
-   每次發生事件時擷取清單，以確保您始終擁有最新的清單。
+   每次事件發生時檢索清單，以確保始終擁有最新的清單。

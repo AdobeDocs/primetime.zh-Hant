@@ -1,7 +1,6 @@
 ---
-description: CRS提供即時(JIT)和非同步重新封裝以及HLS到HLS的轉換。 重新封裝的結果是原始廣告創意的HLS格式版本。 CRS會視需要將HLS格式化版本放在內容放送網路(CDN)伺服器上使用。
+description: CRS提供了即時(JIT)和非同步重新打包以及HLS到HLS的轉換。 重新打包的結果是原始廣告創意的HLS格式版本。 CRS將HLS格式化版本放置在內容分發網路(CDN)伺服器上，以便在需要時使用。
 title: CRS的主要用途
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '351'
@@ -10,34 +9,34 @@ ht-degree: 0%
 ---
 
 
-# CRS {#main-uses-of-crs}的主要用途
+# CRS的主要用途 {#main-uses-of-crs}
 
-CRS提供即時(JIT)和非同步重新封裝以及HLS到HLS的轉換。 重新封裝的結果是原始廣告創意的HLS格式版本。 CRS會視需要將HLS格式化版本放在內容放送網路(CDN)伺服器上使用。
+CRS提供了即時(JIT)和非同步重新打包以及HLS到HLS的轉換。 重新打包的結果是原始廣告創意的HLS格式版本。 CRS將HLS格式化版本放置在內容分發網路(CDN)伺服器上，以便在需要時使用。
 
-在JIT重新封裝Adobe Primetime廣告時，當廣告插入首次遇到非HLS廣告創意時，就會開始重新封裝程式。 這通常會導致在重新封裝程式期間失去執行廣告的機會。
+在JIT重新打包Adobe Primetime廣告插入時，首次遇到非HLS廣告創意時，將開始重新打包過程。 這通常會導致在重新打包過程中丟失運行廣告的機會。
 
-在非同步重新封裝中，廣告創意素材會在需要之前進行轉碼並儲存，以消除這些失去的機會。
+在非同步重新打包中，廣告創意在需要之前被轉碼並儲存，這可以消除那些丟失的機會。
 
-在HLS到HLS的轉換中，CRS會將HLS廣告創意重新格式化為適當大小的區塊，以確保一致的播放。
+在HLS到HLS的轉換中，CRS將HLS廣告重新格式化為適當大小的塊，以確保一致的回放。
 
-## 及時重新打包{#section_1BA344F2300B49F291865A7461EDFEAE}
+## 及時重新打包 {#section_1BA344F2300B49F291865A7461EDFEAE}
 
-JIT再包裝順序為：
+JIT重新包裝的順序如下：
 
-1. 資訊清單伺服器擷取廣告。
-1. 如果廣告格式為HLS，資訊清單伺服器會將廣告插入內容串流。
-1. 如果格式不是HLS（例如MP4、FLV或WebM），資訊清單伺服器會在CDN伺服器上尋找轉碼版本。 如果找到一個，則會將轉碼廣告插入內容串流。
-1. 如果格式不是HLS，而CDN伺服器沒有轉碼版本，資訊清單伺服器會將廣告傳遞至CRS,CRS會轉碼廣告創意並將結果儲存在CDN伺服器上以供日後使用。
-1. 資訊清單伺服器會傳回不含廣告的內容。
+1. 清單伺服器讀取廣告。
+1. 如果廣告格式為HLS，則清單伺服器將廣告插入內容流。
+1. 如果格式不是HLS（例如MP4、FLV或WebM），則清單伺服器在CDN伺服器上查找轉碼版本。 如果找到一個，則會將轉碼廣告插入內容流。
+1. 如果格式不是HLS，並且CDN伺服器沒有轉碼版本，則清單伺服器將廣告傳遞給CRS,CRS對廣告進行轉碼，並將結果儲存在CDN伺服器上以供以後使用。
+1. 清單伺服器返回沒有廣告的內容。
 
-## 非同步重新封裝{#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
+## 非同步重新打包 {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
 
-您可以使用[重新封裝API](../~old-creative-repackaging-service/api-repackage.md)中所述的API，預先轉碼非HLS創意素材，以減少曝光次數並最大化獲利。
+可以使用中介紹的API [重新打包API](../~old-creative-repackaging-service/api-repackage.md) 對非HLS的創意進行預編碼，以盡量減少印象損失和最大化貨幣化。
 
-## HLS到HLS的轉換{#section_877A0E7E8FAF4C2DB086A31C24D53435}
+## HLS到HLS的轉換 {#section_877A0E7E8FAF4C2DB086A31C24D53435}
 
-為避免緩衝和延遲，用戶端會以小塊下載視訊。 如果區塊大小不一致，則播放可能會變得不順暢。 HLS到HLS的轉換可確保資料區塊的持續時間都相同（例如，6秒）。
+為避免緩衝和延遲，客戶端以小塊形式下載視頻。 如果區塊大小不一致，則回放可能會變得亂糟糟。 HLS到HLS的轉換可確保資料塊的持續時間均相同（例如，6秒）。
 
 >[!NOTE]
 >
->CRS會產生HLS第3版，不論它收到的是哪個HLS版本。
+>CRS生成HLS版本3，而不管它接收的是哪個HLS版本。

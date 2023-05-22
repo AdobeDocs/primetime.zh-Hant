@@ -1,24 +1,23 @@
 ---
-description: 您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新值。
+description: 您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新的控制值。
 title: 使用ABRControlParameters配置自適應比特率
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 53ca8516-b449-46c8-baa9-9d0d5800b3c8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# 使用ABRControlParameters配置自適應比特率{#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-# 使用ABRControlParameters{#configure-adaptive-bit-rates-using-abrcontrolparameters}配置自適應位速率
+您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新的控制值。
 
-您只能使用ABRControlParameters設定ABR控制值，但可以隨時構造新值。
+以下條件適用於 `ABRControlParameters`:
 
-以下條件適用於`ABRControlParameters`:
-
-* 必須在構建時提供所有參數的值。
-* 在建構時間後，您無法變更個別值。
-* 如果您指定的參數超出允許的範圍，則會拋出`ArgumentError`。
+* 必須在構造時為所有參數提供值。
+* 在構建時間後不能更改單個值。
+* 如果指定的參數超出允許的範圍，則 `ArgumentError` 。
 
 1. 確定ABR策略：
 
@@ -26,7 +25,7 @@ ht-degree: 0%
    * `ABRControlParameters.MODERATE_POLICY`
    * `ABRControlParameters.AGGRESSIVE_POLICY`
 
-1. 在`ABRControlParameters`建構函式中設定ABR參數值，並將其指派給Media Player。
+1. 在 `ABRControlParameters` 建構子，並將其分配給媒體播放器。
 
    ```js
    var abrParams = new AdobePSDK.ABRControlParameters(); 
@@ -36,4 +35,3 @@ ht-degree: 0%
    abrParams.abrPolicy = eABRPolicy; 
    player.abrControlParameters = abrParams;
    ```
-

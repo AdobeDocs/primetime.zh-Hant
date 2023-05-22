@@ -1,13 +1,13 @@
 ---
 title: 如何安裝並開始使用帳戶IQ
-description: '如何板載、必備項和帳戶IQ入門。 '
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+description: 如何板載、必備項和帳戶IQ入門。
+exl-id: 840ab081-0073-492f-86b2-ba174ae93256
+source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
-
 
 # 如何安裝並開始使用帳戶IQ {#onboard}
 
@@ -53,5 +53,3 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >如果您的用戶無法訪問帳戶IQ儀表板，請與Adobe支援部門聯繫，以確保您的組織的ID在帳戶IQ中白列。
-
-

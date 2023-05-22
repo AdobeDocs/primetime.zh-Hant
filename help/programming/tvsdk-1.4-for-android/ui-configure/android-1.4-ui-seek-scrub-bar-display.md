@@ -1,52 +1,51 @@
 ---
-description: TVSDK支援搜尋特定位置（時間），其中串流為隨選視訊(VOD)和即時串流中的滑動視窗播放清單。
-title: 顯示具有當前回放位置的查找拖曳條
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK支援在視頻點播(VOD)和即時流中尋找特定位置（時間），其中流是滑動窗口播放清單。
+title: 顯示具有當前回放位置的查找擦除欄
+exl-id: 8076521b-579d-491f-97de-c7b57daa9b2e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
+# 顯示具有當前回放位置的查找擦除欄 {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# 顯示具有當前播放位置{#display-a-seek-scrub-bar-with-the-current-playback-position}的搜索拖曳欄
-
-TVSDK支援搜尋特定位置（時間），其中串流為隨選視訊(VOD)和即時串流中的滑動視窗播放清單。
+TVSDK支援在視頻點播(VOD)和即時流中尋找特定位置（時間），其中流是滑動窗口播放清單。
 
 >[!IMPORTANT]
 >
->在即時串流中搜尋僅允許DVR使用。
+>只允許DVR在即時流中查找。
 
-1. 設定搜索回呼。
+1. 設定尋找回調。
 
-       搜尋是非同步的，因此TVSDK會調派下列搜尋相關事件：
+       搜索是非同步的，因此TVSDK會調度以下與搜索相關的事件：
    
-   * `QOSEventListener.onSeekStart` -尋求開始。
-   * `QOSEventListener.onSeekComplete` -尋求成功。
-   * `QOSEventListener.onOperationFailed` -搜索失敗。
+   * `QOSEventListener.onSeekStart`  — 尋找開始。
+   * `QOSEventListener.onSeekComplete`  — 尋求成功。
+   * `QOSEventListener.onOperationFailed`  — 查找失敗。
 
-1. 等待玩家處於有效狀態進行搜尋。
+1. 等待玩家處於有效狀態以進行查找。
 
-   有效狀態包括準備、完成、暫停和播放。
+   有效狀態包括PREPARED、COMPLETE、PAUSED和PLAYING。
 
-1. 使用原生SeekBar設定`OnSeekBarChangeListener`以查看使用者在何時拖曳。
-1. 監聽`QOSEventListener.onOperationFailed`並採取適當的動作。
+1. 使用本機SeekBar設定 `OnSeekBarChangeListener` 查看用戶正在清理的時間。
+1. 聽 `QOSEventListener.onOperationFailed` 採取適當行動。
 
-   此事件會傳遞適當的警告。 例如，您的應用程式會決定如何繼續，方法是再次嘗試搜尋或從上一個位置繼續播放。
+   此事件會傳遞相應的警告。 例如，您的應用程式通過再次嘗試查找或從上一位置繼續回放來確定如何繼續。
 
-1. 等待TVSDK呼叫`QOSEventListener.onSeekComplete`回呼。
-1. 使用回呼的位置參數擷取最終調整的播放位置。
+1. 等待TVSDK調用 `QOSEventListener.onSeekComplete` 回叫。
+1. 使用回調的位置參數檢索最終調整的播放位置。
 
-   這很重要，因為搜尋後的實際開始位置可能與請求的位置不同。 如果搜尋或其他重新定位在廣告插播的中間結束或跳過廣告插播，則播放行為可能會受到影響。
+   這一點很重要，因為在搜索之後的實際開始位置可能與請求的位置不同。 如果搜索或其他重新定位結束於廣告中斷或跳過廣告中斷，則可能會影響播放行為。
 
-1. 在顯示搜尋拖曳列時使用位置資訊。
+1. 在顯示查找清理欄時使用位置資訊。
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
-**搜尋範例**
+**尋找示例**
 
-在此範例中，使用者將搜尋列拖曳至所要的位置。
+在本例中，用戶將搜索條掃描到所需位置。
 
 ```java
 // Use the native SeekBar to set OnSeekBarChangeListener to  
@@ -79,4 +78,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

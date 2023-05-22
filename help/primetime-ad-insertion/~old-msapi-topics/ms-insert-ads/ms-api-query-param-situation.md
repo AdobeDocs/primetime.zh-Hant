@@ -1,7 +1,6 @@
 ---
-description: 除了基本查詢參數，可選查詢參數還可讓資訊清單伺服器搭配不同的用戶端和情況運作。
-title: 依用戶端和情況選擇的查詢參數
-translation-type: tm+mt
+description: 除了基本查詢參數之外，可選查詢參數還使清單伺服器能夠處理不同的客戶機和情況。
+title: 按客戶端和情況列出的可選查詢參數
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '650'
@@ -10,82 +9,82 @@ ht-degree: 0%
 ---
 
 
-# 按客戶端和情況列出的可選查詢參數{#optional-query-parameters-by-client-and-situation}
+# 按客戶端和情況列出的可選查詢參數 {#optional-query-parameters-by-client-and-situation}
 
-除了基本查詢參數，可選查詢參數還可讓資訊清單伺服器搭配不同的用戶端和情況運作。
+除了基本查詢參數之外，可選查詢參數還使清單伺服器能夠處理不同的客戶機和情況。
 
-## 使用Akamai廣告縮放器{#section_120FEC75C34D4F4587B77D842166D68A}插入廣告
+## Akamai廣告插入 {#section_120FEC75C34D4F4587B77D842166D68A}
 
-在Akamai內容傳送網路(CDN)上，Akamai Edge伺服器是用戶端與資訊清單伺服器之間的中介。 如果您也使用廣告縮放器，`ptassetid`和`live`查詢參數會為Akamai Edge提供必要資訊。
+在Akamai內容傳遞網路(CDN)上，Akamai邊緣伺服器充當客戶機和清單伺服器之間的中介。 如果您還使用Ad Scaler, `ptassetid` 和 `live` 查詢參數向Akamai邊緣提供所需資訊。
 
-`ptassetid`參數是發行者的資產ID。 Akamai會使用這個，而非您在請求URL中提供的base64編碼URL，來識別要提供給資訊清單伺服器以進行廣告插入的播放清單。
+的 `ptassetid` 參數是其資產的發佈者ID。 Akamai使用此（而不是作為請求URL一部分提供的base64編碼URL）來標識要提供給清單伺服器以進行廣告插入的播放清單。
 
-`live`參數可區分即時內容與隨選視訊(VOD)。 資訊清單伺服器需要這些資訊，以支援其與Akamai的簡化介面。
+的 `live` 參數區分即時內容和視頻點播(VOD)。 清單伺服器需要此資訊來支援其與Akamai的簡化介面。
 
-以下是顯示與Akamai相關參數的範例URL:
+下面是一個示例URL，它顯示與Akamai相關的參數：
 
 ```
 https://. . .master.m3u8?. . .&ptassetid=pubAsset&live=true
 ```
 
-## 從Xbox {#section_5DB405F4647240A0B83E72DE35D5EC80}上的TVSDK插入廣告
+## 從Xbox上的TVSDK插入廣告 {#section_5DB405F4647240A0B83E72DE35D5EC80}
 
-以Primetime TVSDK為基礎的Xbox播放器，不需要提供其他基本查詢參數。
+基於Xbox上的Bogki時TVSDK的播放器無需提供基本的查詢參數之外的其他查詢參數。
 
-## 在iOS上使用Safari {#section_250E493A125E4F82940D19C7DA2AAB2E}從TVSDK插入廣告
+## TVSDK在iOS上與Safari一起插入廣告 {#section_250E493A125E4F82940D19C7DA2AAB2E}
 
-使用Safari瀏覽器的iOS上以Primetime TVSDK為基礎的播放器，除了基本查詢參數外，還必須指定`ptplayer`和`live`參數。
+使用Safari瀏覽器基於iOS黃金時段TVSDK的播放器必須指定 `ptplayer` 和 `live` 除基本查詢參數外，還有參數。
 
-資訊清單伺服器會辨識`ptplayer`值`ios-mobileweb`，並從它傳回的廣告銜接資訊清單中消除預先統計。
+清單伺服器識別 `ptplayer` 值 `ios-mobileweb` 並從它返回的廣告縫合清單中消除預滾。
 
-`live`參數會告訴資訊清單伺服器要傳回即時或VOD內容。
+的 `live` 參數指示清單伺服器是返回即時內容還是VOD內容。
 
-以下是範例URL，其中顯示與iOS與Safari相關的參數：
+下面是一個示例URL，它顯示與Safari有關的iOS參數：
 
 ```URL
 https://. . .master.m3u8?. . .&ptplayer=ios-mobileweb&live=false
 ```
 
-## 使用自訂廣告提示格式{#section_82AF880AAABE4BD4B593D906434D4D89}的廣告插入
+## 使用自定義廣告提示格式的廣告插入 {#section_82AF880AAABE4BD4B593D906434D4D89}
 
-Adobe提供廣告提示格式的名稱，而它不直接在Primetime套件中支援。 要使用此格式，請提供其Adobe提供的名稱作為`ptcueformat`參數的值。
+Adobe為Mogife包中不直接支援的廣告提示格式提供名稱。 要使用此格式，請提供其Adobe提供的名稱作為 `ptcueformat` 的下界。
 
-以下是指定自訂廣告提示格式的範例URL:
+下面是一個指定自定義提示格式的示例URL:
 
 ```URL
 https://. . .master.m3u8?. . .&ptcueformat=[custom format name]
 ```
 
-## 使用廣告提示建立VOD {#section_E0D830F5EEE24639819B975B90F6999F}的FreeWheel時間軸的廣告插入
+## 使用廣告提示建立用於VOD的FreeWheel時間線的廣告插入 {#section_E0D830F5EEE24639819B975B90F6999F}
 
-對於包含要解析並包含在FreeWheel廣告請求中的廣告提示的VOD內容，請將`ptcueformat`參數的值設為`DPIsimple`。
+對於包含要被解析並包含在FreeWheel廣告請求中的廣告提示的VOD內容，設定 `ptcueformat` 參數 `DPIsimple`。
 
-以下是指定使用FreeWheel時間軸進行VOD的範例URL:
+下面是一個示例URL，它指定對VOD使用FreeWheel時間線：
 
 ```URL
 https://. . .master.m3u8?. . .&ptcueformat=DPISimple&live=false
 ```
 
-## 使用VOD {#section_F398F7659164463FA886A4CC787C7B5A}的自訂時間軸來插入廣告
+## 使用用於視頻點播的定製時間線的廣告插入 {#section_F398F7659164463FA886A4CC787C7B5A}
 
-若要要求資訊清單伺服器根據您提供的時間軸將廣告插入VOD內容，請將`pttimeline`參數的值設定為指定時間軸的字串。 請參閱[VOD時間軸格式](/help/primetime-ad-insertion/~old-msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md)。
+要請求清單伺服器根據您提供的時間表將廣告插入VOD內容，請設定 `pttimeline` 指定時間軸的字串的參數。 請參閱 [VOD時間線格式](/help/primetime-ad-insertion/~old-msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md)。
 
-以下是使用自訂時間軸的VOD範例URL:
+下面是一個示例URL，它使用自定義時間表進行VOD:
 
 ```URL
 https://. . .master.m3u8?. . .&live=false&pttimeline=B,60,2,p;C,120,1;B,30,2,m;C,300,1
 ```
 
-它指定最多包含兩個廣告的1分鐘初始分隔，接著是2分鐘內容區段，接著是30秒分隔，最多包含兩個廣告，接著是5分鐘內容區段。
+它指定了一分鐘的初始休息，最多包含兩個廣告，然後是兩分鐘的內容段，然後是最多包含兩個廣告的30秒休息，最後是五分鐘的內容段。
 
-VOD內容的自訂內容時間軸的廣告拼接如下所示：
+VOD內容的自定義內容時間線的廣告縫合如下所示：
 
-* 廣告會出現在廣告伺服器指定的廣告放置時間之後最接近的中斷邊界。
+* 廣告出現在廣告伺服器指定的廣告投放時間之後最近的中斷邊界處。
 
-* 區段至少有兩秒長。
+* 段長度至少為2秒。
 
-## 授權TS段{#section_BF855A4399DC42CB8C0586113A416BBC}
+## 授權TS段 {#section_BF855A4399DC42CB8C0586113A416BBC}
 
-Adobe僅支援Akamai CDN的此功能。 HTTP即時串流(HLS)使用串流層級的M3U8播放清單來傳送傳輸串流(TS)區段。 在變型M3U8播放清單中，將多個串流層級播放清單提供給用戶端。 用戶端從變型清單中選擇一個播放清單串流，然後逐一下載該串流層級播放清單中的TS區段。 在正常操作中，所請求的內容可能需要Cookie授權，資訊清單伺服器會在背景以不可見方式處理。 它會從原始內容擷取Cookie，並附加適當的Token至URL，以用於請求選取的播放清單串流。
+Adobe僅支援Akamai CDN的此功能。 HTTP即時流(HLS)使用流級M3U8播放清單來傳送傳輸流(TS)段。 在變型M3U8播放清單中向客戶機提供多個流級播放清單。 客戶端從變型清單中選擇一個播放清單流，然後逐個下載該流級播放清單中的TS段。 在正常操作中，請求的內容可能需要Cookie授權，清單伺服器在後台以不可見方式處理該授權。 它從原始內容中提取cookie，並將適當的令牌附加到URL，以用於請求所選播放清單流。
 
-當BootstrapURL查詢參數包含`pttoken=true`時，發佈者會要求使用Cookie來請求每個TS區段，而不是只請求整個串流一次。 資訊清單伺服器會將此Cookie附加為查詢參數，以連結至其傳回之串流播放清單中的每個TS區段URL。
+當BootstrapURL查詢參數包括 `pttoken=true`，發佈者要求在請求每個TS段時使用cookie ，而不是僅對整個流使用一次。 清單伺服器將此cookie作為查詢參數附加到它發送回的流播放清單中的每個TS段URL。

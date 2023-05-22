@@ -1,21 +1,20 @@
 ---
-description: 您可以選擇自訂起始點，選擇何時輸入DVR串流，而非使用ConfigProvider類別在開始時輸入DVR串流的預設行為。
-title: 選擇DVR的自訂起點
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以選擇何時輸入DVR流的自定義起始點，而不是使用ConfigProvider類在開始時輸入DVR流的預設行為。
+title: 為DVR選擇自定義起點
+exl-id: 9813bf60-a91d-4376-a5fe-02311b73e8a0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
+# 為DVR選擇自定義起點 {#choosing-a-custom-starting-point-for-dvr}
 
-# 選擇DVR的自訂起始點{#choosing-a-custom-starting-point-for-dvr}
+您可以選擇何時輸入DVR流的自定義起始點，而不是使用ConfigProvider類在開始時輸入DVR流的預設行為。
 
-您可以選擇自訂起始點，選擇何時輸入DVR串流，而非使用ConfigProvider類別在開始時輸入DVR串流的預設行為。
+在 [配置提供程式](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html) 類：
 
-要通過[ConfigProvider](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html)類設定啟動時間：
-
-1. 啟用[isCustomPositionPrefEnabled()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html#isCustomPositionPrefEnabled())。
-1. 在[retrieveStartTimePref()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html#iretrieveStartTimePref())中設定開始時間。
-1. 檢查自訂開始位置是否已啟用。
+1. 啟用 [isCustomPositionPrefEnabled()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/ConfigProvider.html#isCustomPositionPrefEnabled())。
+1. 在中設定開始時間 [retrieveStartTimePref()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html#iretrieveStartTimePref())。
+1. 檢查自定義起始位置是否已啟用。

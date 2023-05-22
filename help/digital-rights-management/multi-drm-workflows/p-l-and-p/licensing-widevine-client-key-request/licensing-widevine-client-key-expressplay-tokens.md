@@ -1,20 +1,19 @@
 ---
-description: 您可以傳送Token請求至適當的Expressplay Token伺服器，為其加密內容產生Expressplay Token。
-title: Expressplay Token
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 通過將令牌請求發送到相應的Expressplay令牌伺服器，可以為其加密內容生成Expressplay令牌。
+title: 表達式令牌
+exl-id: 38faba06-6737-4dec-ac97-27db3124b993
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
+# 表達式令牌 {#expressplay-tokens}
 
-# Expressplay Token {#expressplay-tokens}
+通過將令牌請求發送到相應的Expressplay令牌伺服器，可以為其加密內容生成Expressplay令牌。
 
-您可以傳送Token請求至適當的Expressplay Token伺服器，為其加密內容產生Expressplay Token。
-
-範例如下：
+示例如下：
 
 ```
 https://wv-gen.service.expressplay.com/hms/wv/
@@ -25,7 +24,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-內容加密密鑰儲存ID或CEKSID（指定給`kid`參數）和內容加密密鑰或CEK（指定給`contentKey`參數）必須匹配用於打包的內容加密密鑰儲存ID和內容加密密鑰。 以下文字是Token伺服器回應的範例：
+提供給的內容加密密鑰儲存ID或CEKSID `kid` 參數和內容加密密鑰，或 `contentKey` 參數必須與用於打包的內容加密密鑰儲存ID和內容加密密鑰匹配。 以下文本是令牌伺服器響應的示例：
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -34,7 +33,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-然後，您可以
+你可以
 
-* 使用傳回的URL和查詢作為授權伺服器URL，或
-* 從URL取出查詢，然後以HTTPPOST標題的形式個別傳入ExpressPlayToken
+* 將返回的URL和查詢用作許可證伺服器URL，或
+* 從URL中取出查詢，然後作為HTTPPOST標頭分別傳入ExpressPlayToken

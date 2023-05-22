@@ -1,27 +1,26 @@
 ---
-description: 您可以從QOSProvider類讀取播放、緩衝和設備統計資訊。
-title: 讀取QOS播放、緩衝和設備統計資訊
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 可以從QOSProvider類讀取回放、緩衝和設備統計資訊。
+title: 讀取QOS回放、緩衝和設備統計資訊
+exl-id: 1b79c254-4135-4d77-8b24-473f214021a1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # 讀取QOS回放、緩衝和設備統計資訊{#read-qos-playback-buffering-and-device-statistics}
 
-您可以從QOSProvider類讀取播放、緩衝和設備統計資訊。
+可以從QOSProvider類讀取回放、緩衝和設備統計資訊。
 
-`QOSProvider`類別提供各種統計資料，包括緩衝、位元速率、影格速率、時間資料等資訊。
+的 `QOSProvider` 類提供各種統計資訊，包括有關緩衝、比特率、幀速率、時間資料等的資訊。
 
-此外，它也提供有關裝置的資訊，例如製造商、型號、作業系統、SDK版本、製造商的裝置ID和螢幕大小／密度。
+它還提供有關設備的資訊，如製造商、型號、作業系統、SDK版本、製造商的設備ID和螢幕大小/密度。
 
 1. 實例化媒體播放器。
-1. 建立`QOSProvider`物件，並將它附加至媒體播放器。
+1. 建立 `QOSProvider` 對象，並將其附加到媒體播放器。
 
-   `QOSProvider`建構函式會擷取播放器內容，以便擷取裝置特定資訊。
+   的 `QOSProvider` 建構子採用播放器上下文以便能夠檢索設備特定的資訊。
 
    ```java
    // Create Media Player. 
@@ -29,9 +28,9 @@ ht-degree: 1%
    _mediaQosProvider.attachMediaPlayer(_mediaPlayer);
    ```
 
-1. （可選）閱讀播放統計資料。
+1. （可選）閱讀回放統計資訊。
 
-   讀取播放統計資訊的一個解決方案是具有計時器，該計時器定期從`QOSProvider`中讀取新的QoS值。 例如：
+   讀取回放統計資訊的一個解決方案是具有計時器，該計時器定期從 `QOSProvider`。 例如：
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
@@ -61,7 +60,7 @@ ht-degree: 1%
    }; 
    ```
 
-1. （可選）閱讀裝置特定資訊。
+1. （可選）讀取設備特定資訊。
 
    ```java
    // Show device information 
@@ -82,4 +81,3 @@ ht-degree: 1%
      deviceInfo.getWidthPixels() + "x" + deviceInfo.getHeightPixels() +  
      " (" + orientation + ")"); 
    ```
-

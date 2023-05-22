@@ -1,86 +1,85 @@
 ---
-description: HLS和DASH串流針對相同的視訊短脈衝串提供不同的位元速率編碼（描述檔）。 TVSDK可根據可用頻寬來選取每個突發串的品質等級。
-title: 視訊品質的可調式位元速率(ABR)
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: HLS和DASH流為同一短視頻突發提供不同的比特率編碼（簡檔）。 TVSDK可以根據可用頻寬為每個突發選擇質量級別。
+title: 用於視頻質量的自適應比特率(ABR)
+exl-id: 2fd24360-4159-4330-a479-02310c6aa525
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 0%
 
 ---
 
+# 用於視頻質量的自適應比特率(ABR){#adaptive-bit-rates-abr-for-video-quality}
 
-# 視訊品質的可調式位元速率(ABR){#adaptive-bit-rates-abr-for-video-quality}
+HLS和DASH流為同一短視頻突發提供不同的比特率編碼（簡檔）。 TVSDK可以根據可用頻寬為每個突發選擇質量級別。
 
-HLS和DASH串流針對相同的視訊短脈衝串提供不同的位元速率編碼（描述檔）。 TVSDK可根據可用頻寬來選取每個突發串的品質等級。
+TVSDK持續監視比特率以確保內容以當前網路連接的最佳比特率播放。
 
-TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳位元速率播放。
-
-您可以為多位速率(MBR)串流設定自適應位速率(ABR)切換策略和初始、最小和最大位速率。 TVSDK會自動切換至位元速率，以在指定組態中提供最佳播放體驗。
+可以為多比特率(MBR)流設定自適應比特率(ABR)切換策略以及初始、最小和最大比特率。 TVSDK自動切換到在指定配置中提供最佳回放體驗的比特率。
 
 <table id="table_AF838E082235406AA359BF1C1A77F85F"> 
  <tbody> 
   <tr> 
-   <td colname="col01"> 初始位元速率 </td> 
-   <td colname="col2"> <p>第一段的所需播放位速率（以位／秒為單位）。 當播放開始時，第一個區段會使用最接近的描述檔，該描述檔等於或大於初始位元速率。 </p> <p> 如果定義了最小位元速率，且初始位元速率低於最小速率，則TVSDK會選擇位元速率低於最小速率的描述檔。 如果初始速率高於最大速率，TVSDK會選擇低於最大速率的最高速率。 </p> <p>如果初始比特率為零或未定義，則初始比特率由ABR策略確定。 </p> <p> <span class="apiname"> ABRInitialBitRate傳 </span> 回一個整數值，代表每秒位元組描述檔。 </p> </td> 
+   <td colname="col01"> 初始比特率 </td> 
+   <td colname="col2"> <p>第一段的所需重放比特率（以位/秒為單位）。 當播放開始時，最接近的輪廓（等於或大於初始比特率）用於第一段。 </p> <p> 如果定義了最小比特率並且初始比特率低於最小速率，則TVSDK選擇具有高於最小比特率的最低比特率的配置檔案。 如果初始速率高於最大速率，則TVSDK選擇低於最大速率的最高速率。 </p> <p>如果初始比特率為零或未定義，則初始比特率由ABR策略確定。 </p> <p> <span class="apiname"> ABRInitialBitRate </span> 返回表示每秒位元組配置檔案的整數值。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col01"> 最低位元速率 </td> 
-   <td colname="col2"> <p>ABR可切換至的最低允許位速率。 ABR切換會忽略位速率低於此位速率的描述檔。 </p> <p> <span class="apiname"> ABRMinBitRate傳 </span> 回代表每秒位元描述檔的整數值。 </p> </td> 
+   <td colname="col01"> 最小比特率 </td> 
+   <td colname="col2"> <p>ABR可切換到的最低允許比特率。 ABR切換忽略比此比特率更低的比特率的簡檔。 </p> <p> <span class="apiname"> ABRMinBitRate </span> 返回表示每秒位配置檔案的整數值。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col01"> 最大位元速率 </td> 
-   <td colname="col2"> <p>ABR可切換的最高允許位速率。 ABR切換會忽略位速率高於此位速率的描述檔。 </p> <p> <span class="apiname"> ABRMaxBitRate傳 </span> 回一個整數值，代表每秒位元描述檔。 </p> </td> 
+   <td colname="col01"> 最大比特率 </td> 
+   <td colname="col2"> <p>ABR可切換到的最高允許比特率。 ABR切換忽略比此比特率更高的比特率的簡檔。 </p> <p> <span class="apiname"> ABRMaxBitRate </span> 返回表示每秒位配置檔案的整數值。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col01"> ABR交換策略 </td> 
-   <td colname="col2"> 如果可能，播放會逐漸切換至最高位元速率的設定檔。 您可以設定ABR切換的原則，此原則會決定TVSDK在設定檔之間切換的速度。 預設值為<span class="codeph"> MODERATE_POLICY </span>。 <p>當TVSDK決定切換至較高的位元速率時，播放器會根據目前的ABR原則，選擇理想的位元速率描述檔以切換至： 
+   <td colname="col01"> ABR切換策略 </td> 
+   <td colname="col2"> 如果可能，回放將逐漸切換到最高比特率配置檔案。 您可以設定ABR切換策略，該策略確定TVSDK在配置檔案之間切換的速度。 預設值為 <span class="codeph"> 中等策略 </span>。 <p>當TVSDK決定切換到較高的比特率時，播放器根據當前的ABR策略選擇理想的比特率配置檔案以切換到： 
      <ul id="ul_058D0FFC944C476A83BB9E756B95DEBD"> 
-      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVAL_POLICY  </span>:當頻寬比當前位速率高50%時，切換到具有下一個較高位速率的配置檔案。 </li> 
-      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY  </span>:當頻寬比當前位速率高20%時，切換到下一個較高的位速率配置檔案。 </li> 
-      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> ACCORPICE_POLICY  </span>:當頻寬高於當前位速率時，立即切換到最高位速率配置檔案。 </li> 
-     </ul> </p> <p>如果初始比特率為零或未指定，但指定了策略，則回放將從保守性的最低比特率配置檔案開始，中度可用配置檔案的中位數比特率最接近的配置檔案，以及侵略性的最高比特率配置檔案開始。 </p> <p>如果指定了最小和最大比特率，則策略在這些速率的約束下工作。 </p> <p> <span class="codeph"> ABRPolicy從 </span> ABRControlParameters枚舉返回當 <span class="codeph"> 前 </span> 設定：CONSERVACTIVE_POLICY、MODERATE_POLICY或ACCORPISIVE_POLICY。 </p> </td> 
+      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVAL_POLICY </span>:當頻寬比當前比特率高50%時，切換到具有下一個更高比特率的配置式。 </li> 
+      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> 中等策略 </span>:當頻寬比當前比特率高20%時，切換到下一個更高的比特率配置檔案。 </li> 
+      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> 攻擊性策略 </span>:當頻寬高於當前比特率時，立即切換到最高比特率配置檔案。 </li> 
+     </ul> </p> <p>如果初始比特率為零或未指定，但指定了策略，則回放從保守的最低比特率配置檔案開始，中等的最接近可用配置檔案的中位比特率的配置檔案，和侵略的最高比特率配置檔案開始。 </p> <p>如果指定了這些速率，則策略在最小和最大比特率的約束下工作。 </p> <p> <span class="codeph"> ABRP策略 </span> 從 <span class="codeph"> ABRControlParameters </span> 枚舉：CONSERVATIVE_POLICY、MEDATE_POLICY或ACCIVE_POLICY。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-請記住下列資訊：
+請牢記以下資訊：
 
-* TVSDK容錯機制可能會覆寫您的設定，因為TVSDK偏好持續播放體驗，而非嚴格遵循您的控制參數。
-* 當位元速率變更時，TVSDK會派單`ProfileEvent.PROFILE_CHANGED`。
-* 您可以隨時變更ABR設定，而播放器會切換使用最符合最新設定的設定檔。
+* TVSDK故障轉移機制可能會覆蓋您的設定，因為TVSDK更青睞連續的回放體驗，而不是嚴格遵循您的控制參數。
+* 當比特率更改時，TVSDK派單 `ProfileEvent.PROFILE_CHANGED`。
+* 您可以隨時更改ABR設定，播放器會切換使用與最近設定最接近的配置式。
 
-例如，如果串流具有下列描述檔：
+例如，如果流具有以下配置檔案：
 
-* 1:300000
-* 2:700000
-* 3:150000
-* 4:240000
-* 5:400000
+* 1: 300000
+* 2: 700000
+* 3: 1500000
+* 4: 2400000
+* 5: 4000000
 
-如果您指定300000到2000000的範圍，TVSDK只會考慮設定檔1、2和3。 這可讓應用程式因應各種網路狀況進行調整，例如從wi-fi切換至3G或切換至手機、平板電腦或桌上型電腦等各種裝置。
+如果指定範圍為300000到2000000，則TVSDK僅考慮配置檔案1、2和3。 這允許應用程式根據各種網路條件進行調整，例如從wi-fi切換到3G或切換到各種設備，如電話、平板或台式電腦。
 
-要設定ABR控制參數，請執行下列操作之一：
+要設定ABR控制參數，請執行以下操作之一：
 
-* 使用`ABRControlParameterBuilder`幫助類設定參數的任何子集（在後台操作`ABRControlParameter`）
+* 使用 `ABRControlParameterBuilder` 幫助類，用於設定參數的任何子集(在 `ABRControlParameter` 幕後)
 
-* 在`ABRControlParameter`類中設定參數。
+* 在 `ABRControlParameter` 類。
 
-## 使用ABRControlParametersBuilder {#section_3DDE397A7CE445E1832EBAA46CE5C069}設定自適應位元速率
+## 使用ABRControlParametersBuilder配置自適應比特率 {#section_3DDE397A7CE445E1832EBAA46CE5C069}
 
-使用`ABRControlParametersBuilder`幫助類是設定ABR參數最簡單、最有效的方法。
+使用 `ABRControlParametersBuilder` helper類是設定ABR參數的最簡單、最有效的方法。
 
-* `ABRControlParametersBuilder`建構子將所有ABR參數設定為基礎`ABRControlParameters`對象上的預設值。
+* 的 `ABRControlParametersBuilder` 建構子將所有ABR參數設定為基礎上的預設值 `ABRControlParameters` 的雙曲餘切值。
 
-* 只要您對相同`ABRControlParametersBuilder`實例的引用保持不變，就可以在運行時重置單個ABR參數。
+* 只要在運行時保留對同一參數的參照，就可以在運行期間重置單個ABR參數 `ABRControlParametersBuilder` 實例。
 
-此類還包括`toABRControlParameters()`幫助方法。 使用此方法可以獲取`ABRControlParameters`的實例，並在`mediaPlayer.ABRControlParameters`屬性上進行設定。 這會使您的設定在播放器中生效。
+此類還包括 `toABRControlParameters()` helper方法。 使用此方法獲取 `ABRControlParameters` 然後把它放在 `mediaPlayer.ABRControlParameters` 屬性。 這會使您的設定在播放器中生效。
 
-1. 實例化`ABRControlParametersBuilder`幫助程式類，並在Media Player上設定參數。
+1. 實例化 `ABRControlParametersBuilder` 幫助程式類，並在媒體播放器上設定參數。
 
    >[!NOTE]
    >
-   >例如，以下示例將所有參數初始化為預設值，然後僅將策略設定為保守，並將最大比特率限制為1000000:
+   >例如，以下示例將所有參數初始化為預設值，然後僅將策略設定為conservaty，並將最大比特率限制為1000000:
    >
    >
    ```
@@ -94,7 +93,7 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
 
 1. 在運行時修改單個ABR參數。
 
-   要修改單個參數，同時保留其餘參數原樣：
+   要修改單個參數，同時保留其餘參數：
 
    ```
    // If later you want to reset the max bit rate to 2000000 
@@ -103,28 +102,28 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
      abrBuilder.toABRControlParameters();
    ```
 
-   若要保留先前的設定，您必須保留對您在步驟1中建立之相同`ABRControlParametersBuilder`例項的參考。
+   要保留以前的設定，必須保留對該設定的引用 `ABRControlParametersBuilder` 在步驟1中建立的實例。
 
-## 使用ABRControlParameters {#section_02161FD0A73F40ED9CAE17F9AF850483}配置自適應位速率
+## 使用ABRControlParameters配置自適應比特率 {#section_02161FD0A73F40ED9CAE17F9AF850483}
 
-您只能以`ABRControlParameters`設定ABR控制值，但可隨時建立新值。
+您只能使用 `ABRControlParameters`，但可以隨時構造新的。
 
-在`ABRControlParametersBuilder`類別存在之前，支援此設定ABR參數的能力，但此能力對於在構建時設定ABR參數仍然有效。 但是，要在構建後更改單個參數，應使用`ABRControlParametersBuilder`類。
+在ABR存在之前，支援設定ABR參數的這一能力 `ABRControlParametersBuilder` 但該能力對於在施工時設定ABR參數仍然有效。 但是，要在構建後更改單個參數，應使用 `ABRControlParametersBuilder` 類。
 
-以下條件適用於`ABRControlParameters`:
+以下條件適用於 `ABRControlParameters`:
 
-* 必須在構建時提供所有參數的值。
-* 在建構時間後，您無法變更個別值。
-* 如果您指定的參數超出允許的範圍，則會拋出`ArgumentError`。
+* 必須在構造時為所有參數提供值。
+* 在構建時間後不能更改單個值。
+* 如果指定的參數超出允許的範圍，則 `ArgumentError` 。
 
-1. 決定初始、最小和最大位速率。
+1. 確定初始、最小和最大比特率。
 1. 確定ABR策略：
 
    * `CONSERVATIVE_POLICY`
    * `MODERATE_POLICY`
    * `AGGRESSIVE_POLICY`
 
-1. 在`ABRControlParameters`建構函式中設定ABR參數值，並將其指派給Media Player。
+1. 在 `ABRControlParameters` 建構子，並將其分配給媒體播放器。
 
    ```
    mediaPlayer.abrControlParameters = new ABRControlParameters( 
@@ -134,4 +133,3 @@ TVSDK會持續監視位元速率，以確保內容以目前網路連線的最佳
        1000000 // Maximum bit rate 
    );
    ```
-

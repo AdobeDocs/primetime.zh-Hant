@@ -1,32 +1,30 @@
 ---
-description: 您可以監聽通知，也可以將自己的通知新增至通知歷史記錄。
+description: 您可以監聽通知，也可以將自己的通知添加到通知歷史記錄中。
 title: 設定通知系統
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: da6cec2d-8488-4f61-881b-72999ece650c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
-
 # 設定通知系統{#set-up-your-notification-system}
 
-您可以監聽通知，也可以將自己的通知新增至通知歷史記錄。
+您可以監聽通知，也可以將自己的通知添加到通知歷史記錄中。
 
-Primetime Player通知系統的核心是Notification類別，它代表獨立通知。
+Gimfige Player通知系統的核心是Notification類，它表示獨立通知。
 
-NotificationHistory類提供累積通知的機制。 它儲存表示通知集合的通知(`NotificationHistoryItem`)對象日誌。
+NotificationHistory類提供了累計通知的機制。 它儲存通知日誌( `NotificationHistoryItem`)對象，它表示通知的集合。
 
-若要接收通知：
+要接收通知，請執行以下操作：
 
-* 監聽通知
-* 新增通知至通知歷史記錄
+* 偵聽通知
+* 將通知添加到通知歷史記錄
 
-1. 監聽狀態變更。
-1. 實作`MediaPlayer.StatusChangeEvent.STATUS_CHANGED`事件偵聽器。
-1. TVSDK會將`MediaPlayer.StatusChangeEvent`例項傳遞至事件偵聽器，其中包含兩個參數：
+1. 偵聽狀態更改。
+1. 實施 `MediaPlayer.StatusChangeEvent.STATUS_CHANGED` 事件偵聽器。
+1. TVSDK通過 `MediaPlayer.StatusChangeEvent` 事件偵聽器的實例，它包含兩個參數：
 
-   * 新狀態(`MediaPlayer.Status`)
-   * `MediaPlayerNotification`物件
-
+   * 新狀態( `MediaPlayer.Status`)
+   * A `MediaPlayerNotification` 對象

@@ -1,44 +1,43 @@
 ---
-description: TVSDK提供在實作封鎖期（包括方法、中繼資料和通知）時有用的API元素。
+description: TVSDK提供在實施封鎖期（包括方法、元資料和通知）時有用的API元素。
 title: 封鎖API元素
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 76d99d8d-1aae-4faa-aaf2-bb7b535a1c71
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
 
+# 封鎖API元素 {#blackout-api-elements}
 
-# 封鎖API元素{#blackout-api-elements}
+TVSDK提供在實施封鎖期（包括方法、元資料和通知）時有用的API元素。
 
-TVSDK提供在實作封鎖期（包括方法、中繼資料和通知）時有用的API元素。
-
-在您的播放器中實施封鎖期解決方案時，可使用下列功能。
+在播放器中實施封鎖解決方案時，可以使用以下方法。
 
 * **PTMediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` 將當前載入的資源另存為背景資源。如果在此方法後呼叫`replaceCurrentItemWithPlayerItem`,TVSDK會繼續下載背景項目的資訊清單，直到您呼叫`unregisterCurrentBackgroundItem`、`stop`或`reset`為止。
+   * `registerCurrentItemAsBackgroundItem` 將當前載入的資源另存為後台資源。 如果 `replaceCurrentItemWithPlayerItem` 在此方法之後調用，TVSDK將繼續下載後台項的清單，直到您調用 `unregisterCurrentBackgroundItem` 。 `stop`或 `reset` 。
 
-   * `unregisterCurrentBackgroundItem` 將背景項目設為nil，並停止擷取和剖析背景資訊清單。
+   * `unregisterCurrentBackgroundItem` 將背景項設定為零，並停止提取和分析背景清單。
 
-* **PTMetadata.** PTBlackoutMetadataA類， `PTMetadata` 專用於封鎖期。
+* **PTMetadata.PTBlackout元資料** A `PTMetadata` 特定於封鎖的類。
 
-   這可讓您在TVSDK上設定不可見的範圍（`CMTimeRanges`的陣列）。 TVSDK會在使用者每次搜尋時檢查這些範圍。 如果已設定，且使用者搜尋至不可見的範圍，TVSDK會強制檢視器到達不可見的範圍結尾。
+   這允許您設定不可查找的範圍( `CMTimeRanges`)。 TVSDK每次用戶查找時都檢查這些範圍。 如果設定了它，並且用戶尋求進入不可見範圍，則TVSDK強制查看器到不可見範圍的末尾。
 
-* **從這裡開** **** 始NEXTPTAdMetadata透過設定為YES或NO，啟用或停用即時串 `enableLivePreroll` 流上的前置播放。若為否，TVSDK在內容播放前不會明確呼叫前段廣告廣告伺服器，因此不會播放前段廣告。 這對中間輥沒有影響。 預設值為YES。
+* **下一頁開始** **PTAd元資料** 通過設定在即時流上啟用或禁用預滾動 `enableLivePreroll` 為「是」或「否」。 如果為否，則TVSDK在播放內容之前不會對預播廣告進行明確的廣告伺服器調用，因此不會播放預播。 這對中間輥沒有影響。 預設值為YES。
 
-* **NSNoftigies**
+* **NSN工事**
 
-   * `PTTimedMetadataChangedInBackgroundNotification` -當TVSDK偵測到背景資訊清單中的訂閱標籤，並準備新 `PTTimedMetadata` 的例項時發佈。通知的對象是當前正在播放的`PTMediaPlayerItem`實例。 您可以使用`PTTimedMetadataKey`鍵從通知的`userInfo`字典中讀取`PTTimedMetadata`實例。
+   * `PTTimedMetadataChangedInBackgroundNotification`  — 當TVSDK檢測到後台清單中的訂閱標籤和新標籤時發佈 `PTTimedMetadata` 實例是從它準備的。 通知的對象是 `PTMediaPlayerItem` 當前正在播放的實例。 你可以 `PTTimedMetadata` 通知中的實例 `userInfo` 詞典 `PTTimedMetadataKey` 按鈕
 
-   * `PTBackgroundManifestErrorNotification` -當媒體播放器完全無法載入背景資訊清單時發佈，即所有串流URL都會傳回錯誤或無效回應。通知的對象是當前正在播放的`PTMediaPlayerItem`實例。
+   * `PTBackgroundManifestErrorNotification`  — 當媒體播放器完全無法載入後台清單時發佈，即所有流URL返回錯誤或無效響應。 通知的對象是 `PTMediaPlayerItem` 當前正在播放的實例。
 
-* **PTNotification**
+* **PTN認證**
 
    * `BACKGROUND_MANIFEST_WARNING`
 
-      * 程式碼：204000
+      * 代碼：204000
       * 類型：警告
-      * 背景資訊清單下載時發生錯誤。
-   * `INVALID_SEEK_WARNING` 在不可查找範圍（在中設定）中嘗試查找時 `nonSeekableRanges` 發送 `PTBlackoutMetadata`的。
+      * 後台清單下載時出錯。
+   * `INVALID_SEEK_WARNING` 在不可查範圍內嘗試查找時發送(在 `nonSeekableRanges` 設定 `PTBlackoutMetadata`)。

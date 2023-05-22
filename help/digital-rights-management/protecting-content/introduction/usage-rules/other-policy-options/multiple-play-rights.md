@@ -1,18 +1,17 @@
 ---
-title: 多重播放權
-description: 多重播放權
+title: 多播放權限
+description: 多播放權限
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c7ee6f8e-9e59-42be-82e4-dbe6db91ad3e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
 
+# 多播放權限 {#multiple-play-rights}
 
-# 多重播放權限{#multiple-play-rights}
+您可以為應用於不同平台或應用程式的不同使用規則指定多個播放權限參數。
 
-您可以針對您套用至不同平台或應用程式的不同使用規則指定多個播放權限參數。
-
-範例使用案例：使用多重播放權限，您可以建立Primetime DRM原則，以指定Microsoft® Windows®平台需要「輸出保護」。 不過，它在Apple® Macintosh®和Linux®平台上是選用的。
+示例用例：使用多個播放權限，您可以建立黃金時段DRM策略，以指定在Microsoft® Windows®平台上需要輸出保護。 但是，在Apple® Macintosh®和Linux®平台上是可選的。

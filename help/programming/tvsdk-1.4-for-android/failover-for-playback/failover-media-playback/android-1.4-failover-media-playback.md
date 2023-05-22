@@ -1,15 +1,14 @@
 ---
-description: 對於即時和隨選視訊(VOD)媒體，TVSDK會下載與中解析度位元速率相關的播放清單，並下載該播放清單所定義的媒體區段，以開始播放。 它快速選擇高解析度位元速率播放清單及其相關媒體，並繼續下載程式。
+description: 對於即時和視頻點播(VOD)媒體，TVSDK通過下載與中解析度比特率相關聯的播放清單開始播放並下載由該播放清單定義的媒體段。 它快速選擇高解析度比特率播放清單及其相關媒體並繼續下載過程。
 title: 媒體播放和故障切換
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 89efaa9a-49f5-4d83-a085-ee79feec4163
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
+# 媒體播放和故障切換 {#media-playback-and-failover}
 
-# 媒體播放和故障切換{#media-playback-and-failover}
-
-對於即時和隨選視訊(VOD)媒體，TVSDK會下載與中解析度位元速率相關的播放清單，並下載該播放清單所定義的媒體區段，以開始播放。 它快速選擇高解析度位元速率播放清單及其相關媒體，並繼續下載程式。
+對於即時和視頻點播(VOD)媒體，TVSDK通過下載與中解析度比特率相關聯的播放清單開始播放並下載由該播放清單定義的媒體段。 它快速選擇高解析度比特率播放清單及其相關媒體並繼續下載過程。

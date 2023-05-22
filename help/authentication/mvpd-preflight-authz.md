@@ -1,39 +1,39 @@
 ---
-title: MVPD預檢授權
-description: MVPD預檢授權
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: MVPD印前檢查授權
+description: MVPD印前檢查授權
+exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
-
-# MVPD預檢授權
+# MVPD印前檢查授權
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-## 簡介 {#mvpd-preflight-authz-intro}
+## 導言 {#mvpd-preflight-authz-intro}
 
-「預檢授權」是針對多個資源的輕量型授權檢查。 程式設計師主要使用它來裝飾他們的UI（例如，用鎖和解鎖表徵圖指示訪問狀態）。
+「印前檢查授權」是針對多個資源的輕量授權檢查。 程式設計師主要使用它來裝飾他們的UI（例如，用鎖定和解鎖表徵圖指示訪問狀態）。
 
-Adobe Primetime驗證目前可透過兩種方式支援MVPD的預檢授權，方法為透過AuthN回應屬性或多頻道AuthZ請求。  以下情況說明了實施預檢授權的不同方法的成本/優勢：
+Adobe Primetime驗證目前可以通過兩種方式支援MVPD的印前檢查授權，即通過AuthN響應屬性或通過多通道AuthZ請求。  以下方案描述了您實施印前授權的不同方法的成本/好處：
 
-* **最佳案例情境** - MVPD會在授權階段（多通道AuthZ）提供預先授權資源的清單。
-* **最壞情況**  — 如果MVPD不支援任何形式的多資源授權，Adobe Primetime驗證伺服器會針對資源清單中的每個資源執行對MVPD的授權呼叫。 此情境對預檢授權請求的回應時間具有影響（與資源數量成比例）。 它可增加Adobe和MVPD伺服器上造成效能問題的負載。 此外，它會產生授權要求/回應事件，而不需要實際播放。
-* **已棄用** - MVPD會在驗證階段提供預先授權資源的清單，因此不需要網路呼叫，甚至不需要預檢請求，因為清單是在用戶端快取的。
+* **最佳案例方案** - MVPD在授權階段（多通道AuthZ）提供預授權資源清單。
+* **最壞情況方案**  — 如果MVPD不支援任何形式的多資源授權，則Adobe Primetime認證伺服器將對資源清單中的每個資源執行對MVPD的授權調用。 此方案對印前檢查授權請求的響應時間具有影響（與資源數成比例）。 它可以增加Adobe和MVPD伺服器上的負載，從而導致效能問題。 另外，它將生成授權請求/響應事件，而不需要實際播放。
+* **已棄用** - MVPD在驗證階段提供預授權資源清單，因此不需要網路呼叫，甚至不需要預檢請求，因為清單已快取在客戶端上。
 
-雖然MVPD不必支援預檢授權，但以下幾節將說明Adobe Primetime驗證可支援的預檢授權方法，然後再回復到上述最壞的情況。
+雖然MVPD不必支援飛行前授權，但以下各節描述了Adobe Primetime身份驗證可支援的某些飛行前授權方法，然後又回到上述最壞情況情形。
 
-## 驗證中的預檢 {#preflight-authn}
+## AuthN中的預檢 {#preflight-authn}
 
-此預檢方案與OLCA相容（電纜）。 7.5.2節中的「驗證和授權介面1.0規範」標題為「驗證斷言內的屬性陳述式」，說明SAML驗證回應如何包含預先授權的資源清單。 如果IdP支援此功能，Adobe Primetime驗證伺服器將能在驗證時產生預先設定的資源清單，並連同驗證Token一起在用戶端上快取。 此方法還實現了最佳情況，並且當程式設計師調用checkPreauthorizedResources()時，不會執行任何網路調用，因為客戶端上已有所有內容。
+此印前檢查方案為OLCA相容(Cableabs)。 「驗證和授權介面1.0規範」7.5.2節標題為「驗證斷言中的屬性語句」，介紹SAML驗證響應如何包含預授權資源清單。 如果IdP支援此功能，Adobe Primetime認證伺服器將能夠在認證時生成預配置資源清單，並將其與認證令牌一起快取到客戶端上。 此方法還實現了最佳案例情形，並且當程式設計師調用checkPreauthorizedResources()時，不會執行網路調用，因為客戶端上已有所有內容。
 
 ### SAML屬性語句中的自定義資源清單 {#custom-res-saml-attr}
 
-IdP的SAML驗證回應應包含AttributeStatement，其中包含AdobePass應授權的資源名稱。  有些MVPD會以下列格式提供此內容：
+IdP的SAML驗證響應應包含AdobePass應授權的資源名稱的AttributeStatement。  某些MVPD以以下格式提供此功能：
 
 ```XML
 <saml:AttributeStatement>
@@ -44,19 +44,19 @@ IdP的SAML驗證回應應包含AttributeStatement，其中包含AdobePass應授�
 </saml:AttributeStatement>
 ```
 
-上述範例提供包含兩個預先授權資源的清單：「MMOD」和「2012年奧運會」。
+上面的示例顯示包含兩個預授權資源的清單：「MMOD」和「2012年奧運會」。
 
-這有效地實現了最佳情況，並且當程式設計師調用checkPreauthorizedResources()時，不會執行網路調用，因為所有內容都已在客戶端上。
+這有效地實現了最佳案例方案，並且當程式設計師調用checkPreauthorizedResources()時不會執行網路調用，因為客戶端上已有所有內容。
 
 ## AuthZ中的多通道預檢 {#preflight-multich-authz}
 
-此預檢實施也與OLCA相容(Cablelabs)。  驗證和授權介面1.0規範（第7.5.3節和7.5.4節）描述了使用SAML斷言或XACML從MVPD請求授權資訊的方法。 這是查詢不支援MVPD的MVPD授權狀態的建議方式，作為驗證流程的一部分。 Adobe Primetime驗證會向MVPD發出單一網路呼叫，以擷取授權資源清單。
+此印前檢查實現也是OLCA相容(Cablelabs)。  驗證和授權介面1.0規範(7.5.3和7.5.4節)介紹了使用SAML斷言或XACML從MVPD請求授權資訊的方法。 這是作為驗證流的一部分查詢不支援此功能的MVPD的授權狀態的推薦方法。 Adobe Primetime驗證向MVPD發出單個網路調用以檢索授權資源清單。
 
 
-Adobe Primetime驗證從程式設計師應用程式接收資源清單。 Adobe Primetime驗證的MVPD整合接著可以進行一個包含所有這些資源的AuthZ呼叫，然後剖析回應並擷取多個允許/拒絕決策。  使用多通道AuthZ情況進行預檢的流程如下：
+Adobe Primetime驗證從程式設計師應用程式接收資源清單。 Adobe Primetime驗證的MVPD整合可以進行一個包括所有這些資源的AuthZ調用，然後分析響應並提取多個允許/拒絕決定。  使用多通道AuthZ方案進行預檢的流程如下：
 
-1. 程式設計師的應用程式通過預檢客戶端API發送以逗號分隔的資源清單，例如：&quot;TestChannel1,TestChannel2,TestChannel3&quot;。
-1. MVPD預檢AuthZ請求呼叫包含多個資源，且具有下列結構：
+1. 程式設計師應用通過印前檢查客戶端API發送以逗號分隔的資源清單，例如：&quot;TestChannel1,TestChannel2,TestChannel3&quot;。
+1. MVPD印前檢查AuthZ請求調用包含多個資源，並具有以下結構：
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?><soap11:Envelope xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/"> 
@@ -113,21 +113,21 @@ Adobe Primetime驗證從程式設計師應用程式接收資源清單。 Adobe P
 </soap11:Envelope>
 ```
 
-## 多個資源的自訂授權 {#custom-authz}
+## 多個資源的自定義授權 {#custom-authz}
 
-有些MVPD的授權端點支援在一個請求中對多個資源進行授權，但不符合多通道AuthZ中所述的案例。 這些特定MVPD需要自訂工作。
+某些MVPD具有支援在一個請求中對多個資源進行授權的授權終結點，但它們不屬於多通道AuthZ中描述的情形。 這些特定MVPD需要自定義工作。
 
-Adobe也可支援多通道授權，而不需變更現有實作。  Adobe和MVPD技術小組之間需要審查此方法，以確保其如預期般運作。
+Adobe還可以支援多通道授權，而無需更改現有實現。  需要在Adobe和MVPD技術小組之間審查這一辦法，以確保它按預期工作。
 
-## 支援預檢授權的MVPD {#mvpds-supp-preflight-authz}
+## 支援印前檢查授權的MVPD {#mvpds-supp-preflight-authz}
 
-下表列出支援預檢授權的MVPD，以及支援的預檢類型和已知限制：
+下表列出了支援「印前檢查授權」的MVPD，以及它們支援的印前檢查類型和已知限制：
 
-| 飛行前進 | MVPD | 附註 |
+| 印前檢查方法 | MVPD | 注釋 |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| 多通道AuthZ | Comcast AT&amp;T代理Clearleap Charter_Direct代理GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
-| 使用者中繼資料中的管道陣列 | HTC突然連結 | 所有Syncor直接整合也可支援此方法。 |
-| 分支並連接 | 上面未列出的所有其他 | 預設的已檢查資源數上限= 5。 |
+| 多通道AuthZ | Comcast AT&amp;T代理Clearleap Charter_Direct代理GLDS Rogers Verizon OSN Bell Sasktel Optimization AlticeOne |  |
+| 用戶元資料中的通道清單 | 突然連結HTC | 所有Synacor直接整合都可支援此方法。 |
+| 叉和聯接 | 上面未列出的所有其他內容 | 選中的預設最大資源數= 5。 |
 
 <!--
 ![RelatedInformation]

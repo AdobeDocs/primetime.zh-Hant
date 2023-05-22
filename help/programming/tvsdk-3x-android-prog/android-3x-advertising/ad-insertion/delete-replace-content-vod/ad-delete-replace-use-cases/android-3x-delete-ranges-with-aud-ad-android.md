@@ -1,26 +1,25 @@
 ---
-description: 您可以從時間軸移除localTime中開始和結束之間的TimeRange。
+description: 可以從時間軸中刪除localTime中開始和結束之間的TimeRange。
 title: 刪除範圍
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: afa2f520-144f-47b4-b271-50c8e4d138d8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
+# 刪除範圍 {#delete-ranges}
 
-# 刪除範圍{#delete-ranges}
-
-您可以從時間軸中移除`begin`和`localTime`中`end`之間的`TimeRanges`。
+可以刪除 `TimeRanges` 間 `begin` 和 `end` 在 `localTime` 從時間軸上。
 
 >[!TIP]
 >
->若要僅從內容移除特定範圍，請建立`CustomRangeMetadata`例項，並指定類型為使用已定義自訂範圍的`DELETE`作業。
+>要僅從內容中刪除某些範圍，請建立 `CustomRangeMetadata` 實例並將類型指定為 `DELETE` 定義的自定義範圍。
 
-廣告地圖必須依廣告伺服器的定義使用。
+廣告映射必須按照廣告伺服器的定義使用。
 
-1. 若要刪除具有Adobe Primetime廣告決策廣告的範圍：
+1. 要刪除帶有Adobe Primetime廣告決策廣告的範圍，請執行以下操作：
 
    ```
    {   

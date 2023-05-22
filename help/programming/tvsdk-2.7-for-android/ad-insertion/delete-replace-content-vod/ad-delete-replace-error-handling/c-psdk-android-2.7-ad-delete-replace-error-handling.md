@@ -1,43 +1,41 @@
 ---
-description: TVSDK會根據特定問題來處理時間範圍錯誤，方法是合併或重新排序未正確定義的時間範圍。
-title: 廣告刪除和取代錯誤處理
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK通過合併或重新排序未正確定義的時間範圍，根據特定問題處理時間範圍錯誤。
+title: 廣告刪除和替換錯誤處理
+exl-id: 0d70bb63-bdc5-4741-81db-1408216234c2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
+# 概述 {#ad-deletion-and-replacement-error-handling-overview}
 
-# 概述{#ad-deletion-and-replacement-error-handling-overview}
+TVSDK通過合併或重新排序未正確定義的時間範圍，根據特定問題處理時間範圍錯誤。
 
-TVSDK會根據特定問題來處理時間範圍錯誤，方法是合併或重新排序未正確定義的時間範圍。
+TVSDK管理 `timeRanges` 預設合併和重新排序進程時出錯。 首先，玩家按 *開始* 時間。 根據此排序順序，如果範圍之間有子集和交集，則TVSDK合併相鄰範圍並連接這些範圍。
 
-TVSDK會透過預設的合併和重新排序程式來管理`timeRanges`錯誤。 首先，播放器會依&#x200B;*begin*&#x200B;時間對客戶定義的時間範圍排序。 根據此排序順序，如果範圍間有子集和交集，TVSDK會合併相鄰範圍並連接這些範圍。
+TVSDK使用以下選項處理時間範圍錯誤：
 
-TVSDK可使用下列選項處理時間範圍錯誤：
+* **無序** TVSDK重新排序時間範圍。
 
-* **順序不** 當的TVSDK會重新排序時間範圍。
+* **子集** TVSDK合併時間範圍子集。
 
-* **SubsetTVSDK** 會合併時間範圍子集。
+* **交叉** TVSDK合併相交時間範圍。
 
-* **** IntersectTVSDK會合併相交的時間範圍。
+* **替換範圍衝突** TVSDK從最早的時間選擇替換持續時間 `timeRange` 在衝突組中顯示。
 
-* **取代範圍** 衝突TVSDK會從衝突群組中顯示的最 `timeRange` 早值選取取代持續時間。
-
-TVSDK以下列方式處理與廣告中繼資料的信令模式衝突：
+TVSDK通過以下方式處理與ad元資料的信令模式衝突：
 
 * 如果廣告信令模式與時間範圍元資料衝突，則時間範圍元資料始終具有優先順序。
 
-   例如，如果廣告信令模式被設為伺服器地圖或資訊清單提示，而廣告中繼資料中也有MARK時間範圍，則產生的行為是已標籤範圍，且未插入廣告。
-* 對於REPLACE範圍，如果信令模式被設定為伺服器映射或資訊清單提示，則該範圍將按照REPLACE範圍中指定的方式被替換，並且不會通過伺服器映射或資訊清單提示插入廣告。
+   例如，如果將廣告信令模式設定為伺服器映射或清單提示，並且廣告元資料中還存在MARK時間範圍，則所產生的行為是標籤了該範圍，並且不插入廣告。
+* 對於REPLACE範圍，如果信令模式設定為伺服器映射或清單提示，則這些範圍將按REPLACE範圍中指定的方式替換，並且不會通過伺服器映射或清單提示插入廣告。
 
-   如需詳細資訊，請參閱[*從廣告信令模式插入和刪除廣告的效果中的信令模式／中繼資料組合行為*&#x200B;表格……](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android)。
+   有關詳細資訊，請參見 *信令模式/元資料組合行為* 表格 [從廣告信令模式對廣告插入和刪除的影響……](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android)。
 
-請記住：
+請記住以下內容：
 
-* 當伺服器未傳回有效的`AdBreaks`時，TVSDK會針對空白的AdBreak產生並處理`NOPTimelineOperation`，而且不會播放廣告。
+* 當伺服器未返回有效時 `AdBreaks`, TVSDK生成並處理 `NOPTimelineOperation` 空的AdBreak，沒有廣告。
 
-* 雖然C3廣告刪除／取代僅支援VOD，但若在廣告中繼資料中指定，則即時串流也會處理時間範圍。
-
+* 儘管C3和刪除/替換僅用於VOD，但如果在ad元資料中指定，則還會為即時流處理時間範圍。

@@ -1,48 +1,47 @@
 ---
-title: 預先授權Android
-description: 預先授權Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 預授權Android
+description: 預授權Android
+exl-id: b5337595-135f-4981-a578-2da432f125d6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-
-# 預先授權 {#preuthorize-android}
+# 預授權 {#preuthorize-android}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
 </br>
 
 
-應用程式需要使用預授權API方法，以便獲得一個或多個資源的預授權決策。 應將預先授權API要求用於UI提示和/或內容篩選。 必須先提出實際的授權API要求，才能授予使用者對指定資源的存取權。
+應用程式需要使用預授權API方法，以便獲得一個或多個資源的預授權決定。 預授權API請求應用於UI提示和/或內容過濾。 必須在授予用戶對指定資源的訪問權限之前發出實際的授權API請求。
 
 
 
-萬一發生非預期的錯誤（例如網路問題、MVPD授權端點無法使用等） 當Adobe Primetime驗證服務處理預先授權API請求時，會為受影響的資源納入一或多個個別的錯誤資訊，作為預先授權API回應結果的一部分。
+如果出現意外錯誤（例如網路問題、MVPD授權終結點不可用等） 當預授權API請求由Adobe Primetime認證服務處理時發生，將作為預授權API響應結果的一部分為受影響的資源包含一個或多個分離的錯誤資訊。
 
 
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**說明：** 
+**描述：** 
 
 **可用性：** v3.6.0+
 
 **參數：**
 
-- *PreauthorizeRequest*:用來定義請求的產生器物件
-- AccessEnablerCallback :用來傳回API回應的回呼
-- PreauthorizeResponse :用於傳回API回應內容的物件
+- *預授權請求*:用於定義請求的生成器對象
+- AccessEnablerCallback :用於返回API響應的回調
+- 預授權響應：用於返回API響應內容的對象
 
 
-### 公用類PreauthorizeRequest {#androidpreauthorizerequest}
+### 公共類PreauthorizeRequest {#androidpreauthorizerequest}
 
-**類別PreauthorizeRequest.Builder**\
+**類PreauthorizeRequest.Builder**\
  
 
 ```java
@@ -64,7 +63,7 @@ ht-degree: 0%
     ///
 ```
 
-**public Builder setResources(List\&lt;string> 資源)**
+**公共生成器setResources(清單\&lt;string> 資源)**
 
 ```
     ///
@@ -86,7 +85,7 @@ ht-degree: 0%
 ```
 
 
-**public Builder disableFeatures(Set\&lt;preauthorizerequest.feature>
+**公共生成器disableFeatures(設定\&lt;preauthorizerequest.feature>
 功能)**
 
 ```
@@ -109,7 +108,7 @@ ht-degree: 0%
 
 **public PreauthorizeRequest build()**
 
-**列舉PreauthorizeRequest.Feature**
+**枚舉預授權請求。功能**
 
 ```java
     ///
@@ -265,7 +264,7 @@ ht-degree: 0%
 
 
 
-範例： 
+示例： 
 
 
 ```java
@@ -289,4 +288,3 @@ ht-degree: 0%
         }
     });
 ```
-

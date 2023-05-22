@@ -1,26 +1,25 @@
 ---
-description: 您可以將廣告插入VOD內容。
-title: 以廣告取代時間範圍
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以將廣告插入視頻點播內容。
+title: 用廣告替換時間範圍
+exl-id: bee5308a-f867-4824-84a8-751746785971
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
+# 用廣告替換時間範圍 {#replace-time-ranges-with-an-ad}
 
-# 以廣告{#replace-time-ranges-with-an-ad}取代時間範圍
+您可以將廣告插入視頻點播內容。
 
-您可以將廣告插入VOD內容。
-
-`localTime`中`begin`和`end`之間的`TimeRanges`會從時間軸中移除。 這些範圍由`begin`的`AdBreak`取代為`begin+replaceDuration`。 如果`replacement-duration`不存在作為參數，則伺服器對返回的`Adbreak`進行確定。
+的 `TimeRanges` 在 `begin` 和 `end` 在 `localTime` 從時間軸中刪除。 這些範圍由 `AdBreak` 共 `begin` 至 `begin+replaceDuration`。 如果 `replacement-duration` 不作為參數存在，伺服器將對返回的 `Adbreak`。
 
 >[!TIP]
 >
->您應始終為自訂範圍提供`replacement-duration`。 如果沒有廣告要取代此自訂範圍，請提供`replacement-duration`，共0個。
+>您應始終提供 `replacement-duration` 的子菜單。 如果沒有廣告意在替換此自定義範圍，請提供 `replacement-duration` 0。
 
-1. 若要以Primetime廣告決策廣告取代範圍：
+1. 要用黃金時段廣告決策替換這些範圍，請：
 
    ```
    {   

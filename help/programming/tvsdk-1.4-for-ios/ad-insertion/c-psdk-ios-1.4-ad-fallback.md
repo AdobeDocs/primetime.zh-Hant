@@ -1,52 +1,50 @@
 ---
-description: 對於啟用後援規則的數位視訊廣告服務範本(VAST)廣告（或創意素材）,TVSDK會將無效媒體類型的廣告視為空白廣告，並嘗試在其位置使用後援廣告。 您可以設定備援行為的某些方面。
-title: 廣泛廣告和VMAP廣告的廣告後援
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 對於啟用了回退規則的數字視頻廣告服務模板(VAST)廣告（或創意）,TVSDK將無效媒體類型的廣告視為空廣告，並嘗試在其位置使用回退廣告。 您可以配置回退行為的某些方面。
+title: VAST和VMAP廣告的廣告回退
+exl-id: 5c469686-f8db-463a-ad1a-cb64e9192fb7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
 
 ---
 
+# VAST和VMAP廣告的廣告回退 {#ad-fallback-for-vast-and-vmap-ads}
 
-# 廣泛廣告和VMAP廣告的廣告後援{#ad-fallback-for-vast-and-vmap-ads}
+對於啟用了回退規則的數字視頻廣告服務模板(VAST)廣告（或創意）,TVSDK將無效媒體類型的廣告視為空廣告，並嘗試在其位置使用回退廣告。 您可以配置回退行為的某些方面。
 
-對於啟用後援規則的數位視訊廣告服務範本(VAST)廣告（或創意素材）,TVSDK會將無效媒體類型的廣告視為空白廣告，並嘗試在其位置使用後援廣告。 您可以設定備援行為的某些方面。
+VAST/數字視頻多廣告播放清單(VMAP)規範規定，對於啟用了VAST回退的廣告，空廣告會自動觸發回退廣告的使用。 當VAST廣告為空時，TVSDK在回退廣告中尋找有效的HLS媒體類型替換。 包裝中的VAST廣告具有無效的媒體類型時，TVSDK將此廣告視為空。 您可以配置TVSDK是否應對VMAP中內聯的廣告執行相同操作。 有關VAST的詳細資訊 `fallbackOnNoAd` 功能，請參閱 [數字視頻廣告服務模板(VAST)3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast)。
 
-VAST/Digital Video Multiple Ad Playlist(VMAP)規格指出，對於啟用VAST備援的廣告，空白廣告會自動觸發備援廣告的使用。 當VAST廣告為空時，TVSDK會在備援廣告中尋找有效的HLS媒體類型取代。 當包裝函式中的VAST廣告具有無效的媒體類型時，TVSDK會將此廣告視為空白。 您可以設定TVSDK是否應針對VMAP內嵌的廣告執行相同動作。 有關VAST `fallbackOnNoAd`功能的詳細資訊，請參閱[數字視頻廣告服務模板(VAST)3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast)。
+## 定義VMAP內聯廣告的回退廣告行為 {#section_D90BB3C6E539472EABF000C0F616DBE2}
 
-## 定義VMAP內嵌廣告的備援廣告行為{#section_D90BB3C6E539472EABF000C0F616DBE2}
+當VMAP內聯廣告包含無效的媒體類型時，可以啟用回退。
 
-當VMAP內嵌廣告包含無效的媒體類型時，您可以開啟備援。
-
-1. 將`FallbackOnInvalidCreativeEnabled`設為`YES`，當線性／內嵌廣告的媒體類型對HLS無效時，VMAP會回落。
+1. 設定 `FallbackOnInvalidCreativeEnabled` 至 `YES` 線上性/內聯ad的媒體類型對HLS無效時使VMAP回落。
 
    >[!NOTE]
    >
-   >預設值為NO。 如果線性廣告因為媒體類型無效或廣告無法重新封裝而失敗，此標幟可讓Primetime廣告決策遵循與廣告為空的VAST包裝函式相同的備援行為。
+   >預設值為NO。 如果線性廣告因為其介質類型無效或無法重新打包廣告而失敗，則此標誌允許Migna時廣告決策遵循與廣告是空的VAST包裝相同的回退行為。
 
    ```
    PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init] autorelease]; 
    adMetadata.isFallbackOnInvalidCreativeEnabled = YES;
    ```
 
-## VAST和VMAP {#section_5B6716CC49CC4C40964CFE9F122C57A6}的廣告備援行為
+## VAST和VMAP的廣告回退行為 {#section_5B6716CC49CC4C40964CFE9F122C57A6}
 
-當Primetime廣告決策遇到空白或媒體類型對HLS無效的VAST廣告（創意廣告）時，它會評估備援廣告以判斷要傳回的內容。
+當黃金時段廣告決策遇到空或媒體類型對HLS無效的VAST廣告（創意廣告）時，它會評估回退廣告以確定返回的內容。
 
-在TVSDK中，唯一有效的媒體類型是`application/x-mpegURL`(M3U8)。
+在TVSDK中，唯一有效的媒體類型是 `application/x-mpegURL` (M3U8)。
 
-當有獨立的後援廣告時，Primetime廣告決策外掛程式會依下列順序檢查這些廣告，並傳回具有有效媒體類型的第一個廣告：
+當有獨立的回退廣告時，黃金時段廣告決策插件將按以下順序檢查這些廣告並返回第一個具有有效媒體類型的廣告：
 
-1. 如果啟用重新封裝，則首次出現具有無效媒體類型的廣告會被視為其他無效媒體類型。
+1. 如果啟用重新打包，則第一次出現具有無效媒體類型的廣告時，會像處理其他無效媒體類型一樣處理。
 
-   如果重新封裝失敗，此程式會套用至廣告的其他發生次數。
-1. 如果TVSDK找不到有效的備援廣告，則會傳回具有無效媒體類型的原始廣告。
-1. 如果傳回具有有效MIME類型的備援廣告，而非原始廣告，Primetime廣告決策會將錯誤碼403傳送至VAST錯誤URL（如果有的話）。
-1. 如果備援廣告是包裝函式，並傳回多個廣告，則只會傳回具有正確媒體類型的廣告。
+   如果重新打包失敗，此過程將應用於廣告的其他事件。
+1. 如果TVSDK找不到有效的回退廣告，則返回媒體類型無效的原始廣告。
+1. 如果返回具有有效MIME類型的回退廣告而不是原始廣告，則Mighare廣告決策會將錯誤代碼403發送到VAST錯誤URL（如果可用）。
+1. 如果回退廣告是包裝，並返回多個廣告，則只返回具有正確媒體類型的廣告。
 
 >[!IMPORTANT]
 >
->VAST包裝函式中的廣告一律會啟用此行為。 對於VMAP內嵌的VAST廣告，行為預設會停用，但您的應用程式可以啟用它。
-
+>此行為始終為VAST包裝中的廣告啟用。 對於VMAP內聯的VAST廣告，預設情況下會禁用該行為，但您的應用程式可以啟用它。

@@ -1,20 +1,19 @@
 ---
-title: 自訂中繼資料
-description: 自訂中繼資料
+title: 自定義元資料
+description: 自定義元資料
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d7783420-b345-44de-8f22-a16dda5d7554
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
+# 自定義元資料 {#custom-metadata}
 
-# 自訂中繼資料{#custom-metadata}
+**指定自定義鍵/值，以添加到可由伺服器應用程式解釋的內容元資料中。**
 
-**指定自訂金鑰／值，以新增至可由伺服器應用程式解譯的內容中繼資料。**
+Adobe訪問內容元資料格式允許在打包時包含定製密鑰/值對，以在許可證簽發期間由許可證伺服器處理。 此元資料與策略分開，對於每個內容都可以是唯一的。
 
-Adobe存取內容中繼資料格式允許在封裝時包含自訂金鑰／值配對，以在授權發行期間由授權伺服器處理。 此中繼資料與原則不同，且對每個內容而言都是唯一的。
-
-範例使用案例：在測試階段，您會在封裝時加入自訂屬性「Release:BETA」。 授權伺服器可在測試期間向此內容發放授權，但在測試期間到期後，授權伺服器就不允許存取內容。
+示例用例：在Beta階段，您在打包時包括自定義屬性「Release:BETA」。 許可證伺服器可以在試用期內向此內容提供許可證，但在試用期到期後，許可證伺服器將不允許訪問該內容。

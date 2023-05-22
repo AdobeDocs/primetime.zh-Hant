@@ -1,16 +1,15 @@
 ---
-title: 授權嵌入程式概觀
-description: 授權嵌入程式概觀
+title: 許可證嵌入程式概述
+description: 許可證嵌入程式概述
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8a58fbc2-179b-4b2e-83a9-fcbdbfb44a63
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '27'
 ht-degree: 0%
 
 ---
 
+# 許可證嵌入程式概述 {#license-embedder-overview}
 
-# 許可證嵌入器概述{#license-embedder-overview}
-
-使用「授權嵌入」命令列工具，您可以將預先產生的授權內嵌在使用Media Packager保護的內容中。
+使用License Emderder命令行工具，可以將預生成的許可證嵌入到使用Media Packager保護的內容中。

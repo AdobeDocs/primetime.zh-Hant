@@ -1,42 +1,41 @@
 ---
-description: 您可以使用瀏覽器TVSDK來擷取可顯示在搜尋列上之媒體的相關資訊。
-title: 顯示視訊的持續時間、目前時間和剩餘時間
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以使用瀏覽器TVSDK來檢索可在查找欄上顯示的媒體資訊。
+title: 顯示視頻的持續時間、當前時間和剩餘時間
+exl-id: f2aa3c42-9c47-4a55-aed6-7dc5a8d0662b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
+# 顯示視頻的持續時間、當前時間和剩餘時間{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-# 顯示視訊的持續時間、目前時間和剩餘時間{#display-the-duration-current-time-and-remaining-time-of-the-video}
+您可以使用瀏覽器TVSDK來檢索可在查找欄上顯示的媒體資訊。
 
-您可以使用瀏覽器TVSDK來擷取可顯示在搜尋列上之媒體的相關資訊。
+1. 等待玩家至少處於PREPARED狀態。
+1. 使用 `MediaPlayer.currentTime` 屬性。
 
-1. 等待您的播放器至少處於「已準備」狀態。
-1. 使用`MediaPlayer.currentTime`屬性擷取目前的播放磁頭時間。
-
-   此屬性會傳回虛擬時間軸上目前的播放磁頭位置（以毫秒為單位）。 時間會相對於可能包含多個替代內容例項的已解析串流來計算，例如，多個廣告或廣告片段會拼接到主串流中。 對於即時／線性串流，傳回的時間一律在播放視窗範圍內。
+   此屬性返回虛擬時間軸上當前播放頭位置（毫秒）。 該時間是相對於可能包含多個替代內容實例的解析流計算的，例如，將多個廣告或廣告片段拼接到主流中。 對於即時/線性流，返回的時間始終在回放窗口範圍內。
 
    ```js
    MediaPlayer.currentTime
    ```
 
-1. 擷取串流的播放範圍並決定持續時間。
-   1. 使用`mediaPlayer.playbackRange`屬性來取得虛擬時間軸時間範圍。
+1. 檢索流的播放範圍並確定持續時間。
+   1. 使用  `mediaPlayer.playbackRange` 屬性，以獲取虛擬時間軸時間範圍。
 
-   1. 要確定持續時間，請從範圍結束處減去開始。
+   1. 要確定持續時間，請從範圍結束減去開始。
 
-      這包括插入至串流（廣告）的其他內容的持續時間。
+      這包括插入流（廣告）的附加內容的持續時間。
 
-      對於VOD，範圍一律以零開始，而結束值等於主要內容持續時間與插入串流（廣告）中之其他內容的持續時間之和。
+      對於VOD，範圍始終以零開始，結束值等於主內容持續時間和插入流（廣告）中的附加內容的持續時間之和。
 
-      對於線性／即時資產，範圍代表播放視窗範圍，而此範圍在播放期間會變更。
+      對於線性/即時資產，該範圍表示回放窗口範圍，且此範圍在回放期間會發生更改。
 
-1. 使用MediaPlayer和瀏覽器TVSDK元素上可用的方法來設定搜尋列參數。
+1. 使用MediaPlayer和Browser TVSDK元素上可用的方法設定查找欄參數。
 
-   例如，這裡提供了可在HTML中顯示搜尋列的版面。
+   例如，這裡可能有一個佈局以在HTML中顯示查找條。
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -50,7 +49,7 @@ ht-degree: 0%
      </div> 
    ```
 
-   以下是對應的css:
+   下面是相應的css:
 
    ```
    #seekbar { 
@@ -148,7 +147,7 @@ ht-degree: 0%
    } 
    ```
 
-1. 監聽`AdobePSDK.TimeChangeEvent`並相應地更新seekbar。
+1. 聽 `AdobePSDK.TimeChangeEvent` 並相應地更新監聽欄。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
@@ -172,7 +171,7 @@ ht-degree: 0%
        } 
    ```
 
-   此示例建立一個seekbar對象以更新seekbar:
+   此示例建立一個Seekbar對象以更新Seekbar:
 
    ```js
    /** 
@@ -343,4 +342,3 @@ ht-degree: 0%
    
            })(); 
    ```
-

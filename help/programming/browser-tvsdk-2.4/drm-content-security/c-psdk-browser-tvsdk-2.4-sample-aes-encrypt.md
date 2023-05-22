@@ -1,29 +1,27 @@
 ---
-description: AES-128加密方法對包括標頭的整個傳輸流(TS)容器進行加密，而SAMPLE-AES加密僅對音頻和部分視頻資料進行加密。
-title: AES加密的HLS串流範例
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: AES-128加密方法加密包括報頭的整個傳輸流(TS)容器，而SAMPLE-AES加密僅加密音頻和部分視頻資料。
+title: 示例AES加密的HLS流
+exl-id: 04bda50f-5ca4-4a00-bb5a-97259a2cb005
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
 
 ---
 
+# 示例AES加密的HLS流{#sample-aes-encrypted-hls-streams}
 
-# 範例AES加密的HLS串流{#sample-aes-encrypted-hls-streams}
+AES-128加密方法加密包括報頭的整個傳輸流(TS)容器，而SAMPLE-AES加密僅加密音頻和部分視頻資料。
 
-AES-128加密方法對包括標頭的整個傳輸流(TS)容器進行加密，而SAMPLE-AES加密僅對音頻和部分視頻資料進行加密。
-
-在加密流中，標識保護塊，其上完成保護過程。 H.264視頻保護塊是網路適配層(NAL)單元的類型1和類型5的主體。 受保護的音訊區塊是音訊影格，音訊必須採用AAC格式。
+在加密流中，標識保護塊，在該塊上完成保護過程。 H.264視頻保護塊是網路適配層(NAL)單元類型1和類型5的主體。 受保護的音頻塊是音頻幀，音頻必須為AAC格式。
 
 >[!IMPORTANT]
 >
->您必須有索引鍵和初始化向量(IV)。 瀏覽器TVSDK使用金鑰和IV來解密串流，再播放它。
+>必須具有鍵和初始化向量(IV)。 瀏覽器TVSDK在播放流之前使用密鑰和IV解密流。
 
-每個受保護區塊包含16位元組區塊的整數，這些區塊使用AES-128密碼區塊鏈結(CBC)模式加密，而不需填補。 CBC發生在每個受保護的塊中，而在每個新保護塊的開頭，IV必須重置為其原始值。
+每個受保護塊包含16位元組的塊的整數，這些塊使用AES-128密碼塊連結(CBC)模式進行加密，而不用填充。 CBC發生在每個受保護塊中，並且在每個新受保護塊的開始時，必須將IV重置為其原始值。
 
-支援下列轉碼器：
+支援以下編解碼器：
 
-* 視訊支援H.264。
-* 對於音訊，僅AAC支援sample-AES。
-
+* 對於視頻，支援H.264。
+* 對於音頻，僅AAC支援sample-AES。

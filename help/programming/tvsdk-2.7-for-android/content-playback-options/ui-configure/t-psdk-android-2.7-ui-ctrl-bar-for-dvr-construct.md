@@ -1,43 +1,43 @@
 ---
-description: 您可以實作對VOD和即時串流具有DVR支援的控制列。 DVR支援包含可檢視視窗和用戶端即時點的概念。
-title: 構建增強的DVR控制欄
+description: 您可以實現一個支援DVR的控制欄，用於VOD和即時流。 DVR支援包括可查看窗口和客戶端即時點的概念。
+title: 構造增強的DVR控制條
 exl-id: 8a764417-4425-44c0-9551-3077c8c0a323
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
-# 構建增強的DVR控制欄 {#construct-a-control-bar-enhanced-for-dvr}
+# 構造增強的DVR控制條 {#construct-a-control-bar-enhanced-for-dvr}
 
-您可以實作對VOD和即時串流具有DVR支援的控制列。 DVR支援包含可檢視視窗和用戶端即時點的概念。
+您可以實現一個支援DVR的控制欄，用於VOD和即時流。 DVR支援包括可查看窗口和客戶端即時點的概念。
 
-* 對於VOD，可搜尋視窗的長度是整個資產的持續時間。
-* 對於即時串流，DVR（可查看）視窗的長度定義為從即時播放視窗開始到用戶端即時點結束的時間範圍。
+* 對於VOD，可瀏覽窗口的長度是整個資產的持續時間。
+* 對於即時流，DVR（可查看）窗口的長度定義為從即時播放窗口開始到客戶端即時點結束的時間範圍。
 
-   請記住以下資訊：
+   記住以下資訊：
 
-   * 從即時視窗結尾減去緩衝長度，即可計算用戶端即時點。
+   * 通過從即時窗口端減去緩衝長度計算客戶機即時點。
 
-      目標持續時間值大於或等於資訊清單中片段的最大持續時間。
+      目標持續時間是大於或等於清單中片段的最大持續時間的值。
    * 預設值為10000毫秒。
-   * 用於即時播放的控制條通過在開始播放時首先將拇指定位在客戶端即時點，並通過顯示標籤不允許搜索的區域的區域來支援DVR。
+   * 用於即時回放的控制條通過在開始回放時首先將拇指定位在客戶端即時點上，並通過顯示標籤不允許查找的區域的區域來支援DVR。
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
 ![](assets/dvr-window.PNG){width="684"}
 
-1. 若要實作具有DVR支援的控制列，請遵循 [顯示當前播放位置的搜索拖曳條……](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) 差異：
+1. 要實現具有DVR支援的控制欄，請按照中的步驟操作 [顯示具有當前播放位置的查找擦除欄……](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) 差異如下：
 
-   * 您可以實作僅對應至可搜尋範圍的控制列，而非對於播放範圍。
+   * 您可以實現一個控制欄，該控制欄僅映射至可查找範圍，而不映射至回放範圍。
 
-      在可搜尋範圍內，任何搜尋的使用者互動都可視為安全。
-   * 您可以實作已對應播放範圍的控制列，但也會顯示可搜尋的範圍。
+      任何用於搜索的用戶交互都可以被認為在可搜索範圍內是安全的。
+   * 您可以實現一個控制欄，該控制欄映射為播放範圍，但也顯示可查找的範圍。
 
       對於控制欄：
-   1. 在代表播放範圍的控制列中新增覆蓋。
-   1. 當使用者開始搜尋時，請使用 `MediaPlayer.getSeekableRange`.
+   1. 向表示回放範圍的控制欄添加覆蓋。
+   1. 當用戶開始尋道時，使用 `MediaPlayer.getSeekableRange`。
 
       例如：
 
@@ -48,7 +48,7 @@ ht-degree: 0%
       }
       ```
 
-      您也可以選擇使用來搜尋用戶端即時點 `MediaPlayer.LIVE_POINT` 常數。
+      您還可以選擇使用 `MediaPlayer.LIVE_POINT` 常數。
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);

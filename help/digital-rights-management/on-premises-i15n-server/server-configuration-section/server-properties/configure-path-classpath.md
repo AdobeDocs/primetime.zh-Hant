@@ -2,36 +2,33 @@
 title: 配置路徑和類路徑
 description: 配置路徑和類路徑
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e6e9f837-4e3d-43e1-971d-3fa0ccaeff39
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # 配置路徑和類路徑{#configure-the-path-and-classpath}
 
-[!DNL flashaccess.war]包含[!DNL jsafeWithNative.jar]，該庫是Crypto-J庫。 後者需要額外的本機庫來執行加密操作。
+的 [!DNL flashaccess.war] 包含 [!DNL jsafeWithNative.jar]，即Crypto-J庫。 後者需要附加的本機庫來執行加密操作。
 
-1. 將原生[!DNL jsafe]程式庫新增至路徑。
+1. 添加本機 [!DNL jsafe] 庫。
 
-   * **Linux /  [!DNL libjsafe.so] -** 包含的目 [!DNL libjsafe.so] 錄必須位於路徑上（本機Crypto-J庫也可用於其他平台）。例如，在`LD_LIBRARY_PATH`上設定[!DNL libjsafe.so]。
+   * **Linux / [!DNL libjsafe.so] -** 包含 [!DNL libjsafe.so] 必須位於路徑上（本機Crypto-J庫也可用於其他平台）。 例如，設定 [!DNL libjsafe.so] 上 `LD_LIBRARY_PATH`。
 
-   * **Windows /  [!DNL jsafe.dll] -Windows** 上的對應項 [!DNL libjsafe.so] 是適當的 [!DNL jsafe.dll]。
-   這些庫可用於[!DNL thirdparty]庫資料夾中。
-1. 將[!DNL adobe-flashaccess-certs] jar檔案之一放在類路徑上。
+   * **Windows / [!DNL jsafe.dll] -** Windows上的對應對象 [!DNL libjsafe.so] 合適 [!DNL jsafe.dll]。
+   這些庫在 [!DNL thirdparty] 庫資料夾。
+1. 放上 [!DNL adobe-flashaccess-certs] 類路徑上的jar檔案。
 
-       此JAR檔案不包含在WAR檔案中；必須將其顯式添加到類路徑中。
+       此JAR檔案未包含在WAR檔案中；必須將其顯式添加到類路徑中。
    
-   * 開發伺服器——僅應使用[!DNL adobe-flashaccess-certs-prerelease.jar]。
-   * 生產伺服器——僅應使用[!DNL adobe-flashaccess- certs.jar]
+   * 開發伺服器 — 只應使用 [!DNL adobe-flashaccess-certs-prerelease.jar]。
+   * 生產伺服器 — 只應使用 [!DNL adobe-flashaccess- certs.jar]
 
-分發包括[!DNL shared]資料夾，其中包括jar檔案和預配置的[!DNL AdobeInitial.properties]檔案。 Adobe建議您通過[!DNL catalina.properties]檔案將這些項目添加到`common.loader`。 例如：
+該分配包括 [!DNL shared] 包含jar檔案和預配置的資料夾 [!DNL AdobeInitial.properties] 的子菜單。 Adobe建議將這些項添加到 `common.loader` 通過 [!DNL catalina.properties] 的子菜單。 例如：
 
 ```
 common.loader=<Any Pre-Existing Values>,${catalina.home}/shared/classes,${catalina.home}/shared/lib/*.jar
 ```
-
-

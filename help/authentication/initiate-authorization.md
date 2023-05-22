@@ -13,19 +13,19 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-## 重設API端點 {#clientless-endpoints}
+## REST API終結點 {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -33,9 +33,9 @@ ht-degree: 0%
 
 獲取授權響應。 
 
-| 端點 | 已呼叫  </br>依據 | 輸入   </br>Params | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
+| 端點 | 已調用  </br>按 | 輸入   </br>帕拉姆 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authorize | 串流應用程式</br></br>或</br></br>程式設計人員服務 | 1.請求者（強制）</br>2.  deviceId（必要）</br>3.  資源（必要）</br>4.  device_info/X-Device-Info（強制）</br>5。  _deviceType_</br> 6.  _deviceUser_ （已過時）</br>7.  _appId_ （已過時）</br>8.  額外參數（可選） | GET | 包含授權詳細資料或錯誤詳細資料（若失敗）的XML或JSON。 請參閱以下範例。 | 200 — 成功  </br>403 — 沒有成功 |
+| &lt;sp_fqdn>/api/v1/authorize | 流式處理應用</br></br>或</br></br>程式設計師服務 | 1。請求者（必需）</br>2.  設備ID（必需）</br>3.  資源（必需）</br>4.  device_info/X-Device-Info（必需）</br>5.  _設備類型_</br> 6。  _設備用戶_ （不建議使用）</br>7。  _應用ID_ （不建議使用）</br>8.  額外參數（可選） | GET | 包含授權詳細資訊或錯誤詳細資訊（如果失敗）的XML或JSON。 請參見下面的示例。 | 200 — 成功  </br>403 — 未成功 |
 
 {style="table-layout:auto"}
 
@@ -44,29 +44,29 @@ ht-degree: 0%
 
 | 輸入參數 | 說明 |
 | --- | --- |
-| 請求者 | 此操作對其有效的程式設計師請求者ID。 |
-| deviceId | 設備id位元組。 |
-| 資源 | 包含resourceId（或MRSS片段）、識別使用者要求的內容並由MVPD授權端點識別的字串。 |
-| device_info/</br></br>X-Device-Info | 串流裝置資訊。</br></br>**附註**:此URL可以作為URL參數傳遞，但由於此參數的可能大小及GETURL長度的限制，因此URL應以X-Device-Info在http標題中傳遞。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | 裝置類型（例如Roku、PC）。</br></br>如果此參數設定正確，ESM將提供以下量度： [按設備類型劃分](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 使用無用戶端時，以便可以針對Roku、AppleTV、Xbox等執行不同類型的分析。</br></br>請參閱 [傳遞量度中無用戶端裝置類型參數的優點&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**附註**:device_info將替換此參數。 |
-| _deviceUser_ | 裝置使用者識別碼。 |
-| _appId_ | 應用程式ID/名稱。 </br></br>**附註**:device_info會取代此參數。 |
-| 額外參數 | 呼叫也可包含可啟用其他功能的選用參數，例如：</br></br>* generic_data — 啟用使用 [促銷TempPass](/help/authentication/promotional-temp-pass.md)</br></br>範例： `generic_data=("email":"email@domain.com")` |
+| 請求 | 此操作對其有效的程式設計師請求者ID。 |
+| 設備ID | 設備ID位元組。 |
+| 資源 | 包含resourceId（或MRSS片段）、標識用戶請求的內容並由MVPD授權端點識別的字串。 |
+| 設備資訊/</br></br>X設備資訊 | 流設備資訊。</br></br>**注釋**:此URL可以作為URL參數傳遞，但由於此參數的可能大小和對GETURL長度的限制，它應作為X-Device-Info在http標頭中傳遞。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->。 |
+| _設備類型_ | 設備類型（如Roku、PC）。</br></br>如果此參數設定正確，ESM將提供 [按設備類型分解](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 使用Clientless時，可對Roku、AppleTV、Xbox等執行不同類型的分析。</br></br>請參閱 [傳遞度量中無客戶端設備類型參數的優點&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**注釋**:device_info將替換此參數。 |
+| _設備用戶_ | 設備用戶標識符。 |
+| _應用ID_ | 應用程式ID/名稱。 </br></br>**注釋**:device_info將替換此參數。 |
+| 額外參數 | 該調用還可包含啟用其他功能的可選參數，如：</br></br>* generic_data — 啟用 [促銷臨時傳遞](/help/authentication/promotional-temp-pass.md)</br></br>示例： `generic_data=("email":"email@domain.com")` |
 
 {style="table-layout:auto"}
 
 >[!CAUTION]
 >
->**串流裝置IP位址**</br>
->對於用戶端對伺服器實作，串流裝置IP位址會以此呼叫隱式傳送。  針對伺服器對伺服器實作，其中 **regcode** 呼叫是由程式設計人員服務而非流式設備進行，需要以下標頭才能傳遞流式設備IP地址：</br></br>
+>**流設備IP地址**</br>
+>對於客戶端到伺服器實現，流設備IP地址隨此調用隱式發送。  對於伺服器到伺服器實施， **重碼** 調用由程式設計師服務而非流式設備進行，要傳遞流式設備IP地址，需要以下報頭：</br></br>
 >
 >
 ```
 >X-Forwarded-For : <streaming\_device\_ip>
 >```
 >
->where `<streaming\_device\_ip>` 是串流裝置的公用IP位址。</br></br>
->範例：</br>
+>何處 `<streaming\_device\_ip>` 是流設備公共IP地址。</br></br>
+>示例：</br>
 >
 >
 ```
@@ -75,23 +75,23 @@ ht-degree: 0%
 >```
 
 
-### 範例回應 {#sample-response}
+### 示例響應 {#sample-response}
 
 * **案例1:成功**
 
 </br>
-  * **XML:**
+  **XML:**
   </br>
 
-    &quot;&#39;XML
+    &quot;`XML
     &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
     &lt;authorization>
     &lt;expires>1348148289000&lt;/expires>
-    &lt;mvpd>sampleMvpdId&lt;/mvpd>
-    &lt;requestor>sampleRequestorId&lt;/requestor>
-    &lt;resource>sampleResourceId&lt;/resource>
+    &lt;mvpd>示例MvpdId&lt;/mvpd>
+    &lt;requestor>示例請求者ID&lt;/requestor>
+    &lt;resource>示例資源ID&lt;/resource>
     &lt;/authorization>
-    &quot;
+    「」
 
 
 
@@ -108,11 +108,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->當回應來自Proxy MVPD時，可能會包含名為的其他元素 `proxyMvpd`. 
+>當響應來自代理MVPD時，它可能包含名為 `proxyMvpd`。 
 
  
 
-* **案例2:拒絕授權**
+* **案例二：授權被拒絕**
 
 
    ```JSON

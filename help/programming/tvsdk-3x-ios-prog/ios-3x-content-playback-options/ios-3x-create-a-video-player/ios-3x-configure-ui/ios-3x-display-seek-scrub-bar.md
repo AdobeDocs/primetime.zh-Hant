@@ -1,20 +1,19 @@
 ---
-description: 您可以顯示正在播放的內容的目前和剩餘時間。
-title: 顯示具有當前播放時間位置的搜索拖曳條
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以顯示正在播放的內容的當前時間和剩餘時間。
+title: 顯示具有當前播放時間位置的查找擦除欄
+exl-id: 2093ee96-84fe-4011-ba18-275f2bf960ca
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
+# 顯示具有當前播放時間位置的查找擦除欄 {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
-# 顯示當前播放時間位置{#display-a-seek-scrub-bar-with-the-current-playback-time-position}的搜索拖曳欄
+您可以顯示正在播放的內容的當前時間和剩餘時間。
 
-您可以顯示正在播放的內容的目前和剩餘時間。
-
-若要實作拖曳列，請使用下列范常式式碼：
+要實現清理條，請使用以下示例代碼：
 
 ```
 // 1. Register for the PTMediaPlayerTimeChangeNotification 

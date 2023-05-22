@@ -1,30 +1,30 @@
 ---
-title: 防止MVPD出現在選取對話方塊中
-description: 防止MVPD出現在選取對話方塊中
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 防止MVPD出現在「選擇」對話框中
+description: 防止MVPD出現在「選擇」對話框中
+exl-id: 20faf501-c006-45e2-a725-fb1273ecaffe
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
-# 防止MVPD出現在選取對話方塊中
+# 防止MVPD出現在「選擇」對話框中
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
 ## 問題 {#issue-prevent-mvpd-sel-dialog}
 
-您必須防止（「封鎖清單」）特定MVPD出現在MVPD選取器中。
+您需要防止(&quot;block-list&quot;)特定的MVPD出現在MVPD選擇器中。
 
 
 ## 解決方案 {#solution-prevent-mvpd-sel-dialog}
 
-解決方案是在 `displayProviderDialog()` 的URL。
+解決方案是在 `displayProviderDialog()` 。
 
-例如，如果希望CableCompany_1和CableCompany_2不顯示在MVPD選擇器內，您可以執行如下例所示的操作。
+例如，如果希望CableCompany_1和CableCompany_2不顯示在MVPD選擇器內，則應執行如下例所示的操作。
 
 ```C
 function displayProviderDialog(mvpdList) {

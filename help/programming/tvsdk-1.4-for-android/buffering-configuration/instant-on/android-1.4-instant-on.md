@@ -1,37 +1,36 @@
 ---
-description: 「立即開啟」一詞指預先載入一或多個頻道，讓選擇頻道或切換頻道的使用者可立即看到內容播放。 緩衝已在使用者開始觀看時完成。
-title: 立即啟動
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 即時載入指預載一個或多個頻道，以便用戶選擇頻道或切換頻道可以立即看到內容播放。 在用戶開始監視時，緩衝已完成。
+title: 即開
+exl-id: f640f208-d1b3-467a-be97-38690e10b7ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
+# 即開 {#instant-on}
 
-# 即時於{#instant-on}
+即時載入指預載一個或多個頻道，以便用戶選擇頻道或切換頻道可以立即看到內容播放。 在用戶開始監視時，緩衝已完成。
 
-「立即開啟」一詞指預先載入一或多個頻道，讓選擇頻道或切換頻道的使用者可立即看到內容播放。 緩衝已在使用者開始觀看時完成。
+如果沒有即時開啟，TVSDK將初始化要播放的媒體，但在應用程式調用之前不會開始緩衝流 `play`。 在緩衝完成之前，用戶看不到任何內容。 在即時開啟時，您可以啟動多個媒體播放器（或媒體播放器項載入器）實例，TVSDK會立即開始緩衝流。
 
-在不立即啟動的情況下，TVSDK會初始化要播放的媒體，但直到應用程式呼叫`play`時，才會開始緩衝串流。 在緩衝完成之前，使用者不會看到任何內容。 立即啟動後，您就可啟動多個媒體播放器（或媒體播放器項目載入器）例項，而TVSDK會立即開始緩衝串流。
+當用戶更改頻道且流已正確緩衝時，調用 `play` 在新頻道上立即開始播放。
 
-當使用者變更頻道且串流已正確緩衝時，在新頻道上呼叫`play`會立即開始播放。
+儘管對於 `MediaPlayer` TVSDK可以運行的實例，運行更多實例會消耗更多資源。 應用程式效能可能受運行實例數的影響。 有關這些實例的詳細資訊，請參見 [使用MediaPlayerItemLoader載入媒體資源](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)。
 
-雖然TVSDK可執行的`MediaPlayer`例項數目沒有限制，但執行更多例項會耗用更多資源。 執行中的執行個體數量會影響應用程式效能。 如需這些例項的詳細資訊，請參閱[使用MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md)載入媒體資源。
+## 為即時播放配置緩衝 {#configure-buffering-for-instant-on-playback}
 
-## 配置即時播放{#configure-buffering-for-instant-on-playback}的緩衝
+在即時開啟時，用戶可以切換頻道，播放立即開始，而無需等待時間。 啟用即時時，TVSDK會在播放開始之前緩衝一個或多個頻道。
 
-使用者可立即開啟，以切換頻道，而不需等待時間，就可立即開始播放。 當您啟用立即啟動時，TVSDK會在播放開始前緩衝一或多個頻道。
+1. 通過驗證狀態是否為PREPARED，確認資源已載入並已準備好播放。
+1. 呼叫前 `play`調用 `prepareBuffer` 每 `MediaPlayer` 實例。
 
-1. 通過驗證狀態為PREPARED，確認資源已載入並已準備好播放。
-1. 在呼叫`play`之前，請呼叫每個`MediaPlayer`實例的`prepareBuffer`。
-
-   如此可立即啟動，表示TVSDK會開始緩衝，而不實際播放媒體資源。 當緩衝區已滿時，TVSDK會調度`BUFFERING_COMPLETED`事件。
+   這將啟用即時，這意味著TVSDK開始緩衝，而不實際播放媒體資源。 TVSDK派單 `BUFFERING_COMPLETED` 緩衝區已滿時的事件。
 
    >[!NOTE]
    >
-   >依預設，`prepareBuffer`和`prepareToPlay`會設定媒體串流，從頭開始播放。 若要從另一個位置開始，請將位置（以毫秒為單位）傳遞至`prepareToPlay`。
+   >預設情況下， `prepareBuffer` 和 `prepareToPlay` 設定媒體流以從頭開始播放。 要從另一個位置開始，請將該位置（以毫秒為單位）傳遞到 `prepareToPlay`。
 
    ```java
    @Override 
@@ -54,9 +53,9 @@ ht-degree: 0%
    }
    ```
 
-1. 當您收到`BUFFERING_COMPLETE`事件時，請開始播放項目或顯示視覺化回應，以指出內容已完全緩衝。
+1. 當您收到 `BUFFERING_COMPLETE` 事件，開始播放項目或顯示可視反饋以指示內容已完全緩衝。
 
-   如果您呼叫`play`，應立即開始播放。
+   如果你打電話 `play`，應立即開始播放。
 
    ```java
    void onBufferPrepared(const psdk::PSDKEvent *ev) { 

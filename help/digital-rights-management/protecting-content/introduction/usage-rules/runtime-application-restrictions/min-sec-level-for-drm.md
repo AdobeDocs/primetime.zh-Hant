@@ -1,20 +1,19 @@
 ---
-title: DRM和執行時期的最低安全等級
-description: DRM和執行時期的最低安全等級
+title: DRM和運行時的最低安全級別
+description: DRM和運行時的最低安全級別
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d8b1162f-26ed-4072-9fed-20a38b9c587c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
 
 ---
 
+# DRM和運行時的最低安全級別{#minimum-security-level-for-drm-and-runtimes}
 
-# DRM和執行時期的最低安全等級{#minimum-security-level-for-drm-and-runtimes}
+最低安全級別指定訪問內容所需的安全級別。 為每個元件指定各個安全級別。
 
-最低安全級別指定訪問內容所需的安全級別。 您可以為每個元件指定各個安全級別。
+DRM/運行時模組的預設安全級別為10000。
 
-DRM/Runtime模組的預設安全級別為10000。
-
-範例使用案例：某些類型的內容（例如HD視訊）可能需要比其他類型更高的安全性等級。
+示例用例：某些類型的內容（例如高清視頻）可能需要比其他類型更高的安全級別。

@@ -1,32 +1,31 @@
 ---
-description: 您可以使用PrimetimeDigital Rights Management(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商DRM解決方案，做為Adobe整合Primetime DRM解決方案的替代方案。
-title: Primetime DRM介面總覽
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以使用黃金時段Digital Rights Management(DRM)系統的功能來提供對視頻內容的安全訪問。 或者，您可以使用第三方DRM解決方案作為Adobe整合的Mighine DRM解決方案的替代方案。
+title: 黃金時段DRM介面概述
+exl-id: 2f6e50e6-39f0-4939-bb9b-6c46e34bab7e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
+# 概述 {#primetime-drm-interface-overview}
 
-# 概述{#primetime-drm-interface-overview}
-
-您可以使用PrimetimeDigital Rights Management(DRM)系統的功能，提供對視訊內容的安全存取。 或者，您也可以使用協力廠商DRM解決方案，做為Adobe整合Primetime DRM解決方案的替代方案。
+您可以使用黃金時段Digital Rights Management(DRM)系統的功能來提供對視頻內容的安全訪問。 或者，您可以使用第三方DRM解決方案作為Adobe整合的Mighine DRM解決方案的替代方案。
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-請洽詢您的Adobe代表，以取得有關協力廠商DRM解決方案可用性的最新資訊。
+請咨詢您的Adobe代表，瞭解有關第三方DRM解決方案可用性的最新資訊。
 
-Primetime數位版權管理(DRM)系統的主要用戶端元素是DRM管理器。 Android SDK隨附的範例應用程式包含`DRMHelper`類別，示範如何讓某些DRM作業更容易實作。
+黃金時段數字版權管理(DRM)系統的關鍵客戶端元素是DRM管理器。 Android SDK附帶的示例應用程式套件括 `DRMHelper` 演示如何使某些DRM操作更容易實現的類。
 
-Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程式中實作內容保護。 您可以針對每個數位媒體檔案建立授權，以保護並管理視訊內容的權利。
+黃金時段DRM提供可擴展的、高效的工作流，以在TVSDK應用程式中實施內容保護。 通過為每個數字媒體檔案建立許可證，您可以保護和管理視頻內容的權限。
 
-請參閱TVSDK套件中包含的DRM範例播放器程式碼。
+請參閱TVSDK包中包含的DRM示例播放器代碼。
 
-以下是使用DRM時最重要的API元素：
+以下是使用DRM的最重要的API元素：
 
-* 媒體播放器中對實現DRM子系統的DRM管理器對象的參考：
+* 媒體播放器中對實現DRM子系統的DRM管理器對象的引用：
 
    ```java
    MediaPlayer.getDRMManager();
@@ -34,13 +33,13 @@ Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程�
 
    >[!TIP]
    >
-   >此API只有在`MediaPlayerEvent.DRM_METADATA`引發後才會傳回有效的`DRMManager`物件。 如果您在觸發此事件之前呼叫`getDRMManager()`，則可能會傳回NULL。
+   >此API將返回有效 `DRMManager` 對象僅在 `MediaPlayerEvent.DRM_METADATA` 被炒了。 如果你打電話 `getDRMManager()` 在觸發此事件之前，它可能返回NULL。
 
-* `DRMHelper`幫助類，在實施DRM工作流時非常有用。
+* 的 `DRMHelper` 幫助類，在實施DRM工作流時非常有用。
 
-   您可在`ReferencePlayer`中看到`DRMHelper`。
+   你可以看到 `DRMHelper` 在 `ReferencePlayer`。
 
-* `DRMHelper`中繼資料載入器方法，當DRM中繼資料位於與媒體不同的URL時，會載入該方法。
+* A `DRMHelper` 元資料載入器方法，當DRM元資料位於與媒體分開的URL中時，該方法載入DRM元資料。
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -48,7 +47,7 @@ Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程�
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* 一種檢查DRM元資料以確定是否需要驗證的`DRMHelper`方法。
+* A `DRMHelper` 方法檢查DRM元資料以確定是否需要驗證。
 
    ```java
    /** 
@@ -62,7 +61,7 @@ Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程�
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
    ```
 
-* `DRMHelper` 執行驗證的方法。
+* `DRMHelper` 執行身份驗證的方法。
 
    ```java
    /** 
@@ -93,11 +92,11 @@ Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程�
 
 其他相關API元素：
 
-* [com.adobe.ave.drm.DRMManager](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMManager.html)
-* [com.adobe.ave.drm.DRMMetdata](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMMetadata.html)
+* [com.adobe.ave.drm.DRManager](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMManager.html)
+* [com.adobe.ave.drm.DRMetdata](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMMetadata.html)
 * [com.adobe.ave.drm.DRMPolicy](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMPolicy.html)
 * [com.adobe.ave.drm.DRMAuthenticationMethod](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMAuthenticationMethod.html)
-* [com.adobe.ave.drm.DRMAuthenticationCompleteCallback](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMAuthenticationCompleteCallback.html)
+* [com.adobe.ave.drm.DRMA認證完整回調](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMAuthenticationCompleteCallback.html)
 * [com.adobe.ave.drm.DRMOperationErrorCallback](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMOperationErrorCallback.html)
 * com.adobe.mediacore.drm.DRMAuthenticateListener
 
@@ -108,4 +107,4 @@ Comment Type: draft
 -->
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-有關DRM的詳細資訊，請參閱[Adobe PrimetimeDRM文檔](https://helpx.adobe.com/primetime/user-guide.html)。
+有關DRM的詳細資訊，請參見 [Adobe PrimetimeDRM文檔](https://helpx.adobe.com/primetime/user-guide.html)。

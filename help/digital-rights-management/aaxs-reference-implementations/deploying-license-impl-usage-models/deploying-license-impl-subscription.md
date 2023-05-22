@@ -2,15 +2,14 @@
 title: 訂閱
 description: 訂閱
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: dbd39af3-7b2d-4fdd-abe1-07399c8692b6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# 訂閱 {#subscription}
 
-# 訂閱{#subscription}
-
-有些服務提供付費訂閱，讓使用者只要繼續支付月費，就能無限制地存取大型內容庫。 授權伺服器會針對每項內容發出唯一的授權，並會發出根授權，其到期時間與訂閱期間一致。 每個月，當使用者重新訂閱時，根授權也可以續約。 當要求授權時，使用者需要驗證，如此伺服器就可確認使用者的訂閱是最新版本。
+一些服務提供付費訂閱，只要用戶繼續支付每月費用，就可以無限制地訪問大量內容庫。 許可證伺服器為每個內容發出唯一的許可證，並且還發出根許可證，根許可證的過期與預訂期一致。 每個月，當用戶重新發佈其訂閱時，也可以續訂根許可證。 當請求許可證時，用戶需要進行身份驗證，以便伺服器可以驗證用戶的訂閱是否是最新的。

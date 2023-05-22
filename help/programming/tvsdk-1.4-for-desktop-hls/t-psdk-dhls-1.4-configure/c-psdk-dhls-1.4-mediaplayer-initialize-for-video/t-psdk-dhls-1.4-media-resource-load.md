@@ -1,50 +1,49 @@
 ---
-description: 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
+description: 通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。 這是載入媒體資源的一種方法。
 title: 在MediaPlayer中載入媒體資源
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8258c45e-f8bf-434d-9621-88c189e1530d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
 # 在MediaPlayer中載入媒體資源{#load-a-media-resource-in-the-mediaplayer}
 
-直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。 這是載入介質資源的一種方法。
+通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。 這是載入媒體資源的一種方法。
 
-1. 使用要播放的新資源設定`MediaPlayer`對象的可播放項。
+1. 設定 `MediaPlayer` 對象的可播放項，以及要播放的新資源。
 
-   呼叫`MediaPlayer.replaceCurrentResource`並傳遞現有的`MediaResource`例項，以取代您現有的MediaPlayer目前可播放的項目。
+   通過調用替換現有MediaPlayer的當前可播放項 `MediaPlayer.replaceCurrentResource` 通過現有 `MediaResource` 實例。
 
-1. 請至少檢查下列變更：
+1. 至少檢查以下更改：
 
    * 已初始化
-   * 準備好
+   * 準備
    * 錯誤
 
-      通過這些事件，`MediaPlayer`對象可以在媒體資源成功載入時通知您的應用程式。
+      通過這些活動， `MediaPlayer` 在成功載入媒體資源時，對象可以通知您的應用程式。
 
-1. 當媒體播放器的狀態更改為「已初始化」時，您可以調用`MediaPlayer.prepareToPlay`
+1. 當媒體播放器的狀態更改為INITIALIZED時，可以調用 `MediaPlayer.prepareToPlay`
 
-   「已初始化」狀態表示介質已成功載入。 呼叫`prepareToPlay`會啟動廣告解析度和位置處理程式（如果有的話）。
+   INITIALIZED狀態表示媒體已成功載入。 呼叫 `prepareToPlay` 啟動廣告解決和投放過程（如果有）。
 
-1. 當媒體播放器狀態變更為PREPARED時，媒體串流已成功載入並準備播放。
+1. 當媒體播放器狀態更改為PREPARED時，媒體流已成功載入並準備播放。
 
-   載入媒體串流時，會建立`MediaPlayerItem`。
+   載入媒體流時， `MediaPlayerItem` 的子菜單。
 
-如果發生故障，MediaPlayer會切換至「錯誤」狀態。 它還會將`STATUS_CHANGED`事件分派到您的`MediaPlayerStatusChangeEvent`回呼，以通知您的應用程式。
+如果出現故障，MediaPlayer將切換到「ERROR（錯誤）」狀態。 它還通過調度 `STATUS_CHANGED` 事件 `MediaPlayerStatusChangeEvent` 回叫。
 
-這會傳遞數個參數：
-* 類型字串的`type`參數，其值為`ERROR`。
+這會傳遞幾個參數：
+* A `type` 帶值的字串類型參數 `ERROR`。
 
-* `MediaError`參數，您可用來取得包含錯誤事件診斷資訊的通知。
+* A `MediaError` 參數，用於獲取包含有關錯誤事件的診斷資訊的通知。
 
 
 <!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
-以下簡化的范常式式碼說明載入媒體資源的程式：
+以下簡化示例代碼說明了載入媒體資源的過程：
 
 ```
 // mediaResource is a properly configured MediaResource instance 

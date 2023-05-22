@@ -1,7 +1,6 @@
 ---
-description: 使用選用的pttrackingmode、pttrackingversion和pttrackingposition查詢參數，以取得要傳送目前視訊廣告追蹤資訊的URL。 回應會隨追蹤版本以及視訊串流是即時或隨選(VOD)而異。
-title: 播放器與資訊清單伺服器互動的API
-translation-type: tm+mt
+description: 使用可選的pttrackingmode、pttrackingversion和pttrackingposition查詢參數可獲取要向其發送有關當前視頻的廣告跟蹤資訊的URL。 響應隨跟蹤版本和視頻流是即時還是按需(VOD)而變化。
+title: 用於玩家與清單伺服器交互的API
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '260'
@@ -10,26 +9,26 @@ ht-degree: 0%
 ---
 
 
-# 播放器與資訊清單伺服器{#api-for-players-to-interact-with-the-manifest-server}互動的API
+# 用於玩家與清單伺服器交互的API {#api-for-players-to-interact-with-the-manifest-server}
 
-使用選用的`pttrackingmode`、`pttrackingversion`和`pttrackingposition`查詢參數，以取得要傳送目前視訊廣告追蹤資訊的URL。 回應會隨追蹤版本以及視訊串流是即時或隨選(VOD)而異。
+使用可選 `pttrackingmode`。 `pttrackingversion`, `pttrackingposition` 查詢參數以獲取要向其發送有關當前視頻的廣告跟蹤資訊的URL。 響應隨跟蹤版本和視頻流是即時還是按需(VOD)而變化。
 
-## 查詢參數{#query-parameters}
+## 查詢參數 {#query-parameters}
 
-**pttrackingmode**
+**跟蹤模式**
 
-範例：`pttrackingmode=simple`
-指定simple會告訴資訊清單伺服器您要追蹤資訊。
-請在要求追蹤資訊之前，先在要求時指定擷取M3U8。當您未指定資訊時，資訊清單伺服器會傳回#EXT-X-MARKER標籤中的追蹤資訊。
-或者，如果您指定除了簡單以外的有效值，則會呼叫伺服器端追蹤。
+示例： `pttrackingmode=simple`
+指定simple會告訴清單伺服器您想要跟蹤資訊。
+在請求跟蹤資訊之前，請在請求獲取M3U8時指定它。如果未指定它，清單伺服器將返回#EXT-X-MARKER標籤中的跟蹤資訊。
+或者，如果指定除簡單跟蹤之外的有效值，則會調用伺服器端跟蹤。
 
 **pttrackingversion**
 
-範例：`pttrackingversion=v2`
-此參數會告訴資訊清單伺服器要使用何種格式來傳回追蹤資訊（請參閱[檔案格式](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md)）。
-在要求追蹤資訊之前，請在要求時指定它以擷取M3U8。當您未指定它或指定無效值時，資訊清單伺服器會使用v1。
+示例： `pttrackingversion=v2`
+此參數將告訴清單伺服器返回跟蹤資訊時要使用的格式(請參閱 [檔案格式](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md))。
+在請求跟蹤資訊之前，請在請求獲取M3U8時指定它。如果未指定它或指定了無效值，清單伺服器將使用v1。
 
-**pttrackingposition**
+**跟蹤位置**
 
-範例：`pttrackingposition`
-此參數會通知資訊清單伺服器，將視訊的追蹤資訊傳回為M3U8檔案中的JSON或VMAP物件。資訊清單伺服器會忽略指定的值，並傳送該作業的所有追蹤資訊。 如果未傳遞值，manifest伺服器會傳回要求的M3U8檔案。
+示例： `pttrackingposition`
+此參數指示清單伺服器以M3U8檔案中的JSON或VMAP對象形式返回視頻的跟蹤資訊。清單伺服器忽略指定值併發送它為該會話擁有的所有跟蹤資訊。 如果未傳遞值，則清單伺服器返回請求的M3U8檔案。

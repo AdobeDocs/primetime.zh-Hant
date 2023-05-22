@@ -1,20 +1,19 @@
 ---
-title: 建立視訊播放器
-description: 建立視訊播放器
+title: 建立視頻播放器
+description: 建立視頻播放器
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 06667acf-1609-4457-8fc3-0e42fb4252bc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
+# 建立視頻播放器{#create-video-players}
 
-# 建立視訊播放器{#create-video-players}
+如果要回放受保護的內容，應用程式必須使用ActionScript3 DRM API或Adobe PrimetimeDRM。
 
-如果您想要播放受保護的內容，您的應用程式必須使用ActionScript3 DRM API或Adobe PrimetimeDRM。
+查看 *寫程式ActionScript3* 和 *ActionScript3.0Adobe Flash Platform參考* 的子菜單。
 
-如需詳細資訊，請參閱《Adobe Flash Platform的&#x200B;*規劃ActionScript3*&#x200B;和&#x200B;*ActionScript3.0參考》。*
-
-請參閱Adobe PrimetimePSDK檔案，瞭解如何建立以iOS為基礎的視訊播放器。
+請參閱Adobe PrimetimePSDK文檔，瞭解如何構建基於iOS的視頻播放器。

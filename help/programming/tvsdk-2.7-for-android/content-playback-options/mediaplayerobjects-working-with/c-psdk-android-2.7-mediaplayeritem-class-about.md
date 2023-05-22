@@ -1,25 +1,24 @@
 ---
-description: 在您成功載入MediaResource物件後，TVSDK會建立MediaPlayerItem類別的例項，以提供該資源的存取權。
+description: 成功載入MediaResource對象後，TVSDK會建立MediaPlayerItem類的實例，以提供對該資源的訪問。
 title: 關於MediaPlayerItem類
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7bf9db5f-63e1-4098-b657-5905fdd12b70
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
 
 ---
 
+# 關於MediaPlayerItem類 {#about-the-mediaplayeritem-class}
 
-# 關於MediaPlayerItem類{#about-the-mediaplayeritem-class}
+MediaPlayer對象表示您的媒體播放器。 MediaPlayerItem表示播放器上的音頻或視頻。
 
-MediaPlayer物件代表您的媒體播放器。 MediaPlayerItem代表播放器上的音訊或視訊。
+成功載入MediaResource對象後，TVSDK會建立MediaPlayerItem類的實例，以提供對該資源的訪問。
 
-在您成功載入MediaResource物件後，TVSDK會建立MediaPlayerItem類別的例項，以提供該資源的存取權。
+的 `MediaResource` 表示應用程式層向 `MediaPlayer` 載入內容的實例。
 
-`MediaResource`代表應用層向`MediaPlayer`實例發出的用於載入內容的請求。
-
-`MediaPlayer`會解析媒體資源、載入相關資訊清單檔案，並解析資訊清單。 這是資源載入過程的非同步部分。 `MediaPlayerItem`實例是在資源解析後生成的，此實例是`MediaResource`的已解析版本。 TVSDK可透過`MediaPlayer.CurrentItem`存取新建立的`MediaPlayerItem`例項。
+的 `MediaPlayer` 解析媒體資源，載入關聯的清單檔案，並解析清單。 這是資源載入進程的非同步部分。 的 `MediaPlayerItem` 實例是在資源解析後生成的，此實例是 `MediaResource`。 TVSDK提供對新建立的 `MediaPlayerItem` 實例 `MediaPlayer.CurrentItem`。
 
 >[!TIP]
 >
->您必須等待資源成功載入，才能存取媒體播放器項目。
+>必須等待資源成功載入後才能訪問媒體播放器項目。

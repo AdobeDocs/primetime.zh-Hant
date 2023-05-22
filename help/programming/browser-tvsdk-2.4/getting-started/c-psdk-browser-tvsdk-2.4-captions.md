@@ -1,20 +1,19 @@
 ---
-description: 您可以在播放視訊內容時顯示標題。
-title: 標題
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 播放視頻內容時，可以顯示字幕。
+title: 字幕
+exl-id: 2144a6b2-0b9a-49ea-ad44-997adf36cbe6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
+# 字幕{#captions}
 
-# 標題{#captions}
+播放視頻內容時，可以顯示字幕。
 
-您可以在播放視訊內容時顯示標題。
-
-若要處理標題，您必須新增`AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`事件接聽程式：
+要處理字幕，必須添加 `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` 事件偵聽器：
 
 ```js
 ... 
@@ -34,7 +33,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-UI架構提供預設標題行為實作，可加以修改。 隱藏字幕行為也可以透過延伸預設隱藏字幕行為來修改。 例如：
+UI框架提供預設字幕行為實現，可以對其進行修改。 還可以通過擴展預設的隱藏字幕行為來修改隱藏字幕行為。 例如：
 
 ```js
 // Using UI Framework 

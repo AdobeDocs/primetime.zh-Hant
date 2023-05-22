@@ -1,44 +1,42 @@
 ---
-description: 直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。
+description: 通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。
 title: 在MediaPlayer中載入媒體資源
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b775c33e-399c-4a03-a132-407944f07706
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
 
+# 在MediaPlayer中載入媒體資源 {#load-a-media-resource-in-the-mediaplayer}
 
-# 在MediaPlayer中載入媒體資源{#load-a-media-resource-in-the-mediaplayer}
+通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。
 
-直接執行個體化MediaResource並載入要播放的視訊內容，以載入資源。
+1. 設定 `MediaPlayer` 對象的可播放項，以及要播放的新資源。
 
-1. 使用要播放的新資源設定`MediaPlayer`對象的可播放項。
+   替換現有 `MediaPlayer` 通過調用對象的當前可播放項 `replaceCurrentResource` 通過現有 `MediaResource` 實例。
 
-   呼叫`replaceCurrentResource`並傳遞現有的`MediaResource`例項，以取代您現有`MediaPlayer`物件目前可播放的項目。
-
-1. 等待瀏覽器TVSDK將`AdobePSDK.MediaPlayerStatusChangeEvent`與`event.status`相等於下列任一項分派：
+1. 等待瀏覽器TVSDK派單 `AdobePSDK.MediaPlayerStatusChangeEvent` 與 `event.status` 等於以下任何項：
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      透過這些事件，MediaPlayer物件會通知您的應用程式媒體資源是否已成功載入。
+      通過這些事件，MediaPlayer對象將通知您的應用程式媒體資源是否已成功載入。
 
-1. 當媒體播放器的狀態變更為`MediaPlayerStatus.INITIALIZED`時，您可以呼叫`MediaPlayer.prepareToPlay`。
+1. 當媒體播放器的狀態更改為 `MediaPlayerStatus.INITIALIZED`您可以 `MediaPlayer.prepareToPlay`。
 
-   「已初始化」狀態表示介質已成功載入。 呼叫`prepareToPlay`會啟動廣告解析度和位置處理程式（如果有的話）。
-1. 當瀏覽器TVSDK派單`MediaPlayerStatus.PREPARED`事件時，媒體串流已成功載入（建立MediaPlayerItem）並準備播放。
+   INITIALIZED狀態表示媒體已成功載入。 呼叫 `prepareToPlay` 啟動廣告解決和投放過程（如果有）。
+1. 當瀏覽器TVSDK派單時 `MediaPlayerStatus.PREPARED` 已成功載入媒體流（建立MediaPlayerItem）並準備播放。
 
-如果發生故障， `MediaPlayer`將切換到`MediaPlayerStatus.ERROR`。
+如果出現故障， `MediaPlayer` 切換到 `MediaPlayerStatus.ERROR`。
 
-它還通過調度`MediaPlayerStatus.ERROR`事件來通知您的應用程式。
+它還通過調度 `MediaPlayerStatus.ERROR` 的子菜單。
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
-
-以下簡化的范常式式碼說明載入媒體資源的程式：
+以下簡化示例代碼說明了載入媒體資源的過程：
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

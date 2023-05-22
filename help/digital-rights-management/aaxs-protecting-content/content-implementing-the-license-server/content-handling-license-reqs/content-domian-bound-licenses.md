@@ -1,20 +1,19 @@
 ---
-title: 發行限制網域的授權
-description: 發行限制網域的授權
+title: 頒發域綁定許可證
+description: 頒發域綁定許可證
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b9823ae4-d88f-4580-a2ce-275ed3e32f51
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
+# 頒發域綁定許可證{#issuing-domain-bound-licenses}
 
-# 發行網域系結授權{#issuing-domain-bound-licenses}
+為了使用需要域註冊的策略頒發許可證，客戶端的請求必須包括由策略中指定的域伺服器頒發的有效域令牌。 當客戶端請求許可證時，如果已向這些域伺服器註冊，它將自動包括其內容元資料中指定的任何域伺服器的域令牌。 如果所選策略需要域註冊，SDK將自動從請求中選擇一個域令牌以將許可證綁定到，或在找不到適當的域令牌時返回錯誤。
 
-為了使用需要域註冊的策略發放許可證，客戶機的請求必須包括策略中指定的域伺服器發出的有效域令牌。 當用戶端要求授權時，如果已向這些網域伺服器註冊，就會自動將其網域Token加入內容中繼資料中指定的網域伺服器。 如果選取的原則需要網域註冊，SDK會自動從請求中選取網域Token，以將授權系結至，或在找不到適當的網域Token時傳回錯誤。
+如果域令牌未過期，並且是由授權域CA頒發的，則域令牌被視為有效。 許可證伺服器必須通過配置指定將接受域令牌的域授權 `HandlerConfiguration.setDomainCAs()`。 如果未配置域CA，則許可證伺服器將無法頒發域綁定的許可證。
 
-若網域Token未過期，且是由授權網域CA核發，則網域Token即視為有效。 授權伺服器必須透過設定`HandlerConfiguration.setDomainCAs()`，指定接受網域Token的網域授權。 如果未配置域CA，則許可證伺服器將無法發放域綁定的許可證。
-
-如果元資料包括多個策略，則許可證伺服器業務邏輯可以根據客戶端是否呈現域令牌來選擇策略。 使用`LicenseRequestMessage.getDomainTokens()`確定客戶端已註冊的域。
+如果元資料包括多個策略，則許可證伺服器業務邏輯可以基於客戶端是否呈現了域令牌來選擇策略。 使用 `LicenseRequestMessage.getDomainTokens()` 確定客戶機已註冊的域。

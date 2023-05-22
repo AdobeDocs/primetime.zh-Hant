@@ -1,51 +1,51 @@
 ---
 title: 代理MVPD SAML整合
 description: 代理MVPD SAML整合
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 6c83e703-d8cd-476b-8514-05b8230902be
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%
 
 ---
 
-
 # 代理MVPD SAML整合
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
 ## 概述 {#overview-proxy-mvpd-saml-int}
 
-本檔案說明Proxy整合的SAML驗證流程。  這些流程取決於Adobe Primetime驗證伺服器設定中存在的Proxy設定資料。 Proxy MVPD透過Adobe Primetime驗證Proxy Web Service將其Proxy設定資料推送至Adobe Primetime驗證伺服器。
+本文檔介紹用於代理整合的SAML驗證流。  這些流取決於Adobe Primetime身份驗證伺服器配置中存在的代理配置資料。 代理MVPD通過Adobe Primetime驗證代理Web服務將其代理配置資料推送到Adobe Primetime驗證伺服器。
 
 ## 代理配置資料 {#proxy-config-data}
 
-每個MVPD代理都會將其代理MVPD的代理設定資料提供給Adobe Primetime驗證Proxy Web服務。  代理Web服務文檔中涵蓋的詳細資訊。   為了讓SAML AuthN流程正常運作，Proxy設定資料必須包含下列屬性：
+每個MVPD代理都為其代理的MVPD向Adobe Primetime驗證代理Web服務提供代理配置資料。  Proxy Web服務文檔中介紹的詳細資訊。   要使SAML AuthN流工作，代理配置資料需要包括以下屬性：
 
 | 屬性 | 說明 |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MVPD ID | 內部代理MVPD的字串，代表Adobe Primetime驗證。  確認為Adobe Primetime驗證內容中的唯一。 |
-| MVPD預設徽標URL | 標誌的URL，可顯示在使用者的MVPD選取器體驗中。  應使用透明背景。 |
-| MVPD顯示名稱 | 要用作顯示名稱文本的字串，可與徽標一起顯示，可能作為替代文本。 |
+| MVPD ID | 在內部表示代理MVPD到Adobe Primetime身份驗證的字串。  由Adobe確認在Adobe Primetime驗證中是唯一的。 |
+| MVPD預設徽標URL | 標識的URL，可以在用戶的MVPD選擇器體驗中顯示。  應使用透明背景。 |
+| MVPD顯示名稱 | 用作顯示名稱文本的字串，可以與徽標一起顯示，可能用作替代文字。 |
 
 
 
-## SAML整合流程 {#saml-int-flows}
+## SAML整合流 {#saml-int-flows}
 
-當MVPD訂戶訪問程式設計師的站點或應用程式時，Adobe Primetime驗證響應來自站點或應用程式的API調用，並為該程式設計師激活的MVPD清單。  整合可直接或代理；程式設計師之間沒有區別。 這可讓程式設計人員以任何他們認為合適的方式呈現作用中MVPD的清單。 訂閱者會選擇其MVPD，而Adobe Primetime驗證會將訂閱者重新導向至MVPD的特定身分提供者。
+當MVPD訂戶訪問程式設計師的站點或應用程式時，Adobe Primetime驗證通過為該程式設計師激活的MVPD清單響應來自該站點或應用程式的API調用。  整合可以是直接的，也可以是代理的；他們與程式設計師沒有區別。 這允許程式設計師以他們認為合適的方式顯示活動MVPD的清單。 訂戶選擇其MVPD，而Adobe Primetime驗證將訂戶重定向到MVPD的特定身份提供程式。
 
-在整合MVPD代理的情況下，整合會在Adobe Primetime驗證和MVPD代理之間完成。 Adobe Primetime驗證會將使用者驗證請求傳送至MVPD代理，而MVPD代理會處理重新導向。 為了讓MVPD代理知道要將使用者驗證請求重新導向的位置，Adobe Primetime驗證會在SAML驗證請求中傳送MVPD識別碼。  此識別碼是代理提供者透過上述代理網站服務指定的MVPD ID。
+在整合MVPD代理的情況下，在Adobe Primetime驗證和MVPD代理之間進行整合。 Adobe Primetime身份驗證將用戶身份驗證請求發送到MVPD代理，MVPD代理處理重定向。 為了使MVPD代理知道將用戶身份驗證請求重定向到何處，Adobe Primetime身份驗證在SAML身份驗證請求中發送MVPD標識符。  此標識符是由代理提供程式通過如上所述的代理Web服務指定的MVPD ID。
 
 ### 驗證 {#authn-saml-int}
 
-為了讓Adobe Primetime驗證與Proxy MVPD整合，需要下列項目：
+為了使Adobe Primetime驗證與代理MVPD整合，將需要以下操作：
 
-* 代理MVPD提供推送至Adobe代理Web服務的代理MVPD清單
+* 代理MVPD提供已代理MVPD的清單，已推送到Adobe代理Web服務
 
-* 父MVPD代理的SAML中繼資料
+* 父MVPD代理的SAML元資料
 
-* （建議） — Proxy MVPD會處理對代理MVPD的登入頁面URL的其他重新導向
+* （推薦） — 代理MVPD處理到代理MVPD的登錄頁URL的其他重定向
 
 * MVPD代理需要為以下IP開啟埠443和80:
    * 192.150.4.5
@@ -61,21 +61,21 @@ ht-degree: 1%
    * 66.235.139.168
 
 
-#### 驗證SAML要求和回應 {#authn-saml-req-resp}
+#### 驗證SAML請求和響應 {#authn-saml-req-resp}
 
-在SAML AuthN請求中，Proxy整合包含下列其他屬性，需由MVPD Proxy處理。  若要代表代理的MVPD正確處理要求者，並呈現正確的登入體驗，此屬性是必要的。 （以下範例要求會反白顯示此屬性。）
+在SAML AuthN請求中，代理整合包括需要由MVPD代理處理的以下附加屬性。  為了正確處理請求者（代理的MVPD），並提供正確的登錄體驗，此屬性是必需的。 （此屬性在下面的示例請求中突出顯示。）
 
-**範圍屬性**  — 包含IDPEntry項目，其中包含特定MVPD_ID和MVPD名稱。  這表示用戶實際從程式設計員選擇器中選擇的MVPD，並與代理Web服務中指定的MVPD_ID匹配。
+**作用域屬性**  — 包括包含特定MVPD_ID和MVPD名稱的IDPEntry項。  這表示用戶實際從程式設計師選取器中選擇的MVPD，並與代理Web服務中指定的MVPD_ID匹配。
 
-RequestorID還有一個附加的作用域屬性，可用於自定義程式設計師特定品牌的登錄（如果需要）。 或者，這也只能用於請求來源的分析。
+RequestorID還有一個附加的作用域屬性，可用於自定義登錄到程式設計師的特定品牌（如果需要）。 或者，它只能用於請求發端的分析。
 
-在SAML AuthN回應中，Proxy MVPD應在下列屬性中將代理的MVPD指定為IdP實體：
+在SAML AuthN響應中，代理MVPD應在以下屬性中將代理的MVPD指定為IdP實體：
 
 * SAML頒發者
 * 名稱限定符
 
 
-**範例AuthN請求**
+**示例AuthN請求**
 
 ```XML
 <samlp:AuthnRequest
@@ -111,7 +111,7 @@ RequestorID還有一個附加的作用域屬性，可用於自定義程式設計
 ```
 
 
-**範例AuthN回應**
+**示例AuthN響應**
 
 ```XML
 <samlp:Response Destination="https://sp.auth-staging.adobe.com/sp/saml/SAMLAssertionConsumer"
@@ -164,13 +164,13 @@ RequestorID還有一個附加的作用域屬性，可用於自定義程式設計
 
 ### 授權 {#authz-proxy-mvpd-saml-int}
 
-對於授權部分，MVPD需要接受由程式設計師指定的資源的授權。  在大多數情況下，這是通道網路的字串識別碼，例如TBS或TNT。
+對於授權部分，MVPD需要接受以授權程式設計師指定的資源。  在大多數情況下，這是通道網路的字串標識符，如TBS或TNT。
 
-#### 授權SAML要求與回應 {#authz-saml-req-resp}
+#### 授權SAML請求和響應 {#authz-saml-req-resp}
 
-在AuthZ回應中，ISSUER必須符合來自SAML回應的ISSUER，而SAML回應應是代理的MVPD識別碼。
+在AuthZ響應中，ISSUER必須與SAML響應中的ISSUER匹配，該ISSUER應是代理的MVPD標識符。
 
-**範例AuthZ XACML要求**
+**示例AuthZ XACML請求**
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>

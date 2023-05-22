@@ -1,46 +1,46 @@
 ---
 title: MVPD授權
 description: MVPD授權
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 215780e4-12b6-4ba6-8377-4d21b63b6975
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 0%
 
 ---
 
-
 # MVPD授權
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
 ## 概述 {#mvpd-authz-overview}
 
-授權(AuthZ)是透過Adobe托管後端伺服器與MVPD AuthZ端點之間的後端通道（伺服器對伺服器）通訊來執行。
+授權(AuthZ)通過承載Adobe的後端伺服器與MVPD AuthZ端點之間的後通道（伺服器到伺服器）通信執行。
 
-對於AuthZ請求，授權端點應能至少處理下列參數：
+對於AuthZ請求，授權終結點應至少能夠處理以下參數：
 
-* **Uid**. 從驗證步驟接收的使用者ID。
+* **UID**。 從驗證步驟接收的用戶ID。
 
-* **資源ID**. 識別指定內容資源的字串。 此資源ID由程式設計師指定，MVPD必須加強這些資源上的業務規則（例如，通過檢查用戶是否訂閱了某個渠道）。
+* **資源ID**。 標識給定內容資源的字串。 此資源ID由程式設計師指定，MVPD必須加強這些資源上的業務規則（例如，檢查用戶是否訂閱了特定渠道）。
 
-除了判斷使用者是否獲得授權外，回應還必須包含此授權的存留時間(TTL)，即授權過期的時間。 如果未設定TTL,AuthZ請求將會失敗。  因此， **TTL是Adobe Primetime驗證端的強制設定**，以涵蓋MVPD未在其要求中包含TTL的情況。
+除了確定用戶是否已授權外，響應還必須包括此授權的生存時間(TTL)，即授權到期時。 如果未設定TTL，則AuthZ請求將失敗。  因此， **TTL是Adobe Primetime身份驗證端的強制配置設定**，以覆蓋MVPD在其請求中不包含TTL的情況。
 
 ## 授權請求 {#authz-req}
 
-AuthZ請求必須包含代表提出請求的主體、主體嘗試存取的資源、主體嘗試對資源執行的動作，以及即將進行操作的環境。 在Adobe Primetime驗證的特定案例中，這些元素對應至：
+AuthZ請求必須包括代表其提出請求的主題、該主題嘗試訪問的資源、該主題嘗試對資源執行的操作以及即將進行操作的環境。 在Adobe Primetime驗證的特定情況下，這些元素對應於：
 
-| XACML元素 | 對應至 |
+| XACML元素 | 對應於 |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------|
-| 主旨 | 由已驗證工作階段所識別的主體，由SAML斷言的「主旨代號」AttributeValue所參照。 |
+| 主題 | 由已驗證會話標識的主體，由SAML斷言的「subject-token」 AttributeValue引用。 |
 | 資源 | 受保護資源的URI。 |
-| 動作 | 檢視。 |
-| 環境 | 包括請求客戶端的IP地址，如SP所示。 |
+| 操作 | 。 |
+| 環境 | 包括請求客戶端的IP地址，如SP所見。 |
 
 
 
-此時，SP必須準備XACML授權DecisionQuery，並(通過HTTPPOST)將其發送到（先前商定的）策略決策點(PDP)以獲取IdP。 以下是簡單XACML請求的範例（請參閱XACML核心規格）:
+此時，SP必須準備XACML授權DecisionQuery並將其(通過HTTPPOST)發送到（先前商定的）策略決策點(PDP)以獲取IdP。 下面是簡單XACML請求的示例（請參見XACML核心規範）:
 
 ```XML
 POST https://authz.site.com/XACML_endpoint
@@ -80,11 +80,11 @@ http://docs.oasis-open.org/xacml/access_control-xacml-2.0-context-schema-os.xsd"
 ```
 
 
-收到AuthZ請求後，MVPD的PDP會評估請求，並判斷是否應允許主體對資源執行請求的動作。 然後，MVPD會傳回包含決策、狀態碼和訊息的回應，如下方的授權回應所述。
+在接收到AuthZ請求後，MVPD的PDP評估該請求並確定是否應允許該對象對資源執行所請求的操作。 然後，MVPD將返回包含「決定」、「狀態」代碼和消息的響應，如下面的「授權響應」中所述。
 
-## 授權回應 {#authz-response}
+## 授權響應 {#authz-response}
 
-在MVPD評估請求並套用請求的業務規則以判斷是否允許主體對資源執行請求的動作之後，才會回應AuthZ請求。 傳回的對Adobe Primetime驗證的回應會在XACML核心規格後再次表示，其中包含SP作為策略執行點(PEP)具有的Decision、Status代碼、消息和Expility。 以下是範例回應：
+在MVPD評估請求並應用所請求的業務規則來確定是否允許主體對資源執行所請求的操作之後，對AuthZ請求的響應即出現。 在XACML核心規範後，返回的對Adobe Primetime驗證的響應將再次表示為SP作為策略實施點(PEP)具有的決定、狀態代碼、消息和義務。 以下是示例響應：
 
 ```XML
 <Response xmlns="urn:oasis:names:tc:xacml:2.0:context:schema:os">
@@ -106,15 +106,15 @@ http://docs.oasis-open.org/xacml/access_control-xacml-2.0-context-schema-os.xsd"
 
 以下是Adobe Primetime身份驗證支援並使程式設計師能夠履行的DENY義務清單：
 
-* **回歸:tve:xacml:2.0:obligations:restrict-pc**  — 訂閱者未通過家長控制檢查，SP必須採取適當措施限制對此內容的訪問。
+* **甕:tve:xacml:2.0:obligations:限制**  — 訂閱伺服器未通過家長控制檢查，SP必須採取適當措施限制對此內容的訪問。
 
-* **回歸:tve:xacml:2.0:obligations:升級**  — 訂閱者沒有適當的訂閱級別。  必須升級訂閱才能訪問內容。
+* **甕:tve:xacml:2.0:obligations:升級**  — 訂閱伺服器沒有適當的訂閱級別。  必須升級訂閱才能訪問內容。
 
-Adobe Primetime驗證支援下列 **許可** 使程式設計師能夠履行這些義務：
+Adobe Primetime身份驗證支援以下 **許可** 使程式設計師能夠履行這些義務和履行這些義務：
 
-* **回歸:cablelabs:olca:1.0:obligations:記錄** - Adobe Pass記錄交易，並可透過商定的報告機制提供。
+* **甕:cablelabs:olca:1.0:obligations:日誌** -Adobe Pass記錄交易，並可通過商定的報告機制提供。
 
-* **回歸:cablelabs:olca:1.0:obligations:re-authz** - Adobe Primetime驗證會在n秒內再次重新整理授權（透過XACML AttributeAssignment指定為Odiction的引數 — 請參閱XACML核心規格，第5.46節）。
+* **甕:cablelabs:olca:1.0:obligations:重奧茨** -Adobe Primetime驗證在n秒內再次刷新授權（通過XACML AttributeAssignment指定為Oractive的參數 — 請參閱XACML核心規範第5.46節）。
 
 <!--
 >![RelatedInformation]

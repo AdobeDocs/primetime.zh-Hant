@@ -1,40 +1,38 @@
 ---
-description: 您可以自訂廣告插入中繼資料。
-title: 自訂廣告插入中繼資料
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 您可以自定義和插入元資料。
+title: 自定義廣告插入元資料
+exl-id: 4881ace6-e97b-448d-8fb4-64e7b69517f1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# 自定義廣告插入元資料{#customize-ad-insertion-metadata}
 
-# 自訂廣告插入中繼資料{#customize-ad-insertion-metadata}
+您可以自定義和插入元資料。
 
-您可以自訂廣告插入中繼資料。
+1. 設定未解決機會的元資料廣告超時。
 
-1. 為未解決的機會設定廣告元資料的超時。
-
-   此逾時的預設值為20秒。
+   此超時的預設值為20秒。
 1. 要將值更改為10秒，請輸入以下內容：
 
    ```js
    auditudeSettings.timeout = 10000; //this value is specified in milliseconds
    ```
 
-   `timeout`屬性定義在`AdvertisingMetadata`類別中，且可針對從`AdvertisingMetadata`類別衍生的任何自訂廣告設定設定設定此逾時。 例如，如果使用者為FreeWheel解析器定義自訂設定，則可使用此設定來設定預設逾時。
+   的 `timeout` 屬性在 `AdvertisingMetadata` 類，並且可以為從派生的任何自定義廣告設定設定此超時 `AdvertisingMetadata` 類。 例如，如果用戶為FreeWheel解析器定義自定義設定，則他們可以使用此設定設定預設超時。
 
-1. 使用步驟2中的廣告設定建立`MediaPlayerItemConfig`。
+1. 建立 `MediaPlayerItemConfig` 的FTP伺服器連接設定。
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
    config.advertisingMetadata = auditudeSettings;
    ```
 
-1. 在`MediaPlayer`上呼叫`replaceCurrentResource`時，請使用此配置。
+1. 調用時使用此配置 `replaceCurrentResource` 上 `MediaPlayer`。
 
    ```js
    player.replaceCurrentResource(mediaResource, config);
    ```
-

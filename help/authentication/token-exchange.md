@@ -1,51 +1,49 @@
 ---
-title: 為Adobe代號交換平台SSO代號
-description: 為Adobe代號交換平台SSO代號
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 為Adobe令牌交換平台SSO令牌
+description: 為Adobe令牌交換平台SSO令牌
+exl-id: 5ab60268-8f97-4755-8281-be45e812ed7f
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 2%
 
 ---
 
-
-# 為Adobe代號交換平台SSO代號 {#exchange-a-platform-sso-token-for-an-adobe-token}
+# 為Adobe令牌交換平台SSO令牌 {#exchange-a-platform-sso-token-for-an-adobe-token}
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-## 重設API端點 {#clientless-endpoints}
+## REST API終結點 {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 測試 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## 說明 {#description}
 
-允許以「交換」Platform SSO設定檔來取得AdobeToken。
+允許將平台SSO配置檔案「交換」為Adobe令牌。
 
-| 端點 | 已呼叫  </br>依據 | 輸入   </br>Params | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
+| 端點 | 已調用  </br>按 | 輸入   </br>帕拉姆 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/authn | 串流應用程式</br></br>或</br></br>程式設計人員服務 | 1.請求者（強制）</br>    </br>2.  deviceId（必要）</br>    </br>3.  mvpd（必要）</br>    </br>4.  deviceType（必要）</br>    </br>5.  SAMLResponse（強制）</br>    </br>6.  deviceUser（已過時）</br>    </br>7.  appId（已過時） | POST | 成功的回應將是「204無內容」，表示Token已成功建立，且已準備好用於驗證流程。 | 204 — 無內容   </br>400 — 錯誤請求 |
+| &lt;sp_fqdn>/api/v1/tokens/authn | 流式處理應用</br></br>或</br></br>程式設計師服務 | 1。請求者（必需）</br>    </br>2.  設備ID（必需）</br>    </br>3.  mvpd（必需）</br>    </br>4.  deviceType（必需）</br>    </br>5.  SAMLResponse（強制）</br>    </br>6.  deviceUser（不建議使用）</br>    </br>7.  appId（不建議使用） | POST | 成功的響應將是204無內容，表示令牌已成功建立並準備用於驗證流。 | 204 — 無內容   </br>400 — 錯誤請求 |
 
 
 | 輸入參數 | 說明 |
 | --- | --- |
-| 請求者 | 此操作對其有效的程式設計師請求者ID。 |
-| deviceId | 設備id位元組。 |
+| 請求 | 此操作對其有效的程式設計師請求者ID。 |
+| 設備ID | 設備ID位元組。 |
 | mvpd | 此操作對其有效的MVPD ID。 |
-| deviceType | 我們嘗試取得設定檔要求的Apple平台。  其中 **iOS** 或 **tvOS**. |
-| SAMLResponse | Platform SSO傳回的實際設定檔。 |
-| _deviceUser_ | 裝置使用者識別碼。 |
-| _appId_ | 應用程式ID/名稱。 |
-
-
+| 設備類型 | 我們正嘗試為其獲取配置檔案請求的Apple平台。  要麼 **iOS** 或 **電視作業系統**。 |
+| 薩姆勒埃斯龐塞 | 平台SSO返回的實際配置檔案。 |
+| _設備用戶_ | 設備用戶標識符。 |
+| _應用ID_ | 應用程式ID/名稱。 |

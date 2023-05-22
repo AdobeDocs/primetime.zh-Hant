@@ -1,102 +1,102 @@
 ---
-title: 整合媒體代號驗證器
-description: 整合媒體代號驗證器
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 整合媒體令牌驗證器
+description: 整合媒體令牌驗證器
+exl-id: 1688889a-2e30-4d66-96ff-1ddf4b287f68
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
 
 ---
 
-
-# 整合媒體代號驗證器
+# 整合媒體令牌驗證器
 
 >[!NOTE]
 >
->此頁面的內容僅供參考。 若要使用此API，必須具備目前的Adobe授權。 不允許未經授權使用。
+>此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
 
-## 關於媒體代號驗證器 {#about-media-token-verifier}
+## 關於媒體令牌驗證器 {#about-media-token-verifier}
 
-授權成功時，Adobe Primetime驗證會建立長期授權(AuthZ)代號。  AuthZ代號會傳遞至用戶端，或儲存在伺服器端，端視用戶端的平台而定。  (請參閱 [了解Token](/help/authentication/programmer-overview.md#understanding-tokens) 關於如何在不同的用戶端系統上儲存代號，以及其他詳細資訊。)
-
-
-AuthZ代號可授權網站的使用者檢視指定資源。  通常存留時間(TTL)為6到24小時，代號便會過期。 **對於實際的檢視存取，Primetime驗證會使用AuthZ代號來產生您所取得的短期媒體代號，並傳遞至您的媒體伺服器**. 這些短暫的媒體代號的TTL很短（通常需幾分鐘）。
+授權成功後，Adobe Primetime身份驗證將建立長期授權(AuthZ)令牌。  AuthZ令牌會傳遞到客戶端或儲存在伺服器端，具體取決於客戶端的平台。  (請參閱 [瞭解令牌](/help/authentication/programmer-overview.md#understanding-tokens) 關於令牌如何儲存在不同客戶端系統上，以及其他詳細資訊。)
 
 
-在AccessEnabler整合中，您可通過 `setToken()` 回呼。 若是無用戶端API整合，您可透過 `<SP_FQDN>/api/v1/tokens/media` API呼叫。 令牌是以明文發送的字串，由Adobe簽名，使用基於PKI（公鑰基礎設施）的令牌保護。 通過基於PKI的保護，令牌使用非對稱密鑰簽名，由認證機構發給Adobe。
+AuthZ令牌授權站點用戶查看給定資源。  它的典型生存時間(TTL)為6到24小時，在此之後令牌將過期。 **對於實際查看訪問，黃金時段身份驗證使用AuthZ令牌生成您獲取的短時間媒體令牌，並將其傳遞到媒體伺服器**。 這些短壽命媒體令牌的TTL非常短（通常為幾分鐘）。
 
 
-由於客戶端上沒有對令牌進行驗證，因此惡意用戶可以使用工具插入假 `setToken()` 呼叫。 因此，您 **不能** 僅僅依賴於 `setToken()` 會在考量使用者是否獲授權時觸發。 您必須驗證短期代號本身是否合法。 執行驗證的工具是媒體代號驗證程式庫。
+在AccessEnabler整合中，通過 `setToken()` 回叫。 對於無客戶端API整合，您可以使用 `<SP_FQDN>/api/v1/tokens/media` API調用。 令牌是使用基於PKI（公鑰基礎架構）的令牌保護以明文發送的字串，由Adobe簽名。 在基於PKI的這種保護下，令牌使用非對稱密鑰簽名，由認證機構頒發給Adobe。
+
+
+由於客戶端上沒有驗證令牌，因此惡意用戶可以使用工具來注入假 `setToken()` 呼叫。 所以你 **不能** 只是依靠一個事實 `setToken()` 觸發，當考慮用戶是否已授權時。 您必須驗證短期令牌本身是否合法。 執行驗證的工具是介質令牌驗證器庫。
 
 
 >[!TIP]
 >
->您必須將傳回的Token字串的整個長度傳遞至媒體Token驗證器以進行驗證。
+>必須將返回的令牌字串的整個長度傳遞給媒體令牌驗證器進行驗證。
 
-## 使用媒體代號驗證器驗證短期代號 {#validate-short-livedttokens}
+## 使用媒體令牌驗證器驗證短期令牌 {#validate-short-livedttokens}
 
-建議程式設計人員將代號傳送至使用媒體代號驗證程式庫的網站服務，以便在實際啟動視訊資料流之前驗證代號。 短期媒體權杖的極短TTL被定義為足夠長，以允許產生權杖的伺服器和驗證權杖的伺服器之間出現時鐘同步問題，但是不再。
-
-
-
-此 [媒體令牌驗證程式庫](https://adobeprimetime.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Ftve.zendesk.com%2Fhc%2Fen-us%2Farticles%2F204963159-Media-Token-Verifier-library&amp;theme=hc&amp;locale=en-us&amp;brand_id=343429&amp;auth_origin=343429%2Cfalse%2Ctrue){target=_blank} 適用於Primetime驗證合作夥伴。
+我們建議程式設計師將令牌發送到使用媒體令牌驗證器庫的Web服務，以便在實際啟動視頻流之前驗證令牌。 短壽命媒體令牌的極短TTL被定義為足夠長，以允許在生成令牌的伺服器和驗證令牌的伺服器之間發生時鐘同步問題，但不再。
 
 
 
-Java歸檔檔案中包含媒體令牌驗證程式庫 `mediatoken-verifier-VERSION.jar`. 程式庫會定義：
-
-* 代號驗證API(`ITokenVerifier` 介面)，搭配JavaDoc檔案
-* 用來驗證代號是否確實來自Adobe的Adobe公開金鑰
-* 參考實作(`com.adobe.entitlement.test.EntitlementVerifierTest.java`)，說明如何使用驗證程式API，以及如何使用程式庫中包含的Adobe公開金鑰來驗證其來源
+的 [媒體令牌驗證器庫](https://adobeprimetime.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Ftve.zendesk.com%2Fhc%2Fen-us%2Farticles%2F204963159-Media-Token-Verifier-library&amp;theme=hc&amp;locale=en-us&amp;brand_id=343429&amp;auth_origin=343429%2Cfalse%2Ctrue){target=_blank} 可供Mighine驗證合作夥伴使用。
 
 
-封存包含所有相依性和憑證金鑰存放區。 包含的憑證金鑰存放區的預設密碼為「123456」。
+
+媒體令牌驗證器庫包含在Java存檔檔案中 `mediatoken-verifier-VERSION.jar`。 庫定義：
+
+* 令牌驗證API(`ITokenVerifier` 介面)，帶JavaDoc文檔
+* 用於驗證令牌是否確實來自Adobe的Adobe公鑰
+* 參考實現(`com.adobe.entitlement.test.EntitlementVerifierTest.java`)，顯示如何使用Verifier API以及如何使用庫中包含的Adobe公鑰驗證其源
+
+
+存檔包含所有依賴項和證書密鑰庫。 包含的證書密鑰庫的預設口令是「123456」。
 
 * 驗證庫需要JDK 1.5版或更高版本。
-* 請使用您慣用的JCE提供程式來使用簽名算法「SHA256WithRSA」。
+* 使用您首選的JCE提供程式來使用簽名算法「SHA256WithRSA」。
 
 
-**驗證程式庫必須是分析令牌內容的唯一方法。 程式設計師不應分析令牌並提取資料本身，因為令牌格式不受保證，並且可能會在未來發生更改。** 只有驗證程式API才能正常運作。 直接剖析字串可能會暫時運作，但在格式可能變更時，將來會造成問題。 驗證器API會從Token中擷取資訊，例如：
+**驗證器庫必須是用於分析令牌內容的唯一方法。 程式設計師不應分析令牌並自行提取資料，因為令牌格式不受保證，並且受將來更改的影響。** 只有Verifier API才能正確運行。 直接分析字串可能會暫時起作用，但在格式可能更改時，將來會出現問題。 驗證器API從令牌中檢索資訊，如：
 
-* 代號有效( `isValid()` 方法)?
-* 系結至代號的資源ID( `getResourceID()` 方法);這可以與（而且應該符合） `setToken()` 函式回呼。 如果不符合，這可能表示欺詐行為。
-* 發出代號的時間(`getTimeIssued()` 方法)。
-* TTL(`getTimeToLive()` 方法)。
-* 從MVPD(`getUserSessionGUID()` 方法)。
-* 驗證使用者的經銷商ID（若是如此） — 為經銷商提供驗證的代理MVPD。
+* 令牌是否有效( `isValid()` 方法)?
+* 資源ID與令牌( `getResourceID()` 方法);可以將此參數與 `setToken()` 函式回調。 如果不匹配，則可能表示欺詐行為。
+* 發出令牌的時間(`getTimeIssued()` )。
+* TTL(`getTimeToLive()` )。
+* 從MVPD(M)接收的匿名認證GUID`getUserSessionGUID()` )。
+* 對用戶進行身份驗證的分發伺服器的ID（如果是） — 為分發伺服器提供身份驗證的proxy-MVPD。
 
-## 使用驗證程式API {#using-verifier-api}
+## 使用驗證器API {#using-verifier-api}
 
-此 `ITokenVerifier` 類定義了用於驗證給定資源的令牌真實性的方法。 使用 `ITokenVerifier` 分析響應於 `setToken()` 請求。
-
-
-此 `isValid()` 方法是驗證Token的主要方式。 需要一個引數，即資源ID。 如果您傳遞Null資源ID，方法只會驗證Token真實性和有效期。
+的 `ITokenVerifier` 類定義用於驗證給定資源的令牌真實性的方法。 使用 `ITokenVerifier` 分析響應於 `setToken()` 請求。
 
 
-此 `isValid()` 方法會傳回下列其中一個狀態值：
+的 `isValid()` 方法是驗證令牌的主要方法。 它需要一個參數，即資源ID。 如果傳遞空資源ID，則該方法僅驗證令牌真實性和有效期。
+
+
+的 `isValid()` 方法返回以下狀態值之一：
 
 
 
-| VALID_TOKEN | 所有驗證均成功 |
+| 有效標籤 | 所有驗證都成功 |
 |--------------------|-----------------------------------------|
 | INVALID_TOKEN_FORMAT | 令牌格式無效 |
-| INVALID_SIGNATURE | 無法驗證令牌真實性 |
-| TOKEN_EXPIRED | 令牌TTL無效 |
+| 無效簽名 | 無法驗證令牌真實性 |
+| 令牌(_E) | 令牌TTL無效 |
 | INVALID_RESOURCE_ID | 令牌對給定資源無效 |
-| ERROR_UNKNOWN | 尚未驗證令牌 |
+| 錯誤_未知 | 尚未驗證令牌 |
 
-其他方法可提供特定資源ID、核發時間，以及指定Token的存留時間。
+其他方法提供對給定令牌的資源ID、發出的時間和生存時間的特定訪問。
 
-* 使用 `getResourceID()` 擷取與Token相關聯的資源ID，並將其與從setToken()請求傳回的ID進行比較。
-* 使用 `getTimeIssued()` 以擷取發出代號的時間。
-* 使用 `getTimeToLive()` 來擷取TTL。
-* 使用 `getUserSessionGUID()` 擷取MVPD設定的匿名GUID。
-* 使用 `getMvpdId()` 擷取已驗證使用者的MVPD ID。
-* 使用 `getProxyMvpdId()` 擷取已驗證使用者的Proxy MVPD ID。
+* 使用 `getResourceID()` 檢索與令牌關聯的資源ID，並將其與從setToken()請求返回的ID進行比較。
+* 使用 `getTimeIssued()` 以檢索令牌發出的時間。
+* 使用 `getTimeToLive()` 以檢索TTL。
+* 使用 `getUserSessionGUID()` 檢索由MVPD設定的匿名GUID。
+* 使用 `getMvpdId()` 以檢索已驗證用戶的MVPD的ID。
+* 使用 `getProxyMvpdId()` 以檢索已驗證用戶的代理MVPD的ID。
 
-## 程式碼範例 {#sample-code}
+## 示例代碼 {#sample-code}
 
-媒體代號驗證器封存包含參考實作(`com.adobe.entitlement.test.EntitlementVerifierTest.java`)和使用測試類別叫用API的範例。 此範例(`com.adobe.entitlement.text.EntitlementVerifierTest.java`)說明代號驗證程式庫整合至媒體伺服器。
+媒體令牌驗證器存檔包含引用實現(`com.adobe.entitlement.test.EntitlementVerifierTest.java`)和使用test類調用API的示例。 此示例(`com.adobe.entitlement.text.EntitlementVerifierTest.java`)說明了令牌驗證庫與媒體伺服器的整合。
 
 
 ```Java

@@ -1,22 +1,21 @@
 ---
-description: 依預設，當開始播放時，VOD媒體會從0開始，而即時媒體會從用戶端即時點(DefaultMediaPlayer.LIVE_POINT)開始。
-title: 在特定時間輸入串流
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 預設情況下，當開始播放時，VOD媒體從0開始，而即時媒體從客戶端即時點(DefaultMediaPlayer.LIVE_POINT)開始。
+title: 在特定時間輸入流
+exl-id: b97dbabf-e2ab-4669-a9f3-9129af938a40
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# 在特定時間輸入流{#enter-a-stream-at-a-specific-time}
 
-# 在特定時間輸入串流{#enter-a-stream-at-a-specific-time}
+預設情況下，當開始播放時，VOD媒體從0開始，而即時媒體從客戶端即時點(DefaultMediaPlayer.LIVE_POINT)開始。
 
-依預設，當開始播放時，VOD媒體會從0開始，而即時媒體會從用戶端即時點(DefaultMediaPlayer.LIVE_POINT)開始。
+將位置傳遞到 `MediaPlayer.prepareToPlay`。
 
-將位置傳遞至`MediaPlayer.prepareToPlay`。
-
-TVSDK會將指定位置視為資產的起點。 不需要查找操作。 如果位置不在可查找範圍內，則使用預設位置。
+TVSDK將給定位置視為資產的起點。 不需要查找操作。 如果位置不在可瀏覽範圍內，則使用預設位置。
 
 例如：
 

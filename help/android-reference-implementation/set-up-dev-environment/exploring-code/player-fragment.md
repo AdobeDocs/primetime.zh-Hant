@@ -1,26 +1,25 @@
 ---
-description: 您可在PlayerFragment類別中編輯程式碼，以建立全功能管理員。
+description: PlayerFragment類是編輯代碼以建立完全啟用的功能管理器的位置。
 title: 播放器片段
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9060f0f5-9148-48cd-b89b-718607dd70bc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
+# 播放器片段 {#playerfragment}
 
-# PlayerFragment {#playerfragment}
+PlayerFragment類是編輯代碼以建立完全啟用的功能管理器的位置。
 
-您可在PlayerFragment類別中編輯程式碼，以建立全功能管理員。
+的 `PlayerFragment` 類包含所有UI元件，如 `playerFrame`。 `ControlBar`。 `playerClickableAdFragment`, `adOverlay`。
 
-`PlayerFragment`類別包含所有UI元件，例如`playerFrame`、`ControlBar`、`playerClickableAdFragment`和`adOverlay`。
+它處理所有這些元件的初始化以及建立播放器、設定視圖、為媒體播放器建立功能管理器、處理媒體事件（如恢復、播放和暫停）和處理事件偵聽器 `QoSManager`。 `DRMManager`。 `CCManager`。 `AAManager`。 `AdsManager`。 `PlaybackManager`, `EntitlementManager`。
 
-它可處理所有這些元件的初始化，以及建立播放器、設定檢視、建立媒體播放器的功能管理程式、處理媒體事件，例如繼續、播放和暫停，並處理`QoSManager`、`DRMManager`、`CCManager`、`AAManager`、`AdsManager`、`PlaybackManager`和`EntitlementManager`的事件監聽程式。
+包含XML的配置參數的XML檔案 `PlayerFragment` 是 `res/layout/fragment_player.xml`。
 
-包含`PlayerFragment`配置參數的XML檔案為`res/layout/fragment_player.xml`。
-
-在建立功能管理員之前，您必須先確定`PlayerFragment.java`檔案中包含下列程式碼，以建立媒體播放器：
+在建立功能管理器之前，您需要通過以下代碼位於 `PlayerFragment.java` 檔案：
 
 ```java
 private MediaPlayer createMediaPlayer() { 

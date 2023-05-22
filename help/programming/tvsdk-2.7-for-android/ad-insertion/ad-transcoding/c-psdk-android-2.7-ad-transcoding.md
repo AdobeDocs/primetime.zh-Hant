@@ -1,45 +1,41 @@
 ---
-description: 某些協力廠商廣告（或創意素材）無法銜接至HTTP即時串流(HLS)內容串流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇將不相容的廣告重新封裝至相容的M3U8視訊。
-title: 使用Adobe創意重新封裝服務(CRS)重新封裝不相容的廣告
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 某些第三方廣告（或創意）無法縫合到HTTP即時流(HLS)內容流中，因為其視頻格式與HLS不相容。 黃金時段廣告插入和TVSDK可以選擇嘗試將不相容的廣告重新打包到相容的M3U8視頻中。
+title: 使用Adobe創意重新打包服務(CRS)重新打包不相容的廣告
+exl-id: b6fb2846-64b6-4db7-a6a9-f85365780775
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
+# 使用Adobe創意重新打包服務(CRS)重新打包不相容的廣告 {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
-# 使用Adobe創意重新封裝服務(CRS){#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}重新封裝不相容的廣告
+某些第三方廣告（或創意）無法縫合到HTTP即時流(HLS)內容流中，因為其視頻格式與HLS不相容。 黃金時段廣告插入和TVSDK可以選擇嘗試將不相容的廣告重新打包到相容的M3U8視頻中。
 
-某些協力廠商廣告（或創意素材）無法銜接至HTTP即時串流(HLS)內容串流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇將不相容的廣告重新封裝至相容的M3U8視訊。
+來自不同第三方（如代理廣告伺服器、您的清單合作夥伴或廣告網路）的廣告通常以不相容的格式（如漸進式下載MP4格式）提供。
 
-來自不同第三方（例如代理商廣告伺服器、您的庫存合作夥伴或廣告網路）的廣告通常以不相容的格式提供，例如漸進式下載MP4格式。
+當TVSDK第一次遇到不相容的廣告時，播放器忽略該廣告並向作為黃金時段廣告插入後端的一部分的創造性重新打包服務(CRS)發出將該廣告重新打包成相容格式的請求。 CRS嘗試生成廣告的多比特率M3U8格式副本，並將這些格式副本儲存在黃金時段內容交付網路(CDN)上。 下次TVSDK收到指向該廣告的廣告響應時，播放器使用CDN中與HLS相容的M3U8版本。
 
-當TVSDK第一次遇到不相容的廣告時，播放器會忽略廣告，並向創意重新封裝服務(CRS)發出請求，以將廣告重新封裝為相容格式。 CRS會嘗試產生廣告的多位元速率M3U8轉譯，並將這些轉譯儲存在Primetime內容傳送網路(CDN)上。 下次TVSDK收到指向該廣告的廣告回應時，播放器會從CDN使用HLS相容的M3U8版本。
-
-若要啟用此選用的CRS功能，請連絡您的Adobe代表。
+要激活此可選CRS功能，請與Adobe代表聯繫。
 
 >[!NOTE]
 >
->對於CRS 3.0版（及舊版）客戶，從CRS 3.1版開始，下列變更已改善安全性和效能：
+>對於CRS 3.0版（及更早版本）客戶，從CRS 3.1版開始，以下更改提高了安全性和效能：
 >
->* 如果重新封裝的內容使用`https:`,CRS 3.1會繼續使用`https:`。 這降低了某些播放器呈現不安全內容的可能性。
-   >
-   >
-* CRS 3.1可大幅降低網路呼叫，縮短視訊啟動時間。
-
+>* CRS 3.1繼續 `https:` 如果要重新打包的內容使用 `https:`。 這降低了一些玩家呈現不安全內容的可能性。
+>
+>* CRS 3.1極大地減少了網路呼叫，縮短了視頻啟動時間。
 >
 
 
-
-如需CRS的詳細資訊，請參閱[創意封裝服務(CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf)。
+有關CRS的詳細資訊，請參見 [創意包裝服務(CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf)。
 
 ## 在TVSDK應用程式中啟用CRS{#enable-crs-in-tvsdk-applications}
 
-若要在TVSDK應用程式中啟用CRS，您必須在Auditude設定中設定下列資訊：
+要在TVSDK應用程式中啟用CRS，必須在「審核」設定中設定以下資訊：
 
-1. 在`AuditudeSettings`中啟用CRS。
+1. 在中啟用CRS `AuditudeSettings`。
 
    ```
    ... 

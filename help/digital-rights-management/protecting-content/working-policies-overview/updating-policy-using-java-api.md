@@ -2,27 +2,26 @@
 title: 使用Java API更新DRM策略
 description: 使用Java API更新DRM策略
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 00bb9b64-30f7-4900-b6bd-57604295b44d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
-# 使用Java API {#updating-a-drm-policy-with-the-java-api}更新DRM策略
+# 使用Java API更新DRM策略 {#updating-a-drm-policy-with-the-java-api}
 
 要使用Java API更新DRM策略：
 
-1. 設定您的開發環境並將[設定開發環境](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)中列出的所有JAR檔案都包括在項目中。
-1. 建立DRM `Policy`實例並從檔案或資料庫讀取DRM策略。
+1. 設定開發環境並將項目中列出的所有JAR檔案包括在 [建立開發環境](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)。
+1. 建立DRM `Policy` 實例並從檔案或資料庫讀取DRM策略。
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. 通過設定DRM `Policy`對象的屬性（如其名稱和使用規則）來更新該對象。
+1. 更新DRM `Policy` 對象，方法是設定其屬性，如名稱和使用規則。
 
    ```java
    // Change the DRM policy name.  
@@ -47,7 +46,7 @@ ht-degree: 0%
    }
    ```
 
-1. 序列化更新的DRM `Policy`對象，並將其儲存在檔案或資料庫中。
+1. 序列化更新的DRM `Policy` 對象並將其儲存在檔案或資料庫中。
 
    ```java
    // Serialize the DRM policy.  
@@ -61,4 +60,4 @@ ht-degree: 0%
    out.close();
    ```
 
-有關此示例代碼的源資訊，請參閱參考實施命令行工具[!DNL samples]目錄中的`com.adobe.flashaccess.samples.policy.UpdatePolicy`。
+請參閱 `com.adobe.flashaccess.samples.policy.UpdatePolicy` 在「參考實現」命令行工具中 [!DNL samples] 的子目錄。

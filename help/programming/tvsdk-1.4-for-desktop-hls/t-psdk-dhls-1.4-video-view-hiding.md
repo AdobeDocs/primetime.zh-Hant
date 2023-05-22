@@ -1,31 +1,30 @@
 ---
-description: 在使用MediaPlayer檢視來播放視訊後，您可以使用TVSDK方法或手動隱藏並再次顯示視訊。
-title: 隱藏視訊檢視
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 使用MediaPlayer視圖播放視頻後，可以使用TVSDK方法或手動隱藏並再次顯示視頻。
+title: 隱藏視頻視圖
+exl-id: 92354cd3-f0ed-4434-a7af-a3545e0e2460
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# 隱藏視頻視圖{#hide-a-video-view}
 
-# 隱藏視訊檢視{#hide-a-video-view}
+使用MediaPlayer視圖播放視頻後，可以使用TVSDK方法或手動隱藏並再次顯示視頻。
 
-在使用MediaPlayer檢視來播放視訊後，您可以使用TVSDK方法或手動隱藏並再次顯示視訊。
-
-您必須先暫停視訊，才能將其清除或從顯示器移除。
-* 選項1:使用`MediaPlayer.clearVideo`清除視訊影格，&#x200B;稍後更換影格。
-   * 暫停您要隱藏的影片。
-   * 呼叫`MediaPlayer.clearVideo`以移除顯示的視訊影格。
-   * 若要重設`MediaPlayer`以便再次播放，請呼叫`replaceCurrentResource`或`replaceCurrentItem`。
-* 選項2:將`MediaPlayer`檢視移出畫面，稍後再將它移回畫面，而不需要加以取代。
-   * 暫停您要隱藏的影片。
-   * 將檢視移出舞台。 例如：
+必須先暫停視頻，然後才能清除視頻或將其從顯示器中移動。
+* 選項1:清除視頻幀 `MediaPlayer.clearVideo`稍&#x200B;後更換框架。
+   * 暫停要隱藏的視頻。
+   * 通過呼叫刪除顯示的視頻幀 `MediaPlayer.clearVideo`。
+   * 重置 `MediaPlayer` 這樣它就可以再次播放，呼叫 `replaceCurrentResource` 或 `replaceCurrentItem`。
+* 選項2:移動 `MediaPlayer` 在螢幕之外查看並稍後將其移回，而無需更換。
+   * 暫停要隱藏的視頻。
+   * 將視圖移出舞台。 例如：
 
       ```
       view.x = -300; 
       view.y = -300;
       ```
 
-   * 若要再次顯示視訊，請將檢視移回舞台。
+   * 要再次顯示視頻，請將視圖移回舞台。

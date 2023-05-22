@@ -1,24 +1,22 @@
 ---
-description: MediaPlayerItem.timedMetadata屬性可讓您存取從播放清單／資訊清單標籤或從媒體串流內的ID3標籤建立的所有TimedMetadata物件。 MediaPlayerItem.hasTimedMetadata屬性可指出目前媒體中是否有已訂閱的自訂標籤。
-title: 資訊清單標籤的通知
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayerItem.timedMetadata屬性允許您訪問從播放清單/清單標籤或從媒體流中的ID3標籤建立的所有TimedMetadata對象。 MediaPlayerItem.hasTimedMetadata屬性指示當前媒體中是否存在訂閱的自定義標籤。
+title: 清單標籤的通知
+exl-id: 1a91fa47-edd5-4496-9755-17c906a3cf54
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# 清單標籤的通知{#notifications-for-manifest-tags}
 
-# 資訊清單標籤的通知{#notifications-for-manifest-tags}
+MediaPlayerItem.timedMetadata屬性允許您訪問從播放清單/清單標籤或從媒體流中的ID3標籤建立的所有TimedMetadata對象。 MediaPlayerItem.hasTimedMetadata屬性指示當前媒體中是否存在訂閱的自定義標籤。
 
-MediaPlayerItem.timedMetadata屬性可讓您存取從播放清單／資訊清單標籤或從媒體串流內的ID3標籤建立的所有TimedMetadata物件。 MediaPlayerItem.hasTimedMetadata屬性可指出目前媒體中是否有已訂閱的自訂標籤。
+您可以通過偵聽以下事件來監視定時元資料，這些事件會通知您的應用程式相關活動：
 
-您可以監聽下列事件來監控計時中繼資料，這些事件會通知您的應用程式相關活動：
+* `MediaPlayerItemEvent.ITEM_CREATED`:初始清單 `TimedMetadata` 對象在 `MediaPlayerItem` 的子菜單。 發生此情況時，此事件會通知您的應用程式。
 
-* `MediaPlayerItemEvent.ITEM_CREATED`:在建立對象 `TimedMetadata` 後，可以使用對象 `MediaPlayerItem` 的初始清單。發生此情況時，此事件會通知您的應用程式。
+* `MediaPlayerItemEvent.ITEM_UPDATED`:對於清單/播放清單定期刷新的即時/線性流，更新的播放清單/清單中可能會出現附加的自定義標籤，因此可能會將附加的TimedMetadata對象添加到 `MediaPlayerItem.timedMetadata` 屬性。 發生此情況時，此事件會通知您的應用程式。
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`:對於資訊清單／播放清單定期重新整理的即時／線性串流，更新的播放清單／資訊清單中可能會顯示其他自訂標籤，因此可能會將其他TimedMetadata物件新增至 `MediaPlayerItem.timedMetadata` 屬性。發生此情況時，此事件會通知您的應用程式。
-
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`:每次建立新對 `TimedMetadata` 像時，都會由調度此事件 `MediaPlayer`。對於在初始化階段建立的`TimedMetadata`對象，不會調度此事件。
-
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`:每次新 `TimedMetadata` 建立對象，此事件由 `MediaPlayer`。 未為 `TimedMetadata` 在初始化階段建立的對象。

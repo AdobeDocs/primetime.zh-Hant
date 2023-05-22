@@ -1,22 +1,21 @@
 ---
-description: 這些課程可協助偵測時間軸中的廣告機會。
-title: 時間軸檢測器類別
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 這些類有助於在時間線中檢測廣告機會。
+title: 時間軸檢測器類
+exl-id: c6a39ac5-53bb-4a5b-802b-eeb18ca6a7bc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
 
 ---
 
+# 時間軸檢測器類{#timeline-detectors-classes}
 
-# 時間軸探測器類{#timeline-detectors-classes}
+這些類有助於在時間線中檢測廣告機會。
 
-這些課程可協助偵測時間軸中的廣告機會。
-
-套件：[com.adobe.mediacore.timeline.depters](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/package-detail.html)
+包： [com.adobe.mediacore.timeline.depters](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/package-detail.html)
 
 | 名稱 | 說明 |
 |---|---|
-| [OpportunityDetector](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/OpportunityDetector.html) | 必須由任何機會檢測器類實施的介面。 |
-| [SpliceOutOpportunityDetector](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/SpliceOutOpportunityDetector.html) | 可監控播放時間軸並偵測廣告放置機會的類別，作為`SpliceOut`注釋插入資訊清單。 |
+| [機會檢測器](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/OpportunityDetector.html) | 必須由任何機會檢測器類實現的介面。 |
+| [SpliceOutOpportunityDetector](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/detectors/SpliceOutOpportunityDetector.html) | 監視播放時間線並檢測插入清單的廣告投放機會的類 `SpliceOut` 注釋。 |

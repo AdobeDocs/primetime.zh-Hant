@@ -2,32 +2,31 @@
 title: 非SWF應用程式允許清單
 description: 非SWF應用程式允許清單
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f33fb0e9-144f-49f8-8da2-8a50aea09456
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
+# 非SWF應用程式允許清單 {#non-swf-application-isting}
 
-# 非SWF應用程式允許列出{#non-swf-application-isting}
+AIR是首個提供應用程式允許清單的平台，以及您用於允許列出非SWF應用程式(Adobe AIR、iOS、Android等)的屬性的名稱。 保留其原名： `policy.allowedAIRApplication.n`。 這允許在發佈前使用簽名證書籤名的所有非Flash應用程式回放內容。 這稱為 *應用程式ID*。 可以使用 [!DNL AdobePublisherIDUtility.jar] 工具欄。 此允許清單將在支援Mogifale DRM的任何客戶端上強制執行。
 
-AIR是第一個提供應用程式允許清單的平台，以及您用來允許清單非SWF應用程式(Adobe AIR、iOS、Android等)的屬性名稱 保留其原名：`policy.allowedAIRApplication.n`。 這可讓所有非Flash應用程式在發佈前，先使用簽署憑證來簽署內容。 這稱為&#x200B;*應用程式ID*。 您可以使用[!DNL AdobePublisherIDUtility.jar]工具來擷取應用程式ID。 此允許清單將強制執行於支援Primetime DRM的任何用戶端。
+應用程式ID是從用於對特定應用程式進行簽名的簽名證書的公鑰派生的。 如果證書中的公鑰過期，則所有先前允許的內容只允許在使用舊證書籤名的應用上播放，將不會在新應用（使用新證書籤名）上播放。
 
-應用程式ID衍生自用於簽署特定應用程式之簽署憑證的公開金鑰。 如果憑證中的公開金鑰過期，則所有先前的內容都允許列在僅播放使用舊憑證簽署的應用程式時，新應用程式將不會播放（使用新憑證簽署）。
+如果您有一個允許將內容庫列出到已使用特定簽名證書籤名的應用程式，且該證書過期並且您獲得了新證書（使用其他公共/私鑰對），則舊內容將不會在新應用程式上播放 *除非* 執行下列任一操作：
 
-如果您有內容庫可列在使用特定簽署憑證簽署的應用程式中，且該憑證會過期，而您會獲得新憑證（使用不同的公用／私用鑰匙對），則舊內容不會在新應用程式上播放，除非您執行下列任何動作：**
+* 使用 `PolicyUpdateList` 在您的許可證伺服器上覆蓋傳入策略，並在新簽名證書的摘要中插入新的「應用程式允許」清單條目。
+* 更新許可證伺服器的邏輯以覆蓋傳入策略並插入新的「應用程式允許」清單條目。
+* 請求籤名證書頒發者向您頒發使用與先前證書相同的公共/私鑰對的新證書。
+* 如果您正在提供引用URL終結點以檢索HDS/HLS內容 `DRMMetadata`，可再生 `DRMMetadata` （使用Mogfire DRM Java SDK）插入包含已更新的「應用程式允許」清單條目的新DRM策略。
 
-* 在您的授權伺服器上使用`PolicyUpdateList`來覆寫傳入的原則，並插入新的「應用程式允許」清單項目及新簽署憑證的摘要。
-* 更新您的授權伺服器邏輯以覆寫傳入的原則，並插入新的「允許應用程式」清單項目。
-* 請求您的簽署憑證發行者簽發新憑證，該憑證會使用您先前憑證使用的相同公開／私用金鑰配對。
-* 如果您要傳送參照URL端點來擷取`DRMMetadata`的HDS/HLS內容，則可重新產生`DRMMetadata`（使用Primetime DRM Java SDK）以插入新的DRM原則，其中包含更新的「允許應用程式」清單項目。
+* 使用具有新簽名證書摘要的新DRM策略重新打包所有舊內容。
 
-* 使用包含新簽署憑證摘要的新DRM原則，重新封裝所有舊內容。
-
-如需詳細資訊，請參閱&#x200B;*Configuration properties*&#x200B;中的`policy.allowedAIRApplication.n`。
+請參閱 `policy.allowedAIRApplication.n` 在 *配置屬性* 的雙曲餘切值。
 
 >[!NOTE]
 >
->若要允許列出iOS應用程式，您必須有特殊的方法。 請參閱《iOS程式設計師指南》*TVSDK for iOS的「允許」中的[「允許」列出您的iOS應用程式](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)。*
+>允許列出iOS應用程式需要您採用一種特殊的方法。 請參閱 [允許列出您的iOS應用程式](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) 的 *《 TVSDK foriOS程式設計師指南》*。

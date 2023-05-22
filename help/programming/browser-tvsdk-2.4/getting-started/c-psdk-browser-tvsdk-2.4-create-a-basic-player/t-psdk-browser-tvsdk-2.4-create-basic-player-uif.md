@@ -1,21 +1,20 @@
 ---
-title: 使用UI架構建立基本播放器
-description: 使用UI架構建立基本播放器
+title: 使用UI框架建立基本播放器
+description: 使用UI框架建立基本播放器
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 78629042-fd87-406b-af42-229e34d48162
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# 使用UI框架建立基本播放器{#create-a-basic-player-using-the-ui-framework}
 
-# 使用UI Framework{#create-a-basic-player-using-the-ui-framework}建立基本播放器
+要使用UI框架建立基本播放器：
 
-若要使用UI架構建立基本播放器：
-
-1. 為您的播放器例項建立`<div>`。
+1. 建立 `<div>` 你的玩家實例。
 
    例如：
 
@@ -34,7 +33,7 @@ ht-degree: 1%
    </script>
    ```
 
-   建立播放器時，指定的`<div>`元素會獲得`ptp-main-video-div-style`的CSS類別。 產生的DOM會顯示如下：
+   建立播放器時， `<div>` 元素被賦給CSS類 `ptp-main-video-div-style`。 結果的DOM顯示如下：
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -42,9 +41,9 @@ ht-degree: 1%
    </div>
    ```
 
-1. 新增UI控制項。
+1. 添加UI控制項。
 
-   例如，新增當滑鼠暫留在播放器上時顯示的控制列：
+   例如，添加當滑鼠懸停在播放器上時顯示的控制欄：
 
    ```js
    <script> 
@@ -62,7 +61,7 @@ ht-degree: 1%
    </script>
    ```
 
-   產生的DOM如下：
+   生成的DOM如下所示：
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -71,7 +70,7 @@ ht-degree: 1%
    </div>
    ```
 
-從呼叫`ptp.videoPlayer()`傳回的物件會提供包住TVSDK媒體播放器API的行為，並可程式化控制播放。 當您呼叫媒體播放器例項時，使用者介面會根據媒體播放器引發的事件自行更新：
+調用返回的對象 `ptp.videoPlayer()` 提供一種包裝TVSDK媒體播放器API並允許對回放進行寫程式控制的行為。 在媒體播放器實例上進行呼叫時，用戶介面會根據媒體播放器觸發的事件來更新自己：
 
 ```js
 <script> 

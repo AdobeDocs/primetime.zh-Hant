@@ -1,37 +1,36 @@
 ---
-title: UltraViolet媒體與Adobe PrimetimeDRM
-description: UltraViolet媒體與Adobe PrimetimeDRM
+title: UltraViolet媒體和Adobe PrimetimeDRM
+description: UltraViolet媒體和Adobe PrimetimeDRM
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 03b01a29-e8e0-4fb5-a685-63a745a6417c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
+# UltraViolet媒體和Adobe PrimetimeDRM {#ultraviolet-media-and-adobe-primetime-drm}
 
-# UltraViolet介質和Adobe PrimetimeDRM {#ultraviolet-media-and-adobe-primetime-drm}
+Adobe PrimetimeDRM可以與其它第三方內容流解決方案一起使用，以建立一個完整和安全的基於DRM的媒體分發生態系統。
 
-Adobe PrimetimeDRM可與其他協力廠商內容串流解決方案搭配使用，以建立完整且安全的DRM媒體散發生態系統。
+紫外線( [https://www.myuv.com/](https://www.uvvu.com/))是一種數字版權認證和基於雲的分發系統，使數字家庭娛樂內容的消費者能夠通過多個平台和設備對購買的內容進行流式傳輸和下載。 UltraViolet內容將使用Common Encryption(CENC)以通用檔案格式(CFF)下載（或流式傳輸）。
 
-UltraViolet([https://www.myuv.com/](https://www.uvvu.com/))是數位版權驗證和雲端散發系統，可讓數位家庭娛樂內容的消費者透過多種平台和裝置串流及下載購買的內容。 UltraViolet內容將使用通用加密(CENC)以通用檔案格式(CFF)下載（或串流化）。
-
-與Adobe PrimetimeDRM一起設定UltraViolet系統很容易。 下列使用案例描述內容流程行為：
+與Adobe PrimetimeDRM一起，可輕鬆設定UltraViolet系統。 以下用例描述了內容流行為：
 
 <!--<a id="fig_cxy_dc2_44"></a>-->
 
 ![](assets/AdobeUV_web.png)
 
-1. 內容擁有者會以CFF編碼並封裝內容。 套裝內容授權給零售商進行散發。
-1. 零售商會將內容上傳至數位服務供應商，例如CDN。 內容現在可供下載。 請注意，其中某些角色可由一或多家公司擔任。
+1. 內容所有者在CFF中對內容進行編碼和包裝。 將打包的內容授權給零售商進行分發。
+1. 零售商將內容上傳到數字服務提供商，如CDN。 現在可以下載內容。 請注意，這些角色中的某些角色可以由一個或多個公司擔任。
 
-   最終用戶有支援Adobe AIR的設備。 除此之外，用戶還需要安裝符合UltraViolet標準的應用程式。 應用程式包含解析CFF並呈現供執行階段使用的必要程式碼。 所有敏感加密操作都在安全運行時處理。
-1. 應用程式可觸發裝置的網域連結，而裝置會與協調器互動。 協調員維護權限鎖、用戶資料庫和域。 協調者的網域管理器是使用Primetime DRM SDK來建置，以實施Primetime DRM專用網域加入／離開操作。
-1. 然後，使用者可使用應用程式來選擇想要從零售商取得的視訊。 零售商通常提供入口網站並處理所有商業邏輯。
-1. 然後零售商會與協調者互動，以新增權利Token。 零售商接著會將請求重新導向至服務供應商，以便實際下載內容。
-1. 如果裝置尚未取得內容授權，則會使用CFF觸發授權要求。 該請求通常包括域證書、用戶證書和關於該應用程式的資訊。 該服務提供商運行Primetime DRM許可證伺服器（使用Primetime DRM SDK），該伺服器遵循UltraViolet規範。
-1. 服務提供商的UltraViolet業務邏輯根據需要與協調者交互以檢索適當的權限令牌，以確定是否應該發放內容許可。
+   最終用戶具有支援Adobe AIR的設備。 除此之外，用戶還需要安裝符合UltraViolet要求的應用程式。 應用程式套件括分析CFF並呈現給運行時消耗的必要代碼。 所有敏感加密操作都在安全運行時中處理。
+1. 應用程式可以觸發與協調器交互的設備的域連接。 協調器維護權限鎖、用戶資料庫和域。 協調器的域管理器是使用黃金時段DRM SDK構建的，以實現黃金時段DRM特定域加入/離開操作。
+1. 然後，用戶可以使用應用程式從零售商處選擇他們想要獲取的視頻。 零售商通常提供一個門戶網站並處理所有業務邏輯。
+1. 然後零售商與協調員交互以添加權利令牌。 然後零售商將請求重定向到服務提供商以下載實際內容。
+1. 如果設備尚未獲得內容許可，則它使用CFF觸發許可請求。 該請求通常包括域證書、用戶憑據和有關該應用程式的資訊。 服務提供商運行Mighile DRM許可證伺服器（使用Mighile DRM SDK開發），該伺服器遵循UltraViolet規範。
+1. 服務提供商的UltraViolet業務邏輯根據需要與協調器進行交互，以檢索適當的權利令牌以確定是否應該頒發內容許可證。
 
-   內容授權系結至網域。 用戶端應用程式可將授權插入CFF檔案。 現在，內容可在應用程式中播放，所有保護與使用規則實施都由Primetime DRM元件在執行時期中處理。
-1. 同一使用者擁有的其他裝置和應用程式可向協調者註冊。 現在，內容可以載入其他Primetime DRM裝置，而不需要任何外部交易。
+   內容許可證已綁定到域。 客戶端應用程式可以將許可證插入CFF檔案。 現在，可以在應用程式中回放內容，所有保護和使用規則的實施都由Mighine DRM元件在運行時處理。
+1. 同一最終用戶擁有的其它設備和應用程式可以註冊到協調器。 該內容現在可以載入到其它黃金時段DRM設備中而不需要任何外部事務。

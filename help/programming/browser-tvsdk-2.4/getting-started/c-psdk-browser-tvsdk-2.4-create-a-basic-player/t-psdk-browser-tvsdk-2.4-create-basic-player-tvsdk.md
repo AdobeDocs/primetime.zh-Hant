@@ -1,23 +1,22 @@
 ---
-description: 請完成下列步驟，以使用瀏覽器TVSDK建立基本播放器。
+description: 完成以下步驟，使用瀏覽器TVSDK建立基本播放器。
 title: 使用TVSDK建立基本播放器
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ea7485e0-5d15-469b-b8b6-f9604d283492
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# 使用TVSDK建立基本播放器{#create-a-basic-player-using-tvsdk}
 
-# 使用TVSDK{#create-a-basic-player-using-tvsdk}建立基本播放器
+完成以下步驟，使用瀏覽器TVSDK建立基本播放器。
 
-請完成下列步驟，以使用瀏覽器TVSDK建立基本播放器。
-
-1. 建立新目錄，您可在其中下載瀏覽器TVSDK的壓縮檔案。
-1. 從Zendesk下載瀏覽器TVSDK、解壓縮檔案，並將frameworks檔案夾放入新目錄。
-1. 為程式碼建立內含`div`的簡單HTML樣式板。
-1. 將此樣式板置於您在步驟1中建立的目錄中的HTML檔案中。
+1. 建立一個新目錄，在該目錄中可以下載Browser TVSDK的壓縮檔案。
+1. 從Zendesk下載瀏覽器TVSDK，解壓縮檔案，並將框架資料夾放在新目錄中。
+1. 為代碼建立一個簡單的HTML模板 `div` 在裡面。
+1. 將此模板置於您在步驟1中建立的目錄中的HTML檔案中。
 
    ```
    <!DOCTYPE html> 
@@ -33,7 +32,7 @@ ht-degree: 0%
    </html>
    ```
 
-1. 在標題區段中新增瀏覽器TVSDK程式庫。
+1. 在頭部分添加瀏覽器TVSDK庫。
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -42,16 +41,16 @@ ht-degree: 0%
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. 對於body標籤，添加`onLoad`部分。
+1. 對於body標籤，添加 `onLoad` 的子菜單。
 
    ```
    <body onload="startVideo()">
    ```
 
-1. 開始實作`startVideo`函式。
-1. 新增指令碼標籤並在標籤中建立`startVideo`函式。
+1. 開始實施 `startVideo` 的子菜單。
+1. 添加指令碼標籤並建立 `startVideo` 的子菜單。
 
-   這應該在頁面的標題區段中。
+   這本該在頁首部分。
 
    ```js
    <script> 
@@ -60,17 +59,17 @@ ht-degree: 0%
    </script>
    ```
 
-1. 建立`Adobe.MediaPlayer`。
+1. 建立 `Adobe.MediaPlayer`。
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. 建立`MediaPlayerView`。
+1. 建立 `MediaPlayerView`。
 
    >[!TIP]
    >
-   >這是您先前建立的`div`使用的位置。
+   >這裡 `div` 將使用您以前建立的。
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -78,13 +77,13 @@ ht-degree: 0%
    player.view = view;
    ```
 
-1. 新增播放器事件接聽程式。
+1. 添加播放器事件偵聽器。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
    ```
 
-1. 實作事件處理常式，並將它放在新增事件接聽程式之前。
+1. 實現事件處理程式，並將其置於添加事件偵聽器之前。
 
    ```js
    var onStatusChange = function (event) { 
@@ -141,7 +140,7 @@ ht-degree: 0%
    }; 
    ```
 
-1. 建立`MediaResource`，以傳遞M3U8連結（或mpd）。
+1. 建立 `MediaResource`，它通過M3U8鏈路（或mpd）。
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -157,7 +156,7 @@ ht-degree: 0%
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. 當播放器處於「已初始化」狀態時，請呼叫`prepareToPlay`。
+1. 當播放器處於INITIALIZED狀態時，調用 `prepareToPlay`。
 
    ```js
    case INITIALIZED: 
@@ -165,11 +164,10 @@ ht-degree: 0%
     break;
    ```
 
-1. 播放器處於PREPARED狀態後，請呼叫`play`。
+1. 玩家處於PREPARED狀態後，呼叫 `play`。
 
    ```js
    case PREPARED: 
     player.play(); 
     break;
    ```
-

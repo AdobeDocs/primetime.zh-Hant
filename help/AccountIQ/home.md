@@ -1,6 +1,6 @@
 ---
 title: 帳戶IQ概述
-description: 帳戶IQ可幫助MVPD和程式設計師了解其收入和業務運營的風險，並確定要採取哪些最有效的措施來減輕憑據欺詐的影響。
+description: Account IQ可幫助MVPD和程式設計師瞭解其收入和業務運營所面臨的風險，並確定採取的最有效措施來減輕憑據欺詐的影響。
 exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
 source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
 workflow-type: tm+mt
@@ -11,36 +11,36 @@ ht-degree: 0%
 
 # 帳戶IQ概述 {#account-iq-overview}
 
-流服務訂閱者共用憑據是業界一個日益嚴重的主要問題。 要添加此功能，了解、識別憑據共用並採取相應行動是一個複雜的過程。 了解訂閱者使用行為和開發其活動的整體視圖涉及複雜性，例如區分同一家庭內和外部成員之間的共用。 由於這一挑戰，流服務提供商在採取行動反對憑據共用時可能會有障礙。
+流媒體服務訂閱者共用證書是業界一個主要且日益嚴重的問題。 要增加此功能，瞭解、識別和處理憑據共用是一個複雜的過程。 瞭解用戶使用行為和開發其活動的整體視圖涉及複雜性，例如區分同一家庭內和外部成員之間的共用。 由於這一挑戰，流服務提供商在反對憑據共用方面可能存在障礙。
 
 
 <div class "preview">
-一般而言，視頻流服務提供商了解分享到其業務的風險和成本，但有有限的補救辦法，例如阻止分享者或提供優惠。 但是，我們建議採用一種有根據和有針對性的方法 — 一種方法使服務能夠準確地理解共用，並採用獎勵良好觀看行為和同時瞄準業務增長的策略。 </span>
+一般而言，視頻流服務提供商瞭解共用給其業務的風險和成本，但有有限的補救措施，例如阻止共用者或提供報價。 但是，建議採用一種有根據、有針對性的方法 — 一種使服務能夠準確理解共用，並採用獎勵良好觀看行為和同時瞄準業務增長的策略。 </span>
 
-![帳戶IQ流程圖](assets/aiq-intro.png)
+![帳戶IQ流圖](assets/aiq-intro.png)
 
 *圖：帳戶IQ資訊流*
 
-Adobe Primetime帳戶IQ可讓視訊串流服務了解訂閱者使用模式，並識別憑證共用。 通過使用Adobe專有的多層機器學習模型深入分析每個用戶留下的資料的長路徑，流服務可以更確定地了解使用行為並識別憑據共用。 此外，它還允許您透過與其他系統的整合（例如限制同時資料流或自訂優惠方案）來採取動作，並驗證這些動作的影響，無論是鼓勵合法的檢視行為，還是增加訂閱者和收入。
+Adobe Primetime帳戶IQ使視頻流服務能夠理解用戶使用模式並識別憑據共用。 通過使用Adobe專有的多層機器學習模型對每個用戶留下的資料的長期記錄進行深入分析，流服務能夠更加準確地理解使用行為和識別憑證共用。 此外，它還允許通過與其他系統的整合來執行操作，並驗證了這些操作的影響 — 無論是鼓勵合法查看行為還是鼓勵不斷增長的訂閱者和收入。
 
-帳戶IQ提供可衡量、管理憑證共用並從中獲利的工具和功能。 報表、分析和控制面板可讓您探索資料以識別模式。 透過匯出與整合Adobe和協力廠商系統（例如行銷活動管理、貨幣限制或訂閱者註冊），支援直接動作。 專用的追蹤工具可衡量這些動作的成功程度，以便更新或擴充。
+Account IQ提供了衡量、管理和貨幣化憑據共用的工具和功能。 報告、分析和控制板使資料能夠進行探索以識別模式。 通過出口和與Adobe和第三方系統（如活動管理、貨幣限制或訂戶註冊）的整合，支援直接行動。 而專用的跟蹤工具可以衡量這些動作的成功，以便更新或擴展這些動作。
 
-以下各節將說明帳戶IQ應用程式工具和功能：
+以下各節將介紹帳戶IQ應用程式工具和功能：
 
-* [控制面板](/help/AccountIQ/dashboard.md)
-* [一般使用情況報表](/help/AccountIQ/general-usage-reports.md)
-* [共用帳戶報表](/help/AccountIQ/shared-acc-reports.md)
+* [儀表板](/help/AccountIQ/dashboard.md)
+* [常規使用情況報告](/help/AccountIQ/general-usage-reports.md)
+* [共用帳戶報告](/help/AccountIQ/shared-acc-reports.md)
 * [使用模式](/help/AccountIQ/usage-patterns.md)
 * [操作](/help/AccountIQ/operations.md)
 
-讓我們深入探討這些區段中的圖形與報表。
+讓我們深入瞭解這些部分中的圖表和報告。
 
 >[!MORELIKETHIS]
 >
 >* [如何開始使用帳戶IQ](/help/AccountIQ/get-started.md)
->* [控制面板](/help/AccountIQ/dashboard.md)
->* [一般使用情況報表](/help/AccountIQ/general-usage-reports.md)
->* [共用帳戶報表](/help/AccountIQ/shared-acc-reports.md)
+>* [儀表板](/help/AccountIQ/dashboard.md)
+>* [常規使用情況報告](/help/AccountIQ/general-usage-reports.md)
+>* [共用帳戶報告](/help/AccountIQ/shared-acc-reports.md)
 >* [使用模式](/help/AccountIQ/usage-patterns.md)
 >* [產品術語表](/help/AccountIQ/product-concepts.md)
 >* [帳戶IQ白皮書](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
