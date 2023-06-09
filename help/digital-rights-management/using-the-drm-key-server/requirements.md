@@ -1,29 +1,28 @@
 ---
-title: 使用黃金時段DRM密鑰伺服器的要求
-description: 使用黃金時段DRM密鑰伺服器的要求
+title: 使用Primetime DRM金鑰伺服器的需求
+description: 使用Primetime DRM金鑰伺服器的需求
 copied-description: true
 exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
-# 導言 {#introduction}
+# 簡介 {#introduction}
 
-黃金時段DRM密鑰伺服器是用於遠程iOS和/或Xbox 360密鑰傳遞的多租戶密鑰伺服器。 如果在iOS的策略中啟用遠程密鑰傳遞，則必須部署黃金時段DRM密鑰伺服器，以便在iOS客戶端上啟用內容回放。 Xbox 360始終需要黃金時段DRM密鑰伺服器。
+Primetime DRM Key Server是用於遠端iOS和/或Xbox 360金鑰傳遞的多租使用者金鑰伺服器。 如果在iOS的原則中啟用了遠端金鑰傳遞，則必須部署Primetime DRM金鑰伺服器，才能在iOS使用者端上啟用內容播放。 Xbox 360一律需要Primetime DRM金鑰伺服器。
 
-## 使用黃金時段DRM密鑰伺服器的要求 {#requirements-for-using-primetime-drm-key-server}
+## 使用Primetime DRM金鑰伺服器的需求 {#requirements-for-using-primetime-drm-key-server}
 
-使用黃金時段DRM密鑰伺服器的最低要求是：
+使用Primetime DRM Key Server的最低需求為：
 
-* [Java JRE 1.6](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 或稍後。 （要在Windows 64位上使用HSM，需要JRE 8）
+* [Java JRE 1.6](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 或更新版本。 （若要在Windows 64位元上使用HSM，需要JRE 8）
 
-   >[!NOTE]
-   >
-   >OpenJDK 8現在支援64位PKCS11: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)和OracleJDK: [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559)。
-
+  >[!NOTE]
+  >
+  >OpenJDK 8現在支援64位元PKCS11： [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)，和Oracle
 * [Apache Tomcat 7](https://tomcat.apache.org)
-* Adobe頒發的憑據
-* Microsoft頒發的憑據（用於Xbox 360客戶端）
+* 由Adobe簽發的認證
+* Microsoft核發的認證（適用於Xbox 360使用者端）

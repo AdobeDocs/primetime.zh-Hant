@@ -1,100 +1,100 @@
 ---
-description: DRM客戶端錯誤是TVSDK客戶端錯誤的子集。
-title: DRM客戶端錯誤消息參考
+description: DRM使用者端錯誤是TVSDK使用者端錯誤的子集。
+title: DRM使用者端錯誤訊息參考
 exl-id: 3d74cb92-c0a7-4eab-91b8-7e60a9c33df4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '5185'
+source-wordcount: '5173'
 ht-degree: 1%
 
 ---
 
-# DRM客戶端錯誤消息參考 {#client-error-message-reference}
+# DRM使用者端錯誤訊息參考 {#client-error-message-reference}
 
-DRM客戶端錯誤是TVSDK客戶端錯誤的子集，與DRM相關的錯誤代碼範圍從3300到3399。
+DRM使用者端錯誤是TVSDK使用者端錯誤的子集，與DRM相關的錯誤碼範圍從3300到3399。
 
-## DRM客戶端錯誤 {#drm-client-errors}
+## DRM使用者端錯誤 {#drm-client-errors}
 
-| 錯誤代碼 | 助記法 | 補救 |
+| 錯誤代碼 | 助記鍵 | 補救措施 |
 |---|---|---|
-| 3300 | 憑證無效 | 分銷商的軟體應該做什麼： <ul><li> 如果您使用的是GoogleChrome，並且您處於Incognito模式，且Flash Player版本低於11.6，則可能會發生此錯誤。 我們建議播放器檢查瀏覽器的版本號，並建議用戶退出Incognito模式。</li><li> 再次請求許可證。 如果請求成功，則無需記錄或升級。 如果請求不成功，請記錄導致錯誤的內容。 `subErrorId` 包含行錯誤（如果存在）。</li></ul> 分銷商應該做的： <ul><li> 如果對Flash低於11.6版的Chrome以外的配置重試失敗，則打包中可能出現故障。</li><li>檢查問題是否特定於某些內容並重新打包。</li></ul> |
-| 3301 | 身份驗證失敗 | 伺服器無法驗證或授權客戶端。<ul><li>分銷商的軟體應採取任何必要的操作來重新建立用戶的憑據，或指導用戶獲取對內容的訪問。</li><li>分發伺服器應確認其授權和身份驗證機制正常工作。 如果分銷商不計畫使用身份驗證或授權功能，他們應檢查違規內容的策略是否需要身份驗證，並參閱診斷策略/許可證差異。</li></ul> 有關此錯誤代碼的詳細資訊，請參見 [DRM錯誤3301的原因和解決方法](https://forums.adobe.com/thread/1277149)。 |
-| 3302 | 需要SSL | 對於黃金時段DRM 4.0及更高版本，當遠程密鑰URL不使用HTTPS作為方案時，在iOS引發此錯誤。 需要HTTPS。 <ul><li>如果分發伺服器使用的版本早於黃金時段DRM版本4，或至少是版本4，但平台不是iOS，則分發伺服器的軟體應記錄該錯誤。 此錯誤僅在iOS引發。</li><li>如果分銷商的軟體至少是黃金時段DRM版本4，而平台是iOS，則分銷商必須將他們使用的遠程密鑰伺服器URL更改為HTTPS。 如果它們只使用HTTP，則分發伺服器可能必須設定HTTPS伺服器。 否則，分銷商需要將記錄的資訊提交到Adobe並上報問題。</li></ul> |
-| 3303 | 內容已過期 | 您正在查看的內容已根據內容提供程式設定的規則過期。  `subErrorId` 包含特定於客戶端的錯誤或行錯誤。 <ul><li>分發伺服器的軟體應嘗試從伺服器重新獲取一次許可證，以確定是否有新的未過期許可證可用。 如果沒有可用的許可證或許可證已過期，允許用戶獲取新的許可證，或通知用戶無法監視內容。</li></ul> 如果內容已與具有失效過期/終止日期的策略打包，並且許可證伺服器日誌報告PolicyEvaluationException，則聲明策略結束日期已失效（伺服器錯誤代碼303）。 檢查伺服器的日誌檔案以驗證。<br>如果可能，客戶應檢查他們在打包期間使用的策略，以查看該策略是否已過期。 Java命令行工具是： <ul><li>java -jar libs/AdobePolicyManager.jar</li><li> 詳細演示.pol</li><li>分發伺服器應確認許可證到期日期是否按預期配置。</li></ul> 有關此錯誤代碼的詳細資訊，請參見 [AMS/FMS使用即時流時3303（內容已過期）?](https://forums.adobe.com/thread/1300813) |
-| 3304 | 授權失敗 | 當前用戶無權查看內容。 以其他用戶身份登錄。<br>有關此錯誤代碼的詳細資訊，請參閱錯誤代碼3301。 |
-| 3305 | ServerConnection失敗 | 由於網路延遲或客戶端離線，與許可證或域伺服器的連接超時。 通常，subErrorId包含HTTP返回代碼。<ul><li>分發伺服器的軟體應嘗試連接到已知良好的伺服器。 如果嘗試失敗，則提示用戶重新連接到網路。 如果嘗試成功，請記錄。</li><li>分發伺服器應驗證正在使用的任何許可證和域伺服器是否聯機且可從客戶端網路中看到。</li></ul>有關此錯誤代碼的詳細資訊，請參見 [DRM 3305 ServerConnectionFailed原因和解決方法](https://forums.adobe.com/thread/1284947.) |
-| 3306 | ClientUpdateRequired | 當前客戶端無法完成請求的操作，但更新的客戶端可能能夠完成請求。<br>這可能有幾個原因：<ul><li>使用的共用域在此客戶端上不可用。 在Chrome上播放時可能會出現這種情況，但不會出現其他瀏覽器，反之亦然。<br>**注：** Chrome使用的PHDS/PHLS密鑰與其他瀏覽器使用的密鑰不同。</li><li>當在5.0之前的iOS版本上運行時，應用程式正嘗試添加多個DRMSassion。</li><li>只支援版本2時，元資料的版本為3或更高。</li><li>分發伺服器的軟體應提醒用戶並中止操作。 如果軟體有確定升級是否可用的方法，請以適當的方式引導用戶進行升級。</li><li>如果由於共用域而出現此問題，則分發伺服器需要使用Adobe檢查更新的運行時或庫。 在Flash運行時，分發伺服器可以直接在其應用程式中強制升級。 對於庫，分發伺服器需要獲取更新的庫，重建其應用程式並將其部署到其用戶。</li></ul>如果由於多個DRMSassion而出現問題，則分銷商需要更新其應用程式以在添加多個DRMSassion之前檢查iOS版本號。 或者，他們可以限制將他們的申請分發到iOS第5版及更高版本。<br>如果由於元資料版本高於版本2而出現問題，則問題可能是元資料損壞。 他們可以嘗試重建元資料並查看結果。 如果他們繼續看到問題，請記錄問題並升級為Adobe。<br>有關此錯誤代碼的詳細資訊，請參見 [如何修復3306 DRMErrorEvent錯誤代碼](https://forums.adobe.com/thread/1266675)。 |
-| 3307 | 內部故障 | 這通常表示黃金時段DRM代碼中的錯誤，並且是意外的，除非存在已知的錯誤，如下所示。subErrorId包含特定於客戶端的錯誤或行錯誤。<ul><li>如果瀏覽器是Windows上的Chrome，而Flash版本是11.6(SWF版本19或更高版本)，則分銷商的軟體應假定用戶在資訊欄上按了「拒絕」，並將其與3368一樣處理。</li><li>如果3307在瀏覽器不是Chrome或Flash版本不是11.6時發生，則分銷商應升級為Adobe。</li></ul>**注：** 3307:1107296344(FailedToGetBrokerHandle)可能發生在Chrome瀏覽器版本24-28上。 |
-| 3308 | WrongLicenseKey | 當使用的許可證包含解密內容的錯誤密鑰時，會引發此錯誤。 subErrorId包含客戶端特定的錯誤或行錯誤。<br>產生此錯誤的方法似乎只有兩種：<ul><li>客戶修改了用於生成許可證的標準Adobe工具（例如許可證伺服器Java框架）。 在這種情況下，許可證包含的密鑰可能與任何內容不對應。</li><li>客戶已使用相同的許可證ID頒發多個許可證。 在這種情況下，客戶端上有多個可用的許可證，這些許可證與內容元資料相匹配，而黃金時段DRM代碼已選擇了錯誤的許可證供使用。</li><li>分發伺服器的軟體應嘗試從伺服器重新獲取許可證。</li><li>如果沒有可用的許可證或許可證已過期，請為用戶提供一個工作流以獲取新的許可證，或通知用戶無法監視內容，然後記錄問題。</li><li> 如果這是域綁定內容(對於AIR)，請為用戶提供加入域的方法。</li><li>分發商應：</li><li> 驗證他們是否尚未自定義Mighine DRM許可證伺服器的許可證頒發部分。</li><li>驗證他們是否為所有許可證頒發唯一的許可證ID。</li><li>將問題升級為Adobe。</li></ul> |
-| 3309 | 損壞的附加頭 | 如果報頭大於65536位元組，則會發生這種情況。<ul><li>分發商的軟體應記錄導致錯誤的內容。</li><li>分發商應確認該錯誤可通過特定內容再現。 重新打包損壞的內容。</li></ul> |
-| 3310 | AppIDMismatch | 不允許列出應用程式。 安卓、iOS或FlashSWF。<br>subErrorId:1000942;播放受保護的流時出錯。 FAXS錯誤。<br>也可能是客戶端報告pubID（應用發佈者ID）的空字串。<br>**Android:** Android應用程式與正在使用的應用程式不匹配。 請記住，Android中調試密鑰庫的目錄通常與發行版密鑰庫的目錄不同。<br>**iOS:** 查看 [允許列出您的iOS應用程式](/help/programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) TVSDKiOS指南中的文檔。 |
-| 3312 | 許可證完整性 | 再次從伺服器下載許可證。 |
-| 3313 | WriteMicrosafe失敗 | 當系統無法寫入檔案系統時，會出現此問題。 subErrorId包含客戶端特定的錯誤或行錯誤。<br>在MicrosoftWindows上，當加密內容的licenseID或policyID太長時，Active X或NPAPI插件快閃記憶體播放器可能會拋出錯誤3313。 這是因為Windows中的最大路徑長度。 （Pepper插件沒有此問題。）<ul><li>分發伺服器的軟體應提示用戶確認其用戶目錄未鎖定，或者卷已滿或已鎖定。</li><li>如果分銷商使用的是AIR，而不是Flash，則問題可能由路徑長度限制引起。 分銷商應將其AIR申請的名稱縮短到合理的程度。</li></ul> |
-| 3314 | 損壞的DRMMetadata | 此錯誤通常表示內容已與testPKI證書打包，而播放器是使用生產PKI構建的，反之亦然。<br>subErrorId包含客戶端特定的錯誤或行錯誤。<ul><li>分發商的軟體應記錄導致錯誤的內容。</li><li>分發者應確認該錯誤可通過特定內容再現。</li></ul>您可能必須重新打包損壞的內容。 |
-| 3315 | 拒絕權限 | 當打算使用3305時，可能會引發此錯誤代碼的已知錯誤。 有關詳細資訊，請參閱錯誤代碼3305。<br>AIR載入的遠程SWF不允許訪問黃金時段DRM功能。 如果在網路訪問期間出現安全錯誤，也可以拋出此錯誤代碼。 例如，目標伺服器不能通過使用crossdomain.xml連接客戶端，或者無法訪問crossdomain.xml。<br>有關詳細資訊，請參見 [DRM錯誤3315可能的根本原因和解決方法](https://forums.adobe.com/thread/1266592)。 |
-| 3317 | AAXS_LoadAdobeCPF失敗 | **重要提示：** 這是一個罕見的錯誤，通常不會在生產環境中出現。<br>如果確實發生錯誤，可以執行下列操作之一：<ul><li>如果使用AIR，請重新安裝AIR。</li><li>如果使用Flash Player，請再次下載AdobeCP模組。</li></ul> |
-| 3318 | 不相容AdobeCPVersion | **重要提示：** 這是一個罕見的錯誤，通常不會在生產環境中出現。<br>如果確實發生錯誤，可以執行下列操作之一：<ul><li>如果使用AIR，請重新安裝AIR。</li><li>如果使用Flash Player，請再次下載AdobeCP模組。</li></ul> |
-| 3319 | 缺少AdobeCPGetAPI | **重要提示：** 這是一個罕見的錯誤，通常不會在生產環境中出現。<br>如果確實發生錯誤，可以執行下列操作之一：<ul><li>如果使用AIR，請重新安裝AIR。</li><li>如果使用Flash Player，請再次下載AdobeCP模組。</li></ul> |
-| 3320 | 主機失敗 | **重要提示：** 這是一個罕見的錯誤，通常不會在生產環境中出現。<br>如果確實發生錯誤，可以執行下列操作之一：<ul><li>如果使用AIR，請重新安裝AIR。</li><li>再次下載AdobeCP和FlashPlayer，因為任何一個解決方案都可能不同步。</li></ul>應用程式只需更新Flash Player，這將導致AdobeCP再次下載。 |
-| 3321 | I15nFailed | 使用密鑰設定客戶端的過程失敗。 subErrorId包含特定於客戶端、特定於伺服器或行的錯誤。<ul><li>分發伺服器的軟體應至少重試一次該操作。</li></ul>如果您在Windows上使用GoogleChrome，請說明如何允許不在沙箱中的插件訪問。 有關詳細資訊，請參閱GoogleChrome的「無沙箱」訪問被拒絕。<ul><li>分發伺服器應完成以下任務之一：</li><li>如果錯誤跨平台一致，應使用Adobe來解決問題。</li><li>如果錯誤僅限於Windows上的Chrome，請引導用戶允許無沙盒插件訪問。</li></ul>分銷商應將其SWF更新為19版或更高版本。 對於Chrome特定的3321錯誤，將引發3368錯誤。 錯誤3368可以由分銷商的軟體更具體地處理。 此更改是在Chrome Stable通道26.0.1410.43版中引入的。<br>**注：** 錯誤3321:1090519056可能發生在Flash播放器版本11.1到11.6之間。我們建議您升級到最新的Flash Player版。<br>有關詳細資訊，請參見 [DRM錯誤3321原因和解決方法](https://forums.adobe.com/thread/1277138)。 |
-| 3322 | 設備綁定失敗 | 設備似乎與初始化時存在的配置不匹配。 subErrorId包含客戶端特定或行錯誤。<br>分銷商的軟體應完成以下任務之一：<ul><li>如果設備不使用Flash Player，而是AIR,iOS等， `callDRMManager.resetDRMVouchers()`。</li></ul>如果在開發階段的iOS出現此問題，請讓開發人員確認在從第三方預發行分發系統（例如，HockeyApp）下載的生成和從Xcode下載的本地生成之間切換時是否觀察到此問題。 在從HockeApp分發的生成和從Xcode分發的生成之間切換時，不會完全覆蓋以前安裝的屬性。 此情況可能觸發3322錯誤。<br>要解決此問題，開發人員應在安裝新生成之前從設備中刪除舊生成。<ul><li>如果設備正在使用Flash Player，並且無法從3322或3346錯誤代碼中複製，請參閱Adobe中有關如何以寫程式方式在上重置DRM許可證儲存的說明 [Chrome中的DRM錯3322/3346/3368（資訊欄問題）](https://forums.adobe.com/message/5535907#5535907)。</li></ul>此錯誤不應頻繁發生。 在使用漫遊配置檔案的企業環境中，如果用戶正在查看受DRM保護的內容，則當用戶從不同機器登錄時發生的概率錯誤3322增加。 如果可能，分發伺服器應嘗試從用戶獲取此資訊。<br>如果錯誤頻發，請升級為Adobe。 您必須通知Adobe重置許可證儲存是否解決了問題，並告知Adobe在哪些瀏覽器上發生錯誤。<br>有關詳細資訊，請參閱以下文章：<ul><li>https://forums.adobe.com/message/5520902</li><li>https://forums.adobe.com/message/5535911</li><li>https://forums.adobe.com/message/5748618</li><li>https://forums.adobe.com/message/6061165</li></ul> |
-| 3323 | CorruptGlobalStateStore | DRM客戶端使用的檔案已意外修改。 subErrorId包含客戶端特定或行錯誤。<ul><li>分銷商軟體應指導用戶以與錯誤代碼3322相同的方式重置。</li><li>如果GlobalStore的故障率高於用戶群硬碟的預期故障率，請將問題上報到Adobe。</li></ul> |
-| 3324 | MachineTokenInvalid | 許可證伺服器可能無法連接到證書吊銷清單(CRL)伺服器以刷新其CRL檔案，或者客戶端電腦正在請求已被許可證伺服器吊銷的許可證/身份驗證。<br>在伺服器日誌中，錯誤代碼111 isMachineTokenInvalid。 但是，在客戶端級別，錯誤代碼111被轉換為錯誤代碼3324。<br>DRM許可證伺服器管理員應檢查客戶的許可證伺服器是否能夠檢索AdobeCRL檔案。 如果客戶使用Tomcat，則客戶可以檢查tomcat/temp/目錄以查看是否有4個.CRL檔案。<ul><li>如果檔案在此目錄中，請按兩下Windows資源管理器和CRL查看器應用程式中的檔案，確定是否有任何檔案已過期。</li><li>如果tomcat/temp/中沒有檔案，則可以假定此許可證伺服器由於防火牆或路由問題從未能到達AdobeCRL伺服器。</li></ul>有關詳細資訊，請參閱防火牆規則。<br>如果CRL檔案不可用或已過期，則必須確認是否可以訪問許可證伺服器。 在客戶的許可證伺服器上開啟網路嗅探器（例如，Charles或Wireshark），重新啟動伺服器，並讓客戶端嘗試從伺服器請求許可證。<br>可以觀察網路通信量，以查看對以下URL端點的調用是否成功：<br>**注：** 您還可以在瀏覽器中輸入以下CRL URL，以查看是否可以手動下載每個檔案。<ul><li>[https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl](https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl)</li><li>[https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl](http://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl)</li><li>[https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl](http://crl2.adobe.com/Adobe/FlashAccessRootCA.crl)</li><li>[https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl](http://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl)</li></ul>如果防火牆規則已開啟且當前沒有3324個錯誤，則可能存在臨時網路問題。 檢查客戶的伺服器日誌（可能位於/tomcat/logs/目錄中），以確定當許可證伺服器嘗試獲取證書吊銷清單時是否出現錯誤。<br>**注：** 在更新CRL檔案時，當大量客戶端（或拆分）將3324錯誤報告到臨時網路問題時，可能會發生錯誤。 網路問題解決後，3324個問題也解決了。<br>如果tomcat/temp/目錄中存在所有4個CRL檔案，並且客戶端仍然收到3324個錯誤，則CRL檔案可能存在檔案訪問問題。<br>要解決此問題，您可能需要查看日誌並清除現有CRL檔案。<br>如果沒有伺服器問題，請提示用戶按錯誤代碼3322中所述重置。 |
-| 3325 | 損壞的ServerStateStore | DRM客戶端使用的檔案已意外修改。 subErrorId包含客戶端特定或行錯誤。<ul><li>分發伺服器的軟體應再次重試該操作，因為AdobeCP已在內部刪除了違規伺服器儲存，重試應成功。 如果重試失敗，請記錄問題。</li><li>如果重試失敗的速率大於用戶群硬碟的預期失敗速率，請將問題升級為Adobe。</li></ul> |
-| 3326 | 檢測到StorePampertingDetected | 許可證儲存已被篡改或損壞，無法再使用。<br>分發伺服器軟體應指導用戶以與錯誤代碼3322中所述相同的方式重置。 |
-| 3327 | 檢測到ClockPampertingDetected | 修復時鐘或再次獲取Authn/Lic/Domain許可證。 |
-| 3328 | 伺服器錯誤重試 | 這是伺服器端錯誤，伺服器無法從客戶端完成請求。 例如，當伺服器忙、HTTP/500、伺服器沒有解密請求所需的密鑰等時，可能會發生此錯誤。<br>在客戶身上，無法確定出了什麼問題。 客戶必須查看黃金時段DRM伺服器日誌（通常稱為AdobeFlashAccess.log），以確定出錯的原因。 日誌中始終存在描述性很強的堆棧跟蹤，以指示問題。 subErrorId包含伺服器特定的或行錯誤。<br>分發伺服器應查看伺服器日誌以確定哪個伺服器正在發送此錯誤。 對於子錯誤代碼為101的3328錯誤，伺服器無法解密該請求。 客戶必須驗證安裝在許可證伺服器上的許可證/傳輸伺服器證書是否匹配並與打包期間使用的證書對應。<br>此外，如果客戶正在使用「參考實施」，則他們必須確保在指定主證書和附加證書的flashaccessrefimpl.properties檔案中沒有拼寫錯誤。<br> |
-| 3329 | ApplicationSpecificError | Mighine DRM不知道特定於應用程式的子錯誤代碼。 subErrorId包含發佈者自定義許可證伺服器中的伺服器特定錯誤。 伺服器在特定於應用程式的命名空間中返回錯誤。 |
-| 3330 | 需要身份驗證 | 當內容配置為要求客戶端在獲取許可證之前進行身份驗證時，會出現此錯誤。<ul><li>分銷商的軟體應驗證用戶，然後再次獲取許可證。 如果您的服務不打算使用身份驗證，請記錄導致此錯誤的內容的標識。</li><li>此錯誤不應要求升級，除非不應將內容配置為需要身份驗證。 在這種情況下，使用適當的策略重新打包違規內容。 如果內容打包正確，請參閱診斷策略/許可證差異。</li></ul> |
-| 3331 | ContentNotYetValid | 獲取的許可證尚未生效。 要解決此問題，請檢查客戶端時鐘是否設定不正確。 要設定客戶端時鐘，請重新打包內容或修改許可證伺服器配置。 |
-| 3332 | CachedLicenseExpired | 再次從伺服器獲取許可證。 |
-| 3333 | 播放窗口已過期 | 您必須通知用戶在策略過期之前無法播放此內容。 |
-| 3334 | DRMPlatform無效 | 不允許該平台回放內容，因為例如，內容提供商已將Mighile DRM配置為拒絕在平台上的Mighile DRM的內容或共用域綁定許可證綁定到用於不同分區的共用域令牌。<br>如果內容未通過使用適當（CDM功能選通）打包器證書打包，CDM可能會引發此錯誤。 有關詳細資訊，請參閱CDM功能選中。<br>如果內容與不正確的PHDS/PHLS證書打包，則內容可能在Chrome中工作，但不能在其他瀏覽器中工作（反之亦然）。<br>**注：** 這是因為Chrome使用不同的PHDS/PHLS證書。<br>要確認正在使用哪個證書，請轉儲內容元資料的詳細資訊並查找收件人證書。 |
-| 3335 | DRMVersion無效 | 要解決此問題，請完成以下任務之一：<ul><li>升級AIR</li><li>對於Flash Player，請升級AdobeCP模組並重試播放。</li></ul> |
-| 3336 | InvalidRuntimePlatform | 不允許此平台回放內容，因為例如，內容提供商已將Mighile DRM配置為拒絕在平台上將內容發給FP/AIR。 |
-| 3337 | InvalidRuntimeVersion | 如果內容或伺服器配置為拒絕播放特定版本的Flash或AIR運行時，則會發生這種情況。<ul><li>如果用戶在可升級Flash的作業系統上，分發伺服器的軟體應提示用戶升級Flash，然後重試。 否則建議用戶使用其他電腦。</li><li>如果懷疑出現錯誤3337s，請確定是否針對特定內容發生錯誤並重新打包該內容。 如果內容打包正確，請參閱診斷策略/許可證差異。</li></ul> |
-| 3338 | 未知連接類型 | 無法檢測連接類型，並且策略要求您開啟「輸出保護」。 只有在內容打包以需要數字或模擬輸出保護時，才會出現此問題。<br>11.8.800.168版以前的Flash Player版本中出現問題，導致錯誤338偶爾出現在策略指示內容保護為USE IF AVAILABLE的內容上。 此問題已在11.8.800.168版和更高版本中解決。<ul><li>分銷商的軟體選擇不需要輸出保護的內容的變體（例如HD流的SD變體）。 如果錯誤3338發生在USE_IF_AVAILABLE內容上，請檢查播放器版本號。 如果播放器版本小於11.8.800.168，建議用戶升級Flash Player。 如果11.8.800.168以上版本發生錯誤338，請記錄導致錯誤的內容。</li><li>分發伺服器應檢查哪些內容導致此錯誤，並驗證內容的策略是否為模擬和數字輸出設定了NO_PROTECTION或USE_IF_AVAILABLE。 如果內容無意中使用NO_OUTPUT或REQUIRED打包，請重新打包內容。 如果內容打包正確，請參閱診斷策略/許可證差異。 否則，請升級為Adobe。</li></ul>有關詳細資訊，請參見 [將DRM策略設定為USE_IF_AVAILABLE時，將獲取意外的3338錯誤](https://forums.adobe.com/message/5518688)? |
-| 3339 | NoAnalogPlaybackAllowed | 無法在模擬設備上回放。 要解決此問題，請連接數字設備。 |
-| 3340 | 無模擬保護可用 | 無法回放內容，因為連接的模擬外部顯示設備（監視器/電視）沒有正確的功能（例如，設備沒有Macrovision或ACP）。 |
-| 3341 | NoDigitalPlaybackAllowed | 無法在數字設備上回放內容。 |
-| 3342 | NoDigitalProtectionAvail | 連接的數字外部顯示設備（顯示器/電視）沒有正確的功能。 例如，設備沒有HDCP。 |
-| 3343 | 內部錯誤 | 當前已知在發佈新版本的Flash後，此錯誤最初會發生。 出現此情況是因為Flash在Flash開啟時升級，這會使Flash處於一個錯誤狀態，直到瀏覽器重新啟動。<ul><li>分銷商的軟體應完成以下任務：</li><li>建議用戶關閉或退出所有瀏覽器，然後重新開啟。</li><li>檢查Flash的版本是否為當前版本。</li></ul>如果版本不是最新版本，建議客戶升級，關閉其瀏覽器中的所有頁籤，然後重新開啟。<ul><li>如果瀏覽器成功重新啟動後出現錯誤，請升級到Adobe。 發佈新版本時，我們建議您與Adobe支援部門聯繫，以查看後台更新問題是否已解決。</li></ul> |
-| 3344 | 缺少AdobeCPModule | 部分Flash或AIR未正確安裝。<br>要解決此問題，請完成以下任務之一：<ul><li>對於AIR，用戶必須重新卸載並安裝AIR。</li><li>對於Flash Player，請調用System.update。</li></ul> |
-| 3346 | 遷移失敗 | 分銷商的軟體應執行以下操作之一：<ul><li>如果AIR，打電話 `DRMManager.resetDRMVouchers()`。</li><li>如果Flash因錯誤3322或3346而不可用，則用戶應轉到 [https://forums.adobe.com/message/5535907#5535907](https://forums.adobe.com/message/5535907#5535907) 並按照Adobe文章的說明以寫程式方式重置其DRM許可證儲存。</li><li>如果此錯誤經常發生，分發伺服器應提供有關頻率播放器版本和要Adobe的瀏覽器版本的詳細資訊。</li></ul>有關詳細資訊，請參閱以下論壇文章：<ul><li>[Chrome中的DRM錯3322/3346/3368（資訊欄問題）](https://forums.adobe.com/message/5520902)</li><li>[硬體更改後出現3322或3346錯誤](https://forums.adobe.com/message/5535911)</li></ul> |
-| 3347 | DeviceCapabilities不足 | 此錯誤的主要含義是許可證具有客戶端的DRM證書表示它不能滿足的約束。 下列「硬體功能」是在發出客戶端DRM證書時定義的：<ul><li>**非用戶可訪問的匯流排。** 如果 **真**，解密的媒體從不流經匯流排或進入主儲存器，應用程式可以在主儲存器中訪問它。 如果 **假**，解密後，應用程式可以訪問內容。</li><li>**硬體信任根。** 如果 **真**，啟動時在設備上載入的所有軟體都通過僅在硬體中可用的密鑰或摘要進行驗證。 當針對客戶機的DRM證書開啟許可證時，在客戶端上檢查這兩個約束，並且立即失敗。 在發放許可證之前，還可以在伺服器端檢查這些約束。</li></ul>此錯誤的次要含義是許可證已設定「Jailbreak Enforcement」策略，並且在設備上檢測到了越獄。 此檢查在客戶端定期完成，在伺服器端無法檢查。<br>分銷商可以更新策略並取消限制。 對於設備功能策略，使用 — devCapabilitiesV1flag和no參數發出策略更新命令。 用於jaylbreak強制setpolicy.enforceJailbreak=false。 |
+| 3300 | 無效的憑單 | 分銷商的軟體應該做什麼： <ul><li> 如果您使用Google Chrome，且處於無痕模式，而Flash Player版本低於11.6，則可能會發生此錯誤。 我們建議播放器檢查瀏覽器的版本號碼，並建議使用者退出無痕模式。</li><li> 再次要求授權。 如果請求成功，您就不需要記錄或呈報。 如果要求不成功，請記錄造成錯誤的內容。 `subErrorId` 包含行錯誤（如果存在）。</li></ul> 分銷商應該做什麼： <ul><li> 如果Flash低於11.6版的Chrome以外的設定重試失敗，封裝中可能會發生失敗。</li><li>檢查該問題是否特定於某些內容並重新封裝。</li></ul> |
+| 3301 | 驗證失敗 | 伺服器無法驗證或授權使用者端。<ul><li>散發者的軟體應採取任何必要的動作來重新建立使用者的認證，或引導使用者取得內容的存取權。</li><li>散發者應確認其授權和驗證機制正常運作。 如果經銷商不打算使用驗證或授權功能，他們應該檢查違規內容的原則是否需要驗證，並參閱診斷原則/授權差異。</li></ul> 如需此錯誤碼的詳細資訊，請參閱 [DRM錯誤3301原因和解決方法](https://forums.adobe.com/thread/1277149). |
+| 3302 | RequireSSL | 對於Primetime DRM 4.0和更新版本，當遠端金鑰URL未使用HTTPS作為配置時，會在iOS上擲回此錯誤。 需要HTTPS。 <ul><li>如果散發者使用的版本比Primetime DRM版本4舊，或至少是版本4，但平台不是iOS，散發者的軟體應該記錄錯誤。 此錯誤只會在iOS上擲回。</li><li>如果發行商的軟體至少是Primetime DRM版本4，而且平台是iOS，則發行商必須將其使用的遠端金鑰伺服器URL變更為HTTPS。 如果他們只使用HTTP，經銷商可能必須設定HTTPS伺服器。 否則，分銷商需要提交記錄的資訊以Adobe和升級問題。</li></ul> |
+| 3303 | ContentExpired | 根據內容提供者設定的規則，您正在檢視的內容已過期。  `subErrorId` 包含使用者端特有的錯誤或行錯誤。 <ul><li>散發者的軟體應嘗試從伺服器重新取得授權一次，以判斷是否有新的未到期授權可用。 如果沒有可用的授權或授權已過期，請允許使用者取得新的授權，或通知使用者無法觀看內容。</li></ul> 如果內容已封裝有過期/結束日期無效的原則，且授權伺服器記錄報告PolicyEvaluationException，請指出原則結束日期已過期（伺服器錯誤碼303）。 檢查伺服器的記錄檔以進行驗證。<br>如果可行，客戶應檢查打包期間使用的原則，檢視是否已過期。 Java命令列工具是： <ul><li>java -jar libs/AdobePolicyManager.jar</li><li> detail demo.pol</li><li>分銷商應確認授權到期日是否按預期配置。</li></ul> 如需此錯誤碼的詳細資訊，請參閱 [3303 （內容已過期）與AMS/FMS使用即時資料流？](https://forums.adobe.com/thread/1300813) |
+| 3304 | AuthorizationFailed | 目前使用者無權檢視內容。 以其他使用者身分登入。<br>如需此錯誤碼的詳細資訊，請參閱錯誤碼3301。 |
+| 3305 | ServerConnectionFailed | 由於網路延遲或使用者端離線，與授權或網域伺服器的連線逾時。 通常，subErrorId包含HTTP傳回碼。<ul><li>散發者的軟體應嘗試與已知正常之伺服器進行網路連線。 如果嘗試失敗，則提示使用者重新連線到網路。 如果嘗試成功，則將其記錄。</li><li>散發者應確認任何使用中的授權和網域伺服器已上線，且可從使用者端網路中看到。</li></ul>如需此錯誤碼的詳細資訊，請參閱 [DRM 3305 ServerConnectionFailed原因和解決方法](https://forums.adobe.com/thread/1284947.) |
+| 3306 | ClientUpdateRequired | 目前的使用者端無法完成要求的動作，但更新的使用者端可能能夠完成要求。<br>這可能有幾個原因：<ul><li>使用的共用網域在此使用者端上無法使用。 當播放在Chrome上運作時可能會發生這種情況，但其他任何瀏覽器都無法運作，反之亦然。<br>**注意：** Chrome使用的PHDS/PHLS金鑰與其他瀏覽器使用的不同。</li><li>應用程式嘗試在5.0之前的iOS版本上執行時新增多個DRMSession。</li><li>僅支援版本2時，中繼資料的版本為3或更高版本。</li><li>散發者的軟體應提醒使用者並中止作業。 如果軟體有辦法判斷是否有升級可用，請以適合平台的方式將使用者導向該升級。</li><li>如果問題是因為共用網域而發生，散發者將需要向Adobe檢查更新的執行階段或程式庫。 在Flash執行階段的情況下，散發者可以直接在其應用程式中強制升級。 若是程式庫，散發者需要取得更新的程式庫、重建其應用程式並將其部署給使用者。</li></ul>如果問題因多個DRMSessions而發生，發行者將需要更新其應用程式以在新增多個DRMSessions之前檢查iOS版本號碼。 或者，他們也可以限制將其應用程式發佈到iOS版本5及更高版本。<br>如果問題是因為中繼資料版本高於版本2而發生，則問題可能是中繼資料損毀。 他們可以嘗試重建中繼資料並檢視結果。 如果他們持續看到問題，請記錄問題並升級至Adobe。<br>如需此錯誤碼的詳細資訊，請參閱 [如何補救3306 DRMErrorEvent錯誤碼](https://forums.adobe.com/thread/1266675). |
+| 3307 | InternalFailure | 這通常表示Primetime DRM程式碼中的錯誤，除非有已知錯誤，否則不會預期到。subErrorId包含使用者端特有的錯誤或行錯誤。<ul><li>如果瀏覽器在Windows上為Chrome，而Flash版本為11.6 (SWF版本19或更高版本)，則散發者的軟體應假設使用者在資訊列上按下「拒絕」，並將此視為相同的3368。</li><li>如果瀏覽器不是Chrome或Flash版本不是11.6時發生3307，則分銷商應升級至Adobe。</li></ul>**注意：** 3307：1107296344 (FailedToGetBrokerHandle)可能會在Chrome瀏覽器24-28版中發生。 |
+| 3308 | WrongLicenseKey | 當使用的授權包含解密內容的錯誤金鑰時，就會擲回此錯誤。 subErrorIdentifis包含使用者端特有的錯誤或行錯誤。<br>產生此錯誤的方式似乎只有兩種：<ul><li>客戶已修改用於產生授權的標準Adobe工具（例如，授權者伺服器Java架構）。 在此情況下，授權包含可能未對應到任何內容的錯誤金鑰。</li><li>客戶已使用相同的授權ID核發多個授權。 在這種情況下，使用者端上有多個符合內容中繼資料的可用授權，且Primetime DRM程式碼已選取了錯誤的授權使用。</li><li>散發者的軟體應嘗試從伺服器重新取得授權。</li><li>如果沒有可用的授權或授權已過期，請提供工作流程讓使用者取得新授權，或通知使用者無法觀看內容，並記錄問題。</li><li> 如果這是網域繫結內容(適用於AIR)，請提供讓使用者加入網域的方式。</li><li>散發者應：</li><li> 確認他們尚未自訂Primetime DRM授權伺服器的授權發行部分。</li><li>驗證他們是否核發所有授權的唯一授權ID。</li><li>呈報Adobe的問題。</li></ul> |
+| 3309 | CorruptedAdditionalHeader | 如果標題大於65536位元組，就會發生這種情況。<ul><li>散發者的軟體應記錄導致錯誤的內容片段。</li><li>散發者應確認錯誤可透過特定內容片段重現。 重新封裝中斷的內容。</li></ul> |
+| 3310 | AppIDMismatch | 不允許列出應用程式。 Android、iOS或FlashSWF。<br>subErrorId： 1000942；播放受保護的資料流時發生錯誤。 FAX錯誤。<br>使用者端可能也會回報pubID （應用程式發佈者ID）的空字串。<br>**Android：** Android應用程式與正在使用的應用程式不相符。 請記住，Android中除錯金鑰存放區的目錄通常與發行金鑰存放區的目錄不同。<br>**iOS：** 請參閱 [允許列出您的iOS應用程式](/help/programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) TVSDK iOS指南中的檔案。 |
+| 3312 | Licenseintegrity | 再次從伺服器下載授權。 |
+| 3313 | WriteMicrosafeFailed | 當系統無法寫入檔案系統時，就會發生此問題。 subErrorIdcontains使用者端特有的錯誤或行錯誤。<br>在Microsoft Windows上，當加密的內容具有licenseID或policyID太長時，Active X或NPAPI外掛程式flash player可能會擲回錯誤3313。 這是因為Windows中的路徑長度上限。 （Pepper外掛程式沒有這個問題。）<ul><li>散發者的軟體應提示使用者確認其使用者目錄未鎖定，或位於已滿或已鎖定的磁碟區上。</li><li>如果散發者使用AIR而非Flash，則問題可能是由於路徑長度限制所造成。 經銷商應將其AIR應用程式的名稱縮短為合理名稱。</li></ul> |
+| 3314 | CorruptedDRMMetadata | 此錯誤通常表示內容已搭配測試PKI憑證封裝，而播放器是搭配生產PKI建置，反之亦然。<br>subErrorId包含使用者端特有的錯誤或行錯誤。<ul><li>散發者的軟體應記錄導致錯誤的內容片段。</li><li>散發者應確認錯誤可透過特定內容片段重現。</li></ul>您可能必須重新封裝損毀的內容。 |
+| 3315 | PermissionDenied | 已知的Bug會在預期3305時擲回此錯誤碼。 如需詳細資訊，請參閱錯誤代碼3305。<br>AIR載入的遠端SWF不允許存取Primetime DRM功能。 如果在網路存取期間發生安全性錯誤，也會擲回此錯誤碼。 例如，目的地伺服器未透過crossdomain.xml連線的使用者端，或無法連線crossdomain.xmlis。<br>如需詳細資訊，請參閱 [DRM錯誤3315可能的根本原因和解決方法](https://forums.adobe.com/thread/1266592). |
+| 3317 | AAXS_LoadAdobeCPFailed | **重要：** 這是罕見的錯誤，通常不會發生在生產環境中。<br>如果發生錯誤，您可以執行下列任一項作業：<ul><li>如果您使用AIR，請重新安裝AIR。</li><li>如果您正在使用Flash Player，請再次下載AdobeCP模組。</li></ul> |
+| 3318 | IncompatibleAdobeCPVersion | **重要：** 這是罕見的錯誤，通常不會發生在生產環境中。<br>如果發生錯誤，您可以執行下列任一項作業：<ul><li>如果您使用AIR，請重新安裝AIR。</li><li>如果您正在使用Flash Player，請再次下載AdobeCP模組。</li></ul> |
+| 3319 | MissingAdobeCPGetAPI | **重要：** 這是罕見的錯誤，通常不會發生在生產環境中。<br>如果發生錯誤，您可以執行下列任一項作業：<ul><li>如果您使用AIR，請重新安裝AIR。</li><li>如果您正在使用Flash Player，請再次下載AdobeCP模組。</li></ul> |
+| 3320 | 主機失敗 | **重要：** 這是罕見的錯誤，通常不會發生在生產環境中。<br>如果發生錯誤，您可以執行下列任一項作業：<ul><li>如果您使用AIR，請重新安裝AIR。</li><li>下載AdobeCP和FlashPlayeragree，因為任一解決方案可能不同步。</li></ul>應用程式只需要更新Flash Player，這會導致再次下載AdobeCP。 |
+| 3321 | I15nFailed | 提供金鑰給使用者端的程式失敗。 subErrorId包含使用者端特有、伺服器特有或行錯誤。<ul><li>散發者的軟體應至少重試一次作業。</li></ul>如果您在Windows上使用Google Chrome，請提供說明來說明如何允許不在沙箱中的外掛程式存取。 如需詳細資訊，請參閱Google Chrome的非沙箱存取遭拒。<ul><li>散發者應完成下列其中一項工作：</li><li>如果錯誤在各平台間是一致的，您應使用Adobe來重新計算問題。</li><li>如果錯誤僅限於Windows上的Chrome，請引導使用者允許無沙箱外掛程式存取。</li></ul>經銷商應將其SWF更新至版本19或更新版本。 對於Chrome特定的3321錯誤，會擲回3368錯誤。 錯誤3368可以由散發者的軟體更具體處理。 此變更已在Chrome穩定通道26.0.1410.43版中引入。<br>**注意：** Flash播放器版本11.1到11.6可能發生錯誤3321：1090519056。建議您升級至最新的Flash Player版本。<br>如需詳細資訊，請參閱 [DRM錯誤3321原因與解決方法](https://forums.adobe.com/thread/1277138). |
+| 3322 | DeviceBindingFailed | 裝置似乎不符合初始化時存在的設定。 subErrorId包含使用者端特有的錯誤或行錯誤。<br>散發者的軟體應完成下列其中一項作業：<ul><li>如果裝置未使用Flash Player，而是使用AIR、iOS等， `callDRMManager.resetDRMVouchers()`.</li></ul>如果iOS在開發階段發生問題，請要求開發人員確認在從協力廠商發行前發佈系統（例如HockeyApp）下載的組建與從Xcode下載的本機組建之間切換時，是否發現問題。 在從HockeyApp分發的組建和從Xcode分發的組建之間切換時，不會完全覆寫先前安裝的屬性。 這種情況可能會觸發3322錯誤。<br>若要解決此問題，開發人員應先從裝置移除舊版組建，然後再安裝新版組建。<ul><li>如果裝置正在使用Flash Player，且無法從3322或3346錯誤代碼使用，請參閱Adobe中有關如何以程式設計方式重設您的DRM授權存放區的指示。 [Chrome中的DRM錯誤3322/3346/3368 （資訊列問題）](https://forums.adobe.com/message/5535907#5535907).</li></ul>此錯誤預計不會頻繁發生。 在使用漫遊設定檔的公司環境中，如果使用者檢視受DRM保護的內容，則當使用者從不同電腦登入時，發生錯誤3322的可能性會增加。 如有可能，散發者應嘗試從使用者取得此資訊。<br>如果錯誤經常發生，請升級至Adobe。 您必須通知Adobe重設授權存放區是否解決此問題，並告知Adobe在哪些瀏覽器上發生錯誤。<br>如需詳細資訊，請參閱下列文章：<ul><li>https://forums.adobe.com/message/5520902</li><li>https://forums.adobe.com/message/5535911</li><li>https://forums.adobe.com/message/5748618</li><li>https://forums.adobe.com/message/6061165</li></ul> |
+| 3323 | CorruptedGlobalStateStore | DRM使用者端使用的檔案已被意外修改。 subErrorIdentifis包含使用者端特有的錯誤或行錯誤。<ul><li>散發者的軟體應該會以錯誤碼3322的相同方式引導使用者重設。</li><li>如果GlobalStore的故障率高於使用者群硬碟的預期故障率，請將問題升級至Adobe。</li></ul> |
+| 3324 | MachineTokenInvalid | 授權伺服器可能無法連線到憑證撤銷清單(CRL)伺服器來重新整理其CRL檔案，或是使用者端電腦正在要求由授權伺服器撤銷的授權/驗證。<br>在伺服器記錄檔中，錯誤碼111 isMachineTokenInvalid。 不過，在使用者端層級，錯誤碼111會轉譯為錯誤碼3324。<br>DRM授權伺服器管理員應檢查客戶的授權伺服器是否曾經能夠擷取AdobeCRL檔案。 如果客戶使用Tomcat，則可檢查tomcat/temp/目錄以檢視是否有4個.CRL檔案。<ul><li>如果檔案位於此目錄中，請在Windows檔案總管和CRL檢視器應用程式中連按兩下檔案，判斷是否有任何檔案已過期。</li><li>如果tomcat/temp/中沒有檔案，則可以假設由於防火牆或路由問題，此授權伺服器永遠無法連線到AdobeCRL伺服器。</li></ul>如需詳細資訊，請參閱防火牆規則。<br>如果CRL檔案無法使用或已過期，您必須確認是否可以連線到授權伺服器。 在客戶的授權伺服器上開啟網路Sniffer （例如Charles或Wireshark），重新啟動伺服器，並讓使用者端嘗試從伺服器要求授權。<br>您可以觀察網路流量，以檢視對以下URL端點的呼叫是否成功：<br>**注意：** 您也可以在瀏覽器中輸入下列CRL URL，以檢視是否可以手動下載每個檔案。<ul><li>[https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl](https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl)</li><li>[https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl](http://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl)</li><li>[https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl](http://crl2.adobe.com/Adobe/FlashAccessRootCA.crl)</li><li>[https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl](http://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl)</li></ul>如果防火牆規則已開啟且目前沒有任何3324錯誤，則可能是暫時性的網路問題。 檢查客戶的伺服器記錄（可能位於/tomcat/logs/目錄中），以判斷授權伺服器嘗試擷取「憑證撤銷清單」時是否發生錯誤。<br>**注意：** 續約CRL檔案時，如果大量使用者端報告3324錯誤至暫時性網路問題，就可能發生錯誤。 網路問題解決後，3324問題也解決了。<br>如果所有4個CRL檔案都存在於tomcat/temp/目錄中，並且使用者端仍然收到3324錯誤，則可能會出現對CRL檔案的檔案存取問題。<br>若要解決此問題，您可能需要檢閱記錄檔並清除現有的CRL檔案。<br>如果沒有伺服器問題，請提示使用者重設，如錯誤碼3322所述。 |
+| 3325 | CorruptedServerStateStore | DRM使用者端使用的檔案已被意外修改。 subErrorIdentifis包含使用者端特有的錯誤或行錯誤。<ul><li>散發者的軟體應再次重試操作，因為AdobeCP已在內部刪除違規的伺服器存放區，重試應該會成功。 如果重試失敗，請記錄問題。</li><li>如果重試失敗率高於使用者群硬碟的預期失敗率，請將問題升級至Adobe。</li></ul> |
+| 3326 | StoreTamperingDetected | 授權存放區已被竄改或損毀，無法再使用。<br>散發者的軟體應該會以錯誤碼3322中說明的相同方式引導使用者重設。 |
+| 3327 | ClockTamperingDetected | 請修正時鐘或再次取得授權/授權/網域授權。 |
+| 3328 | ServerErrorTryArgety | 這是伺服器端錯誤，伺服器無法完成來自使用者端的請求。 例如，當伺服器忙碌中、HTTP/500、伺服器沒有解密請求所需的金鑰等時，就會發生此錯誤。<br>在使用者端上，無法判斷哪裡出了問題。 客戶必須檢閱Primetime DRM伺服器記錄（通常稱為AdobeFlashAccess.log），以判斷哪裡出問題。 記錄檔中總是有描述性很強的棧疊追蹤來指示問題。 subErrorId包含伺服器特有的錯誤或行錯誤。<br>散發者應檢視伺服器記錄檔，以識別傳送此錯誤的伺服器。 對於子錯誤碼為101的3328錯誤，伺服器無法解密請求。 客戶必須驗證安裝在授權伺服器上的授權/傳輸伺服器憑證是否相符，並與封裝期間使用的憑證相對應。<br>此外，如果客戶使用參考實作，他們必須確保flashaccessrefimpl.properties檔案中沒有指定主要和其他憑證的拼字。<br> |
+| 3329 | ApplicationSpecificError | Primetime DRM不知道應用程式專屬的子錯誤代碼。 subErrorId包含來自發行者自訂授權伺服器的伺服器特定錯誤。 伺服器在應用程式專屬的名稱空間中傳回錯誤。 |
+| 3330 | 需要驗證 | 當內容設定為要求使用者端在取得授權前進行驗證時，就會發生此錯誤。<ul><li>散發者的軟體應該驗證使用者，然後再次取得授權。 如果您的服務不打算使用驗證，請記錄造成此錯誤之內容的識別碼。</li><li>除非內容不應設定為需要驗證，否則此錯誤不應要求呈報。 在這種情況下，請使用適當的原則重新封裝違規內容。 如果內容已正確封裝，請參閱診斷原則/授權差異。</li></ul> |
+| 3331 | ContentNotYetValid | 取得的授權尚未生效。 若要解決此問題，請檢查使用者端時鐘是否設定不正確。 若要設定使用者端時鐘，請重新封裝內容或修改許可證伺服器設定。 |
+| 3332 | CachedLicenseExpired | 再次從伺服器取得授權。 |
+| 3333 | PlaybackwindowExpired | 您必須通知使用者，在原則過期前他們無法播放此內容。 |
+| 3334 | InvalidDRMPlatform | 此平台不允許播放內容，例如，內容提供者已設定Primetime DRM拒絕內容至平台上的Primetime DRM，或共用網域繫結授權繫結至適用於不同分割區的共用網域權杖。<br>若未使用適當的（閘道式CDM功能）封裝程式認證來封裝內容，CDM可能會擲回此錯誤。 如需詳細資訊，請參閱CDM功能閘道。<br>如果內容封裝有不正確的PHDS/PHLS憑證，內容可能會在Chrome中運作，但不能在其他瀏覽器中運作（反之亦然）。<br>**注意：** 這是因為Chrome使用不同的PHDS/PHLS憑證。<br>若要確認正在使用哪個憑證，請傾印內容中繼資料的詳細資訊並尋找收件者憑證。 |
+| 3335 | InvalidDRMVersion | 若要解決此問題，請完成下列其中一項作業：<ul><li>升級AIR</li><li>若為Flash Player，請升級AdobeCP模組並重試播放。</li></ul> |
+| 3336 | InvalidRuntimePlatform | 此平台不允許播放內容，因為內容提供者已將Primetime DRM設定為拒絕將內容傳送至平台上的FP/AIR。 |
+| 3337 | InvalidRuntimeVersion | 如果內容或伺服器設定為拒絕播放至特定版本的Flash或AIR執行階段，就會發生這種情況。<ul><li>如果使用者在可以升級Flash的作業系統上，散發者的軟體應該提示使用者升級Flash，然後再試一次。 否則，建議使用者使用不同的電腦。</li><li>如果懷疑錯誤3337s，請確定它是否發生在特定內容中，並重新封裝該內容。 如果內容正確封裝，請參閱診斷原則/授權差異。</li></ul> |
+| 3338 | UnknownConnectionType | 無法偵測連線型別，原則要求您開啟輸出保護。 僅當封裝的內容需要數位或類比輸出保護時，才會出現此問題。<br>在11.8.800.168版之前的Flash Player版本中，對於原則指出內容保護為USE IF AVAILABLE的內容，偶爾會發生錯誤3338。 此問題已在11.8.800.168版及更新版本中修正。<ul><li>經銷商的軟體會選取不需要輸出保護的內容變體（例如HD資料流的SD變體）。 如果onUSE_IF_AVAILABLE內容發生錯誤3338，請檢查播放器版本號碼。 如果播放器版本低於11.8.800.168，建議使用者升級Flash Player。 如果11.8.800.168以上的版本發生錯誤3338，請記錄導致錯誤的內容。</li><li>散發者應檢查造成此錯誤的內容，並確認內容的原則為類比與數位輸出設定NO_PROTECTION或USE_IF_AVAILABLE。 如果內容意外地以NO_OUTPUT或REQUIRED封裝，請重新封裝內容。 如果內容正確封裝，請參閱診斷原則/授權差異。 否則呈報至Adobe。</li></ul>如需詳細資訊，請參閱 [當您的DRM原則設定為USE_IF_AVAILABLE時，發生未預期的3338錯誤](https://forums.adobe.com/message/5518688)？ |
+| 3339 | NoAnalogPlaybackAllowed | 無法在類比裝置上播放。 若要解決此問題，請連線數位裝置。 |
+| 3340 | NoAnalogProtectionAvail | 無法播放內容，因為連線的類比外部顯示裝置（顯示器/電視）沒有正確的功能（例如，裝置沒有Macrovision或ACP）。 |
+| 3341 | NoDigitalPlaybackAllowed | 無法在數位裝置上播放內容。 |
+| 3342 | NoDigitalProtectionAvail | 連線的數位外接顯示裝置（顯示器/電視）功能不正確。 例如，裝置沒有HDCP。 |
+| 3343 | 內部錯誤 | 目前已知此錯誤最初會在新版Flash發行後發生。 發生此問題的原因是Flash在Flash開啟時升級，這會使Flash處於不良狀態，直到瀏覽器重新啟動為止。<ul><li>散發者的軟體應完成下列工作：</li><li>建議使用者關閉或結束所有瀏覽器，然後重新開啟。</li><li>檢查Flash的版本是否為最新版本。</li></ul>如果版本不是最新版本，建議客戶升級、關閉其瀏覽器中的所有索引標籤，然後重新開啟。<ul><li>如果瀏覽器成功重新啟動後發生錯誤，請升級至Adobe。 發行新版本時，建議您聯絡Adobe支援，檢視背景更新問題是否已修正。</li></ul> |
+| 3344 | MissingAdobeCPModule | 部分Flash或AIR未正確安裝。<br>若要解決此問題，請完成下列其中一項作業：<ul><li>若為AIR，使用者必須解除安裝並重新安裝AIR。</li><li>若要Flash Player，請呼叫System.update。</li></ul> |
+| 3346 | 移轉失敗 | 散發者的軟體應執行下列其中一項作業：<ul><li>如果AIR，請呼叫 `DRMManager.resetDRMVouchers()`.</li><li>如果Flash因錯誤3322或3346而無法使用，使用者應前往 [https://forums.adobe.com/message/5535907#5535907](https://forums.adobe.com/message/5535907#5535907) 並遵循Adobe文章的指示，以程式設計方式重設其DRM授權存放區。</li><li>如果此錯誤經常發生，散發者應該提供頻率播放器版本的詳細資訊以及要Adobe的瀏覽器版本。</li></ul>如需詳細資訊，請參閱下列論壇文章：<ul><li>[Chrome中的DRM錯誤3322/3346/3368 （資訊列問題）](https://forums.adobe.com/message/5520902)</li><li>[硬體變更後出現3322或3346錯誤](https://forums.adobe.com/message/5535911)</li></ul> |
+| 3347 | Devicecapabilities不足 | 此錯誤的主要含義是授權具有限制，使用者端的DRM憑證指出它無法滿足。 發行使用者端DRM憑證時，會定義下列「硬體功能」：<ul><li>**非使用者可存取的匯流排。** 若 **true**，解密的媒體絕不會流經匯流排或流入應用程式可存取它的主記憶體。 若 **false**，應用程式在解密後可存取內容。</li><li>**信任的硬體根目錄。** 若 **true**，所有在開機時載入到裝置上的軟體，都會根據硬體提供的金鑰或摘要進行驗證。 當使用者端的DRM憑證開啟許可證時，使用者端會檢查這兩個限制，並且會立即失敗。 在發行授權之前，也可以在伺服器端檢查這些限制。</li></ul>此錯誤的次要含義是授權已設定「Jailbreak Enforcement」原則，且在裝置上偵測到越獄。 這項檢查定期在使用者端完成，無法在伺服器端進行檢查。<br>經銷商可以更新原則並移除限制。 針對裝置功能原則，發出原則更新命令，其中包含 — devCapabilitiesV1flag且無引數。 對於越獄執行setpolicy.enforceJailbreak=false。 |
 | 3348 | HardStopIntervalExpired | 硬停止間隔已過期。 |
-| 3349 | ServerVersionTooHigh | 伺服器運行的版本高於客戶端支援的最高版本。 |
-| 3350 | 伺服器版本太低 | 伺服器運行的版本低於客戶端支援的最低版本。 |
-| 3351 | DomainToken無效 | 域令牌無效。 要解決此問題，請再次向域註冊。 |
-| 3352 | 域令牌太舊 | 域令牌早於許可證所需的令牌。 要解決此問題，請再次向域註冊。 |
-| 3353 | 域令牌太新 | 域令牌比許可證所需的令牌新。 |
-| 3354 | 域令牌已過期 | 域令牌已過期。 |
-| 3355 | 域加入失敗 | 域加入失敗。 |
-| 3356 | 無對應根 | 找不到V3葉許可證的根許可證。 |
-| 3357 | NoValidEmbeddedLicense | 找不到有效的嵌入式許可證。 |
-| 3358 | 無可用的ACPProtection | 無法回放，因為連接的模擬設備沒有ACP保護。 |
-| 3359 | 無CGSMAProtectionAvailable | 無法回放，因為連接的模擬設備沒有CGMSA保護。 |
-| 3360 | 需要域註冊 | 內容需要域註冊。 |
-| 3361 | 未註冊到域 | 電腦未註冊到指定元資料的域。 |
-| 3362 | OperationTimeoutError | 非同步操作所花費的時間比配置的maxOperationTimeout要長。<br>**注：** 此錯誤代碼僅由iOSDRMNative Framework返回。 |
-| 3363 | 不支援的IOSPlaylistError | M3U8播放清單包含不受支援的內容，或缺少所需的#EXT-X-FAXS-CM DRM元資料對象。<br>**注：** 此錯誤代碼僅由iOSDRMNative Framework返回。 |
-| 3364 | 無設備ID | 框架請求了設備ID，但返回的值為空。<br>框架請求了設備ID，但返回的值為空。<br>在Chrome瀏覽器設定中，用戶不應選擇 **允許受保護內容的標識符** 的子菜單。 |
-| 3365 | IncognitoModeNotAllowed | 此瀏覽器/平台組合不允許在Incognito模式下播放受DRM保護的內容。<br>分發伺服器的軟體應建議用戶退出Incognito模式或使用其他瀏覽器。 有關詳細資訊，請參見 [DRM錯誤3365原因和解決方法](https://forums.adobe.com/thread/1266622)。 |
-| 3366 | 錯誤參數 | 主機運行時使用錯誤的參數調用了Mighine DRM庫。 |
-| 3367 | 錯誤簽名 | M3U8清單簽名失敗。<br>**注：** 此錯誤代碼僅由iOSDRMNative Framework或AVE返回。 |
-| 3368 | 用戶設定無訪問 | 用戶取消了操作或輸入了不允許訪問系統的設定。<br>此錯誤僅在SWF版本19或更高版本中引發。 為了向後相容，對於SWF版本18或更早版本，拋出錯誤代碼3321。<br>分銷商的軟體應指導用戶解釋如何允許無沙盒插件訪問。 有關詳細資訊，請參見 [GoogleChrome的無沙盒訪問被拒絕](https://helpx.adobe.com/adobe-access/kb/error-3321.html) 和 [Chrome中的DRM錯3322/3346/3368（資訊欄問題）](https://forums.adobe.com/message/5520902)。 |
-| 3369 | 介面不可用 | 所需的瀏覽器介面不可用。 此問題僅發生在Pepper上。 Flash插件和瀏覽器版本之間可能不匹配。<br>分發程式的軟體應指導用戶確保安裝了最新版本的瀏覽器。<br>如果此錯誤的發生率在增加，並且它們對應於正在發佈的瀏覽器更新，則升級為Adobe。 |
-| 3370 | 內容ID設定無訪問 | 用戶已禁用 **允許受保護內容設定的標識符。**<br>**注：** Pepper 13.0.0.x或更高版本出現此錯誤。<br>分銷商的軟體和/或操作團隊應指導用戶啟用 **允許受保護內容的標識符** 的子菜單。<br>有關詳細資訊，請參見 [https://forums.adobe.com/message/6518323#6518323](https://forums.adobe.com/message/6518323#6518323)。 |
-| 3371 | NoOPConstraintInPixelConstraints | 基於許可證中的輸出保護約束的解析格式不正確。<br>分發伺服器的軟體應顯示錯誤消息。 要求用戶向具有內容標題的分銷商報告問題。<br>分發伺服器應使用有效的策略重新打包內容。 |
-| 3372 | 解析度LagerThanMax解析度 | 內容的解析度大於輸出保護約束中指定的最大解析度。<br>如果分發商的操作團隊在日誌中看到此錯誤，則他們應檢查基於解析度的輸出保護策略，並在必要時重新打包內容。<br>有關基於解析度的輸出保護的詳細資訊，請參見關於基於解析度的輸出保護。 |
-| 3373 | DisplayResolutionLagerThanConstrain | 內容的解析度大於當前活動的輸出保護約束所指定的解析度。<br>如果分發商的操作團隊在日誌中看到此錯誤，則他們應檢查基於解析度的輸出保護策略，並在必要時重新打包內容。<br>有關基於解析度的輸出保護的詳細資訊，請參見關於基於解析度的輸出保護。 |
-| 3374 | ClientCommProcessFailed | 在客戶端通信處理期間失敗，例如請求生成、響應處理、錯誤的身份驗證令牌等。 |
+| 3349 | ServerVersionToHigh | 伺服器的執行版本高於使用者端支援的最高版本。 |
+| 3350 | ServerVersionTooLow | 伺服器的執行版本低於使用者端支援的最低版本。 |
+| 3351 | DomainTokenInvalid | 網域權杖無效。 若要解決此問題，請再次向網域註冊。 |
+| 3352 | DomainTokenTooOld | 網域權杖早於授權所需的權杖。 若要解決此問題，請再次向網域註冊。 |
+| 3353 | DomainTokenToNew | 網域權杖比授權所需的權杖新。 |
+| 3354 | DomainTokenExpired | 網域權杖已過期。 |
+| 3355 | DomainJoinFailed | 網域加入失敗。 |
+| 3356 | NoActivatedRoot | 找不到V3分葉授權的根授權。 |
+| 3357 | NoValidEmbeddedLicense | 找不到有效的內嵌授權。 |
+| 3358 | NoACProtectionAvailable | 無法播放，因為連線的類比裝置沒有ACP保護。 |
+| 3359 | NoCGSMAProtectionAvailable | 無法播放，因為連線的類比裝置沒有CGMSA保護。 |
+| 3360 | DomainRegistrationRequired | 內容需要網域註冊。 |
+| 3361 | NotRegisteredToDomain | 電腦未註冊到指定中繼資料的網域。 |
+| 3362 | OperationTimeoutError | 非同步作業所花的時間超過設定的maxOperationTimeout。<br>**注意：** 此錯誤碼僅由iOS DRMNative Framework傳回。 |
+| 3363 | UnsupportedIOSPlaylistError | M3U8播放清單包含不支援的內容，或遺失必要的#EXT-X-FAXS-CM DRM中繼資料物件。<br>**注意：** 此錯誤碼僅由iOS DRMNative Framework傳回。 |
+| 3364 | NoDeviceId | 框架已要求裝置ID，但傳回的值是空的。<br>框架已要求裝置ID，但傳回的值是空的。<br>在Chrome瀏覽器設定中，使用者不應選取 **允許受保護內容的識別碼** 核取方塊。 |
+| 3365 | IncognitoModeNotAllowed | 此瀏覽器/平台組合不允許無痕模式下受DRM保護的播放。<br>散發者的軟體應建議使用者結束無痕模式或使用不同的瀏覽器。 如需詳細資訊，請參閱 [DRM錯誤3365原因和解決方法](https://forums.adobe.com/thread/1266622). |
+| 3366 | Badparameter | 主機執行階段使用錯誤的引數呼叫Primetime DRM程式庫。 |
+| 3367 | BadSignature | M3U8資訊清單簽署失敗。<br>**注意：** 此錯誤碼只會由iOS DRMNative Framework或AVE傳回。 |
+| 3368 | UserSettingsNoAccess | 使用者已取消操作，或已輸入不允許存取系統的設定。<br>此錯誤只會在SWF版本19或更新版本中擲回。 為了回溯相容性，系統會針對SWF版本18或更早版本擲回錯誤代碼3321。<br>分銷商的軟體應引導使用者說明如何允許無沙箱外掛程式存取。 如需詳細資訊，請參閱 [Chrome中的DRM錯誤3322/3346/3368 （資訊列問題）](https://forums.adobe.com/message/5520902). |
+| 3369 | InterfaceNotAvailable | 無法使用必要的瀏覽器介面。 此問題僅發生在Pepper上。 Flash外掛程式和瀏覽器版本之間可能會不相符。<br>散發者的軟體應引導使用者確保他們已安裝最新版本的瀏覽器。<br>如果此錯誤的發生次數增加，且對應於已發佈的瀏覽器更新，請升級至Adobe。 |
+| 3370 | ContentIdSettingsNoAccess | 使用者已停用 **允許受保護內容設定的識別碼。**<br>**注意：** 此錯誤出現在Pepper 13.0.0.x版或更新版本中。<br>經銷商的軟體和/或操作團隊應引導使用者啟用 **允許受保護內容的識別碼** 設定。<br>如需詳細資訊，請參閱 [https://forums.adobe.com/message/6518323#6518323](https://forums.adobe.com/message/6518323#6518323). |
+| 3371 | NoOPConstraintInPixelConstraints | 根據授權中的輸出保護限制，解析格式錯誤。<br>散發者的軟體應顯示錯誤訊息。 要求使用者以內容標題將問題報告給經銷商。<br>散發者應使用有效原則重新封裝內容。 |
+| 3372 | ResolutionLargerThanMaxResolution | 內容的解析度大於輸出保護限制中指定的最大解析度。<br>如果散發者的作業團隊在記錄中看到此錯誤，他們應該檢閱以解析度為基礎的輸出保護原則，並在必要時重新封裝內容。<br>如需以解析度為基礎的輸出保護的詳細資訊，請參閱關於以解析度為基礎的輸出保護。 |
+| 3373 | DisplayResolutionLargerThanConstrain | 內容的解析度大於目前作用中的輸出保護限制所指定的解析度。<br>如果散發者的作業團隊在記錄中看到此錯誤，他們應該檢閱以解析度為基礎的輸出保護原則，並在必要時重新封裝內容。<br>如需以解析度為基礎的輸出保護的詳細資訊，請參閱關於以解析度為基礎的輸出保護。 |
+| 3374 | ClientCommProcessFailed | 在使用者端通訊處理期間失敗，例如，要求產生、回應處理、錯誤的驗證權杖等。 |
 
-## 3328的子錯誤代碼映射 {#suberror-code-mapping-for-3328}
+## 3328的子錯誤碼對應 {#suberror-code-mapping-for-3328}
 
-| 子錯誤 | 說明 |
+| SubError | 說明 |
 |---|---|
-| 100-1000 | 由Adobe的許可證伺服器保留 |
-| 10000 - 20000 | 由Adobe的個性化伺服器保留 |
-| 20100-21000 | 為AdobeXbox密鑰伺服器保留。<br>此範圍中的錯誤映射到常規Mighine DRM Server SDK錯誤消息參考，如下所示：<br>Xbox KeyServer錯誤= DRM伺服器錯誤+ 0x20000<br>例如，Xbox Keyserver Error 20202等效於DRM Server SDK Error 202 |
-| 100xxxx | 為客戶端子錯誤代碼保留 |
+| 100-1000 | 由Adobe授權伺服器保留 |
+| 10000 - 20000 | 由Adobe的個人化伺服器保留 |
+| 20100-21000 | 保留給AdobeXbox金鑰伺服器。<br>此範圍內的錯誤對應至一般Primetime DRM伺服器SDK錯誤訊息參考，如下所示：<br>Xbox keyserver錯誤= DRM伺服器錯誤+ 0x20000<br>例如，Xbox Keyserver Error 20202等同於DRM Server SDK Error 202 |
+| 100xxxx | 保留給使用者端子錯誤碼 |
