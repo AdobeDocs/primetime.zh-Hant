@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 密碼加擾器 {#password-scrambler}
 
-密碼加擾器實用程式加密密碼，以便在Adobe Access Server中用於受保護流配置檔案。 要運行擾碼器，請運行以下命令：
+Password Scrambler公用程式會加密密碼，以便用於Adobe Access Server的Protected Streaming設定檔。 若要執行擾碼器，請執行以下命令：
 
 ```
 Scrambler.bat password 
@@ -24,14 +24,14 @@ Scrambler.bat password
 java -jar libs/flashaccess-scrambler.jar password  
 ```
 
-該實用程式輸出以下消息：
+公用程式輸出下列訊息：
 
 ```
 Encrypted password: scrambled-password 
 ```
 
-必須加密flashaccess-global.xml和flashaccess-tenant.xml中指定的所有密碼。
+flashaccess-global.xml和flashaccess-tenant.xml中指定的所有密碼都必須加密。
 
 >[!NOTE]
 >
->Adobe Access Server保護流的密碼加擾器實用程式不能與隨參考實施許可證伺服器提供的加擾器互換。
+>適用於受保護串流的Adobe Access Server中的Password Scrambler公用程式不可與參考實作授權伺服器隨附的Scrambler互換。

@@ -10,16 +10,16 @@ ht-degree: 0%
 
 ---
 
-# HTTP快取 {#caching}
+# http快取 {#caching}
 
-預設情況下，黃金時段Ad Insertion在讀取廣告創意和內容時會考慮HTTP快取控制標頭。  這可以大大減少黃金時段Ad Insertion在所有客戶端上向CDN發出的網路請求量。  對於快取，Adobe推薦以下設定並涉及發送HTTP頭 `max-age` 從您的CDN。  請與CDN代表聯繫，以在視頻流和廣告流上啟用這些標頭。
+擷取廣告創意和內容時，PrimetimeAd Insertion預設會遵循HTTP快取控制標頭。  這可大幅減少PrimetimeAd Insertion跨所有使用者端向CDN發出的網路要求數量。  對於快取，Adobe會建議進行下列設定，並且需要傳送HTTP標頭 `max-age` 從您的CDN.  請聯絡您的CDN代表，在您的視訊串流和廣告串流上啟用這些標頭。
 
-## 對於即時/線性內容 {#caching-live-linear-content}
+## 適用於即時/線性內容 {#caching-live-linear-content}
 
-* 主清單：24小時或快取控制：最大年齡=86400
-* 媒體清單：1秒或快取控制：最大年齡=1
+* 主要資訊清單：24小時，或Cache-Control： max-age=86400
+* 媒體資訊清單： 1秒，或Cache-Control： max-age=1
 
-## 對於VOD內容 {#caching-vod-content}
+## 針對VOD內容 {#caching-vod-content}
 
-* 主清單：24小時或快取控制：最大年齡=86400
-* 媒體清單：24小時或快取控制：最大年齡=86400
+* 主要資訊清單：24小時，或Cache-Control： max-age=86400
+* 媒體資訊清單： 24小時或Cache-Control： max-age=86400

@@ -1,6 +1,6 @@
 ---
-title: 配置目錄結構
-description: 配置目錄結構
+title: 組態目錄結構
+description: 組態目錄結構
 copied-description: true
 exl-id: e24d3df0-f723-4dad-84d5-984f3350353a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# 配置目錄結構{#configuration-directory-structure}
+# 組態目錄結構{#configuration-directory-structure}
 
-配置目錄具有以下結構：
+組態目錄具有下列結構：
 
 ```
 <i class="+ topic ph hi-d="" i "="">

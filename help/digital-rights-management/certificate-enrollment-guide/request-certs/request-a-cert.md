@@ -1,6 +1,6 @@
 ---
-title: 請求證書（請求者）
-description: 請求證書（請求者）
+title: 要求憑證（要求者）
+description: 要求憑證（要求者）
 copied-description: true
 exl-id: 290231ec-1146-4bfb-a449-b8ff85704197
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,27 +10,27 @@ ht-degree: 0%
 
 ---
 
-# 請求證書（請求者）{#request-a-certificate-requester}
+# 要求憑證（要求者）{#request-a-certificate-requester}
 
-1. 登錄到證書註冊站點。
+1. 登入憑證註冊網站。
 
-   請求證書的用戶必須是請求者。
+   要求憑證的使用者必須是要求者。
 
-1. 在「請求」頁籤上，選擇證書類型（許可證伺服器、打包器或傳輸）。
+1. 在「要求」標籤上，選取憑證型別（授權伺服器、封裝程式或傳輸）。
 
    >[!NOTE]
    >
-   >對於評估版和試用版SDK版本，不顯示此選項。 這些SDK版本使用一個證書。
+   >評估版和試用版SDK未顯示此選項。 這些SDK版本使用一個憑證。
 
-1. 執行下列操作之一：
+1. 執行下列任一項作業：
 
-   * 上載CSR檔案。
-   * 將CSR資訊從CSR複製並貼上到表單中。
+   * 上傳CSR檔案。
+   * 複製CSR中的CSR資訊，並將其貼到表單中。
 
       >[!NOTE]
       >
-      >要複製CSR資訊，請選擇開始標籤之間的文本 `(-----BEGIN CERTIFICATE REQUEST-----)` 和結束標籤 `(-----END CERTIFICATE REQUEST-----)`。
+      >若要複製CSR資訊，請選取開頭標籤之間（不包括）的文字 `(-----BEGIN CERTIFICATE REQUEST-----)` 和結束標籤 `(-----END CERTIFICATE REQUEST-----)`.
 
-1. 按一下 **[!UICONTROL Submit Request]** 按鈕
+1. 按一下 **[!UICONTROL Submit Request]** 按鈕。
 
-   電子郵件將發送給帳戶和輔助管理員以供審閱。 請求者為Cc&#39;d。
+   系統會傳送電子郵件給帳戶和次要管理員，以供其檢閱。 請求者已提交。

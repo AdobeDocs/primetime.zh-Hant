@@ -1,5 +1,5 @@
 ---
-description: 清單伺服器返回M3U8格式的主播放清單，符合建議的HTTP即時流標準。 它由一組變型傳輸流(TS)組成，每個流包含針對不同比特率和格式的相同內容的格式副本。 Adobe Primetime廣告插入添加了EXT-X-MARKER指令標籤，由客戶端視頻播放器進行解釋。
+description: 資訊清單伺服器會傳回M3U8格式的主播放清單，符合建議的HTTP即時資料流標準。 它包含一組變體傳輸資料流(TS)，每個資料流都包含相同內容的轉譯以供不同的位元速率和格式使用。 Adobe Primetime廣告插入會新增EXT-X-MARKER指示詞標籤，以供使用者端視訊播放器解譯。
 title: EXT-X-MARKER指令
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -11,63 +11,63 @@ ht-degree: 0%
 
 # EXT-X-MARKER指令 {#ext-x-marker-directive}
 
-清單伺服器返回M3U8格式的主播放清單，符合建議的HTTP即時流標準。 它由一組變型傳輸流(TS)組成，每個流包含針對不同比特率和格式的相同內容的格式副本。 Adobe Primetime廣告插入添加了EXT-X-MARKER指令標籤，由客戶端視頻播放器進行解釋。
+資訊清單伺服器會傳回M3U8格式的主播放清單，符合建議的HTTP即時資料流標準。 它包含一組變體傳輸資料流(TS)，每個資料流都包含相同內容的轉譯以供不同的位元速率和格式使用。 Adobe Primetime廣告插入會新增EXT-X-MARKER指示詞標籤，以供使用者端視訊播放器解譯。
 
-有關EXT-X-MARKER標籤的詳細資訊，請參見 [Adobe PrimetimeHTTP即時流式處理配置檔案](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf)。
-
->[!NOTE]
->
->僅當引導清單伺服器URL不包含 `pttrackingmode` 的下界。
+如需EXT-X-MARKER標籤的詳細資訊，請參閱 [Adobe Primetime HTTP Live Streaming Profile](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
 
 >[!NOTE]
 >
->EXT-X-MARKER標籤被添加到廣告段而不是內容段。
-
-標準草稿位於 [HTTP即時流](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) 描述變型播放清單的內容和格式。 EXT-X-MARKER標籤指示客戶端調用回調。 它包含以下元件：
-
-* **ID** 程式流上下文中此回調事件的唯一標識符（字串）。
-
-* **類型** 回調事件的類型（字串）:PodBegin、PodEnd、PrerollPodBegin、PrerollPodEnd或AdBegin
-
-* **持續時間** 從攜帶指令仍然有效的標籤的段開始開始的時間長度（秒）。
-
-* **偏移** 可選。 在必須調用回調時，相對於段回放開始的偏移量（秒）。
-
-   * `PodBegin` 和 `PrerollPodBegin` 包含DATA屬性中的信標資訊，並在段開始時激發。 所以 `OFFSET` 此處不提供標籤。
-
-   * `AdBegin` 包含DATA屬性中的信標資訊，在該段的開頭觸發印象標籤。 所以 `OFFSET` 此處也不提供標籤。
-
-   * `PodEnd` 和 `PrerollPodEnd` 包含DATA屬性中的信標資訊，但在當前段的末尾激發，因為這些標籤預期在pod中最後一個廣告的末尾激發。 在這個例子中， `OFFSET` 設定為 `<duration of segment>` 指定在當前段結束時激發信標。
-
-* **資料** Base64編碼的字串，用雙引號括起來，其中包含調用回調時要傳遞給應用程式的資料。 它包含符合VMAP1.0和VAST3.0規範的廣告跟蹤資訊。
-
-* **計數** 在廣告分段中將縫製的廣告數。
-
-   僅當TYPE元件設定為PodBegin或PrerollPodBegin時，才適用。
-
-* **佈雷克杜爾** 填充廣告分段的總持續時間（秒）。
-
-   僅當TYPE元件設定為PodBegin或PrerollPodBegin時，才適用。
-
-構建回調時，按如下方式解釋EXT-X-MARKER元件：
-
-* 當標籤包含 `OFFSET`，在指定的偏移量處觸發回調，該偏移量相對於該段中內容回放的開始。 否則，當該段中的內容開始播放時立即觸發回調。
-* 使用 `DURATION` 跟蹤廣告內容的進度並請求跟蹤事件的URL。
-* 通過 `ID`。 `TYPE`, `DATA` 回電。
-
-使用 `PrerollPodBegin`, `PrerollPodEnd` 值 `TYPE` 確定在即時/線性流中首先播放的TS段。
+>只有啟動程式資訊清單伺服器URL不包含 `pttrackingmode` 引數。
 
 >[!NOTE]
 >
->的 `PrerollPodBegin`, `PrerollPodEnd` 僅當預滾動廣告插入即時流時，值才可用。
+>EXT-X-MARKER標籤會新增至廣告區段，而非內容區段。
 
-清單伺服器包括以下段中的EXT-X-MARKER標籤：
+草稿標準位於 [HTTP即時資料流](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) 說明變體播放清單的內容和格式。 EXT-X-MARKER標籤會指示使用者端叫用回呼。 它包含下列元件：
 
-* 廣告片段的第一段，用於跟蹤廣告莢的開始。
-* 廣告的第一段，用於跟蹤廣告盒內單個廣告的開始/完成/進度。
-* 廣告片段的最後一段，用於跟蹤廣告盒的結尾。
+* **ID** 程式串流內容中此回呼事件的唯一識別碼（字串）。
 
-清單伺服器發送 `VMAP1.0-conformant` XML文檔，用於跟蹤每個廣告分段的開始和結束。 它是廣告伺服器返回的實際VMAP1.0響應的篩選版本，主要包含跟蹤事件，如下所示：
+* **型別** 回呼事件的型別（字串）： PodBegin、PodEnd、PrerollPodBegin、PrerollPodEnd或AdBegin
+
+* **持續時間** 從攜帶指示詞對其保持有效之標籤的區段開始算起的時間長度（以秒為單位）。
+
+* **位移** 選填。 必須叫用回呼時，相對於區段播放開始的位移（以秒為單位）。
+
+   * `PodBegin` 和 `PrerollPodBegin` 包含DATA屬性中的信標資訊，並在區段開頭引發。 因此 `OFFSET` 標籤在這裡無法使用。
+
+   * `AdBegin` 包含DATA屬性中的信標資訊，而曝光標籤會在該區段開頭引發。 因此 `OFFSET` 標籤在此也不可用。
+
+   * `PodEnd` 和 `PrerollPodEnd` 包含DATA屬性中的信標資訊，但會在目前區段結尾引發，因為這些標籤預期會在Pod中最後一個廣告區段的結尾引發。 在這種情況下， `OFFSET` 設為 `<duration of segment>` ，以指定在目前區段的結尾引發信標。
+
+* **資料** 以雙引號括住的Base64編碼字串，其中包含要在叫用回呼時傳遞至應用程式的資料。 其中包含符合VMAP1.0和VAST3.0規格的廣告追蹤資訊。
+
+* **計數** 將在廣告插播中拼接的廣告數量。
+
+   僅適用於TYPE元件設為PodBegin或PrerollPodBegin時。
+
+* **BREAKDUR** 已填入廣告插播的總持續時間（以秒為單位）。
+
+   僅適用於TYPE元件設為PodBegin或PrerollPodBegin時。
+
+建構回呼時，請將EXT-X-MARKER元件解譯如下：
+
+* 當標籤包含 `OFFSET`，會在相對於該區段中內容播放開始的指定位移處觸發回呼。 否則，只要該區段中的內容開始播放，就會立即觸發回呼。
+* 使用 `DURATION` 以追蹤廣告內容的進度，並要求用於追蹤事件的URL。
+* 通過 `ID`， `TYPE`、和 `DATA` 至回呼。
+
+使用 `PrerollPodBegin`、和 `PrerollPodEnd` 值 `TYPE` 決定要在即時/線性資料流中首先播放哪個TS區段。
+
+>[!NOTE]
+>
+>此 `PrerollPodBegin`、和 `PrerollPodEnd` 只有在將前段廣告插入即時資料流時，才可使用值。
+
+資訊清單伺服器包含EXT-X-MARKER標籤，位於下列區段中：
+
+* 廣告插播中的第一個區段，用於追蹤廣告Pod的開始。
+* 廣告的第一個區段，用於追蹤廣告Pod中個別廣告的開始/完成/進度。
+* 廣告插播中的最後一個區段，用於追蹤廣告Pod的結尾。
+
+資訊清單伺服器傳送 `VMAP1.0-conformant` 追蹤每個廣告插播開始和結束的XML檔案。 這是廣告伺服器傳回的實際VMAP1.0回應的篩選版本，主要包含追蹤事件，如下所示：
 
 ```xml
 <?xml version="1.0"?> 
@@ -92,7 +92,7 @@ ht-degree: 0%
 </AdTrackingFragments>
 ```
 
-對於每個廣告，清單伺服器插入程式內容，它發送一個VAST3.0一致的XML文檔來跟蹤該廣告。 每個XML文檔都包含 `<InLine>` 描述線性和創造性插入的元素，或 `<Wrapper>` 包裝廣告（即連結或重定向廣告）和任何相關的伴生廣告和擴展。 如果VAST響應包含序列屬性，例如當廣告是廣告盒的一部分時，文檔將包含該屬性。 以下是用於跟蹤單個廣告的VAST3.0一致XML文檔示例：
+資訊清單伺服器會針對插入程式內容中的每個廣告創意，傳送VAST3.0-conformant XML檔案以追蹤該廣告。 每個XML檔案都包含 `<InLine>` 說明插入線性廣告創意的元素，或 `<Wrapper>` 元素（包裝廣告） （亦即連結或重新導向的廣告）以及任何關聯的隨附廣告和副檔名。 如果VAST回應包含序列屬性（例如，當廣告是廣告Pod的一部分時），則檔案會包含該屬性。 以下是追蹤個別廣告的VAST3.0-conformant XML檔案範例：
 
 ```xml
 <?xml version="1.0"?> 

@@ -1,6 +1,6 @@
 ---
-description: 如果要頒發黃金時段DRM客戶端可以接受的有效許可證，則必須使用Adobe已頒發的一組憑據配置黃金時段DRM伺服器以進行受保護流式處理。 您可以將這些憑據儲存在PKCS#12(.pfx)檔案或HSM上。
-title: 關於Adobe PrimetimeDRM憑據
+description: 如果您想要核發Primetime DRM使用者端可以接受的有效授權，則必須使用Adobe核發的一組認證來設定Primetime DRM伺服器以使用受保護的串流。 您可以將這些憑證儲存在PKCS#12 (.pfx)檔案或HSM上。
+title: 關於Adobe Primetime DRM認證
 exl-id: a48da53f-2c2c-4a64-a512-dd69a8c9aa14
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 ---
 
-# 關於Adobe PrimetimeDRM憑據{#about-adobe-primetime-drm-credentials}
+# 關於Adobe Primetime DRM認證{#about-adobe-primetime-drm-credentials}
 
-如果要頒發黃金時段DRM客戶端可以接受的有效許可證，則必須使用Adobe已頒發的一組憑據配置黃金時段DRM伺服器以進行受保護流式處理。 您可以將這些憑據儲存在PKCS#12(.pfx)檔案或HSM上。
+如果您想要核發Primetime DRM使用者端可以接受的有效授權，則必須使用Adobe核發的一組認證來設定Primetime DRM伺服器以使用受保護的串流。 您可以將這些憑證儲存在PKCS#12 (.pfx)檔案或HSM上。
 
-的 [!DNL .pfx] 檔案可以位於您選擇的任何目錄中。 但是，Adobe建議您 [!DNL .pfx] 檔案，以方便訪問。
+此 [!DNL .pfx] 檔案可以位於您選取的任何目錄中。 不過，Adobe建議您找出 [!DNL .pfx] 租使用者設定目錄中的檔案以方便存取。

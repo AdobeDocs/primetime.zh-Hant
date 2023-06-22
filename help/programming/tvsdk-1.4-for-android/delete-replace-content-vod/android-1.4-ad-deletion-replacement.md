@@ -1,6 +1,6 @@
 ---
-description: Android TVSDK API中的這些更改支援刪除和替換。
-title: 廣告刪除和替換API更改
+description: Android TVSDK API中的這些變更支援廣告刪除和取代。
+title: 廣告刪除和取代API變更
 exl-id: bde8bd6e-0afe-42d0-b716-f33f75de757e
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,95 +9,95 @@ ht-degree: 0%
 
 ---
 
-# 廣告刪除和替換API更改{#ad-deletion-and-replacement-api-changes}
+# 廣告刪除和取代API變更{#ad-deletion-and-replacement-api-changes}
 
-Android TVSDK API中的這些更改支援刪除和替換。
+Android TVSDK API中的這些變更支援廣告刪除和取代。
 
-* `AdSignalingMode` 新的自定義時間範圍和信令模式
+* `AdSignalingMode` 新的自訂時間範圍和訊號模式
 
-* `AdvertisingMetadata` 新建 `setTimeRanges(TimeRangeCollection timeRanges, Metadata options)`:設定處理元資料時要標籤、刪除或替換的時間範圍
+* `AdvertisingMetadata` 新增 `setTimeRanges(TimeRangeCollection timeRanges, Metadata options)`：設定處理中繼資料時標籤、刪除或取代的時間範圍
 
 * `ContentResolver`
 
-   * 新建 `public final boolean canResolve(PlacementOpportunity placementOpportunity)`
-   * 新建 `protected abstract boolean doCanResolve(PlacementOpportunity placementOpportunity)`
+   * 新增 `public final boolean canResolve(PlacementOpportunity placementOpportunity)`
+   * 新增 `protected abstract boolean doCanResolve(PlacementOpportunity placementOpportunity)`
 
-* 新建 `ContentRemoval` 類
+* 新增 `ContentRemoval` 類別
 
-   `TimelineOperation` 定義要從時間軸中刪除的時間範圍的類
+   `TimelineOperation` 定義要從時間軸移除的時間範圍的類別
 
 * `AuditudeResolver`
 
-   * 新建 `private LinkedList<AuditudeRequest> _requestQueue`
-   * 新建 `void startConsumer()`:開始處理黃金時段廣告決策請求隊列，並確保在 `MIN_INIT_REQUEST_INTERVAL` 間隔
+   * 新增 `private LinkedList<AuditudeRequest> _requestQueue`
+   * 新增 `void startConsumer()`：開始處理Primetime ad Decisioning請求佇列，並確保每個請求都是在 `MIN_INIT_REQUEST_INTERVAL` 間隔
 
-   * 新建 `processReplacementRange()`:從廣告元資料中提取時間範圍並生成 `PlacementInformations`，並建立包含 `PlacementInformations`。
+   * 新增 `processReplacementRange()`：從廣告中繼資料擷取時間範圍並產生 `PlacementInformations`，並建立Primetime廣告決策請求，包含 `PlacementInformations`.
 
-   * 新建 `canDoResolver()`:檢查放置機會是否具有黃金時段廣告決策元資料
+   * 新增 `canDoResolver()`：檢查刊登位置機會是否有Primetime廣告決策中繼資料
 
-* 新建 `CustomRangeHelper` 從ad元資料中提取時間範圍元資料並刪除子集/重疊/無效時間範圍的幫助程式類。
+* 新增 `CustomRangeHelper` 從廣告中繼資料擷取時間範圍中繼資料，並移除子集/重疊/無效時間範圍的協助程式類別。
 
-* 新建 `DeleteContentResolver` 解析內容解析器的放置機會 `PlacementInformation.Mode.DELETE`
+* 新增 `DeleteContentResolver` 解決以下位置機會的內容解析程式： `PlacementInformation.Mode.DELETE`
 
-* 新建 `NopTimelineOperation` 無需進行廣告中斷放置或替換時的新時間線操作。 此類用於區分此類和在解析過程中出現錯誤時。
+* 新增 `NopTimelineOperation` 新的時間表操作，適用於不需要進行廣告插播放置或取代的情況。 此類別用於區分此與解析過程中發生錯誤的時間。
 
-* `TimelineOperationQueue` 檢查時間軸操作是否為 `NopTimelineOperation` 處理之前。
+* `TimelineOperationQueue` 檢查時間表作業是否為 `NopTimelineOperation` 處理之前。
 
-* `CustomAdMarkersContentResolver` 新建 `canDoResolve()`:檢查職位安排機會是否屬於類型 `Mode.MARK`
+* `CustomAdMarkersContentResolver` 新增 `canDoResolve()`：檢查刊登版位機會是否為型別 `Mode.MARK`
 
-* `MetadataResolver` 新建 `canDoResolve()`:檢查職位安排機會是否屬於類型 `Mode.INSERT`
+* `MetadataResolver` 新增 `canDoResolve()`：檢查刊登版位機會是否為型別 `Mode.INSERT`
 
-* `DefaultMetadataKeys` 新建 `TIME_RANGES_METADATA_KEY("time_ranges_metadata_key")`
+* `DefaultMetadataKeys` 新增 `TIME_RANGES_METADATA_KEY("time_ranges_metadata_key")`
 
 * `PlacementInformation`
 
    * 新模式 `enum (INSERT, DELETE, REPLACE, MARK)`
-   * 新類型 `CUSTOM_TIME_RANGES`
+   * 新型別 `CUSTOM_TIME_RANGES`
 
-* `TimeRange` 新建 `compareTo(TimeRange timeRange)`:因此，可以根據開始時間對TimeRanges排序
+* `TimeRange` 新增 `compareTo(TimeRange timeRange)`：依開始時間排序時間範圍同樣有效
 
-* 新建 `ReplacementTimeRange` 擴展 `TimeRange` 代表替換時間表的類， `begin`。 `end`, `replacement-duration` 的下界。
+* 新增 `ReplacementTimeRange` 擴充 `TimeRange` 代表取代時間範圍的類別，使用 `begin`， `end`、和 `replacement-duration` 引數。
 
 * `TimeRangeCollection`
 
-   * 新建 `MARK_RANGES, DELETE_RANGES, REPLACE_RANGES`
-   * 已更名 `CUSTOM_AD_MARKERS` 至 `MARK_RANGES`
+   * 新增 `MARK_RANGES, DELETE_RANGES, REPLACE_RANGES`
+   * 已重新命名 `CUSTOM_AD_MARKERS` 至 `MARK_RANGES`
 
-   * 已修改 `toMetadata(Metadata options)` 將刪除/標籤/替換範圍放入ad元資料。
+   * 修改時間 `toMetadata(Metadata options)` 將刪除/標籤/取代範圍放入廣告中繼資料。
 
 * `MediaPlayerNotification`
 
-   * 新建 `UNDEFINED_TIME_RANGES`:當ad信令模式是伺服器映射或清單提示時，並且替換範圍也在ad元資料中時，將忽略替換範圍。
-   * 新建 `REPLACE_RANGES_NOT_AVAILABLE`:當ad信令模式為自定義時間範圍且替換範圍不可用時，將發出警告。
+   * 新增 `UNDEFINED_TIME_RANGES`：當廣告訊號模式為伺服器對應或資訊清單提示，且取代範圍也在廣告中繼資料中時，取代範圍會遭到忽略。
+   * 新增 `REPLACE_RANGES_NOT_AVAILABLE`：當廣告訊號模式為自訂時間範圍且取代範圍無法使用時，將會傳送警告。
 
-* `AdvertisingFactory` 新建 `public abstract List<ContentResolver> createContentResolvers(MediaPlayerItem item)`
+* `AdvertisingFactory` 新增 `public abstract List<ContentResolver> createContentResolvers(MediaPlayerItem item)`
 
-* `DefaultAdvertisingFactory` 新建 `public List<ContentResolver> createContentResolvers(MediaPlayerItem item)`
+* `DefaultAdvertisingFactory` 新增 `public List<ContentResolver> createContentResolvers(MediaPlayerItem item)`
 
-* `DefaultContentResolverFactory` 新建 `public static List<ContentResolver> createContentResolvers(MediaResource resource, Context context)`
+* `DefaultContentResolverFactory` 新增 `public static List<ContentResolver> createContentResolvers(MediaResource resource, Context context)`
 
 * `DefaultMediaPlayer`
 
-   * 在 `prepareToPlay()`:將初始查找設定為0，因為如果範圍 `[0,n]` 刪除後，媒體播放器將不會自動播放。
+   * 在 `prepareToPlay()`：將初始搜尋設為0，因為若為範圍 `[0,n]` 刪除，媒體播放器將不會自動播放。
 
-   * 在 `prepareToPlay()`:循環瀏覽初始放置資訊清單 `mediaplayerclient` 來解決。
+   * 在 `prepareToPlay()`：在初始位置資訊清單中循環 `mediaplayerclient` 以解決。
 
-   * 在 `extractAdSignalingMode()`:適應新的自定義時間範圍模式。
-   * 新建 `private static List<PlacementInformation> createInitalPlacementInformations()`:生成廣告信令模式和內容解析器（從廣告元資料導出）的初始放置資訊。
-   * 在 `ContentPlacementCompletedListener`:檢查是否 `mediaPlayerClient` 是 `doneInitialResolving` 前 `endAdResolving`。
+   * 在 `extractAdSignalingMode()`：適應新的自訂時間範圍模式。
+   * 新增 `private static List<PlacementInformation> createInitalPlacementInformations()`：產生廣告訊號模式和內容解析器的初始位置資訊（衍生自廣告中繼資料）。
+   * 在 `ContentPlacementCompletedListener`：檢查以檢視 `mediaPlayerClient` 是 `doneInitialResolving` 呼叫前 `endAdResolving`.
 
 * `MediaPlayerClient`
 
-   * 新建 `List<ContentResolver> _contentResolvers`
-   * 新建 `int _reservations`
-   * 新建 `lookupContentResolver(PlacementOpportunity placementOpportunity)`:查找哪些解析程式可以解析 `PlacementOpportunity`。
+   * 新增 `List<ContentResolver> _contentResolvers`
+   * 新增 `int _reservations`
+   * 新增 `lookupContentResolver(PlacementOpportunity placementOpportunity)`：查詢哪個解析器可以解析 `PlacementOpportunity`.
 
-   * 修改的代碼以建立多個內容解析器。
-   * 新建 `public boolean doneInitialResolving()`:檢查是否還有任何機會需要解決。
+   * 修改程式碼以建立多個內容解析器。
+   * 新增 `public boolean doneInitialResolving()`：檢查是否有任何機會需要解決。
 
 * `VideoEngineTimeline`
 
-   * 新建 `removeContent(TimelineOperation timelineOperation)`:從時間軸中刪除給定的內容範圍。
-   * 新建 `removeContentByLocalTime(long begin, long end)`:按給定的本地時間刪除內容 `begin` 和 `end`。
+   * 新增 `removeContent(TimelineOperation timelineOperation)`：從時間軸移除指定的內容範圍。
+   * 新增 `removeContentByLocalTime(long begin, long end)`：依指定的當地時間移除內容 `begin` 和 `end`.
 
-* `DefaultOpportunityDetectorFactory` 已修改 `createOpportunityDetector`:對於VOD流，僅返回新 `SpliceOutOpportunityDetector` 如果沒有MARK或REPLACE範圍（因為這些範圍比信令模式具有優先順序）。
+* `DefaultOpportunityDetectorFactory` 修改時間 `createOpportunityDetector`：針對VOD資料流，只會傳回新的 `SpliceOutOpportunityDetector` 如果沒有MARK或REPLACE範圍（因為這些範圍優先於訊號模式）。

@@ -1,6 +1,6 @@
 ---
-title: 獲取個性化伺服器證書
-description: 獲取個性化伺服器證書
+title: 取得個人化伺服器憑證
+description: 取得個人化伺服器憑證
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,14 +10,14 @@ ht-degree: 0%
 ---
 
 
-# 獲取個性化伺服器證書{#obtain-individualization-server-certificates}
+# 取得個人化伺服器憑證{#obtain-individualization-server-certificates}
 
-要使用本地個性化伺服器，必須先獲取兩個數字憑據（證書）:
+若要使用On Premises Individualization Server，您必須先取得兩個數位憑證（憑證）：
 
-* *個性化傳輸憑據*  — 由Adobe
-* *個性化CA憑據*  — 由Symantec(VeriSign)發佈
+* *個人化傳輸認證*  — 由Adobe簽發
+* *個人化CA認證*  — 由Symantec (VeriSign)發行
 
-要獲取這些證書：
+若要取得這些憑證：
 
-1. 請通過Zendesk票證向以下用戶提交請求： [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
-請注意，這些憑據是運行Mogfire DRM許可證伺服器所需的憑據之外。
+1. 請透過Zendesk票證將請求提交至： [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
+請注意，這些認證是操作Primetime DRM授權伺服器所需的認證以外的認證。

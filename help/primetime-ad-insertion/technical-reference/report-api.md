@@ -1,6 +1,6 @@
 ---
-title: 報告API
-description: 審核報告API
+title: 報表API
+description: 稽核報表API
 exl-id: 50eb4869-3765-4591-8c41-794b29d50044
 source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
 workflow-type: tm+mt
@@ -9,65 +9,65 @@ ht-degree: 1%
 
 ---
 
-# 報告API {#report-api}
+# 報表API {#report-api}
 
-用戶介面為客戶和啟用(Adobe)團隊提供了托管角色。 客戶可以訪問門戶，然後可以建立和編輯其配置。 還可以在用戶介面上看到廣告印象的報告。
+使用者介面已管理客戶和啟用(Adobe)團隊的角色。 客戶可以存取入口網站，然後可以建立和編輯其設定。 他們也可以從使用者介面檢視其廣告印象的報告。
 
-API在幕後工作，以便客戶和管理員與後端基礎架構通信。
+API會在幕後運作，方便客戶和管理員與後端基礎架構通訊。
 
-瀏覽 [!DNL Primetime Ad Insertion] API請參見 [Ad Insertion配置用戶介面中的API端點](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/)。
+若要探索 [!DNL Primetime Ad Insertion] API請參閱 [在swaggered使用者介面中Ad InsertionAPI端點](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
 
-## API終結點 {#report-api-endpoint}
+## API端點 {#report-api-endpoint}
 
 ### 生產 {#production}
 
 `https://dai-primetime.adobe.io/report`
 
-### 沙盒 {#sandbox}
+### Sandbox {#sandbox}
 
 `https://dai-sandbox1-primetime.adobe.io/report`
 
-## 查詢參數
+## 查詢引數
 
 
-| 名稱 | 意義 | 值類型 | 強制？ | 預設值 | 約束 | 示例/有效示例值 |
+| 名稱 | 重要性 | 值型別 | 強制？ | 預設值 | 限制 | 範例/有效的範例值 |
 |----------|-----------------------------------------------------------------------------------------------|----------------|----------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| 結束日期 | 報表資料的結束日期 | 日期 | Y | 無 | 不比UTC-8中的昨天新 | ######## |
-| 篩選 | 篩選一個或多個列 | 字串 | N | 無 | ad_config_id,zone_id | ad_config_id=990,900;state=active |
-|  |  |  |  |  | 在請求中將metaData設定為「true」時，您也可以按名稱進行篩選。 |  |
-|  |  |  |  |  |  | 多個篩選器鍵以分號分隔。 |
-|  |  |  |  |  |  | 使用逗號分隔的值來提供篩選器鍵的值清單 |
-| 分組依據 | 按時間分組（年\|月\|天）或ad_config_id。 Adconfig是AdRule的同義詞。 | 字串 | N | 無 | y \| m \| d,ad_config_id | m,ad_config_id |
+| endDate | 報表資料的結束日期 | 日期 | Y | 無 | UTC-8中的時間不比昨天晚 | ######## |
+| 篩選器 | 在一或多個欄上篩選 | 字串 | N | 無 | ad_config_id ， zone_id | ad_config_id=990,900；state=active |
+|  |  |  |  |  | 當請求中的metaData設為「true」時，您也可以依名稱篩選。 |  |
+|  |  |  |  |  |  | 多個篩選鍵以分號分隔。 |
+|  |  |  |  |  |  | 使用逗號分隔值來提供篩選索引鍵的值清單 |
+| groupBy | 分組依據：時間（年\|月\|日）或ad_config_id。 Adconfig是AdRule的同義字。 | 字串 | N | 無 | y \| m \| d ， ad_config_id | m ， ad_config_id |
 |  |  |  |  |  |  |  |
-|  |  |  |  |  |  | 對於groupBy按時提供y或m或d之一 |
+|  |  |  |  |  |  | 若為groupBy on time，請提供y、m或d其中之一 |
 |  |  |  |  |  |  |  |
 
 
 
-## 標題 {#headers}
+## 標頭 {#headers}
 
-| 名稱 | 值類型 | 強制 | 示例值 | 意義 |
+| 名稱 | 值型別 | 強制 | 範例值 | 重要性 |
 |-----------------------|----------------|---------------|-------------------------------------|------------------------------------|
-| 接受 | 字串 | Y | CSV文本/csv | 應從API響應的類型 |
-|  |  |  | 應用程式/json或&#39;*/*&#39;用於JSON |  |
-| 授權令牌 | 字串 | Y | x | 授權令牌 |
-| x-api鍵 | 字串 | Y | x | API密鑰 |
-| x-gw-ims-org-id | 字串 | Y | xyz12345 | 帳戶的IMS組織ID |
+| Accept | 字串 | Y | CSV適用的text/csv | API應有的回應型別 |
+|  |  |  | application/json或&#39;*/*&#39;適用於JSON |  |
+| 授權權杖 | 字串 | Y | xyz | 授權權杖 |
+| x-api-key | 字串 | Y | xyz | API金鑰 |
+| x-gw-ims-org-id | 字串 | Y | xyz12345 | 您帳戶的IMS組織ID |
 
-* 您可以按照Adobe.io的JWT驗證幫助頁中詳細介紹的步驟來生成授權令牌（也稱為訪問令牌）。
+* 您可以依照Adobe.io的JWT驗證說明頁面中詳述的步驟來產生授權權杖（也稱為存取權杖）。
    >[!NOTE]
-   >授權令牌的到期時間為24小時，因此，如果您使用的是循環指令碼的報表API，請確保在授權令牌到期之前或當您收到有關令牌無效的Oauth錯誤時生成授權令牌。
+   >授權權杖有24小時的到期日，因此，如果您使用週期性指令碼來使用Report API，則請確保在授權權杖到期前或當您收到有關權杖無效的Oauth錯誤時產生授權權杖。
 
-* 要在請求標頭中設定正確的值並生成授權令牌（使用JWT驗證），您需要瞭解帳戶的以下配置。 請與黃金時段支援團隊聯繫以獲取這些價值。
+* 若要在請求標頭中設定正確的值並產生授權權杖（使用JWT驗證），您需要知道您帳戶的以下設定。 請聯絡Primetime支援團隊以取得這些值。
 技術帳戶ID
 
    * 組織ID
-   * API鍵(_K)
-   * 客戶端密鑰
+   * Api_key
+   * Client_secret
 
 ## 輸出 {#output}
 
-預設情況下，Report API查詢的結果為JSON格式，它根據所請求的維(groupby param)的不同值指定印數。 輸出示例如下：
+報表API查詢的結果預設為JSON格式，這會針對請求的維度（groupby引數）的不同值指定曝光次數。 範例輸出如下所示：
 
 ```JSON
 [
@@ -86,11 +86,11 @@ API在幕後工作，以便客戶和管理員與後端基礎架構通信。
 ]
 ```
 
-## 錯誤代碼和字串 {#error-codes-strings}
+## 錯誤碼和字串 {#error-codes-strings}
 
-### 錯誤響應格式 {#error-response-format}
+### 錯誤回應格式 {#error-response-format}
 
-呈現宏「code」時出錯：為參數指定的值無效 `com.atlassian.confluence.ext.code.render.InvalidValueException`
+產生巨集&#39;code&#39;時發生錯誤：為引數指定的值無效 `com.atlassian.confluence.ext.code.render.InvalidValueException`
 
 ```Shell
 {
@@ -99,26 +99,26 @@ API在幕後工作，以便客戶和管理員與後端基礎架構通信。
 }
 ```
 
-下表列出了Report API可以返回的錯誤代碼和消息。 有關授權層的錯誤，請參閱 [錯誤代碼文檔](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#errors-and-troubleshooting) Adobe。
+下表列出Report API可傳回的錯誤碼和訊息。 有關授權層的相關錯誤，請參閱 [錯誤代碼檔案](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#errors-and-troubleshooting) 的Adobe.io.
 
-| 錯誤代碼 | 錯誤消息 |
+| 錯誤代碼 | 錯誤訊息 |
 |-----------------------|------------------------------------------|
-| 4001007 | 用戶詳細資訊無效。 |
-| 4001008 | 所有區域都不是來自同一帳戶。 |
+| 4001007 | 使用者詳細資料無效。 |
+| 4001008 | 所有區域並非來自相同帳戶。 |
 | 5001010 | 發生內部錯誤。 |
-| 4001011 | 日期未以所需格式發送。 |
+| 4001011 | 日期未以要求的格式傳送。 |
 | 4001012 | 日期超出範圍。 |
-| 4001013 | 缺少必需參數。 |
-| 4001014 | 帳戶的區域清單為空。 |
-| 4001015 | 請求中的篩選器鍵無效。 |
+| 4001013 | 遺失必要引數。 |
+| 4001014 | 帳戶的區域清單是空的。 |
+| 4001015 | 請求中的篩選索引鍵無效。 |
 | 4001016 | 請求中的GroupBy選項無效。 |
-| 4001017 | 請求中提供了無效ID |
+| 4001017 | 請求中提供了無效的ID |
 
-## 示例調用和預期結果 {#sample-calls-expected-results}
+## 呼叫範例和預期結果 {#sample-calls-expected-results}
 
-以下是使用訪問令牌獲取2020-07-01和2021-06-30之間月印度計數的curl命令：
+以下是curl命令，可使用存取權杖來取得2020-07-01和2021-06-30之間的每月曝光計數：
 
-**報告API調用示例**
+**報表API呼叫範例**
 
 ```shell
 curl --location --request GET 'https://dai-sandbox1-primetime.adobe.io/report?startDate=2020-07-01&endDate=2021-06-30&groupBy=m&unpaged=true' \
@@ -128,24 +128,24 @@ curl --location --request GET 'https://dai-sandbox1-primetime.adobe.io/report?st
 --header 'Accept: application/json'
 ```
 
-| 示例呼叫/使用案例 | 預期結果 |
+| 呼叫/使用案例範例 | 預期結果 |
 |---|---|
-| 提取具有開始日期和結束日期的報告GET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2021-01-01標頭：接受=應用程式/json。 或 */* | 具有以下參數的Json（所有廣告均屬於此帳戶total_impress） |
-| GroupBy = d \| m \| yGET的讀取報告： [API_ENDPOINT]//report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d \| m \| y標頭：接受=應用程式/json。 或 */* | 具有以下參數的Json，所有廣告均屬於此帳戶日期（mm-dd-yyyy \|mm-yyyy \|yyyy格式）total_impression |
-| GroupBy = ad_config_idGET的提取報告： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=ad_config_id頭：接受=應用程式/json。 或 */* | 包含以下參數的Json（所有廣告均屬於此帳戶ad_config_id total_impressions） |
-| GroupBy = d \| m \| y和ad_config_idGET的讀取報告： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d,ad_config_id標頭：接受=應用程式/json。 或 */* | 具有以下參數的Json，所有廣告均屬於此帳戶ad_config_id日期（mm-dd-yyyy \|mm-yyyy \|yyyy格式）total_impression |
-| metaData=true和groupBy=d \| m \| yGET的讀取報告： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=ad_config_id頭：接受=應用程式/json。 或 */* | Json具有以下參數，所有廣告均屬於此帳戶ad_config_id name total_impress |
-| groupBy=d \| m \| y和ad_config_idGET的獲取報告： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=d \| m \| y,ad_config_id頭：接受=應用程式/json。 或 */* | 具有以下參數的Json，所有廣告均屬於此帳戶ad_config_id名稱total_impression日期（mm-dd-yyyy \|mm-yyyy \|yyyy格式） |
-| 獲取報告以獲取給定日期範圍的所有行（未分頁= true）GET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-31&amp;groupBy=d&amp;unpaged=true | 返回的Json陣列中的31個條目 |
-| 具有有效頁查詢參數的獲取報表GET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-31&amp;page=0&amp;size=5&amp;groupBy=d | 返回的陣列中有5個條目 |
-| 獲取報告，採用csv格式GET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10標頭：接受=文本/csv | 返回CSV字串，其標題為：總印象 |
-| Fetch Report（csv格式）和groupBy = d \| m \| yGET: [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;groupBy=d\|m\|y標頭：接受=文本/csv | 返回CSV字串，其標題為：總印象日期（mm-dd-yyyy \|mm-yyyy \|yyyy格式） |
-| 使用csv格式和元資料=真GET的獲取報告： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true標頭：接受=文本/csv | 返回CSV字串，其標題為：總印象 |
-| 使用csv格式、元資料=true和groupBy = d \| m \| yGET獲取報告： [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y標頭：接受=文本/csv | 返回CSV字串，其標題為：總印象日期（mm-dd-yyyy \|mm-yyyy \|yyyy格式） |
+| 具有開始和結束日期GET的擷取報表： [API端點]/report？startDate=2020-01-01&amp;endDate=2021-01-01標頭：接受= application/json。 或 */* | Json及其下列引數，以及屬於此帳戶total_impressions的所有廣告 |
+| 以GroupBy = d \| m \| yGET擷取報表： [API端點]//report？startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d \| m \| y標頭：接受= application/json。 或 */* | Json，包含下列引數以及屬於此帳戶日期(mm-dd-yyyy \| mm-yyyy \| yyyy format) total_impressions |
+| 以GroupBy = ad_config_idGET擷取報表： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=ad_config_id標頭：接受= application/json。 或 */* | Json及其下列引數，以及屬於此帳戶ad_config_id total_impressions的所有廣告 |
+| 以GroupBy = d \| m \| y和ad_config_idGET擷取報表： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d，ad_config_id標頭：接受= application/json。 或 */* | Json，包含下列引數以及屬於此帳戶ad_config_id日期的所有廣告(mm-dd-yyyy \| mm-yyyy \| yyyy format) total_impressions |
+| Fetch Report with metaData=true and groupBy=d \| m \| yGET： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=ad_config_id標頭：接受= application/json。 或 */* | Json包含下列引數，以及屬於此帳戶ad_config_id名稱total_impressions的所有廣告 |
+| 使用groupBy=d \| m \| y和ad_config_idGET擷取報表： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=d \| m \| y，ad_config_id標頭：接受= application/json。 或 */* | Json，包含下列引數以及屬於此帳戶ad_config_id名稱total_impressions日期（mm-dd-yyyy \| mm-yyyy \| yyyy格式） |
+| 擷取報告以取得指定日期範圍的所有列（未分頁= true）GET： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-01-31&amp;groupBy=d&amp;unpaged=true | 傳回Json陣列中的31個專案 |
+| 使用有效頁面查詢引數擷取報表GET： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-01-31&amp;page=0&amp;size=5&amp;groupBy=d | 傳回陣列中的5個專案 |
+| 以csv格式GET擷取報表： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-01-10標頭：接受=文字/csv | 傳回CSV字串，並帶有標題： total_impressions |
+| 以csv格式擷取報表，且groupBy = d \| m \| yGET： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-01-10&amp;groupBy=d\|m\|y標頭：接受=文字/csv | 傳回CSV字串，標頭： total_impressions日期（mm-dd-yyyy \| mm-yyyy \| yyyy格式） |
+| 擷取報表（使用csv格式），且中繼資料= trueGET： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true標頭：接受=文字/csv | 傳回CSV字串，並帶有標題： total_impressions |
+| 擷取報表，使用csv格式、metadata = true和groupBy = d \| m \| yGET： [API端點]/report？startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y標頭：接受=文字/csv | 傳回CSV字串，標頭： total_impressions日期（mm-dd-yyyy \| mm-yyyy \| yyyy格式） |
 
 
-## 報告API限制策略 {#report-api-throttling-policy}
+## 報表API節流原則 {#report-api-throttling-policy}
 
-* 每個用戶在5秒的窗口內允許5個API請求。
-* 如果用戶超出限制，則響應延遲5秒。
-* 如果用戶在5秒內撥打了10個以上的呼叫，將開始以「429請求太多」的響應被拒絕。
+* 每個使用者可在5秒的視窗內提出5個API請求。
+* 如果使用者超過限制，回應會延遲5秒。
+* 如果使用者在5秒的範圍內進行超過10次呼叫，他們將開始被拒絕並回應「429太多請求」。

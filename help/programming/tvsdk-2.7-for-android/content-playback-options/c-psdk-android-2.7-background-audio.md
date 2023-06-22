@@ -1,6 +1,6 @@
 ---
-title: 啟用後台音頻
-description: 啟用後台音頻
+title: 啟用背景音訊
+description: 啟用背景音訊
 copied-description: true
 exl-id: db494969-ef63-46ad-9f08-a95f58c8b27b
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,15 +10,15 @@ ht-degree: 0%
 
 ---
 
-# 啟用後台音頻 {#enable-background-audio}
+# 啟用背景音訊 {#enable-background-audio}
 
-要在應用程式處於後台時啟用音頻播放，應用應該呼叫 `enableAudioPlaybackInBackground` 當播放器處於PREPARED狀態時，參數為true的MediaPlayer的API。
+若要在應用程式於背景時啟用音訊播放，應用程式應呼叫 `enableAudioPlaybackInBackground` 當播放器處於已準備狀態時，具有true作為引數的MediaPlayer的API。
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-在響應電話等事件期間，當應用程式失去對音頻焦點的控制時，應暫停播放。 以下代碼段演示了如何實現 `OnAudioFocusChangeListener`:
+應用程式在回應電話等事件期間失去音訊焦點保留時，應暫停播放。 下列程式碼片段示範如何實作 `OnAudioFocusChangeListener`：
 
 ```
 /** 

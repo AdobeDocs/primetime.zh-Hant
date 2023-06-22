@@ -1,6 +1,6 @@
 ---
-title: 程式設計師權利流
-description: 程式設計師權利流
+title: 程式設計師權益流程
+description: 程式設計師權益流程
 exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,52 +9,52 @@ ht-degree: 0%
 
 ---
 
-# 程式設計師權利流 {#prog-entitlement-flow}
+# 程式設計師權益流程 {#prog-entitlement-flow}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 概述 {#overview}
+## 概觀 {#overview}
 
-本文檔從程式設計師的角度描述了基本權利流。  有關此處介紹的基本TVE整合之外的功能和使用案例的資訊，請參見 [程式設計師使用案例](/help/authentication/programmer-use-cases.md)。
+本檔案從程式設計人員的角度說明基本權益流程。  如需這裡所涵蓋基本TVE整合以外的功能和使用案例相關資訊，請參閱 [程式設計師使用案例](/help/authentication/programmer-use-cases.md).
 
-Adobe Primetime認證通過為雙方提供安全、一致的介面來調節程式設計師和MVPD之間的權利流。  在程式設計師方面，黃金時段身份驗證提供了兩種一般類型的權利介面：
+Adobe Primetime驗證透過為雙方提供安全、一致的介面，調解程式設計師和MVPD之間的權益流程。  在程式設計師方面，Primetime驗證提供兩種一般型別的軟體權利檔案介面：
 
-1. AccessEnabler — 為可呈現網頁（如Web應用、智慧手機/平板電腦應用）的設備上的應用程式提供API庫的客戶端元件。
-2. 無客戶端API — 用於無法呈現網頁（例如機頂盒、遊戲控制台、智慧電視）的設備的REST風格Web服務。 呈現網頁的要求來自MVPD要求用戶在MVPD的網站上進行身份驗證。
+1. AccessEnabler — 一種使用者端元件，為可轉譯網頁的裝置（例如網頁應用程式、智慧型手機/平板電腦應用程式）上的應用程式提供API程式庫。
+2. 無使用者端API — 適用於無法轉譯網頁的裝置（例如機上盒、遊戲機、智慧型電視）的RESTful網路服務。 轉譯網頁的需求來自MVPD要求使用者在MVPD的網站上進行驗證的需求。
 
-除了此處介紹的平台中性概述外，此處還提供了特定於客戶端的API概述：無客戶端API文檔。 AccessEnabler在受支援的平台(Web上的AS/JS、iOS上的Objective-C和Android上的Java)上以本機方式運行。 AccessEnabler API在支援的平台中是一致的。 所有不支援AccessEnabler的平台都使用相同的無客戶端API。
+除了這裡提供的平台中立概述外，這裡還有無使用者端API專屬概述：無使用者端API檔案。 AccessEnabler會在支援的平台上以原生方式執行(網頁上的AS / JS、iOS上的Objective-C以及Android上的Java)。 AccessEnabler API在所有支援的平台上都是一致的。 所有不支援AccessEnabler的平台都使用相同的Clienless API。
 
-對於這兩種類型的介面，黃金時段身份驗證可安全地調整程式設計師應用和用戶MVPD之間的權利流：
+對於這兩種型別的介面，Primetime驗證安全地協調程式設計師的應用程式和使用者的MVPD之間的權利流程：
 
 ![](assets/prog-entitlement-flow.png)
 
 
-*圖：Adobe Primetime認證生態系統*
+*圖： Adobe Primetime驗證生態系統*
 
 >[!IMPORTANT]
 >
->上圖中注意，權利流程中有一部分不通過Adobe Primetime驗證伺服器：MVPD登錄。 用戶必須登錄到其MVPD的登錄頁。 由於這一要求，在無法呈現網頁的設備上，程式設計師應用程式必須指示用戶切換到能夠使用Web的設備以使用其MVPD登錄，然後返回原始設備以完成權利流的剩餘部分。
+>在上圖中，請注意權利流程有一部分不會透過Adobe Primetime驗證伺服器：MVPD登入。 使用者必須登入其MVPD的登入頁面。 由於此要求，在無法轉譯網頁的裝置上，程式設計師的應用程式必須指示使用者切換到可支援網頁的裝置，以使用他們的MVPD登入，之後他們返回原始裝置進行剩餘的權益流程。
 
-## 權利流 {#entitlement-flow}
+## 權益流程 {#entitlement-flow}
 
-有四個不同的子流構成了基本的權利流：
+基本權益流程由四個不同的子流程組成：
 
-1. [啟動流](/help/authentication/entitlement-flow.md#startup)
-1. [驗證流](/help/authentication/entitlement-flow.md#authentication)
-1. [授權流](/help/authentication/entitlement-flow.md#authorization)
-1. [註銷流](/help/authentication/entitlement-flow.md#logout)
+1. [啟動流程](/help/authentication/entitlement-flow.md#startup)
+1. [驗證流程](/help/authentication/entitlement-flow.md#authentication)
+1. [授權流程](/help/authentication/entitlement-flow.md#authorization)
+1. [登出檔案](/help/authentication/entitlement-flow.md#logout)
 
-在用戶最初訪問程式設計師站點時，權利流按上面的順序進行。 但是，在後續訪問中，根據驗證和授權令牌是否已過期，或根據查看策略，用戶可能只會通過其中的一個或兩個子流。
+使用者初次造訪程式設計人員網站時，權益流程會依上述順序進行。 不過，在後續的造訪中，視驗證和授權權杖是否已過期而定，或視檢視原則而定，使用者可能只會通過一或兩個子流程。
 
-### 啟動流 {#startup}
+### 啟動流程 {#startup}
 
-建立程式設計師和設備的身份，執行初始化任務。 這是所有後續權利調用的先決條件。
+建立程式設計師和裝置的身分識別，執行初始化工作。 這是所有後續軟體權利檔案呼叫的先決條件。
 
 **AccessEnabler**
 
-* **`setRequestor()`**  — 使用AccessEnalber和擴展的Adobe Primetime身份驗證伺服器建立您的身份。 此呼叫是權利流其餘部分的前奏。 例如，在JavaScript中：
+* **`setRequestor()`**  — 使用AccessEnalber及Adobe Primetime驗證伺服器（依擴充功能）建立您的身分識別。 此呼叫是權益流程其餘部分的先導。 例如，在JavaScript中：
 
    ```JavaScript
      /* Define the requestor ID (Programmer/aggregator ID). */
@@ -68,99 +68,99 @@ Adobe Primetime認證通過為雙方提供安全、一致的介面來調節程�
        }
    ```
 
-**無客戶端API**
+**無使用者端API**
 
-* **`\<REGGIE\_FQDN\>/reggie/v1/{requestorId}/regcode`**  — 根據平台的不同，在您的應用調用regcode之前可能需要完成先決任務。 查看 **無客戶端API文檔** 的雙曲餘切值。 例如，Xbox平台要求您在呼叫註冊碼之前完成規定的安全步驟。
+* **`\<REGGIE\_FQDN\>/reggie/v1/{requestorId}/regcode`**  — 視平台而定，在您的應用程式呼叫regcode之前，可能會有要完成的先決條件任務。 請參閱 **無使用者端API檔案** 以取得詳細資訊。 例如，Xbox平台要求您在呼叫regcode之前完成規定的安全性步驟。
 
-### 驗證流 {#authentication}
+### 驗證流程 {#authentication}
 
-成功的身份驗證將生成與設備和請求方綁定的AuthN令牌。 成功身份驗證是授權的先決條件。
+成功的驗證會產生繫結至裝置和請求者的AuthN權杖。 成功的驗證是取得授權的先決條件。
 
 **AccessEnabler**
 
-* `checkAuthentication()`  — 檢查本地令牌快取中是否存在有效的快取身份驗證令牌，而不實際觸發完整身份驗證流。 這將觸發 `setAuthenticationStatus()` 回調函式。
-* `getAuthentication()`  — 啟動完整驗證流。 如果成功，Adobe Primetime驗證將生成AuthN令牌，並在客戶端上快取該令牌。 用戶登錄到其選定的MVPD站點，視平台而定，這些站點顯示在iFrame、彈出窗口或webview中。 這將觸發displayProviderDialog()。
+* `checkAuthentication()`  — 檢查本機權杖快取中是否存在有效的快取驗證權杖，而不會實際觸發完整驗證流程。 這會觸發 `setAuthenticationStatus()` 回呼函式。
+* `getAuthentication()`  — 啟動完整的驗證流程。 如果成功，Adobe Primetime驗證會產生AuthN權杖，並在使用者端上快取該權杖。 使用者在其選取的MVPD網站上登入，視平台而定，會顯示在iFrame、彈出式視窗或Webview中。 這會觸發displayProviderDialog()。
 
-**無客戶端API**
+**無使用者端API**
 
-* `<FQDN>/.../checkauthn` - Web服務版本 `checkAuthentication()` 上。
-* `<FQDN>/.../config`  — 將MVPD清單返回到第2螢幕應用。
-* `<FQDN>/.../authenticate`  — 從第2螢幕應用啟動身份驗證流，將用戶重定向到其選定的MVPD進行登錄。 如果成功，Adobe Primetime驗證將生成一個AuthN令牌並將其儲存在伺服器上，用戶將返回到其原始設備以完成權利流。
+* `<FQDN>/.../checkauthn` - Web服務版本 `checkAuthentication()` 以上。
+* `<FQDN>/.../config`  — 將MVPD清單傳回至第二熒幕應用程式。
+* `<FQDN>/.../authenticate`  — 從第二熒幕應用程式起始驗證流程，將使用者重新導向至其選取的MVPD登入。 如果成功，Adobe Primetime驗證會產生AuthN權杖並將其儲存在伺服器上，然後使用者會返回其原始裝置以完成權利流程。
 
-如果以下兩點為true，則AuthN令牌被視為有效：
+如果下列兩點為true，則AuthN權杖視為有效：
 
-* AuthN令牌未過期
-* 與AuthN令牌關聯的MVPD位於當前請求者ID的允許MVPD清單中
+* AuthN權杖未過期
+* 與AuthN權杖關聯的MVPD位於目前要求者ID的允許MVPD清單中
 
-#### 通用AccessEnabler初始身份驗證工作流 {#generic-ae-initial-authn-flow}
+#### 通用AccessEnabler初始驗證工作流程 {#generic-ae-initial-authn-flow}
 
-1. 您的應用啟動身份驗證工作流，並調用 `getAuthentication()`，用於檢查有效的快取身份驗證令牌。 此方法具有可選 `redirectURL` 參數；如果不為 `redirectURL`，成功驗證後，用戶將返回到初始化驗證的URL。
-1. AccessEnabler可確定當前身份驗證狀態。 如果用戶當前已通過身份驗證，則AccessEnabler將調用 `setAuthenticationStatus()` 回調函式，傳遞一個驗證狀態，表示成功。
-1. 如果用戶未經身份驗證，AccessEnabler將繼續身份驗證流程，方法是確定用戶上次使用給定MVPD進行身份驗證的嘗試是否成功。 如果快取MVPD ID，則 `canAuthenticate` 標誌為true，或使用 `setSelectedProvider()`,MVPD選擇對話框不會提示用戶。 驗證流繼續使用MVPD的快取值（即上次成功驗證期間使用的相同MVPD）。 對後端伺服器進行網路調用，並將用戶重定向到MVPD登錄頁。
+1. 您的應用程式會透過呼叫來啟動驗證工作流程 `getAuthentication()`，會檢查是否有有效的快取驗證Token。 此方法有一個選擇性 `redirectURL` 引數；如果您未提供 `redirectURL`，在成功驗證後，使用者會傳回至初始化驗證的URL。
+1. AccessEnabler會判斷目前的驗證狀態。 如果使用者目前已驗證，AccessEnabler會呼叫 `setAuthenticationStatus()` 回呼函式，傳遞驗證狀態以表示成功。
+1. 如果使用者未驗證，AccessEnabler會透過判斷使用者的上次驗證嘗試是否在指定的MVPD上成功來繼續驗證流程。 如果已快取MVPD ID且 `canAuthenticate` 標幟為true或選取的MVPD是使用 `setSelectedProvider()`，則不會使用MVPD選取對話方塊提示使用者。 驗證流程會繼續使用MVPD的快取值（即上次成功驗證期間使用的MVPD）。 系統會呼叫後端伺服器，並將使用者重新導向至MVPD登入頁面。
 
-1. 如果沒有快取MVPD ID，並且沒有使用 `setSelectedProvider()` 或 `canAuthenticate` 標誌設定為false, `displayProviderDialog()` 調用回調。 此回調將指示您的應用建立UI，該UI向用戶顯示要從中選擇的MVPD清單。 提供了MVPD對象陣列，其中包含構建MVPD選擇器所需的資訊。 每個MVPD對象都描述MVPD實體，並包含MVPD的ID和可找到MVPD徽標的URL等資訊。
+1. 如果未快取MVPD ID且未使用選取MVPD `setSelectedProvider()` 或 `canAuthenticate` 標幟設為false，則 `displayProviderDialog()` 已呼叫callback。 此回呼會指示您的應用程式建立UI，向使用者顯示可從中進行選擇的MVPD清單。 提供了一個MVPD物件陣列，其中包含建立MVPD選擇器所需的資訊。 每個MVPD物件都描述一個MVPD實體，並包含MVPD的ID和可以找到MVPD標誌的URL等資訊。
 
-1. 選擇MVPD後，您的應用必須通知AccessEnabler用戶的選擇。 對於非Flash客戶端，一旦用戶選擇了所需的MVPD，您就會通過對 `setSelectedProvider()` 的雙曲餘切值。 Flash客戶端而發送共用 `MVPDEvent` 類型&quot;`mvpdSelection`「 」，傳遞所選提供程式。
+1. 選取MVPD後，您的應用程式必須通知AccessEnabler使用者所做的選擇。 對於非Flash使用者端，一旦使用者選取所需的MVPD，您就會透過呼叫 `setSelectedProvider()` 方法。 Flash使用者端改為傳送共用的 `MVPDEvent` 屬於「」型別`mvpdSelection`&quot;，傳遞選取的提供者。
 
-1. 當AccessEnabler獲知用戶的MVPD選擇時，會向後端伺服器進行網路調用，並將用戶重定向到MVPD登錄頁。
+1. 當AccessEnabler收到有關使用者MVPD選擇的通知時，就會對後端伺服器發出網路呼叫，並將使用者重新導向至MVPD登入頁面。
 
-1. 在驗證工作流中，AccessEnabler與Adobe Primetime驗證和選定的MVPD通信，以徵求用戶憑據（用戶ID和密碼）並驗證其身份。 當某些MVPD重定向到其自己的站點進行登錄時，其他MVPD則要求您在iFrame中顯示其登錄頁。 您的頁面必須包括建立iFrame的回調，以防客戶選擇其中一個MVPD。<!-- For more information on creating a login iFrame, see  [Managing the Login IFrame](https://tve.helpdocsonline.com/managing-the-login-iframe)-->。
+1. 在驗證工作流程中，AccessEnabler會與Adobe Primetime驗證和選取的MVPD通訊，以索取使用者的認證（使用者ID和密碼）並驗證其身分。 雖然有些MVPD會重新導向至自己的登入網站，有些則需要您在iFrame中顯示其登入頁面。 您的頁面必須包含建立iFrame的回呼，以備客戶選擇其中一個MVPD時使用。<!-- For more information on creating a login iFrame, see  [Managing the Login IFrame](https://tve.helpdocsonline.com/managing-the-login-iframe)-->.
 
-1. 用戶成功登錄後，AccessEnabler將檢索驗證令牌並通知您的應用驗證流已完成。 AccessEnabler將調用 `setAuthenticationStatus()` 狀態代碼為1的回調，表示成功。 如果執行這些步驟時出錯， `setAuthenticationStatus()` 回調被觸發，狀態代碼為0，表示身份驗證失敗，並且有相應的錯誤代碼。
+1. 使用者成功登入後，AccessEnabler會擷取驗證Token，並通知您的應用程式驗證流程已完成。 AccessEnabler會呼叫 `setAuthenticationStatus()` 狀態碼為1的callback，表示成功。 如果在執行這些步驟期間發生錯誤， `setAuthenticationStatus()` 系統會以狀態碼0來觸發回呼，表示驗證失敗，以及對應的錯誤代碼。
 
 >[!IMPORTANT]
->Comcast是目前唯一不提供徽標靜態URL的MVPD。 程式設計師應從 [XFINITY開發人員門戶](https://developers.xfinity.com/products/tv-everywhere)。
+>Comcast是目前唯一未提供標誌靜態URL的MVPD。 程式設計師應從以下來源取得最新的標誌 [XFINITY開發人員入口網站](https://developers.xfinity.com/products/tv-everywhere).
 
-### 授權流 {#authorization}
+### 授權流程 {#authorization}
 
-授權是查看受保護內容的先決條件。 成功的授權會生成AuthZ令牌，以及為安全目的而提供給程式設計師應用的短生命週期媒體令牌。 請注意，要支援授權工作流，您以前必須執行了必要的請求程式設定並整合了 [媒體令牌驗證器](/help/authentication/media-token-verifier-int.md)。 完成這些操作後，您可以啟動授權。
+授權是檢視受保護內容的先決條件。 成功的授權會產生AuthZ權杖，以及提供給程式設計人員應用程式以用於安全目的的短期媒體權杖。 請注意，若要支援授權工作流程，您必須先執行必要的請求者設定，且已整合 [媒體權杖驗證器](/help/authentication/media-token-verifier-int.md). 完成這些步驟後，您就可以啟動授權。
 
-當用戶請求訪問受保護的資源時，您的應用會啟動授權。 您會傳遞一個資源ID，指定所請求的資源（例如，頻道、集合等）。 你的應用首先檢查儲存的身份驗證令牌。 如果找不到，則啟動身份驗證過程。
+當使用者請求存取受保護的資源時，您的應用程式會起始授權。 您傳遞的資源ID會指定請求的資源（例如，頻道、集數等）。 您的應用程式會先檢查是否有儲存的驗證Token。 如果找不到，您就會啟動驗證程式。
 
 **AccessEnabler**
 
-* `checkAuthorization()`  — 在未啟動完全授權流的情況下檢查授權。 這通常用於更新程式設計師應用程式UI中顯示的狀態資訊。
+* `checkAuthorization()`  — 檢查授權，而不啟動完整授權流程。 這通常用於更新程式設計人員應用程式UI中顯示的狀態資訊。
 
-* `getAuthorization()`  — 啟動完整授權流。
+* `getAuthorization()`  — 起始完整授權流程。
 
-您提供以下回調函式來處理授權調用的結果：
+您提供下列回呼函式來處理授權呼叫的結果：
 
-* `setToken()`  — 如果以前身份驗證成功且授權成功，則AccessEnabler將調用 `setToken()` 回調函式，傳遞短命的媒體令牌，指示成功結束到Adobe Primetime身份驗證權限流。 (在允許用戶查看受保護內容之前，程式設計師應用使用媒體令牌驗證器檢查媒體令牌的有效性。
+* `setToken()`  — 如果先前驗證成功且授權成功，AccessEnabler會呼叫 `setToken()` 回呼函式，傳遞短期媒體權杖，表示成功完成Adobe Primetime驗證許可權流程。 (在允許使用者檢視受保護的內容之前，程式設計師的應用程式會使用媒體權杖驗證器來檢查媒體權杖的有效性。
 
-* `tokenRequestFailed()`  — 如果用戶未獲得請求資源的授權（或查詢因任何其他原因失敗），則AccessEnabler將調用此回調函式（加上您自己的錯誤報告函式），並傳遞有關失敗的詳細資訊。
+* `tokenRequestFailed()`  — 如果使用者未獲授權使用請求的資源（或如果查詢因任何其他原因而失敗），AccessEnabler會呼叫此回呼函式（加上您自己的錯誤報告函式），並傳遞有關失敗的詳細資料。
 
-**無客戶端API**
+**無使用者端API**
 
-* `\<FQDN\>/.../authorize`  — 啟動完整授權流。
+* `\<FQDN\>/.../authorize`  — 起始完整授權流程。
 
-#### 通用AccessEnabler授權工作流 {#generic-ae-authr-wf}
+#### 一般AccessEnabler授權工作流程 {#generic-ae-authr-wf}
 
-1. 提供回調函式，該函式使用 `setReqestor()`。 成功下載AccessEnabler時調用此回調函式。
+1. 提供回呼函式，使用Access Enabler註冊指派的程式設計人員GUID `setReqestor()`. 成功下載AccessEnabler時，會呼叫此回呼函式。
 
-1. 呼叫 `getAuthorization()` 當用戶請求訪問受保護的資源時。 使用 `getAuthorization()`，傳遞指定所請求資源的資源ID（例如，頻道、插集等）。 AccessEnabler查找要隨授權請求傳遞的快取身份驗證令牌。 如果找不到，則啟動驗證流。
-1. 提供回調函式以處理授權結果：
+1. 呼叫 `getAuthorization()` 當使用者請求存取受保護資源時。 使用 `getAuthorization()`，傳遞指定請求資源的資源ID （例如，頻道、集數等）。 AccessEnabler會尋找快取的驗證Token以隨著授權請求傳遞。 如果找不到，則會啟動驗證流程。
+1. 提供回呼函式以處理授權結果：
 
-   * `setToken()`  — 如果授權成功或用戶以前已獲得授權，則Access Enabler將通過致電您 `setToken()` 回調函式，傳遞短時授權令牌。
+   * `setToken()`  — 如果授權成功，或如果使用者先前已獲得授權，Access Enabler會繼續授權程式，方法是呼叫 `setToken()` 回呼函式，傳遞短期授權權杖。
 
-   * `tokenRequestFailed()`  — 如果用戶未獲得請求資源的授權（或查詢因任何其他原因失敗）,AccessEnabler將調用您註冊的任何錯誤報告函式，加上 `tokenRequestFailed()` 回調，傳遞故障的詳細資訊。
+   * `tokenRequestFailed()`  — 如果使用者無權使用要求的資源（或查詢因任何其他原因而失敗），AccessEnabler會呼叫您已註冊的任何錯誤報告函式，以及 `tokenRequestFailed()` 回呼，傳遞失敗詳細資料。
 
-### 註銷流 {#logout}
+### 登出流程 {#logout}
 
-清除與當前用戶的權利流關聯的令牌和其他資料。
+清除與目前使用者軟體權利檔案流程關聯的權杖和其他資料。
 
 **AccessEnabler**
 
 * `logout()`
 
-**無客戶端API**
+**無使用者端API**
 
 * `\<FQDN\>/.../logout`
 
 ## 瞭解AccessEnabler行為 {#ae-behavior}
 
-所有AccessEnabler API調用都是非同步的（API引用中指出了一個例外）。 您可以任意調用API的次數，但無法強烈保證由調用觸發的操作將按與調用相同的順序完成。 (此操作的例外是當前Flash Player運行時；不是多線程，它將確保呼叫 *做* 按調用順序完成。)
+所有AccessEnabler API呼叫為非同步（但有一個例外，在API參考資料中說明）。 您可以任意次數呼叫API，但無法保證由呼叫觸發的動作會以呼叫的相同順序完成。 (目前的Flash Player執行階段是一個例外；若不是多執行緒，則可確保呼叫 *do* 以呼叫的順序完成。)
 
-為了區分響應和能夠將響應與呼叫配對，所有回叫都回復其輸入參數。 這包括 `setToken()` 和`tokenRequestFailed()`，而最終由 `checkAuthorization()`。 (對於 `checkAuthorization()` 回調，所用資源被回調。) 利用此功能，可以區分哪個響應與哪個呼叫對應。 要使用此功能，可以編碼如下內容：
+為了區分回應，並能夠配對回應與呼叫，所有回呼都會回應回傳其輸入引數。 其中包括 `setToken()` 和`tokenRequestFailed()`，最終觸發者為 `checkAuthorization()`. (適用於 `checkAuthorization()` 回呼，會回呼所使用的資源。) 利用此功能，您可以分辨哪個回應對應到哪個呼叫。 若要使用此功能，您可以編寫類似下列的程式碼：
 
 ```JavaScript
     for each (resource in ["TNT", "CNN", "TBS", "AdultSwim"] ) {
@@ -194,15 +194,15 @@ Adobe Primetime認證通過為雙方提供安全、一致的介面來調節程�
     }
 ```
 
-### AE行為常見問題 {#ae-beh-faq}
+### AE行為常見問題集 {#ae-beh-faq}
 
-**問題。 如果在第一次呼叫結束之前進行第二次AccessEnabler呼叫，會發生什麼情況？**
+**問題。 如果我會在第一個呼叫完成之前進行第二個AccessEnabler呼叫，會發生什麼情況？**
 
-當第二呼叫執行（非同步通信）時，第一呼叫繼續執行。
+第二個呼叫執行時，第一個呼叫會繼續執行（非同步通訊）。
 
-**問題。 AccessEnabler是否支援最多的同時呼叫數？**
+**問題。 AccessEnabler可支援的同時呼叫數是否有上限？**
 
-AccessEnabler代碼中未明確設定任何限制，因此您僅受可用系統資源以及MVPD容量的限制。
+AccessEnabler程式碼未明確設定任何限制，因此您只受可用系統資源及MVPD容量的限制。
 
 <!--
 

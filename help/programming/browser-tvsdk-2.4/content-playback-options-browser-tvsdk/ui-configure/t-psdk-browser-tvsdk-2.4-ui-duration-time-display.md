@@ -1,6 +1,6 @@
 ---
-description: 您可以使用瀏覽器TVSDK來檢索可在查找欄上顯示的媒體資訊。
-title: 顯示視頻的持續時間、當前時間和剩餘時間
+description: 您可以使用瀏覽器TVSDK來擷取可以顯示在搜尋列上的媒體資訊。
+title: 顯示視訊的持續時間、目前時間和剩餘時間
 exl-id: f2aa3c42-9c47-4a55-aed6-7dc5a8d0662b
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,33 +9,33 @@ ht-degree: 0%
 
 ---
 
-# 顯示視頻的持續時間、當前時間和剩餘時間{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# 顯示視訊的持續時間、目前時間和剩餘時間{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-您可以使用瀏覽器TVSDK來檢索可在查找欄上顯示的媒體資訊。
+您可以使用瀏覽器TVSDK來擷取可以顯示在搜尋列上的媒體資訊。
 
-1. 等待玩家至少處於PREPARED狀態。
-1. 使用 `MediaPlayer.currentTime` 屬性。
+1. 請等待播放器至少處於「已準備」狀態。
+1. 使用擷取目前的播放點時間 `MediaPlayer.currentTime` 屬性。
 
-   此屬性返回虛擬時間軸上當前播放頭位置（毫秒）。 該時間是相對於可能包含多個替代內容實例的解析流計算的，例如，將多個廣告或廣告片段拼接到主流中。 對於即時/線性流，返回的時間始終在回放窗口範圍內。
+   此屬性會傳回虛擬時間軸上目前的播放點位置（以毫秒為單位）。 此時間是相對於已解析資料流來計算的，該資料流可能包含替代內容的多個例項，例如拼接至主資料流的多個廣告或廣告插播。 對於即時/線性串流，傳回的時間一律在播放視窗範圍內。
 
    ```js
    MediaPlayer.currentTime
    ```
 
-1. 檢索流的播放範圍並確定持續時間。
-   1. 使用  `mediaPlayer.playbackRange` 屬性，以獲取虛擬時間軸時間範圍。
+1. 擷取資料流的播放範圍並決定持續時間。
+   1. 使用  `mediaPlayer.playbackRange` 屬性以取得虛擬時間軸時間範圍。
 
-   1. 要確定持續時間，請從範圍結束減去開始。
+   1. 若要判斷持續時間，請從範圍的結尾減去開始時間。
 
-      這包括插入流（廣告）的附加內容的持續時間。
+      這包括插入資料流（廣告）中之其他內容的持續時間。
 
-      對於VOD，範圍始終以零開始，結束值等於主內容持續時間和插入流（廣告）中的附加內容的持續時間之和。
+      對於VOD，範圍一律從零開始，而結束值等於主要內容持續時間與插入串流（廣告）中之其他內容持續時間的總和。
 
-      對於線性/即時資產，該範圍表示回放窗口範圍，且此範圍在回放期間會發生更改。
+      對於線性/即時資產，範圍表示播放視窗範圍，此範圍在播放期間會變更。
 
-1. 使用MediaPlayer和Browser TVSDK元素上可用的方法設定查找欄參數。
+1. 使用MediaPlayer和瀏覽器TVSDK元素上的可用方法來設定搜尋列引數。
 
-   例如，這裡可能有一個佈局以在HTML中顯示查找條。
+   例如，以下是以HTML顯示搜尋列的可能配置。
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -49,7 +49,7 @@ ht-degree: 0%
      </div> 
    ```
 
-   下面是相應的css:
+   以下是相對應的css：
 
    ```
    #seekbar { 
@@ -147,7 +147,7 @@ ht-degree: 0%
    } 
    ```
 
-1. 聽 `AdobePSDK.TimeChangeEvent` 並相應地更新監聽欄。
+1. 聆聽 `AdobePSDK.TimeChangeEvent` 並相應地更新搜尋列。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
@@ -171,7 +171,7 @@ ht-degree: 0%
        } 
    ```
 
-   此示例建立一個Seekbar對象以更新Seekbar:
+   此範例會建立搜尋列物件來更新搜尋列：
 
    ```js
    /** 

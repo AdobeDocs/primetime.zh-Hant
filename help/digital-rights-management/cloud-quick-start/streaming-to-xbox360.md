@@ -1,6 +1,6 @@
 ---
-title: 在播放器中設定XSTS令牌
-description: 在播放器中設定XSTS令牌
+title: 在播放器中設定XSTS權杖
+description: 在播放器中設定XSTS權杖
 copied-description: true
 exl-id: 1b83baac-e6a6-4e84-8ea5-07bd7e4afd9d
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,38 +10,38 @@ ht-degree: 0%
 
 ---
 
-# 流式處理到Xbox360（可選） {#streaming-to-xboc360}
+# 串流至Xbox360 （選購） {#streaming-to-xboc360}
 
-黃金時段DRM可在Xbox360平台上使用。 但是，只支援「受保護的流」使用案例，而不支援全套DRM策略權限。 不支援非流式DRM策略權限，如設備域組。 Xbox360在嘗試播放內容時會忽略不受支援的權限。
+Primetime DRM可在Xbox360平台上使用。 不過，僅支援Protected Streaming使用案例，不支援完整的DRM原則權利。 不支援非串流DRM原則許可權，例如「裝置網域群組」。 嘗試播放內容時，Xbox360會忽略不支援的許可權。
 
-Xbox的Bogk時段DRM政策支援權限包括：
-* 數字輸出保護
-* 許可證離線快取結束日期
-* 許可證開始日期
-* 許可證結束日期
-* 播放窗口持續時間（秒）
+Xbox支援的Primetime DRM原則許可權為：
+* 數位輸出保護
+* 授權離線快取結束日期
+* 授權開始日期
+* 授權結束日期
+* 播放視窗持續時間（秒）
 
-如果內容已打包用於其他黃金時段平台，如iOS、Android或案頭，則可能不必重新打包以流式傳輸到Xbox360。
+如果內容已封裝到其他Primetime平台，例如iOS、Android或案頭，則不必重新封裝內容以串流到Xbox360。
 
-Xbox360的一個注意事項是，每次在M3U8中遇到EXT-X-KEY標籤時，它必須始終聯繫到密鑰伺服器。 與iOS不同，在iOS,DRM策略設定(policy.requireKeyServer)將導致黃金時段視頻播放器從本地主機檢索AES解密密鑰，Xbox將始終嘗試從遠程密鑰伺服器檢索解密密鑰。 沒有DRM策略權限指示Xbox應用從本地主機檢索AES解密密鑰。 由於這一要求，EXT-X-KEY條目必須位於指向黃金時段雲DRM端點的M3U8中。 此URL是通過 &lt;key_url> 在OfflinePackager.jar配置檔案config_hls.xml中。
+對於Xbox360，有個警告是每次在M3U8中遇到EXT-X-KEY標籤時，它都必須連線到金鑰伺服器。 與iOS不同，在DRM原則設定(policy.requireKeyServer)中，iOS Primetime視訊播放器會從localhost擷取AES解密金鑰，而Xbox會一直嘗試從遠端金鑰伺服器擷取解密金鑰。 沒有DRM政策許可權可指示Xbox應用程式從localhost擷取AES解密金鑰。 由於此需求，EXT-X-KEY專案必須位於指向Primetime Cloud DRM端點的M3U8中。 此URL的設定方式： &lt;key_url> OfflinePackager.jar組態檔config_hls.xml中。
 
-如果希望將內容打包一次並使其流到所有黃金時段目標，並將iOS設備配置為不從遠程密鑰伺服器檢索密鑰，則可以使用屬性policy.requireKeyServer=false的DRM策略來打包內容（如policy_ios_localkeyserver.pol中）。 iOS設備將在本地檢索AES密鑰，而Xbox設備將忽略此屬性並訪問黃金時段雲DRM密鑰伺服器獲取解密密鑰。
+如果您想要封裝內容一次，並讓內容串流到所有Primetime目標，以及設定iOS裝置不要從遠端keyserver擷取金鑰，您可以使用具有屬性policy.requireKeyServer=false的DRM原則（例如在policy_ios_localkeyserver.pol中）來封裝內容。 iOS裝置會在本機擷取AES金鑰，而Xbox裝置則會忽略此屬性，並連絡Primetime Cloud DRM金鑰伺服器以取得解密金鑰。
 
->！注釋
+>！注意
 >
->所有Xbox360請求都必須使用自定義身份驗證/>權利。這是因為在Xbox360平台上，Xbox Live >使用Xbox安全令牌伺服器(XSTS)令牌用於>驗證目的。
->黃金時段雲DRM許可證伺服器使用XSTS令牌>驗證Xbox設備和用戶發出的許可證請求的完整性。 但是，驗證XSTS令牌需要>客戶的專用Xbox Live供應商密鑰，而Mighide Cloud DRM>不儲存該密鑰。 因此，當黃金時段雲DRM收到Xbox 360客戶端的>一個許可請求時，黃金時段雲DRM >將將XSTS令牌轉發到黃金時段客戶的後端>驗證/權利伺服器。 黃金時段客戶伺服器
->然後將分析並驗證XSTS令牌，以確保它已使用客戶的應用程式發佈者密鑰簽名。
->要從Xbox360客戶端傳遞XSTS令牌，請響應MediaPlayer.RequestKeyAttribute >event（此處進一步詳述），請同步設定令牌>: **在播放器中設定XSTS令牌。** 在「自定義驗證」>和「權利」目錄中，軟體版本中包含一個「後端驗證/權利」伺服器示例。XSTS令牌的驗證將在以下位置進行詳細討論： **Xbox Live XSTS令牌驗證。**
+>所有Xbox360請求都必須使用自訂驗證/>權益。這是因為在Xbox360平台上，Xbox Live會使用Xbox Secure Token Server (XSTS) Token來進行驗證。
+>Primetime Cloud DRM授權伺服器使用XSTS權杖來驗證Xbox裝置和發出授權請求的使用者的完整性。 不過，驗證XSTS權杖需要客戶的私人Xbox Live廠商金鑰，而Primetime Cloud DRM不會儲存此金鑰。 因此，當Primetime Cloud DRM收到來自Xbox 360使用者端的授權請求時，Primetime Cloud DRM會將XSTS權杖轉送到Primetime客戶的後端>驗證/權益伺服器。 Primetime客戶的伺服器
+>然後會剖析及驗證XSTS權杖，以確保其已使用客戶的應用程式發行者金鑰簽署。
+>若要從Xbox360使用者端傳遞XSTS權杖，請同步設定權杖以回應MediaPlayer.RequestKeyAttribute >事件 — 詳情請見此處： **在播放器中設定XSTS權杖。** 軟體發行版本隨附一個範例後端驗證/軟體權利檔案伺服器，位於「自訂驗證」和「軟體權利檔案」目錄中。XSTS權杖的驗證將在此處詳細討論： **Xbox Live XSTS權杖驗證。**
 
 
-## 在播放器中設定XSTS令牌 {#set-the-xsts-token-in-your-player}
+## 在播放器中設定XSTS權杖 {#set-the-xsts-token-in-your-player}
 
-在Xbox360中，您非同步設定令牌以響應 `MediaPlayer.RequestKeyAttribute` 的子菜單。
+在Xbox360中，您會以非同步方式設定Token以回應 `MediaPlayer.RequestKeyAttribute` 事件。
 
-設定XSTS令牌。
+設定XSTS權杖。
 
-與軟體捆綁的示例應用說明如何在播放器中設定XSTS令牌。 下面是示例播放器中的相關代碼段：
+軟體隨附的範例應用程式會顯示如何在播放器中設定XSTS權杖。 以下是範例播放器中的相關程式碼片段：
 
 ```
    MediaPlayer mMediaPlayer;  
@@ -56,30 +56,30 @@ private void Player_RequestKeyAttribute(object sender, RequestKeyAttributeEventA
 } 
 ```
 
-## Xbox Live XSTS令牌驗證 {#xbox-live-xsts-token-validation}
+## Xbox Live XSTS權杖驗證 {#xbox-live-xsts-token-validation}
 
-對於XSTS請求， `customerSpecificAuthToken` 欄位將包含Base64編碼的XSTS令牌。 示例 `XSTSValidator` 代碼檢查Base64解碼的令牌是否存在 `EncryptedAssertion` 元素；但是，您可以使用其他方法來區分這些請求和非Xbox請求。 例如，可以使用其他URL。
+對於XSTS請求， `customerSpecificAuthToken` 欄位將包含Base64編碼的XSTS權杖。 範例 `XSTSValidator` 程式碼會檢查Base64解碼權杖是否存在 `EncryptedAssertion` 元素；不過，您可以使用其他方法來區分這些請求和非Xbox請求。 例如，您可以使用不同的URL。
 
-在響應消息中返回的策略將覆蓋隨Xbox密鑰請求提供的DRM元資料中的原始策略。 Xbox客戶端只支援策略功能的子集，這些欄位是唯一將覆蓋原始策略的欄位。
+回應訊息中傳回的原則將覆寫隨Xbox金鑰請求提供的DRM中繼資料中的原始原則。 Xbox使用者端僅支援原則功能的子集，而且這些欄位是唯一會覆寫原始原則的欄位。
 
-需要其他設定步驟來支援令牌解密和驗證。 必須載入 [!DNL xsts_partner_cert.pfx] 和 [!DNL x_secure_token_service.part.xboxlive.com.cer] JKS格式密鑰庫中的憑據，然後將其作為系統屬性提供給後端權利伺服器 `xsts-keystore`。 預設情況下，合作夥伴 [!DNL .pfx] 有別名 `xsts`，令牌驗證證書具有別名 `xsts-verify-cert`。 也可以使用系統屬性覆蓋這些屬性。 最後，有一個系統屬性 `xsts-keystore-password` 沒有預設值，並且包含密鑰庫密碼。 由 `XSTSValidator` 規則概述如下：
+支援權杖解密和驗證需要額外的設定步驟。 您必須載入 [!DNL xsts_partner_cert.pfx] 和 [!DNL x_secure_token_service.part.xboxlive.com.cer] 認證進入JKS格式金鑰儲存區，然後您提供給後端權益伺服器作為系統屬性 `xsts-keystore`. 依預設，合作夥伴 [!DNL .pfx] 具有別名 `xsts`，而權杖驗證憑證具有別名 `xsts-verify-cert`. 您也可以使用系統屬性來覆寫這些內容。 最後，還有系統屬性 `xsts-keystore-password` 沒有預設值，且包含金鑰庫密碼。 由讀取的系統屬性 `XSTSValidator` 程式碼概述如下：
 
-| 系統屬性 | 預設值 | 注釋 |
+| 系統屬性 | 預設值 | 註解 |
 |---|---|---|
-| xsts密鑰庫 | xsts.jks | 驗證程式使用的JKS格式密鑰庫。 |
-| xsts-keystore-password |  | 密鑰庫的密碼 |
-| xsts別名 | xst | 用於從密鑰庫檢索解密密鑰的別名 |
-| xsts-verify-cert-alias | xsts-verify-cert | 用於從密鑰庫檢索驗證證書的別名 |
+| xsts-keystore | xsts.jks | 驗證器使用的JKS格式金鑰存放區。 |
+| xsts-keystore-password |  | 金鑰存放區的密碼 |
+| xsts-alias | xsts | 用於從金鑰存放區擷取解密金鑰的別名 |
+| xsts-verify-cert-alias | xsts-verify-cert | 用於從金鑰存放區擷取驗證憑證的別名 |
 
-## 為XSTS驗證程式建立JKS{#create-jks-for-an-xsts-validator}
+## 建立XSTS驗證器的JKS{#create-jks-for-an-xsts-validator}
 
-1. 查找位於合作夥伴中的專用證書的別名 [!DNL .pfx] 的子菜單。
+1. 瞭解位於合作夥伴中的私人憑證別名 [!DNL .pfx] 檔案。
 
    ```
    keytool -list -storetype pkcs12 -keystore xsts_partner_cert.pfx -v 
    ```
 
-1. 轉換 [!DNL .pfx] 至 [!DNL .jks]。
+1. 轉換 [!DNL .pfx] 至 [!DNL .jks].
 
    ```
    keytool -importkeystore -srckeystore xsts_partner_cert.pfx -srcstoretype PKCS12 \  
@@ -87,17 +87,17 @@ private void Player_RequestKeyAttribute(object sender, RequestKeyAttributeEventA
    <alias> -destalias xsts
    ```
 
-   ( `<alias>` 是您在步驟1中發現的專用證書的別名。)
-1. 導入 [!DNL x_secure_token_service.part.xboxlive.com.cer]。
+   (其中 `<alias>` 是您在步驟1中發現的私人憑證別名。)
+1. 匯入 [!DNL x_secure_token_service.part.xboxlive.com.cer].
 
    ```
    keytool -importcert -alias xsts-verify-cert -keystore xsts.jks \  
            -file x_secure_token_service.part.xboxlive.com.cer 
    ```
 
-1. 放置 [!DNL xsts.jks] 在Tomcat主目錄中，並定義 `-Dxsts-keystore-password=****` 的雙曲餘切值。
+1. Put [!DNL xsts.jks] ，並定義 `-Dxsts-keystore-password=****` 適用於Tomcat。
 
-如果 [!DNL xsts_partner_cert.pfx] 和 [!DNL xsts.jks] 使用不同的密碼，更新 `xsts` 密碼 `jks` 讓他們變成一樣。
+若 [!DNL xsts_partner_cert.pfx] 和 [!DNL xsts.jks] 使用不同的密碼，請更新 `xsts` 密碼輸入 `jks` 以維持原樣。
 
 ```
 keytool -keypasswd -keystore xsts.jks -alias xsts 

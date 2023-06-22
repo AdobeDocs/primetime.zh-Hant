@@ -1,6 +1,6 @@
 ---
-title: 全局伺服器配置資料
-description: 全局伺服器配置資料
+title: 全域伺服器設定資料
+description: 全域伺服器設定資料
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,8 +10,8 @@ ht-degree: 0%
 ---
 
 
-# 全局伺服器配置資料{#global-server-configuration-data}
+# 全域伺服器設定資料{#global-server-configuration-data}
 
-除了許可證伺服器使用的配置外， `HandlerConfiguration` 儲存可發送到客戶端的配置資訊，以控制如何強制實施許可證。 通過建立 `ServerConfigData` 類和呼叫 `HandlerConfiguration.setServerConfigData()`。 這些設定僅適用於此許可證伺服器頒發的許可證。
+除了授權伺服器使用的設定， `HandlerConfiguration` 儲存可傳送給使用者端的設定資訊，以控制如何強制執行授權。 這是透過建立 `ServerConfigData` 類別和呼叫 `HandlerConfiguration.setServerConfigData()`. 這些設定僅套用至此授權伺服器所發行的授權。
 
-時鐘向後容錯是許可證伺服器可以設定的一個屬性，以控制客戶端如何實施許可證。 預設情況下，用戶可以將其電腦時鐘設定回4小時，而不會使許可證失效。 如果許可證伺服器操作員希望使用其他設定，可以在 `ServerConfigData` 類。 更改這些設定中的任何一個的值時，請確保通過調用來增加版本號 `setVersion()`。 僅當客戶端上的版本比當前版本舊時，新值才會發送到客戶端 `ServerConfigData` 。
+時鐘回溯容許度是授權伺服器可以設定的一個屬性，用來控制使用者端執行授權的方式。 依預設，使用者可將電腦時鐘設定回4小時，而不會讓授權失效。 如果授權伺服器操作員想要使用不同的設定，則可以在以下位置設定新值： `ServerConfigData` 類別。 當您變更其中任何設定的值時，請務必透過呼叫來增加版本號碼 `setVersion()`. 只有在使用者端上的版本比目前的版本舊時，才會將新值傳送給使用者端 `ServerConfigData` 版本。

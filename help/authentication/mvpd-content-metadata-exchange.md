@@ -1,6 +1,6 @@
 ---
-title: MVPD內容元資料交換
-description: MVPD內容元資料交換
+title: MVPD內容中繼資料交換
+description: MVPD內容中繼資料交換
 exl-id: d17e60dc-6c61-4ca2-bad8-1840c95261e0
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,41 +9,41 @@ ht-degree: 0%
 
 ---
 
-# MVPD內容元資料交換
+# MVPD內容中繼資料交換
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 概述 {#content-metadat-exchange-overview}
+## 概觀 {#content-metadat-exchange-overview}
 
-本頁介紹Adobe Primetime身份驗證在授權請求上將結構化資料發送到MVPD時使用的兩種標準實現。  所述結構化資料表示發出所述請求的資源（程式設計師），並且可能還表示諸如內容分級之類的附加資料。
+本頁說明Adobe Primetime驗證用來在授權要求上傳送結構化資料至MVPD的兩個標準實作。  結構化資料代表提出請求的資源（程式設計師），可能還包括其他資料，例如內容評等。
 
-在程式設計師方面，Adobe Primetime身份驗證支援結構化MRSS資料資源，如下所示：
+在程式設計師方面，Adobe Primetime驗證支援結構化的MRSS資料資源，如下所示：
 
-1. 程式設計師將資源作為MRSS字串發送。 Adobe Primetime身份驗證不會在客戶端對web或本機設備進行編碼。 MRSS作為常規字串發送到Adobe Primetime驗證伺服器。
-1. 在伺服器端，MRSS將根據預定義的模式(http://search.yahoo.com/mrss/)進行驗證。  如果驗證通過，Adobe Primetime驗證會從MRSS欄位中提取資訊，包括：
+1. 程式設計師以MRSS字串形式傳送資源。 Adobe Primetime驗證不會在網頁或原生裝置的使用者端進行編碼。 MRSS會以一般字串的形式傳送至Adobe Primetime驗證伺服器。
+1. 在伺服器端，MRSS會根據預先定義的結構描述進行驗證(http://search.yahoo.com/mrss/)。  如果驗證通過，Adobe Primetime驗證會從MRSS欄位中擷取資訊，包括：
    * 頻道標題
-   * 項目標題
-   * 資源標識符
-   * 評級值和類型
-1. 從MRSS提取的值用於構建傳遞到MVPD的授權請求。
+   * 專案標題
+   * 資源識別碼
+   * 評等值和型別
+1. 從MRSS擷取的值用於建立傳遞給MVPD的授權請求。
 
-Adobe Primetime驗證支援兩種將MRSS轉換為MVPD支援的格式的方法：
+Adobe Primetime驗證支援兩種將MRSS轉譯為MVPD所支援格式的方法：
 
-* **XACML**。  第一種方法與OLCA標準一致。  它使用XACML，在XACML中提取MRSS值，用映射到MRSS元素的屬性構建XACMLResource。  然後將此項傳遞給MVPD。
-* **休息**。  第二種方法是基於REST。  MRSS是base64編碼的，並作為REST調用的URL參數傳遞。
+* **XACML**.  第一種方式符合OLCA標準。  它使用XACML，其中擷取MRSS值，以建立具有對應到MRSS元素的屬性的XACMLResource。  然後傳遞至MVPD。
+* **REST**.  第二種方法是以REST為基礎。  MRSS會進行base64編碼，並以URL引數的形式傳遞至REST呼叫。
 
-在這兩種方法中，MVPD通過將提取的值包括在其自身的邏輯流中並返回授權響應來處理授權請求。
+在這兩種方法中，MVPD都會將擷取的值納入其本身的邏輯流程中，並傳回授權回應，以處理授權要求。
 
 ## 整合詳細資訊 {#integration-details}
 
-* 基於OLCA的XACML結構化資源
-* 基於REST的結構化資源
+* OLCA型XACML結構化資源
+* REST型結構化資源
 
-### 基於OLCA的XACML結構化資源 {#olca-based-xacml-struc-resource}
+### OLCA型XACML結構化資源 {#olca-based-xacml-struc-resource}
 
-大多數面向電纜的MVPD都使用基於XACML的方法，但尚未支援完整的結構化資料方法。  支援XACML的其他MVPD將獲取「通道標題」，並接受該「通道標題」作為ResourceID屬性。 以下示例顯示了基於XACML的完整結構化方法。 Adobe Primetime身份驗證團隊建議，對於使用XACML但尚不支援家長控制等功能的MVPD，他們應將其XACML整合調整為以下示例：
+大多數以纜線導向的MVPD都使用XACML型方法，但尚未支援完整的結構化資料方法。  其他支援XACML的MVPD會取得管道標題，並接受該標題作為ResourceID屬性。 以下範例顯示完整的結構化XACML型方法。 Adobe Primetime驗證團隊建議，對於使用XACML，但尚未支援家長監護等功能MVPD，他們應該根據以下範例調整其XACML整合：
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -104,9 +104,9 @@ Adobe Primetime驗證支援兩種將MRSS轉換為MVPD支援的格式的方法：
 //formatted for readability
 ```
 
-### 基於REST的結構化資源 {#rest-based-struct-resource}
+### REST型結構化資源 {#rest-based-struct-resource}
 
-一些MVPD已經對以下基於REST的授權協定進行了標準化。 此方法與XACML方法一樣全面，但提供了「輕量」實施。
+有些MVPD已標準化下列REST型授權通訊協定。 此方法與XACML方法一樣功能齊全，但提供「較輕重量」實施。
 
 `// The MRSS is base64 encoded by Adobe Primetime authentication, and passed in that format to the REST-based Authorization endpoint.`
 

@@ -1,6 +1,6 @@
 ---
-description: TVSDK支援VOD流中廣告內容的寫程式刪除和替換。
-title: 自定義時間範圍操作
+description: TVSDK支援程式化地刪除和取代VOD串流中的廣告內容。
+title: 自訂時間範圍作業
 exl-id: 10aa3609-d5d0-49e2-959f-d72d8dbd6ef4
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,35 +9,35 @@ ht-degree: 0%
 
 ---
 
-# 自定義時間範圍操作 {#custom-time-range-operations}
+# 自訂時間範圍作業 {#custom-time-range-operations}
 
-TVSDK支援VOD流中廣告內容的寫程式刪除和替換。
+TVSDK支援程式化地刪除和取代VOD串流中的廣告內容。
 
-刪除和替換特徵擴展了自定義和標籤特徵。 自定義廣告標籤將主內容的節標籤為與廣告相關的內容句點。 除了標籤這些時間範圍外，還可以刪除和替換時間範圍。
+刪除和取代功能可延伸自訂廣告標籤功能。 自訂廣告標籤會將主要內容的區段標示為與廣告相關的內容句號。 除了標示這些時間範圍外，您也可以刪除和取代時間範圍。
 
-廣告刪除和替換通過 `TimeRange` 標識VOD流中不同類型時間範圍的元素：標籤、刪除和替換。 對於這些自定義時間範圍類型中的每種類型，可以執行相應的操作，包括刪除和替換廣告內容。
+使用實作廣告刪除和取代 `TimeRange` 可識別VOD資料流中不同型別時間範圍的元素：標籤、刪除和取代。 對於每種自訂時間範圍型別，您可以執行對應的操作，包括刪除和取代廣告內容。
 
-對於廣告刪除和替換，TVSDK使用以下 *自定義時間範圍操作* 模式：
+對於廣告刪除和取代，TVSDK會使用下列專案 *自訂時間範圍作業* 模式：
 
 * **標籤**
-（這些標籤在TVSDK的早期版本中稱為自定義廣告標籤）。 它們標籤已放入VOD流的廣告的開始和結束時間。 當流中存在MARK類型的時間範圍標籤時，初始放置 
-`Mode.MARK` 由 `CustomAdMarkersContentResolver`。 未插入廣告。
+（在舊版TVSDK中，這些被稱為自訂廣告標籤）。 它們會標籤已置入VOD資料流中廣告的開始和結束時間。 當串流中有MARK型別的時間範圍標籤時，初始位置為 
+`Mode.MARK` 由產生並解析 `CustomAdMarkersContentResolver`. 未插入任何廣告。
 
 * **DELETE**
-對於DELETE時間範圍，初始 
-`placementInformation` 類型 `Mode.DELETE` 由相應的 `DeleteContentResolver`。 `ContentRemoval` 是新的 `timelineOperation` 定義要從時間軸中刪除的範圍。 TVSDK使用 `removeByLocalTime` 從Adobe視頻引擎(AVE)API中，以便於該操作。 如果存在DELETE範圍和Adobe Primetime和決策（以前稱為Auditude）元資料，則首先刪除該範圍，然後 `AuditudeResolver` 使用常規的Adobe Primetime廣告決策工作流解析廣告。
+若為DELETE時間範圍，則為初始值 
+`placementInformation` 型別 `Mode.DELETE` 由對應的建立和解析 `DeleteContentResolver`. `ContentRemoval` 是新的 `timelineOperation` 會定義要從時間軸移除的範圍。 TVSDK使用 `removeByLocalTime` 從Adobe Video Engine (AVE) API取得資料，以利該作業。 如果存在DELETE範圍和Adobe Primetime ad decisioning （先前稱為Auditude）中繼資料，則會先刪除範圍，然後 `AuditudeResolver` 使用一般Adobe Primetime ad decisioning工作流程解析廣告。
 
-* **替換**
-對於REPLACE時間範圍，兩個初始 
-`placementInformations` 建立，一個 `Mode.DELETE` 一個 `Mode.REPLACE`。 的 `DeleteContentResolver` 先刪除時間範圍，然後刪除 `AuditudeResolver` 插入指定廣告 `replaceDuration` 進入時間軸。 否 `replaceDuration` 指定時，伺服器將確定插入的內容。
+* **REPLACE**
+對於REPLACE時間範圍，兩個初始值 
+`placementInformations` 已建立，一個 `Mode.DELETE` 和一個 `Mode.REPLACE`. 此 `DeleteContentResolver` 先刪除時間範圍，然後刪除 `AuditudeResolver` 插入指定的廣告 `replaceDuration` 放入時間軸中。 若否 `replaceDuration` 指定時，伺服器會決定要插入的內容。
 
-為支援這些自定義時間範圍操作，TVSDK提供了以下功能：
+為了支援這些自訂時間範圍作業，TVSDK提供下列功能：
 
 * 多個內容解析器
 
-   流可以基於廣告信令模式和廣告元資料具有多個內容解析器。 行為隨著廣告信令模式和廣告元資料的不同組合而改變。
-* 多個初始 `PlacementInformations` 的 `DefaultMediaPlayer` 建立初始清單 `PlacementInformations` 基於廣告信令方式和廣告元資料 `MediaPlayerClient`。
+   一個串流可以有多個根據廣告訊號模式和廣告中繼資料的內容解析器。 此行為會隨著廣告訊號模式和廣告中繼資料的不同組合而改變。
+* 多個初始 `PlacementInformations` 此 `DefaultMediaPlayer` 建立初始清單 `PlacementInformations` 根據將由解析的廣告訊號模式和廣告中繼資料 `MediaPlayerClient`.
 
-* 新廣告信令模式：自定義時間範圍
+* 新廣告訊號模式：自訂時間範圍
 
-   廣告是基於來自外部源（如JSON檔案）的時間範圍資料進行放置的。
+   廣告會根據來自外部來源的時間範圍資料放置（例如JSON檔案）。

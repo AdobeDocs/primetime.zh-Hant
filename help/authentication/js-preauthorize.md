@@ -1,6 +1,6 @@
 ---
-title: 預授權
-description: JavaScript預授權
+title: 預先授權
+description: JavaScript預先授權
 exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,161 +9,161 @@ ht-degree: 0%
 
 ---
 
-# 預授權 {#js-preauthorize}
+# 預先授權 {#js-preauthorize}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 概述 {#preauth-overview}
+## 概觀 {#preauth-overview}
 
-該預授權API方法將由應用程式使用以獲得一個或多個資源的預授權決定。 預授權API請求應用於UI提示和/或內容過濾。 在允許用戶訪問指定資源之前，必須發出實際的授權API請求。
+應用程式將使用預先授權API方法來取得一或多個資源的預先授權決定。 預先授權API請求應該用於UI提示和/或內容篩選。 在允許使用者存取指定的資源之前，必須先提出實際的授權API請求。
 
-如果預授權API請求由Adobe Primetime認證服務處理時發生意外錯誤（例如，網路問題和MVPD授權終結點不可用），則作為預授權API響應結果的一部分，將包括受影響資源的一個或多個單獨的錯誤資訊。
+如果在Adobe Primetime驗證服務處理預先授權API請求時發生未預期的錯誤（例如，網路問題和MVPD授權端點無法使用），則受影響資源的一個或多個單獨錯誤資訊將會作為Preauthorize API回應結果的一部分納入。
 
-### 公共預授權(請求：預授權請求，回調：AccessEnabler回調&lt;any>):虛 {#preauth-method}
+### public preauthorize(請求： PreauthorizeRequest， callback： AccessEnablerCallback&lt;any>)： void {#preauth-method}
 
-**描述：** 該方法將被應用程式用於從Adobe Primetime認證服務獲得經過驗證的用戶的預授權（資訊性）決定，以查看特定的受保護資源，主要目的是裝飾應用程式的UI（例如用鎖和解鎖表徵圖指示訪問狀態）。
+**說明：** 應用程式可使用此方法從Adobe Primetime Authentication服務取得已驗證使用者的預先授權（資訊）決定，以檢視特定的受保護資源，主要目的是裝飾應用程式的UI （例如，使用鎖定和解鎖圖示指示存取狀態）。
 
 **可用性：** v4.4.0+
 
-**參數：**
+**引數：**
 
-* `PreauthorizeRequest`:用於定義請求的生成器對象
-* `AccessEnablerCallback`:用於返回API響應的回調
-* `PreauthorizeResponse`:用於返回API響應內容的對象
+* `PreauthorizeRequest`：用於定義請求的產生器物件
+* `AccessEnablerCallback`：用於傳回API回呼的回呼
+* `PreauthorizeResponse`：用於傳回API回應內容的物件
 
-### 類PreauthorizeRequestBuilder {#preath-req-builder-class}
+### 類別PreauthorizeRequestBuilder {#preath-req-builder-class}
 
-#### setResources(資源：字串[]):預授權請求生成器 {#set-res-preath-req-buildr}
+#### setResources(resources：字串[])： PreauthorizeRequestBuilder {#set-res-preath-req-buildr}
 
-* 設定要獲取其預授權決定的資源清單。
-* 必須將其設定為使用預授權API。
-* 清單中的每個元素都必須是一個字串，它表示資源ID值或必須與MVPD一致的媒體RSS片段。
-* 此方法僅在當前上下文中設定資訊 `PreauthorizeRequestBuilder` 對象實例，是此方法調用的接收方。
+* 設定您要取得預先授權決定的資源清單。
+* 您必須設定此變數，才能使用預先授權API。
+* 清單中的每個元素都必須是字串，代表必須與MVPD協定的資源ID值或媒體RSS片段。
+* 此方法只會設定目前內容中的資訊 `PreauthorizeRequestBuilder` 物件例項，此方法呼叫的接收者。
 
-* 要構建實際 `PreauthorizeRequest` 你可以看看 `PreauthorizeRequestBuilder`s方法：
+* 若要建置實際 `PreauthorizeRequest` 您可以檢視 `PreauthorizeRequestBuilder`的方法：
 
 ```JavaScript
   build(): PreauthorizeRequest
 ```
 
-* `@param {string[]}` 資源。 要獲得預授權決定的資源清單。
-* `@returns {PreauthorizeRequestBuilder}` 對同一項的引用 `PreauthorizeRequestBuilder` 對象實例，是方法調用的接收方。
-* 它這樣做是為了允許建立方法連結。
+* `@param {string[]}` 資源。 您要取得預先授權決定的資源清單。
+* `@returns {PreauthorizeRequestBuilder}` 對同一專案的參照 `PreauthorizeRequestBuilder` 物件例項，方法呼叫的接收者。
+* 如此可允許建立方法鏈結。
 
-#### 禁用功能(...功能：字串[]):預授權請求生成器 {#disabl-featres-preauth-req-buildr}
+#### disableFeatures(...features： string[])： PreauthorizeRequestBuilder {#disabl-featres-preauth-req-buildr}
 
-* 設定獲取預授權決定時要禁用的功能。
-* 此函式僅在當前上下文中設定資訊 `PreauthorizeRequestBuilder` 對象實例，是此函式調用的接收方。
-* 要構建實際 `PreauthorizeRequest` 你可以看看 `PreauthorizeRequestBuilder`&#39;s函式：
+* 設定您要在取得預先授權決定時停用這些功能的功能。
+* 此函式僅設定目前內容中的資訊 `PreauthorizeRequestBuilder` 物件例項，此函式呼叫的接收者。
+* 若要建置實際 `PreauthorizeRequest` 您可以檢視 `PreauthorizeRequestBuilder`的函式：
 
 ```JavaScript
 public func build() -> PreauthorizeRequest
 ```
 
-* `@param {string[]}` 功能。 要禁用的一組功能。
-* `@returns` 對同一項的引用 `PreauthorizeRequestBuilder` 對象實例，是函式調用的接收方。
-* 它這樣做是為了允許建立函式連結。
+* `@param {string[]}` 功能。 您要停用它們的一組功能。
+* `@returns` 對同一專案的參照 `PreauthorizeRequestBuilder` 物件例項，此例項是函式呼叫的接收者。
+* 它這樣做是為了允許建立函式鏈結。
 
-#### build():預授權請求 {#preauth-req}
+#### build()： PreauthorizeRequest {#preauth-req}
 
-* 建立和檢索新的參照 `PreauthorizeRequest` 對象實例。
-* 此方法實例化新 `PreauthorizeRequest` 對象。
-* 此方法使用當前上下文中預先設定的值 `PreauthorizeRequestBuilder` 對象實例，是此方法調用的接收方。
-* 請記住，這種方法不會產生任何副作用，
-* 因此，它不會更改SDK的狀態或 `PreauthorizeRequestBuilder` 對象實例，是此方法調用的接收方。
-* 這意味著對同一接收方的連續調用將建立不同的新 `PreauthorizeRequest` 對象實例，但具有相同的資訊，以防值設定為 `PreauthorizeRequestBuilder` 未在調用之間修改。
-* 如果您不需要更新任何提供的資訊（資源和快取），則可以將PreauthorizeRequest實例重新用於預授權API的多次使用。
+* 建立及擷取新的參照 `PreauthorizeRequest` 物件例項。
+* 此方法會具現化新的 `PreauthorizeRequest` 物件。
+* 此方法會使用目前內容中預先設定的值 `PreauthorizeRequestBuilder` 物件例項，此方法呼叫的接收者。
+* 請記住，此方法不會產生任何副作用，
+* 因此，不會變更SDK的狀態或 `PreauthorizeRequestBuilder` 物件例項，此方法呼叫的接收者。
+* 這表示此方法對相同接收器的後續呼叫將建立不同的新 `PreauthorizeRequest` 物件例項，但具有相同的資訊，以防值設定為 `PreauthorizeRequestBuilder` 在兩次呼叫之間未修改的位置。
+* 如果您不需要更新任何提供的資訊（資源與快取），您可以針對預先授權API的多重用途重複使用PreauthorizeRequest執行個體。
 * `@returns {PreauthorizeRequest}`
 
 ### 介面AccessEnablerCallback&lt;t> {#interface-access-enablr-callback}
 
-#### onResponse(結果：T); {#on-response-result}
+#### onResponse(result： T)； {#on-response-result}
 
-* 完成預授權API請求時，SDK調用了響應回調。
-* 結果是成功或包含狀態的錯誤結果。
+* 完成預先授權API要求時，SDK呼叫的回應回呼。
+* 結果為成功或包含狀態的錯誤結果。
 * `@param {T} result`
 
-#### onFailure(結果：T); {#on-failure-result}
+#### onFailure（結果： T）； {#on-failure-result}
 
-* 當無法為預授權API請求提供服務時，SDK調用失敗回調。
+* 無法服務預先授權API請求時，SDK呼叫的失敗回呼。
 * 結果是包含狀態的失敗結果。
 * `@param {T} result`
 
-### 類預授權響應 {#preauth-response-class}
+### 類別PreauthorizeResponse {#preauth-response-class}
 
-#### 公共狀態：狀態； {#public-status}
+#### 公開狀態：狀態； {#public-status}
 
-* 返回：失敗時的其他狀態（狀態）資訊。
-* 可能 `null` 值。
+* 傳回：失敗時的其他狀態（狀態）資訊。
+* 可容納 `null` 值。
 
-#### 公共決策：決定[]; {#public-decisions}
+#### 公開決定：決定[]； {#public-decisions}
 
-* 返回：預授權決定清單。 每個資源一個決定。
-* 如果失敗，清單可能為空。
+* 傳回：預先授權決定的清單。 每個資源一個決定。
+* 如果失敗，清單可能會是空的。
 
-### 類狀態 {#class-status}
+### 類別狀態 {#class-status}
 
-#### 公共狀態：數字； {#public-status-numbr}
+#### 公開狀態：數字； {#public-status-numbr}
 
-* RFC 7231中記錄的HTTP響應狀態代碼。
-* 可能為0，以防 `Status` 來自SDK，而不是Adobe Primetime身份驗證服務。
+* RFC 7231中說明的HTTP回應狀態碼。
+* 可能是0，以防萬一 `Status` 來自SDK，而不是Adobe Primetime Authentication Services。
 
-#### 公共代碼：數字； {#public-code-numbr}
+#### 公用代碼：數字； {#public-code-numbr}
 
-* 標準Adobe Primetime身份驗證服務錯誤代碼。
+* 標準Adobe Primetime驗證服務錯誤代碼。
 * 可能包含空字串或 `null` 值。
 
-#### 公共消息：字串； {#public-msg-string}
+#### 公開訊息：字串； {#public-msg-string}
 
-* 在某些情況下，MVPD授權端點或程式設計師降級規則提供的詳細消息。
+* 在某些情況下由MVPD授權端點或程式設計人員降級規則提供的詳細訊息。
 * 可能包含空字串或 `null` 值。
 
-#### 公共詳細資訊：字串； {#public-details-strng}
+#### 公開詳細資料：字串； {#public-details-strng}
 
-* 保存詳細消息，在某些情況下，MVPD授權端點或程式設計師降級規則提供該消息。
+* 儲存詳細訊息，在某些情況下，該訊息由MVPD授權端點或程式設計人員降級規則提供。
 * 可能包含空字串或 `null` 值。
 
 
-#### 公共幫助URL:字串； {#public-help-url-string}
+#### public helpUrl： string； {#public-help-url-string}
 
-* 連結到有關此狀態/錯誤發生原因的詳細資訊和可能解決方案的URL。
+* 此URL會連結至有關此狀態/錯誤發生原因及可能解決方案之詳細資訊。
 * 可能包含空字串或 `null` 值。
 
-#### 公共跟蹤：字串； {#public-trace-string}
+#### 公用追蹤：字串； {#public-trace-string}
 
-* 此響應的唯一標識符，在與支援部門聯繫以確定更複雜情形中的特定問題時可以使用此標識符。
+* 此回應的唯一識別碼，在聯絡支援人員以識別更複雜情境中的特定問題時可使用此識別碼。
 * 可能包含空字串或 `null` 值。
 
-#### 公共操作：字串； {#public-action-string}
+#### 公開動作：字串； {#public-action-string}
 
-* 建議的糾正此情況的操作。
-   * **無**:很遺憾，沒有預定義的操作來修正此問題。 這可能表示對公共API的調用不正確
-   * **配置**:需要通過TVE儀表板或聯繫支援人員來更改配置。
-   * **應用註冊**:應用程式必須重新註冊自身。
-   * **認證**:用戶必須進行身份驗證或重新進行身份驗證。
-   * **授權**:用戶必須獲得特定資源的授權。
-   * **退化**:應採用某種形式的退化。
-   * **重試**:重試請求可能會解決問題
-   * **重試後**:在指定的時間段後重試請求可能會解決此問題。
+* 補救此情況的建議動作。
+   * **無**：很抱歉，沒有預先定義的動作來修正此問題。 這可能表示對公用API的呼叫不正確
+   * **設定**：需要透過TVE儀表板或連絡支援人員來變更設定。
+   * **application-register**：應用程式必須重新註冊自身。
+   * **驗證**：使用者必須驗證或重新驗證。
+   * **授權**：使用者必須取得特定資源的授權。
+   * **退化**：應套用某種形式的降級。
+   * **重試**：重試請求可能解決此問題
+   * **重試之後**：在指定的時段後重試請求可解決問題。
 * 可能包含空字串或 `null` 值。
 
-### 類決策 {#class-decision}
+### 類別決定 {#class-decision}
 
-#### 公共ID:字串； {#public-id-string}
+#### 公開id：字串； {#public-id-string}
 
-* 獲取決定的資源ID。
+* 取得決定的資源ID。
 
-#### 公共授權：布爾值； {#public-auth-boolean}
+#### public authorized： boolean； {#public-auth-boolean}
 
-* 指示決策是否成功的標誌值。
+* 表示決定是否成功的旗標值。
 
-#### 公共錯誤：狀態； {#public-error-status}
+#### 公開錯誤：狀態； {#public-error-status}
 
-* 發生錯誤時，其他狀態（狀態）資訊。 可能 `null` 值。
+* 發生某些錯誤時的其他狀態（狀態）資訊。 可容納 `null` 值。
 
-## 客戶端實現示例 {#client-imp-example}
+## 使用者端實作範例 {#client-imp-example}
 
 ```JavaScript
 let accessEnablerApi = new window.AccessEnabler.AccessEnabler("software statement");
@@ -195,20 +195,20 @@ accessEnablerApi.preauthorize(request, callback);
 ```
 
 
-## 方案示例 {#scenario-examples}
+## 案例範例 {#scenario-examples}
 
-### 方案1:已授權所有請求的資源 {#all-req-res-auth}
+### 案例1：已授權所有請求的資源 {#all-req-res-auth}
 
 <table>
 <thead>
   <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
   </tr>
 </thead>
 <tbody>
 <tr>
-    <td>已禁用</td>
+    <td>已停用</td>
     <td>
 
 ```JavaScript
@@ -235,114 +235,40 @@ accessEnablerApi.preauthorize(request, callback);
 </tbody>
 
 
-### 方案2:已授權一些請求的資源。 {#sm-req-res-auth}
+### 案例2：已授權部分請求的資源。 {#sm-req-res-auth}
 
 <table>
 <thead>
   <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
   </tr>
 </thead>
 <tbody>
 <tr>
-    <td>已禁用</td>
+    <td>已停用</td>
     <td>
 
-    &quot;`JavaScript
+    ```JavaScript
     
-    { 0}
-    「決定」：[
-    { 0}
-    &quot;id&quot;:&quot;RES01&quot;,
-    &quot;已授權&quot;:真
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES02&quot;,
-    &quot;已授權&quot;:假
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES03&quot;,
-    &quot;已授權&quot;:真
+    {
+    &quot;decisions&quot;： [
+    {
+    &quot;id&quot;： &quot;RES01&quot;，
+    &quot;authorized&quot;： true
+    }，
+    {
+    &quot;id&quot;： &quot;RES02&quot;，
+    &quot;authorized&quot;： false
+    }，
+    {
+    &quot;id&quot;： &quot;RES03&quot;，
+    &quot;authorized&quot;： true
     }
     ]
     }
     
-    「」
-
-</td>
-  </tr>
-
-<tr>
-    <td>已啟用</td>
-    <td>
-
-    &quot;`JavaScript
-    { 0}
-    「決定」：[
-    { 0}
-    &quot;id&quot;:&quot;RES01&quot;,
-    &quot;已授權&quot;:真
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES02&quot;,
-    &quot;已授權&quot;:假的，
-    &quot;錯誤&quot;:{ 0}
-    &quot;狀態&quot;:403,
-    &quot;代碼&quot;:&quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;消息&quot;:&quot;MVPD在請求指定資源的預授權時返回\ &quot;拒絕\&quot;決定。&quot;,
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;無&quot;
-    }
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES03&quot;,
-    &quot;已授權&quot;:真
-    },
-    ]
-    }
-    
-    「」
-
-</td>
-  </tr>
-</tbody>
-
-
-### 方案3:未授權請求的資源。 {#none-req-res-auth}
-
-<table>
-<thead>
-  <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
-  </tr>
-</thead>
-<tbody>
-<tr>
-    <td>已禁用</td>
-    <td>
-
-    &quot;`JavaScript
-    
-    { 0}
-    「決定」：[
-    { 0}
-    &quot;id&quot;:&quot;RES01&quot;,
-    &quot;已授權&quot;:假
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES02&quot;,
-    &quot;已授權&quot;:假
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES03&quot;,
-    &quot;已授權&quot;:假
-    }
-    ]
-    }
-    
-    「」
+    ```
 
 </td>
   </tr>
@@ -351,125 +277,199 @@ accessEnablerApi.preauthorize(request, callback);
     <td>已啟用</td>
     <td>
 
-    &quot;`JavaScript
+    ```JavaScript
+    {
+    &quot;decisions&quot;： [
+    {
+    &quot;id&quot;： &quot;RES01&quot;，
+    &quot;authorized&quot;： true
+    }，
+    {
+    &quot;id&quot;： &quot;RES02&quot;，
+    &quot;authorized&quot;： false，
+    &quot;error&quot;： {
+    &quot;status&quot;：403，
+    &quot;code&quot;： &quot;preauthorization_denied_by_mvpd&quot;，
+    &quot;message&quot;： &quot;MVPD在要求指定資源的預先授權時傳回\&quot;Deny\&quot;決定。&quot;，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;none&quot;
+    }
+    }，
+    {
+    &quot;id&quot;： &quot;RES03&quot;，
+    &quot;authorized&quot;： true
+    }，
+    ]
+    }
     
-    { 0}
-    「決定」：[
-    { 0}
-    &quot;id&quot;:&quot;RES01&quot;,
-    &quot;已授權&quot;:假的，
-    &quot;錯誤&quot;:{ 0}
-    &quot;狀態&quot;:403,
-    &quot;代碼&quot;:&quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;消息&quot;:&quot;MVPD在請求指定資源的預授權時返回\ &quot;拒絕\&quot;決定。&quot;,
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;無&quot;
+    ```
+
+</td>
+  </tr>
+</tbody>
+
+
+### 案例3：沒有任何請求的資源獲得授權。 {#none-req-res-auth}
+
+<table>
+<thead>
+  <tr>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td>已停用</td>
+    <td>
+
+    ```JavaScript
+    
+    {
+    &quot;decisions&quot;： [
+    {
+    &quot;id&quot;： &quot;RES01&quot;，
+    &quot;authorized&quot;： false
+    }，
+    {
+    &quot;id&quot;： &quot;RES02&quot;，
+    &quot;authorized&quot;： false
+    }，
+    {
+    &quot;id&quot;： &quot;RES03&quot;，
+    &quot;authorized&quot;： false
     }
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES02&quot;,
-    &quot;已授權&quot;:假的，
-    &quot;錯誤&quot;:{ 0}
-    &quot;狀態&quot;:403,
-    &quot;代碼&quot;:&quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;消息&quot;:&quot;MVPD在請求指定資源的預授權時返回\ &quot;拒絕\&quot;決定。&quot;,
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;無&quot;
+    ]
     }
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES03&quot;,
-    &quot;已授權&quot;:假的，
-    &quot;錯誤&quot;:{ 0}
-    &quot;狀態&quot;:403,
-    &quot;代碼&quot;:&quot;maximum_execution_time_exceeded&quot;,
-    &quot;消息&quot;:&quot;請求未在允許的最大時間內完成。 重試請求可能會解決問題。」，
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;重試&quot;
+    
+    ```
+
+</td>
+  </tr>
+
+<tr>
+    <td>已啟用</td>
+    <td>
+
+    ```JavaScript
+    
+    {
+    &quot;decisions&quot;： [
+    {
+    &quot;id&quot;： &quot;RES01&quot;，
+    &quot;authorized&quot;： false，
+    &quot;error&quot;： {
+    &quot;status&quot;：403，
+    &quot;code&quot;： &quot;preauthorization_denied_by_mvpd&quot;，
+    &quot;message&quot;： &quot;MVPD在要求指定資源的預先授權時傳回\&quot;Deny\&quot;決定。&quot;，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;none&quot;
+    }
+    }，
+    {
+    &quot;id&quot;： &quot;RES02&quot;，
+    &quot;authorized&quot;： false，
+    &quot;error&quot;： {
+    &quot;status&quot;：403，
+    &quot;code&quot;： &quot;preauthorization_denied_by_mvpd&quot;，
+    &quot;message&quot;： &quot;MVPD在要求指定資源的預先授權時傳回\&quot;Deny\&quot;決定。&quot;，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;none&quot;
+    }
+    }，
+    {
+    &quot;id&quot;： &quot;RES03&quot;，
+    &quot;authorized&quot;： false，
+    &quot;error&quot;： {
+    &quot;status&quot;：403，
+    &quot;code&quot;： &quot;maximum_execution_time_exceeded&quot;，
+    &quot;message&quot;： &quot;請求未在允許的最長時間內完成。 重試請求或許可以解決這個問題。」，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;retry&quot;
     }
     }
     ]
     }
     
-    「」
+    ```
 
 </td>
   </tr>
 </tbody>
 
 
-### 方案4:客戶端請求錯誤 — 未指定資源。 {#bad-cl-req-no-res-sp}
+### 案例4：錯誤的使用者端請求 — 未指定資源。 {#bad-cl-req-no-res-sp}
 
 <table>
 <thead>
   <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>已禁用/已啟用</td>
+    <td>已停用/已啟用</td>
     <td>
 
-    &quot;`JavaScript
-    { 0}
-    &quot;狀態&quot;:{ 0}
-    &quot;狀態&quot;:400,
-    &quot;代碼&quot;:&quot;internal_error&quot;,
-    &quot;消息&quot;:&quot;由於內部錯誤，請求失敗。&quot;,
-    「詳細資訊」：&quot;所需的String[]參數&#39;resource&#39;不存在&quot;,
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;無&quot;
-    },
-    「決定」：[]
+    ```JavaScript
+    {
+    &quot;status&quot;： {
+    &quot;status&quot;：400，
+    &quot;code&quot;： &quot;internal_error&quot;，
+    &quot;message&quot;： &quot;由於內部錯誤，請求失敗。&quot;，
+    &quot;details&quot;： &quot;Required String[]引數&#39;resource&#39;不存在&quot;，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;none&quot;
+    }，
+    &quot;decisions&quot;： []
     }
-    「」
+    ```
 
 </td>
   </tr>
 </tbody>
 </table>
 
-### 方案5:錯誤的客戶端請求 — 指定的資源為空。 {#bad-cl-req-empt-res-sp}
+### 案例5：錯誤的使用者端請求 — 指定了空的資源。 {#bad-cl-req-empt-res-sp}
 
 <table>
 <thead>
   <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>已禁用/已啟用</td>
+    <td>已停用/已啟用</td>
     <td>
 
-    &quot;`JavaScript
-    { 0}
-    &quot;狀態&quot;:{ 0}
-    &quot;狀態&quot;:412,
-    &quot;代碼&quot;:&quot;missing_resource&quot;,
-    &quot;消息&quot;:&quot;缺少資源參數&quot;,
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;無&quot;
-    },
-    「決定」：[]
+    ```JavaScript
+    {
+    &quot;status&quot;： {
+    &quot;status&quot;： 412，
+    &quot;code&quot;： &quot;missing_resource&quot;，
+    &quot;message&quot;： &quot;缺少資源引數&quot;，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;none&quot;
+    }，
+    &quot;decisions&quot;： []
     }
-    「」
+    ```
 
 </td>
   </tr>
 </tbody>
 </table>
 
-### 方案6:網路錯誤。 {#ntwrk-error}
+### 案例6：網路錯誤。 {#ntwrk-error}
 
 <table>
 <thead>
   <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
   </tr>
 </thead>
 <tbody>
@@ -477,66 +477,66 @@ accessEnablerApi.preauthorize(request, callback);
     <td>已啟用</td>
     <td>
 
-    &quot;`JavaScript
-    { 0}
-    「決定」：[
-    { 0}
-    &quot;id&quot;:&quot;RES01&quot;,
-    &quot;已授權&quot;:假的，
-    &quot;錯誤&quot;:{ 0}
-    &quot;狀態&quot;:403,
-    &quot;代碼&quot;:&quot;network_received_error&quot;,
-    &quot;消息&quot;:&quot;從關聯的夥伴服務檢索響應時出現讀取錯誤。 重試請求可能會解決問題。」，
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;重試&quot;
+    ```JavaScript
+    {
+    &quot;decisions&quot;： [
+    {
+    &quot;id&quot;： &quot;RES01&quot;，
+    &quot;authorized&quot;： false，
+    &quot;error&quot;： {
+    &quot;status&quot;：403，
+    &quot;code&quot;： &quot;network_received_error&quot;，
+    &quot;message&quot;： &quot;從關聯的合作夥伴服務擷取回應時發生讀取錯誤。 重試請求或許可以解決這個問題。」，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;retry&quot;
     }
-    },
-    { 0}
-    &quot;id&quot;:&quot;RES02&quot;,
-    &quot;已授權&quot;:假的，
-    &quot;錯誤&quot;:{ 0}
-    &quot;狀態&quot;:403,
-    &quot;代碼&quot;:&quot;network_received_error&quot;,
-    &quot;消息&quot;:&quot;從關聯的夥伴服務檢索響應時出現讀取錯誤。 重試請求可能會解決問題。」，
-    &quot;helpUrl&quot;:&quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;操作&quot;:&quot;重試&quot;
+    }，
+    {
+    &quot;id&quot;： &quot;RES02&quot;，
+    &quot;authorized&quot;： false，
+    &quot;error&quot;： {
+    &quot;status&quot;：403，
+    &quot;code&quot;： &quot;network_received_error&quot;，
+    &quot;message&quot;： &quot;從關聯的合作夥伴服務擷取回應時發生讀取錯誤。 重試請求或許可以解決這個問題。」，
+    &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
+    &quot;action&quot;： &quot;retry&quot;
     }
     }
     ]
     }
-    「」
+    ```
 
 </td>
   </tr>
 </tbody>
 </table>
 
-### 方案7:在沒有有效AuthN會話的情況下調用了預授權流。
+### 案例7：叫用預先授權流程時沒有有效的AuthN工作階段。
 
 <table>
 <thead>
   <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>已禁用/已啟用</td>
+    <td>已停用/已啟用</td>
     <td>
 
-    &quot;`JavaScript
-    { 0}
-    &quot;狀態&quot;:{ 0}
-    &quot;狀態&quot;:0,
-    &quot;代碼&quot;:&quot;authentication_session_missing&quot;,
-    &quot;消息&quot;:&quot;無法檢索與此請求關聯的驗證會話。 用戶必須使用支援的MVPD重新驗證才能繼續。&quot;,
-    &quot;操作&quot;:&quot;驗證&quot;
-    },
-    「決定」：[]
+    ```JavaScript
+    {
+    &quot;status&quot;： {
+    &quot;status&quot;： 0，
+    &quot;code&quot;： &quot;authentication_session_missing&quot;，
+    &quot;message&quot;： &quot;無法擷取與此要求相關聯的驗證工作階段。 使用者必須使用支援的MVPD重新驗證才能繼續。」，
+    &quot;action&quot;： &quot;authentication&quot;
+    }，
+    &quot;decisions&quot;： []
     }
     
-    「」
+    ```
 
 </td>
   </tr>
@@ -545,31 +545,31 @@ accessEnablerApi.preauthorize(request, callback);
 
 
 
-### 方案8:在setRequestor調用完成之前調用了預授權流
+### 案例8：在完成setRequestor呼叫之前叫用預先授權流程
 
 <table>
 <thead>
   <tr>
-    <th>增強的錯誤代碼標誌</th>
-    <th>響應</th>
+    <th>增強的錯誤碼標幟</th>
+    <th>回應</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>已禁用/已啟用</td>
+    <td>已停用/已啟用</td>
     <td>
 
-    &quot;`JavaScript
-    { 0}
-    &quot;狀態&quot;:{ 0}
-    &quot;狀態&quot;:0,
-    &quot;代碼&quot;:&quot;requestor_not_configured&quot;,
-    &quot;消息&quot;:&quot;尚未配置請求者，該請求者是使用除setRequestor API之外的任何API的先決條件。&quot;,
-    &quot;操作&quot;:&quot;重試&quot;
-    },
-    「決定」：[]
+    ```JavaScript
+    {
+    &quot;status&quot;： {
+    &quot;status&quot;： 0，
+    &quot;code&quot;： &quot;requestor_not_configured&quot;，
+    &quot;message&quot;：&quot;要求者尚未設定，這是使用setRequestor API以外的任何API的先決條件。&quot;，
+    &quot;action&quot;： &quot;retry&quot;
+    }，
+    &quot;decisions&quot;： []
     }
-    「」
+    ```
 
 </td>
   </tr>

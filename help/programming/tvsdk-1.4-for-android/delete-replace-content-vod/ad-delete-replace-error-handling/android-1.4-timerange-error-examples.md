@@ -1,6 +1,6 @@
 ---
-description: TVSDK通過合併或替換適當的時間範圍來響應錯誤的時間範圍規範。
-title: 時間範圍錯誤示例
+description: TVSDK會適當地合併或取代時間範圍，以回應錯誤的時間範圍規格。
+title: 時間範圍錯誤範例
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '110'
@@ -9,11 +9,11 @@ ht-degree: 0%
 ---
 
 
-# 時間範圍錯誤示例{#time-range-error-examples}
+# 時間範圍錯誤範例{#time-range-error-examples}
 
-TVSDK通過合併或替換適當的時間範圍來響應錯誤的時間範圍規範。
+TVSDK會適當地合併或取代時間範圍，以回應錯誤的時間範圍規格。
 
-在以下示例中，定義了四個相交的DELETE時間範圍。 TVSDK將四個時間範圍合併為一個，因此實際刪除範圍是0到50s。
+在以下範例中，定義了四個相交DELETE時間範圍。 TVSDK會將四個時間範圍合併為一個，因此實際刪除範圍是從0到50秒。
 
 ```
 "time-ranges": {
@@ -34,7 +34,7 @@ TVSDK通過合併或替換適當的時間範圍來響應錯誤的時間範圍規
 }
 ```
 
-在下例中，四個REPLACE時間範圍定義為衝突的時間範圍。 在這種情況下，TVSDK用25個廣告代替0到50個。 它與排序順序中的第一個替換持續時間相同，因為後續範圍記憶體在衝突。
+在以下範例中，四個REPLACE時間範圍定義為有衝突的時間範圍。 在此情況下，TVSDK會以25s廣告取代0-50s。 它會隨著排序順序中的第一個取代持續時間而改變，因為後續範圍有衝突。
 
 ```
 "time-ranges": {

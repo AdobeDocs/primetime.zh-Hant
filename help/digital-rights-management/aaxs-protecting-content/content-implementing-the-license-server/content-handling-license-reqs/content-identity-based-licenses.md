@@ -1,6 +1,6 @@
 ---
-title: 基於身份的許可證
-description: 基於身份的許可證
+title: 以身分為基礎的授權
+description: 以身分為基礎的授權
 copied-description: true
 exl-id: 8cf0a4d8-bf97-4a45-b9c1-95b1de12f555
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,10 +10,10 @@ ht-degree: 0%
 
 ---
 
-# 基於身份的許可證 {#identity-based-licenses}
+# 以身分為基礎的授權 {#identity-based-licenses}
 
-如果使用基於身份的許可，則伺服器在頒發許可證之前檢查有效的驗證令牌。 請參閱 [用戶驗證](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) 的子菜單。
+如果使用以身分為基礎的授權，伺服器會在發行授權之前檢查有效的驗證Token。 另請參閱 [使用者驗證](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) 以取得處理驗證Token的詳細資訊。
 
 >[!NOTE]
 >
->要預覽基於身份的內容的許可證，客戶端必須進行身份驗證。
+>若要預覽以身分為基礎之內容的授權，使用者端必須驗證。

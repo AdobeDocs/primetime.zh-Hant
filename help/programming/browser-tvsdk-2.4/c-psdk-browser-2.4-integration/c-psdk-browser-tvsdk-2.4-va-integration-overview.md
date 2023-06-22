@@ -1,6 +1,6 @@
 ---
-description: 您可以通過將瀏覽器TVSDK與Adobe Analytics整合來跟蹤視頻使用情況。
-title: 視頻分析
+description: 您可以將瀏覽器TVSDK與Adobe Analytics整合，以追蹤視訊使用情形。
+title: 視訊分析
 exl-id: b6fb39a9-6cb8-4498-a9fa-0ea19af52a58
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 0%
 
 ---
 
-# 視頻分析{#video-analytics}
+# 視訊分析{#video-analytics}
 
-您可以通過將瀏覽器TVSDK與Adobe Analytics整合來跟蹤視頻使用情況。
+您可以將瀏覽器TVSDK與Adobe Analytics整合，以追蹤視訊使用情形。
 
-瀏覽器中的視頻跟蹤TVSDK使用 **Adobe Analytics視頻軟體** 服務，它提供視頻接洽度量，如視頻視圖、視頻完成、廣告印象、視頻花費的時間等。 有關此服務的詳細資訊，請與Adobe代表聯繫。
+瀏覽器TVSDK中的視訊追蹤會使用 **Adobe Analytics Video Essentials** 此服務提供視訊參與量度，例如視訊觀看次數、視訊完成次數、廣告曝光數、視訊逗留時間等。 如需此服務的詳細資訊，請聯絡您的Adobe代表。
 
-以下過程匯總了在播放器中激活視頻跟蹤的步驟：
+下列程式總結列出在播放器中啟動視訊追蹤的步驟：
 
-1. 初始化和/或配置以下視頻跟蹤元件：
+1. 初始化及/或設定下列視訊追蹤元件：
 
-   * **AppMeasurement庫**  — 包含低級資料收集核心邏輯。 這是通過網路累積和發送視頻心跳資料的地方。
-   * **視頻心跳庫**  — 包含視頻心跳資料收集核心邏輯。 視頻心跳庫訪問AppMeasurement庫API的子集。
+   * **AppMeasurement資料庫**  — 包含低階資料收集核心邏輯。 這是累積視訊心率資料並透過網路傳送的位置。
+   * **視訊心率資料庫**  — 包含視訊心率資料收集核心邏輯。 視訊心率程式庫會存取AppMeasurement程式庫API的子集。
 
       >[!TIP]
       >
-      >你的應用不會直接與視頻心跳代碼交互。 相反，該應用使用瀏覽器TVSDK API來配置播放器的視頻跟蹤功能。
+      >您的應用程式不會直接與視訊心率程式碼互動。 應用程式會改用瀏覽器TVSDK API來設定播放器的視訊追蹤功能。
 
-   * **訪問者ID庫**  — 唯一標識承載視頻播放器的網頁的訪問者。
+   * **VisitorID程式庫**  — 唯一識別託管視訊播放器之網頁的訪客。
    >[!IMPORTANT]
    >
-   >瀏覽器TVSDK內置視頻跟蹤功能取決於正確配置的AppMeasurement實例。 跟蹤元素假定在配置和激活視頻跟蹤之前已實例化並配置了AppMeasurement庫。 瀏覽器TVSDK視頻跟蹤功能取決於AppMeasurement庫是否存在一個功能齊全且配置正確的實例。
+   >瀏覽器TVSDK內建的視訊追蹤功能取決於正確設定的AppMeasurement例項。 追蹤元素假設在設定和啟用視訊追蹤之前，AppMeasurement程式庫已具現化並完成設定。 瀏覽器TVSDK視訊追蹤功能取決於AppMeasurement程式庫是否存在功能齊全且設定正確的執行個體。
 
-1. 使用Adobe Analytics管理工具在伺服器端設定視頻分析報告。
+1. 使用Adobe Analytics管理工具在伺服器端設定視訊分析報告。

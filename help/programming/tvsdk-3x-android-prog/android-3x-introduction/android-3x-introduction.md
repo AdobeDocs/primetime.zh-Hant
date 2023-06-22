@@ -1,6 +1,6 @@
 ---
-title: 導言
-description: 導言
+title: 簡介
+description: 簡介
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,5 +10,5 @@ ht-degree: 0%
 ---
 
 
-# 導言{#introduction}
+# 簡介{#introduction}
 

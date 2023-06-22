@@ -1,6 +1,6 @@
 ---
-title: 頒發許可證時的電腦計數
-description: 頒發許可證時的電腦計數
+title: 簽發授權時的電腦計數
+description: 簽發授權時的電腦計數
 copied-description: true
 exl-id: de052e98-8ae3-4e12-8f77-787293edda39
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,14 +10,14 @@ ht-degree: 0%
 
 ---
 
-# 頒發許可證時的電腦計數{#machine-count-when-issuing-licenses}
+# 簽發授權時的電腦計數{#machine-count-when-issuing-licenses}
 
-如果業務規則要求跟蹤用戶的電腦數，則許可證伺服器或域伺服器必須儲存與用戶關聯的電腦ID。 跟蹤電腦ID的最穩健方法是儲存由 `MachineId.getBytes()` 中的設定。 當新請求出現時，將請求中的電腦ID與使用的已知電腦ID進行比較 `MachineId.matches()`。
+如果商業規則要求追蹤使用者的電腦數目，則License Server或Domain Server必須儲存與使用者相關聯的電腦ID。 追蹤機器ID最有效的方法是儲存 `MachineId.getBytes()` 方法。 傳入新請求時，請使用將請求中的電腦ID與已知的電腦ID進行比較 `MachineId.matches()`.
 
-`MachineId.matches()` 執行ID的比較以確定它們是否代表同一台電腦。 只有與之比較的電腦ID數量很少時，此比較才實用。 例如，如果允許用戶在其域內使用五台電腦，則可以在資料庫中搜索與用戶用戶名關聯的電腦ID，並獲取一小組資料進行比較。
+`MachineId.matches()` 會執行ID的比較，以判斷它們是否代表同一部電腦。 只有在要比較的機器ID數量較少時，這項比較才切實可行。 例如，如果允許使用者在其網域內使用五台電腦，您可以在資料庫中搜尋與使用者使用者名稱相關聯的電腦ID，並取得一小部分資料集以進行比較。
 
 >[!NOTE]
 >
->此比較對於允許匿名訪問的部署來說不實用。 在這種情況下 `MachineId.getUniqueID()` 但是，如果用戶從Flash和Adobe AIR®運行時訪問內容，則此ID將不相同，如果用戶重新格式化其硬碟，則此ID將無法生存。
+>此比較不適用於允許匿名存取的部署。 在這種情況下 `MachineId.getUniqueID()` 但是，如果使用者同時從Flash和Adobe AIR®執行階段存取內容，則此ID不會相同；如果使用者重新格式化其硬碟，此ID將無法存留。
 
-瞭解有關 `MachineToken.getMachineId()`和 `MachineId.matches()`，請參見 *Adobe訪問API參考*。
+若要深入瞭解 `MachineToken.getMachineId()`和 `MachineId.matches()`，請參閱 *Adobe存取API參考*.

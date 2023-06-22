@@ -1,6 +1,6 @@
 ---
-description: UI框架是瀏覽器TVSDK上的UI層，它提供與視頻播放器相關的各種UI結構。 通過進行適合您環境的點更改，可以建立高度可定製的播放器。
-title: UI框架
+description: UI架構是UI層，位於瀏覽器TVSDK上方，提供各種現成可用的視訊播放器相關UI結構。 您可以透過進行適合您環境的點變更，建立高度可自訂的播放器。
+title: UI架構
 exl-id: 3175c74b-c08d-4a83-97e4-fe0a8dcf9d86
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 0%
 
 ---
 
-# UI框架 {#the-ui-framework}
+# UI架構 {#the-ui-framework}
 
-UI框架是瀏覽器TVSDK上的UI層，它提供與視頻播放器相關的各種UI結構。 通過進行適合您環境的點更改，可以建立高度可定製的播放器。
+UI架構是UI層，位於瀏覽器TVSDK上方，提供各種現成可用的視訊播放器相關UI結構。 您可以透過進行適合您環境的點變更，建立高度可自訂的播放器。
 
 >[!TIP]
 >
->可自定義視覺（外觀）和UI行為。
+>視覺（外觀設計）和UI行為是可自訂的。
 
-您可以重寫自己的行為或覆蓋某些預設行為的功能。 您還可以通過從頭開始編寫行為來重新使用SDK提供的行為。
+您可以重寫自己的行為或覆寫特定預設行為的功能。 您也可以從頭開始撰寫行為，以重複使用SDK提供的行為。
 
 ## 建立基本播放器 {#section_30E4812C4DDA4B519C9C837930B6AE45}
 
-`primetimevisualapi.min.js` 是UI框架庫，其所有功能都通過全局對象ptp公開。 在以下示例中， `videoPlayer` 方法建立基礎播放器：
+`primetimevisualapi.min.js` 是UI框架程式庫，其所有功能會透過全域物件ptp公開。 在以下範例中， `videoPlayer` 方法會建立基礎播放器：
 
 ```js
 <script src="scripts/primetimevisualapi.min.js"></script> 
@@ -32,35 +32,35 @@ UI框架是瀏覽器TVSDK上的UI層，它提供與視頻播放器相關的各�
 </script>
 ```
 
-## 配置播放器 {#section_9FC936B983CD40439E6D7675197B226C}
+## 設定播放器 {#section_9FC936B983CD40439E6D7675197B226C}
 
-可以通過以下方式之一配置播放器：
+您可以透過下列其中一種方式來設定播放器：
 
-* 使用JSON對象
+* 使用JSON物件
 * 使用API
 
-要生成JSON對象，Browser TVSDK提供了UI配置器工具。 在工具中，可以選擇各種設定，按一下 **[!UICONTROL Test Configuration]** 驗證設定，然後按一下 **[!UICONTROL Download Configuration]** 下載設定。 下載檔案的內容將用作要傳遞到 `ptp.videoPlayer` API。
+若要產生JSON物件，瀏覽器TVSDK提供UI設定器工具。 在工具中，您可以選取各種設定，按一下 **[!UICONTROL Test Configuration]** 驗證設定，然後按一下 **[!UICONTROL Download Configuration]** 以下載設定。 下載檔案的內容會當作JSON物件使用，以傳遞至 `ptp.videoPlayer` API。
 
-**如何運行UI配置器工具**:
+**如何執行UI設定器工具**：
 
-1. 主持 `frameworks` 資料夾，可在本地Web伺服器上的瀏覽器TVSDK中使用。
-1. 要開啟工具，請開啟瀏覽器並導航至 `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`。
+1. 託管 `frameworks` 資料夾（可在本機Web伺服器上的瀏覽器TVSDK中使用）。
+1. 若要開啟工具，請開啟瀏覽器並導覽至 `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`.
 
-**配置播放器的行為**
+**設定播放器的行為**
 
-可以使用以下方法之一配置播放器行為：
+您可以透過下列其中一種方式來設定播放器行為：
 
 >[!TIP]
 >
->對於某些設定，這兩個選項都可用。
+>對於某些設定，兩個選項都可用。
 
-* **使用videoBehavior API** `ptp.videoPlayer` 返回 `ptp.videoBehavior`，允許您配置基礎視頻播放器。 如果需要配置某些與回放相關的設定，則可以使用此選項。
+* **使用videoBehavior API** `ptp.videoPlayer` 傳回 `ptp.videoBehavior`，可讓您設定基礎的視訊播放器。 如果需要設定某些播放相關設定，您可以使用此選項。
 
    ```js
    player.setAbrControlParameters ({object})
    ```
 
-* **將配置對象傳遞到videoPlayer函式** 使用此對象時，除了上面討論的回放設定外，還可以配置UI的行為。 調用方需要指定必須更改的參數，並且播放器將繼續為未指定的參數使用預設值。
+* **將設定物件傳遞至videoPlayer函式** 使用此物件時，除了上述的播放設定外，還可以設定UI的行為。 呼叫者需要指定必須變更的引數，播放器將繼續使用未指定引數的預設值。
 
    ```js
    var player = ptp.videoPlayer('#video1', { 
@@ -71,19 +71,19 @@ UI框架是瀏覽器TVSDK上的UI層，它提供與視頻播放器相關的各�
    });
    ```
 
-   在上例中，ABR控制參數是使用配置對象配置的。 還傳遞了一個對象以配置控制欄行為。
+   在上述範例中，ABR控制引數是使用組態物件來設定。 也傳遞了物件以設定控制列行為。
 
-   有關配置對象的結構，請參閱下面的「查看配置對象結構」部分。
+   如需設定物件的結構，請參閱下方的檢視設定物件結構一節。
 
-* **訪問AdobePSDK.MediaPlayer** 您可以使用 `videoPlayer.getMediaPlayer` 在某些高級使用情況下，您需要訪問瀏覽器TVSDK的MediaPlayer。
+* **存取AdobePSDK.MediaPlayer** 您可以使用 `videoPlayer.getMediaPlayer` 在某些進階使用案例中，您需要存取瀏覽器TVSDK的MediaPlayer。
 
-* **配置播放器的外觀** 有關使播放器外觀的詳細資訊，請參閱 [剝皮玩家](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md)。
+* **設定播放器的外觀設定** 如需建立播放器外觀的詳細資訊，請參閱 [為播放器建立外觀](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
 
 ## 修改預設行為 {#section_D5D692638FFF4BEF81F7BE70E438CCE9}
 
-在UI框架術語中，行為是定義特定元件的可視部分和交互部分的構造。 通過使用下面概述的對象結構，可以修改要更改的行為。
+在UI架構術語中，行為是定義特定元件之視覺部分和互動部分的建構。 使用下列物件結構，可以修改您要變更的行為。
 
-例如，在顯示卷滑塊後，如果不想隱藏它，請使用以下示例：
+例如，在體積塊滑桿可見後，如果您不想隱藏它，請使用下列範例：
 
 ```js
 var customVolumeSliderBehavior = function (element, configuration, player) { 
@@ -110,15 +110,15 @@ var player = ptp.videoPlayer('.videoHolder', {
 
 >[!NOTE]
 >
->根據您需要的自定義，您可以覆蓋行為中的某些功能或編寫您自己的行為。 有關可以覆蓋哪些功能的詳細資訊，請參閱 [UI框架](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API文檔。
+>根據您想要的自訂內容，您可以覆寫行為中的特定功能，或撰寫您自己的行為。 如需可覆寫哪些功能的詳細資訊，請參閱 [UI框架](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API檔案。
 
 ## 引用 {#section_0A76A3F44D8A49B09FE4C83F3FACCB76}
 
-以下是一些其他參考資訊：
+以下是其他參考資訊：
 
-* **查看配置對象結構** 這是完整的對象結構，它以分層方式將所有預設行為與行為的預設元素一起提到。 在示例配置中，使用UI工廠建立元素。 可以使用相同的元素或首選方法來構建元素。
+* **檢視組態物件結構** 這是完整的物件結構，會以階層方式提及所有預設行為，以及行為的預設元素。 在範例設定中，使用UI工廠來建立元素。 您可以使用相同的元素或您偏好的方法來建構元素。
 
-   您只需指定要更改的部件，其餘功能將從預設值中選取。 要開始，根據使用案例，您需要提供 `SingleViewConfigurationObject` 或 `MultiViewConfigurationObject` 結構。
+   您只需要指定想要變更的零件，其餘的功能將從預設值中選取。 若要開始，視使用案例而定，您必須提供 `SingleViewConfigurationObject` 或 `MultiViewConfigurationObject` 結構。
 
    ```js
    var DEFAULT_CONTROL_BAR_CONFIG = { 
@@ -765,13 +765,13 @@ var player = ptp.videoPlayer('.videoHolder', {
    };
    ```
 
-* **幫助程式構造** 此構造由以下組成：
+* **協助程式建構** 此建構包含下列專案：
 
-   * **工廠** 要建立可視元素，可以使用 `ptp.factories.simpleButtonFactory`。 `ptp.factories.simpleDivFactory`。 `ptp.factories.simpleHRFactory`, `ptp.factories.simpleSliderFactory`。 有關詳細資訊，請參見 [UI框架](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API文檔。
+   * **工廠** 若要建立視覺元素，您可以使用 `ptp.factories.simpleButtonFactory`， `ptp.factories.simpleDivFactory`， `ptp.factories.simpleHRFactory`、和 `ptp.factories.simpleSliderFactory`. 如需詳細資訊，請參閱 [UI框架](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API檔案。
 
-   * **米辛** 混合是可組合的模組，可以在使用公共結構的行為中組合。 例如，許多元件希望瞭解在廣告播放時可能影響其行為的更改。 所有這些元素都將 `adBreak` 類。
+   * **Mixin** Mixin是可撰寫的模組，可以在行為中撰寫以使用通用建構。 例如，許多元件希望瞭解可能影響其行為的變更，例如正在播放廣告時的變更。 所有這些元素都會新增 `adBreak` 類別。
 
-      下面是如何實現內置混合的示例 `adBreakStyling`:
+      以下是如何實作內建mixin的範例 `adBreakStyling`：
 
       ```js
       adBreakStyling = function (element, player) { 
@@ -784,7 +784,7 @@ var player = ptp.videoPlayer('.videoHolder', {
       }
       ```
 
-      以下是行為如何使用此混合：
+      以下為行為如何使用此mixin：
 
       ```js
       customBehavior = function (element, configuration, player) { 
@@ -797,6 +797,6 @@ var player = ptp.videoPlayer('.videoHolder', {
       }
       ```
 
-      現在 `customBehavior` 可以使用 `adBreakStyling`，在本例中是 `manageAdBreakStyle`。 另一個使用情形是混合可以添加事件偵聽器，而在處理程式中，混合可以以某種方式修改元素。 隨後，使用此混合的元件將自動具有此功能。
+      現在 `customBehavior` 可以使用以下專案公開的所有方法： `adBreakStyling`，在此範例中為 `manageAdBreakStyle`. 另一個使用案例是當mixin可以新增事件接聽程式時，而在處理常式中，mixin可以以某種方式修改元素。 隨後，使用此mixin的元件將自動擁有此功能。
 
-   * **實用程式** 一些公用設施，如 `ptp.elementGetter`，用於配置節和 `ptp.deepmerge`，可幫助您編寫或擴展行為。 有關詳細資訊，請參見 [UI框架](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API文檔。
+   * **Utils** 某些公用程式，例如 `ptp.elementGetter`，用於設定區段和 `ptp.deepmerge`，可協助您撰寫或擴充行為指令。 如需詳細資訊，請參閱 [UI框架](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API檔案。

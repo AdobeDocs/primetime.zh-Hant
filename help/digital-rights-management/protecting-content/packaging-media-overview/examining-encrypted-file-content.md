@@ -12,14 +12,14 @@ ht-degree: 0%
 
 # 正在檢查加密的檔案內容{#examining-encrypted-file-content}
 
-可以使用Java API檢查加密媒體檔案的內容。
+您可以使用Java API檢查加密媒體檔案的內容。
 
-要檢查加密的檔案內容：
+若要檢查加密的檔案內容：
 
-1. 設定開發環境並包括所有JAR檔案。 請參閱 *設定SDK* 為你的項目。
-1. 建立 `MediaEncrypter` 實例。
-1. 將加密的檔案傳遞到 `MediaEncrypter.examineEncryptedContent` 方法，它返回 `KeyMetaData` 的雙曲餘切值。
+1. 設定您的開發環境並包含所有JAR檔案。 另請參閱 *設定SDK* 專案的。
+1. 建立 `MediaEncrypter` 執行個體。
+1. 將加密檔案傳遞至 `MediaEncrypter.examineEncryptedContent` 方法，會傳回 `KeyMetaData` 物件。
 
-1. Inspect `KeyMetaData` 的雙曲餘切值。
+1. Inspect中的資訊 `KeyMetaData` 物件。
 
-有關描述如何從加密檔案中提取DRM元資料的示例代碼，請參見 `com.adobe.flashaccess.samples.mediapackager.ExamineContent` 在「參考實現」命令行工具中 [!DNL samples/] 的子菜單。
+如需說明如何從加密檔案中擷取DRM中繼資料的範常式式碼，請參閱 `com.adobe.flashaccess.samples.mediapackager.ExamineContent` 在參考實作命令列工具中 [!DNL samples/] 目錄。

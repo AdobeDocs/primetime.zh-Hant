@@ -1,6 +1,6 @@
 ---
-description: 有關內容打包和保護的資訊使您能夠保護您的內容。
-title: 包裝和保護內容
+description: 有關封裝和保護內容的資訊可讓您保護內容。
+title: 包裝與保護內容
 exl-id: f33d382b-07d7-4630-9e44-820d6249fee4
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,60 +9,60 @@ ht-degree: 0%
 
 ---
 
-# 打包和保護內容 {#packaging-protecting-content}
+# 封裝和保護內容 {#packaging-protecting-content}
 
-有關內容打包和保護的資訊使您能夠保護您的內容。
+有關封裝和保護內容的資訊可讓您保護內容。
 
 ## 保護伺服器 {#securing-the-server}
 
-您需要對執行策略管理和內容打包的電腦進行物理保護。
+您需要實際保護進行原則管理和內容封裝的電腦。
 
-有關詳細資訊，請參見 [物理安全和訪問](../../secure-deployment-guidelines/physical-sec-and-access.md)。
+如需詳細資訊，請參閱 [實體安全性與存取](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
-如果內容打包實施需要網路連接，則必須強化作業系統並實施適當的防火牆解決方案。 有關詳細資訊，請參見 [網路拓撲](../../secure-deployment-guidelines/overview/network-topology.md)。
+如果您的內容封裝實作需要網路連線，則必須強化作業系統並實作適當的防火牆解決方案。 如需詳細資訊，請參閱 [網路拓撲](../../secure-deployment-guidelines/overview/network-topology.md).
 
-## 安全地打包內容 {#securely-packaging-content}
+## 安全地封裝內容 {#securely-packaging-content}
 
-Adobe PrimetimeDRM Media Packager命令行工具的配置檔案需要打包期間使用的PKCS12憑據。
+Adobe Primetime DRM Media Packager命令列工具的組態檔需要封裝期間使用的PKCS12認證。
 
-在Reference Implementation（參考實現）命令級工具中，PKCS12憑據檔案的口令儲存在 `flashaccess.properties` 文本。 因此，在保護承載此檔案的電腦並確保電腦處於安全環境中時，應格外小心。 有關詳細資訊，請參見 [物理安全和訪問](../../secure-deployment-guidelines/physical-sec-and-access.md)。
+在「參考實作」命令列工具中，PKCS12認證檔案的密碼會儲存在 `flashaccess.properties` 以純文字顯示的檔案。 因此，保護裝載此檔案的電腦時，請格外小心，並確保電腦處於安全的環境中。 如需詳細資訊，請參閱 [實體安全性與存取](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
-打包程式還使用許可證伺服器和許可證伺服器傳輸證書，並且必須保護此資訊的完整性和機密性。 只應允許授權實體使用打包器。 如果您的私鑰被洩露，請立即通知Adobe Systems Incorporated，以便吊銷證書。
+封裝程式也會使用License Server和License Server傳輸憑證，而且必須保護此資訊的完整性和機密性。 僅授權實體才允許使用封裝程式。 如果您的私密金鑰遭到盜用，請立即通知Adobe Systems Incorporated以便撤銷憑證。
 
 >[!NOTE]
 >
->API使您能夠對多個內容使用相同的密鑰。 要確保最高級別的安全性，您應僅將此功能用於多比特率FMS內容。 不要對表示不同內容的多個檔案使用相同的密鑰。
+>此API可讓您針對多個內容片段使用相同的金鑰。 為了確保最高層級的安全性，您應該只對多位元速率FMS內容使用此功能。 請勿對代表不同內容的多個檔案使用相同的金鑰。
 
-黃金時段DRM打包API在特定條件下發出警告。 查看這些警告以確定您的檔案是否已成功加密。 警告消息可能是以下之一：
+Primetime DRM Packaging API在某些情況下會發出警告。 檢閱這些警告，判斷您的檔案是否已成功加密。 警告訊息可能是下列其中一項：
 
-* 策略已過期，無法加密無法識別的標籤或跟蹤。
-* 無法對影片片段進行加密，且這些片段中的引用可能無效。
-* 無法加密元資料。
+* 原則已過期，且無法加密無法辨識的標籤或追蹤。
+* 無法加密影片片段，且這些片段內的參考可能無效。
+* 中繼資料無法加密。
 
-如果內容是通過使用屬性不正確的策略打包的，則需要更新策略。 必須通過策略更新清單或其他傳遞機制將更新的策略提供給許可證伺服器。 建立策略後，無法更改某些策略屬性。 如果這些屬性不正確，請從分發站點中撤回內容，撤消策略，以便將來不能授予許可證，然後重新加密內容。
+如果使用屬性不正確的原則封裝內容，則需要更新原則。 更新的原則必須透過原則更新清單或其他傳遞機制提供給License Server。 某些原則屬性在建立原則後即無法變更。 如果這些屬性不正確，請從發佈網站提取內容、撤銷原則，以便未來無法授予任何授權，然後再次加密內容。
 
-包裝完成後，包裝密鑰被垃圾收集，不會被明確銷毀。 因此，封裝密鑰在記憶體中保留一段時間。 您必須防止對電腦進行未經授權的訪問，並確保不會洩露任何可能洩露此資訊的檔案。
+封裝完成時，封裝金鑰會進行垃圾收集，而不會明確銷毀。 因此，封裝金鑰會保留在記憶體中一段時間。 您必須防止未經授權存取電腦，並確保不會公開任何可能洩露此資訊的檔案，例如核心傾印。
 
-## 安全地儲存策略 {#securely-storing-policies}
+## 安全地儲存原則 {#securely-storing-policies}
 
-Adobe PrimetimeDRM SDK允許您開發可用於內容打包和策略建立的應用程式。
+Adobe Primetime DRM SDK可讓您開發可用於內容封裝和原則建立的應用程式。
 
-在建立這些應用程式時，您可以允許某些用戶建立和修改策略，並限制其他用戶僅將現有策略應用於內容。 您必須實施必要的訪問控制，並建立具有不同權限的用戶帳戶以建立策略和策略應用程式。
+建立這些應用程式時，您可以允許某些使用者建立和修改原則，並限制其他使用者只將現有原則套用至內容。 您必須實作必要的存取控制項，並建立具有不同許可權的使用者帳號，以建立原則和應用原則。
 
-在打包中使用策略之前，不會對其進行簽名或保護以使其不受修改。 如果您擔心打包工具用戶可能修改策略，請簽署策略以確保策略無法修改。
+原則在用於封裝之前，不會經過簽署或受到修改保護。 如果您擔心封裝工具使用者可能會修改原則，請簽署原則以確保無法修改原則。
 
-有關使用SDK建立應用程式的詳細資訊，請參閱上的Mighine DRM API [API黃金時段API參考](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)。
+如需有關使用SDK建立應用程式的詳細資訊，請參閱Primetime DRM API，位於 [API Primetime API參考](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
-## 非對稱密鑰加密 {#asymmetric-key-encryption}
+## 非對稱金鑰加密 {#asymmetric-key-encryption}
 
-非對稱密鑰加密（也稱為公鑰加密）使用對密鑰。 一個密鑰用於加密，另一個密鑰用於解密。
+非對稱金鑰加密（也稱為公開金鑰加密）使用金鑰組。 其中一個金鑰用於加密，另一個金鑰用於解密。
 
-解密密鑰，或 *`private key`*，保密；加密密鑰，或 *`public key`*，可供任何有權加密內容的人使用。 任何有權訪問公鑰的人都可以加密內容。 但是，只有有權訪問私鑰的人才能解密內容。 無法從公鑰重建私鑰。
+解密金鑰，或 *`private key`*，會保密、加密金鑰或 *`public key`*，可供任何獲授權加密內容的人使用。 有權存取公開金鑰的任何人都可以加密內容。 不過，只有可存取私密金鑰的人才能解密內容。 無法從公開金鑰重建私密金鑰。
 
-打包內容時，許可證伺服器的公鑰將用於加密DRM元資料中的內容加密密鑰(CEK)。 必須確保只有許可證伺服器才能訪問許可證伺服器的私鑰。 如果其他人有密鑰，他們可以解密並查看內容。
+當您封裝內容時，會使用授權伺服器的公開金鑰來加密DRM中繼資料中的內容加密金鑰(CEK)。 您必須確保只有License Server可以存取License Server的私人金鑰。 如果其他人擁有金鑰，他們可以解密並檢視內容。
 
 >[!CAUTION]
 >
->確保從受信任的源獲取包含公鑰的許可證伺服器證書。 這樣，您就可以確保它是許可證伺服器的密鑰，而不是無管理公鑰。 如果攻擊者用其公鑰替換許可證伺服器的密鑰，他們可以解密您的內容。
+>請務必從信任的來源取得包含公開金鑰的License Server憑證。 如此一來，您可以確保它是授權伺服器的金鑰，而不是流氓公開金鑰。 如果攻擊者用他們的公開金鑰取代授權伺服器的金鑰，他們可能會將您的內容解密。
 
-有關如何打包內容的詳細資訊，請參見 [使用Adobe PrimetimeDRM SDK保護內容](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf)。
+如需如何封裝內容的詳細資訊，請參閱 [使用Adobe Primetime DRM SDK保護內容](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).

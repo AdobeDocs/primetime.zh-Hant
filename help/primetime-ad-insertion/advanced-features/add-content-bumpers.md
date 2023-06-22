@@ -1,6 +1,6 @@
 ---
-title: 添加內容保存器
-description: 添加內容保存器
+title: 新增內容緩衝器
+description: 新增內容緩衝器
 copied-description: true
 exl-id: 45d465fa-4156-4574-a34c-e58824f5e569
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
@@ -10,6 +10,6 @@ ht-degree: 0%
 
 ---
 
-# 添加內容「Bumpers」 {#adding-content-bumpers}
+# 新增內容「緩衝器」 {#adding-content-bumpers}
 
-媒體公司可能需要在其內容周圍設定「阻塞器」，以用於品牌推廣、贊助和/或滿足政府要求。 黃金時段Ad Insertion提供了多種方法，可以放置保險槓，而不將其烘焙成實際內容。 如欲瞭解更多資訊，請與您的黃金時段支援代表聯繫。
+媒體公司可能需要在其內容周圍放置「緩衝器」，以利品牌推廣、贊助及/或符合政府規定。 PrimetimeAd Insertion提供多種方式，可以在不將緩衝器烘焙至實際內容的情況下放置緩衝器。 如需詳細資訊，請聯絡您的Primetime支援代表。

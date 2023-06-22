@@ -1,6 +1,6 @@
 ---
-title: 使用DRMStatusEvent類概述
-description: 使用DRMStatusEvent類概述
+title: 使用DRMStatusEvent類別概觀
+description: 使用DRMStatusEvent類別概觀
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,8 +10,8 @@ ht-degree: 0%
 ---
 
 
-# 概述 {#using-the-drmstatusevent-class-overview}
+# 概觀 {#using-the-drmstatusevent-class-overview}
 
-A `DRMStatusEvent` 當由Mogfire DRM保護的內容開始成功播放時，會調度對象。 （成功意味著許可證已驗證，用戶已通過驗證並且已授權查看內容）。
+A `DRMStatusEvent` 當Primetime DRM保護的內容開始成功播放時，會傳送物件。 （成功代表授權已驗證，且使用者已驗證並獲授權檢視內容）。
 
-的 `DRMStatusEvent` 對象包含與許可證相關的資訊，包括許可證是否可以離線使用或許可證過期且內容無法再查看。
+此 `DRMStatusEvent` 物件包含與授權相關的資訊，包括授權是否可離線使用，或授權到期且無法再檢視內容時。

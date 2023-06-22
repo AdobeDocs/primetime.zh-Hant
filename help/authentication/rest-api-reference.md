@@ -1,6 +1,6 @@
 ---
 title: REST API參考
-description: Rest api引用
+description: Rest api參考
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -13,64 +13,64 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 響應格式 {#response-formats}
+## 回應格式 {#response-formats}
 
 
 >[!NOTE]
 >
-> 這些服務中提供的API可以以XML或JSON返迴響應（對於返迴響應的API）。 在請求中指定響應格式有三種不同的方法：
+> 這些服務中提供的API可以傳回XML或JSON格式的回應（適用於傳回回應的API）。 有3種不同的方式可在請求中指定回應格式：
 >
->* 將HTTP接受標頭設定為 `application/xml` 或 `application/json`。
->* 在請求負載中，指定參數 `format=xml` 或 `format=json`。
->* 使用擴展調用Web服務終結點 `.xml` 或 `.json`。 比如說， `/regcode.xml` 或 `/regcode.json`
+>* 將HTTP Accept標頭設定為 `application/xml` 或 `application/json`.
+>* 在請求承載中，指定引數 `format=xml` 或 `format=json`.
+>* 使用副檔名呼叫Web服務端點 `.xml` 或 `.json`. 例如， `/regcode.xml` 或 `/regcode.json`
 >
->可以指定以上方法中的任何一種。 指定具有衝突格式的多個方法可能會導致錯誤或不期望的輸出。
+>您可以指定上述任一種方法。 使用衝突的格式指定多個方法可能會導致錯誤或不想要的輸出。
 
-## REST API終結點 {#clientless-endpoints}
+## REST API端點 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+&lt;reggie_fqdn>：
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;sp_fqdn>：
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
-## Web服務摘要 {#web_srvs_summary}
+## 網站服務摘要 {#web_srvs_summary}
 
-下表列出了無客戶端方法的可用Web服務。 按一下Web服務端點以瞭解詳細資訊（示例請求和響應、輸入參數、HTTP方法等）
+下表列出無使用者端方法的可用網路服務。 按一下Web服務端點以取得詳細資訊（範例要求與回應、輸入引數、HTTP方法等）
 
 
-| 老 | Web服務終結點 | 說明 | <!--[Diag.  </br>Ref](http://tve.helpdocsonline.com/api-reference-v2-test#illustration)-->. | 托管於 | 調用者 |
+| Sr | Web服務端點 | 說明 | <!--[Diag.  </br>Ref](http://tve.helpdocsonline.com/api-reference-v2-test#illustration)-->. | 託管位置 | 呼叫者 |
 | --- | --- | --- | --- | --- | --- |
-| 1. | [&lt;reggie_fqdn>/reggie/v1  </br>  {requestorId}/regcode](/help/authentication/registration-code-request.md) | 返回隨機生成的註冊代碼和登錄頁URI | 2 | Adobe  </br>註冊代碼服務 | 智慧設備 |
-| 2. | [&lt;reggie_fqdn>/reggie/v1  </br>  {requestorId}/regcode/  </br>  {registrationCode}](/help/authentication/return-registration-record.md) | 返回包含註冊代碼UUID、註冊代碼和散列設備ID的註冊代碼記錄 | 8 | Adobe  </br>註冊代碼服務 | 黃金時段驗證 |
-| 3. | [&lt;sp_fqdn>/api/v1/config/  </br>  {requestorId}](/help/authentication/provide-mvpd-list.md) | 返回請求方的已配置MVPD清單 | 5 | Adobe  </br>黃金時段  </br>認證  </br>服務 | 登錄  </br>Web  </br>應用 |
-| 4. | [&lt;sp_fqdn>/api/v1/authenticate](/help/authentication/initiate-authentication.md) | 通過通知MVPD選擇事件啟動AuthN進程。 在驗證資料庫上建立記錄，當從MVPD接收成功響應時對其進行協調（步驟13） | 7 | Adobe  </br>黃金時段  </br>認證  </br>服務 | 登錄  </br>Web  </br>應用 |
-| 5. | SAML斷言使用者 | Mogini時驗證和MVPD之間的現有SAML工作流 | 13 | 黃金時段  </br>認證  </br>服務 | 黃金時段驗證 |
-| 6. | [&lt;sp_fqdn>/api/v1/checkauthn/  </br>  {registrationCode}](/help/authentication/check-authentication-flow-by-second-screen-web-app.md) | 登錄Web應用可以檢查嘗試的登錄流是否成功 |  | 黃金時段  </br>認證   </br>服務 | 登錄   </br>Web   </br>應用 |
-| 7. | [&lt;sp_fqdn>/api/v1/tokens/authn](/help/authentication/retrieve-authentication-token.md) | 獲取與AuthN令牌相關的元資料 | 15 | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 8. | [&lt;reggie_fqdn>/reggie/v1  </br>  {requestorId}/regcode/  </br>  {registrationCode}](/help/authentication/delete-registration-record.md) | 刪除註冊碼記錄並釋放註冊碼以供重用 | 16 | Adobe  </br>註冊代碼服務 | 黃金時段驗證 |
-| 9. | [&lt;sp_fqdn>/api/v1/authorize](/help/authentication/initiate-authorization.md) | 獲取授權響應。 | 17 | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 10. | [&lt;sp_fqdn>/api/v1/checkauthn](/help/authentication/check-authentication-token.md) | 指示設備是否具有未到期的AuthN令牌。 |  | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 11. | [&lt;sp_fqdn>/api/v1/tokens/authn](/help/authentication/retrieve-authentication-token.md) | 如果找到，則返回AuthN令牌。 |  | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 12. | [&lt;sp_fqdn>/api/v1/tokens/authz](/help/authentication/retrieve-authorization-token.md) | 如果找到，則返回AuthZ令牌。 |  | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 13. | [&lt;sp_fqdn>/api/v1/tokens/media](/help/authentication/obtain-short-media-token.md) | 返回短媒體令牌（如果找到） — 與/api/v1/mediatoken相同 |  | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 14. | [&lt;sp_fqdn>/api/v1/mediaken](/help/authentication/obtain-short-media-token.md) | 獲取短媒體令牌 |  | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 15. | [&lt;sp_fqdn>/api/v1/preauthorize](/help/authentication/retrieve-list-of-preauthorized-resources.md) | 檢索預授權資源清單 |  | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
-| 16. | [&lt;sp_fqdn>/api/v1/preauthorize/{code}](/help/authentication/retrieve-list-of-preauthorized-resources-by-second-screen-web-app.md) | 檢索預授權資源清單 |  | 黃金時段  </br>認證  </br>服務 | 登錄Web應用 |
-| 17. | [&lt;sp_fqdn>/api/v1/logout](/help/authentication/initiate-logout.md) | 從儲存中刪除AuthN和AuthZ令牌 |  | 黃金時段  </br>認證   </br>服務 | 智慧設備 |
-| 18. | [&lt;sp_fqdn>/api/v1/tokens/usermetadata](/help/authentication/user-metadata.md) | 在驗證流完成後獲取用戶元資料 | 不適用 | 不適用 | 智慧設備 |
-| 19. | [&lt;sp_fqdn>/api/v1/authenticate/freepreview](/help/authentication/free-preview-for-temp-pass-and-promotional-temp-pass.md) | 為臨時傳遞或提升臨時傳遞建立驗證令牌 | 不適用 | 黃金時段  </br>認證  </br>服務 | 智慧設備 |
+| 1. | [&lt;reggie_fqdn>/reggie/v1/  </br>  {requestId}/regcode](/help/authentication/registration-code-request.md) | 傳回隨機產生的註冊代碼和登入頁面URI | 2 | Adobe  </br>規則程式碼服務 | 智慧型裝置 |
+| 2. | [&lt;reggie_fqdn>/reggie/v1/  </br>  {requestorId}/regcode/  </br>  {registrationCode}](/help/authentication/return-registration-record.md) | 傳回包含註冊代碼UUID、註冊代碼和雜湊裝置ID的註冊代碼記錄 | 8 | Adobe  </br>規則程式碼服務 | Primetime驗證 |
+| 3. | [&lt;sp_fqdn>/api/v1/config/  </br>  {requestorId}](/help/authentication/provide-mvpd-list.md) | 傳回要求者的已設定MVPD清單 | 5 | Adobe  </br>Primetime  </br>驗證  </br>服務 | 登入  </br>Web  </br>應用程式 |
+| 4. | [&lt;sp_fqdn>/api/v1/authenticate](/help/authentication/initiate-authentication.md) | 透過通知MVPD選取事件來起始AuthN程式。 在驗證資料庫上建立記錄，在從MVPD收到成功回應時進行調節（步驟13） | 7 | Adobe  </br>Primetime  </br>驗證  </br>服務 | 登入  </br>Web  </br>應用程式 |
+| 5. | SAML判斷提示取用者 | Primetime驗證和MVPD之間的現有SAML工作流程 | 13 | Primetime  </br>驗證  </br>服務 | Primetime驗證 |
+| 6. | [&lt;sp_fqdn>/api/v1/checkauthn/  </br>  {registrationCode}](/help/authentication/check-authentication-flow-by-second-screen-web-app.md) | 登入Web應用程式可以檢查嘗試的登入流程是否成功 |  | Primetime  </br>驗證   </br>服務 | 登入   </br>Web   </br>應用程式 |
+| 7. | [&lt;sp_fqdn>/api/v1/tokens/authn](/help/authentication/retrieve-authentication-token.md) | 取得AuthN權杖相關的中繼資料 | 15 | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 8. | [&lt;reggie_fqdn>/reggie/v1/  </br>  {requestorId}/regcode/  </br>  {registrationCode}](/help/authentication/delete-registration-record.md) | 刪除登入程式碼記錄，並釋出登入程式碼以供重複使用 | 16 | Adobe  </br>規則程式碼服務 | Primetime驗證 |
+| 9. | [&lt;sp_fqdn>/api/v1/authorize](/help/authentication/initiate-authorization.md) | 取得授權回應。 | 17 | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 10. | [&lt;sp_fqdn>/api/v1/checkauthn](/help/authentication/check-authentication-token.md) | 指出裝置是否有未到期的AuthN權杖。 |  | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 11. | [&lt;sp_fqdn>/api/v1/tokens/authn](/help/authentication/retrieve-authentication-token.md) | 如果找到，則傳回AuthN權杖。 |  | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 12. | [&lt;sp_fqdn>/api/v1/tokens/authz](/help/authentication/retrieve-authorization-token.md) | 如果找到，則傳回AuthZ權杖。 |  | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 13. | [&lt;sp_fqdn>/api/v1/tokens/media](/help/authentication/obtain-short-media-token.md) | 如果找到，則傳回簡短媒體權杖 — 與/api/v1/mediatoken相同 |  | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 14. | [&lt;sp_fqdn>/api/v1/mediatoken](/help/authentication/obtain-short-media-token.md) | 取得短媒體Token |  | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 15. | [&lt;sp_fqdn>/api/v1/preauthorize](/help/authentication/retrieve-list-of-preauthorized-resources.md) | 擷取預先授權的資源清單 |  | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
+| 16. | [&lt;sp_fqdn>/api/v1/preauthorize/{code}](/help/authentication/retrieve-list-of-preauthorized-resources-by-second-screen-web-app.md) | 擷取預先授權的資源清單 |  | Primetime  </br>驗證  </br>服務 | 登入網頁應用程式 |
+| 17. | [&lt;sp_fqdn>/api/v1/logout](/help/authentication/initiate-logout.md) | 從儲存空間中移除AuthN和AuthZ權杖 |  | Primetime  </br>驗證   </br>服務 | 智慧型裝置 |
+| 18. | [&lt;sp_fqdn>/api/v1/tokens/usermetadata](/help/authentication/user-metadata.md) | 驗證流程完成後取得使用者中繼資料 | 不適用 | 不適用 | 智慧型裝置 |
+| 19. | [&lt;sp_fqdn>/api/v1/authenticate/freepreview](/help/authentication/free-preview-for-temp-pass-and-promotional-temp-pass.md) | 為Temp Pass或Promotional Temp Pass建立驗證Token | 不適用 | Primetime  </br>驗證  </br>服務 | 智慧型裝置 |
 
 
-## REST API安全 {#security}
+## REST API安全性 {#security}
 
-必須使用HTTPS協定調用所有黃金時段驗證無客戶端API，以實現安全通信。 此外，調用的大多數API應包含由 [動態客戶端註冊](/help/authentication/dynamic-client-registration.md)。
+必須使用HTTPS通訊協定呼叫所有Primetime驗證無使用者端API，以進行安全通訊。 此外，呼叫的大多數API應包含提供的存取權杖 [動態使用者端註冊](/help/authentication/dynamic-client-registration.md).

@@ -1,6 +1,6 @@
 ---
-description: 您可以顯示正在播放的內容的當前時間和剩餘時間。
-title: 顯示當前時間和剩餘時間
+description: 您可以顯示正在播放之內容的目前和剩餘時間。
+title: 顯示目前時間和剩餘時間
 exl-id: f1aebeb7-381b-4bd5-8535-32b902f838d2
 source-git-commit: 7e3f1e2dcf855ecd241b2aebc01d9d60c90ed114
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# 顯示當前時間和剩餘時間 {#display-the-current-time-and-remaining-time}
+# 顯示目前時間和剩餘時間 {#display-the-current-time-and-remaining-time}
 
-您可以顯示正在播放的內容的當前時間和剩餘時間。
+您可以顯示正在播放之內容的目前和剩餘時間。
 
-1. 要實現顯示活動內容的當前時間和剩餘時間的顯示，請使用以下示例代碼：
+1. 若要實作顯示作用中內容目前和剩餘時間的顯示，請使用下列範常式式碼：
 
    ```
       // 1. Register for the PTMediaPlayerTimeChangeNotification 
@@ -66,7 +66,7 @@ ht-degree: 0%
       } 
    ```
 
-1. 要實現顯示廣告進度和剩餘時間的顯示，請使用以下示例代碼：
+1. 若要實作顯示廣告進度和剩餘時間的顯示，請使用下列範常式式碼：
 
    ```
       double adBreakDurationLeft; 

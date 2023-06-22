@@ -1,6 +1,6 @@
 ---
-title: 按第二螢幕Web應用檢索預授權資源清單
-description: 按第二螢幕Web應用檢索預授權資源清單
+title: 依第二熒幕Web應用程式擷取預先授權資源清單
+description: 依第二熒幕Web應用程式擷取預先授權資源清單
 exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,47 +9,47 @@ ht-degree: 0%
 
 ---
 
-# 按第二螢幕Web應用檢索預授權資源清單 {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
+# 依第二熒幕Web應用程式擷取預先授權資源清單 {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## REST API終結點 {#clientless-endpoints}
+## REST API端點 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
-
-* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
-
-&lt;sp_fqdn>:
+&lt;reggie_fqdn>：
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+
+&lt;sp_fqdn>：
+
+* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## 說明 {#description}
 
-請求Adobe Primetime驗證以獲取預授權資源清單。
+要求Adobe Primetime驗證以取得預先授權資源清單。
 
-有兩組API:一組用於流式應用程式或程式設計師服務，另一組用於第二螢幕Web應用。 此頁描述AuthN應用的API。
+有兩組API：一組用於串流應用程式或程式設計人員服務，另一組用於第二熒幕網頁應用程式。 本頁面說明AuthN應用程式的API。
 
  \
-|端點 |調用  </br>按 |輸入   </br>帕拉姆 | HTTP  </br>方法 |響應 | HTTP  </br>響應 | | - | - | - | - | - | - | | &lt;sp_fqdn>/api/v1/preauthorize/{註冊代碼 | AuthN模組 | 1。  註冊碼  </br>    （路徑元件）</br>2.  請求者（必需）</br>3.  資源清單（必需） |GET | XML或JSON包含單個預授權決定或錯誤詳細資訊。 請參見下面的示例。 | 200 — 成功</br></br>400 — 錯誤請求</br></br>401 — 未授權</br></br>405 — 不允許使用方法  </br></br>412 — 先決條件失敗</br></br>500 — 內部伺服器錯誤 |
+|端點 |已呼叫  </br>作者： |輸入   </br>引數 | HTTP  </br>方法 |回應 | HTTP  </br>回應 | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorize/{註冊代碼} |驗證模組 | 1.  註冊代碼  </br>    （路徑元件）</br>2.  請求者（必要）</br>3.  資源清單（必要） |GET |包含個別預先授權決定或錯誤詳細資料的XML或JSON。 請參閱下列範例。 | 200 — 成功</br></br>400 — 錯誤請求</br></br>401 — 未獲授權</br></br>405 — 不允許的方法  </br></br>412 — 先決條件失敗</br></br>500 — 內部伺服器錯誤 |
 
 
 
-| 輸入參數 | 說明 |
+| 輸入引數 | 說明 |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 註冊碼 | 用戶在驗證流開始時提供的註冊代碼值。 |
-| 請求 | 此操作對其有效的程式設計師請求者ID。 |
-| 資源清單 | 包含以逗號分隔的resourceId清單的字串，該清單標識用戶可訪問且由MVPD授權端點識別的內容。 |
+| 註冊代碼 | 使用者在驗證流程開始時提供的註冊代碼值。 |
+| 請求者 | 此作業有效的程式設計員requestorId。 |
+| 資源清單 | 一個字串，包含以逗號分隔的resourceId清單，可識別使用者可存取且可由MVPD授權端點辨識的內容。 |
 
 
-### 示例響應 {#sample-response}
+### 範例回應 {#sample-response}
 
-**XML:**
+**XML：**
 
 ```XML
 HTTP/1.1 200 OK
@@ -78,7 +78,7 @@ Content-Type: application/xml; charset=utf-8
 </resources>
 ```
 
-**JSON:**
+**JSON：**
 
 ```JSON
 HTTP/1.1 200 OK

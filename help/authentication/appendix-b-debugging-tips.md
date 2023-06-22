@@ -2,9 +2,9 @@
 title: 附錄B「偵錯技巧」
 description: 附錄B「偵錯技巧」
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe Primetime驗證會儲存暫時資料，例如瀏覽器快取、LSO快取�
 
 - [清除瀏覽器快取和Cookie](#clearing-the-browser-cache-and-cookies)
 - [正在清除LSO快取](#clearing-lsos-cache)\
-   
+    
 
 ## 清除瀏覽器快取和Cookie {#clearing-the-browser-cache-and-cookies}
 
@@ -41,7 +41,8 @@ Adobe Primetime驗證會儲存暫時資料，例如瀏覽器快取、LSO快取�
 Adobe Primetime驗證工程師會使用以下偵錯工具：
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug （適用於flash player的偵錯版本）
+- Flashbug （適用於flash player的偵錯版本） <https://addons.mozilla.org/en-US/firefox/addon/14465/>
+- Live http標頭 —  <https://addons.mozilla.org/en-US/firefox/addon/3829/>
 - 小提琴手 —  <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
 - Wireshark - <http://www.wireshark.org/>

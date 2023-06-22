@@ -1,6 +1,6 @@
 ---
-description: 302重定向優化將302個重定向響應的數量減到最少，這樣您的應用程式就可以更有效地平衡負載。
-title: HTTP 302重定向優化
+description: 302重新導向最佳化可將302重新導向回應的數量降至最低，讓您的應用程式更有效率地平衡負載。
+title: HTTP 302重新導向最佳化
 exl-id: 80d5d38d-c998-4fc0-b527-b38e578d76e7
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,24 +9,24 @@ ht-degree: 0%
 
 ---
 
-# HTTP 302重定向優化 {#http-redirect-optimization}
+# HTTP 302重新導向最佳化 {#http-redirect-optimization}
 
-302重定向優化將302個重定向響應的數量減到最少，這樣您的應用程式就可以更有效地平衡負載。
+302重新導向最佳化可將302重新導向回應的數量降至最低，讓您的應用程式更有效率地平衡負載。
 
-如果重定向主清單請求，並且在您的播放器中啟用了302優化，則對該清單中資產的後續請求將使用最終域位置，這樣可避免額外的302響應。 預設情況下啟用此功能，您可以更改此設定。
+如果重新導向主要資訊清單請求，並在播放器中啟用302最佳化，則從該資訊清單對資產發出的後續請求將使用最終網域位置，這會避免額外302個回應。 此功能預設為啟用，您可以變更此設定。
 
 >[!IMPORTANT]
 >
->僅在支援以下功能的認證瀏覽器中支援此功能 `responseURL` 屬性 `XMLHttpRequest` 的雙曲餘切值。
+>只有支援此功能的已認證瀏覽器才支援此功能 `responseURL` 中的屬性 `XMLHttpRequest` 物件。
 
-對於Flash回退，請記住以下資訊：
+如需Flash備援，請記住下列資訊：
 
-* 您的最終用戶必須安裝AdobeFlash Player版本23或更高版本。
-* 如果禁用流完整性，則僅認證的瀏覽器支援302重定向。
+* 您的使用者必須安裝AdobeFlash Player版本23或更新版本。
+* 如果停用資料流完整性，則只有在認證的瀏覽器上才支援302重新導向。
 
-## 禁用302重定向優化 {#disabling-redirect-optimization}
+## 停用302重新導向最佳化 {#disabling-redirect-optimization}
 
-可以使用useRedirectedUrl屬性啟用302重定向(true)或禁用(false)。
+您可以使用useRedirectedUrl屬性來啟用302重新導向(true)或停用(false)。
 
 例如：
 

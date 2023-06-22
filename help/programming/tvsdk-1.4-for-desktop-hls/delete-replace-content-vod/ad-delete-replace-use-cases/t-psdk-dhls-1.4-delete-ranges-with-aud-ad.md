@@ -1,6 +1,6 @@
 ---
-description: 從時間軸中刪除localTime中開始和結束之間的TimeRange。
-title: 刪除Mogina時廣告決定廣告的範圍
+description: 從時間軸移除localTime中開始和結束之間的TimeRanges。
+title: 刪除具有Primetime廣告決策廣告的範圍
 exl-id: e097f92e-b4ce-4e33-9a71-213cf19188fb
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# 刪除Mogina時廣告決定廣告的範圍{#delete-ranges-with-primetime-ad-decisioning-ad}
+# 刪除具有Primetime廣告決策廣告的範圍{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-從時間軸中刪除localTime中開始和結束之間的TimeRange。
+從時間軸移除localTime中開始和結束之間的TimeRanges。
 
-刪除帶有短語廣告的範圍。
+刪除包含片語廣告的範圍。
 
 ```
 {   

@@ -1,6 +1,6 @@
 ---
-description: HLS和DASH流為同一短視頻突發提供不同的比特率編碼（簡檔）。 瀏覽器TVSDK可以根據可用頻寬為每個突發選擇質量級別。
-title: 用於視頻質量的自適應比特率(ABR)
+description: HLS和DASH資料流為相同的短時突發視訊提供不同的位元速率編碼（設定檔）。 瀏覽器TVSDK可以根據可用頻寬來選取每個高載的品質等級。
+title: 視訊品質的最適化位元速率(ABR)
 exl-id: 2506a57b-d77d-4bd1-9e4c-5e00ef1bc8b7
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,38 +9,38 @@ ht-degree: 1%
 
 ---
 
-# 概述 {#adaptive-bit-rates-abr-for-video-quality-overview}
+# 概觀 {#adaptive-bit-rates-abr-for-video-quality-overview}
 
-HLS和DASH流為同一短視頻突發提供不同的比特率編碼（簡檔）。 瀏覽器TVSDK可以根據可用頻寬為每個突發選擇質量級別。
+HLS和DASH資料流為相同的短時突發視訊提供不同的位元速率編碼（設定檔）。 瀏覽器TVSDK可以根據可用頻寬來選取每個高載的品質等級。
 
-瀏覽器TVSDK持續監視比特率以確保以當前網路連接的最佳比特率播放內容。
+瀏覽器TVSDK會持續監控位元速率，確保內容以目前網路連線的最佳位元速率播放。
 
-可以為多比特率(MBR)流設定自適應比特率(ABR)切換策略以及初始、最小和最大比特率。 瀏覽器TVSDK自動切換到在指定配置中提供最佳回放體驗的比特率。
+您可以設定最適化位元速率(ABR)切換原則，以及多位元速率(MBR)資料流的初始、最小和最大位元速率。 瀏覽器TVSDK會自動切換為位元速率，以在指定的設定中提供最佳播放體驗。
 
 <table id="table_AF838E082235406AA359BF1C1A77F85F"> 
  <tbody> 
   <tr> 
-   <td colname="col01"> 初始比特率 </td> 
-   <td colname="col2">第一段的所需重放比特率（以位/秒為單位）。 當播放開始時，最接近的輪廓（等於或大於初始比特率）用於第一段。 <p> 如果定義了最小比特率並且初始比特率低於最小速率，則瀏覽器TVSDK選擇具有高於最小比特率的最低比特率的配置檔案。 如果初始速率高於最大速率，則瀏覽器TVSDK將選擇低於最大速率的最高速率。 </p> <p>如果初始比特率為零或未定義，則初始比特率由ABR策略確定。 </p> <p><span class="codeph"> 初始比特率</span> 返回表示每秒位元組配置檔案的整數值。 </p> </td> 
+   <td colname="col01"> 初始位元速率 </td> 
+   <td colname="col2">第一個區段的所需播放位元速率（以位元/秒為單位）。 當播放開始時，第一個區段會使用最接近的設定檔（等於或大於初始位元速率）。 <p> 如果已定義最小位元速率，且初始位元速率低於最小速率，瀏覽器TVSDK會選取位元速率最低且高於最小位元速率的設定檔。 如果初始速率高於最大速率，瀏覽器TVSDK會選取低於最大速率的最高速率。 </p> <p>如果初始位元速率為零或未定義，初始位元速率會由ABR原則決定。 </p> <p><span class="codeph"> initialBitrate</span> 傳回代表每秒位元組設定檔的整數值。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col01"> 最小比特率 </td> 
-   <td colname="col2">ABR可切換到的最低允許比特率。 ABR切換忽略比此比特率更低的比特率的簡檔。 <p><span class="codeph"> 最小比特率</span> 返回表示每秒位配置檔案的整數值。 </p> </td> 
+   <td colname="col01"> 最小位元速率 </td> 
+   <td colname="col2">ABR可切換的最低位元速率。 ABR切換會忽略位元速率低於此位元速率的設定檔。 <p><span class="codeph"> minBitRate</span> 傳回代表每秒位元設定檔的整數值。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col01"> 最大比特率 </td> 
-   <td colname="col2">ABR可切換到的最高允許比特率。 ABR切換忽略比此比特率更高的比特率的簡檔。 <p><span class="codeph"> 最大比特率</span> 返回表示每秒位配置檔案的整數值。 </p> </td> 
+   <td colname="col01"> 最大位元速率 </td> 
+   <td colname="col2">ABR可切換的最高允許位元速率。 ABR切換會忽略位元速率高於此位元速率的設定檔。 <p><span class="codeph"> maxBitRate</span> 傳回代表每秒位元設定檔的整數值。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-請牢記以下資訊：
+請記住下列資訊：
 
-* 當比特率更改時，Browser TVSDK派單 `AdobePSDK.ProfileEvent` 類型為 `AdobePSDK.PSDKEventType.PROFILE_CHANGED`。
+* 當位元速率變更時，瀏覽器TVSDK會傳送 `AdobePSDK.ProfileEvent` 將型別設為 `AdobePSDK.PSDKEventType.PROFILE_CHANGED`.
 
-* 您可以隨時更改ABR設定，播放器會切換使用與最近設定最接近的配置式。
+* 您可以隨時變更ABR設定，然後播放器會切換成使用最符合最新設定的設定檔。
 
-例如，如果流具有以下配置檔案：
+例如，如果串流具有以下設定檔：
 
 * 1: 300000
 * 2: 700000
@@ -48,8 +48,8 @@ HLS和DASH流為同一短視頻突發提供不同的比特率編碼（簡檔）�
 * 4: 2400000
 * 5: 4000000
 
-如果指定範圍為300000到2000000，則Browser TVSDK僅考慮配置檔案1、2和3。 這允許應用程式根據各種網路條件進行調整，例如從wi-fi切換到3G或切換到各種設備，如電話、平板或台式電腦。
+如果您指定300000至2000000的範圍，瀏覽器TVSDK只會考慮設定檔1、2和3。 這可讓應用程式根據各種網路狀況進行調整，例如從Wi-Fi切換至3G或各種裝置，例如手機、平板電腦或桌上型電腦。
 
-要設定ABR控制參數：
+若要設定ABR控制引數，請執行下列動作：
 
-* 在 `ABRControlParameters` 類。
+* 在 `ABRControlParameters` 類別。

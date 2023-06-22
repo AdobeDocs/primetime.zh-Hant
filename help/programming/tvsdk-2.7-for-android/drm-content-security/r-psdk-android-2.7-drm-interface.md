@@ -1,6 +1,6 @@
 ---
-description: 黃金時段DRM解決方案的關鍵客戶端元素是DRM管理器。 Android SDK附帶的示例應用程式還包括DRMHelper類，該類可用於使某些DRM操作更容易實現。
-title: 黃金時段DRM介面概述
+description: Primetime DRM解決方案的關鍵使用者端元素是DRM管理員。 Android SDK隨附的範例應用程式也包含DRMHelper類別，可用來讓特定DRM作業更容易實作。
+title: Primetime DRM介面概觀
 exl-id: 37037419-fe3d-4e9e-a35d-e0accfba4e80
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 0%
 
 ---
 
-# 黃金時段DRM介面概述 {#primetime-drm-interface-overview}
+# Primetime DRM介面概觀 {#primetime-drm-interface-overview}
 
-黃金時段DRM解決方案的關鍵客戶端元素是DRM管理器。 Android SDK附帶的示例應用程式還包括DRMHelper類，該類可用於使某些DRM操作更容易實現。
+Primetime DRM解決方案的關鍵使用者端元素是DRM管理員。 Android SDK隨附的範例應用程式也包含DRMHelper類別，可用來讓特定DRM作業更容易實作。
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-黃金時段DRM提供可擴展的、高效的工作流，以在TVSDK應用程式中實施內容保護。 通過為每個數字媒體檔案建立許可證，您可以保護和管理視頻內容的權限。
+Primetime DRM提供可擴充、有效率的工作流程，以在TVSDK應用程式中實作內容保護。 您可以為每個數位媒體檔案建立授權，藉此保護和管理視訊內容的許可權。
 
-有關詳細資訊，請參閱TVSDK包中包含的DRM示例播放器代碼。
+如需詳細資訊，請參閱TVSDK套件中包含的DRM範例播放器程式碼。
 
 以下是使用DRM時最重要的API元素：
 
-* 媒體播放器中對實現DRM子系統的DRM管理器對象的引用：
+* 在媒體播放器中對實作DRM子系統的DRM管理員物件的參考：
 
    ```java
    MediaPlayer.getDRMManager();
@@ -29,10 +29,10 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >此API將返回有效 `DRMManager` 對象僅在 `MediaPlayerEvent.DRM_METADATA` 被炒了。 如果你打電話 `getDRMManager()` 在觸發此事件之前，它可能返回NULL。
+   >此API將傳回有效的 `DRMManager` 物件僅位於 `MediaPlayerEvent.DRM_METADATA` 觸發。 如果您呼叫 `getDRMManager()` 觸發此事件之前，可能會傳回NULL。
 
-* 的 `DRMHelper` 幫助類，在實施DRM工作流時非常有用。
-* A `DRMHelper` 元資料載入器方法，當DRM元資料位於與媒體分開的URL中時，該方法載入DRM元資料。
+* 此 `DRMHelper` helper類別，在實作DRM工作流程時很有用。
+* A `DRMHelper` 中繼資料載入器方法，當DRM中繼資料位於與媒體不同的獨立URL中時，就會載入中繼資料。
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -40,7 +40,7 @@ ht-degree: 0%
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* A `DRMHelper` 方法檢查DRM元資料並確定是否需要驗證。
+* A `DRMHelper` 檢查DRM中繼資料並確定是否需要驗證的方法。
 
    ```java
    /** 
@@ -54,7 +54,7 @@ ht-degree: 0%
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
    ```
 
-* `DRMHelper` 執行身份驗證的方法。
+* `DRMHelper` 執行驗證的方法。
 
    ```java
    /** 
@@ -83,4 +83,4 @@ ht-degree: 0%
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-有關DRM的詳細資訊，請參見 [DRM文檔](https://helpx.adobe.com/primetime/user-guide.html)。
+如需DRM的詳細資訊，請參閱 [DRM檔案](https://helpx.adobe.com/primetime/user-guide.html).

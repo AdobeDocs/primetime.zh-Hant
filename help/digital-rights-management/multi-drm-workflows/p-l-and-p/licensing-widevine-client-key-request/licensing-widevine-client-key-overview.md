@@ -1,6 +1,6 @@
 ---
-description: 若要播放內容打包產生的DASH內容，TVSDK客戶端需要獲取在打包過程中在密鑰獲取工作流中傳遞的內容解密密鑰。 客戶端內容解密密鑰通常由Widevine/PlayReady許可證伺服器響應於來自客戶端的一個或多個HTTP/HTTPS帖子而傳送到客戶端。
-title: 客戶端密鑰請求工作流概述
+description: 若要播放內容封裝產生的DASH內容，TVSDK使用者端需要取得內容解密金鑰，該金鑰會在金鑰取得工作流程中的封裝程式期間傳遞。 使用者端內容解密金鑰通常會由Widevine/PlayReady授權伺服器傳送給使用者端，以回應使用者端的一或多個HTTP/HTTPS貼文。
+title: 使用者端金鑰請求工作流程概觀
 exl-id: ae600cbd-415b-441a-bf01-f259993071f2
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,14 +9,14 @@ ht-degree: 0%
 
 ---
 
-# 客戶端密鑰請求工作流 {#client-key-request-workflow-overview}
+# 使用者端金鑰請求工作流程 {#client-key-request-workflow-overview}
 
-若要播放內容打包產生的DASH內容，TVSDK客戶端需要獲取在打包過程中在密鑰獲取工作流中傳遞的內容解密密鑰。 客戶端內容解密密鑰通常由Widevine/PlayReady許可證伺服器響應於來自客戶端的一個或多個HTTP/HTTPS帖子而傳送到客戶端。
+若要播放內容封裝產生的DASH內容，TVSDK使用者端需要取得內容解密金鑰，該金鑰會在金鑰取得工作流程中的封裝程式期間傳遞。 使用者端內容解密金鑰通常會由Widevine/PlayReady授權伺服器傳送給使用者端，以回應使用者端的一或多個HTTP/HTTPS貼文。
 
-要獲取內容解密密鑰，PSDK客戶端必須執行以下操作
+若要取得內容解密金鑰，PSDK使用者端必須執行下列動作
 
-* 抓住內容的pssh框，將其提供給平台，並獲取響應密鑰請求。
-* 通過HTTPPOST將密鑰請求發送到相應的Widevine/PlayReady許可證伺服器。
-* 將伺服器的響應傳遞給平台，該平台將從響應中提取客戶端內容解密密鑰並將其用於內容解密。
+* 抓取內容的pssh方塊，將其提供給平台，並取得金鑰要求以回應。
+* 透過HTTPPOST將金鑰要求傳送至適當的Widevine/PlayReady授權伺服器。
+* 將伺服器的回應傳遞至平台，平台會從回應中擷取使用者端內容解密金鑰，並將其用於內容解密。
 
-要發送密鑰請求的HTTPPOST，您的代碼必須將許可證伺服器URL連同需要附加到帖子的任何額外資料傳遞給PSDK客戶端。 要傳遞的URL和資料的選擇取決於您所使用的Widevine/PlayReady服務提供商。 例如，如果使用ExpressPlay提供服務，則您將傳遞相應的ExpressPlay Widevine/PlayReady許可證伺服器URL，並將與內容的加密密鑰關聯的ExpressPlay令牌附加到傳出密鑰請求。 可以從ExpressPlay文檔獲取相應的ExpressPlay Widevine/PlayReady許可證伺服器URL。
+若要針對金鑰要求傳送HTTPPOST，您的程式碼必須將授權伺服器URL以及任何需要附加至貼文的額外資料傳遞至PSDK使用者端。 要傳遞的URL和資料選擇取決於您所合作的Widevine/PlayReady服務提供者。 例如，如果您使用ExpressPlay提供服務，請傳入適當的ExpressPlay Widevine/PlayReady授權伺服器URL，並將與內容加密金鑰相關聯的ExpressPlay權杖附加至外寄金鑰要求。 您可以從ExpressPlay檔案取得適當的ExpressPlay Widevine/PlayReady授權伺服器URL。

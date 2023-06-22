@@ -1,5 +1,5 @@
 ---
-description: 黃金時段廣告插入使用Cookie進行內部用途，並便於使用流和廣告伺服器。
+description: Primetime廣告插入將Cookie用於內部用途，並方便使用串流和廣告伺服器。
 title: Cookie
 exl-id: 13184a7a-4302-46af-a7f6-37678db05ce8
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,12 +11,12 @@ ht-degree: 0%
 
 # Cookie {#cookies}
 
-黃金時段廣告插入使用Cookie進行內部用途，並便於使用流和廣告伺服器。  建議使用Cookie，並建議啟用我的客戶端玩家。
+Primetime廣告插入將Cookie用於內部用途，並方便使用串流和廣告伺服器。  建議使用Cookie，也建議我的使用者端播放器啟用。
 
 ## Cookie清單
 
-黃金時段廣告插入可維護以下Cookie:
+Primetime廣告插入會維護下列Cookie：
 
-* `ssaiPub` 幫助從需要Cookie身份驗證的流中檢索內容URL以獲取 `m3u8` 的子菜單。
-* `ssai3` 為需要它們的ad伺服器保存會話cookie。
-* `AWSELB` 和 `ssaiSession` 保存與會話相關的資訊。
+* `ssaiPub` 有助於從需要Cookie驗證的資料流擷取內容URL，以取得 `m3u8` 檔案。
+* `ssai3` 保留需要工作階段Cookie的廣告伺服器。
+* `AWSELB` 和 `ssaiSession` 保留工作階段相關資訊。

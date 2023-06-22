@@ -1,6 +1,6 @@
 ---
-description: 如果客戶端請求跟蹤資訊，則清單伺服器發送回格式化檔案。 其格式和內容取決於查詢參數跟蹤版本的值
-title: 用於跟蹤URL的VMAP格式
+description: 如果使用者端要求追蹤資訊，資訊清單伺服器會傳回格式化的檔案。 其格式和內容取決於查詢引數pttrackingversion的值
+title: 用於追蹤URL的VMAP格式
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '138'
@@ -9,13 +9,13 @@ ht-degree: 0%
 ---
 
 
-# 用於跟蹤URL的VMAP格式 {#vmap-format-for-tracking-urls}
+# 用於追蹤URL的VMAP格式 {#vmap-format-for-tracking-urls}
 
-如果客戶端請求跟蹤資訊，則清單伺服器發送回格式化檔案。 其格式和內容取決於查詢參數的值 `pttrackingversion`
+如果使用者端要求追蹤資訊，資訊清單伺服器會傳回格式化的檔案。 其格式和內容取決於查詢引數的值 `pttrackingversion`
 
-## 單VMAP格式 {#vmap}
+## 單一VMAP格式 {#vmap}
 
-清單伺服器在 `pttrackingversion=vmap` 具有以下示例的格式，該格式來自典型的VMAP塊。 縮短了時間，避免了不必要的重複，使結構更加清晰。 省略號（三個點，用空格分隔）表示某些URL內和某些代碼塊之間省略的資訊。 未縮短的URL顯示在多行上，儘管它們顯示在VMAP檔案的單行上。
+資訊清單伺服器傳送的VMAP檔案，如果 `pttrackingversion=vmap` 具有下列範例的格式，此格式來自典型的VMAP區塊。 已縮短以避免不必要的重複，使結構更清晰。 省略符號（三個點，以空格分隔）表示某些URL內和某些程式碼區塊之間遺漏的資訊。 未縮短的URL會出現在多行上，但會顯示在VMAP檔案的單一行上。
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 

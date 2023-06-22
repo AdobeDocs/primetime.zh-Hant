@@ -1,6 +1,6 @@
 ---
-title: 預轉碼API
-description: 您可以使用即時重新打包API提前對廣告創意進行代碼轉換，因此在需要時可提供內容相容版本，從而消除了與即時(JIT)重新打包相關的2-4分鐘延遲。
+title: 預先轉碼API
+description: 您可以使用即時重新封裝API來預先轉碼廣告創意，以便在需要時提供內容相容版本，消除與即時(JIT)重新封裝相關的2至4分鐘延遲。
 exl-id: d45668e0-ec8a-4e5a-a56b-cffff27561f2
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 0%
 
 ---
 
-# 預轉碼和重新打包API {#pre-transcoding-api}
+# 預先轉碼和重新封裝API {#pre-transcoding-api}
 
-黃金時段Ad Insertion提供預轉碼API，用於預先知道創意URL的情況，例如大型直銷活動。  這消除了與即時轉碼相關的2-4分鐘延遲。
+PrimetimeAd Insertion提供預先轉碼API，適用於事先知道創意URL的情況，例如大型直銷活動。  這消除了即時轉碼所帶來的2到4分鐘的延遲。
 
-## HTTP請求 {#section_F616F5722F0B4AB7939EE2ECBEDDB297}
+## HTTP要求 {#section_F616F5722F0B4AB7939EE2ECBEDDB297}
 
-將HTTPPOST命令發送到指定的URL，以告訴CRS您要轉換哪些廣告和希望使用哪些選項。 響應代碼報告成功或失敗以及其他資訊。
+傳送HTTPPOST命令至指定的URL，告訴CRS您要轉碼哪些廣告創意，以及您想使用哪些選項。 回應代碼會報告成功或失敗以及其他資訊。
 
-此請求需要用戶名和密碼。 您可以從Adobe技術客戶經理處獲取這些資訊。 如果您需要有關驗證的資訊，請與Adobe Primetime支援代表聯繫。
+此請求需要使用者名稱和密碼。 您可以向Adobe技術客戶經理索取。 如果您需要有關驗證的資訊，請聯絡您的Adobe Primetime啟用代表。
 
-要向CRS提交轉碼請求，請發送HTTP消息，如下所示：
+若要提交轉碼請求給CRS，請傳送HTTP訊息，如下所示：
 
 * **URL -** [https://id3.auditude.com/repackage](https://id3.auditude.com/repackage)
 
 * **方法 —** `POST`
 
-* **身份驗證 —** `Digest`
+* **驗證 —** `Digest`
 
-* **標題 —** `Content-Type: text/xml`
+* **頁首 —** `Content-Type: text/xml`
 
-* **正文 —** XML，如下例所示：
+* **內文 —** XML，如下列範例所示：
 
    ```xml
    <RepackageList>
@@ -51,7 +51,7 @@ ht-degree: 0%
    </RepackageList>
    ```
 
-的 `RepackageList` 正文中的塊可以包含1到300 `Repackage` 塊。 如果 `Repackage` Body中的塊超過300，則HTTP請求將失敗，並出現以下錯誤：
+此 `RepackageList` 內文中的區塊可包含1到300 `Repackage` 個區塊。 如果數量 `Repackage` 內文中的區塊超過300個，則HTTP請求將失敗，並出現以下錯誤：
 
 ```
 <codeph>
@@ -61,47 +61,47 @@ ht-degree: 0%
 ```
 
 
-中的必需和可選參數 `Repackage` 塊如下所示：
+中的必要和選用引數 `Repackage` 區塊如下所示：
 
-* **`AdSystem`** （必需） — 源和伺服器，例如， `Auditude`。 `FreeWheel`。 `Apad.tv`。 這是與VAST元素對應的字串值 `AdSystem`。
+* **`AdSystem`** （必要） — 來源廣告伺服器，例如， `Auditude`， `FreeWheel`， `Apad.tv`. 這是對應至VAST元素的字串值 `AdSystem`.
 
-* **`AdId`** （必需） — 這是請求中指定的第三方和伺服器的標識符。 它與 `id` 屬性 `Ad` VAST響應中的元素。
+* **`AdId`** （必要） — 這是要求中指定的第三方廣告伺服器的識別碼。 它對應至 `id` 的屬性 `Ad` VAST回應中的元素。
 
-* **`CreativeURL`** （必需） — 要轉碼的廣告創意的位置(URI)。 這對應於 `MediaFile` 的子菜單。
+* **`CreativeURL`** （必要） — 要轉碼的廣告創意位置(URI)。 此專案對應至VAST `MediaFile` 元素。
 
-* `CreativeID` （可選） — 作為廣告體驗一部分要包括的廣告創意的標識符。
-* **`Zone`** （必需） — 帳戶的區域ID（從技術客戶經理處獲取）。 這是一個與Auditude平台相對應的數值 `publisher_site_id` 的子菜單。
+* `CreativeID` （選用） — 要包含在廣告體驗中的廣告創意識別碼。
+* **`Zone`** （必要） — 您帳戶的區域ID （請向您的技術客戶經理取得）。 這是對應至Auditude平台的數值 `publisher_site_id` 設定。
 
-* **`Format`** （可選） — 控制CRS如何轉換廣告創意的參數：
+* **`Format`** （選用） — 控制CRS如何轉碼廣告創意的引數：
 
-   * `clientside`  — 生成與TVSDK用於與CDN通信的URL相容的輸出。
+   * `clientside`  — 產生與TVSDK用來與CDN通訊的URL相容的輸出。
    >[!IMPORTANT]
    >
-   >如果希望重新打包的廣告與客戶端Ad Insertion相容，則必須提供此參數。 如果不提供此功能，則重新打包的廣告將僅與伺服器端Ad Insertion相容。
+   >如果您希望重新封裝的廣告和使用者端Ad Insertion相容，則必須提供此引數。 如果您不提供此功能，重新封裝的廣告只會與伺服器端Ad Insertion相容。
 
-   * `hls`  — 生成與HLS相容的轉碼廣告創意。
-   * `dash`  — 生成與DASH相容的轉碼廣告創意。
-   * `id3`  — 將ID3定時元資料標籤插入已轉碼和創意。
-   * `targetdur`  — 轉碼廣告創意的段持續時間（秒）。 預設值為 `targetdur=4`。 此值應與清單中指定的值相對應 `<s>` 在目標持續時間標籤中： `#EXT-X-TARGETDURATION:<s>`。
+   * `hls`  — 產生與HLS相容的轉碼廣告創意。
+   * `dash`  — 產生與DASH相容的轉碼廣告創意。
+   * `id3`  — 將ID3計時中繼資料標籤插入轉碼廣告創意中。
+   * `targetdur`  — 轉碼廣告創意的區段持續時間（秒）。 預設為 `targetdur=4`. 此值應該對應至資訊清單中指定的值 `<s>` 在目標持續時間標籤中： `#EXT-X-TARGETDURATION:<s>`.
 
    >[!NOTE]
    >
-   >與DASH相容的資產與Adobe Primetime廣告插入不相容。
+   >DASH相容資產與Adobe Primetime廣告插入不相容。
 
 >[!IMPORTANT]
 >
->要確保最平穩的回放，請設定 `targetdur` 匹配內容塊持續時間。
+>若要確保最流暢的播放，請設定 `targetdur` 以符合內容區塊持續時間。
 
-## HTTP響應 {#section_B30D27E4A6AC4AAD9E758162EFF7D963}
+## HTTP回應 {#section_B30D27E4A6AC4AAD9E758162EFF7D963}
 
-CRS使用以下狀態代碼之一響應請求：
+CRS會使用下列其中一個狀態代碼來回應要求：
 
-* **HTTP 202**  — 已接受（正文為空）。 這表示成功。 CRS將轉碼廣告上載到CDN伺服器。
-* **HTTP 400**  — 錯誤請求。 已發佈的XML無效。
-* **HTTP 500**  — 內部伺服器錯誤。 伺服器遇到內部問題（例如，伺服器無法連接到資料庫）。
+* **HTTP 202**  — 已接受（內文空白）。 這表示成功。 CRS會將轉碼廣告上傳至CDN伺服器。
+* **HTTP 400**  — 錯誤請求。 張貼的XML無效。
+* **HTTP 500**  — 內部伺服器錯誤。 伺服器發生內部問題（例如，伺服器無法連線到資料庫）。
 
-## SSAI或CSAI的預轉碼資產 {#section_098888BB74FD4DC1AD0BD507B2A48318}
+## 為SSAI或CSAI預先轉碼資產 {#section_098888BB74FD4DC1AD0BD507B2A48318}
 
-使用重新打包API，可以預轉碼將來的SSAI或CSAI事件。 如果資產將來要與SSAI一起使用，請確保POST調用中的所有參數都是唯一的。 參數包括：AdSystem、AdId、CreativeURL、區域、格式。 這組參數中的任何差異都會導致對SSAI的新轉碼請求。
+使用重新封裝API，您可以預先轉碼未來的SSAI或CSAI事件。 如果資產預計在未來與SSAI搭配使用，請確定POST呼叫中的所有引數都是唯一的。 引數為：AdSystem、AdId、CreativeURL、Zone、Format。 這組引數中的任何差異，都會導致SSAI有新的轉碼要求。
 
-對於將來與CSAI一起使用的資產，資產唯一性取決於Zone和CreativeURL。 AdSystem和AdId不會導致不同的轉碼資產，這些資產可供客戶端使用。
+對於日後與CSAI一起使用的資產，資產的唯一性取決於Zone和CreativeURL。 AdSystem和AdId不會產生不同的轉碼資產，這些資產可供使用者端使用。

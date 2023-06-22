@@ -1,6 +1,6 @@
 ---
-description: 清單伺服器協調提供內容、提供廣告、播放視頻和跟蹤廣告的系統。 它接收客戶視頻播放器從內容提供商接收的M3U8編碼播放清單（清單），將廣告從廣告提供商縫製到清單，並將縫製的清單傳遞給視頻播放器。 它支援客戶端和伺服器端廣告跟蹤。 它使用基於HTTP的Web服務介面進行交互。
-title: 清單伺服器交互概述
+description: 資訊清單伺服器會協調提供內容、提供廣告、播放視訊和追蹤廣告的系統。 它會接收使用者端視訊播放器從內容提供者接收的M3U8編碼播放清單（資訊清單）、將廣告提供者的廣告拼接至資訊清單，並將拼接的資訊清單傳遞至視訊播放器。 它同時支援使用者端和伺服器端的廣告追蹤。 它會使用HTTP型Web服務介面進行互動。
+title: 資訊清單伺服器互動概述
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '584'
@@ -9,56 +9,56 @@ ht-degree: 0%
 ---
 
 
-# 清單伺服器交互概述 {#overview-of-manifest-server-interactions}
+# 資訊清單伺服器互動概述 {#overview-of-manifest-server-interactions}
 
-清單伺服器協調提供內容、提供廣告、播放視頻和跟蹤廣告的系統。 它接收客戶視頻播放器從內容提供商接收的M3U8編碼播放清單（清單），將廣告從廣告提供商縫製到清單，並將縫製的清單傳遞給視頻播放器。 它支援客戶端和伺服器端廣告跟蹤。 它使用基於HTTP的Web服務介面進行交互。
+資訊清單伺服器會協調提供內容、提供廣告、播放視訊和追蹤廣告的系統。 它會接收使用者端視訊播放器從內容提供者接收的M3U8編碼播放清單（資訊清單）、將廣告提供者的廣告拼接至資訊清單，並將拼接的資訊清單傳遞至視訊播放器。 它同時支援使用者端和伺服器端的廣告追蹤。 它會使用HTTP型Web服務介面進行互動。
 
-典型配置包含：
+典型設定包含：
 
-* 黃金時段清單伺服器
-* 黃金時段創意再包裝服務(CRS)
-* 控制視頻播放器的客戶端
-* 發佈者，通常帶有內容管理系統(CMS)
-* 內容分發網路(CDN)
+* Primetime資訊清單伺服器
+* Primetime Creative Repackaging Service (CRS)
+* 控制視訊播放器的使用者端
+* 發行者，通常具有內容管理系統(CMS)
+* 內容傳遞網路(CDN)
 * 廣告伺服器
-* 廣告跟蹤報告的接收器
+* 廣告追蹤報表的接收者
 
-工作流根據許多因素而變化，例如，CDN是Akamai還是客戶端正在執行廣告跟蹤。 有關客戶端廣告跟蹤的工作流圖，請參見 [客戶端跟蹤工作流](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow)。
+工作流程會因數種因素而異，例如CDN是否為Akamai，或使用者端是否正在執行廣告追蹤。 如需使用者端廣告追蹤的工作流程圖表，請參閱 [使用者端追蹤工作流程](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow).
 
-清單伺服器通過接收和響應HTTPGET請求與視頻傳送客戶端進行交互。 響應是M3U8編碼的描述廣告縫合內容的清單，可選地包括包含詳細廣告跟蹤指令的JSON或VMAP結構(sidecar)(請參見 [檔案格式](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md))。
+資訊清單伺服器會接收並回應HTTPGET要求，與視訊傳遞使用者端互動。 回應是M3U8編碼的資訊清單，說明廣告拼接內容，選擇性地包括包含詳細廣告追蹤指示的JSON或VMAP結構（側欄） (請參閱 [檔案格式](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/ms-api-file-formats.md))。
 
-典型的工作流如下所示：
+典型的工作流程如下所示：
 
-1. 發佈者將廣告伺服器的內容URL和資訊發送到客戶端。
-1. 客戶端使用發佈者的資訊生成清單伺服器URL，並向該URL發送GET請求。 這稱為BootstrapURL。
-1. 清單伺服器與客戶端建立會話。
-1. 清單伺服器從CDN獲取內容清單，其可包括廣告中斷資訊。
-1. 清單伺服器將客戶機重定向到它為客戶機生成的主/變型清單。
+1. 發佈者會將廣告伺服器的內容URL和資訊傳送給使用者端。
+1. 使用者端會使用來自發佈者的資訊來產生資訊清單伺服器URL，並傳送GET要求至該URL。 這稱為BootstrapURL。
+1. 資訊清單伺服器會建立與使用者端的工作階段。
+1. 資訊清單伺服器會從CDN取得內容資訊清單，其中可能包含廣告插播資訊。
+1. 資訊清單伺服器會將使用者端重新導向至它為使用者端產生的主要/變體資訊清單。
 
    >[!NOTE]
    >
-   >如果BootstrapURL查詢參數包含 `pttrackingmode=simple` 或 `ptplayer=ios-mobileweb` 設定時，清單伺服器返回JSON對象中的主/變型清單URL，客戶端向該變型清單URL發送GET請求。
+   >如果BootstrapURL查詢引數包含 `pttrackingmode=simple` 或 `ptplayer=ios-mobileweb` 設定時，資訊清單伺服器會傳回JSON物件中的主要/變體資訊清單URL，而使用者端會傳送GET要求給該變體資訊清單URL。
 
-1. 客戶端選擇生成的變型清單中的流來播放，並將廣告資訊發送到清單伺服器。
-1. 清單伺服器將客戶機提供的資訊傳遞給廣告伺服器，並從廣告伺服器接收廣告和廣告跟蹤URL。 如果提供的廣告不是HLS格式，則清單伺服器將其發送到CRS以轉換到HLS。
-1. 清單伺服器將廣告縫合到內容清單中，並將新縫合清單發送到客戶端。
-1. 客戶端使用縫合廣告播放內容，並在指定時間向指定的跟蹤URL發出請求。
+1. 使用者端選擇播放產生的變體資訊清單中的資料流，將廣告資訊傳送至資訊清單伺服器。
+1. 資訊清單伺服器會將使用者端提供的資訊傳遞至廣告伺服器，並從廣告伺服器接收廣告和廣告追蹤URL。 如果提供的廣告不是HLS格式，資訊清單伺服器會將其傳送至CRS以轉換為HLS。
+1. 資訊清單伺服器會將廣告拼接至內容資訊清單，並將新拼接的資訊清單傳送給使用者端。
+1. 使用者端播放內含拼接廣告的內容，並在指定時間向指定的追蹤URL提出要求。
 
-黃金時段廣告插入支援許多視頻傳輸平台上的客戶端。 並非所有客戶端都構建在黃金時段TVSDK包上，但所有客戶端都將GET請求發送到相同的基本URL。 查詢參數通過通知清單伺服器來區分一個客戶端請求和另一個客戶端請求：
+Primetime廣告插入支援許多視訊傳送平台上的使用者端。 並非所有使用者端都建立在Primetime TVSDK套件上，但所有使用者端都會將GET要求傳送至相同的基本URL。 查詢引數可告知資訊清單伺服器，以區分不同的使用者端要求：
 
-* 哪個客戶提出請求，
-* 那個客戶想要的，
-* 以及要提供的廣告跟蹤資訊。
+* 哪個使用者端正在提出要求，
+* 客戶想要什麼，
+* 以及要提供哪些廣告追蹤資訊。
 
 ## CORS {#section_BEA7F298660944BE92801E4C82FCD038}
 
-清單伺服器使用跨源資源共用標準(CORS)。 它尋找 `Origin` 接收的請求中的標頭。 如果報頭存在，則它會回復
+資訊清單伺服器使用跨原始資源共用標準(CORS)。 它會尋找 `Origin` 標頭。 如果標題存在，則會回覆
 
-* `Access-Control-Allow-Origin: *`源標題中的字串`*`
+* `Access-Control-Allow-Origin: *`來自Origin標頭的字串`*`
 * `Access-Control-Allow-Credentials: true`
 * `Access-Control-Allow-Methods: GET`
 
-如果沒有，則答復如下：
+如果沒有，則會回覆為：
 
 * `Access-Control-Allow-Origin: *`
 * `Access-Control-Allow-Methods: GET`

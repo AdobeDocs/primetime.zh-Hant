@@ -1,6 +1,6 @@
 ---
-title: 打包器屬性檔案
-description: 打包器屬性檔案
+title: 封裝程式屬性檔案
+description: 封裝程式屬性檔案
 copied-description: true
 exl-id: 7d78576b-fd77-460d-92d9-c2e69e37006e
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,6 +10,6 @@ ht-degree: 0%
 
 ---
 
-# 打包器屬性檔案 {#packager-properties-file}
+# 封裝程式屬性檔案 {#packager-properties-file}
 
-使用 [!DNL flashaccess-refimpl-packager.properties] 檔案，以配置引用實現的「監視資料夾包」元件。 至少要設定許可證伺服器URL、許可證伺服器證書、打包器憑據和密鑰保護選項。 此檔案還包含每個受監視資料夾(packager.watchfolder.source)的位置。 `n`). 對此屬性檔案中的值所做的任何更改將在下次運行受監視資料夾打包程式時生效（不需要重新啟動伺服器）。 但是，如果打包器中存在配置錯誤，則會退出受監視的資料夾打包器線程，並且需要重新啟動伺服器以重新啟動打包器線程。
+使用 [!DNL flashaccess-refimpl-packager.properties] 檔案來設定參考實作的Watched Folder Packager元件。 至少請務必設定授權伺服器URL、授權伺服器憑證、封裝者認證和金鑰保護選項。 此檔案也包含每個監看資料夾(packager.watchfolder.source)的位置。 `n`). 此屬性檔案中值的任何變更將在下次執行watched資料夾封裝程式時生效（不需要重新啟動伺服器）。 不過，如果封裝程式發生設定錯誤，就會結束watched資料夾封裝程式執行緒，而且伺服器必須重新啟動才能重新啟動封裝程式執行緒。

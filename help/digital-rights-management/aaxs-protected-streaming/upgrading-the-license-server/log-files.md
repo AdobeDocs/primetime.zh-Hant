@@ -1,6 +1,6 @@
 ---
-title: 日誌檔案
-description: 日誌檔案
+title: 記錄檔
+description: 記錄檔
 copied-description: true
 exl-id: 23de35da-1583-4718-ba35-e9d4bf750239
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,10 +10,10 @@ ht-degree: 0%
 
 ---
 
-# 日誌檔案{#log-files}
+# 記錄檔{#log-files}
 
-由Adobe Access Server為受保護流應用程式生成的日誌檔案將位於由 *LicenseServer.LogRoot*。
+Adobe Access Server為受保護的串流應用程式產生的記錄檔將位於指定的目錄中 *LicenseServer.LogRoot*.
 
 >[!NOTE]
 >
->如果當前日誌檔案在伺服器運行期間被刪除或移動，則可能不會重新建立日誌檔案，並且某些日誌資訊將丟失。
+>如果在伺服器執行期間刪除或移動目前的記錄檔，則可能無法重新建立記錄檔，並且某些記錄資訊將會遺失。

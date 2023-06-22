@@ -1,6 +1,6 @@
 ---
-title: 全局日誌檔案
-description: 全局日誌檔案
+title: 全域記錄檔
+description: 全域記錄檔
 copied-description: true
 exl-id: a7b97507-b32f-4a5c-911a-49cd0d13f0d0
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,6 +10,6 @@ ht-degree: 0%
 
 ---
 
-# 全局日誌檔案{#global-log-file}
+# 全域記錄檔{#global-log-file}
 
-全局日誌檔案flashaccess-global.log位於 *LicenseServer.LogRoot*。 此日誌可包含Adobe訪問SDK生成的日誌消息或伺服器初始化期間生成的日誌消息。
+全域記錄檔flashaccess-global.log位於 *LicenseServer.LogRoot*. 此記錄檔可包含Adobe存取SDK產生的記錄檔訊息，或伺服器初始化期間產生的記錄檔訊息。

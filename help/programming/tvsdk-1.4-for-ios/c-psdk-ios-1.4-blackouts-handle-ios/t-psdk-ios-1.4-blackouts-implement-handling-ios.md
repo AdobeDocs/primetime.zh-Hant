@@ -1,6 +1,6 @@
 ---
-description: TVSDK提供API和示例代碼以處理封鎖期。
-title: 實現封鎖處理
+description: TVSDK提供處理中斷期間的API和範常式式碼。
+title: 實作中斷處理
 exl-id: 31e4a016-ecba-47cc-b574-553db85ece53
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 0%
 
 ---
 
-# 實現封鎖處理 {#implement-blackout-handling}
+# 實作中斷處理 {#implement-blackout-handling}
 
-TVSDK提供API和示例代碼以處理封鎖期。
+TVSDK提供處理中斷期間的API和範常式式碼。
 
-要在封鎖期間實施封鎖處理並提供備用內容，請執行以下操作：
+若要實施中斷處理並在中斷期間提供替代內容：
 
-1. 設定應用以訂閱即時流清單中的封鎖標籤。
+1. 設定您的應用程式以訂閱即時資料流資訊清單中的中斷標籤。
 
 ```
  - (void) createMediaPlayer:(PTMediaPlayerItem *)item
@@ -26,7 +26,7 @@ TVSDK提供API和示例代碼以處理封鎖期。
  }
 ```
 
-1. 添加通知偵聽器 `PTTimedMetadataChangedNotification`。
+1. 新增通知接聽程式 `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -36,7 +36,7 @@ TVSDK提供API和示例代碼以處理封鎖期。
    }
    ```
 
-1. 實現監聽器方法 `PTTimedMetadata` 前景中的對象。
+1. 實作接聽程式方法 `PTTimedMetadata` 前景中的物件。
 
    例如：
 
@@ -60,7 +60,7 @@ TVSDK提供API和示例代碼以處理封鎖期。
    }
    ```
 
-1. 手柄 `TimedMetadata` 在回放期間具有常數更新的對象。
+1. 控制代碼 `TimedMetadata` 在播放期間持續更新的物件。
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -81,7 +81,7 @@ TVSDK提供API和示例代碼以處理封鎖期。
    }
    ```
 
-1. 添加 `PTTimedMetadata` 處理程式，以切換到備用內容並返回主內容，如 `PTTimedMetadata` 對象及其播放時間。
+1. 新增 `PTTimedMetadata` 處理常式，可切換至替代內容並返回主要內容，如 `PTTimedMetadata` 物件及其播放時間。
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -196,7 +196,7 @@ TVSDK提供API和示例代碼以處理封鎖期。
    }
    ```
 
-1. 實現監聽器方法 `PTTimedMetadata` 對象。
+1. 實作接聽程式方法 `PTTimedMetadata` 背景中的物件。
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -217,7 +217,7 @@ TVSDK提供API和示例代碼以處理封鎖期。
    }
    ```
 
-1. 實現後台錯誤的偵聽器方法。
+1. 針對背景錯誤實作接聽程式方法。
 
    ```
    - (void) onBackgroundManifestError:(NSNotification *)notification 
@@ -226,7 +226,7 @@ TVSDK提供API和示例代碼以處理封鎖期。
    }
    ```
 
-1. 如果封鎖範圍在播放流的DVR上，請更新不可查找的範圍。
+1. 如果中斷範圍在播放資料流的DVR上，請更新不可搜尋的範圍。
 
    ```
    // This sample assumes that blackoutStartTimedMetadata is the PTTimedMetadata  

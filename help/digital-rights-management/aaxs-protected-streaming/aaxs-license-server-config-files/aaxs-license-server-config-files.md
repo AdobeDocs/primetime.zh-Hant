@@ -1,6 +1,6 @@
 ---
-title: 許可證伺服器配置檔案
-description: 許可證伺服器配置檔案
+title: 授權伺服器組態檔
+description: 授權伺服器組態檔
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,5 +10,5 @@ ht-degree: 0%
 ---
 
 
-# 許可證伺服器配置檔案{#license-server-configuration-files}
+# 授權伺服器組態檔{#license-server-configuration-files}
 

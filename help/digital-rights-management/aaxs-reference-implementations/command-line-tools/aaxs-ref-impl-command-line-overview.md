@@ -1,6 +1,6 @@
 ---
-title: 用於打包內容和建立撤消清單的命令行工具
-description: 用於打包內容和建立撤消清單的命令行工具
+title: 封裝內容和建立撤銷清單的命令列工具
+description: 封裝內容和建立撤銷清單的命令列工具
 copied-description: true
 exl-id: 34305dab-a2f0-41c2-9a59-3261e8dea7e2
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,44 +10,44 @@ ht-degree: 0%
 
 ---
 
-# 用於打包內容和建立撤消清單的命令行工具 {#command-line-tools-for-packaging-content-revocation-lists}
+# 封裝內容和建立撤銷清單的命令列工具 {#command-line-tools-for-packaging-content-revocation-lists}
 
-該參考實現包括以下命令行工具：
+參考實作包括下列命令列工具：
 
-* 策略管理器：用於建立和管理策略的工具
-* 策略更新清單管理器：用於建立和查看策略更新清單的工具
-* 吊銷清單管理器：用於建立和查看吊銷清單的工具
-* 介質打包器：用於建立加密FLV和F4V檔案的工具
-* AIR發佈者ID
-* 實用程式許可證生成器
-* 許可證嵌入器
+* 原則管理員：建立和管理原則的工具
+* 原則更新清單管理員：用於建立和檢視原則更新清單的工具
+* 撤銷清單管理員：用於建立和檢視撤銷清單的工具
+* Media Packager：用來建立加密的FLV和F4V檔案的工具
+* AIR發行者ID
+* UtilityLicense產生器
+* 授權內嵌程式
 
-## 要求 {#requirements}
+## 需求 {#requirements}
 
-使用參考實現中可用的命令行工具的要求如下：
+使用參考實施中可用的命令列工具的需求如下：
 
-* 所有命令行工具都需要Java 1.5或更高版本。
-* 由Adobe頒發的打包程式和許可證伺服器憑據（證書和密碼）。 您需要憑據來加密和簽名視頻檔案、簽署策略更新和吊銷清單以及預生成許可證。
+* 所有命令列工具都需要Java 1.5或更高版本。
+* 由Adobe所核發的封裝程式和授權伺服器憑證（憑證和密碼）。 您需要認證才能加密和簽署視訊檔案、簽署原則更新和撤銷清單，以及預先產生授權。
 
 >[!NOTE]
 >
->由於Java錯誤，在命令行（如檔案名、策略名或說明）上使用的參數只能使用作業系統預設字元集中的字元。
+>由於Java錯誤，命令列上使用的引數（例如檔案名稱、原則名稱或說明）只能使用作業系統預設字元集中的字元。
 
-## 配置檔案 {#configuration-file}
+## 組態檔 {#configuration-file}
 
-一些命令行工具需要一個包含用於應用策略和加密檔案的工具資訊的配置檔案。
+有些命令列工具需要包含工具用來套用原則及加密檔案之資訊的組態檔。
 
-預設配置檔案為 [!DNL flashaccesstools.properties]。 它位於工作目錄中；即運行工具的目錄（請參閱安裝命令行工具）。 每個工具還包含一個選項( `-c`)，以指向您希望不使用預設值時使用的配置檔案。
+預設設定檔案為 [!DNL flashaccesstools.properties]. 它位於工作目錄中；也就是您執行工具的目錄（請參閱安裝命令列工具）。 每個工具也包含一個選項( `-c`)可讓您指向不想使用預設值時要使用的設定檔案。
 
-配置檔案使用Java屬性檔案格式。 如果任何屬性的值都包含特殊字元，請記住以下限制：
+組態檔使用Java屬性檔案格式。 如果任何屬性的值包含特殊字元，請記住以下限制：
 
-* 使用附加反斜線轉義反斜線。 例如，要指定 [!DNL C:\credentials.pfx] 檔案，指定為 [!DNL C:\\credentials.pfx] 或 `C:/credentials.pfx`。 要在網路伺服器上指定檔案，請指定 `\\\\server\\folder\\filename.pfx`。
-* 配置檔案只能包含拉丁文–1字元。 如果必須使用非拉丁文1字元，請使用相應的Unicode轉義序列(可選地，使用 [!DNL native2ascii] 工具)。
+* 使用其他反斜線逸出反斜線。 例如，若要指定 [!DNL C:\credentials.pfx] 檔案，將其指定為 [!DNL C:\\credentials.pfx] 或 `C:/credentials.pfx`. 若要指定網路伺服器上的檔案，請指定 `\\\\server\\folder\\filename.pfx`.
+* 組態檔只能包含Latin-1字元。 如果您必須使用非拉丁1字元，請使用適當的Unicode逸出順序(選擇性地使用 [!DNL native2ascii] Java隨附的工具)。
 
-在運行工具之前，設定配置檔案中屬性的值。 對於某些命令行工具，可以通過命令行或配置檔案為某些選項設定值。 在這些情況下，通過命令行設定的值優先於配置檔案中的任何值。
+在執行工具之前，先設定組態檔案中的屬性值。 對於某些命令列工具，您可以透過命令列或組態檔案來設定某些選項的值。 在這些情況下，透過命令列設定的值優先於組態檔案中的任何值。
 
-## 安裝命令行工具  {#installing-the-command-line-tools}
+## 安裝命令列工具  {#installing-the-command-line-tools}
 
-您可以從 [!DNL \Reference Implementation\Command Line Tools] DVD上的目錄，其中包含預設 [!DNL flashaccesstools.properties] 配置檔案和 [!DNL libs] 目錄，其中包含工具的JAR檔案。
+您可以複製您需要的檔案，從 [!DNL \Reference Implementation\Command Line Tools] 目錄，包含預設值 [!DNL flashaccesstools.properties] 設定檔案和 [!DNL libs] 目錄，其中包含工具的JAR檔案。
 
-的 [!DNL samples] 目錄包含幾個示例Java源檔案，它們演示了Adobe訪問SDK API的用法。 要構建和運行示例，請使用 [!DNL build-samples.xml] 螞蟻指令碼。
+此 [!DNL samples] directory包含多個Java來源檔案範例，展示Adobe存取SDK API的使用方式。 若要建置並執行範例，請使用 [!DNL build-samples.xml] Ant指令碼。

@@ -1,6 +1,6 @@
 ---
-title: Cookie更新 — SameSite和Secure標誌
-description: Cookie更新 — SameSite和Secure標誌
+title: Cookie更新 — SameSite和Secure標幟
+description: Cookie更新 — SameSite和Secure標幟
 exl-id: cc1f60fd-fa64-48cb-a185-dba562a54c33
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,81 +9,81 @@ ht-degree: 0%
 
 ---
 
-# Cookie更新 — SameSite和Secure標誌 {#cookies-updates---samesite-and-secure-flags}
+# Cookie更新 — SameSite和Secure標幟 {#cookies-updates---samesite-and-secure-flags}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
 </br>
 
 
 ## 更新 {#Updates}
 
-本節重點介紹Chrome瀏覽器和Adobe Primetime身份驗證為處理第三方Cookie而引入的更改。
+本節著重說明Chrome瀏覽器和Adobe Primetime驗證針對處理第三方Cookie所推出的變更。
 
  
 
 ### Chrome 80更新 {#Chrome}
 
-從Chrome版本80（版本82除外）開始，不指定 *同一站點* 屬性將被視為 *SameSite=Lax*。 因此，需要在跨站點上下文中傳遞的Cookie必須顯式指定 *SameSite=無*，並且必須標有 *安全* 屬性和交付 *HTTPS*。 有關這些更新的更多詳細資訊，可從官方鉻版上閱讀： <https://www.chromium.org/updates/same-site> 還有 <https://web.dev/samesite-cookies-explained/>。
+從Chrome 80版（82版除外）開始，未指定 *SameSite* 會將屬性視為已移除的 *SameSite=Lax*. 因此，必須在跨網站內容中傳送的Cookie必須明確指定 *SameSite=None*，且也必須標示 *安全* 屬性並傳遞於 *HTTPS*. 如需這些更新的詳細資訊，請參閱官方chromium頁面： <https://www.chromium.org/updates/same-site> 以及來自 <https://web.dev/samesite-cookies-explained/>.
 
 
 ### Adobe Primetime驗證更新 {#Pass-Updates}
 
-Adobe Primetime認證服務目前依賴從瀏覽器的視角（包括Chrome）認為是第三方Cookie的兩個Cookie，以便與一些平台和Adobe Primetime認證SDK版本結合使用。 因此，為了遵守即將進行的更改並繼續在跨站點上下文中從這些較舊的SDK傳遞這些Cookie,Adobe Primetime身份驗證服務在 *adobe-pass-2.55.1* 。
+Adobe Primetime Authentication Service目前仰賴Cookie （從瀏覽器的角度而言被視為協力廠商Cookie），以搭配某些平台和版本的Adobe Primetime Authentication SDK運作。 因此，為了配合即將到來的變更，並繼續透過這些舊版SDK在跨網站內容中傳送這些Cookie，Adobe Primetime驗證服務會在中實作必要的變更。 *adobe-pass-2.55.1* 版本。
 
-這些更改 *adobe-pass-2.55.1* 版本涉及添加 *安全* 和 *SameSite=無* 使用從80版及更高版本開始的Chrome瀏覽器（除82版外）時，其所有Cookie的屬性傳回到所有Adobe Primetime驗證SDK。
+這些變更來自 *adobe-pass-2.55.1* 版本涉及新增 *安全* 和 *SameSite=None* 使用從版本80及更高版本（版本82除外）開始的Chrome瀏覽器時，其所有Cookie的屬性會傳回至所有Adobe Primetime驗證SDK。
 
-下一節介紹平台清單和Adobe Primetime驗證SDK版本的一些潛在問題，以防一個用戶使用Chrome瀏覽器80及更高版本（版本82除外）。
+下一節會顯示平台和Adobe Primetime Authentication SDK版本清單的一些潛在問題，以防一位使用者使用Chrome瀏覽器80及更高版本（版本82除外）。
 
-## 故障排除 {#Troubleshooting}
+## 疑難排除 {#Troubleshooting}
 
-瀏覽此部分時，請記住所有Adobe Primetime身份驗證服務Cookie必須 *安全* 屬性集 *adobe-pass-2.55.1* 版本，而 *SameSite=無* 只能為Chrome瀏覽器版本80及更高版本（版本82除外）設定屬性。
-
-
-### 常規故障排除 {#General}
-
-1. 請注意，已知某些用戶代理與 *SameSite=無* 屬性。
-
-   - 從Chrome 51到Chrome 66的Chrome版本（兩端均包括）。 這些Chrome版本將拒絕Cookie *SameSite=無*。 這還影響到舊版的鉻衍生瀏覽器以及Android WebView。 根據當時的Cookie規範版本，此行為是正確的，但是，在規範中添加新的「無」值後，此行為已在Chrome 67和更新版本中更新。 (在Chrome 51之前， SameSite屬性被完全忽略，所有Cookie都被視為 *SameSite=無*。)
-   - 12.13.2版之前的Android上的UC瀏覽器版本。舊版本將拒絕Cookie *SameSite=無*。 根據當時的Cookie規範版本，此行為是正確的，但是，在規範中添加新的「無」值後，此行為已在較新版本的UC瀏覽器中更新。
-   - MacOS10.14上的Safari和嵌入式瀏覽器版本，以及iOS12上的所有瀏覽器。 這些版本將錯誤地處理標有Cookie *SameSite=無* 就像是標籤了 *SameSite=Strict*。 此Bug已在iOS和MacOS的新版本上修復。
+瀏覽本節時，請記住，所有Adobe Primetime驗證服務Cookie都必須 *安全* 屬性設定於 *adobe-pass-2.55.1* 所有瀏覽器的版本，而 *SameSite=None* 屬性只能針對Chrome 80版及更新版本（82版除外）設定。
 
 
-1. 請注意， *安全* 必須將屬性發送 *HTTPS*，否則cookie將無法到達Adobe Primetime身份驗證服務。
+### 一般疑難排解 {#General}
 
-   - AccessEnabler JavaScript SDK:
-      - 強制要求與 *sp.auth.adobe.com* 使用 *HTTPS* 版本 *二點三五* 和 *3.5.0*，然後再引入動態客戶端註冊。
-   - AccessEnableriOS/tvOS SDK:
-      - 強制要求與 *sp.auth.adobe.com* 使用 *HTTPS* 對於以前的版本 *3.0.0*，然後再引入動態客戶端註冊。
-   - AccessEnabler Android SDK:
-      - 強制要求與 *sp.auth.adobe.com* 使用 *HTTPS* 對於以前的版本 *3.0.0*，然後再引入動態客戶端註冊。
-   - AccessEnabler FireOS SDK:
-      - 強制要求與 *sp.auth.adobe.com* 使用 *HTTPS* 版本 *2.0.4*。
+1. 請務必注意，有些使用者代理已知與 *SameSite=None* 屬性。
+
+   - 從Chrome 51到Chrome 66的Chrome版本（兩端都包含）。 這些Chrome版本會拒絕Cookie，但會 *SameSite=None*. 這也會影響舊版的Chromium衍生瀏覽器以及Android WebView。 根據Cookie當時的規格版本，此行為是正確的，但隨著規格中新增了「無」值，此行為已在Chrome 67及更新版本中更新。 (在Chrome 51之前，SameSite屬性會被完全忽略，而且所有Cookie都會被視為是 *SameSite=None*.)
+   - Android 12.13.2版之前的UC瀏覽器版本。舊版本會拒絕包含下列專案的Cookie： *SameSite=None*. 根據當時Cookie規格的版本，此行為正確，但隨著規格中新增了「無」值，此行為已在較新版本的UC瀏覽器中更新。
+   - macOS 10.14上的Safari和嵌入式瀏覽器版本，以及iOS 12上的所有瀏覽器。 這些版本會錯誤處理以標籤的Cookie *SameSite=None* 就像已標籤一樣 *SameSite=嚴格*. 較新版本的iOS和MacOS已修正此錯誤。
+
+
+1. 請務必注意，Cookie具有 *安全* 屬性必須傳送到 *HTTPS*，否則Cookie將不會連線Adobe Primetime驗證服務。
+
+   - AccessEnabler JavaScript SDK：
+      - 強制與通訊 *sp.auth.adobe.com* 使用 *HTTPS* 適用於版本 *2.35* 和 *3.5.0*，然後才開始使用動態使用者端註冊。
+   - AccessEnabler iOS/tvOS SDK：
+      - 強制與通訊 *sp.auth.adobe.com* 使用 *HTTPS* 適用於之前的版本 *3.0.0*，然後才開始使用動態使用者端註冊。
+   - AccessEnabler Android SDK：
+      - 強制與通訊 *sp.auth.adobe.com* 使用 *HTTPS* 適用於之前的版本 *3.0.0*，然後才開始使用動態使用者端註冊。
+   - AccessEnabler FireOS SDK：
+      - 強制與通訊 *sp.auth.adobe.com* 使用 *HTTPS* 適用於版本 *2.0.4*.
 
 </br>
 
-### AccessEnabler JavaScript SDK版本2.35疑難解答 {#235-Troubleshooting}
+### AccessEnabler JavaScript SDK 2.35版疑難排解 {#235-Troubleshooting}
 
-在Chrome 80及更高版本（版本82除外）中，用戶的驗證流可能受到影響。 為了確保用戶沒有因上述更新而出現驗證問題，可以：
+使用者的驗證流程在Chrome 80及更高版本中可能會受到影響（82版除外）。 為了確保使用者不會因上述更新而遇到驗證問題，您可以：
 
-- 檢查 *JSESSIONID* cookie在瀏覽器中設定，並 *SameSite=無* 和 *安全* 屬性集。 
-- 檢查 *JSESSIONID* 餅乾 *https://sp.auth.adobe.com/authenticate/saml* 網路請求與 *JSESSIONID* 餅乾 *https://sp.auth.adobe.com/session* 網路請求。
-
-
-### AccessEnabler JavaScript SDK 3.5.0版疑難解答 {#350-Troubleshooting}
-
-在Chrome 80及更高版本（版本82除外）中，用戶的驗證流可能受到影響。 為了確保用戶沒有因上述更新而出現驗證問題，可以：
-
-- 檢查 *JSESSIONID* cookie在瀏覽器中設定，並 *SameSite=無* 和 *安全* 屬性集。 
-- 檢查 *JSESSIONID* 餅乾 *https://sp.auth.adobe.com/authenticate/saml* 網路請求與 *JSESSIONID* 餅乾 *https://sp.auth.adobe.com/session* 網路請求。
-- 檢查 *傳遞\_sfp* cookie在瀏覽器中設定，並 *SameSite=無* 和 *安全* 屬性集。
-- 檢查 *傳遞\_sfp* cookie設定在 *https://sp.auth.adobe.com/session* 網路請求。
+- 檢查 *JSESSIONID* Cookie設定於瀏覽器中，並具有 *SameSite=None* 和 *安全* 屬性集。 
+- 檢查 *JSESSIONID* 來自的Cookie *https://sp.auth.adobe.com/authenticate/saml* 網路請求符合 *JSESSIONID* 來自的Cookie *https://sp.auth.adobe.com/session* 網路要求。
 
 
-在Chrome 80及更高版本（版本82除外）中，用戶的授權流可能受到影響。 為了確保用戶在觀看受保護的資源時沒有遇到問題，在成功驗證後，由於上述更新，可以：
+### AccessEnabler JavaScript SDK 3.5.0版疑難排解 {#350-Troubleshooting}
 
-- 檢查 *傳遞\_sfp* cookie在瀏覽器中設定，並 *SameSite=無* 和 *安全* 屬性集。
-- 檢查 *傳遞\_sfp* cookie設定在 *https://sp.auth.adobe.com/adobe-services/authorize* 網路請求。
-- 檢查 *傳遞\_sfp* cookie設定在 *https://sp.auth.adobe.com/adobe-services/shortAuthorize* 網路請求。
+使用者的驗證流程在Chrome 80及更高版本中可能會受到影響（82版除外）。 為了確保使用者不會因上述更新而遇到驗證問題，您可以：
+
+- 檢查 *JSESSIONID* Cookie設定於瀏覽器中，並具有 *SameSite=None* 和 *安全* 屬性集。 
+- 檢查 *JSESSIONID* 來自的Cookie *https://sp.auth.adobe.com/authenticate/saml* 網路請求符合 *JSESSIONID* 來自的Cookie *https://sp.auth.adobe.com/session* 網路要求。
+- 檢查 *pass\_sfp* Cookie設定於瀏覽器中，並具有 *SameSite=None* 和 *安全* 屬性集。
+- 檢查 *pass\_sfp* Cookie設定於 *https://sp.auth.adobe.com/session* 網路要求。
+
+
+使用者的授權流程可能會在Chrome 80及更高版本中受到影響（82版除外）。 為了確保使用者沒有觀看受保護資源的麻煩，在成功驗證後，由於上述更新，您可以：
+
+- 檢查 *pass\_sfp* Cookie設定於瀏覽器中，並具有 *SameSite=None* 和 *安全* 屬性集。
+- 檢查 *pass\_sfp* Cookie設定於 *https://sp.auth.adobe.com/adobe-services/authorize* 網路要求。
+- 檢查 *pass\_sfp* Cookie設定於 *https://sp.auth.adobe.com/adobe-services/shortAuthorize* 網路要求。

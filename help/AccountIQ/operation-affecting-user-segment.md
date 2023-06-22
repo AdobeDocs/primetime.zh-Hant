@@ -1,6 +1,6 @@
 ---
-title: 對用戶段和跟蹤效果建立操作
-description: 如何建立操作，以影響和跟蹤對已定義用戶段的影響。
+title: 在使用者區段上建立操作並追蹤效果
+description: 如何建立會影響及追蹤使用者已定義區段之效果的作業。
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
 source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
@@ -9,48 +9,48 @@ ht-degree: 0%
 
 ---
 
-# 在用戶段上建立操作 {#operation-to-track-segment}
+# 在使用者區段上建立操作 {#operation-to-track-segment}
 
-帳戶IQ上的每個報告頁都有 **建立新操作** 選項，幫助您建立工作流以自動化（並簡化）訂戶帳戶上的各種（批量）操作；定義規則以指定示例、定義操作以及記錄和分析這些操作的效果。 在要建立操作的頁上，您可以定義要在其上執行操作的用戶組示例，並將操作安排在將來日期運行。
+帳戶IQ上的每個報表頁面都有一個 **建立新作業** 選項可協助您建立工作流程，以自動化（及簡化）訂閱者帳戶上的各種（大量）動作；定義規則以指定範例、定義動作，以及記錄和分析這些動作的影響。 在要建立作業的頁面上，您可以定義將在其中執行作業的使用者群組範例，並排程作業在未來的日期執行。
 
-要建立操作：
+若要建立作業，請執行下列步驟：
 
-1. 使用中的步驟定義段（組）以分析任何報表或儀表板頁 [定義段和時間範圍](/help/AccountIQ/howto-select-segment-timeframe.md)。
+1. 使用下列步驟，定義您的區段（同類群組），以在任何報告或儀表板頁面上進行分析 [定義區段和時間範圍](/help/AccountIQ/howto-select-segment-timeframe.md).
 
-1. 選擇 **建立新操作** 選項。 的 **建立新操作** 的上界。
+1. 選取 **建立新作業** 選項適用於任何報告或儀表板頁面。 此 **建立新作業** 頁面隨即顯示。
 
-   ![建立新操作的頁](assets/create-new-operations.png)
-   *圖：要建立新操作的頁*
+   ![建立新作業的頁面](assets/create-new-operations.png)
+   *圖：建立新作業的頁面*
 
-1. 在 **建立新操作** 的子菜單。
+1. 於 **建立新作業** 頁面，在表單欄位中填寫下列專案的詳細資訊：
 
-   * [操作名稱](#operation-details) 在操作詳細資訊中
-   * 要在下運行操作的段 [目標段](#segment) 並使用 [附加分段](#additional-segmentation)
-   * [段類型](#segment-type) 在 [目標段](#segment)
-   * [操作](#action)
-   * [計畫激活](#schedule)
+   * [作業名稱](#operation-details) 在作業詳細資訊中
+   * 要在下執行作業的區段 [目標區段](#segment) 並使用調整區段 [其他細分](#additional-segmentation)
+   * [區段型別](#segment-type) 在 [目標區段](#segment)
+   * [動作](#action)
+   * [排程啟用](#schedule)
 
-1. [保存操作](#save-operation)。
+1. [儲存操作](#save-operation).
 
-## 操作詳細資訊 {#operation-details}
+## 作業詳細資料 {#operation-details}
 
-+++程式設計師操作詳細資訊
++++程式設計師 — 作業詳細資料
 
-將新操作命名為 **操作名稱** 欄位。 例如， &quot;*Test多重身份驗證對MVPD X訂戶的影響」或「限制併發監視中的流數」或「限制MVPD D訂戶查看20多台設備的通道「N」*。
-
-+++
-
-+++MVPD — 操作詳細資訊
-
-將新操作命名為 **操作名稱** 欄位。 例如， &quot;*Test多因素身份驗證對頻道N查看器的影響」或「限制併發監視中的流數」或「限制訂閱者從20多台設備查看頻道「N」*。
+將新作業命名為 **作業名稱** 「作業詳細資料」下的欄位。 例如，「*測試多重驗證對MVPD X的訂閱者的影響」或「限制並行監視中的資料流數量」或「限制MVPD D的訂閱者檢視20個以上裝置的頻道「N」*「。
 
 +++
 
-## 目標段 {#segment}
++++MVPD — 操作詳細資料
 
-+++程式設計師 — 目標段
+將新作業命名為 **作業名稱** 「作業詳細資料」下的欄位。 例如，「*測試多重驗證對頻道N的檢視器的影響」或「限制並行監視中的資料流數量」或「限制從20個以上的裝置檢視頻道「N」的訂閱者*「。
 
-的 **段** 這裡定義了將由此操作操作的用戶；或操作的示例組。 預設段為 **分部** 已使用 [段和時間面板](/help/AccountIQ/howto-select-segment-timeframe.md) 在上面步驟1的主報表或儀表板頁面上。
++++
+
+## 目標區段 {#segment}
+
++++程式設計師 — 目標區段
+
+此 **區段** 此處定義將透過此作業操作的使用者，或您作業的範例群組。 預設區段為 **區段** 您使用以下專案選取 [區段和時間範圍面板](/help/AccountIQ/howto-select-segment-timeframe.md) 位於上述步驟1中的主要報表或儀表板頁面上。
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -58,13 +58,13 @@ ht-degree: 0%
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-此段定義將受所建立操作影響的訂戶。 例如，所選段可能會指定 *查看頻道「N Sports」的名為「C」的MVPD的所有訂閱者帳戶*。
+此區段會定義將受到所建立作業影響的訂閱者。 例如，您選取的區段可指定 *名為&#39;C&#39;且檢視頻道&#39;N Sports&#39;的MVPD所有訂閱者帳戶*.
 
 +++
 
-+++MVPD — 目標段
++++MVPD — 目標區段
 
-的 **段** 這裡定義了將由此操作操作的用戶；或操作的示例組。 預設段為 **分部** 已使用 [段和時間面板](/help/AccountIQ/howto-select-segment-timeframe.md) 在上面步驟1的主報表或儀表板頁面上。
+此 **區段** 此處定義將透過此作業操作的使用者，或您作業的範例群組。 預設區段為 **區段** 您使用以下專案選取 [區段和時間範圍面板](/help/AccountIQ/howto-select-segment-timeframe.md) 位於上述步驟1中的主要報表或儀表板頁面上。
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -72,32 +72,32 @@ ht-degree: 0%
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-此段定義將受所建立操作影響的訂閱者（特定渠道的查看者）。 例如，您的（預設）段包括 *查看頻道「N Sports」的所有訂閱者帳戶*。
+此區段會定義您的訂閱者（哪些是特定頻道的檢視者），這些訂閱者將受到所建立操作的影響。 例如，您的（預設）區段包括 *所有檢視頻道「N Sports」的訂閱者帳戶*.
 +++
 
-### 附加分段 {#additional-segmentation}
+### 其他細分 {#additional-segmentation}
 
-此外，您還可以通過添加更多度量來細化目標段。 例如，可以添加大於90%的共用概率作為另一個度量。 現在問題陳述里 *&quot;為名為&quot;C&quot;的MVPD的訂戶帳戶建立操作，這些帳戶正在查看共用概率大於90%的頻道&quot;N Sports&quot;&quot;*。
+此外，您可以新增更多量度以縮小目標區段。 例如，您可以將大於90%的分享機率新增為另一個量度。 因此，現在問題陳述式會顯示 *「為名為&#39;C&#39;且正在檢視共用機率大於90%之頻道&#39;N Sports&#39;的MVPD訂閱者帳戶建立作業」*.
 
 ![](assets/additional-segment.gif)
 
-*圖：附加分段*
+*圖：其他細分*
 
-此外，如果通過添加設備數的另一個度量來細化操作，則更新的問題語句將讀取 *&quot;為名為&quot;C&quot;的MVPD的訂戶帳戶建立操作，這些帳戶正在查看共用分數超過90且在評估期間使用5台以上設備查看內容的頻道&quot;N Sports&quot;。&quot;*。
+此外，如果您藉由為裝置數量新增另一個量度來調整作業，則更新的問題陳述式會顯示 *「針對名為&#39;C&#39;且正在檢視頻道&#39;N Sports&#39; （共用分數超過90）並在評估期間使用5部以上的裝置檢視內容)的MVPD訂閱者帳戶建立操作」*.
 
 ![](assets/refined-segment.png)
 
-*圖：具有總體共用分數和設備數量度量的精細示例段*
+*圖：使用整體共用分數和裝置數量量度來完善範例區段*
 
-通過這樣，用戶組變得更精細。 因此，通過添加更多的指標和條件，您將進一步限定該段以定義要操作的帳戶。
+如此一來，使用者群組就會變得更加精細。 因此，透過新增更多量度和條件，您可以進一步限定區段，以定義要操作的帳戶。
 
-### 段類型 {#segment-type}
+### 區段型別 {#segment-type}
 
-段類型是在整個工序評估期間處理段的方式。
+「區段型別」是在整個作業評估期間處理區段的方式。
 
 ![](assets/segment-type.png)
 
-*圖：使用段類型細化要操作的段數*
+*圖：調整要使用「區段」型別操作的區段數*
 
 <!--The segment type option allows you to further refine your segment based on the evaluation period (or time).
 
@@ -113,7 +113,7 @@ When you select **Variable number of accounts** segment type, you do not limit t
 
 >[!IMPORTANT]
 >
->您只能使用 **固定帳戶數** 選項。 要選擇的選項 **帳戶的變數數** 將在即將發佈的版本中提供。
+>您只能使用 **固定帳戶數量** 選項（截至目前）。 要選取的選項 **帳戶數量可變** 將在即將發行的版本中提供。
 
 <!--
 
@@ -140,47 +140,47 @@ the......will vary from period to period.
 
 if not fixed segment, then I won't initially evaluate or have initial set of 5000, instead at every period during an operation and the.-->
 
-## 操作 {#action}
+## 動作 {#action}
 
-的 **操作** 定義要對定義的段執行的操作。
+此 **動作** 定義您要在定義的區段上執行的操作。
 
-可以執行兩種操作：
+您可採取兩種動作：
 
-* 使用與Account IQ整合的系統的操作；例如 **併發監視** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->。
+* 使用與Account IQ整合之系統的動作；例如 **並行監視** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
-* 建立和處理帳戶IQ外部且未與帳戶IQ系統整合的工作流的操作。 例如，渠道程式設計師「N」向MVPD「C」的所有訂閱者發送批量電子郵件的操作。
-
->[!NOTE]
->
->通過建立操作，您不僅可以指定操作並定義其範圍，還可以開始記錄這些操作的效果。
-
-## 計畫{#schedule}
-
-您可以通過設定起始日期和終止日期來安排操作的激活。
+* 用於建立和處理Account IQ外部且未與Account IQ系統整合的工作流程的動作。 例如，頻道程式設計師&#39;N&#39;傳送大量電子郵件給MVPD &#39;C&#39;所有訂閱者的動作。
 
 >[!NOTE]
 >
->開始日期和結束日期的粒度與定義段時為評估選擇的粒度相同 **段和時間面板**&#x200B;的子菜單。
+>透過建立作業，您不僅可以指定動作並定義其範圍，而且可以開始記錄這些作業的效果。
+
+## 排程{#schedule}
+
+您可以設定開始和結束日期，以排程作業的啟動。
+
+>[!NOTE]
+>
+>開始日期和結束日期的粒度與您為定義區段時使用的評估選取的粒度相同。 **區段和時間範圍面板**，在步驟1。
 >
 >
->因此，如果您選擇粒度為「周」，則開始日期和結束日期將以周為單位（例如，「周14」）;如果選擇粒度為「月」，則起始日期和終止日期以月為單位。
+>因此，如果您選取詳細程度為「週」，則開始和結束日期會以周為單位（例如「第14週」）；如果您選取詳細程度為「月」，則開始和結束日期會以月為單位。
 
 
 >[!IMPORTANT]
 >
->開始日期必須晚於評估期間，也遲於當前日期。 同樣，結束日期也必須晚於開始日期和當前日期。
+>開始日期必須晚於評估期間，也晚於目前日期。 同樣地，結束日期也必須晚於開始日期和目前日期。
 
-### 保存操作 {#save-operation}
+### 儲存操作 {#save-operation}
 
-保存操作時，將顯示一個消息螢幕，通知您此操作中定義的段也將保存到將來。 但是，您需要命名此段。
+儲存作業時，會顯示訊息畫面，通知您在此作業中定義的區段也儲存以供日後使用。 不過，您必須為此區段命名。
 
 ![](assets/save-operation.png)
 
-*圖：保存操作並指定段名稱*
+*圖：儲存作業並指定區段名稱*
 
 >[!NOTE]
 >
->根據您所採取的行動與您將要執行的活動段相結合，為您的操作命名是一種最佳做法。
+>最佳實務是根據您正在執行的動作以及將要執行的區段來命名作業。
 
 <!--In future you can select this saved segment when defining a segment for your analysis on the main reports page. Moreover, the saved segment is also listed when you create an operation the next time.
 
@@ -194,10 +194,10 @@ if not fixed segment, then I won't initially evaluate or have initial set of 500
 >
 >Adding new metrics creates a new segment, but you cannot modify an existing segment.-->
 
-建立操作後，該操作將從開始日期運行到您指定的結束日期。
+建立作業後，該作業將從開始日期執行至您指定的結束日期。
 
-在首頁上可以查看已保存操作的詳細資訊 [操作](/help/AccountIQ/operations.md) 的子菜單。
+您儲存的作業詳細資訊可在首頁面上檢視 [作業](/help/AccountIQ/operations.md) 頁面。
 
 ![](assets/new-operation-created.png)
 
-*圖：新建立的操作將在主「操作」頁上列出*
+*圖：新建立的作業會列在主作業頁面上*

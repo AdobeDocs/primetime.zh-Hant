@@ -1,5 +1,5 @@
 ---
-description: TVSDK通知系統產生各種錯誤、警告和資訊通知，這些通知提供診斷元資料。
+description: TVSDK通知系統會產生各種錯誤、警告和資訊性通知，提供診斷中繼資料。
 title: 通知代碼
 exl-id: b0a0f14d-e799-4c4d-a233-bc355ec46d78
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # 通知代碼 {#notification-codes}
 
-TVSDK通知系統產生各種錯誤、警告和資訊通知，這些通知提供診斷元資料。
+TVSDK通知系統會產生各種錯誤、警告和資訊性通知，提供診斷中繼資料。
 
-通知對象提供與播放器狀態相關的資訊。 TVSDK提供按時間順序排序的通知對象清單。 每個通知都包含以下元資料：
+通知物件提供與播放器狀態相關的資訊。 TVSDK提供依時間順序排序的通知物件清單。 每個通知都包含以下中繼資料：
 
 <table frame="all" colsep="1" rowsep="1" id="table_1A32EFFE1834438D8261886EC9D7250D"> 
  <thead> 
@@ -24,29 +24,29 @@ TVSDK通知系統產生各種錯誤、警告和資訊通知，這些通知提供
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 類型</span> </td> 
-   <td colname="2"> <p>通知類型。 </p> <p>根據平台，此屬性是可能值為INFO、WARN和ERROR的枚舉類型。 這是通知的頂級分組。 </p> </td> 
+   <td colname="1"><span class="codeph"> type</span> </td> 
+   <td colname="2"> <p>通知型別。 </p> <p>視平台而定，此屬性是列舉型別，可能值為INFO、WARN和ERROR。 這是通知的頂層群組。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> 代碼</span> </td> 
-   <td colname="2"> <p>以下數字表示法被分配給通知： 
+   <td colname="1"> <span class="codeph"> 程式碼</span> </td> 
+   <td colname="2"> <p>下列數值表示會指派給通知： 
      <ul id="ul_A86BF89D6B3B410E81FAD718D3C4A9F0"> 
       <li id="li_8180972D704C40098723734DD4B45643">錯誤通知事件，從100000到199999 </li> 
-      <li id="li_0EC29EA5F0034E5EBFEF8E68A6498D39">警告通知事件，20000至299999 </li> 
-      <li id="li_189A53D3D7EF4960A521AB04D00DCF70">資訊通知事件，從300000到399999 </li> 
-     </ul> </p> <p>每個頂級範圍（如錯誤）被劃分為子範圍，如表示回放錯誤的101000到101999。 </p> </td> 
+      <li id="li_0EC29EA5F0034E5EBFEF8E68A6498D39">警告通知事件，從200000到299999 </li> 
+      <li id="li_189A53D3D7EF4960A521AB04D00DCF70">從300000到399999的資訊通知事件 </li> 
+     </ul> </p> <p>每個頂層範圍（例如錯誤）會分成子範圍(例如從代表播放錯誤的101000到101999)。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 名稱</span> </td> 
-   <td colname="2">包含通知事件的可人讀描述的字串，如 <span class="codeph"> 查找錯誤</span>。 </td> 
+   <td colname="2">字串，包含人類看得懂的通知事件說明，例如 <span class="codeph"> SEEK_ERROR</span>. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 元資料</span> </td> 
-   <td colname="2"> <p>包含有關通知的其他相關資訊的鍵/值對。 </p> <p>例如，名為 <span class="codeph"> URL</span> 將提供與通知相關的URL值，例如導致錯誤的無效URL。 </p> </td> 
+   <td colname="1"><span class="codeph"> 中繼資料</span> </td> 
+   <td colname="2"> <p>包含通知其他相關資訊的索引鍵/值組。 </p> <p>例如，名為的金鑰 <span class="codeph"> URL</span> 會提供一個與通知相關的URL值，例如造成錯誤的無效URL。 </p> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 內部通知</span> </td> 
-   <td colname="2"> <p>對另一個的引用 <span class="codeph"> 媒體播放器通知</span> 直接影響此通知的對象。 </p> <p>示例可能是與時間線插入衝突直接對應的廣告插入失敗的通知。 並非所有通知都提供內部通知。 </p> </td> 
+   <td colname="1"><span class="codeph"> innerNotification</span> </td> 
+   <td colname="2"> <p>對另一個的參照 <span class="codeph"> MediaPlayerNotification</span> 直接影響此通知的物件。 </p> <p>一個範例可能是直接對應時間線插入衝突的廣告插入失敗通知。 並非所有通知都會提供內部通知。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

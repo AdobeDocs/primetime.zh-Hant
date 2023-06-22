@@ -1,6 +1,6 @@
 ---
-title: 預授權Android
-description: 預授權Android
+title: 預先授權Android
+description: 預先授權Android
 exl-id: b5337595-135f-4981-a578-2da432f125d6
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,39 +9,39 @@ ht-degree: 0%
 
 ---
 
-# 預授權 {#preuthorize-android}
+# 預先授權 {#preuthorize-android}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
 </br>
 
 
-應用程式需要使用預授權API方法，以便獲得一個或多個資源的預授權決定。 預授權API請求應用於UI提示和/或內容過濾。 必須在授予用戶對指定資源的訪問權限之前發出實際的授權API請求。
+應用程式需要使用預先授權API方法，才能取得一或多個資源的預先授權決定。 預先授權API請求應該用於UI提示和/或內容篩選。 在授與使用者對指定資源的存取權之前，必須先提出實際的授權API要求。
 
 
 
-如果出現意外錯誤（例如網路問題、MVPD授權終結點不可用等） 當預授權API請求由Adobe Primetime認證服務處理時發生，將作為預授權API響應結果的一部分為受影響的資源包含一個或多個分離的錯誤資訊。
+萬一發生意外錯誤（例如網路問題、無法使用MVPD授權端點等）， 當Adobe Primetime Authentication Services處理預先授權API要求時，受影響資源的一或多個分隔的錯誤資訊將會包含在預先授權API回應結果中。
 
 
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**描述：** 
+**說明：** 
 
 **可用性：** v3.6.0+
 
-**參數：**
+**引數：**
 
-- *預授權請求*:用於定義請求的生成器對象
-- AccessEnablerCallback :用於返回API響應的回調
-- 預授權響應：用於返回API響應內容的對象
+- *PreauthorizeRequest*：用於定義請求的產生器物件
+- AccessEnablerCallback ：用於傳回API回呼的回呼
+- PreauthorizeResponse ：用來傳回API回應內容的物件
 
 
-### 公共類PreauthorizeRequest {#androidpreauthorizerequest}
+### 公用類別PreauthorizeRequest {#androidpreauthorizerequest}
 
-**類PreauthorizeRequest.Builder**\
+**類別PreauthorizeRequest.Builder**\
  
 
 ```java
@@ -63,7 +63,7 @@ ht-degree: 0%
     ///
 ```
 
-**公共生成器setResources(清單\&lt;string> 資源)**
+**公用產生器setResources(List\&lt;string> resources)**
 
 ```
     ///
@@ -85,7 +85,7 @@ ht-degree: 0%
 ```
 
 
-**公共生成器disableFeatures(設定\&lt;preauthorizerequest.feature>
+**公用產生器disableFeatures(Set\&lt;preauthorizerequest.feature>
 功能)**
 
 ```
@@ -108,7 +108,7 @@ ht-degree: 0%
 
 **public PreauthorizeRequest build()**
 
-**枚舉預授權請求。功能**
+**列舉PreauthorizeRequest.Feature**
 
 ```java
     ///
@@ -142,7 +142,7 @@ ht-degree: 0%
 
  
 
-### 類預授權響應 {#preauthorizeresponse}
+### 類別PreauthorizeResponse {#preauthorizeresponse}
 
 ```java
     ///
@@ -163,7 +163,7 @@ ht-degree: 0%
 ```
 
 
-**類狀態** {#status}
+**類別狀態** {#status}
 
 ```java
 ///
@@ -227,7 +227,7 @@ ht-degree: 0%
 
 </br>
 
->**類決策** {#decision}
+>**類別決定** {#decision}
 
 ```
     ///
@@ -264,7 +264,7 @@ ht-degree: 0%
 
 
 
-示例： 
+範例： 
 
 
 ```java

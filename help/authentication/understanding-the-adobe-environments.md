@@ -13,25 +13,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-提供了描述Adobe環境的正式檔案 [設定環境並在預定時間內進行測試](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
+推出說明Adobe環境的官方檔案 [在Pre-qual中設定您的環境和測試](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md)：
 
-Adobe環境，用幾個詞來總結：
+Adobe環境，概括為幾個字：
 
-Adobe有兩個環境： **資格預審** 和 **發佈**。
+Adobe有兩個環境： **資格預審** 和 **版本**.
 
-* 在資格預審環境中，我們準備發佈新版本。
+* 在「資格預審」環境中，我們正在準備要發佈的新版本編號。
 
-* 當前版本生成位於版本環境上。
+* 目前的版本編號在版本環境中。
 
-每個環境有兩個配置檔案： **暫存** 和 **生產**。
+每個環境都有兩個設定檔： **分段** 和 **生產**.
 
-* 臨時配置檔案連接到MVPD臨時伺服器
-* 生產配置檔案連接到MVPD生產配置檔案。
+* 中繼設定檔會連線至MVPD中繼伺服器
+* 生產設定檔會連線到MVPD生產設定檔。
 
-擁有兩個配置檔案的原因是，在試運行配置檔案中，我們正在準備新合作夥伴投入使用，他們希望將系統與即將構建（資格預審）或發行版test（更穩定）。
+擁有這兩個設定檔的原因是，在中繼設定檔上，我們讓新合作夥伴準備上線，他們想要使用即將推出的組建（資格預審）或發行版本（更穩定）來測試系統。
 
-如果合作夥伴想要test新版本，則需要執行幾項附加步驟。 看， [設定環境並在預定時間內進行測試](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md)。
+如果合作夥伴想要測試新版本，則需要完成額外的幾個步驟。 請參閱， [在Pre-qual中設定您的環境和測試](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md).
 
-通過執行上述步驟，可以確保即將發佈的產品將在資格預審環境中進行測試。
+依照上述步驟操作，即可確保即將發行的版本將會在資格預審環境中進行測試。

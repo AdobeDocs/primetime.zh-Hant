@@ -1,6 +1,6 @@
 ---
-description: 授權請求和響應通過許可伺服器和客戶的授權服務之間的相互認證的SSL連接來傳遞。
-title: 查看公共API
+description: 權利要求與回應會透過授權伺服器與客戶權利服務之間相互驗證的SSL連線來傳遞。
+title: 檢視公開API
 exl-id: b78cd74d-06ea-4d31-a1f2-0f0d84d23670
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 0%
 
 ---
 
-# 查看公共API {#sees-public-api}
+# 檢視公開API {#sees-public-api}
 
-授權請求和響應通過許可伺服器和客戶的授權服務之間的相互認證的SSL連接來傳遞。
+權利要求與回應會透過授權伺服器與客戶權利服務之間相互驗證的SSL連線來傳遞。
 
-HTTPS URI方案( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2))用於定義權利終結點，以及HTTPPOST請求方法( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3))用於請求。 權利終結點以及指示後端權利的標誌是必需的，並且必須在打包時包含在策略中。
+HTTPS URI配置( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2))來定義權益端點，以及HTTPPOST要求方法( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3))用於要求。 需要軟體權利檔案端點，以及指示後端軟體權利檔案的旗標，且必須在封裝時包含在原則中。
 
-## 權利請求 {#section_BFBFEF0795CA46D6842C479256B95F95}
+## 權益請求 {#section_BFBFEF0795CA46D6842C479256B95F95}
 
-權利請求的正文將是JSON對象，如下所示。
+權益要求的主體將是一個定義的JSON物件，如下所示。
 
-**JSON權利請求對象定義**
+**JSON權益要求物件定義**
 
 ```
 { 
@@ -51,11 +51,11 @@ HTTPS URI方案( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://too
 }
 ```
 
-## 權利響應 {#section_F15A9FD6BAD946B3B4C5C14612F90154}
+## 權益回應 {#section_F15A9FD6BAD946B3B4C5C14612F90154}
 
-權利響應的主體是JSON對象。
+權益回應的內文是JSON物件。
 
-**JSON權利響應對象定義**
+**JSON權益回應物件定義**
 
 ```
 { 

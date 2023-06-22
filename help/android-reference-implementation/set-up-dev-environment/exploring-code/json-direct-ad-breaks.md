@@ -1,6 +1,6 @@
 ---
-title: 用於直接廣告分段的JSON對象
-description: 當類型值為直接分段時，詳細說明JSON對象
+title: 直接廣告插播的JSON物件
+description: 當型別值為直接廣告插播時，詳細說明JSON物件
 exl-id: d5e3ddd5-b963-4e7d-b04b-087d4fe96faf
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# 用於直接廣告分段的JSON對象{#json-object-for-direct-ad-breaks}
+# 直接廣告插播的JSON物件{#json-object-for-direct-ad-breaks}
 
-當類型值為直接分段時，以下代碼塊定義詳細資訊JSON對象。
+當型別值是直接廣告插播時，下列程式碼區塊會定義詳細資訊JSON物件。
 
-的 `MetadataNode` 返回 `IFeedItemAdapter:getStreamMetadata()` 包含鍵類型的條目 `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` 以及下面詳細資訊JSON對象值的字串表示形式的值。
+此 `MetadataNode` 傳回者 `IFeedItemAdapter:getStreamMetadata()` 包含具有型別索引鍵的專案 `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` 和字串值，代表以下的詳細資料JSON物件值。
 
 ```
 “metadata”: { 
@@ -49,12 +49,12 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 |---|---|
-| `tag` | 映射到中的標籤欄位的字串 `com.adobe.mediacore.timeline.advertising.AdBreak`。 |
-| `time` | 指示廣告分段的開始時間，映射到中的時間欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`。 值0表示預滾廣告。 |
-| `replace` | 指示廣告分段替換持續時間，映射到 `replaceDuration` 欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`。 |
-| `ad-list` | 在指定廣告分段期間要播放的廣告清單，映射到 `List<Ad>` 欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`。 |
+| `tag` | 對應至中標籤欄位的字串 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `time` | 表示廣告插播的開始時間，對應至中的時間欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`. 值0表示前段廣告。 |
+| `replace` | 表示廣告插播取代持續時間，對應至 `replaceDuration` 中的欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | 在指定的廣告插播期間要播放的廣告清單，將對應至 `List<Ad>` 中的欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
-以下代碼塊定義ads-list陣列的JSON對象。
+下列程式碼區塊會定義廣告清單陣列的JSON物件。
 
 ```
 "ad-list": [ 
@@ -73,6 +73,6 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 |---|---|
-| `url` | 廣告內容的URL，映射到中的URL欄位 `com.adobe.mediacore.timeline.advertising.Ad`。 |
-| `duration` | 廣告的持續時間，映射到中的持續時間欄位 `com.adobe.mediacore.timeline.advertising.Ad`。 |
-| `tag` | 描述字串。 |
+| `url` | 廣告內容的URL，對應至中的url欄位 `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `duration` | 廣告持續時間，對應至中的持續時間欄位 `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `tag` | 說明字串。 |

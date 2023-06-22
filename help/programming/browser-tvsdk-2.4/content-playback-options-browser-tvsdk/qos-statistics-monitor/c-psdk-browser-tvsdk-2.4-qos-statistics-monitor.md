@@ -1,6 +1,6 @@
 ---
-description: 服務質量(QoS)提供視頻引擎如何運行的詳細視圖。 瀏覽器TVSDK提供有關播放、緩衝和設備的詳細統計資訊。
-title: 服務質量統計
+description: 服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 瀏覽器TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
+title: 服務品質統計資料
 exl-id: b7486ed5-e59f-428c-942c-a2fee7a869c9
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,18 +9,18 @@ ht-degree: 0%
 
 ---
 
-# 服務質量統計{#quality-of-service-statistics}
+# 服務品質統計資料{#quality-of-service-statistics}
 
-服務質量(QoS)提供視頻引擎如何運行的詳細視圖。 瀏覽器TVSDK提供有關播放、緩衝和設備的詳細統計資訊。
+服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 瀏覽器TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
 
-## 讀取QOS回放、緩衝和設備統計資訊 {#read-qos-playback-buffering-and-device-statistics}
+## 讀取QOS播放、緩衝和裝置統計資料 {#read-qos-playback-buffering-and-device-statistics}
 
-可以從QOSProvider類讀取回放、緩衝和設備統計資訊。
+您可以從QOSProvider類別讀取播放、緩衝和裝置統計資料。
 
-的 `QOSProvider` 類提供各種統計資訊，包括有關緩衝、比特率、幀速率、時間資料等的資訊。
+此 `QOSProvider` class提供各種統計資料，包括關於緩衝、位元速率、影格速率、時間資料等的資訊。
 
-1. 實例化媒體播放器。
-1. 建立 `QOSProvider` 對象，並將其附加到媒體播放器。
+1. 例項化媒體播放器。
+1. 建立 `QOSProvider` 物件並將其附加至媒體播放器。
 
    ```js
    // Create Media Player.qosProvider =  
@@ -28,9 +28,9 @@ ht-degree: 0%
    qosProvider.attachMediaPlayer(player);
    ```
 
-1. （可選）閱讀回放統計資訊。
+1. （選用）讀取播放統計資料。
 
-   讀取回放統計資訊的一個解決方案是具有計時器，該計時器定期從 `QOSProvider`。 例如：
+   讀取播放統計資料的解決方案之一，是讓計時器定期從擷取新的QoS值 `QOSProvider`. 例如：
 
    ```js
    var qosTimer = (function () { 
@@ -70,7 +70,7 @@ ht-degree: 0%
    qosTimer.start(); 
    ```
 
-1. （可選）讀取設備特定資訊。
+1. （選擇性）讀取裝置特定資訊。
 
    ```js
    // Show device information 

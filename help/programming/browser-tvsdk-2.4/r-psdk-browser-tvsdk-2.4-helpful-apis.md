@@ -1,6 +1,6 @@
 ---
-description: 有些API可幫助您使用AdobeFlash Player。
-title: 用於AdobeFlash Player的有用API
+description: 有些API可以協助您使用AdobeFlash Player。
+title: AdobeFlash Player的實用API
 exl-id: 3a80088b-382e-4624-bbaa-6d7e9f0126e2
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# 用於AdobeFlash Player的有用API{#helpful-apis-for-the-adobe-flash-player}
+# AdobeFlash Player的實用API{#helpful-apis-for-the-adobe-flash-player}
 
-有些API可幫助您使用AdobeFlash Player。
+有些API可以協助您使用AdobeFlash Player。
 
 ## AdobePSDK.MediaResource {#section_8C339FA1386D4B1A926A1459B2619E5E}
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-如果支援，可使用 `forceFlash` 參數以覆蓋回放技術確定序列並強制實現使用Flash Player。
+如果支援，您可以使用 `forceFlash` 引數來覆寫播放技術決定順序，並強制實作使用Flash Player。
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 

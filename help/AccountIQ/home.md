@@ -1,6 +1,6 @@
 ---
-title: 帳戶IQ概述
-description: Account IQ可幫助MVPD和程式設計師瞭解其收入和業務運營所面臨的風險，並確定採取的最有效措施來減輕憑據欺詐的影響。
+title: Account IQ概述
+description: Account IQ可協助MVPD和程式設計師瞭解其收入和業務營運的風險，並決定採取最有效的行動來減輕認證詐騙的影響。
 exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
 source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
 workflow-type: tm+mt
@@ -9,41 +9,41 @@ ht-degree: 0%
 
 ---
 
-# 帳戶IQ概述 {#account-iq-overview}
+# Account IQ概述 {#account-iq-overview}
 
-流媒體服務訂閱者共用證書是業界一個主要且日益嚴重的問題。 要增加此功能，瞭解、識別和處理憑據共用是一個複雜的過程。 瞭解用戶使用行為和開發其活動的整體視圖涉及複雜性，例如區分同一家庭內和外部成員之間的共用。 由於這一挑戰，流服務提供商在反對憑據共用方面可能存在障礙。
+串流服務訂閱者的憑證共用是業界一個重大且不斷增長的問題。 要增加認證內容，瞭解、識別及執行認證共用是一項複雜的程式。 瞭解訂閱者的使用行為，以及開發其活動的整體檢視涉及複雜性，例如，區分同一家庭內外成員之間的共用。 由於此挑戰，串流服務提供者可能會禁止採取違反憑證共用的行動。
 
 
 <div class "preview">
-一般而言，視頻流服務提供商瞭解共用給其業務的風險和成本，但有有限的補救措施，例如阻止共用者或提供報價。 但是，建議採用一種有根據、有針對性的方法 — 一種使服務能夠準確理解共用，並採用獎勵良好觀看行為和同時瞄準業務增長的策略。 </span>
+一般而言，視訊串流服務供應商瞭解與其業務共用的風險和成本，但有有限的補救措施，例如封鎖分享者或提供優惠方案。 然而，我們建議採取明智且目標明確的方法，讓服務人員能夠準確瞭解分享內容，並採納獎勵良好觀看行為並同時鎖定業務增長的策略。 </span>
 
-![帳戶IQ流圖](assets/aiq-intro.png)
+![帳戶IQ流程圖](assets/aiq-intro.png)
 
-*圖：帳戶IQ資訊流*
+*圖：帳戶IQ資訊流程*
 
-Adobe Primetime帳戶IQ使視頻流服務能夠理解用戶使用模式並識別憑據共用。 通過使用Adobe專有的多層機器學習模型對每個用戶留下的資料的長期記錄進行深入分析，流服務能夠更加準確地理解使用行為和識別憑證共用。 此外，它還允許通過與其他系統的整合來執行操作，並驗證了這些操作的影響 — 無論是鼓勵合法查看行為還是鼓勵不斷增長的訂閱者和收入。
+Adobe Primetime帳戶IQ可讓視訊串流服務瞭解訂閱者的使用模式，並識別憑證共用。 串流服務使用Adobe專屬的多層機器學習模型，深入分析每位訂閱者留下的長期資料記錄，能更明確瞭解使用行為並識別憑證共用。 此外，它可讓您透過與其他系統整合來執行動作，例如限制並行資料流或自訂優惠方案，並驗證這些動作的影響 — 無論是鼓勵合法的觀看行為還是增加訂閱者和收入。
 
-Account IQ提供了衡量、管理和貨幣化憑據共用的工具和功能。 報告、分析和控制板使資料能夠進行探索以識別模式。 通過出口和與Adobe和第三方系統（如活動管理、貨幣限制或訂戶註冊）的整合，支援直接行動。 而專用的跟蹤工具可以衡量這些動作的成功，以便更新或擴展這些動作。
+Account IQ提供的工具和功能可衡量、管理認證共用並從中獲利。 報表、分析和儀表板可讓您探索資料以識別模式。 直接動作可透過匯出及與Adobe和第三方系統整合（例如行銷活動管理、貨幣限制或訂閱者註冊）來支援。 而專用的追蹤工具會衡量這些動作是否成功，以便更新或擴充。
 
-以下各節將介紹帳戶IQ應用程式工具和功能：
+以下幾節將說明帳戶IQ應用程式工具和功能：
 
 * [儀表板](/help/AccountIQ/dashboard.md)
-* [常規使用情況報告](/help/AccountIQ/general-usage-reports.md)
-* [共用帳戶報告](/help/AccountIQ/shared-acc-reports.md)
+* [一般使用報告](/help/AccountIQ/general-usage-reports.md)
+* [共用帳戶報表](/help/AccountIQ/shared-acc-reports.md)
 * [使用模式](/help/AccountIQ/usage-patterns.md)
-* [操作](/help/AccountIQ/operations.md)
+* [作業](/help/AccountIQ/operations.md)
 
-讓我們深入瞭解這些部分中的圖表和報告。
+讓我們深入瞭解一下這些區段中的圖表和報告。
 
 >[!MORELIKETHIS]
 >
 >* [如何開始使用帳戶IQ](/help/AccountIQ/get-started.md)
 >* [儀表板](/help/AccountIQ/dashboard.md)
->* [常規使用情況報告](/help/AccountIQ/general-usage-reports.md)
->* [共用帳戶報告](/help/AccountIQ/shared-acc-reports.md)
+>* [一般使用報告](/help/AccountIQ/general-usage-reports.md)
+>* [共用帳戶報表](/help/AccountIQ/shared-acc-reports.md)
 >* [使用模式](/help/AccountIQ/usage-patterns.md)
->* [產品術語表](/help/AccountIQ/product-concepts.md)
->* [帳戶IQ白皮書](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
+>* [產品辭彙表](/help/AccountIQ/product-concepts.md)
+>* [Account IQ白皮書](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
 
 
 <!-- Credential sharing is rampant and prevalent among subscribers in the video streaming industry. To add to it, understanding, identifying, and acting on password sharing is a complex process. There is complexity involved in understanding the subscriber usage behavior and developing a holistic view of viewer activity—for example, distinguishing sharing among members within the same household and outside. Due to this challenge, streaming service providers have inhibitions in acting against password sharing.

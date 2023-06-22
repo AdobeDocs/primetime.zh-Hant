@@ -1,6 +1,6 @@
 ---
-title: 先決條件
-description: 先決條件
+title: 必要條件
+description: 必要條件
 copied-description: true
 exl-id: 1b66f7fd-ea2f-4217-b327-910e90ab889d
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,10 +10,10 @@ ht-degree: 0%
 
 ---
 
-# 先決條件 {#prerequisites}
+# 必要條件 {#prerequisites}
 
-在打包內容之前，需要黃金時段DRM打包器證書。 必須通過黃金時段DRM證書註冊流程來請求。 只需要打包器證書（無許可證伺服器或傳輸）。 請在「證書請求」電子郵件中指出該請求是要與DRM服務一起使用的證書。
+在封裝內容之前，需要Primetime DRM Packager憑證。 必須透過Primetime DRM憑證註冊程式來要求。 只需要封裝程式憑證（無授權伺服器或傳輸）。 請在憑證要求電子郵件中指出要求是要與DRM服務搭配使用的憑證。
 
-[證書註冊指南](../../digital-rights-management/certificate-enrollment-guide/about-certs.md)
+[憑證註冊指南](../../digital-rights-management/certificate-enrollment-guide/about-certs.md)
 
-包裝證書分為兩個級別 — 生產和試用。 使用TRIAL證書打包的內容僅供開發使用，在證書過期後不會播放。 所有頒發給TRIAL內容的許可證的硬編碼策略到期日期將與證書到期日期的最大硬編碼策略到期日期相同（如果未在DRM策略中設定）。
+封裝憑證有兩個等級 — 生產及試用。 使用「試用版」憑證封裝的內容僅供開發使用，不會在憑證過期後播放。 所有發行至「試用版」內容的授權中，硬式編碼原則到期日的最大值將等於憑證到期日（若未在DRM原則中設定）。

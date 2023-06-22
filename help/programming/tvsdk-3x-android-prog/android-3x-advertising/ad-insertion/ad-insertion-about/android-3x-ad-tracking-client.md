@@ -1,6 +1,6 @@
 ---
-description: TVSDK自動跟蹤視頻點播和即時/線性流播的廣告。
-title: 跟蹤客戶端廣告
+description: TVSDK會自動追蹤VOD和即時/線性串流的廣告。
+title: 追蹤使用者端廣告
 exl-id: 0ee8f928-393b-467b-8ef1-8b50758afda7
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 ---
 
-# 跟蹤客戶端廣告 {#track-client-ad}
+# 追蹤使用者端廣告 {#track-client-ad}
 
-TVSDK自動跟蹤視頻點播和即時/線性流播的廣告。
+TVSDK會自動追蹤VOD和即時/線性串流的廣告。
 
-通知用於通知您的應用程式廣告進度，包括廣告何時開始和何時結束的資訊。
+通知可用來通知應用程式廣告的進度，包括廣告開始時間和結束時間的相關資訊。

@@ -1,6 +1,6 @@
 ---
-description: 這些類提供關於時間線內發生的廣告的資訊。
-title: 時間軸廣告類
+description: 這些類別會提供發生在時間軸內之廣告的相關資訊。
+title: 時間表廣告類別
 exl-id: fb31a235-6578-4da1-b732-713a2f9b24be
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,27 +9,27 @@ ht-degree: 0%
 
 ---
 
-# 時間軸廣告類{#timeline-advertising-classes}
+# 時間表廣告類別{#timeline-advertising-classes}
 
-這些類提供關於時間線內發生的廣告的資訊。
+這些類別會提供發生在時間軸內之廣告的相關資訊。
 
-包： [com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/package-summary.html)
+封裝： [com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/package-summary.html)
 
-包： [com.adobe.mediacore.timeline.advertising.audited](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/package-summary.html)
+封裝： [com.adobe.mediacore.timeline.advertising.auditude](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/package-summary.html)
 
 | 名稱 | 說明 |
 |--- |--- |
-| [廣告](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | 定義Ad抽象並包含所有Ad資訊的類。 它由唯一ID、持續時間和 `MediaResource`。 的 `MediaResource` 包含實際廣告內容所在的URL。 |
-| [廣告資產](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | 表示要顯示的資產的類。 表示廣告資產的類。 |
-| [廣告中斷](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | 在播放期間某個時刻將播放的多個廣告提供統一視圖的類。 |
-| [廣告中斷放置](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | 廣告中斷放置操作類。 |
-| [AdBreak策略](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPolicy.html) | 定義與用戶相關的廣告播放策略的枚舉，該策略在查找時繞過廣告。 |
-| [廣告點擊](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdClick.html) | 表示與資產關聯的按一下實例的類。 此實例包含有關點擊式URL和標題的資訊，這些資訊可用於向用戶提供附加資訊。 |
-| [AdPolicyInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicyInfo.html) | 定義AdPolicySelector API調用屬性的介面。 這些屬性提供了強制執行每個廣告行為的上下文。 |
-| [AdPolicySelector](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicySelector.html) | 用於強制廣告行為的廣告策略選擇器介面。 應用程式可以通過實施所有必需的方法或通過擴展現有預設策略選擇器類來自定義特定行為來遵循此介面。 |
+| [廣告](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | 定義廣告抽象並保留所有廣告資訊的類別。 它由唯一ID、持續時間和 `MediaResource`. 此 `MediaResource` 包含實際廣告內容所在的URL。 |
+| [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | 代表要顯示之資產的類別。 代表廣告資產的類別。 |
+| [廣告插播](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | 在播放期間某個時間點播放的數個廣告上提供統一檢視的類別。 |
+| [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | 廣告插播位置作業類別。 |
+| [AdBreakPolicy](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPolicy.html) | 定義與搜尋時略過廣告的使用者相關之廣告播放原則的列舉。 |
+| [AdClick](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdClick.html) | 代表與資產相關聯之點選例項的類別。 此執行個體包含點進URL和標題的相關資訊，可用於向使用者提供其他資訊。 |
+| [AdPolicyInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicyInfo.html) | 定義AdPolicySelector API呼叫屬性的介面。 這些屬性提供強制實行每個廣告行為的內容。 |
+| [AdPolicySelector](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicySelector.html) | 用於強制實施廣告行為的廣告原則選擇器介面。 應用程式可以透過實作所有必要的方法或擴充現有的預設原則選取器類別來自訂特定行為，來符合此介面。 |
 | `auditude.AuditudeAdProvider` | 已棄用。 使用AuditudeResolver。 |
-| [AuditudeResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeResolver.html) | 在短語流程中處理黃金時段廣告解析的類。 |
-| [奧迪跟蹤器](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeTracker.html) | 實現ContentTracker介面並定義Mighide廣告跟蹤事件的類。 |
-| [內容解析器](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentResolver.html) | 處理短語進程中廣告解析部分的類。 |
-| [內容跟蹤器](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | 用於定義要建立廣告跟蹤模組以與庫或自定義廣告跟蹤器整合時必須實現的協定的介面。 此介面要求您定義向遠程廣告跟蹤系統報告廣告進度事件的方式。 |
-| [放置資訊](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | 抽取放置資訊請求的類。 每個已解析的廣告必須附加一個放置資訊。 該放置資訊描述了廣告要放置在時間軸上的位置。 它包含以下資訊： <ul><li>位置（毫秒） </li><li>放置的類型（前滾、中滾或後滾） </li><li>將要替換的主內容塊的持續時間</li></ul> |
+| [AuditudeResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeResolver.html) | 處理片語程式中的primetime和解析的類別。 |
+| [Auditudetracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeTracker.html) | 實作ContentTracker介面並定義Primetime廣告追蹤事件的類別。 |
+| [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentResolver.html) | 處理片語處理中廣告解析部分的類別。 |
+| [ContentTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | 定義您必須實作通訊協定的介面，用來建立與資料庫或自訂廣告追蹤器整合的廣告追蹤模組。 此介面需要您定義向遠端廣告追蹤系統報告廣告進度事件的方式。 |
+| [位置資訊](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | 抽象位置資訊請求的類別。 每個已解析廣告都必須附加一個版位資訊。 位置資訊說明廣告在時間軸上的放置位置。 其中包含下列資訊： <ul><li>位置位置（以毫秒為單位） </li><li>位置型別（前段、中段或後段） </li><li>即將取代之主要內容區塊的持續時間</li></ul> |

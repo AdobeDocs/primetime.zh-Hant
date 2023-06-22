@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # 支援的格式 {#supported-formats}
 
-黃金時段Ad Insertion截取並支援廣告插入到以下媒體流：
+PrimetimeAd Insertion會攔截並支援將廣告插入下列媒體串流：
 
-## 合肥光源 {#hls}
+## HLS {#hls}
 
-- 混合音頻/視頻片段播放清單
-- CMAF和取消混音的音頻/視頻播放清單，包括僅音頻播放清單
+- 將音訊/視訊片段播放清單設為靜音
+- CMAF和已取消連結的音訊/視訊播放清單，包括僅限音訊的播放清單
 - WebVTT
-- I幀流播放清單(#EXT-X-I-FRAME-STREAM-INF)
-- 影像播放清單(#EXT-X-IMAGE-STREAM-INF)
+- I-Frame串流播放清單(#EXT-X-I-FRAME-STREAM-INF)
+- Thubmanil影像播放清單(#EXT-X-IMAGE-STREAM-INF)
 
-## 短划線 {#dash}
+## 虛線 {#dash}
 
-- CMAF和取消混音的音頻/視頻播放清單，包括僅音頻播放清單
+- CMAF和已取消連結的音訊/視訊播放清單，包括僅限音訊的播放清單
 - WebVTT

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 使用Adobe Medium伺服器 {#use-adobe-media-server}
 
-某些客戶可能已在使用Adobe Medium伺服器，並希望維護該內容交付模式。 如果是這樣，則可以從此套件中包含的任何配置檔案中獲取所需的黃金時段雲DRM特定資料，以填充AMS的JIT(Just In Time)XML配置。
+有些客戶可能已經在使用Adobe Medium伺服器，並且想要維護該內容傳遞模式。 如果是這種情況，可以從本套件中包含的任何一個設定檔案中擷取所需的Primetime Cloud DRM特定資料，以填入AMS的JIT （即時） XML設定。
 
 例如：
 

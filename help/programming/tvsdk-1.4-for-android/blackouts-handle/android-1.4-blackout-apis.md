@@ -1,6 +1,6 @@
 ---
-description: 您可以處理即時視頻流中的封鎖，並在封鎖期間提供備用內容。
-title: 封鎖API元素
+description: 您可以處理即時視訊串流中的中斷，並在中斷期間提供替代內容。
+title: 中斷API元素
 exl-id: 8e4f1dc3-f2f6-4db9-b9d0-3e79d21032e9
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,59 +9,59 @@ ht-degree: 0%
 
 ---
 
-# 封鎖API元素{#blackout-api-elements}
+# 中斷API元素{#blackout-api-elements}
 
-您可以處理即時視頻流中的封鎖，並在封鎖期間提供備用內容。
+您可以處理即時視訊串流中的中斷，並在中斷期間提供替代內容。
 
-當即時流中發生封鎖時，您的播放器使用事件處理程式來檢測封鎖，並為那些不適合觀看主流的用戶提供備用內容。 播放器檢測封鎖期的開始和結束，將回放從主流切換到備用流，並在封鎖期結束時切換回主流。
+當即時資料流中發生中斷時，您的播放器會使用事件處理常式來偵測中斷，並為不符合觀看主要資料流資格的使用者提供替代內容。 您的播放器會偵測中斷期間的開始和結束，將播放從主要資料流切換至替代資料流，並在中斷期間結束時切換回主要資料流。
 
-要處理即時流中的封鎖：
+若要處理即時資料流中的中斷：
 
-1. 通過訂閱即時流清單中的封鎖標籤，設定應用以檢測封鎖標籤。
+1. 訂閱即時資料流資訊清單中的中斷標籤，將應用程式設定為偵測中斷標籤。
 
-   TVSDK本身不檢測封鎖標籤；在清單檔案分析過程中遇到標籤時，必須訂閱封鎖標籤才能接收通知。
-1. 為播放器訂閱的標籤建立事件偵聽器（在本例中為PLAYBACK和LACUTES標籤）。
+   TVSDK本身不會偵測中斷標籤；您必須訂閱中斷標籤，才能在資訊清單檔案剖析期間遇到標籤時收到通知。
+1. 為您的播放器訂閱的標籤（在此例中為「播放」和「中斷」標籤）建立事件接聽程式。
 
-   當播放器在前景（主內容）或背景（備用內容）流清單中訂閱（例如，封鎖標籤）的標籤出現時，TVSDK將調度 `TimedMetadataEvent` 建立 `TimedMetadataObject` 為 `TimedMetadataEvent`。
+   當標籤發生時，您的播放器已訂閱前景（主要內容）或背景（替代內容）資料流資訊清單（例如，中斷標籤），TVSDK就會傳送 `TimedMetadataEvent` 並建立 `TimedMetadataObject` 的 `TimedMetadataEvent`.
 
-1. 為前台和後台流的定時元資料事件實現處理程式。
+1. 針對前景和背景資料流的計時中繼資料事件，實作處理常式。
 
-   在這些處理程式中，從定時元資料事件對象獲取封鎖期的開始和結束時間。
-1. 建立用於在封鎖期開始和結束時切換內容的方法。
+   在這些處理常式中，從定時中繼資料事件物件取得中斷期間的開始和結束時間。
+1. 建立用於在中斷期間開始和結束時切換內容的方法。
 
-   當封鎖期開始時，將主內容切換到後台，將備用內容切換為主流。 繼續提取並分析背景中的原始清單，並繼續檢查「封鎖結束」標籤，以便播放器可以在封鎖結束時重新加入原始流。
-1. 如果封鎖範圍在播放流的DVR中，則更新不可查找的範圍。
+   當中斷期間開始時，請將主要內容切換到背景，並將替代內容切換到主要資料流。 繼續擷取並剖析背景中的原始資訊清單，並持續檢查「中斷結束」標籤，讓播放器可以在中斷結束時重新加入原始資料流。
+1. 如果播放資料流上的中斷範圍在DVR中，請更新不可搜尋的範圍。
 
-   跟蹤並處理 `TimedMetadata` 在後台流上，通過準備和更新封鎖不可見範圍。
+   追蹤並處理 `TimedMetadata` 在背景資料流中，透過準備和更新不可搜尋的中斷範圍。
 
-TVSDK提供在實施封鎖期（包括方法、元資料和通知）時有用的API元素。
+TVSDK提供API元素，這些元素在實施中斷時很有用，包括方法、中繼資料和通知。
 
-在播放器中實施封鎖解決方案時，可以使用以下方法。
+在播放器中實作中斷解決方案時，您可以使用下列專案。
 
-* **媒體播放器**
+* **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` 將當前載入的資源另存為後台資源。 如果 `replaceCurrentResource` 在此方法之後調用，TVSDK將繼續下載後台項的清單，直到您調用 `unregisterCurrentBackgroundItem`。 `release`或 `reset`。
+   * `registerCurrentItemAsBackgroundItem` 將目前載入的資源儲存為背景資源。 若 `replaceCurrentResource` 此方法之後呼叫，TVSDK會繼續下載背景專案的資訊清單，直到您呼叫 `unregisterCurrentBackgroundItem`， `release`，或 `reset`.
 
-   * `unregisterCurrentBackgroundItem` 將後台項設定為Null，並停止讀取和分析後台清單。
+   * `unregisterCurrentBackgroundItem` 將背景專案設定為null並停止擷取和分析背景資訊清單。
 
-* **封鎖元資料** -
+* **BlackoutMetadata** -
 
-   特定於封鎖的元資料類。
+   特定於中斷的中繼資料類別。
 
-   這允許您設定不可查找的範圍( `TimeRanges`)。 TVSDK每次用戶查找時都檢查這些範圍。 如果設定了它，並且用戶尋求進入不可見範圍，則TVSDK強制查看器到不可見範圍的末尾。
+   這可讓您設定無法搜尋的範圍(一系列 `TimeRanges`)。 TVSDK會在每次使用者搜尋時檢查這些範圍。 如果已設定，且使用者搜尋到無法搜尋的範圍，TVSDK會強制檢視器搜尋到無法搜尋範圍的結尾。
 
-* **從此處開始下一個廣告元資料** 通過設定在即時流上啟用或禁用預卷 `enableLivePreroll` 是真是假。 如果為false，則TVSDK在播放內容之前不會對預播廣告進行顯式廣告伺服器調用，因此不會播放預播。 這對中間輥沒有影響。 預設值為true。
+* **從這裡開始下一個AdvertisingMetadata** 透過設定在即時資料流上啟用或停用前置滾動 `enableLivePreroll` 為true或false。 若為false，TVSDK不會在內容播放前對前段廣告發出明確廣告伺服器呼叫，因此不會播放前段廣告。 這對中間卷沒有影響。 預設值為true。
 
-* **MediaPlayer.LacutesEventListener**
+* **MediaPlayer.BlackoutsEventListener**
 
-   * `onTimedMetadataInBackgroundItem`  — 在檢測到後台清單中的訂閱標籤和新標籤時派送 `TimedMetadata` 實例是從它準備的。 的 `TimedMetadata` 實例作為參數派發。
+   * `onTimedMetadataInBackgroundItem`  — 在背景資訊清單中偵測到訂閱的標籤和新的時傳送 `TimedMetadata` 執行個體已從中準備。 此 `TimedMetadata` 執行個體會作為引數傳送。
 
-   * `onBackgroundManifestFailed`  — 當媒體播放器完全無法載入後台清單時調度，即所有流URL返回錯誤或無效響應。
+   * `onBackgroundManifestFailed`  — 當媒體播放器完全無法載入背景資訊清單時傳送，也就是說，所有串流URL都會傳回錯誤或無效的回應。
 
 * **通知**
 
    * `BACKGROUND_MANIFEST_WARNING`
 
-      * 代碼：204000
-      * 類型：警告
-      * 後台清單下載時出錯。
+      * 代碼： 204000
+      * 型別：警告
+      * 背景資訊清單下載發生錯誤。

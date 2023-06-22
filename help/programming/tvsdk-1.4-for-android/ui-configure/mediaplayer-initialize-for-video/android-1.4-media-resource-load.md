@@ -1,5 +1,5 @@
 ---
-description: 通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。 這是載入媒體資源的一種方法。
+description: 透過直接例項化MediaResource並載入要播放的視訊內容來載入資源。 這是載入媒體資源的其中一種方式。
 title: 在MediaPlayer中載入媒體資源
 exl-id: 2d5e95bc-3962-4356-b90f-e550066f7a70
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,34 +11,34 @@ ht-degree: 0%
 
 # 在MediaPlayer中載入媒體資源 {#load-a-media-resource-in-the-mediaplayer}
 
-通過直接實例化MediaResource並載入要播放的視頻內容來載入資源。 這是載入媒體資源的一種方法。
+透過直接例項化MediaResource並載入要播放的視訊內容來載入資源。 這是載入媒體資源的其中一種方式。
 
-1. 將MediaPlayer的可播放項目與要播放的新資源一起設定。
+1. 使用要播放的新資源設定MediaPlayer的可播放專案。
 
-   通過調用替換現有MediaPlayer的當前可播放項 `MediaPlayer.replaceCurrentItem` 通過現有 `MediaResource` 實例。
+   呼叫，取代您現有的MediaPlayer目前可播放的專案 `MediaPlayer.replaceCurrentItem` 並傳遞現有 `MediaResource` 執行個體。
 
-1. 註冊 `MediaPlayer.PlaybackEventListener` 與 `MediaPlayer` 實例。
+1. 註冊實作 `MediaPlayer.PlaybackEventListener` 與的介面 `MediaPlayer` 執行個體。
 
    * `onPrepared`
-   * `onStateChanged`，並檢查是否已初始化和錯誤。
+   * `onStateChanged`，並檢查「已初始化」和「錯誤」。
 
-1. 當媒體播放器的狀態更改為INITIALIZED時，可以調用 `MediaPlayer.prepareToPlay`
+1. 當媒體播放器的狀態變更為「已初始化」時，您可以呼叫 `MediaPlayer.prepareToPlay`
 
-   INITIALIZED狀態表示媒體已成功載入。 呼叫 `prepareToPlay` 啟動廣告解決和投放過程（如果有）。
+   INITIALIZED狀態表示媒體已成功載入。 通話 `prepareToPlay` 開始廣告解析度和刊登版位程式（如果有的話）。
 
-1. 當TVSDK調用 `onPrepared` 回調，媒體流已成功載入並準備播放。
+1. 當TVSDK呼叫 `onPrepared` callback，媒體資料流已成功載入，並準備好播放。
 
-   載入媒體流時， `MediaPlayerItem` 的子菜單。
+   載入媒體資料流時， `MediaPlayerItem` 「 」已建立。
 
->如果出現故障， `MediaPlayer` 切換到「ERROR（錯誤）」狀態。 它還通過調用 `PlaybackEventListener.onStateChanged`回叫。
+>如果失敗， `MediaPlayer` 切換至ERROR狀態。 此外，也會透過呼叫 `PlaybackEventListener.onStateChanged`callback。
 >
->這會傳遞幾個參數：
->* A `state` 類型參數 `MediaPlayer.PlayerState` 值 `MediaPlayer.PlayerState.ERROR`。
+>這會傳遞數個引數：
+>* A `state` 引數型別 `MediaPlayer.PlayerState` ，其值為 `MediaPlayer.PlayerState.ERROR`.
 >
->* A `notification` 類型參數 `MediaPlayerNotification` 包含有關錯誤事件的診斷資訊。
+>* A `notification` 引數型別 `MediaPlayerNotification` 包含有關錯誤事件的診斷資訊。
 
 
-以下簡化示例代碼說明了載入媒體資源的過程：
+下列簡化的範常式式碼說明載入媒體資源的程式：
 
 ```java
 // mediaResource is a properly configured MediaResource instance 

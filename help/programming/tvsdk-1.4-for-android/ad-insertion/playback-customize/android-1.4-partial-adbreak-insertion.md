@@ -1,6 +1,6 @@
 ---
-description: 你可以像電視一樣體驗，能夠在廣告的中間，在直播中加入。
-title: 部分廣告分段插入
+description: 您可以啟用類似電視的體驗，即能夠在廣告中間、在直播串流中加入。
+title: 部分廣告插播插入
 exl-id: cb0d2f5f-c760-450e-ab34-fd7639d1190b
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,26 +9,26 @@ ht-degree: 0%
 
 ---
 
-# 部分廣告分段插入 {#partial-ad-break-insertion}
+# 部分廣告插播插入 {#partial-ad-break-insertion}
 
-你可以像電視一樣體驗，能夠在廣告的中間，在直播中加入。
+您可以啟用類似電視的體驗，即能夠在廣告中間、在直播串流中加入。
 
-「部分廣告中斷」功能可以模擬類似電視的體驗：如果客戶端在某個媒體內啟動一個即時流，則該媒體將在該媒體內啟動。 類似電視頻道，廣告無縫
+「部分廣告插播」功能可讓您模擬類似電視的體驗，如果客戶在中間版本內開始即時資料流，則會從該中間版本內開始。 這類似於切換至電視頻道，而商業廣告則順暢運作。
 
-例如，如果用戶在90秒廣告中斷（3個30秒廣告）的中間加入，在第二個廣告中加入10秒（即，在廣告中斷開始40秒），則會發生以下情況：
+例如，如果使用者在90秒的廣告插播（3個30秒的廣告）中間、第二個廣告的10秒（亦即廣告插播的40秒）中加入，會發生下列情況：
 
-* 第二廣告在剩餘持續時間（20秒）內被播放，隨後是第三廣告。
-* 未觸發部分播放的廣告（第二個廣告）的廣告跟蹤器。 只觸發第三個廣告的跟蹤器。
+* 第二個廣告會播放剩餘的持續時間（20秒），然後是第三個廣告。
+* 部分播放的廣告（第二個廣告）的廣告追蹤器不會觸發。 僅觸發第三個廣告的追蹤器。
 
-預設情況下未啟用此行為。 要啟用此功能在應用中工作，請執行以下操作。
+預設不會啟用此行為。 若要在應用程式中啟用此功能，請執行以下操作。
 
-1. 使用AdvertingMetadata類的方法setEnableLivePreroll禁用即時預覽。
+1. 使用AdvertisingMetadata類別的方法setEnableLivePrerroll停用即時預列。
 
    ```
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
    ```
 
-1. 開啟「部分Ad-break插入」的首選項。 使用MediaPlayer介面中的新方法setPartialAdBreakPref將此功能開啟。 使用getPartialAdBreakPref方法查找此首選項的當前狀態。
+1. 開啟「部分廣告插播插入」的偏好設定。 使用MediaPlayer介面中的新方法setPartialAdBreakPref，將此功能切換為ON。 使用getPartialAdBreakPref方法尋找此偏好設定的目前狀態。
 
    ```
    MediaPlayer mediaPlayer = DefaultMediaPlayer.create(getActivity().getApplicationContext()); 
@@ -36,11 +36,11 @@ ht-degree: 0%
           mediaPlayer.setPartialAdBreakPref(true); 
    ```
 
-1. 此功能要求您實施自定義廣告策略選擇器以自定義行為。 如果您尚未自定義AdvertisingFactory類的實現，則添加新的AdvertisingFactory實現。 覆蓋createAdPolicySelector方法。 此方法返回AdPolicySelector實現的新實例。
+1. 此功能需要您實作自訂廣告原則選擇器來自訂行為。 如果您還沒有AdvertisingFactory類別的自訂實作，請新增新的AdvertisingFactory實作。 覆寫createAdPolicySelector方法。 此方法會傳回AdPolicySelector實作的新執行個體。
 
-   下面提供了示例實現，供您參考。 以下示例實現可從com.adobe.mediacore包中使用。 但是，為了便於參考，它被簡化，並且不建議按原樣使用。
+   以下提供實作範例，以供您參考。 以下實作範例可從com.adobe.mediacore套件使用。 不過，為方便參考，已將其簡化，不建議照原樣使用。
 
-   1. 示例Ad策略選擇器
+   1. 範例廣告原則選擇器
 
       ```
        package com.adobe.mediacore;
@@ -158,7 +158,7 @@ ht-degree: 0%
       } 
       ```
 
-   1. 示例廣告工廠
+   1. 範例廣告工廠
 
       ```
       private AdvertisingFactory createPartialAdBreakFactory() { 
@@ -183,7 +183,7 @@ ht-degree: 0%
       } 
       ```
 
-   1. 向媒體播放器註冊我們的AdvertingFactory
+   1. 向媒體播放器註冊AdvertisingFactory
 
       ```
       AdvertisingFactory advertisingFactory = createPartialAdBreakFactory();  
@@ -193,7 +193,7 @@ ht-degree: 0%
       } 
       ```
 
-   1. 覆蓋createAdPolicySelector方法
+   1. 覆寫createAdPolicySelector方法
 
       ```
       @Override 

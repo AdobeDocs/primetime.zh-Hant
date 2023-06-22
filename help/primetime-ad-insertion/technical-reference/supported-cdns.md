@@ -12,10 +12,10 @@ ht-degree: 2%
 
 # 支援的CDN {#cdn-supported}
 
-Adobe PrimetimeAd Insertion支援從任何CDN提取內容和片段，但擴展了對許多主要CDN的身份驗證/標籤化支援。  有關其他CDN支援或身份驗證/授權需要的詳細資訊，請與我們聯繫。
+Adobe Primetime Ad Insertion支援從任何CDN擷取內容和片段，但已擴充對許多主要CDN的驗證/代碼化支援。  如需其他CDN支援或驗證/授權需求的詳細資訊，請聯絡我們。
 
-* 阿卡邁
+* Akamai
 * 聚光燈
-* 王牌登網路
+* Limelight Networks
 * Level3
 * 世紀連結

@@ -1,6 +1,6 @@
 ---
-description: TVSDK支援VOD流中廣告內容的寫程式刪除和替換。
-title: 廣告刪除和替換API更改
+description: TVSDK支援程式化地刪除和取代VOD串流中的廣告內容。
+title: 廣告刪除和取代API變更
 exl-id: 4093af3c-41fd-4486-9e1c-26f68d3fbeb4
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,63 +9,63 @@ ht-degree: 0%
 
 ---
 
-# 廣告刪除和替換API更改 {#ad-deletion-and-replacement-api-changes}
+# 廣告刪除和取代API變更 {#ad-deletion-and-replacement-api-changes}
 
-TVSDK支援VOD流中廣告內容的寫程式刪除和替換。
+TVSDK支援程式化地刪除和取代VOD串流中的廣告內容。
 
-刪除和替換特徵擴展了自定義和標籤特徵。 自定義廣告標籤將主內容的節標籤為與廣告相關的內容句點。 除了標籤這些時間範圍外，還可以刪除和替換時間範圍。
+刪除和取代功能可延伸自訂廣告標籤功能。 自訂廣告標籤會將主要內容的區段標示為與廣告相關的內容句號。 除了標示這些時間範圍外，您也可以刪除和取代時間範圍。
 
 <!--<a id="section_7A90BFE99F1A4D908D6DDB0B49FA1199"></a>-->
 
-TVSDK中的以下更改支援刪除和替換。
+下列TVSDK變更支援廣告刪除和取代。
 
 **新API**
 
-* `PTTimeRangeCollection` 是定義預定義的一組範圍和類型的公共類：
+* `PTTimeRangeCollection` 是一個公用類別，定義了一組預先定義的範圍和型別：
 
-   * `property PTTimeRangeCollectionType type` 指示時間範圍的類型。
+   * `property PTTimeRangeCollectionType type` 表示時間範圍的型別。
    * `property NSArray* ranges` 用於設定時間範圍。
 
-      陣列中預期的對象類型為 `PTReplacementTimeRange` 或 `CMTimeRange`。
+      陣列中預期的物件型別為 `PTReplacementTimeRange` 或 `CMTimeRange`.
 
       >[!TIP]
       >
-      >陣列的所有對象必須是同一類型。
+      >陣列的所有物件都必須是相同的型別。
 
-   * `PTTimeRangeCollectionType` 是定義在 `PTTimeRangeCollection`:
+   * `PTTimeRangeCollectionType` 是列舉，定義中定義之範圍的行為。 `PTTimeRangeCollection`：
 
-      * `PTTimeRangeCollectionTypeMarkRanges`:範圍的類型為 *標籤*。 該範圍用於將內容中的範圍標籤為廣告。
+      * `PTTimeRangeCollectionTypeMarkRanges`：範圍的型別為 *標籤*. 範圍是用來將內容中的範圍標示為廣告。
 
-      * `PTTimeRangeCollectionTypeDeleteRanges`:範圍的類型為「刪除」。 在廣告插入之前，從主內容中刪除所定義的範圍。
-      * `PTTimeRangeCollectionTypeReplaceRanges`:範圍的類型為「替換」。 定義的範圍從主端用Ads替換(Ad信令模式設定為 `PTAdSignalingModeCustomTimeRanges`)。
+      * `PTTimeRangeCollectionTypeDeleteRanges`：範圍的型別是「刪除」。 定義的範圍會在廣告插入前從主要內容中移除。
+      * `PTTimeRangeCollectionTypeReplaceRanges`：範圍的型別是「取代」。 定義的範圍會從主要以Ads （廣告訊號模式設定為）取代 `PTAdSignalingModeCustomTimeRanges`)。
 
-* `PTReplacementTimeRange`  — 新的公共類，定義 `PTTimeRangeCollection`:
+* `PTReplacementTimeRange`  — 新的公用類別，定義 `PTTimeRangeCollection`：
 
    * `property CMTimeRange range`  — 定義範圍的開始和持續時間。
-   * `property long replacementDuration`  — 如果 `TimeRangeCollection` 是 `PTTimeRangeCollectionTypeReplaceRanges`，也請參見Wiki頁。 `replacementDuration` 用於建立持續時間為 `replacementDuration`。 如果 `replacementDuration` 未設定，則廣告伺服器將確定該投放機會的廣告持續時間和數量。
+   * `property long replacementDuration`  — 如果 `TimeRangeCollection` 是 `PTTimeRangeCollectionTypeReplaceRanges`，則 `replacementDuration` 用於建立投放機會（廣告插入），其持續時間為 `replacementDuration`. 如果 `replacementDuration` 未設定，廣告伺服器將會決定該刊登機會的廣告持續時間和數量。
 
 * `PTAdSignalingMode`:
 
-   * `PTAdSignalingModeCustomTimeRanges`  — 已添加新類型 `PTAdSignalingMode`。 此模式與 `PTTimeRangeCollection` 類型 `PTTimeRangeCollectionReplace` 根據替換範圍插入廣告。
+   * `PTAdSignalingModeCustomTimeRanges`  — 新增新型別 `PTAdSignalingMode`. 此模式會與 `PTTimeRangeCollection` 具有型別 `PTTimeRangeCollectionReplace` 用於根據取代範圍插入廣告。
 
 * `PTAdMetadata`:
 
-   * `property PTTimeRangeCollection* timeRangeCollection`  — 用於設定回放內容中標籤/刪除/替換範圍中使用的時間範圍。
+   * `property PTTimeRangeCollection* timeRangeCollection`  — 用於設定播放內容中標籤/刪除/取代範圍所使用的時間範圍。
 
-* 警告日誌：
+* 警告記錄：
 
    * `UNDEFINED_TIME_RANGES`
 
-      * 類型 — 警告
-      * 說明 — 廣告信令模式定義為自定義範圍，但未定義自定義範圍。
+      * 型別 — 警告
+      * 說明 — 廣告訊號模式定義為自訂範圍，但未定義自訂範圍。
    * `INVALID_TIME_RANGES`
 
-      * 類型 — 警告
-      * 說明 — 一個或多個時間範圍無效，將忽略或修改。
+      * 型別 — 警告
+      * 說明 — 一或多個時間範圍無效，將被忽略或修改。
 
 
-**棄用的API**
+**過時的API**
 
 * `PTAdMetadata`:
 
-   * `property NSArray* externalAdRanges`  — 此屬性以前用於定義C3範圍以進行標籤。 現在已棄用，因為這些範圍是通過 `PTTimeRangeCollection`。
+   * `property NSArray* externalAdRanges`  — 此屬性先前用於定義要標示的C3範圍。 現已棄用，因為這些範圍是透過以下方式設定： `PTTimeRangeCollection`.

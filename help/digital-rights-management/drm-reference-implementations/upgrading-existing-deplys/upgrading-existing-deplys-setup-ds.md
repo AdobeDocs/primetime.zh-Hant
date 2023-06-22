@@ -1,6 +1,6 @@
 ---
-title: 設定域伺服器
-description: 設定域伺服器
+title: 設定網域伺服器
+description: 設定網域伺服器
 copied-description: true
 exl-id: eeb0d39d-58a4-4414-9123-2cf1b27b73de
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# 設定域伺服器{#set-up-a-domain-server}
+# 設定網域伺服器{#set-up-a-domain-server}
 
-要在現有許可證伺服器安裝上配置域伺服器：
+若要在現有授權伺服器安裝上設定網域伺服器：
 
-1. 在 [!DNL tomcat/lib] 目錄，開啟 [!DNL flashaccess-refimpl.properties] 的子菜單。
-1. 在 `Domain CA certificate` 選項，填寫域CA證書。
+1. 在 [!DNL tomcat/lib] 目錄，開啟 [!DNL flashaccess-refimpl.properties] 檔案。
+1. 在 `Domain CA certificate` 選項，完成網域CA憑證。
 
-   然後，此證書用於接受域令牌。
-1. 在 `Domain CA credential` 選項，完成 `Domain CA credential certificate (PFX)` 。
+   然後，會使用此憑證來接受網域Token。
+1. 在 `Domain CA credential` 選項，填妥 `Domain CA credential certificate (PFX)` 詳細資料。
 
-   然後，此證書將用於對域證書和令牌進行簽名。
-1. 指定 `DomainServerlURL`。
+   然後，此憑證會用於簽署網域憑證和權杖。
+1. 指定值 `DomainServerlURL`.
 
-   如果此值設定為 `NULL`，域身份驗證可能成功。 但是，在加入域時，可能會發生加入域錯誤。
+   如果此值設定為 `NULL`，網域驗證可能會成功。 但是，在加入網域時，可能會發生加入網域錯誤。

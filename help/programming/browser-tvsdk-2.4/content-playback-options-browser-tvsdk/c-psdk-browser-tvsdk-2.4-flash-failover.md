@@ -1,6 +1,6 @@
 ---
-description: 瀏覽器TVSDK提供了建立高級視頻播放器應用程式（您的Mogki時播放器）的工具，您可以將其與其他Mogki時段元件整合。
-title: Flash故障轉移
+description: 瀏覽器TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）的工具，您可以將其與其他Primetime元件整合。
+title: Flash容錯移轉
 exl-id: 76bd9214-767a-4f26-977d-81fbac3e0c42
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 0%
 
 ---
 
-# Flash故障轉移 {#flash-failover}
+# Flash容錯移轉 {#flash-failover}
 
-瀏覽器TVSDK提供了建立高級視頻播放器應用程式（您的Mogki時播放器）的工具，您可以將其與其他Mogki時段元件整合。
+瀏覽器TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）的工具，您可以將其與其他Primetime元件整合。
 
-使用平台的工具建立播放器並將其連接到瀏覽器TVSDK中的媒體播放器視圖，該視圖具有播放和管理視頻的方法。 例如，Browser TVSDK提供播放和暫停方法。 您可以在平台上建立用戶介面按鈕，並設定按鈕以調用這些瀏覽器TVSDK方法。
+使用平台的工具來建立播放器，並將其連線至瀏覽器TVSDK中的媒體播放器檢視，該檢視具有播放和管理視訊的方法。 例如，瀏覽器TVSDK提供播放和暫停方法。 您可以在平台上建立使用者介面按鈕，並設定呼叫這些瀏覽器TVSDK方法的按鈕。
 
-## Flash回退 {#section_92D3884A13A6431F9A9CC5C79715D888}
+## Flash遞補 {#section_92D3884A13A6431F9A9CC5C79715D888}
 
-在瀏覽器TVSDK中，您的應用程式僅與 `Primetime.js` API。 基礎的瀏覽器TVSDK實現基於當前平台和要播放的媒體的資源類型來決定要使用的播放器技術。
+在瀏覽器TVSDK中，您的應用程式只會與 `Primetime.js` API。 基礎瀏覽器TVSDK實作會根據目前平台和要播放的媒體資源型別，決定要使用哪個播放器技術。
 
-在您致電之前，不會對播放器技術做出決定 `MediaPlayer.replaceCurrentResource` 播放特定資源。
+您必須呼叫，才會針對播放器技術做出決定 `MediaPlayer.replaceCurrentResource` 播放特定資源。
 
 例如：
 
@@ -31,21 +31,21 @@ var player = new AdobePSDK.MediaPlayer(),
               player.replaceCurrentResource(mediaResource);
 ```
 
-## 確定要使用的媒體播放器 {#section_D844E386AF5848688D204DEE258ECEE6}
+## 決定要使用的媒體播放器 {#section_D844E386AF5848688D204DEE258ECEE6}
 
-此示例過程說明了確定播放器技術的過程：
-
->[!TIP]
->
->進程可能因URL和環境而異。
-
-1. 如果支援媒體源擴展，請使用它，但沒有已知限制。
-1. 如果支援，請使用 `<video>` 直接標籤，而無MSE。
-1. 確保您至少使用AdobeFlash Player版本23.0。
-1. 如果找不到合適的回放技術， `replaceCurrentResource` 返回錯誤。
-
-後續 `replaceCurrentResource` 呼叫相同 `MediaPlayer` 實例遵循同一進程。 這樣，您就可以使用 `MediaPlayer` 同一父代中的實例 `<DIV>` 您在 `MediaPlayerView` 已建立實例。
+此範例程式說明決定播放器技術的程式：
 
 >[!TIP]
 >
->SWF對象和 `<video>` 標籤嵌套在父代中 `<DIV>` 標籤。
+>此程式可能會因URL和您的環境而異。
+
+1. 如果支援Media Source Extensions，請使用它而沒有已知限制。
+1. 如果支援，請使用 `<video>` 標籤而不使用MSE。
+1. 確保您至少使用AdobeFlash Player23.0版。
+1. 如果找不到合適的播放技術， `replaceCurrentResource` 傳回錯誤。
+
+後續的 `replaceCurrentResource` 對相同專案呼叫 `MediaPlayer` 執行個體會遵循相同程式。 這可讓您使用相同的播放器來播放各種資源型別 `MediaPlayer` 相同父項中的執行個體 `<DIV>` 標籤之前指定的時間 `MediaPlayerView` 執行個體已建立。
+
+>[!TIP]
+>
+>SWF物件與 `<video>` 標籤已巢狀內嵌於父項中 `<DIV>` 標籤之間。

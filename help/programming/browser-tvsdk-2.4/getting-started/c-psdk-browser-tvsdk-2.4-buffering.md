@@ -1,5 +1,5 @@
 ---
-description: 您可以配置視覺對象以通知用戶內容正在緩衝。
+description: 您可以設定視覺效果來通知使用者內容正在緩衝中。
 title: 緩衝
 exl-id: 1b2f32b4-1839-4256-82d6-b262569aa751
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # 緩衝{#buffering}
 
-您可以配置視覺對象以通知用戶內容正在緩衝。
+您可以設定視覺效果來通知使用者內容正在緩衝中。
 
-聽 `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` 和 `AdobePSDK.PSDKEventType.BUFFERING_END` 事件。 例如：
+聆聽 `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` 和 `AdobePSDK.PSDKEventType.BUFFERING_END` 事件。 例如：
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
@@ -29,7 +29,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-UI Framework提供預設緩衝覆蓋行為實現，可按如下所示進行擴展：
+UI Framework提供預設緩衝覆蓋行為實施，可擴充如以下所示：
 
 ```js
 // Using UI Framework 
@@ -48,7 +48,7 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-DOM的結果如下：
+以下是結果DOM的外觀：
 
 ```
 <div id=" videoDiv" class="ptp-root-element"> 

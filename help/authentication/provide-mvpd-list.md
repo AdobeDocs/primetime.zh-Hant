@@ -13,48 +13,48 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## REST API終結點 {#clientless-endpoints}
+## REST API端點 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
-
-* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
-
-&lt;sp_fqdn>:
+&lt;reggie_fqdn>：
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+
+&lt;sp_fqdn>：
+
+* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
  </br>
 
 ## 說明 {#description}
 
-返回請求方的已配置MVPD清單。
+傳回要求者的已設定MVPD清單。
 
-| 端點 | 已調用  </br>按 | 輸入   </br>帕拉姆 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
+| 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>例如：</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | 黃金時段驗證 | 1。請求者</br>    （路徑元件）</br>_2.  deviceType（不建議使用）_ | GET | 包含MVPD清單的XML或JSON。 | 200 |
+| &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>例如：</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | Primetime驗證 | 1.請求者</br>    （路徑元件）</br>_2.  deviceType （已棄用）_ | GET | 包含MVPD清單的XML或JSON。 | 200 |
 
 {style="table-layout:auto"}
 
 
-| 輸入參數 | 說明 |
+| 輸入引數 | 說明 |
 | --------------- | ------------------------------------------------------------- |
-| 請求 | 此操作對其有效的程式設計師請求者ID。 |
-| *設備類型* | 設備類型。 |
+| 請求者 | 此作業有效的程式設計員requestorId。 |
+| *deviceType* | 裝置型別。 |
 
 {style="table-layout:auto"}
 
-### 示例響應 {#sample-response}
+### 範例回應 {#sample-response}
 
-與現有MVPD XML對/config servlet的響應相同
+與/config servlet的現有MVPD XML回應相同
 
-注：配置為使用平台SSO的所有MVPD在其相應節點(JSON/XML)中將具有以下額外屬性：
+注意：所有設定為使用Platform SSO的MVPD在其對應節點(JSON/XML)中都具有下列額外屬性：
 
-* **enablePlatformServices（布爾型）:** 指示是否通過平台SSO整合此MVPD的標誌
-* **boardingStatus（字串）:** 指示MVPD是否完全支援平台SSO(SUPPORTED)或MVPD是否僅出現在平台選取器(PICKER)中的標誌
-* **displayInPlatformPicker（布爾型）:** 此MVPD是否出現在平台選取器中
-* **platformMappingId（字串）:** 平台所知的此MVPD的標識符
-* **requiredMetadataFields（字串陣列）:** 成功登錄時，用戶元資料欄位預期可用
+* **enablePlatformServices （布林值）：** 表示此MVPD是否透過Platform SSO整合的旗標
+* **boardingStatus （字串）：** 此旗標指出MVPD是否完全支援Platform SSO （支援）或MVPD是否只出現在平台選擇器（選擇器）中
+* **displayInPlatformPicker （布林值）：** 此MVPD是否出現在平台選擇器中
+* **platformMappingId （字串）：** 平台所知的此MVPD的識別碼
+* **requiredMetadataFields （字串陣列）：** 使用者中繼資料欄位應在成功登入後才能使用

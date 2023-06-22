@@ -1,6 +1,6 @@
 ---
-title: 辭彙表
-description: 需要特殊定義的常用術語。
+title: 字彙表
+description: 需要特別定義的常用辭彙。
 exl-id: 4e7874f7-c5c0-4f2c-ada2-a0da3ed4d4bf
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
@@ -9,41 +9,41 @@ ht-degree: 0%
 
 ---
 
-# 辭彙表 {#glossary}
+# 字彙表 {#glossary}
 
-需要特殊定義的常用術語。
+需要特別定義的常用辭彙。
 
-## 內容加密密鑰 {#content-encryption-key}
+## 內容加密金鑰 {#content-encryption-key}
 
-由實用程式生成的內容加密密鑰(CEK)隨後被內容打包器用於準備必須保護的內容。
-該實用程式以十六進位形式生成長度為16位元組的密鑰。
-本指南在注釋和錯誤消息、檔案和命令示例中顯示CEK的參數名稱和值名稱的以下變型：
+公用程式產生的內容加密金鑰(CEK)隨後由內容封裝程式用來準備必須保護的內容。
+公用程式會產生16個位元組的十六進位金鑰。
+本指南在附註和錯誤訊息、檔案和命令範例中顯示CEK的引數名稱和值名稱的下列變體：
 
-* 內容密鑰
+* 內容金鑰
 * `&contentKey=`
 * `?cek=`
 * `<CEK>`
 * `[YOUR CONTENT KEY]`
 
-CEK的檔案名顯示為：
+CEK的檔案名稱如下所示：
 
 * `keyfile.bin`
 * `creds/fairplaybin`
 * `Jaigo_DASH/_info/key.B64.random`
 
-CEK本身可以儲存在密鑰管理系統中並且被加密。 本指南將儲存索引稱為CEK儲存ID CEKSID。 密鑰加密密鑰(KEK)一詞是指二級加密密鑰，該術語 `ek` 指該加密的值。
-某些調用同時使用CEK和CEK儲存ID CEKSID，並且從儲存中檢索到的CEK必須與調用中提供的CEK匹配。
-對於HLS Offline with FairPlay，還有 `persistentContentKey` 可設定為過期。
+CEK本身可儲存在金鑰管理系統中並加密。 本指南將儲存索引稱為CEK儲存ID CEKSID。 金鑰加密金鑰(KEK)一詞是指第二層級加密金鑰，而金鑰則是 `ek` 是指該加密的值。
+有些呼叫會同時使用CEK和CEK儲存ID CEKSID，而且從儲存體擷取的CEK必須符合呼叫中提供的CEK。
+對於使用FairPlay的HLS離線，也有 `persistentContentKey` 可設為過期。
 
-## 內容加密密鑰儲存ID {#content-encryption-key-storage-id}
+## 內容加密金鑰儲存ID {#content-encryption-key-storage-id}
 
-內容加密密鑰儲存ID(CEKSID)是用於從密鑰管理系統檢索內容加密密鑰的ID。
+內容加密金鑰儲存ID (CEKSID)是從金鑰管理系統擷取內容加密金鑰的ID。
 
 CEKSID也稱為
-* 密鑰ID
+* 金鑰ID
 * 內容ID
 * `&kid`
 
-## 客戶驗證器 {#customer-authenticator}
+## 客戶驗證者 {#customer-authenticator}
 
-用於對Expressplay的API請求進行身份驗證的密鑰。 請求可以包括令牌請求。
+在對Expressplay的API的請求中進行驗證的金鑰。 請求可以包含代號的請求。

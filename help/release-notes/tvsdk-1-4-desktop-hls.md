@@ -5,9 +5,9 @@ contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '5194'
+source-wordcount: '5195'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ TVSDK for Desktop HLS發行說明說明TVSDK DHLS的新增或變更專案、已�
 
 * Zendesk #33777 - DHLS散發組建的Localhost權杖SWF已過期。
 
-  正在更新DHLS上PMP示範的localhost權杖。
+   正在更新DHLS上PMP示範的localhost權杖。
 
 ### 舊版中的已解決問題 {#resolved-issues-previous}
 
@@ -110,11 +110,11 @@ TVSDK for Desktop HLS發行說明說明TVSDK DHLS的新增或變更專案、已�
 
 * Zendesk #30731 - TVSDK不會在AdBreak中播放多個VPAID廣告。
 
-  修正AdBreak中的多個VPAID廣告播放。
+   修正AdBreak中的多個VPAID廣告播放。
 
 * Zendesk #29968 — 雙告示牌。
 
-  當發生ABR切換時，視訊播放器可以重複該時段的最後一個區段。 因此，有時會重複前段的最後一個區段。 此問題已修正。
+   當發生ABR切換時，視訊播放器可以重複該時段的最後一個區段。 因此，有時會重複前段的最後一個區段。 此問題已修正。
 
 **版本1.4.35** (879)
 
@@ -124,31 +124,31 @@ TVSDK for Desktop HLS發行說明說明TVSDK DHLS的新增或變更專案、已�
 
 * Zendesk #21701 — 傳送1401 CRS請求的原始創意URL，而不是標準化的URL。
 
-  已根據CRS後端要求，修正要求重新封裝的URL進行轉碼的問題。
+   已根據CRS後端要求，修正要求重新封裝的URL進行轉碼的問題。
 * Zendesk #26197 — 未以所需的顯示解析度重播變形壓縮。
 
-  **注意**：此問題需要Flash播放器24.0.0.194或更新版本。
+   **注意**：此問題需要Flash播放器24.0.0.194或更新版本。
 
-  已修正使用長寬比表格中缺少的專案來計算輸出寬度的問題。
+   已修正使用長寬比表格中缺少的專案來計算輸出寬度的問題。
 
 * Zendesk #26840 — 第二次嘗試後，IE11 + Windows7上的HDCP偵測失敗。
 
-  **注意**：此問題需要Flash播放器24.0.0.218或更新版本。
+   **注意**：此問題需要Flash播放器24.0.0.218或更新版本。
 
-  此問題已透過修改AdobeCP的主要訊息佇列處理來解決，以循環處理整個佇列，而不是僅封鎖第一則訊息。
+   此問題已透過修改AdobeCP的主要訊息佇列處理來解決，以循環處理整個佇列，而不是僅封鎖第一則訊息。
 
 * Zendesk #27460 — 新的Akamai帳戶無法處理POSTCDN請求。
 
-  新的CDN帳戶無法處理POST CDN請求。 此問題已透過更新程式碼來解決，以使cdn.auditude.com廣告請求是GET而非POST。
+   新的CDN帳戶無法處理POST CDN請求。 此問題已透過更新程式碼來解決，以使cdn.auditude.com廣告請求是GET而非POST。
 * Zendesk #27619 - Windows 10上的Flash當機
 
-  **注意**：此問題需要Flash播放器24.0.0.218或更新版本。
+   **注意**：此問題需要Flash播放器24.0.0.218或更新版本。
 
-  此問題已藉由防止長URL造成的錯誤而解決。
+   此問題已藉由防止長URL造成的錯誤而解決。
 
 * Zendesk #28218 — 從恢復點回撥時未觸發追蹤事件
 
-  此問題與Zendesk #26592中的問題相同。 已修正當媒體播放器處於VOD資料流的「已準備」狀態時，允許搜尋作業的問題。
+   此問題與Zendesk #26592中的問題相同。 已修正當媒體播放器處於VOD資料流的「已準備」狀態時，允許搜尋作業的問題。
 
 **版本1.4.32** (867)
 
@@ -194,9 +194,9 @@ TVSDK for Desktop HLS發行說明說明TVSDK DHLS的新增或變更專案、已�
 
 **版本1.4.28** (848)
 
-* Zendesk #25027 -Auditude在1.4.27桌上型電腦版本中無法運作
+* Zendesk #25027 - Auditude在1.4.27桌上型電腦版本中無法運作
 
-此問題已透過新增程式碼以檢查AUDITUDE_METADATA_KEY以及讓AUDITUDE_METADATA_KEY和ADVERTISING_METADATA_KEY可互換而解決。
+此問題已透過新增代碼以檢查AUDITUDE_METADATA_KEY以及讓AUDITUDE_METADATA_KEY和ADVERTISING_METADATA_KEY可互換而解決。
 
 * Zendesk #24428 — 使用TVSDK播放DRM HLS的常見緩衝問題
 
@@ -382,7 +382,7 @@ Windows原生網路程式碼已修正，以確保連線不會關閉其他連線�
 
 為廣告請求建立廣告單位時，Auditude請求會剖析自訂引數的AuditudeSettings 。
 
-此行為已變更為在請求中包含來自Opportunity物件的自訂引數。 此外，無法將具有不同自訂引數的多個商機封裝在一個Auditude請求中。
+此行為已變更為在請求中包含來自Opportunity物件的自訂引數。 此外，多個具有不同自訂引數的商機無法封裝在一個Auditude請求中。
 
 * Zendesk #21227 - m3u8無法持續播放
 
@@ -655,7 +655,7 @@ TrickPlay現在接受高於16x的比率：+/- 32、+/-64和+/-128。
 
 * Zendesk #3268 — 桌上型電腦：視訊播放器在 `+-` 40/50秒後開始變黑 `+-` 90秒
 
-修正Mac Chrome上串流開始忽隱忽現，最終變成黑色的問題。 (需要Flash Player18.0.0.161)
+修正Mac Chrome上串流開始閃爍並最終變黑的問題。 (需要Flash Player18.0.0.161)
 
 * Zendesk #3304 - VAST 3.0 `[ERRORCODE]` 未填入巨集
 
@@ -695,7 +695,7 @@ HLS格式的MIME型別區分大小寫，這不正確，已變更為不再區分�
 
 **版本1.4.6**
 
-* Zendesk #2652 — 案頭HLS的Auditude檔案，釐清案頭HLS檔案的Auditudemedia_id
+* Zendesk #2652 — 適用於案頭HLS的Auditude檔案，適用於案頭HLS檔案的Artificate Auditude media_id
 
 **版本1.4.5**
 
@@ -754,7 +754,7 @@ _playbackManager.pause();
 
    * PTPLAY-1634 — 相同的訂閱標籤在不同的即時視窗中具有不同的時間戳記。 當Live Windows移動時，每個視窗中的相同標籤應該有相同的時間戳記。 但有時候，相同的標籤會有不同的時間戳記。
    * PTPLAY-28 - MediaPlayer時間軸不包含空白分行符號。
-   * 需要跨網域原則檔案(crossdomain.xml)，才能從不同網域串流內容。 [設定用於HTTP串流的crossdomain.xml檔案](https://helpx.adobe.com/adobe-media-server/dev/configure-dynamic-streaming-live-streaming.html).
+   * 需要跨網域原則檔案(crossdomain.xml)，才能從不同網域串流內容。 [設定用於HTTP串流的crossdomain.xml檔案](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html).
    * 錯誤#3694203 — 在DVR串流中，從播放中段搜尋另一個中段廣告提示可能會導致瀏覽器凍結
    * 錯誤#3753725 — 如果已觀看廣告插播，則未考慮selectPolicyForSeekIntoAd
    * 錯誤#3754529 — 在即時DVR資料流中搜尋時，不會從資料流中移除前段廣告

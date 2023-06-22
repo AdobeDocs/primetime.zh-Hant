@@ -1,6 +1,6 @@
 ---
 title: DRM 5.3.1發行說明
-description: 《DRM 5.3.1發行說明》介紹了DRM中的新功能和已知問5.3.1。
+description: DRM 5.3.1發行說明說明DRM 5.3.1的新功能和已知問題。
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
@@ -14,44 +14,44 @@ ht-degree: 0%
 
 # DRM 5.3.1發行說明 {#drm-release-notes}
 
-《DRM 5.3.1發行說明》介紹了DRM中的新功能和已知問5.3.1。
+DRM 5.3.1發行說明說明DRM 5.3.1的新功能和已知問題。
 
 ## 5.3版中的新功能 {#new-features}
 
-* **安全停止 —** 可以指定回放是在回放窗口結束時停止還是繼續。
-* **基於解析度的輸出保護(RBOP)-** 可以根據像素解析度指定輸出約束。
-* **CDM門控 —** 為了支援HTML5,Adobe已經更新了Adobe PrimetimeDRM(以前稱為Adobe訪問DRM)Java SDK附帶的參考實現許可伺服器，以便能夠在單個URL端點處使用所有DRM協定消息。 為了符合CDM（內容解密模組）DRM供應商需要實現的HTML5 EME（加密媒體擴展）規範，HTTP URL方法的這種合併是必要的。 以前，這些是引用實施許可證伺服器公開的唯一URL終結點：
+* **安全停止 —** 您可以指定在播放視窗結束時是否停止或繼續播放。
+* **以解析度為基礎的輸出保護(RBOP) -** 您可以根據畫素解析度來指定輸出限制。
+* **CDM閘道 —** 為了支援HTML5，Adobe更新了Adobe Primetime DRM (原稱Adobe Access DRM) Java SDK隨附的參考實作授權伺服器，以便能夠在單一URL端點使用所有DRM通訊協定訊息。 為了遵循CDM （內容解密模組） DRM廠商實作的HTML5 EME （加密媒體擴充功能）規格，必須合併HTTP URL方法。 之前，這些是Reference Implementation授權伺服器公開的唯一一個URL端點：
 
-   * /flashaccess/i15n/v3（個性化）
-   * /flashaccess/license/v5（許可證請求）
-   * /flashaccess/licenseRet/v5（許可證返回）
-   * /flashaccess/getServerVersion/v5（獲取伺服器版本）
+   * /flashaccess/i15n/v3 （個人化）
+   * /flashaccess/license/v5 （授權要求）
+   * /flashaccess/licenseRet/v5 （授權退回）
+   * /flashaccess/getServerVersion/v5 （取得伺服器版本）
 
-現在，所有請求(源於HTML5 CDM)都可以定向到單個端點：/req
+現在，所有請求(源自HTML5 CDM)都可以被導向到單一端點：/req
 
-這種變化與Flash Player、安卓、iOS等非CDM平台向後相容。
+此變更可回溯相容於非CDM平台，例如Flash Player、Android、iOS。
 
-* **RBOP縮放 —** 對於HTML5空間，RBOP包含自動縮放功能，其中，如果比特率超過DRM策略中指定的允許比特率，則內容將縮放到最大允許解析度。 例如，如果1080p流被流式傳輸到在非HDCP相容監視器上顯示內容的客戶端，則DRM策略可指示最大解析度應為720p。 黃金時段DRM將解碼1080p流，然後縮放到720p，然後再在螢幕上呈現。 如果播放視頻的瀏覽器隨後被拖到支援HDCP的監視器，則黃金時段DRM將停止縮放內容，並允許其在10時80回放。
+* **RBOP縮減比例 —** 特定於HTML5空間，RBOP包含自動縮減縮放功能，其中如果位元速率超過DRM原則中指定的允許位元速率，內容將會縮減到允許的最大解析度。 例如，如果將1080p資料流傳輸至在非HDCP相容監視器上顯示內容的使用者端，DRM原則可能會指出最大解析度應為720p。 Primetime DRM會解碼1080p資料流，然後在熒幕上呈現之前將其縮小至720p。 如果播放視訊的瀏覽器接著被拖曳到支援HDCP的監視器上，Primetime DRM就會停止縮減內容縮放並允許1080重播。
 
 ## 5.3版中的已知問題 {#known-issues}
 
-* `Hasher.bat (flashaccess-hasher.jar)` 將日誌消息輸出到 `flashaccess-global.log.`您必須確保 `flashaccess-global.log` 檔案與Hasher.bat位於同一目錄中。
+* `Hasher.bat (flashaccess-hasher.jar)` 將記錄訊息輸出至 `flashaccess-global.log.`您必須確保 `flashaccess-global.log` 檔案與Hasher.bat位於相同目錄中。
 
-* 某些 `toJSON()`呼叫回復 `Strings` 不完全符合JSON或完全符合（即不合成JSON結構）。
+* 部分「 」的 `toJSON()`呼叫傳回 `Strings` 非完全符合JSON規範或以獨立方式完全符合（即沒有JSON結構組成）的檔案。
 
-* Xbox密鑰伺服器接受版本值不等於1的密鑰請求。
+* Xbox金鑰伺服器接受版本值不等於1的金鑰要求。
 
-Xbox密鑰伺服器只應支援版本等於1的密鑰請求，但當前，伺服器接受版本不為1的密鑰請求。
+Xbox金鑰伺服器應僅支援版本等於1的關鍵要求，但目前，伺服器接受版本不是1的關鍵要求。
 
-* Xbox密鑰伺服器無法正確驗證策略。
+* Xbox金鑰伺服器無法正確驗證原則。
 
-Xbox密鑰伺服器不應接受有效日期之外的策略，但目前伺服器無論如何都接受這些策略。
+Xbox金鑰伺服器不應該接受超過有效日期的原則，但是目前，伺服器無論如何都會接受這些原則。
 
-* Xbox密鑰伺服器應拒絕包含使用錯誤打包證書建立的元資料的密鑰請求。
-* 某些JSON結構的返回值的格式不正確，無法用於與基於解析度的輸出保護相關的類。
+* Xbox金鑰伺服器應拒絕金鑰要求，該金鑰要求包含使用錯誤的封裝程式憑證建立的中繼資料。
+* 部分JSON結構的傳回值格式不正確，無法用於以解析度為基礎的輸出保護相關類別。
 
-若干類實現toJSON()方法，該方法應將該對象的JSON相容表示形式返回為String，但當前返回的值不完全符合JSON。
+有幾個類別實作toJSON()方法，該方法應該會將該物件的JSON相容表示傳回為String，但目前傳回的值不完全符合JSON。
 
-## 有用的資源 {#helpful-resources}
+## 實用資源 {#helpful-resources}
 
-* 請參閱以下網址的完整幫助文檔 [Adobe Primetime學習和支援](https://helpx.adobe.com/support/primetime.html) 的子菜單。
+* 如需完整說明檔案，請前往 [Adobe Primetime學習與支援](https://helpx.adobe.com/support/primetime.html) 頁面。

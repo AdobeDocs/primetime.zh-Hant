@@ -1,6 +1,6 @@
 ---
-title: 按第二螢幕Web應用檢查身份驗證流
-description: 按第二螢幕Web應用檢查身份驗證流
+title: 依第二熒幕Web應用程式檢查驗證流程
+description: 依第二熒幕Web應用程式檢查驗證流程
 exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,44 +9,44 @@ ht-degree: 0%
 
 ---
 
-# 按第二螢幕Web應用檢查身份驗證流 {#check-authentication-flow-by-second-screen-web-app}
+# 依第二熒幕Web應用程式檢查驗證流程 {#check-authentication-flow-by-second-screen-web-app}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## REST API終結點 {#clientless-endpoints}
+## REST API端點 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
-
-* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
-
-&lt;sp_fqdn>:
+&lt;reggie_fqdn>：
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+
+&lt;sp_fqdn>：
+
+* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## 說明 {#description}
 
-此API應由第二個螢幕登錄Web應用使用，以確認Adobe Primetime身份驗證已確認成功從MVPD登錄。 我們建議在向最終用戶顯示成功消息之前調用此API，該消息指示他/她繼續到設備控制台以繼續工作流。
+此API應由第二個畫面登入Web應用程式使用，以確認Adobe Primetime驗證已確認成功從MVPD登入。 我們建議先呼叫此API，再向一般使用者顯示成功訊息，指示他/她繼續前往裝置主控台，以繼續執行工作流程。
 
 
-| 端點 | 已調用  </br>按 | 輸入   </br>帕拉姆 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
+| 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
 | --- | --- | --- | --- | --- | --- |
-| SP_FQDN/api/v1/checkauthn/{註冊代碼} | 登錄Web應用 | 1。註冊碼  </br>    （路徑元件）</br>2.  請求  </br>    （強制） | GET | 如果失敗，則包含錯誤詳細資訊的XML或JSON。 | 200 — 成功   </br>403 — 禁止 |
+| SP_FQDN/api/v1/checkauthn/{registration code} | 登入網頁應用程式 | 1.註冊代碼  </br>    （路徑元件）</br>2.  請求者  </br>    （必要） | GET | XML或JSON包含失敗時的錯誤詳細資料。 | 200 — 成功   </br>403 — 禁止 |
 
 </br>
 
-| 輸入參數 | 說明 |
+| 輸入引數 | 說明 |
 | ----------------- | --------------------------------------------------------------------------------------------- |
-| 註冊碼 | 用戶在驗證流開始時提供的註冊代碼值。 |
-| 請求 | 此操作對其有效的程式設計師請求者ID。 |
+| 註冊代碼 | 使用者在驗證流程開始時提供的註冊代碼值。 |
+| 請求者 | 此作業有效的程式設計員requestorId。 |
 
 
-### 示例響應（如果出現錯誤） {#response}
+### 範例回應（發生錯誤時） {#response}
 
 ```JSON
     {

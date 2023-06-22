@@ -12,37 +12,37 @@ ht-degree: 0%
 
 # 效能調整{#performance-tuning}
 
-使用以下提示幫助提高效能：
+使用下列提示來協助提高效能：
 
-* 使用網路HSM比使用直接連接的HSM要慢得多。
-* 為了提高效能，您可以選擇通過部署位於 [!DNL thirdparty/cryptoj] 資料夾。 要啟用本機支援，請將平台的庫（用於Windows的jsafe.dll或用於Linux的libjsafe.so）添加到路徑中。
+* 使用網路HSM比使用直接連線的HSM要慢得多。
+* 為改善效能，您可以部署位於以下位置的平台特定程式庫，選擇性地啟用密碼編譯作業的原生支援： [!DNL thirdparty/cryptoj] SDK的資料夾。 若要啟用原生支援，請將您平台的程式庫（適用於Windows的jsafe.dll或適用於Linux的libjsafe.so）新增至路徑。
 
    >[!NOTE]
    >
-   >如果在同一Tomcat實例中運行多個Web應用程式，並且 `jsafe.dll` 在路徑上，只有載入的第一個Web應用程式能夠載入 `jsafe.dll` 的下界。 因此，只有第一個Web應用程式才能獲得本機支援的好處。 在這種情況下，要提高所有Web應用程式的效能，請 `cryptoj.jar`在戰爭檔案之外。 例如，在 `<tomcat_installation_folder>/lib` 的子菜單。
+   >如果您在同一Tomcat執行個體中執行多個Web應用程式並擁有 `jsafe.dll` 在路徑上，只有第一個載入的Web應用程式才能載入 `jsafe.dll` 資料庫。 因此，只有第一個Web應用程式才能享受原生支援的好處。 在這種情況下，若要改善所有網頁應用程式的效能，請放置 `cryptoj.jar`在WAR檔案外部。 例如，在 `<tomcat_installation_folder>/lib` 目錄。
 
-* 64位作業系統（如64位版本的Red Hat®或Windows）比32位作業系統提供了更好的效能。
+* 64位元作業系統(例如64位元版本的Red Hat®或Windows)比32位元作業系統提供更優異的效能。
 
-## 生成隨機數(Linux) {#section_3E2E936A538F40B7BF8892C65E117907}
+## 產生隨機數字(Linux) {#section_3E2E936A538F40B7BF8892C65E117907}
 
-在某些情況下，Linux環境在執行黃金時段DRM相關操作時可能會暫停，這些操作需要隨機數生成，包括：
+在某些情況下，Linux環境在執行需要隨機數字產生的Primetime DRM相關作業時可能會暫停，包括：
 
-* 啟動Adobe PrimetimeDRM許可證伺服器
-* 使用 [!DNL AdobePolicyManager] 實用
-* 將受DRM保護的內容與Adobe Medium伺服器或Mogine OfflinePackager打包
+* 啟動Adobe Primetime DRM License Server
+* 使用產生原則 [!DNL AdobePolicyManager] 公用程式
+* 使用Adobe Medium伺服器或Primetime OfflinePackager封裝受DRM保護的內容
 
-這些操作中的延遲通常是Linux伺服器上低熵池的結果。
+這些作業期間的延遲通常是因為Linux伺服器上的低平均資訊量集區。
 
-在Linux上，隨機數從伺服器環境的熵池中產生。 熵池通常通過Linux內核接收硬體中斷來維護。 如果伺服器被隔離並且沒有從硬體資源（例如滑鼠或鍵盤）接收常規輸入，則可以擴展等待重新填充熵池。 在此方案中，等待資料的操作 [!DNL /dev/random] 可以暫停。
+在Linux上，隨機數字是從伺服器環境的平均資訊量集區產生的。 平圴資訊量集區通常是透過接收Linux核心的硬體中斷來維護。 如果伺服器被隔離且未收到硬體資源（例如滑鼠或鍵盤）的定期輸入，則重新填滿平均資訊量集區的等待時間可能會延長。 在此案例中，等待資料來自的作業 [!DNL /dev/random] 可能會暫停。
 
-您可以在Linux伺服器上使用硬體隨機數生成器來確保生成足夠的熵。 但是，如果在給定的部署方案中沒有硬體隨機數生成器，則可以使用基於軟體的解決方案來增加熵池刷新率。 在Linux上，這樣的軟體解決方案之一是 [!DNL haveged] （HArdware Volatile Entropy Gathering and Expansion守護程式）。
+您可以在Linux伺服器上使用硬體隨機數字產生器，以確保產生足夠的平均資訊量。 不過，如果指定的部署案例中沒有硬體隨機數字產生器，您可以使用軟體式解決方案來增加平均資訊量集區重新整理率。 在Linux上，這類軟體解決方案之一是 [!DNL haveged] (Hardware Volatile Entropy Gathering and Expansion daemon)。
 
-## 確定可用熵 {#section_686B311FE6144566B6939E9F20915ADC}
+## 決定可用的平均資訊量 {#section_686B311FE6144566B6939E9F20915ADC}
 
-要在意外延遲期間驗證給定伺服器的熵池中可用的位數，請執行以下命令：
+若要驗證在意外的延遲期間，指定伺服器的平均資訊量集區中可用的位元數，請執行以下命令：
 
 ```
 cat /proc/sys/kernel/random/entropy_avail 
 ```
 
-一個健康的Linux系統，有大量的熵值，將回到接近4096位的熵值。 如果返回的值小於200，則系統運行的熵非常低。
+健全的Linux系統，若有大量的可用平均資訊量，將會回覆接近完整的4,096位元平均資訊量。 如果傳回的值小於200，則系統的平均資訊量會非常低。

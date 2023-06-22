@@ -1,6 +1,6 @@
 ---
-title: JavaScript SDK概述
-description: JavaScript SDK概述
+title: JavaScript SDK概觀
+description: JavaScript SDK概觀
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,35 +9,35 @@ ht-degree: 0%
 
 ---
 
-# JavaScript SDK概述 {#javascript-sdk-overview}
+# JavaScript SDK概觀 {#javascript-sdk-overview}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 導言
+## 簡介
 
-Adobe強烈建議您遷移到AccessEnabler庫的最新JS v4.x。
+Adobe強烈建議您移轉至AccessEnabler程式庫的最新JS v4.x。
 
-Adobe Primetime驗證JavaScript整合在熟悉的JS Web應用程式開發環境中為程式設計師提供了TV-Everywhere解決方案。 整合的主要元件是您的「高級」應用程式（用戶交互、視頻演示），以及Adobe提供的「低級」AccessEnabler庫，該庫提供您對權利流的輸入，並處理與Adobe Primetime身份驗證伺服器的通信。
+Adobe Primetime驗證JavaScript整合在熟悉的JS Web應用程式開發環境中，為程式設計師提供無所不在的TV解決方案。 整合的主要元件是您的「高階」應用程式（使用者互動、視訊簡報），以及Adobe提供的「低階」 AccessEnabler資料庫，此資料庫提供您許可權流程的入口，並處理與Adobe Primetime驗證伺服器的通訊。
 
-一般的Adobe Primetime身份驗證權限流在 [程式設計師權利流](/help/authentication/entitlement-flow.md)以及JavaScript整合指南指導您完成實現。 以下各節提供了特定於JavaScript AccessEnabler整合的說明和示例。
+一般Adobe Primetime驗證許可權流程涵蓋 [程式設計師權益流程](/help/authentication/entitlement-flow.md)和JavaScript整合逐步指南會逐步引導您完成實作。 以下小節提供JavaScript AccessEnabler整合專屬的說明和範例。
 
 >[!IMPORTANT]
 >
->本文檔介紹案頭Web解決方案的實施。 移動平台不支援JavaScript庫(例如，iOS的Safari和Android的Chrome)。 如果您希望將目標鎖定在移動平台(iOS、Android、Windows)，請使用我們的本機SDK。
+>本檔案說明案頭Web解決方案的實作。 行動平台不支援JavaScript程式庫(例如iOS上的Safari、Android上的Chrome)。 如果您想要鎖定行動平台(iOS、Android、Windows)，請使用我們的原生SDK。
 
-## 建立MVPD選擇對話框 {#creating-the-mvpd-selection-dialog}
+## 建立MVPD選擇對話方塊 {#creating-the-mvpd-selection-dialog}
 
-用戶若要登錄到其MVPD並經過身份驗證，您的頁面或播放器必須為用戶提供標識其MVPD的方法。 提供了MVPD選擇對話框的預設版本供開發。 為了生產用途，必須實現自己的MVPD選擇器。 
+使用者若要登入其MVPD並獲得驗證，您的頁面或播放器必須提供使用者識別其MVPD的方式。 會提供MVPD選取對話方塊的預設版本以進行開發。 對於生產使用，您必須實作自己的MVPD選擇器。 
 
-如果您已經知道客戶的提供商是誰，您可以 [以寫程式方式設定MVPD](/help/authentication/home.md)，而無需用戶交互。 該技術相同，但會繞過調用「提供程式選擇器」對話框並要求客戶選擇其MVPD的步驟。
+如果您已經知道客戶的提供者，您可以 [以程式設計方式設定MVPD](/help/authentication/home.md)，無需使用者互動。 技巧相同，但會略過叫用「提供者選擇器」對話方塊並要求客戶選取其MVPD的步驟。
 
-## 顯示服務提供程式 {#displaying-the-service-provider}
+## 顯示服務提供者 {#displaying-the-service-provider}
 
-以下代碼示例演示了如何發現和顯示當前客戶的服務提供商：
+下列程式碼範例示範如何探索和顯示目前客戶的服務提供者：
 
- **HTML**  — 如果客戶已登錄，此頁會向顯示其所選提供商的頁面添加一個部分：
+ **HTML**  — 此頁面會將區段新增至顯示客戶所選提供者（如果已登入）的頁面：
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -76,7 +76,7 @@ Adobe Primetime驗證JavaScript整合在熟悉的JS Web應用程式開發環境�
 ```
  
 
-**JavaScript** 如果用戶已登錄，則此JavaScript檔案將查詢當前提供程式的Access Enabler，並在為其保留的頁面部分中顯示結果。 它還實現MVPD選擇器對話框：
+**JavaScript** 如果使用者已登入，此JavaScript檔案會查詢目前提供者的Access Enabler，並在為其保留的頁面區段中顯示結果。 它也會實作MVPD選擇器對話方塊：
 
 ```JS
     $(function() {
@@ -195,21 +195,21 @@ Adobe Primetime驗證JavaScript整合在熟悉的JS Web應用程式開發環境�
     }
 ```
 
-## 註銷 {#logout}
+## 登出 {#logout}
 
-呼叫 `logout()` 啟動註銷進程。 此方法不使用任何參數。 它註銷當前用戶，清除該用戶的所有身份驗證和授權資訊，並從本地系統刪除所有AuthN和AuthZ令牌。
+呼叫 `logout()` 以啟動登出程式。 此方法不使用引數。 它會登出目前的使用者，清除該使用者的所有驗證和授權資訊，並從本機系統刪除所有AuthN和AuthZ權杖。
 
-在某些情況下，您的玩家不負責處理用戶註銷：
+在某些情況下，您的播放器不負責處理使用者登出：
 
  
 
-- **從未與Adobe Primetime身份驗證整合的站點啟動註銷時。** 在這種情況下，MVPD可以通過瀏覽器重定向調用Adobe Primetime驗證單次註銷服務。 （當前不支援通過回通道調用調用SLO。）
+- **從未與Adobe Primetime驗證整合的網站起始登出時。** 在這種情況下，MVPD可透過瀏覽器重新導向來叫用Adobe Primetime驗證單一登出服務。 （目前不支援透過後通道呼叫叫用SLO。）
 
 >[!NOTE]
 >
->如果用戶使其電腦空閒足夠長，以致其令牌過期，則他們仍可以返回其會話並成功啟動註銷。 Adobe Primetime驗證確保刪除所有令牌，並通知MVPD刪除其會話。
+>如果使用者讓電腦閒置足夠長的時間令其代號過期，他們仍可返回工作階段並成功起始登出。 Adobe Primetime驗證可確保刪除所有Token，並通知MVPD刪除其工作階段。
 
-以下JavaScript代碼演示註銷（取消驗證）當前已驗證的用戶：
+以下JavaScript程式碼會示範登出（取消驗證）目前驗證的使用者：
 
 ```JS
     [...]

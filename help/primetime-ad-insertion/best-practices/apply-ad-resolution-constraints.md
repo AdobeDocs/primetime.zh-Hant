@@ -1,6 +1,6 @@
 ---
-title: 應用廣告解決約束
-description: 應用廣告解決約束
+title: 套用廣告解析度限制
+description: 套用廣告解析度限制
 copied-description: true
 exl-id: aae17be8-d23c-4c5c-90fd-7ee6fba69e9a
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
@@ -10,6 +10,6 @@ ht-degree: 0%
 
 ---
 
-# 應用廣告解決約束 {#apply-ad-resolution-constraints}
+# 套用廣告解析度限制 {#apply-ad-resolution-constraints}
 
-在某些情況下，特定廣告提供商的響應速度很慢，這可能導致視頻啟動時間增加。 黃金時段Ad Insertion支援超時廣告請求和整個廣告解析階段，以限制這些慢速廣告提供商的影響。  如果下游廣告提供程式響應速度太慢，也可以插入回退廣告。  有關詳細資訊，請參見 [`ptadtimeout` BootstrapAPI中的參數](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md)。
+在某些情況下，特定廣告提供者可能會回應緩慢，進而導致視訊啟動時間增加。 PrimetimeAd Insertion支援廣告請求逾時和整個廣告解析階段，以限制這些緩慢的廣告提供者的影響。  如果下游廣告提供者回應速度太慢，也可以插入遞補廣告。  如需詳細資訊，請參閱 [`ptadtimeout` Bootstrap API中的引數](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).

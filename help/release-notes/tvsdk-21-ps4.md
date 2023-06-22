@@ -1,6 +1,6 @@
 ---
-title: 《 TVSDK 2.1 PlayStation 4發行說明》
-description: 《 TVSDK 2.1 for PlayStation 4發行說明》介紹了TVSDK 2.1 PlayStation 4中支援的功能和已知問題。
+title: TVSDK 2.1 PlayStation 4發行說明
+description: PlayStation 4適用的TVSDK 2.1發行說明說明TVSDK 2.1 PlayStation 4的支援功能和已知問題。
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
@@ -12,129 +12,129 @@ ht-degree: 0%
 
 ---
 
-# 《 TVSDK 2.1 PlayStation 4發行說明》 {#tvsdk-playstation-release-notes}
+# TVSDK 2.1 PlayStation 4發行說明 {#tvsdk-playstation-release-notes}
 
-《 TVSDK 2.1 for PlayStation 4發行說明》介紹了TVSDK 2.1 PlayStation 4中支援的功能和已知問題。
+PlayStation 4適用的TVSDK 2.1發行說明說明TVSDK 2.1 PlayStation 4的支援功能和已知問題。
 
 ## 已解決的問題 {#resolved-issues}
 
-下面是針對PlayStation 4的TVSDK 2.1的已解決問題：
+以下是適用於PlayStation 4的TVSDK 2.1已解決的問題：
 
-**2.1.0.638版**
+**版本2.1.0.638**
 
-* **PTPLAY-10439:**
-當VMAP包裝器和連結斷開時，播放器將陷入「準備」狀態（未發送） 
-`onComplete` )。
+* **PTPLAY-10439：**
+當VMAP包裝函式廣告連結中斷時，播放器卡在準備狀態（未傳送） 
+`onComplete` 給其呼叫者)。
 
-* **PTPLAY-10179:**
+* **PTPLAY-10179：**
 
-   `creativeRepackaging` 和 `fallbackOnInvalidCreative` 現在，預設情況下值處於關閉狀態。 另外，當 `creativeRepackaging` 已設定標誌但無 `creativeRepackaging` 格式， `onRepackagingComplete` 廣告片段被撥打的次數與廣告片段中有廣告的次數相同，導致廣告片段被多次建立。
+   `creativeRepackaging` 和 `fallbackOnInvalidCreative` 值現在預設為關閉。 此外，當 `creativeRepackaging` 標幟已設定但無 `creativeRepackaging` 已提供格式， `onRepackagingComplete` 由於廣告插播中有廣告，因此系統多次呼叫廣告插播。
 
-* **森德克#10304**:adforvens on/off變數未初始化。 現在，我們從初始化變數 `DataSetEntry's` ctor。
+* **Zendesk #10304**：未初始化ad forveness on/off變數。 我們現在從下列位置初始化變數： `DataSetEntry's` ctor.
 
-* **PTPLAY-10318:**
-介紹了對後台模式的支援。
-* **Zendesk # 17409:**
-進入特技播放模式後，回到正常播放模式，再進入特技播放模式，播放位置跳轉。
-* **PTPLAY-9552:**
-解析響應XML檔案後，現在只要沒有廣告就會ping錯誤代碼1108。
-* **PTPLAY-9551:**
-當審核處理後沒有廣告中斷時，CRS調用 
-**在預回遷完成** 它會降低groupCount。 因為沒有廣告， **組計數** 為0，減1。 以前 **組計數** 是 **uint32_t** 因為它曾經變為最大值。 現在 **int32_t**。
+* **PTPLAY-10318：**
+已引入對背景模式的支援。
+* **Zendesk # 17409：**
+進入特技播放模式時，然後回到正常播放模式，然後再次進入特技播放模式時，播放位置會跳躍。
+* **PTPLAY-9552：**
+剖析回應XML檔案後，現在只要沒有廣告出現，就會釘選錯誤代碼1108。
+* **PTPLAY-9551：**
+當稽核處理後沒有廣告插播時，CRS會呼叫 
+**onPrefetchComplete** 會遞減groupCount。 由於沒有廣告插播， **群組計數** 為0並以1遞減。 先前 **群組計數** 為 **uint32_t** 因此過去會變更為最大值。 這是現在 **int32_t**.
 
-**2.1.0.621版**
+**版本2.1.0.621**
 
-* **森德克#4555**
-記憶體問題即時處理導致載入錯誤 —  
-`MediaItemLoader` 修復在釋放時發生的崩潰 `mediaitemloader`
+* **Zendesk #4555**
+立即記憶體問題導致載入錯誤 —  
+`MediaItemLoader` 針對釋放時發生當機的修正 `mediaitemloader`
 
-* **森德克#17223**
-2.x CSAI:並非所有廣告跟蹤URL都觸發
-   * 一些VAST廣告指向的是線內廣告，缺少跟蹤URL。
-   * 當VAST XML中的廣告中有多個印模標籤時，只保存第一個印模URL，而忽略其餘。 現在，將保存所有印象，並稍後進行ping。
-* **森德克#17224**
-PS4用戶代理將黃金時段資訊移動到UAString的末尾
-* **森德克#17226**
-2.x CSAI:並不是所有的廣告。
+* **Zendesk #17223**
+2.x CSAI：並非所有廣告追蹤URL都會引發
+   * 部分VAST廣告進而指向內嵌廣告，導致遺失追蹤URL。
+   * 當VAST XML的廣告中有多個曝光標籤時，只會儲存第一印象url，而忽略其餘部分。 現在，將會儲存所有印象URL並於稍後釘選。
+* **Zendesk #17224**
+PS4使用者代理程式會將primetime資訊移至UAString結尾
+* **Zendesk #17226**
+2.x CSAI：並非所有廣告都已連結。
 \
-   修復是指由於insertBy或eraseBy操作，時間軸已更改，並相應地執行期間切換。
+   「修復」表示時間軸因insertBy或eraseBy操作而變更，並相應地執行週期切換。
 
-* **森德克#17284**
-   [所有平台] 未顯示隱藏字幕。\
-   HLS — 支援 `EXT-X-MEDIA-TIME` VTT標題檔案的標籤。
+* **Zendesk #17284**
+   [所有平台] 隱藏式字幕未顯示。\
+   HLS — 支援 `EXT-X-MEDIA-TIME` VTT註解檔案的標籤。
 
-* **森德克#17889**
-在PS4上播放「奶奶」
+* **Zendesk #17889**
+在PS4上播放「Milky」
 \
-   應用了正確的yoffset（用於顏色轉換）
+   已套用正確的偏移量（用於色彩轉換）
 
-* **森德克#17954**
-廣告回退邏輯+處理空大
+* **Zendesk #17954**
+廣告遞補邏輯+處理空白vast
 \
-   如果Vast包裝中的一個為空，則Vast解析器會繼續處理包裝。
+   修正當其中一個Vast包裝函式為空白時，用於繼續處理包裝函式的Vast剖析器問題。
 
-* **森德克#17807**
-無法通過與Zendesk相同的空大#3103
+* **Zendesk #17807**
+無法通過與Zendesk #3103相同的空白vast
 
-* **森德克#17865**
-PS4和XBox One上的回退邏輯
+* **Zendesk #17865**
+PS4和XBox One上的遞補邏輯
 \
    與Zendesk #3103相同
 
-**2.1.0.591版**
+**版本2.1.0.591**
 
-* **森德克#3767**
-PS4 Ad代碼段，處理VMAP重定向時Ad解析失敗。
-* **森德克#4096**
-PS4 CSAI:當ad庫處理VMAP響應時，當TVSDK拋出分段錯誤時分段錯誤固定崩潰。
+* **Zendesk #3767**
+PS4廣告程式碼片段，處理VMAP重新導向時，廣告解析失敗。
+* **Zendesk #4096**
+PS4 CSAI：分段錯誤修正當廣告程式庫處理VMAP回應時，TVSDK擲回分段錯誤時的當機問題。
 
-* **森德克#4161**
-影片末尾的Trickplay 16x凍結當Trickplay返回正常播放時發生的固定死鎖
+* **Zendesk #4161**
+影片結尾的Trickplay 16x會凍結修正當Trickplay恢復正常播放時發生鎖死的問題
 
-* **森德克#4208**
-啟用隱藏字幕時隨機崩潰啟用隱藏字幕時固定記憶體洩漏
+* **Zendesk #4208**
+開啟隱藏式字幕時的隨機當機啟用隱藏式字幕時修復記憶體流失
 
-* **森德克#4213**
-PS4 CSAI:更改所有與廣告相關的調用的預設用戶代理字串建立用戶代理字串時使用瀏覽器使用的相同UA字串+添加黃金時段字串
+* **Zendesk #4213**
+PS4 CSAI：變更所有廣告相關呼叫的預設使用者代理字串使用者代理字串是使用瀏覽器所使用的相同UA字串建立+ Primetime字串
 
-* **PTPLAY-7675** （內部）轉碼廣告在VMAP或VAST響應中調用時沒有播放Creative Repackaging失敗。 解決辦法是只從廣告中閱讀媒體，而不是在大廣告中閱讀資產。
+* **PTPLAY-7675** （內部）轉碼廣告不會播放Creative Repackaging在VMAP或VAST回應中呼叫時失敗。 Fix是在大型廣告的情況下，從廣告讀取媒體檔案，而不是從資產讀取。
 
-* **PTPLAY-7895** （內部） `allowMultipleAds=false`，沒有廣告播放固定錯誤 `allowMultipleAds` 未正確跟蹤參數。
+* **PTPLAY-7895** （內部）時間 `allowMultipleAds=false`，無廣告播放已修正的錯誤，其中 `allowMultipleAds` 未正確遵循引數。
 
-* **PTPLAY-7896** （內部）在PS4固定問題上，廣告的播放順序與XML響應中廣告的顯示順序不符。
+* **PTPLAY-7896** （內部）廣告在PS4上的播放順序不同已修正廣告在XML回應中並非出現順序的問題。
 
-* PS4 TVSDK在小型應用程式（而非遊戲）中重新測試。
+* PS4 TVSDK已在迷你應用程式（而非遊戲）中重新測試。
 
-**2.1.0.563版**
+**版本2.1.0.563**
 
-* **森德克#3868**
-TVSDK是否支援Playstation SDK 2.5 TVSDK現在使用2.5 Playstation SDK構建。
+* **Zendesk #3868**
+TVSDK是否支援Playstation SDK 2.5此TVSDK現以2.5版Playstation SDK建置。
 
-* **森德克#4093**
-定向Pt Ads請求中的Info鍵值對。
+* **Zendesk #4093**
+Pt Ads請求中的targetingInfo索引鍵值配對。
 \
-   添加了分隔鍵/值對的換行符。
+   已新增分隔索引鍵/值配對的新行字元。
 
 ## 支援的功能 {#supported-features}
 
-TVSDK 2.1中支援PlayStation 4的以下功能：
+PlayStation 4的TVSDK 2.1支援下列功能：
 
-**2.1.0.621版**
+**版本2.1.0.621**
 
-* 廣告回退，在廣告選擇邏輯中菊花鏈(Zendesk #3103)對於啟用了回退規則的VAST廣告（創意）,TVSDK將具有無效MIME類型的廣告視為空廣告，並嘗試使用回退廣告代替它。您可以配置回退行為的某些方面
+* 廣告遞補、在廣告選擇邏輯中鏈結的雛菊(Zendesk #3103)對於已啟用遞補規則的VAST廣告（創意），TVSDK會將具有無效MIME型別的廣告視為空白廣告，並嘗試在其位置使用遞補廣告。您可以設定遞補行為的某些方面
 
-**2.1.0.538版**
+**版本2.1.0.538**
 
-* HLS VOD播放，包括播放、暫停、查找
-* 自適應比特率流
-* 使用黃金時段DRM和香草AES保護的內容進行加密內容回放
-* 客戶端和插入，包括預設廣告行為和廣告寬減
-* 創意重新包裝
-* WebVTT隱藏字幕
-* 具有自定義起始位置的即時啟動
-* 快進快退的特技遊戲
-* 302重定向
+* HLS VOD播放，包括播放、暫停、搜尋
+* 最適化位元速率串流
+* 使用Primetime DRM和受Vanilla AES保護的內容進行加密內容播放
+* 具有預設廣告行為和廣告寬恕的使用者端廣告插入
+* 創意重新封裝
+* WebVTT隱藏式字幕
+* 使用自訂開始位置立即開啟
+* 快速前進和快速倒帶的特技遊戲
+* 302重新導向
 
-## 有用的資源 {#helpful-resources}
+## 實用資源 {#helpful-resources}
 
-* 請參閱以下網址的完整幫助文檔 [Adobe Primetime學習和支援](https://experienceleague.adobe.com/docs/primetime.html) 的子菜單。
+* 如需完整說明檔案，請前往 [Adobe Primetime學習與支援](https://experienceleague.adobe.com/docs/primetime.html) 頁面。

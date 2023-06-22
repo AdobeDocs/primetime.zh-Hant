@@ -1,6 +1,6 @@
 ---
-description: 您可以基於預設解析器實施您自己的內容解析器。
-title: 實現自定義內容解析器
+description: 您可以根據預設解析器來實作您自己的內容解析器。
+title: 實作自訂內容解析程式
 exl-id: f594840b-ff56-49c5-baf5-ac2800411215
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# 實現自定義內容解析器{#implement-a-custom-content-resolver}
+# 實作自訂內容解析程式{#implement-a-custom-content-resolver}
 
-您可以基於預設解析器實施您自己的內容解析器。
+您可以根據預設解析器來實作您自己的內容解析器。
 
-當瀏覽器TVSDK檢測到新機會時，它會通過註冊的內容解析器迭代，以查找能夠通過使用 `canResolve` 的雙曲餘切值。 選擇返回true的第一個用於解決商機。 如果沒有內容解析器功能，則跳過該機會。 由於內容解析過程通常是非同步的，因此內容解析程式負責在過程完成時通知瀏覽器TVSDK。
+當瀏覽器TVSDK偵測到新的商機時，它會透過註冊的內容解析程式反複查詢，以透過使用 `canResolve` 方法。 系統會選取傳回true的第一個來解析商機。 如果沒有內容解析程式可用，則會略過該機會。 由於內容解析程式通常是非同步的，內容解析程式負責在程式完成時通知瀏覽器TVSDK。
 
-記住以下資訊：
+請記住以下資訊：
 
-* 內容解析程式調用 `client.process` 指定TVSDK需要執行的時間線操作。
+* 內容解析程式呼叫 `client.process` 以指定TVSDK需要執行的時間軸操作。
 
-   操作通常是廣告中斷位置。
+   該操作通常是廣告插播位置。
 
-* 內容解析程式調用 `client.notifyCompleted` 如果解析過程成功或 `client.notifyFailed` 的下界。
+* 內容解析程式呼叫 `client.notifyCompleted` 如果解決程式成功或 `client.notifyFailed` 如果程式失敗。
 
-1. 建立自定義機會解析程式。
+1. 建立自訂機會解析程式。
 
    ```js
    /** 
@@ -80,7 +80,7 @@ ht-degree: 0%
    }; 
    ```
 
-1. 建立使用自定義內容解析器的自定義內容工廠。
+1. 建立使用自訂內容解析程式的自訂內容處理站。
 
    例如：
 
@@ -105,9 +105,9 @@ ht-degree: 0%
    }; 
    ```
 
-1. 為要播放的媒體流註冊自定義內容工廠。
+1. 註冊自訂內容處理站，以便播放媒體資料流。
 
-   在UI Framework播放器中，可以按如下方式指定自定義內容工廠：
+   在UI Framework播放器中，您可以指定自訂內容工廠，如下所示：
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 

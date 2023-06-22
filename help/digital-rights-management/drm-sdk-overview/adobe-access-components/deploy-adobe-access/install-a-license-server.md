@@ -1,6 +1,6 @@
 ---
-description: 使用Adobe PrimetimeDRM SDK，必須建立許可證伺服器。 當使用黃金時段DRM保護內容時，只有在許可證伺服器向消費者頒發許可證時，才能查看內容。 如果使用基於身份的許可，則基於密碼的身份驗證可確保只有經過授權的消費者才能開啟和查看內容。
-title: 實施許可證伺服器
+description: 使用Adobe Primetime DRM SDK時，您必須建立License Server。 使用Primetime DRM保護內容時，除非授權伺服器向消費者發出授權，否則無法檢視內容。 如果使用以身分為基礎的授權，以密碼為基礎的驗證可確保只有經過授權的消費者才能開啟和檢視內容。
+title: 實作授權伺服器
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '159'
@@ -9,10 +9,10 @@ ht-degree: 0%
 ---
 
 
-# 實施許可證伺服器{#implement-a-license-server}
+# 實作授權伺服器{#implement-a-license-server}
 
-使用Adobe PrimetimeDRM SDK，必須建立許可證伺服器。 當使用黃金時段DRM保護內容時，只有在許可證伺服器向消費者頒發許可證時，才能查看內容。 如果使用基於身份的許可，則基於密碼的身份驗證可確保只有經過授權的消費者才能開啟和查看內容。
+使用Adobe Primetime DRM SDK時，您必須建立License Server。 使用Primetime DRM保護內容時，除非授權伺服器向消費者發出授權，否則無法檢視內容。 如果使用以身分為基礎的授權，以密碼為基礎的驗證可確保只有經過授權的消費者才能開啟和檢視內容。
 
-在實施許可證伺服器時，必須從Adobe獲取必要的數字證書。 有關請求證書的詳細說明，請參閱黃金時段DRM證書註冊文檔。
+實作License Server時，您必須從Adobe取得必要的數位憑證。 如需請求憑證的詳細說明，請參閱Primetime DRM憑證註冊檔案。
 
-要瞭解有關實施許可證伺服器和獲取數字證書的詳細資訊，請參閱*使用Adobe PrimetimeDRM SDK保護內容。*
+若要深入瞭解如何實作License Server及取得數位憑證，請參閱*使用Adobe Primetime DRM SDK保護內容。*

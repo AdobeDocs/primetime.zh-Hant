@@ -1,6 +1,6 @@
 ---
-title: 續訂證書
-description: 續訂證書
+title: 更新憑證
+description: 更新憑證
 copied-description: true
 exl-id: db130ca5-4e26-447f-b2f4-4eee0838fd56
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,27 +10,27 @@ ht-degree: 0%
 
 ---
 
-# 續訂證書{#renew-certificates}
+# 更新憑證{#renew-certificates}
 
-您應瞭解基於Adobe PrimetimeDRM SDK配置的以下證書續訂限制：
+請注意以下根據您Adobe Primetime DRM SDK設定的憑證續約限制：
 
-* 黃金時段DRM製作SDK
+* Primetime DRM Production SDK
 
-   Adobe在您購買支援合同時為Mogine DRM Production SDK提供初始的一組免費證書。 如果您沒有支援合同，則可以購買一組有效期為兩年的續訂證書。
-* 黃金時段DRM評估SDK
+   當您購買支援合約時，Adobe會為Primetime DRM Production SDK提供初始的免費憑證集。 如果您沒有支援合約，您可以購買一組有效期為兩年的續約憑證。
+* Primetime DRM評估SDK
 
-   此SDK的證書集的有效期為一年，無法續訂。
-* 黃金時段DRM試用版SDK
+   此SDK的憑證集有效期為一年，無法續約。
+* Primetime DRM試用版SDK
 
-   黃金時段DRM試用版SDK有效期為三個月，Adobe提供一組免費續訂證書。
+   Primetime DRM試用版SDK的有效期為三個月，而Adobe則提供一組免費的續約憑證。
 
-## 為現有內容實施新證書和使用舊證書 {#section_345C92D1C9794B0BBB9A9B0702EC95FF}
+## 實作新憑證並對現有內容使用舊憑證 {#section_345C92D1C9794B0BBB9A9B0702EC95FF}
 
-在黃金時段DRM中，您可以允許許可證伺服器為與先前（甚至過期）打包器證書打包的內容頒發許可證。 要配置伺服器以接受來自以前打包內容的許可證請求，請將舊證書提供到伺服器並更新伺服器的配置檔案，以便伺服器知道在何處查找舊證書。 有關詳細資訊，請參見 *在Adobe頒發的證書過期時處理證書更新* 在 *使用Adobe PrimetimeDRM SDK保護內容*。
+在Primetime DRM中，您可以允許授權伺服器為使用先前封裝器憑證（甚至過期）封裝的內容發行授權。 若要設定您的伺服器以接受來自先前封裝內容的授權要求，請將您的舊憑證提供給伺服器並更新伺服器的設定檔案，讓伺服器知道在哪裡可以找到舊憑證。 如需詳細資訊，請參閱 *在Adobe發行的憑證過期時處理憑證更新* 在 *使用Adobe Primetime DRM SDK保護內容*.
 
-如果您的伺服器應用程式基於黃金時段DRM參考實現，則無需更新您的伺服器端程式。 在 `flashaccess-refimpl.properties` 檔案中，您可以在其中指定其他傳輸和許可證伺服器證書。 如果您只有一個證書，則不必填充這些屬性。 如果證書已過期，並且希望在發出許可證響應時使用這些證書，則必須向配置檔案提供這些證書並重新啟動伺服器。
+如果您的伺服器應用程式是以Primetime DRM Reference Implementation為基礎，則不必更新伺服器端程式。 在 `flashaccess-refimpl.properties` 檔案中，有些欄位可讓您指定其他傳輸和授權伺服器憑證。 如果您只有一個憑證，則不需要填入這些屬性。 如果您有過期的憑證，並且想要在發行授權回應時使用這些憑證，則必須將這些憑證提供給設定檔案並重新啟動伺服器。
 
-要指定舊證書，請使用以下屬性：
+若要指定舊憑證，請使用下列屬性：
 
 * `#HandlerConfiguration.AdditionalServerTransportCredential.1=transport.pfx`
 * `#HandlerConfiguration.AdditionalServerTransportCredential.1.password=[password]`

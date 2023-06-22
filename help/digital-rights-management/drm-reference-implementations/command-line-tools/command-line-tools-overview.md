@@ -1,6 +1,6 @@
 ---
-title: 概述
-description: 概述
+title: 概觀
+description: 概觀
 copied-description: true
 exl-id: c7e2ab2b-4085-4f85-97c9-95c442885ff1
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,16 +10,16 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#overview}
+# 概觀 {#overview}
 
-使用Adobe PrimetimeDRM參考實現命令行工具，您可以直接從命令行執行與DRM相關的各種任務。
+Adobe Primetime DRM參考實作命令列工具可讓您直接從命令列執行各種與DRM相關的工作。
 
-黃金時段DRM參考實現包括以下命令行工具：
+Primetime DRM參照實施包括下列命令列工具：
 
-* 策略管理器 — 建立和管理DRM策略
-* 介質打包器 — 建立加密檔案
-* 策略更新清單管理器 — 建立和顯示DRM策略更新清單
-* 吊銷清單管理器 — 建立和顯示吊銷清單
-* AIR發佈者ID — 計算AIR應用程式的發佈者ID
-* Utility License Generator — 本地生成許可證（不向伺服器發出許可證請求）
-* 許可證嵌入器 — 將預生成的許可證嵌入內容
+* 原則管理員 — 建立和管理DRM原則
+* Media Packager — 建立加密檔案
+* 原則更新清單管理員 — 建立並顯示DRM原則更新清單
+* 撤銷清單管理員 — 建立並顯示撤銷清單
+* AIR發行者ID — 計算AIR應用程式的發行者ID
+* 公用程式授權產生器 — 在本機產生授權（無需向伺服器請求授權）
+* 授權內嵌程式 — 將預先產生的授權內嵌於內容中

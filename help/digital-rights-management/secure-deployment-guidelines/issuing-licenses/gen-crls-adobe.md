@@ -1,6 +1,6 @@
 ---
-description: 可以使用Adobe PrimetimeDRM建立CRL，該CRL補充由Adobe發佈的電腦CRL。
-title: 生成CRL以補充由Adobe發佈的CRL
+description: 您可以使用Adobe Primetime DRM來建立CRL，以補充Adobe所發佈的機器CRL。
+title: 產生CRL以補充Adobe所發佈的CRL
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '123'
@@ -9,10 +9,10 @@ ht-degree: 0%
 ---
 
 
-# 生成CRL以補充由Adobe發佈的CRL{#generating-crls-to-supplement-those-published-by-adobe}
+# 產生CRL以補充Adobe所發佈的CRL{#generating-crls-to-supplement-those-published-by-adobe}
 
-可以使用Adobe PrimetimeDRM建立CRL，該CRL補充由Adobe發佈的電腦CRL。
+您可以使用Adobe Primetime DRM來建立CRL，以補充Adobe所發佈的機器CRL。
 
-黃金時段DRM SDK檢查並強制AdobeCRL。 但是，您可以通過建立CRL來禁止其他客戶端電腦，該CRL通過將CRL傳遞到Mogine DRM SDK來撤消其他電腦憑據。 發放許可證時，SDK將檢查AdobeCRL和CRL。
+Primetime DRM SDK會檢查並強制執行AdobeCRL。 不過，您可以建立CRL，將CRL傳遞至Primetime DRM SDK以撤銷其他電腦認證，藉此禁止使用其他使用者端電腦。 當您核發授權時，SDK會檢查AdobeCRL和您的CRL。
 
-要生成CRL，請參見 [吊銷清單工廠](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html)。
+若要產生CRL，請參閱 [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).

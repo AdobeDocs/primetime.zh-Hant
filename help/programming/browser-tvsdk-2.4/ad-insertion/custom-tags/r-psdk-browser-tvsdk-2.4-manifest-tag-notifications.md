@@ -1,6 +1,6 @@
 ---
-description: MediaPlayerItem.timedMetadata屬性提供對從播放清單/清單標籤或媒體流中的ID3標籤建立的所有TimedMetadata對象的訪問。
-title: 清單標籤的通知
+description: MediaPlayerItem.timedMetadata屬性可讓您存取所有TimedMetadata物件，這些物件是從播放清單/資訊清單標籤或媒體串流中的ID3標籤建立的。
+title: 資訊清單標籤的通知
 exl-id: a8a3cada-d796-460a-bd8f-fc4a2703e7f0
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,10 +9,10 @@ ht-degree: 0%
 
 ---
 
-# 清單標籤的通知{#notifications-for-manifest-tags}
+# 資訊清單標籤的通知{#notifications-for-manifest-tags}
 
-MediaPlayerItem.timedMetadata屬性提供對從播放清單/清單標籤或媒體流中的ID3標籤建立的所有TimedMetadata對象的訪問。
+MediaPlayerItem.timedMetadata屬性可讓您存取所有TimedMetadata物件，這些物件是從播放清單/資訊清單標籤或媒體串流中的ID3標籤建立的。
 
 <!--<a id="section_9A22F6F1EA1F4F0C9E0C7687D12AA4AA"></a>-->
 
-的 `MediaPlayerItem.hasTimedMetadata` 屬性指示當前媒體中是否存在訂閱的自定義標籤。 您可以通過偵聽 `Events.TimedMetadataEvent`,MediaPlayer實例在每次新 `TimedMetadata` 對象。
+此 `MediaPlayerItem.hasTimedMetadata` 屬性指出目前媒體中是否存在訂閱的自訂標籤。 您可以監聽以下專案來監視定時中繼資料： `Events.TimedMetadataEvent`，MediaPlayer例項每次傳送新訊息時 `TimedMetadata` 物件已建立。

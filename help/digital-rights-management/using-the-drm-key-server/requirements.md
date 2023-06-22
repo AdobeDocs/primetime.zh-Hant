@@ -3,9 +3,9 @@ title: 使用Primetime DRM金鑰伺服器的需求
 description: 使用Primetime DRM金鑰伺服器的需求
 copied-description: true
 exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '153'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,10 @@ Primetime DRM Key Server是用於遠端iOS和/或Xbox 360金鑰傳遞的多租�
 
 * [Java JRE 1.6](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 或更新版本。 （若要在Windows 64位元上使用HSM，需要JRE 8）
 
-  >[!NOTE]
-  >
-  >OpenJDK 8現在支援64位元PKCS11： [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)，和Oracle
+   >[!NOTE]
+   >
+   >OpenJDK 8現在支援64位元PKCS11： [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)，並OracleJDK： [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559).
+
 * [Apache Tomcat 7](https://tomcat.apache.org)
 * 由Adobe簽發的認證
 * Microsoft核發的認證（適用於Xbox 360使用者端）

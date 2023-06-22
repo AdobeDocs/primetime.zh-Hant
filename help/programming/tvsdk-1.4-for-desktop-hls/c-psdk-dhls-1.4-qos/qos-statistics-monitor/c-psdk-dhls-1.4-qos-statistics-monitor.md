@@ -1,6 +1,6 @@
 ---
-description: 服務質量(QoS)提供視頻引擎如何運行的詳細視圖。 TVSDK提供有關播放、緩衝和設備的詳細統計資訊。
-title: 服務質量統計
+description: 服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
+title: 服務品質統計資料
 exl-id: ab664d75-a24f-41d6-91d7-a26ad7baab9a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,21 +9,21 @@ ht-degree: 0%
 
 ---
 
-# 服務質量統計 {#quality-of-service-statistics}
+# 服務品質統計資料 {#quality-of-service-statistics}
 
-服務質量(QoS)提供視頻引擎如何運行的詳細視圖。 TVSDK提供有關播放、緩衝和設備的詳細統計資訊。
+服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
 
-TVSDK還提供有關以下下載資源的資訊：
+TVSDK也提供下列已下載資源的相關資訊：
 
-* 播放清單/清單檔案
+* 播放清單/資訊清單檔案
 * 檔案片段
-* 檔案跟蹤資訊
+* 檔案的追蹤資訊
 
-## 使用負載資訊在片段級別跟蹤 {#track-at-the-fragment-level-using-load-information}
+## 使用載入資訊在片段層級追蹤 {#track-at-the-fragment-level-using-load-information}
 
-可以從LoadInformation類讀取有關下載資源（如片段和軌道）的服務質量(QoS)資訊。
+您可以從LoadInformation類別讀取有關已下載資源（例如片段和曲目）的服務品質(QoS)資訊。
 
-1. 實施 `onLoadInformationAvailable` 回調事件偵聽器。
+1. 實作 `onLoadInformationAvailable` 回呼事件監聽器。
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -32,82 +32,82 @@ TVSDK還提供有關以下下載資源的資訊：
    }
    ```
 
-1. 註冊事件偵聽器，TVSDK每次下載片段時都會調用該偵聽器。
+1. 註冊事件監聽器，TVSDK在每次下載片段時都會呼叫此監聽器。
 
    ```
    player.addEventListener(LoadInformationEvent.LOAD_INFORMATION_AVAILABLE,  
                                     onLoadInformationAvailable);
    ```
 
-1. 從 `LoadInformation` 傳給回叫的。
+1. 從讀取感興趣的資料 `LoadInformation` 會傳遞至回撥的專案。
 
    <table id="table_75E61A2EB25E435DB631166A7FF64757"> 
    <thead> 
    <tr> 
       <th colname="col01" class="entry"> 屬性 </th> 
-      <th colname="col1" class="entry"> 類型 </th> 
+      <th colname="col1" class="entry"> 型別 </th> 
       <th colname="col2" class="entry"> 說明 </th> 
    </tr> 
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> 下載持續時間 </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadduration </span> </td> 
       <td colname="col1"> <p>數字 </p> </td> 
-      <td colname="col2"> <p>下載的持續時間（毫秒）。 </p> <p>TVSDK不區分客戶端連接到伺服器所花的時間和下載完整片段所花的時間。 例如，如果10 MB的段下載需要8秒，則TVSDK會提供該資訊，但不會告訴您下載整個片段需要4秒，直到第一個位元組再花4秒。 </p> </td> 
+      <td colname="col2"> <p>下載持續時間（毫秒）。 </p> <p>TVSDK不會區分使用者端連線至伺服器所花的時間與下載完整片段所花的時間。 例如，如果下載10 MB的區段需要8秒，TVSDK會提供該資訊，但不會告訴您直到第一個位元組花了4秒，然後又花了4秒來下載整個片段。 </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> 媒體持續時間 </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
       <td colname="col1"> <p>數字 </p> </td> 
-      <td colname="col2"> 下載的片段的媒體持續時間（毫秒）。 </td> 
+      <td colname="col2"> 下載片段的媒體持續時間（毫秒）。 </td> 
    </tr> 
    <tr> 
       <td colname="col01"> <span class="codeph"> 大小 </span> </td> 
       <td colname="col1"> <p>數字 </p> </td> 
-      <td colname="col2"> 已下載資源的大小（以位元組為單位）。 </td> 
+      <td colname="col2"> 已下載資源的大小（位元組）。 </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> 跟蹤索引 </span> </td> 
-      <td colname="col1"> <p>整 </p> </td> 
-      <td colname="col2"> 相應軌道的索引（如果已知）;否則，為0。 </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
+      <td colname="col1"> <p>int </p> </td> 
+      <td colname="col2"> 對應曲目的索引（如果已知）；否則為0。 </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> 跟蹤名稱 </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
       <td colname="col1"> <p>字串 </p> </td> 
-      <td colname="col2"> 相應軌道的名稱（如果已知）;否則，為空。 </td> 
+      <td colname="col2"> 對應曲目的名稱（如果已知）；否則為null。 </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> 跟蹤類型 </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
       <td colname="col1"> <p>字串 </p> </td> 
-      <td colname="col2"> 相應軌道的類型（如果已知）;否則，為空。 </td> 
+      <td colname="col2"> 對應曲目的型別（如果已知）；否則為null。 </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> 類型 </span> </td> 
+      <td colname="col01"> <span class="codeph"> type </span> </td> 
       <td colname="col1"> <p>字串 </p> </td> 
-      <td colname="col2"> TVSDK下載的內容。 以下情況之一： 
+      <td colname="col2"> 下載的TVSDK。 下列其中一項： 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
-      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFEST — 播放清單/清單 </li> 
-      <li id="li_D7894C2F0CB64C909C6398288EA5683A">FRAGMENT — 片段 </li> 
-      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK — 與特定跟蹤關聯的片段 </li> 
-      </ul> 有時，可能無法檢測資源的類型。 如果發生這種情況，則返回FILE。 </td> 
+      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">資訊清單 — 播放清單/資訊清單 </li> 
+      <li id="li_D7894C2F0CB64C909C6398288EA5683A">片段 — 片段 </li> 
+      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK — 與特定曲目相關聯的片段 </li> 
+      </ul> 有時可能無法偵測資源的型別。 如果發生此情況，則會傳回FILE。 </td> 
    </tr> 
    <tr> 
       <td colname="col01"> <span class="codeph"> url </span> </td> 
       <td colname="col1"> <p>字串 </p> </td> 
-      <td colname="col2"> 指向下載資源的URL。 </td> 
+      <td colname="col2"> 指向已下載資源的URL。 </td> 
    </tr> 
    </tbody> 
    </table>
 
-## 讀取QOS回放、緩衝和設備統計資訊 {#read-qos-playback-buffering-and-device-statistics}
+## 讀取QOS播放、緩衝和裝置統計資料 {#read-qos-playback-buffering-and-device-statistics}
 
-可以從QOSProvider類讀取回放、緩衝和設備統計資訊。
+您可以從QOSProvider類別讀取播放、緩衝和裝置統計資料。
 
-的 `QOSProvider` 類提供各種統計資訊，包括有關緩衝、比特率、幀速率、時間資料等的資訊。
+此 `QOSProvider` class提供各種統計資料，包括關於緩衝、位元速率、影格速率、時間資料等的資訊。
 
-它還提供有關設備的資訊，如製造商、型號、作業系統、SDK版本和螢幕大小/密度。
+此外也提供裝置的相關資訊，例如製造商、型號、作業系統、SDK版本和熒幕大小/密度。
 
-1. 實例化媒體播放器。
-1. 建立 `QOSProvider` 對象，並將其附加到媒體播放器。
+1. 例項化媒體播放器。
+1. 建立 `QOSProvider` 物件並將其附加至媒體播放器。
 
    ```
    // Create Media Player. 
@@ -115,9 +115,9 @@ TVSDK還提供有關以下下載資源的資訊：
    _mediaQosProvider.attachMediaPlayer(_mediaPlayer);
    ```
 
-1. （可選）閱讀回放統計資訊。
+1. （選用）讀取播放統計資料。
 
-   讀取回放統計資訊的一個解決方案是具有計時器，該計時器定期從 `QOSProvider`。 例如：
+   讀取播放統計資料的解決方案之一，是讓計時器定期從擷取新的QoS值 `QOSProvider`. 例如：
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
@@ -139,7 +139,7 @@ TVSDK還提供有關以下下載資源的資訊：
    }
    ```
 
-1. （可選）讀取設備特定資訊。
+1. （選擇性）讀取裝置特定資訊。
 
    ```
    // Show device information 

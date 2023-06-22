@@ -1,6 +1,6 @@
 ---
-description: 您可以使用回調函式提供有關內容、廣告和章節跟蹤調用的自定義元資料。
-title: 實施自定義元資料支援
+description: 您可以使用回撥函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
+title: 實作自訂中繼資料支援
 exl-id: 59d56d5e-959d-4fb3-8434-55ae8219fca6
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,13 +9,13 @@ ht-degree: 0%
 
 ---
 
-# 實施自定義元資料支援 {#implement-custom-metadata-support}
+# 實作自訂中繼資料支援 {#implement-custom-metadata-support}
 
-您可以使用回調函式提供有關內容、廣告和章節跟蹤調用的自定義元資料。
+您可以使用回撥函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
 
-回調函式在進行跟蹤調用之前即被調用，因此您的應用程式可以附加特定於廣告或章節的元資料。
+回呼函式會在進行追蹤呼叫之前叫用，因此您的應用程式可以附加廣告或章節專屬的中繼資料。
 
-調用內容、廣告和章節的回調函式。
+為內容、廣告和章節叫用回呼函式。
 
 ```java
 // Video Metadata Block 

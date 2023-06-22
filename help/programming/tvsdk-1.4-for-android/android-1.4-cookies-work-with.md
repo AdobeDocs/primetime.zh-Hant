@@ -1,5 +1,5 @@
 ---
-description: 可以使用TVSDK在Cookie標頭中發送任意資料，用於會話管理、門訪問等。
+description: 您可以使用TVSDK在Cookie標頭中傳送任意資料，以進行工作階段管理、閘道存取等。
 title: 使用Cookie
 exl-id: 7482777a-c338-4e0d-b123-ce2712657b8d
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,24 +11,24 @@ ht-degree: 0%
 
 # 使用Cookie{#work-with-cookies}
 
-可以使用TVSDK在Cookie標頭中發送任意資料，用於會話管理、門訪問等。
+您可以使用TVSDK在Cookie標頭中傳送任意資料，以進行工作階段管理、閘道存取等。
 
-下面是向密鑰伺服器發出請求時具有某種類型身份驗證的示例：
+向金鑰伺服器提出請求時，以下是驗證型別的範例：
 
-1. 您的客戶在瀏覽器中登錄到您的網站，其登錄資訊顯示允許他們查看內容。
-1. 您的應用程式根據許可證伺服器預期的內容生成驗證令牌。 將該值傳遞給TVSDK。
-1. TVSDK在cookie標頭中設定該值。
-1. 當TVSDK向密鑰伺服器請求獲取密鑰以解密內容時，該請求包含cookie頭中的驗證值，因此密鑰伺服器知道該請求有效。
+1. 您的客戶在瀏覽器中登入您的網站，其登入顯示他們有權檢視內容。
+1. 您的應用程式會根據授權伺服器的預期產生驗證Token。 將該值傳遞至TVSDK。
+1. TVSDK會在Cookie標頭中設定該值。
+1. 當TVSDK請求金鑰伺服器取得金鑰以解密內容時，該請求在Cookie標頭中包含驗證值，因此金鑰伺服器知道該請求有效。
 
-要使用Cookie，請執行以下操作：
+若要使用Cookie：
 
-1. 建立 `cookieManager` 將URI的Cookie添加到 `cookieStore`。
+1. 建立 `cookieManager` 並將URI的Cookie新增至 `cookieStore`.
 
    例如：
 
    >[!IMPORTANT]
    >
-   >當啟用302重定向時，可以將廣告請求重定向到不同於cookie所屬的域的域。
+   >啟用302重新導向時，廣告請求可能會被重新導向到與Cookie所屬網域不同的網域。
 
    ```java
    CookieManager cookieManager= new CookieManager(); 
@@ -40,9 +40,9 @@ ht-degree: 0%
    cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
    ```
 
-   TVSDK在運行時查詢此cookieManager，檢查是否有與URL關聯的cookie，並自動使用這些cookie。
+   TVSDK會在執行階段查詢此CookieManager，檢查是否有任何Cookie與URL相關聯，並自動使用這些專案。
 
-   另一個選項是 `cookieHeaders` 在 `NetworkConfiguration` 設定用於請求的任意cookie標頭字串。 預設情況下，此cookie標頭僅與密鑰請求一起發送。 要發送包含所有請求的Cookie標頭，請使用 `NetworkConfiguration` 方法 `setUseCookieHeadersForAllRequests`:
+   另一個選項是使用 `cookieHeaders` 在 `NetworkConfiguration` 以設定用於請求的任意Cookie標頭字串。 根據預設，此Cookie標頭只會隨關鍵要求傳送。 若要傳送包含所有請求的Cookie標頭，請使用 `NetworkConfiguration` 方法 `setUseCookieHeadersForAllRequests`：
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 

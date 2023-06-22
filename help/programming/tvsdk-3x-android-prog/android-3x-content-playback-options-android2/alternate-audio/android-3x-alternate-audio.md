@@ -1,6 +1,6 @@
 ---
-description: 備用音頻允許您在視頻軌道的可用音頻軌道之間切換。 用戶可以在播放視頻時選擇其首選語言軌道。
-title: 備用音頻
+description: 替代音訊可讓您切換視訊曲目的可用音軌。 使用者可以在播放視訊時選取他們偏好的語言追蹤。
+title: 替代音訊
 exl-id: 7438d667-3003-42ba-88f3-818fa093c7d9
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#alternate-audio-overview}
+# 概觀 {#alternate-audio-overview}
 
-備用音頻允許您在視頻軌道的可用音頻軌道之間切換。 用戶可以在播放視頻時選擇其首選語言軌道。
+替代音訊可讓您切換視訊曲目的可用音軌。 使用者可以在播放視訊時選取他們偏好的語言追蹤。
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-當TVSDK建立 `MediaPlayerItem` 當前視頻的實例，將建立 `AudioTrack` 每個可用音頻軌道的項目。 該項包含 `name` 屬性，該字串通常包含該軌道語言的用戶可識別的描述。 該項目還包含有關是否預設使用該跟蹤的資訊。 播放視頻時，您可以要求提供可用音頻軌道的清單，或者允許用戶選擇一個軌道，並設定視頻以與所選軌道一起播放。
+當TVSDK建立 `MediaPlayerItem` 目前視訊的執行個體，會建立 `AudioTrack` 每個可用音軌的專案。 專案包含 `name` 屬性，這是字串，通常包含使用者可辨識的該曲目語言描述。 此專案也包含預設是否要使用該曲目的相關資訊。 輪到播放視訊時，您可以要求可用音訊曲目清單、選擇是否允許使用者選取曲目，並設定要以選取的曲目播放視訊。
 
 >[!TIP]
 >
->雖然很少，但如果TVSDK建立後有附加的音頻軌道可用 `MediaPlayerItem`,TVSDK將觸發 `MediaPlayerItem.AUDIO_TRACK_UPDATED` 的子菜單。
+>雖然很罕見，但在TVSDK建立 `MediaPlayerItem`，TVSDK會觸發 `MediaPlayerItem.AUDIO_TRACK_UPDATED` 事件。
 
-## 添加的API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## 新增API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
-已添加以下API以支援備用音頻：
+已新增下列API以支援替代音訊：
 
 **`hasAlternateAudio`**
 
-如果指定的介質具有備用音頻軌道（預設軌道除外），則此布爾函式將返回 `true`。 如果沒有備用音頻軌道，則函式返回 `false`。
+如果指定的媒體有預設音軌以外的替代音軌，此布林值函式會傳回 `true`. 如果沒有替代音軌，函式會傳回 `false`.
 
 ```java
 boolean hasAlternateAudio();
@@ -35,7 +35,7 @@ boolean hasAlternateAudio();
 
 **`getAudioTracks`**
 
-此函式返回指定介質中所有當前可用音頻軌道的清單。
+此函式傳回指定媒體中所有目前可用音訊曲目的清單。
 
 ```java
 List<AudioTrack> getAudioTracks();
@@ -43,7 +43,7 @@ List<AudioTrack> getAudioTracks();
 
 **`getSelectedAudioTrack`**
 
-此函式返回當前選擇的備用音頻軌道和屬性（如語言）。 還可以提取軌跡的自動選擇。
+此函式傳回目前選取的替代音軌和屬性，例如語言。 也可以擷取自動選取軌跡。
 
 ```java
 AudioTrack getSelectedAudioTrack();
@@ -51,7 +51,7 @@ AudioTrack getSelectedAudioTrack();
 
 **`selectAudioTrack`**
 
-此函式選擇要播放的備用音頻軌道。
+此函式選取要播放的替代音軌。
 
 ```java
 void selectAudioTrack(AudioTrack audioTrack);

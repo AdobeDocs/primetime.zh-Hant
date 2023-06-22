@@ -1,6 +1,6 @@
 ---
-description: 您可以通過將TVSDK與Adobe Analytics整合來跟蹤視頻使用。
-title: 視頻分析
+description: 您可以整合TVSDK與Adobe Analytics以追蹤視訊使用情況。
+title: 視訊分析
 exl-id: 4450cc73-205b-4a6a-8734-e7c8b5546964
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# 視頻分析{#video-analytics}
+# 視訊分析{#video-analytics}
 
-您可以通過將TVSDK與Adobe Analytics整合來跟蹤視頻使用。
+您可以整合TVSDK與Adobe Analytics以追蹤視訊使用情況。
 
-TVSDK中的視頻跟蹤使用 **Adobe Analytics視頻軟體** 服務，它提供視頻接洽度量，如視頻視圖、視頻完成、廣告印象、視頻花費的時間等。 有關此服務的詳細資訊，請與Adobe代表聯繫。
+TVSDK中的視訊追蹤會使用 **Adobe Analytics Video Essentials** 此服務提供視訊參與量度，例如視訊觀看次數、視訊完成次數、廣告曝光數、視訊逗留時間等。 如需此服務的詳細資訊，請聯絡您的Adobe代表。
 
-以下過程匯總了在播放器中激活視頻跟蹤的步驟：
+下列程式總結列出在播放器中啟動視訊追蹤的步驟：
 
-1. 初始化和/或配置以下視頻跟蹤元件：
+1. 初始化及/或設定下列視訊追蹤元件：
 
    在Android上，這些元件是TVSDK的一部分：
 
-   * JSON配置檔案
-   * 視頻分析元資料對象
-   * 全局元資料對象
+   * JSON設定檔案
+   * 視訊分析中繼資料物件
+   * 全域中繼資料物件
 
-1. 使用Adobe Analytics管理工具在伺服器端設定視頻分析報告。
+1. 使用Adobe Analytics管理工具在伺服器端設定視訊分析報告。

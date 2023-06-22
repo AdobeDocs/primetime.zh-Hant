@@ -1,6 +1,6 @@
 ---
-description: 您可以自定義或覆蓋廣告行為。
-title: 設定自定義播放
+description: 您可以自訂或覆寫廣告行為。
+title: 設定自訂播放
 exl-id: aaa4d1c2-c425-4a2e-8377-0a3072f3fb18
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,29 +9,29 @@ ht-degree: 0%
 
 ---
 
-# 設定自定義播放 {#cset-up-customized-playback}
+# 設定自訂播放 {#cset-up-customized-playback}
 
-通過向TVSDK註冊廣告策略實例，可以自定義或覆蓋廣告行為。
+您可以使用TVSDK註冊廣告原則執行個體，來自訂或覆寫廣告行為。
 
-要自定義廣告行為，請執行以下操作之一：
+若要自訂廣告行為，請執行下列任一項作業：
 
-* 實施 `AdPolicySelector` 介面及其所有方法。
-如果需要覆蓋所有預設廣告行為，建議使用此選項。
+* 實作 `AdPolicySelector` 介面及其所有方法。
+如果您需要覆寫所有預設廣告行為，建議使用此選項。
 
-* 擴展 `DefaultAdPolicySelector` 類並僅為那些需要自定義的行為提供實現。
-如果只需要覆蓋某些預設行為，則建議使用此選項。
+* 擴充 `DefaultAdPolicySelector` 類別並提供僅用於需要自訂之行為的實作。
+如果您只需要覆寫部分預設行為，建議使用此選項。
 
-對於這兩個選項，請完成以下任務：
+針對這兩個選項，請完成下列工作：
 
-要自定義廣告行為：
+若要自訂廣告行為：
 
-1. 實現AdPolicySelector介面及其所有方法。
+1. 實作AdPolicySelector介面及其所有方法。
 
-1. 通過廣告工廠分配TVSDK要使用的策略實例。
+1. 透過Advertising Factory指派TVSDK使用的原則執行個體。
 
 >[!IMPORTANT]
 >
->當MediaPlayer實例>取消分配時，會清除在>回放開始處註冊的自定義廣告策略。每次建立新的回放會話時，應用程式都必須註冊一個策略>selector實例。
+>取消配置MediaPlayer例項時，在播放開頭註冊的自訂廣告原則會被清除。您的應用程式必須在每次建立新播放工作階段時註冊原則選取器例項。
 
 例如：
 
@@ -52,4 +52,4 @@ ht-degree: 0%
     mediaPlayer.replaceCurrentResource(resource, config);
 ```
 
-1. 實施您的自定義。
+1. 實作您的自訂。

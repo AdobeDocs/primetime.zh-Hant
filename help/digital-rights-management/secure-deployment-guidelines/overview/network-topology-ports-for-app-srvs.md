@@ -1,6 +1,6 @@
 ---
-description: 可以配置Adobe PrimetimeDRM許可證伺服器以使用任何網路埠。
-title: 應用程式伺服器的埠
+description: 您可以將Adobe Primetime DRM授權伺服器設定為使用任何網路連線埠。
+title: 應用程式伺服器的連線埠
 exl-id: a482c54a-5f26-43c0-8fd7-c517ab296924
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 ---
 
-# 應用程式伺服器的埠{#ports-for-application-servers}
+# 應用程式伺服器的連線埠{#ports-for-application-servers}
 
-可以配置Adobe PrimetimeDRM許可證伺服器以使用任何網路埠。
+您可以將Adobe Primetime DRM授權伺服器設定為使用任何網路連線埠。
 
-必須在內部防火牆上啟用或禁用這些埠，具體取決於您希望允許連接到運行Mogine DRM的應用程式伺服器的客戶端的網路功能。
+這些連線埠必須在內部防火牆上啟用或停用，具體取決於您要允許連線到執行Primetime DRM的應用程式伺服器的使用者端使用的網路功能。

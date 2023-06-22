@@ -1,6 +1,6 @@
 ---
-description: 為了適應那些只想按使用付費而不是按固定費率付費的客戶，Adobe收集使用量度，並使用這些度量來確定向客戶收取的費用。
-title: 計費度量
+description: 為因應客戶只想依使用量付款，而不想依實際使用量支付固定費率的需求，Adobe會收集使用量度並使用這些量度來決定向客戶收費的金額。
+title: 計費量度
 exl-id: 8b670ed0-77a5-410c-abd6-0188558fbc4a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,38 +9,38 @@ ht-degree: 0%
 
 ---
 
-# 計費度量 {#billing-metrics}
+# 計費量度 {#billing-metrics}
 
-為了適應那些只想按使用付費而不是按固定費率付費的客戶，Adobe收集使用量度，並使用這些度量來確定向客戶收取的費用。
+為因應客戶只想依使用量付款，而不想依實際使用量支付固定費率的需求，Adobe會收集使用量度並使用這些量度來決定向客戶收費的金額。
 
-每次播放器生成流啟動事件時，TVSDK開始定期向Adobe的計費系統發送HTTP消息。 該週期稱為可計費持續時間，對於標準VOD、pro VOD（啟用中間廣告）和即時內容可以不同。 每種內容類型的預設持續時間為30分鐘，但您與Adobe的合同將確定實際值。
+每次播放器產生資料流開始事件時，TVSDK就會開始定期傳送HTTP訊息至Adobe的計費系統。 期間（稱為可計費期間）在標準VOD、pro VOD （啟用中段廣告）和即時內容中可能不同。 每種內容型別的預設持續時間為30分鐘，但您的Adobe合約會決定實際值。
 
-這些消息包含以下資訊：
+訊息包含下列資訊：
 
-* 內容類型（即時、線性或VOD）
+* 內容型別（即時、線性或VOD）
 * 內容URL
 * 是否啟用廣告
-* 是否啟用中間卷廣告（僅VOD）
-* 流是否受DRM保護
+* 是否啟用中段廣告（僅限VOD）
+* 資料流是否受DRM保護
 * TVSDK版本和平台
 
-Adobe預先配置此安排，但如果要更改此安排，請與您的Adobe支援代表合作。
+Adobe會預先設定此安排，但如果您想要變更安排，請與您的Adobe啟用代表合作。
 
-要監視TVSDK發送到Adobe的統計資訊，請從Adobe啟用代表獲取URL，然後使用網路捕獲工具（例如Charles）查看資料。
+若要監視TVSDK傳送至Adobe的統計資料，請從Adobe啟用代表取得URL，然後使用網路擷取工具（例如Charles）來檢視資料。
 
-## 配置計費度量 {#configure-billing-metrics}
+## 設定計費量度 {#configure-billing-metrics}
 
-如果使用預設配置，則無需執行其他任何操作即可啟用或配置計費。 如果您從Adobe啟用代表處獲得了不同的配置參數，請在初始化媒體播放器之前使用PTBillingMetricsConfiguration類設定這些參數。
+如果您使用預設設定，則您無需執行任何其他操作即可啟用或設定帳單。 如果您從「Adobe啟用」代表取得不同的設定引數，請在初始化媒體播放器之前使用PTBillingMetricsConfiguration類別設定這些引數。
 
-大多數客戶應使用預設配置。
+大部分客戶應使用預設設定。
 
 >[!IMPORTANT]
 >
->您設定的配置在媒體播放器的生命週期中仍然有效。 初始化媒體播放器後，無法更改配置。
+>您設定的設定會在媒體播放器的一生中維持有效。 初始化媒體播放器後，便無法變更設定。
 
-要配置計費度量，請執行以下操作：
+若要設定計費量度：
 
-1. 輸入以下代碼樣例。
+1. 輸入下列程式碼範例。
 
    ```
    PTBillingMetricsConfiguration *billingConfig = [[[PTBillingMetricsConfiguration alloc] init] autorelease]; 
@@ -53,13 +53,13 @@ Adobe預先配置此安排，但如果要更改此安排，請與您的Adobe支�
    [metadata setMetadata:billingConfig forKey:PTBillingMetricsConfigurationMetadataKey];
    ```
 
-## 傳輸計費度量 {#transmit-billing-metrics}
+## 傳輸計費量度 {#transmit-billing-metrics}
 
-TVSDK以XML格式向Adobe發送計費度量。
+TVSDK會以XML格式將計費量度傳送至Adobe。
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-如果使用網路捕獲工具監視TVSDK傳輸到Adobe的統計資訊，則應看到以下單元：
+如果您使用網路擷取工具來監視TVSDK傳輸至Adobe的統計資料，您應該會看到如下的單位：
 
 ```
 <request> 
@@ -85,4 +85,4 @@ TVSDK以XML格式向Adobe發送計費度量。
 </request>
 ```
 
-布爾屬性 `drmProtected`。 `adsEnabled`, `midrollEnabled` 只有在它們為真時才顯示。
+布林值屬性 `drmProtected`， `adsEnabled`、和 `midrollEnabled` 只有在為true時才會出現。

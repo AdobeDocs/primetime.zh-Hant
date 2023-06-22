@@ -1,6 +1,6 @@
 ---
-title: SWF哈希計算器
-description: SWF哈希計算器
+title: SWF雜湊電腦
+description: SWF雜湊電腦
 copied-description: true
 exl-id: 651b31bc-47b5-4388-aa00-27d3bd59da30
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# SWF哈希計算器{#swf-hash-calculator}
+# SWF雜湊電腦{#swf-hash-calculator}
 
-SWF哈希計算器實用程式計算位於檔案中的SWF應用程式的摘要。 要運行哈希器，請運行命令：
+SWF雜湊計算器公用程式會計算檔案中SWF應用程式的摘要。 若要執行雜湊程式，請執行以下命令：
 
 ```
 Hasher.bat filename.swf
@@ -24,10 +24,10 @@ Hasher.bat filename.swf
 java -jar libs/flashaccess-hasher.jar filename.swf
 ```
 
-該實用程式輸出以下消息：
+公用程式會輸出下列訊息：
 
 ```
 SWF Hash: hash-of-swf
 ```
 
-此值可用於指定中的SWF摘要 [!DNL flashaccess-tenant.xml]。
+此值可用於指定中的SWF摘要 [!DNL flashaccess-tenant.xml].

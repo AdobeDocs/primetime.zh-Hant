@@ -1,6 +1,6 @@
 ---
-description: 如果要設定黃金時段DRM，請從DVD複製檔案。 這些檔案包括包含代碼、證書和第三方類的JAR檔案。 此外，您需要向Adobe Systems公司申請證書。 然後，Adobe會向您發出多個憑據，這些憑據用於保護打包內容、許可證的完整性以及客戶端與伺服器之間的通信。
-title: 設定開發環境
+description: 如果要設定Primetime DRM，請從DVD複製檔案。 這些檔案包含JAR檔案，其中包含程式碼、憑證和協力廠商類別。 此外，您需要向Adobe Systems， Incorporated索取憑證。 然後Adobe會向您發出多個認證，用於保護封裝內容、授權以及使用者端與伺服器之間通訊的完整性。
+title: 設定您的開發環境
 exl-id: c10f85b6-84bc-444f-9001-f49dc88cf99c
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,19 +9,19 @@ ht-degree: 0%
 
 ---
 
-# 設定開發環境 {#set-up-your-development-environment}
+# 設定您的開發環境 {#set-up-your-development-environment}
 
-如果要設定黃金時段DRM，請從DVD複製檔案。 這些檔案包括包含代碼、證書和第三方類的JAR檔案。 此外，您需要向Adobe Systems公司申請證書。 然後，Adobe會向您發出多個憑據，這些憑據用於保護打包內容、許可證的完整性以及客戶端與伺服器之間的通信。
+如果要設定Primetime DRM，請從DVD複製檔案。 這些檔案包含JAR檔案，其中包含程式碼、憑證和協力廠商類別。 此外，您需要向Adobe Systems， Incorporated索取憑證。 然後Adobe會向您發出多個認證，用於保護封裝內容、授權以及使用者端與伺服器之間通訊的完整性。
 
-Adobe提供Mogfire DRM SDK on DVD:
+Adobe在DVD上提供Primetime DRM SDK：
 
-1. 從[!DNL複製以下檔案 [DRM DVD]/SDK/]到開發系統（位於Java類路徑上）:
+1. 從[！DNL]複製下列檔案 [DRM DVD]/SDK/]至您的開發系統（在您的Java類別路徑上）：
 
-   * [!DNL adobe-flashaccess-certs.jar]  — 包括Adobe根證書
-   * [!DNL adobe-flashaccess-sdk.jar]  — 包括Mogfire DRM核心SDK類
-   * [!DNL adobe-flashaccess-sdk-pro.jar]  — 包括Mogfire DRM Professional SDK類，僅專業功能所需
+   * [!DNL adobe-flashaccess-certs.jar]  — 包含Adobe根憑證
+   * [!DNL adobe-flashaccess-sdk.jar]  — 包含Primetime DRM核心SDK類別
+   * [!DNL adobe-flashaccess-sdk-pro.jar]  — 包含Primetime DRM Professional SDK類別，僅適用於Professional功能
 
-1. 從[!DNL複製以下檔案 [DRM DVD]/SDK/第三方]到您的開發系統：
+1. 從[！DNL]複製下列檔案 [DRM DVD]/SDK/thirdparty]至您的開發系統：
 
    * [!DNL bcmail-jdk15-141.jar]
    * [!DNL bcprov-jdk15-141.jar]
@@ -38,15 +38,15 @@ Adobe提供Mogfire DRM SDK on DVD:
    * [!DNL jackson-core--2.4.0-rc4-20140529.184520-13.jar]
    * [!DNL jackson-databind-2.4.0-rc4-20140603.005043-38.jar]
 
-1. （可選）為了提高效能，您可以通過從[!DNL]複製適當的平台特定庫來啟用對加密操作的本機支援 [DRM DVD]/SDK/第三方/cryptoj/]到您的開發系統（請記住將位置放在您的路徑上）:
+1. （可選）為改善效能，您可以從[！DNL]複製適當的平台特定程式庫，以啟用密碼編譯作業的原生支援 [DRM DVD]/SDK/thirdparty/cryptoj/]到您的開發系統（記得將位置放在您的路徑上）：
 
-   * [!DNL jsafe.dll]  — 窗口
+   * [!DNL jsafe.dll] - Windows
    * [!DNL libjsafe.so] - Linux
 
       >[!NOTE]
       >
-      >這些庫的32位和64位版本可用。 只有在您有64位作業系統並且運行64位版本的Java時，才應使用64位版本。
+      >這些程式庫的32位元和64位元版本可供使用。 如果您有64位元作業系統，而且您執行64位元版本的Java，則應該只使用64位元版本。
 
-1. （可選）有關AdobeFlash媒體Rights Management伺服器(FMRMS)1.x相容性的功能，請複製 `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` 到您的開發系統：
+1. （選用）如需AdobeFlash媒體Rights Management伺服器(FMRMS) 1.x相容性的相關功能，請複製 `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` 至您的開發系統：
 
-   僅當您以前部署了FMRMS 1.x且不想重新打包受FMRMS保護的內容時，才部署此項。 在這種情況下，必須將此支援添加到您的許可證伺服器中，以便它能夠管理舊內容和客戶端。
+   僅當您先前已部署FMRMS 1.x且不想重新封裝受FMRMS保護的內容時，才部署此專案。 在此情況下，您必須將此支援新增至您的授權伺服器，以便其管理舊的內容和使用者端。

@@ -1,6 +1,6 @@
 ---
-description: 要使隱藏字幕對客戶端播放器可用，必須啟用它們。 用戶可以開啟或關閉隱藏字幕並選擇格式。
-title: 公開隱藏的字幕
+description: 若要讓您的使用者端播放器可以使用隱藏式字幕，您必須啟用它們。 使用者可以開啟或關閉隱藏式字幕，並選取格式。
+title: 公開隱藏式字幕
 exl-id: 6383a2b2-04e3-4fe1-a573-5e1f1ef486ed
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# 公開隱藏的字幕 {#expose-closed-captions}
+# 公開隱藏式字幕 {#expose-closed-captions}
 
-要使隱藏字幕對客戶端播放器可用，必須啟用它們。 用戶可以開啟或關閉隱藏字幕並選擇格式。
+若要讓您的使用者端播放器可以使用隱藏式字幕，您必須啟用它們。 使用者可以開啟或關閉隱藏式字幕，並選取格式。
 
-要公開隱藏字幕：
+若要顯示隱藏式字幕，請執行下列動作：
 
-1. 在 `PTMediaPlayer` 對象，設定 `closedCaptionDisplayEnabled` 屬性。
+1. 在 `PTMediaPlayer` 物件，設定 `closedCaptionDisplayEnabled` 屬性。
 
-   如果用戶已啟用隱藏字幕，則此步驟將顯示文本。
-
-   >[!NOTE]
-   >
-   >客戶端用戶使用「iOS輔助功能設定」開啟或關閉關閉字幕，這些設定還提供了格式選項。
+   如果使用者已啟用隱藏式字幕，此步驟會顯示文字。
 
    >[!NOTE]
    >
-   >`closedCaptionDisplayEnabled` 不建議使用屬性。 使用 `subtitlesOptions` 物業 `PTMediaPlayerItem`。 請參閱 [曝光字幕](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md) 以使用隱藏字幕。
+   >使用者端使用者可使用iOS協助工具設定來開啟或關閉隱藏式字幕，而這些設定也提供格式選項。
+
+   >[!NOTE]
+   >
+   >`closedCaptionDisplayEnabled` 屬性已過時。 使用 `subtitlesOptions` 屬性 `PTMediaPlayerItem`. 另請參閱 [公開字幕](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md) 以使用隱藏式字幕。

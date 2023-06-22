@@ -1,6 +1,6 @@
 ---
-title: 命令行用法
-description: 命令行用法
+title: 命令列使用方式
+description: 命令列使用方式
 copied-description: true
 exl-id: 51b11ef8-438e-4747-be3e-e1774dc9f31a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# 命令行用法 {#command-line-usage}
+# 命令列使用方式 {#command-line-usage}
 
-要嵌入許可證，請使用以下語法：
+若要內嵌授權，請使用下列語法：
 
 ```
     java -jar AdobeLicenseEmbedder.jar  
@@ -22,33 +22,33 @@ ht-degree: 0%
 ```
 
 * `sourcefile` 是加密的FLV或F4V檔案。
-* `destfile` 指定將寫入嵌入許可證的加密內容的位置。 如果指定了目錄，則檔案將使用與源檔案相同的檔案名保存到此目錄中，但該目錄不能是包含源檔案的目錄。
+* `destfile` 指定將內嵌授權之加密內容寫入何處。 如果指定目錄，檔案會使用與來源檔案相同的檔案名稱儲存在此目錄中，但目錄不能是包含來源檔案的目錄。
 
-下表介紹了可以指定的命令行選項以及前面提到的語法：
+下表說明可搭配上述語法指定的命令列選項：
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_hnl_2sy_n4"> 
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
-   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">命令行選項 </p> </th> 
+   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">命令列選項 </p> </th> 
    <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">說明 </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l許可證檔案名 </span> </td> 
-   <td colname="2" class="- topic/entry "> 包含要嵌入的許可證的檔案的名稱。 多重 <span class="codeph"> -l </span> 可以指定選項來嵌入多個許可證。 </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename </span> </td> 
+   <td colname="2" class="- topic/entry "> 包含要內嵌之授權的檔案名稱。 多個 <span class="codeph"> -l </span> 可以指定選項以嵌入多個授權。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m元資料檔案名 </span> </td> 
-   <td colname="2" class="- topic/entry "> 指定要為其生成許可證的內容元資料。 （生成許可證時需要） </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename </span> </td> 
+   <td colname="2" class="- topic/entry "> 指定要為其產生授權的內容中繼資料。 （產生授權所需） </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
-   <td colname="2" class="- topic/entry "> 不要詢問是否應覆蓋目標檔案。 如果目標檔案已存在，並且 <span class="codeph"> -o </span> 未設定，將返回錯誤。 </td> 
+   <td colname="2" class="- topic/entry "> 不要詢問是否應該覆寫目的地檔案。 如果目的地檔案已存在且 <span class="codeph"> -o </span> 未設定，則會傳回錯誤。 </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
-   <td colname="2" class="- topic/entry "> 如果目標檔案已存在，則覆蓋它而不出現提示。 </td> 
+   <td colname="2" class="- topic/entry "> 如果目的地檔案已經存在，請覆寫它而不提示。 </td> 
   </tr> 
  </tbody> 
 </table>

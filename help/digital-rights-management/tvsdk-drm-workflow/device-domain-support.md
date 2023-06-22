@@ -1,6 +1,6 @@
 ---
-description: 通常，所有黃金時段DRM許可證在建立時都綁定到唯一設備。 此綁定防止用戶在不經授權的情況下跨不同設備共用許可證。 除了每設備綁定外，Mighine DRM還提供了將許可證綁定到設備域或設備組的能力。
-title: 使用域支援播放加密內容
+description: 通常，所有Primetime DRM授權在建立時都會繫結到唯一裝置。 此繫結可防止使用者未經授權而跨不同裝置共用授權。 除了每個裝置的繫結外，Primetime DRM還提供將授權繫結到裝置網域或裝置群組的功能。
+title: 使用網域支援播放加密的內容
 exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
 source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 0%
 
 ---
 
-# 設備域支援 {#device-domain-support}
+# 裝置網域支援 {#device-domain-support}
 
-通常，所有黃金時段DRM許可證在建立時都綁定到唯一設備。 此綁定防止用戶在不經授權的情況下跨不同設備共用許可證。 除了每設備綁定外，Mighine DRM還提供了將許可證綁定到設備域或設備組的能力。
+通常，所有Primetime DRM授權在建立時都會繫結到唯一裝置。 此繫結可防止使用者未經授權而跨不同裝置共用授權。 除了每個裝置的繫結外，Primetime DRM還提供將授權繫結到裝置網域或裝置群組的功能。
 
-如果內容元資料指定需要設備域註冊，則應用程式可以調用API以加入設備組。 此操作將觸發要發送到域伺服器的域註冊請求。 一旦向設備組發放許可證，就可以導出該許可證並與已加入設備組的其他設備共用。
+如果內容中繼資料指定需要裝置網域註冊，應用程式可以叫用API來加入裝置群組。 這個動作會觸發要傳送至網域伺服器的網域註冊要求。 將授權核發至裝置群組後，即可匯出授權並與已加入裝置群組的其他裝置共用。
 
-然後，在中使用設備組資訊 `DRMContentData` `VoucherAccessInfo` 對象，然後該對象將用於顯示成功檢索和使用許可證所需的資訊。
+然後，裝置群組資訊會用於 `DRMContentData` `VoucherAccessInfo` 物件，然後用於呈現成功擷取和使用授權所需的資訊。
 
-## 使用域支援播放加密內容 {#play-encrypted-content-using-domain-support}
+## 使用網域支援播放加密的內容 {#play-encrypted-content-using-domain-support}
 
-要使用Mighine DRM播放加密內容，請執行以下步驟：
+若要使用Primetime DRM播放加密的內容，請執行下列步驟：
 
-1. 使用 `VoucherAccessInfo.deviceGroup`，檢查是否需要註冊設備組。
-1. 如果需要身份驗證：
-   1. 使用 `DeviceGroupInfo.authenticationMethod` 屬性，查看是否需要驗證。
-   1. 如果需要驗證，請執行以下步驟之一來驗證用戶：
+1. 使用 `VoucherAccessInfo.deviceGroup`，檢查是否需要裝置群組註冊。
+1. 如果需要驗證：
+   1. 使用 `DeviceGroupInfo.authenticationMethod` 屬性，瞭解是否需要驗證。
+   1. 如果需要驗證，請執行以下步驟之一來驗證使用者：
 
-      * 獲取用戶的用戶名和密碼並調用 `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`。
-      * 獲取快取/預生成的驗證令牌並調用 `DRMManager.setAuthenticationToken()`。
-   1. 調用 `DRMManager.addToDeviceGroup()`
-1. 通過執行以下任務之一獲取內容許可證：
-   1. 使用 `DRMManager.loadVoucher()` 的雙曲餘切值。
-   1. 從在同一設備組中註冊的不同設備獲取許可證，並將許可證提供給 `DRMManager` 通過 `DRMManager.storeVoucher()` 的雙曲餘切值。
-1. 使用 `Primetime.play()` 的雙曲餘切值。
-要導出內容的許可證，任何設備都可以使用 `DRMVoucher.toByteArray()` 從黃金時段DRM許可伺服器獲取許可證後的方法。 內容提供者通常限制設備組中的設備數量。 如果達到限制，則可能需要調用 `DRMManager.removeFromDeviceGroup()` 在註冊當前設備之前對未使用設備執行方法。
+      * 取得使用者的使用者名稱和密碼並叫用 `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
+      * 取得快取/預先產生的驗證權杖並叫用 `DRMManager.setAuthenticationToken()`.
+   1. 叫用 `DRMManager.addToDeviceGroup()`
+1. 執行下列其中一項工作，以取得內容的授權：
+   1. 使用 `DRMManager.loadVoucher()` 方法。
+   1. 從同一裝置群組中註冊的不同裝置取得授權，並將授權提供給 `DRMManager` 透過 `DRMManager.storeVoucher()` 方法。
+1. 使用播放加密的內容 `Primetime.play()` 方法。
+若要匯出內容的授權，任何裝置都可使用 `DRMVoucher.toByteArray()` 從Primetime DRM授權伺服器取得授權後的方法。 內容提供者通常會限制裝置群組中的裝置數量。 如果達到限制，您可能需要呼叫 `DRMManager.removeFromDeviceGroup()` 註冊目前裝置之前，在未使用裝置上執行的方法。

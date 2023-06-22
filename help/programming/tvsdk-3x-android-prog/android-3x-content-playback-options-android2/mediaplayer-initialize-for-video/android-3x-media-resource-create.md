@@ -1,5 +1,5 @@
 ---
-description: MediaResource類表示要由MediaPlayer實例載入的內容。
+description: MediaResource類別代表MediaPlayer例項要載入的內容。
 title: 建立媒體資源
 exl-id: d9693ee5-c192-4ac5-925a-d64e629920b4
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,49 +11,49 @@ ht-degree: 0%
 
 # 建立媒體資源 {#create-a-media-resource}
 
-對於每個新視頻內容，使用有關視頻內容的資訊初始化MediaResource實例並載入媒體資源。
+對於每個新視訊內容，使用視訊內容的資訊初始化MediaResource例項並載入媒體資源。
 
-MediaResource類表示要由MediaPlayer實例載入的內容。
+MediaResource類別代表MediaPlayer例項要載入的內容。
 
-1. 建立 `MediaResource` 通過將有關媒體的資訊 `MediaResource` 建構子。
+1. 建立 `MediaResource` 將媒體的相關資訊傳送至 `MediaResource` 建構函式。
 
-   的 `MediaResource` 建構子需要以下參數：
+   此 `MediaResource` 建構函式需要下列引數：
 
    <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
    <thead> 
    <tr> 
-      <th colname="col1" class="entry"> 建構子參數 </th> 
+      <th colname="col1" class="entry"> 建構函式引數 </th> 
       <th colname="col2" class="entry"> 說明 </th> 
    </tr> 
    </thead>
    <tbody> 
    <tr> 
       <td colname="col1"> <span class="codeph"> url </span> </td> 
-      <td colname="col2"> 表示媒體清單/播放清單的URL的字串。 </td> 
+      <td colname="col2"> 代表媒體資訊清單/播放清單URL的字串。 </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> 類型 </span> </td> 
-      <td colname="col2"> 以下成員之一 <span class="codeph"> MediaResource.Type </span> 枚舉，與指定的檔案類型對應： 
+      <td colname="col1"> <span class="codeph"> type </span> </td> 
+      <td colname="col2"> 下列成員之一 <span class="codeph"> MediaResource.Type </span> 列舉，對應到指示的檔案型別： 
       <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> 合肥光源 </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> 伊索姆夫 </span> - ISO基本媒體檔案格式(MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> 短划線 </span> - MPEG-DASH媒體演示說明(MPD) </li> 
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO基本媒體檔案格式(MP4) </li> 
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> 虛線 </span> - MPEG虛線媒體簡報說明(MPD) </li> 
       </ul> </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> 元資料 </span> </td> 
-      <td colname="col2"> 實例 <span class="codeph"> 元資料 </span> 類（類似字典的結構），它可能包含有關將要載入的內容的附加資訊，如要放置在主內容中的替代內容或廣告內容。 如果使用廣告，請設定 <span class="codeph"> 音頻設定 </span> 之前 <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> 廣告插入元資料 </a>。 </td> 
+      <td colname="col1"> <span class="codeph"> 中繼資料 </span> </td> 
+      <td colname="col2"> 的例項 <span class="codeph"> 中繼資料 </span> 類別（類似字典的結構），可能包含即將載入之內容的額外資訊，例如要置於主要內容內的替代或廣告內容。 如果使用廣告，請設定 <span class="codeph"> Auditudesettings </span> 使用此建構函式之前 <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> 廣告插入中繼資料 </a>. </td> 
    </tr> 
    </tbody> 
    </table>
 
    >[!IMPORTANT]
    >
-   >TVSDK僅支援特定類型的內容的回放。 如果嘗試載入任何其他類型的內容，TVSDK將派單錯誤事件。
+   >TVSDK僅支援特定內容型別的播放。 如果您嘗試載入任何其他型別的內容，TVSDK會傳送錯誤事件。
    >
-   >對於MP4視頻點播(VOD)內容，TVSDK不支援特技播放、自適應比特率(ABR)流、廣告插入、隱藏字幕或DRM。
+   >針對MP4隨選視訊(VOD)內容，TVSDK不支援特技播放、調適型位元速率(ABR)串流、廣告插入、隱藏式字幕或DRM。
 
-   以下代碼將建立 `MediaResource` 實例：>
+   下列程式碼會建立 `MediaResource` 執行個體： >
 
    ```java
    // To do: Create metadata here 
@@ -63,13 +63,13 @@ MediaResource類表示要由MediaPlayer實例載入的內容。
      metadata); 
    ```
 
-   在此步驟後的任何時間，您都可以使用 `MediaResource` 訪問器(getter)，用於檢查資源的類型、URL和元資料。
+   在此步驟後的任何時間，您都可以使用 `MediaResource` 存取子(getter)，檢查資源的型別、URL和中繼資料。
 
-1. 使用以下選項之一載入媒體資源：
+1. 使用下列其中一個選項載入媒體資源：
 
-   * MediaPlayer實例。
-   * `MediaPlayerItemLoader` 有關詳細資訊，請參見 [使用MediaPlayerItemLoader載入媒體資源](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)。
+   * MediaPlayer例項。
+   * `MediaPlayerItemLoader` 如需詳細資訊，請參閱 [使用MediaPlayerItemLoader載入媒體資源](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
 
    >[!IMPORTANT]
    >
-   >不要在後台線程上載入媒體資源。 大多數TVSDK操作需要在主線程上運行，而在後台線程上運行這些操作可能會導致操作引發錯誤並退出。
+   >請勿在背景執行緒上載入媒體資源。 大部分的TVSDK操作都需要在主要執行緒上執行，而在背景執行緒上執行這些操作可能會導致操作擲回錯誤並退出。

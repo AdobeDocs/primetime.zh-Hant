@@ -1,6 +1,6 @@
 ---
-description: 此版本包括播放器，支援多種瀏覽器。
-title: 要求
+description: 此版本包含播放器並支援多種瀏覽器。
+title: 需求
 exl-id: 3157a86b-bf93-41d9-be82-0b702d69c69e
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,64 +9,64 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#requirements-overview}
+# 概觀 {#requirements-overview}
 
-瀏覽器TVSDK需要媒體內容、清單內容和軟體版本的特定屬性。
+瀏覽器TVSDK需要媒體內容、資訊清單內容和軟體版本的特定屬性。
 
-瀏覽器TVSDK版本包括以下播放器：
+瀏覽器TVSDK版本包含下列播放器：
 
-* `Primetime.js` 用於台式機和移動設備上的HLS
+* `Primetime.js` 適用於桌上型電腦和行動裝置上的HLS
 
-玩家包括以下參考API:
+播放器包含下列參考API：
 
 * `Primetime.js` 瀏覽器TVSDK
-* 用於核心播放的JavaScript API
-* 參考演示播放器
+* 適用於核心播放的JavaScript API
+* 參考示範播放程式
 
 **認證平台：**
 
-* **台式機配置**
+* **桌上型電腦設定**
 
-   * MicrosoftWindows 7:
-
-      * Internet Explorer 11+
-      * 鉻33+
-      * 火狐38+
-   * MicrosoftWindows 8.1
+   * Microsoft Windows 7：
 
       * Internet Explorer 11+
-      * 鉻33+
-      * 火狐38+
-   * MicrosoftWindows 10
+      * Chrome 33+
+      * Firefox 38+
+   * Microsoft Windows 8.1
 
-      * 邊緣+
-   * AppleOS X
+      * Internet Explorer 11+
+      * Chrome 33+
+      * Firefox 38+
+   * Microsoft Windows 10
+
+      * Edge+
+   * APPLE OS X
 
       * Safari 8+
-      * 鉻33+
-      * 火狐38+
+      * Chrome 33+
+      * Firefox 38+
 
 
 
 
-* **移動Web配置**
+* **行動網站設定**
 
    * Android 4.4
 
-      * 本機瀏覽器
-      * 鉻33+
+      * 原生瀏覽器
+      * Chrome 33+
    * Android 5.0
 
-      * 本機瀏覽器
-      * 鉻33+
+      * 原生瀏覽器
+      * Chrome 33+
    * Android 6.0
 
-      * 鉻33+
-   * AppleiOS8
+      * Chrome 33+
+   * APPLE IOS 8
 
       * Safari 8+
-      * 鉻33+
-   * AppleiOS9
+      * Chrome 33+
+   * APPLE IOS 9
 
       * Safari 8+
-      * 鉻33+
+      * Chrome 33+

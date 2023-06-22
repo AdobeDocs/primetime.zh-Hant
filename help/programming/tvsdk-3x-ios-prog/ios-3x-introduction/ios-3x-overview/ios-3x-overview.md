@@ -1,6 +1,6 @@
 ---
-title: 導言
-description: 導言
+title: 簡介
+description: 簡介
 copied-description: true
 exl-id: 881ad531-b914-42f6-a06e-119da13965e0
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,25 +10,25 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#overview}
+# 概觀 {#overview}
 
-Adobe Primetime軟體開發工具包(TVSDK)是一個工具包，允許您向應用程式添加高級視頻播放功能。
+Adobe Primetime Software Development Kit (TVSDK)是一個工具組，可讓您在應用程式中新增進階視訊播放功能。
 
-* 有關TVSDK支援的功能的清單，請參見 [黃金時段播放器TVSDK功能](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md)。
-* 有關使用TVSDK的特定硬體和軟體要求，請參見 [要求](../../ios-3x-introduction/ios-3x-requirements.md)。
+* 如需TVSDK支援的功能清單，請參閱 [Primetime Player TVSDK功能](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md).
+* 如需使用TVSDK的特定硬體與軟體需求，請參閱 [需求](../../ios-3x-introduction/ios-3x-requirements.md).
 
-本指南提供有關如何使用TVSDK開發視頻播放器應用程式的資訊，該TVSDK適用於iOS，在Objective-C中實現。
+本指南提供如何使用Objective-C實作的iOS適用的TVSDK開發視訊播放器應用程式的相關資訊。
 
 ## 產品概述 {#section_3C0C7E7FEF1F41BD9C65392C6C5E8D8E}
 
-TVSDK包括API說明和代碼示例，可幫助您將高級視頻功能、內容保護和廣告功能整合到播放器中。 使用Objective-C建立視頻播放器用戶介面。 TVSDK可幫助您將該用戶介面連接到其媒體播放器。 這允許您根據媒體清單播放視頻和廣告。 您還可以使用TVSDK檢索有關視頻的資訊、處理安全性以及控制和監視播放。
+TVSDK包含API說明和程式碼範例，可協助您將進階視訊功能、內容保護和廣告功能整合到播放器中。 您可以使用Objective-C建立視訊播放器使用者介面。 TVSDK可協助您將該使用者介面連線到其媒體播放器。 這可讓您根據媒體資訊清單播放影片和廣告。 您也可以使用TVSDK來擷取視訊的相關資訊、處理安全性，以及控制和監視播放。
 
-有關使用TVSDK的特定硬體和軟體要求，請參見要求
+如需使用TVSDK的特定軟硬體需求，請參閱需求
 
-## 觀眾 {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## 對象 {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-本指南假定您瞭解如何使用Objective-C開發應用程式和視頻播放器。您使用該語言實現視頻播放器用戶介面並合併TVSDK功能。
+本指南假設您瞭解如何使用Objective-C開發應用程式和影片播放器。您可以使用該語言來實作視訊播放器使用者介面，並整合TVSDK功能。
 
 ## 關於本指南 {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-本指南提供資訊，允許您在iOS設備上使用Objective-C將TVSDK功能合併到視頻播放器中。
+本指南提供的資訊可讓您在iOS裝置上使用Objective-C，將TVSDK功能合併到視訊播放器中。

@@ -1,6 +1,6 @@
 ---
-description: 當當前播放時間與開始時間匹配時，可以使用TimedMetadata。
-title: 使用定時元資料
+description: 當目前的播放時間符合開始時間時，您可以使用TimedMetadata。
+title: 使用定時中繼資料
 exl-id: 7f87cd14-121a-4543-ab0a-a03d829d040b
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,22 +9,22 @@ ht-degree: 0%
 
 ---
 
-# 使用定時元資料 {#use-timed-metadata}
+# 使用定時中繼資料 {#use-timed-metadata}
 
-當當前播放時間與開始時間匹配時，可以使用TimedMetadata。
+當目前的播放時間符合開始時間時，您可以使用TimedMetadata。
 
-使用這些保存的 `TimedMetadata` 回放期間的對象，使用已保存的 `ArrayList` 從 [在調度時儲存定時元資料對象](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)。
+若要使用這些已儲存的 `TimedMetadata` 物件在播放期間，使用已儲存的 `ArrayList` 從 [在傳送時儲存定時中繼資料物件](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
-1. 運行計時器並重複查詢當前播放時間。
-1. 查找所有 `TimedMetadata` 對象的起始時間與當前回放時間匹配。
+1. 執行計時器並重複查詢目前的播放時間。
+1. 尋找所有 `TimedMetadata` 開始時間符合目前播放時間的物件。
 
-   可以使用這些對象完成各種操作。
+   您可以使用這些物件完成各種動作。
 
    >[!IMPORTANT]
    >
-   >檢查當前回放時間是否與任何 `TimedMetadata` 對象，包括 `shouldTriggerSubscribedTagEvent` 作為條件。
+   >檢查目前的播放時間是否符合任何條件時 `TimedMetadata` 物件，包括 `shouldTriggerSubscribedTagEvent` 作為條件。
 
-   時間線可能會因各種廣告行為而改變。 例如，一個或多個廣告分段可能從它們在時間軸上的原始位置移動，但 `shouldTriggerSubscribedTagEvent` 確保 `TimeMetadata` 對象的開始時間與當前回放時間匹配。
+   時間軸可能會因各種廣告行為而變更。 例如，一個或多個廣告插播可能會從它們在時間軸上的原始位置移動，但是 `shouldTriggerSubscribedTagEvent` 確保 `TimeMetadata` 物件的開始時間符合目前的播放時間。
 
    例如：
 
@@ -58,4 +58,4 @@ ht-degree: 0%
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. 定期刷新陳舊 `TimedMetadata` 從清單中實例，以防止記憶體持續增長。
+1. 定期排清陳舊 `TimedMetadata` 執行個體，以防止記憶體持續成長。

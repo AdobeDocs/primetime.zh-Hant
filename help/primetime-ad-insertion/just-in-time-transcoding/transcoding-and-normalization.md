@@ -12,16 +12,16 @@ ht-degree: 0%
 
 # 轉碼和標準化 {#transcoding-and-normalization}
 
-黃金時段Ad Insertion將嘗試匹配以下內容和廣告，以確保內容和廣告的觀看體驗一致：
+PrimetimeAd Insertion會嘗試比對以下內容，以確保跨內容和廣告有一致的檢視體驗：
 
-1. 源流編解碼器和比特率，同時在轉碼時始終選擇最高質量/比特率
+1. 來源資料流轉碼器和位元速率，同時在轉碼時一律選擇最高品質/位元速率創意
 
-1. 源流碎片大小(HLS/#EXT-X-TARGETDURATION)
+1. 來源資料流片段大小(HLS/#EXT-X-TARGETDURATION)
 
-1. 用於轉碼的首選創意格式
+1. 轉碼時首選的創意格式
 
-1. 音頻自動調平，確保所有廣告創意的dB級別一致。
+1. 音訊自動平準以確保所有廣告創意內容都有一致的dB等級。
 
 >[!NOTE]
 >
->黃金時段Ad Insertion即時轉碼生成的HLS資產將生成版本3的HLS資產，而不管內容中定義了哪個HLS版本。
+>PrimetimeAd Insertion產生的HLS資產會即時轉碼產生版本3的HLS資產，無論內容中定義了哪個HLS版本。

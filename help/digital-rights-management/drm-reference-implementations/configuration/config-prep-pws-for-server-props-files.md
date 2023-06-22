@@ -12,14 +12,14 @@ ht-degree: 0%
 
 # 為伺服器屬性檔案準備密碼{#prepare-passwords-for-the-server-properties-files}
 
-參考實現提供 `ScrambleUtil.class`，一個可確保憑據密碼安全性的類。
+參考實作提供 `ScrambleUtil.class`，確保認證密碼安全的類別。
 
-在將密碼包含到 [!DNL flashaccess-refimpl.properties] 的子菜單。
+在密碼加入之前，請使用此工具先加密密碼 [!DNL flashaccess-refimpl.properties] 檔案。
 
-要運行該工具，可以使用Ant指令碼或Java。
+若要執行工具，您可以使用Ant指令碼或Java。
 
-該實用程式將生成加密密碼，您必須將其複製到 [!DNL flashaccess-refimpl.properties] 的子菜單。
+公用程式會產生加密的密碼，您必須將密碼複製到 [!DNL flashaccess-refimpl.properties] 檔案。
 
 >[!NOTE]
 >
->已與 `ScrambleUtil.class` 已提供的參考實現與Mogfire DRM Server for Protected Streaming不相容。
+>密碼已使用 `ScrambleUtil.class` 參考實作中提供的資料無法搭配Primetime DRM伺服器使用，因此無法進行受保護的串流。

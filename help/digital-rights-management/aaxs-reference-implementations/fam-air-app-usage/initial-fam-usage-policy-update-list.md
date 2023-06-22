@@ -1,6 +1,6 @@
 ---
-title: 策略更新清單
-description: 策略更新清單
+title: 原則更新清單
+description: 原則更新清單
 copied-description: true
 exl-id: 78078e95-775e-4c64-ab0f-d8bf644f3aee
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,14 +10,14 @@ ht-degree: 0%
 
 ---
 
-# 策略更新清單 {#policy-update-list}
+# 原則更新清單 {#policy-update-list}
 
-可以使用策略更新清單將策略更改與許可證伺服器通信。 如果策略在用於打包內容後被修改，則希望許可證伺服器知道策略的最新版本，以便該版本可用於頒發許可證。
+您可以使用原則更新清單將原則變更傳達給授權伺服器。 如果在使用原則封裝內容後修改原則，最好讓授權伺服器知道原則的最新版本，以便使用版本發行授權。
 
-要首次建立策略更新清單，請按一下 **[!UICONTROL Add policies]** 查看伺服器上的所有可用策略。 對於自用於打包內容後已更新的任何策略，請選擇 **[!UICONTROL update]** 按鈕。
+若要第一次建立原則更新清單，請按一下 **[!UICONTROL Add policies]** 以檢視伺服器上所有可用的原則。 對於自用於封裝內容以來更新的任何原則，請選取 **[!UICONTROL update]** 選項按鈕。
 
-如果您不再希望使用策略來頒發任何許可證，並且該策略已用於打包內容，則可能希望撤消該策略。 為此，請選擇 **[!UICONTROL revoke]** 按鈕。 選擇所需策略後，選擇 **[!UICONTROL Create Policy Update List]**。 名為 [!DNL PolicyUpdateList.dat] 將保存在 [!DNL Resources] 目錄。
+如果您不想再使用原則來核發任何授權，而且原則已用來封裝內容，您可能會想要撤銷原則。 若要這麼做，請選取 **[!UICONTROL revoke]** 選項按鈕。 選取所需原則後，選擇 **[!UICONTROL Create Policy Update List]**. 名為的檔案 [!DNL PolicyUpdateList.dat] 將會儲存在 [!DNL Resources] 目錄。
 
-要修改現有策略更新清單，請按一下 **[!UICONTROL Add policies]** 查看伺服器上的所有可用策略。 選擇要添加或撤消的附加策略。 「策略更新清單」中的現有條目可以在螢幕的上半部分更改。 已標籤的策略 **[!UICONTROL updated]** 可能已更改為 **[!UICONTROL revoked]**&#x200B;但一旦策略 **[!UICONTROL revoked]**，無法將其更改回 **[!UICONTROL updated]**。
+若要修改現有的原則更新清單，請按一下 **[!UICONTROL Add policies]** 以檢視伺服器上所有可用的原則。 選擇要新增或撤銷的其他原則。 原則更新清單中的現有專案可以在畫面的上方區段中變更。 標示的原則 **[!UICONTROL updated]** 可變更為 **[!UICONTROL revoked]**，但一旦原則變成 **[!UICONTROL revoked]**，無法變更回 **[!UICONTROL updated]**.
 
-完成所需更改後，選擇 **[!UICONTROL Create Policy Update List]**&#x200B;的 [!DNL PolicyUpdateList.dat] 檔案。 如果策略已在策略更新清單中，且自上次生成清單後已更新，則當再次生成策略更新清單時，將使用策略的最新版本。
+完成所需的變更後，請選擇 **[!UICONTROL Create Policy Update List]**，以及 [!DNL PolicyUpdateList.dat] 檔案會重新產生。 如果原則已經在原則更新清單中，並且自上次產生清單以來已更新，則在再次產生原則更新清單時，將使用最新版本的原則。

@@ -1,6 +1,6 @@
 ---
-description: 可以使用MediaPlayerView對象控制視頻視圖的位置和大小。
-title: 控制視頻視圖的位置和大小
+description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
+title: 控制視訊檢視的位置和大小
 exl-id: 5e7ae557-7f2b-4697-85eb-e72d1f43a7fc
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 0%
 
 ---
 
-# 控制視頻視圖的位置和大小{#control-the-position-and-size-of-the-video-view}
+# 控制視訊檢視的位置和大小{#control-the-position-and-size-of-the-video-view}
 
-可以使用MediaPlayerView對象控制視頻視圖的位置和大小。
+您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
 
-預設情況下，TVSDK會嘗試在視頻大小或位置發生變化時（由於應用程式或配置檔案開關或內容開關等的更改）保持視頻視圖的寬高比。
+TVSDK預設會在視訊大小或位置變更（由於應用程式、設定檔切換器或內容切換器等所做的變更）時，嘗試維持視訊檢視的外觀比例。
 
-可通過指定不同的長寬比行為來覆蓋預設長寬比行為 *規模策略*。 使用 `MediaPlayerView` 對象 `scalePolicy` 屬性。 的 `MediaPlayerView`的預設比例策略是使用 `MaintainAspectRatioScalePolicy` 類。 要重置縮放策略，請替換 `MaintainAspectRatioScalePolicy` 上 `MediaPlayerView.scalePolicy` 你自己的政策。 (無法設定 `scalePolicy` 屬性到空值。)
+您可以透過指定不同的外觀比例行為來覆寫預設外觀比例行為 *縮放原則*. 使用指定縮放原則 `MediaPlayerView` 物件的 `scalePolicy` 屬性。 此 `MediaPlayerView`的預設縮放原則是以 `MaintainAspectRatioScalePolicy` 類別。 若要重設比例原則，請取代預設的執行個體 `MaintainAspectRatioScalePolicy` 於 `MediaPlayerView.scalePolicy` 使用您自己的原則。 (您無法設定 `scalePolicy` 屬性轉換為null值。)
 
-1. 實施 `MediaPlayerViewScalePolicy` 介面，建立您自己的縮放策略。
+1. 實作 `MediaPlayerViewScalePolicy` 介面以建立您自己的縮放原則。
 
-   的 `MediaPlayerViewScalePolicy` 有一種方法：
+   此 `MediaPlayerViewScalePolicy` 有一個方法：
 
    ```
    public function adjust(viewPort:Rectangle, 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >TVSDK使用 `StageVideo` 顯示視頻的對象，因為 `StageVideo` 對象不在顯示清單中， `viewPort` 參數包含視頻的絕對坐標。
+   >TVSDK使用 `StageVideo` 顯示視訊的物件，以及 `StageVideo` 物件不在顯示清單上， `viewPort` 引數包含視訊的絕對座標。
    >
    >
    >例如：
@@ -57,14 +57,14 @@ ht-degree: 0%
    >}
    >```
 
-1. 將實施分配給 `MediaPlayerView` 屬性。
+1. 將您的實作指派給 `MediaPlayerView` 屬性。
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. 將視圖添加到媒體播放器 `view` 屬性。
+1. 將檢視新增至媒體播放器的 `view` 屬性。
 
    ```
    addChild(view); 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 <!--<a id="example_7B08ECCDA17B4DD191FC672BD1F4C850"></a>-->
 
-**例如：縮放視頻以填充整個視頻視圖，而不保持縱橫比：**
+**例如：縮放視訊以填滿整個視訊檢視，而不維持外觀比例：**
 
 ```
 package com.adobe.mediacore.samples.utils { 

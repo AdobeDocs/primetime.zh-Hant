@@ -3,9 +3,9 @@ title: NATIVE_ERROR通知的詳細資料
 description: NATIVE_ERROR通知的詳細資料
 copied-description: true
 exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '6868'
+source-wordcount: '6888'
 ht-degree: 2%
 
 ---
@@ -352,7 +352,7 @@ Adobe視訊引擎的Video Encoder介面會傳回下列DRM通知： `NATIVE_ERROR
    <td colname="col2"><span class="codeph"> AAXS_I15n失敗 </span> </td> 
    <td colname="col3"> <p>提供金鑰給使用者端的程式失敗。 subErrorId包含使用者端特有、伺服器特有或行錯誤。 </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
-     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">散發者的軟體應至少重試一次作業。 <p>如果您在Windows上使用Google Chrome，請提供說明來說明如何允許不在沙箱中的外掛程式存取。 Google Chrome的非沙箱存取遭拒</a>. </p> </li> 
+     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">散發者的軟體應至少重試一次作業。 <p>如果您在Windows上使用Google Chrome，請提供說明來說明如何允許不在沙箱中的外掛程式存取。 如需詳細資訊，請參閱 <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Google Chrome的非沙箱存取遭拒</a>. </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">散發者應完成下列其中一項工作： 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">如果錯誤在各平台間是一致的，您應使用Adobe將問題升級。 </li> 
@@ -685,7 +685,7 @@ Adobe視訊引擎的Video Encoder介面會傳回下列DRM通知： `NATIVE_ERROR
   <tr> 
    <td colname="col1"> 3368 </td> 
    <td colname="col2"><span class="codeph"> AAXS_UserSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>使用者已取消操作，或已輸入不允許存取系統的設定。 </p> <p>只有在SWF版本為19或更新版本時，才會擲回此錯誤。 為了回溯相容性，當SWF版本為18或更舊版本時會擲回3321。 </p> <p>分銷商的軟體應引導使用者說明如何允許無沙箱外掛程式存取。 Google Chrome的非沙箱存取遭拒</a> 和 <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Chrome中的DRM錯誤3322/3346/3368 （資訊列問題）</a>. </p> </td> 
+   <td colname="col3"> <p>使用者已取消操作，或已輸入不允許存取系統的設定。 </p> <p>只有在SWF版本為19或更新版本時，才會擲回此錯誤。 為了回溯相容性，當SWF版本為18或更舊版本時會擲回3321。 </p> <p>分銷商的軟體應引導使用者說明如何允許無沙箱外掛程式存取。 如需詳細資訊，請參閱 <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Google Chrome的非沙箱存取遭拒</a> 和 <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Chrome中的DRM錯誤3322/3346/3368 （資訊列問題）</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3369 </td> 

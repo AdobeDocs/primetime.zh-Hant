@@ -1,6 +1,6 @@
 ---
-description: 您可以實現自己的日誌記錄系統。
-title: 瞭解自定義日誌記錄
+description: 您可以實作自己的記錄系統。
+title: 瞭解自訂記錄
 exl-id: 8b6a916e-783e-40e1-8a3d-706b57a6ff63
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 0%
 
 ---
 
-# 自定義日誌記錄 {#customized-logging}
+# 自訂記錄 {#customized-logging}
 
-您可以實現自己的日誌記錄系統。
+您可以實作自己的記錄系統。
 
-除了使用預定義通知進行記錄外，您還可以實現使用TVSDK生成的日誌消息和消息的記錄系統。 有關預定義通知的詳細資訊，請參閱 [通知系統](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System)。 您可以使用這些日誌來排除播放器應用程式的故障，並更好地瞭解播放和廣告工作流。
+除了使用預先定義的通知來記錄外，您還可以實作記錄系統，該系統會使用TVSDK產生的記錄訊息和訊息。 如需預先定義通知的詳細資訊，請參閱 [通知系統](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System). 您可以使用這些記錄檔來疑難排解播放器應用程式，以及提供對播放和廣告工作流程的更佳瞭解。
 
-自定義日誌記錄使用的共用單個實例 `PSDKPTLogFactory`，它提供了一種機制，可將消息記錄到多個記錄程式。 您可以定義並向 `PTLogFactory`。 這允許您使用自定義實現定義多個記錄器，如控制台記錄器、Web記錄器或控制台歷史記錄記錄器。
+自訂記錄使用下列專案的共用單一執行個體： `PSDKPTLogFactory`，提供將訊息記錄到多個記錄器的機制。 您可以定義並新增（註冊）一或多個記錄器至 `PTLogFactory`. 這可讓您使用自訂實作來定義多個記錄器，例如主控台記錄器、網頁記錄器或主控台歷史記錄記錄器。
 
-TVSDK為其許多活動生成日誌消息， `PTLogFactory` 轉發給所有已註冊的記錄程式。 您的應用程式還可以生成自定義日誌消息，這些消息將轉發給所有已註冊的日誌程式。 每個記錄器都可以過濾消息並採取適當的操作。
+TVSDK會為其許多活動產生記錄訊息，而 `PTLogFactory` 轉寄給所有註冊的記錄器。 您的應用程式也可以產生自訂記錄訊息，這些訊息會轉送給所有註冊的記錄器。 每個記錄器都可以篩選訊息並採取適當的動作。
 
-有兩種實現 `PTLogFactory`:
+有兩個實作 `PTLogFactory`：
 
-* 用於監聽日誌。
-* 將日誌添加到 `PTLogFactory`。
+* 用於聆聽記錄。
+* 用於將記錄檔新增至 `PTLogFactory`.
 
-## 偵聽日誌 {#listen-to-logs}
+## 聆聽記錄 {#listen-to-logs}
 
-要註冊以偵聽日誌，請執行以下操作：
-1. 實現遵循協定的自定義類 `PTLogger`:
+註冊監聽記錄檔：
+1. 實作遵循通訊協定的自訂類別 `PTLogger`：
 
    ```
    @implementation PTConsoleLogger 
@@ -44,7 +44,7 @@ TVSDK為其許多活動生成日誌消息， `PTLogFactory` 轉發給所有已�
    @end
    ```
 
-1. 要註冊實例以接收日誌記錄條目，請添加 `PTLogger` 到 `PTLoggerFactory`:
+1. 若要註冊執行處理以接收記錄專案，請新增執行處理的 `PTLogger` 至 `PTLoggerFactory`：
 
    ```
    PTConsoleLogger *logger = [PTConsoleLogger consoleLogger]; 
@@ -57,7 +57,7 @@ TVSDK為其許多活動生成日誌消息， `PTLogFactory` 轉發給所有已�
 
 <!--<a id="example_3738B5A8B4C048D28695E62297CF39E3"></a>-->
 
-下面是使用 `PTLogEntry` 類型：
+以下範例說明如何使用 `PTLogEntry` 型別：
 
 ```
 @implementation PTConsoleLogger 
@@ -88,15 +88,15 @@ TVSDK為其許多活動生成日誌消息， `PTLogFactory` 轉發給所有已�
 @end
 ```
 
-## 添加新日誌消息 {#add-new-log-messages}
+## 新增記錄檔訊息 {#add-new-log-messages}
 
-要註冊以偵聽日誌，請執行以下操作：
+註冊以監聽記錄檔：
 
-新建 `PTLogEntry` 並添加到 `thePTLogFactory`:
+建立新的 `PTLogEntry` 並將其新增至 `thePTLogFactory`：
 
-可以手動實例化 `PTLogEntry` 並加到 `PTLogFactory` 共用實例或使用其中一個宏完成同一任務。
+您可以手動具現化 `PTLogEntry` 並將其新增至 `PTLogFactory` 共用執行個體或使用其中一個巨集完成相同的工作。
 
-下面是使用 `PTLogDebug` 宏：
+以下是使用的記錄範例 `PTLogDebug` 巨集：
 
 <!--<a id="example_F014436E1686468F941F4EBD1A21B18E"></a>-->
 

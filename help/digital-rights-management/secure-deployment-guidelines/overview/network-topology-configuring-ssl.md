@@ -1,6 +1,6 @@
 ---
-description: 只有在需要支援Flash媒體Rights Management伺服器1.x客戶端時，才需要安全套接字層(SSL)。
-title: 配置SSL
+description: 只有在您需要支援Flash MediaRights Management伺服器1.x使用者端時，才需要安全通訊端層(SSL)。
+title: 設定SSL
 exl-id: f22520dd-65df-4bcb-b966-ff605f25bfbf
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 ---
 
-# 配置SSL {#configuring-ssl}
+# 設定SSL {#configuring-ssl}
 
-只有在需要支援Flash媒體Rights Management伺服器1.x客戶端時，才需要安全套接字層(SSL)。
+只有在您需要支援Flash MediaRights Management伺服器1.x使用者端時，才需要安全通訊端層(SSL)。
 
-Adobe PrimetimeDRM密鑰伺服器需要使用客戶端身份驗證的SSL。 有關詳細資訊，請參見 [使用Adobe PrimetimeDRM密鑰伺服器](../../using-the-drm-key-server/requirements.md)。
+Adobe Primetime DRM Key Server需要具有使用者端驗證的SSL。 如需詳細資訊，請參閱 [使用Adobe Primetime DRM Key Server](../../using-the-drm-key-server/requirements.md).

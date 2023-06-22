@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # 轉換檔案{#convert-files}
 
-請求者使用諸如OpenSSL和私鑰之類的實用程式通過在命令窗口中輸入以下命令來生成PKCS#12(pfx)和PEM/DER檔案：
+請求者使用公用程式（例如OpenSSL和私密金鑰）從命令視窗輸入下列命令來產生PKCS#12 (pfx)和PEM/DER檔案：
 
-1. 將PKCS#7檔案轉換為臨時PEM檔案。
+1. 將PKCS#7檔案轉換為暫存PEM檔案。
 
-   要使用OpenSSL，請開啟「命令」窗口，然後輸入以下內容：
+   若要使用OpenSSL，請開啟「命令視窗」並輸入下列內容：
 
    ```
    openssl pkcs7 -in mycompany-license.p7b -inform DER -out mycompany-license-temp.pem \ 
@@ -25,20 +25,20 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >此臨時PEM包含您的證書和中間CA的證書。 使用這些證書生成PFX檔案。
+   >此暫時PEM包含您的憑證和中繼CA的憑證。 使用這些憑證來產生PFX檔案。
 
-1. 將臨時PEM檔案轉換為PFX檔案。
+1. 將暫存PEM檔案轉換為PFX檔案。
 
-   要使用OpenSSL，請開啟「命令」窗口，然後輸入以下內容：
+   若要使用OpenSSL，請開啟「命令視窗」並輸入下列內容：
 
    ```
    openssl pkcs12 -export -inkey mycompany-license.key -in mycompany-license-temp.pem \ 
    -out mycompany-license.pfx -passin pass:private_key_password -passout pass:pfx_password 
    ```
 
-1. 將臨時PEM檔案轉換為最終PEM檔案。
+1. 將暫存PEM檔案轉換為最終PEM檔案。
 
-   要使用OpenSSL，請開啟「命令」窗口，然後輸入以下內容：
+   若要使用OpenSSL，請開啟「命令視窗」並輸入下列內容：
 
    ```
    openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM 
@@ -46,13 +46,13 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >雖然不是必需的，但Adobe建議為私鑰(privatekeypassword)和PFX(pfxpassword)使用不同的口令。
+   >雖然不需要，但Adobe建議對私密金鑰(private_key_password)和PFX (pfx_password)使用不同的密碼。
 
-   此最終PEM檔案僅包含您的證書。
+   此最終PEM檔案僅包含您的憑證。
 
 1. 將PEM檔案轉換為DER檔案。
 
-   要使用OpenSSL，請開啟「命令」窗口，然後輸入以下內容：
+   若要使用OpenSSL，請開啟「命令視窗」並輸入下列內容：
 
    ```
    openssl x509 -in mycompany-license.pem -inform PEM -out mycompany-license.der -outform DER 
@@ -60,4 +60,4 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >DER檔案僅對HTTP Dynamic Streaming打包器是必需的。
+   >只有HTTP Dynamic Streaming封裝程式才需要DER檔案。

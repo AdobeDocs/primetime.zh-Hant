@@ -1,6 +1,6 @@
 ---
-title: 在「選擇」對話框中允許MVPD
-description: 在「選擇」對話框中允許MVPD
+title: 在選擇對話方塊中允許MVPD
+description: 在選擇對話方塊中允許MVPD
 exl-id: 2c0e0f06-ddc6-4bea-90dc-d7ef8e78d27e
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 0%
 
 ---
 
-# 在「選擇」對話框中允許MVPD {#allow-mvpds-selection-dialog}
+# 在選擇對話方塊中允許MVPD {#allow-mvpds-selection-dialog}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
 ## 問題 {#issue}
 
-程式設計師可能希望在向最終用戶公開之前test或檢查新MVPD整合的用戶體驗。
+程式設計師可能要在向一般使用者公開之前，測試或檢查新MVPD整合的使用者體驗。
 
 ## 解決方案 {#solution}
 
-在 `displayProviderDialog()` 回調，Adobe Primetime驗證將返回與所選程式設計師（請求者ID）整合的所有MVPD。 但程式設計師可以對MVPD的返回陣列應用篩選器，並只顯示兩個清單中的篩選器。
+在 `displayProviderDialog()` callback，Adobe Primetime驗證會傳回與所選程式設計師（請求者ID）整合的所有MVPD。 但程式設計師可以在MVPD的傳回陣列上套用篩選器，並只顯示同時在這兩個清單中的專案。
 
-## 示例 {#example}
+## 範例 {#example}
 
-此示例演示如何在MVPD選擇器對話框內僅顯示CableCompany_1和CableCompany_2，以及不顯示CableCompany_NewIntegration。
+此範例示範如何在MVPD選取器對話方塊中僅顯示CableCompany_1和CableCompany_2，而不顯示CableCompany_NewIntegration。
 
 ```C
 function displayProviderDialog(mvpdList) {

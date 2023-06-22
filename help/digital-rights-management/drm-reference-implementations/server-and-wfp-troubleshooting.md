@@ -1,6 +1,6 @@
 ---
-title: 故障排除
-description: 故障排除
+title: 疑難排除
+description: 疑難排除
 copied-description: true
 exl-id: 6c4f15b6-507e-496e-ad1c-702ce77dd069
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,31 +10,31 @@ ht-degree: 0%
 
 ---
 
-# 故障排除{#troubleshooting}
+# 疑難排除{#troubleshooting}
 
-以下是在部署過程中可能遇到的一些問題和解決方案。
+以下是您在部署期間可能會遇到的一些問題和解決方案。
 
-* 如果顯示以下錯誤消息：
+* 如果顯示下列錯誤訊息：
 
    ```
    "Error decoding the password for HandlerConfiguration.ServerTransportCredential.password  
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   確保密碼已使用 `ScrambleUtil` 類。
+   確定密碼已使用 `ScrambleUtil` 類別。
 
-* 如果顯示以下錯誤消息：
+* 如果顯示下列錯誤訊息：
 
    ```
    "Unable to load credential from file.pfx -- possibly wrong password."
    ```
 
-   確保在PFX檔案中指定了正確的加密密碼。
+   請確定您已在PFX檔案中指定正確的加密密碼。
 
-* 如果顯示以下錯誤消息：
+* 如果顯示下列錯誤訊息：
 
    ```
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   確保使用密碼擾碼器類 *已提供的參考實施*。 此擾碼器實用程式與隨Adobe PrimetimeDRM伺服器提供的受保護流式管理實用程式不同。
+   請確定您使用密碼加擾程式類別 *參考實作所提供的資源*. 此Scrambler公用程式與Adobe Primetime DRM Server for Protected Streaming隨附的公用程式不同。

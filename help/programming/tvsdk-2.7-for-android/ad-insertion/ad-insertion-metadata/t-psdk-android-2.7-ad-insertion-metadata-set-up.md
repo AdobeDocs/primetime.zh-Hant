@@ -1,6 +1,6 @@
 ---
-description: 使用幫助程式類AuditudeSettings（擴展MetadataNode類）來設定Adobe Primetime和確定元資料。
-title: 設定和插入元資料
+description: 使用協助程式類別AuditudeSettings （擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
+title: 設定廣告插入中繼資料
 exl-id: da5bfdc1-2c55-45f2-b2a8-3e32450cb30d
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 0%
 
 ---
 
-# 設定和插入元資料 {#set-up-ad-insertion-metadata}
+# 設定廣告插入中繼資料 {#set-up-ad-insertion-metadata}
 
-使用幫助程式類AuditudeSettings（擴展MetadataNode類）來設定Adobe Primetime和確定元資料。
+使用協助程式類別AuditudeSettings （擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
 
 >[!TIP]
 >
->Adobe Primetime的廣告決定之前被稱為奧迪。
+>Adobe Primetime ad decisioning先前稱為Auditude。
 
-廣告元資料位於 `MediaResource.Metadata` 屬性。 開始播放新視頻時，應用程式負責設定正確的廣告元資料。
+廣告中繼資料位於 `MediaResource.Metadata` 屬性。 開始播放新視訊時，您的應用程式負責設定正確的廣告中繼資料。
 
-1. 構建 `AuditudeSettings` 實例。
+1. 建置 `AuditudeSettings` 執行個體。
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. 設定Adobe Primetime和決策 `mediaID`。 `zoneID`。 `<ph conkeyref="phrases/primetime-sdk-name"/>`和可選的目標參數。
+1. 設定Adobe Primetime廣告決策 `mediaID`， `zoneID`， `<ph conkeyref="phrases/primetime-sdk-name"/>`和選用的目標定位引數。
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
@@ -43,30 +43,30 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >媒體ID被TVSDK用作字串，該字串被轉換為md5值，用於 `u` Mighine廣告決策URL請求中的值。 例如：
+   >媒體ID會由TVSDK作為字串使用，然後轉換為一個md5值，並用於 `u` Primetime廣告決策URL請求中的值。 例如：
    >
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
-1. 建立 `MediaResource` 實例。
+1. 建立 `MediaResource` 使用媒體串流URL和先前建立的廣告中繼資料，執行個體。
 
    ```java
    MediaResource mediaResource = new MediaResource( 
    "https://example.com/media/test_media.m3u8", MediaResource.Type.HLS, Metadata);
    ```
 
-1. 載入 `MediaResource` 對象 `MediaPlayer.replaceCurrentResource` 的雙曲餘切值。
+1. 載入 `MediaResource` 物件穿過 `MediaPlayer.replaceCurrentResource` 方法。
 
-   的 `MediaPlayer` 開始載入和處理媒體流清單。
+   此 `MediaPlayer` 開始載入及處理媒體資料流資訊清單。
 
-1. 當 `MediaPlayer` 轉換為INITIALIZED狀態，獲取媒體流特性，格式為 `MediaPlayerItem` 實例 `MediaPlayer.CurrentItem` 的雙曲餘切值。
-1. （可選）查詢 `MediaPlayerItem` 實例，查看流是否處於活動狀態，而不管它是否具有備用音頻軌道或流是否受到保護。
+1. 當 `MediaPlayer` 轉換到INITIALIZED狀態，以的格式取得媒體資料流特性 `MediaPlayerItem` 執行個體透過 `MediaPlayer.CurrentItem` 方法。
+1. （選用）查詢 `MediaPlayerItem` 執行個體以檢視資料流是否為即時，無論是否有替代音軌或資料流受到保護。
 
-   此資訊可幫助您為回放準備UI。 例如，如果您知道有兩個音頻軌道，則可以包括在這些軌道之間切換的UI控制項。
+   此資訊可協助您為播放準備UI。 例如，如果您知道有兩個音軌，您可以包含可在這些音軌之間切換的UI控制項。
 
-1. 呼叫 `MediaPlayer.prepareToPlay` 以啟動廣告工作流。
+1. 呼叫 `MediaPlayer.prepareToPlay` 以開始廣告工作流程。
 
-   廣告解析並放在時間表上後， `MediaPlayer` 向 `PREPARED` 狀態。
-1. 呼叫 `MediaPlayer.play` 的子菜單。
+   解析廣告並放置在時間軸上後， `MediaPlayer` 轉換至 `PREPARED` 州別。
+1. 呼叫 `MediaPlayer.play` 以開始播放。
 
-TVSDK現在在播放媒體時包含廣告。
+TVSDK現在會在您的媒體播放時包含廣告。

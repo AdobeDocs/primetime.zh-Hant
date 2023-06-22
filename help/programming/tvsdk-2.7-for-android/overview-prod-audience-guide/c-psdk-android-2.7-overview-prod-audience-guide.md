@@ -1,6 +1,6 @@
 ---
-description: 本指南提供有關如何使用TVSDK開發視頻播放器應用程式的資訊，該TVSDK適用於Android，該應用程式在Java中實現。
-title: 產品概述、受眾和本指南
+description: 本指南提供如何使用Java實作的Android版TVSDK開發視訊播放器應用程式的相關資訊。
+title: 產品概述、對象和本指南
 exl-id: 3dfef60a-5547-494b-9bbe-74eb0440ec92
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,32 +9,32 @@ ht-degree: 0%
 
 ---
 
-# 產品概述、受眾和本指南 {#product-overview-audience-and-this-guide}
+# 產品概述、對象和本指南 {#product-overview-audience-and-this-guide}
 
-本指南提供有關如何使用TVSDK開發視頻播放器應用程式的資訊，該TVSDK適用於Android，該應用程式在Java中實現。
+本指南提供如何使用Java實作的Android版TVSDK開發視訊播放器應用程式的相關資訊。
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* 有關TVSDK支援的功能的清單，請參見 [黃金時段TVSDK功能](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md)。
-* 有關使用TVSDK的特定硬體和軟體要求，請參見 [要求](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)。
-* 有關可用API的清單，請參見 [TVSDK Android API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/)。
+* 如需TVSDK支援的功能清單，請參閱 [Primetime TVSDK功能](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
+* 如需使用TVSDK的特定硬體與軟體需求，請參閱 [需求](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
+* 如需可用API的清單，請參閱 [TVSDK Android API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
 
 ## 產品概述 {#section_9664959F25C948878F2F7EF3D360CA95}
 
-TVSDK包括API說明和代碼示例，可幫助您將高級視頻功能、內容保護和廣告功能整合到播放器中。 使用Java建立視頻播放器用戶介面。 TVSDK可幫助您將該用戶介面連接到其媒體播放器。 這允許您根據媒體清單播放視頻和廣告。 您還可以使用TVSDK檢索有關視頻的資訊、處理安全性以及控制和監視播放。
+TVSDK包含API說明和程式碼範例，可協助您將進階視訊功能、內容保護和廣告功能整合到播放器中。 您可以使用Java建立視訊播放器使用者介面。 TVSDK可協助您將該使用者介面連線到其媒體播放器。 這可讓您根據媒體資訊清單播放影片和廣告。 您也可以使用TVSDK來擷取視訊的相關資訊、處理安全性，以及控制和監視播放。
 
-## 觀眾 {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## 對象 {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-本指南假定您瞭解如何使用Java開發應用程式和視頻播放器。 您可以在Java中實現視頻播放器UI，並合併所需的TVSDK功能。
+本指南假設您瞭解如何使用Java開發應用程式和影片播放程式。 您可在Java中實作視訊播放器UI，並整合所需的TVSDK功能。
 
 ## 關於本指南 {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-本指南提供資訊，使您能夠在Android設備上使用Java將TVSDK功能合併到視頻播放器中。
+本指南提供的資訊可讓您在Android裝置上使用Java的視訊播放器中合併TVSDK功能。
 
-## 本指南中的命名空間符號 {#section_8B866054E9ED4B5F99DCA7A681404632}
+## 本指南中的名稱空間標籤法 {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->TVSDK API命名空間前置詞 [!DNL com.adobe.mediacore] 為了簡單起見，常常會省略。
+>TVSDK API名稱空間前置詞 [!DNL com.adobe.mediacore] 為簡短起見，通常會省略。
 >
->如果上下文清除，則引用許多API元素時沒有其父類指示符。
+>如果上下文清楚，許多API元素參照時沒有其父類別指示器。

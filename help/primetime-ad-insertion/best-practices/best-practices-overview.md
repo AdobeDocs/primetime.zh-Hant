@@ -1,6 +1,6 @@
 ---
-title: 最佳做法
-description: 最佳做法
+title: 最佳實務
+description: 最佳實務
 copied-description: true
 exl-id: 2dae6032-5e22-4274-a5a2-02960fcbcf19
 source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
@@ -10,12 +10,12 @@ ht-degree: 0%
 
 ---
 
-# 最佳做法 {#best-practices}
+# 最佳實務 {#best-practices}
 
-要獲得視頻流的最佳效能和啟動時間，請參閱以下最佳實踐來分析和優化您的廣告和內容工作流。
+如需影片串流的最佳效能和啟動時間，請參閱下列最佳實務，以分析和最佳化您的廣告和內容工作流程。
 
-+ [優化視頻啟動時間](optimize-video-startup-time.md)
++ [最佳化視訊啟動時間](optimize-video-startup-time.md)
 + [分析效能](analyze-performance.md)
-+ [HTTP快取](caching.md)
-+ [優化路由和協定](optimize-routes-protocols.md)
-+ [應用廣告解決約束](apply-ad-resolution-constraints.md)
++ [http快取](caching.md)
++ [最佳化路由和通訊協定](optimize-routes-protocols.md)
++ [套用廣告解析度限制](apply-ad-resolution-constraints.md)

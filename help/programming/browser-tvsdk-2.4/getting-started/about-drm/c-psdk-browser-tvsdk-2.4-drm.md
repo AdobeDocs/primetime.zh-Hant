@@ -1,5 +1,5 @@
 ---
-description: 可以完成Digital Rights Management(DRM)特定的工作流。
+description: 您可以完成Digital Rights Management(DRM)特定的工作流程。
 title: Digital Rights Management
 exl-id: 5a40252b-2917-4341-bc64-8642432ddda9
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Digital Rights Management {#digital-rights-management}
 
-可以完成Digital Rights Management(DRM)特定的工作流。
+您可以完成Digital Rights Management(DRM)特定的工作流程。
 
-你可以聽 `AdobePSDK.DRMMetadataInfoEvent` 處理DRM工作流的事件：
+您可以聆聽 `AdobePSDK.DRMMetadataInfoEvent` 處理DRM工作流程的事件：
 
 ```js
 ... 
@@ -21,15 +21,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## 添加Digital Rights Management {#add-digital-rights-management}
+## 新增Digital Rights Management {#add-digital-rights-management}
 
-1. 添加 `DRMMetadataInfoAvailableEvent` 去 `DRMMetadata`。
+1. 新增 `DRMMetadataInfoAvailableEvent` 以取得 `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. 實施 `onDRMMetadataInfoAvailable` 欄的「字型」框中的字型)的字型名稱。
+1. 實作 `onDRMMetadataInfoAvailable` 區段位於步驟1中的行上方。
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -50,7 +50,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    var drmManager = player.drmManager;
    ```
 
-1. 通過複製以下示例為Widevine和PlayReady建立保護資料：
+1. 複製下列範例，建立Widevine和PlayReady的保護資料：
 
    ```js
    var protectionData = { 
@@ -68,21 +68,21 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. 將保護資料添加到drmManager。
+1. 將保護資料新增至drmManager。
 
    ```js
    drmManager.setProtectionData(protectionData);
    ```
 
-1. 將資源URL更改為DASHtest流。
+1. 將資源URL變更為DASH測試資料流。
 
    >[!TIP]
    >
-   >請確保更新資源類型，因為現在這是DASH。
+   >請確定您更新資源型別，因為現在是DASH。
 
    ```js
    var resourceUrl = "https://ptdemos.com/videos/dashdrm/stream.mpd"; 
    var resourceType = AdobePSDK.MediaResourceType.DASH;
    ```
 
-1. Test配置。
+1. 測試您的設定。

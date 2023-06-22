@@ -12,19 +12,19 @@ ht-degree: 0%
 
 # 加密內容{#encrypting-content}
 
-您使用 `MediaEncrypter` 的雙曲餘切值。 您可以加密只包含音頻軌道的媒體檔案。 您也只能應用部分加密；例如，在為低端設備加密H.264內容時提高效能。
+您使用加密視訊內容 `MediaEncrypter` 物件。 您可以加密僅包含音訊曲目的媒體檔案。 您也可以僅套用部分加密；例如，針對低端裝置加密H.264內容時，可提升效能。
 
-要使用Java API加密媒體檔案：
+若要使用Java API加密媒體檔案：
 
-1. 設定開發環境並包括中提及的所有JAR檔案 *建立開發環境* 你的項目。
-1. 建立 `ServerCredential` 實例，以載入簽名所需的憑據。
-1. 建立 `MediaEncrypter` 實例。 使用 `MediaEncryperFactory` 如果你不知道你擁有的檔案類型。
+1. 設定您的開發環境，並包含中提到的所有JAR檔案 *設定開發環境* 在您的專案中。
+1. 建立 `ServerCredential` 執行個體以載入簽署所需的認證。
+1. 建立 `MediaEncrypter` 執行個體。 使用 `MediaEncryperFactory` 如果您不知道您有哪種檔案型別。
 
-1. 使用 `DRMParameters` 的雙曲餘切值。
-1. 使用 `SignatureParameters` 並傳遞 `ServerCredential` 實例 `setServerCredentials` 的雙曲餘切值。
+1. 使用指定加密選項 `DRMParameters` 物件。
+1. 使用設定簽名選項 `SignatureParameters` 物件並傳遞 `ServerCredential` 執行個體至其 `setServerCredentials` 方法。
 
-1. 使用 `V2KeyParameters` 的雙曲餘切值。 使用 `setPolicies` 的雙曲餘切值。 通過調用 `setLicenseServerUrl` 和 `setLicenseServerTransportCertificate` 的雙曲餘切值。 使用 `setKeyProtectionOptions` 方法及其自定義屬性 `setCustomProperties` 的雙曲餘切值。 最後，根據使用的加密類型，將 `DRMKeyParameters` 對象到相應類型( `VideoDRMParameters`。 `AudioDRMParameters`)，並設定加密選項。
+1. 使用設定金鑰和授權資訊 `V2KeyParameters` 物件。 使用設定DRM政策 `setPolicies` 方法。 透過呼叫 `setLicenseServerUrl` 和 `setLicenseServerTransportCertificate` 方法。 使用設定CEK加密選項 `setKeyProtectionOptions` 方法，及其自訂屬性 `setCustomProperties` 方法。 最後，視所使用的加密型別而定，將 `DRMKeyParameters` 物件至適當的型別( `VideoDRMParameters`， `AudioDRMParameters`)，並設定加密選項。
 
-1. 通過將輸入和輸出檔案和加密選項傳遞到 `MediaEncrypter.encryptContent` 的雙曲餘切值。
+1. 將輸入和輸出檔案及加密選項傳遞至 `MediaEncrypter.encryptContent` 方法。
 
-有關顯示如何加密內容的示例代碼，請參見 `com.adobe.flashaccess.samples.mediapackager.EncryptContent` 在「參考實現」命令行工具中 [!DNL samples/] 的子菜單。
+如需顯示如何加密內容的範常式式碼，請參閱 `com.adobe.flashaccess.samples.mediapackager.EncryptContent` 在參考實作命令列工具中 [!DNL samples/] 目錄。

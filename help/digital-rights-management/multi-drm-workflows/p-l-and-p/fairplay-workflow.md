@@ -1,6 +1,6 @@
 ---
-description: DRM工作流涉及打包您的內容、為內容提供許可，以及從您自己的視頻應用程式中回放受保護的內容。 對於每個DRM解決方案，工作流通常都相似，但在細節方面有一些不同。
-title: FairPlay的多DRM工作流
+description: DRM工作流程包括封裝您的內容、提供內容的授權，以及從您自己的視訊應用程式播放受保護的內容。 每個DRM解決方案的工作流程通常都類似，但細節上有些差異。
+title: 公平播放的多重DRM工作流程
 exl-id: a66cecda-762b-48f7-afed-6fef6303d169
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,38 +9,38 @@ ht-degree: 0%
 
 ---
 
-# FairPlay的多DRM工作流 {#multi-drm-workflow-for-fairplay}
+# 公平播放的多重DRM工作流程 {#multi-drm-workflow-for-fairplay}
 
-DRM工作流涉及打包您的內容、為內容提供許可，以及從您自己的視頻應用程式中回放受保護的內容。 對於每個DRM解決方案，工作流通常都相似，但在細節方面有一些不同。
+DRM工作流程包括封裝您的內容、提供內容的授權，以及從您自己的視訊應用程式播放受保護的內容。 每個DRM解決方案的工作流程通常都類似，但細節上有些差異。
 
-此多DRM工作流將帶您完成使用AppleFairPlay保護的HLS內容的設定、打包、許可和回放。 此工作流還包含用於實現離線播放和許可證輪換的可選說明。
+此多DRM工作流程會帶您完成Apple FairPlay所保護之HLS內容的設定、封裝、授權和播放。 此工作流程也包含實作離線播放和授權輪換的選用指示。
 
-## 為FairPlay啟用ExpressPlay服務 {#enable-expressplay-service-for-fairplay}
+## 啟用FairPlay的ExpressPlay服務 {#enable-expressplay-service-for-fairplay}
 
-Apple的FairPlay DRM解決方案在與ExpressPlay DRM服務一起使用時需要進行一些設定。 這包括從Apple獲取憑據並將其上傳到ExpressPlay。
+當您搭配ExpressPlay DRM服務使用Apple的FairPlay DRM解決方案時，需要一些設定。 其中涉及從Apple取得認證，並將其上傳至ExpressPlay。
 
-按照以下步驟啟用ExpressPlay服務以保護FairPlay內容。
+請依照下列步驟啟用ExpressPlay服務，以提供FairPlay內容保護。
 
-1. 從Apple獲得證書。
+1. 從Apple取得認證。
 
-   這些憑據被唯一地設定給每個服務提供商。 您必須通過填寫以下表單來請求： [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/)。
+   這些認證會唯一提供給每個服務提供者。 您必須完成下清單單來要求這些許可權： [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
 
    >[!NOTE]
    >
-   >選擇 **[!UICONTROL Content Provider]** 。
+   >選取 **[!UICONTROL Content Provider]** 用於主要角色。
 
-   一旦你的請求獲得批准，Apple會 *FairPlay流式部署包*。
-1. 生成證書籤名請求。
+   您的請求獲得核准後，Apple會傳送電子郵件給您。 *FairPlay串流部署套件*.
+1. 產生憑證申請檔。
 
-   您可以使用 [!DNL openssl] 生成公用/私鑰對和證書籤名請求(CSR)。
+   您可以使用 [!DNL openssl] 以產生您的公開/私密金鑰組，以及您的憑證簽署要求(CSR)。
 
-   1. 生成密鑰對。
+   1. 產生您的金鑰組。
 
       ```
       openssl genrsa -aes256 -out privatekey.pem 1024 
       ```
 
-   1. 生成CSR。
+   1. 產生您的CSR。
 
       ```
       openssl req -new -sha1 -key privatekey.pem -out certreq.csr  
@@ -49,70 +49,70 @@ Apple的FairPlay DRM解決方案在與ExpressPlay DRM服務一起使用時需要
 
       >[!NOTE]
       >
-      >此步驟的說明位於 *FairPlay流式部署包*，但為方便起見，請在此提供。 如果您對此部分流程有問題，請查看 *FairPlayCertificateCreation.pdf* （在部署包中）。
+      >此步驟的指示位於 *FairPlay串流部署套件*，但為了您的方便，也包含在這裡。 如果您對流程的這個部分有任何問題，請檢視 *FairPlayCertificateCreation.pdf* （在您的部署套件中）。
 
-1. 通過Apple開發人員門戶上傳您的CSR。
-   1. 開發團隊的團隊代理必須登錄 [!DNL developer.apple.com/account]。
-   1. 按一下 **[!UICONTROL Certificates, Identifiers & Profiles]**，然後選擇 **[!UICONTROL iOS, tvOS, watchOS]** 下拉到頁面左上角，然後按一下 **[!UICONTROL Certificates->Production]** 頁左側。
-   1. 按一下 **[!UICONTROL +]** 的子菜單。 選擇 **[!UICONTROL FairPlay Streaming Certificate]** 選項 **[!UICONTROL Production]**。
+1. 透過Apple開發人員入口網站上傳您的CSR。
+   1. 開發團隊的團隊代理必須登入 [!DNL developer.apple.com/account].
+   1. 按一下 **[!UICONTROL Certificates, Identifiers & Profiles]**，然後選取 **[!UICONTROL iOS, tvOS, watchOS]** 下拉式清單，然後按一下 **[!UICONTROL Certificates->Production]** 頁面左側。
+   1. 按一下 **[!UICONTROL +]** 按鈕來要求新憑證。 選取 **[!UICONTROL FairPlay Streaming Certificate]** 下的選項 **[!UICONTROL Production]**.
 
-      的 *添加iOS證書* 對話框。
-   1. 在 *添加iOS證書*&#x200B;上載在步驟2.b中生成的CSR檔案，然後按一下 **[!UICONTROL Generate]**。
+      此 *新增iOS憑證* 對話方塊開啟。
+   1. 在 *新增iOS憑證*，上傳您在步驟2.b.中產生的CSR檔案，然後按一下 **[!UICONTROL Generate]**.
 
-      您的應用程式密鑰(ASK)顯示在同一對話框中。
-   1. 記下您的ASK，並將其儲存在安全位置。
-   1. ASK中的密鑰以完成證書生成，然後按一下 **[!UICONTROL Continue]**。
-   1. 驗證是否已保存ASK後，按一下 **[!UICONTROL Generate]** 繼續。
+      您的應用程式秘密金鑰(ASK)會顯示在同一個對話方塊中。
+   1. 記下您的ASK，並將其儲存在安全的位置。
+   1. 在ASK中取得金鑰以完成憑證產生並按一下 **[!UICONTROL Continue]**.
+   1. 確認已儲存ASK之後，請按一下 **[!UICONTROL Generate]** 以繼續。
 
       >[!NOTE]
       >
-      >保存ASK副本並安全地儲存它非常重要。 *如果您的ASK受到損害，您將無法再通過FairPlay流式處理保護您的內容。* 只有一(1)個ASK分配給您的團隊。 將不再提供該值，您以後無法檢索它。
+      >請務必儲存ASK的復本並妥善儲存。 *如果您的ASK受到損害，您將無法再使用FairPlay串流保護您的內容。* 只有一(1)個ASK分配給您的團隊。 不會再提供值，且您稍後無法擷取它。
 
-   1. 下載FPS證書。
+   1. 下載您的FPS憑證。
 
-      確保將私鑰（從步驟2.a.）和公鑰（在此步驟中下載的FPS證書）的備份副本保存在安全位置。
-1. 使用FairPlay憑據設定ExpressPlay帳戶。
-   1. 假設您在步驟3.h中下載的證書名稱。是 [!DNL fairplay.cer]。
-   1. 開啟 [!DNL fairplay.cer] 檔案。
-   1. 通過輸入「」篩選您的許多證書 `fairplay`」對話框。
-   1. 確定您公司的FairPlay證書。
+      請務必將私密金鑰（來自步驟2.a.）和公開金鑰（您在此步驟中下載的FPS憑證）的備份復本儲存在安全的地方。
+1. 使用您的FairPlay憑證設定您的ExpressPlay帳戶。
+   1. 假設您在步驟3.h.下載的憑證名稱是 [!DNL fairplay.cer].
+   1. 開啟 [!DNL fairplay.cer] 使用Apple鑰匙圈存取公用程式的檔案。
+   1. 輸入「」以篩選許多憑證 `fairplay`」在右上角的搜尋欄位中。
+   1. 識別貴公司的FairPlay憑證。
 
-      您的公司名稱應與Apple頒發的證書關聯。
-   1. 通過選擇展開箭頭展開證書，然後按一下右鍵您的私鑰。
-   1. 選擇 **[!UICONTROL Export "Your Company Name"]** 並保存 [!DNL .p12] 的子菜單。
+      您的公司名稱應與Apple發行的憑證相關聯。
+   1. 選取展開箭頭來展開憑證，然後以滑鼠右鍵按一下您的私密金鑰。
+   1. 選取 **[!UICONTROL Export "Your Company Name"]** 並儲存 [!DNL .p12] 檔案。
 
-      將要求您分配密碼以保護此檔案。 記下此密碼，因為您需要將此密碼與您的憑據包一起發送。
-   1. 登錄帳戶 [www.expressplay.com](https://www.expressplay.com)。
-   1. 按一下 **[!UICONTROL DRM SERVICES]** 在左上角，選擇 **[!UICONTROL FairPlay]** 頁籤。
-   1. 將FairPlay憑據上載到ExpressPlay帳戶。
+      系統會要求您指定密碼來保護此檔案。 記下此密碼，因為您將需要連同認證封裝一起傳送此密碼。
+   1. 於登入您的帳戶 [www.expressplay.com](https://www.expressplay.com).
+   1. 按一下 **[!UICONTROL DRM SERVICES]** 然後選取「 」 **[!UICONTROL FairPlay]** 標籤。
+   1. 將您的FairPlay憑證上傳至您的ExpressPlay帳戶。
 
-      1. 建立包含ASK值的文本檔案(應為32個字元，例如： `1234567890abcdef1234567890abcdef`)，並選擇此檔案進行上載。
-      1. 從步驟4.f中選擇PKCS12檔案。上載。
-      1. 在步驟4.f中輸入PKCS12檔案密碼。
-      1. 按一下「Upload（上載）」按鈕。
+      1. 建立包含ASK值的文字檔(應該是32個字元，例如： `1234567890abcdef1234567890abcdef`)，並選取此檔案以上傳。
+      1. 從Step 4.f.選取要上傳的PKCS12檔案。
+      1. 從Step 4.f輸入PKCS12檔案密碼。
+      1. 按一下上傳按鈕。
 
-現在，您可以建立iOS應用程式或HTML5頁，同時提供FairPlay內容保護 [!DNL fairplay.cer] 使用ExpressPlay服務的證書。
+現在您可以建立iOS應用程式或HTML5頁面，並搭配您的 [!DNL fairplay.cer] 憑證使用FairPlay的ExpressPlay服務。
 
 <!--<a id="fig_sjr_2pn_sv"></a>-->
 
 ![](assets/multi_drm_expressplay_drm_services_web.png)
 
-### 將您的內容打包以用於FairPlay {#package-your-content-for-fairplay}
+### 封裝您的內容以享受FairPlay {#package-your-content-for-fairplay}
 
-要打包內容，您可以使用Adobe離線打包程式或其他工具，如ExpressPlay的Bento4打包程式。
+若要封裝您的內容，您可以使用AdobeOffline Packager或其他工具，例如ExpressPlay的Bento4封裝。
 
-打包員準備視頻以進行回放（例如，將原始檔案分片並放入清單），並使用您選擇的DRM解決方案（在本例中為FairPlay）保護視頻：
+封裝程式會準備視訊以進行播放（例如，將原始檔案分割並放入資訊清單中），並使用您選擇的DRM解決方案（在此案例中為FairPlay）來保護視訊：
 
-* [AdobeFairPlay DRM離線打包器](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
-* [ExpressPlay打包器 — HLS的Bento4](https://www.bento4.com/developers/hls/)
+* [FairPlay DRM的Adobe離線封裝程式](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
+* [ExpressPlay封裝程式 — 適用於HLS的Bento4](https://www.bento4.com/developers/hls/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
 
 ![](assets/pkg_lic_play_hls_web.png)
 
-1. 打包您的內容。
+1. 封裝您的內容。
 
-   下面是使用Adobe離線打包器的打包示例。 打包器使用配置檔案(例如， [!DNL fairplay.xml])，它看起來是這樣的：
+   以下是使用Adobe Offline Packager的封裝範例。 封裝程式會使用組態檔(例如 [!DNL fairplay.xml])，如下所示：
 
    ```
    <config>
@@ -130,18 +130,18 @@ Apple的FairPlay DRM解決方案在與ExpressPlay DRM服務一起使用時需要
    </config>
    ```
 
-   * `in_path`  — 此入口指向本地打包機上源視頻的位置。
-   * `out_type`  — 此條目描述打包輸出的類型，在本例中為FairPlay的HLS。
-   * `out_path`  — 希望輸出到的本地電腦上的位置。
-   * `drm_sys`  — 要打包的DRM解決方案。 這是 `FAIRPLAY` 在這個例子中。
+   * `in_path`  — 此專案指向本機封裝電腦上的來源視訊位置。
+   * `out_type`  — 此專案說明封裝輸出的型別，在此例中為FairPlay的HLS。
+   * `out_path`  — 本機電腦上您要輸出到的位置。
+   * `drm_sys`  — 您封裝的DRM解決方案。 這是 `FAIRPLAY` 在此案例中。
    * `frag_dur`  — 片段持續時間（秒）。
    * `target_dur` - HLS輸出的目標持續時間。
-   * `key_file_path`  — 這是作為內容加密密鑰(CEK)的打包電腦上許可證檔案的位置。 它是Base-64編碼的16位元組十六進位字串。
-   * `iv_file_path`  — 這是包裝機上IV檔案的位置。
-   * `key_url`  — 的URI參數 `EXT-X-KEY` 標籤 [!DNL .m3u8] 的子菜單。
+   * `key_file_path`  — 這是封裝電腦上用作內容加密金鑰(CEK)的授權檔案的位置。 它是Base-64編碼的16位元組十六進位字串。
+   * `iv_file_path`  — 這是封裝機器上IV檔案的位置。
+   * `key_url`  — 的URI引數 `EXT-X-KEY` 的標籤 [!DNL .m3u8] 檔案。
    * `content_id`  — 預設值。
 
-   如 [打包程式文檔](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)，「作為最佳做法，建立包含要用於生成輸出的常用選項的配置檔案。 然後，通過提供特定選項作為命令行參數來建立輸出。」
+   如 [Packager檔案](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)，「最佳做法是建立組態檔，其中包含您要用來產生輸出的常用選項。 然後，提供特定選項作為命令列引數來建立輸出。」
 
    ```
    java -jar OfflinePackager.jar -in_path sample.mp4 -out_type hls 
@@ -149,66 +149,66 @@ Apple的FairPlay DRM解決方案在與ExpressPlay DRM服務一起使用時需要
    -key_url "user_provided_value"
    ```
 
-   生成的M3U8檔案 `EXT-X-KEY` 屬性，如下所示：
+   產生的M3U8檔案具有 `EXT-X-KEY` 屬性，如下所示：
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES,URI="user_provided_value",​
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1" 
    ```
 
-### 設定FairPlay的策略 {#setting-policies-for-fairplay}
+### 設定FairPlay的原則 {#setting-policies-for-fairplay}
 
-可以使用權利伺服器為受公平播放保護的內容設定策略。 您可以設定自己的權限，或使用Adobe提供的示例權限伺服器。
+您可以使用軟體權利檔案伺服器，為受FairPlay保護的內容設定原則。 您可以自行設定，或使用Adobe提供的範例權益伺服器。
 
-Adobe提供一個示例ExpressPlay權利伺服器(SEES)，該伺服器顯示如何 *基於時間* 和 *設備綁定* 權利。 此示例權利伺服器構建在ExpressPlay服務之上。
+Adobe提供範例ExpressPlay軟體權利檔案伺服器(SEES)，說明如何操作 *基於時間* 和 *裝置繫結* 權利。 此範例軟體權利檔案伺服器是以ExpressPlay服務為基礎所建置。
 
-[參考伺服器：示例ExpressPlay權利伺服器(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
+[參考伺服器：範例ExpressPlay軟體權利檔案伺服器(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
-* [參考服務：基於時間的權利](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-* [參考服務：設備綁定權利](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+* [參考服務：以時間為基礎的權益](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+* [參考服務：裝置繫結權益](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
 
-## FairPlay的許可和播放 {#licensing-and-playback-for-fairplay}
+## FairPlay的授權和播放 {#licensing-and-playback-for-fairplay}
 
-授權和播放受公平播放保護的內容需要在視頻清單檔案(skd:)中使用的方案和ExpressPlay令牌請求(https:)中使用的方案之間交換URL方案。
+FairPlay保護內容的授權和播放需要交換URL配置，在視訊資訊清單檔案(skd：)中使用的配置和ExpressPlay權杖請求(https：)中使用的配置之間。
 
-從iOSTVSDK客戶端實現許可和播放的說明如下： [在TVSDK應用程式中啟用Apple公平播放](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)。 您還可以選擇為FairPlay實現離線播放和許可證輪換。
+以下說明如何從iOS TVSDK使用者端實作授權和播放： [在TVSDK應用程式中啟用Apple FairPlay](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md). 您也可以選擇實作FairPlay的離線播放和授權輪換。
 
-## HLS FairPlay離線 {#section_047A05D1E3B64883858BC601CFC8F759}
+## 使用FairPlay離線HLS {#section_047A05D1E3B64883858BC601CFC8F759}
 
-當無法檢索到受公平播放保護的內容時，您可能希望用戶能夠播放該內容，因為該播放器與網頁（如在飛機上）隔離。
+您可能想要讓使用者在無法擷取其授權時播放受FairPlay保護的內容，因為播放器與網路隔離（例如在飛機上）。
 
-開始此任務之前，請下載並閱讀Apple文檔 **「Offline Playback with FairPlay Streaming and HTTP Live Streaming」**。 閱讀指南，瞭解如何下載傳輸流(TS)段並將其保存到本地電腦。
+開始此工作之前，請先下載並閱讀Apple檔案 **「使用FairPlay串流和HTTP即時串流進行離線播放」**. 閱讀指南以瞭解如何下載Transport Stream (TS)區段並將它們儲存到您的本機電腦。
 
-通過此工作流為FairPlay實施離線播放：
+使用此工作流程實作FairPlay的離線播放：
 
-1. 下載HLS TS段。
-1. 從FairPlay伺服器請求永久租用許可證（請參見） **&quot;FairPlay持續租賃政策&quot;**)。
-1. 保存 `persistentContentKey`。
+1. 下載HLS TS區段。
+1. 向FairPlay伺服器要求永久租用授權(請參閱 **「FairPlay持續性租賃政策」**)。
+1. 儲存 `persistentContentKey`.
 1. 離線播放FairPlay內容。
 
 >[!NOTE]
 >
->如果保留的內容密鑰已過期，客戶端上的FairPlay流不會啟動解密。 但是，如果內容密鑰在回放期間過期，則它將繼續用戶體驗。
+>如果儲存的內容金鑰已過期，使用者端上的FairPlay串流不會開始解密。 不過，如果內容索引鍵在播放期間過期，則會繼續使用者體驗。
 >
->請參閱 [使用HTTP即時流](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) 的子菜單。
+>另請參閱 [使用HTTP即時資料流](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) 檔案，以取得更多詳細資料。
 
-### 公平播放許可證輪換 {#section_D32AA08C61474B4F876AC2A5F18CB879}
+### FairPlay授權輪換 {#section_D32AA08C61474B4F876AC2A5F18CB879}
 
-許可證輪換是防止長期播放內容的許可證駭客的方案。
+授權輪換是一種防止長時間播放的內容遭到授權駭客攻擊的方案。
 
-在M3U8清單中，每個密鑰標籤將應用於以下TS段，直到下一個密鑰標籤或檔案結束。
+在M3U8資訊清單中，每個金鑰標籤會套用至下列TS區段，直到下一個金鑰標籤或檔案結尾為止。
 
-要添加許可證輪替，請執行以下操作：
+若要新增授權輪換，請執行下列動作：
 
-* 在許可證輪換期間插入新的FairPlay密鑰標籤。
+* 在授權輪換期間插入新的FairPlay金鑰標籤。
 
-   可以添加任意數量的密鑰標籤。
+   可新增任意數量的關鍵標籤。
 
-   對於線性內容，請確保在M3U8窗口中維護最新的密鑰標籤。 iOS將請求下一個M3U8，當剩餘大約兩個TS段要播放時（大約20秒）。 如果新M3U8包含新密鑰標籤，則所有密鑰請求都將立即發生。 將不再請求以前的現有密鑰。 iOS將等待所有關鍵請求完成，然後再開始播放。
+   如果是線性內容，請務必在M3U8視窗中保留最新的金鑰標籤。 大約還剩兩個TS區段可供播放時（約20秒），iOS會要求下一個M3U8。 如果新的M3U8包含新的關鍵標籤，所有關鍵請求都將立即發生。 將不再請求先前的現有金鑰。 iOS會等待所有重要要求完成，再開始播放。
 
-   對於具有許可證循環的VOD內容，所有關鍵請求都將在播放開始時發生。
+   對於使用授權輪換的VOD內容，所有重要請求都將在播放開始時發生。
 
-   以下是帶鍵旋轉的示例M3U8:
+   以下是包含金鑰輪換的範例M3U8：
 
    ```
    #EXTM3U

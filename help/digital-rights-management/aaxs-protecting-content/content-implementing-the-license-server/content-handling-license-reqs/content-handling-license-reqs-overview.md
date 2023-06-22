@@ -1,6 +1,6 @@
 ---
-title: 概述
-description: 概述
+title: 概觀
+description: 概觀
 copied-description: true
 exl-id: f1a55d5c-c7df-4b8f-8c1e-875d30026069
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,18 +10,18 @@ ht-degree: 0%
 
 ---
 
-# 概述{#overview}
+# 概觀{#overview}
 
-為請求許可證，客戶端在打包期間發送嵌入內容中的元資料。 許可證伺服器使用內容元資料中的資訊來生成許可證。
+若要請求授權，使用者端會在封裝期間傳送內嵌於內容中的中繼資料。 授權伺服器使用內容中繼資料中的資訊來產生授權。
 
-的 `LicenseHandler` 讀取許可證請求並解析該請求。 `LicenseHandler`延伸 `BatchHandlerBase` 以容納批許可請求，儘管Adobe訪問客戶端當前不支援此功能。 的 `getRequests()` 方法將返回 `LicenseRequestMessage` 對象。 調用方應迭代 `LicenseRequestMessages`，並針對每個請求生成許可證或設定錯誤代碼(請參見 `LicenseRequestMessage` API參考文檔（瞭解詳細資訊）。 對於每個許可請求，伺服器確定它是否將頒發許可。 呼叫 `LicenseRequestMessage.getContentInfo()` 從內容元資料（包括內容ID、許可ID和策略）中獲取資訊。
+此 `LicenseHandler` 讀取授權要求並剖析要求。 `LicenseHandler`延伸 `BatchHandlerBase` 以容納批次授權請求，但Adobe存取使用者端目前不支援此功能。 此 `getRequests()` 方法將傳回 `LicenseRequestMessage` 物件。 呼叫者應透過 `LicenseRequestMessages`，並為每個請求產生授權或設定錯誤代碼(請參閱 `LicenseRequestMessage` API參考檔案)。 伺服器會針對每個授權要求，決定是否發行授權。 呼叫 `LicenseRequestMessage.getContentInfo()` 以取得從內容中繼資料擷取的資訊，包括內容ID、授權ID和原則。
 
-* 請求處理程式類為 `com.adobe.flashaccess.sdk.protocol.license.LicenseHandler`
-* 請求消息類為 `com.adobe.flashaccess.sdk.protocol.license.LicenseRequestMessage`
-* 如果客戶端和伺服器都支援協定版本5，請求URL為「元資料中的許可證伺服器URL:+「/flashaccess/license/v4」。 如果客戶端或伺服器支援的協定版本3是最大版本，則Adobe訪問客戶端將向「元資料中的許可證伺服器URL」+「/flashaccess/license/v3」發送身份驗證請求。 否則，身份驗證請求將發送到「元資料中的許可證伺服器URL」+「/flashaccess/license/v1」
+* 要求處理常式類別為 `com.adobe.flashaccess.sdk.protocol.license.LicenseHandler`
+* 請求訊息類別為 `com.adobe.flashaccess.sdk.protocol.license.LicenseRequestMessage`
+* 如果使用者端和伺服器都支援通訊協定版本5，則請求URL是「中繼資料中的授權伺服器URL： + &quot;/flashaccess/license/v4」。 如果通訊協定版本3是使用者端或伺服器支援的最大版本，則Adobe存取使用者端會傳送驗證請求給「中繼資料中的授權伺服器URL」+ &quot;/flashaccess/license/v3&quot;。 否則，驗證請求會傳送到「中繼資料中的授權伺服器URL」+ &quot;/flashaccess/license/v1&quot;
 
-如果分析請求時出錯， `HandlerParsingException` 。 此異常包含要返回給客戶端的錯誤資訊。 要檢索錯誤資訊，請調用 `HandlerParsingException.getErrorData()`。 如果由於未滿足策略要求而生成許可證時出錯， `PolicyEvaluationException` 。 此例外還包括 `ErrorData` 將返回給客戶。 請參閱API文檔， `LicenseRequestMessage.generateLicense()` 有關在許可證生成過程中如何評估策略的詳細資訊。
+如果剖析請求時發生錯誤， `HandlerParsingException` 擲回。 此例外狀況包含要傳回至使用者端的錯誤資訊。 若要擷取錯誤資訊，請呼叫 `HandlerParsingException.getErrorData()`. 如果由於不符合原則要求而產生授權時發生錯誤， `PolicyEvaluationException` 擲回。 此例外狀況還包括 `ErrorData` 要傳回給使用者端。 請參閱API檔案以瞭解 `LicenseRequestMessage.generateLicense()` 瞭解在授權產生期間如何評估原則的詳細資訊。
 
-許可證和錯誤在 `LicenseHandler.close()` 。
+授權和錯誤會在以下情況下同時傳送： `LicenseHandler.close()` 稱為。
 
-設備可以具有多個相同內容的許可證（相同的許可證ID），但只能具有一個特定許可證ID和策略ID的許可證。 如果它收到具有重複的許可證ID/策略ID的許可證，則僅當新許可證的頒發日期晚於現有許可證的頒發日期時，新許可證才會替換舊許可證。 此邏輯用於處理嵌入到內容中的許可證，因此，建議不要在內容塊中嵌入多個具有相同策略ID的許可證。 同樣的邏輯適用於通過 `DRMManager.storeVoucher()` ActionScript3 API;如果客戶端已經擁有具有稍後發放日期的許可證，則可忽略提供的許可證。
+一個裝置可能擁有多個相同內容的授權（相同的授權ID），但特定授權ID和原則ID只能有一個授權。 如果收到具有重複LicenseID/PolicyID的授權，則只有在新授權的發行日期晚於現有授權的發行日期時，新授權才會取代舊授權。 此邏輯用於處理內嵌於內容中的授權，因此，不建議在內容區塊中嵌入多個具有相同原則ID的授權。 相同的邏輯會套用至透過 `DRMManager.storeVoucher()` ActionScript3 API；如果使用者端已擁有日後發行日期的授權，則提供的授權可能會被忽略。

@@ -1,6 +1,6 @@
 ---
-title: 增強的許可證連結
-description: 增強的許可證連結
+title: 增強授權鏈結
+description: 增強授權鏈結
 copied-description: true
 exl-id: 4548cdc4-4a55-411b-ad22-8c77927f4564
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,10 +10,10 @@ ht-degree: 0%
 
 ---
 
-# 增強的許可證連結 {#enhanced-license-chaining}
+# 增強授權鏈結 {#enhanced-license-chaining}
 
-在AdobeAccess 3.0中通過增強的許可證連結，建議在用戶首次請求特定電腦的許可證時同時發出葉和根。 如果用戶已擁有根許可證，則伺服器可能僅發出葉（調用） `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` 確定客戶端是否已具有3.0增強根)。 對於後續的許可證請求，客戶端將指示它已經具有葉和根，因此伺服器應頒發新的根許可證。 使用增強的許可證連結時， `setRootKeyRetrievalInfo()` 必須調用以提供解密策略中的根加密密鑰所需的憑據。
+透過Adobe存取3.0的增強型授權鏈結，建議在使用者第一次請求特定電腦的授權時同時核發Leaf和Root。 如果使用者已經擁有Root授權，伺服器可能只會發出Leaf (呼叫 `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` 以判斷使用者端是否已具有3.0 Enhanced Root)。 對於後續的授權要求，使用者端會指出它已經有分葉和根，所以伺服器應該核發新的根授權。 使用增強型授權鏈結時， `setRootKeyRetrievalInfo()` 必須呼叫以提供在原則中解密根加密金鑰所需的認證。
 
 >[!NOTE]
 >
->如果策略支援3.0增強的許可證連結，但客戶端是Adobe訪問2.0，則伺服器將頒發2.0原始連結許可證。 要確定客戶端版本，請使用LicenseRequestMessage.getClientVersion()。
+>如果原則支援3.0 Enhanced License Chaining，但使用者端為Adobe存取2.0，則伺服器將核發2.0原始鏈結授權。 若要判斷使用者端版本，請使用LicenseRequestMessage.getClientVersion()。

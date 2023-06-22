@@ -1,6 +1,6 @@
 ---
-description: AdAsset的內容描述了一個伴生標題。
-title: 伴隨橫幅資料
+description: AdAsset的內容會說明隨附橫幅。
+title: 隨附橫幅資料
 exl-id: fae96cb8-0092-43ed-a26b-cdaa1389a368
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# 伴隨橫幅資料 {#companion-banner-data}
+# 隨附橫幅資料 {#companion-banner-data}
 
-AdAsset的內容描述了一個伴生標題。
+AdAsset的內容會說明隨附橫幅。
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
@@ -27,23 +27,23 @@ AdAsset的內容描述了一個伴生標題。
  <tbody> 
   <tr> 
    <td colname="col1"> 寬度 </td> 
-   <td colname="col2"> 配對標題的寬度（以像素為單位）。 </td> 
+   <td colname="col2"> 隨附橫幅的寬度（畫素）。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 高度 </td> 
-   <td colname="col2"> 陪同橫幅的高度（以像素為單位）。 </td> 
+   <td colname="col2"> 隨附橫幅的高度（畫素）。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 資源類型 </td> 
-   <td colname="col2">此伴隨標題的資源類型： 
+   <td colname="col1"> 資源型別 </td> 
+   <td colname="col2">此隨附橫幅的資源型別： 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
-     <li id="li_02B7224C67004095B3F6E50FD21E507E">html:資料在HTML代碼中。 </li> 
-     <li id="li_5F37E14472424F808C6094F42009E676">iframe:資料是iframe URL(src)。 </li> 
+     <li id="li_02B7224C67004095B3F6E50FD21E507E">html：資料採用HTML程式碼。 </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe：資料是iframe URL (src)。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 靜態URL </td> 
-   <td colname="col2"> <p>有時，伴隨的橫幅上還有 <span class="codeph"> 靜態URL</span> 是指向影像或 <span class="codeph"> .swf</span> （閃屏）。 </p> <p>如果不想使用html或iframe，可以使用指向影像或swf的直接URL來在Flash階段顯示標題。 在這種情況下，您可以 <span class="codeph"> 靜態URL</span> 來顯示標題。 </p> <p>重要提示：您必須檢查靜態URL是否是有效字串，因為此屬性可能並不總是可用。 </p> </td> 
+   <td colname="col2"> <p>有時候，隨附橫幅也會有 <span class="codeph"> staticURL</span> 這是影像或的直接URL <span class="codeph"> .swf</span> （flash橫幅）。 </p> <p>如果您不想要使用html或iframe，可以使用影像或swf的直接URL來顯示Flash舞台中的橫幅。 在此情況下，您可以使用 <span class="codeph"> staticURL</span> 以顯示橫幅。 </p> <p>重要：您必須檢查靜態URL是否為有效的字串，因為此屬性可能並不一定都可用。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

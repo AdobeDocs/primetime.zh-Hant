@@ -1,5 +1,5 @@
 ---
-description: MediaPlayerNotification對象提供有關播放器狀態、警告和錯誤更改的資訊。 停止播放視頻的錯誤還導致播放器的狀態發生更改。
+description: MediaPlayerNotification物件提供有關播放器狀態變更、警告和錯誤的資訊。 停止播放視訊的錯誤也會造成播放器狀態的變更。
 title: 通知內容
 exl-id: b8298865-0389-4610-b495-b8735ef9cd56
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,98 +11,98 @@ ht-degree: 0%
 
 # 通知內容 {#notification-content}
 
-MediaPlayerNotification對象提供有關播放器狀態、警告和錯誤更改的資訊。 停止播放視頻的錯誤還導致播放器的狀態發生更改。
+MediaPlayerNotification物件提供有關播放器狀態變更、警告和錯誤的資訊。 停止播放視訊的錯誤也會造成播放器狀態的變更。
 
-您的應用程式可以檢索通知和狀態資訊。 您還可以使用通知資訊建立診斷和驗證的日誌記錄系統。
+您的應用程式可以擷取通知和狀態資訊。 您也可以使用通知資訊，建立用於診斷和驗證的記錄系統。
 
-實現事件偵聽器以捕獲和響應事件。 許多事件提供 `MediaPlayerNotification` 狀態通知。
+您可以實作事件接聽程式來擷取和回應事件。 許多事件提供 `MediaPlayerNotification` 狀態通知。
 
 `MediaPlayerNotification` 提供與播放器狀態相關的資訊。
 
-TVSDK提供按時間順序排列的 `MediaPlayerNotification` 通知。 每個通知都包含以下資訊：
+TVSDK提供以下專案的時間順序清單： `MediaPlayerNotification` 通知。 每個通知都包含下列資訊：
 
-* 時間戳
-* 包含以下元素的診斷元資料：
+* 時間戳記
+* 包含下列元素的診斷中繼資料：
 
-   * `type`:資訊、警告或錯誤。
-   * `code`:通知的數字表示。
-   * `name`:通知的可人讀描述，如SEEK_ERROR
-   * `metadata`:包含有關通知的相關資訊的鍵/值對。 例如，名為 `URL` 提供與通知相關的URL的值。
+   * `type`：資訊、警告或錯誤。
+   * `code`：通知的數字表示法。
+   * `name`：可讀取的通知說明，例如SEEK_ERROR
+   * `metadata`：包含通知相關資訊的索引鍵/值組。 例如，名為的金鑰 `URL` 提供一個值，該值為與通知相關的URL。
 
-   * `innerNotification`:對另一個的引用 `MediaPlayerNotification` 直接影響此通知的對象。
+   * `innerNotification`：對另一個的參照 `MediaPlayerNotification` 直接影響此通知的物件。
 
-您可以將此資訊本地儲存以供以後分析，或將其發送到遠程伺服器以進行日誌記錄和圖形表示。
+您可以將此資訊儲存在本機，供日後分析使用，或傳送至遠端伺服器以供記錄及圖形化顯示。
 
-## 設定通知系統 {#set-up-your-notification-system}
+## 設定您的通知系統 {#set-up-your-notification-system}
 
-您可以監聽通知，也可以將自己的通知添加到通知歷史記錄中。
+您可以監聽通知，也可以將您自己的通知新增至通知歷史記錄。
 
-黃金時段播放器通知系統的核心是 `Notification` 類，表示獨立通知。
+Primetime播放器通知系統的核心為 `Notification` 類別，代表獨立通知。
 
-的 `NotificationHistory` 類提供了累計通知的機制。 它儲存表示通知集合的通知日誌(NotificationHistoryItem)對象。
+此 `NotificationHistory` class提供累積通知的機制。 它會儲存代表通知集合的通知(NotificationHistoryItem)物件的記錄。
 
-要接收通知，請執行以下操作：
+若要接收通知：
 
-* 偵聽通知
-* 將通知添加到通知歷史記錄
+* 接聽通知
+* 將通知新增至通知歷史記錄
 
-1. 偵聽狀態更改。
-1. 實施 `MediaPlayer.PlaybackEventListener.onStateChanged` 回叫。
-1. TVSDK將兩個參數傳遞給回調：
+1. 接聽狀態變更。
+1. 實作 `MediaPlayer.PlaybackEventListener.onStateChanged` callback。
+1. TVSDK會將兩個引數傳遞至回呼：
 
    * 新狀態( `MediaPlayer.PlayerState`)
-   * A `MediaPlayerNotification` 對象
+   * A `MediaPlayerNotification` 物件
 
-## 添加即時日誌記錄和調試 {#add-real-time-logging-and-debugging}
+## 新增即時記錄與偵錯 {#add-real-time-logging-and-debugging}
 
-您可以使用通知在視頻應用程式中實現即時記錄。
+您可以使用通知在視訊應用程式中實作即時記錄。
 
-通知系統允許您收集日誌和調試資訊，以便進行診斷和驗證，而不會過度給系統帶來壓力。
+通知系統可讓您收集記錄和偵錯資訊，以進行診斷和驗證，而不會對系統造成過大的壓力。
 
 >[!IMPORTANT]
 >
->記錄後端不是生產設定的一部分，不應處理高負載流量。 如果您的實施不需要完全完成，請考慮資料傳輸的效率以避免系統過載。
+>記錄後端不是生產設定的一部分，預期不會處理高負載流量。 如果您的實作不需要完全完成，請考慮資料傳輸的效率，以避免系統過載。
 
-下面是如何檢索通知的示例。
+以下是如何擷取通知的範例。
 
-1. 為視頻應用程式建立基於計時器的執行線程，該線程定期查詢TVSDK通知系統收集的資料。
+1. 為您的視訊應用程式建立以計時器為基礎的執行執行緒，以定期查詢TVSDK通知系統所收集的資料。
 
-1. 如果計時器的間隔太大，而事件清單的大小太小，則通知事件清單將溢出。 要避免此溢出，請執行以下操作之一：
+1. 如果計時器的間隔太大，而事件清單太小，則通知事件清單會溢位。 若要避免此溢位，請執行下列任一項作業：
 
-   * 減少驅動輪詢新事件的線程的時間間隔。
+   * 縮短驅動輪詢新事件的執行緒的時間間隔。
    * 增加通知清單的大小。
 
-1. 以JSON格式序列化最新通知事件項，並將這些項發送到遠程伺服器以進行後處理。
+1. 以JSON格式序列化最新的通知事件專案，並將這些專案傳送至遠端伺服器以進行後續處理。
 
-   然後，遠程伺服器可以圖形化地即時顯示所提供的資料。
-1. 要檢測通知事件的丟失，請查找事件索引值序列中的間隙。
+   然後，遠端伺服器可以圖形化方式即時顯示提供的資料。
+1. 若要偵測通知事件遺失，請尋找事件索引值序列中的間隙。
 
-   每個通知事件都有一個索引值，該索引值由 `session.NotificationHistory` 類。
+   每個通知事件都有一個索引值，此值會自動遞增 `session.NotificationHistory` 類別。
 
 ## ID3標籤 {#id-tags}
 
-ID3標籤提供有關音頻或視頻檔案的資訊，如檔案的標題或藝術家的姓名。 TVSDK檢測HLS流中傳輸流(TS)段級別的ID3標籤並調度事件。 應用程式可以從標籤中提取資料。
+ID3標籤提供音訊或視訊檔案的相關資訊，例如檔案標題或藝人姓名。 TVSDK會在HLS資料流的傳輸資料流(TS)區段層級偵測ID3標籤，並傳送事件。 應用程式可從標籤中擷取資料。
 
 >[!IMPORTANT]
 >
->TVSDK在音頻(AAC)和視頻(H.264)流中識別ID3元資料(2.3.0或2.4.0版)，其任何可能的編碼（ASCII、UTF8、UTF16-BE或UTF16-LE）。 它忽略不在識別的版本或格式之一的ID3標籤。 未指定的編碼被視為UTF8。
+>TVSDK會將ID3中繼資料（2.3.0版或2.4.0版）識別為音訊(AAC)和視訊(H.264)串流，以及其任何可能的編碼（ASCII、UTF8、UTF16-BE或UTF16-LE）。 它會忽略不具任一認可版本或格式的ID3標籤。 未指定的編碼會視為UTF8。
 
-當TVSDK檢測到ID3元資料時，它會發出以下資料的通知：
+當TVSDK偵測ID3中繼資料時，會發出包含以下資料的通知：
 
-* InfoCode = 303007
-* 類型= ID3
+* 資訊碼= 303007
+* 型別= ID3
 * 名稱=不存在
-* ID = 0
+* 識別碼= 0
 
-1. 為實現 `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` 並註冊到 `MediaPlayer` 的雙曲餘切值。
+1. 實作事件接聽程式 `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` 並向 `MediaPlayer` 物件。
 
-   TVSDK在檢測到ID3元資料時調用此偵聽器。
+   TVSDK在偵測ID3中繼資料時，會呼叫此監聽器。
 
    >[!NOTE]
    >
-   >自定義廣告提示使用相同 `onTimedMetadata` 事件，指示檢測到新標籤。 這不應引起任何混淆，因為在清單級別檢測到自定義廣告提示，並且ID3標籤嵌入到流中。 有關詳細資訊，請參見custom-tags-configure。
+   >自訂廣告提示使用相同的 `onTimedMetadata` 表示偵測到新標籤的事件。 這不會造成任何混淆，因為在資訊清單層級偵測到自訂廣告提示，且ID3標籤內嵌在資料流中。 如需詳細資訊，請參閱自訂標籤設定。
 
-1. 檢索元資料。
+1. 擷取中繼資料。
 
    ```java
    @Override 

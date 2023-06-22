@@ -1,6 +1,6 @@
 ---
-description: 通過實施OpportunityGenerator類，您可以實施自己的機會生成器。
-title: 實施自定義機會生成器
+description: 您可以實作OpportunityGenerator類別來實作自己的機會產生器。
+title: 實作自訂機會產生器
 exl-id: 215259bd-d8df-43df-9dba-a373559fd926
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# 實施自定義機會生成器 {#implement-a-custom-opportunity-generator}
+# 實作自訂機會產生器 {#implement-a-custom-opportunity-generator}
 
-通過實施OpportunityGenerator類，您可以實施自己的機會生成器。
+您可以實作OpportunityGenerator類別來實作自己的機會產生器。
 
-1. 實施您的自定義 `ContentFactory` 通過執行 `ContentFactory` 介面和覆蓋 `retrieveGenerators`。
+1. 實作您的自訂 `ContentFactory` 實作 `ContentFactory` 介面和覆寫 `retrieveGenerators`.
 
    例如：
 
@@ -29,7 +29,7 @@ ht-degree: 0%
    }
    ```
 
-1. 註冊 `ContentFactory` 到 `MediaPlayer`。
+1. 註冊 `ContentFactory` 至 `MediaPlayer`.
 
    例如：
 
@@ -46,14 +46,14 @@ ht-degree: 0%
    itemLoader.load(resource, id, config);
    ```
 
-1. 建立一個自定義機會生成器類，用於實現 `OpportunityGenerator` 類。
+1. 建立實作的自訂機會產生器類別 `OpportunityGenerator` 類別。
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. 在自定義業務機會生成器中，覆蓋 `doConfigure`。 `doUpdate` 和 `doCleanup`:
+   1. 在自訂機會產生器中，覆寫 `doConfigure`， `doUpdate` 和 `doCleanup`：
 
       ```java
       @Override 
@@ -68,13 +68,13 @@ ht-degree: 0%
       }
       ```
 
-      要獲取定時元資料，請執行以下操作：
+      若要取得定時中繼資料：
 
       ```java
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. 每個 `TimedMetadata` 或組 `TimedMetadata`，建立具有以下屬性的商機：
+   1. 針對每個 `TimedMetadata` 或群組 `TimedMetadata`，使用下列屬性建立機會：
 
       ```java
       Opportunity( 
@@ -85,11 +85,11 @@ ht-degree: 0%
       ); 
       ```
 
-   1. 對於建立的每個機會，請撥打 `resolve` 的 `OpportunityGeneratorClient:getClient().resolve(opportunity);`。
+   1. 針對每個建立的商機，呼叫 `resolve` 於 `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-這是一個示例自定義放置機會檢測器：
+這是自訂位置機會偵測器的範例：
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {

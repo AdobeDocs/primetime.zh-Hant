@@ -1,6 +1,6 @@
 ---
-title: 使用隨附的Mogine Offline Packager
-description: 使用隨附的Mogine Offline Packager
+title: 使用隨附的Primetime離線封裝程式
+description: 使用隨附的Primetime離線封裝程式
 copied-description: true
 exl-id: 6a1d0dc3-8906-4de5-8351-890c1cf31efd
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,34 +10,34 @@ ht-degree: 0%
 
 ---
 
-# 使用隨附的Mogine Offline Packager{#use-the-included-primetime-offline-packager}
+# 使用隨附的Primetime離線封裝程式{#use-the-included-primetime-offline-packager}
 
-您的Mogifale Java打包程式預配置了打包內容所需的大多數設定。 只有幾個區域需要更新才能開始。
+您的Primetime Java Packager已預先設定封裝內容所需的大部分設定。 要開始使用，只需更新幾個區域。
 
-## 更新打包器屬性 {#section_99904D35E99944A28FF43D924E516CC2}
+## 更新封裝程式屬性 {#section_99904D35E99944A28FF43D924E516CC2}
 
-當前任務的上下文
+目前任務的前後關聯
 
-* 在使用配置檔案打包內容之前，請更新以下打包器屬性：
+* 在使用設定檔案封裝您的內容之前，請更新下列封裝程式屬性：
 
-### 用戶提供的XML配置檔案屬性
+### 使用者提供的XML組態檔內容
 
 | 屬性名稱 | 說明 |
 |---|---|
-| `policy_file` | 策略檔案路徑。 Adobe應提供若干預配置的政策，供選擇。 |
-| `pkgr_pfx` | 打包程式憑據路徑。 必須提供您自己的Adobe頒發的打包器憑據( [!DNL .pfx])這裡。 |
-| `pkgr_pfx_pwd` | 打包程式憑據密碼。 必須在此處為Adobe頒發的打包器憑據提供密碼。 |
+| `policy_file` | 原則檔案路徑。 Adobe應提供數個預先設定的原則以供選擇。 |
+| `pkgr_pfx` | 封裝程式認證路徑。 您必須提供您自己的Adobe簽發的封裝者認證( [!DNL .pfx])此處。 |
+| `pkgr_pfx_pwd` | 封裝程式認證密碼。 您必須在此處提供密碼給您Adobe簽發的封裝者認證。 |
 
-## 使用命令行的包 {#section_DFBE462679E34D62963BE201FD3321F9}
+## 使用命令列封裝 {#section_DFBE462679E34D62963BE201FD3321F9}
 
-打包內容之前，請確保配置檔案中提供了所有必需的資訊。
+在封裝內容之前，請確定您已擁有設定檔案中提供的所有必要資訊。
 
-* 要將內容打包到配置檔案中，請在命令行上使用以下語法：
+* 若要使用組態檔案封裝內容，請在命令列上使用下列語法：
 
 ```
 java -jar OfflinePackager.jar -conf_path [configuration filename]
 ```
 
-提供了將內容打包到HLS或HDS格式的示例配置檔案，名為 [!DNL config_hds.xml] 和 [!DNL config.hls.xml]。
+提供了將內容封裝為HLS或HDS格式的設定檔範例，名為 [!DNL config_hds.xml] 和 [!DNL config.hls.xml].
 
-HDS或HLS內容將輸出到 [!DNL /output] 資料夾。 寫入此目錄的所有對象都必須托管在HTTP Web伺服器上才能播放。
+HDS或HLS內容將輸出到 [!DNL /output] 資料夾（在Protection Kit目錄中）。 所有寫入此目錄的成品都必須在HTTP Web伺服器上託管，才能播放。

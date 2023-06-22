@@ -1,6 +1,6 @@
 ---
-title: 在Adobe頒發的證書過期時處理證書更新
-description: 在Adobe頒發的證書過期時處理證書更新
+title: 在Adobe核發的憑證過期時處理憑證更新
+description: 在Adobe核發的憑證過期時處理憑證更新
 copied-description: true
 exl-id: 9768544e-7e92-4c3a-9863-af9aed74a0c0
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,21 +10,21 @@ ht-degree: 0%
 
 ---
 
-# 在Adobe頒發的證書過期時處理證書更新 {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
+# 在Adobe核發的憑證過期時處理憑證更新 {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
 
-有時候你必須從Adobe獲得新證書。 例如，當生產證書過期時，評估證書過期，或者從評估切換到生產證書時。 當證書過期且您不想重新打包使用舊證書的內容時。 您可以使許可證伺服器瞭解舊證書和新證書。
+有時候，您可能必須從Adobe取得新憑證。 例如，當生產憑證過期時、評估憑證過期時，或當您從評估切換至生產憑證時。 憑證過期時，而您不想重新封裝使用舊憑證的內容。 您可以讓License Server知道舊憑證和新憑證。
 
-請按下列步驟使用新證書更新伺服器：
+使用以下程式，以新憑證更新您的伺服器：
 
-1. （可選）在將新條目添加到現有策略更新清單或吊銷清單時，請確保使用新憑據簽名，並使用舊證書驗證現有檔案上的簽名。
+1. （選擇性）將新專案新增至現有原則更新清單或撤銷清單時，請務必使用新憑證簽署，並使用舊憑證來驗證現有檔案上的簽章。
 
-   例如，使用以下命令行向使用其他憑據簽名的現有策略更新清單中添加一個條目：
+   例如，使用以下命令列，將專案新增至使用不同認證簽署的現有原則更新清單：
 
    ```
    java -jar AdobePolicyUpdateListManager.jar newList -f oldList oldSigningCert.cer -u pol 0 "" ""
    ```
 
-1. 使用Java API使用新策略更新清單或吊銷清單更新許可證伺服器：
+1. 使用Java API以新的原則更新清單或撤銷清單更新授權伺服器：
 
    ```
     HandlerConfiguration.setRevocationList() 
@@ -36,39 +36,39 @@ ht-degree: 0%
     HandlerConfiguration.setPolicyUpdateList()
    ```
 
-   在參考實現中，您使用的屬性是 `HandlerConfiguration.RevocationList` 和 `HandlerConfiguration.PolicyUpdateList`。 還更新用於驗證簽名的證書： `RevocationList.verifySignature.X509Certificate`。
+   在參考實作中，您使用的屬性為 `HandlerConfiguration.RevocationList` 和 `HandlerConfiguration.PolicyUpdateList`. 同時更新用來驗證簽章的憑證： `RevocationList.verifySignature.X509Certificate`.
 
-1. 要使用使用舊證書打包的內容，許可證伺服器需要舊和新許可證伺服器憑據以及傳輸憑據。 使用新證書和舊證書更新許可證伺服器。
+1. 若要使用使用使用舊憑證封裝的內容，授權伺服器需要舊和新的授權伺服器憑證及傳輸憑證。 使用新憑證和舊憑證更新授權伺服器。
 
-   對於許可證伺服器憑據：
+   對於授權伺服器認證：
 
-   * 確保將當前憑據傳入 `LicenseHandler` 建構子：
+   * 確保目前的認證已傳遞至 `LicenseHandler` 建構函式：
 
-      * 在參考實現中，通過 `LicenseHandler.ServerCredential` 屬性。
-      * 在Adobe Access Server的受保護流中，當前憑據必須是在 `LicenseServerCredential` flashaccess-tenant.xml檔案中的元素。
-   * 確保向提供當前和舊憑據 `AsymmetricKeyRetrieval`
+      * 在參考實作中，透過 `LicenseHandler.ServerCredential` 屬性。
+      * 在Adobe Access Server for Protected Streaming中，目前的認證必須是 `LicenseServerCredential` flashaccess-tenant.xml檔案中的元素。
+   * 確保提供目前和舊認證給 `AsymmetricKeyRetrieval`
 
-      * 在參考實現中，通過 `LicenseHandler.ServerCredential` 和 `AsymmetricKeyRetrieval.ServerCredential. n` 屬性。
-      * 在Adobe Access Server的受保護流管理中，舊憑據在 `LicenseServerCredential` flashaccess-tenant.xml檔案中的元素。
-   對於傳輸憑據：
+      * 在參考實作中，透過 `LicenseHandler.ServerCredential` 和 `AsymmetricKeyRetrieval.ServerCredential. n` 屬性。
+      * 在Adobe Access Server for Protected Streaming中，舊認證是在 `LicenseServerCredential` flashaccess-tenant.xml檔案中的元素。
+   對於傳輸認證：
 
-   * 確保將當前憑據傳入 `HandlerConfiguration.setServerTransportCredential()` 方法：
+   * 確保目前的認證已傳遞至 `HandlerConfiguration.setServerTransportCredential()` 方法：
 
-      * 在參考實現中，通過 `HandlerConfiguration.ServerTransportCredential` 屬性。
-      * 在Adobe Access Server中，當前憑據必須是在 `TransportCredential` flashaccess-tenant.xml檔案中的元素。
-   * 確保向提供舊憑據 `HandlerConfiguration.setAdditionalServerTransportCredentials`():
+      * 在參考實作中，透過 `HandlerConfiguration.ServerTransportCredential` 屬性。
+      * 在用於受保護串流的Adobe Access Server中，目前的認證必須是中指定的第一個認證 `TransportCredential` flashaccess-tenant.xml檔案中的元素。
+   * 確保提供舊認證給 `HandlerConfiguration.setAdditionalServerTransportCredentials`()：
 
-      * 在參考實現中，通過 `HandlerConfiguration.AdditionalServerTransportCredential. n` 屬性。
-      * 在受保護的流式傳輸的Adobe Access Server中，這是在 `TransportCredential` flashaccess-tenant.xml檔案中的元素。
-
-
+      * 在參考實作中，透過 `HandlerConfiguration.AdditionalServerTransportCredential. n` 屬性。
+      * 在適用於受保護串流的Adobe Access Server中，這會在中的第一個認證之後指定 `TransportCredential` flashaccess-tenant.xml檔案中的元素。
 
 
-1. 更新打包工具，以確保它們使用當前憑據打包內容。 確保使用最新的許可證伺服器證書、傳輸證書和打包器憑據進行打包。
-1. 要更新密鑰伺服器的許可證伺服器證書：
 
-   * 更新Adobe訪問密鑰伺服器租戶配置檔案中的憑據。 在flashaccess-keyserver-tenant.xml中同時包括舊密鑰伺服器憑據和新密鑰伺服器憑據。
-   * 確保將當前證書傳遞到 `HandlerConfiguration.setKeyServerCertificate()` 的雙曲餘切值。
 
-      * 在參考實現中，通過 `HandlerConfiguration.KeyServerCertificate` 屬性。
-      * 在「受保護的流」的Adobe Access Server中，通過Configuration/Tenant/Certificates/KeyServer元素在中指定密鑰伺服器的證書。
+1. 更新封裝工具，確保它們使用目前的憑證封裝內容。 確保封裝時使用最新的授權伺服器憑證、傳輸憑證和封裝程式認證。
+1. 若要更新金鑰伺服器的授權伺服器憑證：
+
+   * 更新Adobe存取金鑰伺服器租使用者設定檔案中的認證。 在flashaccess-keyserver-tenant.xml中同時包含舊金鑰伺服器認證和新Key Server認證。
+   * 確保目前的憑證已傳遞至 `HandlerConfiguration.setKeyServerCertificate()` 方法。
+
+      * 在參考實作中，透過 `HandlerConfiguration.KeyServerCertificate` 屬性。
+      * 在適用於受保護串流的Adobe Access Server中，透過Configuration/Tenant/Certificates/KeyServer元素在中指定金鑰伺服器的憑證。

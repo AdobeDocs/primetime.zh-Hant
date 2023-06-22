@@ -1,6 +1,6 @@
 ---
-title: 確定受保護的資源
-description: 確定受保護的資源
+title: 識別受保護的資源
+description: 識別受保護的資源
 exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# 確定受保護的資源 {#identifying-protected-resources}
+# 識別受保護的資源 {#identifying-protected-resources}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 概述 {#overview}
+## 概觀 {#overview}
 
-每個授權請求（或檢查授權的請求）必須包含用戶請求訪問的受保護資源的唯一標識符。 受保護的資源可以是任何級別的授權內容，如MVPD與參與的程式設計師所同意。 潛在的受保護資源必須適合此樹結構，其粒度越來越具體：
+每個授權請求（或檢查授權的請求）都必須包含使用者請求存取之受保護資源的唯一識別碼。 受保護的資源可以是任何層級的授權內容，如MVPD和參與的程式設計人員所協定。 潛在受保護資源必須適合此樹狀結構，且粒度越來越具體：
 
 - 網路
    - 頻道
       - 顯示
-         - 插曲
+         - 集數
             - 資產\
                 
 
@@ -30,10 +30,10 @@ ht-degree: 0%
 
 ## 媒體RSS格式 {#media_rss}
 
-資源可以通過簡單字串（頻道的唯一標識符）來標識，也可以按照Adobe(或Adobe Primetime身份驗證授權夥伴)與參與的MVPD和程式設計師之間的約定以媒體RSS格式(MRSS)來表示。 用作資源說明符的RSS字串可以包括附加資訊，如分級和家長控制元資料。\
+資源可由簡單字串（管道的唯一識別碼）識別，或以Media RSS格式(MRSS)表示，如Adobe(或Adobe Primetime驗證授權合作夥伴)與參與的MVPD和程式設計人員所協定。 用作資源規範的RSS字串可以包含其他資訊，例如分級和家長監護中繼資料。\
  
 
-如果使用簡單的資源標識符，如&quot;TNT&quot;，則假定它代表一個通道，並被轉換為此RSS資源說明符：
+如果您使用簡單資源識別碼（例如「TNT」），則會假設它代表管道，並轉譯成此RSS資源規範：
 
 ```RSS
     <rss version="2.0"> 
@@ -44,7 +44,7 @@ ht-degree: 0%
 ```
  
 
-更複雜的說明符可能包括例如附加評級資訊。 您可以將整個RSS字串傳遞給需要資源ID的Access Enabler函式，如 [`getAuthorization()`](/help/authentication/rest-api-reference.md):
+例如，更複雜的規範可能包含其他評等資訊。 您可以將整個RSS字串傳遞至需要資源ID的Access Enabler函式，例如 [`getAuthorization()`](/help/authentication/rest-api-reference.md)：
 
 ```rss
     var resource = 
@@ -57,7 +57,7 @@ ht-degree: 0%
     getAuthorization(resource);
 ```
 
-資源說明符對Adobe Primetime驗證不透明；它們只是通過MVPD。 如果MVPD無法識別或無法分析您的資源說明符，它會將錯誤返回給Adobe Primetime驗證，從而將錯誤傳回給您 `tokenRequestFailed()` 回叫。
+資源指定字元對Adobe Primetime驗證而言是不透明的；它們只會傳遞到MVPD。 如果MVPD無法辨識或無法剖析您的資源規範，則會傳回Adobe Primetime驗證錯誤，並將錯誤傳回 `tokenRequestFailed()` callback。
 
 <!--
 ## Related Information {#related}

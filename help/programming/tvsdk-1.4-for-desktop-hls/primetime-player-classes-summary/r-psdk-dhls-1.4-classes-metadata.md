@@ -1,6 +1,6 @@
 ---
-description: 這些類提供用於廣告、命名空間和跟蹤的元資料。
-title: 元資料類
+description: 這些類別提供廣告、名稱空間和追蹤的中繼資料。
+title: 中繼資料類別
 exl-id: 4014b496-7fc4-4fa9-98da-28350668d35f
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# 元資料類 {#metadata-classes}
+# 中繼資料類別 {#metadata-classes}
 
-這些類提供用於廣告、命名空間和跟蹤的元資料。
+這些類別提供廣告、名稱空間和追蹤的中繼資料。
 
-包： [com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/package-detail.html)
+封裝： [com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/package-detail.html)
 
 | 名稱 | 說明 |
 |---|---|
-| [AdSigningMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AdSignalingMode.html) | 枚舉類，用於在短語中顯示支援的信令模式。 |
-| [音頻設定](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AuditudeSettings.html) | 擴展的類 `Metadata` 特別是短語。 提供要配置的屬性以解析給定媒體項的短語廣告。 必須設定所有必需的屬性，包括區域ID、媒體ID和廣告伺服器URL，才能配置播放器以成功解析廣告。 |
-| [位元組陣列元資料](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/ByteArrayMetadata.html) | 已棄用。 使用 `Metadata`。 |
-| [預設元資料鍵](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/DefaultMetadataKeys.html) | 課。 |
-| [元資料](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/Metadata.html) | 定義用於配置播放器和其他對象的所有可用元資料的通用介面。 |
-| [元資料節點](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/MetadataNode.html) | 已棄用。 使用 `Metadata`。 |
-| [元資料實用程式](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/MetadataUtils.html) | 處理元資料的方法類。 |
-| [TimedMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/TimedMetadata.html) | 插入到媒體流中的定時元資料的原始表示的類。 |
-| [TimedMetadataType](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/TimedMetadataType.html) | 包含時間元資料（在播放清單或流中）支援的類型的類，如ID3元資料或標籤。 |
+| [AdSignalingMode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AdSignalingMode.html) | 列舉類別會公開片語中支援的訊號模式。 |
+| [Auditudesettings](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/AuditudeSettings.html) | 擴充的類別 `Metadata` 專門針對片語。 提供為解析指定媒體專案的片語廣告而要設定的屬性。 您必須設定所有必要的屬性（包括區域ID、媒體ID和廣告伺服器URL），才能設定播放器以成功解析廣告。 |
+| [ByteArrayMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/ByteArrayMetadata.html) | 已棄用。 使用 `Metadata`. |
+| [DefaultMetadataKey](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/DefaultMetadataKeys.html) | 類別。 |
+| [中繼資料](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/Metadata.html) | 定義通用介面，用於設定播放器和其他物件所有可用的中繼資料。 |
+| [MetadataNode](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/MetadataNode.html) | 已棄用。 使用 `Metadata`. |
+| [MetadataUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/MetadataUtils.html) | 使用中繼資料的方法類別。 |
+| [TimedMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/TimedMetadata.html) | 插入媒體串流中計時中繼資料的原始表示類別。 |
+| [TimedMetadataType](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/metadata/TimedMetadataType.html) | 包含定時中繼資料（在播放清單或串流中）之支援型別（例如ID3中繼資料或標籤）的類別。 |

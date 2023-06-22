@@ -1,6 +1,6 @@
 ---
-title: 增強的錯誤代碼
-description: 增強的錯誤代碼
+title: 增強型錯誤代碼
+description: 增強型錯誤代碼
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,137 +9,137 @@ ht-degree: 2%
 
 ---
 
-# 增強的錯誤代碼 {#enhanced-error-codes}
+# 增強型錯誤代碼 {#enhanced-error-codes}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 概述 {#overview}
+## 概觀 {#overview}
 
-本文檔介紹返回給應用程式的API錯誤代碼和其他錯誤資訊的清單。
+本檔案說明API錯誤碼清單以及傳回給應用程式的其他錯誤資訊。
 
-要在程式設計師應用程式中使用增強的錯誤代碼，需要向支援團隊發出請求，以便在配置更改時啟用它。
+若要在程式設計人員應用程式中使用增強型錯誤代碼，需要向支援團隊提出請求，才能在設定變更時啟用它。
 
-## 響應錯誤處理 {#response-error-handling}
+## 回應錯誤處理 {#response-error-handling}
 
-在大多數情況下，黃金時段驗證API在響應主體中包括附加錯誤資訊，以便提供 **有意義的上下文** 說明發生特定錯誤的原因和/或自動修正問題的可能解決方案。  *但是，在涉及身份驗證或註銷流的某些特定情況下，黃金時段身份驗證服務可能會返回HTML響應或空正文 — 請查看API文檔以瞭解詳細資訊。*
+在大多數情況下，Primetime驗證API會在回應內文中包含其他錯誤資訊，以便提供 **有意義的上下文** 發生特定錯誤的原因和/或自動修正問題的可能解決方案。  *但是，在涉及驗證或登出流程的特定情況下，Primetime驗證服務可能會傳回HTML回應或空白內文 — 請檢視API檔案以取得更多資訊。*
 
-雖然某些類型的錯誤可以自動處理（例如，在網路超時時重試授權請求或要求用戶在其會話過期時重新驗證），但其他類型可能需要更改配置或客戶服務團隊交互。 對於程式設計師來說，收集並提供此類情況下的完整錯誤資訊非常重要。
+雖然某些型別的錯誤可以自動處理（例如，在網路逾時的情況下重試授權請求，或在其工作階段過期時要求使用者重新驗證），但其他型別可能需要設定變更或客戶服務團隊互動。 在這種情況下，程式設計師必須收集並提供完整的錯誤資訊。
 
-黃金時段驗證API返回400-500範圍內的HTTP狀態代碼，以指示故障或錯誤。 每個HTTP狀態代碼都具有某些含義：
+Primetime驗證API會傳回400-500範圍內的HTTP狀態代碼，以指出失敗或錯誤。 每個HTTP狀態程式碼都有特定的含意：
 
-- 4xx錯誤代碼意味著錯誤是由客戶端生成的，並且客戶端需要做其他工作來修復它（例如，在調用受保護的API或提供任何所需參數之前獲取訪問令牌）
+- 4xx錯誤代碼表示錯誤是由使用者端產生的，使用者端需要執行額外的操作來修正錯誤（例如，在叫用受保護的API或提供任何必要的引數之前取得存取權杖）
 
-- 5xx錯誤代碼表示錯誤是由伺服器生成的，並且伺服器需要做其他工作來修復。
+- 5xx錯誤碼表示錯誤是由伺服器產生的，而且伺服器需要執行其他工作來修正錯誤。
 
-其他錯誤資訊包含在響應體中的「錯誤」欄位中。 
-
-
+其他錯誤資訊會包含在回應內文的「error」欄位中。 
 
 
-| 名稱 | 類型 | 示例 | 說明 |
+
+
+| 名稱 | 型別 | 範例 | 說明 |
 | --- | --- | --- | --- |
-| **錯誤** | _對象_ | JSON <br>    { 0}<br>        &quot;狀態&quot;:403,<br>        &quot;代碼&quot;:&quot;network_connection_failure&quot;,<br>        &quot;消息&quot;:「無法聯繫您的電視提供商服務」，<br>        &quot;helpUrl&quot; :&quot;<br>        &quot;跟蹤&quot;:&quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;,<br>        &quot;操作&quot;:&quot;重試&quot;<br>    }<br><br>—<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | 嘗試完成請求時收集的集合或錯誤對象。 |
+| **錯誤** | _物件_ | JSON <br>    {<br>        &quot;status&quot; ：403，<br>        &quot;code&quot; ： &quot;network_connection_failure&quot;，<br>        &quot;message&quot; ：&quot;Unable to contact your TV provider service&quot;，<br>        &quot;helpUrl&quot; ： &quot;&quot;，<br>        &quot;trace&quot; ： &quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;，<br>        &quot;action&quot; ： &quot;retry&quot;<br>    }<br><br>----------------------------------------------------------------------------<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | 嘗試完成請求時收集的集合或錯誤物件。 |
 
 </br>
 
-處理多個項（預授權API等）的Adobe PrimetimeAPI可能會通過使用項級別錯誤資訊來指示處理特定項是否失敗，而處理其他項是否成功。 在這個例子中， ***&quot;錯誤&quot;*** 對象位於項級別，響應主體可能包含多個 ***&quot;錯誤&quot;*** 對象 — 請參考API文檔。
+處理多個專案的Adobe Primetime API （預先授權API等）可能會使用專案層級錯誤資訊，指出特定專案的處理失敗而其他專案處理成功。 在此案例中， ***&quot;error&quot;*** 物件位於專案層級，且回應內文可能包含多個 ***&quot;errors&quot;*** 物件 — 請參閱API檔案。
 
 </br>
 
-| 部分成功和項目級錯誤的示例 |
+| 部分成功與料號層次錯誤的範例 |
 | ---------------------- |
-| <pre lang="json">JSON <br>{ 0}<br>  &quot;id&quot;:&quot;TestStream1&quot;,<br>  &quot;已授權&quot;:真 <br>}, </br>{ 0} </br>  &quot;id&quot;:&quot;TestStream2&quot;, <br>   &quot;已授權&quot;:假的， </br>   &quot;錯誤&quot;:{ 0} <br> </br>      &quot;狀態&quot;:403,<br>      &quot;代碼&quot;:&quot;network_connection_failure&quot;,<br>      &quot;消息&quot;:「無法聯繫您的電視提供商服務」，<br>      &quot;詳細資訊&quot;:&quot;<br>      &quot;helpUrl&quot; :&quot;<br>      &quot;跟蹤&quot;:&quot;8bcb17f9-b172-47d2-86d9-3eb146eba85e&quot;,<br>      &quot;操作&quot;:&quot;重試&quot;</br>    }<br> </br>   }<br> ] </br>} </pre> |
+| <pre lang="json">JSON <br>{<br>  &quot;id&quot; ： &quot;TestStream1&quot;，<br>  &quot;authorized&quot; ： true <br>}， </br>{ </br>  &quot;id&quot; ： &quot;TestStream2&quot;， <br>   &quot;authorized&quot; ： false， </br>   &quot;error&quot; ： { <br> </br>      &quot;status&quot; ：403，<br>      &quot;code&quot; ： &quot;network_connection_failure&quot;，<br>      &quot;message&quot; ：&quot;Unable to contact your TV provider service&quot;，<br>      &quot;details&quot; ： &quot;&quot;，<br>      &quot;helpUrl&quot; ： &quot;&quot;，<br>      &quot;trace&quot; ： &quot;8bcb17f9-b172-47d2-86d9-3eb146eba85e&quot;，<br>      &quot;action&quot; ： &quot;retry&quot;</br>    }<br> </br>   }<br> ] </br>} </pre> |
 
 </br>
 
-每個錯誤對象都具有以下參數：
+每個錯誤物件都有以下引數：
 
-| 名稱 | 類型 | 示例 | 受限 | 說明 |
+| 名稱 | 型別 | 範例 | 受限制 | 說明 |
 |----|----|----|----|--------------|
-| 狀態 | *整數* | 403 | ♦ | RFC 7231(https://tools.ietf.org/html/rfc7231#section-6)中記錄的響應HTTP狀態代碼 <br> - 400錯誤請求 <br> - 400錯誤請求 <br> - 400錯誤請求 <br> - 401未授權 <br> - 403已禁止 <br>  — 找不到404 <br> - 405方法不允許 <br> - 409衝突 <br> - 410消失 <br> - 412先決條件失敗 <br> - 429請求過多 <br> - 500間隔伺服器錯誤 <br> - 503服務不可用 |
-| 代碼 | *字串* | 網路連接失敗 | ♦ | 標準的Mighine Authentication錯誤代碼。 錯誤代碼的完整清單包括在下面。 |
-| 消息 | *字串* | 無法聯繫您的電視提供商服務 |  | 可顯示給最終用戶的可讀消息。 |
-| 詳細資訊 | *字串* | 您的訂閱包不包括「即時」頻道 |  | 在某些情況下，MVPD授權端點或程式設計師通過降級規則提供詳細消息。 <br> <br> 請注意，如果未從夥伴服務接收到自定義消息，則錯誤欄位中可能不存在此欄位。 |
-| 幫助URL | *url* | &quot;&quot; |  | 連結到有關此錯誤發生原因的詳細資訊和可能解決方案的URL。 <br> <br>  URI表示絕對URL，不應從錯誤代碼推斷。 根據錯誤上下文，可以提供不同的URL。 例如，同一bad_request錯誤代碼將為身份驗證和授權服務生成不同的url。 |
-| 痕跡 | *字串* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 |  | 此響應的唯一標識符，在與支援部門聯繫以識別更複雜場景中的特定問題時可使用。 |
-| 動作 | *字串* | 重試 | ♦ | *建議採取措施來糾正此情況：* </br><br> -none — 很遺憾沒有預定義的操作來修正此問題。 這可能表示對公共API的調用不正確 </br><br>-configuration — 需要通過TVE儀表板或聯繫支援人員來更改配置。 </br><br>-application-registration — 應用程式必須重新註冊自身。 </br><br>-authentication — 用戶必須進行身份驗證或重新驗證。 </br><br>-authorization — 用戶必須獲得特定資源的授權。 </br><br> — 降解 — 應採用某種形式的降解。 </br><br>-retry — 重試請求可能會解決問題</br><br>-retry-after — 在指定的時間段後重試請求可能會解決問題。 |
+| 狀態 | *整數* | 403 | ♦ | RFC 7231中記錄的回應HTTP狀態碼(https://tools.ietf.org/html/rfc7231#section-6) <br> - 400個錯誤請求 <br> - 400個錯誤請求 <br> - 400個錯誤請求 <br> - 401未獲授權 <br> - 403禁止 <br> - 404找不到 <br> - 405不允許方法 <br> - 409衝突 <br> - 410已過期 <br> - 412先決條件失敗 <br> - 429請求太多 <br> - 500間隔伺服器錯誤 <br> - 503服務無法使用 |
+| 程式碼 | *字串* | network_connection_failure | ♦ | 標準Primetime驗證錯誤代碼。 完整的錯誤碼清單包含於下方。 |
+| message | *字串* | 無法連絡您的電視提供者服務 |  | 可顯示給一般使用者的人類可讀訊息。 |
+| 詳細資料 | *字串* | 您的訂閱套件不包含「即時」頻道 |  | 在某些情況下，MVPD授權端點或程式設計師透過降級規則提供詳細訊息。 <br> <br> 請注意，如果未從合作夥伴服務收到自訂訊息，則錯誤欄位中可能不存在此欄位。 |
+| helpUrl | *url* | &quot;&quot; |  | 此URL會連結至有關此錯誤發生原因和可能解決方案的詳細資訊。 <br> <br>  URI代表絕對URL，不應從錯誤代碼推斷。 根據錯誤內容，可以提供不同的url。 例如，相同的bad_request錯誤碼將會為驗證和授權服務產生不同的url。 |
+| trace | *字串* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 |  | 此回應的唯一識別碼，可在聯絡支援人員以識別更複雜情境中的特定問題時使用。 |
+| 動作 | *字串* | 重試 | ♦ | *補救此情況的建議動作：* </br><br> -none — 很抱歉，沒有預先定義的動作來修正此問題。 這可能表示對公用API的呼叫不正確 </br><br>-configuration — 需要透過TVE儀表板或連絡支援人員來變更設定。 </br><br>-application-registration — 應用程式必須重新註冊自己。 </br><br>-authentication — 使用者必須驗證或重新驗證。 </br><br>-authorization — 使用者必須取得特定資源的授權。 </br><br>-degradation — 應套用某種形式的降級。 </br><br>-retry — 重試請求可能解決此問題</br><br>-retry-after — 在指定的時段後重試請求可解決問題。 |
 
 </br>
 
 **附註：**
 
-- ***受限*** 列 *指示各個欄位值是否表示有限集* (例如，「」的現有HTTP狀態代碼&#x200B;*狀態*」)。 將來對此規範的更新可能會將值添加到受限清單，但不會刪除或更改現有的值。 無限制欄位通常可以包含任何資料，但可能存在一些限制，以確保大小合理。
+- ***受限制*** 欄 *指示個別欄位值是否代表有限集* (例如「」的現有HTTP狀態代碼&#x200B;*狀態*「 」欄位)。 此規格的未來更新可能會將值新增至限制清單，但不會移除或變更現有值。 不受限制的欄位通常可以包含任何資料，但為確保合理的大小，可能存在限制。
 
-- 每個Adobe響應都將包含一個「Adobe請求ID」，該ID標識整個HTTP服務中的客戶端請求。 「」**痕跡**&quot;外地是補充，應該一起報告。 
+- 每個Adobe回應將包含「Adobe-Request-Id」，用於識別整個HTTP服務的使用者端要求。 「**trace**」欄位是對的補充，應該一起報告。 
 
 ## HTTP狀態代碼和錯誤代碼 {#http-status-codes-and-error-codes}
 
-各種錯誤代碼及其關聯的HTTP狀態代碼之間的不一致是由於與舊sdk和應用程式(例如， *未知\_應用程式* 產生400個錯誤請求，而 *未知\_軟體\_語句* 401未授權)。 解決這些不一致問題將在以後的迭代中成為目標。 
+各種錯誤碼與其相關HTTP狀態碼之間的不一致是由於與舊版sdk和應用程式(例如 *未知\_application* 產生400個錯誤請求，但 *未知\_software\_statement* 產生401 （未獲授權）。 未來反複專案會鎖定解決這些不一致的地方。 
  
-## 操作和錯誤代碼 {#actions-and-error-codes}
+## 動作和錯誤代碼 {#actions-and-error-codes}
 
-對於大多數錯誤代碼，多個操作都可以作為解決當前問題的路徑，甚至可能需要多個操作才能自動修復它們。 我們選擇指出修正錯誤概率最高的錯誤。 的 **動作** 可分為三類：
+對於大多數的錯誤碼，多個動作可能符合資格作為修正手頭問題的路徑，甚至可能需要多個動作才能自動修正這些問題。 我們選擇指出修正錯誤的可能性最高的錯誤。 此 **動作** 可分割為三個類別：
 
-1. 嘗試修復請求上下文（重試，重試後） 
-1. 嘗試在應用程式中修復用戶上下文（應用程式註冊、身份驗證、授權） 
-1. 嘗試修復應用程式與身份提供程式之間的整合上下文（配置、降級）的
+1. 嘗試修正請求內容的請求（重試、之後重試） 
+1. 嘗試修正應用程式內的使用者內容（應用程式註冊、驗證、授權）的使用者內容 
+1. 嘗試修正應用程式和身分提供者之間的整合內容（設定、降級）的訪客
 
-對於第1個類別（重試和重試後），只是重試同一請求可能就足以解決問題。 在處理多個項的API的情況下，應用程式應重複請求，並只包括那些具有「重試」或「重試後」操作的項。 對於「」*重試後*&quot;操作， &quot;<u>重試後</u>&quot;標頭將指示應用程式在重複請求之前應等待的秒數。
+對於第一個類別（重試和之後重試），僅重試相同請求可能足以解決問題。 在API處理多個專案的情況下，應用程式應重複該請求，並僅包含具有「重試」或「之後重試」動作的專案。 針對&quot;*重試之後*「動作，a 」<u>重試晚於</u>「標頭」會指出應用程式在重複請求前應等待的秒數。
 
-對於第2和第3類，實際操作實施與應用程式功能高度相關。 例如， &quot;*退化*「可以以「切換到15分鐘的臨時傳遞，以允許用戶回放內容」或「自動工具，將AUTHN-ALL或AUTHZ-ALL降級應用於與指定MVPD的整合」來實現。 類似於&quot;*認證*「操作可以觸發平板電腦上的被動身份驗證（後通道身份驗證）和連接的電視上的全第二屏身份驗證流。 因此，我們選擇為完整的URL提供架構和所有參數。 
+對於第2和第3類別，實際動作實作與應用程式功能有很大的關係。 例如，「*退化*「可實作為」切換至15分鐘暫時通路以允許使用者播放內容「或實作為」自動工具套用AUTHN-ALL或AUTHZ-ALL降級，以便與指定的MVPD整合」。 類似於&quot;*驗證*「動作可能會在平板電腦上觸發被動驗證（背景通道驗證），並在連線的電視上觸發完整的第二個畫面驗證流程。 這就是我們選擇提供完整包含結構描述和所有引數的URL的原因。 
 
 ## 錯誤代碼 {#error-codes}
 
-下面的錯誤表列出了可能的錯誤代碼、相關消息和可能的操作。
+下列錯誤表列出了可能的錯誤代碼、相關訊息和可能的動作。
 
-| 操作 | 錯誤代碼 | HTTP狀態代碼 | 說明 |
+| 動作 | 錯誤代碼 | HTTP狀態代碼 | 說明 |
 |---|---|---|--------------|
-| 配置 | *授權_拒絕_by_mvpd* | 403 | MVPD在請求指定資源的授權時返回了「拒絕」決定。 |
-|  | *授權_denied_by_parent_controls* | 403 | MVPD已返回「拒絕」決定，因為指定資源的家長控制設定。 |
-|  | *授權_denied_by_programmer* | 403 | 程式設計師應用的降級規則強制當前用戶執行「拒絕」決定。 |
-|  | *錯誤請求* | 400 | API請求無效或格式不正確。 查看API文檔以確定請求要求。 |
-|  | *個性化服務不可用* | 503 | 由於個性化服務不可用，請求失敗。 |
-|  | *內部錯誤* | 500 | 由於內部伺服器錯誤，請求失敗。 |
-|  | *無效_client_time* | 400 | 未正確設定客戶端電腦「Date / Time / Timezone」。 這可能導致身份驗證/授權錯誤。 |
-|  | *無效_custom_scheme* | 400 | 無法識別應用程式註冊中使用的指定自定義方案。 請檢查TVE儀表板配置以確定正確的自定義方案值。 |
-|  | *無效域* | 400 | 請求者使用的域無效。 特定請求者ID使用的所有域都需要按Adobe列出白名。 |
-|  | *無效的標頭* | 400 | 請求失敗，因為它包含無效的標頭。 查看API文檔，以確定哪些標頭對您的請求有效以及它們的值是否有任何限制。 |
-|  | *無效_http_method* | 405 | 不支援與請求關聯的HTTP方法。 查看API文檔，確定請求支援的HTTP方法。 |
-|  | *無效_parameter_value* | 400 | 請求失敗，因為它包含無效的參數或參數值。 查看API文檔以確定哪些參數對您的請求有效以及它們的值是否有任何限制。 |
-|  | *無效_resource_value* | 400 | 請求失敗，因為使用了無效或格式錯誤的資源。 查看API文檔，確定為請求必須對複雜資源進行編碼的方式，以及這些資源的值和/或大小是否存在任何限制。 |
-|  | *無效_註冊代碼 | 404 | 指定的註冊代碼不再有效或已過期。 |
-|  | *無效_service_configuration* | 500 | 由於服務配置不正確，請求失敗。 |
-|  | *missing_authentication_header* | 400 | 請求失敗，因為它不包含特定API所需的身份驗證標頭。 |
-|  | *missing_resource_mapping* | 400 | 沒有指定資源的相應映射。 聯繫支援以修復所需的映射。 |
-|  | *preauthorization_denied_by_mvpd* | 403 | MVPD在請求指定資源的預授權時返回了「拒絕」決定。 |
-|  | *preauthorization_denied_by_programmer* | 403 | 程式設計師應用的降級規則強制當前用戶執行「拒絕」決定。 |
-|  | *註冊_代碼_服務_不可用* | 503 | 請求失敗，因為註冊代碼服務不可用。 |
-|  | *服務不可用 | 503 | 由於身份驗證或授權服務不可用，請求失敗。 |
-|  | *access_token_unavailable* | 400 | 由於檢索訪問令牌時出現意外錯誤，請求失敗。 請檢查TVE儀表板配置以獲取可用的軟體語句和已註冊的自定義方案。 |
-|  | *不受支援的客戶端版本* | 400 | 此版本的Mogfire Authentication SDK太舊，不再受支援。 請查看API文檔，瞭解升級到最新版本所需的步驟。 |
-|  | *network_required_ssl* | 403 | 目標夥伴服務存在SSL連接問題。 請與支援團隊聯繫。 |
-|  | *資源過多* | 403 | 授權或預授權請求失敗，因為查詢了太多資源。 請與支援團隊聯繫以正確配置授權和預授權限制。 |
-|  | *未知程式設計師 | 400 | 無法識別程式設計師或服務提供商。 使用TVE儀表板註冊指定的程式設計師。 |
-|  | *未知應用程式* | 400 | 無法識別應用程式。 使用TVE儀表板註冊指定的應用程式。 |
-|  | *未知整合* | 400 | 指定的程式設計師和身份提供程式之間不存在整合。 使用TVE儀表板建立所需的整合。 |
-|  | *未知_software_statement* | 401 | 無法識別與訪問令牌關聯的軟體語句。 請與支援團隊聯繫以澄清軟體語句的狀態。 |
-| 應用註冊 | *access_token_expired* | 401 | 訪問令牌已過期。 應用程式應按API文檔中的說明刷新訪問令牌。 |
-|  | *無效_access_token_signature* | 401 | 訪問令牌簽名不再有效。 應用程式應按API文檔中的說明刷新訪問令牌。 |
-|  | *無效_client_id* | 401 | 無法識別關聯的客戶端標識符。 應用程式應遵循API文檔中指明的應用程式註冊過程。 |
-| 認證 | *驗證_會話已過期* | 410 | 當前身份驗證會話已過期。 用戶必須使用支援的MVPD重新驗證才能繼續。 |
-|  | *authentication_session_missing* | 401 | 無法檢索與此請求關聯的身份驗證會話。 用戶必須使用支援的MVPD重新驗證才能繼續。 |
-|  | *驗證_會話失效* | 401 | 身份提供程式已使身份驗證會話失效。 用戶必須使用支援的MVPD重新驗證才能繼續。 |
-|  | *authentication_session_issuer_mismatch | 400 | 授權請求失敗，因為為授權流指定的MVPD與發出身份驗證會話的MVPD不同。 用戶必須重新驗證所需的MVPD才能繼續。 |
-|  | *授權_拒絕_by_hba_policies* | 403 | MVPD已返回「拒絕」決定，因為基於家庭的身份驗證策略。 當前身份驗證是使用基於家庭的身份驗證流(HBA)獲得的，但當請求對指定資源的授權時，設備不再位於家中。 用戶必須使用支援的MVPD重新驗證才能繼續。 |
-|  | *標識_不_被識別者_mvpd* | 403 | 授權請求失敗，因為MVPD無法識別用戶標識。 |
-| 授權 | *授權已到期* | 410 | 指定資源的先前授權已過期。 用戶必須獲得新授權才能繼續。 |
-|  | *未找到授權* | 404 | 找不到指定資源的授權。 用戶必須獲得新授權才能繼續。 |
-|  | *device_identifier_mismatch* | 403 | 指定的設備標識符與授權設備標識不匹配。 用戶必須獲得新授權才能繼續。 |
-| 重試 | **網路連接失敗** | 403 | 與關聯的夥伴服務發生連接失敗。 重試請求可能會解決問題。 |
-|  | *網路連接超時* | 403 | 與關聯的夥伴服務存在連接超時。 重試請求可能會解決問題。 |
-|  | *network_received_error* | 403 | 從關聯的夥伴服務檢索響應時出現讀取錯誤。 重試請求可能會解決問題。 |
-|  | *最大執行時間超出* | 403 | 請求未在允許的最大時間內完成。 重試請求可能會解決問題。 |
-| 重試後 | *請求太多* | 429 | 在給定時間間隔內發送了太多請求。 應用程式可以在建議的時間段後重試請求。 |
-|  | *user_rate_limit_exceeded* | 429 | 特定用戶在給定時間間隔內發出的請求過多。 應用程式可以在建議的時間段後重試請求。 |
+| 設定 | *authorization_denied_by_mvpd* | 403 | 請求指定資源的授權時，MVPD傳回「拒絕」決定。 |
+|  | *authorization_denied_by_parental_controls* | 403 | 由於指定資源的家長監護設定，MVPD已傳回「拒絕」決定。 |
+|  | *authorization_denied_by_programmer* | 403 | 程式設計師套用的降級規則會強制目前使用者執行「拒絕」決定。 |
+|  | *bad_request* | 400 | API請求無效或格式錯誤。 請檢閱API檔案，以判斷要求需求。 |
+|  | *individualization_service_unavailable* | 503 | 由於無法使用個人化服務，請求失敗。 |
+|  | *internal_error* | 500 | 由於內部伺服器錯誤，請求失敗。 |
+|  | *invalid_client_time* | 400 | 使用者端電腦日期/時間/時區未正確設定。 這可能會導致驗證/授權錯誤。 |
+|  | *invalid_custom_scheme* | 400 | 無法辨識應用程式註冊中使用的指定自訂配置。 請檢查TVE儀表板設定，以取得適當的自訂配置值。 |
+|  | *invalid_domain* | 400 | 請求者使用無效的網域。 特定請求者ID使用的所有網域都必須依Adobe列入白名單。 |
+|  | *invalid_header* | 400 | 請求失敗，因為它包含無效的標頭。 請檢閱API檔案，判斷哪些標頭對您的請求有效，以及其值是否有任何限制。 |
+|  | *invalid_http_method* | 405 | 不支援與要求關聯的HTTP方法。 請檢閱API檔案，判斷您的請求支援的HTTP方法。 |
+|  | *invalid_parameter_value* | 400 | 請求失敗，因為它包含無效的引數或引數值。 請檢閱API檔案，判斷哪些引數適用於您的請求，以及其值是否有任何限制。 |
+|  | *無效的resource_value* | 400 | 請求失敗，因為使用了無效或格式錯誤的資源。 請檢閱API檔案，以決定複雜資源必須如何針對您的請求編碼，以及其值和/或大小是否有任何限制。 |
+|  | *invalid_registration_code | 404 | 指定的註冊代碼不再有效或已過期。 |
+|  | *invalid_service_configuration* | 500 | 由於不正確的服務設定，請求失敗。 |
+|  | *missing_authentication_header* | 400 | 請求失敗，因為它不包含特定API所需的驗證標頭。 |
+|  | *missing_resource_mapping* | 400 | 指定的資源沒有對應的對應。 請聯絡支援以修正所需的對應。 |
+|  | *preauthorization_denied_by_mvpd* | 403 | 請求指定資源的預先授權時，MVPD傳回「拒絕」決定。 |
+|  | *preauthorization_denied_by_programmer* | 403 | 程式設計師套用的降級規則會強制目前使用者執行「拒絕」決定。 |
+|  | *registration_code_service_unavailable* | 503 | 要求失敗，因為註冊代碼服務無法使用。 |
+|  | *service_unavailable | 503 | 由於無法使用驗證或授權服務，請求失敗。 |
+|  | *access_token_unavailable* | 400 | 擷取存取Token時發生意外錯誤，導致要求失敗。 請檢查TVE儀表板設定，瞭解可用的軟體陳述式和註冊的自訂配置。 |
+|  | *unsupported_client_version* | 400 | 此版本的Primetime Authentication SDK太舊，不再受支援。 請檢視API檔案，瞭解升級至最新版本所需的步驟。 |
+|  | *network_required_ssl* | 403 | 目標合作夥伴服務發生SSL連線問題。 請聯絡支援團隊。 |
+|  | *too_many_resources* | 403 | 授權或預先授權要求失敗，因為查詢的資源太多。 請聯絡支援團隊，以正確設定授權和預先授許可權制。 |
+|  | *unknown_programmer | 400 | 無法辨識程式設計師或服務提供者。 使用TVE Dashboard註冊指定的程式設計師。 |
+|  | *未知的應用程式* | 400 | 無法辨識應用程式。 使用TVE儀表板註冊指定的應用程式。 |
+|  | *unknown_integration* | 400 | 指定的程式設計師和身分提供者之間的整合不存在。 使用TVE儀表板建立所需的整合。 |
+|  | *unknown_software_statement* | 401 | 無法辨識與存取權杖相關聯的軟體陳述式。 請連絡支援團隊，以釐清軟體宣告的狀態。 |
+| application-registration | *access_token_expired* | 401 | 存取權杖已過期。 應用程式應按照API檔案中的指示重新整理存取權杖。 |
+|  | *invalid_access_token_signature* | 401 | 存取權杖簽章已無效。 應用程式應按照API檔案中的指示重新整理存取權杖。 |
+|  | *invalid_client_id* | 401 | 無法辨識關聯的使用者端識別碼。 應用程式應遵循API檔案中指示的應用程式註冊程式。 |
+| 驗證 | *authentication_session_expired* | 410 | 目前的驗證工作階段已過期。 使用者必須使用支援的MVPD重新驗證才能繼續。 |
+|  | *authentication_session_missing* | 401 | 無法擷取與此要求相關聯的驗證工作階段。 使用者必須使用支援的MVPD重新驗證才能繼續。 |
+|  | *authentication_session_invalid* | 401 | 身分提供者已使驗證工作階段失效。 使用者必須使用支援的MVPD重新驗證才能繼續。 |
+|  | *authentication_session_issuer_mismatch | 400 | 授權要求失敗，因為授權流程的指定MVPD與發出驗證工作階段的MVPD不同。 使用者必須使用所需的MVPD重新驗證才能繼續。 |
+|  | *authorization_denied_by_hba_policies* | 403 | MVPD因為家用驗證原則而傳回「拒絕」決定。 目前的驗證是使用家用驗證流程(HBA)取得的，但是當請求指定資源的授權時，裝置不再在家中。 使用者必須使用支援的MVPD重新驗證才能繼續。 |
+|  | *identity_not_recovered_by_mvpd* | 403 | 由於MVPD無法辨識使用者身分，授權要求失敗。 |
+| 授權 | *authorization_expired* | 410 | 指定資源的先前授權已過期。 使用者必須取得新授權才能繼續。 |
+|  | *authorization_not_found* | 404 | 找不到指定資源的授權。 使用者必須取得新授權才能繼續。 |
+|  | *device_identifier_mismatch* | 403 | 指定的裝置識別碼與授權裝置識別碼不相符。 使用者必須取得新授權才能繼續。 |
+| 重試 | **network_connection_failure** | 403 | 與關聯的合作夥伴服務發生連線失敗。 重試請求或許可以解決此問題。 |
+|  | *network_connection_timeout* | 403 | 與關聯的合作夥伴服務發生連線逾時。 重試請求或許可以解決此問題。 |
+|  | *network_received_error* | 403 | 從關聯的合作夥伴服務擷取回應時發生讀取錯誤。 重試請求或許可以解決此問題。 |
+|  | *已超出最大執行時間* | 403 | 請求未在允許的最長時間內完成。 重試請求或許可以解決此問題。 |
+| 重試之後 | *too_many_requests* | 429 | 在指定間隔內已傳送過多請求。 應用程式可在建議的時間段後重試請求。 |
+|  | *user_rate_limit_exceeded* | 429 | 特定使用者在指定間隔內發出的請求過多。 應用程式可在建議的時間段後重試請求。 |

@@ -1,6 +1,6 @@
 ---
-title: 蜂類概述
-description: 蜂類概述
+title: BEES概述
+description: BEES概述
 copied-description: true
 exl-id: 481af72b-40a3-4f33-9e91-990dc5308596
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,22 +10,22 @@ ht-degree: 0%
 
 ---
 
-# 蜂類概述{#bees-overview}
+# BEES概述{#bees-overview}
 
-您可以實施後端權利服務(BEES)，為您的黃金時段雲DRM操作提供自定義權利。
+您可以實作後端權益服務(BEES)，為您的Primetime Cloud DRM操作提供自訂權益。
 
-預設情況下，Mighine Cloud DRM使用匿名許可證交付。 這意味著發送到Mighile Cloud DRM的所有許可證請求將返回有效的許可證，而無需執行任何附加的驗證/授權檢查(除非您應用了需要使用Adobe Primetime驗證的策略約束)。
+Primetime Cloud DRM預設使用匿名授權傳遞。 這表示傳送至Primetime Cloud DRM的所有授權要求都將傳回有效的授權，而不執行任何其他驗證/授權檢查(除非您已套用原則限制，要求使用Adobe Primetime驗證)。
 
-許可請求包含在內容打包/加密期間使用的DRM策略。 DRM策略用於生成返回給客戶機的DRM許可。 在預設情況下，必須在內容打包時做出所有DRM策略決定。 希望對這些工作流進行更精確控制的客戶具有以下選項：
+授權要求包含內容封裝/加密期間所使用的DRM原則。 DRM政策用於產生傳回給使用者端的DRM授權。 在預設情況下，您必須在內容封裝時做出所有DRM政策決定。 想要更精細地控制這些工作流程的客戶有以下選項：
 
-1. 整合Mogifale身份驗證以在播放前添加額外權利檢查。
-1. 建立Mogifale Cloud DRM將在允許任何設備播放您打包的內容之前查詢的本地權利服務。
+1. 整合Primetime驗證，以在播放前新增額外的權益檢查。
+1. 建立內部部署軟體權利服務，Primetime Cloud DRM在允許任何裝置播放您已封裝的內容之前會查詢此服務。
 
-您的本地權利服務必須提供對黃金時段雲DRM的響應，該響應包括以下兩條資料：
+您的內部部署軟體權利檔案服務必須提供對Primetime Cloud DRM的回應，包括以下兩個資料片段：
 
 * `isAllowed`
 * `drmPolicyToUse`
 
-這些確定是否允許設備播放內容，以及使用哪個DRM策略來生成DRM許可(如果 `isAllowed` 為真)。
+這些選項決定裝置是否允許播放內容，以及使用哪個DRM原則來產生DRM授權(如果 `isAllowed` 為true)。
 
-本文檔介紹了完成上述選項2所需做的工作：實施您自己的內部外部權利服務，並使其可用於Mighaile Cloud DRM，以獲取您打包的內容。
+本檔案說明完成上述選項2所需執行的操作：實作您自己的內部部署外部權利服務，並使其可供Primetime Cloud DRM使用您已封裝的內容。

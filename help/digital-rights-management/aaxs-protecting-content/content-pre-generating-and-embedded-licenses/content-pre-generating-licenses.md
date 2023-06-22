@@ -1,6 +1,6 @@
 ---
-title: 預生成許可證
-description: 預生成許可證
+title: 預先產生授權
+description: 預先產生授權
 copied-description: true
 exl-id: 2be8674c-736f-4ed3-b952-f661bf3ff48f
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,24 +10,24 @@ ht-degree: 0%
 
 ---
 
-# 預生成許可證{#pre-generating-licenses}
+# 預先產生授權{#pre-generating-licenses}
 
-要預生成許可證，請使用 `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` 獲取 `LicenseFactory`。 必須指定許可證伺服器憑據才能對此工廠生成的許可證進行簽名。 此類支援生成葉許可證（無許可證連結）和葉和根許可證(具有 [增強的許可證連結](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)。
+若要預先產生授權，請使用 `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` 若要取得「 」的例項 `LicenseFactory`. 必須指定License Server認證，才能簽署此工廠產生的授權。 此類別支援不使用授權鏈結來產生Leaf授權，以及使用 [增強授權鏈結](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
 
-生成葉許可證時，必須使用 `initContentInfo()`。 如果元資料包含多個策略，或者您希望使用元資料中未包含的策略，請使用 `setSelectedPolicy()` 指定用於生成許可證的策略。 如果使用策略更新清單跟蹤策略的更新，則可以在使用初始化元資料之前將策略更新清單提供給許可證工廠 `setPolicyUpdateList()`。
+產生Leaf授權時，必須使用指定內容中繼資料 `initContentInfo()`. 如果中繼資料包含多個原則，或您想使用中繼資料中沒有的原則，請使用 `setSelectedPolicy()` 指定用來產生授權的原則。 如果您使用原則更新清單來追蹤原則的更新，則可以使用在初始化中繼資料之前提供原則更新清單給授權工廠 `setPolicyUpdateList()`.
 
-當生成根許可證時，可以如上所述指定內容元資料。 或者，可以使用策略( `setSelectedPolicy()`)和許可證伺服器URL( `setLicenseServerURL()`)而不是元資料。
+產生Root授權時，可依照上述方式指定內容中繼資料。 或者，可以使用原則( `setSelectedPolicy()`)和授權伺服器URL ( `setLicenseServerURL()`)而非中繼資料。
 
 >[!NOTE]
 >
->即使沒有Adobe訪問許可證伺服器，客戶端也可以從中請求許可證，也需要許可證伺服器URL。 在這種情況下，許可證伺服器URL應指定標識許可證頒發者的URL。
+>即使沒有使用者端可要求授權的Adobe存取授權伺服器，也需要授權伺服器URL。 在此情況下，授權伺服器URL應指定識別授權簽發者的URL。
 
-如果策略使用增強的許可證連結，則必須指定許可證伺服器憑據才能解密策略中的根加密密鑰( `setRootKeyRetrievalInfo()`)。
+如果原則使用增強型授權鏈結，則必須指定授權伺服器認證，才能解密原則中的根加密金鑰( `setRootKeyRetrievalInfo()`)。
 
-如果策略需要域綁定許可證，請使用 `setDomainCAs()` 指定許可證伺服器將從中接受域令牌的域發行者。 必須提供一個或多個域CA證書才能驗證許可證收件人。
+如果原則需要網域繫結授權，請使用 `setDomainCAs()` 以指定授權伺服器將接受網域權杖的網域發行者。 必須提供一個或多個網域CA憑證，才能驗證授權收件者。
 
-如果策略要求iOS設備的遠程密鑰傳遞，則必須使用 `setKeyServerCertificate()`，除非生成連結葉。
+如果原則需要iOS裝置的遠端金鑰傳遞，則必須使用下列專案提供金鑰伺服器憑證： `setKeyServerCertificate()`，除非產生鏈結的葉。
 
-要生成許可證，請調用 `generateLicense()` 並指定許可證類型（葉或根）和一個或多個收件人證書。 接收者證書將是電腦證書或域證書，具體取決於策略中指定的要求。 如果要生成鏈式葉，則不需要收件人。 在生成許可證後，可以覆蓋策略中指定的使用規則。 最後，調用 `signLicense()` 簽署許可證並獲取 `PreGeneratedLicense`。 現在可以將許可證保存到檔案(使用 `getBytes()` 檢索序列化許可證)或嵌入加密內容。 看， [嵌入許可證](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md)。
+若要產生授權，請叫用 `generateLicense()` 和指定授權型別（分葉或根）和一個或多個收件者憑證。 收件者憑證會是電腦憑證或網域憑證，視原則中指定的要求而定。 如果您產生鏈結分葉，則不需要收件者。 產生授權後，可以覆寫原則中指定的使用規則。 最後，叫用 `signLicense()` 以簽署授權並取得 `PreGeneratedLicense`. 授權現在可以儲存至檔案(使用 `getBytes()` 以擷取序列化授權)或內嵌在加密內容中。 請參閱， [內嵌授權](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md).
 
-有關演示預生成許可證的示例代碼，請參見 `com.adobe.flashaccess.samples.licensegen.GenerateLicense` 在「參考實現」命令行工具「示例」目錄中。
+如需示範預先產生之授權的範常式式碼，請參閱 `com.adobe.flashaccess.samples.licensegen.GenerateLicense` 在「參考實作命令列工具」的「範例」目錄中。

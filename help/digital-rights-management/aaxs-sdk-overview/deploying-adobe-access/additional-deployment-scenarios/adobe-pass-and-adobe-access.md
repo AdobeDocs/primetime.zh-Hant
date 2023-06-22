@@ -1,6 +1,6 @@
 ---
-title: Adobe Pass和Adobe
-description: Adobe Pass和Adobe
+title: Adobe Pass和Adobe存取
+description: Adobe Pass和Adobe存取
 copied-description: true
 exl-id: b9a90297-da24-416f-91de-6a31322f35fb
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,22 +10,22 @@ ht-degree: 0%
 
 ---
 
-# Adobe Pass和Adobe {#adobe-pass-and-adobe-access}
+# Adobe Pass和Adobe存取 {#adobe-pass-and-adobe-access}
 
-Adobe Pass [](https://www.adobe.com/products/adobepass/))跨多個內容提供程式提供用戶/設備身份驗證和授權。 用戶必須有有效的有線電視或衛星電視訂閱。
+ADOBE PASS ( [](https://www.adobe.com/products/adobepass/))提供使用者/裝置驗證，以及跨多個內容提供者的授權。 使用者必須擁有有效的有線電視或衛星電視訂閱。
 
 <!--<a id="fig_cln_bc2_44"></a>-->
 
 ![](assets/AdobePass_web.png)
 
-Adobe Pass可以與Adobe訪問一起用於保護媒體內容。 在此方案中，視頻播放器(SWF)可以載入另一個SWF，稱為 *訪問啟用碼*&#x200B;由Adobe Systems主辦。 的 *訪問啟用碼* 用於連接到Adobe Pass服務，並促進SAML SSO與MVPD（多通道視頻寫程式分發伺服器）身份提供程式系統的整合。 這涉及將用戶的瀏覽器簡要重定向到MVPD登錄頁，然後保存AuthN令牌，最後使用快取的AuthN會話返回到內容網站。
+Adobe Pass可與Adobe存取搭配使用，以保護媒體內容。 在此案例中，視訊播放器(SWF)可以載入另一個SWF，稱為 *存取啟用程式*，由Adobe Systems託管。 此 *存取啟用程式* 用於連線至Adobe Pass服務，並促進SAML SSO與MVPD （多頻道視訊程式設計經銷商）身分提供者系統的整合。 這包括將使用者的瀏覽器短暫重新導向至MVPD登入頁面，然後保留AuthN權杖，最後以快取的AuthN工作階段返回內容網站。
 
-的 *訪問啟用碼* 然後便於Adobe Pass服務和MVPD之間的後端授權。 MVPD維護業務邏輯並確定用戶有權訪問哪些內容。 該權利保留在該內容資源的附加AuthZ令牌中，並將其發回給客戶端。
+此 *存取啟用程式* 然後可以促進Adobe Pass服務和MVPD之間的後端授權。 MVPD會維護商業邏輯，並決定使用者有權使用的內容。 權利會保留在該內容資源的額外AuthZ權杖中，並傳送回使用者端。
 
-使用Adobe訪問客戶端的唯一ID和私鑰對認證和授權令牌進行簽名以避免篡改或欺騙。 只能通過 *訪問啟用碼*。
+驗證和授權權杖會使用Adobe存取使用者端的唯一ID和私密金鑰來簽署，以避免竄改或詐騙。 此Token只能透過 *存取啟用程式*.
 
-視頻播放器可以通過呼叫來觸發該過程 `getAuthorization` 的 *訪問啟用碼*。 當存在有效的AuthN/AuthZ令牌時， *AccessEnabler* 向視頻播放器發出回叫，該視頻播放器將包含用於播放視頻內容的短時媒體令牌。
+視訊播放器可藉由呼叫 `getAuthorization` 於 *存取啟用程式*. 當有效的AuthN/AuthZ權杖出現時， *AccessEnabler* 發出回撥給視訊播放器，其中包含播放視訊內容的短期媒體權杖。
 
-Adobe Pass提供可部署到伺服器的媒體令牌驗證程式Java庫。 使用Flass Access伺服器進行內容保護時，可以將媒體令牌驗證器與Adobe訪問伺服器端插件整合，以便在成功驗證媒體令牌後自動頒發通用許可證。 然後，內容從CDN伺服器流式傳輸到客戶機。 為了獲得內容許可，可將短壽命媒體令牌提交到Adobe訪問伺服器，其中驗證令牌的有效性並且可以頒發許可證。
+Adobe Pass提供可部署至伺服器的媒體權杖驗證器Java程式庫。 使用Flass Access伺服器進行內容保護時，您可以將媒體權杖驗證器與Adobe存取伺服器端外掛程式整合，以在成功驗證媒體權杖後自動發行通用授權。 然後內容會從CDN伺服器串流到使用者端。 若要取得內容授權，可將短暫的媒體權杖提交至Adobe存取伺服器，在伺服器上驗證權杖的有效性並可核發授權。
 
-長壽命AuthN令牌通常由 *訪問啟用碼* 跨所有內容開發商，以表示該MVPD訂閱伺服器的AuthN。 此外，Adobe Access Server和令牌驗證器可由CDN或服務提供商代表內容提供商操作。
+長效的AuthN代號通常由 *存取啟用程式* 以代表該MVPD訂閱者的AuthN。 此外，Adobe Access Server和權杖驗證器可由CDN或服務提供者代表內容提供者操作。

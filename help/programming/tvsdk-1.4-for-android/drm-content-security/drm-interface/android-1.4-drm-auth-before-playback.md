@@ -1,5 +1,5 @@
 ---
-description: 當視頻的DRM元資料與媒體流分離時，在開始回放之前執行驗證。
+description: 當視訊的DRM中繼資料與媒體資料流不同時，請在開始播放之前執行驗證。
 title: 播放前DRM驗證
 exl-id: da81ec38-ea77-4fcd-a6e4-5804465385cb
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,18 +11,18 @@ ht-degree: 0%
 
 # 播放前DRM驗證 {#drm-authentication-before-playback}
 
-當視頻的DRM元資料與媒體流分離時，在開始回放之前執行驗證。
+當視訊的DRM中繼資料與媒體資料流不同時，請在開始播放之前執行驗證。
 
-視頻資產可以具有關聯的DRM元資料檔案。 例如：
+視訊資產可以有相關聯的DRM中繼資料檔案。 例如：
 
-* &quot;url&quot;:&quot;ht&quot;<span></span>tps://www.domain.com/asset.m3u8
-* &quot;drmMetadata&quot;:&quot;ht&quot;<span></span>tps://www.domain.com/asset.metadata
+* &quot;url&quot;： &quot;ht<span></span>tps://www.domain.com/asset.m3u8」
+* &quot;drmMetadata&quot;： &quot;ht<span></span>tps://www.domain.com/asset.metadata」
 
-在這種情況下，使用 `DRMHelper` 方法下載DRM元資料檔案的內容、分析它並檢查是否需要DRM驗證。
+如果是這種情況，請使用 `DRMHelper` 下載DRM中繼資料檔案內容、解析該檔案以及檢查是否需要DRM驗證的方法。
 
-1. 使用 `loadDRMMetadata` 載入元資料URL內容並將下載的位元組解析到 `DRMMetadata`。
+1. 使用 `loadDRMMetadata` 以載入中繼資料URL內容，並將下載的位元組剖析為 `DRMMetadata`.
 
-   與任何其他網路操作一樣，此方法是非同步的，它建立了自己的線程。
+   如同任何其他網路操作，此方法為非同步，建立自己的執行緒。
 
    ```java
    public static void loadDRMMetadata( 
@@ -37,8 +37,8 @@ ht-degree: 0%
    DRMHelper.loadDRMMetadata(drmManager, metadataURL, new DRMLoadMetadataListener());
    ```
 
-1. 由於操作是非同步的，因此最好讓用戶意識到這一點。 否則，他會想，為什麼他的回放沒有開始。 例如，在下載和分析DRM元資料時顯示旋轉輪。
-1. 在 `DRMLoadMetadataListener`。 的 `loadDRMMetadata` 調用這些事件處理程式（調度這些事件）。
+1. 由於操作不同步，因此最好讓使用者意識到這一點。 否則，他將會想知道為什麼他的播放沒有開始。 例如，在下載並剖析DRM中繼資料時顯示旋轉滾輪。
+1. 在中實施回呼 `DRMLoadMetadataListener`. 此 `loadDRMMetadata` 呼叫這些事件處理常式（排程這些事件）。
 
    ```java
    public interface  
@@ -57,11 +57,11 @@ ht-degree: 0%
    }
    ```
 
-   * `onLoadMetadataUrlStart` 檢測元資料URL載入何時開始。
-   * `onLoadMetadataUrlComplete` 檢測元資料URL何時完成載入。
-   * `onLoadMetadataUrlError` 指示載入元資料失敗。
+   * `onLoadMetadataUrlStart` 會偵測中繼資料URL載入何時開始。
+   * `onLoadMetadataUrlComplete` 會偵測中繼資料URL何時完成載入。
+   * `onLoadMetadataUrlError` 表示中繼資料無法載入。
 
-1. 載入完成時，檢查 `DRMMetadata` 查看是否需要DRM驗證。
+1. 載入完成時，請檢查 `DRMMetadata` 物件，以檢視是否需要DRM驗證。
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
@@ -83,7 +83,7 @@ ht-degree: 0%
    ```
 
 1. 如果不需要驗證，請開始播放。
-1. 如果需要驗證，請通過獲取許可證來執行驗證。
+1. 如果需要驗證，請透過取得授權來執行驗證。
 
    ```java
    /** 
@@ -105,7 +105,7 @@ ht-degree: 0%
         final DRMAuthenticationListener authenticationListener);
    ```
 
-   為簡單起見，此示例顯式地編碼用戶的名稱和密碼。
+   為了簡單起見，此範例明確編碼使用者的名稱和密碼。
 
    ```java
    DRMHelper.performDrmAuthentication(drmManager, drmMetadata, DRM_USERNAME, DRM_PASSWORD,  
@@ -131,7 +131,7 @@ ht-degree: 0%
    }); 
    ```
 
-1. 這也意味著網路通信，因此這也是非同步操作。 使用事件偵聽器檢查驗證狀態。
+1. 這也代表網路通訊，因此這也是非同步操作。 使用事件監聽器來檢查驗證狀態。
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -166,6 +166,6 @@ ht-degree: 0%
    ```
 
 1. 如果驗證成功，請開始播放。
-1. 如果驗證失敗，請通知用戶，並且不要開始播放。
+1. 如果驗證失敗，請通知使用者並且不要開始播放。
 
-您的應用程式必須處理任何身份驗證錯誤。 在將TVSDK置於錯誤狀態之前未能成功驗證。 即，它將其狀態更改為ERROR，生成包含來自DRM庫的錯誤代碼的錯誤，並停止回放。 您的應用程式必須解決問題，重置播放器並重新載入資源。
+您的應用程式必須處理任何驗證錯誤。 播放前無法成功驗證，導致TVSDK進入錯誤狀態。 也就是說，它會將其狀態變更為ERROR，產生包含DRM程式庫錯誤代碼的錯誤，然後播放停止。 您的應用程式必須解決問題、重設播放器，然後重新載入資源。

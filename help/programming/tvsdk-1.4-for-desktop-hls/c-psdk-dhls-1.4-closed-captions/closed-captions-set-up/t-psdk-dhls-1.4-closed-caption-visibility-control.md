@@ -1,6 +1,6 @@
 ---
-description: 您可以控制隱藏字幕的可見性。 當可見性開啟時，將顯示當前選定的軌道。 如果更改當前軌道，則可見性設定保持不變。
-title: 控制隱藏字幕可見性
+description: 您可以控制隱藏式字幕的可見度。 當可見性開啟時，會顯示目前選取的軌跡。 如果變更目前哪個軌跡，可視性設定會維持不變。
+title: 控制隱藏式字幕可見度
 exl-id: fac24d97-b83e-4bc4-a824-8a1692509519
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 0%
 
 ---
 
-# 控制隱藏字幕可見性{#control-closed-caption-visibility}
+# 控制隱藏式字幕可見度{#control-closed-caption-visibility}
 
-您可以控制隱藏字幕的可見性。 當可見性開啟時，將顯示當前選定的軌道。 如果更改當前軌道，則可見性設定保持不變。
+您可以控制隱藏式字幕的可見度。 當可見性開啟時，會顯示目前選取的軌跡。 如果變更目前哪個軌跡，可視性設定會維持不變。
 
 >[!TIP]
 >
->如果在播放器進入查找模式時顯示隱藏的字幕文本，則在查找完成後不再顯示該文本。 相反，在幾秒鐘後，TVSDK在結束查找位置後在視頻中顯示下一個隱藏字幕文本。
+>如果在播放器進入搜尋模式時顯示隱藏式字幕文字，搜尋完成後文字將不再顯示。 相反地，幾秒後，TVSDK會在視訊中顯示搜尋結束位置後的下一個隱藏式字幕文字。
 
 >[!NOTE]
 >
->隱藏字幕的可見性值在中定義 `ClosedCaptionsVisibility`。
+>隱藏式字幕的可見度值定義於 `ClosedCaptionsVisibility`.
 >
 >
 ```
@@ -27,14 +27,14 @@ ht-degree: 0%
 >public static const VISIBLE:String = visible;
 >```
 
-1. 等待 `MediaPlayer` 至少具有PREPARED狀態(請參見 [等待有效狀態](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
-1. 要獲取隱藏字幕的當前可見性設定，請使用中的getter方法 `MediaPlayer`，返回可見性值。
+1. 等候 `MediaPlayer` 至少要有PREPARED狀態(請參閱 [等待有效的狀態](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
+1. 若要取得隱藏式字幕的目前可見度設定，請在中使用getter方法 `MediaPlayer`，會傳回可見度值。
 
    ```
    public function get ccVisibility():String
    ```
 
-1. 要更改隱藏字幕的可見性，請使用setter方法，通過 `ClosedCaptionsVisibility`。
+1. 若要變更隱藏式字幕的可見度，請使用setter方法，傳遞可視度值 `ClosedCaptionsVisibility`.
 
    例如：
 
@@ -42,7 +42,7 @@ ht-degree: 0%
    public function set ccVisibility(value:String):void
    ```
 
-1. 定義下拉清單。
+1. 定義下拉式清單。
 
    ```
    <s:DropDownList id="ccTracksList" width="85" 
@@ -51,28 +51,28 @@ ht-degree: 0%
                    prompt="CC"/>
    ```
 
-1. 定義可綁定的隱藏字幕軌道陣列。
+1. 定義隱藏式字幕軌跡的可繫結陣列。
 
    ```
    [Bindable] private var _ccTracks:ArrayCollection =  
      new ArrayCollection(); // active tracks 
    ```
 
-1. 設定偵聽器。
+1. 設定監聽器。
 
    ```
    player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
    player.addEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-   要從銷毀代碼中刪除監聽程式：
+   若要從銷毀程式碼中移除監聽器：
 
    ```
    player.removeEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
    player.removeEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-1. 當用戶從清單中選擇時，建立並更新清單。
+1. 當使用者從清單進行選擇時建立和更新清單。
 
    ```
    private function onCCTrackChange(event:IndexChangeEvent):void { 

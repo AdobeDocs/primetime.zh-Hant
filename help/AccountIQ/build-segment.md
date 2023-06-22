@@ -1,6 +1,6 @@
 ---
-title: 生成段
-description: 如何在帳戶IQ中構建段。
+title: 建立區段
+description: 如何在帳戶IQ中建立區段。
 exl-id: 93b7fc6a-e15a-441a-aaa1-2d6d7aed6e0b
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# 在帳戶IQ中生成段 {#build-segment}
+# 在帳戶IQ中建立區段 {#build-segment}
 
-要構建新段以進行分析，請執行以下操作：
+若要建置新區段以供分析：
 
-1. 選擇 **建立新段** 選項 **段** 的子菜單。
-1. 在中添加段的名稱 **段名稱**。
+1. 選取 **建立新區段** 選項於 **區段** 頁面。
+1. 在中新增區段的名稱 **區段名稱**.

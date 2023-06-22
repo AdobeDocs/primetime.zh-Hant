@@ -1,6 +1,6 @@
 ---
-description: 在某些情況下，您可能希望限制最終用戶在購買或租用內容時在多個設備上播放內容。 如果客戶使用Expressplay，則可以使用Expressplay API將用戶的Expressplay令牌綁定到用戶的電腦。
-title: 設備綁定
+description: 在某些情況下，您可能想要限制一般使用者在購買或出租內容時，無法在多部裝置上播放內容。 如果客戶使用Expressplay，可使用Expressplay API將使用者的Expressplay權杖繫結到使用者的電腦來完成此操作。
+title: 裝置繫結
 exl-id: 96ead794-e3eb-4059-91d3-a2c351a17ea3
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,23 +9,23 @@ ht-degree: 0%
 
 ---
 
-# 設備綁定{#device-binding}
+# 裝置繫結{#device-binding}
 
-在某些情況下，您可能希望限制最終用戶在購買或租用內容時在多個設備上播放內容。 如果客戶使用Expressplay，則可以使用Expressplay API將用戶的Expressplay令牌綁定到用戶的電腦。
+在某些情況下，您可能想要限制一般使用者在購買或出租內容時，無法在多部裝置上播放內容。 如果客戶使用Expressplay，可使用Expressplay API將使用者的Expressplay權杖繫結到使用者的電腦來完成此操作。
 
-可以通過以下方式使用API。
+您可以透過下列方式使用API。
 
-1. 生成Cookie。
-1. 發送虛擬令牌生成請求，生成的cookie作為查詢字串附加(cookie=`<cookie>`)或作為標題。
-1. 讓用戶的電腦使用上述令牌（例如通過播放虛擬內容）向Expressplay許可證伺服器發送許可請求。
+1. 產生Cookie。
+1. 以查詢字串(Cookie=)形式附加產生的Cookie，以傳送虛擬Token產生請求`<cookie>`)或當作標頭。
+1. 讓使用者的電腦使用上述Token （例如，透過播放虛擬內容），將授權請求傳送至Expressplay授權伺服器。
 
-   成功後，此虛擬許可請求將用戶的device_id（由用戶設備上的DRM實現計算或生成）與Expressplay後端中的cookie相關聯。 然後，以下方式使用此cookie:
+   此虛擬授權要求若成功，會將使用者的device_id （由使用者裝置上的DRM實作計算或產生）與Expressplay後端的Cookie建立關聯。 然後會以下列方式使用此Cookie：
 
-   * 在內容購買/租用時，代碼通過發送關聯的cookie( [https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval))
-   * 使用購買內容的密鑰(CEK)、密鑰ID(CEKSID)、策略和其他資訊發送令牌生成請求，將上面的cookie和deviceid分別附加為 `cookie` 相關參數 `deviceid` 令牌限制參數。
+   * 在內容購買/出租時，程式碼會傳送相關Cookie ( [https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval))
+   * 使用購買內容的金鑰(CEK)、keyID (CEKSID)、原則及其他資訊傳送權杖產生請求，將上述Cookie和device_id分別附加為 `cookie` 關聯引數和 `deviceid` 權杖限制引數。
 
-   * 向用戶提供此令牌。
+   * 提供此Token給使用者。
 
-      此進程為綁定到用戶的device_id的內容生成令牌。 當用戶的電腦發出具有此令牌的許可證請求時，Expressplay後端將用許可證請求的deviceid交叉檢查令牌的deviceid。
+      此程式會為繫結至使用者device_id的內容產生權杖。 當使用者的電腦使用此權杖傳送授權請求時，Expressplay後端會交叉檢查權杖的device_id和授權請求的device_id。
 
-      示例Expressplay權利伺服器實現此工作流。
+      Expressplay軟體權利檔案伺服器會實作此工作流程。

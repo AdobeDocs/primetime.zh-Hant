@@ -7,9 +7,9 @@ ht-degree: 0%
 ---
 
 
-# 空 {#no-title}
+# null {#no-title}
 
-內容加密密鑰儲存IDT內容加密密鑰儲存ID(CEKSID)是用於從密鑰管理系統檢索內容加密密鑰的ID。
+內容加密金鑰儲存ID內容加密金鑰儲存ID (CEKSID)是從金鑰管理系統擷取內容加密金鑰的ID。
 
 ```
 :    

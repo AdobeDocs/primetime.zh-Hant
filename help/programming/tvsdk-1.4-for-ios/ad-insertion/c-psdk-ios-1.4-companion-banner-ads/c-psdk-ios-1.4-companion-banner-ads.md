@@ -1,6 +1,6 @@
 ---
-description: TVSDK支援伴生條幅廣告，這些廣告是線性廣告的附帶廣告，線上性廣告結束後，通常會留在頁面上。 您的應用程式負責顯示隨線性廣告提供的伴隨橫幅。
-title: 伴生橫幅廣告
+description: TVSDK支援隨附橫幅廣告，這是線性廣告隨附的廣告，通常線上性廣告結束後仍會留在頁面上。 您的應用程式負責顯示隨線性廣告提供的隨附橫幅。
+title: 隨附橫幅廣告
 exl-id: e7b0ce38-e4b0-4e10-8d76-2d43d8eff665
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,32 +9,32 @@ ht-degree: 0%
 
 ---
 
-# 伴生橫幅廣告 {#companion-banner-ads}
+# 隨附橫幅廣告 {#companion-banner-ads}
 
-TVSDK支援伴生條幅廣告，這些廣告是線性廣告的附帶廣告，線上性廣告結束後，通常會留在頁面上。 您的應用程式負責顯示隨線性廣告提供的伴隨橫幅。
+TVSDK支援隨附橫幅廣告，這是線性廣告隨附的廣告，通常線上性廣告結束後仍會留在頁面上。 您的應用程式負責顯示隨線性廣告提供的隨附橫幅。
 
-顯示伴侶廣告時，請遵循以下建議：
+顯示隨附廣告時，請遵循下列建議：
 
-* 嘗試在播放器佈局中顯示視頻廣告的夥伴橫幅廣告的數量。
-* 僅當您的位置與其指定的高度和寬度完全匹配時，才顯示伴隨標題。
+* 嘗試儘可能多地呈現視訊廣告的隨附橫幅廣告，以符合您的播放器版面配置。
+* 只有在您的位置完全符合其指定高度和寬度時，才會顯示隨附橫幅。
 
    >[!TIP]
    >
-   >不要調整橫幅的大小。
+   >請勿調整橫幅大小。
 
-* 在廣告開始後盡快呈現伴隨橫幅。
-* 不要將主廣告/視頻容器與伴隨橫幅覆蓋。
-* 廣告結束後繼續顯示伴隨橫幅。
+* 在廣告開始後儘快提供隨附橫幅。
+* 請勿以隨附橫幅覆蓋主要廣告/視訊容器。
+* 在廣告結束後繼續顯示隨附橫幅。
 
-   標準是顯示每個伴隨橫幅，直到您更換了此橫幅。
+   標準是顯示每個隨附橫幅，直到您有此橫幅的替代橫幅為止。
 
-## 伴隨橫幅資料 {#companion-banner-data}
+## 隨附橫幅資料 {#companion-banner-data}
 
-PTAdAsset的內容描述了一個伴隨的橫幅。
+PTAdAsset的內容會說明隨附橫幅。
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-的 `PTMediaPlayerAdStartedNotification` 通知返回 `PTAd` 包含實例 `companionAssets` 屬性（陣列） `PtAdAsset`)。
+此 `PTMediaPlayerAdStartedNotification` 通知傳回 `PTAd` 包含 `companionAssets` 屬性(陣列 `PtAdAsset`)。
 每個 `PtAdAsset` 提供有關顯示資產的資訊。
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
@@ -47,61 +47,61 @@ PTAdAsset的內容描述了一個伴隨的橫幅。
  <tbody> 
   <tr> 
    <td colname="col1"> 寬度 </td> 
-   <td colname="col2"> 配對標題的寬度（以像素為單位）。 </td> 
+   <td colname="col2"> 隨附橫幅的寬度（畫素）。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 高度 </td> 
-   <td colname="col2"> 陪同橫幅的高度（以像素為單位）。 </td> 
+   <td colname="col2"> 隨附橫幅的高度（畫素）。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 資源類型 </td> 
-   <td colname="col2">此伴隨標題的資源類型： 
+   <td colname="col1"> 資源型別 </td> 
+   <td colname="col2">此隨附橫幅的資源型別： 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
-     <li id="li_02B7224C67004095B3F6E50FD21E507E">html:資料在HTML代碼中。 </li> 
-     <li id="li_5F37E14472424F808C6094F42009E676">iframe:資料是iframe URL(src)。 </li> 
-     <li id="li_76B945007CE842158B5125422765E0B2">靜態：資料是指向影像的直接URL的靜態URL。 </li> 
+     <li id="li_02B7224C67004095B3F6E50FD21E507E">html：資料採用HTML程式碼。 </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe：資料是iframe URL (src)。 </li> 
+     <li id="li_76B945007CE842158B5125422765E0B2">靜態：資料是靜態URL，是影像的直接URL。 </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 資料 </td> 
-   <td colname="col2"> 指定的類型的資料 <span class="codeph"> 資源類型</span> 這個伴隨的橫幅。 </td> 
+   <td colname="col2"> 指定的型別資料 <span class="codeph"> resourceType</span> 以取得此隨附橫幅。 </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## 顯示橫幅廣告 {#display-banner-ads}
 
-要顯示橫幅廣告，您需要建立橫幅實例並允許TVSDK偵聽與廣告相關的事件。
+若要顯示橫幅廣告，您必須建立橫幅例項，並允許TVSDK接聽與廣告相關的事件。
 
-TVSDK提供與通過以下連結的線性廣告關聯的夥伴橫幅廣告的清單： `PTMediaPlayerAdPlayStartedNotification` 通知事件。
+TVSDK提供透過與線性廣告相關聯的隨附橫幅廣告清單 `PTMediaPlayerAdPlayStartedNotification` 通知事件。
 
-清單可通過以下方式指定伴隨橫幅廣告：
+資訊清單可透過以下方式指定隨附橫幅廣告：
 
-* HTML段
-* iFrame頁的URL
+* HTML片段
+* iFrame頁面的URL
 * 靜態影像或AdobeFlashSWF檔案的URL
 
-對於每個伴侶廣告，TVSDK會指示哪些類型可用於應用程式。
+對於每個隨附廣告，TVSDK會指出您的應用程式可用的型別。
 
-1. 建立 `PTAdBannerView`  頁面上每個伴侶廣告插槽的實例。
+1. 建立 `PTAdBannerView`  頁面上每個隨附廣告位置的例項。
 
-       確保提供了以下資訊：
+       請確定已提供下列資訊：
    
-   * 為防止檢索不同大小的配對廣告，請使用一個標語實例來指定寬度和高度。
+   * 為防止擷取不同大小的隨附廣告，指定寬度和高度的橫幅例項。
    * 標準橫幅大小。
 
-1. 為 `PTMediaPlayerAdStartedNotification` 執行以下操作：
-   1. 清除標題實例中的現有廣告。
-   1. 獲取來自的伴侶廣告清單 `Ad.getCompanionAssets` `PTAd.companionAssets`。
-   1. 如果伴生廣告清單不為空，則在標題實例的清單上迭代。
+1. 為新增觀察者 `PTMediaPlayerAdStartedNotification` 這樣會執行下列動作：
+   1. 清除橫幅例項中的現有廣告。
+   1. 從取得隨附廣告清單 `Ad.getCompanionAssets` `PTAd.companionAssets`.
+   1. 如果隨附廣告清單不是空的，請在清單上反複檢視橫幅例項。
 
-      每個標題實例( `PTAdAsset`)包含寬度、高度、資源類型（html、iframe或static）等資訊，以及顯示伴隨橫幅所需的資料。
-   1. 如果視頻廣告沒有隨其預訂的伴侶廣告，則伴侶資產清單中不包含該視頻廣告的資料。
+      每個橫幅例項( a `PTAdAsset`)包含寬度、高度、資源型別（html、iframe或靜態）等資訊，以及顯示隨附橫幅所需的資料。
+   1. 如果視訊廣告沒有隨附廣告，隨附資產清單則不包含該視訊廣告的資料。
 
-      要顯示獨立顯示廣告，請將邏輯添加到指令碼中，以在相應的標題實例中運行正常的DFP（發佈伺服器的按兩下）顯示廣告標籤。
-   1. 將橫幅資訊發送到頁面上在適當位置顯示橫幅的功能。
+      若要顯示獨立顯示廣告，請在指令碼中新增邏輯，以在適當的橫幅例項中執行一般DFP (DoubleClick for Publishers)顯示廣告標籤。
+   1. 將橫幅資訊傳送至頁面上會在適當位置顯示橫幅的函式。
 
-      這通常是 `div`，您的函式使用 `div ID` 來顯示標題。 例如：
+      這通常是 `div`，而您的函式會使用 `div ID` 以顯示橫幅。 例如：
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 

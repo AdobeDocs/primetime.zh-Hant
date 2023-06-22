@@ -1,6 +1,6 @@
 ---
-title: 升級元資料
-description: 升級元資料
+title: 升級中繼資料
+description: 升級中繼資料
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,25 +10,25 @@ ht-degree: 0%
 ---
 
 
-# 升級元資料{#upgrading-metadata}
+# 升級中繼資料{#upgrading-metadata}
 
-如果Adobe PrimetimeDRM客戶端遇到與Flash媒體Rights Management伺服器1.x打包的內容，則它從內容中提取加密元資料並將其發送到伺服器。 然後，伺服器將FMRMS 1.x元資料轉換為黃金時段DRM格式，並將其發送到客戶端。 然後，客戶端在標準黃金時段DRM許可請求中發送更新的元資料。
+如果Adobe Primetime DRM使用者端遇到與Flash MediaRights Management伺服器1.x封裝的內容，便會從內容中擷取加密中繼資料，並將其傳送至伺服器。 然後，伺服器會將FMRMS 1.x中繼資料轉換為Primetime DRM格式並傳送給使用者端。 然後，使用者端會以標準Primetime DRM授權請求傳送更新的中繼資料。
 
-* 請求處理程式類為 `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1MetadataHandler`。
-* 請求URL為「」*1.x內容的基URL*&quot; +&quot; [!DNL /flashaccess/headerconversion/v1]。
+* 要求處理常式類別為 `com.adobe.flashaccess.sdk.protocol.compatibility.FMRMSv1MetadataHandler`.
+* 請求URL是&quot;*來自1.x內容的基礎URL*「 +」 [!DNL /flashaccess/headerconversion/v1]「。
 
-當伺服器從客戶端接收舊元資料時，可以即時執行元資料轉換。 或者，伺服器可以對舊內容進行預處理並儲存轉換後的元資料；在這種情況下，當客戶端請求新元資料時，伺服器只需要獲取與舊元資料的許可證標識符匹配的新元資料。
+當伺服器從使用者端接收舊中繼資料時，可以立即完成中繼資料轉換。 或者，伺服器可以預先處理舊內容並儲存轉換過的中繼資料；在這種情況下，當使用者端請求新的中繼資料時，伺服器只需要擷取和舊中繼資料的授權識別碼相符的新中繼資料。
 
-要轉換元資料，伺服器必須執行以下步驟：
+若要轉換中繼資料，伺服器必須執行下列步驟：
 
-* 獲取 `LiveCycleKeyMetaData`。 要預轉換元資料， `LiveCycleKeyMetaData` 可從1.x封裝檔案中使用 `MediaEncrypter.examineEncryptedContent()`。 元資料也包含在元資料轉換請求中( `FMRMSv1MetadataHandler.getOriginalMetadata()`)。
+* 取得 `LiveCycleKeyMetaData`. 若要預先轉換中繼資料， `LiveCycleKeyMetaData` 可從1.x封裝檔案取得，使用 `MediaEncrypter.examineEncryptedContent()`. 中繼資料也包含在中繼資料轉換請求( `FMRMSv1MetadataHandler.getOriginalMetadata()`)。
 
-* 從舊元資料中獲取許可證標識符，並查找加密密鑰和DRM策略(此資訊最初位於AdobeLiveCycleES資料庫中。 LiveCycleES DRM策略必須轉換為Mighine DRM 2.0 DRM策略。) 參考實現包括用於轉換DRM策略和從LiveCycleES導出許可證資訊的指令碼和示例代碼。
-* 填寫 `V2KeyParameters` 對象(通過調用 `MediaEncrypter.getKeyParameters()`)。
+* 從舊的中繼資料取得授權識別碼，並尋找加密金鑰和DRM原則(此資訊最初是在AdobeLiveCycleES資料庫中)。 LiveCycleES DRM政策必須轉換為Primetime DRM 2.0 DRM政策)。 「參考實作」包含用於轉換DRM原則和從LiveCycleES匯出許可證資訊的指令碼和範常式式碼。
+* 填入 `V2KeyParameters` 物件（您透過呼叫來擷取） `MediaEncrypter.getKeyParameters()`)。
 
-* 載入 `SigningCredential`，是Adobe頒發的用於簽名加密元資料的打包器憑據。 獲取 `SignatureParameters` 調用對象 `MediaEncrypter.getSignatureParameters()` 並填寫簽名憑據。
+* 載入 `SigningCredential`，這是由用來簽署加密中繼資料的Adobe所發出的封裝程式認證。 取得 `SignatureParameters` 物件，透過呼叫 `MediaEncrypter.getSignatureParameters()` 並填寫簽署認證。
 
-* 呼叫 `MetaDataConverter.convertMetadata()` 獲取 `V2ContentMetaData`。
+* 呼叫 `MetaDataConverter.convertMetadata()` 以取得 `V2ContentMetaData`.
 
-* 呼叫 `V2ContentMetaData.getBytes()` 並儲存供將來使用或呼叫 `FMRMSv1MetadataHandler.setUpdatedMetadata()`。
+* 呼叫 `V2ContentMetaData.getBytes()` 和存放區以供日後使用，或呼叫 `FMRMSv1MetadataHandler.setUpdatedMetadata()`.
 

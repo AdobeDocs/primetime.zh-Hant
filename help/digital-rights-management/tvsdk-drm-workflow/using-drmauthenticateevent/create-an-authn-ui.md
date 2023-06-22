@@ -1,6 +1,6 @@
 ---
-title: 建立身份驗證UI
-description: 建立身份驗證UI
+title: 建立驗證UI
+description: 建立驗證UI
 copied-description: true
 exl-id: 54853dcf-2241-44e6-9565-7eca94cc84cc
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,11 +10,11 @@ ht-degree: 0%
 
 ---
 
-# 建立身份驗證UI {#create-an-authentication-ui}
+# 建立驗證UI {#create-an-authentication-ui}
 
-1. 建立用戶介面以檢索用戶的驗證憑據。
+1. 建立使用者介面以擷取使用者的驗證認證。
 
-   以下是用於檢索用戶憑據的簡單用戶介面的Flex示例。 它由一個包含兩個 `TextInput` 對象，每個用戶名和密碼憑據對應一個對象。 該面板還包含一個按鈕，用於啟動 `credentials()` 的雙曲餘切值。
+   以下是擷取使用者憑證的簡單使用者介面的Flex範例。 它由包含兩個面板物件的面板物件組成 `TextInput` 物件，使用者名稱和密碼認證各一個。 面板也包含可啟動 `credentials()` 方法。
 
    ```xml
    <mx:Panel x="236.5"  
@@ -43,9 +43,9 @@ ht-degree: 0%
    </mx:Panel>  
    ```
 
-1. 寫入 `credentials()` 處理用戶提供的驗證值的方法。
+1. 撰寫 `credentials()` 處理使用者提供的驗證值的方法。
 
-   的 `credentials()` 方法是將用戶名和密碼值傳遞給 `setDRMAuthenticationCredentials()` 的雙曲餘切值。 傳遞值後， `credentials()` 方法重置 `TextInput` 對象。
+   此 `credentials()` 方法是一種使用者定義的方法，會將使用者名稱和密碼值傳遞至 `setDRMAuthenticationCredentials()` 方法。 值一經傳遞， `credentials()` 方法會重設 `TextInput` 物件。
 
    ```
    <mx:Script> 
@@ -58,7 +58,7 @@ ht-degree: 0%
    </mx:Script> 
    ```
 
-   實現這種簡單介面的一種方法是將面板作為新狀態的一部分。 新狀態源於當 `DRMAuthenticateEvent` 對象被拋出。 以下示例包含 `VideoDisplay` 源屬性指向受保護視頻檔案的對象。 在這個例子中， `credentials()` 方法被修改，以便它還將應用程式返回到基狀態。 此方法在傳遞用戶憑據並重置TextInput對象值之後執行。
+   實作此類簡單介面的一種方式，是將面板納入新狀態的一部分。 新狀態源自於基礎狀態，當 `DRMAuthenticateEvent` 物件被擲回。 以下範例包含 `VideoDisplay` 具有來源屬性的物件，指向受保護的視訊檔案。 在此案例中， `credentials()` 方法已修改，因此也可將應用程式傳回基本狀態。 此方法會在傳遞使用者認證並重設TextInput物件值之後執行。
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 

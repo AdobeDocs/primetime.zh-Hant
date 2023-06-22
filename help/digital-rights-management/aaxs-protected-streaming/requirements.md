@@ -1,6 +1,6 @@
 ---
-title: 要求
-description: 要求
+title: 需求
+description: 需求
 copied-description: true
 exl-id: 01380b2c-0301-4885-8365-8c82c8074202
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# 要求{#requirements}
+# 需求{#requirements}
 
-* MicrosoftWindows Server 2008或Red Hat® Enterprise Linux® 5.6
-* OracleJava JRE 1.6(建立自定義授權擴展需要OracleJava JDK 1.6)
-* Apache Tomcat® 6(在DVD的第三方\Tomcat\6.0.18資料夾中提供)
-* Adobe頒發的憑據
+* Microsoft Windows Server 2008或Red Hat® Enterprise Linux® 5.6
+* oracleJava JRE 1.6 (建立自訂授權擴充功能需要OracleJava JDK 1.6)
+* Apache Tomcat® 6 （可在DVD的協力廠商\Tomcat\6.0.18資料夾中取得）
+* 由Adobe簽發的認證

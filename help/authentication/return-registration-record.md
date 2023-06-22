@@ -1,6 +1,6 @@
 ---
-title: 返回註冊記錄
-description: 返回註冊記錄
+title: 傳回註冊記錄
+description: 傳回註冊記錄
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,53 +9,53 @@ ht-degree: 0%
 
 ---
 
-# 返回註冊記錄 {#return-registration-record}
+# 傳回註冊記錄 {#return-registration-record}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
 
-## REST API終結點 {#clientless-endpoints}
+## REST API端點 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
-
-* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
-
-&lt;sp_fqdn>:
+&lt;reggie_fqdn>：
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+
+&lt;sp_fqdn>：
+
+* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
  </br>
  
 
 ## 說明 {#description}
 
-返回包含註冊代碼UUID、註冊代碼和散列設備ID的註冊代碼記錄。 
+傳回包含註冊代碼UUID、註冊代碼和雜湊裝置ID的註冊代碼記錄。 
 
  
 
 <div>
 
 
-| 端點 | 已調用  </br>按 | 輸入   </br>帕拉姆 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
+| 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>例如：</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | 流式處理應用</br></br>或</br></br>程式設計師服務 | 1。請求  </br>    （路徑元件）</br>2.  註冊碼  </br>    （路徑元件） | GET | 包含註冊代碼和資訊的XML或JSON。 請參閱下面的架構和示例。 | 200 |
+| &lt;reggie_fqdn>；/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>例如：</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK？format=xml | 串流應用程式</br></br>或</br></br>程式設計師服務 | 1.請求者  </br>    （路徑元件）</br>2.  註冊代碼  </br>    （路徑元件） | GET | 包含註冊代碼和資訊的XML或JSON。 請參閱下列結構描述和範例。 | 200 |
 
 {style="table-layout:auto"}
 
 </br>
 
-| 輸入參數 | 說明 |
+| 輸入引數 | 說明 |
 | --- | --- |
-| 請求 | 此操作對其有效的程式設計師請求者ID。 |
-| 註冊碼 | 將顯示在流設備（要輸入到驗證流）上的註冊代碼值。 |
+| 請求者 | 此作業有效的程式設計員requestorId。 |
+| 註冊代碼 | 串流裝置上顯示的註冊代碼值（要輸入驗證流程中）。 |
 
 </br>
 
-## 響應XML架構 {#response-xml-schema}
+## 回應XML結構描述 {#response-xml-schema}
 
 ### 註冊代碼XSD
 
@@ -93,22 +93,22 @@ ht-degree: 0%
 
 | 元素名稱 | 說明 |
 | --- | --- |
-| ID | 註冊代碼服務生成的UUID |
-| 代碼 | 註冊代碼服務生成的註冊代碼 |
-| 請求 | 請求者ID |
+| id | 註冊代碼服務產生的UUID |
+| 程式碼 | 註冊代碼服務產生的註冊代碼 |
+| 請求者 | 請求者ID |
 | mvpd | MVPD ID |
-| 生成 | 註冊代碼建立時間戳（自1970年1月1日以來以毫秒為單位） |
-| 過期 | 註冊代碼過期的時間戳（自1970年1月1日以來以毫秒為單位） |
-| 設備ID | 唯一設備ID（或XSTS令牌） |
-| 設備類型 | 設備類型 |
-| 設備用戶 | 用戶登錄到設備 |
-| 應用ID | 應用程式ID |
+| 已產生 | 註冊代碼建立時間戳記（自1970年1月1日GMT起以毫秒為單位） |
+| 過期 | 註冊代碼過期的時間戳記（自1970年1月1日以來以毫秒為單位GMT） |
+| deviceId | 不重複裝置ID （或XSTS權杖） |
+| deviceType | 裝置型別 |
+| deviceuser | 使用者已登入裝置 |
+| appId | 應用程式ID |
 | appVersion | 應用程式版本 |
-| 註冊URL | 要顯示給最終用戶的登錄Web應用的URL |
+| 註冊URL | 要向一般使用者顯示的登入網頁應用程式的URL |
 
 {style="table-layout:auto"}
 
-### 示例響應 {#sample-response}
+### 範例回應 {#sample-response}
 
 ```XML
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>

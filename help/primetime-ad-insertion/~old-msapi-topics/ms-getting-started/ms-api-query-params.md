@@ -1,6 +1,6 @@
 ---
-title: 清單伺服器查詢參數
-description: 查詢參數告訴清單伺服器客戶端發送請求的類型以及該客戶端希望清單伺服器執行的操作。 有些是必需的，有些則具有特定的可接受格式或值。
+title: 資訊清單伺服器查詢引數
+description: 查詢引數會告知資訊清單伺服器傳送請求的使用者端型別，以及該使用者端希望資訊清單伺服器做什麼。 部分為必要專案，部分則具有可接受的特定格式或值。
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '721'
@@ -9,40 +9,40 @@ ht-degree: 0%
 ---
 
 
-# 清單伺服器查詢參數 {#ms-query-params}
+# 資訊清單伺服器查詢引數 {#ms-query-params}
 
-查詢參數告訴清單伺服器客戶端發送請求的類型以及該客戶端希望清單伺服器執行的操作。 有些是必需的，有些則具有特定的可接受格式或值。
+查詢引數會告知資訊清單伺服器傳送請求的使用者端型別，以及該使用者端希望資訊清單伺服器做什麼。 部分為必要專案，部分則具有可接受的特定格式或值。
 
-完整URL由基URL和問號組成，然後 `parameterName=value` 參數，用符號分隔： `Base URL?name1=value1&name2=value2& . . .&name n=value n`。
+完整的URL包含基底URL，後跟問號，然後 `parameterName=value` 引數，以&amp;符號分隔： `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## 已識別的參數 {#section_072845B7FA94468C8068E9092983C9E6}
+## 已識別的引數 {#section_072845B7FA94468C8068E9092983C9E6}
 
-清單伺服器識別以下參數。 它處理它們或將它們連同所有無法識別的參數一起傳遞給廣告伺服器。
+資訊清單伺服器可辨識下列引數。 它會處理這些引數，或連同所有無法辨識的引數一起傳送至廣告伺服器。
 
-| 鍵 | 說明 | 必需 | 有效值 |
+| 金鑰 | 說明 | 必填 | 有效值 |
 |---|---|---|---|
-| `__sid__` | 清單伺服器用於生成會話ID的唯一ID。 | 是 | 字母數字 |
-| g | 客戶端設備類型 | 當目標規則依賴於設備類型時 | 請參閱清單位置 [客戶端類型](https://adobeprimetime.zendesk.com)。 需要Zendesk訪問。 |
-| k | 自定義廣告目標的關鍵字 | 否 | 格式為URL安全字串 `key1=value1;key2=value2;. . .` |
-| 烏 | 黃金時段廣告插入資產ID。 | 是 | MD5哈希值 |
-| z | 資產的黃金時段廣告插入區域ID。 | 是 | 整數 |
-| enableC3 | 客戶端位於C3窗口中。 如果為true，則僅替換本地可用；否則，替換所有可用。 | 否 | 布爾型 |
-| 活 | 指示內容是Live還是VOD（視頻點播）流。 | Akamai Ad Scaler或iOSSafari客戶。 | 布爾型 |
-| `pabimode` | [啟用部分廣告分段插入](/help/primetime-ad-insertion/~old-msapi-topics/ms-insert-ads/partial-ad-break-insetion.md) 支援。 <br> 如果為true或start，則啟用。<br> 如果為false，則禁用。 | 否（預設為禁用） | start 、 true或false |
-| `ptadwindow` | 廣告縫合窗口的持續時間（秒）:當DVR用戶加入流時，要回到多遠才能查找廣告。 | 否（預設值= 1800） | 0至1800 |
-| `ptassetid` | 發佈者分配和維護的內容的唯一ID。 | 阿卡邁 | URL安全字串 |
-| `ptcdn` | 主機轉碼資產的一個或多個CDN的清單。 請參閱 [多CDN支援](/help/primetime-ad-insertion/~old-creative-repackaging-service/multi-cdn-supportt.md)。 | 否（預設值=Akamai） | 示例：Akamai、Level3、Velting、Comcast |
-| `ptcueformat` | M3U8中存在的自定義廣告提示格式的名稱。 | 否 | DPISimple、DPIScte35、Elemental、NBC、NFL或Turner |
-| `ptfailover` | 向清單伺服器發出信號，以標識主播放清單中指定的主流和故障轉移流，並將它們視為不相交集。 這便於故障切換並防止計時錯誤。 (僅限AppleHLS設備)。 請參閱  [促進HLS播放器切換](/help/primetime-ad-insertion/~old-msapi-topics/ms-insert-ads/hls-switching-to-failover.md)。 | 否 | 真 |
-| `ptmulticall` | 如果設定為true，則會多次向FER發出Auditude廣告；每個廣告時段一個。 如果缺席或設為假，則向FER發出一個廣告。 | 否 | 布爾型 <br> **注釋**:以下要求： <ul><li>`ptcueformat` 參數必須設定為nbc</li><li>將忽略pttimeline參數。</li></ul> |
-| `ptplayer` | 播放器發出請求。 | iOS/薩法里 | ios mobileweb |
-| `ptrendition` | 通過廣告插入自動生成並由Akamai使用。 不要添加或刪除。 | 阿卡邁 |  |
-| `pttagds` | 啟用 [EXT-X — 不連續序列](https://tools.ietf.org/html/draft-pantos-http-live-streaming-19#section-4.3.3.3) 標籤 | 否 | true — 清單伺服器在其發送的每個m3u8檔案中的內容之前包含序列標籤；如果參數不存在或不為true，則清單伺服器不包括序列標籤。 |
-| `pttimeline` | 包含廣告放置和內容所需時間線的字串，該字串覆蓋內容流中的廣告斷點。 | 否 | [VOD時間線](/help/primetime-ad-insertion/~old-msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md) |
-| `pttoken` | 啟用TS段授權令牌。<br> **注釋**:僅支援Akamai CDN令牌 | 對於TS段授權令牌 | 布爾型 |
-| `pttrackingmode` | 啟用廣告跟蹤；自定義客戶端(simple)、伺服器端(sstm)或混合(simplesstm)。 | 否 | simple 、 sstm或simplesstm。<br> **注釋**:如果未包括此參數，則#EX-X-MARKER將注入清單。 請參閱 [EXT-X-MARKER指令](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md)。 |
-| `pttrackingposition` | 指示清單伺服器僅返回廣告跟蹤資訊。 不要在引導請求中指定此參數。 | 客戶端跟蹤 | 字母數字注釋：清單伺服器忽略所有傳遞的值。 但是，如果傳遞空字串或空字串，則清單伺服器將返回M3U8，而不返回跟蹤資訊。 |
-| `pttrackingversion` | 客戶端跟蹤資訊的格式版本。 | 客戶端跟蹤 | v1 、 v2 、 v3或vmap |
-| `scteTracking` | 在JSON V2 Sidecar中提取SCTE跟蹤資訊之前，請提取M3U8。 <br>此參數向清單伺服器指示讀取M3U8的播放器需要檢索SCTE標籤資訊。 | 否(預設值：假) | 真或假。 <br> **注釋**:SCTE-35資料在JSONsidecar中返回，並包含以下查詢參數值組合： <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35`</li><li>`pttrackingversion=v2`</li><li>`scteTracking=true`</li></ul> |
-| `vetargetmultiplier` | 從即時點開始的段數預滾偏移配置為： `(vetargetmultiplier * targetduration + vebufferlength`<br/><br/>**注釋**:僅限Live/Linear | 否(預設值：3.0) | 浮動 |
-| `vebufferLength` | 從即時點開始的秒數。 **注釋**:僅限Live/Linear。 | 否(預設值：3.0) | 浮動 |
+| `__sid__` | 資訊清單伺服器用來產生工作階段ID的唯一ID。 | 是 | 英數字元 |
+| g | 使用者端裝置型別 | 當鎖定目標規則取決於裝置型別時 | 檢視清單于 [使用者端型別](https://adobeprimetime.zendesk.com). 需要Zendesk存取權。 |
+| k | 自訂廣告目標定位的關鍵字 | 否 | 格式中的URL安全字串 `key1=value1;key2=value2;. . .` |
+| u | Primetime廣告插入資產ID。 | 是 | MD5雜湊值 |
+| z | 資產的Primetime廣告插入區域ID。 | 是 | 整數 |
+| enableC3 | 使用者端在C3視窗中。 如果為true，則僅取代本機可用；否則，取代所有可用。 | 否 | 布林值 |
+| live | 指出內容為即時或VOD （視訊隨選）資料流。 | Akamai Ad Scaler或iOS Safari使用者端。 | 布林值 |
+| `pabimode` | [啟用部分廣告插播插入](/help/primetime-ad-insertion/~old-msapi-topics/ms-insert-ads/partial-ad-break-insetion.md) 支援。 <br> 如果true或start則啟用。<br> 若為false則停用。 | 否（預設為停用） | start、true或false |
+| `ptadwindow` | 廣告拼接視窗的持續時間（秒）：當DVR使用者加入資料流時，要回顧多久才會尋找廣告。 | 否（預設= 1800） | 0至1800 |
+| `ptassetid` | 由發佈者指派和維護之內容的唯一ID。 | Akamai廣告縮放器 | URL安全字串 |
+| `ptcdn` | 託管轉碼資產的一或多個CDN清單。 另請參閱 [多CDN支援](/help/primetime-ad-insertion/~old-creative-repackaging-service/multi-cdn-supportt.md). | 否（預設=Akamai） | 範例： Akamai、Level3、Limelight、Comcast |
+| `ptcueformat` | M3U8中存在的自訂廣告提示格式名稱。 | 否 | DPISimple、DPIScte35、Elemental、NBC、NFL或Turner |
+| `ptfailover` | 代表資訊清單伺服器識別主要播放清單中指定的主要和容錯移轉資料流，並將它們視為分離集。 這有助於容錯移轉並防止計時錯誤。 (僅適用於Apple HLS裝置)。 另請參閱  [促進HLS播放器切換](/help/primetime-ad-insertion/~old-msapi-topics/ms-insert-ads/hls-switching-to-failover.md). | 否 | true |
+| `ptmulticall` | 若設為true，則會對FER發出多個自動廣告呼叫；每個廣告插播各一個。 如果不存在或設為false，則會發出一個廣告呼叫來稽核FER。 | 否 | 布林值 <br> **注意**：下列需求： <ul><li>`ptcueformat` 引數必須設定為nbc</li><li>pttimeline引數會被忽略。</li></ul> |
+| `ptplayer` | 發出要求的播放器。 | iOS/Safari | ios-mobileweb |
+| `ptrendition` | 由廣告插入自動產生，並由Akamai使用。 請勿新增或移除。 | Akamai廣告縮放器 |  |
+| `pttagds` | 啟用 [EXT-X — 不連續 — 序列](https://tools.ietf.org/html/draft-pantos-http-live-streaming-19#section-4.3.3.3) 標籤 | 否 | true — 資訊清單伺服器在其傳送的每個m3u8檔案中的內容之前都包含一個序列標籤；如果引數不存在或不為true，則資訊清單伺服器不會包含序列標籤。 |
+| `pttimeline` | 字串，其中包含廣告投放和內容的所需時間軸，可覆寫內容串流中的廣告插播。 | 否 | [VOD時間表](/help/primetime-ad-insertion/~old-msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md) |
+| `pttoken` | 啟用TS區段授權權杖。<br> **注意**：僅支援Akamai CDN Token | 對於TS區段授權Token | 布林值 |
+| `pttrackingmode` | 啟用廣告追蹤；自訂使用者端（簡單）、伺服器端(sstm)或混合(simplesstm)。 | 否 | simple、sstm或simplesstm。<br> **注意**：如果未包含此引數，#EX-X-MARKER會插入資訊清單中。 另請參閱 [EXT-X-MARKER指令](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md). |
+| `pttrackingposition` | 指示資訊清單伺服器僅傳回廣告追蹤資訊。 請勿在啟動程式要求中指定此引數。 | 使用者端追蹤 | 英數字元注意：資訊清單伺服器會忽略所有通過的值。 不過，如果您傳遞null或空字串，資訊清單伺服器會傳回M3U8，而非追蹤資訊。 |
+| `pttrackingversion` | 使用者端追蹤資訊的格式版本。 | 使用者端追蹤 | v1、v2、v3或vmap |
+| `scteTracking` | 先擷取M3U8 ，然後才能在JSON V2側欄中擷取SCTE追蹤資訊。 <br>此引數會向資訊清單伺服器指出，擷取M3U8的播放器需要擷取SCTE標籤資訊。 | 否（預設： false） | true或false。 <br> **注意**：SCTE-35資料會在JSON側欄中傳回，且具有下列查詢引數值組合： <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35`</li><li>`pttrackingversion=v2`</li><li>`scteTracking=true`</li></ul> |
+| `vetargetmultiplier` | 來自即時點的區段數使用設定前段位移： `(vetargetmultiplier * targetduration + vebufferlength`<br/><br/>**注意**：僅限即時/線性 | 否（預設： 3.0） | 浮點數 |
+| `vebufferLength` | 從即時點開始的秒數。 **注意**：僅限即時/線性。 | 否（預設： 3.0） | 浮點數 |

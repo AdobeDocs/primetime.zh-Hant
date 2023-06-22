@@ -13,16 +13,16 @@ ht-degree: 0%
 
 MediaPlayerNotification提供與播放器狀態相關的資訊。
 
-TVSDK提供按時間順序排列的 `MediaPlayerNotification` 通知。 每個通知都包含以下資訊：
+TVSDK提供以下專案的時間順序清單： `MediaPlayerNotification` 通知。 每個通知都包含下列資訊：
 
-* 時間戳
-* 包含以下元素的診斷元資料：
+* 時間戳記
+* 包含下列元素的診斷中繼資料：
 
-   * 類型資訊、警告或錯誤
-   * `code`:通知的數字表示。
-   * `name`:通知的可人讀描述，如SEEK_ERROR
-   * `metadata`:包含有關通知的相關資訊的鍵/值對。 例如，名為 `URL` 提供與通知相關的URL的值。
+   * 輸入INFO、WARN或ERROR
+   * `code`：通知的數字表示法。
+   * `name`：可讀取的通知說明，例如SEEK_ERROR
+   * `metadata`：包含通知相關資訊的索引鍵/值組。 例如，名為的金鑰 `URL` 提供一個值，該值為與通知相關的URL。
 
-   * `innerNotification`:對另一個的引用 `MediaPlayerNotification` 直接影響此通知的對象。
+   * `innerNotification`：對另一個的參照 `MediaPlayerNotification` 直接影響此通知的物件。
 
-您可以將此資訊本地儲存以供以後分析，或將其發送到遠程伺服器以進行日誌記錄和圖形表示。
+您可以將此資訊儲存在本機，供日後分析使用，或傳送至遠端伺服器以供記錄及圖形化顯示。

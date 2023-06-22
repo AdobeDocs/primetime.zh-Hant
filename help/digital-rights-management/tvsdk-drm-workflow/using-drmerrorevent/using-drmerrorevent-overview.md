@@ -1,6 +1,6 @@
 ---
-title: 使用DRMErrorEvent類概述
-description: 使用DRMErrorEvent類概述
+title: 使用DRMErrorEvent類別概觀
+description: 使用DRMErrorEvent類別概觀
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,10 +10,10 @@ ht-degree: 0%
 ---
 
 
-# 使用DRMErrorEvent類概述 {#using-the-drmerrorevent-class-overview}
+# 使用DRMErrorEvent類別概觀 {#using-the-drmerrorevent-class-overview}
 
-黃金時段發稿 `DRMErrorEvent` 當試圖播放受保護內容的黃金時段對象遇到 [與DRM相關的錯誤](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages)。 如果用戶憑據無效， `DRMAuthenticateEvent` 對象重複派單，直到用戶輸入有效憑據或應用程式拒絕進一步嘗試。 應用程式負責偵聽任何其它DRM錯誤事件，以檢測、識別和處理 [與DRM相關的錯誤](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages)。
+Primetime會傳送 `DRMErrorEvent` 物件（當Primetime物件嘗試播放受保護內容時） [DRM相關錯誤](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages). 如果使用者認證無效， `DRMAuthenticateEvent` 物件會重複傳送，直到使用者輸入有效憑證或應用程式拒絕進一步嘗試為止。 應用程式負責監聽任何其他DRM錯誤事件，以偵測、識別及處理 [DRM相關錯誤](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages).
 
-即使使用有效的用戶憑據，內容許可證的條款仍然可以阻止用戶查看加密內容。 例如，可以拒絕用戶嘗試查看未授權應用程式中的內容的訪問（例如，「應用程式允許清單」）。 未授權的應用程式是尚未使用允許列出的應用程式簽名證書籤名的應用程式。 在這種情況下， `DRMErrorEvent` 對象已調度。
+即使使用有效的使用者憑證，內容授權的條款仍可能阻止使用者檢視加密的內容。 例如，使用者嘗試在未經授權的應用程式中檢視內容（例如應用程式允許清單）時，可能會被拒絕存取。 未獲授權的應用程式是指尚未使用允許列出的應用程式簽署憑證簽署的應用程式。 在此案例中， `DRMErrorEvent` 物件已分派。
 
-如果內容已損壞或應用程式的版本與許可證指定的版本不匹配，也可以觸發錯誤事件。 應用程式必須提供適當的錯誤處理機制。
+如果內容損毀或應用程式的版本不符合授權所指定的內容，也會觸發錯誤事件。 應用程式必須提供處理錯誤的適當機制。

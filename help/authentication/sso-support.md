@@ -1,6 +1,6 @@
 ---
-title: 單一登錄支援
-description: 單一登錄支援
+title: 單一登入支援
+description: 單一登入支援
 exl-id: edc3719e-c627-464c-9b10-367a425698c6
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,57 +9,57 @@ ht-degree: 0%
 
 ---
 
-# 單一登錄支援
+# 單一登入支援
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## 概述 {#overview-sso-support}
+## 概觀 {#overview-sso-support}
 
-本文檔介紹在不同平台上通過Adobe Primetime身份驗證支援和支援的單一登錄類型。 本文檔的範圍是介紹支援的和不支援的，每個SSO方法的MVPD覆蓋範圍以及程式設計師需要什麼才能從每個平台上的SSO中受益。
+本檔案說明不同平台上由Adobe Primetime驗證支援和支援的單點登入型別。 本檔案的範圍是說明支援和不支援的內容、每個SSO方法的MVPD涵蓋範圍，以及程式設計師需要哪些內容才能從每個平台的SSO中獲益。
 
-用戶使用其MVPD憑據登錄後，Adobe Primetime驗證將生成一個表示MVPD驗證會話的安全令牌，並使用設備ID將該令牌綁定到用戶設備。 Adobe Primetime驗證將令牌/設備ID儲存在伺服器或設備上。 這樣，用戶在確保交易安全的同時可以更少地輸入其憑據。
+使用者使用其MVPD憑證登入後，Adobe Primetime驗證會產生代表MVPD驗證工作階段的安全權杖，並使用裝置ID將該權杖繫結到使用者的裝置。 Adobe Primetime驗證會將權杖/裝置ID儲存在伺服器或裝置上。 這可讓使用者較少輸入其認證，同時確保交易安全。
 
 >[!NOTE]
 >
->SSO工作流是「高級工作流」包的一部分。 如果有興趣使用此功能，請與您的黃金時段銷售代表聯繫。
+>SSO工作流程是Premium Workflow套件的一部分。 如果您有興趣使用此功能，請聯絡您的Primetime銷售代表。
 
-## 不同平台上SSO的當前狀態 {#current-sso-status-platforms}
+## 各種平台上SSO的目前狀態 {#current-sso-status-platforms}
 
-| 平台/設備 | SSO支援 | SSO類型 | MVPD覆蓋 | 注釋 |
+| 平台/裝置 | SSO支援 | SSO型別 | MVPD涵蓋範圍 | 附註 |
 |:-------------------:|:-----------:|:---------------------------------------:|-----------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Web(JavaScript) | 是 | 共用身份驗證令牌(AdobeSSO) | 全部 | 無跨瀏覽器SSO請按照Programmer Integration Guide for JavaScript中的說明進行操作。 按照說明，SSO預設處於啟用狀態。  啟用每個請求者的身份驗證中斷SSO |
-| iOS | 是 | 平台SSO — 令牌交換 | 取決於Apple的支援 — 清單在此 | 從iOS10號開始，Apple和Adobe為參與的程式設計師和MVPD引入了SSO功能。 通過使用最新的AdobeiOSSDK或使用Adobe的無客戶端REST API並實現AppleSSO功能，您可以從iOS設備上的SSO中受益。 此處是SDK實現的更多詳細資訊，此處是無客戶端實現的更多詳細資訊。 額外注釋： — 如果不想使用AppleSSO，則在同一供應商的應用程式（可共用儲存的同一捆綁包ID）和ID(IDFV)之間仍然可以有限的SSO，因此SSO僅限於同一供應商的應用。 |
-| 安卓 | 是 | 共用身份驗證令牌(AdobeSSO) | 全部 | 如果用戶不接受WRITE_EXTERNAL_STORAGE權限請求，庫將使用本地沙盒儲存。 本例中的含義是，使用本地儲存時，不同應用程式之間將不存在SSO。 |
-| tvOS — 新AppleTV | 是 | 平台SSO — 令牌交換 | 取決於Apple的支援 — 清單在此 | 從tvOS 10開始，Apple和Adobe為參與的程式設計師和MVPD引入了SSO功能。 通過使用最新的AdobetvOS SDK或使用Adobe的無客戶端REST API並實現AppleSSO功能，您可以從tvOS設備上的SSO中受益。 有關tvOS SDK的詳細資訊：此處和此處，以及有關無客戶端實施的詳細資訊。 |
-| 羅庫 | 是 | 共用身份驗證令牌(AdobeSSO) | 即將提供大量覆蓋面完整清單。 | Roku SSO與Clientless API一起開箱即用，適用於所有遵守Roku准則的客戶，無需特殊實施。 SSO基於Roku正在安全地發送到Adobe的設備標識資訊。 |
-| Amazon火電 | 是 | 共用身份驗證令牌(AdobeSSO) | 即將提供大量覆蓋面完整清單。 | FireTV SDK基於Android功能提供對單一登錄的支援。 此平台上的SSO僅在目前使用AdobeFireTV SDK的應用之間可用。 此處提供有關新FireTV SDK的詳細資訊。 在無客戶端API上實施的FireTV應用將能夠從EOY 2018的SSO中獲益。 |
-| Xbox 360 | 否 |  |  | 沒有我們可以利用的設備ID。 有應用程式ID，因此用戶不必每次都進行身份驗證。 |
-| Xbox One | 否 |  |  | 沒有我們可以利用的設備ID。 有應用程式ID，因此用戶不必每次都進行身份驗證。 |
-| Windows 8/10 | 否 |  |  | 沒有我們可以利用的設備ID。 有應用程式ID，因此用戶不必每次都進行身份驗證。 |
-| 三星電視 | 否 |  |  | 沒有我們可以利用的設備ID。 有應用程式ID，因此用戶不必每次都進行身份驗證。 |
+| 網頁(JavaScript) | 是 | 共用驗證Token (AdobeSSO) | 全部 | 無跨瀏覽器SSO請依照JavaScript適用的程式設計人員整合指南中的指示操作。 依照指示，SSO預設為啟用。  啟用每個請求者的驗證會中斷SSO |
+| iOS | 是 | 平台SSO — 權杖交換 | 根據Apple支援 — 清單顯示在這裡 | 從iOS 10開始，Apple和Adobe為參與的程式設計人員和MVPD推出SSO功能。 透過使用最新AdobeiOS SDK或Adobe的無使用者端REST API並實作Apple SSO功能，您可以在iOS裝置上從SSO獲益。 這裡提供SDK實作的詳細資訊，這裡提供無使用者端實作的詳細資訊。 額外附註： — 如果您不想使用Apple SSO，同一廠商的應用程式（相同的套件組合ID）之間共用儲存空間和ID (IDFV)時，仍然可以有有限的SSO，因此SSO僅限於同一廠商的應用程式。 |
+| Android | 是 | 共用驗證Token (AdobeSSO) | 全部 | 如果使用者不接受WRITE_EXTERNAL_STORAGE許可權要求，程式庫將會使用本機沙箱儲存空間。 此案例的含意是，使用本機儲存裝置時，不同應用程式之間不會有SSO。 |
+| tvOS — 全新Apple TV | 是 | 平台SSO — 權杖交換 | 根據Apple支援 — 清單顯示在這裡 | 從tvOS 10，Apple和Adobe為參與的程式設計人員和MVPD引入了SSO功能。 只要使用最新AdobetvOS SDK或Adobe的無使用者端REST API，並實作Apple SSO功能，您就可以從tvOS裝置上的SSO獲益。 有關tvOS SDK的更多詳細資料：此處和此處，以及有關無使用者端實作的更多詳細資料。 |
+| Roku | 是 | 共用驗證Token (AdobeSSO) | 重要涵蓋範圍完整清單即將提供。 | Roku SSO可立即與無使用者端API搭配使用，適合所有遵循Roku指引的客戶，無需特殊實施。 SSO是以Roku安全傳送至Adobe的裝置識別資訊為基礎。 |
+| Amazon FireTV | 是 | 共用驗證Token (AdobeSSO) | 重要涵蓋範圍完整清單即將提供。 | FireTV SDK支援以Android功能為基礎的單一登入。 此平台上的SSO僅可在目前使用AdobeFireTV SDK的應用程式之間使用。 如需新FireTV SDK的詳細資訊，請參閱此處。 在Clienless API上實作的FireTV應用程式將可受益於EOY 2018的SSO。 |
+| Xbox 360 | 否 |  |  | 沒有可用的裝置ID。 應用程式ID可供使用，因此使用者不需要每次都驗證。 |
+| Xbox One | 否 |  |  | 沒有可用的裝置ID。 應用程式ID可供使用，因此使用者不需要每次都驗證。 |
+| Windows 8/10 | 否 |  |  | 沒有可用的裝置ID。 應用程式ID可供使用，因此使用者不需要每次都驗證。 |
+| Samsung TV | 否 |  |  | 沒有可用的裝置ID。 應用程式ID可供使用，因此使用者不需要每次都驗證。 |
 
-### Xbox 360和Xbox One上的注釋 {#notes-xbox-360}
+### Xbox 360和Xbox One的注意事項 {#notes-xbox-360}
 
-* **Xbox 360**- Xbox 360依靠Live服務提供嵌入設備ID的令牌。 設備ID的appID值中的Live Service層，使其僅限於應用。 對於Xbox 360,Microsoft提供了AdobeJava庫以幫助解析令牌。
+* **Xbox 360**- Xbox 360仰賴即時服務提供內嵌deviceID的權杖。 Live Service層級為deviceID的appID值，使其範圍僅限於應用程式。 對於Xbox 360，Microsoft提供AdobeJava程式庫以協助剖析權杖。
 
-* **Xbox One** — 將發佈JSON Web令牌，該令牌用發佈者的cert/key加密並由Microsoft簽名。 Adobe從名為DPI（設備配對ID）的參數中提取設備ID，這與Xbox 360參數PDID（合作夥伴設備ID）不同。 PDID也存在於Xbox One中，但是應用此新參數「設備配對ID」(DPI)替換。
+* **Xbox One** — 將發行使用發佈者的憑證/金鑰加密並由Microsoft簽署的JSON Web權杖。 Adobe會從名為DPI (Device Pairwise ID)的引數擷取deviceID，此引數與Xbox 360引數PDID (Partner Device ID)不同。 PDID也存在於Xbox One中，但旨在由這個新引數「Device Pairwise ID」(DPI)取代。
 
 
-### 禁用SSO {#disable-sso}
+### 停用SSO {#disable-sso}
 
-在某些情況下，某些應用或站點將希望禁用SSO以滿足高級業務案例。
+在某些情況下，某些應用程式或網站會想要停用SSO來滿足進階業務案例。
 
-* **對於JS和本機SDK**  — 黃金時段身份驗證支援團隊可以禁用請求者ID / MVPD對的SSO。 無需在站點或本機應用中執行任何工作。  一旦黃金時段身份驗證支援團隊禁用了SSO，使用指定的RequestorId / MVPD對執行的身份驗證將不會與使用不同請求者ID的站點或應用共用。 此外，具有不同請求者ID的現有身份驗證對於禁用SSO的請求者ID/MVPD組合將無效。 技術上，SSO禁用是通過將AuthN令牌綁定到特定請求者ID/MVPD組合來實現的。
-* **對於無客戶端API**  — 通過在REST調用中指定非空appId參數，可以在無客戶端身份驗證流中禁用SSO。 只要該字串對請求者ID是唯一的，就可以使用任何字串作為值。 請注意，對於無客戶端API，程式設計師/引導程式必須更改站點或應用程式，以添加此特定於請求者的參數。
+* **適用於JS與原生SDK** - Primetime驗證支援團隊可以為請求者ID / MVPD配對停用SSO。 不需要在網站或原生應用程式中工作。  一旦Primetime驗證支援團隊停用SSO，使用指定的RequestorId / MVPD配對執行的驗證將不會與使用不同請求者ID的網站或應用程式共用。 此外，具有不同請求者ID的現有驗證對於已停用SSO的請求者ID / MVPD組合將無效。 技術上，停用SSO的作法是將AuthN權杖繫結至特定的請求者ID/MVPD組合。
+* **適用於無使用者端API**  — 您可以在REST呼叫中指定非空白的appId引數，在無使用者端驗證流程中停用SSO。 您可以使用任何字串作為值，前提是該字串對於請求者ID而言是唯一的。 請注意，針對無使用者端API，程式設計師/實作人員必須變更網站或應用程式，才能新增此請求者特有的引數。
 
 >[!IMPORTANT]
 >
->無客戶端API SSO的重要說明：某些MVPD要求每個網路（請求者ID）執行其自己的驗證流。 對於基於SDK的流(iOS等),SDK會自動處理。 但是，對於無客戶端API，需要由程式設計師處理。 我們強烈建議程式設計師在此時不要為無客戶端API啟用SSO流，而是為設備ID使用設備ID +應用ID組合。 Adobe還將致力於改進無客戶端API流，以便建立正確的SSO。
+>無使用者端API SSO的重要注意事項：有些MVPD會要求每個網路（請求者ID）執行自己的驗證流程。 對於以SDK為基礎的流程(iOS等)，這會由SDK自動處理。 不過，針對無使用者端API，這必須由程式設計師處理。 我們強烈建議程式設計師此時不要為無使用者端API啟用SSO流程，而是將裝置ID +應用程式ID組合用於裝置ID。 Adobe也將致力於改善無使用者端API流程，以便建立適當的SSO。
 
-### 註銷 {#logout-sso-support}
+### 登出 {#logout-sso-support}
 
-程式設計師需要知道，在一次登入上下文中執行的「註銷」操作將刪除設備上的所有令牌，用戶將跨應用/站點註銷。
+程式設計師必須注意，在單一登入內容中的「登出」動作，若於單一應用程式/單一網站上執行，將會刪除裝置上的所有權杖，且使用者將會跨應用程式/網站登出。
 
-如果滿足SSO條件（無論是啟用還是禁用SSO），將執行註銷，並刪除所有驗證和授權資訊。
+如果符合SSO條件（無論是否啟用或停用SSO），將會執行登出，並刪除所有驗證和授權資訊。

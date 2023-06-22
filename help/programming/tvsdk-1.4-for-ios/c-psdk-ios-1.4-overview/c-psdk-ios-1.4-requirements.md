@@ -1,6 +1,6 @@
 ---
 description: TVSDK requires specific properties for media content, manifest content, and software versions.
-title: 要求
+title: 需求
 exl-id: 2b81ae19-7907-4038-80e1-f579a8c04540
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 ---
 
-# 要求 {#requirements}
+# 需求 {#requirements}
 
-TVSDK需要媒體內容、清單內容和軟體版本的特定屬性。
+TVSDK需要媒體內容、資訊清單內容和軟體版本的特定屬性。
 
 ## System and software requirements {#section_61C32A0209C44230B392B113B85643EE}
 
@@ -25,11 +25,11 @@ Check the restrictions and requirements for streams and playlists (manifests), i
 
 | Content segment key frames | Each content segment must begin with a key frame. |
 |---|---|
-| 即時/線性視頻中的序列號 | 必須在任何給定時間為主內容匹配所有比特率格式副本。 |
+| 即時/線性視訊中的序號 | 在任何指定時間，主要內容的所有位元速率轉譯之間都必須相符。 |
 
-## #EXT-X-VERSION要求 {#section_C03D3DCE1D244E26BBD2C1D7144FDFBD}
+## #EXT-X-VERSION統需求 {#section_C03D3DCE1D244E26BBD2C1D7144FDFBD}
 
-版本 `#EXT-X-VERSION` 的 [!DNL .m3u8] 檔案會影響應用程式可用的功能以及 `EXT` 標籤在播放清單/清單中有效。
+的版本 `#EXT-X-VERSION` 在 [!DNL .m3u8] 檔案會影響您的應用程式可使用哪些功能，以及 `EXT` 標籤在您的播放清單/資訊清單中有效。
 
 `#EXT-X-VERSION`
 
@@ -50,8 +50,8 @@ Clients and servers must implement the versions in the following way:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="1"> <span class="codeph"> EXT-X — 版本：2 </span> </td> 
-   <td colname="2"> IV屬性 <span class="codeph"> EXT-X鍵 </span> 標籤。 </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION：2 </span> </td> 
+   <td colname="2"> 的IV屬性 <span class="codeph"> EXT-X-KEY </span> 標籤之間。 </td> 
   </tr> 
   <tr> 
    <td colname="1"> <span class="codeph"></span> </td> 
@@ -67,10 +67,10 @@ Clients and servers must implement the versions in the following way:
      <ul id="ul_99E24D013E3141308B5A57446A9B8033"> 
       <li id="li_F36E65ADD2CA451C82FF18DBD5667927"><span class="codeph"></span> </li> 
       <li id="li_8C653168A7B84D11AC233E7548A8D2EF"><span class="codeph"></span> </li> 
-      <li id="li_2922B34717CB4F6189068529CDBE6D10">的 <span class="codeph"> 僅EXT-X-I — 幀 </span> 標籤 </li> 
-      <li id="li_D015D78E217641D7867EB509E9F9EEE2">的 <span class="codeph"> EXT-X-MEDIA </span> 標籤 </li> 
-      <li id="li_CA068EA381984F5497FE67617CA8BB34">的 <span class="codeph"> 音頻 </span> 和 <span class="codeph"> 視頻 </span> 屬性 <span class="codeph"> EXT-X — 流 — INF </span> 標籤 </li> 
-      <li id="li_EE78CC7D194A4EB2897F9AE8E4B081B8"> TVSDK備用音頻 </li> 
+      <li id="li_2922B34717CB4F6189068529CDBE6D10">此 <span class="codeph"> 僅限EXT-X-I-FRAMES </span> 標籤 </li> 
+      <li id="li_D015D78E217641D7867EB509E9F9EEE2">此 <span class="codeph"> EXT-X-MEDIA </span> 標籤 </li> 
+      <li id="li_CA068EA381984F5497FE67617CA8BB34">此 <span class="codeph"> 音訊 </span> 和 <span class="codeph"> 視訊 </span> 屬性 <span class="codeph"> EXT-X-STREAM-INF </span> 標籤 </li> 
+      <li id="li_EE78CC7D194A4EB2897F9AE8E4B081B8"> TVSDK替代音訊 </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 

@@ -1,6 +1,6 @@
 ---
-title: 視頻分析
-description: 視頻分析
+title: 視訊分析
+description: 視訊分析
 copied-description: true
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
@@ -10,5 +10,5 @@ ht-degree: 0%
 ---
 
 
-# 視頻分析 {#video-analytics}
+# 視訊分析 {#video-analytics}
 

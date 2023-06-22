@@ -1,6 +1,6 @@
 ---
-title: 從FMRMS 1.0或1.5遷移到AdobeAccess 2.0及更高版本
-description: 從FMRMS 1.0或1.5遷移到AdobeAccess 2.0及更高版本
+title: 從FMRMS 1.0或1.5移轉至Adobe存取2.0和更高版本
+description: 從FMRMS 1.0或1.5移轉至Adobe存取2.0和更高版本
 copied-description: true
 exl-id: 9aadf9a0-a7c5-466b-9dd1-c1bab2b8bfc6
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,22 +10,22 @@ ht-degree: 0%
 
 ---
 
-# 從FMRMS 1.0或1.5遷移到AdobeAccess 2.0及更高版本 {#migrating-from-fmrms-or-to-adobe-access-and-above}
+# 從FMRMS 1.0或1.5移轉至Adobe存取2.0和更高版本 {#migrating-from-fmrms-or-to-adobe-access-and-above}
 
-為了繼續為使用Flash媒體Rights Management伺服器(FMRMS)1.0或1.5打包的內容頒發許可證，必鬚根據Adobe訪問SDK將許可證和策略資料從LiveCycleES伺服器遷移到客戶的新伺服器。 重要步驟是：
+為了繼續為使用Flash MediaRights Management伺服器(FMRMS) 1.0或1.5封裝的內容發行授權，授權和原則資料必須從LiveCycleES伺服器移轉到客戶基於Adobe存取SDK的新伺服器。 重要步驟如下：
 
-1. 導入許可證資訊
-1. 將FMRMS策略轉換為Adobe訪問格式
-1. 通過 `FMRMSv1RequestHandler` 和 `FMRMSv1MetadataHandler`
+1. 匯入授權資訊
+1. 將FMRMS原則轉換為Adobe存取格式
+1. 透過支援1.x相容性要求 `FMRMSv1RequestHandler` 和 `FMRMSv1MetadataHandler`
 
-要將許可證資訊從LiveCycleES導入到基於Adobe訪問的伺服器，請參閱中提供的示例資料庫指令碼 [!DNL Reference Implementation\Server\migration\db] 的子菜單。 提供了示例指令碼，用於將相關資料從MySQL、Oracle或SQL Server資料庫導出為CSV檔案格式。 導出資料後，可將其導入到您選擇的資料庫中。 導出的許可證資訊包括許可證ID、打包時分配的內容ID、使用的策略ID、打包內容的時間以及內容加密密鑰。 對於Adobe訪問，將1.x內容元資料轉換為Adobe訪問元資料格式時需要此資訊(請參見 `FMRMSv1RequestHandler` 和 `FMRMSv1MetadataHandler`)。 在引用實現中，此資料儲存在許可證資料庫表中，並由 `RefImplMetadataConvReqHandler`。
+若要將LiveCycleES的授權資訊匯入您的Adobe存取型伺服器，請參閱 [!DNL Reference Implementation\Server\migration\db] 資料夾。 提供範例指令碼，用於將相關資料從MySQL、Oracle或SQL Server資料庫匯出為CSV檔案格式。 匯出資料後，即可將其匯入您選擇的資料庫。 匯出的授權資訊包括授權ID、封裝時指派的內容ID、所用原則的ID、內容封裝的時間以及內容加密金鑰。 若為Adobe存取，須提供此資訊才能將1.x內容中繼資料轉換為Adobe存取中繼資料格式(請參閱 `FMRMSv1RequestHandler` 和 `FMRMSv1MetadataHandler`)。 在參考實作中，此資料會儲存在「授權資料庫」表格中，並由 `RefImplMetadataConvReqHandler`.
 
-現有策略需要轉換為Adobe訪問格式，以便在轉換元資料和為1.0或1.5內容頒發許可證時使用這些策略。 Reference Implementation\Server\migration資料夾包含用於基於舊策略建立Adobe訪問策略的示例代碼。
+現有原則需要轉換成Adobe存取格式，才能在轉換1.0或1.5內容的中繼資料和核發授權時使用那些原則。 Reference Implementation\Server\migration資料夾包含根據舊有原則建立Adobe存取原則的範常式式碼。
 
-如果要從FMRMS 1.0遷移到「Adobe訪問」，請參見V1_0PolicyConverter.java示例。 通過運行「」編譯示例代碼 `ant-f build-migration.xml build-1.0-converter`&quot;(指令碼要求1.0和Adobe訪問庫位於 [!DNL libs/1.0] 和libs/flashaccess)。 編輯converter.properties檔案以指向LiveCycleES伺服器。 然後運行「 `ant -f build-migration.xml migrate-all-1.0-policies`&quot;將所有FMRMS 1.0策略轉換為Adobe訪問格式。
+如果您要從FMRMS 1.0移轉至Adobe存取，請參閱V1_0PolicyConverter.java範例。 執行&#39;&#39;以編譯範常式式碼 `ant-f build-migration.xml build-1.0-converter`&quot; (指令碼預期1.0和Adobe存取程式庫位於 [!DNL libs/1.0] 和libs/flashaccess)。 編輯converter.properties檔案以指向您的LiveCycleES伺服器。 然後執行「 `ant -f build-migration.xml migrate-all-1.0-policies`»以將所有FMRMS 1.0原則轉換為Adobe存取格式。
 
-如果要從FMRMS 1.5遷移到Adobe訪問，請參見V1_5PolicyConverter.java示例。 通過運行「」編譯示例代碼 `ant-f build-migration.xml build-1.5-converter`&quot;（指令碼希望1.5和3.0庫分別位於libs/1.5和libs/flashaccess中）。 編輯converter.properties檔案以指向LiveCycleES伺服器。 然後運行「 `ant -f build-migration.xml migrate-all-1.5-policies`&quot;將所有FMRMS 1.5策略轉換為Adobe訪問格式。
+如果您要從FMRMS 1.5移轉至Adobe存取，請參閱V1_5PolicyConverter.java範例。 執行&#39;&#39;以編譯範常式式碼 `ant-f build-migration.xml build-1.5-converter`「 （指令碼預期1.5和3.0程式庫分別位於libs/1.5和libs/flashaccess）。 編輯converter.properties檔案以指向您的LiveCycleES伺服器。 然後執行「 `ant -f build-migration.xml migrate-all-1.5-policies`»以將所有FMRMS 1.5原則轉換為Adobe存取格式。
 
-轉換後的策略將寫入一組檔案。 此外，PolicyConverter將輸出一個CSV檔案，其中包含舊策略ID到新策略ID的映射。 此檔案可導入到引用實現資料庫的「PolicyConversion」表中，並將由 `RefImplMetadataConvReqHandler`。
+轉換的原則將寫入一組檔案中。 此外，PolicyConverter會輸出包含舊原則ID與新原則ID對應的CSV檔案。 此檔案可匯入參考實作資料庫的「PolicyConversion」表格，並將由以下人員使用 `RefImplMetadataConvReqHandler`.
 
-在相關資料遷移到基於Adobe訪問的伺服器後，您就可以實施對1.x相容性請求的支援。 請參閱 `RefImplUpgradeV1ClientHandler` 和 `RefImplMetadataConvReqHandler` 在參考實現中，瞭解如何處理這些類型的請求的示例。
+相關資料移轉至Adobe存取型伺服器後，您就可以實作1.x相容性要求的支援。 另請參閱 `RefImplUpgradeV1ClientHandler` 和 `RefImplMetadataConvReqHandler` 在參考實作中，以取得如何處理這些型別請求的範例。

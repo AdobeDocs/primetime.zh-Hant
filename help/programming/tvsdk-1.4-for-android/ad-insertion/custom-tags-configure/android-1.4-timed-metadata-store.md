@@ -1,6 +1,6 @@
 ---
-description: 應用程式必須在適當的時間使用相應的TimedMetadata對象。
-title: 在調度時儲存定時元資料對象
+description: 您的應用程式必須在適當的時間使用適當的TimedMetadata物件。
+title: 在傳送定時中繼資料物件時將其儲存
 exl-id: db8b303a-441e-4cc0-a80d-dc9afda482b8
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,20 +9,20 @@ ht-degree: 0%
 
 ---
 
-# 在調度時儲存定時元資料對象 {#store-timed-metadata-objects-as-they-are-dispatched}
+# 在傳送定時中繼資料物件時將其儲存 {#store-timed-metadata-objects-as-they-are-dispatched}
 
-應用程式必須在適當的時間使用相應的TimedMetadata對象。
+您的應用程式必須在適當的時間使用適當的TimedMetadata物件。
 
-在內容分析期間（在播放之前）,TVSDK識別訂閱的標籤並將這些標籤通知您的應用程式。 與每個關聯的時間 `TimedMetadata` 是播放時間線上的本地時間。
+在內容剖析期間（發生在播放之前），TVSDK會識別訂閱的標籤，並通知您的應用程式這些標籤。 與每個報表套裝相關聯的時間 `TimedMetadata` 是播放時間軸上的當地時間。
 
-您的應用程式必須完成以下任務：
+您的應用程式必須完成下列工作：
 
-1. 跟蹤當前播放時間。
-1. 將當前播放時間與已調度時間匹配 `TimedMetadata` 對象。
+1. 追蹤目前的播放時間。
+1. 比對目前播放時間與已傳送的時間 `TimedMetadata` 物件。
 
-1. 使用 `TimedMetadata` 其中，開始時間等於當前本地播放時間。
+1. 使用 `TimedMetadata` 其中開始時間等於目前的本機播放時間。
 
-   以下示例說明如何保存 `TimedMetadata` 對象 `ArrayList`。
+   以下範例說明如何儲存 `TimedMetadata` 中的物件 `ArrayList`.
 
    ```java
    private List<TimedMetadata> _timedMetadataList = new ArrayList<TimedMetadata>(); 

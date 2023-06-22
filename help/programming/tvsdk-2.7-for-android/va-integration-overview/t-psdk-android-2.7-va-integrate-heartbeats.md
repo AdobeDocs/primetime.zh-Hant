@@ -1,6 +1,6 @@
 ---
-title: 初始化和配置視頻分析
-description: 初始化和配置視頻分析
+title: 初始化和設定視訊分析
+description: 初始化和設定視訊分析
 copied-description: true
 exl-id: add832e3-5a17-4235-a76f-ae342e1d85f0
 source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
@@ -10,42 +10,42 @@ ht-degree: 0%
 
 ---
 
-# 初始化和配置視頻分析 {#initialize-and-configure-video-analytics}
+# 初始化和設定視訊分析 {#initialize-and-configure-video-analytics}
 
-您可以配置播放器以跟蹤和分析視頻使用。
-在激活視頻跟蹤（視頻心跳）之前，請確保您有以下幾點：
+您可以設定播放器以追蹤和分析視訊使用情況。
+在啟用視訊追蹤（視訊心率）之前，請確定您具備下列條件：
 
-* 用於Android的TVSDK 2.5。
-* 配置/初始化資訊
+* 適用於Android的TVSDK 2.5。
+* 設定/初始化資訊
 
-   請聯繫您的Adobe代表，瞭解您的特定視頻跟蹤帳戶資訊：
+   請聯絡您的Adobe代表，取得您的特定視訊追蹤帳戶資訊：
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>重要提示：此JSON配置檔案名必須保留 <span class="filepath"> ADBMobileConfig.json </span>。 無法更改此配置檔案的名稱和路徑。 此檔案的路徑必須為 <span class="filepath"> &lt;source root=""&gt;/assets </span>。 </p> </td> 
+   <td colname="col2"> <p>重要：此JSON設定檔案名稱必須保留 <span class="filepath"> ADBMobileConfig.json </span>. 無法變更此設定檔的名稱和路徑。 此檔案的路徑必須是 <span class="filepath"> &lt;source root=""&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> AppMeasurement跟蹤伺服器終結點 </td> 
-   <td colname="col2"> Adobe Analytics(以前為SiteCatalyst)後端集合終結點的URL。 </td> 
+   <td colname="col1"> AppMeasurement追蹤伺服器端點 </td> 
+   <td colname="col2"> Adobe Analytics (前身為SiteCatalyst)後端集合端點的URL。 </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 視頻分析跟蹤伺服器終結點 </td> 
-   <td colname="col2"> 視頻分析後端集合終結點的URL。 這是發送所有視頻心跳跟蹤呼叫的地方。 <p>提示：訪問者跟蹤伺服器的URL與分析跟蹤伺服器的URL相同。 有關實施訪問者ID服務的資訊，請參見 <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> 實施ID服務 </a>。 </p> </td> 
+   <td colname="col1"> Video Analytics追蹤伺服器端點 </td> 
+   <td colname="col2"> 視訊分析後端集合端點的URL。 這是傳送所有視訊心率追蹤呼叫的位置。 <p>提示：訪客追蹤伺服器的URL與Analytics追蹤伺服器的URL相同。 如需實作訪客ID服務的相關資訊，請參閱 <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> 實作ID服務 </a>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 帳戶名 </td> 
-   <td colname="col2"> 也稱為報告套件ID(RSID)。 </td> 
+   <td colname="col1"> 帳戶名稱 </td> 
+   <td colname="col2"> 也稱為報表套裝ID (RSID)。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Marketing Cloud組織ID </td> 
-   <td colname="col2"> 實例化訪問者元件所需的字串值。 </td> 
+   <td colname="col2"> 具現化訪客元件所需的字串值。 </td> 
   </tr> 
  </tbody> 
 </table>
 
-要在播放器中配置視頻跟蹤，請執行以下操作：
+若要在播放器中設定視訊追蹤：
 
 1. 確認中的載入時間選項 `ADBMobileConfig.json` 資源檔案正確。
 
@@ -76,30 +76,30 @@ ht-degree: 0%
    }
    ```
 
-   此JSON格式的配置檔案與TVSDK捆綁為資源。 播放器僅在載入時讀取這些值，並且這些值在應用程式運行時保持不變。
+   此JSON格式設定檔案是隨TVSDK提供的資源。 您的播放器僅在載入時讀取這些值，而值在應用程式執行時保持不變。
 
-   要配置載入時間選項：
+   若要設定載入時間選項：
 
 
-   1. 確認 `ADBMobileConfig.json` 檔案包含相應的值(由Adobe提供)。
-   1. 確認此檔案位於 `assets/` 的子菜單。
+   1. 確認 `ADBMobileConfig.json` 檔案包含適當的值(由Adobe提供)。
+   1. 確認此檔案位於 `assets/` 資料夾。
 
-      此資料夾必須位於應用程式源樹的根中。
+      此資料夾必須位於應用程式來源樹狀結構的根目錄中。
 
-   1. 編譯並構建應用程式。
-   1. 部署並運行捆綁的應用程式。
+   1. 編譯及建置您的應用程式。
+   1. 部署並執行隨附的應用程式。
 
-      有關這些AppMeasurement設定的詳細資訊，請參見 [Adobe Analytics視頻測量](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en)。
+      如需這些AppMeasurement設定的詳細資訊，請參閱 [在Adobe Analytics中測量視訊](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 
-1. 初始化和配置視頻心跳跟蹤元資料。
+1. 初始化和設定視訊心率追蹤中繼資料。
 
    >[!IMPORTANT]
    >
-   >您可以停止視頻分析模組中流，並根據需要重新初始化它。 在重新初始化模組之前，請確保視頻分析元資料也更新為正確的內容元資料。 要重新建立元資料，請重複以下前兩步（子步驟） **a** 和 **b**)。
+   >您可以停止Video Analytics模組的Midstream，並視需要再次重新初始化。 在重新初始化模組之前，請確定視訊分析中繼資料也已更新為正確的內容中繼資料。 若要重新建立中繼資料，請重複下列前兩個步驟（子步驟） **a** 和 **b**)。
 
-   1. 建立視頻分析元資料的實例。
+   1. 建立Video Analytics中繼資料的例項。
 
-      此實例包含啟用視頻心跳跟蹤所需的所有配置資訊。 例如：
+      此例項包含啟用視訊心率追蹤所需的所有設定資訊。 例如：
 
       ```java
       private VideoAnalyticsMetadata getVideoAnalyticsTrackingMetadata() { 
@@ -120,33 +120,33 @@ ht-degree: 0%
       }
       ```
 
-   1. 初始化視頻分析提供程式。
+   1. 初始化Video Analytics提供者。
 
-      建立媒體播放器實例後，必須建立視頻分析提供程式實例並向其提供應用程式上下文。
+      建立媒體播放器例項後，您必須建立Video Analytics提供者例項，並提供其應用程式內容。
 
       >[!TIP]
       >
-      >始終為每個內容播放會話建立新的提供程式實例，並在分離媒體播放器實例後刪除以前的引用。
+      >請一律為每個內容播放工作階段建立新的提供者例項，並在您分離媒體播放器例項後移除先前的參照。
 
       ```java
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. 在 `videoAnalyticsProvider` 實例。
+   1. 在上設定視訊分析中繼資料 `videoAnalyticsProvider` 執行個體。
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. 將媒體播放器實例連接到 `videoAnalyticsProvider` 實例：
+   1. 將媒體播放器例項附加至 `videoAnalyticsProvider` 例項：
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
       ```
 
-   1. 銷毀視頻分析提供程式。
+   1. 銷毀Video Analytics提供者。
 
-      在開始新的內容播放會話之前，請銷毀視頻提供程式的先前實例。 收到內容完成事件（或通知）後，請等待幾分鐘，然後銷毀視頻分析提供程式實例。 立即銷毀實例可能會干擾視頻分析提供程式發送「視頻完整」ping的能力。
+      開始新的內容播放工作階段之前，請先銷毀視訊提供者的上一個例項。 收到內容完成事件（或通知）後，請稍候幾分鐘再銷毀視訊分析提供者執行個體。 立即摧毀執行個體可能會干擾Video Analytics提供者傳送「視訊完成」Ping的能力。
 
       ```java
       if (videoAnalyticsProvider) { 
@@ -155,13 +155,13 @@ ht-degree: 0%
       }
       ```
 
-   1. 手動將Live/Linear流標籤為完成。
+   1. 手動將即時/線性資料流標示為完成。
 
-      如果您在一個即時流上有各種集數，則可以使用完整的API手動將集數標籤為完整。 這將結束當前視頻集的視頻跟蹤會話，並且您可以為下一集啟動新的跟蹤會話。
+      如果您有一個即時資料流上有各種劇集，可以使用完整的API手動將劇集標示為完成。 如此將結束目前視訊集的視訊追蹤工作階段，而您可以為下一集開始新的追蹤工作階段。
 
       >[!TIP]
       >
-      >此API是可選的，不適用於VOD視頻跟蹤。
+      >此API為選用，不適用於VOD視訊追蹤。
 
       ```java
       if (videoAnalyticsProvider) { 

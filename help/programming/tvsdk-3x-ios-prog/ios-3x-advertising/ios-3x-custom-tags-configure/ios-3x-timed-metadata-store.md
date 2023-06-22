@@ -1,6 +1,6 @@
 ---
-description: 您的應用程式必須在適當的時間使用相應的PTTimedMetadata對象。
-title: 在調度時儲存定時元資料對象
+description: 您的應用程式必須在適當的時間使用適當的PTTimedMetadata物件。
+title: 在傳送定時中繼資料物件時將其儲存
 exl-id: 8b859e8d-eb4c-48f9-a95e-1bcc35a2a520
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,24 +9,24 @@ ht-degree: 0%
 
 ---
 
-# 在調度時儲存定時元資料對象 {#store-timed-metadata-objects-as-they-are-dispatched}
+# 在傳送定時中繼資料物件時將其儲存 {#store-timed-metadata-objects-as-they-are-dispatched}
 
-您的應用程式必須在適當的時間使用相應的PTTimedMetadata對象。
+您的應用程式必須在適當的時間使用適當的PTTimedMetadata物件。
 
-在內容分析期間（在播放之前）,TVSDK識別訂閱的標籤並將這些標籤通知您的應用程式。 與每個關聯的時間 `PTTimedMetadata` 是播放時間線上的絕對時間。
+在內容剖析期間（發生在播放之前），TVSDK會識別訂閱的標籤，並通知您的應用程式這些標籤。 與每個報表套裝相關聯的時間 `PTTimedMetadata` 是播放時間軸的絕對時間。
 
-您的應用程式必須完成以下任務：
+您的應用程式必須完成下列工作：
 
-1. 跟蹤當前播放時間。
-1. 將當前播放時間與已調度時間匹配 `PTTimedMetadata` 對象。
+1. 追蹤目前的播放時間。
+1. 比對目前播放時間與已傳送的時間 `PTTimedMetadata` 物件。
 
-1. 使用 `PTTimedMetadata` 其中，開始時間等於當前回放時間。
+1. 使用 `PTTimedMetadata` 其中開始時間等於目前播放時間。
 
    >[!NOTE]
    >
-   >以下代碼假定只有一個 `PTTimedMetadata` 實例。 如果有多個實例，應用程式必須將它們正確保存在字典中。 一種方法是在給定時間建立陣列並將所有實例儲存在該陣列中。
+   >以下程式碼假設只有一個 `PTTimedMetadata` 一次執行個體。 如果有多個執行個體，應用程式必須適當地儲存在字典中。 一種方法是在指定時間建立陣列，並儲存該陣列中的所有執行個體。
 
-   以下示例說明如何保存 `PTTimedMetadata` 對象 `NSMutableDictionary (timedMetadataCollection)` 由每個的開始時間鍵控 `timedMetadata`。
+   以下範例說明如何儲存 `PTTimedMetadata` 中的物件 `NSMutableDictionary (timedMetadataCollection)` 以每個專案的開始時間作為索引鍵 `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -51,9 +51,9 @@ ht-degree: 0%
    }
    ```
 
-## 解析尼爾森ID3標籤 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
+## 剖析Nielsen ID3標籤 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-要提取ID3標籤以進行分析，請在 `onMediaPlayerSubscribedTagIdentified` 方法：
+若要擷取ID3標籤以供剖析，請在 `onMediaPlayerSubscribedTagIdentified` 方法：
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
@@ -66,7 +66,7 @@ Unknown macro: { PTMetadata *metadata = (PTMetadata *)timedMetadata; NSString * 
 }
 ```
 
-分析ID3標籤後，使用以下方法提取特定於尼爾森的元資料：
+剖析ID3標籤後，請使用下列專案擷取Nielsen專屬的中繼資料：
 
 ```
     (NSString *)parseNielsenUrlFromID3Tag:(NSString *)str 

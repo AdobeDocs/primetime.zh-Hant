@@ -12,24 +12,24 @@ ht-degree: 0%
 
 # 監視{#monitoring}
 
-個性化伺服器和密鑰生成伺服器均具有狀態頁，您可以使用該頁來確定伺服器的運行狀況。
+「個人化」伺服器和「金鑰產生」伺服器各自都有狀態頁面，您可以使用此頁面來判斷伺服器的健康狀態。
 
-* **個性化狀態頁：** [!DNL https://SERVER:PORT/flashaccess/status]
+* **個人化狀態頁面：** [!DNL https://SERVER:PORT/flashaccess/status]
 
-   * 如果應用程式伺服器正在運行且應用程式可以向密鑰生成伺服器發出GET請求，則報告「活動」
-   * 該頁報告「活動」或無。 未顯示有關應用程式的資訊，因此此頁可用於從防火牆外部進行監視。
+   * 如果應用程式伺服器執行中，且應用程式可向金鑰產生伺服器發出GET要求，則會回報「使用中」
+   * 頁面會報告「使用中」或沒有任何內容。 應用程式的相關資訊未顯示，因此此頁面可用於從防火牆外部進行監視。
 
-* **「密鑰生成狀態」頁：** [!DNL https://SERVER:PORT/flashaccess-kgs/status]
+* **金鑰產生狀態頁面：** [!DNL https://SERVER:PORT/flashaccess-kgs/status]
 
-   * 如果應用伺服器正在運行，則報告「活動」
-   * 所有密鑰生成URL必須只能在內部訪問
+   * 如果應用程式伺服器執行中，則報告「使用中」
+   * 所有金鑰產生URL都只能由內部存取
 
-* **「個性化統計資訊」頁：** [!DNL https://SERVER:PORT/flashaccess/admin/appstats]
+* **「個人化統計資料」頁面：** [!DNL https://SERVER:PORT/flashaccess/admin/appstats]
 
-   * 包括有關個性化伺服器的統計資訊，如所服務的請求數和快取中可用的密鑰數
-   * 此頁面只能在內部訪問
+   * 包含有關個人化伺服器的統計資料，例如提供的請求數和快取中可用的金鑰數
+   * 此頁面只能供內部存取
 
-* **「密鑰生成統計資訊」頁：** [!DNL https://SERVER:PORT/flashaccess-kgs/appstats]
+* **金鑰產生統計值頁面：** [!DNL https://SERVER:PORT/flashaccess-kgs/appstats]
 
-   * 包括有關密鑰生成伺服器的統計資訊，如所服務的請求數和磁碟上可用的密鑰檔案數
-   * 所有密鑰生成URL必須只能在內部訪問
+   * 包括有關「金鑰產生」伺服器的統計資料，例如已服務的請求數和磁碟上可用的金鑰檔案數
+   * 所有金鑰產生URL都只能由內部存取

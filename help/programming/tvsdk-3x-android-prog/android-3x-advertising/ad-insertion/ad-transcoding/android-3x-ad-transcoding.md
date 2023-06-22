@@ -1,6 +1,6 @@
 ---
-description: 某些第三方廣告（或創意）無法縫合到HTTP即時流(HLS)內容流中，因為其視頻格式與HLS不相容。 黃金時段廣告插入和TVSDK可以選擇嘗試將不相容的廣告重新打包到相容的M3U8視頻中。
-title: 使用Adobe創意重新打包服務(CRS)重新打包不相容的廣告
+description: 部分協力廠商廣告（或創意）無法結合至HTTP即時串流(HLS)內容資料流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇嘗試將不相容的廣告重新封裝成相容的M3U8影片。
+title: 使用Adobe Creative重新封裝服務(CRS)重新封裝不相容的廣告
 exl-id: 7e1f9ffd-cd7e-488b-bbb7-f78e1623b697
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,31 +9,31 @@ ht-degree: 0%
 
 ---
 
-# 使用Adobe創意重新打包服務(CRS)重新打包不相容的廣告 {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# 使用Adobe Creative重新封裝服務(CRS)重新封裝不相容的廣告 {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
-某些第三方廣告（或創意）無法縫合到HTTP即時流(HLS)內容流中，因為其視頻格式與HLS不相容。 黃金時段廣告插入和TVSDK可以選擇嘗試將不相容的廣告重新打包到相容的M3U8視頻中。
+部分協力廠商廣告（或創意）無法結合至HTTP即時串流(HLS)內容資料流，因為其視訊格式與HLS不相容。 Primetime廣告插入和TVSDK可選擇嘗試將不相容的廣告重新封裝成相容的M3U8影片。
 
-來自不同第三方（如代理廣告伺服器、您的清單合作夥伴或廣告網路）的廣告通常以不相容的格式（如漸進式下載MP4格式）提供。
+由不同第三方提供的廣告，例如代理廣告伺服器、詳細目錄合作夥伴或廣告網路，通常以不相容的格式傳送，例如漸進式下載MP4格式。
 
-當TVSDK第一次遇到不相容的廣告時，播放器忽略該廣告並向作為黃金時段廣告插入後端的一部分的創造性重新打包服務(CRS)發出將該廣告重新打包成相容格式的請求。 CRS嘗試生成廣告的多比特率M3U8格式副本，並將這些格式副本儲存在黃金時段內容交付網路(CDN)上。 下次TVSDK收到指向該廣告的廣告響應時，播放器使用CDN中與HLS相容的M3U8版本。
+當TVSDK首次遇到不相容的廣告時，播放器會忽略該廣告，並向創意重新封裝服務(CRS) （Primetime廣告插入後端的一部分）發出請求，以將廣告重新封裝為相容的格式。 CRS會嘗試產生廣告的多位元速率M3U8轉譯，並將這些轉譯儲存在Primetime內容傳遞網路(CDN)上。 下次TVSDK收到指向該廣告的廣告回應時，播放器會使用來自CDN的HLS相容M3U8版本。
 
-要激活此可選CRS功能，請與Adobe代表聯繫。
+若要啟用此選擇性CRS功能，請聯絡您的Adobe代表。
 
 >[!NOTE]
 >
->對於CRS 3.0版（及更早版本）客戶，從CRS 3.1版開始，以下更改提高了安全性和效能：
+>對於CRS 3.0版（及舊版）客戶，從CRS 3.1版開始，下列變更已改善安全性和效能：
 >
->* CRS 3.1繼續 `https:` 如果要重新打包的內容使用 `https:`。 這降低了一些玩家呈現不安全內容的可能性。
+>* CRS 3.1繼續提供 `https:` 如果重新封裝的內容使用 `https:`. 如此一來，部分播放器就不太可能呈現不安全的內容。
 >
->* CRS 3.1極大地減少了網路呼叫，縮短了視頻啟動時間。
+>* CRS 3.1大幅減少網路呼叫，改善視訊啟動時間。
 >
 
 
 ## 在TVSDK應用程式中啟用CRS {#enable-crs-in-tvsdk-applications}
 
-要在TVSDK應用程式中啟用CRS，必須在「審核」設定中設定以下資訊：
+若要在TVSDK應用程式中啟用CRS，您必須在稽核設定中設定下列資訊：
 
-1. 在中啟用CRS `AuditudeSettings`。
+1. 在中啟用CRS `AuditudeSettings`.
 
    ```
    ... 

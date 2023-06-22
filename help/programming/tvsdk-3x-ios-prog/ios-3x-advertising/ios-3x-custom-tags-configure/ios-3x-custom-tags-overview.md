@@ -1,6 +1,6 @@
 ---
-title: 自定義VOD資產示例
-description: 自定義VOD資產示例
+title: 自訂VOD資產範例
+description: 自訂VOD資產範例
 copied-description: true
 exl-id: c5722e1f-75f7-40b6-861c-bbe348e1183b
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# 自定義VOD資產示例 {#example-of-a-customized-vod-asset}
+# 自訂VOD資產範例 {#example-of-a-customized-vod-asset}
 
-下面是自定義VOD資產的示例：
+以下是自訂VOD資產的範例：
 
 ```
 #EXTM3U
@@ -40,7 +40,7 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-您的應用程式可以設定以下方案：
+您的應用程式可設定下列情境：
 
-* 在 `#EXT-X-ASSET` 標籤或您訂閱的任何其他自定義標籤名稱集都存在於檔案中。
-* 在 `#EXT-X-AD` 在流中找到標籤或任何其他自定義標籤名稱。
+* 通知時間 `#EXT-X-ASSET` 標籤或您已訂閱的任何其他自訂標簽名稱集都存在於檔案中。
+* 插入廣告的時機 `#EXT-X-AD` 標籤或任何其他自訂標籤名稱可在資料流中找到。

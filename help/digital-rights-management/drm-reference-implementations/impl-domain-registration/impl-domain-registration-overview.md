@@ -1,6 +1,6 @@
 ---
-title: 概述
-description: 概述
+title: 概觀
+description: 概觀
 copied-description: true
 exl-id: 75c8c180-e843-4796-954a-3acff064765a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,9 +10,9 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#implement-domain-registration-overview}
+# 概觀 {#implement-domain-registration-overview}
 
-參考實現許可證伺服器演示了兩種域註冊業務邏輯變化：
+參考實作授權伺服器示範網域註冊商業邏輯上的兩種變化：
 
-* **基於身份**  — 每個經過身份驗證的用戶都有一個域和可加入該域的特定數量的設備。
-* **匿名**  — 大量設備屬於一個域，可能不需要身份驗證。
+* **以身分為基礎**  — 每個已驗證身分的使用者都有網域和可加入網域的特定裝置數量。
+* **匿名**  — 大量裝置屬於一個網域，可能不需要驗證。

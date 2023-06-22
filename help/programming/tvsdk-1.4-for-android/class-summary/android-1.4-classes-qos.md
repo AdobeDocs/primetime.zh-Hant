@@ -1,6 +1,6 @@
 ---
-description: 這些類提供資訊，幫助您確定播放器的效能。
-title: QoS類
+description: 這些類別提供的資訊可協助您判斷播放器的執行狀況。
+title: QoS類別
 exl-id: 928accdc-488a-4beb-bf8f-a7e007366c5d
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# QoS類 {#qos-classes}
+# QoS類別 {#qos-classes}
 
-這些類提供資訊，幫助您確定播放器的效能。
+這些類別提供的資訊可協助您判斷播放器的執行狀況。
 
-包： [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html)  包： [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
+封裝： [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html)  封裝： [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -24,44 +24,44 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">度量。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> 緩衝度量</a></span></td> 
-   <td colname="2"> 提供有關播放器在緩衝期間花費的時間以及發生緩衝事件的頻率的資訊。 </td> 
+   <td colname="1"><span class="codeph">量度。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> 緩衝量度</a></span></td> 
+   <td colname="2"> 提供播放器緩衝時所花費的時間以及緩衝事件發生頻率的資訊。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> 設備資訊</a> </span></td> 
-   <td colname="2">提供有關運行短語的平台和作業系統的資訊： 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> 裝置資訊</a> </span></td> 
+   <td colname="2">提供執行片語的平台和作業系統的相關資訊： 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
-     <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">平台OS的版本 </li> 
-     <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">短語庫的版本號 </li> 
-     <li id="li_30D38320C2A3440E92C0A477FFFBF9A0">設備的型號名稱 </li> 
-     <li id="li_2D15164B987E405685B96A900EBF041D">設備製造商的名稱 </li> 
-     <li id="li_B78485CB9580444DB9694404706BA191">設備UUID </li> 
-     <li id="li_841EA77499B44F0692192F9DE1A798E4">設備螢幕的寬度/高度 </li> 
+     <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">平台作業系統的版本 </li> 
+     <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">片語庫的版本號碼 </li> 
+     <li id="li_30D38320C2A3440E92C0A477FFFBF9A0">裝置的型號名稱 </li> 
+     <li id="li_2D15164B987E405685B96A900EBF041D">裝置製造商名稱 </li> 
+     <li id="li_B78485CB9580444DB9694404706BA191">裝置UUID </li> 
+     <li id="li_841EA77499B44F0692192F9DE1A798E4">裝置熒幕的寬度/高度 </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/LoadInfo.html" format="html" scope="external"> 載入資訊</a></span> </td> 
-   <td colname="2"> 包含有關載入各種資源（檔案、清單或播放清單、片段/段、曲目等）的各種QoS資訊。 </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/LoadInfo.html" format="html" scope="external"> LoadInfo</a></span> </td> 
+   <td colname="2"> 包含載入各種資源（檔案、資訊清單或播放清單、片段/區段、曲目等）的各種QoS資訊。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/PlaybackInformation.html" format="html" scope="external"> 播放資訊</a></span> </td> 
-   <td colname="2"> 提供有關播放的執行方式的資訊。 這包括幀速率、配置檔案比特率、在緩衝中花費的總時間、緩衝嘗試次數、從第一視頻片段獲取第一位元組所花的時間、呈現第一幀所花的時間、當前緩衝的長度和緩衝時間。 </td> 
+   <td colname="2"> 提供有關播放執行方式的資訊。 這包括影格速率、設定檔位元速率、緩衝花費的總時間、緩衝嘗試次數、從第一個視訊片段取得第一個位元組所花的時間、轉譯第一個影格所花的時間、目前緩衝的長度，以及緩衝時間。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">度量。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> 播放載入度量</a></span> </td> 
-   <td colname="2"> 提供有關媒體載入所花的時間、播放器渲染第一幀所花的時間，或在出現錯誤時失敗的資訊。 </td> 
+   <td colname="1"><span class="codeph">量度。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackLoadMetrics</a></span> </td> 
+   <td colname="2"> 提供載入媒體所需的時間、播放器轉譯第一個影格所需的時間，或是發生錯誤時失敗的資訊。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">度量。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> 播放度量</a> </span></td> 
-   <td colname="2"> 提供有關播放的操作方式的資訊。 這包括幀速率、比特率、緩衝區長度等。 </td> 
+   <td colname="1"><span class="codeph">量度。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> Playbackmetrics</a> </span></td> 
+   <td colname="2"> 提供播放行為的相關資訊。 這包括影格速率、位元速率、緩衝區長度等。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">度量。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackSessionMetrics.html" format="html" scope="external"> 播放會話度量</a></span> </td> 
-   <td colname="2"> 提供有關玩家在實際播放時花費的秒數以及視頻在螢幕上實際花費的時間的資訊。 </td> 
+   <td colname="1"><span class="codeph">量度。<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackSessionMetrics.html" format="html" scope="external"> PlaybackSessionMetrics</a></span> </td> 
+   <td colname="2"> 提供播放器實際播放所花費的秒數，以及視訊實際在熒幕上的時間長短。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/QOSProvider.html" format="html" scope="external"> QOSProvider</a></span></td> 
-   <td colname="2">為播放和設備提供基本的QoS指標。 QOS資訊提供程式類。</td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/QOSProvider.html" format="html" scope="external"> QOSProviser</a></span></td> 
+   <td colname="2">提供播放和裝置的基本QoS量度。 QOS資訊提供者類別。</td> 
   </tr> 
  </tbody> 
 </table>

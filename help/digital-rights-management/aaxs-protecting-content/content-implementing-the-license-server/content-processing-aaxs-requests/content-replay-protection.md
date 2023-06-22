@@ -1,6 +1,6 @@
 ---
-title: 重放保護
-description: 重放保護
+title: 重播保護
+description: 重播保護
 copied-description: true
 exl-id: dfb6d615-07d2-4303-82cc-10cfee4bb387
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,6 +10,6 @@ ht-degree: 0%
 
 ---
 
-# 重放保護{#replay-protection}
+# 重播保護{#replay-protection}
 
-對於重播保護，通過調用來檢查消息標識符最近是否已被看到可能是謹慎的 `RequestMessageBase.getMessageId()`。 如果是，則攻擊者可能正嘗試重播請求，應拒絕該請求。 為了檢測重播嘗試，伺服器可以儲存最近看到的消息ID的清單，並根據快取清單檢查每個傳入請求。 要限制消息標識符需要儲存的時間，請調用 `HandlerConfiguration.setTimestampTolerance()`。 如果設定了此屬性，則SDK將拒絕任何帶有超過指定秒數的時間戳的請求。
+若為重播保護，檢查訊息識別碼最近是否透過呼叫而顯示，可能是審慎的做法 `RequestMessageBase.getMessageId()`. 若是如此，攻擊者可能會嘗試重新執行要求，但應予以拒絕。 若要偵測重播嘗試，伺服器可以儲存最近檢視的訊息ID清單，並根據快取清單檢查每個傳入請求。 若要限制需要儲存訊息識別碼的時間長度，請呼叫 `HandlerConfiguration.setTimestampTolerance()`. 如果設定此屬性，SDK將會拒絕任何包含時間戳記超過伺服器時間指定秒數的請求。

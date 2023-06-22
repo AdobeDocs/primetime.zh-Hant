@@ -1,6 +1,6 @@
 ---
-title: 提供內容
-description: 提供內容
+title: 傳遞內容
+description: 傳遞內容
 copied-description: true
 exl-id: a55293f0-ef9b-468f-a1b2-8222ebab0b4b
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,11 +10,11 @@ ht-degree: 0%
 
 ---
 
-# 提供內容 {#delivering-content}
+# 傳遞內容 {#delivering-content}
 
-黃金時段DRM對內容的傳送機制是不可知的，因為運行時將網路層抽象出來，並且僅將受保護的內容提供給黃金時段DRM子系統。 因此，內容可以通過HTTP、HTTP Dynamic Streaming、RTMP或RTMPE、HLS等來傳送。
+Primetime DRM與內容的傳遞機制無關，因為執行階段會抽象出網路層，並僅將受保護的內容提供給Primetime DRM子系統。 因此，內容可以透過HTTP、HTTP Dynamic Streaming、RTMP或RTMPE、HLS等傳送。
 
-但是，根據協定的不同，檢索受保護內容的元資料可能涉及複雜的內容( `DRMContentData`  — 通常以側裝的形式 [!DNL .metadata] )。 需要此DRM元資料來調用任何 `DRMManager` API，例如預取許可證、DRM驗證或加入設備域。 例如，使用RTMP/RTMPE協定，只有FLV和F4V資料可以通過Flash Media Server(FMS)傳送到客戶端。 因此，客戶端必須通過其他方式檢索元資料blob。 解決此問題的一個選項是將元資料托管在HTTP Web伺服器上，並實施客戶端視頻播放器以根據正在回放的內容檢索相應的元資料。
+不過，根據通訊協定，擷取受保護內容的中繼資料可能會涉及錯綜複雜的問題( `DRMContentData`  — 通常採用側載的形式 [!DNL .metadata] 檔案)。 此DRM中繼資料是呼叫任何 `DRMManager` API，例如預先擷取授權、DRM驗證或加入裝置網域。 例如，使用RTMP/RTMPE通訊協定時，只有FLV和F4V資料可以透過Flash Media Server(FMS)傳遞給使用者端。 因此，使用者端必須以其他方式擷取中繼資料blob。 解決此問題的一個選項是在HTTP網頁伺服器上託管中繼資料，並實作使用者端視訊播放器以擷取適當的中繼資料（視播放的內容而定）。
 
 ```
 private function getMetadata():void { 

@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # 標籤範圍{#mark-ranges}
 
-標籤 `TimeRanges` 在 `begin` 和 `end` 在 `localTime` 作為 `AdBreak` 從時間軸上。 忽略其他廣告設定。
+標籤 `TimeRanges` 介於 `begin` 和 `end` 在 `localTime` as a `AdBreak` 從時間軸。 其他廣告設定會被忽略。
 
-1. 標籤時間範圍。
+1. 標示時間範圍。
 
    ```
    {   

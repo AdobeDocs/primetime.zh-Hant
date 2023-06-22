@@ -1,5 +1,5 @@
 ---
-description: 在使用由ExpressPlay支援的Mighide DRM雲時，您可以啟用FairPlay for Safari。
+description: 使用Primetime DRM Cloud （由ExpressPlay提供技術支援）時，您可以啟用FairPlay for Safari。
 title: 為Safari HLS啟用FairPlay
 exl-id: 761c7cb8-3068-44c9-8ceb-6411c509c0a7
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,25 +11,25 @@ ht-degree: 0%
 
 # 為Safari HLS啟用FairPlay {#enable-fairplay-for-safari-hls}
 
-在使用由ExpressPlay支援的Mighide DRM雲時，您可以啟用FairPlay for Safari。
+使用Primetime DRM Cloud （由ExpressPlay提供技術支援）時，您可以啟用FairPlay for Safari。
 
-確保您具有以下功能：
+請確認您具備下列專案：
 
-* 可播放HLS視頻的正常運行的示例應用。
+* 可播放HLS視訊的功能範例應用程式。
 
-   該示例應用必須能夠通過ExpressPlay支援的Mogine DRM處理的授權來播放受FairPlay保護的內容。
-* HLS內容示例（M3U8清單），包含FairPlay保護。
+   範例應用程式必須能夠播放受FairPlay保護的內容，並透過由ExpressPlay支援的Primetime DRM處理授權。
+* 搭配FairPlay保護封裝的範例HLS內容（M3U8資訊清單）。
 
-要充分利用此處的資訊，請從子部分開始瞭解多DRM工作流 [參考伺服器：示例ExpressPlay權利伺服器(SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) 中。 首先閱讀有關如何設定權利和密鑰伺服器的文檔，下面的資訊將更有用。
-您需要以下項目：
+若要充分利用此處的資訊，請從小節開始瞭解多DRM工作流程 [參考伺服器：範例ExpressPlay軟體權利檔案伺服器(SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) 多重DRM工作流程手冊中的。 首先閱讀有關如何設定許可權和金鑰伺服器的檔案，以下資訊將會更加有用。
+您需要下列專案：
 
-* 您 *生產* 來自ExpressPlay的客戶驗證器
-* 相同的內容密鑰和 `iv` 打包內容的。
-* FairPlay公鑰證書的位置。
+* 您的 *生產* 來自ExpressPlay的客戶驗證者
+* 相同的內容索引鍵和 `iv` 用來封裝您的內容。
+* 您的FairPlay公開金鑰憑證的位置。
 
-要修改FairPlay/Safari應用：
+若要修改您的FairPlay / Safari應用程式：
 
-1. 設定在FairPlay許可證伺服器請求中使用的FairPlay公鑰證書的位置。
+1. 設定FairPlay授權伺服器請求中使用的FairPlay公開金鑰憑證的位置。
 
    例如：
 
@@ -37,14 +37,14 @@ ht-degree: 0%
    var myServerCertificatePath = './my_fairplay.cer';
    ```
 
-1. 執行手動FairPlay許可證 *標籤* 請求ExpressPlay獲取許可證令牌URL。
+1. 執行手動FairPlay授權 *token* 要求ExpressPlay取得授權權杖URL。
 
-       您可以通過以下方法之一完成此步驟：
+       您可以透過下列其中一種方式完成此步驟：
    
-   * 使用您自己的ExpressPlay生產客戶驗證器。
-   * 使用相同的內容密鑰和 `iv` 在此請求中，該請求用於打包要播放的內容。
+   * 使用您自己的ExpressPlay生產客戶驗證程式。
+   * 使用相同的內容金鑰和 `iv` 用於封裝您要播放之內容的要求。
 
-      從shell運行以下命令並替換ExpressPlay客戶驗證器以獲取示例內容的許可證令牌URL:
+      從Shell執行以下命令，並取代您的ExpressPlay客戶驗證器，以取得範例內容的授權權杖URL：
 
       ```
       curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
@@ -54,14 +54,14 @@ ht-degree: 0%
            iv=<your iv here>"
       ```
 
-      使用許可證令牌URL的響應將如下所示：
+      授權權杖URL的回應看起來像這樣：
 
       ```
       https://fp.service.expressplay.com:80/hms/fp/rights/? 
            ExpressPlayToken=<base64-encoded ExpressPlay token>
       ```
 
-1. 使用ExpressPlay中的許可證令牌URL設定變數。
+1. 使用ExpressPlay中的授權權杖URL設定變數。
 
    例如：
 
@@ -70,11 +70,11 @@ ht-degree: 0%
         ExpressPlayToken=<base64-encoded ExpressPlay token>';
    ```
 
-1. 在應用程式播放受保護的內容之前，請更改內容的URL方案 `skd://` 至 `https://`。
+1. 在您的應用程式可播放受保護的內容之前，請先變更內容的URL配置，從 `skd://` 至 `https://`.
 
-   在呼叫允許播放的許可證伺服器之前，您需要在應用中添加此URL方案更改。
+   呼叫允許播放的授權伺服器之前，您必須在應用程式中新增此URL配置變更。
 
-   需要更改協定，因為提供對密鑰管理系統中內容密鑰的訪問的內容ID已打包在M3U8清單中， `skd://` 協定。 當播放器準備好獲取許可證以播放受保護的內容時，它需要首先切換協定以與ExpressPlay許可證伺服器通信。 在下面的示例中， `myServerProcessSPCPath` 修改為包含許可證伺服器請求的正確URL方案：
+   需要變更通訊協定，因為提供金鑰管理系統中內容金鑰存取權的內容ID會封裝在M3U8資訊清單中，並附有 `skd://` 通訊協定。 當播放器準備取得授權以播放受保護的內容時，需要先切換通訊協定，才能與ExpressPlay授權伺服器通訊。 在以下範例中， `myServerProcessSPCPath` 修改為包含許可證伺服器要求的正確URL配置：
 
    ```js
    extractContentId(initData) {  

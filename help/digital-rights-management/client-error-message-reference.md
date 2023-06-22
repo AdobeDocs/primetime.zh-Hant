@@ -2,9 +2,9 @@
 description: DRM使用者端錯誤是TVSDK使用者端錯誤的子集。
 title: DRM使用者端錯誤訊息參考
 exl-id: 3d74cb92-c0a7-4eab-91b8-7e60a9c33df4
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '5173'
+source-wordcount: '5185'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ DRM使用者端錯誤是TVSDK使用者端錯誤的子集，與DRM相關的錯誤
 | 3365 | IncognitoModeNotAllowed | 此瀏覽器/平台組合不允許無痕模式下受DRM保護的播放。<br>散發者的軟體應建議使用者結束無痕模式或使用不同的瀏覽器。 如需詳細資訊，請參閱 [DRM錯誤3365原因和解決方法](https://forums.adobe.com/thread/1266622). |
 | 3366 | Badparameter | 主機執行階段使用錯誤的引數呼叫Primetime DRM程式庫。 |
 | 3367 | BadSignature | M3U8資訊清單簽署失敗。<br>**注意：** 此錯誤碼只會由iOS DRMNative Framework或AVE傳回。 |
-| 3368 | UserSettingsNoAccess | 使用者已取消操作，或已輸入不允許存取系統的設定。<br>此錯誤只會在SWF版本19或更新版本中擲回。 為了回溯相容性，系統會針對SWF版本18或更早版本擲回錯誤代碼3321。<br>分銷商的軟體應引導使用者說明如何允許無沙箱外掛程式存取。 如需詳細資訊，請參閱 [Chrome中的DRM錯誤3322/3346/3368 （資訊列問題）](https://forums.adobe.com/message/5520902). |
+| 3368 | UserSettingsNoAccess | 使用者已取消操作，或已輸入不允許存取系統的設定。<br>此錯誤只會在SWF版本19或更新版本中擲回。 為了回溯相容性，系統會針對SWF版本18或更早版本擲回錯誤代碼3321。<br>分銷商的軟體應引導使用者說明如何允許無沙箱外掛程式存取。 如需詳細資訊，請參閱 [Google Chrome的非沙箱存取遭拒](https://helpx.adobe.com/adobe-access/kb/error-3321.html) 和 [Chrome中的DRM錯誤3322/3346/3368 （資訊列問題）](https://forums.adobe.com/message/5520902). |
 | 3369 | InterfaceNotAvailable | 無法使用必要的瀏覽器介面。 此問題僅發生在Pepper上。 Flash外掛程式和瀏覽器版本之間可能會不相符。<br>散發者的軟體應引導使用者確保他們已安裝最新版本的瀏覽器。<br>如果此錯誤的發生次數增加，且對應於已發佈的瀏覽器更新，請升級至Adobe。 |
 | 3370 | ContentIdSettingsNoAccess | 使用者已停用 **允許受保護內容設定的識別碼。**<br>**注意：** 此錯誤出現在Pepper 13.0.0.x版或更新版本中。<br>經銷商的軟體和/或操作團隊應引導使用者啟用 **允許受保護內容的識別碼** 設定。<br>如需詳細資訊，請參閱 [https://forums.adobe.com/message/6518323#6518323](https://forums.adobe.com/message/6518323#6518323). |
 | 3371 | NoOPConstraintInPixelConstraints | 根據授權中的輸出保護限制，解析格式錯誤。<br>散發者的軟體應顯示錯誤訊息。 要求使用者以內容標題將問題報告給經銷商。<br>散發者應使用有效原則重新封裝內容。 |

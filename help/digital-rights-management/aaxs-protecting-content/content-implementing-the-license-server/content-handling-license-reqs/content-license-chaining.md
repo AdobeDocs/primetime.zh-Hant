@@ -1,6 +1,6 @@
 ---
-title: 許可證連結
-description: 許可證連結
+title: 授權鏈結
+description: 授權鏈結
 copied-description: true
 exl-id: 2f439e21-c748-45aa-a87c-36e70ee3722a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,6 +10,6 @@ ht-degree: 0%
 
 ---
 
-# 許可證連結{#license-chaining}
+# 授權鏈結{#license-chaining}
 
-如果用於生成許可證的策略支援許可證連結，則伺服器必須決定是發放葉許可證、根許可證還是兩者兼有。 要確定策略支援的許可證連結類型，請使用 `Policy.getLicenseChainType()`或 `Policy.getRootLicenseId()` 確定策略是否具有根許可證。 通過Adobe訪問2.0許可證連結，伺服器通常在用戶第一次請求特定電腦的許可證時發出葉許可證，並在此後發出根許可證。 要確定電腦是否已具有指定策略的葉許可證，請調用 `LicenseRequestMessage.clientHasLeafForPolicy()`。
+如果用來產生授權的原則支援授權鏈結，則伺服器必須決定是核發Leaf授權、Root授權，還是兩者都核發。 若要判斷原則支援的授權鏈結型別，請使用 `Policy.getLicenseChainType()`，或呼叫 `Policy.getRootLicenseId()` 以判斷原則是否有根授權。 透過Adobe存取2.0授權鏈結，伺服器通常會在使用者第一次請求特定電腦的授權時發出分葉授權，之後再請求根授權。 若要判斷電腦是否已擁有指定原則的分葉授權，請呼叫 `LicenseRequestMessage.clientHasLeafForPolicy()`.

@@ -1,6 +1,6 @@
 ---
-title: 概述
-description: 概述
+title: 概觀
+description: 概觀
 copied-description: true
 exl-id: 67c3d98f-8c17-4b5a-8abb-00f6f0f1e823
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,36 +10,36 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#overview}
+# 概觀 {#overview}
 
-*包裝* 指對FLV或F4V檔案加密和應用策略的過程。 使用介質打包API來打包檔案。 Adobe訪問Java SDK只能包裝漸進式下載Flash和AIR內容，如FLV、F4V和MP4。 為了使用Adobe訪問DRM對其他內容格式(如AdobeHTTP Dynamic Streaming(HDS)或AppleHTTP即時流(HLS))打包內容，您必須使用其他工具，如Adobe Medium伺服器( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html))或實現Adobe廣播SDK的編碼器( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf))。 或者，客戶可以選擇使用Adobe的Java Mighide Packager工具集，該工具集可以將內容打包成多種目標格式，如HDS、HLS和DASH。
+*封裝* 是指加密原則並將其套用至FLV或F4V檔案的過程。 使用媒體封裝API來封裝檔案。 Adobe存取Java SDK只能封裝漸進式下載Flash和AIR內容，例如FLV、F4V和MP4。 若要使用Adobe存取DRM封裝內容以供其他內容格式使用，例如AdobeHTTP Dynamic Streaming(HDS)或Apple HTTP Live Streaming (HLS)，您必須使用其他工具，例如Adobe Medium伺服器( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html))或實作AdobeBroadcast SDK的編碼器( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf))。 或者，客戶可以選擇使用Adobe的Java Primetime Packager工具集，該工具集可以封裝各種目標格式（例如HDS、HLS和DASH）的內容。
 
-打包從許可證伺服器中解耦。 打包程式不需要連接到許可證伺服器來交換有關內容的任何資訊。 許可證伺服器為頒發許可證而需要知道的所有資訊都包含在內容元資料中。
+封裝從授權伺服器分離。 封裝程式不需要連線到授權伺服器來交換任何有關內容的資訊。 授權伺服器發行授權所需瞭解的一切資訊都會包含在內容中繼資料中。
 
-當檔案被加密時，如果沒有相應的許可證，則無法分析其內容。 Adobe訪問允許您選擇要加密的檔案的哪些部分。 由於Adobe® Access™可以分析FLV和F4V內容的檔案格式，因此它可以智慧地加密檔案的選擇性部分，而不是整個檔案。 元資料和提示點等資料可以保持未加密狀態，以便搜索引擎仍然可以搜索檔案。
+當檔案被加密時，如果沒有適當的授權，就無法剖析其內容。 Adobe存取可讓您選取要加密的檔案部分。 由於Adobe® Access™可剖析FLV和F4V內容的檔案格式，因此可聰明地加密檔案的選擇性部分，而非整個檔案。 中繼資料和提示點等資料可以維持未加密，讓搜尋引擎仍可搜尋檔案。
 
-給定內容可能具有多個策略。 例如，如果您希望在不需要多次打包內容的情況下在不同業務模式下對內容進行許可，則此功能可能非常有用。 例如，您可以允許在短時間內匿名訪問，然後允許客戶購買內容並擁有無限的訪問權限。 如果內容使用多個策略打包，則許可證伺服器必須實現邏輯以選擇要用於頒發許可證的策略。
+特定內容片段可以有多個原則。 例如，如果您想要在不同商業模式下授權內容，而不需要多次封裝內容，這將很有用。 例如，您可以允許匿名存取一小段時間，之後客戶可以購買內容並擁有無限制的存取權。 如果使用多個原則封裝內容，則License Server必須實作邏輯，以選取要用來發行授權的原則。
 
 >[!NOTE]
 >
->該體系結構允許指定使用策略並在打包內容時將其綁定到內容。 在客戶端可以回放內容之前，客戶端必須獲取該電腦的許可證。 許可證指定強制使用的規則並提供用於解密內容的密鑰。 該策略是用於生成許可證的模板，但許可證伺服器可以選擇在頒發許可證時覆蓋使用規則。 請注意，許可證可能會因到期時間或播放窗口等約束而變為無效。
+>此架構允許在封裝內容時指定使用原則並繫結至內容。 使用者端必須取得該電腦的授權，才能播放內容。 授權會指定強制使用的使用規則，並提供用來解密內容的金鑰。 原則是用於產生授權的範本，但授權伺服器可能會選擇在發行授權時覆寫使用規則。 請注意，許可證可能會因為到期時間或播放視窗等限制而變成無效。
 
-打包內容時有許多選項。 在 `DRMParameters` 介面和實現該介面的類， `F4VDRMParameters` 和 `FLVDRMParameters`。 通過這些類，您可以設定簽名和密鑰參數，並指示是加密音頻內容、視頻內容還是指令碼資料。 要瞭解這些命令在參考實現中是如何實現的，請參閱中討論的「介質打包器」命令行選項的說明 *使用Adobe訪問參考實現*。 這些選項基於Java API，因此可用於寫程式使用。
+封裝內容時，有多種選項可供選擇。 這些在 `DRMParameters` 介面和實作該介面的類別，也就是 `F4VDRMParameters` 和 `FLVDRMParameters`. 使用這些類別，您可以設定簽名和金鑰引數，以及指示是否要加密音訊內容、視訊內容或指令碼資料。 若要檢視如何在參考實作中實作這些專案，請參閱中討論的「媒體封裝器」命令列選項說明 *使用Adobe存取參考實作*. 這些選項以Java API為基礎，因此可用於程式設計使用。
 
-打包選項包括：
+封裝選項包括：
 
-* 加密選項（音頻、視頻、部分加密）。
-* 許可證伺服器URL（客戶端將此URL用作發送到許可證伺服器的所有請求的基本URL）
-* 許可證伺服器傳輸證書
-* 用於加密CEK的許可證伺服器證書。
-* 用於對元資料簽名的打包器憑據
+* 加密選項（音訊、視訊、部分加密）。
+* 授權伺服器URL （使用者端會使用此URL作為傳送至授權伺服器之所有要求的基礎URL）
+* 授權伺服器傳輸憑證
+* 授權伺服器憑證，用於加密CEK。
+* 簽署中繼資料的封裝程式認證
 
-Adobe訪問提供了用於在CEK中傳遞的API。 如果未指定CEK，則SDK會隨機生成它。 通常，您需要為每段內容提供不同的CEK。 但是，在動態流中，您可能會對該內容的所有檔案使用相同的CEK，因此用戶只需要一個許可證，就可以無縫地從一個比特率過渡到另一個比特率。 要對多個內容使用相同的密鑰和許可證，請傳遞相同的密鑰 `DRMParameters` 對象 `MediaEncrypter.encryptContent()`，或在CEK中通過 `V2KeyParameters.setContentEncryptionKey()`。 要對每段內容使用不同的密鑰和許可證，請建立一個新 `DRMParameters` 實例。
+Adobe存取提供用於在CEK中傳遞的API。 如果未指定CEK，SDK會隨機產生它。 通常每個內容片段都需要不同的CEK。 不過，在Dynamic Streaming中，您可能會針對該內容的所有檔案使用相同的CEK，因此使用者只需要單一授權，就能順暢地從某個位元速率轉換到另一個位元速率。 若要針對多個內容片段使用相同的金鑰和授權，請傳遞相同的 `DRMParameters` 物件至 `MediaEncrypter.encryptContent()`，或使用在CEK中傳遞 `V2KeyParameters.setContentEncryptionKey()`. 若要對每個內容使用不同的金鑰和授權，請建立新的 `DRMParameters` 每個檔案的執行個體。
 
-使用密鑰輪替對內容進行打包時，可以控制使用的輪替密鑰以及密鑰更改的頻率。 `F4VDRMParameters` 和 `FLVDRMParameters` 執行 `KeyRotationParameters` 。 通過此介面，可以啟用密鑰輪替。 您還需要指定 `RotatingContentEncryptionKeyProvider`。 對於加密的每個示例，此類確定要使用的旋轉密鑰。 您可以實施您自己的提供商，或使用 `TimeBasedKeyProvider` 包含在SDK中。 此實現在指定的秒數後隨機生成新密鑰。
+使用金鑰輪換來封裝內容時，您可以控制使用的輪換金鑰以及金鑰變更的頻率。 `F4VDRMParameters` 和 `FLVDRMParameters` 實作 `KeyRotationParameters` 介面。 透過此介面，您可以啟用金鑰輪換。 您也需要指定 `RotatingContentEncryptionKeyProvider`. 針對每個加密的範例，此類別會決定要使用的輪換金鑰。 您可以實作自己的提供者，或使用 `TimeBasedKeyProvider` 隨附於SDK。 此實作會在指定的秒數後隨機產生新金鑰。
 
-在某些情況下，您可能需要將內容元資料儲存為單獨的檔案，並使其與內容分開提供給客戶端。 為此，請調用 `MediaEncrypter.encryptContent()`，返回 `MediaEncrypterResult` 的雙曲餘切值。 呼叫 `MediaEncrypterResult.getKeyInfo()` 將結果轉為 `V2KeyStatus`。 然後檢索內容元資料並將其儲存在檔案中。
+在某些情況下，您可能需要將內容中繼資料儲存為個別檔案，並讓使用者端可將其與內容分開使用。 若要這麼做，請叫用 `MediaEncrypter.encryptContent()`，會傳回 `MediaEncrypterResult` 物件。 呼叫 `MediaEncrypterResult.getKeyInfo()` 並將結果轉換為 `V2KeyStatus`. 然後擷取內容中繼資料並將其儲存在檔案中。
 
-所有這些任務都可使用Java API完成。 有關本章中討論的Java API的詳細資訊，請參見 *Adobe訪問API參考*。
+所有這些工作都可以使用Java API來完成。 如需本章所述Java API的詳細資訊，請參閱 *Adobe存取API參考*.
 
-有關介質打包器參考實現的資訊，請參見 *使用Adobe訪問參考實現*。
+如需Media Packager參考實作的相關資訊，請參閱 *使用Adobe存取參考實作*.

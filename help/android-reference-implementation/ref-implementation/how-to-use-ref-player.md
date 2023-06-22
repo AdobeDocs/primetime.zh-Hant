@@ -1,6 +1,6 @@
 ---
-title: 如何使用黃金時段參考實現
-description: 如何使用黃金時段參考實現
+title: 如何使用Primetime參考實作
+description: 如何使用Primetime參考實作
 copied-description: true
 exl-id: 45145f0d-c0e4-4d36-94fd-72f07619dc91
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,17 +10,17 @@ ht-degree: 0%
 
 ---
 
-# 如何使用黃金時段參考實現 {#how-to-use-the-primetime-reference-implementation}
+# 如何使用Primetime參考實作 {#how-to-use-the-primetime-reference-implementation}
 
-黃金時段參考實現是一個模組化播放器，已細分為各個功能，您可以通過專門的功能管理器輕鬆修改這些功能。 這些功能管理器用作連接應用程式和TVSDK庫的橋。
+Primetime參考實作是一種模組化播放程式，已細分為個別功能，您可以透過專業功能管理員輕鬆加以修改。 這些功能管理員是連線應用程式和TVSDK程式庫的橋樑。
 
-可通過以下方式使用參照實現：
+您可以透過下列方式使用參照實作：
 
-* 按原樣使用，而不更改任何代碼（所有特徵都以預設值開啟）。
-* 使用它作為參考，瞭解如何使用TVSDK庫。
-* 通過關閉不使用的功能來選取應用於應用程式的功能。
-* 定制UI元件，而不對功能進行任何更改。
+* 按原樣使用，而不變更任何程式碼（所有功能都會以預設值開啟）。
+* 請參考以瞭解如何使用TVSDK程式庫。
+* 關閉您未使用的功能，挑選並選取適用於您的應用程式的功能。
+* 自訂UI元件，而不需對功能進行任何變更。
 
-我們提供黃金時段參考實現，幫助您瞭解TVSDK並輕鬆修改功能管理器以自定義您的播放器。 但是，請參閱 [《 TVSDK 1.4 for Android程式設計師指南》](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) 的子菜單。
+我們提供Primetime參考實作，協助您瞭解TVSDK並輕鬆修改功能管理員，以自訂您的播放器。 然而，請參閱 [Android適用的TVSDK 1.4程式設計師指南](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) 以取得有關TVSDK資料庫的詳細資訊。
 
-要方便地訪問Javadoc格式的參考實現API文檔，請按一下 [這裡](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html)。
+若要輕鬆存取Javadoc格式的參考實作API檔案，請按一下 [此處](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).

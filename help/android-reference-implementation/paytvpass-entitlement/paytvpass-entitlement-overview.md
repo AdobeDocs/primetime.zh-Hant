@@ -1,6 +1,6 @@
 ---
-description: 您可以使用Adobe Primetime身份驗證管理播放器中的用戶權利。
-title: 概述
+description: 您可以使用Adobe Primetime驗證來管理播放器中的使用者權益。
+title: 概觀
 exl-id: 0db18747-0ccb-4654-8f1d-9b51915b3652
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,12 +9,12 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#overview}
+# 概觀 {#overview}
 
-您可以使用Adobe Primetime身份驗證管理播放器中的用戶權利。
+您可以使用Adobe Primetime驗證來管理播放器中的使用者權益。
 
-封裝黃金時段身份驗證權利流的功能管理器是 `EntitlementManager`。 此類封裝權利邏輯，同時將UI工作委託給其他位置。
+封裝Primetime驗證權利流程的功能管理員是 `EntitlementManager`. 此類別會封裝權益邏輯，同時將UI工作委派給其他地方。
 
-Android的此參考實現使用Mogni時驗證AccessEnabler庫1.7.3版。大多數實現與AccessEnabler庫提供的現有演示應用程式非常相似。
+此Android參考實作使用Primetime驗證AccessEnabler程式庫1.7.3版。大部分實作與AccessEnabler程式庫隨附的現有示範應用程式非常類似。
 
-有關黃金時段驗證的其他資訊，請參閱 [程式設計師整合簡介](https://tve.helpdocsonline.com/introduction-to-programmer-integration)。
+如需Primetime驗證的其他資訊，請參閱檔案： [程式設計師整合簡介](https://tve.helpdocsonline.com/introduction-to-programmer-integration).

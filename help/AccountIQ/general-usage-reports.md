@@ -1,6 +1,6 @@
 ---
-title: 常規使用情況報告
-description: 常規使用情況報告
+title: 一般使用報告
+description: 一般使用報告
 exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
 source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# 常規使用情況報告 {#general-usage-reports}
+# 一般使用報告 {#general-usage-reports}
 
-帳戶IQ報告是基本的分析工具和報告，使您能夠深入查看資料以隔離 [馬蹄](/help/AccountIQ/product-concepts.md#segmet-def)、識別異常，並瞭解您的客戶特性。
+帳戶IQ報表是基本的分析工具和報表，可讓您鑽研資料以加以隔離 [同類群組](/help/AccountIQ/product-concepts.md#segmet-def)、識別異常，並建構對您帳戶特性的瞭解。
 
-「一般使用情況報告」頁提供了根據使用中的帳戶設備數、檢測到的IP和相應的郵遞區號劃分子組度量的工具。
+「一般使用報告」頁面提供工具，讓您根據使用的帳戶裝置數、偵測到的IP和個別郵遞區號來劃分子群組量度。
 
 <!--Divide the content in cohorts.
 
@@ -23,7 +23,7 @@ device filters
 segment and definition replicate to cohorts. Number of people and number of account that ......
 content consumption.....-->
 
-所有報告均基於使用 [段和時間框架](/help/AccountIQ/howto-select-segment-timeframe.md) 的子菜單。 您可以通過在中指定（設備數、 IP數和郵遞區號數）閾值來微調您的選擇並進一步縮小選擇範圍 [快照概述 — 超過閾值的帳戶](#snapshot-overview) 的子菜單。
+所有報表都是根據以下專案選取的目前區段： [區段和時間範圍](/help/AccountIQ/howto-select-segment-timeframe.md) 面板。 您可以微調您的選取範圍，並透過指定（裝置數、IP數和郵遞區號數）臨界值來進一步縮小選取範圍。 [快照概述 — 超過臨界值的帳戶](#snapshot-overview) 面板。
 
 <!--To view General Usage Reports:
 
@@ -37,171 +37,171 @@ content consumption.....-->
 
 4. You can fine tune your selection and further narrow it down by specifying (number of devices, number of IPs, and number of zip codes) thresholds in [Snapshot Overview - Accounts above thresholds](#snapshot-overview) widget/panel.-->
 
-## AuthN OK / AuthZ OK /播放請求/唯一訂閱者 {#authn-authz-playreq-uniquesubs}
+## AuthN確定/AuthZ確定/播放請求/不重複訂閱者 {#authn-authz-playreq-uniquesubs}
 
-此處的折線圖為您提供了定義段的選定時間範圍內AuthN OK 、 AuthZ OK 、 Play Requests和Unique Subscribers值隨時間變化的視圖。
+此處的折線圖可讓您檢視定義區段在選定時間範圍內，AuthN OK、AuthZ OK、Play Requests和Unique Subscribers的值隨時間的變更。
 
-+++程式設計師 —  **AuthN OK / AuthZ OK /播放請求/唯一訂閱者**
++++程式設計師 —  **AuthN確定/AuthZ確定/播放請求/不重複訂閱者**
 
 ![](assets/progr-line-graph-gu.png)
 
 
-*圖：針對程式設計師用戶的AuthN OK / AuthZ OK / Play Requests /唯一訂閱者*
+*圖：程式設計人員使用者的AuthN確定/AuthZ確定/播放請求/不重複訂閱者*
 
 
 +++
 
 
-+++MVPD- **AuthN OK / AuthZ OK /唯一訂閱者**
++++MVPD- **AuthN確定/AuthZ確定/不重複訂閱者**
 
 ![](assets/mvpd-line-graph-gu.png)
 
 
-*圖：AuthN OK / AuthZ OK / MVPD用戶的唯一訂閱者*
+*圖：MVPD使用者的AuthN確定/ AuthZ確定/不重複訂閱者*
 
 
 +++
 
-x軸表示當前時間範圍內的單位，y軸表示該時段內的基本訂戶活動度量。 通過線形圖，您可以比較在段選擇面板中選擇的MVPD和通道的訂戶的以下值：
+x軸表示目前時間範圍內的單位，而y軸表示該期間的基本訂閱者活動量度。 折線圖可讓您比較您在區段選取面板中選取之MVPD和色版訂閱者的下列值：
 
-* **AuthN確定**
+* **驗證正常**
 
-   AuthN OK是成功身份驗證的次數。 有關詳細資訊和定義，請參閱 [產品概念：AuthN確定](/help/AccountIQ/product-concepts.md#authn-ok-def)。
+   AuthN OK是成功的驗證數目。 如需詳細資訊和定義，請參閱 [產品概念：驗證確定](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ確定**
 
-   AuthZ OK是成功的授權數。 有關詳細資訊和定義，請參閱 [產品概念：AuthZ確定](/help/AccountIQ/product-concepts.md#authz-ok-def)。
+   AuthZ OK是成功的授權數目。 如需詳細資訊和定義，請參閱 [產品概念：AuthZ確定](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
 * **播放請求**
 
-   播放請求是播放請求數。 有關詳細資訊和定義，請參閱 [產品概念：播放請求](/help/AccountIQ/product-concepts.md#play-requests-def)
+   Play requests是播放要求數目。 如需詳細資訊和定義，請參閱 [產品概念：播放要求](/help/AccountIQ/product-concepts.md#play-requests-def)
 
    >[!NOTE]
    >
-   >播放請求線形圖對MVPD用戶不可用。
+   >MVPD使用者無法使用播放要求線圖。
 
 
-* **唯一訂閱者**
+* **不重複訂閱者**
 
-   Unique預訂者是成功的唯一預訂者數。 有關詳細資訊和定義，請參閱 [產品概念：唯一訂閱者](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+   Unique subscribers是成功的不重複訂閱者的數目。 如需詳細資訊和定義，請參閱 [產品概念：不重複訂閱者](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
    >[!NOTE]
    >
-   >如果程式設計師使用AdobeTempPass（即免費預覽）是段的一部分，則唯一訂閱者總數還包括唯一設備數。
+   >如果程式設計師使用AdobeTempPass （即免費預覽）是區段的一部分，則獨特訂閱者的總數也包含不重複裝置數量。
 
-## 快照概述 — 超過閾值的帳戶 {#snapshot-overview}
+## 快照概述 — 超過臨界值的帳戶 {#snapshot-overview}
 
-使用此附加篩選器微調分析和報告以設定各種使用閾值。 一旦通過選擇所需的MVPD和通道來定義要分析的段（或隊列），您還可以使用以下篩選器來分析訂閱者行為：
+使用此額外的篩選器微調您的分析和報告，以設定各種使用臨界值。 一旦您透過選取所需的MVPD和管道來定義要分析的區段（或同類群組）後，您還可以使用下列篩選器來分析訂閱者的行為：
 
-* 設備數閾值
+* 裝置數量臨界值
 
-* IP數閾值
+* IP數量臨界值
 
-* 郵遞區號閾值數
+* 郵遞區號數量臨界值
 
-在中更新閾值時 [帳戶段 — 基於選定閾值](#account-segments-basedon-segments) 面板中，您可以在中查看影響：
+當您更新中的臨界值時 [科目節段 — 根據選取的臨界值](#account-segments-basedon-segments) 面板中，您可在以下位置檢視影響：
 
-* [每個帳戶每週（或每月）的設備](#devices-week-account)
+* [每個帳戶的每週（或每月）裝置數](#devices-week-account)
 
-* [每個帳戶每週（或每月）的位置](#locations-week-account)
+* [每個帳戶的每週（或月）位置](#locations-week-account)
 
 * [每個帳戶每週（或每月）的IP](#ip-week-account)
 
-* [帳戶段的歷史視圖](#account-segment-historical-view)
+* [科目節段的歷史檢視](#account-segment-historical-view)
 
 >[!NOTE]
 >
->每個閾值的預設值為4。 也就是說，「一般用法」頁顯示MVPD的分析，訂戶使用四台（和四台以上）設備，從四個（或更多）不同地理位置和四個（或更多）不同的郵遞區號消耗內容。
+>每個臨界值的預設值為4。 也就是說，「一般使用方式」頁面會顯示訂閱者使用四個（及四個以上）裝置的MVPD分析，這些裝置使用四個（及更多）不同地理位置及四個（及更多）不同郵遞區號的內容。
 
-### 帳戶段 — 基於選定閾值 {#account-segments-basedon-segments}
+### 科目節段 — 根據選取的臨界值 {#account-segments-basedon-segments}
 
-的 **帳戶段 — 基於選定閾值** 面板為您提供了設定設備數、IP數和郵遞區號數的閾值（介於1和10之間）的選項。
+此 **科目節段 — 根據選取的臨界值** 面板提供設定裝置數、IP數和郵遞區號數臨界值（介於1到10之間）的選項。
 
-該圖表顯示：
+圖表會顯示：
 
-* 訂戶帳戶的絕對數，以及
+* 訂閱者帳戶的絕對數量，以及
 
-* 佔該段的訂戶帳戶總數的百分比，
+* 該區段中的訂戶帳戶總數百分比，
 
-   使用X個設備、Y個IP和Z個Z個Zip代碼，在一段時間內從您的渠道為（定義的）MVPD消耗內容。
+   使用X個裝置、Y個IP和Z個郵遞區號來在某個時間範圍內使用（已定義區段的） MVPD的管道內容。
 
 ![](assets/select-thresholds.png)
 
-## 每個帳戶每週（或每月）的設備 {#devices-week-account}
+## 每個帳戶的每週（或每月）裝置數 {#devices-week-account}
 
-的 **條形圖** 提供關於訂閱者如何使用其設備訪問內容的使用行為的見解。
+此 **條狀圖** 提供有關訂閱者如何使用其裝置存取內容方面的使用行為深入分析。
 
-x軸以「帳戶數」為圖表，y軸以「設備數」為圖表。 根據為每個帳戶設定的設備數設定的閾值，它標籤在一週的持續時間內從特定數量的設備消耗內容的訂戶帳戶的絕對數量。
+X軸會繪製「帳戶數」，而Y軸會繪製「裝置數」。 它會根據您為每個帳戶設定的裝置數臨界值，標籤在一週內使用特定裝置數之內容的訂戶帳戶的絕對數目。
 
 ![](assets/bar-gr-devices-w-acc.png)
 
-當懸停在條形（特定於設備數）上時，將顯示一個標籤，該標籤提供有關一週內使用這些許多設備流式傳輸頻道內容的訂戶帳戶數（以及段中訂戶帳戶總數的百分比）的資訊。
+當游標停留在橫條上（特定於裝置數）時，會出現一個標籤，提供有關使用每週這些許多裝置串流頻道內容的訂閱者帳戶數（以及區段中的訂閱者帳戶總數百分比）的資訊。
 
-該圖還標籤以下內容：
+此圖表也會標籤下列專案：
 
-* 用於標籤所設定的閾值的紅線。
+* 紅線表示您所設定的臨界值。
 
-* 用於標籤訂閱者帳戶每週（或月）使用的不同設備的平均數的綠線。
+* 綠色線條，標示訂閱者帳戶每週（或每月）使用的不同裝置平均數量。
 
-您可以將閾值級別與帳戶使用的不同設備的每週平均數量進行比較，以判斷共用級別。
+您可以將臨界值等級與帳戶使用的不同裝置數每週平均數進行比較，以判斷共用等級。
 
-該圖表還提供了使用比設定閾值更多設備的訂戶帳戶的百分比。
+此圖表也會讓您一窺使用超過設定臨界值之裝置數的訂戶帳號百分比。
 
-甜圈圖可幫助您一眼就判斷使用超過設定閾值（時間段內）的設備消耗頻道內容的用戶帳戶的數量。
+環圈圖可協助您一目瞭然地判斷使用超過設定臨界值（在時間範圍內）之裝置的頻道內容之訂閱者帳戶的大小。
 
 ![](assets/donut-devices-w-acc.png)
 
-## 每個帳戶每週（或每月）的位置 {#locations-week-account}
+## 每個帳戶的每週（或每月）位置數 {#locations-week-account}
 
-像 [每個帳戶每週（或每月）的設備](#devices-week-account)，每週（或每月）的「帳戶位置」度量可幫助您分析不同位置的訂戶帳戶使用情況，以更密切地識別密碼共用。 x軸以「帳戶數」(Number of Accounts)為圖表，y軸以「位置數」(Number of Locations)為圖表。
+按讚 [每個帳戶的每週（或每月）裝置數](#devices-week-account)，每帳戶每週（或每月）的位置量度可協助您分析不同位置的訂戶帳戶使用情形，以更密切地識別密碼共用。 X軸會繪製「帳戶數」，而Y軸會繪製「位置數」。
 
-此度量的結果與 [每個帳戶每週（或每月）的設備](#devices-week-account) 和數量 [每個帳戶每週（或每月）的IP](#ip-week-account) 幫助您更準確地判斷密碼共用實例；這樣，真實用戶就不被計算在內。
+此量度與數量結合的結果 [每個帳戶的每週（或每月）裝置數](#devices-week-account) 和數量 [每個帳戶每週（或每月）的IP](#ip-week-account) 協助您更準確地判斷密碼共用例項；如此一來，真實的使用者就不會計算在內。
 
 ![](assets/graph-loc-week-acc.png)
 
-定義了段並設定了位置數的閾值後，可以從圖形中標識：
+定義區段並設定位置數量的臨界值後，您就可以從圖形中識別：
 
-* 在一週內從（特定）x個位置消費內容的訂戶數（和百分比）。
+* 一週內從（特定） x個位置消費內容的訂閱者人數（和百分比）。
 
-* 從超過閾值的位置查看內容的訂戶帳戶總數的百分比。
+* 從超過臨界值的位置檢視內容的總訂戶帳戶百分比。
 
-* 將每週平均值（帳戶的不同位置數）與閾值進行比較。
+* 比較每週平均值（帳戶的不同位置數量）與臨界值。
 
 ## 每個帳戶每週（或每月）的IP {#ip-week-account}
 
-類似於 [每個帳戶每週（或每月）的設備](#devices-week-account) 和 [每個帳戶每週（或每月）的位置](#locations-week-account)，也請參見Wiki頁。 **每個帳戶每週的IP數** 度量允許您更精確、更精細地分析密碼共用。
+類似於 [每個帳戶的每週（或每月）裝置數](#devices-week-account) 和 [每個帳戶的每週（或每月）位置數](#locations-week-account)，則 **每個帳戶每週IP數量** 量度可讓您更精確、更精細地分析密碼共用。
 
-x軸以圖表示帳戶數，y軸以圖表示IP數。
+X軸會繪製「帳戶數」，而Y軸會繪製「IP數」。
 
 ![](assets/graph-ip-week-acc.png)
 
-定義段（通過選擇MVPD和通道）並設定IP數的閾值後，可以從圖表中標識：
+定義區段（透過選取MVPD和通道）並設定IP數目的臨界值後，您就可以從圖形中識別：
 
-* 在一週內從（特定）x IP數量消耗內容的訂戶數（和百分比）。
+* 一週內從（特定） x個IP位址使用內容的訂閱者人數（和百分比）。
 
-* 從多於閾值的IP地址查看內容的訂戶帳戶總數的百分比。
+* 從超過臨界值的IP位址檢視內容的總訂戶帳戶百分比。
 
-* 將每週平均值（帳戶的不同IP數）與閾值進行比較。
+* 比較每週平均值（帳戶的不同IP數量）和臨界值。
 
-## 帳戶段 — 歷史視圖 {#account-segment-historical-view}
+## 科目節段 — 歷史檢視表 {#account-segment-historical-view}
 
-「歷史視圖」條形圖可幫助您比較不同時間幀的使用度量。 此外，它會以集合形式繪製各種使用度量，如 [每個帳戶每週（或每月）的設備](#devices-week-account)。 [每個帳戶每週（或每月）的位置](#locations-week-account), [每個帳戶每週（或每月）的IP](#ip-week-account)。
+「歷史檢視」長條圖可協助您比較不同時間範圍內的使用量度。 此外，它還會集體繪製各種使用量度，例如 [每個帳戶的每週（或每月）裝置數](#devices-week-account)， [每個帳戶的每週（或每月）位置數](#locations-week-account)、和 [每個帳戶每週（或每月）的IP](#ip-week-account).
 
-* x軸以圖表方式顯示時間幀，y軸以圖表方式顯示訂戶帳戶、設備、位置和IP的數量。
+* x軸繪製時間範圍，y軸繪制訂戶帳戶、裝置、位置和IP的數量。
 
-* 橙色色條表示不同時間幀中的段。
+* 橙色長條表示各種時間範圍內的區段。
 
-* 線形圖以曲線圖顯示 [每個帳戶每週（或每月）的設備](#devices-week-account)。 [每個帳戶每週（或每月）的位置](#locations-week-account), [每個帳戶每週（或每月）的IP](#ip-week-account) 根據閾值跨時間幀的值。
+* 折線圖會繪製下列變更： [每個帳戶的每週（或每月）裝置數](#devices-week-account)， [每個帳戶的每週（或每月）位置數](#locations-week-account)、和 [每個帳戶每週（或每月）的IP](#ip-week-account) 時間範圍內的值，根據臨界值。
 
 ![](assets/historical-view.png)
 
-* 藍條表示整個行業內一段時間內的活動用戶總數。
+* 藍色長條表示在某個時間範圍內整個產業中的活躍訂閱者總數。
 
-* 您可以選擇特定的圖例，這些圖例將幫助您縮放圖形。
+* 您可以選取特定的圖例，它們可以協助您縮放圖形。
 
 ![](assets/historical-view-total.png)
 
 >[!MORELIKETHIS]
 >
->* 瞭解如何使用常規使用情況報告中的篩選器導出所選段中前1000名訂閱者的報告 [導出前1000個帳戶](/help/AccountIQ/export-acc-information.md) 的雙曲餘切值。
+>* 瞭解如何透過一般使用報告中的篩選器，匯出所選區段中前1000名訂閱者的報告 [匯出前1000個帳戶](/help/AccountIQ/export-acc-information.md) 選項。
 

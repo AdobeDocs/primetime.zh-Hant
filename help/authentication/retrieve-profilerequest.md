@@ -1,6 +1,6 @@
 ---
-title: 檢索平台SSO配置檔案請求
-description: 檢索平台SSO配置檔案請求
+title: 擷取Platform SSO設定檔要求
+description: 擷取Platform SSO設定檔要求
 exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
 source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
@@ -9,38 +9,38 @@ ht-degree: 0%
 
 ---
 
-# 檢索平台SSO配置檔案請求 {#retrieve-platform-sso-profile-request}
+# 擷取Platform SSO設定檔要求 {#retrieve-platform-sso-profile-request}
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
-## REST API終結點 {#clientless-endpoints}
+## REST API端點 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
-
-* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
-
-&lt;sp_fqdn>:
+&lt;reggie_fqdn>：
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 暫存 —  [api.auth.staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+
+&lt;sp_fqdn>：
+
+* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## 說明 {#description}
 
-此資源為請求者ID和MVPD元組生成配置檔案請求。
+此資源會產生要求者ID和MVPD Tuple的設定檔要求。
 
 
-| 端點 | 已調用  </br>按 | 輸入   </br>帕拉姆 | HTTP  </br>方法 | 響應 | HTTP  </br>響應 |
+| 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/{requestor/profile-requests/{mvpd} | 流式處理應用</br></br>或</br></br>程式設計師服務 | 1。請求者（路徑參數）</br>2. mvpd（路徑參數）</br>3. deviceType（必需） | GET | 響應內容類型將是application/octet-stream，因為客戶端應用程式的實際負載不透明。</br></br>應將響應轉發到平台</br></br>用於獲取簡檔SSO的SSO引擎。 | 200 — 成功   </br>400 — 錯誤請求 |
+| &lt;sp_fqdn>/api/v1/{requestor}/profile-requests/{mvpd} | 串流應用程式</br></br>或</br></br>程式設計師服務 | 1.請求者（路徑引數）</br>2. mvpd （路徑引數）</br>3. deviceType （必要） | GET | 回應Content-Type將會是應用程式/八位元資料流，因為使用者端應用程式的實際裝載是不透明的。</br></br>應用程式應將回應轉送至平台</br></br>用於取得設定檔SSO的SSO引擎。 | 200 — 成功   </br>400 — 錯誤請求 |
 
 
-| 輸入參數 | 說明 |
+| 輸入引數 | 說明 |
 | --------------- | -------------------------------------------------------------------------------------------------------- |
-| 請求 | 此操作對其有效的程式設計師請求者ID。 |
-| mvpd | 此操作對其有效的MVPD ID。 |
-| 設備類型 | 我們正嘗試為其獲取配置檔案請求的Apple平台。  要麼 **iOS** 或 **電視作業系統**。 |
+| 請求者 | 此作業有效的程式設計員requestorId。 |
+| mvpd | 此作業適用的MVPD ID。 |
+| deviceType | 我們嘗試為其取得設定檔請求的Apple平台。  兩者之一 **iOS** 或 **tvOS**. |

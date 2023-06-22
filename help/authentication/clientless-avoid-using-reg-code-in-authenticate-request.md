@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考。 使用此API需要來自Adobe的當前許可證。 不允許未經授權使用。
+>此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
 
 </br>
 
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## 問題
 
-IE 9瀏覽器將「\®」解釋為特殊命令，並將其轉換為®。 
+IE 9瀏覽器將&#39;\®&#39;解譯為特殊命令，並將其轉換為®。 
 
-## 解釋
+## 說明
 
-如果 `/authenticate` 請求的組成如下……
+如果 `/authenticate` 請求的構成如下……
 
  
 
@@ -34,7 +34,7 @@ IE 9瀏覽器將「\®」解釋為特殊命令，並將其轉換為®。 
 ```
  
 
-...IE瀏覽器將按照如下方式進行解釋，並將以此格式發送到Adobe:
+...將由IE瀏覽器解譯，如下所示，並會以此格式傳送至Adobe：
 
  
 
@@ -43,22 +43,22 @@ IE 9瀏覽器將「\®」解釋為特殊命令，並將其轉換為®。 
 ```
  
 
-請求者\_id將解釋為univision®\_code=EKAFMFI，因為沒有「&amp;」，並且Adobe將找不到 `regCode` 參數，將令牌與關聯。  AuthN令牌有可能根本不會建立，在這種情況下 `/checkauthn` 呼叫將找不到任何令牌。
+請求者\_id將解譯為univision®\_code=EKAFMFI，因為沒有「&amp;」，而Adobe找不到 `regCode` 與權杖建立關聯的引數。  AuthN權杖有可能完全不會建立，在此情況下 `/checkauthn` 呼叫將找不到任何Token。
 
 
 
 ## 解決方案
 
-以下選項之一應解決此問題：
+下列其中一個選項應該可以解決此問題：
 
-1. 避免使用 `&reg_code` 其他查詢字串參數之間的參數。  將其移到請求URL中的第一個query-string參數，使請求URL如下所示：\
+1. 避免使用 `&reg_code` 其他查詢字串引數之間的引數。  請改為將其移至請求URL中的第一個查詢字串引數，使請求URL如下所示：\
     
 
-       &lt;fqdn>authenticate?reg_code =EKAFMFI&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
+       &lt;fqdn>authenticate？reg_code =EKAFMFI&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
    
 
-   這樣， `&reg` 參數不會被錯誤解釋。
+   如此一來， `&reg` 不會錯誤解譯引數。
 
-1. 規範化 `&reg_code` 使用 `&amp;reg_code`。
+1. 標準化 `&reg_code` 如使用 `&amp;reg_code`.
 
-1. 如果AuthN令牌建立失敗，Adobe可以引入新功能，以響應身份驗證調用將錯誤代碼發回第2螢幕。
+1. 如果AuthN權杖建立失敗，Adobe可能會引入新功能，將錯誤代碼傳回第2個畫面以回應驗證呼叫。

@@ -1,6 +1,6 @@
 ---
-description: TVSDK支援解析和插入用於視頻點播和即時/線性流的廣告。
-title: 黃金時段廣告伺服器元資料
+description: TVSDK支援解析和插入VOD和即時/線性資料流的廣告。
+title: Primetime廣告伺服器中繼資料
 exl-id: 3723dd2f-292c-4ce5-9670-fda1b1f2b5df
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#primetime-ad-server-metadata-overview}
+# 概觀 {#primetime-ad-server-metadata-overview}
 
-TVSDK支援解析和插入用於視頻點播和即時/線性流的廣告。
+TVSDK支援解析和插入VOD和即時/線性資料流的廣告。
 
 >[!NOTE]
 >
->在視頻內容中包括廣告之前，請提供以下元資料資訊：
+>在視訊內容中加入廣告之前，請提供下列中繼資料資訊：
 >
->* A `mediaID`，它標識要播放的特定內容。
->* 您 `zoneID`，它標識您的公司或網站。
->* 您的廣告伺服器域，它指定您分配的廣告伺服器的域。
->* 其他目標參數。
+>* A `mediaID`，可識別要播放的特定內容。
+>* 您的 `zoneID`，可識別您的公司或網站。
+>* 您的廣告伺服器網域，這會指定您指派的廣告伺服器網域。
+>* 其他目標定位引數。
 >
 
 
-## 設定Mogfire廣告伺服器元資料 {#section_86C4A3B2DF124770B9B7FD2511394313}
+## 設定Primetime廣告伺服器中繼資料 {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-您的應用程式必須向TVSDK提供所需 `PTAuditudeMetadata` 連接到ad伺服器的資訊。
+您的應用程式必須向TVSDK提供所需的 `PTAuditudeMetadata` 連線至廣告伺服器的資訊。
 
-設定廣告伺服器元資料：
+若要設定廣告伺服器中繼資料：
 
-1. 建立實例 [PTAuditude元資料](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) 並設定其屬性。
+1. 建立例項 [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) 並設定其屬性。
 
    ```
    PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  
@@ -40,7 +40,7 @@ TVSDK支援解析和插入用於視頻點播和即時/線性流的廣告。
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. 設定 `PTAuditudeMetadata` 實例作為當前的元資料 `PTMediaPlayerItem` 元資料 `PTAdResolvingMetadataKey`。
+1. 設定 `PTAuditudeMetadata` 執行個體作為目前的中繼資料 `PTMediaPlayerItem` 中繼資料（使用） `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
@@ -48,7 +48,7 @@ TVSDK支援解析和插入用於視頻點播和即時/線性流的廣告。
    [adMetadata release];
    ```
 
-   下面是一個示例：
+   範例如下：
 
    ```
    PTMetadata *metadata = [self createMetadata]; 
@@ -68,25 +68,25 @@ TVSDK支援解析和插入用於視頻點播和即時/線性流的廣告。
    }
    ```
 
-## 在全事件重播中啟用廣告 {#section_6016E1DAF03645C8A8388D03C6AB7571}
+## 啟用完整事件重播中的廣告 {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
-全事件重播(FER)是一種VOD資產，充當即時/DVR資產，因此您的應用程式必須採取步驟以確保廣告被正確放置。
+完整事件重播(FER)是一種可作為即時/DVR資產的VOD資產，因此您的應用程式必須採取措施以確保廣告正確放置。
 
-對於即時內容，TVSDK使用清單中的元資料/提示來確定廣告的放置位置。 但是，有時即時/線性內容可能與VOD內容類似。 例如，當即時內容完成時， `EXT-X-ENDLIST` 標籤將附加到即時清單。 對於HLS, `EXT-X-ENDLIST` 標籤表示流是VOD流。 TVSDK無法自動將此流與正常的VOD流區分，以正確插入廣告。
+對於即時內容，TVSDK會使用資訊清單中的中繼資料/提示來決定放置廣告的位置。 不過，有時即時/線性內容可能會類似VOD內容。 例如，當即時內容完成時， `EXT-X-ENDLIST` 標籤會附加至即時資訊清單。 若為HLS，則 `EXT-X-ENDLIST` 標籤表示資料流是VOD資料流。 TVSDK無法自動區分此串流和一般VOD串流，以正確插入廣告。
 
-您的應用程式必須通過指定以下內容來告訴TVSDK內容是即時還是視頻點播 `PTAdSignalingMode`。
+您的應用程式必須透過指定 `PTAdSignalingMode`.
 
-對於FER流，Adobe Primetime廣告決定伺服器不應提供在開始播放之前需要在時間線上插入廣告中斷的清單。 這是視頻點播內容的典型過程。 相反，通過指定不同的信令模式，TVSDK從FER清單讀取所有提示點並進入廣告伺服器以請求廣告中斷。 此過程類似於即時/DVR內容。
+對於FER資料流，Adobe Primetime ad decisioning伺服器不應提供在開始播放之前需要插入時間軸上的廣告插播清單。 這是VOD內容的典型程式。 相反地，透過指定不同的訊號模式，TVSDK會從FER資訊清單中讀取所有提示點，並前往每個提示點的廣告伺服器，以請求廣告插播。 此程式類似於即時/DVR內容。
 
-除了與提示點相關聯的每個請求之外，TVSDK還對預卷廣告進行附加的廣告請求。
+除了與提示點關聯的每個請求之外，TVSDK還會針對前段廣告提出額外的廣告請求。
 
-1. 從外部源（如vCMS）獲取應使用的信令模式。
-1. 建立與廣告相關的元資料。
-1. 如果必須覆蓋預設行為，請指定 `PTAdSignalingMode` 使用 `PTAdMetadata.signalingMode`。
+1. 從外部來源（例如vCMS）取得應使用的訊號模式。
+1. 建立廣告相關中繼資料。
+1. 如果必須覆寫預設行為，請指定 `PTAdSignalingMode` 透過使用 `PTAdMetadata.signalingMode`.
 
-   有效值為 `PTAdSignalingModeDefault`。 `PTAdSignalingModeManifestCues`, `PTAdSignalingModeServerMap`。
+   有效值為 `PTAdSignalingModeDefault`， `PTAdSignalingModeManifestCues`、和 `PTAdSignalingModeServerMap`.
 
-   在調用前必須設定廣告信令模式 `prepareToPlay`。 在TVSDK開始解析廣告並將其置於時間線上後，將忽略對廣告信令模式的更改。 為資源建立廣告元資料時設定模式。
+   呼叫之前，您必須設定廣告訊號模式 `prepareToPlay`. 在TVSDK開始解析廣告並將廣告置於時間軸上後，廣告訊號模式的變更會被忽略。 為資源建立廣告中繼資料時設定模式。
 
 1. 繼續播放。
 

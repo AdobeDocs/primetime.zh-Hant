@@ -1,6 +1,6 @@
 ---
-description: 當用戶按一下廣告或相關按鈕時，您的應用程式必須做出響應。 TVSDK提供有關按一下的目標URL的資訊。
-title: 響應廣告點擊
+description: 當使用者點選廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供點按目的地URL的相關資訊。
+title: 回應廣告的點按
 exl-id: 14716265-747d-4472-801e-2b97c7df2425
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,33 +9,33 @@ ht-degree: 0%
 
 ---
 
-# 響應廣告點擊 {#respond-to-clicks-on-ads}
+# 回應廣告的點按 {#respond-to-clicks-on-ads}
 
-TVSDK提供資訊，以便您能夠對點擊廣告進行操作。 在建立播放器UI時，必須決定當用戶按一下可按一下廣告時如何響應。
+TVSDK會提供您資訊，讓您在點進廣告上採取行動。 建立播放器UI時，您必須決定當使用者點按可點按廣告時如何回應。
 
-對於Android版TVSDK，只有線性廣告可點擊。
-當用戶按一下廣告或相關按鈕時，您的應用程式必須做出響應。 TVSDK提供有關按一下的目標URL的資訊。
+若是Android適用的TVSDK，只能點按線性廣告。
+當使用者點選廣告或相關按鈕時，您的應用程式必須回應。 TVSDK會提供點按目的地URL的相關資訊。
 
-1. 要為TVSDK設定事件偵聽器，並提供點擊資訊，請註冊 `AdClickedEventListener.onAdClicked`。
+1. 若要設定TVSDK的事件監聽器，並提供點進資訊，請註冊 `AdClickedEventListener.onAdClicked`.
 
-   當用戶按一下廣告或相關按鈕時，TVSDK將調度此通知，包括有關按一下的目標的資訊。
-1. 監視可點擊廣告上的用戶交互。
-1. 當用戶觸摸或按一下廣告或按鈕時，要通知TVSDK，請撥打 `notifyClick` 的 `MediaPlayerView`。
-1. 聽著 `onAdClick(AdClickEvent event)` TVSDK中的事件。
-1. 要檢索點擊式URL和相關資訊，請使用 `AdClickEvent` 實例。
-1. 暫停視頻。
+   當使用者點按廣告或相關按鈕時，TVSDK會傳送此通知，包括點按目的地的相關資訊。
+1. 監視使用者在可點按廣告上的互動。
+1. 當使用者接觸或按一下廣告或按鈕時，若要通知TVSDK，請呼叫 `notifyClick` 於 `MediaPlayerView`.
+1. 聆聽 `onAdClick(AdClickEvent event)` TVSDK的事件。
+1. 若要擷取點進URL和相關資訊，請使用getter方法 `AdClickEvent` 執行個體。
+1. 暫停視訊。
 
-   有關暫停視頻的詳細資訊，請參閱  [暫停並繼續播放](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md)。
-1. 使用點擊資訊顯示廣告點擊URL和相關資訊。 例如，可以通過以下方式之一顯示資訊：
+   如需有關暫停視訊的詳細資訊，請參閱  [暫停並繼續播放](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
+1. 使用點進資訊來顯示廣告點進URL和相關資訊。 例如，您可以用下列其中一種方式來顯示資訊：
 
-   * 在應用程式中，通過在瀏覽器中開啟點擊式URL。
+   * 在您的應用程式中，透過在瀏覽器中開啟點進URL。
 
-      在案頭平台上，視頻和播放區域用於在用戶點擊時調用點擊式URL。
-   * 將用戶重定向到其外部移動Web瀏覽器。
+      在案頭平台上，視訊廣告播放區域是用來在使用者點按時叫用點進URL。
+   * 將使用者重新導向至其外部行動網頁瀏覽器。
 
-      在移動設備上，視頻和播放區域用於其他功能，如隱藏和顯示控制項、暫停播放、擴展到全屏等。 在這些設備上，使用單獨的視圖（如發起人按鈕）來啟動點擊式URL。
+      在行動裝置上，視訊廣告播放區域可用於其他功能，例如隱藏和顯示控制項、暫停播放、展開至全熒幕等。 在這些裝置上，會使用獨立檢視（例如贊助者按鈕）來啟動點進URL。
 
-1. 關閉其中顯示點擊資訊的瀏覽器窗口並繼續播放視頻。
+1. 關閉顯示點進資訊的瀏覽器視窗，然後繼續播放視訊。
 
 <!--<a id="example_2D93228E510D438C8AB5559897817A47"></a>-->
 

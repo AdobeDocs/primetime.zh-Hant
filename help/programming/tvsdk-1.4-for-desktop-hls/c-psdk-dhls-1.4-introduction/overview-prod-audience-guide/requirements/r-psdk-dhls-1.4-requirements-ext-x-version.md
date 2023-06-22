@@ -54,7 +54,7 @@ The version of #EXT-X-VERSION in the .m3u8 file affects what features are availa
       <li id="li_A093F448567D475AB44656D4600BCBD6"><span class="codeph"></span> </li> 
       <li id="li_1084AE3B10FD4EB387D25EEDDFBBC8CD"><span class="codeph"></span> </li> 
       <li id="li_4FEFA36E300C403DBB77BB4DA46DB4EB"><span class="codeph"></span> </li> 
-      <li id="li_E53D81AED45C47AEA346FA3A1B191E5C">的 <span class="codeph"> 音頻 </span> 和 <span class="codeph"> 視頻 </span> 屬性 <span class="codeph"> EXT-X — 流 — INF </span> 標籤 </li> 
+      <li id="li_E53D81AED45C47AEA346FA3A1B191E5C">此 <span class="codeph"> 音訊 </span> 和 <span class="codeph"> 視訊 </span> 屬性 <span class="codeph"> EXT-X-STREAM-INF </span> 標籤 </li> 
       <li id="li_2E99A4971B8046F3845CF3D4D363CCCF">TVSDK alternate audio </li> 
      </ul> </p> </td> 
   </tr> 

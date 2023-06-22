@@ -1,6 +1,6 @@
 ---
-title: 使用策略更新清單
-description: 使用策略更新清單
+title: 使用原則更新清單
+description: 使用原則更新清單
 copied-description: true
 exl-id: 71715eec-e6a3-4640-b17f-ec0c38caf73e
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,23 +10,23 @@ ht-degree: 0%
 
 ---
 
-# 使用策略更新清單{#working-with-policy-update-lists}
+# 使用原則更新清單{#working-with-policy-update-lists}
 
-對於沒有訪問資料庫以儲存策略資訊的許可證伺服器，您可能希望使用策略更新清單將更新的策略通知給許可證伺服器。 策略更新清單可能包含已吊銷的策略版本或策略ID清單。 如果在中提供策略更新清單 `HandlerConfiguration`, SDK將在頒發許可證時強制執行此清單。
+對於無法存取資料庫以儲存原則相關資訊的授權伺服器，您可能希望使用原則更新清單來通知授權伺服器已更新的原則。 原則更新清單可能包含更新版本的原則，或已撤銷的原則ID清單。 如果中提供了原則更新清單 `HandlerConfiguration`，SDK會在核發授權時強制執行此清單。
 
-如果內容所有者或分銷商希望根據特定策略終止發放許可證，則也可撤銷該策略。 策略更新清單可用於在SDK中強制執行策略撤消。 策略更新清單也可用於向SDK提供更新策略的清單。 請注意，撤消策略不會撤消已頒發的許可證。 它只防止根據該政策簽發額外許可證。
+如果內容擁有者或經銷商想要根據特定原則停止簽發授權，原則也可能遭到撤銷。 原則更新清單可用來強制執行SDK中的原則撤銷。 原則更新清單也可用來為SDK提供已更新原則的清單。 請注意，撤銷原則不會撤銷已核發的授權。 它只會防止根據該原則簽發額外的授權。
 
-使用策略更新清單涉及使用 `PolicyUpdateListFactory` 的雙曲餘切值。 要建立策略更新清單，請載入現有策略更新清單，並檢查是否已使用Java API更新或吊銷策略，請執行以下步驟：
+使用原則更新清單涉及使用 `PolicyUpdateListFactory` 物件。 若要建立原則更新清單、載入現有原則更新清單，並使用Java API檢查原則是否已更新或撤銷，請執行以下步驟：
 
-1. 設定開發環境並包括「設定項目內的開發環境」中提到的所有JAR檔案。
-1. 建立 `ServerCredentialFactory` 實例，以載入簽名所需的憑據。
-1. 建立 `PolicyUpdateListFactory` 實例使用 `ServerCredential` 建立的。
-1. 指定要撤消的策略ID。
-1. 建立 `PolicyRevocationEntry` 使用策略ID的對象 `String` 您剛剛建立的，並通過將其傳入策略更新清單將其添加到 `PolicyUpdateListFactory.addRevocationEntry()`。 通過調用生成新策略更新清單 `PolicyUpdateListFactory.generatePolicyUpdateList()`。 同樣，可以使用 `PolicyUpdateEntry`。
-1. 如果策略更新清單已存在，則可以通過調用對其進行序列化以載入 `PolicyUpdateList.getBytes()`。 要載入清單，請調用 `PolicyUpdateListFactory.loadPolicyUpdateList()` 並在序列化清單中傳遞。
-1. 通過調用驗證簽名是否有效以及清單是否由正確的許可證伺服器證書籤名 `PolicyUpdateList.verifySignature()`。
-1. 要檢查項是否被吊銷，請傳遞策略ID `String` 入 `PolicyUpdateList.isRevoked()`。 或者，該清單可以傳入 `HandlerConfiguration` 發證後執行。
+1. 設定您的開發環境，並在您的專案中包含設定開發環境中所提及的所有JAR檔案。
+1. 建立 `ServerCredentialFactory` 執行個體以載入簽署所需的認證。
+1. 建立 `PolicyUpdateListFactory` 使用下列專案的例項： `ServerCredential` 您已建立。
+1. 指定要撤銷的原則ID。
+1. 建立 `PolicyRevocationEntry` 使用原則ID的物件 `String` 您剛才已建立，並將其傳遞至以新增至原則更新清單 `PolicyUpdateListFactory.addRevocationEntry()`. 呼叫，產生新的原則更新清單 `PolicyUpdateListFactory.generatePolicyUpdateList()`. 同樣地，可使用將更新的原則新增至清單 `PolicyUpdateEntry`.
+1. 如果原則更新清單已經存在，您可以呼叫，將其序列化以供載入 `PolicyUpdateList.getBytes()`. 若要載入清單，請呼叫 `PolicyUpdateListFactory.loadPolicyUpdateList()` 並在序列化清單中傳遞。
+1. 透過呼叫，驗證簽章是否有效，以及清單是否由正確的授權伺服器憑證簽署 `PolicyUpdateList.verifySignature()`.
+1. 若要檢查專案是否已撤銷，請傳遞原則ID `String` 到 `PolicyUpdateList.isRevoked()`. 或者，清單可傳遞至 `HandlerConfiguration` 並且會在簽發授權時強制執行。
 
-將附加條目添加到現有條目 `PolicyUpdateList`，載入現有策略更新清單。 新建 `PolicyUpdateListFactory` 實例。 呼叫P `olicyUpdateListFactory.addEntries` 將舊清單中的所有條目添加到新清單。 呼叫 `PolicyUpdateListFactory.addRevocationEntry` 或 `addUpdatedEntry` 將任何新的吊銷或更新條目添加到PolicyUpdateList。
+若要新增其他專案至現有專案，請執行下列步驟： `PolicyUpdateList`，載入現有的原則更新清單。 建立新的 `PolicyUpdateListFactory` 執行個體。 呼叫P `olicyUpdateListFactory.addEntries` 將舊清單中的所有專案新增至新清單。 呼叫 `PolicyUpdateListFactory.addRevocationEntry` 或 `addUpdatedEntry` 將任何新的撤銷或更新專案新增至PolicyUpdateList。
 
-有關演示如何建立策略更新清單、載入現有策略更新清單以及檢查策略是否已被吊銷的示例代碼，請參見 `com.adobe.flashaccess.samples.policyupdatelist` `.CreatePolicyUpdateList` 在「參考實現」命令行工具「示例」目錄中。
+如需示範如何建立原則更新清單、載入現有原則更新清單，以及檢查原則是否已撤銷的範常式式碼，請參閱 `com.adobe.flashaccess.samples.policyupdatelist` `.CreatePolicyUpdateList` 在「參考實作命令列工具」的「範例」目錄中。

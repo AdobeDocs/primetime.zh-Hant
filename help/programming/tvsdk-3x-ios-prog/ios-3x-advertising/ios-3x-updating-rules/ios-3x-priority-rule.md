@@ -1,5 +1,5 @@
 ---
-description: 該優先順序規則定義將從VAST/VMAP響應中選擇用於回放的廣告創意的優先順序順序。
+description: 優先順序規則會定義從VAST/VMAP回應中選取要播放的廣告創意的優先順序。
 keywords: 優先順序規則；創意選擇規則
 title: 優先順序規則
 exl-id: b81ba9ed-d141-4941-8ded-9c0765267eb9
@@ -12,15 +12,15 @@ ht-degree: 0%
 
 # 優先順序規則 {#priority-rules}
 
-該優先順序規則定義將從VAST/VMAP響應中選擇用於回放的廣告創意的優先順序順序。
+優先順序規則會定義從VAST/VMAP回應中選取要播放的廣告創意的優先順序。
 
-## 優先順序規則具有以下屬性和可能的值：
+## 優先順序規則具有下列屬性和可能的值：
 
 <table id="table_ljp_tgx_hz">  
  <thead> 
   <tr> 
-   <th class="entry"><b>鍵</b></th> 
-   <th class="entry"><b>類型</b></th> 
+   <th class="entry"><b>金鑰</b></th> 
+   <th class="entry"><b>型別</b></th> 
    <th class="entry"><b>值</b></th> 
    <th class="entry"><b>說明</b></th> 
   </tr> 
@@ -30,45 +30,45 @@ ht-degree: 0%
    <td><span class="codeph"> 優先順序</span></td> 
    <td><span class="codeph"> 陣列</span></td> 
    <td></td> 
-   <td> 小寫mime類型的陣列，它定義了必須選擇源建立才能播放的優先順序。</td> 
+   <td> 一個小寫MIME型別陣列，定義必須選取來源創意內容才能播放的優先順序。</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> 物料</span></td> 
+   <td><span class="codeph"> 個專案</span></td> 
    <td><span class="codeph"> 字串</span></td> 
    <td><span class="codeph"> 主機</span></td> 
-   <td>僅當前 <span class="codeph"> 主機</span> 支援。 當 <span class="codeph"> 匹配</span> 和 <span class="codeph"> 值</span> 屬性。</td> 
+   <td>目前僅適用 <span class="codeph"> 主機</span> 支援。 此屬性必須存在於 <span class="codeph"> 符合</span> 和 <span class="codeph"> 值</span> 屬性已定義。</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> 匹配</span></td> 
+   <td><span class="codeph"> 符合</span></td> 
    <td><span class="codeph"> 字串</span></td> 
-   <td><span class="codeph"> 多</span></td> 
+   <td><span class="codeph"> 多個</span></td> 
    <td>可能的值：
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> 情</span>  — 等於</li> 
-     <li><span class="codeph"> 紐</span>  — 不等於</li> 
-     <li><span class="codeph"> 協</span>  — 包含</li> 
-     <li><span class="codeph"> 數控</span>  — 不包含</li> 
-     <li><span class="codeph"> 軟</span>  — 開頭</li> 
-     <li><span class="codeph"> 新</span>  — 結尾</li> 
+     <li><span class="codeph"> eq</span>  — 等於</li> 
+     <li><span class="codeph"> 新</span>  — 不等於</li> 
+     <li><span class="codeph"> co</span>  — 包含</li> 
+     <li><span class="codeph"> nc</span>  — 不包含</li> 
+     <li><span class="codeph"> sw</span>  — 開頭為</li> 
+     <li><span class="codeph"> ew</span>  — 結尾為</li> 
     </ul></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> 類型</span></td> 
+   <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> 字串</span></td> 
    <td><span class="codeph"> 優先順序</span></td> 
-   <td>值必須始終為 <span class="codeph"> 優先順序</span></td> 
+   <td>值必須一律為 <span class="codeph"> 優先順序</span></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> 值</span></td> 
    <td><span class="codeph"> 陣列</span></td> 
    <td></td> 
-   <td> <p>TVSDK將使用 <span class="codeph"> 匹配</span> 屬性 <span class="codeph"> 物料</span> 建立源，並與此陣列中定義的值匹配</p> </td> 
+   <td> <p>TVSDK會使用 <span class="codeph"> 符合</span> 上的屬性 <span class="codeph"> 個專案</span> 和符合此陣列中定義的值</p> </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> 流</span></td> 
+   <td><span class="codeph"> 串流</span></td> 
    <td><span class="codeph"> 字串</span></td> 
    <td></td> 
-   <td> <p>值可以是 <span class="codeph"> 視頻</span> 或 <span class="codeph"> 活</span></p> </td> 
+   <td> <p>值可以是 <span class="codeph"> vod</span> 或 <span class="codeph"> live</span></p> </td> 
   </tr> 
  </tbody> 
 </table>

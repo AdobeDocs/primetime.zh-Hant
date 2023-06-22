@@ -12,10 +12,10 @@ ht-degree: 0%
 
 # 後續步驟 {#next-steps}
 
-您可以完成以下可選步驟：
-1. 使用硬體安全模組(HSM)提高魯棒性。
-1. 設定參考許可證伺服器並修改其原始碼以滿足您的業務要求。
+您可以完成下列選擇性步驟：
+1. 使用Hardware Security Module (HSM)提高穩健性。
+1. 設定Reference License Server並修改其原始程式碼以符合您的業務需求。
 
-   有關詳細資訊，請參見 *使用Adobe PrimetimeDRM參考實現。*
-1. 使用Flash Media Server(FMS)進行內容流。
-1. 使用AdobeOpen Screen Media Framework建立支援黃金時段DRM的視頻播放器，以獲得更具吸引力的用戶體驗。
+   如需詳細資訊，請參閱 *使用Adobe Primetime DRM參考實作。*
+1. 使用Flash Media Server(FMS)進行內容串流。
+1. 使用Adobe Open Screen Media Framework建立啟用Primetime DRM的視訊播放器，以獲得更吸引人的使用者體驗。

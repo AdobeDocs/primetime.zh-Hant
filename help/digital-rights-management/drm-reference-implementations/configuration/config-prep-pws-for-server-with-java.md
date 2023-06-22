@@ -12,10 +12,10 @@ ht-degree: 0%
 
 # 使用Java準備密碼{#prepare-passwords-using-java}
 
-運行 `ScrambleUtil.class` 使用Java:
+執行 `ScrambleUtil.class` 使用Java：
 
-1. 導航到 `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
-1. 在命令行中，鍵入：
+1. 導覽至 `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
+1. 在命令列中，輸入：
 
    ```
    java -classpath [DRM SDK DVD]/SDK/adobe-flashaccess-sdk.jar;  

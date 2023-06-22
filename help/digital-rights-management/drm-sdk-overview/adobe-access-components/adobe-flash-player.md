@@ -12,6 +12,6 @@ ht-degree: 0%
 
 # AdobeFlash Player {#adobe-flash-player}
 
-Flash Player是一種輕量級的瀏覽器插件和運行時，可提供一致且引人入勝的用戶體驗、令人驚嘆的音頻/視頻回放和普及的訪問。 Flash Player提供流式或下載的視頻內容的高質量回放。 對於內容發佈者，Flash Player提供了定制圍繞內容的播放螢幕的方法，允許通過使用橫幅和覆蓋的廣告來加深品牌體驗和賺錢。 對於消費者來說，Flash Player提供了一種直觀、直觀的視頻內容觀看方式。
+Flash Player是輕量型的瀏覽器外掛程式和執行階段，提供一致且吸引人的使用者體驗、令人驚豔的音訊/視訊播放，以及無處不在的觸角。 Flash Player提供高品質的串流或下載視訊內容播放。 對於內容發佈者而言，Flash Player提供自訂內容周圍播放畫面的方法，透過使用橫幅和覆蓋圖的廣告提供更深入的品牌體驗和營收。 對於消費者而言，Flash Player提供直覺式且視覺上吸引人的方式來檢視視訊內容。
 
-有關Flash Player的詳細資訊，請訪問： [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)
+如需Flash Player的詳細資訊，請造訪： [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)

@@ -1,6 +1,6 @@
 ---
-title: 打包媒體檔案概述
-description: 打包媒體檔案概述
+title: 封裝媒體檔案概述
+description: 封裝媒體檔案概述
 copied-description: true
 exl-id: 88c593a7-33b5-4773-b283-2ab16f9e8c3a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,32 +10,32 @@ ht-degree: 0%
 
 ---
 
-# 概述 {#packaging-media-files-overview}
+# 概觀 {#packaging-media-files-overview}
 
-打包是指對視頻內容加密和應用DRM策略的過程。 可以使用介質打包API來打包檔案。 Mighide DRM Java SDK只能包裝漸進式下載內容，如MP4。
-
->[!NOTE]
->
->請務必聯繫您的Mighine DRM代表，瞭解如何為您的媒體格式和使用案例選擇最合適的打包選項。
-
-打包從許可證伺服器中解耦。 打包程式不需要連接到許可證伺服器來交換有關內容的任何資訊。 許可證伺服器在頒發許可證時需要知道的所有內容都包含在內容元資料中。
-
-當檔案被加密時，如果沒有相應的許可證，則無法分析其內容。 可以使用Mogfi時DRM來選取要加密的檔案的部分。 由於Mighide DRM能夠分析視頻內容的檔案格式，因此它可以智慧地加密檔案的選擇性部分而不是整個檔案。 資料（如元資料和提示點）可保持未加密狀態，以便搜索引擎仍可搜索檔案。
-
-指定的內容段可以具有多個DRM策略。 例如，您可以在不同業務模式下許可內容，而無需多次打包內容。 此外，您還可以允許短時間的匿名訪問，然後允許客戶購買內容以具有無限的訪問權限。 如果使用多個DRM策略打包內容，則許可證伺服器必須實現邏輯以選擇必須使用哪個DRM策略來頒發許可證。
+封裝是指將DRM原則加密並套用至視訊內容的程式。 您可以使用媒體封裝API來封裝檔案。 Primetime DRM Java SDK只能封裝漸進式下載內容，例如MP4。
 
 >[!NOTE]
 >
->該體系結構允許當內容打包時指定使用DRM策略並綁定到內容。 在客戶端可以回放內容之前，客戶端必須獲取指定電腦的許可證。 許可證指定強制使用的規則，並提供必須用於解密內容的密鑰。 DRM策略表示用於生成許可證的模板。 但是，當許可證伺服器發出許可證時，它可以覆蓋使用規則。 許可證可由諸如到期時間或回放窗口等約束而變為無效。
+>請務必聯絡您的Primetime DRM代表，瞭解如何針對您的媒體格式和使用案例選取最適合的封裝選項。
 
-黃金時段DRM提供用於在CEK中傳遞的API。 如果未指定CEK，則SDK會隨機生成它。 通常，您需要為每個內容部分提供不同的CEK。 但是，在動態流中，您可能會對構成該內容的所有檔案使用相同的CEK。 因此，用戶只需一個許可證即可從一個比特率無縫過渡到另一個比特率。 如果希望對多個內容使用相同的密鑰和許可證，則需要傳遞相同的密鑰和許可證 `DRMParameters` 對象 `MediaEncrypter.encryptContent()`，或在CEK中通過 `V2KeyParameters.setContentEncryptionKey()`。 如果要為內容的每個部分使用不同的密鑰和許可證，則需要建立新的 `DRMParameters` 實例。
+封裝從授權伺服器分離。 封裝程式不需要連線到授權伺服器來交換任何有關內容的資訊。 授權伺服器發行授權所需瞭解的一切資訊都會包含在內容中繼資料中。
 
-使用密鑰旋轉對內容進行打包時，可以控制使用的旋轉密鑰以及密鑰更改的頻率。 `F4VDRMParameters` 和 `FLVDRMParameters` 執行 `KeyRotationParameters` 。 通過此介面，可以啟用密鑰輪替。 您還需要指定 `RotatingContentEncryptionKeyProvider`。 對於加密的每個示例，此類確定要使用的旋轉密鑰。 您可以實施您自己的提供商，或使用 `TimeBasedKeyProvider` 包含在SDK中。 此實現在指定的秒數後隨機生成新密鑰。
+當檔案被加密時，如果沒有適當的授權，就無法剖析其內容。 您可以使用Primetime DRM來選取要加密的檔案部分。 由於Primetime DRM可剖析視訊內容的檔案格式，因此可聰明地加密檔案的選擇性部分，而非整個檔案。 中繼資料和提示點等資料可以維持未加密狀態，讓搜尋引擎仍可搜尋檔案。
 
-在某些情況下，您可能需要將內容元資料儲存為單獨的檔案，並使其與內容分開提供給客戶端。 在這種情況下，你需要 `MediaEncrypter.encryptContent()`，返回 `MediaEncrypterResult` 的雙曲餘切值。 呼叫 `MediaEncrypterResult.getKeyInfo()` 將結果轉為 `V2KeyStatus`。 然後檢索內容元資料並將其儲存在檔案中。
+一個指定的內容可能有多個DRM原則。 例如，您可以授權不同商業模式下的內容，而無需多次封裝內容。 此外，您可以允許短期匿名存取，然後允許客戶購買內容以擁有無限制的存取權。 如果使用多個DRM原則封裝內容，則License Server必須實作邏輯，以選取必須使用哪個DRM原則來核發許可證。
 
-所有這些任務都可通過Java API完成。
+>[!NOTE]
+>
+>該架構允許在封裝內容時指定使用DRM原則並將其繫結到內容。 使用者端必須先取得指定電腦的授權，才能播放內容。 授權會指定強制使用的使用規則，並提供解密內容所必須使用的金鑰。 DRM政策代表產生許可證的範本。 不過，授權伺服器發行授權時，可能會覆寫使用規則。 授權可能會因為這類限制（例如到期時間或播放視窗）而變成無效。
 
-請參閱 *Adobe PrimetimeDRM API參考* 的子菜單。
+Primetime DRM提供用於傳入CEK的API。 如果未指定CEK，SDK會隨機產生它。 通常每個內容區段都需要不同的CEK。 不過，在Dynamic Streaming中，您可能會對組成該內容的所有檔案使用相同的CEK。 因此，使用者只需要單一授權，就能順暢地從一個位元速率轉換到另一個位元速率。 如果您想要針對多個內容片段使用相同的金鑰和授權，您需要傳遞相同的 `DRMParameters` 物件至 `MediaEncrypter.encryptContent()`，或使用在CEK中傳遞 `V2KeyParameters.setContentEncryptionKey()`. 如果您想要針對內容的每個區段使用不同的金鑰和授權，則需要建立新的 `DRMParameters` 每個檔案的執行個體。
 
-請參閱 *使用Adobe PrimetimeDRM參考實現* 有關介質打包器參考實現的資訊。
+使用金鑰輪換封裝內容時，您可以控制使用的輪換金鑰以及金鑰變更的頻率。 `F4VDRMParameters` 和 `FLVDRMParameters` 實作 `KeyRotationParameters` 介面。 透過此介面，您可以啟用金鑰輪換。 您也需要指定 `RotatingContentEncryptionKeyProvider`. 針對每個加密的範例，此類別會決定要使用的輪換金鑰。 您可以實作自己的提供者，或使用 `TimeBasedKeyProvider` 隨附於SDK。 此實作會在指定的秒數後隨機產生新金鑰。
+
+在某些情況下，您可能需要將內容中繼資料儲存為個別檔案，並讓使用者端可將其與內容分開使用。 在這種情況下，您需要叫用 `MediaEncrypter.encryptContent()`，會傳回 `MediaEncrypterResult` 物件。 呼叫 `MediaEncrypterResult.getKeyInfo()` 並將結果轉換為 `V2KeyStatus`. 然後擷取內容中繼資料並將其儲存在檔案中。
+
+所有這些工作都可以使用Java API來完成。
+
+另請參閱 *Adobe Primetime DRM API參考* 以取得有關Java API的詳細資訊。
+
+另請參閱 *使用Adobe Primetime DRM參考實作* 以瞭解Media Packager參考實作的相關資訊。

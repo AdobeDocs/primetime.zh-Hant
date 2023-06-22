@@ -1,6 +1,6 @@
 ---
-description: 對於瀏覽器TVSDK，需要注意一些安全注意事項。
-title: 安全考慮事項
+description: 瀏覽器TVSDK有一些需要注意的安全性考量。
+title: 安全性考量
 exl-id: bc98890a-082a-4e2d-b927-ecb3bd878de9
 source-git-commit: 78be1575cc7bd6630a7bf85faa061327e5c414d7
 workflow-type: tm+mt
@@ -9,28 +9,28 @@ ht-degree: 0%
 
 ---
 
-# 安全考慮事項{#security-considerations}
+# 安全性考量{#security-considerations}
 
-對於瀏覽器TVSDK，需要注意一些安全注意事項。
+瀏覽器TVSDK有一些需要注意的安全性考量。
 
 * **AdobeFlash Player**
 
-   * Flash Player不允許訪問駐留在SWF發源的域之外的資料。
+   * Flash Player不允許存取位於SWF來源網域以外的資料。
 
-      要允許訪問，請在承載資料的伺服器的根目錄處托管具有適當權限的跨域策略檔案。 在FlashTVSDK(Flash Player版本23及更高版本)的回退模式下，您需要域的授權令牌。 要生成令牌，請與Adobe代表聯繫。
+      若要允許存取，請在託管資料的伺服器根目錄下，以適當許可權託管跨網域原則檔案。 在瀏覽器TVSDK的Flash遞補模式(Flash Player版本23及更新版本)中，您需要網域的授權Token。 若要產生代號，請聯絡您的Adobe代表。
 
 * **JavaScript**
 
-   * JavaScript遵循相同的源策略，並防止跨域邊界訪問資源。
+   * JavaScript遵循相同的原始原則，並防止跨網域邊界存取資源。
 
-      要允許訪問這些資源，必須在承載於播放器以外的源的資源上設定訪問控制允許來源(CORS)標頭。 或者，如果內容是使用位元組範圍指定的，則CORS飛行前選項請求必須指明這些請求是源允許的。
+      若要允許存取這些資源，Access-Control-Allow-Origin (CORS)標頭必須設定於在播放器以外的原始裝置上託管的資源。 或者，如果使用位元組範圍指定內容，CORS預檢選項要求必須指出來源允許這些要求。
 
-* **瀏覽器和混合內容**
+* **瀏覽器和混合式內容**
 
-   * 瀏覽器要求AES-128加密內容通過安全原點（例如HTTPS）托管。
+   * 瀏覽器要求透過安全的來源（例如HTTPS）來託管AES-128加密內容。
 
-      由於大多數瀏覽器不允許混合內容，因此我們建議播放器、內容和相關資產（如Key/ WebVTT檔案）也通過安全源托管。
+      由於大多數瀏覽器不允許混合式內容，因此我們建議將播放器、內容和相關資產（例如金鑰/WebVTT檔案）也託管於安全的Origin上。
 
       >[!IMPORTANT]
       >
-      >從2.4.5版開始，如果播放器是通過HTTPS承載的，則當使用MSE技術時，Browser TVSDK會將HTTP調用轉換為HTTPS。
+      >從2.4.5版開始，如果播放器是透過HTTPS託管，則瀏覽器TVSDK會在使用MSE技術時將HTTP呼叫轉換為HTTPS。

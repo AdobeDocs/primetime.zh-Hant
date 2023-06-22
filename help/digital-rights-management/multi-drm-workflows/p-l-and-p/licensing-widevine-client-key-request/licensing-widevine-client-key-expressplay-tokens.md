@@ -1,6 +1,6 @@
 ---
-description: 通過將令牌請求發送到相應的Expressplay令牌伺服器，可以為其加密內容生成Expressplay令牌。
-title: 表達式令牌
+description: 您可以傳送權杖請求至適當的Expressplay權杖伺服器，為其加密內容產生Expressplay權杖。
+title: Expressplay權杖
 exl-id: 38faba06-6737-4dec-ac97-27db3124b993
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,11 +9,11 @@ ht-degree: 0%
 
 ---
 
-# 表達式令牌 {#expressplay-tokens}
+# Expressplay權杖 {#expressplay-tokens}
 
-通過將令牌請求發送到相應的Expressplay令牌伺服器，可以為其加密內容生成Expressplay令牌。
+您可以傳送權杖請求至適當的Expressplay權杖伺服器，為其加密內容產生Expressplay權杖。
 
-示例如下：
+下列URL即是範例：
 
 ```
 https://wv-gen.service.expressplay.com/hms/wv/
@@ -24,7 +24,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-提供給的內容加密密鑰儲存ID或CEKSID `kid` 參數和內容加密密鑰，或 `contentKey` 參數必須與用於打包的內容加密密鑰儲存ID和內容加密密鑰匹配。 以下文本是令牌伺服器響應的示例：
+提供給的內容加密金鑰儲存ID或CEKSID `kid` 引數以及指定給的內容加密金鑰或CEK `contentKey` 引數必須與用於封裝的內容加密金鑰儲存體ID和內容加密金鑰相符。 以下文字是權杖伺服器回應的範例：
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -33,7 +33,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-你可以
+然後，您可以
 
-* 將返回的URL和查詢用作許可證伺服器URL，或
-* 從URL中取出查詢，然後作為HTTPPOST標頭分別傳入ExpressPlayToken
+* 使用傳回的URL和查詢作為授權伺服器URL，或者
+* 從URL中取出查詢，並分別在ExpressPlayToken中作為HTTPPOST標頭傳遞

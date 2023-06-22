@@ -1,5 +1,5 @@
 ---
-description: 此表提供了有關INFO的詳細資訊。 類型通知。
+description: 此表格提供INFO的詳細資訊。 輸入通知。
 title: INFO通知代碼
 exl-id: 65cd0a63-c765-4624-9028-d46cb8fbec3a
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -11,20 +11,20 @@ ht-degree: 4%
 
 # INFO通知代碼{#info-notification-codes}
 
-此表提供了有關INFO的詳細資訊。 類型通知。
+此表格提供INFO的詳細資訊。 輸入通知。
 
 <!--<a id="section_ED4302E363AE48CBA2C3E0B71AE612D8"></a>-->
 
-大多數資訊性通知都包含相關的元資料，例如，無法下載的資源的URL。 某些通知包含元資料，用於指定是在主視頻內容、備用音頻內容還是廣告中出現問題。
+大多數資訊通知包含相關中繼資料，例如無法下載的資源的URL。 某些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
 
 <table frame="all" colsep="1" rowsep="1" id="table_503463046E764A87B10EB5D8B294EB23"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="1" class="entry"> 代碼 </th> 
+   <th colname="1" class="entry"> 程式碼 </th> 
    <th colname="2" class="entry"> 名稱 </th> 
    <th colname="3" class="entry"> 內部通知 </th> 
-   <th colname="4" class="entry"> 元資料鍵 </th> 
-   <th colname="5" class="entry"> 注釋 </th> 
+   <th colname="4" class="entry"> 中繼資料索引鍵 </th> 
+   <th colname="5" class="entry"> 註解 </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -37,69 +37,69 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300000 </span> </td> 
-   <td colname="2"><span class="codeph"> 播放開始 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_START </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> 無 </td> 
-   <td colname="5"> 播放已開始。 </td> 
+   <td colname="5"> 已開始播放。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300001 </span> </td> 
-   <td colname="2"><span class="codeph"> 播放完成 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> 無 </td> 
    <td colname="5"> 播放已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> 查找開始 </span> </td> 
+   <td colname="2"><span class="codeph"> 搜尋開始 </span> </td> 
    <td colname="3"> 無 </td> 
-   <td colname="4"><span class="codeph"> 查找時間</span> </td> 
-   <td colname="5"> 已啟動查找操作。 </td> 
+   <td colname="4"><span class="codeph"> 搜尋時間</span> </td> 
+   <td colname="5"> 已起始搜尋作業。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300003 </span> </td> 
-   <td colname="2"><span class="codeph"> 查找完成 </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_COMPLETE </span> </td> 
    <td colname="3"> 無 </td> 
-   <td colname="4"><span class="codeph"> 查找時間</span> </td> 
-   <td colname="5"> 搜索操作已完成。 </td> 
+   <td colname="4"><span class="codeph"> 搜尋時間</span> </td> 
+   <td colname="5"> 搜尋作業已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300004 </span> </td> 
-   <td colname="2"><span class="codeph"> 內容更改 </span> </td> 
+   <td colname="2"><span class="codeph"> CONTENT_CHANGE </span> </td> 
    <td colname="3"> 無 </td> 
-   <td colname="4"> <span class="codeph"> 內容ID</span> <span class="codeph"> 當前媒體時間</span> </td> 
-   <td colname="5"> 當前播放時間已越過主內容和備用內容之間的邊框。 </td> 
+   <td colname="4"> <span class="codeph"> CONTENT_ID</span> <span class="codeph"> CURRENT_MEDIA_TIME</span> </td> 
+   <td colname="5"> 目前的播放時間已超過主要和替代內容之間的邊界。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300005 </span> </td> 
-   <td colname="2"><span class="codeph"> 播放器_狀態_更改 </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
    <td colname="3"> <p>任何錯誤通知。 </p> </td> 
    <td colname="4"><span class="codeph"> 狀態 </span> </td> 
-   <td colname="5"> 玩家狀態已更改。 當狀態為ERROR時，內部通知是觸發交換機進入ERROR狀態的錯誤通知對象。 </td> 
+   <td colname="5"> 播放器狀態已變更。 當狀態為ERROR時，內部通知是觸發切換至ERROR狀態的錯誤通知物件。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300006 </span> </td> 
-   <td colname="2"><span class="codeph"> 內容標籤 </span> </td> 
+   <td colname="2"><span class="codeph"> CONTENT_MARKER </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> CONTENT_ID CURRENT_MEDIA_TIME </span> </td> 
-   <td colname="5"> 收到內容標籤。 </td> 
+   <td colname="5"> 已收到內容標籤。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300100 </span> </td> 
-   <td colname="2"><span class="codeph"> 載入資訊可用 </span> </td> 
+   <td colname="2"><span class="codeph"> LOAD_INFO_AVAILABLE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"> <span class="codeph"> 片段URL</span> <span class="codeph"> 片段大小</span> <span class="codeph"> FRAGMENT_DOWNLOAD_DURATION</span> <span class="codeph"> PERIOD_INDEX</span> </td> 
-   <td colname="5"> 提供與視頻段下載方式相關的資訊。 </td> 
+   <td colname="4"> <span class="codeph"> FRAGMENT_URL</span> <span class="codeph"> FRAGMENT_SIZE</span> <span class="codeph"> FRAGMENT_DOWN_DURATION</span> <span class="codeph"> PERIOD_INDEX</span> </td> 
+   <td colname="5"> 提供與視訊區段下載方式相關的資訊。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300101 </span> </td> 
-   <td colname="2"><span class="codeph"> 視頻大小更改 </span> </td> 
+   <td colname="2"><span class="codeph"> VIDEO_SIZE_CHANGED </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <span class="codeph"> 高度</span> <p><span class="codeph"> 寬度</span> </p> </td> 
-   <td colname="5"> 視頻播放窗口的大小已更改。 </td> 
+   <td colname="5"> 視訊播放視窗的大小已變更。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>自適應比特率(ABR)</b> </td> 
+   <td colname="1"><b>最適化位元速率(ABR)</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -107,10 +107,10 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 302000 </span> </td> 
-   <td colname="2"><span class="codeph"> 比特率_更改 </span> </td> 
+   <td colname="2"><span class="codeph"> BITRATE_CHANGE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 比特率 </span><span class="codeph"> 當前媒體時間 </span> </td> 
-   <td colname="5"> 視頻的比特率已更改。 </td> 
+   <td colname="4"><span class="codeph"> 位元速率 </span><span class="codeph"> CURRENT_MEDIA_TIME </span> </td> 
+   <td colname="5"> 視訊的位元速率已變更。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>廣告處理</b> </td> 
@@ -121,76 +121,76 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303000 </span> </td> 
-   <td colname="2"><span class="codeph"> 時間軸_更改 </span> </td> 
+   <td colname="2"><span class="codeph"> 時間軸變更 </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 內容ID </span><span class="codeph"> PERIOD_INDEX </span> </td> 
-   <td colname="5"> 時間線已更改（例如，添加或刪除了備用內容）。 </td> 
+   <td colname="4"><span class="codeph"> CONTENT_ID </span><span class="codeph"> PERIOD_INDEX </span> </td> 
+   <td colname="5"> 時間軸已變更（例如，已新增或移除替代內容）。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303001 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_BREAK_放置_完成 </span> </td> 
+   <td colname="2"><span class="codeph"> AD_BREAK_PLACEMENT_COMPLETE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"> <span class="codeph"> 建議的_AD_BREAK</span> <span class="codeph"> 接受_AD_BREAK</span> </td> 
-   <td colname="5"> 已接受建議的廣告中斷 <code>primetime-sdk-name</code> 並（全部或部分）放置在回放時間軸上。 </td> 
+   <td colname="4"> <span class="codeph"> PROPOSED_AD_BREAK</span> <span class="codeph"> ACCEPTED_AD_BREAK</span> </td> 
+   <td colname="5"> 建議的廣告插播已被接受 <code>primetime-sdk-name</code> 並放置（全部或部分）在播放時間軸上。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303002 </span> </td> 
    <td colname="2"><span class="codeph"> AD_BREAK_START </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> AD_BREAK </span> </td> 
-   <td colname="5"> 已開始播放特定廣告分段。 </td> 
+   <td colname="5"> 特定廣告插播的播放已開始。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303003 </span> </td> 
    <td colname="2"><span class="codeph"> AD_BREAK_COMPLETE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> AD_BREAK </span> </td> 
-   <td colname="5"> 播放特定廣告片段已完成。 </td> 
+   <td colname="5"> 特定廣告插播的播放已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303004 </span> </td> 
    <td colname="2"><span class="codeph"> AD_START </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> 廣告</span> </p> </td> 
-   <td colname="5"> 已開始播放特定廣告。 </td> 
+   <td colname="5"> 特定廣告的播放已開始。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303005 </span> </td> 
-   <td colname="2"><span class="codeph"> 完成(_C) </span> </td> 
+   <td colname="2"><span class="codeph"> AD_COMPLETE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> 廣告</span> </p> </td> 
-   <td colname="5"> 播放特定廣告已完成。 </td> 
+   <td colname="5"> 特定廣告的播放已完成。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303006 </span> </td> 
    <td colname="2"><span class="codeph"> AD_PROGRESS </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> 廣告</span> </p> <span class="codeph"> 進度</span> </td> 
-   <td colname="5"> 某個廣告的播放量已達到該特定廣告的一定百分比。 </td> 
+   <td colname="5"> 特定廣告的播放已達該特定廣告的特定百分比。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303007 </span> </td> 
    <td colname="2"><span class="codeph"> TIMED_METADATA_ADD </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"> <span class="codeph"> 類型</span> <p><span class="codeph"> ID</span> </p> <span class="codeph"> 名稱</span> <p><span class="codeph"> 時間</span> </p> </td> 
-   <td colname="5"> 在清單中發現了新的定時元資料。 </td> 
+   <td colname="4"> <span class="codeph"> 型別</span> <p><span class="codeph"> ID</span> </p> <span class="codeph"> 名稱</span> <p><span class="codeph"> 時間</span> </p> </td> 
+   <td colname="5"> 在資訊清單中發現新的計時中繼資料。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303008 </span> </td> 
-   <td colname="2"><span class="codeph"> 按一下(_C) </span> </td> 
+   <td colname="2"><span class="codeph"> AD_CLICK </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> 廣告</span> </p> <span class="codeph"> 按一下(_C)</span> </td> 
-   <td colname="5"> 返回有關用戶按一下的廣告的資訊。 </td> 
+   <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> 廣告</span> </p> <span class="codeph"> AD_CLICK</span> </td> 
+   <td colname="5"> 傳回使用者點按的廣告相關資訊。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303009</span> </td> 
-   <td colname="2"><span class="codeph"> 跳過AD_BREAK_SKPITED</span> </td> 
+   <td colname="2"><span class="codeph"> AD_BREAK_SKIPPED</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> 廣告</span> </p> <span class="codeph"> 按一下(_C)</span> </td> 
-   <td colname="5"> 已跳過廣告中斷。 </td> 
+   <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> 廣告</span> </p> <span class="codeph"> AD_CLICK</span> </td> 
+   <td colname="5"> 已略過廣告插播。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname=""><b>後期綁定音頻(LBA)</b> </td> 
+   <td colname=""><b>延遲繫結音訊(LBA)</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -198,10 +198,10 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 304000 </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE </span> </td> 
+   <td colname="2"><span class="codeph"> AUDIO_TRACK_變更 </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> 跟蹤ID </span><span class="codeph"> 當前媒體時間 </span> </td> 
-   <td colname="5"> 音頻軌道已更改。 </td> 
+   <td colname="4"><span class="codeph"> TRACK_ID </span><span class="codeph"> CURRENT_MEDIA_TIME </span> </td> 
+   <td colname="5"> 音訊曲目已變更。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>DRM</b> </td> 
@@ -215,10 +215,10 @@ ht-degree: 4%
    <td colname="2"><span class="codeph"> DRM_METADATA_AVAILABLE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> PREFETCH_TIMESTAMP </span> </td> 
-   <td colname="5"> 新DRM資料可用。 </td> 
+   <td colname="5"> 有新的DRM資料可供使用。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>泛型</b> </td> 
+   <td colname="1"><b>通用</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -226,10 +226,10 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> 399999 </span> </td> 
-   <td colname="2"><span class="codeph"> 泛型資訊 </span> </td> 
+   <td colname="2"><span class="codeph"> GENERIC_INFO </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
-   <td colname="5"> <p>標籤泛型資訊事件。 不是TVSDK發的。 它只是TVSDK資訊事件所對應的數字代碼範圍的結束的標誌。 </p> </td> 
+   <td colname="5"> <p>標籤一般資訊事件。 並非由TVSDK實際發出。 它只是TVSDK資訊事件對應之數值程式碼範圍結尾的標籤。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

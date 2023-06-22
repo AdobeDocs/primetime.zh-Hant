@@ -1,6 +1,6 @@
 ---
-title: Adobe PrimetimeDRM SDK — 概述
-description: Adobe PrimetimeDRM SDK — 概述
+title: Adobe Primetime DRM SDK — 概觀
+description: Adobe Primetime DRM SDK — 概觀
 copied-description: true
 exl-id: 6760dfcc-b8f9-4379-bc01-70af4bf24baf
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
@@ -10,18 +10,18 @@ ht-degree: 0%
 
 ---
 
-# Adobe PrimetimeDRM SDK — 概述 {#adobe-primetime-drm-sdk-an-overview}
+# Adobe Primetime DRM SDK — 概觀 {#adobe-primetime-drm-sdk-an-overview}
 
 >[!NOTE]
 >
->Adobe PrimetimeDRM以前叫做Adobe訪問，在之前叫Flash Access。
+>Adobe Primetime DRM先前稱為Adobe存取，之前稱為Flash Access。
 
-黃金時段DRM SDK是一種數字版權管理平台，它使得能夠保護和安全地傳送視頻和音頻內容，以便在消費設備上回放。
+Primetime DRM SDK是數位版權管理平台，可保護並安全地傳送視訊與音訊內容，以便在消費者裝置上播放。
 
-黃金時段DRM是一個靈活的平台，它使內容所有者能夠保護其內容並保持對分發的控制。 內容所有者可以通過為每個數字媒體檔案建立許可證來保護和管理其權利，從而確保向消費者提供各種最高質量的內容。
+Primetime DRM是彈性的平台，可讓內容擁有者保護其內容並維持對散佈的控制。 內容擁有者可透過為每個數位媒體檔案建立授權來保護和管理其權利，確保消費者可獲得各種最高品質的內容。
 
-黃金時段DRM支援多種業務模式，包括視頻點播、租賃和電子銷售。 您可以通過多種方式分發受Mogine DRM保護的內容，包括：
+Primetime DRM支援多種商業模式，包括視訊隨選、租借及電子銷售。 您可以透過多種方式散佈受Primetime DRM保護的內容，包括：
 
-* 通過AdobeFlash Media Server軟體流式傳輸
-* 使用AdobeHTTP Dynamic Streaming技術，通過HTTP提供漸進式下載
-* 允許下載到內容庫以便用戶方便地進行本地播放
+* 透過AdobeFlash Media Server軟體串流
+* 使用Adobe的HTTP Dynamic Streaming技術，透過HTTP提供漸進式下載
+* 允許下載至內容庫，方便消費者本機播放

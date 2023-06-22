@@ -12,8 +12,8 @@ ht-degree: 0%
 
 # Adobe AIR{#adobe-air}
 
-Adobe AIR是一個跨作業系統運行時，它允許內容製作商通過設計定製的多媒體應用程式將他們在Web上的現有投資擴展到案頭。 它構建在經驗證的開放技術之上，為企業開發和部署可信賴的定製應用程式提供了可靠、簡化的方法，以提供更安全、更愉快的用戶體驗。 Adobe AIR公司使企業能夠輕鬆整合富媒體，創造更身臨其境的互動用戶體驗。 它使開發人員能夠使用HTML、JavaScript、Flash或Adobe®Flex®軟體等熟悉的工具，將富Internet應用程式的獨特組合部署到Windows、Macintosh或Linux。
+Adobe AIR是跨作業系統的執行階段，可讓內容製作者透過設計自訂的多媒體應用程式，將其現有的網頁投資擴充至案頭。 它以經過實證的開放式技術為基礎，為企業開發和部署值得信賴的自訂應用程式提供可靠、簡化的方式，以提供更安全、更愉快的使用者體驗。 Adobe AIR可讓企業輕鬆整合多媒體，創造更沈浸式且互動式的使用者體驗。 它可讓開發人員使用熟悉的工具，例如HTML、JavaScript、Flash或Adobe®Flex®軟體，將其獨特的豐富網際網路應用程式組合部署到Windows、Macintosh或Linux。
 
-企業對用戶介面有完全的控制，可以設計用戶體驗來反映和強化其品牌。 通過對播放受Adobe PrimetimeDRM SDK保護的內容的內置支援，Adobe AIR幫助建立定製的端到端內容分發鏈。
+企業可完全控制使用者介面，且可設計使用者體驗來反映及強化其品牌。 Adobe AIR內建支援以Adobe Primetime DRM SDK保護的內容播放，可協助建立自訂的端對端內容發佈鏈。
 
-有關Adobe AIR的更多資訊，請訪問： [www.adobe.com/go/air](https://www.adobe.com/go/air)
+如需Adobe AIR的詳細資訊，請造訪： [www.adobe.com/go/air](https://www.adobe.com/go/air)
