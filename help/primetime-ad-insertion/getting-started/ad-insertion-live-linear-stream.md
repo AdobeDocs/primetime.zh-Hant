@@ -2,9 +2,9 @@
 title: 在即時/線性資料流中使用Ad Insertion
 description: 在即時/線性資料流中使用Ad Insertion
 exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ PrimetimeAd Insertion支援各種標準和非標準提示格式，包括：
 
 * DPI SCTE-35 （SCTE-35增強型廣告標籤）
 
-* [Adobe數位程式插入訊號規格](https://www.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
+* [Adobe數位程式插入訊號規格](assets/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
 
 * 二進位SCTE-35 （HLS和DASH）
 
