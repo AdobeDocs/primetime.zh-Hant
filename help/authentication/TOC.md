@@ -2,7 +2,7 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime驗證
-user-guide-description: Primetime驗證是TV Everywhere的權益解決方案，提供模組化架構，以判斷請求存取資源的人是否有權使用資源。
+user-guide-description: Primetime驗證是TV Everywhere的權益解決方案，提供模組化架構，用於判斷要求存取資源的人是否有權使用資源。
 source-git-commit: 5e649f1c0937882c9a05809af8916229f6a95e73
 workflow-type: tm+mt
 source-wordcount: '739'
@@ -17,8 +17,8 @@ ht-degree: 0%
 + Primetime驗證概念 {#authentication-concepts}
    + [技術檔案](technical-paper.md)
    + [程式設計師概觀](programmer-overview.md)
-   + [MVPD概述](mvpd-overview.md)
-+ 快速入門手冊 {#kickstart-guides}
+   + [MVPD概覽](mvpd-overview.md)
++ Kickstart指南 {#kickstart-guides}
    + [程式設計師快速入門手冊](programmer-kickstart-guide.md)
    + [MVPD快速入門手冊](mvpd-kickstart-guide.md)
 + 程式設計師整合指南 {#programmer-integration-guide}
@@ -27,12 +27,12 @@ ht-degree: 0%
    + [程式設計師使用案例](programmer-use-cases.md)
    + [傳遞使用者端資訊（裝置、連線和應用程式）](passing-client-information-device-connection-and-application.md)
    + REST API {#restapi}
-      + [REST API概觀](rest-api-overview.md)
+      + [REST API總覽](rest-api-overview.md)
       + [REST API逐步指南（伺服器對伺服器）](rest-api-cookbook-servertoserver.md)
       + [REST API逐步指南（使用者端對伺服器）](rest-api-cookbook-clienttoserver.md)
       + Rest API參考 {#rest-api-reference}
          + [REST API參考](rest-api-reference.md)
-         + [註冊代碼請求](registration-code-request.md)
+         + [註冊代碼要求](registration-code-request.md)
          + [傳回註冊記錄](return-registration-record.md)
          + [刪除註冊記錄](delete-registration-record.md)
          + [提供MVPD清單](provide-mvpd-list.md)
@@ -49,10 +49,10 @@ ht-degree: 0%
          + [使用者中繼資料](user-metadata.md)
          + [擷取設定檔請求](retrieve-profilerequest.md)
          + [Token Exchange](token-exchange.md)
-         + [臨時通行證和促銷臨時通行證的免費預覽](free-preview-for-temp-pass-and-promotional-temp-pass.md)
+         + [臨時通票和促銷臨時通票的免費預覽](free-preview-for-temp-pass-and-promotional-temp-pass.md)
    + AccessEnabler SDK {#accessenabler-sdk}
       + JavaScript SDK {#javascriptsdk}
-         + [JavaScript SDK概觀](javascript-sdk-overview.md)
+         + [JavaScript SDK總覽](javascript-sdk-overview.md)
          + [JavaScript SDK逐步指南](javascript-sdk-cookbook.md)
          + [JavaScript SDK API參考](javascript-sdk-api-reference.md)
          + 准則 {#js-sdk-guidelines}
@@ -70,7 +70,7 @@ ht-degree: 0%
          + iOS/tvOS API {#ios-tvos-api}
             + [預先授權](preauthorize.md)
       + Android SDK {#androidsdk}
-         + [Android SDK概觀](android-sdk-overview.md)
+         + [Android SDK總覽](android-sdk-overview.md)
          + [Android SDK逐步指南](android-sdk-cookbook.md)
          + [Android SDK API參考](android-sdk-api-reference.md)
          + 准則 {#androidguidelines}
@@ -110,8 +110,8 @@ ht-degree: 0%
    + [使用者中繼資料交換](mvpd-user-metadata-exchng.md)
    + [Proxy MVPD Web服務](proxy-mvpd-webserv.md)
    + [Proxy MVPD SAML整合](proxy-mvpd-saml-int.md)
-   + [服務提供者範圍設定](serv-provider-scoping.md)
-   + [MVPD允許IP位址](mvpd-listing-ip-addres.md)
+   + [服務提供者範圍](serv-provider-scoping.md)
+   + [mvpd允許IP位址](mvpd-listing-ip-addres.md)
 + Primetime驗證功能 {#auth-features}
    + Adobe Analytics整合 {#analytics-int}
       + [將Primetime驗證伺服器端資料整合至Adobe Analytics](integrate-authn-servr-data-analytics.md)
@@ -138,18 +138,18 @@ ht-degree: 0%
    + 使用者端註冊 {#client-regn}
       + [動態使用者端註冊](dynamic-client-registration.md)
       + [動態使用者端註冊API](dynamic-client-registration-api.md)
-      + [Dynamic Client註冊管理](dynamic-client-registration-management.md)
+      + [動態使用者端註冊管理](dynamic-client-registration-management.md)
    + 降級服務 {#degrn-service}
-      + [降級API概述](degradation-api-overview.md)
+      + [降級API概觀](degradation-api-overview.md)
    + 隱私權整備 {#privacy-readiness}
       + [隱私權支援概述](privacy-supp-overview.md)
       + [如何提出隱私權請求](make-privacy-req.md)
-+ 提示和疑難排解 {#tips-troubleshoot}
-   + [在選擇對話方塊中允許MVPD](allow-mvpd-selectn-dialog.md)
-   + [防止MVPD出現在選取對話方塊](prevent-mvpd-selectn-dialog.md)
++ 提示與疑難排解 {#tips-troubleshoot}
+   + [在選取對話方塊中允許MVPD](allow-mvpd-selectn-dialog.md)
+   + [防止MVPD出現在選取對話方塊中](prevent-mvpd-selectn-dialog.md)
 + 支援 {#support}
    + [向上呈報程式](escalation-procedures.md)
-   + [監控PrimetimeAdobePayTV通過](monitoring-adobe-pay-tv-pass.md)
+   + [監控PrimetimeAdobePayTV Pass](monitoring-adobe-pay-tv-pass.md)
    + [最低系統需求](minimum-system-requirements.md)
 + 發行說明 {#release-notes}
    + [Adobe Pass Authentication 2.66發行說明](auth-rn-266.md)
@@ -180,19 +180,19 @@ ht-degree: 0%
          + [AccessEnabler iOS/tvOS 3.7.0升級路徑](accessenabler-iostvos-370-upgrade-path.md)
    + Primetime驗證環境 {#primetime-authentication-environments}
       + [瞭解Adobe環境](understanding-the-adobe-environments.md)
-      + [在預備中設定您的環境和測試](setting-up-your-environment-and-testing-in-prequal.md)
+      + [在預備中設定您的環境及測試](setting-up-your-environment-and-testing-in-prequal.md)
       + [如何使用Adobe API測試網站測試驗證和授權流程](test-authn-authz-flows-using-adobes-api-test-site.md)
    + 無使用者端API {#clientless-api}
-      + [無使用者端API實作 — 錯誤代碼/訊息的可能原因/原因](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
-      + [沒有裝置ID時的無使用者端API流程](clientless-api-flow-in-the-absence-of-device-id.md)
+      + [無使用者端API實施 — 錯誤代碼/包含可能原因/原因的訊息](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
+      + [缺少裝置ID時的無使用者端API流程](clientless-api-flow-in-the-absence-of-device-id.md)
       + [無使用者端：避免在/authenticate請求中使用&#39;&amp;&#39;reg_code](clientless-avoid-using-reg-code-in-authenticate-request.md)
-      + [為Xbox 360和XboxOne無使用者端上的程式設計人員啟用Primetime軟體權利檔案服務](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
+      + [在Xbox 360和XboxOne無使用者端上啟用程式設計師的Primetime軟體權利檔案服務](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
       + [無使用者端裝置型別和量度](benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
    + 使用者體驗 {#user-exp}
       + [如何將MVPD登入頁面從iFrame移轉至快顯視窗](migr-mvpd-login-iframe-popup.md)
       + [預檢功能：如何啟用、疑難排解或判斷問題](preflight-feature.md)
    + 工具與公用程式 {#tools-and-utilities}
-      + [使用Charles Proxy](using-charles-proxy.md)
+      + [使用Charles代理](using-charles-proxy.md)
    + 概念 {#concepts}
       + [瞭解使用者ID](understanding-user-ids.md)
 + [TVE儀表板使用手冊](tve-dashboard-user-guide.md)
