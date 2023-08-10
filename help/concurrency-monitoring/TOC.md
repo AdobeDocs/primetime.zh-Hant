@@ -2,10 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Primetime並行監視
-user-guide-description: null
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+user-guide-description: 瞭解如何定義並強制實施多個應用程式間並行使用的限制。
+source-git-commit: d84723842e5c540ddf83c4007da09e44b4f08eff
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '145'
 ht-degree: 0%
 
 ---
