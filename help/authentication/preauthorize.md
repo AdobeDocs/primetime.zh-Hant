@@ -2,7 +2,7 @@
 title: iOS/tvOS API預先授權
 description: iOS/tvOS API預先授權
 exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
@@ -13,25 +13,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
-預先授權API可用於取得一或多個資源的預先授權決定，如此一來，應用程式便可實作UI提示和/或內容篩選。
-
->[!IMPORTANT]
->
->授權API **必須** 在授與使用者對指定資源的存取權之前使用。
-
-如果Preauthorize API回應結果包含一或多個資源且預先授權決定遭拒，則可包含其他錯誤資訊 **（請參閱下面的附註）** 每個受影響的資源。
+預先授權API可用於針對一個或多個資源取得預先授權決定，如此一來，應用程式就可以實作UI提示和/或內容篩選。
 
 >[!IMPORTANT]
 >
->增強的錯誤報告功能會為被拒絕的預先授權決定新增其他錯誤資訊，此功能必須在Adobe Primetime驗證設定端啟用，因此可應請求使用。
+>授權API **必須** 在授與使用者對指定資源的存取權之前使用。
 
-如果因為Adobe Primetime Authentication SDK錯誤或Adobe Primetime Authentication Services錯誤而導致Preauthorize API請求無法提供服務，則會在預先授權API回應結果中納入其他錯誤資訊（無論上述設定為何）和任何資源。
+如果Preauthorize API回應結果包含一或多個具有已拒絕預先授權決定的資源，則可以包含其他錯誤資訊 **（請參閱下方的附註）** 每個受影響的資源。
+
+>[!IMPORTANT]
+>
+>增強的錯誤報告功能會為被拒絕的預先授權決定新增其他錯誤資訊，因為必須在Adobe Primetime驗證設定端啟用該功能，所以可依請求使用。
+
+如果因為Adobe Primetime Authentication SDK錯誤或Adobe Primetime Authentication Services發生錯誤，而無法服務預先授權API要求，則無論上述設定為何，其他錯誤資訊和任何資源都不會納入預先授權API回應結果中。
 
 </br>
 
-## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
+## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
 
 
 **可用性：** v3.6.0+
@@ -39,13 +39,13 @@ ht-degree: 0%
 **引數：**
 
 - PreauthorizeRequest：用來傳遞API要求內容的要求物件；
-- AccessEnablerCallback：用於傳回API回應的回呼物件；
+- AccessEnablerCallback：用來傳回API回應的回呼物件；
 - PreauthorizeResponse：用來傳回API回應內容的回應物件；
 
- 
+
 </br>
 
-## `class PreauthorizeRequest`{#androidpreauthorizerequest}
+## `class PreauthorizeRequest`{#androidpreauthorizerequest}
 
 ### **類別PreauthorizeRequest.Builder**
 
@@ -69,7 +69,7 @@ ht-degree: 0%
     ///
     public func setResources(resources: [String]) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Sets the features which you want to have them disabled when obtaining preauthorization decisions.
@@ -88,9 +88,9 @@ ht-degree: 0%
     ///
     /// - Returns: The reference to the same `Builder` object instance which is the receiver of the function call. It does this in order to allow the creation of function chaining.
     ///
-    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
+    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Creates and retrieves the reference of a new `PreauthorizeRequest` object instance.
@@ -107,9 +107,9 @@ ht-degree: 0%
     ///
     /// - Returns: The reference to a new `PreauthorizeRequest` object instance.
     ///
-    public func build() -> PreauthorizeRequest
+    public func build() -> PreauthorizeRequest
 ```
- 
+
 
 ## **列舉PreauthorizeRequest.Feature**
 
@@ -132,11 +132,11 @@ ht-degree: 0%
 ## `interface AccessEnablerCallback<PreauthorizeResponse>` {#accessenablercallback}
 
 ```
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
     public func onResponse(result: PreauthorizeResponse)
 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
     public func onFailure(result: PreauthorizeResponse)
 ```
 
@@ -150,30 +150,30 @@ ht-degree: 0%
     /// - Returns: Additional status (state) information in case of error or failure.
     ///   Might hold a `nil` value.
     ///
-    public Status getStatus()
+    public Status getStatus()
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of error or failure.
     ///
-    public List<Decision> getDecisions()
+    public List<Decision> getDecisions()
 ```
 
 ### 範例：
 
-本節著重說明一些可能的PreauthorizeResponse物件的JSON結構。
+本節會強調部分可能的PreauthorizeResponse物件的JSON結構。
 
 >[!IMPORTANT]
 >
->以下範例顯示的JSON只能透過本檔案中顯示的模型類別存取。 除非透過公用方法，否則您將無法存取此類JSON的屬性。
+>下列範例所顯示的JSON只能透過本檔案顯示的模型類別存取。 除非透過公用方法，否則您將無法存取此類JSON的屬性。
 
 >[!IMPORTANT]
 >
->透過增強錯誤報告功能的媒體擷取的可能其他錯誤清單記錄在 [進階錯誤報告](/help/authentication/enhanced-error-codes.md).
+>透過增強錯誤報告功能的媒體擷取的可能其他錯誤清單，請參見 [進階錯誤報告](/help/authentication/enhanced-error-codes.md).
 
 #### 成功
 
-所有請求的資源都有正面的預先授權決定
+所有請求的資源都具有正向的預先授權決定
 
 ```JSON
     {
@@ -193,7 +193,7 @@ ht-degree: 0%
         ]
     }
 ```
- 
+
 
 一或多個資源具有遭拒絕的預先授權決定，且Adobe Primetime驗證設定中未啟用增強錯誤報告功能
 
@@ -216,9 +216,9 @@ ht-degree: 0%
         ]
     }
 ```
- 
 
-一或多個資源具有遭拒絕的預先授權決定，且已在Adobe Primetime驗證設定中啟用增強型錯誤報告功能
+
+一或多個資源具有遭拒絕的預先授權決定，且Adobe Primetime驗證設定中已啟用增強錯誤報告功能
 
 ```JSON
     {
@@ -247,33 +247,33 @@ ht-degree: 0%
         ]
     }
 ```
- 
+
 
 #### 錯誤
 
- 
 
-為Preauthorize API請求提供服務時，Adobe Primetime驗證服務發生錯誤
+
+Adobe Primetime驗證服務在服務預先授權API要求時發生錯誤
 
 ```JSON
     {
-        "resources": [],
-        "status": {
-            "status": 400,
-            "code" : "bad_request",
-            "message": "Missing required parameter : deviceId",
-            "details": "",
-            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
-            "action" : "none"
-        }
+        "resources": [],
+        "status": {
+            "status": 400,
+            "code" : "bad_request",
+            "message": "Missing required parameter : deviceId",
+            "details": "",
+            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
+            "action" : "none"
+        }
     }
 ```
- 
+
 
 #### 失敗
 
-為Preauthorize API請求提供服務時，Adobe Primetime Authentication SDK發生錯誤
+Adobe Primetime Authentication SDK在服務預先授權API要求時點選錯誤
 
 ```JSON
     {
@@ -385,14 +385,14 @@ ht-degree: 0%
     ///
     /// - Returns: The resource id for which the decision was obtained.
     ///
-    public Status getId()
+    public Status getId()
 
     ///
     /// This is a getter function.
     ///
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
-    public boolean isAuthorized()
+    public boolean isAuthorized()
 
     ///
     /// This is a getter function.
@@ -400,7 +400,7 @@ ht-degree: 0%
     /// - Returns: Additional status (state) information in case some error has occurred.
     ///            Might hold a `nil` value.
     ///
-    public Status getError()
+    public Status getError()
 ```
 
 </br>
@@ -417,15 +417,15 @@ let disabledFeatures: Set<PreauthorizationRequest.Feature> = [PreauthorizationRe
 
 let request: PreauthorizationRequest = PreauthorizationRequest.Builder()
 
-                  .setResources(resources: resources)
+                  .setResources(resources: resources)
 
 
-                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
+                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
 
-                  .build();
+                  .build();
 
 // Build the AccessEnablerCallback by providing the constructor two callbacks for onResponse and onFailure handling  
-func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
+func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
 TODO };
 
 func onFailureCallback(result: PreauthorizeResponse) -> Void {

@@ -1,9 +1,10 @@
 ---
 product: adobe primetime
+feature: Concurrency Monitoring
 audience: end-user
 user-guide-title: Primetime並行監視
 user-guide-description: 瞭解如何定義並強制實施多個應用程式間並行使用的限制。
-source-git-commit: d84723842e5c540ddf83c4007da09e44b4f08eff
+source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: 擷取授權Token
 description: 擷取授權Token
 exl-id: 0b010958-efa8-4dd9-b11b-5d10f51f5680
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -13,30 +13,30 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
 ## REST API端點 {#clientless-endpoints}
 
 &lt;reggie_fqdn>：
 
-* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>：
 
-* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
-* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
+* 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## 說明 {#description}
 
-擷取授權(AuthZ) Token。  
+擷取授權(AuthZ) Token。
 
 
-| 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
+| 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>例如：</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | 串流應用程式</br></br>或</br></br>程式設計師服務 | 1.請求者（必要）</br>2.  deviceId （必要）</br>3.  資源（必要）</br>4.  device_info/X-Device-Info （必要）</br>5.  _deviceType_</br> 6.  _deviceuser_ （已棄用）</br>7.  _appId_ （已棄用） | GET | 1.成功</br>2.  驗證Token  </br>    找不到或已過期：   </br>    XML說明原因  </br>    找不到驗證權杖的</br>3.  授權權杖  </br>    找不到：  </br>    XML說明</br>4.  授權權杖  </br>    已過期：  </br>    XML說明 | 200 — 成功  </br>412 — 無AuthN</br></br>404 — 無AuthZ</br></br>410 - AuthZ已過期 |
+| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>例如：</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | 串流應用程式</br></br>或</br></br>程式設計師服務 | 1.請求者（必要）</br>2.  deviceId （必要）</br>3.  resource （必要）</br>4.  device_info/X-Device-Info （必要）</br>5.  _deviceType_</br> 6.  _deviceuser_ （已棄用）</br>7.  _appId_ （已棄用） | GET | 1.成功</br>2.  驗證Token  </br>    找不到或已過期：   </br>    XML說明原因  </br>    找不到驗證權杖的</br>3.  授權權杖  </br>    找不到：  </br>    XML說明</br>4.  授權權杖  </br>    已過期：  </br>    XML說明 | 200 — 成功  </br>412 — 無AuthN</br></br>404 — 無AuthZ</br></br>410 - AuthZ已過期 |
 
 {style="table-layout:auto"}
 
@@ -44,20 +44,20 @@ ht-degree: 0%
 
 | 輸入引數 | 說明 |
 | --- | --- |
-| 請求者 | 此作業有效的程式設計員requestorId。 |
-| deviceId | 裝置ID位元組。 |
-| 資源 | 包含resourceId （或MRSS片段）的字串，可識別使用者請求的內容並由MVPD授權端點識別。 |
-| device_info/</br></br>X-Device-Info | 串流裝置資訊。</br></br>**注意**：此引數可以作為URL引數傳遞，但由於此引數潛在的大小以及GETURL的長度限制，它應該在http標頭中作為X-Device-Info傳遞。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | 裝置型別（例如Roku、PC）。</br></br>如果此引數設定正確，ESM會提供 [依裝置型別劃分](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 使用Clienless時，以便執行不同型別的分析，例如Roku、AppleTV和Xbox。</br></br>請參閱， [在通過的量度中使用無使用者端裝置型別引數的好處&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**注意**：device_info會取代此引數。 |
+| 要求者 | 此作業有效的程式設計師要求者ID。 |
+| deviceId | 裝置識別碼位元組。 |
+| resource | 包含resourceId （或MRSS片段）的字串，可識別使用者要求的內容並由MVPD授權端點識別。 |
+| device_info/</br></br>X-Device-Info | 串流裝置資訊。</br></br>**注意**：這可以作為URL引數傳遞device_info，但由於此引數潛在的大小以及GETURL長度的限制，應該在http標頭中作為X-Device-Info傳遞。 </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | 裝置型別（例如Roku、PC）。</br></br>若此引數設定正確，ESM提供的量度會 [依裝置型別劃分](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 使用無使用者端時，以便執行不同型別的分析，例如Roku、AppleTV和Xbox。</br></br>請參閱， [在傳遞量度中使用無使用者端裝置型別引數的好處&#x200B;](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**注意**：device_info會取代此引數。 |
 | _deviceuser_ | 裝置使用者識別碼。 |
-| _appId_ | 應用程式id/名稱。 </br></br>**注意**：device_info會取代此引數。 |
+| _appId_ | 應用程式id/名稱。 </br></br>**注意**：device_info會取代此引數。 |
 
 {style="table-layout:auto"}
 
 
 ### 範例回應 {#response}
 
- 
+
 
 #### 成功
 
@@ -74,7 +74,7 @@ ht-degree: 0%
     </authorization>
 ```
 
- 
+
 
 **JSON：**
 
@@ -88,10 +88,10 @@ ht-degree: 0%
     }
 ```
 
- </br>
+</br>
 
 
-#### 找不到驗證權杖或驗證權杖已過期：
+#### 找不到驗證權杖或已過期：
 
 **XML：**
 
@@ -103,7 +103,7 @@ ht-degree: 0%
     </error>
 ```
 
- 
+
 
 **JSON：**
 
@@ -116,9 +116,9 @@ ht-degree: 0%
 ```
 
 </br>
- 
 
-#### 找不到授權權杖：
+
+#### 找不到授權Token：
 
 **XML：**
 
@@ -130,7 +130,7 @@ ht-degree: 0%
     </error>
 ```
 
- 
+
 
 **JSON：**
 
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 </br>
 
- 
+
 
 #### 授權權杖已過期：
 
@@ -158,7 +158,7 @@ ht-degree: 0%
     </error>
 ```
 
- 
+
 
 **JSON：**
 

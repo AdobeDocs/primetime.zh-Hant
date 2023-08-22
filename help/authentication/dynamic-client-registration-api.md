@@ -2,7 +2,7 @@
 title: 動態使用者端註冊API
 description: 動態使用者端註冊API
 exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -13,24 +13,24 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
 ## 概觀 {#overview}
 
-目前，Primetime驗證識別及註冊應用程式的方式有兩種：
+目前，Primetime驗證有兩種方式可識別及註冊應用程式：
 
-* 瀏覽器型使用者端是透過允許進行註冊 [網域清單](/help/authentication/programmer-overview.md)
-* 原生應用程式使用者端(例如iOS和Android應用程式)會透過已簽署的請求者機制進行註冊。
+* 瀏覽器型使用者端是透過允許註冊 [網域清單](/help/authentication/programmer-overview.md)
+* 原生應用程式使用者端(例如iOS和Android應用程式)會透過簽署的請求者機制進行註冊。
 
-Adobe Primetime驗證會提出註冊應用程式的新機制。 以下段落將說明此機制。
+Adobe Primetime驗證會建議註冊應用程式的新機制。 此機制於以下段落中說明。
 
 ## 應用程式註冊機制 {#appRegistrationMechanism}
 
 ### 技術原因 {#reasons}
 
-Adobe Primetime驗證中的驗證機制需仰賴工作階段Cookie，原因如下 [Android Chrome自訂標籤](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}，此目標無法再達成。
+Adobe Primetime驗證中的驗證機制依賴工作階段Cookie，原因如下 [Android Chrome自訂標籤](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}，此目標無法再達成。
 
-由於存在這些限制，Adobe為其所有使用者端引進了新的註冊機制。 此變數以OAuth 2.0 RFC為基礎，並包含下列步驟：
+由於存在這些限制，Adobe會為所有使用者端引入新的註冊機制。 此變數以OAuth 2.0 RFC為基礎，包含下列步驟：
 
 1. 從TVE儀表板擷取軟體陳述式
 1. 取得使用者端認證
@@ -44,25 +44,25 @@ Adobe Primetime驗證中的驗證機制需仰賴工作階段Cookie，原因如�
 >
 >使用軟體陳述式時，將不再需要已簽署的請求者ID機制。
 
-如需如何建立軟體陳述式的詳細資訊，請造訪 [TVE儀表板中的使用者端註冊](/help/authentication/dynamic-client-registration.md).
+如需如何建立軟體陳述式的詳細資訊，請造訪 [在TVE儀表板中註冊使用者端](/help/authentication/dynamic-client-registration.md).
 
 ### 取得使用者端認證 {#clientCredentials}
 
-從TVE Dashboard擷取軟體陳述式後，您需要向Adobe Primetime授權伺服器註冊應用程式。 請執行/register呼叫並擷取唯一的使用者端識別碼，以執行此操作。
+從TVE Dashboard擷取軟體陳述式後，您需要向Adobe Primetime授權伺服器註冊應用程式。 執行/register呼叫並擷取您的唯一使用者端識別碼，以執行此操作。
 
 **請求**
 
-| HTTP呼叫 |  |
+| HTTP呼叫 |                    |
 |-----------|--------------------|
 | 路徑 | /o/client/register |
 | 方法 | POST |
 
-| 欄位 |  |  |
+| 欄位 |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
-| software_statement | 在TVE儀表板中建立的軟體陳述式。 | 強制 |
+| software_statement | 在TVE Dashboard中建立的軟體宣告。 | 強制 |
 | redirect_uri | 應用程式用來完成驗證流程的URI。 | 可選 |
 
-| 請求標頭 |  |  |
+| 請求標頭 |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | 強制 |
 | X-Device-Info | 傳遞裝置和連線資訊中定義的裝置資訊 | 強制 |
@@ -70,15 +70,15 @@ Adobe Primetime驗證中的驗證機制需仰賴工作階段Cookie，原因如�
 
 **回應**
 
-| 回應標頭 |  |  |
+| 回應標頭 |                  |           |
 |------------------|------------------|-----------|
 | Content-Type | application/json | 強制 |
 
-| 回應欄位 |  |  |
+| 回應欄位 |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | 字串 | 強制 |
 | client_secret | 字串 | 強制 |
-| client_id_issued_at | long | 強制 |
+| client_id_issued_at | 長 | 強制 |
 | redirect_uris | 字串清單 | 強制 |
 | grant_types | 字串清單<br/> **接受的值**<br/> `client_credentials`：由不安全的使用者端使用，例如Android SDK。 | 強制 |
 | 錯誤 | **接受的值**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unapproved_software_statement</li></ul> | 錯誤流程中的必要專案 |
@@ -90,7 +90,7 @@ Adobe Primetime驗證中的驗證機制需仰賴工作階段Cookie，原因如�
 
 | 狀態代碼 | 回應內文 | 說明 |
 | --- | --- | --- |
-| HTTP 400 | {&quot;error&quot;： &quot;invalid_request&quot;} | 請求缺少必要的引數、包含不受支援的引數值、重複引數或格式錯誤。 |
+| HTTP 400 | {&quot;error&quot;： &quot;invalid_request&quot;} | 請求缺少必要的引數、包含不支援的引數值、重複引數或格式錯誤。 |
 | HTTP 400 | {&quot;error&quot;： &quot;invalid_redirect_uri&quot;} | 根據此使用者端已註冊的應用程式，不允許對其使用redirect_uri。 |
 | HTTP 400 | {&quot;error&quot;： &quot;invalid_software_statement&quot;} | 軟體陳述式無效。 |
 | HTTP 400 | {&quot;error&quot;： &quot;unapproved_software_statement&quot;} | 在設定中找不到software_id。 |
@@ -160,12 +160,12 @@ Pragma: no-cache
 **請求**
 
 
-| **HTTP呼叫** |  |
+| **HTTP呼叫** | |
 | --- | --- |
 | 路徑 | `/o/client/token` |
 | 方法 | POST |
 
-| **要求引數** |  |
+| **要求引數** | |
 | --- | --- |
 | `grant_type` | 在使用者端註冊程式中接收。<br/> **接受的值**<br/>`client_credentials`：用於不安全的使用者端，例如Android SDK。 |
 | `client_id` | 在使用者端註冊程式中取得的使用者端識別碼。 |
@@ -173,13 +173,13 @@ Pragma: no-cache
 
 **回應**
 
-| 回應欄位 |  |  |
+| 回應欄位 | | |
 | --- | --- | --- |
 | `access_token` | 您用來呼叫Primetime API的存取權杖值 | 強制 |
 | `expires_in` | access_token過期前的秒數 | 強制 |
-| `token_type` | 權杖的型別 **承載** | 強制 |
+| `token_type` | 權杖的型別 **持有者** | 強制 |
 | `created_at` | 權杖的問題時間 | 強制 |
-| **回應標頭** |  |  |
+| **回應標頭** | | |
 | `Content-Type` | application/json | 強制 |
 
 **錯誤回應**
@@ -188,7 +188,7 @@ Pragma: no-cache
 
 | 狀態代碼 | 回應內文 | 說明 |
 | --- | --- | --- |
-| HTTP 400 | {&quot;error&quot;： &quot;invalid_request&quot;} | 請求缺少必要的引數、包含不受支援的引數值（授權型別除外）、重複引數、包含多個認證、使用多個機制來驗證使用者端，或格式錯誤。 |
+| HTTP 400 | {&quot;error&quot;： &quot;invalid_request&quot;} | 請求缺少必要的引數、包含不受支援的引數值（授予型別除外）、重複引數、包含多個認證、使用多個機制來驗證使用者端，或格式錯誤。 |
 | HTTP 400 | {&quot;error&quot;： &quot;invalid_client&quot;} | 使用者端驗證失敗，因為使用者端不明。 SDK必須再次向授權伺服器註冊。 |
 | HTTP 400 | {&quot;error&quot;： &quot;unauthorized_client&quot;} | 已驗證的使用者端無權使用此授權授予型別。 |
 
@@ -232,15 +232,15 @@ Pragma: no-cache
 
 ## 執行驗證要求 {#autheticationRequests}
 
-使用存取權杖執行Adobe Primetime [驗證API呼叫](/help/authentication/initiate-authentication.md). 為此，需要以下列方式之一將存取權杖新增到API請求：
+使用存取權杖執行Adobe Primetime [驗證API呼叫](/help/authentication/initiate-authentication.md). 為此，需要以下列方式之一將存取權杖新增到API請求中：
 
-* 將新的查詢引數新增至請求。 此新引數稱為 **access_token**.
+* 將新的查詢引數新增到請求中。 此新引數稱為 **access_token**.
 
-* 將新的HTTP標頭新增到請求中：授權：載體。 建議您使用HTTP標頭，因為查詢字串通常顯示在伺服器記錄中。
+* 透過將新的HTTP標頭新增到請求：授權：持有人。 建議您使用HTTP標頭，因為查詢字串傾向於顯示在伺服器記錄中。
 
 發生錯誤時，可能會傳回下列錯誤回應：
 
-| 錯誤回應 |  |  |
+| 錯誤回應 |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | 要求的格式錯誤。 |
 | invalid_client | 403 | 不再允許使用者端ID執行要求。 應產生新的使用者端認證。 |
@@ -248,7 +248,7 @@ Pragma: no-cache
 
 ### 執行驗證要求範例：
 
-**以要求引數傳送存取權杖：**
+**正在傳送存取權杖作為請求引數：**
 
 ```HTTPS
 GET adobe-services/config?access_token=<access_token>&requestor_id=... HTTP/1.1
@@ -266,7 +266,7 @@ Authorization: Bearer <access_token>
 Host: sp.auth.adobe.com
 ```
 
-**錯誤回應為回應內文：**
+**錯誤回應做為回應內文：**
 
 ```HTTPS
 HTTP/1.1 401 Unauthorized

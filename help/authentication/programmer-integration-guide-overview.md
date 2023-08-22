@@ -2,7 +2,7 @@
 title: 程式設計師整合指南概觀
 description: 程式設計師整合指南說明
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -14,11 +14,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
+>
 
 ## 逐步指南 {#cookbooks}
 
-* AccessEnabler JavaScript SDK逐步指南 
+* AccessEnabler JavaScript SDK逐步指南
 * AccessEnabler iOS/tvOS SDK逐步指南
 * AccessEnabler Android SDK逐步指南
 * REST API逐步指南（伺服器對伺服器）
@@ -33,12 +34,12 @@ ht-degree: 0%
 
 ## 技術概覽 {#technical-overviews}
 
-* AccessEnabler JavaScript SDK概觀
+* AccessEnabler JavaScript SDK總覽
 * AccessEnabler iOS/tvOS SDK概覽
-* AccessEnabler Android SDK概觀
-* REST API概觀
+* AccessEnabler Android SDK總覽
+* REST API總覽
 
-這些範本適用於將處理Adobe Primetime驗證整合技術層面的軟體工程師。
+這些範本的適用對象是負責處理Adobe Primetime驗證整合技術層面的軟體工程師。
 
 <!--
 
