@@ -2,7 +2,7 @@
 title: Android SDK總覽
 description: Android SDK總覽
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Primetime驗證軟體權利檔案解決方案圍繞著產生特定資料片段�
 
 #### 驗證Token
 
-- **AccessEnabler 1.6和舊版** - ****驗證權杖在裝置上快取的方式取決於&quot;**每個要求者的驗證」** 與目前MVPD關聯的旗標：
+- **AccessEnabler 1.6和舊版**  — 驗證權杖在裝置上的快取方式取決於&quot;**每個要求者的驗證」** 與目前MVPD關聯的旗標：
 
 
 1. 如果「每個請求者的驗證」功能為 *已停用*，則單一驗證Token會儲存在全域作業範圍中的本機。 此代號將在與目前MVPD整合的所有應用程式之間共用。
