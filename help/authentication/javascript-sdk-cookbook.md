@@ -2,9 +2,9 @@
 title: JavaScript SDK逐步指南
 description: JavaScript SDK逐步指南
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: df9d2bbef16cceb6a7e594f9b81262d475a5b334
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 >此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
-## 簡介(#intro)
+## 簡介 {#intro}
 
 本檔案說明程式設計師的上層應用程式為JavaScript與Adobe Primetime驗證服務的整合所實作的權益工作流程。 JavaScript API參考資料連結包含在中。
 
 另請注意 [相關資訊](#related) 區段包含一組JavaScript程式碼範例的連結。
 
-## 權益流程(#entitlement)
+## 權益流程 {#entitlement}
 
 1. [必要條件](#prereq)
 2. [啟動流程](#startup)
@@ -34,7 +34,7 @@ ht-degree: 0%
 ![](assets/javascript-flows.png)
 
 
-## 必要條件(#prereq)
+## 必要條件 {#prereq}
 
 **相依性：**
 
@@ -141,7 +141,7 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 
 當AccessEnabler呼叫時到達驗證流程完成 `setAuthenticationStatus()`替換為 `isAuthenticated == 1`.
 
-## 4.授權流程(#authz)
+## 4.授權流程 {#authz}
 
 **相依性：**
 
@@ -164,7 +164,7 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 - 如果驗證通過：為使用者顯示/播放請求的媒體。
 - 如果失敗：AuthZ權杖無效，應拒絕媒體請求，並向使用者顯示錯誤訊息。
 
-## 5.檢視Media流程(#logout)
+## 5.檢視Media流程 {#logout}
 
 - 使用者選擇要檢視的媒體。
    - 媒體是否受到保護？
@@ -173,7 +173,7 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
          - 如果媒體未受保護，請繼續檢視媒體流程。
          - 播放媒體
 
-## 設定訪客ID (#visitorID)
+## 設定訪客ID {#visitorID}
 
 設定 [Experience CloudvisitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 從analytics的角度來看，值非常重要。 設定EC visitorID值後，SDK會將此資訊與每個網路呼叫一併傳送，而Adobe Primetime驗證服務將會收集此資訊。 如此一來，您就可以將Adobe Primetime驗證服務的分析資料與其他應用程式或網站的任何其他分析報表建立關聯。 如需如何設定EC visitorID的相關資訊，請參閱 [此處](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
