@@ -1,7 +1,7 @@
 ---
 title: 並行監視簡介
 description: 並行監視簡介
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 「並行監視」可讓身分與內容提供者（MVPD與程式設計人員）定義並強制在多個應用程式（可能由多個合作夥伴擁有）間並行使用限制。
 
-**並行監視API託管於下列位置：
+**並行監視API託管於下列位置：**
 
-* V2.0： [並行監視API](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0： [並行監視API](http://docs.adobeptime.io/cm-api-v2/)**
 
 若要註冊我們的並行監視服務，請連絡 [支援團隊](mailto:tve-support@adobe.com). 指定下列資訊，我們的團隊會很樂意為您提供協助：
 
