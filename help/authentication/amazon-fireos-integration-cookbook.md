@@ -2,7 +2,7 @@
 title: Amazon FireOS整合逐步指南
 description: Amazon FireOS整合逐步指南
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: e5e42763fecae437cfc34bae98a5d2bd5adc4643
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
@@ -198,7 +198,6 @@ AccessEnabler的網路活動會發生在不同的執行緒中，因此不會封�
 
 ### F.登出流程 {#logout_flow}
 
-1. 呼叫 [`logout()`](#$logout) 將使用者登出。\
-   AccessEnabler會清除所有快取值和權杖，這些值和權杖是使用者透過「單一登入」在共用登入的所有要求者上，針對目前的MVPD所取得的。 清除快取之後，AccessEnabler會進行伺服器呼叫以清除伺服器端工作階段。  請注意，由於伺服器呼叫可能會導致SAML重新導向至IdP （這允許IdP端的工作階段清理），此呼叫必須在所有重新導向之後。 因此，此呼叫將在WebView控制項中處理，使用者看不到該呼叫。
+1. 呼叫 [`logout()`](#$logout) 將使用者登出。 AccessEnabler會清除所有快取值和權杖，這些值和權杖是使用者透過「單一登入」在共用登入的所有要求者上，針對目前的MVPD所取得的。 清除快取之後，AccessEnabler會進行伺服器呼叫以清除伺服器端工作階段。  請注意，由於伺服器呼叫可能會導致SAML重新導向至IdP （這允許IdP端的工作階段清理），此呼叫必須在所有重新導向之後。 因此，此呼叫將在WebView控制項中處理，使用者看不到該呼叫。
 
    **注意：** 登出流程與驗證流程的不同之處在於，使用者不需要以任何方式與WebView互動。 因此，在登出過程中，可以（而且建議）讓WebView控制項隱形（亦即：隱藏）。
