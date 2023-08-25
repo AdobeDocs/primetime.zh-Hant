@@ -2,7 +2,7 @@
 title: Amazon FireOS技術概覽
 description: Amazon FireOS技術概覽
 exl-id: 939683ee-0dd9-42ab-9fde-8686d2dc0cd0
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4691e769e1fee51507550c8e1fbecdcdff7e44eb
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 0%
@@ -80,7 +80,7 @@ Primetime驗證軟體權利檔案解決方案圍繞著產生特定資料片段�
 
 #### 驗證Token
 
-- **FireOS適用的AccessEnabler 1.10.1 **以Android 1.9.1適用的AccessEnabler為基礎 — 此SDK引進了權杖儲存的新方法，可啟用多個程式設計人員 — MVPD貯體，因此也支援多個驗證權杖。
+- **FireOS適用的AccessEnabler 1.10.1** 是以Android 1.9.1適用的AccessEnabler為基礎 — 此SDK推出一種新的權杖儲存方法，可啟用多個程式設計人員 — MVPD貯體，因此可啟用多個驗證權杖。
 
 #### 授權Token
 
