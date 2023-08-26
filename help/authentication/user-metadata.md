@@ -2,7 +2,7 @@
 title: 使用者中繼資料
 description: 使用者中繼資料
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 6779e20e37f1396402f36564e2c85d48d8c581a3
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -33,8 +33,6 @@ ht-degree: 0%
 
 擷取MVPD所共用的有關已驗證使用者的中繼資料。
 
-<div>
-
 
 | 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
 | --- | --- | --- | --- | --- | --- |
@@ -54,7 +52,8 @@ ht-degree: 0%
 > 
 >使用者中繼資料資訊應在驗證流程完成後提供，但可在授權流程上根據MVPD和中繼資料型別進行更新。
 
-</br>
+
+
 
 ## 範例回應 {#sample-response}
 
@@ -87,6 +86,6 @@ ht-degree: 0%
 
 發生錯誤時，伺服器會傳回XML或JSON物件，指定詳細的錯誤訊息。
 
-如需詳細資訊，請參閱 [使用者中繼資料](/help/authentication/user-metadata.md).
+如需詳細資訊，請參閱 [使用者中繼資料](/help/authentication/user-metadata-feature.md).
 
 ### [返回REST API參考](/help/authentication/rest-api-reference.md).
