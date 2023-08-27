@@ -2,9 +2,9 @@
 title: 傳回註冊記錄
 description: 傳回註冊記錄
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## REST API端點 {#clientless-endpoints}
 
-&lt;reggie_fqdn>：
+`<REGGIE_FQDN>`:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>：
+`<SP_FQDN>`:
 
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 | 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>；/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>例如：</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK？format=xml | 串流應用程式</br></br>或</br></br>程式設計師服務 | 1.請求者  </br>    （路徑元件）</br>2.  註冊代碼  </br>    （路徑元件） | GET | 包含註冊代碼和資訊的XML或JSON。 請參閱下面的結構描述和範例。 | 200 |
+| `<REGGIE_FQDN>`；/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>例如：<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJCFK？format=xml | 串流應用程式</br></br>或</br></br>程式設計師服務 | 1.請求者  </br>    （路徑元件）</br>2.  註冊代碼  </br>    （路徑元件） | GET | 包含註冊代碼和資訊的XML或JSON。 請參閱下面的結構描述和範例。 | 200 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ ht-degree: 0%
 | 要求者 | 要求者ID |
 | mvpd | MVPD ID |
 | 已產生 | 註冊代碼建立時間戳記（自1970年1月1日GMT起以毫秒為單位） |
-| 過期 | 註冊代碼過期的時間戳記（自1970年1月1日以來以毫秒為單位GMT） |
+| 過期 | 註冊代碼過期的時間戳記（自1970年1月1日GMT以來以毫秒為單位） |
 | deviceId | 不重複裝置ID （或XSTS權杖） |
 | deviceType | 裝置型別 |
 | deviceuser | 使用者已登入裝置 |
