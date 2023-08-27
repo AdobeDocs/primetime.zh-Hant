@@ -2,7 +2,7 @@
 title: 使用者中繼資料
 description: 使用者中繼資料
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: a9158c4b688b6e0c5b5bf664656587f0ecb0f00b
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -59,6 +59,10 @@ ht-degree: 0%
 
 成功呼叫後，伺服器會以XML （預設）或JSON物件回應，其結構類似於以下所示：
 
+<!--
+Please check syntax below. I added a close tag on line 70.
+-->
+
 ```JSON
     {
         updated: 1334243471,
@@ -69,7 +73,7 @@ ht-degree: 0%
                   "MPAA": "PG-13",
                   "VCHIP": "TV-Y", 
                   "URL": "http://exam.pl/e/manage/ratings"
-              },
+              }},
               householdID: "3456",
               userID: "BgSdasfsdk23/dsaf3+saASesadgfsShggssd=",
               channelID: ["channel-1", "channel-2"]
