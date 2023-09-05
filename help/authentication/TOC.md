@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Primetime驗證
 user-guide-description: Primetime驗證是TV Everywhere的權益解決方案，提供模組化架構，用於判斷要求存取資源的人是否有權使用資源。
-source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
+source-git-commit: 90d6c78791f2fd1bf80979b105d42e019686aacd
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '744'
 ht-degree: 0%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 0%
    + [監控PrimetimeAdobePayTV Pass](monitoring-adobe-pay-tv-pass.md)
    + [最低系統需求](minimum-system-requirements.md)
 + 發行說明 {#release-notes}
+   + [Adobe Pass Authentication 2.67發行說明](auth-rn-267.md)
    + [Adobe Pass Authentication 2.66發行說明](auth-rn-266.md)
    + [Adobe Pass Authentication 2.65.1發行說明](auth-rn-2651.md)
    + [Primetime Authentication 2.65發行說明](auth-rn-265.md)
