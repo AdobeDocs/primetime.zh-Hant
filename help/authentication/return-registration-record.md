@@ -2,7 +2,7 @@
 title: 傳回註冊記錄
 description: 傳回註冊記錄
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * 生產 —  [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 分段 —  [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## 說明 {#description}
@@ -37,7 +37,7 @@ ht-degree: 0%
 
 
 
-<div>
+
 
 
 | 端點 | 已呼叫  </br>作者： | 輸入   </br>引數 | HTTP  </br>方法 | 回應 | HTTP  </br>回應 |
@@ -46,14 +46,16 @@ ht-degree: 0%
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | 輸入引數 | 說明 |
 | --- | --- |
 | 要求者 | 此作業有效的程式設計師要求者ID。 |
 | 註冊代碼 | 串流裝置上顯示的註冊代碼值（要輸入驗證流程中）。 |
 
-</br>
+
+
 
 ## 回應XML結構描述 {#response-xml-schema}
 
