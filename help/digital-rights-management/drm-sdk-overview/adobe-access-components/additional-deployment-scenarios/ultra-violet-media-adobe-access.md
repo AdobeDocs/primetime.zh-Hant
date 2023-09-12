@@ -3,18 +3,18 @@ title: UltraViolet媒體與Adobe Primetime DRM
 description: UltraViolet媒體與Adobe Primetime DRM
 copied-description: true
 exl-id: 03b01a29-e8e0-4fb5-a685-63a745a6417c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
 
 # UltraViolet媒體與Adobe Primetime DRM {#ultraviolet-media-and-adobe-primetime-drm}
 
-Adobe Primetime DRM可搭配其他協力廠商內容串流解決方案使用，以建立完整且安全的DRM型媒體發佈生態系統。
+Adobe Primetime DRM可搭配其他協力廠商的內容串流解決方案使用，以建立完整且安全的DRM型媒體發佈生態系統。
 
-紫羅蘭( [https://www.myuv.com/](https://www.uvvu.com/))是數位版權驗證和雲端型發佈系統，可讓數位家庭娛樂內容的消費者透過多個平台和裝置串流及下載購買的內容。 UltraViolet內容將會使用一般加密(CENC)以一般檔案格式(CFF)下載（或串流）。
+UltraViolet是一種數位版權驗證和雲端式發佈系統，可以讓數位家庭娛樂內容的消費者透過多個平台和裝置串流和下載購買的內容。 UltraViolet內容將使用「一般加密」(CENC)以一般檔案格式(CFF)下載（或串流）。
 
 您可以輕鬆設定UltraViolet系統與Adobe Primetime DRM。 以下使用案例說明內容流程行為：
 
@@ -23,14 +23,14 @@ Adobe Primetime DRM可搭配其他協力廠商內容串流解決方案使用，�
 ![](assets/AdobeUV_web.png)
 
 1. 內容擁有者會將內容編碼並封裝在CFF中。 封裝內容已授權給零售商進行分銷。
-1. 零售商會將內容上傳至數位服務提供者，例如CDN。 內容現在可供下載。 請注意，其中某些角色可由一或多家公司擔任。
+1. 零售商會將內容上傳至數位服務提供者，例如CDN。 內容現在可供下載。 請注意，其中有些角色可由一或多個公司擔任。
 
-   一般使用者擁有支援Adobe AIR的裝置。 除此之外，使用者還需要安裝符合UltraViolet的應用程式。 應用程式包含必要的程式碼，以剖析CFF並顯示以供執行階段使用。 所有敏感密碼編譯操作都會在安全執行階段中處理。
-1. 應用程式可觸發裝置的網域加入，其與協調器互動。 協調人負責維護許可權鎖定器、使用者資料庫和網域。 協調者的網域管理員是使用Primetime DRM SDK建置，以實作Primetime DRM特定的網域加入/離開作業。
-1. 然後，使用者可以使用應用程式來選取他們想要從零售商取得的影片。 零售商通常會提供入口網站並處理所有商業邏輯。
-1. 然後，零售商會與協調者互動，以新增許可權代號。 零售商會將要求重新導向至服務提供者，以供實際內容下載。
+   一般使用者擁有支援Adobe AIR的裝置。 除此之外，使用者還需要安裝與UltraViolet相容的應用程式。 應用程式包含必要的程式碼，以剖析CFF並顯示以供執行階段使用。 所有敏感密碼編譯操作都將在安全執行階段中處理。
+1. 應用程式可觸發裝置的網域加入，與協調器互動。 協調者會維護許可權鎖定器、使用者資料庫和網域。 協調者的網域管理員是使用Primetime DRM SDK建置的，以實作Primetime DRM特定的網域加入/離開作業。
+1. 接著，使用者可使用應用程式來選取要從零售商取得的視訊。 零售商通常會提供入口網站並處理所有商業邏輯。
+1. 然後零售商與協調者互動，以新增許可權代號。 零售商會將要求重新導向給服務提供者，以供實際內容下載。
 1. 如果裝置尚未擁有內容的授權，則會使用CFF觸發授權請求。 要求通常會包含網域憑證、使用者認證和應用程式的相關資訊。 服務提供者會操作遵循UltraViolet規格的Primetime DRM License Server （使用Primetime DRM SDK開發）。
-1. 服務提供者的UltraViolet商業邏輯會視需要與協調者互動，以擷取適當的許可權權杖來決定是否應核發內容授權。
+1. 服務提供者的UltraViolet商業邏輯會視需要與協調器互動，以擷取適當的許可權權杖來決定是否應發行內容授權。
 
    內容授權已繫結至網域。 使用者端應用程式可以將授權插入CFF檔案。 內容現在可以在應用程式中播放，所有保護和使用規則執行都由Primetime DRM元件在執行階段處理。
 1. 相同一般使用者擁有的其他裝置和應用程式可向協調者註冊。 內容現在可以載入其他Primetime DRM裝置，而不需要任何外部交易。
