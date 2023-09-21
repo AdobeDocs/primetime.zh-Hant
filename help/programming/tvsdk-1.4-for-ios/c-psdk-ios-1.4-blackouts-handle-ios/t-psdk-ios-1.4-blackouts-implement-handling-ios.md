@@ -1,8 +1,7 @@
 ---
-description: TVSDK提供處理中斷期間的API和範常式式碼。
+description: TVSDK提供API以及處理中斷期間的範常式式碼。
 title: 實作中斷處理
-exl-id: 31e4a016-ecba-47cc-b574-553db85ece53
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 實作中斷處理 {#implement-blackout-handling}
 
-TVSDK提供處理中斷期間的API和範常式式碼。
+TVSDK提供API以及處理中斷期間的範常式式碼。
 
 若要實施中斷處理並在中斷期間提供替代內容：
 
@@ -36,7 +35,7 @@ TVSDK提供處理中斷期間的API和範常式式碼。
    }
    ```
 
-1. 實作接聽程式方法 `PTTimedMetadata` 前景中的物件。
+1. 實作監聽器方法 `PTTimedMetadata` 前景中的物件。
 
    例如：
 
@@ -60,7 +59,7 @@ TVSDK提供處理中斷期間的API和範常式式碼。
    }
    ```
 
-1. 控制代碼 `TimedMetadata` 在播放期間持續更新的物件。
+1. 控點 `TimedMetadata` 在播放期間持續更新的物件。
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -196,7 +195,7 @@ TVSDK提供處理中斷期間的API和範常式式碼。
    }
    ```
 
-1. 實作接聽程式方法 `PTTimedMetadata` 背景中的物件。
+1. 實作監聽器方法 `PTTimedMetadata` 背景中的物件。
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -217,7 +216,7 @@ TVSDK提供處理中斷期間的API和範常式式碼。
    }
    ```
 
-1. 針對背景錯誤實作接聽程式方法。
+1. 針對背景錯誤實作監聽器方法。
 
    ```
    - (void) onBackgroundManifestError:(NSNotification *)notification 

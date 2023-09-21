@@ -1,8 +1,7 @@
 ---
 description: 您可以使用回撥函式，針對內容、廣告和章節追蹤呼叫提供自訂中繼資料。
 title: 實作自訂中繼資料支援
-exl-id: 56580338-5104-4121-b441-5d92ba6f4610
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 回呼函式會在進行追蹤呼叫之前叫用，因此您的應用程式可以附加廣告或章節專屬的中繼資料。
 
-1. 為內容、廣告和章節叫用回呼函式。
+1. 叫用內容、廣告和章節的回呼函式。
 
    ```
    // Video Metadata Block 

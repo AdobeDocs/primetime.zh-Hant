@@ -2,8 +2,7 @@
 title: 使用Java API更新原則
 description: 使用Java API更新原則
 copied-description: true
-exl-id: 1b03f033-0d29-46cc-ae14-d6fef96fe970
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -46,7 +45,7 @@ ht-degree: 0%
      }
    ```
 
-1. 序列化更新的 `Policy` 物件並將其儲存在檔案或資料庫中。
+1. 序列化已更新的 `Policy` 物件並將其儲存在檔案或資料庫中。
 
    ```java
       // Serialize the policy.  
@@ -60,4 +59,4 @@ ht-degree: 0%
       out.close(); 
    ```
 
-如需此範常式式碼的完整來源，請參閱 `com.adobe.flashaccess.samples.policy.UpdatePolicy` 在「參考實作命令列工具」的「範例」目錄中。
+如需此範常式式碼的完整原始碼，請參閱 `com.adobe.flashaccess.samples.policy.UpdatePolicy` 在「參考實作」命令列工具「範例」目錄中。

@@ -1,8 +1,7 @@
 ---
-description: 當您的播放包含廣告時，TVSDK會以通常預期的序列傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
+description: 當您的播放包含廣告時，TVSDK會以通常預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
 title: 廣告活動的順序
-exl-id: 131b1dc1-3a59-4276-b639-d004ab7394ea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 廣告活動的順序{#order-of-advertising-events}
 
-當您的播放包含廣告時，TVSDK會以通常預期的序列傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
+當您的播放包含廣告時，TVSDK會以通常預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
 
 <!--<a id="section_69E3CCBC57BB48399799876E83908348"></a>-->
 
@@ -21,13 +20,13 @@ ht-degree: 0%
 * 系統會為廣告插播中的每個廣告傳送以下內容：
 
    * `AdPlaybackEvent.AD_STARTED`
-   * `AdPlaybackEvent.AD_PROGRESS` （在廣告播放期間多次）
+   * `AdPlaybackEvent.AD_PROGRESS` （廣告播放期間多次）
    * `AdClickEvent.AD_CLICK` （每次點按）
    * `AdPlaybackEvent.AD_COMPLETED`
 
 * `AdBreakPlaybackEvent.AD_BREAK_COMPLETED`
 
-以下範例顯示廣告播放事件的典型進度：
+下列範例顯示廣告播放事件的典型延展：
 
 ```
 mediaPlayer.addEventListener(AdBreakPlaybackEvent.AD_BREAK_STARTED, onAdBreakStarted); 

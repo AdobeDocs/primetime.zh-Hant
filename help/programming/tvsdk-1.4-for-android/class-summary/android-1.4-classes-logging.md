@@ -1,8 +1,7 @@
 ---
 description: 這些類別可讓您自訂記錄。
 title: 記錄類別
-exl-id: e420f557-eb4f-4adf-9b87-1cffc6b36d53
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -29,7 +28,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/LogEntry.html" format="html" scope="external"> LogEntry</a> </span></td> 
-   <td colname="2" rowsep="0"> 類別。 定義專案記錄並保留有關記錄訊息的資訊。 </td> 
+   <td colname="2" rowsep="0"> 類別。 定義專案記錄檔並保留有關記錄檔訊息的資訊。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> logfactory</a> </span></td> 

@@ -1,8 +1,7 @@
 ---
 description: 當媒體播放器將其目前的設定檔切換至新的設定檔時，您可以擷取關於切換的資訊，包括切換的時間、寬度和高度資訊，或是使用不同位元速率的原因。
 title: 取得設定檔切換器的相關資訊
-exl-id: b46909fe-666a-4730-8922-15c3eb7a1cba
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -15,14 +14,14 @@ ht-degree: 0%
 
 1. 聆聽 `ProfileEvent.PROFILE_CHANGED` 事件。
 
-   TVSDK媒體播放器在其最適化位元速率切換演演算法因網路或電腦狀況而切換至另一個設定檔時，會傳送此事件。 （當位元速率或週期變更時。）
-1. 發生事件時，請檢查下列屬性，以取得有關交換器的資訊：
+   TVSDK媒體播放器在其最適化位元速率切換演演算法因網路或電腦狀況而切換至另一個設定檔時，會排程此事件。 （當位元速率或週期變更時。）
+1. 發生事件時，請檢查下列屬性，以取得關於交換器的資訊：
 
    * `profile`：所使用新設定檔的識別碼。
    * `time`：切換發生的資料流時間。
    * `description`：位元速率變更原因的文字說明，以分號分隔的索引鍵/值配對字串。 最多包含一個 `Reason` 和一個 `Bitrate`. 如果資訊無法使用或位元速率未變更，則此字串為空白。
 
-      <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
+     <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
        <thead> 
          <tr> 
          <th colname="col1" class="entry"> 金鑰名稱 </th> 
@@ -51,20 +50,20 @@ ht-degree: 0%
        </tbody> 
        </table>
 
-      以下是傳回的一些範例 `description` 字串：
+     以下是傳回的一些範例 `description` 字串：
 
-      ```
-      "Bitrate::=up;Reason::=Network Adaptation;" 
-      
-      "Bitrate::=down;Reason::=Failover;"
-      ```
+     ```
+     "Bitrate::=up;Reason::=Network Adaptation;" 
+     
+     "Bitrate::=down;Reason::=Failover;"
+     ```
 
    * `width`：整數，指出寬度（畫素）。
    * `height`：整數，表示高度（畫素）。
 
-      >[!NOTE]
-      >
-      >寬度和高度資料必須包含在 `RESOLUTION` M3U8資訊清單中的標籤。 如果M3U8中未包含該資訊，則寬度和高度屬性會設為0，因為這些屬性不是設定檔資訊的一部分。
+     >[!NOTE]
+     >
+     >寬度和高度資料必須包含在 `RESOLUTION` M3U8資訊清單中的標籤。 如果資訊未包含在M3U8中，則寬度和高度屬性會設為0，因為這些屬性不是設定檔資訊的一部分。
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 

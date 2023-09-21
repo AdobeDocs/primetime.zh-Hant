@@ -1,21 +1,20 @@
 ---
 description: 我們使用Bento4封裝程式和Adobe離線封裝程式來編寫加密的DASH內容。 Bento4會以未加密的mp4內容作為輸入。
 title: 使用Bento4封裝您的內容
-exl-id: c873eaf6-c738-4f95-a900-a8aecb03754d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
-# 封裝Widevine和PlayReady的內容 {#package-for-widevine}
+# 為Widevine和PlayReady封裝內容 {#package-for-widevine}
 
 我們使用Bento4封裝程式和Adobe離線封裝程式來編寫加密的DASH內容。 Bento4會以未加密的mp4內容作為輸入。
 
 ## 使用Bento4封裝您的內容{#package-your-content-with-bento}
 
-Bento4封裝程式預期輸入mp4會預先分割。 Bento4 Packager散發包含此功能的工具。
+Bento4封裝器預期輸入mp4會預先分割。 Bento4 Packager發行版本包含此功能的工具。
 
 **正在撥打Bento4**
 
@@ -44,7 +43,7 @@ Bento4封裝程式預期輸入mp4會預先分割。 Bento4 Packager散發包含�
 --playready-header=\"LA_URL:http://pr.test.expressplay.com/playready/RightsManager.asmx\"
 ```
 
-以下範例結合了PlayReady和Widevine配置。 在此特定情況下，封裝程式會將Widevine內容保護和PlayReady內容保護初始化資料新增至輸出的DASH內容。
+以下範例結合了PlayReady和Widevine配置。 在此特定情況下，封裝程式會將Widevine內容保護和PlayReady內容保護初始化資料新增至輸出DASH內容。
 
 ```
 /mp4dash
@@ -64,17 +63,17 @@ Bento4封裝程式預期輸入mp4會預先分割。 Bento4 Packager散發包含�
 
 的值 `--encryption-key` 旗標在表單中 `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-此 `--widevine-header=provider:intertrust#content_id:2a` flag會告訴封裝程式將pssh方塊納入資訊清單中，哪個TVSDK目前需要播放此方塊。
+此 `--widevine-header=provider:intertrust#content_id:2a` 標幟會告訴封裝者在資訊清單中包含pssh方塊，這就是TVSDK目前播放所需的專案。
 
 的值 `-playready-header` 用於PlayReady授權贏取。
 
 ## 使用Adobe離線封裝程式封裝您的內容 {#package-your-content-with-adobe-offline-packager}
 
-AdobeOffline Packager會以未加密的mp4內容作為輸入。
+AdobeOffline Packager會取得未加密的mp4內容作為輸入。
 
 **呼叫Adobe離線封裝程式**
 
-典型的Adobe離線封裝程式呼叫看起來類似以下呼叫：
+典型的Adobe離線封裝程式呼叫看起來類似下列呼叫：
 
 ```
 java -jar OfflinePackager.jar -conf_path Content_PR_WV.xml -in_path "Jaigo.mp4"

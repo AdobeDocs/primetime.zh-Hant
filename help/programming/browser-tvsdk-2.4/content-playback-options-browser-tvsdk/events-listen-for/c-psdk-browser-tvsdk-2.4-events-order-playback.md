@@ -1,8 +1,7 @@
 ---
-description: 瀏覽器TVSDK會以通常預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
+description: 瀏覽器TVSDK會依照一般預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
 title: 播放事件的順序
-exl-id: fd9dc0d5-0f39-4a6d-9d88-1fd49946fedf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
@@ -11,20 +10,20 @@ ht-degree: 0%
 
 # 播放事件的順序{#order-of-playback-events}
 
-瀏覽器TVSDK會以通常預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
+瀏覽器TVSDK會依照一般預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
 下列範例顯示包含播放事件之部分事件的順序。
 
-* 透過成功載入媒體資源時 `replaceCurrentResource`，事件的順序為：
+* 當成功載入媒體資源透過 `replaceCurrentResource`，事件的順序為：
 
    * `AdobePSDK.MediaPlayerStatusChangeEvent` 替換為 `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* 透過準備播放時 `MediaPlayer.prepareToPlay`，事件的順序為：
+* 準備透過播放 `MediaPlayer.prepareToPlay`，事件的順序為：
 
    * `AdobePSDK.MediaPlayerStatusChangeEvent` 替換為 `event.status =`
 

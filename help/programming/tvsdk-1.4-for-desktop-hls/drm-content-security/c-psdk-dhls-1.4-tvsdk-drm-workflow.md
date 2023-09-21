@@ -1,8 +1,7 @@
 ---
 description: Primetime DRM已整合至TVSDK，這簡化了TVSDK應用程式中實施內容保護的流程。
 title: 在TSVDK應用程式中實作Primetime DRM
-exl-id: 28400b9f-96fd-4748-b27a-60350d3558ff
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%

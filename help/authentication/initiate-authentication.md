@@ -1,8 +1,7 @@
 ---
 title: 啟動驗證
 description: 啟動驗證
-exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: 7511d5b375e8e22a3f97cb545438c684fcee9813
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%

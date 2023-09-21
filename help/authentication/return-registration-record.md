@@ -1,8 +1,7 @@
 ---
 title: 傳回註冊記錄
 description: 傳回註冊記錄
-exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%

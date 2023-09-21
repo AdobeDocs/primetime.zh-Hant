@@ -1,8 +1,7 @@
 ---
 title: 使用OAuth 2.0通訊協定進行驗證
 description: 使用OAuth 2.0通訊協定進行驗證
-exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
-source-git-commit: d7d284e7e8563c5ca1ab1c8627cb75ecb1e1cbe5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%

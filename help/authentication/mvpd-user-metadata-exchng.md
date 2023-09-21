@@ -1,8 +1,7 @@
 ---
 title: MVPD使用者中繼資料交換
 description: MVPD使用者中繼資料交換
-exl-id: 8bce6acc-cd33-476c-af5e-27eb2239cad1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 0%
@@ -13,13 +12,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
 ## 簡介 {#intro-user-metadata-exchange}
 
-MVPD會維護其客戶的使用者特定中繼資料，這些中繼資料在某些情況下會與程式設計師共用。 Adobe Primetime驗證的目的是為了代理此「使用者中繼資料」的交換，但不強制執行任何種類的關於交換的規則。 交換規則是供MVPD與其程式設計人員合作夥伴合作使用。
+MVPD會維護其客戶的使用者特定中繼資料，這些中繼資料在某些情況下會與程式設計師共用。 Adobe Primetime驗證的目的是為了代理此「使用者中繼資料」的交換，但並非強制執行任何有關交換的規則。 交換規則是供MVPD與其程式設計人員合作夥伴合作使用。
 
-可用於Exchange的使用者中繼資料型別目前包括下列專案：
+目前可用於Exchange的使用者中繼資料型別包括下列專案：
 
 * 郵遞區號
 * 最高評等（VChip或MPAA）
@@ -27,7 +26,7 @@ MVPD會維護其客戶的使用者特定中繼資料，這些中繼資料在某�
 * 家庭ID
 * 管道ID
 
-使用此功能，MVPD和程式設計師可以實作特殊使用案例，例如家長監護。 例如，MVPD可以將家長評等資料傳遞給程式設計師，程式設計師接著使用該資料來篩選使用者的可用檢視選擇。
+使用此功能，MVPD和程式設計師可以實作特殊使用案例，例如家長監護。 例如，MVPD可以將家長評等資料傳遞給程式設計師，程式設計師接著會使用該資料來篩選使用者的可用檢視選擇。
 
 使用者中繼資料關鍵點：
 
@@ -39,7 +38,7 @@ MVPD會維護其客戶的使用者特定中繼資料，這些中繼資料在某�
 
 >[!NOTE]
 >
->使用者中繼資料是靜態中繼資料（驗證權杖TTL、授權權杖TTL和裝置ID）的延伸，以前可在Adobe Primetime驗證中使用。
+>使用者中繼資料是靜態中繼資料（驗證權杖TTL、授權權杖TTL和裝置ID）的延伸，先前可在Adobe Primetime驗證中使用。
 
 ## 範例 {#example-mvpd-user-metadata-exch}
 
@@ -53,10 +52,10 @@ MVPD會維護其客戶的使用者特定中繼資料，這些中繼資料在某�
 
 ### 程式設計師到MVPD中繼資料交換 {#progr-mvpd-metadata-exch}
 
-目前，程式設計師API、Adobe Primetime驗證和MVPD授權程式都僅支援通道層級的授權。 通道在程式設計師的getAuthorization() API呼叫中指定為純文字字串。 此字串會一直傳播至MVPD的授權後端：
+目前，程式設計師API、Adobe Primetime驗證和MVPD授權器都僅支援通道層級的授權。 通道在程式設計師的getAuthorization() API呼叫中指定為純文字字串。 此字串會一直傳播至MVPD的授權後端：
 
-從程式設計師的應用程式或網站，使用者會選擇具備XACML功能的MVPD （在此範例中為「TNT」）。 如需XACML的相關資訊，請參閱 [可擴充存取控制標籤語言](https://en.wikipedia.org/wiki/XACML){target=_blank}.
-程式設計師的應用程式會形成包含資源及其中繼資料的AuthZ請求。  此範例在頻道元素的媒體屬性中包含「pg」的MPAA評等：
+從程式設計師的應用程式或網站，使用者會選擇支援XACML的MVPD （在此範例中為「TNT」）。 如需XACML的相關資訊，請參閱 [可擴充存取控制標籤語言](https://en.wikipedia.org/wiki/XACML){target=_blank}.
+程式設計師的應用程式會形成包含資源及其中繼資料的AuthZ請求。  此範例在頻道元素的媒體屬性中納入「pg」的MPAA評等：
 
 ```XML
 var resource = '<rss version="2.0" xmlns:media="http://video.search.yahoo.com/mrss/">
@@ -68,11 +67,11 @@ var resource = '<rss version="2.0" xmlns:media="http://video.search.yahoo.com/mr
 getAuthorization(resource);
 ```
 
-當MVPD和程式設計人員都支援時，Adobe Primetime驗證實際上支援更精細的授權，甚至資產層級。 資源及其中繼資料對於Adobe而言是不透明的；其目的在於建立標準格式，以標準化方式指定資源ID和中繼資料，以將資源ID傳送至不同的MVPD。
+當MVPD和程式設計師都支援時，Adobe Primetime驗證實際上可支援更精細的授權，甚至資產層級。 資源及其中繼資料對於Adobe而言是不透明的；其目的是建立標準格式，以標準化方式指定資源ID和中繼資料，以將資源ID傳送至不同的MVPD。
 
 >[!NOTE]
 >
->如果使用者選擇只能使用通道的MVPD，則Adobe Primetime驗證只會擷取通道標題（上述範例中為「TNT」），並只將標題傳給MVPD。
+>如果使用者選擇僅能使用通道的MVPD，則Adobe Primetime驗證僅會擷取通道標題（上述範例中為「TNT」），並僅將標題傳給MVPD。
 
 ### MVPD至程式設計師中繼資料交換流程 {#mvpd-progr-exchange-flow}
 
@@ -80,8 +79,8 @@ Adobe Primetime驗證會進行下列假設：
 
 * MVPD會傳送最大評等作為SAML回應的一部分
 * 此資訊會儲存為驗證權杖的一部分
-* Adobe Primetime驗證會提供API，讓程式設計師可以擷取此資訊
-* 程式設計師在其網站或應用程式上實作此功能（例如，隱藏超過使用者最高評分的視訊）
+* Adobe Primetime驗證提供的API可讓程式設計師擷取此資訊
+* 程式設計師在其網站或應用程式上實作此功能（例如，隱藏超過使用者最高評等的視訊）
 
 ```XML
 <saml:Assertion ID="pfxec5f92e0-8589-3fc3-c708-f4fb8e2fad59"
@@ -105,28 +104,28 @@ Adobe Primetime驗證會進行下列假設：
 
 ### 附註 {#notes-mvpd-progr-metadata-exch-flow}
 
-**資源標準化與驗證。** 資源ID可以純字串或MRSS字串形式傳遞。 程式設計師可以決定使用純字串格式或MRSS，但需要事先與MVPD達成協定，以便MVPD知道如何處理該資源。
+**資源標準化與驗證。** 資源ID可以純字串或MRSS字串形式傳遞。 程式設計師可以決定使用純字串格式或MRSS，但必須事先與MVPD達成協定，以便MVPD知道如何處理該資源。
 
 **資源ID和中繼資料規格。** Adobe Primetime驗證會使用RSS標準搭配Media RSS擴充功能來指定資源及其中繼資料。 結合Media RSS擴充功能後，Adobe Primetime驗證可支援多種中繼資料，例如家長監護(透過 `<media:rating>`)或地理位置(`<media:location>`)。
 
-Adobe Primetime驗證也可支援從舊版管道字串透明轉換為需要RSS的MVPD的對應RSS資源。 另一方面，Adobe Primetime驗證支援從RSS+MRSS轉換為純頻道標題，適用於僅限頻道的MVPD。
+Adobe Primetime驗證也可針對需要RSS的MVPD，支援從舊版頻道字串到對應RSS資源的透明轉換。 另一方面，Adobe Primetime驗證支援將RSS+MRSS轉換為純頻道標題，適用於僅限頻道的MVPD。
 
-**Adobe Primetime驗證可確保與現有整合完全回溯相容。** 也就是說，對於使用管道層級驗證的程式設計師而言，Adobe Primetime驗證作業會在將管道ID傳送給瞭解該格式的MVPD之前，小心將管道ID封裝為必要的格式。 反之亦然：如果程式設計師以新格式指定其所有資源，而授權的MVPD只進行頻道層級授權，則Adobe Primetime驗證會將新格式轉譯為簡單的頻道字串。
+**Adobe Primetime驗證可確保與現有整合的完整回溯相容性。** 也就是說，對於使用管道層級驗證的程式設計人員而言，Adobe Primetime驗證作業在傳送管道ID給可瞭解該格式的MVPD之前，會注意先以必要的格式將其封裝。 反之亦然：如果程式設計師以新格式指定其所有資源，而只針對具有管道層級授權的MVPD授權，Adobe Primetime驗證會將新格式轉譯為簡單的管道字串。
 
 ## 使用者中繼資料使用案例 {#user-metadata-use-cases}
 
-隨著越來越多的MVPD做出法律安排並新增功能，使用案例在不斷變化和擴展。 以下是可用於的使用者中繼資料的範例。
+隨著更多MVPD進行法律安排並新增功能，使用案例會不斷變更和擴充。 以下是可用於的使用者中繼資料的範例。
 
 * [MVPD使用者ID](#mvpd-user-id)
 * [家庭ID](#household-user-id)
 * [郵遞區號](#zip-code)
 * [最大評分（家長監護）](#max-rating-parental-control)
-* [頻道組合](#channel-line-up)
+* [頻道排列](#channel-line-up)
 
 ### MVPD使用者ID {#mvpd-user-id}
 
 * 由MVPD提供
-* 不是使用者的實際登入資訊，因為它由MVPD雜湊處理
+* 不是使用者的實際登入資訊，因為它會由MVPD雜湊處理
 * 可用於指出特定使用者的或問題
 * 已加密
 * MVPD支援：所有MVPD
@@ -140,18 +139,18 @@ Adobe Primetime驗證也可支援從舊版管道字串透明轉換為需要RSS�
 ### 郵遞區號 {#zip-code}
 
 * 使用者的帳單郵遞區號
-* 主要用於強制實施體育賽事凍結期規則
-* 可隨附AuthZ回應，以快速更新
+* 主要用於強制實施體育賽事凍結期間規則
+* 可隨附AuthZ回應以進行快速更新
 * MVPD支援：部分MVPD
 
 ### 最大評分（家長監護） {#max-rating-parental-control}
 
 * AuthN初始，加上AuthZ重新整理
-* 從UI中篩選內容
+* 從UI篩選內容
 * MPAA或VChip評等
 * MVPD支援：部分MVPD
 
-### 頻道組合 {#channel-line-up}
+### 頻道排列 {#channel-line-up}
 
 * MVPD可提供使用者有權檢視的管道清單
 * 允許快速UI繪圖

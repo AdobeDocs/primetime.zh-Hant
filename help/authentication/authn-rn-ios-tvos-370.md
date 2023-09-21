@@ -1,8 +1,7 @@
 ---
 title: Authentication iOS / tvOS 3.7.0發行說明
 description: Authentication iOS / tvOS 3.7.0發行說明
-exl-id: 19c1179e-16b1-4608-954f-25b0980d7ad9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -13,9 +12,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
-本頁說明此版本的新功能、變更和已知問題：
+此頁面說明此版本的新功能、變更和已知問題：
 
 ## 建置編號 {#build-no-ios-tvos-sdk-370}
 
@@ -27,7 +26,7 @@ Adobe Primetime驗證： iOS / tvOS 3.7.0
 
 ## 版本總覽 {#overview-ios-tvos-sdk-370}
 
-當應用程式在背景或裝置鎖定時，允許鑰匙圈儲存操作，以新增AccessEnabler架構使用方式的改善。 例如，這可以促進AirPlay的實作。
+當應用程式在背景或裝置被鎖定時，允許鑰匙圈儲存作業，以增加AccessEnabler架構使用方式的改善。 例如，這可以促進AirPlay的實作。
 
 ## 發行套件 {#rel=pkg-iostvos370}
 

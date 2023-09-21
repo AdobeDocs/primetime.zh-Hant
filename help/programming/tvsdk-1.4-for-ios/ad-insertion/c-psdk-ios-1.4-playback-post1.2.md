@@ -1,8 +1,7 @@
 ---
-description: 搜尋、暫停和包含廣告都會影響媒體播放行為。
+description: 媒體播放行為會因搜尋、暫停和包含廣告而受影響。
 title: 預設和自訂的廣告播放行為
-exl-id: bd92b58a-fc71-41de-a80e-19002d66246f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -11,13 +10,13 @@ ht-degree: 0%
 
 # 預設和自訂的廣告播放行為{#default-and-customized-playback-behavior-with-ads}
 
-搜尋、暫停和包含廣告都會影響媒體播放行為。
+媒體播放行為會因搜尋、暫停和包含廣告而受影響。
 
 若要覆寫預設行為，請使用 `PTAdPolicySelector`.
 
 >[!IMPORTANT]
 >
->對於VOD和即時/線性串流，無法修訂時間表調整。 這表示在廣告播放後，無法從時間軸中移除廣告。 如果使用者再次搜尋，即使正常原則是移除該廣告，也會再次播放相同的廣告。
+>對於VOD和即時/線性串流，無法修訂時間表調整。 這表示廣告播放後即無法從時間軸移除。 如果使用者搜尋回來，即使正常原則應是移除該廣告，仍會再次播放相同的廣告。
 
 >[!IMPORTANT]
 >
@@ -30,7 +29,7 @@ ht-degree: 0%
   <tr> 
    <th colname="col1" class="entry"> 視訊活動 </th> 
    <th colname="col2" class="entry"> 預設TVSDK行為原則 </th> 
-   <th colname="col3" class="entry">自訂可透過 <span class="codeph"> ptadPolicySelector</span> </th> 
+   <th colname="col3" class="entry">自訂功能可透過 <span class="codeph"> ptadPolicySelector</span> </th> 
   </tr>
  </thead>
  <tbody> 
@@ -41,37 +40,37 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"> 您的應用程式會在廣告插播中向前尋找主要內容。 </td> 
-   <td colname="col2"> 播放上一個略過的未觀看廣告插播，並在插播播放完成時在所需的搜尋位置繼續播放。 </td> 
-   <td colname="col3">使用以下專案選取要播放哪個略過的插播 <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col2"> 播放上一個略過的未觀看廣告插播，並在插播完成時在所需的搜尋位置繼續播放。 </td> 
+   <td colname="col3">選擇哪個略過的插播播放，使用 <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 您的應用程式會向後搜尋廣告插播，以進入主要內容。 </td> 
    <td colname="col2"> 跳到所需的搜尋位置而不播放廣告插播。 </td> 
-   <td colname="col3">使用以下專案選取要播放哪個略過的插播 <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
+   <td colname="col3">選擇哪個略過的插播播放，使用 <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 您的應用程式會向前尋找廣告插播。 </td> 
    <td colname="col2"> 從搜尋結束的廣告開始播放。 </td> 
-   <td colname="col3">為廣告插播及搜尋結尾的特定廣告指定不同的廣告原則，請使用 <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">針對廣告插播及搜尋結尾的特定廣告，指定不同的廣告原則(使用 <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 您的應用程式會向後搜尋廣告插播。 </td> 
    <td colname="col2"> 從搜尋結束的廣告開始播放。 </td> 
-   <td colname="col3">為廣告插播及搜尋已結束的特定廣告指定不同的廣告原則，使用 <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col3">針對廣告插播及搜尋已透過使用結束的特定廣告，指定不同的廣告原則 <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 您的應用程式會透過觀看的廣告插播向前或向後搜尋主要內容。 </td> 
-   <td colname="col2"> 如果已觀看最後一個略過的廣告插播，則會跳至使用者選取的搜尋位置。 </td> 
-   <td colname="col3">選取要播放的已略過的分隔符號 <span class="codeph"> selectAdBreaksToPlay</span> 並判斷已使用觀看了哪些中斷 <span class="codeph"> ptadBreak.isWatched</span>. <p> <p>重要：根據預設，TVSDK會在廣告插播中輸入第一個廣告後，立即將廣告插播標示為觀看中。 </p> </p> </td> 
+   <td colname="col1"> 您的應用程式會在觀看的廣告插播中向前或向後搜尋主要內容。 </td> 
+   <td colname="col2"> 如果已經觀看最後一個略過的廣告插播，則會跳至使用者選取的搜尋位置。 </td> 
+   <td colname="col3">選取要播放的跳過的插播，使用 <span class="codeph"> selectAdBreaksToPlay</span> 並判斷已使用觀看哪些中斷 <span class="codeph"> ptadBreak.isWatched</span>. <p> <p>重要：根據預設，TVSDK在廣告插播中輸入第一個廣告後，會立即將廣告插播標示為觀看中。 </p> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 您的應用程式會在一或多個廣告插播上向前或向後搜尋，然後掉進觀看的廣告插播。 </td> 
-   <td colname="col2"> 略過廣告插播，並尋找緊接在廣告插播之後的位置。 </td> 
-   <td colname="col3">為廣告插播（觀看狀態設為true）和搜尋結束的特定廣告指定不同的廣告原則，使用 <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
+   <td colname="col1"> 您的應用程式會在一或多個廣告插播中向前或向後搜尋，並掉進觀看的廣告插播。 </td> 
+   <td colname="col2"> 略過廣告插播並搜尋緊接在廣告插播之後的位置。 </td> 
+   <td colname="col3">為廣告插播（觀看狀態設為true）和搜尋結尾的特定廣告指定不同的廣告原則 <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 您的應用程式會向前搜尋使用自訂廣告標籤插入的廣告。 </td> 
-   <td colname="col2"> 略過至使用者選取的搜尋位置。 </td> 
+   <td colname="col2"> 跳至使用者選取的搜尋位置。 </td> 
    <td colname="col3"></td> 
   </tr> 
  </tbody> 

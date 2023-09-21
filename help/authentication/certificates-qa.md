@@ -1,8 +1,7 @@
 ---
 title: 憑證問答
 description: 憑證問答
-exl-id: d4e493b0-4467-42b1-9758-16c5941d8051
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%

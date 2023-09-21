@@ -1,33 +1,32 @@
 ---
-description: 您可以控制隱藏式字幕的可見度。 當可見性開啟時，會顯示目前選取的軌跡。 如果變更目前哪個軌跡，可視性設定會維持不變。
-title: 控制隱藏式字幕可見度
-exl-id: fac24d97-b83e-4bc4-a824-8a1692509519
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: 您可以控制隱藏式字幕的可見度。 當可見度開啟時，會顯示目前選取的軌道。 如果變更目前哪個軌跡，可視性設定會保持相同。
+title: 控制隱藏式字幕可視性
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
-# 控制隱藏式字幕可見度{#control-closed-caption-visibility}
+# 控制隱藏式字幕可視性{#control-closed-caption-visibility}
 
-您可以控制隱藏式字幕的可見度。 當可見性開啟時，會顯示目前選取的軌跡。 如果變更目前哪個軌跡，可視性設定會維持不變。
+您可以控制隱藏式字幕的可見度。 當可見度開啟時，會顯示目前選取的軌道。 如果變更目前哪個軌跡，可視性設定會保持相同。
 
 >[!TIP]
 >
->如果在播放器進入搜尋模式時顯示隱藏式字幕文字，搜尋完成後文字將不再顯示。 相反地，幾秒後，TVSDK會在視訊中顯示搜尋結束位置後的下一個隱藏式字幕文字。
+>如果在播放器進入搜尋模式時顯示隱藏式字幕文字，搜尋完成後文字將不再顯示。 相反地，幾秒後，TVSDK會在視訊中搜尋結束位置後顯示下一個隱藏式字幕文字。
 
 >[!NOTE]
 >
 >隱藏式字幕的可見度值定義於 `ClosedCaptionsVisibility`.
 >
->
-```
+>```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
 >```
+>
 
-1. 等候 `MediaPlayer` 至少要有PREPARED狀態(請參閱 [等待有效的狀態](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
+1. 等待 `MediaPlayer` 至少要有「已準備」狀態(請參閱 [等待有效的狀態](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md))。
 1. 若要取得隱藏式字幕的目前可見度設定，請在中使用getter方法 `MediaPlayer`，會傳回可見度值。
 
    ```
@@ -65,7 +64,7 @@ ht-degree: 0%
    player.addEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-   若要從銷毀程式碼中移除監聽器：
+   若要將監聽器從您的銷毀程式碼中移除：
 
    ```
    player.removeEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 

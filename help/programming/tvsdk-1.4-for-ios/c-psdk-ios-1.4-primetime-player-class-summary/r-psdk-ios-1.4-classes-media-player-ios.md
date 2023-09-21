@@ -1,8 +1,7 @@
 ---
 description: 這些類別會說明您的媒體播放器及其資源。
 title: 媒體播放器類別
-exl-id: de7f7488-2026-43b4-b74d-feff67bdc69a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -22,8 +21,8 @@ ht-degree: 0%
    <td colname="2"><b>說明</b> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTABRControlParameters.html" format="html" scope="external"> PTABRControlParameters</a></span> </td> 
-   <td colname="2">封裝所有自適應位元速率控制引數。 支援的引數包括： 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTABRControlParameters.html" format="html" scope="external"> Ptabrcontrolparameters</a></span> </td> 
+   <td colname="2">封裝所有最適化位元速率控制引數。 支援的引數包括： 
     <ul id="ul_pnh_hm2_2m"> 
      <li id="li_46572FE1EB514AFF8C9F731E44DAF30B"><span class="codeph"> minBitRate</span> </li> 
      <li id="li_A10C75C9A5234241A5B84A4139F4D143"><span class="codeph"> maxBitRate</span> </li> 
@@ -40,7 +39,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTMediaPlayerClientFactory.html" format="html" scope="external"> PTMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> 說明自訂媒體播放器使用者端工廠應實作以提供可用之方法的通訊協定 <span class="codeph"> PTOpportunityResolver</span> ， <span class="codeph"> PTContentResolver</span> 和 <span class="codeph"> ptadPolicySelector</span> 執行個體。 </td> 
+   <td colname="2"> 描述自訂媒體播放器使用者端工廠應實作以提供可用之方法的通訊協定 <span class="codeph"> PTOpportunityResolver</span> ， <span class="codeph"> PTContentResolver</span> 和 <span class="codeph"> ptadPolicySelector</span> 執行個體。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerItem.html" format="html" scope="external"> PTMediaPlayerItem</a></span> </td> 
@@ -65,11 +64,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolver</a> </span> 類別， <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolver</a> 通訊協定</span> </td> 
-   <td colname="2"> 用於處理資訊清單內提示的類別，這些提示將用作Adobe Primetime廣告決策程式的版位。 </td> 
+   <td colname="2"> 用於處理資訊清單內提示的類別，這些提示將用作Adobe Primetime廣告決策程式的位置。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolverDelegate.html" format="html" scope="external"> PTOpportunityResolverDelegate</a></span> </td> 
-   <td colname="2"> 說明自訂機會解析器( <span class="codeph"> PTOpportunityResolver</span> )應該使用向委派傳達商機解析的狀態。 </td> 
+   <td colname="2"> 說明自訂機會解析程式( <span class="codeph"> PTOpportunityResolver</span> )應該使用將商機的解析狀態傳達給代理人。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTSDK.html" format="html" scope="external"> PTSDK</a></span> </td> 

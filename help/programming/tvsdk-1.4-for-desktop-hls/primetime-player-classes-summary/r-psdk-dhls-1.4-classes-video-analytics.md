@@ -1,15 +1,14 @@
 ---
 description: 這些類別提供TVSDK與Adobe Video Analytics之間的介面。
-title: 視訊分析類別
-exl-id: 980d8e36-cfd1-45d4-8c40-f3c53e29b6f6
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+title: Video Analytics類別
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
-# 視訊分析類別{#video-analytics-classes}
+# Video Analytics類別{#video-analytics-classes}
 
 這些類別提供TVSDK與Adobe Video Analytics之間的介面。
 
@@ -17,5 +16,5 @@ ht-degree: 0%
 
 | 名稱 | 說明 |
 |---|---|
-| [videoanalyticsProvider](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsProvider.html) | 附加 `MediaPlayer` 用於追蹤播放的VideoHeartbeat模組例項。 |
-| [videoanalyticsMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsMetadata.html) | 包含Video Analytics專用的屬性中繼資料。 |
+| [videoanalyticsProvider](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsProvider.html) | 附加 `MediaPlayer` 例項至VideoHeartbeat模組，以追蹤播放。 |
+| [VideoAnalyticsMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsMetadata.html) | 包含Video Analytics專用的屬性中繼資料。 |

@@ -1,8 +1,7 @@
 ---
 title: Proxy MVPD SAML整合
 description: Proxy MVPD SAML整合
-exl-id: 6c83e703-d8cd-476b-8514-05b8230902be
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%
@@ -13,7 +12,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
 ## 概觀 {#overview-proxy-mvpd-saml-int}
 
@@ -21,31 +20,31 @@ ht-degree: 1%
 
 ## Proxy設定資料 {#proxy-config-data}
 
-每個MVPD Proxy都會將其代理MVPD的Proxy設定資料提供給Adobe Primetime驗證Proxy Web服務。  Proxy Web服務檔案中會說明的詳細資訊。   為了讓SAML AuthN流程正常運作， Proxy設定資料必須包含下列屬性：
+每個MVPD Proxy都會將其代理MVPD的Proxy組態資料提供給Adobe Primetime驗證Proxy Web服務。  Proxy Web服務檔案中涵蓋的詳細資訊。   為了讓SAML AuthN流程正常運作， Proxy設定資料必須包含下列屬性：
 
 | 屬性 | 說明 |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MVPD ID | 在Adobe Primetime驗證中表示內部代理MVPD的字串。  將由Adobe確認為Adobe Primetime驗證內容中的唯一。 |
-| MVPD預設標誌URL | 可在使用者的MVPD選擇器體驗中顯示的標誌URL。  應使用透明背景。 |
-| MVPD顯示名稱 | 可做為顯示名稱文字（可能作為替代文字）的字串，可連同標誌一起顯示。 |
+| MVPD ID | 字串，代表Adobe Primetime驗證的內部代理MVPD。  將由Adobe確認為Adobe Primetime驗證內容中的唯一。 |
+| MVPD預設標誌URL | 可在使用者的MVPD選擇器體驗中顯示的標誌URL。  應該使用透明背景。 |
+| MVPD顯示名稱 | 可做為顯示名稱文字（可能以替代文字顯示）的字串，可與標誌一併顯示。 |
 
 
 
 ## SAML整合流程 {#saml-int-flows}
 
-當MVPD訂閱者造訪程式設計師的網站或應用程式時，Adobe Primetime驗證會以為該程式設計師啟用的MVPD清單來回應來自網站或應用程式的API呼叫。  整合可以是直接整合或代理整合；它們與程式設計師之間沒有區別。 如此一來，程式設計人員就可以使用任何他們認為合適的方式來呈現作用中MVPD清單。 訂戶選擇其MVPD，而Adobe Primetime驗證會將訂戶重新導向至MVPD的特定識別提供者。
+當MVPD訂閱者造訪程式設計師的網站或應用程式時，Adobe Primetime驗證會以為該程式設計師啟用的MVPD清單回應來自網站或應用程式的API呼叫。  整合可以是直接整合或代理整合；它們與程式設計師之間沒有區別。 如此一來，程式設計師就能以自己認為合適的任何方式呈現作用中MVPD清單。 訂戶選擇其MVPD，而Adobe Primetime驗證會將訂戶重新導向至MVPD的特定識別提供者。
 
-若是整合的MVPD Proxy，則會在Adobe Primetime驗證和MVPD Proxy之間完成整合。 Adobe Primetime驗證會將使用者驗證要求傳送至MVPD Proxy，而MVPD Proxy會處理重新導向。 為了讓MVPD Proxy知道將使用者驗證請求重新導向的位置，Adobe Primetime驗證會在SAML驗證請求中傳送MVPD識別碼。  此識別碼是Proxy提供者透過上述指定的Proxy Web服務所指定的MVPD ID。
+在整合的MVPD Proxy中，會在Adobe Primetime驗證和MVPD Proxy之間完成整合。 Adobe Primetime驗證會將使用者驗證要求傳送至MVPD Proxy，而MVPD Proxy會處理重新導向。 為了讓MVPD Proxy知道在何處重新導向使用者驗證請求，Adobe Primetime驗證會在SAML驗證請求中傳送MVPD識別碼。  此識別碼是Proxy提供者透過上述指定的Proxy Web服務所指定的MVPD ID。
 
 ### 驗證 {#authn-saml-int}
 
-為了將Adobe Primetime驗證與Proxy MVPD整合，需要以下專案：
+為了讓Adobe Primetime驗證與Proxy MVPD整合，需要以下專案：
 
-* Proxy MVPD提供的代理MVPD清單，推送至AdobeProxy Web服務
+* Proxy MVPD提供的Proxied MVPD清單，推送至AdobeProxy Web服務
 
 * 上層MVPD Proxy的SAML中繼資料
 
-* （建議） - Proxy MVPD會處理其他重新導向至已代理MVPD的登入頁面URL
+* （建議） - Proxy MVPD會處理其他重新導向至代理MVPD的登入頁面URL
 
 * MVPD Proxy需要為下列IP開啟連線埠443和80：
    * 192.150.4.5
@@ -63,19 +62,19 @@ ht-degree: 1%
 
 #### 驗證SAML請求和回應 {#authn-saml-req-resp}
 
-在SAML AuthN要求中，Proxy整合包含下列需要由MVPD Proxy處理的其他屬性。  若要代表代理的MVPD正確處理請求者，並呈現正確的登入體驗，此屬性是必要的。 （此屬性會在以下範例要求中強調顯示。）
+在SAML AuthN請求中，Proxy整合包括下列需要由MVPD Proxy處理的額外屬性。  若要代表代理的MVPD正確處理要求者，並呈現正確的登入體驗，此屬性是必要的。 （此屬性會在下列範例要求中強調顯示。）
 
-**範圍設定屬性**  — 包含包含包含特定MVPD_ID和MVPD名稱的IDPEntry專案。  這代表使用者實際從程式設計工具的選擇器中選取的MVPD，並符合Proxy Web服務中指定的MVPD_ID。
+**範圍設定屬性**  — 包含包含包含特定MVPD_ID和MVPD名稱的IDPEntry專案。  這代表使用者實際從程式設計工具選擇器選取的MVPD，並符合Proxy Web服務中指定的MVPD_ID。
 
-RequestorID有額外的範圍設定屬性，可用於自訂程式設計師特定品牌的登入（如有需要）。 或者，也可僅用於請求來源地的分析。
+RequestorID有額外的範圍設定屬性，可用於自訂程式設計師特定品牌的登入（如有需要）。 或者，也可僅用於請求來源的分析。
 
 在SAML AuthN回應中，Proxy MVPD應在下列屬性中將Proxied MVPD指定為IdP Entity：
 
 * SAML簽發者
-* 名稱辨識符號
+* 名稱限定詞
 
 
-**範例驗證要求**
+**範例AuthN請求**
 
 ```XML
 <samlp:AuthnRequest
@@ -111,7 +110,7 @@ RequestorID有額外的範圍設定屬性，可用於自訂程式設計師特定
 ```
 
 
-**範例驗證回應**
+**範例AuthN回應**
 
 ```XML
 <samlp:Response Destination="https://sp.auth-staging.adobe.com/sp/saml/SAMLAssertionConsumer"
@@ -164,11 +163,11 @@ RequestorID有額外的範圍設定屬性，可用於自訂程式設計師特定
 
 ### Authorization {#authz-proxy-mvpd-saml-int}
 
-對於授權部分，MVPD需要接受程式設計師指定的資源以進行授權。  在大多數情況下，這是頻道網路的字串識別碼，例如TBS或TNT。
+對於授權部分，MVPD需要接受程式設計師所指定的資源以授權。  在大多數情況下，這是通道網路的字串識別碼，例如TBS或TNT。
 
 #### 授權SAML請求和回應 {#authz-saml-req-resp}
 
-在AuthZ回應中，ISSUER必須符合SAML回應中的ISSUER，它應該是Proxied MVPD識別碼。
+在AuthZ回應中，ISSUER必須符合SAML回應中的ISSUER，該回應應該是Proxied MVPD識別碼。
 
 **範例AuthZ XACML請求**
 

@@ -1,8 +1,7 @@
 ---
-description: Primetime廣告插入將Cookie用於內部用途，並方便使用串流和廣告伺服器。
+description: Primetime廣告插入將Cookie用於內部用途，並方便處理串流和廣告伺服器。
 title: Cookie
-exl-id: 13184a7a-4302-46af-a7f6-37678db05ce8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
@@ -11,12 +10,12 @@ ht-degree: 0%
 
 # Cookie {#cookies}
 
-Primetime廣告插入將Cookie用於內部用途，並方便使用串流和廣告伺服器。  建議使用Cookie，也建議我的使用者端播放器啟用。
+Primetime廣告插入將Cookie用於內部用途，並便於使用串流和廣告伺服器。  建議使用Cookie，並建議在您的使用者端播放器上啟用。
 
 ## Cookie清單
 
 Primetime廣告插入會維護下列Cookie：
 
-* `ssaiPub` 有助於從需要Cookie驗證的資料流擷取內容URL，以取得 `m3u8` 檔案。
-* `ssai3` 保留需要工作階段Cookie的廣告伺服器。
-* `AWSELB` 和 `ssaiSession` 保留工作階段相關資訊。
+* `ssaiPub` 協助從需要Cookie驗證的資料流擷取內容URL，以取得 `m3u8` 檔案。
+* `ssai3` 會保留需要工作階段Cookie的廣告伺服器。
+* `AWSELB` 和 `ssaiSession` 保留工作階段的相關資訊。

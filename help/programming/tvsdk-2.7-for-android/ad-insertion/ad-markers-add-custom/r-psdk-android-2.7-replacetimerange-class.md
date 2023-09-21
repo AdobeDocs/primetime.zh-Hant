@@ -1,8 +1,7 @@
 ---
-description: ReplaceTimeRange公用程式類別是與CustomRangeMetadata搭配使用的TimeRange類別的延伸。
+description: ReplaceTimeRange公用程式類別是搭配CustomRangeMetadata使用的TimeRange類別的延伸。
 title: ReplaceTimeRange類別
-exl-id: 61885c52-d40a-4c72-97a0-51e56da9d449
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # ReplaceTimeRange類別 {#replacetimerange-class}
 
-ReplaceTimeRange公用程式類別是與CustomRangeMetadata搭配使用的TimeRange類別的延伸。
+ReplaceTimeRange公用程式類別是搭配CustomRangeMetadata使用的TimeRange類別的延伸。
 
 ```java
 public class ReplaceTimeRange extends TimeRange {

@@ -2,8 +2,7 @@
 title: 設定授權伺服器資料庫
 description: 設定授權伺服器資料庫
 copied-description: true
-exl-id: be6232b4-bf51-486f-9c85-ab6f6ec6d9bd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
@@ -19,11 +18,11 @@ ht-degree: 0%
 * 中繼資料轉換
 * 網域支援
 
-匿名授權贏取不要求資料庫必須執行。
+匿名授權贏取不需要資料庫必須執行。
 
 >[!NOTE]
 >
->此程式僅適用於Microsoft Windows。 若為其他作業系統，請參閱作業系統的說明檔案，或參閱MySQL說明檔案。
+>此程式僅適用於Microsoft Windows。 若為其他作業系統，請參閱作業系統相關檔案，或參閱MySQL檔案。
 
 若要執行授權伺服器，您必須安裝並設定MySQL：
 

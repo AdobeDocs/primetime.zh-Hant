@@ -2,8 +2,7 @@
 title: 轉換檔案
 description: 轉換檔案
 copied-description: true
-exl-id: 7344ca2f-5307-403b-a6fc-cbbea7c2829f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # 轉換檔案{#convert-files}
 
-請求者使用公用程式（例如OpenSSL和私密金鑰）從命令視窗輸入下列命令來產生PKCS#12 (pfx)和PEM/DER檔案：
+請求者使用OpenSSL和私密金鑰等公用程式，透過從命令視窗輸入下列命令來產生PKCS#12 (pfx)和PEM/DER檔案：
 
 1. 將PKCS#7檔案轉換為暫存PEM檔案。
 
@@ -25,7 +24,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >此暫時PEM包含您的憑證和中繼CA的憑證。 使用這些憑證來產生PFX檔案。
+   >此暫時PEM包含您的憑證和中間CA的憑證。 使用這些憑證來產生PFX檔案。
 
 1. 將暫存PEM檔案轉換為PFX檔案。
 

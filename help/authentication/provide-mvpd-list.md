@@ -1,8 +1,7 @@
 ---
 title: 提供MVPD清單
 description: 提供MVPD清單
-exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%

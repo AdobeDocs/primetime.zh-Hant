@@ -1,8 +1,7 @@
 ---
-description: TVSDK要求對媒體內容、清單內容、DRM和軟體版本有特定要求。
+description: TVSDK 需要針對 媒體 內容、清單內容、DRM 和軟體版本提出特定要求。
 title: 要求
-exl-id: 8fafc52e-01b5-448f-a235-7bc3a72f4d80
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 要求 {#requirements}
 
-TVSDK要求對媒體內容、清單內容、DRM和軟體版本有特定要求。
+TVSDK 需要針對 媒體 內容、清單內容、DRM 和軟體版本提出特定要求。
 
 ## 系統和軟體需求 {#section_96E5B079900246E78682AE44D3F23068}
 
@@ -19,9 +18,9 @@ TVSDK要求對媒體內容、清單內容、DRM和軟體版本有特定要求。
 
 | 作業系統 | Android 4.0或更新版本（最低API層級14） |
 |---|---|
-| CPU | 1 GHz單核心或同等規格 |
-| RAM | 256 MB |
-| GPU | 播放所需的硬體GPU |
+| Cpu | 1 GHz單核心或同等效能 |
+| Ram | 256百萬位元組 |
+| Gpu | 播放所需的硬體 GPU |
 | 建築 | x86 via Houdini、ARM64、ARMv7和ARMv8 |
 
 ## 內容和資訊清單需求 {#section_72DD0E4DA9774DCCADB42887497F1386}
@@ -30,18 +29,18 @@ TVSDK要求對媒體內容、清單內容、DRM和軟體版本有特定要求。
 
 | Adobe存取DRM | 如果受DRM保護的資料流是多位元速率(MBR)，則用於MBR的DRM加密金鑰應與所有位元速率資料流中使用的金鑰相同。 |
 |---|---|
-| 廣告變體資訊清單 | 必須與主內容的格式副本具有相同的比特率格式副本。 |
+| 廣告變體資訊清單 | 必須具有與主內容的格式副本相同的位元速率呈現形式。 |
 
-## #EXT-X-VERSION要求 {#section_49A33664651A46EC9ED888BA9C1C3F6D}
+## #EXT-X-VERSION 需求 {#section_49A33664651A46EC9ED888BA9C1C3F6D}
 
-`#EXT-X-VERSION`檔案中[!DNL .m3u8]的版本會影響應用程式可用的功能，以及在播放清單/清單中有效的`EXT`標籤。
+檔中的版本 `#EXT-X-VERSION` [!DNL .m3u8] 會影響應用程式可用的功能以及播放清單 `EXT` /清單中有效的標記。
 
-以下是有關`#EXT-X-VERSION`標籤的一些資訊，它指定HLS協定版本：
+下面是有關 `#EXT-X-VERSION` 指定 HLS 協定版本的標記的一些資訊：
 
-* 版本必須與HLS播放清單中的功能和屬性相匹配；否則，可能會出現回放錯誤。如需詳細資訊，請參閱 [HTTP即時資料流規格](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
-* Adobe建議至少使用HLS第2版在TVSDK型使用者端中播放。
+* 版本必須與 HLS 播放清單中的功能和屬性匹配;否則，可能會發生播放錯誤。 如需詳細資訊，請參閱 [HTTP即時資料流規格](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
+* Adobe建議至少使用2版HLS在TVSDK使用者端中播放。
 
-   使用者端和伺服器必須以下列方式實作版本：
+  使用者端和伺服器必須透過下列方式實作版本：
 
 <table frame="all" colsep="1" rowsep="1" id="table_62EB98EDD9DE49EC84CB1C7D59BC40E6"> 
  <thead> 
@@ -56,14 +55,14 @@ TVSDK要求對媒體內容、清單內容、DRM和軟體版本有特定要求。
    <td colname="2"> 的IV屬性 <span class="codeph"> EXT-X-KEY </span> 標籤之間。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3 </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION：3 </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">浮點<span class="codeph"> EXTINF </span>持續時間值 <p>持續時間標籤(<span class="codeph"> #EXTINF:版本2中的</span>&lt;duration&gt;,&lt;title&gt;)已四捨五入到整數值。版本3及更高版本要求準確指定持續時間（以浮點形式）。 </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">浮點 <span class="codeph"> EXTINF </span> 持續時間值 <p>持續時間標記 （ <span class="codeph"> #EXTINF： </span>&lt;duration&gt;,&lt;title&gt;） 在版本 2 中四捨五入為整數值。 &lt;/title&gt;&lt;/duration&gt;版本 3 及更高版本要求在浮點數中準確指定持續時間。 </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:4 </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION：4 </span> </td> 
    <td colname="2"> 
     <ul id="ul_3355A6CBBE2141DDB92660BB4B604D70"> 
      <li id="li_5E73D41AF6DC4CEE88D6C029FFCFC350">此 <span class="codeph"> EXT-X-BYTERANGE </span> 標籤 </li> 

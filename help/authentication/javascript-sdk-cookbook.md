@@ -1,8 +1,7 @@
 ---
 title: JavaScript SDK逐步指南
 description: JavaScript SDK逐步指南
-exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: df9d2bbef16cceb6a7e594f9b81262d475a5b334
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '940'
 ht-degree: 0%

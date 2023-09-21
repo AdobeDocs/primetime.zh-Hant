@@ -1,8 +1,7 @@
 ---
-description: 將MediaPlayer例項化，並將它的一個檢視放入框架版面中。
+description: 將MediaPlayer具現化，並將它的一個檢視置入框架版面中。
 title: 設定MediaPlay
-exl-id: e8fb6527-154b-4f7e-a128-525b5a3b3474
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
@@ -11,9 +10,9 @@ ht-degree: 0%
 
 # 設定MediaPlay {#set-up-the-mediaplayer}
 
-TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）的工具，您可以將其與其他Primetime元件整合。 此外，還提供許多專門設計來最大化視訊播放品質的功能。
+TVSDK提供的工具可讓您建立進階視訊播放器應用程式（您的Primetime播放器），以便與其他Primetime元件整合。 此外，還提供許多專為最佳化視訊播放品質而設計的功能。
 
-將MediaPlayer例項化，並將它的一個檢視放入框架版面中。
+將MediaPlayer具現化，並將它的一個檢視置入框架版面中。
 
 1. 具現化 `MediaPlayer`，傳遞 `android.content.Context` 物件至建構函式：
 
@@ -21,7 +20,7 @@ TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. 提供框架版面( `android.widget.FrameLayout`)以保留 `ViewGroup` 之 `mediaPlayer`：
+1. 提供框架配置( `android.widget.FrameLayout`)以保留 `ViewGroup` 之 `mediaPlayer`：
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);
@@ -45,4 +44,4 @@ TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）
    playerFrame.addView(mediaPlayer.getView());
    ```
 
->此 `MediaPlayer` 例項( `mediaPlayer`)現已可用，且已正確設定為在裝置畫面上顯示視訊內容。
+>此 `MediaPlayer` 例項( `mediaPlayer`)現已可用，並已正確設定為在裝置熒幕上顯示視訊內容。

@@ -2,8 +2,7 @@
 title: 範例使用者端請求
 description: 範例使用者端請求
 copied-description: true
-exl-id: 2b6a1349-aafc-4222-9081-525662f62961
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # 範例使用者端請求{#sample-client-requests}
 
-您可以使用Charles Proxy或Wireshark等工具收集範例使用者端請求的資料庫。 您應使用個人化傳輸認證，在設定個人化伺服器後擷取使用者端請求。 然後，您可以傳送這些使用者端請求(透過 *curl* 或其他工具)，驗證伺服器是否正常運作。 例如：
+您可以使用Charles Proxy或Wireshark等工具收集範例使用者端請求的程式庫。 您應使用個人化傳輸認證，在設定個人化伺服器後擷取使用者端請求。 然後，您可以傳送這些使用者端請求(透過 *curl* 或其他工具)，以確認伺服器是否正常啟動及執行。 例如：
 
 ```
 curl https://<<yourindivserver:port>>/flashaccess/i15n/v5 -­data-binary  
@@ -21,4 +20,4 @@ curl https://<<yourindivserver:port>>/flashaccess/i15n/v5 -­data-binary
 
 您也可以在伺服器設定變更或ECI / CRL更新後，再次傳送這些要求。
 
-您也應使用成功的個人化交易適當地更新「個人化統計資料」頁面。
+您也應該以成功的個人化交易適當地更新「個人化統計資料」頁面。

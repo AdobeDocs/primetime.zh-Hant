@@ -2,8 +2,7 @@
 title: 授權伺服器屬性檔案
 description: 授權伺服器屬性檔案
 copied-description: true
-exl-id: ac105ea6-b5a4-4416-bf17-f619abcf7cd5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 使用 [!DNL flashaccess-refimpl.properties] 檔案來設定參照實作的License Server元件。 至少請務必設定與傳輸認證和授權伺服器認證相關的屬性。 必須相對於指定的目錄指定認證檔案的位置 `config.resourcesDirectory` 屬性。 此檔案也包含數個與封裝內容相關的屬性：這些屬性僅用於Flash MediaRights Management伺服器1.x中繼資料轉換。 如果您修改此屬性檔案中的任何值，則需要重新啟動許可證伺服器，變更才會生效。
 
-若要支援在Adobe存取中產生傳送至iOS使用者端的遠端金鑰授權，必須在下列位置指定金鑰伺服器憑證： [!DNL flashaccess-refimpl.properties].
+若要在Adobe存取中支援產生傳送至iOS使用者端的遠端金鑰授權，必須在下列位置指定金鑰伺服器憑證： [!DNL flashaccess-refimpl.properties].
 
 下列屬性已新增至Adobe存取：
 
@@ -32,7 +31,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration。\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry ">Key Server儲存在HSM上的Adobe核發的License Server憑證別名。 啟用HSM時，請使用此屬性而非 <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>. </td> 
+   <td colname="2" class="- topic/entry ">Key Server儲存在HSM上的Adobe核發的License Server憑證別名。 啟用HSM時，請改用此屬性，而非 <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>. </td> 
   </tr> 
  </tbody> 
 </table>

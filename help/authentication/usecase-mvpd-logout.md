@@ -1,8 +1,7 @@
 ---
 title: mvpd登出
 description: mvpd登出
-exl-id: a2b57d02-9688-48e3-beff-1012cd361d0c
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -13,9 +12,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
-登出使用案例可透過傳送至IdP的SAML登出請求或透過呼叫的自訂登出端點來實作。  以下請求和回應範例提供SAML登出實作的範例。
+登出使用案例可由傳送至IdP的SAML登出要求或是由呼叫的自訂登出端點實作。  以下請求和回應範例提供SAML登出實作的範例。
 
 ## 登出請求範例 {#sample-logout-request}
 

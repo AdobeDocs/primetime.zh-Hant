@@ -1,8 +1,7 @@
 ---
 description: 若要接收關於時間表更新的通知，請註冊適當的事件接聽程式。
 title: 新增TimelineUpdatedEvent的監聽器
-exl-id: 7b55beb5-fd84-4144-8d02-bbd998f99e3a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 若要接收關於時間表更新的通知，請註冊適當的事件接聽程式。
 
-每次時間軸更新時， `MediaPlayer` dispatches `AdobePSDK.TimelineEvent` 具有型別 `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+每次更新時間軸時， `MediaPlayer` 派單 `AdobePSDK.TimelineEvent` 與型別 `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. 實作適當的接聽程式。
 
    ```js
@@ -32,7 +31,7 @@ ht-degree: 0%
    }
    ```
 
-1. 註冊事件監聽器。
+1. 註冊事件接聽程式。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMELINE_UPDATED,  

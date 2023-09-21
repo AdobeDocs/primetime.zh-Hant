@@ -1,17 +1,16 @@
 ---
-description: 「SWF雜湊電腦」公用程式會計算位於檔案中的SWF應用程式的摘要。
-title: SWF雜湊電腦
-exl-id: 245254fe-2fcb-41e8-94bd-0cbc8b39b2b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: SWF雜湊計算器公用程式會計算檔案中SWF應用程式的摘要。
+title: SWF雜湊計算器
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
-# SWF雜湊電腦{#swf-hash-calculator}
+# SWF雜湊計算器{#swf-hash-calculator}
 
-「SWF雜湊電腦」公用程式會計算位於檔案中的SWF應用程式的摘要。
+SWF雜湊計算器公用程式會計算檔案中SWF應用程式的摘要。
 
 若要執行雜湊程式，請輸入：
 
@@ -40,4 +39,4 @@ SWF Hash:
 </i class="+ topic>
 ```
 
-您可以使用此值來指定SWF摘要，在 [!DNL flashaccess-tenant.xml].
+您可以使用此值來指定中的SWF摘要 [!DNL flashaccess-tenant.xml].

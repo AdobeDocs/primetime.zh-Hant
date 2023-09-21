@@ -1,8 +1,7 @@
 ---
 description: TVSDK支援隨附橫幅廣告，這是線性廣告隨附的廣告，通常線上性廣告結束後仍會留在頁面上。 您的應用程式負責顯示隨線性廣告提供的隨附橫幅。
 title: 隨附橫幅廣告
-exl-id: c10a38ec-acbb-4e84-aff2-c93c9b1cec81
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
@@ -18,15 +17,15 @@ TVSDK支援隨附橫幅廣告，這是線性廣告隨附的廣告，通常線上
 * 嘗試儘可能多地呈現視訊廣告的隨附橫幅廣告，以符合您的播放器版面配置。
 * 只有在您的位置完全符合其指定高度和寬度時，才會顯示隨附橫幅。
 
-   >[!TIP]
-   >
-   >請勿調整橫幅大小。
+  >[!TIP]
+  >
+  >請勿調整橫幅大小。
 
 * 在廣告開始後儘快提供隨附橫幅。
 * 請勿以隨附橫幅覆蓋主要廣告/視訊容器。
 * 在廣告結束後繼續顯示隨附橫幅。
 
-   標準是顯示每個隨附橫幅，直到您有此橫幅的替代橫幅為止。
+  標準是顯示每個隨附橫幅，直到您有此橫幅的替代專案為止。
 
 ## 隨附橫幅資料 {#companion-banner-data}
 
@@ -67,7 +66,7 @@ AdBannerAsset的內容會說明隨附橫幅。
   </tr> 
   <tr> 
    <td colname="col1"> 靜態URL </td> 
-   <td colname="col2"> <p>有時候，隨附橫幅也會有一個staticURL，它是影像或的直接網址。 <span class="filepath"> .swf</span> （flash橫幅）。 </p> <p>如果您不想要使用html或iframe，可以使用影像或swf的直接URL來顯示Flash舞台中的橫幅。 在此情況下，您可以使用staticURL來顯示橫幅。 </p> <p>重要：您必須檢查靜態URL是否為有效的字串，因為此屬性可能並不一定都可用。 </p> </td> 
+   <td colname="col2"> <p>有時候，隨附橫幅也會有靜態URL，這是影像或的直接URL <span class="filepath"> .swf</span> （flash橫幅）。 </p> <p>如果您不想要使用html或iframe，可以使用影像或swf的直接URL來顯示Flash舞台中的橫幅。 在此情況下，您可以使用靜態URL來顯示橫幅。 </p> <p>重要：您必須檢查靜態URL是否為有效的字串，因為此屬性可能並不一定都可用。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -76,7 +75,7 @@ AdBannerAsset的內容會說明隨附橫幅。
 
 若要顯示橫幅廣告，您必須建立橫幅例項，並允許TVSDK接聽與廣告相關的事件。
 
-TVSDK提供透過與線性廣告相關聯的隨附橫幅廣告清單 `AdPlaybackEvent.AD_STARTED` 事件事件。
+TVSDK提供透過與線性廣告相關的隨附橫幅廣告清單 `AdPlaybackEvent.AD_STARTED` 事件事件。
 
 資訊清單可透過以下方式指定隨附橫幅廣告：
 
@@ -92,15 +91,15 @@ TVSDK提供透過與線性廣告相關聯的隨附橫幅廣告清單 `AdPlayback
 
 1. 從取得隨附廣告清單 `Ad.companionAssets`.
 
-1. 如果隨附廣告清單不是空的，請在清單上反複檢視橫幅例項。
+1. 如果隨附廣告清單不是空的，請反複檢視橫幅例項的清單。
 
    每個橫幅例項( `AdBannerAsset`)包含寬度、高度、資源型別（html、iframe或靜態）等資訊，以及顯示隨附橫幅所需的資料。
 
-1. 如果視訊廣告沒有隨附廣告，隨附資產清單則不包含該視訊廣告的資料。
+1. 如果視訊廣告沒有隨附廣告預訂，則隨附資產清單不包含該視訊廣告的資料。
 
    若要顯示獨立顯示廣告，請在指令碼中新增邏輯，以在適當的橫幅例項中執行一般DFP (DoubleClick for Publishers)顯示廣告標籤。
 
-1. 使用將橫幅資訊傳送至頁面上的函式（通常是JavaScript） `ExternalInterface`，會在適當的位置顯示橫幅。
+1. 使用將橫幅資訊傳送至頁面上的函式（通常是JavaScript） `ExternalInterface`，即會在適當位置顯示橫幅。
 
    這通常是 `div`，而您的函式會使用 `div ID` 以顯示橫幅。 例如：
 
@@ -110,7 +109,7 @@ TVSDK提供透過與線性廣告相關聯的隨附橫幅廣告清單 `AdPlayback
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
    ```
 
-   實作接聽程式處理常式：
+   實作監聽器處理常式：
 
    ```js
    private function onAdStarted(event:AdPlaybackEvent):void { 

@@ -1,8 +1,7 @@
 ---
 description: 您可以將廣告插入VOD內容。
 title: 以廣告取代時間範圍
-exl-id: f6675108-07a7-4d30-8a95-6029afe06ac5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您應一律提供 `replacement-duration` 用於自訂範圍。 如果沒有意圖取代此自訂範圍的廣告，請提供 `replacement-duration` /0.
+>您應該隨時提供 `replacement-duration` 用於自訂範圍。 如果沒有要取代此自訂範圍的廣告，請提供 `replacement-duration` /0。
 
 1. 若要以Primetime廣告決策廣告取代範圍：
 

@@ -2,8 +2,7 @@
 title: 廣告解析程式
 description: 廣告解析程式
 copied-description: true
-exl-id: 0df17e35-5c2d-46cd-bab2-c240ab8320c1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6'
 ht-degree: 0%

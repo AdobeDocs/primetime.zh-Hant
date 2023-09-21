@@ -1,8 +1,7 @@
 ---
 title: 擷取授權Token
 description: 擷取授權Token
-exl-id: 0b010958-efa8-4dd9-b11b-5d10f51f5680
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%

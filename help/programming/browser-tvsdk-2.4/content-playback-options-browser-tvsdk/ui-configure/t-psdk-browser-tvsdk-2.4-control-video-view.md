@@ -1,8 +1,7 @@
 ---
 description: 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
 title: 控制視訊檢視的位置和大小
-exl-id: ab88a90f-4493-4f05-8da0-703ab3cf159e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -13,21 +12,21 @@ ht-degree: 0%
 
 您可以使用MediaPlayerView物件來控制視訊檢視的位置和大小。
 
-瀏覽器TVSDK預設會在視訊大小或位置因應用程式、設定檔引數、內容引數等變更而改變時，嘗試維持視訊檢視的外觀比例。
+預設情況下，每當視訊大小或位置因應用程式、設定檔開關、內容開關等所做的變更而改變時，瀏覽器TVSDK會嘗試維持視訊檢視的外觀比例。
 
-您可以透過指定不同的外觀比例行為來覆寫預設外觀比例行為 *縮放原則*. 使用指定縮放原則 `MediaPlayerView` 物件的 `scalePolicy` 屬性。 的預設縮放原則 `MediaPlayerView` 使用的例項設定 `MaintainAspectRatioScalePolicy` 類別。 若要重設比例原則，請取代預設的執行個體 `MaintainAspectRatioScalePolicy` 於 `MediaPlayerView.scalePolicy` 使用您自己的原則。
+您可以透過指定不同的長寬比來覆寫預設的長寬比行為 *縮放原則*. 使用指定縮放原則 `MediaPlayerView` 物件的 `scalePolicy` 屬性。 的預設縮放原則 `MediaPlayerView` 使用下列的例項設定 `MaintainAspectRatioScalePolicy` 類別。 若要重設縮放原則，請取代預設實體 `MaintainAspectRatioScalePolicy` 於 `MediaPlayerView.scalePolicy` 使用您自己的原則。
 
 >[!IMPORTANT]
 >
->您無法設定 `scalePolicy` 屬性變更為空值。
+>您無法設定 `scalePolicy` 屬性轉換為null值。
 
 ## 非Flash遞補案例 {#non-flash-fallback-scenarios}
 
-在非Flash遞補情況中，為了讓縮放原則正確運作，在中提供的視訊div元素 `View` 建構函式應該傳回非零值 `offsetWidth` 和 `offsetHeight`. 若要提供不正確函式的範例，有時當video div元素的寬度和高度未在css中明確設定時，則 `View` 建構函式傳回零 `offsetWidth` 或 `offsetHeight`.
+在非Flash遞補情況中，為了讓縮放原則正確運作，在中提供的視訊div元素 `View` 建構函式應該傳回非零值 `offsetWidth` 和 `offsetHeight`. 舉一個不正確函式的範例，有時當視訊div元素的寬度和高度未在css中明確設定時，則 `View` 建構函式傳回零 `offsetWidth` 或 `offsetHeight`.
 
 >[!NOTE]
 >
->CustomScalePolicy對幾個瀏覽器的支援有限，尤其是IE、Edge和Safari 9。 對於這些瀏覽器，無法變更視訊的原生外觀比例。 不過，視訊的位置和維度會根據縮放原則強制執行。
+>CustomScalePolicy已限制支援幾種瀏覽器，尤其是IE、Edge和Safari 9。 對於這些瀏覽器，無法變更視訊的原生外觀比例。 不過，視訊的位置和維度將根據縮放原則強制執行。
 
 1. 實作 `MediaPlayerViewScalePolicy` 介面以建立您自己的縮放原則。
 

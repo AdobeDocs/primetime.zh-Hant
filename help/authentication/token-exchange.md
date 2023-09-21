@@ -1,8 +1,7 @@
 ---
 title: 交換Platform SSO權杖以取得Adobe權杖
 description: 交換Platform SSO權杖以取得Adobe權杖
-exl-id: 5ab60268-8f97-4755-8281-be45e812ed7f
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 2%

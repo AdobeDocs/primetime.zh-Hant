@@ -1,8 +1,7 @@
 ---
-description: 您可以設定呼叫TVSDK方法的按鈕，以暫停和播放媒體。
+description: 您可以設定呼叫TVSDK方法以暫停和播放媒體的按鈕。
 title: 實作播放/暫停按鈕
-exl-id: 72b90a67-d5a3-4575-a67e-58a0f0d0acf1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
@@ -11,9 +10,9 @@ ht-degree: 0%
 
 # 實作播放/暫停按鈕{#implement-a-play-pause-button}
 
-您可以設定呼叫TVSDK方法的按鈕，以暫停和播放媒體。
+您可以設定呼叫TVSDK方法以暫停和播放媒體的按鈕。
 
-使用下列範常式式碼來實作播放或暫停按鈕：
+使用以下範常式式碼來實施播放或暫停按鈕：
 
 <!--<a id="example_BC2632D673FE451190A30A23145090D0"></a>-->
 

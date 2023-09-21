@@ -1,8 +1,7 @@
 ---
 description: 您可以顯示目前作用中內容的持續時間。
 title: 顯示視訊的持續時間
-exl-id: a41cb291-9355-44cf-80bb-9c3cf6628b81
-source-git-commit: 85818281390b68522da2663496be025acf8f8675
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -20,7 +19,7 @@ ht-degree: 0%
 * 對於VOD，此範圍是整個VOD內容範圍，包括廣告。
 * 若為即時/線性，此範圍代表可搜尋視窗。
 
-如需API的詳細資訊，請參閱 [iOS API適用的TVSDK 3.4參考](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v3/index.html)
+如需有關API的詳細資訊，請參閱 [iOS API適用的TVSDK 3.4參考](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v3/index.html)
 
 <!--<a id="example_A153BE3AC03F43C6BF3A156316A08CD3"></a>-->
 

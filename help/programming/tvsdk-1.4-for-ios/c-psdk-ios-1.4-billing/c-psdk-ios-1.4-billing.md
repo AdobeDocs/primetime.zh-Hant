@@ -1,8 +1,7 @@
 ---
-description: 為因應客戶只想依使用量付款，而不想依實際使用量支付固定費率的需求，Adobe會收集使用量度並使用這些量度來決定向客戶收費的金額。
+description: 為因應客戶只想依使用量付款，而不論實際使用量為何，Adobe會收集使用量度，並使用這些量度來決定向客戶收費的金額。
 title: 計費量度
-exl-id: 8b670ed0-77a5-410c-abd6-0188558fbc4a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -11,9 +10,9 @@ ht-degree: 0%
 
 # 計費量度 {#billing-metrics}
 
-為因應客戶只想依使用量付款，而不想依實際使用量支付固定費率的需求，Adobe會收集使用量度並使用這些量度來決定向客戶收費的金額。
+為因應客戶只想依使用量付款，而不論實際使用量為何，Adobe會收集使用量度，並使用這些量度來決定向客戶收費的金額。
 
-每次播放器產生資料流開始事件時，TVSDK就會開始定期傳送HTTP訊息至Adobe的計費系統。 期間（稱為可計費期間）在標準VOD、pro VOD （啟用中段廣告）和即時內容中可能不同。 每種內容型別的預設持續時間為30分鐘，但您的Adobe合約會決定實際值。
+每次播放器產生資料流開始事件時，TVSDK就會開始定期傳送HTTP訊息至Adobe的計費系統。 期間（稱為可計費期間）在標準VOD、專業VOD （啟用中段廣告）和即時內容中可能不同。 每種內容型別的預設持續時間為30分鐘，但您的Adobe合約會決定實際值。
 
 訊息包含下列資訊：
 
@@ -24,19 +23,19 @@ ht-degree: 0%
 * 資料流是否受DRM保護
 * TVSDK版本和平台
 
-Adobe會預先設定此安排，但如果您想要變更安排，請與您的Adobe啟用代表合作。
+Adobe會預先設定此安排，但如果您想要變更安排，請與您的「Adobe啟用」代表合作。
 
-若要監視TVSDK傳送至Adobe的統計資料，請從Adobe啟用代表取得URL，然後使用網路擷取工具（例如Charles）來檢視資料。
+若要監視TVSDK傳送至Adobe的統計資料，請向您的Adobe啟用代表取得URL，並使用網路擷取工具（例如Charles）來檢視資料。
 
 ## 設定計費量度 {#configure-billing-metrics}
 
-如果您使用預設設定，則您無需執行任何其他操作即可啟用或設定帳單。 如果您從「Adobe啟用」代表取得不同的設定引數，請在初始化媒體播放器之前使用PTBillingMetricsConfiguration類別設定這些引數。
+如果您使用預設設定，則您不需要執行其他操作即可啟用或設定帳單。 如果您從「Adobe啟用」代表取得不同的設定引數，請在初始化媒體播放器之前使用PTBillingMetricsConfiguration類別設定這些引數。
 
 大部分客戶應使用預設設定。
 
 >[!IMPORTANT]
 >
->您設定的設定會在媒體播放器的一生中維持有效。 初始化媒體播放器後，便無法變更設定。
+>您設定的設定會在媒體播放器的有效期內維持有效。 初始化媒體播放器後，便無法變更設定。
 
 若要設定計費量度：
 
@@ -85,4 +84,4 @@ TVSDK會以XML格式將計費量度傳送至Adobe。
 </request>
 ```
 
-布林值屬性 `drmProtected`， `adsEnabled`、和 `midrollEnabled` 只有在為true時才會出現。
+布林值屬性 `drmProtected`， `adsEnabled`、和 `midrollEnabled` 只有在為true時才出現。

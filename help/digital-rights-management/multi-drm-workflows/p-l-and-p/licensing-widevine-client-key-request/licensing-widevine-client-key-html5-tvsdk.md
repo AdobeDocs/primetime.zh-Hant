@@ -1,8 +1,7 @@
 ---
 description: 程式碼可以透過DRMManager要求金鑰。
 title: HTML5 TVSDK上的重要請求工作流程
-exl-id: 1f60aadc-4730-4f71-a221-1af3ae3cba93
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -32,7 +31,7 @@ license acquisition. </p>
 
 您的程式碼必須先呼叫此API，才能以正常方式開始播放內容。 MediaPlayer.vo.protection.ProtectionData的記錄在此處： [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
-以下是PlayReady和Widevine的授權伺服器URL保護資料物件範例。
+以下是PlayReady和Widevine的保護資料物件範例，其授權伺服器URL均適用。
 
 ```
 var protectionData = { 
@@ -52,4 +51,4 @@ var protectionData = {
    };
 ```
 
-TVSDK不提供任何強制特定DRM系統的API，因為每個瀏覽器僅支援一個DRM系統。
+TVSDK不提供任何API來強制特定DRM系統，因為每個瀏覽器僅支援一個DRM系統。

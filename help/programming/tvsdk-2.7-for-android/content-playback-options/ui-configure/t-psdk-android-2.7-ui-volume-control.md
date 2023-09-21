@@ -1,8 +1,7 @@
 ---
 description: 您可以設定使用者介面控制項來調整視訊的音量。
 title: 提供音量控制
-exl-id: 0daa87e2-51aa-4459-9a67-135dc54d09c7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
@@ -17,7 +16,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >除「已核發」以外的任何狀態都有效。
+   >除了RELEASED之外，任何狀態都是有效的。
 
 1. 呼叫 `setVolume` 設定音量。
 
@@ -27,4 +26,4 @@ ht-degree: 0%
    void setVolume(int volume) throws MediaPlayerException;
    ```
 
-   磁碟區的值代表要求的磁碟區，以最大磁碟區的比例表示，其中 `0` 是靜音且 `1` 是最大磁碟區。
+   磁碟區的值代表要求的磁碟區，以最大磁碟區的比例表示，其中 `0` 無訊息且 `1` 是最大數量。

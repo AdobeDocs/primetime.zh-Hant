@@ -1,8 +1,7 @@
 ---
 title: iOS驗證錯誤 — 找不到adobepass.ios.app
 description: iOS驗證錯誤 — 找不到adobepass.ios.app
-exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%

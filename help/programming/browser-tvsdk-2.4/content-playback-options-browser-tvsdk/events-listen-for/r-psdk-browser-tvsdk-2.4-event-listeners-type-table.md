@@ -1,17 +1,16 @@
 ---
-description: 當您使用瀏覽器TVSDK註冊事件接聽程式時，需指定要接聽的事件型別以及回呼的名稱。 事件發生時，瀏覽器TVSDK會呼叫您的回呼，並向其傳遞適當型別的事件物件。
-title: 回撥的事件型別和類別
-exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: 使用瀏覽器TVSDK註冊事件接聽程式時，您可以指定要接聽的事件型別以及回呼的名稱。 事件發生時，瀏覽器TVSDK會呼叫您的回呼，並向其傳遞適當型別的事件物件。
+title: 回呼的事件型別和類別
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-# 回撥的事件型別和類別{#event-types-and-classes-for-callbacks}
+# 回呼的事件型別和類別{#event-types-and-classes-for-callbacks}
 
-當您使用瀏覽器TVSDK註冊事件接聽程式時，需指定要接聽的事件型別以及回呼的名稱。 事件發生時，瀏覽器TVSDK會呼叫您的回呼，並向其傳遞適當型別的事件物件。
+使用瀏覽器TVSDK註冊事件接聽程式時，您可以指定要接聽的事件型別以及回呼的名稱。 事件發生時，瀏覽器TVSDK會呼叫您的回呼，並向其傳遞適當型別的事件物件。
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
@@ -47,7 +46,7 @@ ht-degree: 0%
    <td colname="2"> 
     <ul id="ul_eny_tc4_2y"> 
      <li id="li_13F95E4BF905425CA5A95ECC138CC078"><span class="codeph"> BUFFERING_BEGIN</span> </li> 
-     <li id="li_BA6F4E38E2F440FAAA4E70DF906A3350"><span class="codeph"> BUFFERING_END</span> </li> 
+     <li id="li_BA6F4E38E2F440FAAA4E70DF906A3350"><span class="codeph"> 緩衝結束</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> 緩衝事件</span> </td> 
   </tr> 
@@ -57,14 +56,14 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="2"><span class="codeph"> LOAD_INFORMATION_AVAILABLE</span> </td> 
-   <td><span class="codeph"> loadinformevent</span> </td> 
+   <td><span class="codeph"> LoadInformationevent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_kwy_cd4_2y"> 
      <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> 音訊已更新</span> </li> 
-     <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> 字幕_已更新</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> MASTER_UPDATES</span> </li> 
+     <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> 已更新標題(_U)</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> 主要更新</span> </li> 
      <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
      <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> 專案已更新</span> </li> 
     </ul> </td> 
@@ -75,23 +74,23 @@ ht-degree: 0%
    <td><span class="codeph"> StatusChangeEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> OPERATION_FAILED</span> </td> 
+   <td colname="2"><span class="codeph"> 操作失敗</span> </td> 
    <td><span class="codeph"> 通知事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> RESERVATION_REACHED</span> </td> 
-   <td><span class="codeph"> ReservationEvent</span> </td> 
+   <td colname="2"><span class="codeph"> RESERVATION_RECEIVED</span> </td> 
+   <td><span class="codeph"> Reservationevent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_jfl_224_2y"> 
-     <li id="li_02B430978FA14A41A000DF8F9A345793"><span class="codeph"> RATE_SELECTED</span> </li> 
+     <li id="li_02B430978FA14A41A000DF8F9A345793"><span class="codeph"> 已選取的速率</span> </li> 
      <li id="li_1EDC0664B59E49448040DF312C928FAA"><span class="codeph"> RATE_PLAYING</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> PlaybackRateEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PROFILE_CHANGE</span> </td> 
+   <td colname="2"><span class="codeph"> 設定檔已變更</span> </td> 
    <td><span class="codeph"> ProfileEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -120,11 +119,11 @@ ht-degree: 0%
    <td><span class="codeph"> TimedMetadataEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> 時間表_已更新</span> </td> 
+   <td colname="2"><span class="codeph"> 時間軸已更新</span> </td> 
    <td><span class="codeph"> 時間軸事件</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAYBACK_RANGE_UPDATED</span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_RANGE_UPDATES</span> </td> 
    <td></td> 
   </tr> 
  </tbody> 

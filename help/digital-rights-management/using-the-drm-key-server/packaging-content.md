@@ -1,24 +1,23 @@
 ---
-title: 封裝內容
-description: 封裝內容
+title: 正在封裝內容
+description: 正在封裝內容
 copied-description: true
-exl-id: d408889c-f96d-43d3-af50-62cb5ecc2e28
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
-# 封裝內容{#packaging-content}
+# 正在封裝內容{#packaging-content}
 
-封裝遠端金鑰傳遞的內容時，請使用指定需要遠端金鑰傳遞的原則。 HLS內容的M3U8 （資訊清單檔案）中必須包含金鑰伺服器URL。 Primetime DRM金鑰伺服器URL的格式為：
+封裝遠端金鑰傳遞的內容時，請使用指定需要遠端金鑰傳遞的原則。 金鑰伺服器URL必須包含在HLS內容的M3U8 （資訊清單檔案）中。 Primetime DRM金鑰伺服器URL的格式為：
 
 ```
 https://key-server-host:port/faxsks/tenant-name/key
 ```
 
-例如，金鑰伺服器主機名稱 [!DNL mykeyserver.com] 接聽連線埠443和名為的租使用者 `tenant1`，則可在M3U8中指定的金鑰伺服器URL為：
+例如，Key Server主機名稱 [!DNL mykeyserver.com] 接聽連線埠443和名為的租使用者 `tenant1`，則在M3U8中指定的金鑰伺服器URL為：
 
 ```
 https://mykeyserver.com:443/faxsks/tenant1/key

@@ -1,8 +1,7 @@
 ---
 title: 瞭解伺服器端量度
 description: 瞭解伺服器端量度
-exl-id: 516884e9-6b0b-451a-b84a-6514f571aa44
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2205'
 ht-degree: 0%

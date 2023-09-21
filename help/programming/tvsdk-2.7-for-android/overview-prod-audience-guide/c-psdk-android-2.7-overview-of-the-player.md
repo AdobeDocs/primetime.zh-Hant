@@ -1,8 +1,7 @@
 ---
 description: Android 2.5適用的TVSDK包含多種您可在播放器中實作的功能。
 title: Primetime TVSDK功能
-exl-id: 1f1ea807-67b0-4dfa-adf3-198207f57aff
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
@@ -21,13 +20,13 @@ TVSDK功能：
    * 支援完整事件重播
    * 隱藏式字幕(608、708、WebVTT)和音訊的替代形式，可提升協助工具
    * 註解中文字樣式的控制項
-   * DVR功能、快速前進和快速倒帶(後兩者稱為 *特技播放模式*)
-   * 最適化位元速率(ABR)邏輯和ABR控制項的初始設定
+   * DVR功能、快進及快退(後兩者稱為 *特技播放模式*)
+   * Adaptive bit rate (ABR)邏輯和ABR控制項的初始設定
    * 即時資訊清單容錯移轉支援
    * 可調整的播放緩衝區
    * 片段持續時間、大小和下載時間追蹤支援
 
-* **廣告**
+* **Advertising**
 
    * VPAID 2.0
    * 使用者端廣告拼接
@@ -46,7 +45,7 @@ TVSDK功能：
 * **影片和廣告追蹤**
 
    * QoS事件追蹤
-   * 可協助TVSDK和您的應用程式非同步通訊影片、廣告和其他元素之狀態的通知。 通知也會記錄活動。
+   * 可協助TVSDK和您的應用程式非同步通訊影片、廣告和其他元素狀態的通知。 通知也會記錄活動。
 
 * **記錄**
 

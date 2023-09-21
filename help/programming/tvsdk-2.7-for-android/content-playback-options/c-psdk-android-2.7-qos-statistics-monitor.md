@@ -1,8 +1,7 @@
 ---
-description: 服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
+description: 服務品質(QoS)可提供視訊引擎執行狀況的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
 title: 服務品質統計資料
-exl-id: 084b5aa7-1eea-464b-a425-1da7b9fa1731
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 服務品質統計資料 {#quality-of-service-statistics}
 
-服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
+服務品質(QoS)可提供視訊引擎執行狀況的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
 
 TVSDK也提供下列已下載資源的相關資訊：
 
@@ -28,13 +27,13 @@ TVSDK也提供下列已下載資源的相關資訊：
 
    >[!NOTE]
    >
-   >深入瞭解 `LoadInformation`，請參閱 [2.7 for Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) API檔案
+   >深入瞭解 `LoadInformation`，請參閱 [Android適用的2.7 (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html) API檔案。
 
 ## 讀取QOS播放、緩衝和裝置統計資料 {#section_D21722600F324E67A9F06234D338B243}
 
 您可以讀取播放、緩衝和裝置統計資料，從 `QOSProvider` 類別。
 
-此 `QOSProvider` class提供各種統計資料，包括關於緩衝、位元速率、影格速率、時間資料等的資訊。 此外也提供裝置的相關資訊，例如製造商、型號、作業系統、SDK版本、製造商的裝置ID以及熒幕大小/密度。
+此 `QOSProvider` class提供各種統計資料，包括有關緩衝、位元速率、影格速率、時間資料的資訊，等等。 也會提供裝置的相關資訊，例如製造商、型號、作業系統、SDK版本、製造商的裝置ID以及熒幕大小/密度。
 
 1. 例項化媒體播放器。
 1. 建立 `QOSProvider` 物件並將其附加至媒體播放器。

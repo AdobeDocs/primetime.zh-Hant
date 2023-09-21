@@ -1,8 +1,7 @@
 ---
 description: MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代表之內容資料流的相關資訊。
 title: 用於存取MediaResource資訊的MediaPlayer方法
-exl-id: 8849411a-e94b-43a9-9fa1-143725264304
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -27,7 +26,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 清單&lt;string&gt; getAdTags() </span> </td> 
-   <td colname="3"> <p>提供用於廣告投放流程的廣告標籤清單。 </p> </td> 
+   <td colname="3"> <p>提供用於廣告刊登流程的廣告標籤清單。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>即時資料流</b> </td> 
@@ -35,14 +34,14 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 布林值isLive()； </span> </td> 
-   <td colname="3"> <p>如果資料流為即時，則為True；如果為VOD，則為False。 </p> </td> 
+   <td colname="3"> <p>如果資料流為即時，則為True；如果為VOD，則為false。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>受DRM保護</b> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 布林值isProtected()； </span> </td> 
-   <td colname="3"> <p>如果資料流受到DRM保護，則為True。 </p> </td> 
+   <td colname="3"> <p>如果資料流受DRM保護，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 清單&lt;drmmetadatainfo&gt; getDRMMetadataInfos()； </span> </td> 
@@ -54,7 +53,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 布林值hasClosedCaptions()； </span> </td> 
-   <td colname="3"> <p>如果隱藏式字幕追蹤可供使用，則為True。 </p> </td> 
+   <td colname="3"> <p>如果可以使用隱藏式字幕追蹤，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 清單&lt;closedcaptionstrack&gt; getClosedCationsTracks()； </span> </td> 
@@ -86,11 +85,11 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> AudioTrack getSelectedAudioTrack()； </span> </td> 
-   <td colname="3"> <p>擷取選取的音軌，並附上 <span class="codeph"> selectAudioTrack </span>. </p> </td> 
+   <td colname="3"> <p>擷取選取的音軌 <span class="codeph"> selectAudioTrack </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectAudioTrack ( AudioTrack audioTrack ) </span> </td> 
-   <td colname="3"> <p>選取音軌作為目前的音軌。 </p> </td> 
+   <td colname="3"> <p>選取音訊曲目，做為目前的音訊曲目。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>定時中繼資料</b> </td> 
@@ -98,11 +97,11 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 布林值hasTimedMetadata()； </span> </td> 
-   <td colname="3"> <p>如果串流有關聯的計時中繼資料，則為True。 </p> </td> 
+   <td colname="3"> <p>如果資料流有關聯的定時中繼資料，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 清單&lt;timedmetadata&gt; getTimedMetadata()； </span> </td> 
-   <td colname="3"> <p>提供與資料流相關聯的計時中繼資料物件清單。 </p> </td> 
+   <td colname="3"> <p>提供與資料流關聯的計時中繼資料物件清單。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 布林值isDynamic()； </span> </td> 
@@ -118,11 +117,11 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 布林值isTrickPlaySupported()； </span> </td> 
-   <td colname="3"> <p>如果播放器支援快進、倒轉和恢復，則為True。 </p> </td> 
+   <td colname="3"> <p>如果播放器支援快進、倒帶和恢復，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> List&lt; Float&gt; getAvailablePlaybackRates </span> </td> 
-   <td colname="3"> <p>提供特技播放功能內容中的可用播放率清單。 </p> </td> 
+   <td colname="3"> <p>提供特技播放功能內容中的可用播放速率清單。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>媒體資源</b> </td> 

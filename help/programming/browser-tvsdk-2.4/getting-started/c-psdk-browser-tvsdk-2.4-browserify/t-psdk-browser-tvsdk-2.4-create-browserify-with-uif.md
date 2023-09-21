@@ -1,15 +1,14 @@
 ---
 description: 使用應用程式中瀏覽器TVSDK提供的瀏覽器程式庫檔案，透過UI-Framework建立與瀏覽器相容的播放器。
-title: 使用UI-Framework建立與瀏覽器相容的播放器
-exl-id: cd72cae1-f67e-4192-9a7e-1c1492d88922
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 使用UI-Framework建立與Browserify相容的播放器
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
-# 使用UI-Framework建立與瀏覽器相容的播放器 {#create-a-browserify-compatible-player-using-the-ui-framework}
+# 使用UI-Framework建立與Browserify相容的播放器 {#create-a-browserify-compatible-player-using-the-ui-framework}
 
 使用應用程式中瀏覽器TVSDK提供的瀏覽器程式庫檔案，透過UI-Framework建立與瀏覽器相容的播放器。
 
@@ -31,4 +30,4 @@ TVSDK中包含的瀏覽器檔案範例：
    ```
 
 1. 依照中的說明繼續開發 [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md).
->您現在可以使用Browserify來組合您的應用程式檔案。
+>您現在可以使用Browserify套件組合您的應用程式檔案。

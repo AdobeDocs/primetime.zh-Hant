@@ -1,8 +1,7 @@
 ---
 title: iOS/tvOS API參考
 description: iOS/tvOS API參考
-exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: d4fd2590ec0e7388c1d4df6c2c1313141659ed9e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6990'
 ht-degree: 0%

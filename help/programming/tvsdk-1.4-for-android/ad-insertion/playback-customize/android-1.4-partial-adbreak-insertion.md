@@ -1,8 +1,7 @@
 ---
 description: 您可以啟用類似電視的體驗，即能夠在廣告中間、在直播串流中加入。
 title: 部分廣告插播插入
-exl-id: cb0d2f5f-c760-450e-ab34-fd7639d1190b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
@@ -13,16 +12,16 @@ ht-degree: 0%
 
 您可以啟用類似電視的體驗，即能夠在廣告中間、在直播串流中加入。
 
-「部分廣告插播」功能可讓您模擬類似電視的體驗，如果客戶在中間版本內開始即時資料流，則會從該中間版本內開始。 這類似於切換至電視頻道，而商業廣告則順暢運作。
+部分廣告插播功能可讓您模擬類似電視的體驗，如果使用者端在中間版本內開始即時資料流，則會從該中間版本內開始。 這類似於切換到電視頻道，廣告也順暢地執行。
 
-例如，如果使用者在90秒的廣告插播（3個30秒的廣告）中間、第二個廣告的10秒（亦即廣告插播的40秒）中加入，會發生下列情況：
+例如，如果使用者在90秒的廣告插播（三個30秒的廣告）中加入，則在第二個廣告中加入10秒（即在廣告插播中加入40秒），就會發生以下情況：
 
 * 第二個廣告會播放剩餘的持續時間（20秒），然後是第三個廣告。
 * 部分播放的廣告（第二個廣告）的廣告追蹤器不會觸發。 僅觸發第三個廣告的追蹤器。
 
 預設不會啟用此行為。 若要在應用程式中啟用此功能，請執行以下操作。
 
-1. 使用AdvertisingMetadata類別的方法setEnableLivePrerroll停用即時預列。
+1. 使用AdvertisingMetadata類別的方法setEnableLivePreroll停用即時預告。
 
    ```
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
@@ -38,7 +37,7 @@ ht-degree: 0%
 
 1. 此功能需要您實作自訂廣告原則選擇器來自訂行為。 如果您還沒有AdvertisingFactory類別的自訂實作，請新增新的AdvertisingFactory實作。 覆寫createAdPolicySelector方法。 此方法會傳回AdPolicySelector實作的新執行個體。
 
-   以下提供實作範例，以供您參考。 以下實作範例可從com.adobe.mediacore套件使用。 不過，為方便參考，已將其簡化，不建議照原樣使用。
+   以下提供實作範例，以供您參考。 以下實作範例可從com.adobe.mediacore套件使用。 不過，為了方便參考，已將其簡化，不建議照原樣使用。
 
    1. 範例廣告原則選擇器
 

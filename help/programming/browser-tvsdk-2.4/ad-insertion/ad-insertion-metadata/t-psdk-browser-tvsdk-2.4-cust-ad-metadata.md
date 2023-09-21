@@ -1,8 +1,7 @@
 ---
 description: 您可以自訂廣告插入中繼資料。
 title: 自訂廣告插入中繼資料
-exl-id: 4881ace6-e97b-448d-8fb4-64e7b69517f1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -22,7 +21,7 @@ ht-degree: 0%
    auditudeSettings.timeout = 10000; //this value is specified in milliseconds
    ```
 
-   此 `timeout` 屬性定義於 `AdvertisingMetadata` 類別，而且此逾時是針對任何衍生自的自訂廣告設定所設定。 `AdvertisingMetadata` 類別。 例如，如果使用者定義FreeWheel解析器的自訂設定，則他們可以使用這個設定來設定預設逾時。
+   此 `timeout` 屬性定義於 `AdvertisingMetadata` 類別，而且此逾時是針對任何衍生自的自訂廣告設定所設定。 `AdvertisingMetadata` 類別。 例如，如果使用者為FreeWheel解析器定義自訂設定，他們可以使用這個設定來設定預設逾時。
 
 1. 建立 `MediaPlayerItemConfig` ，並使用步驟2中的廣告設定。
 

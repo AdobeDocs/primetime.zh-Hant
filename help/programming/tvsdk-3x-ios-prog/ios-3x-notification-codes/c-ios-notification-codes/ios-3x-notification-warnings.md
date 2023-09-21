@@ -1,8 +1,7 @@
 ---
 description: 此表格證明WARN型別通知的詳細資訊。
 title: 警告通知代碼
-exl-id: de922934-9775-463f-a28f-fc891d7a914b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 3%
@@ -15,7 +14,7 @@ ht-degree: 3%
 
 <!--<a id="section_F25366B6703040E3ADA993C113618F01"></a>-->
 
-大多數警告包含相關的中繼資料，例如下載失敗的資源的URL。 某些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
+大多數警告包含相關的中繼資料，例如無法下載的資源的URL。 有些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
 
 <table frame="all" colsep="1" rowsep="1" id="table_C24772DF203B4DB2ACE6B475698C4C58"> 
  <thead> 
@@ -44,7 +43,7 @@ ht-degree: 3%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 201003</span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_ RETURNED_NO_ADS</span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_傳回的_NO_ADS</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> INTERNAL_ERROR， AD_ID，說明</span> </td> 
    <td colname="5"> <p>廣告解析失敗，因為VAST URL無效，或因為VAST包裝函式未傳回任何廣告。 </p> </td> 
@@ -60,8 +59,8 @@ ht-degree: 3%
    <td colname="1"><span class="codeph"> 204000 </span> </td> 
    <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_警告</span> </td> 
    <td colname="3"> <p>無 </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_ WARNING_NAME</span> <span class="codeph"> 說明</span> </td> 
-   <td colname="5"> <p> 背景資訊清單下載發生錯誤。 更新背景資訊清單的任何問題都會以TVSDK警告傳送，而不會導致播放停止。 </p> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_WARNING_NAME</span> <span class="codeph"> 說明</span> </td> 
+   <td colname="5"> <p> 背景資訊清單下載發生錯誤。 更新背景資訊清單的任何問題都會傳送為TVSDK警告，而不會導致播放停止。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204001 </span> </td> 
@@ -71,7 +70,7 @@ ht-degree: 3%
    <td colname="5"> <p></p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>TimeRangeCollection</b> </td> 
+   <td colname="1"><b>時間範圍集合</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -82,17 +81,17 @@ ht-degree: 3%
    <td colname="2"><span class="codeph"> 未定義_時間範圍 </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> 無 </td> 
-   <td colname="5"> 廣告訊號模式定義為自訂範圍，但沒有定義任何範圍。 </td> 
+   <td colname="5"> 廣告訊號模式定義為自訂範圍，但未定義任何範圍。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 210001 </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_TIME_範圍 </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> 說明 </span> </td> 
-   <td colname="5"> <p> 一個或多個時間範圍無效，將被忽略或修改。 </p> <p> DESCRIPTION是包含無效範圍說明的字串。 </p> </td> 
+   <td colname="5"> <p> 一或多個時間範圍無效，將被忽略或修改。 </p> <p> 說明是包含無效範圍說明的字串。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>iOS特定</b> </td> 
+   <td colname="1"><b>iOS專用</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -100,7 +99,7 @@ ht-degree: 3%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
+   <td colname="2"><span class="codeph"> 播放器_未就緒 </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> 說明 </span> </td> 
    <td colname="5"> </td> 
@@ -110,7 +109,7 @@ ht-degree: 3%
    <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
-   <td colname="5"> <p>未在資料流上插入AD。 </p> </td> 
+   <td colname="5"> <p>AD未插入在資料流上。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270002 </span> </td> 
@@ -124,7 +123,7 @@ ht-degree: 3%
    <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING </span> </td> 
    <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
    <td colname="4"> <p>無 </p> </td> 
-   <td colname="5"> <p>找不到與內容目前位元速率相符的廣告資料流。 </p> <p>  </p> </td> 
+   <td colname="5"> <p>找不到符合內容目前位元速率的廣告資料流。 </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270005 </span> </td> 
@@ -152,6 +151,6 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->adID和來源(URL)可透過通知中繼資料中的PTAdAsset擷取，並具有 `AD_ASSET` 金鑰。
+>adID和來源(URL)可透過通知中繼資料中的PTAdAsset來擷取，並具有 `AD_ASSET` 機碼。
 >
->此 [] attribute會指定通知的選用索引鍵。
+>此 [] attribute指定通知的選用索引鍵。

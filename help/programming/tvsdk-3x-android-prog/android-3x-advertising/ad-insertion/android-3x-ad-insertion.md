@@ -1,8 +1,7 @@
 ---
-description: 您可以使用Adobe Primetime廣告決策介面，在VOD和即時/線性內容中插入廣告。 Primetime ad decisioning與TVSDK搭配使用，以識別廣告機會、解決廣告，並在您的視訊串流中插入已解決的廣告。
+description: 您可以使用Adobe Primetime廣告決策介面，在VOD和即時/線性內容中插入廣告。 Primetime ad decisioning與TVSDK搭配使用，在您的視訊串流中識別廣告機會、解析廣告及插入已解析的廣告。
 title: 廣告需求
-exl-id: 3ca82cc5-ed64-458e-9a8d-475a84512478
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -11,11 +10,11 @@ ht-degree: 0%
 
 # 廣告及其需求 {#advertising-requirements}
 
-您可以使用Adobe Primetime廣告決策介面，在VOD和即時/線性內容中插入廣告。 Primetime ad decisioning與TVSDK搭配使用，以識別廣告機會、解決廣告，並在您的視訊串流中插入已解決的廣告。
+您可以使用Adobe Primetime廣告決策介面，在VOD和即時/線性內容中插入廣告。 Primetime ad decisioning與TVSDK搭配使用，在您的視訊串流中識別廣告機會、解析廣告及插入已解析的廣告。
 
 <!--<a id="section_282A8000A8BF4860A24F0D3F1A19BC9E"></a>-->
 
-若要將廣告融入您的視訊內容，請確認廣告和主要視訊內容符合下列要求：
+若要將廣告融入視訊內容，請確定廣告和主要視訊內容符合下列要求：
 
 * 廣告內容的HLS版本不可高於主要內容的HLS版本。
-* 無論主要內容是否經過多工處理，廣告皆不必經過多工處理（沒有限制）。
+* 無論主要內容是否為多工處理，廣告皆不必經過多工處理（沒有任何限制）。

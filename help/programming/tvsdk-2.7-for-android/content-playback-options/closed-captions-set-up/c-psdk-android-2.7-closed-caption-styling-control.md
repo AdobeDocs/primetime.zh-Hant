@@ -1,8 +1,7 @@
 ---
 description: 您可以使用TextFormat類別為隱藏式字幕軌跡提供樣式資訊，該類別會設定播放器顯示的隱藏式字幕樣式。
 title: 控制隱藏式字幕樣式
-exl-id: fa96f9f5-f709-4749-90c8-cf237cf074c0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 您可以使用TextFormat類別為隱藏式字幕軌跡提供樣式資訊，該類別會設定播放器顯示的隱藏式字幕樣式。
 
-此類別封裝隱藏式字幕樣式資訊，例如字型型別、大小、顏色和背景不透明度。
+此類別會封裝隱藏式字幕樣式資訊，例如字型型別、大小、顏色和背景不透明度。
 
 ## 設定隱藏式字幕樣式 {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
 
@@ -52,100 +51,99 @@ ht-degree: 0%
    public TextFormat toTextFormat()
    ```
 
-1. 您可以執行下列任一項作業，取得目前的隱藏式字幕樣式設定：
+1. 您可以執行下列任一項動作，取得目前的隱藏式字幕樣式設定：
 
-   * 取得所有樣式設定 `MediaPlayer.getCCStyle` 傳回值是 `TextFormat` 介面。
+   * 透過取得所有樣式設定 `MediaPlayer.getCCStyle` 傳回值是 `TextFormat` 介面。
 
-      ```java
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws MediaPlayerException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws MediaPlayerException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws MediaPlayerException;
+     ```
 
    * 透過，一次取得一個設定 `TextFormat` 介面getter方法。
 
-      ```java
-      public java.lang.String getFontColor(); 
-      public java.lang.String getBackgroundColor(); 
-      public java.lang.String getFillColor(); // retrieve the font fill color 
-      public java.lang.String getEdgeColor(); // retrieve the font edge color 
-      public TextFormat.Size getSize(); // retrieve the font size 
-      public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
-      public TextFormat.Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity(); 
-      public java.lang.String getBottomInset(java.lang.String bi); 
-      public java.lang.String getSafeArea(java.lang.String sa);
-      ```
+     ```java
+     public java.lang.String getFontColor(); 
+     public java.lang.String getBackgroundColor(); 
+     public java.lang.String getFillColor(); // retrieve the font fill color 
+     public java.lang.String getEdgeColor(); // retrieve the font edge color 
+     public TextFormat.Size getSize(); // retrieve the font size 
+     public TextFormat.FontEdge getFontEdge(); // retrieve the font edge type 
+     public TextFormat.Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity(); 
+     public java.lang.String getBottomInset(java.lang.String bi); 
+     public java.lang.String getSafeArea(java.lang.String sa);
+     ```
 
 1. 若要變更樣式設定，請執行下列任一項動作：
 
    * 使用setter方法 `MediaPlayer.setCCStyle`，傳遞的例項 `TextFormat` 介面：
 
-      ```java
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws MediaPlayerException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
-      ```
+     ```java
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws MediaPlayerException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
+     ```
 
-   * 使用 `TextFormatBuilder` 類別，定義個別setter方法。
+   * 使用 `TextFormatBuilder` 類別，定義個別的setter方法。
 
-      此 `TextFormat` 介面會定義不可變物件，因此只有getter方法而沒有setter。 您只能使用設定隱藏式字幕樣式引數 `TextFormatBuilder` 類別：
+     此 `TextFormat` 介面會定義不可變物件，因此只有getter方法而沒有setter。 您只能使用設定隱藏式字幕樣式引數 `TextFormatBuilder` 類別：
 
-      ```java
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(String backgroundColor) 
-      public void setFillColor(String fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(String edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(String fontColor) 
-      public void setBottomInset(String bi) 
-      public void setSafeArea(String sa) 
-      public void setTreatSpaceAsAlphaNum(bool)
-      ```
+     ```java
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(String backgroundColor) 
+     public void setFillColor(String fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(String edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(String fontColor) 
+     public void setBottomInset(String bi) 
+     public void setSafeArea(String sa) 
+     public void setTreatSpaceAsAlphaNum(bool)
+     ```
 
-      >[!IMPORTANT]
-      >
-      >**色彩設定：** 在Android TVSDK 2.X中，已增強隱藏式字幕的色彩樣式。 此增強功能允許使用代表RGB色彩值的十六進位字串來設定隱藏式字幕色彩。 RGB十六進位色彩表示是您在Photoshop等應用程式中使用的6位元組字串：
-      >
-      >* FFFFFF =黑色
-      >* 000000 =白色
-      >* FF0000 =紅色
-      >* 00FF00 =綠色
-      >* 0000FF =藍色
+     >[!IMPORTANT]
+     >
+     >**色彩設定：** 在Android TVSDK 2.X中，已改良隱藏式字幕的色彩樣式。 增強功能允許使用代表RGB顏色值的十六進位字串來設定隱藏式字幕顏色。 RGB十六進位色彩表示是您在Photoshop等應用程式中所使用的6位元組字串：
+     >
+     >* FFFFFF =黑色
+     >* 000000 =白色
+     >* FF0000 =紅色
+     >* 00FF00 =綠色
+     >* 0000FF =藍色
+     >
+     >等等。
+     >
+     >在您的應用程式中，每當您傳遞顏色樣式資訊至 `TextFormatBuilder`，您仍可使用 `Color` 分項清單和以前一樣，但現在您必須新增 `getValue()` 變更為顏色，以取得字串形式的值。 例如：
+     >
+     >```
+     >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+     >```
+     >
 
-      >
-      >等等。
-      >
-      >在您的應用程式中，每當您傳送顏色樣式資訊至 `TextFormatBuilder`，您仍會使用 `Color` 分項清單和以前一樣，但現在您必須新增 `getValue()` 變更為顏色，以取得字串形式的值。 例如：
-      >
-      >
-      ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
-
-設定隱藏式字幕樣式為非同步操作，因此可能需要幾秒鐘才能讓變更顯示在畫面上。
+設定隱藏式字幕樣式為非同步操作，因此變更可能需要幾秒鐘才會顯示在畫面上。
 
 ## 隱藏式字幕樣式選項 {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
 
@@ -169,7 +167,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->在定義預設值的選項中(例如， `DEFAULT`)，該值是指最初指定註解時的設定。
+>在定義預設值的選項中(例如 `DEFAULT`)，該值代表最初指定註解時的設定。
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -181,15 +179,15 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> 字型 </td> 
-   <td colname="2"> <p>字型型別。 </p> <p>只能設定為以下定義的值： <span class="codeph"> TextFormat.Font </span> 分項清單，並代表（例如，有或沒有襯線）等寬。 </p> <p>提示：裝置上可用的實際字型可能會有所不同，必要時會使用替代。 通常使用含襯線的等寬做為替代，不過此替代可以是系統特定的。 </p> </td> 
+   <td colname="2"> <p>字型型別。 </p> <p>只能設定為以下定義的值： <span class="codeph"> TextFormat.Font </span> 分項清單，並代表（例如，有或沒有襯線）等寬。 </p> <p>提示：裝置上可用的實際字型可能會有所不同，並會視需要使用替代。 通常使用含襯線的等寬做為替代字元，不過此替代字元可能是系統專屬的。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 大小 </td> 
-   <td colname="2"> <p>註解的大小。 </p> <p> 只能設定為下列專案所定義的值： <span class="codeph"> TextFormat.Size </span> 分項清單： 
+   <td colname="2"> <p>註解的大小。 </p> <p> 只能設定為以下定義的值： <span class="codeph"> TextFormat.Size </span> 分項清單： 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> 中 </span>  — 標準大小 </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> 大 </span>  — 大約比中號大30% </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> 小 </span>  — 約比中號小30% </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> 小 </span>  — 大約比中型小30% </li> 
       <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> 預設 </span>  — 註解的預設大小；與「中」相同 </li> 
      </ul> </p> </td> 
   </tr> 
@@ -199,11 +197,11 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 字型顏色 </td> 
-   <td colname="2"> <p>字型顏色。 </p> <p>只能設定為下列專案所定義的值： <span class="codeph"> TextFormat.Color </span> 分項清單。 </p> </td> 
+   <td colname="2"> <p>字型顏色。 </p> <p>只能設定為以下定義的值： <span class="codeph"> TextFormat.Color </span> 分項清單。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 邊緣顏色 </td> 
-   <td colname="2"> <p>邊緣效果的色彩。 </p> <p>可以設定為字型顏色可用的任何值。 </p> </td> 
+   <td colname="2"> <p>邊緣效果的顏色。 </p> <p>可設定為字型顏色可用的任何值。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景顏色 </td> 
@@ -211,11 +209,11 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 填色顏色 </td> 
-   <td colname="2"> <p>文字所在視窗背景的色彩。 </p> <p>可以設定為字型顏色可用的任何值。 </p> </td> 
+   <td colname="2"> <p>文字所在視窗的背景色彩。 </p> <p>可設定為字型顏色可用的任何值。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 字型不透明度 </td> 
-   <td colname="2"> <p>文字的不透明度。 </p> <p>以從0 （完全透明）到100 （完全不透明）的百分比表示。 <span class="codeph"> DEFAULT_不透明度 </span> 的字型為100。 </p> </td> 
+   <td colname="2"> <p>文字的不透明度。 </p> <p>以從0 （完全透明）到100 （完全不透明）的百分比表示。 <span class="codeph"> DEFAULT_不透明度 </span> 的為100。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 背景不透明度 </td> 
@@ -226,12 +224,12 @@ public TextFormatBuilder(
    <td colname="2"> <p>註解視窗背景的不透明度。 </p> <p>以從0 （完全透明）到100 （完全不透明）的百分比表示。 <span class="codeph"> DEFAULT_不透明度 </span> 填色為0。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> 下內凹 </td> 
-   <td colname="2"> <p>要避免的字幕與字幕視窗底部的垂直距離。 </p> <p>以註解視窗高度的百分比（例如「20%」）或畫素數（例如「20」）表示。 </p> </td> 
+   <td colname="1"> 下內縮 </td> 
+   <td colname="2"> <p>要避免的註解與註解視窗底部的垂直距離。 </p> <p>以註解視窗高度的百分比（例如「20%」）或畫素數（例如「20」）表示。 </p> </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> 安全區域 </td> 
-   <td colname="2"> <p>熒幕邊緣周圍0%到25%之間不顯示註解的區域。 </p> <p>依預設，WebVTT的安全區域是0%。 此設定可讓您的應用程式覆寫該預設值。 如果提供兩個值，例如，字串「10%，20%」，則第一個值是水準安全區域，第二個值是垂直安全區域。 如果提供一個值（例如，字串「15%」），垂直軸和水平軸都會使用指定的安全區域。 </p> </td> 
+   <td colname="2"> <p>熒幕邊緣的區域，介於0%到25%之間，不會顯示註解。 </p> <p>依預設，WebVTT的安全區域是0%。 此設定可讓您的應用程式覆寫該預設值。 如果提供兩個值，例如，字串「10%，20%」，則第一個值為水準安全區域，第二個值為垂直安全區域。 如果提供一個值（例如，字串「15%」），則垂直軸和水平軸都會使用指定的安全區域。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

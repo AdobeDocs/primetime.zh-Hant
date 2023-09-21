@@ -1,8 +1,7 @@
 ---
 description: 您可以從QOSProvider類別讀取播放、緩衝和裝置統計資料。
 title: 讀取QOS播放、緩衝和裝置統計資料
-exl-id: 1b79c254-4135-4d77-8b24-473f214021a1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -13,9 +12,9 @@ ht-degree: 0%
 
 您可以從QOSProvider類別讀取播放、緩衝和裝置統計資料。
 
-此 `QOSProvider` class提供各種統計資料，包括關於緩衝、位元速率、影格速率、時間資料等的資訊。
+此 `QOSProvider` class提供各種統計資料，包括有關緩衝、位元速率、影格速率、時間資料的資訊，等等。
 
-此外也提供裝置的相關資訊，例如製造商、型號、作業系統、SDK版本、製造商的裝置ID以及熒幕大小/密度。
+也會提供裝置的相關資訊，例如製造商、型號、作業系統、SDK版本、製造商的裝置ID以及熒幕大小/密度。
 
 1. 例項化媒體播放器。
 1. 建立 `QOSProvider` 物件並將其附加至媒體播放器。

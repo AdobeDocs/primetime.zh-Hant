@@ -1,8 +1,7 @@
 ---
 title: 識別受保護的資源
 description: 識別受保護的資源
-exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%

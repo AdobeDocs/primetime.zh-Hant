@@ -1,15 +1,14 @@
 ---
 description: 依預設，支援DVR的即時資料流會顯示檢視器可以暫停和搜尋的可搜尋範圍。
-title: 具有廣告插入的DVR
-exl-id: 3471741d-1ae3-4cbe-aa35-4e333aeb83c6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 含廣告插入的DVR
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
-# 具有廣告插入的DVR {#dvr-with-ad-insertion}
+# 含廣告插入的DVR {#dvr-with-ad-insertion}
 
 依預設，支援DVR的即時資料流會顯示檢視器可以暫停和搜尋的可搜尋範圍。
 

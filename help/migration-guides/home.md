@@ -2,8 +2,7 @@
 title: Primetime移轉說明
 description: Primetime移轉說明
 copied-description: true
-exl-id: 1f3f1a5b-95c7-4d47-a36f-7ad934a7d49d
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%

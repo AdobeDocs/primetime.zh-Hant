@@ -1,8 +1,7 @@
 ---
-description: TVSDK會以通常預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
+description: TVSDK會以一般預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
 title: 播放事件的順序
-exl-id: d03692f6-04b9-4962-92d1-fad671d06665
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -11,27 +10,27 @@ ht-degree: 0%
 
 # 播放事件的順序{#order-of-playback-events}
 
-TVSDK會以通常預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
+TVSDK會以一般預期的順序傳送事件/通知。 您的播放器可以根據預期序列中的事件實作動作。
 
 <!--<a id="section_6E34A6C7936245D88DEB3315DA64598B"></a>-->
 
 下列範例顯示包含播放事件之部分事件的順序。
 
-* 透過成功載入媒體資源時 `MediaPlayer.replaceCurrentResource`，事件的順序為：
+* 當成功載入媒體資源透過 `MediaPlayer.replaceCurrentResource`，事件的順序為：
 
    * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 具有狀態 `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
    * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 具有狀態 `MediaPlayerStatus.INITIALIZED`
 
-* 透過準備播放時 `MediaPlayer.prepareToPlay`，事件的順序為：
+* 準備透過播放 `MediaPlayer.prepareToPlay`，事件的順序為：
 
    * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 具有狀態 `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` 如果已插入廣告
    * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` 具有狀態 `MediaPlayerStatus.PREPARED`
 
-* 對於即時/線性串流，在播放期間，隨著播放視窗前進並解決其他機會，事件的順序為：
+* 對於即時/線性串流，在播放視窗前進且其他機會解決時播放期間，事件的順序為：
 
    * `MediaPlayerItemEvent.ITEM_UPDATED`
    * `TimelineEvent.TIMELINE_UPDATED` 如果已插入廣告

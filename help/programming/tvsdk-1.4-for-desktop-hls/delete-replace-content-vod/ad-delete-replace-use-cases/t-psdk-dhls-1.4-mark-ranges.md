@@ -2,8 +2,7 @@
 title: 標籤範圍
 description: 標籤範圍
 copied-description: true
-exl-id: 173769cd-6580-4461-9dbc-5bb2fed346d2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # 標籤範圍{#mark-ranges}
 
-標籤 `TimeRanges` 介於 `begin` 和 `end` 在 `localTime` as a `AdBreak` 從時間軸。 其他廣告設定會被忽略。
+標籤 `TimeRanges` 介於 `begin` 和 `end` 在 `localTime` as a `AdBreak` 從時間軸。 其他廣告設定則會被忽略。
 
 1. 標示時間範圍。
 

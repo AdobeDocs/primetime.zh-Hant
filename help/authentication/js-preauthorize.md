@@ -1,8 +1,7 @@
 ---
 title: 預先授權
 description: JavaScript預先授權
-exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 0%
@@ -13,32 +12,32 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
 ## 概觀 {#preauth-overview}
 
-應用程式將使用預先授權API方法來取得一或多個資源的預先授權決定。 預先授權API請求應該用於UI提示和/或內容篩選。 在允許使用者存取指定的資源之前，必須先提出實際的授權API請求。
+預先授權API方法可供應用程式用來取得一或多個資源的預先授權決定。 預先授權API要求應該用於UI提示和/或內容篩選。 在允許使用者存取指定的資源之前，必須先提出實際的授權API要求。
 
-如果在Adobe Primetime驗證服務處理預先授權API請求時發生未預期的錯誤（例如，網路問題和MVPD授權端點無法使用），則受影響資源的一個或多個單獨錯誤資訊將會作為Preauthorize API回應結果的一部分納入。
+如果Adobe Primetime驗證服務處理預先授權API請求時發生未預期的錯誤（例如網路問題，以及MVPD授權端點無法使用），則受影響資源的一或多個個別錯誤資訊將會納入作為預先授權API回應結果的一部分。
 
-### public preauthorize(請求： PreauthorizeRequest， callback： AccessEnablerCallback&lt;any>)： void {#preauth-method}
+### public preauthorize(請求： PreauthorizeRequest， callback： AccessEnablerCallback&lt;any>)：無效 {#preauth-method}
 
-**說明：** 應用程式可使用此方法從Adobe Primetime Authentication服務取得已驗證使用者的預先授權（資訊）決定，以檢視特定的受保護資源，主要目的是裝飾應用程式的UI （例如，使用鎖定和解鎖圖示指示存取狀態）。
+**說明：** 應用程式可使用此方法來從Adobe Primetime Authentication服務取得已驗證使用者的預先授權（資訊）決定，以檢視特定的受保護資源，主要目的是裝飾應用程式的UI （例如，以鎖定和解鎖圖示指示存取狀態）。
 
 **可用性：** v4.4.0+
 
 **引數：**
 
 * `PreauthorizeRequest`：用於定義請求的產生器物件
-* `AccessEnablerCallback`：用於傳回API回呼的回呼
-* `PreauthorizeResponse`：用於傳回API回應內容的物件
+* `AccessEnablerCallback`：用於傳回API回應的回呼
+* `PreauthorizeResponse`：用來傳回API回應內容的物件
 
 ### 類別PreauthorizeRequestBuilder {#preath-req-builder-class}
 
 #### setResources(resources：字串[])： PreauthorizeRequestBuilder {#set-res-preath-req-buildr}
 
 * 設定您要取得預先授權決定的資源清單。
-* 您必須設定此變數，才能使用預先授權API。
+* 您必須將其設定為使用預先授權API。
 * 清單中的每個元素都必須是字串，代表必須與MVPD協定的資源ID值或媒體RSS片段。
 * 此方法只會設定目前內容中的資訊 `PreauthorizeRequestBuilder` 物件例項，此方法呼叫的接收者。
 
@@ -50,30 +49,30 @@ ht-degree: 0%
 
 * `@param {string[]}` 資源。 您要取得預先授權決定的資源清單。
 * `@returns {PreauthorizeRequestBuilder}` 對同一專案的參照 `PreauthorizeRequestBuilder` 物件例項，方法呼叫的接收者。
-* 如此可允許建立方法鏈結。
+* 如此即可建立方法鏈結。
 
 #### disableFeatures(...features： string[])： PreauthorizeRequestBuilder {#disabl-featres-preauth-req-buildr}
 
 * 設定您要在取得預先授權決定時停用這些功能的功能。
-* 此函式僅設定目前內容中的資訊 `PreauthorizeRequestBuilder` 物件例項，此函式呼叫的接收者。
+* 此函式只設定目前內容中的資訊 `PreauthorizeRequestBuilder` 物件例項，此函式呼叫的接收者。
 * 若要建置實際 `PreauthorizeRequest` 您可以檢視 `PreauthorizeRequestBuilder`的函式：
 
 ```JavaScript
 public func build() -> PreauthorizeRequest
 ```
 
-* `@param {string[]}` 功能。 您要停用它們的一組功能。
-* `@returns` 對同一專案的參照 `PreauthorizeRequestBuilder` 物件例項，此例項是函式呼叫的接收者。
+* `@param {string[]}` 功能。 您想要停用它們的一組功能。
+* `@returns` 對同一專案的參照 `PreauthorizeRequestBuilder` 物件例項，函式呼叫的接收者。
 * 它這樣做是為了允許建立函式鏈結。
 
 #### build()： PreauthorizeRequest {#preauth-req}
 
 * 建立及擷取新的參照 `PreauthorizeRequest` 物件例項。
-* 此方法會具現化新的 `PreauthorizeRequest` 物件。
+* 此方法會例項化新的 `PreauthorizeRequest` 物件。
 * 此方法會使用目前內容中預先設定的值 `PreauthorizeRequestBuilder` 物件例項，此方法呼叫的接收者。
 * 請記住，此方法不會產生任何副作用，
 * 因此，不會變更SDK的狀態或 `PreauthorizeRequestBuilder` 物件例項，此方法呼叫的接收者。
-* 這表示此方法對相同接收器的後續呼叫將建立不同的新 `PreauthorizeRequest` 物件例項，但具有相同的資訊，以防值設定為 `PreauthorizeRequestBuilder` 在兩次呼叫之間未修改的位置。
+* 這表示此方法對相同接收器的後續呼叫將建立不同的新值 `PreauthorizeRequest` 物件例項，但具有相同的資訊，以防值設定為 `PreauthorizeRequestBuilder` 在兩次呼叫之間未修改的位置。
 * 如果您不需要更新任何提供的資訊（資源與快取），您可以針對預先授權API的多重用途重複使用PreauthorizeRequest執行個體。
 * `@returns {PreauthorizeRequest}`
 
@@ -88,76 +87,76 @@ public func build() -> PreauthorizeRequest
 #### onFailure（結果： T）； {#on-failure-result}
 
 * 無法服務預先授權API請求時，SDK呼叫的失敗回呼。
-* 結果是包含狀態的失敗結果。
+* 結果會產生包含狀態的失敗結果。
 * `@param {T} result`
 
 ### 類別PreauthorizeResponse {#preauth-response-class}
 
 #### 公開狀態：狀態； {#public-status}
 
-* 傳回：失敗時的其他狀態（狀態）資訊。
+* 傳回：發生失敗時的其他狀態（狀態）資訊。
 * 可容納 `null` 值。
 
 #### 公開決定：決定[]； {#public-decisions}
 
-* 傳回：預先授權決定的清單。 每個資源一個決定。
+* 傳回：預先授權決定的清單。 每個資源一個決策。
 * 如果失敗，清單可能會是空的。
 
 ### 類別狀態 {#class-status}
 
 #### 公開狀態：數字； {#public-status-numbr}
 
-* RFC 7231中說明的HTTP回應狀態碼。
-* 可能是0，以防萬一 `Status` 來自SDK，而不是Adobe Primetime Authentication Services。
+* RFC 7231中記錄的HTTP回應狀態代碼。
+* 可能為0，以防出現 `Status` 來自SDK，而非Adobe Primetime驗證服務。
 
-#### 公用代碼：數字； {#public-code-numbr}
+#### 公用代碼：號碼； {#public-code-numbr}
 
 * 標準Adobe Primetime驗證服務錯誤代碼。
-* 可能包含空字串或 `null` 值。
+* 可能保留空字串或 `null` 值。
 
 #### 公開訊息：字串； {#public-msg-string}
 
 * 在某些情況下由MVPD授權端點或程式設計人員降級規則提供的詳細訊息。
-* 可能包含空字串或 `null` 值。
+* 可能保留空字串或 `null` 值。
 
 #### 公開詳細資料：字串； {#public-details-strng}
 
 * 儲存詳細訊息，在某些情況下，該訊息由MVPD授權端點或程式設計人員降級規則提供。
-* 可能包含空字串或 `null` 值。
+* 可能保留空字串或 `null` 值。
 
 
 #### public helpUrl： string； {#public-help-url-string}
 
-* 此URL會連結至有關此狀態/錯誤發生原因及可能解決方案之詳細資訊。
-* 可能包含空字串或 `null` 值。
+* 此URL會連結至關於為何發生此狀態/錯誤以及可能解決方案的詳細資訊。
+* 可能保留空字串或 `null` 值。
 
 #### 公用追蹤：字串； {#public-trace-string}
 
-* 此回應的唯一識別碼，在聯絡支援人員以識別更複雜情境中的特定問題時可使用此識別碼。
-* 可能包含空字串或 `null` 值。
+* 此回應的唯一識別碼，可在聯絡支援人員以識別更複雜案例中的特定問題時使用。
+* 可能保留空字串或 `null` 值。
 
 #### 公開動作：字串； {#public-action-string}
 
 * 補救此情況的建議動作。
    * **無**：很抱歉，沒有預先定義的動作來修正此問題。 這可能表示對公用API的呼叫不正確
    * **設定**：需要透過TVE儀表板或連絡支援人員來變更設定。
-   * **application-register**：應用程式必須重新註冊自身。
-   * **驗證**：使用者必須驗證或重新驗證。
-   * **授權**：使用者必須取得特定資源的授權。
+   * **application-register**：應用程式必須再次登入自身。
+   * **authentication**：使用者必須驗證或重新驗證。
+   * **authorization**：使用者必須取得特定資源的授權。
    * **退化**：應套用某種形式的降級。
-   * **重試**：重試請求可能解決此問題
-   * **重試之後**：在指定的時段後重試請求可解決問題。
-* 可能包含空字串或 `null` 值。
+   * **重試**：重試請求或許可以解決問題
+   * **之後重試**：在指定的時段後重試請求或許可以解決問題。
+* 可能保留空字串或 `null` 值。
 
 ### 類別決定 {#class-decision}
 
-#### 公開id：字串； {#public-id-string}
+#### 公用識別碼：字串； {#public-id-string}
 
 * 取得決定的資源ID。
 
 #### public authorized： boolean； {#public-auth-boolean}
 
-* 表示決定是否成功的旗標值。
+* 表示決策是否成功的旗標值。
 
 #### 公開錯誤：狀態； {#public-error-status}
 
@@ -309,7 +308,7 @@ accessEnablerApi.preauthorize(request, callback);
 </tbody>
 
 
-### 案例3：沒有任何請求的資源獲得授權。 {#none-req-res-auth}
+### 案例3：沒有授權請求的資源。 {#none-req-res-auth}
 
 <table>
 <thead>
@@ -383,7 +382,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;error&quot;： {
     &quot;status&quot;：403，
     &quot;code&quot;： &quot;maximum_execution_time_exceeded&quot;，
-    &quot;message&quot;： &quot;請求未在允許的最長時間內完成。 重試請求或許可以解決這個問題。」，
+    &quot;message&quot;：&quot;請求未在允許的最長時間內完成。 重試請求或許可以解決此問題。」，
     &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
     &quot;action&quot;： &quot;retry&quot;
     }
@@ -431,7 +430,7 @@ accessEnablerApi.preauthorize(request, callback);
 </tbody>
 </table>
 
-### 案例5：錯誤的使用者端請求 — 指定了空的資源。 {#bad-cl-req-empt-res-sp}
+### 案例5：錯誤的使用者端請求 — 指定的資源是空的。 {#bad-cl-req-empt-res-sp}
 
 <table>
 <thead>
@@ -448,9 +447,9 @@ accessEnablerApi.preauthorize(request, callback);
     ```JavaScript
     {
     &quot;status&quot;： {
-    &quot;status&quot;： 412，
+    &quot;status&quot;：412，
     &quot;code&quot;： &quot;missing_resource&quot;，
-    &quot;message&quot;： &quot;缺少資源引數&quot;，
+    &quot;message&quot;：&quot;缺少資源引數&quot;，
     &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
     &quot;action&quot;： &quot;none&quot;
     }，
@@ -486,7 +485,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;error&quot;： {
     &quot;status&quot;：403，
     &quot;code&quot;： &quot;network_received_error&quot;，
-    &quot;message&quot;： &quot;從關聯的合作夥伴服務擷取回應時發生讀取錯誤。 重試請求或許可以解決這個問題。」，
+    &quot;message&quot;：&quot;從關聯的合作夥伴服務擷取回應時發生讀取錯誤。 重試請求或許可以解決此問題。」，
     &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
     &quot;action&quot;： &quot;retry&quot;
     }
@@ -497,7 +496,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;error&quot;： {
     &quot;status&quot;：403，
     &quot;code&quot;： &quot;network_received_error&quot;，
-    &quot;message&quot;： &quot;從關聯的合作夥伴服務擷取回應時發生讀取錯誤。 重試請求或許可以解決這個問題。」，
+    &quot;message&quot;：&quot;從關聯的合作夥伴服務擷取回應時發生讀取錯誤。 重試請求或許可以解決此問題。」，
     &quot;helpUrl&quot;： &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;，
     &quot;action&quot;： &quot;retry&quot;
     }
@@ -511,7 +510,7 @@ accessEnablerApi.preauthorize(request, callback);
 </tbody>
 </table>
 
-### 案例7：叫用預先授權流程時沒有有效的AuthN工作階段。
+### 案例7：叫用的預先授權流程沒有有效的AuthN工作階段。
 
 <table>
 <thead>
@@ -545,7 +544,7 @@ accessEnablerApi.preauthorize(request, callback);
 
 
 
-### 案例8：在完成setRequestor呼叫之前叫用預先授權流程
+### 案例8：在setRequestor呼叫完成之前叫用預先授權流程
 
 <table>
 <thead>
@@ -564,7 +563,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;status&quot;： {
     &quot;status&quot;： 0，
     &quot;code&quot;： &quot;requestor_not_configured&quot;，
-    &quot;message&quot;：&quot;要求者尚未設定，這是使用setRequestor API以外的任何API的先決條件。&quot;，
+    &quot;message&quot;：&quot;要求者尚未設定，這是使用setRequestor API以外的任何API的必要條件。&quot;，
     &quot;action&quot;： &quot;retry&quot;
     }，
     &quot;decisions&quot;： []

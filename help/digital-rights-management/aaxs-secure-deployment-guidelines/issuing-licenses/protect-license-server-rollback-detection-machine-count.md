@@ -2,8 +2,7 @@
 title: 簽發授權時的電腦計數
 description: 簽發授權時的電腦計數
 copied-description: true
-exl-id: de052e98-8ae3-4e12-8f77-787293edda39
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -12,9 +11,9 @@ ht-degree: 0%
 
 # 簽發授權時的電腦計數{#machine-count-when-issuing-licenses}
 
-如果商業規則要求追蹤使用者的電腦數目，則License Server或Domain Server必須儲存與使用者相關聯的電腦ID。 追蹤機器ID最有效的方法是儲存 `MachineId.getBytes()` 方法。 傳入新請求時，請使用將請求中的電腦ID與已知的電腦ID進行比較 `MachineId.matches()`.
+如果商業規則要求追蹤使用者的電腦數目，則License Server或Domain Server必須儲存與使用者相關聯的電腦ID。 追蹤機器ID最有效的方法是儲存 `MachineId.getBytes()` 資料庫中的方法。 傳入新請求時，請使用將請求中的電腦ID與已知的電腦ID進行比較 `MachineId.matches()`.
 
-`MachineId.matches()` 會執行ID的比較，以判斷它們是否代表同一部電腦。 只有在要比較的機器ID數量較少時，這項比較才切實可行。 例如，如果允許使用者在其網域內使用五台電腦，您可以在資料庫中搜尋與使用者使用者名稱相關聯的電腦ID，並取得一小部分資料集以進行比較。
+`MachineId.matches()` 會執行ID的比較，以判斷它們是否代表同一部電腦。 只有在要比較的機器ID數量較少時，這項比較才切實可行。 例如，如果允許使用者在其網域內使用五台電腦，您可以在資料庫中搜尋與使用者使用者名稱相關聯的電腦ID，並取得一小部分的資料集來進行比較。
 
 >[!NOTE]
 >

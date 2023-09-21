@@ -1,8 +1,7 @@
 ---
 description: 當目前的播放時間符合開始時間時，您可以使用TimedMetadata。
 title: 使用定時中繼資料
-exl-id: 19375158-3647-4d6e-a2fb-6b06a2fd23c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 當目前的播放時間符合開始時間時，您可以使用TimedMetadata。
 
-若要使用這些已儲存的 `PTTimedMetadata` 物件時，使用儲存的字典： [在傳送時儲存定時中繼資料物件](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+若要使用這些已儲存的 `PTTimedMetadata` 物件時，使用儲存的字典，從 [在傳送時儲存定時中繼資料物件](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
 1. 從此通知擷取並更新目前的播放時間，並尋找所有 `PTTimedMetadata` 開始時間符合目前播放時間的物件。
 
@@ -56,4 +55,4 @@ ht-degree: 0%
    }
    ```
 
-1. 定期排清陳舊 `PTTimedMetadata` 執行個體，以防止記憶體持續成長。
+1. 定期排清陳舊 `PTTimedMetadata` 清單中的例項，以防止記憶體持續成長。

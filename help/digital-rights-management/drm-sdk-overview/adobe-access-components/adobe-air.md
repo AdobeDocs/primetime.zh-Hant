@@ -2,8 +2,7 @@
 title: Adobe AIR
 description: Adobe AIR
 copied-description: true
-exl-id: 23f49e1e-9a0b-4b01-aa64-31be2dfbbed6
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%

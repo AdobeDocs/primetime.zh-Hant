@@ -2,8 +2,7 @@
 title: 最佳實務
 description: 最佳實務
 copied-description: true
-exl-id: 2dae6032-5e22-4274-a5a2-02960fcbcf19
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -16,6 +15,6 @@ ht-degree: 0%
 
 + [最佳化視訊啟動時間](optimize-video-startup-time.md)
 + [分析效能](analyze-performance.md)
-+ [http快取](caching.md)
++ [HTTP快取](caching.md)
 + [最佳化路由和通訊協定](optimize-routes-protocols.md)
 + [套用廣告解析度限制](apply-ad-resolution-constraints.md)

@@ -2,8 +2,7 @@
 title: 以身分為基礎的授權
 description: 以身分為基礎的授權
 copied-description: true
-exl-id: 8cf0a4d8-bf97-4a45-b9c1-95b1de12f555
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # 以身分為基礎的授權 {#identity-based-licenses}
 
-如果使用以身分為基礎的授權，伺服器會在發行授權之前檢查有效的驗證Token。 另請參閱 [使用者驗證](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) 以取得處理驗證Token的詳細資訊。
+如果使用以身分為基礎的授權，伺服器會在發行授權之前檢查有效的驗證Token。 另請參閱 [使用者驗證](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) 以取得有關處理驗證Token的詳細資訊。
 
 >[!NOTE]
 >

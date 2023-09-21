@@ -1,8 +1,7 @@
 ---
 description: Adobe視訊引擎的加密模組會在NATIVE_ERROR中繼資料物件中傳回這些通知。
 title: NATIVE_ERROR加密值
-exl-id: c14b35c1-ed91-4a44-b826-fd6a05dbe345
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 8%

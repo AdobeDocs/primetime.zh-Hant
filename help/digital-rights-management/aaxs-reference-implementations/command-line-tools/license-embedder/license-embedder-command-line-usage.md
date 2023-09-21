@@ -2,8 +2,7 @@
 title: 命令列使用方式
 description: 命令列使用方式
 copied-description: true
-exl-id: 51b11ef8-438e-4747-be3e-e1774dc9f31a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
@@ -22,9 +21,9 @@ ht-degree: 0%
 ```
 
 * `sourcefile` 是加密的FLV或F4V檔案。
-* `destfile` 指定將內嵌授權之加密內容寫入何處。 如果指定目錄，檔案會使用與來源檔案相同的檔案名稱儲存在此目錄中，但目錄不能是包含來源檔案的目錄。
+* `destfile` 指定將寫入含內嵌授權之加密內容的位置。 如果指定目錄，檔案會使用與來源檔案相同的檔案名稱儲存在此目錄中，但目錄不能是包含來源檔案的目錄。
 
-下表說明可搭配上述語法指定的命令列選項：
+下表說明可連同先前提到的語法一起指定的命令列選項：
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_hnl_2sy_n4"> 
  <thead class="- topic/thead "> 
@@ -44,11 +43,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
-   <td colname="2" class="- topic/entry "> 不要詢問是否應該覆寫目的地檔案。 如果目的地檔案已存在且 <span class="codeph"> -o </span> 未設定，則會傳回錯誤。 </td> 
+   <td colname="2" class="- topic/entry "> 不要詢問是否應該覆寫目的地檔案。 如果目的地檔案已存在，並且 <span class="codeph"> -o </span> 未設定，則會傳回錯誤。 </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
-   <td colname="2" class="- topic/entry "> 如果目的地檔案已經存在，請覆寫它而不提示。 </td> 
+   <td colname="2" class="- topic/entry "> 如果目的地檔案已經存在，則覆寫它而不進行提示。 </td> 
   </tr> 
  </tbody> 
 </table>

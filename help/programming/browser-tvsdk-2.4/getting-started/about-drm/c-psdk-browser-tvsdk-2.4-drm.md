@@ -1,8 +1,7 @@
 ---
 description: 您可以完成Digital Rights Management(DRM)特定的工作流程。
 title: Digital Rights Management
-exl-id: 5a40252b-2917-4341-bc64-8642432ddda9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -29,7 +28,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. 實作 `onDRMMetadataInfoAvailable` 區段位於步驟1中的行上方。
+1. 實作 `onDRMMetadataInfoAvailable` 區段在步驟1的行上方。
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -44,13 +43,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. 在setupVideo方法中建立DRMManager。
+1. 以setupVideo方法建立DRMManager。
 
    ```js
    var drmManager = player.drmManager;
    ```
 
-1. 複製下列範例，建立Widevine和PlayReady的保護資料：
+1. 複製下列範例來建立Widevine和PlayReady的保護資料：
 
    ```js
    var protectionData = { 

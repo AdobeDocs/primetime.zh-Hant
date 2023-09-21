@@ -1,19 +1,18 @@
 ---
 description: 當視訊的DRM中繼資料包含在媒體串流中時，您可以在播放期間執行驗證。
-title: 在播放期間DRM驗證
-exl-id: fb244aad-38ae-4bc7-85b7-364cf59db8d6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 錄放期間的DRM驗證
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
 
 ---
 
-# 在播放期間DRM驗證 {#drm-authentication-during-playback}
+# 錄放期間的DRM驗證 {#drm-authentication-during-playback}
 
 當視訊的DRM中繼資料包含在媒體串流中時，您可以在播放期間執行驗證。
 
-透過授權輪換，資產會使用多個DRM授權進行加密。 每次發現新的DRM中繼資料時， `DRMHelper` 方法用於檢查DRM中繼資料是否需要DRM驗證。
+使用授權輪換時，資產會使用多個DRM授權加密。 每次發現新的DRM中繼資料時， `DRMHelper` 方法可用來檢查DRM中繼資料是否需要DRM驗證。
 
 >[!TIP]
 >
@@ -36,10 +35,10 @@ ht-degree: 0%
 
 1. 使用 `DRMMetadata` 以檢查是否需要驗證。
 
-   * 如果不需要驗證，您就不需要執行任何動作，而且播放不會中斷。
+   * 如果不需要驗證，您就不需要執行任何動作，而且播放作業會繼續不中斷地進行。
    * 如果需要驗證，請完成DRM驗證。
 
-      由於此作業為非同步作業，且在不同執行緒中處理，因此對使用者介面或視訊播放均無影響。
+     由於此作業為非同步作業，且是在不同的執行緒中處理，因此對使用者介面或視訊播放均沒有影響。
 
 1. 如果驗證失敗，使用者將無法繼續檢視視訊，且播放會停止。
 

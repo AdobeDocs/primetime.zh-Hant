@@ -1,18 +1,17 @@
 ---
-title: 使用Adobe Medium伺服器
-description: 使用Adobe Medium伺服器
+title: 使用Adobe Media Server
+description: 使用Adobe Media Server
 copied-description: true
-exl-id: bb0b12f0-cd33-4a8a-8466-ae0e35cb1641
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
 
-# 使用Adobe Medium伺服器 {#use-adobe-media-server}
+# 使用Adobe Media Server {#use-adobe-media-server}
 
-有些客戶可能已經在使用Adobe Medium伺服器，並且想要維護該內容傳遞模式。 如果是這種情況，可以從本套件中包含的任何一個設定檔案中擷取所需的Primetime Cloud DRM特定資料，以填入AMS的JIT （即時） XML設定。
+有些客戶可能已在使用Adobe Media Server，且想要維護該內容傳遞模式。 若是如此，您就可以從此套件所包含的任何一個組態檔案中擷取必要的Primetime Cloud DRM特定資料，以填入AMS的JIT （即時） XML組態。
 
 例如：
 

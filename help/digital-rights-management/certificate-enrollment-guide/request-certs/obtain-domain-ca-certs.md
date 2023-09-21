@@ -2,8 +2,7 @@
 title: 取得網域CA憑證
 description: 取得網域CA憑證
 copied-description: true
-exl-id: cad233e0-41f7-4897-ab5f-d5a098c37306
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -12,14 +11,14 @@ ht-degree: 0%
 
 # 取得網域CA憑證{#obtain-domain-ca-certificates}
 
-與License Server、Packager或Transport憑證不同，網域CA憑證不是由Adobe發行。 您可以從憑證授權單位取得此憑證，也可以產生自我簽署憑證以用於此用途。
+與License Server、Packager或Transport憑證不同，網域CA憑證不是由Adobe所簽發。 您可以從憑證授權單位取得此憑證，也可以產生自我簽署憑證以用於此用途。
 
-網域CA憑證應使用1024位元金鑰，並包含CA憑證中所需的標準屬性：
+網域CA憑證應使用1024位元金鑰，並包含CA憑證所需的標準屬性：
 
-* CA標幟設為true的基本限制擴充功能
-* 指定允許憑證簽章的金鑰使用延伸模組
+* CA標幟設為True的基本限制延伸
+* 指定憑證簽章的金鑰使用延伸是允許的
 
-例如，使用OpenSSL時，可以產生自我簽署CA憑證，如下所示：
+例如，使用OpenSSL，可以產生自我簽署CA憑證，如下所示：
 
 1. 建立名為的檔案 [!DNL ca-extensions.txt] 包含：
 

@@ -2,8 +2,7 @@
 title: Adobe Primetime程式設計說明
 description: Adobe Primetime程式設計說明
 copied-description: true
-exl-id: 4abaa7a7-4302-4471-88fd-a23eb6af6175
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%

@@ -1,34 +1,33 @@
 ---
-description: 瀏覽器TVSDK提供DRM介面，您可以使用它來播放受不同DRM解決方案（包括FairPlay、PlayReady和Widevine）保護的內容。
-title: DRM介面概觀
-exl-id: aa13f042-4472-4fc3-b7ba-61746b8e024a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: 瀏覽器TVSDK提供DRM介面，可供您用來播放受不同DRM解決方案（包括FairPlay、PlayReady和Widevine）保護的內容。
+title: DRM介面概述
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
-# DRM介面概觀{#drm-interface-overview}
+# DRM介面概述{#drm-interface-overview}
 
-瀏覽器TVSDK提供DRM介面，您可以使用它來播放受不同DRM解決方案（包括FairPlay、PlayReady和Widevine）保護的內容。
+瀏覽器TVSDK提供DRM介面，可供您用來播放受不同DRM解決方案（包括FairPlay、PlayReady和Widevine）保護的內容。
 
 <!--<a id="section_59994F2059B245E996E0776214804A0A"></a>-->
 
 >[!IMPORTANT]
 >
->DRM支援適用於受Microsoft PlayReady （在Windows 8.1和Edge的Internet Explorer上）以及Widevine (在Google Chrome) DRM系統所保護的MPEG-Dash資料流。 DRM支援適用於受FairPlay保護的Safari上的HLS資料流。
+>DRM支援適用於受Microsoft PlayReady （在Windows 8.1和Edge上的Internet Explorer上）以及Widevine (在Google Chrome上) DRM系統保護的MPEG-Dash資料流。 DRM支援適用於Safari上受FairPlay保護的HLS資料流。
 
-DRM工作流程的關鍵介面是 `DRMManager`. 對的參照 `DRMManager` 可以透過MediaPlayer例項取得例項：
+DRM工作流程的主要介面為 `DRMManager`. 對的參照 `DRMManager` 可以透過MediaPlayer例項取得例項：
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
 
 <!--<a id="section_B7E8AD9A4D4F4BD9BA2A67ABC135D6F9"></a>-->
 
-以下是受DRM保護內容錄放的高階工作流程：
+以下是播放DRM保護內容的高階工作流程：
 
-1. 若要附加瀏覽器TVSDK在受保護資料流的授權取得程式中將會使用的DRM系統特定資料，請在叫用前進行下列呼叫 `mediaPlayer.replaceCurrentResource`：
+1. 若要附加瀏覽器TVSDK在受保護資料流的授權贏取程式中將會使用的DRM系統特定資料，請在叫用前進行下列呼叫 `mediaPlayer.replaceCurrentResource`：
 
    ```js
    var protectionData = { 
@@ -91,15 +90,15 @@ DRM工作流程的關鍵介面是 `DRMManager`. 對的參照 `DRMManager` 可以
    drmManager.setProtectionData(protectionData);
    ```
 
-1. 如果未設定保護資料，則會從DRM系統的PSSH方塊中擷取必要資訊（例如授權URL）。
+1. 如果未設定保護資料，則會從DRM系統的PSSH方塊中擷取必要資訊（例如許可證URL）。
 
    >[!TIP]
    >
    >指定保護資料會覆寫PSSH方塊中指定的授權URL。
 
-1. 依照預設，DRM許可證的工作階段型別是暫時的，這表示在工作階段關閉後不會儲存許可證。
+1. 依照預設，DRM許可證的作業階段型別是暫時的，這表示在作業階段關閉後不會儲存許可證。
 
-   您可以使用API指定工作階段型別，位置在： `DRMManager`.  為了回溯相容性，工作階段型別包括 `temporary`， `persistent-license`， `persistent-usage-record`、和 `persistent`.
+   您可以在以下位置使用API指定工作階段型別： `DRMManager`.  為了回溯相容性，階段作業型別包括 `temporary`， `persistent-license`， `persistent-usage-record`、和 `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 

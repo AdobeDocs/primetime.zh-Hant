@@ -1,8 +1,7 @@
 ---
-description: 服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
+description: 服務品質(QoS)可提供視訊引擎執行狀況的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
 title: 服務品質統計資料
-exl-id: 1e9f32fb-3faf-4646-8af1-0c1cc441cb42
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 0%
@@ -11,19 +10,19 @@ ht-degree: 0%
 
 # 服務品質統計資料 {#quality-of-service-statistics}
 
-服務品質(QoS)提供視訊引擎執行狀況的詳細檢視。 TVSDK提供有關播放、緩衝和裝置的詳細統計資料。
+服務品質(QoS)可提供視訊引擎執行狀況的詳細檢視。 TVSDK提供播放、緩衝和裝置的詳細統計資料。
 
 ## 讀取QOS播放、緩衝和裝置統計資料 {#section_9996406E2D814FA382B77E3041CB02BC}
 
 您可以讀取播放、緩衝和裝置統計資料，從 `PTQOSProvider` 類別。
 
-此 `PTQOSProvider` class提供各種統計資料，包括關於緩衝、位元速率、影格速率、時間資料等的資訊。
+此 `PTQOSProvider` class提供各種統計資料，包括有關緩衝、位元速率、影格速率、時間資料的資訊，等等。
 
-它也提供裝置的相關資訊，例如型號、作業系統和製造商的裝置ID。
+它也會提供裝置的相關資訊，例如型號、作業系統和製造商的裝置ID。
 
 >[!TIP]
 >
->您無法變更播放緩衝區大小，但可以監控緩衝區大小的狀態，以便進行偵錯或分析。 `PTPlaybackInformation` 包括以下屬性 `playbackBufferFull` 和 `playbackLikelyToKeepUp`.
+>您無法變更播放緩衝區大小，但可以監視緩衝區大小的狀態以進行偵錯或分析。 `PTPlaybackInformation` 包括以下屬性 `playbackBufferFull` 和 `playbackLikelyToKeepUp`.
 
 1. 例項化媒體播放器。
 1. 建立 `PTQOSProvider` 物件並將其附加至媒體播放器。
@@ -36,7 +35,7 @@ ht-degree: 0%
 
 1. （選用）讀取播放統計資料。
 
-   讀取播放統計資料的解決方案之一，就是使用計時器，例如 `NSTimer`，會定期從擷取新的QoS值 `PTQOSProvider`. 例如：
+   讀取播放統計資料的解決方案之一是擁有計時器，例如 `NSTimer`，會定期從擷取新的QoS值 `PTQOSProvider`. 例如：
 
    ```
    - (void)printPlaybackInfoLog { 

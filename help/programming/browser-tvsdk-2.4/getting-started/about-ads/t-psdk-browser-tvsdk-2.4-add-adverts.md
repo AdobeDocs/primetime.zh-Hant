@@ -2,8 +2,7 @@
 title: 新增廣告
 description: 新增廣告
 copied-description: true
-exl-id: 72f875ea-80ae-482b-94be-41116fff3614
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -28,7 +27,7 @@ ht-degree: 0%
      new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
    ```
 
-1. 將設定新增至設定並新增 `SpliceOut` 剖析器處理站。
+1. 將設定新增至設定並新增 `SpliceOut` 剖析器工廠。
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
@@ -37,7 +36,7 @@ ht-degree: 0%
    ```
 
 1. 新增 `ExtCueOutContentFactory` 移至程式庫區段。
-1. 下載 `ExtCueOutContentFactory.js` 從「元件庫」區段，並將其置於工作資料夾中。
+1. 下載 `ExtCueOutContentFactory.js` 從「元件庫」區段，將其放置在工作資料夾中。
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 

@@ -1,8 +1,7 @@
 ---
 description: 您可以使用Primetime播放器API來自訂播放器的行為。
 title: Mediacore類別
-exl-id: fdbe9cd3-a5ca-4935-b9b3-8a6c04aed9ab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%
@@ -27,7 +26,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a>  ABRControlParameters</span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> Abrcontrolparameters</a>  Abrcontrolparameters</span> </td> 
    <td colname="2"> 封裝所有最適化位元速率控制引數的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -60,11 +59,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.DRMEventListener.html" format="html" scope="external"> MediaPlayer.DRMEventListener</a></span> </td> 
-   <td colname="2"> 受保護中繼資料可供使用時，要叫用的回呼介面定義。 </td> 
+   <td colname="2"> 受保護的中繼資料可供使用時，要叫用的回呼介面定義。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.EventListener.html" format="html" scope="external"> MediaPlayer.EventListener</a> </span> </td> 
-   <td colname="2"> 用於統一事件接聽程式註冊的標籤介面。 </td> 
+   <td colname="2"> 用來統一事件接聽程式註冊的標籤介面。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html" format="html" scope="external"> MediaPlayer.PlaybackEventListener</a> </span> </td>
@@ -88,11 +87,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerView.html" format="html" scope="external"> MediaPlayerView</a> </span> </td> 
-   <td colname="2"> MediaPlayer用於視訊轉譯之檢視的類別。 </td> 
+   <td colname="2"> MediaPlayer將用來呈現視訊的檢視類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaResource.html" format="html" scope="external"> MediaResource</a> </span> </td> 
-   <td colname="2"> 封裝媒體資源所有資訊的類別。 包含媒體資源型別的列舉。 </td> 
+   <td colname="2"> 包裝媒體資源所有資訊的類別。 包含媒體資源型別的列舉。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/PlacementOpportunityDetector.html" format="html" scope="external"> PlacementOpportunityDetector</a> </span> </td> 
@@ -100,15 +99,15 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/PSDKConfig.html" format="html" scope="external"> PSDKConfig</a> </span> </td> 
-   <td colname="2"> 除了預設提示標籤之外，此類別還封裝了媒體播放器執行廣告投放時使用的自訂標籤。 其中也包含應用程式想要收到相關通知的標籤名稱。 </td> 
+   <td colname="2"> 除了預設提示標籤之外，此類別會封裝媒體播放器執行廣告投放時所使用的自訂標籤。 其中也包括應用程式想要收到相關通知的標籤名稱。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/TextFormat.html" format="html" scope="external"> 文字格式</a> </span> </td> 
-   <td colname="2"> 封裝描述文字樣式的不同屬性（例如，隱藏式字幕樣式）的介面。 </td> 
+   <td colname="2"> 封裝描述文字樣式（例如隱藏式字幕樣式）的不同屬性的介面。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/TextFormatBuilder.html" format="html" scope="external"> TextFormatBuilder</a></span> </td> 
-   <td colname="2"> 設定文字格式化的類別方法。 </td> 
+   <td colname="2"> 設定文字格式的類別方法。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/Version.html" format="html" scope="external"> 版本</a></span> </td> 

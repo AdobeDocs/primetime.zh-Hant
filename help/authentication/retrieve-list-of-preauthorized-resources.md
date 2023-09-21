@@ -1,8 +1,7 @@
 ---
 title: 擷取預先授權的資源清單
 description: 擷取預先授權的資源清單
-exl-id: 3821378c-bab5-4dc9-abd7-328df4b60cc3
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%

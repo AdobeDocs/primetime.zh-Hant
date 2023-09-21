@@ -1,8 +1,7 @@
 ---
 title: 不需重新整理的登入和登出
 description: 不需重新整理的登入和登出
-exl-id: 3ce8dfec-279a-4d10-93b4-1fbb18276543
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1772'
 ht-degree: 0%

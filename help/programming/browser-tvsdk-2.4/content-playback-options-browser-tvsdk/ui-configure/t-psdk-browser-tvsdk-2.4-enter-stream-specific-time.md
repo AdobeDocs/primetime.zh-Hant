@@ -1,8 +1,7 @@
 ---
-description: 依預設，當播放開始時，VOD媒體從0開始，而即時媒體從使用者端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
+description: 根據預設，當播放開始時，VOD媒體從0開始，而即時媒體從使用者端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
 title: 在特定時間輸入資料流
-exl-id: 2fb361c1-7133-4e17-a12b-e11f6f7c5479
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -11,10 +10,10 @@ ht-degree: 0%
 
 # 在特定時間輸入資料流{#enter-a-stream-at-a-specific-time}
 
-依預設，當播放開始時，VOD媒體從0開始，而即時媒體從使用者端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
+根據預設，當播放開始時，VOD媒體從0開始，而即時媒體從使用者端即時點(MediaPlayer.LIVE_POINT)開始。 您可以覆寫預設行為。
 
 1. 傳遞位置至 `MediaPlayer.prepareToPlay`.
-1. 瀏覽器TVSDK會使用此位置作為資產的起點。
+1. 瀏覽器TVSDK會以此位置作為資產的起點。
 
    >[!NOTE]
    >

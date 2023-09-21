@@ -1,15 +1,14 @@
 ---
 description: 您可以延伸OpportunityGenerator介面，實作自己的機會產生器。
-title: 實作自訂機會產生器
-exl-id: 45f9ed89-94c4-4e74-b20a-4789a25bd9b3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 實施自訂機會產生器
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
-# 實作自訂機會產生器{#implement-a-custom-opportunity-generator}
+# 實施自訂機會產生器{#implement-a-custom-opportunity-generator}
 
 您可以延伸OpportunityGenerator介面，實作自己的機會產生器。
 
@@ -65,7 +64,7 @@ ht-degree: 0%
    }; 
    ```
 
-1. 註冊自訂內容處理站，以便播放媒體資料流。
+1. 註冊要播放的媒體資料流的自訂內容處理站。
 
    在UI Framework播放器中，您可以指定自訂內容工廠，如下所示：
 

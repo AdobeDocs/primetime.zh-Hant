@@ -1,8 +1,7 @@
 ---
 description: 參考實作使用JSON型輸入檔案。
 title: 範例JSON摘要格式
-exl-id: a04d5501-74dc-4ae3-880e-72da7718fe1b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '51'
 ht-degree: 0%

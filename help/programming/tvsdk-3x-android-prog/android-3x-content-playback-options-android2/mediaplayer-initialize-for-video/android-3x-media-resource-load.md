@@ -1,8 +1,7 @@
 ---
-description: 透過直接例項化MediaResource並載入要播放的視訊內容來載入資源。 這是載入媒體資源的其中一種方式。
+description: 直接將MediaResource實體化並載入要播放的視訊內容，以載入資源。 這是載入媒體資源的其中一種方式。
 title: 在媒體播放器中載入媒體資源
-exl-id: f39d3aa2-8912-4dac-9f10-91b6d20395ea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 在媒體播放器中載入媒體資源 {#load-a-media-resource-in-the-media-player}
 
-透過直接例項化MediaResource並載入要播放的視訊內容來載入資源。 這是載入媒體資源的其中一種方式。
+直接將MediaResource實體化並載入要播放的視訊內容，以載入資源。 這是載入媒體資源的其中一種方式。
 
 1. 設定媒體播放器以播放新資源。
 
@@ -28,11 +27,11 @@ ht-degree: 0%
    透過這些事件， `MediaPlayer` 物件會在應用程式成功載入媒體資源時通知您。
 1. 當媒體播放器的狀態變更為 `INITIALIZED`，您可以呼叫 `MediaPlayer.prepareToPlay()`.
 
-   此狀態表示媒體已成功載入。 新 `MediaPlayerItem` 已準備好播放。 通話 `prepareToPlay()` 開始廣告解析度和刊登版位程式（如果有的話）。
+   此狀態表示媒體已成功載入。 新的 `MediaPlayerItem` 已準備好播放。 通話 `prepareToPlay()` 開始廣告解析度和刊登程式（如果有的話）。
 
 如果發生失敗，媒體播放器會切換至 `ERROR` 狀態。
 
-下列簡化的範常式式碼說明載入媒體資源的程式：
+下列簡化的程式碼範例說明載入媒體資源的程式：
 
 ```java>
 // mediaResource is a properly configured MediaResource instance 

@@ -2,8 +2,7 @@
 title: Primetime參考實作
 description: Primetime參考實作
 copied-description: true
-exl-id: 66be90f1-27e4-4e5f-b84e-fa11ec6f43de
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%

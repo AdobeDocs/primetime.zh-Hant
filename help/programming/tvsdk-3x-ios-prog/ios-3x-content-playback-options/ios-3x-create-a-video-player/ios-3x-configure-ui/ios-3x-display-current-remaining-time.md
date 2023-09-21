@@ -1,8 +1,7 @@
 ---
 description: 您可以顯示正在播放之內容的目前和剩餘時間。
 title: 顯示目前時間和剩餘時間
-exl-id: f1aebeb7-381b-4bd5-8535-32b902f838d2
-source-git-commit: 7e3f1e2dcf855ecd241b2aebc01d9d60c90ed114
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 您可以顯示正在播放之內容的目前和剩餘時間。
 
-1. 若要實作顯示作用中內容目前和剩餘時間的顯示，請使用下列範常式式碼：
+1. 若要實作顯示使用中內容目前和剩餘時間的顯示，請使用下列範常式式碼：
 
    ```
       // 1. Register for the PTMediaPlayerTimeChangeNotification 

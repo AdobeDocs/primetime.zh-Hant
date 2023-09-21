@@ -1,8 +1,7 @@
 ---
 description: 來源清單中的forceflash旗標會強制URL的Flash遞補。 對於此URL，您可以使用AdobeFlash Player來播放內容。
 title: 使用媒體來源清單強制Flash遞補
-exl-id: 657bf9b1-d911-489d-80ca-2956b008431b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%

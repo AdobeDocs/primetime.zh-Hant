@@ -1,8 +1,7 @@
 ---
 description: MediaPlayer物件會封裝媒體播放器的行為和功能。
 title: 設定MediaPlay
-exl-id: f492b2bb-3280-4306-ac4b-8b8d0fd68409
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -49,7 +48,7 @@ MediaPlayer物件會封裝媒體播放器的行為和功能。
          document.getElementById("videoDiv"));  
    ```
 
-1. 附加您的 `MediaPlayerView` 例項至您的 `MediaPlayer` 例項：
+1. 附加您的 `MediaPlayerView` 執行個體新增至 `MediaPlayer` 例項：
 
    ```js
    player.view = view;
@@ -76,4 +75,4 @@ MediaPlayer物件會封裝媒體播放器的行為和功能。
    }
    ```
 
-此 `MediaPlayer` 執行個體現在可供使用，並已正確設定為在裝置畫面上顯示視訊內容。
+此 `MediaPlayer` 執行個體現在可供使用，並已正確設定為在裝置熒幕上顯示視訊內容。

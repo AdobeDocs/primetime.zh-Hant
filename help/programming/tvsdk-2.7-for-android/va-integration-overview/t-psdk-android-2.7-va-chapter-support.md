@@ -2,8 +2,7 @@
 title: 實作章節支援
 description: 實作章節支援
 copied-description: true
-exl-id: 4d1b3488-88c9-49ff-9e54-f78aacdabf6e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 您可以定義並追蹤 *自訂* TVSDK型應用程式中視訊追蹤的章節。
 
-自訂章節由應用程式管理，且以CMS資料或應用程式用來定義章節的其他方式為基礎。
+自訂章節是由應用程式管理，且以CMS資料或應用程式用來定義章節的其他方式為基礎。
 
 >[!CAUTION]
 >

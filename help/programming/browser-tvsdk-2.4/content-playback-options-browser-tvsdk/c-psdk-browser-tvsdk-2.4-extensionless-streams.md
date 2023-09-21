@@ -1,17 +1,16 @@
 ---
-description: 瀏覽器TVSDK目前支援播放資訊清單和片段不包含擴充功能的資料流。
-title: 無擴充功能資料流
-exl-id: ef81bfd2-2bfa-4ff7-b826-fd80802b3c07
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: 瀏覽器TVSDK目前支援播放資訊清單和片段不含擴充功能的資料流。
+title: 無擴充功能串流
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
 
 ---
 
-# 無擴充功能資料流{#extensionless-streams}
+# 無擴充功能串流{#extensionless-streams}
 
-瀏覽器TVSDK目前支援播放資訊清單和片段不包含擴充功能的資料流。
+瀏覽器TVSDK目前支援播放資訊清單和片段不含擴充功能的資料流。
 
 ## 片段層級 {#section_0E035129501D4A77BBC14192D8A53A86}
 
@@ -34,8 +33,8 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-若 `resourceType` ui Framework會從資源URL副檔名中判斷資源型別，然後將其傳遞至 `replaceCurrentResource` 方法。
+如果 `resourceType` 未提供，UI Framework會從資源URL副檔名中判斷資源型別，然後將其傳遞至 `replaceCurrentResource` 方法。
 
 >[!TIP]
 >
->對於無擴充功能的資訊清單，請確定 `resourceType` 在UI Framework中載入資源時一律會傳遞。
+>對於無擴充功能資訊清單，請確定 `resourceType` 在UI Framework中載入資源時一律會傳遞。

@@ -1,8 +1,7 @@
 ---
 title: iOS/tvOS SDK總覽
 description: iOS/tvOS SDK總覽
-exl-id: b02a6234-d763-46c0-bc69-9cfd65917a19
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '3691'
 ht-degree: 0%

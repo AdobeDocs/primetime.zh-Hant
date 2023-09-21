@@ -2,8 +2,7 @@
 title: Primetime發行說明
 description: Primetime發行說明
 copied-description: true
-exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%

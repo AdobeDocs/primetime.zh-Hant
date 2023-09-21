@@ -2,8 +2,7 @@
 title: 產生隨機數字
 description: 產生隨機數字
 copied-description: true
-exl-id: 9a816570-753e-4b05-a6ea-2d4b20ffa3d4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -12,4 +11,4 @@ ht-degree: 0%
 
 # 產生隨機數字{#generating-random-numbers}
 
-硬體隨機數字產生器可用於Linux伺服器，以確保產生足夠的平均資訊量。 如果電腦無法產生足夠的平均資訊量，在等待來自的資料時，需要隨機性來源的Adobe存取操作將會封鎖 `/dev/random`.
+Linux伺服器上可使用硬體隨機數字產生器，以確保產生足夠的平均資訊量。 如果電腦無法產生足夠的平均資訊量，在等待來自的資料時，需要隨機來源的Adobe存取操作將會封鎖 `/dev/random`.

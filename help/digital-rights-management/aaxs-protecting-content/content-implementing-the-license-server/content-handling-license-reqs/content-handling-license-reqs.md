@@ -1,13 +1,12 @@
 ---
-title: 處理授權請求
-description: 處理授權請求
+title: 處理授權要求
+description: 處理授權要求
 copied-description: true
-exl-id: bf6d4193-283f-4c08-8139-5f7c2f3e2180
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '9'
 ht-degree: 0%
 
 ---
 
-# 處理授權請求{#handling-license-requests}
+# 處理授權要求{#handling-license-requests}

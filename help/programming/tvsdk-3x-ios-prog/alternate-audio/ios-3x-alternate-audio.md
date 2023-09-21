@@ -2,8 +2,7 @@
 title: 替代音訊
 description: 替代音訊
 copied-description: true
-exl-id: a3b1c361-4120-42a2-b6fd-710f6244eafa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
@@ -12,15 +11,15 @@ ht-degree: 0%
 
 # 替代音訊 {#alternate-audio}
 
-替代或延遲繫結的音訊可讓您在視訊曲目的可用音訊曲目之間切換。 如此一來，使用者就能在播放視訊時選取語言追蹤。
+替代或延遲繫結的音訊可讓您在視訊曲目的可用音訊曲目之間切換。 如此一來，使用者就能在播放視訊時選取語言曲目。
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-當TVSDK建立 `MediaPlayerItem` 目前視訊的執行個體，會建立 `AudioTrack` 每個可用音軌的專案。 專案包含 `name` 屬性，字串，通常包含使用者可辨識的該曲目語言描述。 此專案也包含預設是否要使用該曲目的相關資訊。
+當TVSDK建立 `MediaPlayerItem` 例項中，會建立 `AudioTrack` 每個可用音軌的專案。 專案包含 `name` 屬性，字串，通常包含使用者可辨識的該曲目語言說明。 此專案也包含預設是否要使用該追蹤的相關資訊。
 
-輪到播放視訊時，您可以要求一份可用音訊曲目清單，選擇性地讓使用者選擇其中一個曲目，並設定要以選取的曲目播放視訊。
+當播放視訊時，您可以要求一份可用音軌清單，選擇性地讓使用者選擇其中一個音軌，並設定要以選取的音軌播放視訊。
 
-雖然很罕見，但如果其他音軌在建立 `MediaPlayerItem`，TVSDK會觸發 `MediaPlayerItem.AUDIO_UPDATED` 事件。
+雖然很少見，但如果其他音軌在建立 `MediaPlayerItem`，TVSDK會觸發 `MediaPlayerItem.AUDIO_UPDATED` 事件。
 
 ## 新增API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -36,9 +35,9 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const {
 }
 ```
 
-**getAudioTrack**
+**getAudioTracks**
 
-此函式傳回指定媒體中所有目前可用音訊曲目的清單。
+此函式傳回指定媒體中所有目前可用的音訊曲目的清單。
 
 ```
 virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const { 

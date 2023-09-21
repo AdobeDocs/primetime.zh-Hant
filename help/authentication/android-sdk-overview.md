@@ -1,8 +1,7 @@
 ---
 title: Android SDK總覽
 description: Android SDK總覽
-exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%

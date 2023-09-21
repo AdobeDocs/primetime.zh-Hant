@@ -1,15 +1,14 @@
 ---
 description: 您應該將播放器的UI邏輯與管理廣告點按的處理程式分開。 其中一個方法是為活動實作多個片段。
-title: 將可點按的廣告程式分開
-exl-id: d36d3b7f-8fd0-4d8c-a733-c3b79d564fba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 區隔可點按的廣告程式
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
-# 將可點按的廣告程式分開 {#separate-the-clickable-ad-process}
+# 區隔可點按的廣告程式 {#separate-the-clickable-ad-process}
 
 您應該將播放器的UI邏輯與管理廣告點按的處理程式分開。 其中一個方法是為活動實作多個片段。
 
@@ -27,9 +26,9 @@ ht-degree: 0%
    } 
    ```
 
-1. 實作不同的片段以顯示UI元素（指出廣告可點按）、監視該UI元素，並將使用者點按的訊息傳達給包含 `MediaPlayer`.
+1. 實作不同的片段來顯示UI元素（表示廣告可點按）、監視該UI元素，並將使用者點按的片段傳達給包含 `MediaPlayer`.
 
-   此片段應宣告用於片段通訊的介面。 片段會擷取介面實作期間 `onAttach()` 生命週期方法，並可呼叫介面方法來與活動通訊。
+   此片段應該宣告介面以進行片段通訊。 片段在其期間擷取介面實施 `onAttach()` 生命週期方法，並可呼叫介面方法來與活動通訊。
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 

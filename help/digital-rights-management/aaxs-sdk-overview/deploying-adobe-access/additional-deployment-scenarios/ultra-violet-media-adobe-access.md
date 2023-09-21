@@ -1,8 +1,7 @@
 ---
 description: Adobe存取可搭配其他協力廠商內容串流解決方案使用，以建立完整且安全的DRM媒體發佈生態系統。
 title: UltraViolet媒體與Adobe存取
-exl-id: cca476a4-1961-46d8-aad4-bc7c996d7b02
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%

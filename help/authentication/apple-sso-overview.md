@@ -1,8 +1,7 @@
 ---
 title: Apple SSO概觀
 description: Apple SSO概觀
-exl-id: 7cf47d01-a35a-4c85-b562-e5ebb6945693
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1452'
 ht-degree: 0%

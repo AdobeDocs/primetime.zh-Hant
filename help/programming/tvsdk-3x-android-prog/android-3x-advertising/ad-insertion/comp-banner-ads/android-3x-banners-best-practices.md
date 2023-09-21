@@ -2,8 +2,7 @@
 title: 隨附橫幅廣告的最佳作法
 description: 隨附橫幅廣告的最佳作法
 copied-description: true
-exl-id: e7d15916-9059-4993-a588-baf7d7ddc534
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
@@ -17,11 +16,11 @@ TVSDK支援隨附橫幅廣告，這是線性廣告隨附的廣告，通常線上
 顯示隨附廣告時，請遵循下列建議：
 
 * 嘗試儘可能多地呈現視訊廣告的隨附橫幅廣告，以符合您的播放器版面配置。
-* 只有在您的位置符合廣告的指定高度和寬度時，才會顯示隨附橫幅。
+* 只有在位置符合廣告的指定高度和寬度時，才會顯示隨附橫幅。
 
-   >[!IMPORTANT]
-   >
-   >請勿調整廣告大小。
+  >[!IMPORTANT]
+  >
+  >請勿調整廣告大小。
 
 * 在廣告開始後儘快開始展示隨附橫幅。
 * 請勿以隨附橫幅覆蓋主要廣告/視訊容器。

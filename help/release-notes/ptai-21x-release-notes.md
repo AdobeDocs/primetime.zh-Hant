@@ -1,8 +1,7 @@
 ---
 title: PTAI 21.11.1發行說明
-description: PTAI發行說明說明2021年PrimetimeAd Insertion的新增或變更專案、已解決的問題及已知問題。
-exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+description: PTAI發行說明說明2021年PrimetimeAd Insertion的新增或變更專案、已解決問題和已知問題。
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -11,17 +10,17 @@ ht-degree: 0%
 
 # PrimetimeAd Insertion21.11.1發行說明
 
-PrimetimeAd Insertion21.xx.x發行說明說明2021年PrimetimeAd Insertion的新增或變更專案、已解決的問題及已知問題。
+PrimetimeAd Insertion21.xx.x版本說明說明2021年PrimetimeAd Insertion中的新功能或變更、已解決的問題及已知問題。
 
 ## PTAI 21.11.1的新增功能
 
-時間：東部時間2021年11月9日星期二上午1:30至凌晨04:30
+時間：東部時間2021年11月9日星期二凌晨1:30至04:30
 
 * [!UICONTROL EXT-X-IMAGE-STREAM-INF] 現在可依區域設定。
 
 * 完全支援Roku Trick Play。
 
-## 舊版版本中的增強功能和修正
+## 舊版中的增強功能和修正
 
 ### 21.10.1版
 
@@ -29,17 +28,17 @@ PrimetimeAd Insertion21.xx.x發行說明說明2021年PrimetimeAd Insertion的新
 
 * 整合伺服器，移除非生產及無用的伺服器。
 
-### PrimetimeAd Insertion維護發行
+### PrimetimeAd Insertion維護版本
 
-時間：東部時間2021年9月28日星期二上午5:00至上午6:00
+時間：東部時間2021年9月28日星期二上午5:00至6:00
 
-* 負載平衡器棧疊的更新從AWS的Elastic Load Balancer到AWS的應用程式負載平衡器，以增強功能和可擴充性。 這些負載平衡器可用來將廣告請求流量從Ad Insertion層(SSAI/CSAI)路由到Auditude後端。
+* 負載平衡器棧疊的更新從AWS的Elastic Load Balancer到AWS的應用程式負載平衡器，以增強功能與擴充性。 這些負載平衡器可用來將廣告請求流量路由至Ad Insertion層(SSAI/CSAI)的Auditude後端。
 
 ### 21.9.1版
 
-時間：東部時間2021年9月7日星期二凌晨02:30至凌晨05:30
+時間：東部時間2021年9月7日星期二凌晨02:30至05:30
 
-* 更新PrimetimeAd Insertion中繼和報告元件(Primetime Ads GUI)背後的基礎結構元件。
+* 更新PrimetimeAd Insertion的中介和報告元件後面的基礎結構元件(Primetime Ads GUI)。
 
 ### 21.8.1版
 
@@ -49,31 +48,31 @@ PrimetimeAd Insertion21.xx.x發行說明說明2021年PrimetimeAd Insertion的新
 
 ### 21.5.1版
 
-時間：東部時間2021年5月26日星期三凌晨3:30至早上06:30
+時間：東部時間2021年5月26日（星期三）凌晨3:30至06:30
 
 **變更**
 
-* 針對SCTE型提示格式，新增對已過時分段型別0x01 (UPID)的支援。
+* 針對SCTE型提示格式，新增對已過時區段型別0x01 (UPID)的支援。
 
-* 已針對即將推出的儀表板變更新增遙測。
+* 新增即將進行儀表板變更的遙測。
 
 ### 21.4.1版
 
-**時間：** 2021年4月22日星期四美國東部時間凌晨2:00至凌晨5:00
+**時間：** 2021年4月22日（星期四），美國東部時間凌晨2:00至凌晨5:00
 
 **變更**
 
-* 將會啟用工作階段要求限制，以防止潛在的DDOS攻擊。 工作階段將限製為每秒10個請求，最多為100個佇列請求。 我們預計不會對根據HLS/DASH規格行事的播放器造成任何影響。
+* 將會啟用工作階段要求限制，以防止潛在的DDOS攻擊。 工作階段將限製為每秒10個要求，排入佇列的要求上限為100個。 我們預計不會影響到按照HLS/DASH規格行事的玩家。
 
 * 其他維護與安全性增強功能
 
 ### 21.2.2版
 
-**時間：** 2021年2月23日星期二美國東部時間上午1:00至凌晨04:00
+**時間：** 2021年2月23日星期二美國東部時間上午1:00至下午4:00
 
 **變更**
 
-* 新增對HLS資料流中EXT-X-IMAGE-STREAM-INF資料流插入/同步的支援。 此功能可透過伺服器端設定來啟用。 請聯絡您的技術客戶代表以啟用此功能。
+* 新增對HLS資料流中EXT-X-IMAGE-STREAM-INF資料流插入/同步的支援。 此功能可透過伺服器端設定啟用。 請聯絡您的技術客戶代表以啟用此功能。
 
 ### 21.2.1版
 
@@ -85,7 +84,7 @@ PrimetimeAd Insertion21.xx.x發行說明說明2021年PrimetimeAd Insertion的新
 
 ### 21.1.2版
 
-**時間：** 2021年1月19日（星期二），東部時間上午12:30至上午8:30
+**時間：** 2021年1月19日（星期二），美國東部時間上午12:30至上午8:30
 
 **變更**
 
@@ -93,8 +92,8 @@ PrimetimeAd Insertion21.xx.x發行說明說明2021年PrimetimeAd Insertion的新
 
 ### 21.1.1版
 
-**時間：** 2021年1月13日星期三美國東部時間上午1:00至上午4:00
+**時間：** 2021年1月13日星期三上午1:00至上午4:00 （東部時間）
 
 **變更**
 
-* 新增對附屬機構提供以SCTE35為基礎的提示格式的支援。
+* 新增對附屬機構提供的支援，適用於以SCTE35為基礎的提示格式。

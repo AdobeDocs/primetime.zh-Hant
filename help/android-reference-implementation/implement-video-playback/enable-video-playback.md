@@ -1,8 +1,7 @@
 ---
 description: 建立處理HLS資料流設定和播放作業的PlaybackManager。 不需要其他設定。
 title: 啟用視訊播放
-exl-id: b53f602b-5752-4471-9905-2e4351dfc8d3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -23,7 +22,7 @@ ht-degree: 0%
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. 透過建立播放管理器 `ManagerFactory`：
+1. 透過建立播放管理員 `ManagerFactory`：
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
@@ -36,7 +35,7 @@ ht-degree: 0%
      new PlaybackManagerEventListener() 
    ```
 
-1. 在中註冊事件監聽器 `PlayerFragment`：
+1. 在中登入事件監聽器 `PlayerFragment`：
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);

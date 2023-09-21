@@ -1,8 +1,7 @@
 ---
 description: 在AdobeTVSDKConfig.json中，您可以指定預設規則以及特定區域的規則。
 title: 創意選取規則範例
-exl-id: 3298695a-2409-498f-bd86-56ab4892e4c7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 ## 預設規則範例 {#section_xy4_3fx_hz}
 
-以下範例為 [!DNL AdobeTVSDKConfig.json] 僅定義預設規則的檔案：
+以下是 [!DNL AdobeTVSDKConfig.json] 僅定義預設規則的檔案：
 
 ```
 {
@@ -65,7 +64,7 @@ ht-degree: 0%
 
 ## 具有其他區域規則的預設規則範例 {#section_ocv_3fx_hz}
 
-以下範例為 [!DNL AdobeTVSDKConfig.json] 定義預設規則的檔案，加上特定區域ID的其他規則（在此例中是區域） **「1234」**)：
+以下是 [!DNL AdobeTVSDKConfig.json] 定義預設規則的檔案，加上特定區域ID的其他規則（在此例中是區域） **「1234」**)：
 
 ```
 {

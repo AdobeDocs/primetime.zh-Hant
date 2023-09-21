@@ -1,8 +1,7 @@
 ---
 description: 這些類別提供有關特定媒體時間軸的資訊，包括廣告的刊登。
 title: 時間表類別
-exl-id: d6d3c683-2a58-4128-a5c7-36d0a965c0eb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

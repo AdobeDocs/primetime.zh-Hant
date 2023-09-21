@@ -1,8 +1,7 @@
 ---
 title: 依第二熒幕Web應用程式擷取預先授權資源清單
 description: 依第二熒幕Web應用程式擷取預先授權資源清單
-exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%

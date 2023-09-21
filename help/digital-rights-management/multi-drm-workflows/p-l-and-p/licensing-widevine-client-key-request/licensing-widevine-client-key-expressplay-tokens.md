@@ -1,8 +1,7 @@
 ---
-description: 您可以傳送權杖請求至適當的Expressplay權杖伺服器，為其加密內容產生Expressplay權杖。
+description: 您可以將權杖要求傳送至適當的Expressplay權杖伺服器，以為其加密內容產生Expressplay權杖。
 title: Expressplay權杖
-exl-id: 38faba06-6737-4dec-ac97-27db3124b993
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Expressplay權杖 {#expressplay-tokens}
 
-您可以傳送權杖請求至適當的Expressplay權杖伺服器，為其加密內容產生Expressplay權杖。
+您可以將權杖要求傳送至適當的Expressplay權杖伺服器，以為其加密內容產生Expressplay權杖。
 
 下列URL即是範例：
 
@@ -24,7 +23,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-提供給的內容加密金鑰儲存ID或CEKSID `kid` 引數以及指定給的內容加密金鑰或CEK `contentKey` 引數必須與用於封裝的內容加密金鑰儲存體ID和內容加密金鑰相符。 以下文字是權杖伺服器回應的範例：
+指定給的內容加密金鑰儲存ID或CEKSID `kid` 引數和指定給的內容加密金鑰或CEK `contentKey` 引數必須符合用於封裝的內容加密金鑰儲存ID和內容加密金鑰。 以下文字是權杖伺服器回應的範例：
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -35,5 +34,5 @@ https://wv.service.expressplay.com/hms/wv/rights/
 
 然後，您可以
 
-* 使用傳回的URL和查詢作為授權伺服器URL，或者
-* 從URL中取出查詢，並分別在ExpressPlayToken中作為HTTPPOST標頭傳遞
+* 使用傳回的URL和查詢作為許可證伺服器URL，或者
+* 從URL取出查詢，並分別在ExpressPlayToken中傳入HTTPPOST標頭

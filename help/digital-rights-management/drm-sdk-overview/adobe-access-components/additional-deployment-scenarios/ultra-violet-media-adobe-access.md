@@ -2,8 +2,7 @@
 title: UltraViolet媒體與Adobe Primetime DRM
 description: UltraViolet媒體與Adobe Primetime DRM
 copied-description: true
-exl-id: 03b01a29-e8e0-4fb5-a685-63a745a6417c
-source-git-commit: d49042b559ce6083eca0738517d04c490755a033
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

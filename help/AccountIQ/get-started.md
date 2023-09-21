@@ -1,8 +1,7 @@
 ---
 title: 如何上線並開始使用Account IQ
 description: 如何上線、必要條件，以及開始使用Account IQ。
-exl-id: 840ab081-0073-492f-86b2-ba174ae93256
-source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 如何上線並開始使用Account IQ {#onboard}
 
-帳戶IQ是託管的Web應用程式。 若要開始將此分析工具用作D2C串流提供者、程式設計人員或散發者(MVPD)並緩解憑證共用，您需要讓您的組織加入Adobe Experience Cloud組織，並將組織使用者指派給 **Primetime帳戶IQ** 設定檔於 [Adobe Admin Console](https://adminconsole.adobe.com/). 請閱讀下文，瞭解入門的先決條件和詳細資訊。
+帳戶IQ是託管的Web應用程式。 若要開始將此分析工具用作D2C串流提供者、程式設計人員或散發者(MVPD)並緩解憑證共用，您必須讓您的組織加入Adobe Experience Cloud組織，並將組織使用者指派給 **Primetime帳戶IQ** 設定檔於 [Adobe Admin Console](https://adminconsole.adobe.com/). 請閱讀下文，瞭解入門的先決條件和詳細資訊。
 
 ## 瀏覽器必要條件 {#browser-prerequisites}
 
@@ -23,7 +22,7 @@ ht-degree: 0%
 
 ## 入門步驟 {#steps-to-onboard}
 
-1. 若要讓您的組織註冊，請 **Adobe Experience Cloud** 組織聯絡人 **Adobe** 傳送電子郵件至tve-support@adobe.com。
+1. 若要讓您的組織註冊： **Adobe Experience Cloud** 組織聯絡人 **Adobe** 傳送電子郵件至tve-support@adobe.com。
 
 1. 將組織使用者指派給 **TVE儀表板讀寫** 或 **TVE儀表板唯讀** 中的設定檔 [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -42,7 +41,7 @@ ht-degree: 0%
 
       >[!NOTE]
       >
-      >在不久的將來，Primetime帳戶IQ將從TVE儀表板中拆分。
+      >在不久的將來，Primetime帳戶IQ將會從TVE儀表板拆分。
 
    1. 您可以在此處建立使用者群組，或選取要新增使用者的現有群組。
 
@@ -52,4 +51,4 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->如果您的使用者無法存取帳戶IQ儀表板，請聯絡Adobe支援，確認貴組織的ID已加入帳戶IQ的白名單。
+>如果您的使用者無法存取Account IQ儀表板，請聯絡Adobe支援，確認貴組織的ID已列於Account IQ的白名單中。

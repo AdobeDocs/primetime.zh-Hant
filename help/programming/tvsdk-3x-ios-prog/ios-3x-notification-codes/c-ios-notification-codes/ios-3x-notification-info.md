@@ -1,8 +1,7 @@
 ---
-description: 此表格提供有關INFO型別通知的詳細資訊。
+description: 此表格提供有關「資訊」型別通知的詳細資訊。
 title: INFO通知代碼
-exl-id: c3703871-26cd-4f83-9a01-0993c6ef3d6b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 4%
@@ -11,9 +10,9 @@ ht-degree: 4%
 
 # INFO通知代碼 {#info-notification-codes}
 
-此表格提供有關INFO型別通知的詳細資訊。
+此表格提供有關「資訊」型別通知的詳細資訊。
 
-大多數資訊通知包含相關中繼資料，例如無法下載的資源的URL。 某些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
+大多數資訊通知包含相關的中繼資料，例如，無法下載的資源的URL。 有些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
 
 <table frame="all" colsep="1" rowsep="1" id="table_503463046E764A87B10EB5D8B294EB23"> 
  <thead> 
@@ -49,7 +48,7 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> 搜尋開始 </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_START </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> <p> 無 </p> </td> 
    <td colname="5"> 已起始搜尋作業。 </td> 
@@ -91,7 +90,7 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 304000 </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_變更 </span> </td> 
+   <td colname="2"><span class="codeph"> audio_TRACK_CHANGE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
    <td colname="5"> <p>音訊曲目已變更。 </p> </td> 

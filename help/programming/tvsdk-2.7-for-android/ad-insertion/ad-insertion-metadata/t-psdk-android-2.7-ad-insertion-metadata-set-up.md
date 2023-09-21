@@ -1,8 +1,7 @@
 ---
-description: 使用協助程式類別AuditudeSettings （擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
+description: 使用協助程式類別AuditudeSettings （會擴充MetadataNode類別）來設定Adobe Primetime ad decisioning中繼資料。
 title: 設定廣告插入中繼資料
-exl-id: da5bfdc1-2c55-45f2-b2a8-3e32450cb30d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 設定廣告插入中繼資料 {#set-up-ad-insertion-metadata}
 
-使用協助程式類別AuditudeSettings （擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
+使用協助程式類別AuditudeSettings （會擴充MetadataNode類別）來設定Adobe Primetime ad decisioning中繼資料。
 
 >[!TIP]
 >
@@ -25,7 +24,7 @@ ht-degree: 0%
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. 設定Adobe Primetime廣告決策 `mediaID`， `zoneID`， `<ph conkeyref="phrases/primetime-sdk-name"/>`和選用的目標定位引數。
+1. 設定Adobe Primetime ad decisioning `mediaID`， `zoneID`， `<ph conkeyref="phrases/primetime-sdk-name"/>`和選用的目標定位引數。
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
@@ -43,7 +42,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   >媒體ID會由TVSDK作為字串使用，然後轉換為一個md5值，並用於 `u` Primetime廣告決策URL請求中的值。 例如：
+   >媒體ID會由TVSDK以字串形式使用，且會轉換為md5值，並用於 `u` Primetime廣告決策URL請求中的值。 例如：
    >
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
@@ -55,11 +54,11 @@ ht-degree: 0%
    "https://example.com/media/test_media.m3u8", MediaResource.Type.HLS, Metadata);
    ```
 
-1. 載入 `MediaResource` 物件穿過 `MediaPlayer.replaceCurrentResource` 方法。
+1. 載入 `MediaResource` 物件，透過 `MediaPlayer.replaceCurrentResource` 方法。
 
    此 `MediaPlayer` 開始載入及處理媒體資料流資訊清單。
 
-1. 當 `MediaPlayer` 轉換到INITIALIZED狀態，以的格式取得媒體資料流特性 `MediaPlayerItem` 執行個體透過 `MediaPlayer.CurrentItem` 方法。
+1. 當 `MediaPlayer` 轉換為INITIALIZED狀態，以格式取得媒體資料流特性 `MediaPlayerItem` 執行個體透過 `MediaPlayer.CurrentItem` 方法。
 1. （選用）查詢 `MediaPlayerItem` 執行個體以檢視資料流是否為即時，無論是否有替代音軌或資料流受到保護。
 
    此資訊可協助您為播放準備UI。 例如，如果您知道有兩個音軌，您可以包含可在這些音軌之間切換的UI控制項。

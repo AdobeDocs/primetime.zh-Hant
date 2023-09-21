@@ -2,8 +2,7 @@
 title: 訊號模式和時間範圍
 description: 訊號模式和時間範圍
 copied-description: true
-exl-id: ccaf345f-63f2-42f1-8558-65c7e0dffa89
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
@@ -65,7 +64,7 @@ ht-degree: 0%
    <td> N/A （自動CustomRange訊號模式） </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCue </span> 訊號模式 </td> 
+   <td> <span class="codeph"> 資訊清單提示 </span> 訊號模式 </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -161,7 +160,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> 伺服器地圖 </span> 訊號模式 </td> 
+   <td> <span class="codeph"> Severmap </span> 訊號模式 </td> 
    <td> 不存在（廣告已停用）。 </td> 
    <td> 
     <code>
@@ -175,7 +174,7 @@ ht-degree: 0%
    <td> 不適用(自動 <span class="codeph"> CustomRange </span> 訊號模式) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCue </span> 訊號模式 </td> 
+   <td> <span class="codeph"> 資訊清單提示 </span> 訊號模式 </td> 
    <td> 不存在（廣告已停用）。 </td> 
    <td> 
     <code>
@@ -192,7 +191,7 @@ ht-degree: 0%
    <td> <span class="codeph"> CustomRange </span> 訊號模式 </td> 
    <td> 不存在（廣告已停用）。 </td> 
    <td> 無 </td> 
-   <td> 無（在中已處理） <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> 無（在中處理） <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>

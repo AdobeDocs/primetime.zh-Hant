@@ -2,8 +2,7 @@
 title: 使用Java API更新DRM原則
 description: 使用Java API更新DRM原則
 copied-description: true
-exl-id: 00bb9b64-30f7-4900-b6bd-57604295b44d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -12,9 +11,9 @@ ht-degree: 0%
 
 # 使用Java API更新DRM原則 {#updating-a-drm-policy-with-the-java-api}
 
-使用Java API更新DRM原則：
+若要使用Java API更新DRM政策：
 
-1. 設定您的開發環境，並將中列出的所有JAR檔案包含在您的專案中 [設定開發環境](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. 設定您的開發環境，並將中列出的所有JAR檔案納入您的專案中 [設定開發環境](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 1. 建立DRM `Policy` 從檔案或資料庫讀取DRM原則。
 
    ```
@@ -60,4 +59,4 @@ ht-degree: 0%
    out.close();
    ```
 
-另請參閱 `com.adobe.flashaccess.samples.policy.UpdatePolicy` 在參考實作命令列工具中 [!DNL samples] 此範常式式碼來源的目錄。
+另請參閱 `com.adobe.flashaccess.samples.policy.UpdatePolicy` 在參照實作命令列工具中 [!DNL samples] 此範常式式碼來源的目錄。

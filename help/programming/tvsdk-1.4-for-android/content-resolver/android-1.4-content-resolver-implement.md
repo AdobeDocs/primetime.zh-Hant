@@ -1,19 +1,18 @@
 ---
 description: 您可以根據預設解析器來實作您自己的內容解析器。
-title: 實作自訂內容解析程式
-exl-id: 96468f6d-80ad-4721-8ed3-4dbfa2a64b9e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 實作自訂內容解析器
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
-# 實作自訂內容解析程式 {#implement-a-custom-content-resolver}
+# 實作自訂內容解析器 {#implement-a-custom-content-resolver}
 
 您可以根據預設解析器來實作您自己的內容解析器。
 
-當TVSDK偵測到新的商機時，它會逐一瀏覽註冊的內容解析器，尋找能夠解析該商機的內容。 系統會選取傳回true的第一個來解析商機。 如果沒有內容解析程式可用，則會略過該機會。 由於內容解析程式通常是非同步的，內容解析器負責在程式完成時進行通知。
+當TVSDK偵測到新的商機時，它會逐一檢視註冊的內容解析器，尋找能夠解析該商機的內容解析器。 系統會選取第一個傳回true的來解析商機。 如果沒有任何內容解析程式能夠解析內容，則會略過該機會。 由於內容解析程式通常是非同步的，因此內容解析器負責在程式完成時進行通知。
 
 1. 建立自訂 `AdvertisingFactory` 執行個體和覆寫 `createContentResolver`.
 
@@ -62,7 +61,7 @@ ht-degree: 0%
                   advertisingMetadata);
    ```
 
-1. 建立自訂廣告解析程式類別，以擴充 `ContentResolver` 類別。
+1. 建立自訂廣告解析程式類別以擴充 `ContentResolver` 類別。
    1. 在自訂廣告解析程式中，覆寫此受保護的函式：
 
       ```java
@@ -70,13 +69,13 @@ ht-degree: 0%
                         PlacementOpportunity placementOpportunity)
       ```
 
-      中繼資料包含您的 `AdvertisingMetada`. 將其用於以下專案 `TimelineOperation` 向量產生。
+      中繼資料包含您的 `AdvertisingMetada`. 用於以下專案 `TimelineOperation` 向量產生。
 
    1. 針對每個刊登機會，建立 `Vector<TimelineOperation>`.
 
-      向量可以是空的，但不可以是Null。
+      向量可以為空白，但不能為Null。
 
-      此範例 `TimelineOperation` 提供以下專案的結構： `AdBreakPlacement`：
+      此範例 `TimelineOperation` 提供適用於以下專案的結構： `AdBreakPlacement`：
 
       ```java
       AdBreakPlacement(AdBreak.createAdBreak( 
@@ -102,10 +101,9 @@ ht-degree: 0%
       error.setMetadata(metadata);
       ```
 
-
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-此自訂廣告解析程式範例會向廣告伺服器發出HTTP要求並接收JSON回應。
+此範例自訂廣告解析器會向廣告伺服器發出HTTP要求並接收JSON回應。
 
 ```java
 public class CustomAdResolver extends ContentResolver { 

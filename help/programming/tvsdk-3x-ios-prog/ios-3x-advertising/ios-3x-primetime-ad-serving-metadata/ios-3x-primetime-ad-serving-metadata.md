@@ -1,8 +1,7 @@
 ---
-description: TVSDK支援解析和插入VOD和即時/線性資料流的廣告。
+description: TVSDK支援VOD和即時/線性資料流的解析和插入廣告。
 title: Primetime廣告伺服器中繼資料
-exl-id: f27657ac-4037-45e5-a658-ad9a783dd990
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 概觀 {#primetime-ad-server-metadata-overview}
 
-TVSDK支援解析和插入VOD和即時/線性資料流的廣告。
+TVSDK支援VOD和即時/線性資料流的解析和插入廣告。
 
 ## 先決條件
 
@@ -19,7 +18,7 @@ TVSDK支援解析和插入VOD和即時/線性資料流的廣告。
 
 * A `mediaID`，可識別要播放的特定內容。
 * 您的 `zoneID`，可識別您的公司或網站。
-* 您的廣告伺服器網域，這會指定您指派的廣告伺服器網域。
+* 您的廣告伺服器網域，這會指定您指派的廣告伺服器的網域。
 * 其他目標定位引數。
 
 ## 設定Primetime廣告伺服器中繼資料 {#section_86C4A3B2DF124770B9B7FD2511394313}
@@ -38,7 +37,7 @@ TVSDK支援解析和插入VOD和即時/線性資料流的廣告。
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. 設定 `PTAuditudeMetadata` 執行個體作為目前的中繼資料 `PTMediaPlayerItem` 中繼資料（使用） `PTAdResolvingMetadataKey`.
+1. 設定 `PTAuditudeMetadata` 執行個體作為目前的中繼資料 `PTMediaPlayerItem` 使用建立中繼資料 `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 

@@ -1,8 +1,7 @@
 ---
-description: 當瀏覽器TVSDK請求不在主要廣告伺服器上的廣告時，播放器需要從次要伺服器請求廣告。 視訊廣告服務範本(VAST)會設定廣告伺服器和視訊播放器之間的通訊標準，以及次要廣告伺服器在請求廣告時傳送的回應。
+description: 當瀏覽器TVSDK請求不在主要廣告伺服器上的廣告時，播放器需要從次要伺服器請求廣告。 視訊廣告服務範本(VAST)設定廣告伺服器和視訊播放器之間的通訊標準，是次要廣告伺服器在請求廣告時傳送的回應。
 title: VAST廣告
-exl-id: b0ebade5-b5da-413d-84f4-abebac579f45
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # VAST廣告 {#vast-ads}
 
-當瀏覽器TVSDK請求不在主要廣告伺服器上的廣告時，播放器需要從次要伺服器請求廣告。 視訊廣告服務範本(VAST)會設定廣告伺服器和視訊播放器之間的通訊標準，以及次要廣告伺服器在請求廣告時傳送的回應。
+當瀏覽器TVSDK請求不在主要廣告伺服器上的廣告時，播放器需要從次要伺服器請求廣告。 視訊廣告服務範本(VAST)設定廣告伺服器和視訊播放器之間的通訊標準，是次要廣告伺服器在請求廣告時傳送的回應。
 
 如需VAST的詳細資訊，請參閱 [數位視訊廣告服務範本(VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
@@ -29,13 +28,13 @@ ht-degree: 0%
 * `AdTitle`
 * `Impression`
 
-   支援下列選用元素：
+  支援下列選用元素：
 
 * `Description`
 * `Survey`
 * `Error`
 
-## 創意 {#section_0121F948CB074E49A8132D202786CAA4}
+## 創意內容 {#section_0121F948CB074E49A8132D202786CAA4}
 
 此元素是屬於VAST廣告一部分的檔案，並包含 `creative` 可支援線性廣告、非線性廣告或隨附廣告的元素。 在 `creative` 元素， `id`， `sequence`、和 `adId` 支援元素。
 
@@ -56,17 +55,17 @@ ht-degree: 0%
 
       * `MediaFile`
 
-         >[!TIP]
-         >
-         >在此元素中， `id`， `bitrate`， `delivery`， `width`， `height`， `scalable`， `maintainAspectRatio`， `apiFramework`、和 `type` 屬性受到支援。
+        >[!TIP]
+        >
+        >在此元素中， `id`， `bitrate`， `delivery`， `width`， `height`， `scalable`， `maintainAspectRatio`， `apiFramework`、和 `type` 屬性受到支援。
 
 * **非線性廣告** 支援下列元素：
 
    * `Non-linear`
 
-      >[!TIP]
-      >
-      >在此元素中， `id`， `width`， `height`， `apiFramework`， `expandedWidth`， `expandedHeight`， `scalable`， `maintainAspectRatio`、和 `minSuggestedDuration` 屬性受到支援。
+     >[!TIP]
+     >
+     >在此元素中， `id`， `width`， `height`， `apiFramework`， `expandedWidth`， `expandedHeight`， `scalable`， `maintainAspectRatio`、和 `minSuggestedDuration` 屬性受到支援。
 
       * `StaticResource`
       * `IFrameResource`
@@ -78,9 +77,9 @@ ht-degree: 0%
 
    * `Companion`
 
-      >[!TIP]
-      >
-      >在此元素中， `id`， `width`， `height`， `apiFramework`， `expandedWidth`、和 `expandedHeight` 屬性受到支援。
+     >[!TIP]
+     >
+     >在此元素中， `id`， `width`， `height`， `apiFramework`， `expandedWidth`、和 `expandedHeight` 屬性受到支援。
 
       * `StaticResource`
       * `IFrameResource`

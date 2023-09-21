@@ -1,8 +1,7 @@
 ---
 title: iOS/tvOS v3.x移轉指南
 description: iOS/tvOS v3.x移轉指南
-exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%

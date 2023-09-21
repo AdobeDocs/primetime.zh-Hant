@@ -2,8 +2,7 @@
 title: 自訂資料
 description: 自訂資料
 copied-description: true
-exl-id: 1f9755cd-e0ec-4db5-a5fb-40766498ce08
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%

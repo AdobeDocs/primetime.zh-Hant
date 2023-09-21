@@ -2,8 +2,7 @@
 title: 要求憑證（要求者）
 description: 要求憑證（要求者）
 copied-description: true
-exl-id: 290231ec-1146-4bfb-a449-b8ff85704197
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -16,7 +15,7 @@ ht-degree: 0%
 
    要求憑證的使用者必須是要求者。
 
-1. 在「要求」標籤上，選取憑證型別（授權伺服器、封裝程式或傳輸）。
+1. 在「要求」標籤上，選取憑證型別（授權伺服器、封裝或傳輸）。
 
    >[!NOTE]
    >
@@ -27,10 +26,10 @@ ht-degree: 0%
    * 上傳CSR檔案。
    * 複製CSR中的CSR資訊，並將其貼到表單中。
 
-      >[!NOTE]
-      >
-      >若要複製CSR資訊，請選取開頭標籤之間（不包括）的文字 `(-----BEGIN CERTIFICATE REQUEST-----)` 和結束標籤 `(-----END CERTIFICATE REQUEST-----)`.
+     >[!NOTE]
+     >
+     >若要複製CSR資訊，請選取開頭標籤之間（不包含在內）的文字 `(-----BEGIN CERTIFICATE REQUEST-----)` 和結束標籤 `(-----END CERTIFICATE REQUEST-----)`.
 
 1. 按一下 **[!UICONTROL Submit Request]** 按鈕。
 
-   系統會傳送電子郵件給帳戶和次要管理員，以供其檢閱。 請求者已提交。
+   系統會傳送電子郵件給帳戶和次要管理員，以供其檢閱。 請求者已送達。

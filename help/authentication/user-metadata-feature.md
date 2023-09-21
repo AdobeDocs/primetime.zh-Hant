@@ -1,8 +1,7 @@
 ---
 title: 使用者中繼資料功能
 description: 使用者中繼資料功能
-exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: 36cf160c42bb68412c71e100a7d4fb3ca9c58d89
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1649'
 ht-degree: 0%

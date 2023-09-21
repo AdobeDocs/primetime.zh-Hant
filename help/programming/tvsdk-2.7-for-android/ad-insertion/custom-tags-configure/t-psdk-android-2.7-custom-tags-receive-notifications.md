@@ -1,8 +1,7 @@
 ---
 description: 若要接收資訊清單中標籤的相關通知，您必須實作適當的事件接聽程式。
 title: 為定時中繼資料通知新增接聽程式
-exl-id: e38f2a25-3379-4132-a8de-6703dc564ed4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 若要接收資訊清單中標籤的相關通知，您必須實作適當的事件接聽程式。
 
-您可以透過監聽以下專案來監視定時中繼資料： `onTimedMetadata`，會通知您的應用程式相關活動。 每次在剖析內容期間識別出不重複的訂閱標籤時，TVSDK都會準備新的 `TimedMetadata` 物件並傳送此事件。 物件包含您訂閱的標簽名稱、此標籤出現所在的播放本地時間以及其他資料。
+您可以透過聆聽來監視定時中繼資料 `onTimedMetadata`，會通知您應用程式相關活動。 每次在剖析內容期間識別出不重複的訂閱標籤時，TVSDK都會準備新的 `TimedMetadata` 物件並傳送此事件。 物件包含您訂閱的標簽名稱、此標籤出現所在的播放本地時間以及其他資料。
 
 1. 接聽事件。
 

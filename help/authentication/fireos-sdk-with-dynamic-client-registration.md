@@ -1,8 +1,7 @@
 ---
 title: 具動態使用者端註冊的Amazon FireOS SDK
 description: 具動態使用者端註冊的Amazon FireOS SDK
-exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: bfa2c3d55848dd1e50daa83fb77d040bc7c37045
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%

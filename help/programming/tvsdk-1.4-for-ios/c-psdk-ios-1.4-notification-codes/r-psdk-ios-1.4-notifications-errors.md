@@ -1,8 +1,7 @@
 ---
 description: 此表格提供有關ERROR型別通知的詳細資訊。
 title: 錯誤通知代碼
-exl-id: dc65670e-4764-4d68-aee1-87b2d27b09b6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 5%
@@ -15,7 +14,7 @@ ht-degree: 5%
 
 <!--<a id="section_D29404228F5E4B818642CBA6A0D39546"></a>-->
 
-大多數錯誤都包含相關的中繼資料，例如無法下載的資源的URL。 某些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
+大多數錯誤包含相關的中繼資料，例如無法下載的資源的URL。 有些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
 
 <table frame="all" colsep="1" rowsep="1" id="table_8B61210A406A45ACBE37FC29729DDE22"> 
  <thead> 
@@ -39,7 +38,7 @@ ht-degree: 5%
    <td colname="1"><span class="codeph"> 100000 </span> </td> 
    <td colname="2"><span class="codeph"> DRM_ERROR </span> </td> 
    <td colname="3"> </td> 
-   <td colname="4"><span class="codeph"> 主要_DRM代碼 </span><span class="codeph"> 次要_DRM_CODE </span><span class="codeph"> 說明 </span> </td> 
+   <td colname="4"><span class="codeph"> 主要DRM代碼 </span><span class="codeph"> 次要_DRM_CODE </span><span class="codeph"> 說明 </span> </td> 
    <td colname="5"></td> 
   </tr> 
   <tr rowsep="1"> 
@@ -75,12 +74,12 @@ ht-degree: 5%
    <td colname="2"><span class="codeph"> PAUSE_ERROR </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> <p>無 </p> </td> 
-   <td colname="5"> <p>執行暫停操作時發生錯誤。 </p> </td> 
+   <td colname="5"> <p>執行暫停作業時發生錯誤。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101101 </span> </td> 
    <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
+   <td colname="3"><span class="codeph"> 播放器_未就緒 </span> </td> 
    <td colname="4"> 無 </td> 
    <td colname="5"> <p>  </p> <p>  </p>
     <!-- workaround for PDF having too much negative kerning in column 2 --> </td> 
@@ -235,9 +234,9 @@ ht-degree: 5%
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170009 </span> </td> 
    <td colname="2"><span class="codeph"> SUBTITLES_TRACK_CHANGE_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
+   <td colname="3"><span class="codeph"> 播放器_未就緒 </span> </td> 
    <td colname="4"> 無 </td> 
-   <td colname="5"> <p>變更字幕追蹤時發生錯誤。 </p> </td> 
+   <td colname="5"> <p>變更字幕曲目時發生錯誤。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170010 </span> </td> 
@@ -258,4 +257,4 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->adID和來源(URL)可透過以下網址擷取： `PTAdAsset` 在通知中繼資料中使用 `AD_ASSET` 金鑰。
+>adID和來源(URL)可透過以下方式擷取： `PTAdAsset` 在通知中繼資料中使用 `AD_ASSET` 機碼。

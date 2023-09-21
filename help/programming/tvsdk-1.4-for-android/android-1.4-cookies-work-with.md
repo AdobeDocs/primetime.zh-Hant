@@ -1,8 +1,7 @@
 ---
 description: 您可以使用TVSDK在Cookie標頭中傳送任意資料，以進行工作階段管理、閘道存取等。
 title: 使用Cookie
-exl-id: 7482777a-c338-4e0d-b123-ce2712657b8d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
@@ -13,12 +12,12 @@ ht-degree: 0%
 
 您可以使用TVSDK在Cookie標頭中傳送任意資料，以進行工作階段管理、閘道存取等。
 
-向金鑰伺服器提出請求時，以下是驗證型別的範例：
+以下是在向金鑰伺服器提出請求時具有某種驗證型別的範例：
 
-1. 您的客戶在瀏覽器中登入您的網站，其登入顯示他們有權檢視內容。
+1. 您的客戶在瀏覽器中登入您的網站，且他們的登入顯示他們有權檢視內容。
 1. 您的應用程式會根據授權伺服器的預期產生驗證Token。 將該值傳遞至TVSDK。
 1. TVSDK會在Cookie標頭中設定該值。
-1. 當TVSDK請求金鑰伺服器取得金鑰以解密內容時，該請求在Cookie標頭中包含驗證值，因此金鑰伺服器知道該請求有效。
+1. 當TVSDK向金鑰伺服器提出要求，要取得金鑰以解密內容時，該要求會在Cookie標頭中包含驗證值，讓金鑰伺服器知道該要求有效。
 
 若要使用Cookie：
 
@@ -28,7 +27,7 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >啟用302重新導向時，廣告請求可能會被重新導向到與Cookie所屬網域不同的網域。
+   >當啟用302重新導向時，廣告請求可能會重新導向到與Cookie所屬網域不同的網域。
 
    ```java
    CookieManager cookieManager= new CookieManager(); 
@@ -42,7 +41,7 @@ ht-degree: 0%
 
    TVSDK會在執行階段查詢此CookieManager，檢查是否有任何Cookie與URL相關聯，並自動使用這些專案。
 
-   另一個選項是使用 `cookieHeaders` 在 `NetworkConfiguration` 以設定用於請求的任意Cookie標頭字串。 根據預設，此Cookie標頭只會隨關鍵要求傳送。 若要傳送包含所有請求的Cookie標頭，請使用 `NetworkConfiguration` 方法 `setUseCookieHeadersForAllRequests`：
+   另一個選項是使用 `cookieHeaders` 在 `NetworkConfiguration` 以設定用於請求的任意Cookie標頭字串。 根據預設，此Cookie標頭只會隨關鍵要求傳送。 若要傳送包含所有請求的Cookie標題，請使用 `NetworkConfiguration` 方法 `setUseCookieHeadersForAllRequests`：
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 

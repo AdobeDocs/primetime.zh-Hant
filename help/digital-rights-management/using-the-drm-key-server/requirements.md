@@ -2,8 +2,7 @@
 title: 使用Primetime DRM金鑰伺服器的需求
 description: 使用Primetime DRM金鑰伺服器的需求
 copied-description: true
-exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -25,4 +24,4 @@ Primetime DRM Key Server是用於遠端iOS和/或Xbox 360金鑰傳遞的多租�
   >OpenJDK 8現在支援64位元PKCS11： [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)，和Oracle
 * [Apache Tomcat 7](https://tomcat.apache.org)
 * 由Adobe簽發的認證
-* Microsoft核發的認證（適用於Xbox 360使用者端）
+* Microsoft發行的認證（適用於Xbox 360使用者端）

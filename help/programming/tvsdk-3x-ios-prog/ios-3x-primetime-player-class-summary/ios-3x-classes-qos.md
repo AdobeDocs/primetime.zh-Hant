@@ -1,8 +1,7 @@
 ---
-description: 這些類別提供的資訊可協助您判斷播放器的執行狀況。
+description: 這些類別提供的資訊可協助您判斷播放器是否表現良好。
 title: QoS類別
-exl-id: ecbeddc6-b5f3-4ee1-a22c-5beec42df5ab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # QoS類別 {#qos-classes}
 
-這些類別提供的資訊可協助您判斷播放器的執行狀況。
+這些類別提供的資訊可協助您判斷播放器是否表現良好。
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -22,7 +21,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDeviceInformation.html" format="html" scope="external"> ptdeviceInformation</a> </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDeviceInformation.html" format="html" scope="external"> PTDeviceInformation</a> </td> 
    <td colname="2">提供TVSDK執行所在平台和作業系統的相關資訊： 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">平台作業系統的版本 </li> 
@@ -34,14 +33,14 @@ ht-degree: 0%
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> PTPlayback資訊</a> </td> 
-   <td colname="2"> 提供有關播放執行方式的資訊。 這包括影格速率、設定檔位元速率、緩衝花費的總時間、緩衝嘗試次數、從第一個視訊片段取得第一個位元組所花的時間、轉譯第一個影格所花的時間、目前緩衝的長度，以及緩衝時間。 </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> ptlaybackinformation</a> </td> 
+   <td colname="2"> 提供播放執行方式的資訊。 這包括影格速率、設定檔位元速率、緩衝所花費的總時間、緩衝嘗試次數、從第一個視訊片段取得第一個位元組所花費的時間、轉譯第一個影格所花費的時間、目前緩衝的長度以及緩衝時間。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoProvider</a> </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
    <td colname="2">
     <pre>
-      提供播放和裝置的基本QoS量度。
+      為播放和裝置提供基本的QoS量度。
     </pre>
     <pre>
       QOS資訊提供者類別。

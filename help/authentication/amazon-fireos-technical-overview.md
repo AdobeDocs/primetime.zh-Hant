@@ -1,8 +1,7 @@
 ---
 title: Amazon FireOS技術概覽
 description: Amazon FireOS技術概覽
-exl-id: 939683ee-0dd9-42ab-9fde-8686d2dc0cd0
-source-git-commit: 4691e769e1fee51507550c8e1fbecdcdff7e44eb
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 0%

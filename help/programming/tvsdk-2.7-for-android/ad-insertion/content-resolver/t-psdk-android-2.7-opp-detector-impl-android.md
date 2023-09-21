@@ -1,19 +1,18 @@
 ---
 description: 您可以實作OpportunityGenerator類別來實作自己的機會產生器。
-title: 實作自訂機會產生器
-exl-id: 8fa97515-692c-4e34-9afb-17a5409228db
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 實施自訂機會產生器
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%
 
 ---
 
-# 實作自訂機會產生器 {#implement-a-custom-opportunity-generator}
+# 實施自訂機會產生器 {#implement-a-custom-opportunity-generator}
 
 您可以實作OpportunityGenerator類別來實作自己的機會產生器。
 
-1. 實作您的自訂 `ContentFactory` 實作 `ContentFactory` 介面和覆寫 `retrieveGenerators`.
+1. 實作您的自訂 `ContentFactory` 透過實作 `ContentFactory` 介面和覆寫 `retrieveGenerators`.
 
    例如：
 
@@ -74,7 +73,7 @@ ht-degree: 0%
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. 針對每個 `TimedMetadata` 或群組 `TimedMetadata`，使用下列屬性建立機會：
+   1. 針對每個 `TimedMetadata` 或群組 `TimedMetadata`，使用下列屬性建立商機：
 
       ```java
       Opportunity( 
@@ -85,7 +84,7 @@ ht-degree: 0%
       ); 
       ```
 
-   1. 針對每個建立的商機，呼叫 `resolve` 於 `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
+   1. 針對每個已建立的商機，呼叫 `resolve` 於 `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 

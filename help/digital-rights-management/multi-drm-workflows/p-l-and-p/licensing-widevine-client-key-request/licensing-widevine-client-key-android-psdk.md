@@ -1,8 +1,7 @@
 ---
 description: 使用者端代碼會將資料傳遞至Android API。
 title: Android PSDK上的重要請求工作流程
-exl-id: 3ff52c0d-0789-4fe5-bf9d-f03184bad488
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -31,9 +30,9 @@ class DRMManager
     }
 ```
 
-成功呼叫此API後，您的程式碼就可以照常開始播放內容。 如果您正在使用Expressplay，您可以將權杖當作授權伺服器URL的一部分或作為請求屬性傳遞，並從授權伺服器URL中移除權杖。
+成功呼叫此API後，您的程式碼就可以照常開始播放內容。 如果您使用Expressplay，您可以將權杖當作授權伺服器URL的一部分或作為請求屬性傳遞，並從授權伺服器URL中移除權杖。
 
-部分Android裝置同時支援Widevine和PlayReady。 在這類裝置上，如果內容有多個DRM標頭，客戶可能會想要強制PSDK使用特定DRM解密內容。 您可在播放前呼叫下列API來達成此目的：
+部分Android裝置同時支援Widevine和PlayReady。 在這類裝置上，如果內容有多個DRM標題，客戶可能會想要強制PSDK使用特定DRM解密內容。 您可以透過在播放前呼叫下列API來達成此目的：
 
 ```
 class MediaPlayer 

@@ -1,8 +1,7 @@
 ---
-description: 302重新導向最佳化可將302重新導向回應的數量降至最低，讓您的應用程式更有效率地平衡負載。
+description: 302重新導向最佳化可將302重新導向回應的數量降至最低，讓您的應用程式更有效地進行負載平衡。
 title: 停用或啟用302重新導向最佳化
-exl-id: b1bdb6d6-b34d-4e0a-8c96-7fd4ce77b5c9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
@@ -11,15 +10,15 @@ ht-degree: 0%
 
 # HTTP 302重新導向最佳化 {#http-302-redirect-optimization}
 
-302重新導向最佳化可將302重新導向回應的數量降至最低，讓您的應用程式更有效率地平衡負載。
+302重新導向最佳化可將302重新導向回應的數量降至最低，讓您的應用程式更有效地進行負載平衡。
 
-如果重新導向主要資訊清單請求，並在播放器中啟用302最佳化，則從該資訊清單對資產發出的後續請求將使用最終網域位置，這會避免額外302個回應。
+如果主要資訊清單要求重新導向，且您的播放器已啟用302最佳化，則從該資訊清單對資產發出的後續要求將使用最終網域位置，以避免額外的302回應。
 
 此功能預設為啟用，您可以變更此設定。
 
 ## 停用或啟用302重新導向最佳化{#disable-or-enable-redirect-optimization}
 
-使用 `useRedirectedUrl` 屬性以開啟302重新導向(true)或關閉(false)。
+使用 `useRedirectedUrl` 屬性以開啟(true)或關閉(false)302重新導向。
 例如：
 
 ```java

@@ -1,8 +1,7 @@
 ---
 description: 在瀏覽器TVSDK中，您可以搜尋資料流中的特定位置（時間）。 串流可以是滑動視窗播放清單或隨選影片(VOD)內容。
 title: 使用搜尋列時處理搜尋
-exl-id: 4c09b218-917a-4318-82b0-c221d450a2c1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -15,13 +14,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->只有DVR才允許搜尋即時資料流。
+>只有DVR才允許在即時資料流中進行搜尋。
 
 1. 等候瀏覽器TVSDK處於有效的搜尋狀態。
 
-   有效狀態為「已準備」、「完成」、「已暫停」和「正在播放」。 處於有效狀態可確保媒體資源已成功載入。 如果播放器不是處於有效的可搜尋狀態，嘗試呼叫以下方法會擲回 `IllegalStateException`.
+   有效的狀態包括「已準備」、「完成」、「已暫停」和「正在播放」。 處於有效狀態可確保媒體資源已成功載入。 如果播放器不是處於有效的可搜尋狀態，則嘗試呼叫以下方法會擲回 `IllegalStateException`.
 
-   例如，您可以等候瀏覽器TVSDK觸發  `AdobePSDK.MediaPlayerStatusChangeEvent`  具有 `event.status` 之 `AdobePSDK.MediaPlayerStatus.PREPARED`.
+   例如，您可以等待瀏覽器TVSDK觸發  `AdobePSDK.MediaPlayerStatusChangeEvent`  具有 `event.status` 之 `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
 1. 將請求的搜尋位置傳遞至 `MediaPlayer.seek` 方法（以毫秒為單位）。
 
@@ -35,7 +34,7 @@ ht-degree: 0%
    void seek(long position) throws IllegalStateException;
    ```
 
-1. 等候瀏覽器TVSDK觸發  `AdobePSDK.PSDKEventType.SEEK_END`  事件，這會傳回事件中 `actualPosition` 屬性：
+1. 等候瀏覽器TVSDK觸發  `AdobePSDK.PSDKEventType.SEEK_END`  事件，這會傳回事件中調整後的位置 `actualPosition` 屬性：
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
@@ -46,10 +45,10 @@ ht-degree: 0%
 
    這很重要，因為搜尋之後的實際開始位置可能與要求的位置不同。 可能適用下列部分規則：
 
-   * 如果搜尋或其他重新定位在廣告插播中途結束，或略過廣告插播，則播放行為會受到影響。
-   * 您只能搜尋資產的可搜尋持續時間。 若為VOD，即從0到資產的持續時間。
+   * 如果搜尋或其他重新定位在廣告插播中途結束，或略過廣告插播，則會影響播放行為。
+   * 您只能搜尋資產的可搜尋期間。 對於VOD，即從0到資產的持續時間。
 
-1. 對於在上述範例中建立的搜尋列，請接聽 `setPositionChangeListener()` 若要檢視使用者何時拖曳：
+1. 對於在上述範例中建立的搜尋列，接聽 `setPositionChangeListener()` 若要檢視使用者何時拖曳：
 
    ```js
    seekBar.setPositionChangeListener(function (pos) { 

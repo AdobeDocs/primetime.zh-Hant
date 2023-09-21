@@ -2,8 +2,7 @@
 title: 使用Java API建立原則
 description: 使用Java API建立原則
 copied-description: true
-exl-id: 60e26fd6-1b72-413c-a35b-b317389cd9ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 若要使用Java API建立原則，請執行以下步驟：
 
 1. 設定您的開發環境，並包含中提到的所有JAR檔案 [設定開發環境](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) 在您的專案中。
-1. 建立 `com.adobe.flashaccess.sdk.policy.Policy` 物件並指定其屬性，例如許可權、授權快取持續期間和原則結束日期。
+1. 建立 `com.adobe.flashaccess.sdk.policy.Policy` 物件並指定其屬性，例如許可權、授權快取持續時間和原則結束日期。
 
    ```java
      // Create a new Policy object.  
@@ -65,4 +64,4 @@ ht-degree: 0%
      out.close();
    ```
 
-如需此範常式式碼的完整來源，請參閱 *com.adobe.flashaccess.samples.policy.CreatePolicy* （在參考實作命令列工具中）» [!DNL samples]「目錄。
+如需此範常式式碼的完整原始碼，請參閱 *com.adobe.flashaccess.samples.policy.CreatePolicy* 在參考實作命令列工具中» [!DNL samples]「目錄。

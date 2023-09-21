@@ -2,8 +2,7 @@
 title: 為伺服器屬性檔案準備密碼
 description: 為伺服器屬性檔案準備密碼
 copied-description: true
-exl-id: b613d43d-17ec-44e9-bd14-81f9bb9a7f62
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 參考實作提供 `ScrambleUtil.class`，確保認證密碼安全的類別。
 
-在密碼加入之前，請使用此工具先加密密碼 [!DNL flashaccess-refimpl.properties] 檔案。
+在您將此密碼加入之前，請使用這個工具先加密密碼 [!DNL flashaccess-refimpl.properties] 檔案。
 
 若要執行工具，您可以使用Ant指令碼或Java。
 
@@ -22,4 +21,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->密碼已使用 `ScrambleUtil.class` 參考實作中提供的資料無法搭配Primetime DRM伺服器使用，因此無法進行受保護的串流。
+>已使用編碼的密碼 `ScrambleUtil.class` 參考實作中提供的資料無法搭配Primetime DRM Server for Protected Streaming使用。

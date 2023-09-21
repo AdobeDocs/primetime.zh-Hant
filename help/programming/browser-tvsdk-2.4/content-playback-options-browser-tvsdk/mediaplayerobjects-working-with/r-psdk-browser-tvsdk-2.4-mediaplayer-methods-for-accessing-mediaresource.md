@@ -1,8 +1,7 @@
 ---
 description: MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代表之內容資料流的相關資訊。
 title: 用於存取MediaResource資訊的MediaPlayer屬性
-exl-id: 183a2992-06f2-4b1d-84c3-a6c2a7223e32
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -24,13 +23,13 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> 即時資料流 </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
-   <td colname="3"> 如果資料流為即時，則為True；如果為VOD，則為False。 </td> 
+   <td colname="2"> <span class="codeph"> 即時 </span> </td> 
+   <td colname="3"> 如果資料流為即時，則為True；如果為VOD，則為false。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> 隱藏式字幕 </td> 
    <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
-   <td colname="3"> 如果隱藏式字幕追蹤可供使用，則為True。 </td> 
+   <td colname="3"> 如果可以使用隱藏式字幕追蹤，則為True。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
@@ -38,7 +37,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> 擷取隱藏式字幕追蹤，該追蹤已選取 <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="3"> 擷取所選用的隱藏式字幕追蹤 <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> 替代音訊 </td> 
@@ -60,7 +59,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> 定時中繼資料 </td> 
    <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
-   <td colname="3"> 如果串流有關聯的計時中繼資料，則為True。 </td> 
+   <td colname="3"> 如果資料流有關聯的定時中繼資料，則為True。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
@@ -76,7 +75,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 媒體資源 </td> 
-   <td colname="2"> <span class="codeph"> 資源 </span> </td> 
+   <td colname="2"> <span class="codeph"> resource </span> </td> 
    <td colname="3"> 傳回與此專案關聯的媒體資源。 </td> 
   </tr> 
  </tbody> 

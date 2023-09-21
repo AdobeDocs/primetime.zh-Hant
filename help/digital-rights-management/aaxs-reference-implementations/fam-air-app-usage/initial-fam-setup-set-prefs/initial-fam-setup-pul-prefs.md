@@ -2,8 +2,7 @@
 title: 原則更新清單喜好設定
 description: 原則更新清單喜好設定
 copied-description: true
-exl-id: bca45ad8-8cc2-48cb-8d83-0fb77da11489
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
@@ -16,6 +15,6 @@ ht-degree: 0%
 
 | 偏好設定 | 說明 |
 |---|---|
-| 授權伺服器認證 | 授權伺服器認證，由Adobe簽發。 此認證用於簽署原則更新清單。 |
+| 授權伺服器認證 | 由Adobe所簽發的License Server認證。 此認證用於簽署原則更新清單。 |
 | 檔案名稱 | PKCS#12 ( [!DNL .pfx])檔案，包含憑證和私密金鑰。 檔案必須位於 [!DNL Resource] 目錄。 |
 | 檔案密碼 | 的密碼 [!DNL .pfx] 檔案 |

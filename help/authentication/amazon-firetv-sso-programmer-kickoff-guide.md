@@ -1,8 +1,7 @@
 ---
 title: Amazon fireTV SSO — 程式設計師啟動指南
 description: Amazon fireTV SSO — 程式設計師啟動指南
-exl-id: cf9ba614-57ad-46c3-b154-34204b38742d
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%

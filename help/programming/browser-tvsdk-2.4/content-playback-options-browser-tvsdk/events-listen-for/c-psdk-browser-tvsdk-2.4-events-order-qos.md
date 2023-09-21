@@ -1,8 +1,7 @@
 ---
-description: 瀏覽器TVSDK會傳送服務品質(QoS)事件，通知您的應用程式有可能會影響QoS統計資料計算的事件，例如緩衝和搜尋事件。
+description: 瀏覽器TVSDK會傳送服務品質(QoS)事件，通知您的應用程式有關可能影響QoS統計資料計算的事件，例如緩衝和搜尋事件。
 title: QoS事件
-exl-id: b0fab68e-ef0f-4812-b4ad-3f69dcdf2d9e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # QoS事件{#qos-events}
 
-瀏覽器TVSDK會傳送服務品質(QoS)事件，通知您的應用程式有可能會影響QoS統計資料計算的事件，例如緩衝和搜尋事件。
+瀏覽器TVSDK會傳送服務品質(QoS)事件，通知您的應用程式有關可能影響QoS統計資料計算的事件，例如緩衝和搜尋事件。
 
 若要接收所有QoS相關事件的通知，請建立 `AdobePSDK.QOSProvider` 並將MediaPlayer例項附加至此 `QOSProvider` 例項：
 

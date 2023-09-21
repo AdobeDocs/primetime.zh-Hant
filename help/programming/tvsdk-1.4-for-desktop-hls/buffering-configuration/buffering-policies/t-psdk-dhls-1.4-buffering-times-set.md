@@ -1,8 +1,7 @@
 ---
 description: MediaPlayer提供方法來設定及取得初始緩衝時間和播放緩衝時間。
 title: 設定緩衝時間
-exl-id: d2fbae05-2190-4acc-ae63-561db030608a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -15,25 +14,25 @@ MediaPlayer提供方法來設定及取得初始緩衝時間和播放緩衝時間
 
 >[!TIP]
 >
->如果您在開始播放之前未設定緩衝控制引數，媒體播放器預設為初始緩衝時間為2秒，持續播放緩衝時間則為30秒。
+>如果您在開始播放之前未設定緩衝控制引數，媒體播放器預設為初始緩衝為2秒，持續播放緩衝時間則為30秒。
 
 1. 設定 `BufferControlParameters` 物件，封裝初始緩衝時間和播放緩衝時間控制引數：
 
-       此類別提供下列Factory方法：
+       此類別提供下列原廠方法：
    
-   * 若要將初始緩衝時間設定為等於播放緩衝時間：
+   * 若要將初始緩衝時間設為等於播放緩衝時間：
 
-      ```
-      createSimple(bufferTime:uint):BufferControlParameters
-      ```
+     ```
+     createSimple(bufferTime:uint):BufferControlParameters
+     ```
 
    * 若要同時設定初始和播放緩衝時間：
 
-      ```
-      createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
-      ```
+     ```
+     createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
+     ```
 
-      這些方法會擲回 `IllegalArgumentException` 如果引數無效，例如：
+     這些方法會擲回 `IllegalArgumentException` 如果引數無效，例如：
 
    * 初始緩衝時間小於零。
    * 初始緩衝時間大於緩衝時間。
@@ -52,7 +51,7 @@ MediaPlayer提供方法來設定及取得初始緩衝時間和播放緩衝時間
 
 <!--<a id="example_B5C5004188574D8D8AB8525742767280"></a>-->
 
-例如，若要將初始緩衝設定為2秒，並將播放緩衝時間設定為30秒，請執行下列動作：
+例如，若要將初始緩衝設定為2秒，播放緩衝時間設定為30秒：
 
 ```
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 

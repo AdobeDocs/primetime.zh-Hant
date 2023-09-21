@@ -1,8 +1,7 @@
 ---
 title: Android SDK API參考
 description: Android SDK API參考
-exl-id: f932e9a1-2dbe-4e35-bd60-a4737407942d
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4517'
 ht-degree: 0%

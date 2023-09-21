@@ -1,8 +1,7 @@
 ---
 description: 為了讓廣告解析程式運作，廣告提供者(例如Adobe Primetime ad decisioning)需要設定值來啟用您與提供者的連線。
 title: 廣告插入中繼資料
-exl-id: 83c0fd25-dbc3-4529-b81a-16ff78012c80
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
@@ -17,17 +16,17 @@ TVSDK包含Primetime廣告決策程式庫。 若要讓您的內容包含來自Pr
 
 * `mediaID`，此為要播放之視訊的唯一識別碼。
 
-   發佈者在將視訊內容和廣告資訊提交至Adobe Primetime廣告決策伺服器時，會指派mediaID。 Primetime廣告決策會使用此ID從伺服器擷取視訊的相關廣告資訊。
+  發佈者會在將視訊內容和廣告資訊提交至Adobe Primetime廣告決策伺服器時，指派mediaID。 Primetime廣告決策會使用此ID從伺服器擷取視訊的相關廣告資訊。
 
 * 您的 `zoneID`由Adobe指派，可識別您的公司或網站。
 * 您指派的廣告伺服器的網域。
 * 其他目標定位引數。
 
-   您可以根據自己的需求和廣告提供者的需求包含這些引數。
+  您可以根據自己的需求和廣告提供者的需求包含這些引數。
 
 ## 設定廣告插入中繼資料 {#set-up-ad-insertion-metadata}
 
-使用helper類別AuditudeSettings （這會擴充MetadataNode類別）來設定Adobe Primetime ad decisioning中繼資料。
+使用協助程式類別AuditudeSettings （會擴充MetadataNode類別）來設定Adobe Primetime廣告決策中繼資料。
 
 >[!TIP]
 >
@@ -41,7 +40,7 @@ TVSDK包含Primetime廣告決策程式庫。 若要讓您的內容包含來自Pr
    var auditudeSettings:AuditudeSettings = new AuditudeSettings();
    ```
 
-1. 設定Adobe Primetime ad decisioning mediaID、zoneID、網域，以及選用的鎖定目標引數。
+1. 設定Adobe Primetime ad decisioning mediaID、zoneID、網域，以及選用的目標定位引數。
 
    ```
    auditudeSettings.zoneId = "yourZoneID"; 
@@ -54,7 +53,7 @@ TVSDK包含Primetime廣告決策程式庫。 若要讓您的內容包含來自Pr
 
    >[!TIP]
    >
-   >媒體ID會由TVSDK作為字串使用，然後轉換為一個md5值，並用於 `u` Primetime廣告決策URL請求中的值。 例如：
+   >媒體ID會由TVSDK以字串形式使用，且會轉換為md5值，並用於 `u` Primetime廣告決策URL請求中的值。 例如：
    >
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
@@ -70,11 +69,11 @@ TVSDK包含Primetime廣告決策程式庫。 若要讓您的內容包含來自Pr
          mediaResourceMetadata);
    ```
 
-1. 載入 `MediaResource` 物件穿過 `MediaPlayer.replaceCurrentResource` 方法。
+1. 載入 `MediaResource` 物件，透過 `MediaPlayer.replaceCurrentResource` 方法。
 
    此 `MediaPlayer` 開始載入及處理媒體資料流資訊清單。
 
-1. （選用）查詢 `MediaPlayerItem` 執行個體以檢視資料流是否為即時，不論其是否有替代音軌，或資料流是否受到保護。
+1. （選用）查詢 `MediaPlayerItem` 執行個體以檢視資料流是否為即時，無論是否有替代音軌，或資料流是否受到保護。
 
    此資訊可協助您為播放準備UI。 例如，如果您知道有兩個音軌，您可以包含可在這些音軌之間切換的UI控制項。
 

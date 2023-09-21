@@ -1,8 +1,7 @@
 ---
 title: 附錄B「偵錯技巧」
 description: 附錄B「偵錯技巧」
-exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: 您可以實作介面PlacementOpportunityDetector來實作自己的機會偵測器。
 title: 實作自訂機會偵測器
-exl-id: d78949a0-2c76-4976-9358-05f3db86781e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -34,16 +33,16 @@ ht-degree: 0%
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. 建立可延伸的自訂機會偵測器類別 `PlacementOpportunityDetector` 類別。
+1. 建立自訂機會偵測器類別，以擴充 `PlacementOpportunityDetector` 類別。
    1. 在自訂機會偵測器中，覆寫此函式：
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      此 `timedMetadataList` 包含可用清單 `TimedMetadata`，已排序。 中繼資料包含要傳送給廣告提供者的目標定位引數和自訂引數。
+      此 `timedMetadataList` 包含可用清單 `TimedMetadata`，已排序。 中繼資料包含目標定位引數以及要傳送給廣告提供者的自訂引數。
 
-   1. 針對每個 `TimedMetadata`，建立 `List<PlacementOpportunity>`. 清單可以是空的，但不可以是Null。 `PlacementOpportunity` 應該具有下列屬性：
+   1. 針對每個 `TimedMetadata`，建立 `List<PlacementOpportunity>`. 清單可為空白，但不可以是Null。 `PlacementOpportunity` 應該具有下列屬性：
 
       ```java
       PlacementOpportunity( 
@@ -53,7 +52,7 @@ ht-degree: 0%
       )
       ```
 
-   1. 為所有偵測到的定時中繼資料物件建立位置機會後，只要傳回 `PlacementOpportunity` 清單。
+   1. 在為所有偵測到的定時中繼資料物件建立位置機會後，只要傳回 `PlacementOpportunity` 清單。
 
 這是自訂位置機會偵測器的範例：
 

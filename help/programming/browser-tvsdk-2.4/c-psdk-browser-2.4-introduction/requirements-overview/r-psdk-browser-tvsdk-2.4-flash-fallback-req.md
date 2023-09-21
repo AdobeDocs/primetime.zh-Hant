@@ -1,8 +1,7 @@
 ---
 description: 若要使用Flash Player，請確保您的環境符合必要的需求。
 title: Flash Player需求
-exl-id: 26531d0d-d34c-4134-8a05-0604f00a3107
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
@@ -18,7 +17,7 @@ ht-degree: 0%
 以下是Flash Player的需求：
 
 * 播放 `Primetime.js`，至少安裝Flash Player版本23。
-* 若要系統提示您提供Flash Player版本23或更新版本的更新，請至少安裝Flash Player版本11.0.0。
+* 若要提示更新Flash Player版本23或更新版本，請至少安裝Flash Player版本11.0.0。
 
 ## 封裝需求 {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
@@ -27,7 +26,7 @@ ht-degree: 0%
 * 處理瀏覽器TVSDK API的主要應用程式SWF檔案。
 * 此 `playerProductInstall.swf` 處理Flash Player安裝和更新的SWF檔案。
 
-此外，Flash中的視訊播放需要授權Token檔案，該檔案可能是SWF或 `.DAT` 檔案。 可使用AdobePSDK API指定SWF檔案的路徑、授權權杖檔案以及權杖檔案名稱和型別。
+此外，Flash中的視訊播放需要授權權杖檔案，該檔案可能是SWF或 `.DAT` 檔案。 SWF檔案的路徑、授權權杖檔案以及權杖檔案名稱和型別可以使用AdobePSDK API來指定。
 
 例如：
 

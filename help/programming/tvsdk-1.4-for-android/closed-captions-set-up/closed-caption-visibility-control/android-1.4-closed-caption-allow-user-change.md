@@ -1,8 +1,7 @@
 ---
-description: 以下是如何建立可讓使用者選取隱藏式字幕追蹤的按鈕的範例。
-title: 允許使用者變更註解追蹤的範例
-exl-id: d7ba19ac-cbfa-4fb4-a92d-21a3d0f7c23f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: 以下是如何建立按鈕以讓使用者選取隱藏式字幕追蹤的範例。
+title: 允許使用者變更標題追蹤的範例
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 範例：允許使用者變更註解追蹤{#example-allow-users-to-change-the-caption-track}
 
-以下是如何建立可讓使用者選取隱藏式字幕追蹤的按鈕的範例。
+以下是如何建立按鈕以讓使用者選取隱藏式字幕追蹤的範例。
 
 1. 建立簡單按鈕以變更隱藏式字幕追蹤。
 
@@ -27,7 +26,7 @@ ht-degree: 0%
      android:text="CC" /> 
    ```
 
-1. 將可用的隱藏式字幕曲目清單轉換為字串陣列。 具有活動的隱藏式字幕追蹤（即TVSDK已探索資料的管道）會適當地標示：
+1. 將可用的隱藏式字幕曲目清單轉換為字串陣列。 隱藏式字幕追蹤具有活動（即TVSDK已探索資料的管道），並會適當地標示：
 
    ```java
    /** 
@@ -53,7 +52,7 @@ ht-degree: 0%
    } 
    ```
 
-1. 當使用者按一下按鈕時，顯示列出所有預設CC磁軌的對話方塊。
+1. 當使用者按一下按鈕時，顯示列出所有預設CC軌道的對話方塊。
 
    ```java
       public void selectClosedCaptioningClick(View view) { 

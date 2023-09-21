@@ -1,8 +1,7 @@
 ---
-description: 您可以新增暫停和播放按鈕來暫停或播放視訊。
+description: 您可以新增暫停和播放按鈕，以暫停或播放視訊。
 title: 播放和暫停視訊
-exl-id: cb13ae62-f96b-4329-841f-aba885725d70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 播放和暫停視訊 {#play-and-pause-a-video}
 
-您可以新增暫停和播放按鈕來暫停或播放視訊。
+您可以新增暫停和播放按鈕，以暫停或播放視訊。
 
 1. 若要建立暫停或播放按鈕：
    1. 等候播放器至少處於準備狀態。

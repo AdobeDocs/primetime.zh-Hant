@@ -1,8 +1,7 @@
 ---
 description: 您可以使用MediaPlayerItemConfig類別在資料流中設定自訂標籤名稱。
 title: 標籤的設定類別方法
-exl-id: 864d5c35-2b26-447b-8134-414e82096f18
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
@@ -66,6 +65,6 @@ var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 
 * 自訂標籤名稱必須包含 `#` 前置詞。
 
-   例如， `#EXT-X-ASSET` 是正確的自訂標籤名稱，但 `EXT-X-ASSET` 不正確。
+  例如， `#EXT-X-ASSET` 是正確的自訂標籤名稱，但 `EXT-X-ASSET` 不正確。
 
 * 媒體資料流載入後，您就無法變更設定。

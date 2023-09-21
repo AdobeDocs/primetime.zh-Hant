@@ -1,8 +1,7 @@
 ---
 description: MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代表之內容資料流的相關資訊。
 title: 用於存取MediaResource資訊的MediaPlayer方法
-exl-id: 74e453d6-233e-4146-9f63-ab6919a4ba39
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
@@ -27,7 +26,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get isLive()：Boolean； </span> </td> 
-   <td colname="3"> <p>如果資料流為即時，則為True；如果為VOD，則為False。 </p> </td> 
+   <td colname="3"> <p>如果資料流為即時，則為True；如果為VOD，則為false。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>受DRM保護</b> </td> 
@@ -35,7 +34,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get isProtected()：Boolean； </span> </td> 
-   <td colname="3"> <p>如果資料流受到DRM保護，則為True。 </p> </td> 
+   <td colname="3"> <p>如果資料流受DRM保護，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式取得drmMetadataInfos()： Vector。&lt;drmmetadatainfo&gt;； </span> </td> 
@@ -47,7 +46,7 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get hasClosedCaptions()：Boolean； </span> </td> 
-   <td colname="3"> <p>如果隱藏式字幕追蹤可供使用，則為True。 </p> </td> 
+   <td colname="3"> <p>如果可以使用隱藏式字幕追蹤，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get closedCaptionsTracks()：Vector。&lt;closedcaptionstrack&gt;； </span> </td> 
@@ -79,11 +78,11 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式取得selectedAudioTrack()：AudioTrack； </span> </td> 
-   <td colname="3"> <p>擷取選取的音軌，並附上 <span class="codeph"> selectAudioTrack </span>. </p> </td> 
+   <td colname="3"> <p>擷取選取的音軌 <span class="codeph"> selectAudioTrack </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectAudioTrack(audioTrack： AudioTrack ) </span> </td> 
-   <td colname="3"> <p>選取音軌作為目前的音軌。 </p> </td> 
+   <td colname="3"> <p>選取音訊曲目，做為目前的音訊曲目。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>定時中繼資料</b> </td> 
@@ -91,18 +90,18 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get hasTimedMetadata()：Boolean； </span> </td> 
-   <td colname="3"> <p>如果串流有關聯的計時中繼資料，則為True。 </p> </td> 
+   <td colname="3"> <p>如果資料流有關聯的定時中繼資料，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get timedMetadata()：Vector。&lt;timedmetadata&gt;； </span> </td> 
-   <td colname="3"> <p>提供與資料流相關聯的計時中繼資料物件清單。 </p> </td> 
+   <td colname="3"> <p>提供與資料流關聯的計時中繼資料物件清單。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get isDynamic()：Boolean； </span> </td> 
    <td colname="3"> <p>如果資料流是多位元速率(MBR)資料流，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> 函式取得profiles()：Vector。&lt;profile&gt;； </span> </td> 
+   <td colname="2"> <span class="codeph"> 函式取得設定檔()：Vector。&lt;profile&gt;； </span> </td> 
    <td colname="3"> <p>提供相關位元速率設定檔的清單。 對於每個設定檔，您可以擷取其位元速率以及設定檔的高度和寬度。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -111,11 +110,11 @@ MediaPlayerItem類別中的方法可讓您取得由載入的MediaResource所代�
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get isTrickPlaySupported()：Boolean； </span> </td> 
-   <td colname="3"> <p>如果播放器支援快進、倒轉和恢復，則為True。 </p> </td> 
+   <td colname="3"> <p>如果播放器支援快進、倒帶和恢復，則為True。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> 函式get availablePlaybackRates()：Vector。&lt;Number&gt; </span> </td> 
-   <td colname="3"> <p>提供特技播放功能內容中的可用播放率清單。 </p> </td> 
+   <td colname="3"> <p>提供特技播放功能內容中的可用播放速率清單。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>媒體播放器 </b> </td> 

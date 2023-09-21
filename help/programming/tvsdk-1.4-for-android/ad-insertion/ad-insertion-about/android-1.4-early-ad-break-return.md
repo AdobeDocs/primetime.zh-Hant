@@ -1,23 +1,22 @@
 ---
-description: 對於直播串流廣告插入，您可能需要從廣告插播結束，然後播放插播中的所有廣告直到完成。
-title: 實施提早的廣告插播回報
-exl-id: 38386ab7-0e3b-4628-84eb-470d585eb929
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: 針對即時串流廣告插入，您可能需要從廣告插播結束，然後才會播放插播中的所有廣告直到結束。
+title: 實作提早的廣告插播回報
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
 
 ---
 
-# 實施提早的廣告插播回報 {#implement-an-early-ad-break-return}
+# 實作提早的廣告插播回報 {#implement-an-early-ad-break-return}
 
-對於直播串流廣告插入，您可能需要從廣告插播結束，然後播放插播中的所有廣告直到完成。
+針對即時串流廣告插入，您可能需要從廣告插播結束，然後才會播放插播中的所有廣告直到結束。
 
-例如，在廣告插播開始之前，某些體育賽事中的廣告插播持續時間可能並不知道。 TVSDK會提供預設持續時間，但如果遊戲在插播完成前繼續，則必須結束廣告插播。 另一個範例是即時資料流中廣告插播期間的緊急訊號。
+例如，某些體育活動中的廣告插播持續時間可能無法在插播開始前知道。 TVSDK提供預設持續時間，但如果遊戲在插播完成前繼續，則必須結束廣告插播。 另一個範例是即時資料流中廣告插播期間的緊急訊號。
 
-1. 訂閱剪接輸出/內嵌廣告標籤( `#EXT-X-CUE-OUT`， `#EXT-X-CUE-IN`、和 `#EXT-X-CUE`)。
+1. 訂閱剪下/插入廣告標籤( `#EXT-X-CUE-OUT`， `#EXT-X-CUE-IN`、和 `#EXT-X-CUE`)。
 
-   如需如何拼接/插入廣告標籤的詳細資訊，請參閱 [機會產生器和內容解析器](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md).
+   如需如何分割/嵌入廣告標籤的詳細資訊，請參閱 [機會產生器和內容解析器](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md).
 1. 使用自訂 `ContentFactory`.
 1. 在 `retrieveGenerators()`，使用 `SpliceInPlacementOpportunityGenerator`.
 

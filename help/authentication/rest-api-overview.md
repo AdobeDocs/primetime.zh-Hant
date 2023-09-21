@@ -1,8 +1,7 @@
 ---
 title: REST API總覽
 description: Rest API概觀
-exl-id: 5533d852-f644-417e-bf80-6f7aa1edd6b2
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 0%

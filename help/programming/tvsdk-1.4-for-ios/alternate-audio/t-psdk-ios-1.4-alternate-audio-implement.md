@@ -1,8 +1,7 @@
 ---
-description: 後期繫結音訊使用PTMediaPlayer來播放在M3U8 HLS播放清單中指定，並且可以包含數個替代音訊資料流的視訊。
+description: 後期繫結音訊使用PTMediaPlayer來播放在M3U8 HLS播放清單中指定，並且可以包含數個替代音訊串流的視訊。
 title: 存取替代音軌
-exl-id: f3ab9573-c189-4132-820d-0ce98ee170d1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -11,12 +10,12 @@ ht-degree: 0%
 
 # 存取替代音軌{#access-alternate-audio-tracks}
 
-後期繫結音訊使用PTMediaPlayer來播放在M3U8 HLS播放清單中指定，並且可以包含數個替代音訊資料流的視訊。
+後期繫結音訊使用PTMediaPlayer來播放在M3U8 HLS播放清單中指定，並且可以包含數個替代音訊串流的視訊。
 
 1. 等待MediaPlayer至少在 `PTMediaPlayerStatusReady` 狀態。
-1. 接聽此事件：
+1. 聆聽此事件：
 
-   通知 `PTMediaPlayerItemMediaSelectionOptionsAvailable`：音訊曲目的初始清單可供使用。
+   通知 `PTMediaPlayerItemMediaSelectionOptionsAvailable`：可使用音訊曲目的初始清單。
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 

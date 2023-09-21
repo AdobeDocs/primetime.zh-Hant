@@ -1,8 +1,7 @@
 ---
-description: Video Analytics Manager會公開這些類別，以便在您的播放器中實作視訊追蹤。
+description: Video Analytics Manager會公開這些類別，以便在播放器中實作視訊追蹤。
 title: 相關API檔案
-exl-id: ad806952-5f51-4f43-8ca3-cbd416789a43
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 相關API檔案 {#related-api-documentation}
 
-Video Analytics Manager會公開這些類別，以便在您的播放器中實作視訊追蹤。
+Video Analytics Manager會公開這些類別，以便在播放器中實作視訊追蹤。
 
 * [vamanager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/VAManager.html)
 * [VAManagerOn](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/VAManagerOn.html)

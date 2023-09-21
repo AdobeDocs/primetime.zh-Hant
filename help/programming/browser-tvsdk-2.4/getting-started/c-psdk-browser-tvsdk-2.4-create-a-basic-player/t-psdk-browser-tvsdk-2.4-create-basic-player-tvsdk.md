@@ -1,8 +1,7 @@
 ---
 description: 完成下列步驟，使用瀏覽器TVSDK建立基本播放器。
 title: 使用TVSDK建立基本播放器
-exl-id: ea7485e0-5d15-469b-b8b6-f9604d283492
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -14,8 +13,8 @@ ht-degree: 0%
 完成下列步驟，使用瀏覽器TVSDK建立基本播放器。
 
 1. 建立新目錄，您可在其中下載瀏覽器TVSDK的壓縮檔案。
-1. 從Zendesk下載瀏覽器TVSDK、解壓縮檔案，並將frameworks資料夾放在新目錄中。
-1. 使用為程式碼建立簡單的HTML樣板 `div` 在裡面。
+1. 從Zendesk下載瀏覽器TVSDK，解壓縮檔案，並將frameworks資料夾放在新目錄中。
+1. 使用為程式碼建立簡單的HTML範本 `div` 在其中。
 1. 將此樣板放入您在步驟1中建立之目錄的HTML檔案中。
 
    ```
@@ -32,7 +31,7 @@ ht-degree: 0%
    </html>
    ```
 
-1. 在head區段中新增瀏覽器TVSDK程式庫。
+1. 在Head區段中新增瀏覽器TVSDK程式庫。
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -164,7 +163,7 @@ ht-degree: 0%
     break;
    ```
 
-1. 在播放器處於「已準備」狀態後，呼叫 `play`.
+1. 在播放器處於準備狀態後，呼叫 `play`.
 
    ```js
    case PREPARED: 

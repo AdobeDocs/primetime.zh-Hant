@@ -1,8 +1,7 @@
 ---
-description: 使用協助程式類別AuditudeSettings來設定Adobe Primetime ad decisioning中繼資料。
+description: 使用helper類別AuditudeSettings設定Adobe Primetime廣告決策中繼資料。
 title: 設定廣告插入中繼資料
-exl-id: 03b2237b-6b3b-46cf-bc0b-691513033463
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -11,11 +10,11 @@ ht-degree: 0%
 
 # 設定廣告插入中繼資料{#set-up-ad-insertion-metadata}
 
-使用協助程式類別AuditudeSettings來設定Adobe Primetime ad decisioning中繼資料。
+使用helper類別AuditudeSettings設定Adobe Primetime廣告決策中繼資料。
 
 >[!TIP]
 >
->Adobe Primetime ad decisioning先前稱為Auditude 。
+>Adobe Primetime ad decisioning先前稱為Auditude。
 
 1. 建置 `AuditudeSettings` 執行個體。
 
@@ -23,7 +22,7 @@ ht-degree: 0%
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. 設定Adobe Primetime ad decisioning mediaID、zoneID、網域，以及選用的鎖定目標引數。
+1. 設定Adobe Primetime ad decisioning mediaID、zoneID、網域，以及選用的目標定位引數。
 
    ```js
    auditudeSettings.domain = "yourdomain"; 
@@ -40,11 +39,11 @@ ht-degree: 0%
          auditudeSettings);
    ```
 
-1. 載入 `MediaResource` 物件穿過 `MediaPlayer.replaceCurrentResource(resource)` 方法。
+1. 載入 `MediaResource` 物件，透過 `MediaPlayer.replaceCurrentResource(resource)` 方法。
 
    此 `MediaPlayer` 開始載入及處理媒體資料流資訊清單。
 
-1. 當 `MediaPlayer` 轉換到INITIALIZED狀態，以的格式取得媒體資料流特性 `MediaPlayerItem` 執行個體透過 `MediaPlayer.CurrentItem` 屬性。
+1. 當 `MediaPlayer` 轉換為INITIALIZED狀態，以格式取得媒體資料流特性 `MediaPlayerItem` 執行個體透過 `MediaPlayer.CurrentItem` 屬性。
 1. （選用）查詢 `MediaPlayerItem` 執行個體以檢視串流是否為即時，無論是否有替代音軌。
 
    此資訊可協助您為播放準備UI。 例如，如果您知道有兩個音軌，您可以包含可在這些音軌之間切換的UI控制項。

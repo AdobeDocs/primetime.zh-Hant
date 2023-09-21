@@ -1,17 +1,16 @@
 ---
-description: 這些類別有助於解析內容（例如廣告），以便放置在時間軸上。
-title: 時間表解析程式類別
-exl-id: 8135214b-5c0c-48ac-b1a4-21825e10f293
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+description: 這些類別可協助解析內容（例如廣告），以放置在時間軸上。
+title: 時間軸解析器類別
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
-# 時間表解析程式類別{#timeline-resolvers-classes}
+# 時間軸解析器類別{#timeline-resolvers-classes}
 
-這些類別有助於解析內容（例如廣告），以便放置在時間軸上。
+這些類別可協助解析內容（例如廣告），以放置在時間軸上。
 
 封裝： [com.adobe.mediacore.timeline.resolvers](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/package-detail.html)
 

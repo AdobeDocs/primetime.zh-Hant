@@ -1,8 +1,7 @@
 ---
 title: JavaScript SDK總覽
 description: JavaScript SDK總覽
-exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%

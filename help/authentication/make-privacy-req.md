@@ -1,8 +1,7 @@
 ---
 title: 如何提出隱私權請求
 description: 如何提出隱私權請求
-exl-id: abb21306-98d6-4899-914a-bdfa85cbd204
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -13,15 +12,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
 ## 識別碼和名稱空間 {#identifier-namespace}
 
 傳送存取或刪除隱私權請求時，客戶應用程式必須包含下列識別碼：
 
 * **mvpdID** - MVPD的唯一識別碼。
-* **userID**  — 唯一識別程式設計師應用程式的使用者，但源自MVPD。 請參閱瞭解程式設計師概觀中的使用者ID 。
-* **IMSOrgID** - Adobe Experience Cloud Identity Management服務組織ID，可在Adobe Experience Cloud中唯一識別客戶
+* **userID**  — 可唯一識別程式設計師應用程式的使用者，但源自MVPD。 請參閱程式設計師概觀中的瞭解使用者ID 。
+* **Imsrogid** - Adobe Experience Cloud Identity Management服務組織ID，可在Adobe Experience Cloud中唯一識別客戶
 
 
 請檢查下列範例：
@@ -38,16 +37,16 @@ ht-degree: 0%
 >
 >使用者必須經過驗證，才能產生Primetime驗證的隱私權請求。 否則，程式設計師必須找到其他方法來擷取MVPD userID。
 
-## 請求型別 {#req-type}
+## 要求型別 {#req-type}
 
-Primetime驗證支援存取和刪除請求。
+Primetime驗證支援存取和刪除要求。
 
 ### 存取 {#access-req}
 
 針對存取要求：
 
-我們將提供包含為該資料主體建立的驗證和授權請求總數摘要的JSON檔案。
-所有這些事件都是根據客戶篩選的。
+我們會提供JSON檔案，其中包含為該資料主體建立的驗證和授權要求總數摘要。
+所有這些事件都是按照客戶篩選的。
 
 
 **要求範例**
@@ -162,10 +161,10 @@ Primetime驗證支援存取和刪除請求。
 
 **回應範例**
 
-對於Delete請求：
+對於刪除請求：
 
 * 我們只分享已移除資料的回條，而非包含所有已移除資料的彙總檔案。
-* 回應中包含的回條包含該資料主體找到之驗證和授權Token總數的摘要。
+* 回應中包含的回條包含該資料主體找到之驗證和授權權杖總數的摘要。
 
 ```JSON
 {
@@ -219,20 +218,20 @@ Primetime驗證支援存取和刪除請求。
 
 ## 如何觸發請求 {#trigger-req}
 
-客戶若要傳送隱私權請求給Adobe，有2個選項可選：
+客戶若要傳送隱私權請求給Adobe，有2個選項可以選擇：
 
 * **手動**  — 使用 [Privacy Service使用者介面](#privacy-service-ui)
-* **自動**  — 使用 [PRIVACY SERVICEAPI ](#privacy-service-api)
+* **自動**  — 使用 [PRIVACY SERVICE API](#privacy-service-api)
 
 ### 使用Privacy ServiceUI {#privacy-service-ui}
 
-A [完成教學課程](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) 您可透過Privacy Service服務線上取得如何存取及使用Adobe I/O使用者介面的資訊。 此外，客戶可以使用此連結來存取隱私權法規的影片和文章庫。 按一下Adobe Experience Cloud和GDPR功能表。 本影片將開啟許多影片 — 「GDPR UI使用說明」說明如何使用。
+A [完成教學課程](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) 您可透過Privacy Service服務線上取得如何存取及使用Adobe I/O使用者介面的資訊。 此外，客戶可以使用此連結來存取隱私權法規的影片和文章庫。 按一下Adobe Experience Cloud和GDPR功能表。 以下影片將說明其使用方式：「GDPR UI使用說明」。
 
-在UI中，客戶需要載入他們自己的IMSOrgID和包含每個產品的GDPR請求詳細資料的JSON。
+在UI中，客戶需要載入自己的IMSOrgID以及包含每個產品之GDPR要求詳細資料的JSON。
 
-### 使用Privacy Service API {#privacy-service-api}
+### 藉由使用Privacy Service API {#privacy-service-api}
 
-Adobe Experience Platform Privacy Service以集中方式提供存取/刪除私人資料請求的常見便利，以及選擇退出銷售的請求。
+Adobe Experience Platform Privacy Service可針對私人資料的存取/刪除請求和選擇退出銷售請求，提供通用、集中的簡化操作。
 
 此 **Privacy Service API檔案** 深入涵蓋Adobe客戶如何與AdobeAPI整合。
 
@@ -253,7 +252,7 @@ Adobe Experience Platform Privacy Service以集中方式提供存取/刪除私�
 **必要的標頭：**
 
 * 所有呼叫都需要標題 `Authorization`， `x-gw-ims-org-id`、和 `x-api-key`. 如需如何取得這些值的詳細資訊，請參閱 **驗證教學課程**.
-* 要求內文中具有裝載的所有要求(例如POST、PUT和PATCH呼叫)都必須包含標頭 `Content-Type` 具有值 `application/json`.
+* 所有在請求內文中具有裝載的請求(例如POST、PUT和PATCH呼叫)都必須包含標題 `Content-Type` ，值為 `application/json`.
 
 <!--
 

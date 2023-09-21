@@ -1,8 +1,7 @@
 ---
-description: 每次在媒體簡報說明(MPD)檔案中遇到訂閱的標籤時，瀏覽器TVSDK都會準備這些物件的TimedMetadata物件。
+description: 每次在媒體簡報說明(MPD)檔案中遇到訂閱的標籤時，瀏覽器TVSDK都會準備TimedMetadata物件。
 title: 訂閱自訂廣告標籤
-exl-id: d4b9ec3a-9c3f-4adf-984e-b45862e97140
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 訂閱自訂廣告標籤{#subscribe-to-custom-ad-tags}
 
-每次在媒體簡報說明(MPD)檔案中遇到訂閱的標籤時，瀏覽器TVSDK都會準備這些物件的TimedMetadata物件。
+每次在媒體簡報說明(MPD)檔案中遇到訂閱的標籤時，瀏覽器TVSDK都會準備TimedMetadata物件。
 
 您必須在播放開始前訂閱標籤。
 若要訂閱標籤，請將包含自訂標簽名稱的向量設定為 `subscribedTags` 屬性。 如果您也需要變更預設機會產生器使用的廣告標籤，請將包含自訂廣告標簽名稱的向量設定為 `adTags` 屬性。

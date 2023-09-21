@@ -1,8 +1,7 @@
 ---
 title: iOS/tvOS API預先授權
 description: iOS/tvOS API預先授權
-exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%

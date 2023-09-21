@@ -1,8 +1,7 @@
 ---
 title: 註冊頁面
 description: 註冊頁面
-exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: 58657dda8528e9f33b3cee4a84904cc5ae28d81f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%

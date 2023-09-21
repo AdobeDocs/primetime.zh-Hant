@@ -1,8 +1,7 @@
 ---
 description: 若要升級支援3.0版Reference Implementation License Server或Watched Folder Packager的伺服器，您必須以Adobe Primetime DRM Reference Implementation Server隨附的檔案，取代已部署在應用程式伺服器上的.war檔案。
 title: 升級現有部署
-exl-id: 83edaf0a-e527-470d-8b8d-23e5ba86b039
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 若要升級支援3.0版Reference Implementation License Server或Watched Folder Packager的伺服器，您必須以Adobe Primetime DRM Reference Implementation Server隨附的檔案，取代已部署在應用程式伺服器上的.war檔案。
 
-若要使用Reference Implementation License Server進行網域註冊，則需要幾個新的資料庫表格。 您需要重新建立整個參考實作資料庫並執行 `CreateSampleDB.sql`.
+若要使用參照實作授權伺服器的網域註冊，則需要幾個新的資料庫表格。 您需要重新建立整個參考實作資料庫並執行 `CreateSampleDB.sql`.
 
 若要保留資料庫記錄並新增表格：
 

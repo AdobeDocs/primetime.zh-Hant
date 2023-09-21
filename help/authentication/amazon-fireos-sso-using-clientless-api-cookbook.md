@@ -1,8 +1,7 @@
 ---
 title: 使用無使用者端API逐步指南的Amazon FireOS SSO
 description: 使用無使用者端API逐步指南的Amazon FireOS SSO
-exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%

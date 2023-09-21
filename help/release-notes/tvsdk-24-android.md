@@ -1,10 +1,9 @@
 ---
 title: Android適用的TVSDK 2.4.1發行說明
-description: Android適用的TVSDK 2.4.1發行說明說明TVSDK Android 2.4.1中的新功能和支援功能，以及已知問題和限制。
+description: Android適用的TVSDK 2.4.1發行說明說明，說明TVSDK Android 2.4.1中的新功能和支援功能，以及已知問題和限制。
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%
@@ -13,48 +12,48 @@ ht-degree: 0%
 
 # Android適用的TVSDK 2.4.1發行說明 {#tvsdk-for-android-release-notes}
 
-Android適用的TVSDK 2.4.1發行說明說明TVSDK Android 2.4.1中的新功能和支援功能，以及已知問題和限制。
+Android適用的TVSDK 2.4.1發行說明說明，說明TVSDK Android 2.4.1中的新功能和支援功能，以及已知問題和限制。
 
 ## TVSDK Android 2.4.1 {#tvsdk-android}
 
 Adobe即將發行適用於Android的TVSDK 2.4.1。
 
-若要使用此版本的TVSDK，請確保您的系統符合以下說明的要求： [系統需求](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_2.5.pdf#page=6).
+若要使用此版本的TVSDK，請確保您的系統符合上所述的要求。 [系統需求](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_2.5.pdf#page=6).
 
 您可以在這裡找到檔案：
 
 ·線上說明系統TVSDK 2.4 for Android說明
 
-· [Android Java API適用的Javadocs TVSDK 2.4](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
+· [適用於Android Java API的Javadocs TVSDK 2.4](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
 
 Javadocs是最終權威，因為它們是直接從TVSDK原始程式碼自動產生的。
 
 · [Android C++ API適用的C++ API檔案TVSDK 2.4](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
 
-每個Java類別都有對應的C++類別，且C++檔案包含的說明資料比Javadocs更多，因此請參閱C++檔案，深入瞭解Java API。
+每個Java類別都有對應的C++類別，且C++檔案包含的說明資料比Javadocs更多，因此請參閱C++檔案以深入瞭解Java API。
 
 ·移轉指南([Android適用的TVSDK 2.4移轉指南](../migration-guides/tvsdk-14-25-android.md))
 
-本指南說明您需要修改哪些內容，才能將以TVSDK 1.4為基礎的應用程式移轉至以TVSDK 2.4為基礎的應用程式。
+本指南說明您將根據TVSDK 1.4的應用程式移轉至根據TVSDK 2.4的應用程式時需要修改的內容。
 
 ## 新功能 {#new-features}
 
 相較於舊版，適用於Android的TVSDK 2.4.1提供許多效能改善專案。 提供高品質的觀賞體驗。
 
-此版本包含2.4版和2.4.1版的所有功能，且沒有已棄用的功能。
+此版本包含2.4和2.4.1版的所有功能，不建議使用任何功能。
 
 以下是2.4.1版的主要新功能：
 
 * HLS 4版功能
 
    * **視訊播放** （播放、暫停、搜尋）搭配播放器控制，適用於即時、線性和VOD資料流。
-   * **隱藏式字幕。** TVSDK可以顯示608/708隱藏式字幕，其中包含字型、字型大小、顏色和背景選擇。 它也可以支援有彙總字幕的視訊，並在語言曲目之間切換（如果有的話）。
-   * **特技播放模式** 支援使用I-Frame的HLS資料流的快速前進和倒帶。 內容上的所有視訊播放控制項都可運作。 慢動作（前進）適用於速率介於0和1之間的外部視訊播放模式。
-   * **最適化位元速率(ABR)** 可讓播放器根據網路和其他條件，動態選取要播放的相同內容資料流的多個版本。 您可以動態設定引數或在資訊清單檔案中設定引數，以在積極主動、溫和和保守的選取原則中選取。
+   * **隱藏式字幕。** TVSDK可以顯示608/708隱藏式字幕，其中包含字型、字型大小、顏色和背景選擇。 它也可以支援有統計字幕的視訊，並在語言曲目之間切換（如果有的話）。
+   * **特技播放模式** 支援使用I-Frame的HLS資料流快速前進和倒帶。 內容上的所有視訊播放控制項都可運作。 低速動作（前進）適用於速率介於0到1之間的外部視訊播放模式。
+   * **最適化位元速率(ABR)** 可讓播放器根據網路和其他條件，動態選取要播放的相同內容資料流的多個版本。 您可以動態設定引數，或在資訊清單檔案中設定引數，以在積極、溫和和保守的選取原則中選取。
    * **位元組範圍** 啟用單一TS檔案以包含多個TS區段。
-   * **替代音訊轉譯** 啟用播放器以切換可用的音軌。
-   * **ID3支援。** TVSDK可以播放包含ID3音訊中繼資料的HLS音訊和視訊串流，例如藝人姓名、標題和相簿。
-   * **容錯移轉。 儘管主機伺服器、播放清單檔案和區段失敗，**TVSDK仍會使用策略來繼續不中斷播放。
+   * **替代音訊轉譯** 讓播放器能在可用音軌之間切換。
+   * **ID3支援。** TVSDK可以播放包含ID3音訊中繼資料的HLS音訊和視訊串流，例如藝人姓名、職稱和專輯。
+   * **容錯移轉。 儘管主機伺服器、播放清單檔案和區段失敗，**TVSDK仍會使用策略來繼續不中斷的播放。
    * **多聲道音訊傳遞(DD+)。** TVSDK可將Dolby Digital Plus音訊(E-AC3)資料傳送至支援的硬體。
 
 * 內容保護功能
@@ -73,25 +72,25 @@ Javadocs是最終權威，因為它們是直接從TVSDK原始程式碼自動產�
 * 廣告/替代內容和營利功能
 
    * **追蹤伺服器端插入的廣告。** TVSDK可追蹤Adobe雲端廣告插入服務所插入的廣告。 它支援VAST2、VAST3和VMAP格式的線性廣告，適用於VOD和即時/線性資料流。
-   * **自訂HLS標籤。** TVSDK使用 `MediaPlayerConfig` 類別，以在自訂HLS標籤出現在資料流中時通知播放器應用程式。
-   * **使用者端廣告插入。** Auditude廣告插入程式庫可與Adobe Auditude伺服器搭配使用，在前置、中置或後置位置動態解析要插入即時、線性和VOD內容的廣告。
-   * **自訂廣告解析程式。** 此 `ContentResolver, OpportunityGenerator,` 和 `MediaPlayerClientFactory` 介面可讓您實作自訂廣告/替代內容解析器，並註冊自訂機會偵測器以搭配TVSDK使用。 此 `TestAdResolver` 和 `AuditudeResolver` 類別提供實作內容解析器的C++範例。 如需Javascript範例，請前往 `samples/jspsdk/testapp/psdk.js`.
-   * **一致的廣告行為。** 使用 `AdPolicySelector` 介面，可在內容中出現廣告時，針對搜尋和特技播放等操作，啟用所有播放器的一致行為。 若您未實作自己的，TVSDK會使用 `DefaultAdPolicySelector`.
-   * **移除/取代C3廣告。** 使用適當的TVSDK API移除自訂內容範圍，並動態插入新廣告，無需額外的準備工作。 直播內容/線性內容播出時，這會很方便，然後可立即隨選使用，無需清理。
+   * **自訂HLS標籤。** TVSDK使用其 `MediaPlayerConfig` 類別，以在自訂HLS標籤出現在資料流中時通知播放器應用程式。
+   * **使用者端廣告插入。** Auditude廣告插入程式庫可與Adobe Auditude伺服器搭配使用，在前段、中段或後段位置，將動態插入的廣告解析為即時、線性和VOD內容。
+   * **自訂廣告解析程式。** 此 `ContentResolver, OpportunityGenerator,` 和 `MediaPlayerClientFactory` 介面可讓您實作自訂廣告/替代內容解析程式，並註冊自訂機會偵測器以搭配TVSDK使用。 此 `TestAdResolver` 和 `AuditudeResolver` 類別提供實作內容解析器的C++範例。 如需Javascript範例，請前往 `samples/jspsdk/testapp/psdk.js`.
+   * **一致的廣告行為。** 使用 `AdPolicySelector` 介面，可在內容中出現廣告時，針對搜尋和特技播放等操作，啟用所有播放器的一致行為。 如果您未實作自己的工具，TVSDK會使用 `DefaultAdPolicySelector`.
+   * **移除/取代C3廣告。** 使用適當的TVSDK API移除自訂內容範圍，並動態插入新廣告，無需額外的準備工作。 直播/線性內容播出後，立即可供點播使用（無需清理）時，此方法會很實用。
 
 以下是2.4版的主要新功能：
 
-* **立即開啟VOD和即時** 當您啟用立即開啟時，TVSDK會在播放開始之前初始化並緩衝媒體。 因為您可以啟動多個 `MediaPlayerItemLoader` 您可以同時在背景執行個體，緩衝多個串流。 當使用者變更頻道，並且資料流已正確緩衝時，新頻道上的播放會立即開始。 TVSDK 2.4也支援即時上線串流。 即時視窗移動時會重新緩衝即時資料流。
+* **立即開啟以進行VOD和即時** 當您啟用立即開啟時，TVSDK會在播放開始之前初始化並緩衝媒體。 因為您可以啟動多個 `MediaPlayerItemLoader` 您可以在背景同時緩衝多個串流。 當使用者變更頻道，並且串流已正確緩衝時，新頻道上的播放立即開始。 TVSDK 2.4也支援即時上線的即時資料流。 即時視窗移動時會重新緩衝即時資料流。
 
 * **效能改良**新的TVSDK 2.4架構提供各種效能改良：
 
    * **子細分** - TVSDK進一步縮小每個片段的大小，以儘快開始播放。
-   * **平行廣告下載** - TVSDK會在點選廣告插播前，與內容播放同時預先擷取廣告，因此可順暢地播放廣告和內容。
-   * **延遲廣告解析度**  — 使用此功能，我們並不會等到非前段廣告解決後再開始播放，因此縮短了啟動時間。 除非解決所有廣告，否則仍不允許搜尋和特技播放等API。
+   * **平行廣告下載** - TVSDK會在點選廣告插播之前預先擷取與內容播放並行的廣告，因此可順暢地播放廣告和內容。
+   * **延遲廣告解析度**  — 有了此功能，我們就不會等到非前段廣告解決後再開始播放，因此縮短了啟動時間。 除非解決所有廣告，否則仍不允許搜尋和特技播放等API。
 
 * **MP4內容播放**
 
-此版本的TVSDK支援播放MP4作為主要內容。
+此版本的TVSDK支援MP4播放為主要內容。
 
 * **持續性網路連線**
 
@@ -101,33 +100,33 @@ TVSDK會維護一組可重複使用的網路連線，因此不會產生為每個
 
 此功能將播放限制繫結至特定解析度，提供更精細的DRM控制項。
 
-* **使用最適化位元速率(ABR)的特技播放**
+* **以最適化位元速率(ABR)進行特技播放**
 
-此功能可讓TVSDK在特技播放模式中切換iFrame資料流。 您可以使用非iFrame設定檔，以較慢的速度進行特技播放。
+此功能可讓TVSDK在特技播放模式中切換iFrame串流。 您可以使用非iFrame設定檔，以較低速度進行特技播放。
 
-* **更流暢的戲法遊戲**
+* **更流暢的特技遊戲**
 
 這些改善專案可增強使用者體驗：
 
 ·在特技播放期間，根據頻寬和緩衝區設定檔選擇最適化位元速率和影格速率
 
-·使用主要資料流而非IDR資料流，以取得最高30 fps的快速播放。
+·使用主資料流而非IDR資料流，以取得最高30 fps的快速播放。
 
 * **改善ABR邏輯**
 
-新的ABR邏輯是以緩衝區長度、緩衝區長度變更速率和測量到的頻寬為基礎。 這可確保ABR在頻寬波動時選擇正確的位元速率，並透過監控緩衝區長度變更的速率，最佳化位元速率切換的實際發生次數。
+新的ABR邏輯是以緩衝區長度、緩衝區長度變更速率，以及測量的頻寬為基礎。 這可確保ABR在頻寬波動時選擇正確的位元速率，並透過監控緩衝區長度變更的速率，最佳化位元速率切換的實際發生次數。
 
 * **帳單**
 
-TVSDK會根據客戶銷售合約自動收集量度，以產生開立帳單所需的定期使用報告。 在每個資料流開始事件上，TVSDK會使用Adobe Analytics資料插入API來傳送計費量度，例如內容型別、啟用廣告插入的旗標及啟用drm的旗標（根據可計費資料流的持續時間）至Adobe Analytics Primetime擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 系統會根據要求定期傳送此計費使用情況報告給客戶。 這是計費功能的第一個階段，僅支援使用計費。 您可以使用檔案中描述的API，根據銷售合約進行設定。
+TVSDK會根據客戶銷售合約自動收集量度，以產生開立帳單所需的定期使用報表。 在每個資料流開始事件上，TVSDK會使用Adobe Analytics資料插入API將計費量度（例如內容型別、廣告插入啟用旗標，以及drm啟用旗標）根據計費資料流的持續時間傳送至Adobe Analytics Primetime擁有的報表套裝。 這不會干擾或納入客戶自己的Adobe Analytics報表套裝或伺服器呼叫。 系統會根據要求定期傳送此計費使用報告給客戶。 這是計費功能的第一個階段，僅支援使用計費。 您可以使用本檔案中說明的API，根據銷售合約進行設定。
 
 ## 支援的功能 {#supported-features}
 
-Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增至視訊應用程式。
+適用於Android 2.4的TVSDK支援許多您可實作的功能，以將功能新增至視訊應用程式。
 
 >[!NOTE]
 >
->在下方的功能矩陣表格中，√表示目前版本支援該功能。
+>在下方的功能矩陣表中，√表示目前版本支援該功能。
 
 ### 核心播放功能 {#core-playback-features}
 
@@ -147,9 +146,9 @@ Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增�
 | 支援Cookie標頭 | VOD +即時 | √ | √ （僅限VOD） |
 | 支援自訂標頭 | VOD +即時 | 不支援 | 不支援 |
 | 設定緩衝區控制引數 | VOD +即時 | √ | √ （僅限VOD） |
-| 設定最適化位元速率控制項 | VOD +即時 | √ | √ （僅限VOD） |
-| 自訂資訊清單標籤(HLS) /事件資料流（虛線） | VOD +即時 | √ | √ （僅限VOD） |
-| 延遲的音訊 | VOD +即時 | √ | √ （僅限VOD） |
+| 設定最適化位元速率控制 | VOD +即時 | √ | √ （僅限VOD） |
+| 自訂資訊清單標籤(HLS) /事件資料流（破折號） | VOD +即時 | √ | √ （僅限VOD） |
+| 延遲傳送的音訊 | VOD +即時 | √ | √ （僅限VOD） |
 | 302重新導向 | VOD +即時 | √ | √ （僅限VOD） |
 
 ### 進階播放功能 {#advanced-playback-features}
@@ -181,7 +180,7 @@ Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增�
    <td>不支援</td> 
   </tr>
   <tr>
-   <td>Smooth Trick Play （使用ABR）</td> 
+   <td>Smooth Trick Play （含ABR）</td> 
    <td>VOD +即時</td> 
    <td>√</td> 
    <td>不支援</td> 
@@ -208,7 +207,7 @@ Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增�
    <td>
     <ul> 
      <li>不連續標籤支援(HLS) </li> 
-     <li>多句點（虛線）</li> 
+     <li>多句點（破折號）</li> 
     </ul> </td> 
    <td>VOD +即時</td> 
    <td>√</td> 
@@ -320,7 +319,7 @@ Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增�
    <td>
     <ul> 
      <li>不連續標籤支援 — SSAI (HLS) </li> 
-     <li>多句點（虛線）</li> 
+     <li>多句點（破折號）</li> 
     </ul> </td> 
    <td>VOD +即時</td> 
    <td>√ </td> 
@@ -339,7 +338,7 @@ Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增�
    <td>√ （僅限VOD前段）</td> 
   </tr>
   <tr>
-   <td>早期廣告退出</td> 
+   <td>早期廣告結束</td> 
    <td>即時</td> 
    <td>√ </td> 
    <td>不支援</td> 
@@ -383,10 +382,10 @@ Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增�
 此版本的TVSDK不支援：
 
 * 廣告中斷。
-* 戲法遊戲中的慢動作。
+* 特技遊戲中的慢動作。
 * 使用MP4內容進行搜尋和點播。
-* 以MP4主要內容插入廣告。
-* 在播放廣告時搜尋。
+* 包含MP4主要內容的廣告插入。
+* 在廣告播放時搜尋。
 * 使用純音訊媒體播放廣告。
 
 ## 已知問題和限制 {#known-issues-and-limitations}
@@ -396,13 +395,13 @@ Android 2.4適用的TVSDK支援許多您可實作的功能，以將功能新增�
 * 裝置特定(Samsung Galaxy Tab 4)當機VOD DRM LBA，具有稽核並點選廣告
 * 不會針對特定內容播放後段廣告。
 * 將隱藏式字幕設定為CJK語言無法運作。
-* 影片可以從Trick模式自動在VOD和即時之間播放。
+* 視訊可以從VOD和即時之間的特技模式自動結束。
 * VHL — 從位移開始內容時，會傳送錯誤的心率呼叫。
 * 播放VPAID廣告時，事件的VHL心率呼叫:type:播放廣告遺失。
-* 即使選擇adBreakPolicy SKIP，也會播放前段廣告。
+* 即使已選取adBreakPolicy SKIP，也會播放前段廣告。
 * 進入完成狀態後，播放器會針對後置廣告返回具有SKIP adBreakPolicy的播放狀態。
 
-如果沒有視訊，就沒有檢視區尺寸，如果沒有檢視區尺寸，就無法顯示註解的任何圖形。
+如果沒有視訊，就沒有檢視區尺寸，如果沒有檢視區尺寸，您將無法顯示註解的任何圖形。
 
 ## 實用資源 {#helpful-resources}
 

@@ -1,8 +1,7 @@
 ---
 description: 您可以在播放視訊內容時顯示註解。
 title: 註解
-exl-id: 2144a6b2-0b9a-49ea-ad44-997adf36cbe6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%
@@ -33,7 +32,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-UI架構提供預設註解行為實施，這些實施可以修改。 隱藏式字幕行為也可以透過延伸預設隱藏式字幕行為來修改。 例如：
+UI架構提供預設的註解行為實施，這些實施可以修改。 隱藏式字幕行為也可以透過延伸預設的隱藏式字幕行為來修改。 例如：
 
 ```js
 // Using UI Framework 

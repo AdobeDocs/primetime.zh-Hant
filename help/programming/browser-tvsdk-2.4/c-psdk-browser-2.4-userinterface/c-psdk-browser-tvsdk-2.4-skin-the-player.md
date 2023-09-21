@@ -1,8 +1,7 @@
 ---
-description: 您可以使用下列資訊來協助建立播放器的外觀。 對於每個視覺建構，預設行為中會提及對應的行為。
+description: 您可以使用下列資訊來協助建立播放器的外觀。 對於每個視覺化建構，預設行為中會提及對應的行為。
 title: 為播放器建立外觀
-exl-id: 4ad50f96-d174-401f-a731-21e5fbfdbe31
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1422'
 ht-degree: 0%
@@ -11,11 +10,11 @@ ht-degree: 0%
 
 # 為播放器建立外觀 {#skinning-the-player}
 
-您可以使用下列資訊來協助建立播放器的外觀。 對於每個視覺建構，預設行為中會提及對應的行為。
+您可以使用下列資訊來協助建立播放器的外觀。 對於每個視覺化建構，預設行為中會提及對應的行為。
 
 >[!IMPORTANT]
 >
->本檔案中的外觀細節適用於由UI架構建立的預設UI元素。 如果您的播放器修改了這些元素，也需要變更外觀元素。
+>本檔案中的外觀設定詳細資料適用於由UI架構建立的預設UI元素。 如果您的播放器修改了這些元素，則需要變更外觀元素。
 
 ## 容器div {#section_99B0D598219D4150B57E97D5381B118F}
 
@@ -41,11 +40,11 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-main-video-div-style</span> </td> 
-   <td colname="col2"> <p>影片播放所在的主要div的樣式。 </p> </td> 
+   <td colname="col2"> <p>視訊播放所在之主要div的樣式。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .pip-mode-active</span> </td> 
-   <td colname="col2"> <p>當PIP模式為作用中時使用。 </p> </td> 
+   <td colname="col2"> <p>當PIP模式作用中時使用。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">預設行為是 <span class="codeph"> videoBehavior</span>. </td> 
@@ -61,7 +60,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .view-as-main-video</span> </td> 
-   <td colname="col2"> <p>已套用至初始PIP並顯示為主要視訊時。 </p> </td> 
+   <td colname="col2"> <p>套用至初始PIP （已調換）並顯示為主要視訊時。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><b>多視訊檢視</b> </p> </td> 
@@ -73,11 +72,11 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-multi-view-view</span> </td> 
-   <td colname="col2"> <p>放在多檢視中每個視訊上的公用css樣式。 </p> </td> 
+   <td colname="col2"> <p>多檢視中每個視訊所放置的公用css樣式。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .multiview</span> </td> 
-   <td colname="col2"> <p>當以多重檢視儲存每個影片的容器以多重檢視時。 </p> </td> 
+   <td colname="col2"> <p>當以多重檢視容納每個影片的容器是多重檢視時。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -108,7 +107,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-panel-header</span> </td> 
-   <td colname="col2"> <p>面板的頁首 </p> </td> 
+   <td colname="col2"> <p>面板的標題 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-vertical-list-menu-item</span> </td> 
@@ -116,7 +115,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-fill-spacer</span> </td> 
-   <td colname="col2"> <p>控制列上的空間 </p> </td> 
+   <td colname="col2"> <p>控制列上的空格 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-hr-separator</span> </td> 
@@ -143,7 +142,7 @@ ht-degree: 0%
 
 ## 控制列 {#section_B683B51EC746484B9AA90CB481D637BD}
 
-以下是控制列的樣式：
+控制列的樣式如下：
 
 <table id="table_681E13F264674F849FAA2523EB65F094"> 
  <thead> 
@@ -164,7 +163,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->下表中的字母與此插圖中的字母對應。
+>下清單格中的字母與此插圖中的字母相對應。
 
 以下是拖曳列的樣式：
 
@@ -178,7 +177,7 @@ ht-degree: 0%
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-scrub-bar</span> </td> 
-   <td colname="col2"> <p>控制列上的推移列 </p> </td> 
+   <td colname="col2"> <p>控制列上的拖曳列 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-scrub-bar .ptp-buffer-progress-bar</span> </td> 
@@ -186,7 +185,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-scrub-bar .ptp-seek-to-bar</span> </td> 
-   <td colname="col2"> <p>當使用者在推移列上搜尋時，推移列的狀態 </p> </td> 
+   <td colname="col2"> <p>使用者在拖曳列上搜尋時拖曳列的狀態 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-scrub-bar .ptp-playback-progress-bar</span> </td> 
@@ -207,7 +206,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-預設行為是：
+預設行為如下：
 
 * `scrubBarBehavior`
 * `bufferProgressBarBehavior`
@@ -259,7 +258,7 @@ ht-degree: 0%
   <tr>
    <td colname="col1"> <p><span class="codeph"> .ptp-volume-control</span>
      <ul id="ul_B12ADDFB83EA40FD8B4E92AF418AA4B4">
-      <li id="li_7DA8143A69ED4E7D8A560B9FF75D6BA7"><span class="codeph"> 展開</span> </li>
+      <li id="li_7DA8143A69ED4E7D8A560B9FF75D6BA7"><span class="codeph"> .expanded</span> </li>
       <li id="li_D8CCAD45D81C4850B6903FE261833AE6"><span class="codeph"> .vertical</span> </li>
      </ul> </p> </td>
    <td colname="col2"> <p>控制列上的音量控制
@@ -283,7 +282,7 @@ ht-degree: 0%
  </tbody>
 </table>
 
-預設行為是 `volumeBehavior` 和 `muteButtonBehavior`.
+預設行為為 `volumeBehavior` 和 `muteButtonBehavior`.
 
 以下是音量滑桿的樣式：
 
@@ -300,7 +299,7 @@ ht-degree: 0%
    <td colname="col2"> <p>音量滑桿。 </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-volume-hide</span> </td>
+   <td colname="col1"><span class="codeph"> .ptp-volume-hidden</span> </td>
    <td colname="col2"> <p>處於隱藏狀態的音量滑桿。 </p> </td>
   </tr>
  </tbody>
@@ -331,7 +330,7 @@ ht-degree: 0%
 
 ## 時間 {#section_0E6549B3DF6D4C10947D445A5F8EEA7F}
 
-以下是在控制列上顯示剩餘時間的樣式：
+以下是在控制列顯示剩餘時間的樣式：
 
 <table id="table_CEE62BFF5FB04FDCBBE1331E0D727EBA">
  <thead>
@@ -373,7 +372,7 @@ ht-degree: 0%
 
 ## 慢速倒帶 {#section_38A22BB8681B430F8C6808C3BD21FB4E}
 
-以下是慢速倒帶按鈕的樣式：
+以下是「慢速倒帶」按鈕的樣式：
 
 <table id="table_E623C374622A497C91E22333D77AF8F6">
  <thead>
@@ -394,7 +393,7 @@ ht-degree: 0%
 
 ## 緩慢前進 {#section_92ACF092EECC4A5EAF6AA090C05E552E}
 
-以下是緩慢前進按鈕的樣式：
+以下是慢速前進按鈕的樣式：
 
 <table id="table_88C1CF5DB2D84EDBA01AC62B70509B08">
  <thead>
@@ -415,7 +414,7 @@ ht-degree: 0%
 
 ## 快進 {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
 
-以下是快速前進按鈕的樣式：
+以下是「快進」按鈕的樣式：
 
 <table id="table_F166BD1E8B934B34AF3690BBBAD894B7">
  <thead>
@@ -452,7 +451,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-audio-track</span> </td>
-   <td colname="col2"> <p>控制列上的音訊追蹤按鈕。 </p> </td>
+   <td colname="col2"> <p>控制列上的音訊曲軌按鈕。 </p> </td>
   </tr>
   <tr>
    <td colname="col1">預設行為是 <span class="codeph"> audioTrackButtonBehavior</span>. </td>
@@ -464,14 +463,14 @@ ht-degree: 0%
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-panel</span> </td> 
-   <td colname="col2"> <p>選擇音訊曲目的面板。 </p> </td>
+   <td colname="col2"> <p>用於選取音訊曲目的面板。 </p> </td>
   </tr>
   <tr>
    <td colname="col1">預設行為是 <span class="codeph"> audioTrackSelectionPanelBehavior</span>. </td>
    <td colname="col2"> </td>
 </tr>
   <tr>
-   <td colname="col1"> <p><b>音軌選擇標頭(M)</b> </p> </td>
+   <td colname="col1"> <p><b>音訊曲目選取標題(M)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
@@ -479,7 +478,7 @@ ht-degree: 0%
    <td colname="col2"> <p>「 」的標題 <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"> <p><b>音軌選擇功能表(N)</b> </p> </td>
+   <td colname="col1"> <p><b>音軌選取功能表(N)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
@@ -507,7 +506,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>將開啟的控制列上的社群媒體分享按鈕 <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
+   <td colname="col2"> <p>控制列上的「社群媒體分享」按鈕將會開啟 <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1">預設行為是 <span class="codeph"> shareVideoButtonBehavior</span>. </td>
@@ -629,7 +628,7 @@ ht-degree: 0%
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .selected</span> </td>
-   <td colname="col2"> <p>處於選取狀態。 </p> </td>
+   <td colname="col2"> <p>在選取的狀態中。 </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-done-btn</span> </td> 
@@ -641,10 +640,10 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-main-menu</span> </td> 
-   <td colname="col2"> <p>隱藏式字幕選項的主要功能表。 </p> </td> 
+   <td colname="col2"> <p>隱藏式字幕選項的主功能表。 </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp — 隱藏式字幕 — 選項 — 子選單</span> </td> 
+   <td colname="col1"><span class="codeph"> ptp-closed-caption-options-sub-menu</span> </td> 
    <td colname="col2"> <p>隱藏式字幕選項的子選單。 </p> </td> 
   </tr> 
   <tr> 
@@ -669,11 +668,11 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-reset-button</span> </td> 
-   <td colname="col2"> <p>此 <span class="uicontrol"> 重設</span> 隱藏式字幕選項面板頁尾中的按鈕。 </p> </td> 
+   <td colname="col2"> <p>此 <span class="uicontrol"> 重設</span> 「隱藏式字幕選項」面板頁尾中的按鈕。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-apply-button</span> </td> 
-   <td colname="col2"> <p>此 <span class="uicontrol"> 套用</span> 隱藏式字幕選項面板頁尾中的按鈕。 </p> </td> 
+   <td colname="col2"> <p>此 <span class="uicontrol"> 套用</span> 「隱藏式字幕選項」面板頁尾中的按鈕。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">預設行為是 <span class="codeph"> closedCaptionOptionsPanelBehavior</span>. </td> 
@@ -699,7 +698,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options.ptp-control-bar-btn</span> </td> 
-   <td colname="col2"> <p>此 <span class="codeph"> ptp-btn-more-options</span> 控制列中所使用的字元。 </p> </td> 
+   <td colname="col2"> <p>此 <span class="codeph"> ptp-btn-more-options</span> 在控制列中使用的字元。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
@@ -762,9 +761,9 @@ ht-degree: 0%
 
 預設行為是 `fullScreenButtonBehavior`.
 
-## 戲法播放(Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
+## Tick Play (Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
 
-以下為設定特技播放的樣式：
+以下是設定特技播放的樣式：
 
 <table id="table_F1ADAC0A4B4E48669828690BDEB4BC09"> 
  <thead> 
@@ -776,16 +775,16 @@ ht-degree: 0%
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-control-bar-trick-play-rate</span> </td> 
-   <td colname="col2"> <p>控制列中的trick rate顯示元件。 </p> </td> 
+   <td colname="col2"> <p>控制列中的Trick Rate顯示元件。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 預設行為是 `trickPlayRateDisplayBehavior`.
 
-## 多重檢視(Z) {#section_58EFAE7263BA45D3A4E2AB7309A9CAA7}
+## 多檢視(Z) {#section_58EFAE7263BA45D3A4E2AB7309A9CAA7}
 
-以下是設定多檢視的樣式：
+以下是設定多重檢視的樣式：
 
 <table id="table_84B37D7410EE40DFA7A8BB8431C6DCF0"> 
  <thead> 
@@ -797,7 +796,7 @@ ht-degree: 0%
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-multiview</span> </td> 
-   <td colname="col2"> <p>此 <span class="uicontrol"> 多重檢視</span> 按鈕以及初始狀態 <span class="uicontrol"> 多重檢視</span> 按鈕。 </p> </td> 
+   <td colname="col2"> <p>此 <span class="uicontrol"> 多重檢視</span> 控制列上的按鈕，以及 <span class="uicontrol"> 多檢視</span> 按鈕。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">預設行為是 <span class="codeph"> multiViewButtonBehavior</span>. </td> 
@@ -841,7 +840,7 @@ ht-degree: 0%
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-error-message-panel</span> </td> 
-   <td colname="col2"> <p>顯示來自播放器之錯誤訊息的面板。 </p> </td> 
+   <td colname="col2"> <p>顯示播放器錯誤訊息的面板。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-error-message-panel-icon</span> </td> 
@@ -875,11 +874,11 @@ ht-degree: 0%
  </tbody> 
 </table>
 
-預設覆蓋圖為 `bufferingOverlayBehavior`.
+預設覆蓋為 `bufferingOverlayBehavior`.
 
-## 特定選取器 {#section_51F735AEF82E41E890FF59E031A0DB89}
+## 特定選擇器 {#section_51F735AEF82E41E890FF59E031A0DB89}
 
-以下是快速前進按鈕的樣式：
+以下是「快進」按鈕的樣式：
 
 <table id="table_E77EDC7D227348E79C7E73FB5D46F992"> 
  <thead> 
@@ -906,12 +905,12 @@ ht-degree: 0%
       <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
       <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-scrub-bar</span> </li> 
-      <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-seek-to-bar</span> </li> 
+      <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp — 搜尋到列</span> </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .multi-view</span> </td> 
-   <td colname="col2"> <p>多檢視時控制項的狀態。 </p> <p>套用至下列專案： 
+   <td colname="col2"> <p>在多重檢視中時控制項的狀態。 </p> <p>套用至下列專案： 
      <ul id="ul_A8AC653C30814AC49041F3B58A2106F4"> 
       <li id="li_0407167DA21647A8A6960DFE55A33F42"><span class="codeph"> .ptp-btn-fastforward</span> </li> 
       <li id="li_EA71CAF41CDC41DE859A85CE482BE97C"><span class="codeph"> .ptp-btn-share-video</span> </li> 

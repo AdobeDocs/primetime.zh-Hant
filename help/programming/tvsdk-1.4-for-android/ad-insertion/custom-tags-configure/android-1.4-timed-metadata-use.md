@@ -1,8 +1,7 @@
 ---
 description: 當目前的播放時間符合開始時間時，您可以使用TimedMetadata。
 title: 使用定時中繼資料
-exl-id: 7f87cd14-121a-4543-ab0a-a03d829d040b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
@@ -22,9 +21,9 @@ ht-degree: 0%
 
    >[!IMPORTANT]
    >
-   >檢查目前的播放時間是否符合任何條件時 `TimedMetadata` 物件，包括 `shouldTriggerSubscribedTagEvent` 作為條件。
+   >檢查目前的播放時間是否符合任何設定時 `TimedMetadata` 物件，包括 `shouldTriggerSubscribedTagEvent` 作為條件。
 
-   時間軸可能會因各種廣告行為而變更。 例如，一個或多個廣告插播可能會從它們在時間軸上的原始位置移動，但是 `shouldTriggerSubscribedTagEvent` 確保 `TimeMetadata` 物件的開始時間符合目前的播放時間。
+   時間軸可能會因各種廣告行為而變更。 例如，一個或多個廣告插播可能會從他們在時間軸上的原始位置移動，但是 `shouldTriggerSubscribedTagEvent` 確保 `TimeMetadata` 物件的開始時間符合目前的播放時間。
 
    例如：
 
@@ -58,4 +57,4 @@ ht-degree: 0%
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. 定期排清陳舊 `TimedMetadata` 執行個體，以防止記憶體持續成長。
+1. 定期排清陳舊 `TimedMetadata` 清單中的例項，以防止記憶體持續成長。

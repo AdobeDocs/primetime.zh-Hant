@@ -1,8 +1,7 @@
 ---
 description: 此版本包含播放器並支援多種瀏覽器。
 title: 需求
-exl-id: 3157a86b-bf93-41d9-be82-0b702d69c69e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 * `Primetime.js` 瀏覽器TVSDK
 * 適用於核心播放的JavaScript API
-* 參考示範播放程式
+* 參考示範播放器
 
 **認證平台：**
 
@@ -32,22 +31,22 @@ ht-degree: 0%
       * Internet Explorer 11+
       * Chrome 33+
       * Firefox 38+
+
    * Microsoft Windows 8.1
 
       * Internet Explorer 11+
       * Chrome 33+
       * Firefox 38+
+
    * Microsoft Windows 10
 
       * Edge+
+
    * APPLE OS X
 
       * Safari 8+
       * Chrome 33+
       * Firefox 38+
-
-
-
 
 * **行動網站設定**
 
@@ -55,17 +54,21 @@ ht-degree: 0%
 
       * 原生瀏覽器
       * Chrome 33+
+
    * Android 5.0
 
       * 原生瀏覽器
       * Chrome 33+
+
    * Android 6.0
 
       * Chrome 33+
+
    * APPLE IOS 8
 
       * Safari 8+
       * Chrome 33+
+
    * APPLE IOS 9
 
       * Safari 8+

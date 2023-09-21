@@ -1,8 +1,7 @@
 ---
 title: iOS/tvOS應用程式註冊
 description: iOS/tvOS應用程式註冊
-exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%

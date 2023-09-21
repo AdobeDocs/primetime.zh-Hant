@@ -1,8 +1,7 @@
 ---
 title: JavaScript SDK API參考
 description: JavaScript SDK API參考
-exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2835'
 ht-degree: 0%

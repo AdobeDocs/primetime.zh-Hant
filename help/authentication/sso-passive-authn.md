@@ -1,8 +1,7 @@
 ---
 title: 透過被動驗證的SSO
 description: 透過被動驗證的SSO
-exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
-source-git-commit: 914ef0b9baaf5c51e6c26a280af9102ea0df5271
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%

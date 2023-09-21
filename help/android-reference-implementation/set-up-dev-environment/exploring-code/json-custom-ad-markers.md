@@ -2,8 +2,7 @@
 title: 自訂廣告標籤的JSON物件
 description: 自訂廣告標籤的JSON物件
 copied-description: true
-exl-id: 85bcf306-703c-4a0d-b125-df9316fadf69
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
@@ -16,7 +15,7 @@ ht-degree: 0%
 
 IFeedItemAdapter：getStreamMetadata()傳回的MetadataNode包含2個專案：
 1. 具有型別索引鍵的專案 `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` 和傳回之MetadataNode例項的值 `TimeRangeCollection.toMetadata()`.
-1. 第二個專案具有型別索引鍵 `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` ，其值為 *adjust-seek-position* 屬性下方。
+1. 第二個專案具有型別索引鍵 `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` ，其值為 *adjust-seek-position* 屬性之下。
 
 ```
 “metadata”: {

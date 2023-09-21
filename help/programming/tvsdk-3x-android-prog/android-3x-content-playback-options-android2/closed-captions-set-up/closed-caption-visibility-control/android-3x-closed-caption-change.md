@@ -1,8 +1,7 @@
 ---
-description: 此程式是如何建立按鈕的範例，該按鈕可讓使用者選取隱藏式字幕追蹤。
+description: 此程式範例說明如何建立可讓使用者選取隱藏式字幕追蹤的按鈕。
 title: 允許使用者變更註解追蹤
-exl-id: cf273f06-ae0d-458c-aeef-7f70dad6106f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 允許使用者變更註解追蹤 {#allow-users-to-change-the-caption-track}
 
-此程式是如何建立按鈕的範例，該按鈕可讓使用者選取隱藏式字幕追蹤。
+此程式範例說明如何建立可讓使用者選取隱藏式字幕追蹤的按鈕。
 
 1. 建立按鈕以變更隱藏式字幕追蹤。
 
@@ -29,7 +28,7 @@ ht-degree: 0%
 
 1. 將可用的隱藏式字幕曲目清單轉換為字串陣列。
 
-   具有活動的隱藏式字幕追蹤（即TVSDK已探索資料的管道）會適當地加上標籤。
+   隱藏式字幕追蹤具有活動（即TVSDK已探索資料的管道），並會適當地標示。
 
    ```java
    /** 

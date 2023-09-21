@@ -1,8 +1,7 @@
 ---
 title: Amazon FireOS Native Client API參考
 description: Amazon FireOS Native Client API參考
-exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: 220c571db04afbd6bafc026b3179f78f60543372
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 0%

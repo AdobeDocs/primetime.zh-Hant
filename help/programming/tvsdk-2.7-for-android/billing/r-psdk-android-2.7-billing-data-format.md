@@ -1,8 +1,7 @@
 ---
 description: TVSDK會以XML格式將計費量度傳送至Adobe。
 title: 傳輸計費量度
-exl-id: 5f42d032-cd2c-4e5e-8960-db555ba75626
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -39,4 +38,4 @@ TVSDK會以XML格式將計費量度傳送至Adobe。
 </request>
 ```
 
-布林值屬性 `drmProtected`， `adsEnabled`、和 `midrollEnabled` 只有在為true時才會出現。
+布林值屬性 `drmProtected`， `adsEnabled`、和 `midrollEnabled` 只有在為true時才出現。

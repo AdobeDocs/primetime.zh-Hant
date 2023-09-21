@@ -1,8 +1,7 @@
 ---
 description: 設定處理錯誤的單一位置。
 title: 設定錯誤處理
-exl-id: 2d0e0d08-d932-4b6e-8f95-494a2e666827
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 0%

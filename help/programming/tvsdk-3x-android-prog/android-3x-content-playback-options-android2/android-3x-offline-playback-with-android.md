@@ -1,8 +1,7 @@
 ---
-description: 已引入新API，指示TVSDK在下載資訊清單時忽略網路連線狀態。
+description: 已引入新的API，將指示TVSDK在下載資訊清單時忽略網路連線狀態。
 title: 使用Android離線播放
-exl-id: 9ac50d3e-5839-4eb9-8811-efde56cfe375
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 使用Android離線播放 {#offline-playback-with-android}
 
-已引入下列API，指示TVSDK在下載資訊清單時忽略網路連線狀態。 網路連線狀態通常用於最適化位元速率串流(ABR)期間，以判斷是否要嘗試遞補或等待網路恢復。
+已引入下列API，將指示TVSDK在下載資訊清單時忽略網路連線狀態。 網路連線狀態通常用於最適化位元速率串流(ABR)期間，以判斷要嘗試遞補或等待網路恢復。
 
 ```
 NetworkConfiguration::setOfflinePlayback(boolean)

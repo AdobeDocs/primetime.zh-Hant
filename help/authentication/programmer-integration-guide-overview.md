@@ -1,8 +1,7 @@
 ---
 title: 程式設計師整合指南概觀
 description: 程式設計師整合指南說明
-exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%

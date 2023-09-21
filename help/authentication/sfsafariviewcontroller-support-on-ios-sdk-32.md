@@ -1,8 +1,7 @@
 ---
 title: iOS SDK 3.2+上的SFSafariViewController支援
 description: iOS SDK 3.2+上的SFSafariViewController支援
-exl-id: 6691550f-c36f-4fae-aa77-082ca7d8a60a
-source-git-commit: 2df1a646ad379caccf7830f3bb3965c57ad72429
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%

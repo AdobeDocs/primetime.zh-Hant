@@ -1,8 +1,7 @@
 ---
 description: TVSDK可設定多個初始位置資訊。
 title: 多個初始位置資訊
-exl-id: 104e981e-7246-4e4a-9c14-dac6ee2624f6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 0%

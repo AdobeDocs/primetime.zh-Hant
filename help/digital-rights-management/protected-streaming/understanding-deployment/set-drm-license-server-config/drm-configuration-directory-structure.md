@@ -2,8 +2,7 @@
 title: 組態目錄結構
 description: 組態目錄結構
 copied-description: true
-exl-id: e24d3df0-f723-4dad-84d5-984f3350353a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '16'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # 組態目錄結構{#configuration-directory-structure}
 
-組態目錄具有下列結構：
+組態目錄的結構如下：
 
 ```
 <i class="+ topic ph hi-d="" i "="">

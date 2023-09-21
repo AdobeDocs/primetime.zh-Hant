@@ -1,8 +1,7 @@
 ---
 description: 這會提供有關Digital Rights Management(DRM)活動的資訊。
 title: Digital Rights Management類別
-exl-id: 39ab92dc-384a-457f-abdb-b1cb0ae2749f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%

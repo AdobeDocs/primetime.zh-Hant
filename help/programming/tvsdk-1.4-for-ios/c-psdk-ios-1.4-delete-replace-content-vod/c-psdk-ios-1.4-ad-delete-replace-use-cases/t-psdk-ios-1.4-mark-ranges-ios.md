@@ -2,8 +2,7 @@
 title: 標籤範圍
 description: 標籤範圍
 copied-description: true
-exl-id: e13db995-8910-43aa-a302-d8b1175af181
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -14,7 +13,7 @@ ht-degree: 0%
 
 實作 `PTTimeRangeCollection` 並將內容範圍標示為廣告：
 1. 準備 `PTTimeRangeCollection`.
-1. 設定 `PTTimeRangeCollection` 至 `PTTimeRangeCollectionTypeMarkRanges`.
+1. 設定型別 `PTTimeRangeCollection` 至 `PTTimeRangeCollectionTypeMarkRanges`.
 
    此步驟會通知TVSDK自訂範圍必須視為廣告。
 
@@ -69,9 +68,9 @@ ht-degree: 0%
 
 ## 取代範圍{#replace-ranges}
 
-實作 `PTTimeRangeCollection` 並刪除作為廣告的內容範圍：
+實作 `PTTimeRangeCollection` 並將內容範圍刪除為廣告：
 1. 準備 `PTTimeRangeCollection`.
-1. 設定 `PTTimeRangeCollection` 至 `PTTimeRangeCollectionTypeReplaceRanges`.
+1. 設定型別 `PTTimeRangeCollection` 至 `PTTimeRangeCollectionTypeReplaceRanges`.
 
    此步驟會通知TVSDK提供的範圍需要取代為替代內容（廣告）。
 
@@ -137,9 +136,9 @@ ht-degree: 0%
 
 ## 刪除範圍 {#delete-ranges}
 
-實作 `PTTimeRangeCollection` 並刪除作為廣告的內容範圍：
+實作 `PTTimeRangeCollection` 並將內容範圍刪除為廣告：
 1. 準備 `PTTimeRangeCollection`.
-1. 設定 `PTTimeRangeCollection` 至 `PTTimeRangeCollectionTypeDeleteRanges`，會通知TVSDK提供的範圍需要刪除。
+1. 設定型別 `PTTimeRangeCollection` 至 `PTTimeRangeCollectionTypeDeleteRanges`，會通知TVSDK提供的範圍需要刪除。
 
    ```
    #define PSDK_TIMESCALE 100000 

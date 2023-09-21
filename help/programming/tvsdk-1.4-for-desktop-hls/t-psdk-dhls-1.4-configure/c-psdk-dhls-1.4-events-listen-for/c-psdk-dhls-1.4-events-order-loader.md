@@ -1,8 +1,7 @@
 ---
-description: 您的播放器可以根據以下事件實作動作
+description: 您的播放器可根據下列事件實作動作
 title: 載入器事件
-exl-id: c9fd00fb-1872-4bfb-8ce3-fdece4af45fe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%

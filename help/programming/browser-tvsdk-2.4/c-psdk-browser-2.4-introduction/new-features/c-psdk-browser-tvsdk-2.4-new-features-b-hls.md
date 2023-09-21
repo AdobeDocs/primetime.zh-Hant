@@ -1,8 +1,7 @@
 ---
-description: 瀏覽器TVSDK支援許多HLS功能，您可實作這些功能，以將功能新增至視訊應用程式。
+description: 瀏覽器TVSDK支援許多HLS功能，您可實作以新增功能至視訊應用程式。
 title: 支援的HLS功能
-exl-id: 111a6683-fb5c-4f0a-8665-5b1aab77056c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 支援的HLS功能 {#supported-hls-features}
 
-瀏覽器TVSDK支援許多HLS功能，您可實作這些功能，以將功能新增至視訊應用程式。
+瀏覽器TVSDK支援許多HLS功能，您可實作以新增功能至視訊應用程式。
 
 * [HLS核心播放](#hls-core-playback)
 * [HLS進階播放功能](#hls-advanced-playback)
@@ -26,7 +25,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->在Safari欄中，「平台限制」表示該使用案例不受支援，因為該平台不允許實作對其的支援。 如果是插入，請使用SSAI。 如果您有重要的播放限制，請強制在Safari上遞補為Flash，直到平台支援廣告插入使用案例為止。
+>在Safari欄中，「平台限制」表示該使用案例不受支援，因為該平台不允許實作對其的支援。 如果是插入，請使用SSAI。 如果您有重要的播放限制，請強制在Safari上遞補Flash，直到平台支援廣告插入使用案例為止。
 
 <!--<a id="section_9FB9193D5763448CB228B96164661738"></a>-->
 
@@ -82,13 +81,13 @@ Removed Nielsen row
 
 ## HLS整合 {#hls-integrations}
 
-| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5： Safari、iOS Safari |
+| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5：Safari、iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | 整合 | VOD +即時 | Adobe Analytics VHL整合 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 
 ## HLS進階廣告插入功能(CSAI) {#hls-advanced-ad-insertion}
 
-| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5： Safari、iOS Safari |
+| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5：Safari、iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | VOD | 僅限廣告 | 不支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | Ad Insertion | VOD +即時 | 目標定位引數 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
@@ -99,7 +98,7 @@ Removed Nielsen row
 
 ## HLS核心廣告插入功能(CSAI) {#hls-core-ad-insertion}
 
-| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5： Safari、iOS Safari |
+| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5：Safari、iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | VOD +即時 | 前置滾動 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | Ad Insertion | VOD +即時 | 中間滾動 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
@@ -112,29 +111,29 @@ Removed Nielsen row
 
 ## HLS內容保護功能 {#hls-content-protection}
 
-| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5： Safari、iOS Safari |
+| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5：Safari、iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | 內容保護 | VOD +即時 | AES-128 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 內容保護 | VOD +即時 | Sample-AES | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 內容保護 | VOD | DRM | Adobe存取 | 不支援 | Fairplay |
+| 內容保護 | VOD | DRM | Adobe存取 | 不支援 | FairPlay |
 
 ## HLS進階播放功能 {#hls-advanced-playback}
 
-| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5： Safari、iOS Safari |
+| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5：Safari、iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | 播放 | VOD | 在位移處播放 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 播放 | VOD | 僅限音訊播放 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| 播放 | VOD | 僅限音訊的播放 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 播放 | VOD | 特技播放 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
-| 播放 | VOD | 平滑的戲法播放 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
+| 播放 | VOD | 平滑特技播放 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
 | 播放 | VOD +即時 | ID3剖析 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 不支援 |
-| 播放 | VOD +即時 | 不連續標籤支援 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
+| 播放 | VOD +即時 | 支援不連續標籤 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 播放 | VOD +即時 | 代碼化的串流 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | 平台限制 |
 | 播放 | VOD +即時 | 帳單 | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 播放 | VOD +即時 | Browserify | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 
 ## HLS核心播放 {#hls-core-playback}
 
-| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5： Safari、iOS Safari |
+| 類別 | 內容型別 | 功能 | Flash | HTML5：FF、IE、Chrome、Android Chrome | HTML5：Safari、iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | 播放 | VOD +即時 | 一般播放（播放、暫停、搜尋） | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |
 | 播放 | FER VOD | 一般播放（播放、暫停、搜尋） | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) | ![支援的圖示](assets/supported15.png) |

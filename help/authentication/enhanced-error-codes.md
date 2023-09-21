@@ -1,8 +1,7 @@
 ---
 title: 增強的錯誤碼
 description: 增強的錯誤碼
-exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2356'
 ht-degree: 2%

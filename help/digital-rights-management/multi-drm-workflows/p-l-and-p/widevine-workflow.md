@@ -1,8 +1,7 @@
 ---
-description: 此多DRM工作流程會帶您完成Widevine和PlayReady加密的DASH內容的設定、封裝、授權和播放。
+description: 此多DRM工作流程會帶您完成設定、封裝、授權及播放使用Widevine和PlayReady加密的DASH內容。
 title: Widevine和PlayReady的多重DRM工作流程
-exl-id: 97adfa69-52ef-470b-903a-eff1f075b7be
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -11,9 +10,9 @@ ht-degree: 0%
 
 # Widevine和PlayReady的多重DRM工作流程 {#multi-drm-workflow-for-widevine-and-playready}
 
-此多DRM工作流程會帶您完成Widevine和PlayReady加密的DASH內容的設定、封裝、授權和播放。
+此多DRM工作流程會帶您完成設定、封裝、授權及播放使用Widevine和PlayReady加密的DASH內容。
 
-Primetime TVSDK僅支援TVSDK 2.X版在HTML5和Android上播放Widevine加密或PlayReady加密的DASH內容。DASH內容加密由「一般加密」規格定義，其完整詳細資訊不在本檔案的範圍之內。 本節提供DASH格式和加密規格的相關詳細資訊，以及您可以用來產生支援內容的一些工具的相關資訊。
+Primetime TVSDK僅支援TVSDK 2.X版在HTML5和Android上播放Widevine加密或PlayReady加密的DASH內容。DASH內容加密由「一般加密」規格定義，其完整詳細資訊不在本檔案的範圍之內。 本節提供DASH格式和加密規格的相關詳細資訊，以及您可以用來產生支援內容的某些工具的資訊。
 
 >[!NOTE]
 >
@@ -43,7 +42,7 @@ Primetime TVSDK僅支援TVSDK 2.X版在HTML5和Android上播放Widevine加密或
 </MPD>
 ```
 
-以下是套用一般加密的範例資訊清單。 Widevine內容保護XML元素( `<ContentProtection>` 資訊清單中的區塊包含base64編碼的pssh （保護系統專屬標頭）方塊。 pssh方塊包含初始化內容解密所需的資料。 此資料也內嵌在資訊清單引用的視訊/音訊內容中。 DASH內容可以有多個內容保護元素，例如1表示PlayReady，1表示Widevine。
+以下是套用一般加密的範例資訊清單。 Widevine內容保護XML元素( `<ContentProtection>` 資訊清單中的區塊包含base64編碼的pssh （保護系統專屬標頭）方塊。 pssh方塊包含初始化內容解密所需的資料。 此資料也內嵌在資訊清單參照的視訊/音訊內容中。 DASH內容可以有多個內容保護元素，例如1表示PlayReady，1表示Widevine。
 
 ```
 <?xml version="1.0" ?>
@@ -120,7 +119,7 @@ Primetime TVSDK僅支援TVSDK 2.X版在HTML5和Android上播放Widevine加密或
 </MPD>
 ```
 
-請注意，上述第一個範例僅針對每個資料流參照一個檔案，而第二個範例則參照一系列小型內容片段。 您也可以定義片段範本，而不是明確提及片段，例如：
+請注意，上述第一個範例僅參照每個資料流的一個檔案，而第二個範例則參照一系列小型內容片段。 您也可以定義片段範本，而不是明確提及片段，例如：
 
 ```
 <Representation bandwidth="348000" codecs="avc1.42c01e" height="360" id="1" width="640">
@@ -136,4 +135,4 @@ Primetime TVSDK僅支援TVSDK 2.X版在HTML5和Android上播放Widevine加密或
 </Representation>
 ```
 
-在這種情況下，內容剖析器(TVSDK)預期會在Jaigo0.m4s、Jaigo1.m4s、Jaigo2.m4s等處找到視訊內容。 這主要用於即時串流，並且具有不需要使用者端不時再次下載資訊清單的優點。
+在此案例中，內容剖析器(TVSDK)預期會在Jaigo0.m4s、Jaigo1.m4s、Jaigo2.m4s等找到視訊內容。 這主要用於即時串流，並且具有不需要使用者端不時再次下載資訊清單的優勢。

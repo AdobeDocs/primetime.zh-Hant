@@ -1,8 +1,7 @@
 ---
 description: 廣告訊號模式會指定視訊資料流應該從何處取得廣告資訊。
 title: 廣告訊號模式
-exl-id: 5653ef11-9af5-46c7-bc33-aceff0c15b2f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
@@ -36,8 +35,8 @@ ht-degree: 0%
     </ul> </td> 
    <td colname="3"> 
     <ul id="ul_D462C76717D94DE09915BDF6E9B3FB68"> 
-     <li id="li_FB46108F4AD9457D99D2618ABEF7DBD1"> <p>使用串流中的位置偵測提示 </p> </li> 
-     <li id="li_C3F7FBB98F524CEF97D17318C292E9EA"> <p>前置式廣告會插入主要資料流中 </p> </li> 
+     <li id="li_FB46108F4AD9457D99D2618ABEF7DBD1"> <p>使用串流中的提示進行位置偵測 </p> </li> 
+     <li id="li_C3F7FBB98F524CEF97D17318C292E9EA"> <p>前段廣告會插入主要資料流中 </p> </li> 
      <li id="li_A56E1545F84840DFA6D065DA60E98C31"> <p>中段廣告取代主要資料流 </p> </li> 
     </ul> </td> 
    <td colname="4"> 
@@ -50,12 +49,12 @@ ht-degree: 0%
    <td colname="1"> 即時/線性 </td> 
    <td colname="2"> 
     <ul id="ul_82AAC9EE056F49E999F809536A96C2F8"> 
-     <li id="li_73BAD2BAA95F4592808B77F8DA436237"> <p>使用資訊清單提示來偵測位置 </p> </li> 
+     <li id="li_73BAD2BAA95F4592808B77F8DA436237"> <p>使用資訊清單提示進行位置偵測 </p> </li> 
      <li id="li_A97B6F61078D4149A984B2412021E103"> <p>廣告取代主要資料流 </p> </li> 
     </ul> </td> 
    <td colname="3"> 
     <ul id="ul_CAED2D4F46334D76AE025482881BF843"> 
-     <li id="li_A8023845A037482DBFDEF7EF247FECFD"> <p>使用串流中的位置偵測提示 </p> </li> 
+     <li id="li_A8023845A037482DBFDEF7EF247FECFD"> <p>使用串流中的提示進行位置偵測 </p> </li> 
      <li id="li_62A3CDAD249344EB89043B2AE0F4D7FF"> <p>廣告取代主要資料流 </p> </li> 
     </ul> </td> 
    <td colname="4"> 不支援 </td> 

@@ -1,8 +1,7 @@
 ---
-description: 您可以使用TVSDK來擷取有關播放器在媒體中位置的資訊，並在搜尋列上顯示。
+description: 您可以使用TVSDK來擷取有關播放器在媒體中位置的資訊，並將其顯示在搜尋列上。
 title: 顯示視訊的持續時間、目前時間和剩餘時間
-exl-id: d9832f19-c2d1-413a-b094-091052912c96
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -11,12 +10,12 @@ ht-degree: 0%
 
 # 顯示視訊的持續時間、目前時間和剩餘時間 {#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-您可以使用TVSDK來擷取有關播放器在媒體中位置的資訊，並在搜尋列上顯示。
+您可以使用TVSDK來擷取有關播放器在媒體中位置的資訊，並將其顯示在搜尋列上。
 
-1. 等候播放器至少處於PREPARED狀態。
+1. 等候播放器至少處於「已準備」狀態。
 1. 使用擷取目前的播放點時間 `MediaPlayer.getCurrentTime` 方法。
 
-   這會傳回虛擬時間軸上目前的播放點位置（以毫秒為單位）。 此時間是相對於已解析資料流來計算的，該資料流可能包含替代內容的多個例項，例如拼接至主資料流的多個廣告或廣告插播。 對於即時/線性串流，傳回的時間一律在播放視窗範圍內。
+   這會傳回虛擬時間軸上目前的播放點位置（以毫秒為單位）。 此時間是相對於已解析資料流而計算的，該資料流可能包含多個替代內容的例項，例如多個廣告或拼接到主資料流中的廣告插播。 對於即時/線性串流，傳回的時間一律在播放視窗範圍內。
 
    ```java
    long getCurrentTime() throws MediaPlayerException;
@@ -32,13 +31,13 @@ ht-degree: 0%
    1. 使用 `MediaPlayer.getPlaybackRange` 取得虛擬時間軸時間範圍的方法。
 
       * 對於VOD，範圍一律從零開始，而結束值等於主要內容持續時間與串流（廣告）中其他內容持續時間的和。
-      * 對於線性/即時資產，範圍表示播放視窗範圍。 此範圍會在播放期間變更。
+      * 對於線性/即時資產，範圍表示播放視窗範圍。 播放期間，此範圍會變更。
 
-         TVSDK呼叫 `ITEM_Updated` 回撥表示媒體專案已重新整理，而且其屬性（包括播放範圍）已更新。
+        TVSDK呼叫 `ITEM_Updated` 回呼表示媒體專案已重新整理，而且其屬性（包括播放範圍）已更新。
 
 1. 使用上的可用方法 `MediaPlayer` 並在 `SeekBar` 類別來設定搜尋列引數。
 
-   例如，以下是可能的配置，其中包含搜尋列和兩個 `TextView` 元素。
+   例如，以下是包含搜尋列和兩個的可能版面 `TextView` 元素。
 
    ```xml
    <LinearLayout 
@@ -76,7 +75,7 @@ ht-degree: 0%
 
    ![](assets/seek-bar.jpg){width="477.000pt"}
 
-   以下範例使用 `Clock.java` helper類別，可在 `ReferencePlayer`，做為計時器。 此類別會設定事件接聽程式，並觸發 `onTick` 事件每秒，或是您可以指定的另一個逾時值。
+   以下範例使用 `Clock.java` helper類別，可在 `ReferencePlayer`，作為計時器。 此類別會設定事件監聽器，並觸發 `onTick` 每秒發生一次事件，或是您可以指定的另一個逾時值。
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -89,7 +88,7 @@ ht-degree: 0%
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   在每個時鐘滴答中，此範例會擷取媒體播放器目前的位置，並更新搜尋列。 它會使用兩個 `TextView` 元素來將目前時間和播放範圍結束位置標示為數值。
+   在每個時鐘刻度上，此範例會擷取媒體播放器目前的位置，並更新搜尋列。 它會使用兩個 `TextView` 元素來將目前時間和播放範圍結束位置標示為數值。
 
    ```java
    @Override 

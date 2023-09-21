@@ -1,8 +1,7 @@
 ---
-description: 這些類別會指定文字的格式設定。
+description: 這些類別會指定文字的格式。
 title: 文字格式類別
-exl-id: 885de6f1-6c1a-4862-ab57-3854a3d5ebaf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 文字格式類別{#text-format-classes}
 
-這些類別會指定文字的格式設定。
+這些類別會指定文字的格式。
 
 封裝： [com.adobe.mediacore.textformat](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/textformat/package-detail.html)
 

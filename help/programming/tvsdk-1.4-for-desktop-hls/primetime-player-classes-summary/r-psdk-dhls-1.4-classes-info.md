@@ -1,8 +1,7 @@
 ---
 description: 這些類別提供有關媒體的資訊。
 title: 資訊類別
-exl-id: af09c81f-07f4-423b-af97-53bc2274cddc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
@@ -44,7 +43,7 @@ ht-degree: 0%
    <td colname="2"> 定義DRM中繼資料抽象的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> 設定檔</a></span></td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> 個人資料</a></span></td> 
    <td colname="2"> 包含媒體設定檔資訊（例如高度、寬度和位元速率）的類別。 </td> 
   </tr> 
   <tr rowsep="0"> 

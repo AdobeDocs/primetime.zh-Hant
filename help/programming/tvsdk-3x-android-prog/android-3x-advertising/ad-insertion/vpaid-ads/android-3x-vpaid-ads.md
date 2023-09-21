@@ -1,8 +1,7 @@
 ---
-description: 影片播放器廣告服務介面定義(VPAID) 2.0提供播放影片廣告的通用介面。 它為使用者提供豐富的媒體體驗，並允許發佈者更好地鎖定廣告、追蹤廣告印象，以及從視訊內容獲利。
+description: 視訊播放器廣告服務介面定義(VPAID) 2.0提供播放視訊廣告的通用介面。 它為使用者提供豐富的媒體體驗，並允許發佈者更精確地鎖定廣告、追蹤廣告印象並從視訊內容獲利。
 title: VPAID 2.0廣告支援
-exl-id: 8cc08999-6047-4bd0-a09f-8a2e28e09766
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -11,17 +10,17 @@ ht-degree: 0%
 
 # 概觀 {#vpaid-ad-support-overview}
 
-影片播放器廣告服務介面定義(VPAID) 2.0提供播放影片廣告的通用介面。 它為使用者提供豐富的媒體體驗，並允許發佈者更好地鎖定廣告、追蹤廣告印象，以及從視訊內容獲利。
+視訊播放器廣告服務介面定義(VPAID) 2.0提供播放視訊廣告的通用介面。 它為使用者提供豐富的媒體體驗，並允許發佈者更精確地鎖定廣告、追蹤廣告印象並從視訊內容獲利。
 
 支援下列功能：
 
 * VPAID規格的2.0版
 
-   如需詳細資訊，請參閱 [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
-* 具有隨選影片(VOD)內容的線性VPAID廣告
+  如需詳細資訊，請參閱 [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
+* 線性VPAID廣告搭配隨選影片(VOD)內容
 * JavaScript VPAID廣告
 
-   VPAID廣告必須以JavaScript為基礎，且廣告回應必須將VPAID廣告的媒體型別識別為 `application/javascript`.
+  VPAID廣告必須以JavaScript為基礎，且廣告回應必須將VPAID廣告的媒體型別識別為 `application/javascript`.
 
 不支援下列功能：
 
@@ -47,4 +46,4 @@ ht-degree: 0%
 
 * VPAID廣告沒有預先定義的持續時間，因為廣告可以是互動式。
 
-   在廣告伺服器回應中指定的廣告持續時間和廣告插播總持續時間可能不準確。
+  在廣告伺服器回應中指定的廣告持續時間和廣告插播總持續時間可能不準確。

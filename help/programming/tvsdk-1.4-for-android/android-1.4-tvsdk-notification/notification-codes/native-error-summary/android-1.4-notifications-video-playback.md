@@ -1,8 +1,7 @@
 ---
 description: AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些視訊播放通知。
 title: NATIVE_ERROR視訊播放值
-exl-id: a4476bbe-a62b-40cf-9795-cd209683c572
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1407'
 ht-degree: 6%
@@ -35,16 +34,16 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 1 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
-   <td colname="col3"> 非同步操作。 已提出操作要求。 成功/失敗資訊將於稍後提供。 </td> 
+   <td colname="col3"> 非同步操作。 已提出作業要求。 成功/失敗資訊將於稍後提供。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 2 </td> 
    <td colname="col2"><span class="codeph"> EOF</span> </td> 
-   <td colname="col3"> 由於檔案結束(EOF)條件，無法執行作業。 </td> 
+   <td colname="col3"> 因為檔案結束(EOF)狀況而無法執行作業。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3 </td> 
-   <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
+   <td colname="col2"><span class="codeph"> 解碼器失敗</span> </td> 
    <td colname="col3"> 解碼器在執行階段失敗。 </td> 
   </tr> 
   <tr> 
@@ -69,7 +68,7 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
-   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVER </span> </td> 
+   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE </span> </td> 
    <td colname="col3"> 網路錯誤，正在嘗試復原。 </td> 
   </tr> 
   <tr> 
@@ -104,13 +103,13 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 15 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG </span> </td> 
+   <td colname="col2"><span class="codeph"> 不支援的_CONFIG </span> </td> 
    <td colname="col3"> 不支援設定。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
    <td colname="col2"><span class="codeph"> 不支援的操作 </span> </td> 
-   <td colname="col3"> 不支援操作。 </td> 
+   <td colname="col3"> 不支援此操作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
@@ -125,7 +124,7 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 19 </td> 
    <td colname="col2"><span class="codeph"> INVALID_OPERATION</span> </td> 
-   <td colname="col3"> 不允許操作。 </td> 
+   <td colname="col3"> 不允許作業。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 20 </td> 
@@ -135,11 +134,11 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 21 </td> 
    <td colname="col2"><span class="codeph"> OP_INVALID_WITH_AUDIO_ONLY_FILE</span> </td> 
-   <td colname="col3"> 作業無法用於純音訊檔案。 </td> 
+   <td colname="col3"> 無法在僅限音訊的檔案上使用作業。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 22 </td> 
-   <td colname="col2"><span class="codeph"> 上一步搜尋進行中</span> </td> 
+   <td colname="col2"><span class="codeph"> 上一步_步驟_搜尋_進行中</span> </td> 
    <td colname="col3"> 上一個搜尋作業仍在進行中。 </td> 
   </tr> 
   <tr> 
@@ -154,7 +153,7 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 25 </td> 
-   <td colname="col2"><span class="codeph"> 無效的_SEEK_TIME</span> </td> 
+   <td colname="col2"><span class="codeph"> 無效的SEEK_TIME</span> </td> 
    <td colname="col3"> 無效的搜尋時間。 </td> 
   </tr> 
   <tr> 
@@ -164,8 +163,8 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 27 </td> 
-   <td colname="col2"><span class="codeph"> COMPONENT_CREATION_FAIL</span> </td> 
-   <td colname="col3"> 無法建立基本元件。 </td> 
+   <td colname="col2"><span class="codeph"> COMPONENT_CREATION_FAILED</span> </td> 
+   <td colname="col3"> 無法建立必要元件。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 28 </td> 
@@ -189,7 +188,7 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 32 </td> 
-   <td colname="col2"><span class="codeph"> 網路無法使用(_U)</span> </td> 
+   <td colname="col2"><span class="codeph"> 網路無法使用</span> </td> 
    <td colname="col3"> 網路無法使用。 </td> 
   </tr> 
   <tr> 
@@ -204,13 +203,13 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 35 </td> 
-   <td colname="col2"><span class="codeph"> VIDEO_PROFILE_NOT_SUPPORT</span> </td> 
+   <td colname="col2"><span class="codeph"> 視訊設定檔不支援</span> </td> 
    <td colname="col3"> 不支援的視訊設定檔。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 36 </td> 
    <td colname="col2"><span class="codeph"> PERIOD_NOT_LOADED</span> </td> 
-   <td colname="col3"> 嘗試在HOLD期間或尚未載入的期間執行操作。 </td> 
+   <td colname="col3"> 嘗試在HOLD期間或尚未載入的期間執行作業。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 37 </td> 
@@ -220,17 +219,17 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 38 </td> 
    <td colname="col2"><span class="codeph"> CALLED_FROM_WRONG_THREAD</span> </td> 
-   <td colname="col3"> 無法從錯誤的執行緒呼叫API。 通常，只適用於應從主要執行緒呼叫的API元素。 </td> 
+   <td colname="col3"> 無法從錯誤的執行緒呼叫API。 通常，只適用於應從主執行緒呼叫的API元素。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 39 </td> 
    <td colname="col2"><span class="codeph"> FRAGMENT_READ_ERROR</span> </td> 
-   <td colname="col3"> 片段讀取錯誤。 沒有容錯移轉。 引擎將嘗試讀取下一個片段。 </td> 
+   <td colname="col3"> 片段讀取錯誤。 不存在容錯移轉。 引擎將嘗試讀取下一個片段。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 40 </td> 
    <td colname="col2"><span class="codeph"> 已中止</span> </td> 
-   <td colname="col3"> 作業已因明確的Abort或Destroy呼叫而中止。 </td> 
+   <td colname="col3"> 作業被明確的Abort或Destroy呼叫中止。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 41 </td> 
@@ -275,17 +274,17 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 49 </td> 
    <td colname="col2"><span class="codeph"> SWITCH_TO_ASYMETRIC_PROFILE</span> </td> 
-   <td colname="col3"> DRM正在切換至非對稱設定檔。 所有設定檔預計都會在持續時間內對齊。 如果沒有，則會擲回此警告，而且播放中可能會有跳躍。 </td> 
+   <td colname="col3"> DRM正在切換至非對稱輪廓。 所有設定檔預計都會在期間內對齊。 如果沒有，系統會擲回此警告，而且播放時可能會有跳躍。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 50 </td> 
    <td colname="col2"><span class="codeph"> LIVE_WINDOW_MOVED_BACKWARD</span> </td> 
-   <td colname="col3"> 即時視窗預期只會向前移動。 如果沒有，則會擲回此警告，且不會讀取視窗。 因此，播放中可能會出現跳躍（或停止/長時間暫停）。 </td> 
+   <td colname="col3"> 即時視窗預期只會向前移動。 如果不會，系統會擲回此警告，且不會讀取視窗。 因此，播放中可能會出現跳躍（或停止/長時間暫停）。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 51 </td> 
    <td colname="col2"><span class="codeph"> CURRENT_PERIOD_EXPIRED</span> </td> 
-   <td colname="col3"> 即時視窗已移動超過目前時段。 </td> 
+   <td colname="col3"> 即時視窗已移至目前期間以外。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 52 </td> 
@@ -294,7 +293,7 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 53 </td> 
-   <td colname="col2"><span class="codeph"> PERIENCE_HOLD</span> </td> 
+   <td colname="col2"><span class="codeph"> PERIOD_HOLD</span> </td> 
    <td colname="col3"> 媒體讀取器無法進一步讀取，因為它已經達到setHoldAt API設定的時間。 </td> 
   </tr> 
   <tr> 
@@ -304,13 +303,13 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
      <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">bufferTime太高（等於或高於即時視窗持續時間）。 </li> 
      <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">一或多個插入/清除API的組合取代的媒體多於新增的媒體。 </li> 
-     <li id="li_1B14716B2157492AB1859306D1250523">下一個時段是具有待處理媒體取代的即時時段（由於InsertBy API呼叫） </li> 
+     <li id="li_1B14716B2157492AB1859306D1250523">下一個期間是有待處理媒體取代的即時期間（由於InsertBy API呼叫） </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
-   <td colname="col3"> 媒體中的音訊和視訊交錯未正確執行。 這是封裝錯誤。 當差異超過兩秒時，就會傳送警告。 </td> 
+   <td colname="col3"> 媒體中的音訊和視訊交錯處理不正確。 這是封裝錯誤。 當差異超過兩秒時會傳送警告。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 56 </td> 
@@ -320,7 +319,7 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHORIZED</span> </td> 
-   <td colname="col3"> 尚未在Flash Player中啟用HLS播放。 請參閱AuthorizedFeatures.enableHLSPlayback。 </td> 
+   <td colname="col3"> Flash Player中尚未啟用HLS播放。 請參閱AuthorizedFeatures.enableHLSPlayback。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
@@ -330,12 +329,12 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 59 </td> 
    <td colname="col2"><span class="codeph"> RANGE_SPANS_READ_HEAD</span> </td> 
-   <td colname="col3"> 開始播放後，插入/取代範圍不應包含讀取磁頭。 </td> 
+   <td colname="col3"> 開始播放後，插入/取代範圍不應包含讀取標頭。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 60 </td> 
    <td colname="col2"><span class="codeph"> POSTROLL_WITH_LIVE_NOT_ALLOWED</span> </td> 
-   <td colname="col3"> 即時媒體上不允許後置滾動插入。 不過，在伺服器將媒體標示為完成之後，才允許這些動作。 </td> 
+   <td colname="col3"> 即時媒體上不允許後置滾動插入。 但是，在伺服器將媒體標示為完成之後，就允許這些動作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 61 </td> 
@@ -345,7 +344,7 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 62 </td> 
    <td colname="col2"><span class="codeph"> SPS_PPS_FOUND_OUTSIDE_AVCC</span> </td> 
-   <td colname="col3"> 串流不遵循總是將H264 SPS/PPS放入AVCC的封裝建議。 可能會出現搜尋/播放問題。 </td> 
+   <td colname="col3"> 資料流未遵循總是將H264 SPS/PPS放入AVCC的封裝建議。 可能會出現搜尋/播放問題。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 63 </td> 
@@ -360,16 +359,16 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   <tr> 
    <td colname="col1"> 65 </td> 
    <td colname="col2"><span class="codeph"> NULL_OPERATION</span> </td> 
-   <td colname="col3"> 操作不會執行任何動作。 </td> 
+   <td colname="col3"> 操作沒有執行任何動作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 66 </td> 
-   <td colname="col2"><span class="codeph"> SEGMENT_SKIPPED_ON_FAILED</span> </td> 
-   <td colname="col3"> 區段無法播放，失敗時會略過。 </td> 
+   <td colname="col2"><span class="codeph"> SEGMENT_SKIPPED_ON_FAILURE</span> </td> 
+   <td colname="col3"> 區段無法播放，因失敗已略過。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 67 </td> 
-   <td colname="col2"><span class="codeph"> INCOMPATIBLE_RENDER_MODE</span> </td> 
+   <td colname="col2"><span class="codeph"> 不相容的_RENDER_MODE</span> </td> 
    <td colname="col3"> 不相容的轉譯模式。 </td> 
   </tr> 
   <tr> 
@@ -384,22 +383,22 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 70 </td> 
-   <td colname="col2"><span class="codeph"> MANIFEST_FILE_UNEXPECTED_CHANGED</span> </td> 
+   <td colname="col2"><span class="codeph"> MANIFEST_FILE_UNEXPECTLY_CHANGED</span> </td> 
    <td colname="col3"> 資訊清單檔案以非預期的方式變更。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 71 </td> 
    <td colname="col2"><span class="codeph"> CANNOT_SPLIT_TIMELINE</span> </td> 
-   <td colname="col3"> 無法在時間表上執行分割操作。 </td> 
+   <td colname="col3"> 無法在時間表上執行分割作業。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 72 </td> 
    <td colname="col2"><span class="codeph"> CANNOT_ERASE_TIMELINE</span> </td> 
-   <td colname="col3"> 無法在時間軸上執行清除操作。 </td> 
+   <td colname="col3"> 無法在時間表上執行清除操作。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 73 </td> 
-   <td colname="col2"><span class="codeph"> DID_NOT_NEXT_GET</span> </td> 
+   <td colname="col2"><span class="codeph"> DID_NOT_GET_NEXT_FRAGMENT</span> </td> 
    <td colname="col3"> 未取得下一個片段。 </td> 
   </tr> 
   <tr> 
@@ -449,13 +448,13 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 83 </td> 
-   <td colname="col2"><span class="codeph"> TIMELINE_TOO_SHORT</span> </td> 
+   <td colname="col2"><span class="codeph"> 時間軸_TOO_SHORT</span> </td> 
    <td colname="col3"> 時間表持續時間太短。 如果這是即時資料流，可能會發生頻繁的緩衝。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 84 </td> 
    <td colname="col2"><span class="codeph"> AUDIO_ONLY_STREAM_START</span> </td> 
-   <td colname="col3"> 資料流已切換為純音訊資料流。 </td> 
+   <td colname="col3"> 串流已切換為僅限音訊的串流。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 85 </td> 
@@ -484,13 +483,13 @@ AVE的視訊編碼器介面會在NATIVE_ERROR中繼資料物件中傳回這些�
   </tr> 
   <tr> 
    <td colname="col1"> 91 </td> 
-   <td colname="col2"> <span class="codeph"> UNREPORTED_TIME_DISCONTINUITY_FOUND</span> </td> 
-   <td colname="col3"> 發現未報告的時間(PTS)中斷。 </td> 
+   <td colname="col2"> <span class="codeph"> 未報告_時間_中斷_已找到</span> </td> 
+   <td colname="col3"> 發現未回報的時間(PTS)中斷。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 92 </td> 
    <td colname="col2"> <span class="codeph"> UNMATCHED_AV_DISCONTINUITY_FOUND</span> </td> 
-   <td colname="col3"> 找到不相符的音訊和視訊中斷。 </td> 
+   <td colname="col3"> 找到不相符的音訊和視訊中斷情形。 </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 93 </td> 

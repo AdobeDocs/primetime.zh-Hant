@@ -1,8 +1,7 @@
 ---
 description: MediaResource類別代表MediaPlayer例項要載入的內容。
 title: 建立媒體資源
-exl-id: ab66255d-7848-479a-a8cd-c6113cdd7749
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -25,11 +24,11 @@ MediaResource類別代表MediaPlayer例項要載入的內容。
     <tbody> 
     <tr> 
     <td colname="col1"> <p>url </p> </td> 
-    <td colname="col2"> <p>代表媒體資訊清單/播放清單URL的字串。 </p> </td> 
+    <td colname="col2"> <p>字串，代表媒體的資訊清單/播放清單的URL。 </p> </td> 
     </tr> 
     <tr> 
     <td colname="col1"> <p>type </p> </td> 
-    <td colname="col2"> <p>下列成員之一 <span class="codeph"> MediaResource.Type </span> 對應到指示的檔案型別的列舉： </p> <p> 
+    <td colname="col2"> <p>下列成員之一 <span class="codeph"> MediaResource.Type </span> 對應到指定檔案型別的列舉： </p> <p> 
     <ul id="ul_E9689FA06DC94BF4848F16E1F2F01A59"> 
     <li id="li_83A14B96CDC648C6AF6F5FA745343E1F"> <span class="codeph"> MP4 </span> - ISO基本媒體檔案格式(MP4) </li> 
     <li id="li_FCD355151515412D9A78C3815DD09129"> <span class="codeph"> HLS </span> - M3U8 </li> 
@@ -38,7 +37,7 @@ MediaResource類別代表MediaPlayer例項要載入的內容。
     </tr> 
     <tr> 
     <td colname="col1"> <p>中繼資料 </p> </td> 
-    <td colname="col2"> <p>的例項 <span class="codeph"> 中繼資料 </span> 類別，其中可能包含有關要載入之內容的自訂資訊。 內容範例為要放置在主要內容內的替代或廣告內容。 如果使用廣告，請設定 <span class="codeph"> Auditudesettings </span> 使用此建構函式之前。 如需詳細資訊，請參閱 <a href="../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md">Ad-insertion-metadata</a>. </p> <p>Flash提示：如有需要，您可以使用 <span class="codeph"> forceFlash </span> 引數。 此功能相當實用，因為瀏覽器TVSDK目前並不支援所有功能（例如即時廣告工作流程）。 Flash遞補內容用於播放視訊內容。 </p> </td> 
+    <td colname="col2"> <p>的例項 <span class="codeph"> 中繼資料 </span> 類別，其中可能包含要載入之內容的自訂資訊。 內容範例為要置於主要內容內的替代或廣告內容。 如果使用廣告，請設定 <span class="codeph"> Auditudesettings </span> 使用此建構函式之前。 如需詳細資訊，請參閱 <a href="../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md">Ad-insertion-metadata</a>. </p> <p>Flash提示：如有需要，您可以使用 <span class="codeph"> forceFlash </span> 引數。 此功能相當實用，因為瀏覽器TVSDK目前並不支援所有功能（例如即時廣告工作流程）。 Flash遞補用於播放視訊內容。 </p> </td> 
     </tr> 
     </tbody> 
    </table>
@@ -60,6 +59,6 @@ MediaResource類別代表MediaPlayer例項要載入的內容。
 
    >[!TIP]
    >
-   >之後您隨時可以使用 `MediaResource` 存取子(getter)，檢查資源的型別、URL和中繼資料。
+   >在此之後的任何時間，您都可以使用 `MediaResource` 存取子(getter) ，用於檢查資源的型別、URL和中繼資料。
 
-1. 載入您的MediaPlayer例項。 如需詳細資訊，請參閱 [在MediaPlayer中載入媒體資源](../../content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md).
+1. 載入MediaPlayer例項。 如需詳細資訊，請參閱 [在MediaPlayer中載入媒體資源](../../content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md).

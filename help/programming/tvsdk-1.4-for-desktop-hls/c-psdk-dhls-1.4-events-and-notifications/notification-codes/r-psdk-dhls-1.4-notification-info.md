@@ -1,8 +1,7 @@
 ---
-description: 此表格提供有關INFO型別通知的詳細資訊。
+description: 此表格提供有關「資訊」型別通知的詳細資訊。
 title: INFO通知代碼
-exl-id: 6f813797-b4ef-4e75-a096-d55103b7304b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 4%
@@ -11,11 +10,11 @@ ht-degree: 4%
 
 # INFO通知代碼{#info-notification-codes}
 
-此表格提供有關INFO型別通知的詳細資訊。
+此表格提供有關「資訊」型別通知的詳細資訊。
 
 ## 章節標題 {#section_ED4302E363AE48CBA2C3E0B71AE612D8}
 
-大多數資訊通知包含相關中繼資料，例如無法下載的資源的URL。 某些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
+大多數資訊通知包含相關的中繼資料，例如，無法下載的資源的URL。 有些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
 
 <table frame="all" colsep="1" rowsep="1" id="table_503463046E764A87B10EB5D8B294EB23"> 
  <thead> 
@@ -51,7 +50,7 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> 搜尋開始 </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_START </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"><span class="codeph"> 搜尋時間</span> </td> 
    <td colname="5"> 已起始搜尋作業。 </td> 
@@ -117,14 +116,14 @@ ht-degree: 4%
    <td colname="2"><span class="codeph"> 時間軸變更 </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> CONTENT_ID </span><span class="codeph"> PERIOD_INDEX </span> </td> 
-   <td colname="5"> 時間軸已變更（例如，已新增或移除替代內容）。 </td> 
+   <td colname="5"> 時間軸已變更（例如，替代內容已新增或移除）。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303001 </span> </td> 
    <td colname="2"><span class="codeph"> AD_BREAK_PLACEMENT_COMPLETE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <span class="codeph"> PROPOSED_AD_BREAK</span> <span class="codeph"> ACCEPTED_AD_BREAK</span> </td> 
-   <td colname="5"> TVSDK接受建議的廣告插播，並將（完整或部分）放在播放時間軸上。 </td> 
+   <td colname="5"> TVSDK已接受提議的廣告插播，並（完整或部分）放置在播放時間軸上。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 303002 </span> </td> 
@@ -170,7 +169,7 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 304000 </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_變更 </span> </td> 
+   <td colname="2"><span class="codeph"> audio_TRACK_CHANGE </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"><span class="codeph"> TRACK_ID </span><span class="codeph"> CURRENT_MEDIA_TIME </span> </td> 
    <td colname="5"> <p>音訊曲目已變更。 </p> </td> 
@@ -201,7 +200,7 @@ ht-degree: 4%
    <td colname="2"><span class="codeph"> GENERIC_INFO </span> </td> 
    <td colname="3"> <p>無 </p> </td> 
    <td colname="4"> <p>無 </p> </td> 
-   <td colname="5"> <p>標籤一般資訊事件。 並非由TVSDK實際發出。 它只是TVSDK資訊事件對應之數值程式碼範圍結尾的標籤。 </p> </td> 
+   <td colname="5"> <p>標籤一般資訊事件。 並非由TVSDK實際發行。 這只是TVSDK資訊事件對應之數值程式碼範圍結尾的標籤。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,8 +1,7 @@
 ---
 description: AdAsset的內容會說明隨附橫幅。
 title: 隨附橫幅資料
-exl-id: 922577fd-bc58-4669-b051-fe54b197a5f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
@@ -43,7 +42,7 @@ AdAsset的內容會說明隨附橫幅。
   </tr> 
   <tr> 
    <td colname="col1"> 靜態URL </td> 
-   <td colname="col2"> <p>有時候，隨附橫幅也會有 <span class="codeph"> staticURL</span> 這是影像或的直接URL <span class="codeph"> .swf</span> （flash橫幅）。 </p> <p>如果您不想要使用html或iframe，可以使用影像或swf的直接URL來顯示Flash舞台中的橫幅。 在此情況下，您可以使用 <span class="codeph"> staticURL</span> 以顯示橫幅。 </p> <p>重要：您必須檢查靜態URL是否為有效的字串，因為此屬性可能並不一定都可用。 </p> </td> 
+   <td colname="col2"> <p>有時候，隨附橫幅也會有 <span class="codeph"> staticURL</span> 這是影像或的直接URL。 <span class="codeph"> .swf</span> （flash橫幅）。 </p> <p>如果您不想要使用html或iframe，可以使用影像或swf的直接URL來顯示Flash舞台中的橫幅。 在此情況下，您可以使用 <span class="codeph"> staticURL</span> 以顯示橫幅。 </p> <p>重要：您必須檢查靜態URL是否為有效的字串，因為此屬性可能並不一定都可用。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,8 +1,7 @@
 ---
 description: 您的應用程式必須在適當的時間使用適當的PTTimedMetadata物件。
 title: 在傳送定時中繼資料物件時將其儲存
-exl-id: 8b859e8d-eb4c-48f9-a95e-1bcc35a2a520
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
@@ -13,20 +12,20 @@ ht-degree: 0%
 
 您的應用程式必須在適當的時間使用適當的PTTimedMetadata物件。
 
-在內容剖析期間（發生在播放之前），TVSDK會識別訂閱的標籤，並通知您的應用程式這些標籤。 與每個報表套裝相關聯的時間 `PTTimedMetadata` 是播放時間軸的絕對時間。
+在播放前進行的內容剖析期間，TVSDK會識別訂閱的標籤，並通知您的應用程式這些標籤。 與每個報表套裝相關聯的時間 `PTTimedMetadata` 是播放時間軸的絕對時間。
 
 您的應用程式必須完成下列工作：
 
 1. 追蹤目前的播放時間。
-1. 比對目前播放時間與已傳送的時間 `PTTimedMetadata` 物件。
+1. 比對目前的播放時間與已傳送的時間 `PTTimedMetadata` 物件。
 
 1. 使用 `PTTimedMetadata` 其中開始時間等於目前播放時間。
 
    >[!NOTE]
    >
-   >以下程式碼假設只有一個 `PTTimedMetadata` 一次執行個體。 如果有多個執行個體，應用程式必須適當地儲存在字典中。 一種方法是在指定時間建立陣列，並儲存該陣列中的所有執行個體。
+   >以下程式碼假設只有一個 `PTTimedMetadata` 一次執行個體。 如果有多個執行個體，應用程式必須將它們適當地儲存在字典中。 一種方法是在指定時間建立陣列，並將所有執行個體儲存在該陣列中。
 
-   以下範例說明如何儲存 `PTTimedMetadata` 中的物件 `NSMutableDictionary (timedMetadataCollection)` 以每個專案的開始時間作為索引鍵 `timedMetadata`.
+   下列範例顯示如何儲存 `PTTimedMetadata` 中的物件 `NSMutableDictionary (timedMetadataCollection)` 以每個專案的開始時間作為索引鍵 `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -53,7 +52,7 @@ ht-degree: 0%
 
 ## 剖析Nielsen ID3標籤 {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-若要擷取ID3標籤以供剖析，請在 `onMediaPlayerSubscribedTagIdentified` 方法：
+若要擷取ID3標籤以進行剖析，請在 `onMediaPlayerSubscribedTagIdentified` 方法：
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 

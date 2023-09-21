@@ -1,8 +1,7 @@
 ---
-description: 授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法（有權利）的使用者可以獲發授權（金鑰），以解密和播放其內容提供者的加密內容中的特定片段。
+description: 授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法的（有權利的）使用者可獲發授權（金鑰），以解密及播放其內容提供者的特定加密內容。
 title: 授權
-exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -11,22 +10,21 @@ ht-degree: 0%
 
 # 授權{#licensing}
 
-授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法（有權利）的使用者可以獲發授權（金鑰），以解密和播放其內容提供者的加密內容中的特定片段。
+授權是允許或拒絕使用者播放受保護視訊內容的主要機制。 合法的（有權利的）使用者可獲發授權（金鑰），以解密及播放其內容提供者的特定加密內容。
 
-在使用者裝置上的應用程式或網頁可以播放受DRM保護的內容之前，必須從您（客戶）所操作的權利或店面伺服器取得Token。 Adobe為此目的提供範例參考伺服器： [參考伺服器：範例ExpressPlay軟體權利檔案伺服器(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+在使用者裝置上的應用程式或網頁可以播放受DRM保護的內容之前，必須從您客戶所操作的權利或店面伺服器取得Token。 Adobe為此提供範例參考伺服器： [參考伺服器：範例ExpressPlay軟體權利檔案伺服器(SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-您的軟體權利檔案或店面伺服器會向相關的ExpressPlay伺服器要求授權權杖，但必須先檢查您自己的後端系統，以判斷特定使用者是否有權觀看要求的內容。 從授權權杖請求傳回的回應是許可證伺服器的現成可用URL，或者回應包含JSON結構的URL，具體取決於您使用的DRM解決方案。
+您的軟體權利檔案或店面伺服器會向相關的ExpressPlay伺服器要求授權權杖，但前提是與您自己的後端系統核實，以確定特定使用者是否有權觀看要求的內容。 從授權權杖請求傳回的回應可能是授權伺服器的現成可用URL，或回應包含JSON結構的URL，具體取決於您使用的DRM解決方案。
 
 >[!NOTE]
 >
 >無法從使用者端本身提出授權權杖請求：
->1. 必須在受信任的環境中檢查權益；以及
->1. 客戶驗證者必須保密。
-
+>1. 必須在受信任的環境中檢查權利；以及
+>1. 客戶驗證器必須保密。
 
 1. 提出授權Token要求。
 
-   對於快速入門案例，您只想確保所涉及的各種元件能夠協同運作，您可能會想使用類似以下的工具 [!DNL curl] 提出您的授權Token要求（而不是讓應用程式初次啟動，並從那裡執行及測試呼叫）。 例如：
+   對於快速入門案例，您只想確保所涉及的各種元件能夠共同運作，您可能會想要使用類似以下的專案 [!DNL curl] 發出授權Token要求（而非讓應用程式初次啟動，並從那裡執行及測試呼叫）。 例如：
 
    * Widevine：
 
@@ -56,7 +54,7 @@ ht-degree: 0%
       &<Any additional licensing attributes desired>" >>WidevineToken 
    ```
 
-   範例Widevine測試Token：
+   Widevine測試權杖範例：
 
    ```
    https://wv.test.expressplay.com/widevine/RightsManager.asmx?ExpressPlayToken= 
@@ -95,7 +93,7 @@ ht-degree: 0%
       &<Any additional licensing attributes desired>" >>playreadyToken
    ```
 
-   範例PlayReady測試Token：
+   PlayReady測試權杖範例：
 
    ```
    {"licenseAcquisitionUrl":"https://pr.test.expressplay.com/playready/RightsManager.asmx", 
@@ -103,9 +101,9 @@ ht-degree: 0%
    G_2Qt8RdTGJ2_Q_xtRfnj7H6C-yt6By40IhNaSQ0nNYUsY1_MtCrHXIltlVhN2Ekr_RNyTNvCjYs0V5TqzOPY"} 
    ```
 
-   請注意，PlayReady回應是JSON物件，有個別的URL和權杖元素。
+   請注意，PlayReady回應是JSON物件，具有個別的URL和權杖元素。
 
-   * 公平遊戲：
+   * FairPlay：
 
    ```
    curl "https://fp-gen.test.expressplay.com/hms/fp/token?customerAuthenticator= 

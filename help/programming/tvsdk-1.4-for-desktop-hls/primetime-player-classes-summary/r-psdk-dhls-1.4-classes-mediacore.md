@@ -1,8 +1,7 @@
 ---
 description: 您可以使用Primetime播放器API來自訂播放器的行為。 這些類別會說明您的媒體播放器及其資源。
 title: Mediacore類別
-exl-id: 8948484d-a48d-49b4-ac11-b68f1abaf706
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%
@@ -27,7 +26,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a> </span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> Abrcontrolparameters</a> </span> </td> 
    <td colname="2"> 封裝所有最適化位元速率控制引數的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -39,11 +38,11 @@ ht-degree: 0%
    <td colname="2"> 為隱藏式字幕中的文字定義所有樣式屬性的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ClosedCaptionsVisibility.html" format="html" scope="external"> 隱藏式字幕可見性</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ClosedCaptionsVisibility.html" format="html" scope="external"> ClosedCaptionsVisibility</a></span> </td> 
    <td colname="2"> 控制隱藏式字幕是否可見的類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ContentFactory.html" format="html" scope="external"> ContentFactory</a> </span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ContentFactory.html" format="html" scope="external"> contentfactory</a> </span> </td> 
    <td colname="2"> 用於建立和管理廣告工作流程中使用的各種元件的工廠基底類別。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -92,7 +91,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html" format="html" scope="external"> MediaPlayerItemLoader</a></span> </td> 
-   <td colname="2">載入媒體播放器資源並建立對應之類別 <span class="codeph"> MediaPlayerItem</span> 物件。 </td> 
+   <td colname="2">載入媒體播放器資源並建立對應專案的類別 <span class="codeph"> MediaPlayerItem</span> 物件。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerStatus.html" format="html" scope="external"> MediaPlayerStatus</a></span> </td> 
@@ -104,7 +103,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaResource.html" format="html" scope="external"> MediaResource</a></span> </td> 
-   <td colname="2"> 封裝媒體資源所有資訊的類別。 包含媒體資源型別的列舉。 </td> 
+   <td colname="2"> 包裝媒體資源所有資訊的類別。 包含媒體資源型別的列舉。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaResourceType.html" format="html" scope="external"> MediaResourceType</a></span> </td> 
@@ -112,11 +111,11 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/PSDKConfig.html" format="html" scope="external"> PSDKConfig</a></span> </td> 
-   <td colname="2"> 除了預設提示標籤之外，此類別還封裝了媒體播放器執行廣告投放時使用的自訂標籤。 其中也包含應用程式想要收到相關通知的標籤名稱。 </td> 
+   <td colname="2"> 除了預設提示標籤之外，此類別會封裝媒體播放器執行廣告投放時所使用的自訂標籤。 其中也包括應用程式想要收到相關通知的標籤名稱。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/TextFormat.html" format="html" scope="external"> 文字格式</a></span> </td> 
-   <td colname="2"> 封裝描述文字樣式的不同屬性（例如，隱藏式字幕樣式）的介面。 </td> 
+   <td colname="2"> 封裝描述文字樣式（例如隱藏式字幕樣式）的不同屬性的介面。 </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/Version.html" format="html" scope="external"> 版本</a></span> </td> 

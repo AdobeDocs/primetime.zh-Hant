@@ -1,8 +1,7 @@
 ---
 description: 此表格提供有關ERROR型別通知的詳細資訊。
 title: 錯誤通知代碼
-exl-id: 3e60488e-b368-41f6-b32c-cda5688d67de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 4%
@@ -15,7 +14,7 @@ ht-degree: 4%
 
 <!--<a id="section_D29404228F5E4B818642CBA6A0D39546"></a>-->
 
-大多數錯誤都包含相關的中繼資料，例如無法下載的資源的URL。 某些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
+大多數錯誤包含相關的中繼資料，例如無法下載的資源的URL。 有些通知包含中繼資料，用於指定問題發生在主要視訊內容、替代音訊內容還是廣告中。
 
 <table frame="all" colsep="1" rowsep="1" id="table_8B61210A406A45ACBE37FC29729DDE22"> 
  <thead> 
@@ -61,7 +60,7 @@ ht-degree: 4%
    <td colname="2"><span class="codeph"> PAUSE_ERROR </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"><span class="codeph"> 說明</span> </td> 
-   <td colname="5"> 執行暫停操作時發生錯誤。 </td> 
+   <td colname="5"> 執行暫停作業時發生錯誤。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101102 </span> </td> 
@@ -158,7 +157,7 @@ ht-degree: 4%
    <td colname="1"><span class="codeph"> 106000 </span> </td> 
    <td colname="2"><span class="codeph"> NATIVE_ERROR </span> </td> 
    <td colname="3"> 無 </td> 
-   <td colname="4"> <span class="codeph"> NATIVE_ERROR_CODE </span> <span class="codeph"> NATIVE_ERROR_NAME </span> <span class="codeph"> 說明 </span> <span class="codeph"> 說明</span> <p><b>DRM詳細資料：</b> </p> <span class="codeph"> drm_ERROR_STRING</span> <span class="codeph"> NATIVE_SUBERROR_CODE</span> </td> 
+   <td colname="4"> <span class="codeph"> NATIVE_ERROR_CODE </span> <span class="codeph"> 原生錯誤名稱 </span> <span class="codeph"> 說明 </span> <span class="codeph"> 說明</span> <p><b>DRM詳細資料：</b> </p> <span class="codeph"> drm_ERROR_STRING</span> <span class="codeph"> NATIVE_SUBERROR_CODE</span> </td> 
    <td colname="5"> <p>低階AVE程式庫發生錯誤。 </p> <p>另請參閱 <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> NATIVE_ERROR通知的詳細資料</a> 這些中繼資料索引鍵值的相關資訊。 </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -173,7 +172,7 @@ ht-degree: 4%
    <td colname="2"><span class="codeph"> ENGINE_RELEASE_錯誤 </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"><span class="codeph"> 說明 </span> </td> 
-   <td colname="5"> 釋放AVE低階程式庫時發生錯誤。 </td> 
+   <td colname="5"> 發行AVE低階程式庫時發生錯誤。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 106003 </span> </td> 
@@ -194,7 +193,7 @@ ht-degree: 4%
    <td colname="2"><span class="codeph"> ENGINE_SET_檢視錯誤 </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"><span class="codeph"> 說明</span> </td> 
-   <td colname="5"> 將檢視附加至AVE資料庫時發生錯誤。 </td> 
+   <td colname="5"> 將檢視附加至AVE程式庫時發生錯誤。 </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>設定</b> </td> 
@@ -207,7 +206,7 @@ ht-degree: 4%
    <td colname="1"><span class="codeph"> 107000 </span> </td> 
    <td colname="2"><span class="codeph"> SET_VOLUME_ERROR </span> </td> 
    <td colname="3"> 無 </td> 
-   <td colname="4"><span class="codeph"> 說明數量 </span> </td> 
+   <td colname="4"><span class="codeph"> 說明磁碟區 </span> </td> 
    <td colname="5"> 嘗試設定磁碟區等級時發生錯誤。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -240,7 +239,7 @@ ht-degree: 4%
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 107005 </span> </td> 
-   <td colname="2"><span class="codeph"> SET_BUFFER_PARAMETERS_ERROR </span> </td> 
+   <td colname="2"><span class="codeph"> SET_BUFFER_引數_錯誤 </span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"><span class="codeph"> 說明 </span><span class="codeph"> INITIAL_BUFFER_TIME </span><span class="codeph"> PLAY_BUFFER_TIME </span> </td> 
    <td colname="5"> 嘗試變更緩衝控制引數時發生錯誤。 </td> 
@@ -256,7 +255,7 @@ ht-degree: 4%
    <td colname="1"><span class="codeph"> 109000 </span> </td> 
    <td colname="2"><span class="codeph"> AUDIO_TRACK_ERROR </span> </td> 
    <td colname="3"><span class="codeph"> DOWNLOAD_ERROR </span> </td> 
-   <td colname="4"><span class="codeph"> AUDIO_TRACK_NAME </span><span class="codeph"> AUDIO_TRACK_LANGUAGE </span> </td> 
+   <td colname="4"><span class="codeph"> 音訊曲目名稱 </span><span class="codeph"> AUDIO_TRACK_LANGUAGE </span> </td> 
    <td colname="5"> 發生與音軌相關的錯誤。 </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -271,7 +270,7 @@ ht-degree: 4%
    <td colname="2"><span class="codeph"> GENERIC_ERROR</span> </td> 
    <td colname="3"> 無 </td> 
    <td colname="4"> 無 </td> 
-   <td colname="5"> 標籤一般錯誤事件。 並非由TVSDK實際發出。 這只是TVSDK錯誤事件對應之數值程式碼範圍結尾的標籤。 </td> 
+   <td colname="5"> 標籤一般錯誤事件。 並非由TVSDK實際發行。 這僅是與TVSDK錯誤事件相對應的數值代碼範圍結尾的標籤。 </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,8 +1,7 @@
 ---
 title: 直接廣告插播的JSON物件
 description: 當型別值為直接廣告插播時，詳細說明JSON物件
-exl-id: d5e3ddd5-b963-4e7d-b04b-087d4fe96faf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 當型別值是直接廣告插播時，下列程式碼區塊會定義詳細資訊JSON物件。
 
-此 `MetadataNode` 傳回者 `IFeedItemAdapter:getStreamMetadata()` 包含具有型別索引鍵的專案 `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` 和字串值，代表以下的詳細資料JSON物件值。
+此 `MetadataNode` 傳回者 `IFeedItemAdapter:getStreamMetadata()` 包含具有型別索引鍵的專案 `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` 和值來代表下方的詳細資料JSON物件值。
 
 ```
 “metadata”: { 
@@ -49,9 +48,9 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 |---|---|
-| `tag` | 對應至中標籤欄位的字串 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `tag` | 對應到中標籤欄位的字串 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 | `time` | 表示廣告插播的開始時間，對應至中的時間欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`. 值0表示前段廣告。 |
-| `replace` | 表示廣告插播取代持續時間，對應至 `replaceDuration` 中的欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `replace` | 表示廣告插播取代持續時間，將對應至 `replaceDuration` 中的欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 | `ad-list` | 在指定的廣告插播期間要播放的廣告清單，將對應至 `List<Ad>` 中的欄位 `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
 下列程式碼區塊會定義廣告清單陣列的JSON物件。
@@ -73,6 +72,6 @@ ht-degree: 0%
 
 | 屬性 | 說明 |
 |---|---|
-| `url` | 廣告內容的URL，對應至中的url欄位 `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `url` | 指向廣告內容的URL，對應到中的url欄位 `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `duration` | 廣告持續時間，對應至中的持續時間欄位 `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | 說明字串。 |

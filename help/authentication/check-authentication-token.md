@@ -1,8 +1,7 @@
 ---
 title: 檢查驗證Token
 description: 檢查驗證Token
-exl-id: 9020f261-44d8-4bd5-b85b-a8667679f563
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%

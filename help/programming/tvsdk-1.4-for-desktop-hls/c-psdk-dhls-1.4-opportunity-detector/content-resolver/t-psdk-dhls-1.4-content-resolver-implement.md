@@ -1,22 +1,21 @@
 ---
 description: 您可以根據預設解析器來實作您自己的內容解析器。
-title: 實作自訂內容解析程式
-exl-id: abe967a5-ced3-4e23-8671-065e256974d3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 實作自訂內容解析器
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-# 實作自訂內容解析程式{#implement-a-custom-content-resolver}
+# 實作自訂內容解析器{#implement-a-custom-content-resolver}
 
 您可以根據預設解析器來實作您自己的內容解析器。
 
-當TVSDK偵測到新的商機時，它會透過註冊的內容解析程式反複尋找，以使用來尋找能夠解析該商機的內容。 `canResolve` 方法。 系統會選取傳回true的第一個來解析商機。 如果沒有內容解析程式可用，則會略過該機會。 由於內容解析程式通常是非同步的，內容解析程式負責在程式完成時通知TVSDK。
+當TVSDK偵測到新的商機時，它會逐一檢視註冊的內容解析器，尋找一個能夠使用 `canResolve` 方法。 系統會選取第一個傳回true的來解析商機。 如果沒有任何內容解析程式能夠解析內容，則會略過該機會。 由於內容解析程式通常是非同步的，內容解析程式負責在程式完成時通知TVSDK。
 
-* 內容解析程式呼叫 `client.place` 以指定TVSDK需要執行的時間軸操作（通常是廣告插播位置）。
-* 內容解析程式呼叫 `client.notifyCompleted` 如果解決程式成功，或 `client.notifyFailed` 如果程式失敗。
+* 內容解析器呼叫 `client.place` 以指定TVSDK需要執行的時間表操作（通常是廣告插播位置）。
+* 內容解析器呼叫 `client.notifyCompleted` 如果解決流程成功，或 `client.notifyFailed` 如果處理失敗。
 
 1. 建立自訂機會解析程式。
 
@@ -118,7 +117,7 @@ ht-degree: 0%
    }
    ```
 
-1. 註冊自訂內容處理站，以便播放媒體資料流。
+1. 註冊要播放的媒體資料流的自訂內容處理站。
 
    例如：
 

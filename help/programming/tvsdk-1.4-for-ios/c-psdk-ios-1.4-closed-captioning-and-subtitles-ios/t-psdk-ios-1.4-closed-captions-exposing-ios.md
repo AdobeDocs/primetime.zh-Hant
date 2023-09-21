@@ -1,8 +1,7 @@
 ---
 description: 若要讓您的使用者端播放器可以使用隱藏式字幕，您必須啟用它們。 使用者可以開啟或關閉隱藏式字幕，並選取格式。
 title: 公開隱藏式字幕
-exl-id: 57168c6e-a958-4a89-b22b-0c9f1cab3a49
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 若要讓您的使用者端播放器可以使用隱藏式字幕，您必須啟用它們。 使用者可以開啟或關閉隱藏式字幕，並選取格式。
 
-若要顯示隱藏式字幕，請執行下列動作：
+若要顯示隱藏式字幕：
 
 1. 在 `PTMediaPlayer` 物件，設定 `closedCaptionDisplayEnabled` 屬性。
 
@@ -21,7 +20,7 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >使用者端使用者可使用iOS協助工具設定來開啟或關閉隱藏式字幕，而這些設定也提供格式選項。
+   >使用者端使用者可使用iOS協助工具設定來開啟或關閉隱藏式字幕，這些設定也提供格式選項。
 
    >[!NOTE]
    >

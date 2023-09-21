@@ -1,8 +1,7 @@
 ---
 title: 最低系統需求
 description: 最低系統需求
-exl-id: 57b21e2a-abd7-4b4b-85f1-25584a850e40
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%

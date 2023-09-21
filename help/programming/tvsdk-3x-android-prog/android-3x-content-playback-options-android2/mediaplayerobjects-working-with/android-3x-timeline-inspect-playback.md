@@ -1,8 +1,7 @@
 ---
-description: 您可以取得與TVSDK正在播放的目前選取專案相關聯的時間軸說明。 如果您的應用程式顯示自訂的清除列控制項，且其中已識別與廣告內容對應的內容區段，這會是最實用的功能。
+description: 您可以取得與TVSDK目前播放之所選專案相關聯的時間軸說明。 當應用程式顯示自訂的搓擦列控制項時，這會非常實用，在控制項中會識別與廣告內容相對應的內容區段。
 title: Inspect播放時間軸
-exl-id: 95792354-76f6-44fd-9207-73e862b434e1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
@@ -11,24 +10,24 @@ ht-degree: 0%
 
 # Inspect播放時間軸 {#inspect-the-playback-timeline}
 
-您可以取得與TVSDK正在播放的目前選取專案相關聯的時間軸說明。 如果您的應用程式顯示自訂的清除列控制項，且其中已識別與廣告內容對應的內容區段，這會是最實用的功能。
+您可以取得與TVSDK目前播放之所選專案相關聯的時間軸說明。 當應用程式顯示自訂的搓擦列控制項時，這會非常實用，在控制項中會識別與廣告內容相對應的內容區段。
 
-以下是實作範例，如下方熒幕擷取畫面所示。  ![](assets/inspect-playback.jpg){width="368.641pt"}
+以下是實作範例，如下列熒幕擷取畫面所示。  ![](assets/inspect-playback.jpg){width="368.641pt"}
 
 1. 存取 `Timeline` 中的物件 `MediaPlayer` 使用 `getTimeline()` 方法。
 
-   此 `Timeline` 類別會封裝與時間軸內容相關的資訊，該時間軸與目前由載入的媒體專案相關聯 `MediaPlayer` 執行個體。 此 `Timeline` 類別可讓您存取基礎時間軸的唯讀檢視。 此 `Timeline` class提供getter方法，可透過 `TimelineMarker` 物件。
+   此 `Timeline` 類別會封裝與時間軸內容相關的資訊，該時間軸與目前由載入的媒體專案相關聯 `MediaPlayer` 執行個體。 此 `Timeline` 類別可讓您存取基礎時間軸的唯讀檢視。 此 `Timeline` class提供getter方法，透過清單 `TimelineMarker` 物件。
 
-1. 逐一檢視清單 `TimelineMarkers` 並使用傳回的資訊來實施您的時間表。
+1. 逐一檢視清單 `TimelineMarkers` 並使用傳回的資訊實施您的時間表。
 
-       &#39;TimelineMarker&#39;物件包含兩則資訊：
+       &#39;TimelineMarker&#39;物件包含兩個資訊：
    
-   * 標籤在時間軸上的位置（以毫秒為單位）
+   * 時間軸上的標籤位置（毫秒）
    * 時間軸上的標籤持續時間（毫秒）
 
-1. 聆聽 `MediaPlayerEvent.TIMELINE_UPDATED` 上的事件 `MediaPlayer` 執行個體，並實作 `TimelineUpdatedEventListener.onTimelineUpdated()` callback。
+1. 聆聽 `MediaPlayerEvent.TIMELINE_UPDATED` 上的事件 `MediaPlayer` 執行個體，並實作 `TimelineUpdatedEventListener.onTimelineUpdated()` 回撥。
 
-   此 `Timeline` 物件可以呼叫您的，通知您的應用程式播放時間軸中可能會發生的變更 `OnTimelineUpdated` 接聽程式。
+   此 `Timeline` 物件可以呼叫您的，通知應用程式播放時間軸中可能發生的變更 `OnTimelineUpdated` 監聽器。
 
 ```java
 // access the timeline object 

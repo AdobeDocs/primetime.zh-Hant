@@ -2,8 +2,7 @@
 title: PrimetimeDigital Rights Management說明
 description: PrimetimeDigital Rights Management說明
 copied-description: true
-exl-id: 07e4b91d-fc64-480b-aa41-218f682e1d1a
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%

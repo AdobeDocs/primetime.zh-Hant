@@ -1,8 +1,7 @@
 ---
-description: AdobeOffline Packager會以未加密的mp4內容作為輸入。
+description: AdobeOffline Packager會取得未加密的mp4內容作為輸入。
 title: 使用Adobe離線封裝程式封裝您的內容
-exl-id: 4433d76a-57c0-41e6-b358-5408b0fe87e7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -11,11 +10,11 @@ ht-degree: 0%
 
 # 使用Adobe離線封裝程式封裝您的內容{#package-your-content-with-adobe-offline-packager}
 
-AdobeOffline Packager會以未加密的mp4內容作為輸入。
+AdobeOffline Packager會取得未加密的mp4內容作為輸入。
 
 **呼叫Adobe離線封裝程式**
 
-典型的Adobe離線封裝程式呼叫看起來類似以下呼叫：
+典型的Adobe離線封裝程式呼叫看起來類似下列呼叫：
 
     java -jar OfflinePackager.jar -conf_path Content_PR_WV.xml -in_path &quot;Jaigo.mp4&quot;
     -out_path &quot;Jaigo_DASH&quot;

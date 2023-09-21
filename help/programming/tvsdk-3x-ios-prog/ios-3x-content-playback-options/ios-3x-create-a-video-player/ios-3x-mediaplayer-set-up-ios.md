@@ -1,8 +1,7 @@
 ---
-description: PTMediaPlayer介面會封裝媒體播放器物件的功能和行為。
+description: PTMmediaPlayer介面會封裝媒體播放器物件的功能和行為。
 title: 設定PTMediaPlayer
-exl-id: 6d16bfd2-8d1d-4261-b343-c2e999c4d28b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
@@ -15,11 +14,11 @@ TVSDK提供建立進階視訊播放器應用程式（您的Primetime播放器）
 
 使用平台的工具來建立播放器，並將其連線至TVSDK中的媒體播放器檢視，該檢視具有播放和管理視訊的方法。 例如，TVSDK提供播放和暫停方法。 您可以在平台上建立使用者介面按鈕，並設定呼叫這些TVSDK方法的按鈕。
 
-PTMediaPlayer介面會封裝媒體播放器物件的功能和行為。
+PTMmediaPlayer介面會封裝媒體播放器物件的功能和行為。
 
 若要設定您的 `PTMediaPlayer`：
 
-1. 從您的使用者介面擷取媒體的URL，例如，在文字欄位中。
+1. 從您的使用者介面擷取媒體的URL，例如在文字欄位中。
 
    ```
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
@@ -27,7 +26,7 @@ PTMediaPlayer介面會封裝媒體播放器物件的功能和行為。
 
 1. 建立 `PTMetadata`.
 
-   假設您的方法 `createMetada` 準備中繼資料(請參閱 [廣告](../../ios-3x-advertising/ios-3x-advertising-requirements.md))。
+   假設您的方法 `createMetada` 準備中繼資料(請參閱 [Advertising](../../ios-3x-advertising/ios-3x-advertising-requirements.md))。
 
    ```
    PTMetadata *metadata = [self createMetadata]
@@ -83,7 +82,7 @@ PTMediaPlayer介面會封裝媒體播放器物件的功能和行為。
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. 呼叫 `play` 以開始媒體播放。
+1. 呼叫 `play` 以開始播放媒體。
 
    ```
    [player play];

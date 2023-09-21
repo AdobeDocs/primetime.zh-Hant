@@ -1,8 +1,7 @@
 ---
 description: 若要接收資訊清單中標籤的相關通知，請接聽AdobePSDK.TimedMetadataEvent。
 title: 新增計時中繼資料通知的接聽程式
-exl-id: eea2505f-595c-4bbe-9b68-ae395943c888
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 若要接收資訊清單中標籤的相關通知，請接聽AdobePSDK.TimedMetadataEvent。
 
-新增時 `TimedMetadata` 物件建立後，MediaPlayer會傳送 `AdobePSDK.TimedMetadataEvent`.
+當新的 `TimedMetadata` 物件已建立，MediaPlayer會傳送 `AdobePSDK.TimedMetadataEvent`.
 
 1. 實作適當的接聽程式。
 
@@ -24,7 +23,7 @@ ht-degree: 0%
        } 
    ```
 
-1. 註冊事件監聽器。
+1. 註冊事件接聽程式。
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE, onTimedMetadataEvent);

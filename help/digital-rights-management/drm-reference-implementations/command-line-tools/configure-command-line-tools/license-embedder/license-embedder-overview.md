@@ -2,8 +2,7 @@
 title: 概觀
 description: 概觀
 copied-description: true
-exl-id: 9aebdbd0-a6f0-4c9d-be2f-a8789cadf287
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # DRM授權內嵌程式 {#license-embedder}
 
-使用 [!DNL AdobeLicenseEmbedder.jar] 將預先產生的授權內嵌到Media Packager所保護的內容中。
+使用 [!DNL AdobeLicenseEmbedder.jar] 將預先產生的授權內嵌到Media Packager保護的內容中。
 
 ## 授權內嵌程式命令列使用方式 {#license-embedder-command-line-usage}
 
@@ -23,7 +22,7 @@ java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
 * `sourcefile` 代表加密的檔案。
 * `destfile` 指定儲存含內嵌授權之加密內容的檔案名稱。
 
-   如果您指定目錄，檔案會儲存在目的地目錄中。 來源檔案的名稱也會變成儲存在目的地目錄中的檔案名稱。
+  如果您指定目錄，檔案會儲存在目的地目錄中。 來源檔案的名稱也會變成儲存在目的地目錄中的檔案名稱。
 
 下表說明您可以指定的命令列選項：
 
@@ -47,7 +46,7 @@ java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
-   <td colname="2" class="- topic/entry "> 不要詢問是否應該覆寫目的地檔案。 如果目的地檔案已存在，且 <span class="codeph"> -o </span> 尚未套用，發生錯誤。 </td> 
+   <td colname="2" class="- topic/entry "> 不要詢問是否應該覆寫目的地檔案。 如果目的地檔案已經存在，而且 <span class="codeph"> -o </span> 尚未套用，發生錯誤。 </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 

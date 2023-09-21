@@ -1,8 +1,7 @@
 ---
 description: AdBannerAsset的內容會說明隨附橫幅。
 title: 隨附橫幅資料
-exl-id: 94954233-4357-43be-a61f-6d8010c930ca
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
@@ -52,7 +51,7 @@ AdBannerAsset的內容會說明隨附橫幅。
   </tr> 
   <tr> 
    <td colname="col1"> 靜態URL </td> 
-   <td colname="col2"> <p>有時隨附橫幅也可能具有靜態URL，它是影像的直接URL。 </p> <p>如果您不想要使用html或iframe，可以使用影像的直接網址。 在此情況下，您可以使用staticURL來顯示橫幅。 </p> <p>重要：您必須檢查靜態URL是否為有效的字串，因為此屬性可能並不一定都可用。 </p> </td> 
+   <td colname="col2"> <p>有時隨附橫幅也可能具有靜態URL，這是影像的直接URL。 </p> <p>如果您不想要使用html或iframe，可以使用影像的直接網址。 在此情況下，您可以使用靜態URL來顯示橫幅。 </p> <p>重要：您必須檢查靜態URL是否為有效的字串，因為此屬性可能並不一定都可用。 </p> </td> 
   </tr> 
  </tbody> 
 </table>

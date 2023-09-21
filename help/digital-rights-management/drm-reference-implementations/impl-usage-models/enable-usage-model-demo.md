@@ -2,8 +2,7 @@
 title: 啟用使用模式示範
 description: 啟用使用模式示範
 copied-description: true
-exl-id: 5d546f1a-ebf6-4c93-9a73-fa812cd71086
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
@@ -22,4 +21,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->如果您在封裝時未啟用可選的示範模式，授權伺服器會根據它處理的第一個有效DRM原則發出授權。
+>如果您在封裝時未啟動選用示範模式，則授權伺服器會根據所處理的第一個有效DRM原則發出授權。

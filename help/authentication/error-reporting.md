@@ -1,8 +1,7 @@
 ---
 title: 錯誤報告
 description: 錯誤報告
-exl-id: a52bd2cf-c712-40a2-a25e-7d9560b46ba6
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 1%

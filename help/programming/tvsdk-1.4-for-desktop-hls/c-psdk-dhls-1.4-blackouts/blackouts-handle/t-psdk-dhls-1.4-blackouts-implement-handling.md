@@ -1,8 +1,7 @@
 ---
-description: TVSDK提供處理中斷期間的API和範常式式碼。
+description: TVSDK提供API以及處理中斷期間的範常式式碼。
 title: 實作中斷處理
-exl-id: c7252467-a075-4227-b7bc-db1112a96a2b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -11,11 +10,11 @@ ht-degree: 0%
 
 # 實作中斷處理{#implement-blackout-handling}
 
-TVSDK提供處理中斷期間的API和範常式式碼。
+TVSDK提供API以及處理中斷期間的範常式式碼。
 
-若要實作中斷處理，包括在中斷期間提供替代內容：
+若要實施中斷處理，包括在中斷期間提供替代內容：
 
-1. 設定您的應用程式以偵測即時資料流資訊清單中的中斷標籤。
+1. 設定應用程式以偵測即時資料流資訊清單中的中斷標籤。
 
    ```
    private function startPlayback(resource:MediaResource):void { 
@@ -29,7 +28,7 @@ TVSDK提供處理中斷期間的API和範常式式碼。
    }
    ```
 
-1. 在前景和背景資料流中建立定時中繼資料事件的事件接聽程式。
+1. 為前景和背景資料流中的定時中繼資料事件建立事件接聽程式。
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -41,7 +40,7 @@ TVSDK提供處理中斷期間的API和範常式式碼。
    }
    ```
 
-1. 對前景和背景資料流實作定時中繼資料事件處理常式。
+1. 針對前景和背景資料流，實作計時中繼資料事件處理常式。
 
    前景：
 
@@ -85,7 +84,7 @@ TVSDK提供處理中斷期間的API和範常式式碼。
    }
    ```
 
-1. 準備MediaPlayer中斷作業。
+1. 準備MediaPlayer的中斷。
 
    ```
    public function prepareBlackoutRanges(timedMetadata:Vector.<TimedMetadata>):void { 

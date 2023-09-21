@@ -1,8 +1,7 @@
 ---
-description: 瀏覽器TVSDK支援許多DASH功能，您可以實作這些功能，以將功能新增至視訊應用程式。
+description: 瀏覽器TVSDK支援許多DASH功能，您可實作這些功能，以將功能新增至視訊應用程式。
 title: 支援的DASH功能
-exl-id: 29a5d1a3-e31e-459c-90b5-80227df46e4b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # 支援的DASH功能{#supported-dash-features}
 
-瀏覽器TVSDK支援許多DASH功能，您可以實作這些功能，以將功能新增至視訊應用程式。
+瀏覽器TVSDK支援許多DASH功能，您可實作這些功能，以將功能新增至視訊應用程式。
 
 * [虛線核心播放功能](#dash-core-playback)
 * [DASH進階播放功能](#dash-advanced-playback)
@@ -98,7 +97,7 @@ ht-degree: 0%
 | Ad Insertion | VOD | 隨附廣告、橫幅廣告和可點按廣告 | 不支援 |
 | Ad Insertion | VOD | VPAID 2.0 | 不支援 |
 
-## 虛線核心廣告插入功能(CSAI) {#dash-core-ad-insertion}
+## DASH核心廣告插入功能(CSAI) {#dash-core-ad-insertion}
 
 | 類別 | 內容型別 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|
@@ -154,12 +153,12 @@ ht-degree: 0%
  </tbody> 
 </table>
 
-## DASH進階播放功能 {#dash-advanced-playback}
+## 破折號進階播放功能 {#dash-advanced-playback}
 
-| 類別 | 內容型別 | 功能 | HTML5、FF、IE、Chrome、Android Chrome |
+| 類別 | 內容型別 | 功能 | HTML5， FF， IE， Chrome， Android Chrome |
 |---|---|---|---|
 | 播放 | VOD | 在位移處播放 | ![](assets/supported15.png) |
-| 播放 | VOD | 純音訊播放 | ![](assets/supported15.png) |
+| 播放 | VOD | 僅限音訊的播放 | ![](assets/supported15.png) |
 | 播放 | VOD | 特技播放 | ![](assets/supported15.png) |
 | 播放 | VOD | Smooth Trick Play | ![](assets/supported15.png) |
 | 播放 | VOD +即時 | ID3剖析 | 不支援 |
@@ -168,7 +167,7 @@ ht-degree: 0%
 | 播放 | VOD +即時 | 帳單 | ![](assets/supported15.png) |
 | 播放 | VOD +即時 | Browserify | ![](assets/supported15.png) |
 
-## DASH核心播放功能 {#dash-core-playback}
+## 虛線核心播放功能 {#dash-core-playback}
 
 | 類別 | 內容型別 | 功能 | HTML5 FF、IE、Chrome、Android Chrome |
 |---|---|---|---|

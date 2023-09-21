@@ -1,8 +1,7 @@
 ---
 title: Adobe PrimetimeAd Insertion
 description: Adobe PrimetimeAd Insertion說明
-exl-id: e758044e-a1f5-498a-a809-b6a351dfe8f0
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 0%

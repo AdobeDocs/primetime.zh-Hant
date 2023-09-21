@@ -1,8 +1,7 @@
 ---
-description: 完整事件重播(FER)內容是指將#EXT-X-ENDLIST標籤新增至資訊清單檔案的結尾處，藉此轉換為VOD的即時資料流。 串流會保留其廣告提示標籤。
+description: 完整事件重播(FER)內容是指將#EXT-X-ENDLIST標籤新增至資訊清單檔案的結尾處，將即時資料流轉換為VOD。 串流會保留其廣告提示標籤。
 title: FER廣告解析和插入
-exl-id: 9075932d-4e77-4249-af5d-0b392033907f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -11,9 +10,9 @@ ht-degree: 0%
 
 # FER廣告解析和插入{#fer-ad-resolving-and-insertion}
 
-完整事件重播(FER)內容是指將#EXT-X-ENDLIST標籤新增至資訊清單檔案的結尾處，藉此轉換為VOD的即時資料流。 串流會保留其廣告提示標籤。
+完整事件重播(FER)內容是指將#EXT-X-ENDLIST標籤新增至資訊清單檔案的結尾處，將即時資料流轉換為VOD。 串流會保留其廣告提示標籤。
 
-瀏覽器TVSDK會將FER資料流視為VOD，所以預設的廣告訊號模式為 `SERVER_MAP`. 不過，由於串流會保留其廣告提示標籤，因此您可以將廣告訊號模式設定為 `MANIFEST_CUES`，可讓您使用廣告提示標籤來插入廣告。
+瀏覽器TVSDK會將FER資料流視為VOD，因此預設的廣告訊號模式為 `SERVER_MAP`. 不過，由於串流會保留其廣告提示標籤，因此您可以將廣告訊號模式設定為 `MANIFEST_CUES`，可讓您使用廣告提示標籤來插入廣告。
 
 若要使用FER資料流的提示標籤來開啟廣告插入：
 

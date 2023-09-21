@@ -1,8 +1,7 @@
 ---
 description: 您可以在VOD內容中將時間間隔指定為廣告插播。
 title: 標籤範圍
-exl-id: ed13168d-5ee8-4f4b-a72e-a38b6d7f9a04
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 您可以在VOD內容中將時間間隔指定為廣告插播。
 
-此 `TimeRanges` 介於 `begin` 和 `end` 在 `localTime` 將標示為 `AdBreak` 在時間軸中。 其他廣告設定會被忽略。
+此 `TimeRanges` 介於 `begin` 和 `end` 在 `localTime` 將標示為 `AdBreak` 在時間軸中。 其他廣告設定則會被忽略。
 
 >[!TIP]
 >

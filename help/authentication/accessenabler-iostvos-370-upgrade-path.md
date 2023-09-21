@@ -1,8 +1,7 @@
 ---
 title: AccessEnabler iOS/tvOS 3.7.0升級路徑
 description: AccessEnabler iOS/tvOS 3.7.0升級路徑
-exl-id: f15c7414-ec9b-4e21-b457-1ecf59f47441
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%

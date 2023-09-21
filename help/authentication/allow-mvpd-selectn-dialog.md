@@ -1,8 +1,7 @@
 ---
 title: 在選擇對話方塊中允許MVPD
 description: 在選擇對話方塊中允許MVPD
-exl-id: 2c0e0f06-ddc6-4bea-90dc-d7ef8e78d27e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -13,15 +12,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->此頁面上的內容僅供參考之用。 使用此API需要來自Adobe的目前授權。 不允許未經授權的使用。
+>此頁面上的內容僅供參考。 使用此API需要Adobe的目前授權。 不允許未經授權的使用。
 
 ## 問題 {#issue}
 
-程式設計師可能要在向一般使用者公開之前，測試或檢查新MVPD整合的使用者體驗。
+程式設計師在將資訊公開給一般使用者之前，可能會想要測試或檢查新MVPD整合的使用者體驗。
 
 ## 解決方案 {#solution}
 
-在 `displayProviderDialog()` callback，Adobe Primetime驗證會傳回與所選程式設計師（請求者ID）整合的所有MVPD。 但程式設計師可以在MVPD的傳回陣列上套用篩選器，並只顯示同時在這兩個清單中的專案。
+在 `displayProviderDialog()` callback，Adobe Primetime驗證會傳回與所選程式設計人員（請求者ID）整合的所有MVPD。 但程式設計師可以在MVPD的傳回陣列上套用篩選，並且只顯示同時在這兩個清單中的專案。
 
 ## 範例 {#example}
 

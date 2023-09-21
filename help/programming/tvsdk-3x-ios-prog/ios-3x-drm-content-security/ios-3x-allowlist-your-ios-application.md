@@ -1,8 +1,7 @@
 ---
 description: 您可以使用Adobe的Machotools工具，允許列出iOS應用程式。
 title: 允許列出您的iOS應用程式
-exl-id: 3af75d9a-3b38-4d3c-9890-513a4abc1809
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -17,19 +16,19 @@ ht-degree: 0%
 
 >[!TIP]
 >
->您也可以使用這些工具來建立DRM原則並加密內容。
+>您也可以使用這些工具來建立DRM政策並加密內容。
 
-將您的應用程式列入允許清單，可確保受保護的內容只能在您的視訊播放器中播放。 不過，允許列出iOS應用程式，需要您完成與Apple應用程式提交原則搭配使用的特殊程式。
+將您的應用程式列入允許清單，可確保受保護的內容只能在視訊播放器中播放。 不過，允許列出iOS應用程式，需要您完成與Apple應用程式提交原則搭配使用的特殊程式。
 
-在提交iOS應用程式之前，您需要先簽署該應用程式並將其發佈到Apple。
+提交iOS應用程式前，您必須先簽署並發佈至Apple。
 
 >[!NOTE]
 >
->Apple會刪除開發人員的簽名，並使用他們自己的憑證重新簽署應用程式。
+>Apple會移除開發人員的簽名，並使用他們自己的憑證重新簽署應用程式。
 
 由於重新簽署，您在提交至Apple App Store之前產生的允許清單資訊無法使用。
 
-若要使用此提交原則，Adobe已建立 `machotools` 此工具會為iOS應用程式建立指紋，以建立摘要值、簽署此值，並將此值插入您的iOS應用程式中。 為iOS應用程式建立指紋後，您可以將應用程式提交至Apple App Store。 當使用者從App Store執行您的應用程式時，Primetime DRM會執行應用程式指紋的執行階段計算，並使用先前插入應用程式的摘要值來確認它。 如果指紋相符，則確認應用程式允許列出，並允許播放受保護的內容。
+若要使用此提交原則，Adobe已建立 `machotools` 工具會為iOS應用程式建立指紋，以建立摘要值，簽署此值，並將此值插入您的iOS應用程式。 為iOS應用程式建立指紋後，您可以將應用程式提交至Apple App Store。 當使用者從App Store執行您的應用程式時，Primetime DRM會執行應用程式指紋的執行階段計算，並使用先前插入應用程式的摘要值來確認。 如果指紋相符，應用程式會確認允許列出，並允許播放受保護的內容。
 
 Adobe `machotools` 工具包含在[！DNL]的iOS TVSDK SDK中 [...]/tools/DRM]資料夾。
 
@@ -45,7 +44,7 @@ Adobe `machotools` 工具包含在[！DNL]的iOS TVSDK SDK中 [...]/tools/DRM]�
 
 1. 出現提示時，請輸入密碼以保護私密金鑰。
 
-   密碼應包含至少12個字元，且字元應混合使用大寫和小寫ASCII字元和數字。
+   密碼應包含至少12個字元，且字元應包含大寫和小寫ASCII字元和數字的混合。
 1. 若要使用OpenSSL為您產生強式密碼，請開啟命令視窗並輸入下列內容：
 
    ```shell
@@ -95,11 +94,11 @@ Adobe `machotools` 工具包含在[！DNL]的iOS TVSDK SDK中 [...]/tools/DRM]�
    ./machotools dumpMachoSignature -in ${PROJECT_DIR}/generatedRes/AAXSAppDigest.digest
    ```
 
-1. 建立新的DRM原則或更新現有原則以包含傳回的發行者ID雜湊值。
-1. 使用 [!DNL AdobePolicyManager.jar]，建立新的DRM原則（更新您現有的原則）以包含傳回的發行者ID雜湊值、選用的「應用程式ID」，以及包含的最小和最大版本屬性 [!DNL flashaccess-tools.properties] 檔案。
+1. 建立新的DRM原則或更新現有原則以包含傳回的發行者識別碼雜湊值。
+1. 使用 [!DNL AdobePolicyManager.jar]，建立新的DRM原則（更新您現有的原則），將傳回的「發行者ID」雜湊值、選用的「應用程式ID」，以及包含的最小和最大版本屬性 [!DNL flashaccess-tools.properties] 檔案。
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
    ```
 
-1. 使用新的DRM原則封裝內容，並確認在iOS應用程式中播放允許清單中的內容。
+1. 使用新的DRM政策封裝內容，並確認在iOS應用程式中播放允許清單中的內容。

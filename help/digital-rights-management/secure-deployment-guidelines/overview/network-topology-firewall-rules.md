@@ -1,8 +1,7 @@
 ---
-description: 在判斷防火牆規則時，請考慮下列URL型別
+description: 在決定防火牆規則時，請考慮下列型別的URL
 title: 防火牆規則
-exl-id: 3f6f6d1a-5759-43b3-9f62-6feb02e0a5c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -11,9 +10,9 @@ ht-degree: 0%
 
 # 防火牆規則 {#firewall-rules}
 
-在決定防火牆規則時，請考慮下列URL型別：
+在決定防火牆規則時，請考慮下列型別的URL：
 
-## 傳入的URL {#section_F111526A9DB844CBBF21A3CAE5F50880}
+## 傳入URL {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
 您可以設定外部防火牆，使其僅公開您想要提供給使用者的應用程式功能的URL。
 
@@ -81,7 +80,7 @@ ht-degree: 0%
      <li id="li_C761F14F3C97479CBA5C255739E01A28"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
      <li id="li_23A8AABE7499488EB61B7ED27CC65098"><span class="filepath"> /flashaccess/dereg/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">若要取消註冊網域，請執行下列動作： </p> <p>如果您實作網域支援，則必須可存取此URL。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">若要解除登入網域。 </p> <p>如果您實作網域支援，則必須可存取此URL。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
@@ -89,7 +88,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn：EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Web服務URLLiveCycle Rights Management ES。 如果內容是使用舊版FMRMS發佈，則此URL可讓舊版使用者端連線至伺服器。 系統會提示這些使用者端升級至Adobe Primetime DRM。 </p> <p class="- topic/p ">注意：此URL必須使用SSL (HTTPS)。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Web服務URLLiveCycle Rights Management ES。 如果內容是使用舊版FMRMS發佈，此URL可讓舊版使用者端連線至伺服器。 系統會提示這些使用者端升級至Adobe Primetime DRM。 </p> <p class="- topic/p ">注意：此URL必須使用SSL (HTTPS)。 </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -97,14 +96,14 @@ ht-degree: 0%
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>若要傳回授權。 </p> <p> 如果您實作授權傳回支援，則必須可存取URL。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>要傳回授權。 </p> <p> 如果您實作授權回傳支援，則必須可存取URL。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->內部防火牆應僅允許透過反向Proxy連線至Primetime DRM授權伺服器，且只能連線至表格中的URL。 若要改善擴充性，請針對反向Proxy與Primetime DRM之間的連線使用HTTP。
+>內部防火牆應該只允許透過反向Proxy連線到Primetime DRM授權伺服器，並且只允許連線到表格中的URL。 若要改善擴充性，請使用HTTP來連線反向Proxy和Primetime DRM。
 
 ## 傳出URL {#section_FFF9F7BB353149F4A27F8788E9934A48}
 

@@ -1,8 +1,7 @@
 ---
-description: 當Primetime ad decisioningencounters為空白或媒體型別對HLS無效的VAST廣告（創意）時，會評估遞補廣告以決定要傳回的內容。
+description: 當Primetime ad decisioningencounters空白或媒體型別對HLS無效的VAST廣告（創意）時，它會評估遞補廣告以決定要傳回的內容。
 title: VAST和VMAP的廣告遞補行為
-exl-id: 65814b91-6528-4eea-abfb-f45dd2dbb899
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # VAST和VMAP的廣告遞補行為 {#ad-fallback-behavior-for-vast-and-vmap}
 
-當Primetime ad decisioningencounters為空白或媒體型別對HLS無效的VAST廣告（創意）時，會評估遞補廣告以決定要傳回的內容。
+當Primetime ad decisioningencounters空白或媒體型別對HLS無效的VAST廣告（創意）時，它會評估遞補廣告以決定要傳回的內容。
 
 <!--<a id="section_9F60AF00CE9645848EAAF8C06A9E426B"></a>-->
 
@@ -23,9 +22,9 @@ ht-degree: 0%
 
    如果重新封裝失敗，此程式會套用至廣告的其他發生次數。
 1. 如果TVSDK找不到有效的遞補廣告，則會傳回媒體型別無效的原始廣告。
-1. 如果傳回的是具有有效MIME型別的遞補廣告，而不是原始廣告，Primetime ad decisionings會將錯誤代碼403傳送至VAST錯誤URL （如果可用）。
+1. 如果傳回的是具有有效MIME型別的遞補廣告，而非原始廣告，Primetime ad decisionings會將錯誤代碼403傳送至VAST錯誤URL （如果可用）。
 1. 如果遞補廣告是包裝函式，並傳回多個廣告，則只會傳回具有正確媒體型別的廣告。
 
 >[!IMPORTANT]
 >
->VAST包裝函式中的廣告一律會啟用此行為。 對於VMAP中內嵌的VAST廣告，行為預設為停用，但您的應用程式可以啟用它。
+>VAST包裝函式中的廣告一律會啟用此行為。 對於VMAP中內嵌的VAST廣告，預設會停用行為，但您的應用程式可以啟用它。

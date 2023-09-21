@@ -2,8 +2,7 @@
 title: 防火牆規則
 description: 防火牆規則
 copied-description: true
-exl-id: 5f560782-7b09-411a-8791-8d227bc4049b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # 防火牆規則 {#firewall-rules}
 
-## 傳入的URL {#section-F111526A9DB844CBBF21A3CAE5F50880}
+## 傳入URL {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
 設定您的外部防火牆，使其僅公開您想要提供給使用者的應用程式功能URL。 僅允許外部使用者透過外部防火牆存取下表所列的URL：
 
@@ -46,7 +45,7 @@ ht-degree: 0%
      <li id="li-E6C551DDA030429B9D0073D2685B778A"><span class="filepath"> /flashaccess/license/v4/*</span> </li> 
      <li id="li-57811F4CD7304DBDAFADD65244AED0D9"><span class="filepath"> /flashaccess/license/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用於向一般使用者核發授權的URL。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">用於發行授權給一般使用者的URL。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -55,7 +54,7 @@ ht-degree: 0%
      <li id="li-B333B85FFE8A46DD884595B0A620B4EE"><span class="filepath"> /flashaccess/sync/v4</span> </li> 
      <li id="li-E4771D3C5AA5454CA1EDCFAA3E027CC1"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">同步化請求的URL。 只有在授權中指定同步化要求時，才能存取此URL。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">同步要求的URL。 只有在您指定授權中的同步化要求時，才能存取此URL。 </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -77,7 +76,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">使用者端使用的URL，可將FMRMS 1.x DRM中繼資料轉換為Adobe存取DRM中繼資料。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">此URL必須使用SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">使用者端將FMRMS 1.x DRM中繼資料轉換為Adobe存取DRM中繼資料所使用的URL。 </p> <p class="- topic/p ">注意： <i class="+ topic/ph hi-d/i ">此URL必須使用SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn：EDCLicenseService/*</span> </td> 
@@ -85,14 +84,14 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>許可證傳回的URL。 只有當您實作授權傳回支援時，才能存取URL。 </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>授權退回URL。 只有在您實作授權回傳支援時，才能存取URL。 </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->內部防火牆必須只允許透過反向Proxy與Adobe存取授權伺服器建立連線，且只能連線到上方列出的URL。 為了改善擴充性，反向Proxy和Adobe存取之間的連線將透過HTTP進行。
+>內部防火牆必須只允許透過反向Proxy與Adobe存取授權伺服器建立連線，而且只能與上方列出的URL建立連線。 為了改善擴充性，反向Proxy和Adobe存取之間的連線將透過HTTP進行。
 
 ## 傳出URL {#section-FFF9F7BB353149F4A27F8788E9934A48}
 

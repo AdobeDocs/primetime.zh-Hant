@@ -1,21 +1,20 @@
 ---
 description: 您可以根據預設解析器來實作您自己的內容解析器。
-title: 實作自訂內容解析程式
-exl-id: 04eff874-8a18-42f0-adb2-5b563e5c6a31
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+title: 實作自訂內容解析器
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
-# 實作自訂內容解析程式 {#implement-a-custom-content-resolver}
+# 實作自訂內容解析器 {#implement-a-custom-content-resolver}
 
 您可以根據預設解析器來實作您自己的內容解析器。
 
-當TVSDK產生新的商機時，它會透過註冊的內容解析程式反複尋找，尋找能夠解析該商機的內容。 第一個傳回 `true` 已選取以解析商機。 如果沒有內容解析程式可用，則會略過該機會。 由於內容解析程式通常是非同步的，內容解析程式負責在程式完成時通知TVSDK。
+當TVSDK產生新的商機時，它會逐一檢視註冊的內容解析器，尋找能夠解析該商機的內容。 第一個傳回的 `true` 已選取以解決商機。 如果沒有任何內容解析程式能夠解析內容，則會略過該機會。 由於內容解析程式通常是非同步的，內容解析程式負責在程式完成時通知TVSDK。
 
-1. 實作您自己的自訂 `ContentFactory`，透過擴充 `ContentFactory` 介面和覆寫 `retrieveResolvers`.
+1. 實作您自己的自訂 `ContentFactory`，方式為擴充 `ContentFactory` 介面和覆寫 `retrieveResolvers`.
 
    例如：
 
@@ -80,7 +79,7 @@ ht-degree: 0%
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. 建立自訂廣告解析程式類別，以擴充 `ContentResolver` 類別。
+1. 建立自訂廣告解析程式類別以擴充 `ContentResolver` 類別。
    1. 在自訂廣告解析程式中，覆寫 `doConfigure`， `doCanResolve`， `doResolve`， `doCleanup`：
 
       ```java
@@ -90,7 +89,7 @@ ht-degree: 0%
       void doCleanup();
       ```
 
-      您取得您的 `advertisingMetadata` 從傳入的專案 `doConfigure`：
+      您將您的 `advertisingMetadata` 從傳入的專案 `doConfigure`：
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -101,7 +100,7 @@ ht-degree: 0%
 
    1. 針對每個刊登機會，建立 `List<TimelineOperation>`.
 
-      此範例 `TimelineOperation` 提供以下專案的結構： `AdBreakPlacement`：
+      此範例 `TimelineOperation` 提供適用於以下專案的結構： `AdBreakPlacement`：
 
       ```java
       AdBreakPlacement( 
@@ -116,26 +115,26 @@ ht-degree: 0%
 
       * 如果廣告解析成功，請呼叫 `process(List<TimelineOperation> proposals)` 和 `notifyCompleted(Opportunity opportunity)` 於 `ContentResolverClient`
 
-         ```java
-         _client.process(timelineOperations); 
-         _client.notifyCompleted(opportunity); 
-         ```
+        ```java
+        _client.process(timelineOperations); 
+        _client.notifyCompleted(opportunity); 
+        ```
 
       * 如果廣告解析失敗，請呼叫 `notifyResolveError` 於 `ContentResolverClient`
 
-         ```java
-         _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
-         ```
+        ```java
+        _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
+        ```
 
-         例如：
+        例如：
 
-         ```java
-         _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
-         ```
+        ```java
+        _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
+        ```
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 
-此自訂廣告解析程式範例可解析商機並提供簡單的廣告：
+此自訂廣告解析程式範例可解決商機並提供簡單的廣告：
 
 ```java
 public class CustomContentResolver extends ContentResolver { 

@@ -1,8 +1,7 @@
 ---
 description: 以下是刪除和取代廣告程式的一些範例。
 title: 刪除和取代廣告的範例
-exl-id: 7fe173a7-fffd-4302-a251-2fbfd129d53a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

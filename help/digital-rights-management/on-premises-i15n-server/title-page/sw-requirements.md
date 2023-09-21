@@ -2,8 +2,7 @@
 title: 軟體需求
 description: 軟體需求
 copied-description: true
-exl-id: aa2ae6ac-7c2a-4cc3-a3a4-b7f92e478d23
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -38,14 +37,14 @@ Adobe Primetime DRM On Premises Individualization Server套件包含下列專案
 * [!DNL addIndivCert.py]  — 用於更新授權伺服器的信任根以支援內部部署個人化的指令碼
 * [!DNL CreateMetadata.jar]  — 建立內部部署DRM中繼資料的公用程式
 * [!DNL client_sample/]  — 包含使用者端程式碼片段的資料夾
-* 發行說明 — 說明檔案在最後一刻的任何新增
+* 發行說明 — 說明檔案在最後一分鐘的任何新增
 
 ## 取得個人化伺服器憑證{#obtain-individualization-server-certificates}
 
 若要使用On Premises Individualization Server，您必須先取得兩個數位憑證（憑證）：
 
 * *個人化傳輸認證*  — 由Adobe簽發
-* *個人化CA認證*  — 由Symantec (VeriSign)發行
+* *個人化CA認證*  — 由Symantec (VeriSign)簽發
 
 若要取得這些憑證，請透過Zendesk票證將請求提交至： [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 

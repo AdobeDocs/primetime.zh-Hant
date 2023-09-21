@@ -2,8 +2,7 @@
 title: 命令列使用方式
 description: 命令列使用方式
 copied-description: true
-exl-id: 241849bb-e818-420e-98b4-c12e306b17b2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # 命令列使用方式 {#command-line-usage}
 
-若要產生授權，請使用下列語法：
+若要產生許可證，請使用下列語法：
 
 ```
     java -jar AdobeLicenseGenerator.jar -m 
@@ -24,9 +23,9 @@ ht-degree: 0%
 </i class="+ topic>
 ```
 
-`metadata` 是包含Adobe存取DRM中繼資料的.metadata檔案。 您可以使用從受保護內容取得此檔案 `-d -m` 媒體封裝程式選項。
+`metadata` 是包含Adobe存取DRM中繼資料的.metadata檔案。 您可以使用從受保護內容取得此檔案 `-d -m` Media Packager選項。
 
-若要顯示先前產生的授權，請使用下列語法：
+若要顯示先前產生的許可證，請使用下列語法：
 
 ```
     java -jar AdobeLicenseGenerator.jar -d 
@@ -35,9 +34,9 @@ ht-degree: 0%
 </i class="+ topic>
 ```
 
-`license` 是一個檔案，其中包含由「許可證產生器」產生的「Adobe存取」許可證。
+`license` 是包含「許可證產生器」產生的「Adobe存取」許可證的檔案。
 
-下表說明可搭配上述語法指定的命令列選項：
+下表說明可連同先前提到的語法一起指定的命令列選項：
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_skr_vry_n4"> 
  <thead class="- topic/thead "> 
@@ -49,7 +48,7 @@ ht-degree: 0%
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c設定檔</span> </td> 
-   <td colname="2" class="- topic/entry "> 指定組態檔的位置。 如果未使用此選項，授權產生器會在工作目錄中尋找flashaccesstools.properties。 命令列上指定的選項優先於組態檔案中的選項。 </td> 
+   <td colname="2" class="- topic/entry "> 指定組態檔的位置。 如果未使用此選項，License Generator會在工作目錄中尋找flashaccesstools.properties。 命令列上指定的選項優先於組態檔案中的選項。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> licensefile</span></i> </p> </td> 
@@ -65,18 +64,18 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry ">不要詢問是否應該覆寫目的地檔案。 如果目的地檔案已存在且 <span class="codeph"> -o</span> 未設定，則會傳回錯誤。 </td> 
+   <td colname="2" class="- topic/entry ">不要詢問是否應該覆寫目的地檔案。 如果目的地檔案已存在，並且 <span class="codeph"> -o</span> 未設定，則會傳回錯誤。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
-   <td colname="2" class="- topic/entry "> 如果目的地檔案已經存在，請覆寫它而不提示。 </td> 
+   <td colname="2" class="- topic/entry "> 如果目的地檔案已經存在，則覆寫它而不進行提示。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-policy policy policy-num</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-policy policy-num</span> </td> 
    <td colname="2" class="- topic/entry "> 如果中繼資料包含多個原則，請指定用來產生授權的原則編號（從1開始）。 如果未指定，則使用第一個原則。 </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r收件者憑證</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r recipient-cer</span> </td> 
    <td colname="2" class="- topic/entry ">為指定的收件者產生授權。 可以使用裝置或網域憑證。 多個 <span class="+ topic/ph pr-d/codeph codeph"> -r </span>可以指定選項來建立多個收件者的授權。 </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
