@@ -1,16 +1,16 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: PrimetimeAd Insertion說明
+user-guide-title: Primetime Ad Insertion 支援
 source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
 
-# PrimetimeAd Insertion說明 {#ad-insertion}
+# Primetime Ad Insertion 支援 {#ad-insertion}
 
 + [Adobe PrimetimeAd Insertion](home.md)
 + PrimetimeAd Insertion公告{#announcements}
@@ -34,7 +34,7 @@ ht-degree: 0%
    + [根據規則路由廣告](advanced-features/route-ads-based-on-rules.md)
    + [最佳化廣告體驗](advanced-features/optimize-ad-experiences.md)
    + [新增內容緩衝器](advanced-features/add-content-bumpers.md)
-   + [情境式報告和目標定位](advanced-features/contextual-reporting-and-targeting.md)
+   + [關聯式報表和鎖定](advanced-features/contextual-reporting-and-targeting.md)
 + 效能：監視、偵錯和報告{#performance}
    + [概觀](performance-monitoring-debugging-reporting/performance-overview.md)
    + 監視和偵錯{#monitor-debug}
@@ -45,8 +45,8 @@ ht-degree: 0%
    + [概觀](advanced-telemetry/advanced-telemetry-overview.md)
    + [關鍵量度和資料維度](advanced-telemetry/key-metrics.md)
 + [即時事件監視](live-event-monitoring.md)
-+ 參考資料 {#technical-reference}
-   + [BOOTSTRAPAPI](technical-reference/bootstrap-api.md)
++ 參考 {#technical-reference}
+   + [BOOTSTRAP API](technical-reference/bootstrap-api.md)
    + [報表API](technical-reference/report-api.md)
    + 最佳實務{#best-practices}
       + [概觀](best-practices/best-practices-overview.md)
@@ -58,7 +58,7 @@ ht-degree: 0%
    + [支援的CDN](technical-reference/supported-cdns.md)
    + [資訊清單重新寫入](technical-reference/manifest-rewriting.md)
    + [詳細記錄](performance-monitoring-debugging-reporting/verbose-logging.md)
-   + [詳細標題(X-ADBE-AI-X1)](performance-monitoring-debugging-reporting/debugging-headers.md)
+   + [詳細資訊標題(X-ADBE-AI-X1)](performance-monitoring-debugging-reporting/debugging-headers.md)
    + [傳遞與儲存](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md)
    + [促進HLS播放器切換到容錯移轉/備份資料流](technical-reference/hls-switching-to-failover.md)
    + [Cookie](technical-reference/cookies.md)

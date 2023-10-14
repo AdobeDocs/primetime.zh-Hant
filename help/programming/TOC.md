@@ -1,16 +1,16 @@
 ---
 audience: end-user
-user-guide-title: Primetime程式設計說明
-user-guide-description: 可讓您在Android裝置上使用Java以及在iOS裝置上使用Objective-C來學習開發應用程式和影片播放程式。
+user-guide-title: Primetime 程式設計說明
+user-guide-description: 可讓您在 Android 裝置上使用 Java 和使用 iOS 裝置上使用 Objective-C 來學習開發應用程式和影片播放程式。
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '4342'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 
-# Primetime程式設計說明 {#programming}
+# Primetime 程式設計說明 {#programming}
 
 + [程式設計概述](home.md)
 + Android適用的TVSDK 3x {#tvsdk-3x-android-prog}
@@ -25,7 +25,7 @@ ht-degree: 0%
          + [關於MediaPlayerItem類別](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayeritem-class-about.md)
          + [MediaPlayer物件的生命週期和狀態](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-object-lifecycle-states.md)
          + [用於存取MediaResource資訊的MediaPlayerItem方法](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayeritem-accessing-mediaresource.md)
-         + [重複使用或移除MediaPlayer執行個體](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-reuse-or-remove.md)
+         + [重複使用或移除MediaPlayer例項](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-reuse-or-remove.md)
          + [Inspect播放時間軸](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
          + [暫停和還原MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-suspend-and-restore.md)
       + 接聽Primetime播放器事件 {#listen-primetime-player-events}
@@ -38,7 +38,7 @@ ht-degree: 0%
          + [識別內容為即時或VOD](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-content-live-vod-identify.md)
          + [提供音量控制](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-volume-control.md)
          + [顯示視訊的持續時間、目前時間和剩餘時間](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-duration-time-display.md)
-         + [顯示搜尋拖曳列與目前播放位置](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md)
+         + [顯示具有目前播放位置的搜尋拖曳列](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md)
          + [建構DVR增強的控制列](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-ctrl-bar-for-dvr-construct.md)
          + [在特定時間輸入資料流](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-stream-entry-control.md)
       + 初始化特定視訊的媒體播放器 {#initialize-the-media-player-for-a-specific-video}
@@ -49,19 +49,19 @@ ht-degree: 0%
          + [概觀](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-implement.md)
          + [費率變更API元素](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-apis.md)
          + [特技播放的限制和行為](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-limitations.md)
-         + [更流暢的戲法操作](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-smooth.md)
+         + [更流暢的魔術戲法操作](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/trick-play-implement/android-3x-trick-play-smooth.md)
       + [HTTP 302重新導向最佳化](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-302-redirect-overview.md)
       + [使用Cookie](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-cookies-work-with.md)
       + 使用隱藏式字幕 {#work-closed-captions}
          + [概觀](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/android-3x-closed-captions-set-up.md)
-         + [從可用曲目中選取目前的註解曲目](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/android-3x-closed-caption-available.md)
-         + [控制隱藏式字幕可見度](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/closed-caption-visibility-control/android-3x-closed-caption-visibility-control.md)
+         + [從可用曲目中選取目前的標題曲目](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/android-3x-closed-caption-available.md)
+         + [控制隱藏式字幕可視性](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/closed-caption-visibility-control/android-3x-closed-caption-visibility-control.md)
          + [允許使用者變更註解追蹤](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/closed-caption-visibility-control/android-3x-closed-caption-change.md)
          + [控制隱藏式字幕樣式](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/closed-captions-set-up/android-3x-closed-caption-styling.md)
       + 替代音訊 {#alternate-audio}
          + [概觀](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/alternate-audio/android-3x-alternate-audio.md)
          + [AC-3 5.1格式](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/alternate-audio/android-3x-ac-format.md)
-         + [播放清單中的替代音訊曲目](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/alternate-audio/android-3x-alternate-audio-in-playlist.md)
+         + [播放清單中的替代音軌](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/alternate-audio/android-3x-alternate-audio-in-playlist.md)
          + [存取替代音軌](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/alternate-audio/android-3x-alternate-audio-implement.md)
       + [啟用背景音訊](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-background-audio.md)
       + [ID3標籤](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-id3-metadata-retrieve.md)
@@ -79,13 +79,13 @@ ht-degree: 0%
          + [VOD的Advertising插入和容錯移轉](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/failover-for-playback/android-3x-failover-ad-insertion-for-vod.md)
       + [使用Android離線播放](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-offline-playback-with-android.md)
       + [透過HTTPS的安全傳遞](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-secure-delivery.md)
-   + 廣告 {#advertising}
+   + Advertising {#advertising}
       + [廣告及其需求](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-insertion.md)
       + 插入廣告 {#insert-ads}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-ad-insertion-about.md)
          + [解析和插入VOD廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-ad-resolving-client-vod.md)
          + [解析和插入即時/線性廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-ad-resolving-client-live-linear.md)
-         + [實施提早的廣告插播回報](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-early-ad-break-return.md)
+         + [實作提早的廣告插播回報](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-early-ad-break-return.md)
          + [追蹤使用者端廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-ad-tracking-client.md)
          + [中斷VMAP的使用者端錯誤處理](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-broken-vmap-error.md)
          + [安全透過HTTPS載入廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-about/android-3x-secure-ad-loading.md)
@@ -95,16 +95,16 @@ ht-degree: 0%
          + [廣告播放的API元素](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-ad-custom-elements.md)
          + [使用預設播放行為](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-use-default.md)
          + [略過一段時間的廣告插播](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-skip-breaks.md)
-         + [儲存視訊位置並稍後繼續](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-save-position.md)
+         + [儲存視訊位置並在稍後繼續](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-playback-save-position.md)
          + [部分廣告插播插入](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/playback-customize/android-3x-partial-ad-break-insertion.md)
-      + 即時廣告解析 {#just-in-time}
+      + Just-In-Time廣告解析 {#just-in-time}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md)
          + [啟用延遲廣告解析](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)
-         + [從2.7.x延遲廣告解決升級為3.x延遲廣告解決（API/工作流程變更）](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/t-upgrade-to-3x.md)
+         + [從2.7.x延遲廣告解決升級到3.x延遲廣告解決（API/工作流程變更）](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/t-upgrade-to-3x.md)
       + 廣告插入中繼資料 {#ad-insertion-metadata}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md)
          + [設定廣告插入中繼資料](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata-set-up.md)
-         + [啟用完整事件重播中的廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
+         + [在全事件重播中啟用廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
          + [廣告訊號模式](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-signaling-mode.md)
       + 隨附橫幅廣告 {#companion-banner-ads}
          + [隨附橫幅廣告的最佳作法](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-banners-best-practices.md)
@@ -112,37 +112,37 @@ ht-degree: 0%
          + [顯示橫幅廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-companion-banner-ads-display.md)
       + 可點按的廣告 {#clickable-ads}
          + [回應廣告的點按](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-respond-to-ad-clicks.md)
-         + [將可點按的廣告程式分開](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-separate-clickable-ad-process.md)
+         + [區隔可點按的廣告程式](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-separate-clickable-ad-process.md)
          + [暫停並繼續播放](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md)
-      + [使用AdobeCRS概述重新封裝不相容的廣告](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
+      + [使用Adobe CRS重新封裝不相容的廣告概述](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
       + VAST和VMAP廣告的廣告遞補 {#ad-fallback}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback.md)
          + [定義VMAP內嵌廣告的遞補廣告行為](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-set-up.md)
          + [VAST和VMAP的廣告遞補行為](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback-behavior.md)
       + 自訂標籤 {#custom-tags}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-configure.md)
-         + [自訂VOD資產範例](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-overview.md)
+         + [自訂VOD資產的範例](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-overview.md)
          + [標籤的設定類別方法](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-psdkconfig-methods.md)
-         + [定時中繼資料類別](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-timedmetadata-class.md)
+         + [計時中繼資料類別](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-timedmetadata-class.md)
          + [訂閱自訂標籤](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-subscribe.md)
          + [為定時中繼資料通知新增接聽程式](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
          + [在傳送定時中繼資料物件時將其儲存](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-timed-metadata-store.md)
       + VPAID 2.0廣告支援 {#vpaid-ad-support}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md)
          + [實作VPAID 2.0整合](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-include-vpaid-support.md)
-      + [來自Moat的廣告測量](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-measurements-from-moat.md)
+      + [從護城河進行廣告測量](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-measurements-from-moat.md)
       + 新增自訂廣告標籤 {#add-custom-ad}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-add-custom.md)
          + [TimeRange類別](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-timerange-class.md)
          + [MediaPlayer和MediaResource類別](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-mediaplayer-mediaresource-classes.md)
          + [ReplaceTimeRange類別](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-replacetimerange-class.md)
          + [在時間軸上放置自訂廣告標籤](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-place-custom-ad-markers-on-timeline.md)
-         + [控制搜尋自訂廣告標籤的播放行為](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-control-seek.md)
+         + [控制對自訂廣告標籤進行搜尋的播放行為](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-control-seek.md)
       + 自訂機會產生器和內容解析器 {#customize-opportunity}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md)
          + [機會產生器和內容解析器](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver-about.md)
-         + [實作自訂機會產生器](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md)
-         + [實作自訂內容解析程式](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver-implement.md)
+         + [實施自訂機會產生器](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-opp-detector-impl-android.md)
+         + [實作自訂內容解析器](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver-implement.md)
       + 刪除和取代VOD資料流中的廣告 {#delete-ads}
          + [概觀](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/android-3x-delete-replace-content-vod.md)
          + [自訂時間範圍作業](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/custom-time-range-ops/android-3x-custom-time-range-ops-android.md)
@@ -163,9 +163,9 @@ ht-degree: 0%
          + [套用創意選取規則](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-updating-rules/android-3x-how-tvsdk-applies-csr.md)
    + 內容保護 {#content-protection}
       + [Widevine DRM](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md)
-      + [Primetime DRM介面概觀](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-interface.md)
-      + [播放前DRM驗證](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-auth-before-playback.md)
-      + [在播放期間DRM驗證](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-auth-during-playback.md)
+      + [Primetime DRM介面概述](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-interface.md)
+      + [播放前的DRM驗證](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-auth-before-playback.md)
+      + [錄放期間的DRM驗證](tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-auth-during-playback.md)
    + 視訊分析 {#video-analytics}
       + [將TVSDK與Adobe Analytics整合](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-integration-overview.md)
       + [初始化和設定視訊分析](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-integrate-heartbeats.md)
@@ -176,14 +176,14 @@ ht-degree: 0%
    + 事件與通知 {#events-and-notifications}
       + [播放器狀態、活動、錯誤和記錄的通知和事件](tvsdk-3x-android-prog/android-3x-events-notifications/android-3x-notification-system.md)
       + [通知代碼](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-notification-codes.md)
-      + [PSDK錯誤代碼](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-error-codes.md)
+      + [PSDK錯誤碼](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-error-codes.md)
       + [NATIVE_ERROR通知的詳細資料](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-native-error-summary.md)
       + [Primetime播放器事件摘要](tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md)
    + 帳單 {#billing}
       + [計費量度](tvsdk-3x-android-prog/android-3x-billing-title/billing/android-3x-billing.md)
       + [設定計費量度](tvsdk-3x-android-prog/android-3x-billing-title/billing/android-3x-billing-config.md)
       + [傳輸計費量度](tvsdk-3x-android-prog/android-3x-billing-title/billing/android-3x-billing-data-format.md)
-+ iOS適用的TVSDK 3x {#tvsdk-3x-ios-prog}
++ 適用於iOS的TVSDK 3x {#tvsdk-3x-ios-prog}
    + 簡介 {#introduction}
       + [概觀](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
       + [Primetime TVSDK功能](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md)
@@ -198,12 +198,12 @@ ht-degree: 0%
       + [實作播放/暫停按鈕](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-implement-pause-play.md)
       + [顯示視訊的持續時間](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-video-duration.md)
       + [顯示目前時間和剩餘時間](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-current-remaining-time.md)
-      + [顯示搜尋清除列，其中包含目前的播放時間位置](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-seek-scrub-bar.md)
+      + [顯示具有目前播放時間位置的搜尋拖曳列](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-seek-scrub-bar.md)
       + [視訊品質的最適化位元速率(ABR)](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-abr-control-quality.md)
    + [服務品質統計資料](tvsdk-3x-ios-prog/ios-3x-qos-statistics-monitor.md)
    + [使用MediaPlayer物件](tvsdk-3x-ios-prog/ios-3x-mediaplayerobjects-working-with.md)
-   + [立即開啟](tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md)
-   + 廣告 {#advertising}
+   + [即時開啟](tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md)
+   + Advertising {#advertising}
       + [廣告需求](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-advertising-requirements.md)
       + [廣告逾時](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-timeout.md)
       + [部分廣告插播插入](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-partialad-break-insertion.md)
@@ -213,20 +213,20 @@ ht-degree: 0%
       + [即時廣告解析](tvsdk-3x-ios-prog/ios-3x-advertising/c-ios-lazy-ad-resolving.md)
    + Primetime廣告伺服器中繼資料 {#ad-server-metadata}
       + [設定Primetime廣告伺服器中繼資料](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)
-      + [啟用完整事件重播中的廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
+      + [在全事件重播中啟用廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
       + [廣告訊號模式](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
    + [隨附橫幅廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-companion-banner-ads/ios-3x-companion-banner-ads.md)
    + [可點按的廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-clickable-ads.md)
-   + [使用AdobeCreative重新封裝服務重新封裝不相容的廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-transcoding.md)
-   + [來自Moat的廣告測量](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-measurements-from-moat.md)
+   + [使用Adobe Creative重新封裝服務重新封裝不相容的廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-transcoding.md)
+   + [從護城河進行廣告測量](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-measurements-from-moat.md)
    + [VPAID 2.0廣告支援](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-vpaid-2.0-ads.md)
    + [VAST和VMAP廣告的廣告遞補](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-fallback.md)
    + [為DVR視窗載入廣告](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-ad-loading-for-a-dvr-window.md)
    + 自訂標籤 {#custom-tags}
       + [概觀](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-configure.md)
-      + [自訂VOD資產範例](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-overview.md)
+      + [自訂VOD資產的範例](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-overview.md)
       + [標籤的設定類別方法](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-psdkconfig-methods.md)
-      + [定時中繼資料類別](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-timedmetadata-class.md)
+      + [計時中繼資料類別](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-timedmetadata-class.md)
       + [訂閱自訂標籤](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md)
       + [為定時中繼資料通知新增接聽程式](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-receive-notifications.md)
       + [在傳送定時中繼資料物件時將其儲存](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md)
@@ -249,12 +249,12 @@ ht-degree: 0%
       + [中斷API元素](tvsdk-3x-ios-prog/ios-3x-blackouts-handle-ios/c-ios-blackout-apis.md)
       + [實作中斷處理](tvsdk-3x-ios-prog/ios-3x-blackouts-handle-ios/ios-3x-blackouts-implement-handling-ios.md)
    + 字幕和隱藏式字幕 {#subtitles-and-closed-captioning}
-      + [字幕和隱藏式字幕的需求](tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/c-ios-closed-captioning-and-subtitles-reqts-ios.md)
+      + [字幕和隱藏式字幕需求](tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/c-ios-closed-captioning-and-subtitles-reqts-ios.md)
       + [公開字幕](tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md)
       + [公開隱藏式字幕](tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-psdk-ios-closed-captions-exposing-ios.md)
    + 替代音訊 {#alternate-audio}
       + [概觀](tvsdk-3x-ios-prog/alternate-audio/ios-3x-alternate-audio.md)
-      + [播放清單中的替代音訊曲目](tvsdk-3x-ios-prog/alternate-audio/ios-3x-alternate-audio-in-playlist.md)
+      + [播放清單中的替代音軌](tvsdk-3x-ios-prog/alternate-audio/ios-3x-alternate-audio-in-playlist.md)
       + [存取替代音軌](tvsdk-3x-ios-prog/alternate-audio/ios-3x-alternate-audio-implement.md)
    + 視訊分析 {#video-analytics}
       + [視訊分析整合](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-integration.md)
@@ -265,7 +265,7 @@ ht-degree: 0%
       + [在伺服器端設定視訊分析報告](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-server-side-reporting-set-up.md)
       + [存取視訊分析報表](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-reports-access.md)
    + 內容保護 {#content-protection}
-      + [Primetime DRM介面概觀](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-drm-interface.md)
+      + [Primetime DRM介面概述](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-drm-interface.md)
       + [TVSDK應用程式中的Apple FairPlay](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
       + [允許列出您的iOS應用程式](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
    + [播放器狀態、活動、錯誤和記錄的通知](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
@@ -281,14 +281,14 @@ ht-degree: 0%
       + [時間表類別](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline.md)
       + [時間表廣告類別](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline-advertising.md)
       + [Digital Rights Management類別](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-digital-rights-management-ios.md)
-      + [視訊分析類別](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
+      + [Video Analytics類別](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
    + 通知代碼 {#notification-codes}
       + [TVSDK通知系統](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/c-ios-notification-codes.md)
       + [錯誤通知代碼](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notifications-errors.md)
       + [警告通知代碼](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notification-warnings.md)
       + [INFO通知代碼](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notification-info.md)
       + [收入最佳化程式碼](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-revenue-optimization.md)
-+ 適用於Android的TVSDK 2.7 {#tvsdk-2-7-for-android}
++ Android適用的TVSDK 2.7 {#tvsdk-2-7-for-android}
    + 產品概述、對象和本指南 {#overview}
       + [產品概述、對象和本指南概述](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
       + [Primetime TVSDK功能](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md)
@@ -300,7 +300,7 @@ ht-degree: 0%
          + [關於MediaPlayerItem類別](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayeritem-class-about.md)
          + [MediaPlayer物件的生命週期和狀態](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-object-lifecycle-states.md)
          + [用於存取MediaResource資訊的MediaPlayerItem方法](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/r-psdk-android-2.7-mediaplayeritem-methods-for-accessing-mediaresource.md)
-         + [重複使用或移除MediaPlayer執行個體](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
+         + [重複使用或移除MediaPlayer例項](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
          + [Inspect播放時間軸](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [暫停和還原MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
       + 接聽Primetime播放器事件   {#listen-primetime-player-events}
@@ -313,7 +313,7 @@ ht-degree: 0%
          + [識別內容為即時或VOD](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-content-live-vod-identify.md)
          + [提供音量控制](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-volume-control.md)
          + [顯示視訊的持續時間、目前時間和剩餘時間](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-duration-time-display.md)
-         + [顯示搜尋拖曳列與目前播放位置](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)
+         + [顯示具有目前播放位置的搜尋拖曳列](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md)
          + [建構DVR增強的控制列](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-ctrl-bar-for-dvr-construct.md)
          + [在特定時間輸入資料流](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-stream-entry-control.md)
       + 初始化特定視訊的媒體播放器 {#initialize-specific-video}
@@ -324,20 +324,20 @@ ht-degree: 0%
          + [概觀](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/t-psdk-android-2.7-trick-play-implement.md)
          + [費率變更API元素](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/r-psdk-android-2.7-trick-play-apis.md)
          + [特技播放的限制和行為](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/c-psdk-android-2.7-trick-play-limitations.md)
-         + [更流暢的戲法操作](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/c-psdk-android-2.7-trick-play-smooth.md)
+         + [更流暢的魔術戲法操作](tvsdk-2.7-for-android/content-playback-options/trick-play-implement/c-psdk-android-2.7-trick-play-smooth.md)
       + [HTTP 302重新導向最佳化](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-302-redirect-overview.md)
       + [使用Cookie](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-cookies-work-with.md)
       + 使用隱藏式字幕 {#closed-captions}
          + [概觀](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/c-psdk-android-2.7-closed-captions-set-up.md)
-         + [從可用曲目中選取目前的註解曲目](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/t-psdk-android-2.7-closed-caption-available-current.md)
-         + 控制隱藏式字幕可見度 {#control-visibility}
+         + [從可用曲目中選取目前的標題曲目](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/t-psdk-android-2.7-closed-caption-available-current.md)
+         + 控制隱藏式字幕可視性 {#control-visibility}
             + [概觀](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/closed-caption-visibility-control/t-psdk-android-2.7-closed-caption-visibility-control.md)
             + [允許使用者變更註解追蹤](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/closed-caption-visibility-control/t-psdk-android-2.7-closed-caption-track-allow-user-to-change.md)
          + [控制隱藏式字幕樣式](tvsdk-2.7-for-android/content-playback-options/closed-captions-set-up/c-psdk-android-2.7-closed-caption-styling-control.md)
       + 替代音訊 {#alternate-audio}
          + [概觀](tvsdk-2.7-for-android/content-playback-options/alternate-audio/c-psdk-android-2.7-alternate-audio.md)
          + [AC-3 5.1格式](tvsdk-2.7-for-android/content-playback-options/alternate-audio/c-psdk-android-2.7-ac-3-5.1-format.md)
-         + [播放清單中的替代音訊曲目](tvsdk-2.7-for-android/content-playback-options/alternate-audio/c-psdk-android-2.7-alternate-audio-in-playlist.md)
+         + [播放清單中的替代音軌](tvsdk-2.7-for-android/content-playback-options/alternate-audio/c-psdk-android-2.7-alternate-audio-in-playlist.md)
          + [存取替代音軌](tvsdk-2.7-for-android/content-playback-options/alternate-audio/t-psdk-android-2.7-alternate-audio-implement.md)
       + [啟用背景音訊](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-background-audio.md)
       + [ID3標籤](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md)
@@ -353,13 +353,13 @@ ht-degree: 0%
          + [概觀](tvsdk-2.7-for-android/content-playback-options/failover-for-playback/c-psdk-android-2.7-failover-for-playback.md)
          + [媒體播放和容錯移轉](tvsdk-2.7-for-android/content-playback-options/failover-for-playback/c-psdk-android-2.7-failover-media-playback.md)
          + [VOD的Advertising插入和容錯移轉](tvsdk-2.7-for-android/content-playback-options/failover-for-playback/c-psdk-android-2.7-failover-ad-insertion-for-vod.md)
-   + 廣告 {#advertising}
+   + Advertising {#advertising}
       + [廣告及其需求](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-insertion.md)
       + 插入廣告 {#insert-ads}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-ad-insertion-about.md)
          + [解析和插入VOD廣告](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-ad-resolving-client-vod.md)
          + [解析和插入即時/線性廣告](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-ad-resolving-client-live-linear.md)
-         + [實施提早的廣告插播回報](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/t-psdk-android-2.7-early-ad-break-return.md)
+         + [實作提早的廣告插播回報](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/t-psdk-android-2.7-early-ad-break-return.md)
          + [追蹤使用者端廣告](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-ad-tracking-client.md)
          + [中斷VMAP的使用者端錯誤處理](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-broken-vmap-error.md)
          + [安全透過HTTPS載入廣告](tvsdk-2.7-for-android/ad-insertion/ad-insertion-about/c-psdk-android-2.7-secure-ad-loading.md)
@@ -369,15 +369,15 @@ ht-degree: 0%
          + [廣告播放的API元素](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-playback-ad-custom-elements.md)
          + [使用預設播放行為](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-use-default.md)
          + [略過一段時間的廣告插播](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-skip-breaks.md)
-         + [儲存視訊位置並稍後繼續](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-save-position.md)
+         + [儲存視訊位置並在稍後繼續](tvsdk-2.7-for-android/ad-insertion/playback-customize/t-psdk-android-2.7-playback-save-position.md)
          + [部分廣告插播插入](tvsdk-2.7-for-android/ad-insertion/playback-customize/c-psdk-android-2.7-partial-ad-break-insertion.md)
-      + 延遲廣告解決 {#lazy-ad-resolving}
+      + 延遲廣告解析 {#lazy-ad-resolving}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/c-psdk-android-2.7-lazy-ad-resolving.md)
          + [啟用延遲廣告解析](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-lazy-ad-resolving/t-psdk-android-2.7-enable-lazy-ad-resolving.md)
       + 廣告插入中繼資料 {#ad-insertion-metadata}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/c-psdk-android-2.7-ad-insertion-metadata.md)
          + [設定廣告插入中繼資料](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/t-psdk-android-2.7-ad-insertion-metadata-set-up.md)
-         + [啟用完整事件重播中的廣告](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
+         + [在全事件重播中啟用廣告](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
          + [廣告訊號模式](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/r-psdk-android-2.7-ad-signaling-mode.md)
       + 隨附橫幅廣告 {#companion-banner-ads}
          + [隨附橫幅廣告的最佳作法](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/c-psdk-android-2.7-companion-banners-best-practices.md)
@@ -385,7 +385,7 @@ ht-degree: 0%
          + [顯示橫幅廣告](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/t-psdk-android-2.7-companion-banner-ads-display.md)
       + 可點按的廣告 {#clickable-ads}
          + [回應廣告的點按](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-respond-to-ad-clicks.md)
-         + [將可點按的廣告程式分開](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-separate-clickable-ad-process.md)
+         + [區隔可點按的廣告程式](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-separate-clickable-ad-process.md)
          + [暫停並繼續播放](tvsdk-2.7-for-android/ad-insertion/clickable-ads/t-psdk-android-2.7-pausing-resuming-playback.md)
       + [使用Adobe Creative重新封裝服務(CRS)重新封裝不相容的廣告](tvsdk-2.7-for-android/ad-insertion/ad-transcoding/c-psdk-android-2.7-ad-transcoding.md)
       + VAST和VMAP廣告的廣告遞補 {#ad-fallback}
@@ -394,28 +394,28 @@ ht-degree: 0%
          + [VAST和VMAP的廣告遞補行為](tvsdk-2.7-for-android/ad-insertion/ad-fallback/r-psdk-android-2.7-ad-fallback-behavior.md)
       + 自訂標籤 {#custom-tags}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)
-         + [自訂VOD資產範例](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-overview.md)
+         + [自訂VOD資產的範例](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-overview.md)
          + [標籤的設定類別方法](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-psdkconfig-methods.md)
-         + [定時中繼資料類別](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/r-psdk-android-2.7-custom-tags-timedmetadata-class.md)
+         + [計時中繼資料類別](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/r-psdk-android-2.7-custom-tags-timedmetadata-class.md)
          + [訂閱自訂標籤](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-subscribe.md)
          + [為定時中繼資料通知新增接聽程式](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
          + [在傳送定時中繼資料物件時將其儲存](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-timed-metadata-store.md)
       + VPAID 2.0廣告支援 {#vpaid-ad-support}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/c-psdk-android-2.7-vpaid-2.0-ads.md)
          + [實作VPAID 2.0整合](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/t-psdk-android-2.7-include-vpaid20-support.md)
-      + [來自Moat的廣告測量](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-measurements-from-moat.md)
+      + [從護城河進行廣告測量](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-measurements-from-moat.md)
       + 新增自訂廣告標籤 {#add-custom-markers}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/c-psdk-android-2.7-ad-markers-add-custom.md)
          + [TimeRange類別](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-timerange-class.md)
          + [MediaPlayer和MediaResource類別](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-mediaplayer-mediaresource-classes.md)
          + [ReplaceTimeRange類別](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-replacetimerange-class.md)
          + [在時間軸上放置自訂廣告標籤](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/t-psdk-android-2.7-place-custom-ad-markers-on-timeline.md)
-         + [控制搜尋自訂廣告標籤的播放行為](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/t-psdk-android-2.7-ad-markers-control-seek.md)
+         + [控制對自訂廣告標籤進行搜尋的播放行為](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/t-psdk-android-2.7-ad-markers-control-seek.md)
       + 自訂機會產生器和內容解析器 {#customize-opportunity}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver.md)
          + [機會產生器和內容解析器](tvsdk-2.7-for-android/ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver-about.md)
-         + [實作自訂機會產生器](tvsdk-2.7-for-android/ad-insertion/content-resolver/t-psdk-android-2.7-opp-detector-impl-android.md)
-         + [實作自訂內容解析程式](tvsdk-2.7-for-android/ad-insertion/content-resolver/t-psdk-android-2.7-content-resolver-implement.md)
+         + [實施自訂機會產生器](tvsdk-2.7-for-android/ad-insertion/content-resolver/t-psdk-android-2.7-opp-detector-impl-android.md)
+         + [實作自訂內容解析器](tvsdk-2.7-for-android/ad-insertion/content-resolver/t-psdk-android-2.7-content-resolver-implement.md)
       + [刪除和取代VOD資料流中的廣告](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-delete-replace-content-vod.md)
       + 自訂時間範圍作業 {#custom-time-range}
          + [概觀](tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/custom-time-range-ops/c-psdk-android-2.7-custom-time-range-ops-android.md)
@@ -438,9 +438,9 @@ ht-degree: 0%
    + 內容保護 {#content-protection}
       + [概觀](tvsdk-2.7-for-android/drm-content-security/c-psdk-android-2.7-drm-content-security.md)
       + [Widevine DRM](tvsdk-2.7-for-android/drm-content-security/r-psdk-android-2.7-drm-widevine.md)
-      + [Primetime DRM介面概觀](tvsdk-2.7-for-android/drm-content-security/r-psdk-android-2.7-drm-interface.md)
-      + [播放前DRM驗證](tvsdk-2.7-for-android/drm-content-security/t-psdk-android-2.7-drm-auth-before-playback.md)
-      + [在播放期間DRM驗證](tvsdk-2.7-for-android/drm-content-security/t-psdk-android-2.7-drm-auth-during-playback.md)
+      + [Primetime DRM介面概述](tvsdk-2.7-for-android/drm-content-security/r-psdk-android-2.7-drm-interface.md)
+      + [播放前的DRM驗證](tvsdk-2.7-for-android/drm-content-security/t-psdk-android-2.7-drm-auth-before-playback.md)
+      + [錄放期間的DRM驗證](tvsdk-2.7-for-android/drm-content-security/t-psdk-android-2.7-drm-auth-during-playback.md)
    + 視訊分析 {#video-analytics}
       + [概觀](tvsdk-2.7-for-android/va-integration-overview/c-psdk-android-2.7-va-integration-overview.md)
       + [初始化和設定視訊分析](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-integrate-heartbeats.md)
@@ -458,7 +458,7 @@ ht-degree: 0%
          + [概觀](tvsdk-2.7-for-android/billing/c-psdk-android-2.7-billing.md)
          + [設定計費量度](tvsdk-2.7-for-android/billing/t-psdk-android-2.7-billing-config.md)
          + [傳輸計費量度](tvsdk-2.7-for-android/billing/r-psdk-android-2.7-billing-data-format.md)
-+ 適用於Android的TVSDK 1.4 {#tvsdk-1-4-for-android}
++ Android適用的TVSDK 1.4 {#tvsdk-1-4-for-android}
    + 簡介 {#introduction}
       + [產品概述、對象和本指南](tvsdk-1.4-for-android/android-1.4-introduction/overview-prod-audience-guide/android-1.4-overview-prod-audience-guide.md)
       + [Primetime TVSDK功能](tvsdk-1.4-for-android/android-1.4-introduction/overview-prod-audience-guide/android-1.4-overview-of-the-player.md)
@@ -475,7 +475,7 @@ ht-degree: 0%
       + [識別內容為即時或VOD](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-content-live-vod-identify.md)
       + [提供音量控制](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-volume-control.md)
       + [顯示視訊的持續時間、目前時間和剩餘時間](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-duration-time-display.md)
-      + [顯示搜尋拖曳列與目前播放位置](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md)
+      + [顯示具有目前播放位置的搜尋拖曳列](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-seek-scrub-bar-display.md)
       + [建構DVR增強的控制列](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-ctrl-bar-for-dvr-construct.md)
       + 實作快速前進和倒帶 {#implement-fast-forward-rewind}
          + [概觀](tvsdk-1.4-for-android/ui-configure/trick-play-implement/android-1.4-trick-play-implement.md)
@@ -504,14 +504,14 @@ ht-degree: 0%
       + [ID3標籤](tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)
       + [緩衝](tvsdk-1.4-for-android/buffering-configuration/android-1.4-buffering-times-set.md)
       + [立即開啟](tvsdk-1.4-for-android/buffering-configuration/instant-on/android-1.4-instant-on.md)
-      + 廣告 {#advertising}
+      + Advertising {#advertising}
          + [廣告需求](tvsdk-1.4-for-android/ad-insertion/android-1.4-advertising-requirements.md)
       + 插入廣告 {#inserting-ads}
          + [概觀](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-insertion-about.md)
          + [廣告插入和刊登](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-loc-ad-placer.md)
          + [VOD廣告解析和插入](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-resolving-client-vod.md)
          + [即時/線性廣告解析和插入](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-resolving-client-live-linear.md)
-         + [實施提早的廣告插播回報](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-early-ad-break-return.md)
+         + [實作提早的廣告插播回報](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-early-ad-break-return.md)
          + [使用者端廣告追蹤](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-ad-tracking-client.md)
          + [實作自訂時間更新](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-imp-cust-time-updates.md)
          + [安全透過HTTPS載入廣告](tvsdk-1.4-for-android/ad-insertion/ad-insertion-about/android-1.4-secure-ad-loading.md)
@@ -523,27 +523,27 @@ ht-degree: 0%
          + [使用預設播放行為](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-use-default.md)
          + [設定自訂播放](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-set-up-playback-customize.md)
          + [略過一段時間的廣告插播](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-skip-breaks.md)
-         + [儲存視訊位置並稍後繼續](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-save-position.md)
+         + [儲存視訊位置並在稍後繼續](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-playback-save-position.md)
          + [部分廣告插播插入](tvsdk-1.4-for-android/ad-insertion/playback-customize/android-1.4-partial-adbreak-insertion.md)
       + 廣告插入中繼資料 {#ad-insertion-metadata}
          + [概觀](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata.md)
          + [設定廣告插入中繼資料](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md)
-         + [啟用完整事件重播中的廣告](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
+         + [在全事件重播中啟用廣告](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
          + [廣告訊號模式](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md)
       + 可點按的廣告 {#clickable-ads}
          + [概觀](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-clickable-ads.md)
          + [回應廣告的點按](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-respond-to-ad-clicks.md)
-         + [將可點按的廣告程式分開](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-separate-clickable-ad-process.md)
+         + [區隔可點按的廣告程式](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-separate-clickable-ad-process.md)
          + [暫停並繼續播放](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md)
-      + [使用AdobeCreative重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-android/ad-insertion/ad-transcoding/android-1.4-ad-transcoding.md)
+      + [使用Adobe Creative重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-android/ad-insertion/ad-transcoding/android-1.4-ad-transcoding.md)
       + [VAST和VMAP廣告的廣告遞補](tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)
-      + [來自Moat的廣告測量](tvsdk-1.4-for-android/ad-insertion/android-1.4-ad-measurements-from-moat.md)
+      + [從護城河進行廣告測量](tvsdk-1.4-for-android/ad-insertion/android-1.4-ad-measurements-from-moat.md)
       + [VPAID 2.0廣告支援](tvsdk-1.4-for-android/ad-insertion/vpaid-2.0-ads/android-1.4-vpaid-2.0-ads.md)
       + 自訂標籤 {#custom-tags}
          + [概觀](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-configure.md)
-         + [自訂VOD資產範例](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-overview.md)
+         + [自訂VOD資產的範例](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-overview.md)
          + [標籤的設定類別方法](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-psdkconfig.md)
-         + [定時中繼資料類別](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-timedmetadata.md)
+         + [計時中繼資料類別](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-timedmetadata.md)
          + [訂閱自訂標籤](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-subscribe.md)
          + [為定時中繼資料通知新增接聽程式](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
          + [在傳送定時中繼資料物件時將其儲存](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
@@ -554,7 +554,7 @@ ht-degree: 0%
          + [MediaPlayer和MediaResource類別](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-mediaplayer-mediaresource-classes.md)
          + [TimeRangeCollection類別](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerangecollection-class.md)
          + [將TimeRange廣告標籤放置在時間軸上](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerange-markers-timeline.md)
-         + [控制搜尋自訂廣告標籤的播放行為](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-control-seek.md)
+         + [控制對自訂廣告標籤進行搜尋的播放行為](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-control-seek.md)
       + 更新廣告創意選擇規則 {#updating-ad-rules}
          + [概觀](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-updating-rules.md)
          + [優先順序規則](tvsdk-1.4-for-android/ad-insertion/android-1.4-updating-rules/android-1.4-priority-rule.md)
@@ -564,7 +564,7 @@ ht-degree: 0%
       + 自訂機會偵測器和內容解析器 {#customize-opportunity-detectors}
          + [機會產生器和內容解析器](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md)
          + [實作自訂機會偵測器](tvsdk-1.4-for-android/content-resolver/android-1.4-opp-detector-impl.md)
-         + [實作自訂內容解析程式](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-implement.md)
+         + [實作自訂內容解析器](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-implement.md)
       + 刪除和取代VOD資料流中的廣告 {#delete-replace-ads}
          + [自訂時間範圍作業](tvsdk-1.4-for-android/delete-replace-content-vod/custom-time-range-ops/android-1.4-custom-time-range-ops.md)
          + [多個初始位置資訊](tvsdk-1.4-for-android/delete-replace-content-vod/custom-time-range-ops/android-1.4-multi-initial-placementinfos.md)
@@ -582,14 +582,14 @@ ht-degree: 0%
          + [實作中斷處理](tvsdk-1.4-for-android/blackouts-handle/android-1.4-blackouts-implement-handling.md)
       + 使用隱藏式字幕 {#closed-captions}
          + [概觀](tvsdk-1.4-for-android/closed-captions-set-up/android-1.4-closed-caption-overview.md)
-         + [從可用曲目中選取目前的註解曲目](tvsdk-1.4-for-android/closed-captions-set-up/android-1.4-closed-caption-available.md)
-         + 控制隱藏式字幕可見度 {#control-visibility}
+         + [從可用曲目中選取目前的標題曲目](tvsdk-1.4-for-android/closed-captions-set-up/android-1.4-closed-caption-available.md)
+         + 控制隱藏式字幕可視性 {#control-visibility}
             + [概觀](tvsdk-1.4-for-android/closed-captions-set-up/closed-caption-visibility-control/android-1.4-closed-caption-visibility-control.md)
             + [允許使用者變更註解追蹤](tvsdk-1.4-for-android/closed-captions-set-up/closed-caption-visibility-control/android-1.4-closed-caption-allow-user-change.md)
          + [控制隱藏式字幕樣式](tvsdk-1.4-for-android/closed-captions-set-up/closed-caption-styling-control/android-1.4-closed-caption-styling.md)
-      + 實作替代音訊曲目 {#alternate-audio-tracks}
+      + 實作替代音軌 {#alternate-audio-tracks}
          + [替代音訊](tvsdk-1.4-for-android/android-1.4-implementing-alternate-audio/alternate-audio/android-1.4-alternate-audio.md)
-         + [播放清單中的替代音訊曲目](tvsdk-1.4-for-android/android-1.4-implementing-alternate-audio/alternate-audio/android-1.4-alternate-audio-in-playlist.md)
+         + [播放清單中的替代音軌](tvsdk-1.4-for-android/android-1.4-implementing-alternate-audio/alternate-audio/android-1.4-alternate-audio-in-playlist.md)
          + [存取替代音軌](tvsdk-1.4-for-android/android-1.4-implementing-alternate-audio/alternate-audio/android-1.4-alternate-audio-implement.md)
       + 將Adobe Analytics與TVSDK整合 {#integrating-adobe-analytics}
          + [視訊分析](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-integration-overview.md)
@@ -602,8 +602,8 @@ ht-degree: 0%
       + 內容保護 {#content-protection}
          + Primetime DRM介面 {#drm-interface}
             + [概觀](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-interface.md)
-            + [播放前DRM驗證](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-auth-before-playback.md)
-            + [在播放期間DRM驗證](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-auth-during-playback.md)
+            + [播放前的DRM驗證](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-auth-before-playback.md)
+            + [錄放期間的DRM驗證](tvsdk-1.4-for-android/drm-content-security/drm-interface/android-1.4-drm-auth-during-playback.md)
             + [在TSVDK應用程式中實作Primetime DRM](tvsdk-1.4-for-android/drm-content-security/android-1.4-tvsdk-drm-workflow.md)
       + [播放器狀態、活動、錯誤和記錄的通知](tvsdk-1.4-for-android/notification-system/android-1.4-notification-content.md)
       + 播放和容錯移轉 {#playback-and-failover}
@@ -655,12 +655,12 @@ ht-degree: 0%
       + [實作播放/暫停按鈕](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-implement-pause-play.md)
       + [顯示視訊的持續時間](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-video-duration.md)
       + [顯示目前時間和剩餘時間](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-current-remaining-time.md)
-      + [顯示目前播放時間的搜尋清除列……](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-seek-scrub-bar.md)
+      + [顯示目前播放時間的搜尋拖曳列……](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-seek-scrub-bar.md)
       + [視訊品質的最適化位元速率(ABR)](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/c-psdk-ios-1.4-abr-control-quality.md)
    + [服務品質統計資料](tvsdk-1.4-for-ios/c-psdk-ios-1.4-qos-statistics-monitor.md)
    + [使用MediaPlayer物件](tvsdk-1.4-for-ios/c-psdk-ios-1.4-mediaplayerobjects-working-with.md)
-   + [立即開啟](tvsdk-1.4-for-ios/c-psdk-ios-1.4-instant-on-ios.md)
-   + 廣告 {#advertising}
+   + [即時開啟](tvsdk-1.4-for-ios/c-psdk-ios-1.4-instant-on-ios.md)
+   + Advertising {#advertising}
       + [廣告需求](tvsdk-1.4-for-ios/ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)
       + [部分廣告插播插入](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-partialad-break-insertion.md)
       + [插入廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-insertion-about.md)
@@ -671,16 +671,16 @@ ht-degree: 0%
       + [廣告訊號模式](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-primetime-ad-serving-metadata/r-psdk-ios-1.4-ad-signaling-mode.md)
    + [隨附橫幅廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-companion-banner-ads/c-psdk-ios-1.4-companion-banner-ads.md)
    + [可點按的廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-clickable-ads.md)
-   + [使用AdobeCreative重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-transcoding.md)
-   + [來自Moat的廣告測量](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-measurements-from-moat.md)
+   + [使用Adobe Creative重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-transcoding.md)
+   + [從護城河進行廣告測量](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-measurements-from-moat.md)
    + [VPAID 2.0廣告支援](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md)
    + [VAST和VMAP廣告的廣告遞補](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md)
    + [為DVR視窗載入廣告](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-loading-for-a-dvr-window.md)
    + 自訂標籤 {#custom-tags}
       + [概觀](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-configure.md)
-      + [自訂VOD資產範例](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-overview.md)
+      + [自訂VOD資產的範例](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-overview.md)
       + [標籤的設定類別方法](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-psdkconfig-methods.md)
-      + [定時中繼資料類別](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/r-psdk-ios-1.4-custom-tags-timedmetadata-class.md)
+      + [計時中繼資料類別](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/r-psdk-ios-1.4-custom-tags-timedmetadata-class.md)
       + [訂閱自訂標籤](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md)
       + [為定時中繼資料通知新增接聽程式](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-receive-notifications.md)
       + [在傳送定時中繼資料物件時將其儲存](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)
@@ -703,12 +703,12 @@ ht-degree: 0%
       + [中斷API元素](tvsdk-1.4-for-ios/c-psdk-ios-1.4-blackouts-handle-ios/c-psdk-ios-1.4-blackout-apis.md)
       + [實作中斷處理](tvsdk-1.4-for-ios/c-psdk-ios-1.4-blackouts-handle-ios/t-psdk-ios-1.4-blackouts-implement-handling-ios.md)
    + 字幕和隱藏式字幕 {#subtitles-closed-captions}
-      + [字幕和隱藏式字幕的需求](tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios.md)
+      + [字幕和隱藏式字幕需求](tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios.md)
       + [公開字幕](tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/t-psdk-ios-1.4-subtitles-exposing-ios.md)
       + [公開隱藏式字幕](tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/t-psdk-ios-1.4-closed-captions-exposing-ios.md)
    + 替代音訊 {#alternate-audio}
       + [概觀](tvsdk-1.4-for-ios/alternate-audio/c-psdk-ios-1.4-alternate-audio.md)
-      + [播放清單中的替代音訊曲目](tvsdk-1.4-for-ios/alternate-audio/c-psdk-ios-1.4-alternate-audio-in-playlist.md)
+      + [播放清單中的替代音軌](tvsdk-1.4-for-ios/alternate-audio/c-psdk-ios-1.4-alternate-audio-in-playlist.md)
       + [存取替代音軌](tvsdk-1.4-for-ios/alternate-audio/t-psdk-ios-1.4-alternate-audio-implement.md)
    + 視訊分析 {#video-analytics}
       + [視訊分析整合](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/c-psdk-ios-1.4-va-integration-overview.md)
@@ -719,10 +719,10 @@ ht-degree: 0%
       + [在伺服器端設定視訊分析報告](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-server-side-reporting-set-up.md)
       + [存取視訊分析報表](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-reports-access.md)
    + 內容保護 {#content-protection}
-      + [Primetime DRM介面概觀](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
+      + [Primetime DRM介面概述](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [TVSDK應用程式中的Apple FairPlay](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
       + [允許列出您的iOS應用程式](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
-   + [播放器狀態、活動、錯誤和記錄的通知 ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
+   + [播放器狀態、活動、錯誤和記錄的通知](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [自訂記錄](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [容錯移轉](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
    + [計費量度](tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)
@@ -735,7 +735,7 @@ ht-degree: 0%
       + [時間表類別](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline.md)
       + [時間表廣告類別](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline-advertising.md)
       + [Digital Rights Management類別](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-digital-rights-management-ios.md)
-      + [視訊分析類別](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
+      + [Video Analytics類別](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
    + 通知代碼 {#notification-codes}
       + [TVSDK通知系統](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/c-psdk-ios-1.4-notification-codes.md)
       + [錯誤通知代碼](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notifications-errors.md)
@@ -753,7 +753,7 @@ ht-degree: 0%
          + StageVideo功能和限制 {#stagevideo}
             + [概觀](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stagevideo-capabilities.md)
             + [檢查StageVideo是否可用](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/t-psdk-dhls-1.4-stage-video-available.md)
-            + [Flash15支援StageVideo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-flash15-support.md)
+            + [Flash 15支援StageVideo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-flash15-support.md)
             + [StageVideo最低需求](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md)
             + [StageVideo和HTML覆蓋圖](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/c-psdk-dhls-1.4-stage-video-and-overlays.md)
    + 內容播放選項 {#content-playback-options}
@@ -776,7 +776,7 @@ ht-degree: 0%
          + [識別內容為即時或VOD](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-content-live-vod-identify.md)
          + [提供音量控制](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-volume-control.md)
          + [顯示視訊的持續時間、目前時間和剩餘時間](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-duration-time-display.md)
-         + [顯示搜尋清除列，其目前播放位置……](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-seek-scrub-bar-display.md)
+         + [顯示目前播放位置的搜尋拖曳列……](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-seek-scrub-bar-display.md)
          + [建構DVR增強的控制列](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-ctrl-bar-for-dvr-construct.md)
          + [實作快速前進和倒帶](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-browser-dhls-1.4-trickplay-implement.md)
          + [在特定時間輸入資料流](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-stream-entry-control.md)
@@ -793,7 +793,7 @@ ht-degree: 0%
       + [關於MediaPlayerItem類別](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/c-psdk-dhls-1.4-mediaplayeritem-class-about.md)
       + [MediaPlayer物件生命週期](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/c-psdk-dhls-1.4-mediaplayer-object-lifecycle-states.md)
       + [用於存取MediaResource資訊的MediaPlayer方法](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/r-psdk-dhls-1.4-mediaplayer-methods-for-accessing-mediaresource.md)
-      + 重複使用或移除MediaPlayer執行個體 {#reuse-or-remove-mediaplayer}
+      + 重複使用或移除MediaPlayer例項 {#reuse-or-remove-mediaplayer}
          + [重設或重複使用MediaPlayer執行個體](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-reset-reuse-instance.md)
          + [發行MediaPlayer例項和資源](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-release-instance.md)
       + [Inspect播放時間軸](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
@@ -801,7 +801,7 @@ ht-degree: 0%
       + [緩衝時間原則](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/c-psdk-dhls-1.4-buffering-policies.md)
       + [設定緩衝時間](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/t-psdk-dhls-1.4-buffering-times-set.md)
    + [隱藏視訊檢視](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-video-view-hiding.md)
-   + 廣告 {#advertising}
+   + Advertising {#advertising}
       + [廣告需求](tvsdk-1.4-for-desktop-hls/ad-insertion/r-psdk-dhls-1.4-advertising-requirements.md)
       + 插入廣告 {#inserting-ads}
          + [概觀](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-about/c-psdk-dhls-1.4-ad-insertion-about.md)
@@ -817,19 +817,19 @@ ht-degree: 0%
          + [使用預設播放行為](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-use-default.md)
          + [設定自訂播放](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-customize.md)
          + [略過一段時間的廣告插播](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-skip-breaks.md)
-         + [儲存視訊位置並稍後繼續](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-save-position.md)
+         + [儲存視訊位置並在稍後繼續](tvsdk-1.4-for-desktop-hls/ad-insertion/playback-customize/t-psdk-dhls-1.4-playback-save-position.md)
       + [廣告插入中繼資料](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md)
       + [隨附橫幅廣告](tvsdk-1.4-for-desktop-hls/ad-insertion/companion-banner-ads/c-psdk-dhls-1.4-companion-banner-ads.md)
       + [可點按的廣告](tvsdk-1.4-for-desktop-hls/ad-insertion/clickable-ads/c-psdk-dhls-1.4-clickable-ads.md)
       + 自訂標籤 {#custom-tags}
          + [概觀](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-configure.md)
-         + [自訂VOD資產範例](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-overview.md)
+         + [自訂VOD資產的範例](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-overview.md)
          + [標籤的設定類別方法](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-psdkconfig-methods.md)
-         + [定時中繼資料類別](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/r-psdk-dhls-1.4-custom-tags-timedmetadata-class.md)
+         + [計時中繼資料類別](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/r-psdk-dhls-1.4-custom-tags-timedmetadata-class.md)
          + [資訊清單標籤的通知](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-notifications.md)
          + [訂閱自訂標籤](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-subscribe.md)
          + [為定時中繼資料通知新增接聽程式](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-receive-notifications.md)
-      + [使用AdobeCreative重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
+      + [使用Adobe Creative重新封裝服務重新封裝不相容的廣告](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
       + [VAST和VMAP廣告的廣告遞補](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-fallback/c-psdk-dhls-1.4-ad-fallback.md)
       + 自訂廣告 {#custom-ads}
          + [自訂廣告需求](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/c-psdk-dhls-1.4-custom-ads-req.md)
@@ -841,7 +841,7 @@ ht-degree: 0%
          + [MediaPlayer和MediaResource類別](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-mediaplayer-mediaresource-classes.md)
          + [TimeRangeCollection類別](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-timerangecollection-class.md)
          + [將TimeRange廣告標籤放置在時間軸上](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/t-psdk-dhls-1.4-timerange-markers-on-timeline.md)
-         + [控制搜尋自訂廣告標籤的播放行為](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/t-psdk-dhls-1.4-ad-markers-control-seek.md)
+         + [控制對自訂廣告標籤進行搜尋的播放行為](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/t-psdk-dhls-1.4-ad-markers-control-seek.md)
       + 更新廣告創意選擇規則 {#updating-ad-rules}
          + [概觀](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/c-psdk-dhls-1.4-updating-rules.md)
          + [優先順序規則](tvsdk-1.4-for-desktop-hls/ad-insertion/c-psdk-dhls-1.4-updating-rules/r-psdk-dhls-1.4-priority-rule.md)
@@ -852,7 +852,7 @@ ht-degree: 0%
       + [概觀](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/c-psdk-dhls-1.4-content-resolver.md)
       + [機會產生器和內容解析器](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/c-psdk-dhls-1.4-content-resolver-about.md)
       + [實作自訂機會偵測器](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/t-psdk-dhls-1.4-opp-detector-impl.md)
-      + [實作自訂內容解析程式](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/t-psdk-dhls-1.4-content-resolver-implement.md)
+      + [實作自訂內容解析器](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-opportunity-detector/content-resolver/t-psdk-dhls-1.4-content-resolver-implement.md)
    + 刪除和取代VOD資料流中的廣告 {#delete-replace-vod-streams}
       + 自訂時間範圍作業 {#custom-time-range}
          + [概觀](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/custom-time-range-ops/c-psdk-dhls-1.4-custom-time-range-ops.md)
@@ -862,21 +862,21 @@ ht-degree: 0%
       + 刪除和取代廣告的使用案例 {#use-cases}
          + [標籤範圍](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-mark-ranges.md)
          + [以Adobe Primetime廣告決策廣告取代時間範圍](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-replace-ranges-with-aud-ad.md)
-         + [刪除具有Primetime廣告決策廣告的範圍](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-delete-ranges-with-aud-ad.md)
+         + [刪除Primetime廣告決策廣告的範圍](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-delete-ranges-with-aud-ad.md)
          + [特殊使用案例](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-use-cases/t-psdk-dhls-1.4-special-use-cases.md)
       + [廣告刪除和取代錯誤處理](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/ad-delete-replace-error-handling/c-psdk-dhls-1.4-ad-delete-replace-error-handling.md)
       + [廣告刪除和取代API變更](tvsdk-1.4-for-desktop-hls/delete-replace-content-vod/c-psdk-dhls-1.4-ad-deletion-replacement-api-changes.md)
-   + 即時串流中的中斷 {#blackouts}
+   + 即時資料流中的中斷 {#blackouts}
       + [處理即時資料流中的中斷](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-blackouts/blackouts-handle/c-psdk-dhls-1.4-blackouts-handle.md)
       + [中斷API元素](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-blackouts/blackouts-handle/c-psdk-dhls-1.4-blackout-apis.md)
       + [實作中斷處理](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-blackouts/blackouts-handle/t-psdk-dhls-1.4-blackouts-implement-handling.md)
    + 隱藏式字幕 {#closed-captions}
       + [使用隱藏式字幕](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-closed-captions/closed-captions-set-up/c-psdk-dhls-1.4-closed-captions-set-up.md)
-      + [控制隱藏式字幕可見度](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-closed-captions/closed-captions-set-up/t-psdk-dhls-1.4-closed-caption-visibility-control.md)
+      + [控制隱藏式字幕可視性](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-closed-captions/closed-captions-set-up/t-psdk-dhls-1.4-closed-caption-visibility-control.md)
       + [控制隱藏式字幕樣式](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-closed-captions/closed-captions-set-up/c-psdk-dhls-1.4-closed-caption-styling-control.md)
    + 替代音軌 {#alternate-audio-tracks}
       + [替代音訊](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/c-psdk-dhls-1.4-alternate-audio.md)
-      + [播放清單中的替代音訊曲目](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/c-psdk-dhls-1.4-alternate-audio-in-playlist.md)
+      + [播放清單中的替代音軌](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/c-psdk-dhls-1.4-alternate-audio-in-playlist.md)
       + [存取替代音軌](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-alternate-tracks/alternate-audio/t-psdk-dhls-1.4-alternate-audio-implement.md)
    + 將TVSDK與Adobe Analytics整合 {#integrating-tvsdk-analytics}
       + [視訊分析](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/c-psdk-dhls-1.4-va-integration-overview.md)
@@ -888,13 +888,13 @@ ht-degree: 0%
       + [存取視訊分析報表](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-reports-access.md)
    + 內容保護 {#content-protection}
       + [支援的DRM系統](tvsdk-1.4-for-desktop-hls/drm-content-security/t-psdk-dhls-1.4-drm-support.md)
-      + [Primetime DRM介面概觀](tvsdk-1.4-for-desktop-hls/drm-content-security/r-psdk-dhls-1.4-drm-interface.md)
+      + [Primetime DRM介面概述](tvsdk-1.4-for-desktop-hls/drm-content-security/r-psdk-dhls-1.4-drm-interface.md)
       + [在TSVDK應用程式中實作Primetime DRM](tvsdk-1.4-for-desktop-hls/drm-content-security/c-psdk-dhls-1.4-tvsdk-drm-workflow.md)
    + 播放器狀態、活動、錯誤和記錄的通知 {#notifications}
       + [概觀](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-system.md)
       + [通知內容](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-content.md)
       + [設定您的通知系統](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-setup.md)
-      + [新增即時記錄與偵錯](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-realtime-logging-debugging.md)
+      + [新增即時記錄和偵錯](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-realtime-logging-debugging.md)
       + [ID3標籤](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md)
       + [追蹤播放器中的AVE警告](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-track-ave-warnings-in-player.md)
    + 播放和容錯移轉 {#playback-and-failover}
@@ -929,9 +929,9 @@ ht-degree: 0%
       + [時間軸偵測器類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-detectors.md)
       + [時間表產生器類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-generators.md)
       + [時間表作業類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-operations.md)
-      + [時間表解析程式類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-resolvers.md)
+      + [時間軸解析器類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-resolvers.md)
       + [公用程式類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-utility.md)
-      + [視訊分析類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
+      + [Video Analytics類別](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
    + 通知代碼 {#notification-codes}
       + [概觀](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-notification-codes.md)
       + [錯誤通知代碼](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-errors.md)
@@ -958,11 +958,11 @@ ht-degree: 0%
       + 基本播放器 {#basic-player}
          + [概觀](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/c-psdk-browser-tvsdk-2.4-create-a-basic-player.md)
          + [使用TVSDK建立基本播放器](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md)
-         + [使用UI架構建立基本播放器](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md)
+         + [使用UI Framework建立基本播放器](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-uif.md)
       + 瀏覽器相容的播放器 {#browserify-compatible-browser}
          + [概觀](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/c-psdk-browser-tvsdk-2.4-browserify.md)
          + [建立不含UI-Framework且與Browserify相容的播放器](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/t-psdk-browser-tvsdk-2.4-create-browserify-no-uif.md)
-         + [使用UI-Framework建立與瀏覽器相容的播放器](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/t-psdk-browser-tvsdk-2.4-create-browserify-with-uif.md)
+         + [使用UI-Framework建立與Browserify相容的播放器](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-browserify/t-psdk-browser-tvsdk-2.4-create-browserify-with-uif.md)
       + [自訂外觀元素](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-custom-skins.md)
       + [註解](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-captions.md)
       + 廣告 {#ads}
@@ -983,13 +983,13 @@ ht-degree: 0%
          + [建立媒體資源](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-create.md)
          + [跨原始資源共用](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-cors-cred-support.md)
          + [在MediaPlayer中載入媒體資源](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md)
-      + [瀏覽器TVSDK的Google Cast應用程式](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/r-psdk-browser-tvsdk-2.4-chromecast.md)
-      + [無擴充功能資料流](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-extensionless-streams.md)
+      + [適用於瀏覽器TVSDK的Google Cast應用程式](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/r-psdk-browser-tvsdk-2.4-chromecast.md)
+      + [無擴充功能串流](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-extensionless-streams.md)
       + [緩衝](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-buffering-configuration.md)
       + 接聽Primetime播放器事件 {#listen-events}
          + [概觀](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-listen-for.md)
          + [實作事件接聽程式和回呼](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/t-psdk-browser-tvsdk-2.4-event-listeners-implement.md)
-         + [回撥的事件型別和類別](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/r-psdk-browser-tvsdk-2.4-event-listeners-type-table.md)
+         + [回呼的事件型別和類別](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/r-psdk-browser-tvsdk-2.4-event-listeners-type-table.md)
          + [廣告活動的順序](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-order-ad-playback.md)
          + [播放事件的順序](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-order-playback.md)
          + [QoS事件](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-order-qos.md)
@@ -1015,13 +1015,13 @@ ht-degree: 0%
          + [關於MediaPlayerItem類別](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayeritem-class-about.md)
          + [MediaPlayer物件的生命週期和狀態](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-object-lifecycle-states.md)
          + [用於存取MediaResource資訊的MediaPlayer屬性](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/r-psdk-browser-tvsdk-2.4-mediaplayer-methods-for-accessing-mediaresource.md)
-         + [重複使用或移除MediaPlayer執行個體](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-reuse-or-remove.md)
+         + [重複使用或移除MediaPlayer例項](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-reuse-or-remove.md)
          + [Inspect播放時間軸](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
          + [新增TimelineUpdatedEvent的監聽器](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
       + 使用隱藏式字幕 {#closed-captions}
          + [概觀](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/c-psdk-browser-tvsdk-2.4-closed-captions-set-up.md)
-         + [控制隱藏式字幕可見度](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-visibility-control.md)
-         + [允許使用者變更曲目](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-track-allow-user-to-change.md)
+         + [控制隱藏式字幕可視性](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-visibility-control.md)
+         + [允許使用者變更追蹤](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-track-allow-user-to-change.md)
          + 控制隱藏式字幕樣式 {#styling}
             + [概觀](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/c-psdk-browser-tvsdk-2.4-closed-caption-styling-control.md)
             + [設定隱藏式字幕樣式](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/closed-caption-styling-control/t-psdk-browser-tvsdk-2.4-closed-caption-styles-set.md)
@@ -1030,7 +1030,7 @@ ht-degree: 0%
       + [媒體播放](browser-tvsdk-2.4/drm-content-security/android-dhls-failover-for-playback/c-psdk-browser-tvsdk-2.4-failover-media-playback.md)
       + [ID3標籤](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-id3-metadata-retrieve.md)
       + [在iOS上自動播放](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-autoplay-ios.md)
-   + 廣告 {#advertising}
+   + Advertising {#advertising}
       + [廣告需求](browser-tvsdk-2.4/ad-insertion/r-psdk-browser-tvsdk-2.4-advertising-requirements.md)
       + [VAST廣告](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-vast-ads.md)
       + [VPAID 2.0廣告支援](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-vpaid-2.0-ads.md)
@@ -1044,15 +1044,15 @@ ht-degree: 0%
       + 自訂標籤 {#custom-tags}
          + [概觀](browser-tvsdk-2.4/ad-insertion/custom-tags/c-psdk-browser-tvsdk-2.4-custom-tags-configure.md)
          + [標籤的設定類別方法](browser-tvsdk-2.4/ad-insertion/custom-tags/c-psdk-browser-tvsdk-2.4-custom-tags-psdkconfig-methods.md)
-         + [定時中繼資料類別](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-custom-tags-timedmetadata-class.md)
+         + [計時中繼資料類別](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-custom-tags-timedmetadata-class.md)
          + [資訊清單標籤的通知](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-manifest-tag-notifications.md)
          + [訂閱自訂廣告標籤](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-subscribe.md)
          + [新增計時中繼資料通知的接聽程式](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-receive-notifications.md)
       + 自訂機會偵測器和內容解析器 {#customize}
          + [概觀](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver.md)
          + [機會產生器和內容解析器](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver-about.md)
-         + [實作自訂機會產生器](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/t-psdk-browser-tvsdk-2.4-opp-detector-impl.md)
-         + [實作自訂內容解析程式](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/t-psdk-browser-tvsdk-2.4-content-resolver-implement.md)
+         + [實施自訂機會產生器](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/t-psdk-browser-tvsdk-2.4-opp-detector-impl.md)
+         + [實作自訂內容解析器](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/t-psdk-browser-tvsdk-2.4-content-resolver-implement.md)
       + [來自Moat的廣告測量](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-moat.md)
       + [重新封裝（轉碼）不相容的廣告](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-ad-transcoding.md)
       + [預設和自訂的廣告播放行為](browser-tvsdk-2.4/ad-insertion/c-psdk-browser-tvsdk-2.4-playback-post1.2.md)
@@ -1077,7 +1077,7 @@ ht-degree: 0%
       + [實作自訂時間更新](browser-tvsdk-2.4/c-psdk-browser-2.4-integration/t-psdk-browser-tvsdk-2.4-imp-cust-time-updates.md)
    + 內容保護 {#content-protection}
       + [支援的DRM系統](browser-tvsdk-2.4/drm-content-security/t-psdk-browser-tvsdk-2.4-drm-support.md)
-      + [DRM介面概觀](browser-tvsdk-2.4/drm-content-security/r-psdk-browser-tvsdk-2.4-drm-interface.md)
+      + [DRM介面概述](browser-tvsdk-2.4/drm-content-security/r-psdk-browser-tvsdk-2.4-drm-interface.md)
       + [為Safari HLS啟用FairPlay](browser-tvsdk-2.4/drm-content-security/t-psdk-browser-tvsdk-2.4-drm-enable-fairplay-safari.md)
       + [AES加密的HLS資料流範例](browser-tvsdk-2.4/drm-content-security/c-psdk-browser-tvsdk-2.4-sample-aes-encrypt.md)
       + 播放和容錯移轉 {#playback-and-failover}

@@ -2,11 +2,11 @@
 product: adobe primetime
 audience: end-user
 feature: Account IQ
-user-guide-description: Primetime Account IQ可協助提供Account IQ元件的相關資訊，並逐步引導您瞭解使用各種元件的使用者歷程。
+user-guide-description: Primetime Account IQ 可協助提供 Account IQ 元件的相關資訊，並逐步引導您了解使用各種元件的使用者歷程。
 source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
